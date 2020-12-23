@@ -1,5 +1,9 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'dart:convert';
 // import 'package:flutter/foundation.dart';
+
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 
 import '../../r5.dart';
 
@@ -21,6 +25,16 @@ abstract class Population implements _$Population {
     CodeableConcept physiologicalCondition,
   }) = _Population;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Population.fromYaml(dynamic yaml) => yaml is String
+      ? Population.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Population.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Population.fromJson(Map<String, dynamic> json) =>
       _$PopulationFromJson(json);
 }
@@ -38,6 +52,16 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
     @JsonKey(name: '_periodString') Element periodStringElement,
     List<CodeableConcept> specialPrecautionsForStorage,
   }) = _ProductShelfLife;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ProductShelfLife.fromYaml(dynamic yaml) => yaml is String
+      ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ProductShelfLife.fromJson(Map<String, dynamic> json) =>
       _$ProductShelfLifeFromJson(json);
@@ -66,6 +90,16 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
     CodeableConcept scoring,
   }) = _ProdCharacteristic;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ProdCharacteristic.fromYaml(dynamic yaml) => yaml is String
+      ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$ProdCharacteristicFromJson(json);
 }
@@ -84,6 +118,16 @@ abstract class MarketingStatus implements _$MarketingStatus {
     FhirDateTime restoreDate,
     @JsonKey(name: '_restoreDate') Element restoreDateElement,
   }) = _MarketingStatus;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MarketingStatus.fromYaml(dynamic yaml) => yaml is String
+      ? MarketingStatus.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MarketingStatus.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory MarketingStatus.fromJson(Map<String, dynamic> json) =>
       _$MarketingStatusFromJson(json);
@@ -163,6 +207,16 @@ abstract class Citation implements _$Citation {
     CitationMedlinePubMed medlinePubMed,
   }) = _Citation;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Citation.fromYaml(dynamic yaml) => yaml is String
+      ? Citation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Citation.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Citation.fromJson(Map<String, dynamic> json) =>
       _$CitationFromJson(json);
 }
@@ -178,6 +232,16 @@ abstract class CitationSummary implements _$CitationSummary {
     Markdown text,
     @JsonKey(name: '_text') Element textElement,
   }) = _CitationSummary;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationSummary.fromYaml(dynamic yaml) => yaml is String
+      ? CitationSummary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationSummary.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationSummary.fromJson(Map<String, dynamic> json) =>
       _$CitationSummaryFromJson(json);
@@ -195,6 +259,16 @@ abstract class CitationVariantCitation implements _$CitationVariantCitation {
     @JsonKey(name: '_value') Element valueElement,
     Reference baseCitation,
   }) = _CitationVariantCitation;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationVariantCitation.fromYaml(dynamic yaml) => yaml is String
+      ? CitationVariantCitation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationVariantCitation.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationVariantCitation.fromJson(Map<String, dynamic> json) =>
       _$CitationVariantCitationFromJson(json);
@@ -215,6 +289,16 @@ abstract class CitationJournal implements _$CitationJournal {
     @JsonKey(name: '_title') Element titleElement,
   }) = _CitationJournal;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationJournal.fromYaml(dynamic yaml) => yaml is String
+      ? CitationJournal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationJournal.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CitationJournal.fromJson(Map<String, dynamic> json) =>
       _$CitationJournalFromJson(json);
 }
@@ -233,6 +317,16 @@ abstract class CitationJournalIssue implements _$CitationJournalIssue {
     @JsonKey(name: '_issue') Element issueElement,
     CitationPublicationDate publicationDate,
   }) = _CitationJournalIssue;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationJournalIssue.fromYaml(dynamic yaml) => yaml is String
+      ? CitationJournalIssue.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationJournalIssue.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationJournalIssue.fromJson(Map<String, dynamic> json) =>
       _$CitationJournalIssueFromJson(json);
@@ -259,6 +353,16 @@ abstract class CitationPublicationDate implements _$CitationPublicationDate {
     @JsonKey(name: '_text') Element textElement,
   }) = _CitationPublicationDate;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationPublicationDate.fromYaml(dynamic yaml) => yaml is String
+      ? CitationPublicationDate.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationPublicationDate.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CitationPublicationDate.fromJson(Map<String, dynamic> json) =>
       _$CitationPublicationDateFromJson(json);
 }
@@ -278,6 +382,16 @@ abstract class CitationPublicationInfo implements _$CitationPublicationInfo {
     String pageCount,
     @JsonKey(name: '_pageCount') Element pageCountElement,
   }) = _CitationPublicationInfo;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationPublicationInfo.fromYaml(dynamic yaml) => yaml is String
+      ? CitationPublicationInfo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationPublicationInfo.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationPublicationInfo.fromJson(Map<String, dynamic> json) =>
       _$CitationPublicationInfoFromJson(json);
@@ -301,6 +415,16 @@ abstract class CitationPublishedIn implements _$CitationPublishedIn {
     @JsonKey(name: '_startDate') Element startDateElement,
   }) = _CitationPublishedIn;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationPublishedIn.fromYaml(dynamic yaml) => yaml is String
+      ? CitationPublishedIn.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationPublishedIn.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CitationPublishedIn.fromJson(Map<String, dynamic> json) =>
       _$CitationPublishedInFromJson(json);
 }
@@ -317,6 +441,17 @@ abstract class CitationAlternativeTitle implements _$CitationAlternativeTitle {
     Markdown title,
     @JsonKey(name: '_title') Element titleElement,
   }) = _CitationAlternativeTitle;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationAlternativeTitle.fromYaml(dynamic yaml) => yaml is String
+      ? CitationAlternativeTitle.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationAlternativeTitle.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationAlternativeTitle.fromJson(Map<String, dynamic> json) =>
       _$CitationAlternativeTitleFromJson(json);
@@ -337,6 +472,16 @@ abstract class CitationPagination implements _$CitationPagination {
     @JsonKey(name: '_lastPage') Element lastPageElement,
   }) = _CitationPagination;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationPagination.fromYaml(dynamic yaml) => yaml is String
+      ? CitationPagination.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationPagination.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CitationPagination.fromJson(Map<String, dynamic> json) =>
       _$CitationPaginationFromJson(json);
 }
@@ -352,6 +497,16 @@ abstract class CitationArticleUrl implements _$CitationArticleUrl {
     FhirUri url,
     @JsonKey(name: '_url') Element urlElement,
   }) = _CitationArticleUrl;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationArticleUrl.fromYaml(dynamic yaml) => yaml is String
+      ? CitationArticleUrl.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationArticleUrl.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationArticleUrl.fromJson(Map<String, dynamic> json) =>
       _$CitationArticleUrlFromJson(json);
@@ -373,6 +528,17 @@ abstract class CitationAlternativeAbstract
     @JsonKey(name: '_abstractCopyright') Element abstractCopyrightElement,
   }) = _CitationAlternativeAbstract;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationAlternativeAbstract.fromYaml(dynamic yaml) => yaml is String
+      ? CitationAlternativeAbstract.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationAlternativeAbstract.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CitationAlternativeAbstract.fromJson(Map<String, dynamic> json) =>
       _$CitationAlternativeAbstractFromJson(json);
 }
@@ -389,6 +555,16 @@ abstract class CitationContributorship implements _$CitationContributorship {
     List<CitationEntry> entry,
     List<CitationSummary1> summary,
   }) = _CitationContributorship;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationContributorship.fromYaml(dynamic yaml) => yaml is String
+      ? CitationContributorship.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationContributorship.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationContributorship.fromJson(Map<String, dynamic> json) =>
       _$CitationContributorshipFromJson(json);
@@ -419,6 +595,16 @@ abstract class CitationEntry implements _$CitationEntry {
     @JsonKey(name: '_listOrder') Element listOrderElement,
   }) = _CitationEntry;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationEntry.fromYaml(dynamic yaml) => yaml is String
+      ? CitationEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationEntry.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CitationEntry.fromJson(Map<String, dynamic> json) =>
       _$CitationEntryFromJson(json);
 }
@@ -436,6 +622,16 @@ abstract class CitationAffiliationInfo implements _$CitationAffiliationInfo {
     @JsonKey(name: '_role') Element roleElement,
     List<Identifier> identifier,
   }) = _CitationAffiliationInfo;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationAffiliationInfo.fromYaml(dynamic yaml) => yaml is String
+      ? CitationAffiliationInfo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationAffiliationInfo.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationAffiliationInfo.fromJson(Map<String, dynamic> json) =>
       _$CitationAffiliationInfoFromJson(json);
@@ -455,6 +651,16 @@ abstract class CitationSummary1 implements _$CitationSummary1 {
     @JsonKey(name: '_value') Element valueElement,
   }) = _CitationSummary1;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationSummary1.fromYaml(dynamic yaml) => yaml is String
+      ? CitationSummary1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationSummary1.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CitationSummary1.fromJson(Map<String, dynamic> json) =>
       _$CitationSummary1FromJson(json);
 }
@@ -472,6 +678,16 @@ abstract class CitationAlternativeForm implements _$CitationAlternativeForm {
     CitationPagination1 pagination,
     CitationPublicationInfo1 publicationInfo,
   }) = _CitationAlternativeForm;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationAlternativeForm.fromYaml(dynamic yaml) => yaml is String
+      ? CitationAlternativeForm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationAlternativeForm.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationAlternativeForm.fromJson(Map<String, dynamic> json) =>
       _$CitationAlternativeFormFromJson(json);
@@ -491,6 +707,16 @@ abstract class CitationJournalIssue1 implements _$CitationJournalIssue1 {
     @JsonKey(name: '_issue') Element issueElement,
     CitationPublicationDate1 publicationDate,
   }) = _CitationJournalIssue1;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationJournalIssue1.fromYaml(dynamic yaml) => yaml is String
+      ? CitationJournalIssue1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationJournalIssue1.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationJournalIssue1.fromJson(Map<String, dynamic> json) =>
       _$CitationJournalIssue1FromJson(json);
@@ -517,6 +743,17 @@ abstract class CitationPublicationDate1 implements _$CitationPublicationDate1 {
     @JsonKey(name: '_text') Element textElement,
   }) = _CitationPublicationDate1;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationPublicationDate1.fromYaml(dynamic yaml) => yaml is String
+      ? CitationPublicationDate1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationPublicationDate1.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CitationPublicationDate1.fromJson(Map<String, dynamic> json) =>
       _$CitationPublicationDate1FromJson(json);
 }
@@ -535,6 +772,16 @@ abstract class CitationPagination1 implements _$CitationPagination1 {
     String lastPage,
     @JsonKey(name: '_lastPage') Element lastPageElement,
   }) = _CitationPagination1;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationPagination1.fromYaml(dynamic yaml) => yaml is String
+      ? CitationPagination1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationPagination1.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationPagination1.fromJson(Map<String, dynamic> json) =>
       _$CitationPagination1FromJson(json);
@@ -555,6 +802,17 @@ abstract class CitationPublicationInfo1 implements _$CitationPublicationInfo1 {
     String pageCount,
     @JsonKey(name: '_pageCount') Element pageCountElement,
   }) = _CitationPublicationInfo1;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationPublicationInfo1.fromYaml(dynamic yaml) => yaml is String
+      ? CitationPublicationInfo1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationPublicationInfo1.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationPublicationInfo1.fromJson(Map<String, dynamic> json) =>
       _$CitationPublicationInfo1FromJson(json);
@@ -577,6 +835,16 @@ abstract class CitationPublishedIn1 implements _$CitationPublishedIn1 {
     @JsonKey(name: '_startDate') Element startDateElement,
   }) = _CitationPublishedIn1;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationPublishedIn1.fromYaml(dynamic yaml) => yaml is String
+      ? CitationPublishedIn1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationPublishedIn1.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CitationPublishedIn1.fromJson(Map<String, dynamic> json) =>
       _$CitationPublishedIn1FromJson(json);
 }
@@ -592,6 +860,16 @@ abstract class CitationKeywordList implements _$CitationKeywordList {
     @JsonKey(name: '_owner') Element ownerElement,
     @required List<CitationKeyword> keyword,
   }) = _CitationKeywordList;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationKeywordList.fromYaml(dynamic yaml) => yaml is String
+      ? CitationKeywordList.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationKeywordList.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationKeywordList.fromJson(Map<String, dynamic> json) =>
       _$CitationKeywordListFromJson(json);
@@ -609,6 +887,16 @@ abstract class CitationKeyword implements _$CitationKeyword {
     String value,
     @JsonKey(name: '_value') Element valueElement,
   }) = _CitationKeyword;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationKeyword.fromYaml(dynamic yaml) => yaml is String
+      ? CitationKeyword.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationKeyword.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationKeyword.fromJson(Map<String, dynamic> json) =>
       _$CitationKeywordFromJson(json);
@@ -638,6 +926,16 @@ abstract class CitationMedlinePubMed implements _$CitationMedlinePubMed {
     List<CitationRelatedArticle> relatedArticle,
   }) = _CitationMedlinePubMed;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationMedlinePubMed.fromYaml(dynamic yaml) => yaml is String
+      ? CitationMedlinePubMed.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationMedlinePubMed.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CitationMedlinePubMed.fromJson(Map<String, dynamic> json) =>
       _$CitationMedlinePubMedFromJson(json);
 }
@@ -653,6 +951,16 @@ abstract class CitationPubMedPubDate implements _$CitationPubMedPubDate {
     FhirDateTime date,
     @JsonKey(name: '_date') Element dateElement,
   }) = _CitationPubMedPubDate;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationPubMedPubDate.fromYaml(dynamic yaml) => yaml is String
+      ? CitationPubMedPubDate.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationPubMedPubDate.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationPubMedPubDate.fromJson(Map<String, dynamic> json) =>
       _$CitationPubMedPubDateFromJson(json);
@@ -670,6 +978,16 @@ abstract class CitationRelatedArticle implements _$CitationRelatedArticle {
     @JsonKey(name: '_citationMarkdown') Element citationMarkdownElement,
     List<Identifier> identifier,
   }) = _CitationRelatedArticle;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CitationRelatedArticle.fromYaml(dynamic yaml) => yaml is String
+      ? CitationRelatedArticle.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CitationRelatedArticle.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CitationRelatedArticle.fromJson(Map<String, dynamic> json) =>
       _$CitationRelatedArticleFromJson(json);
@@ -736,6 +1054,16 @@ abstract class EvidenceReport implements _$EvidenceReport {
     List<EvidenceReportSection> section,
   }) = _EvidenceReport;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory EvidenceReport.fromYaml(dynamic yaml) => yaml is String
+      ? EvidenceReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? EvidenceReport.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory EvidenceReport.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportFromJson(json);
 }
@@ -750,6 +1078,16 @@ abstract class EvidenceReportSubject implements _$EvidenceReportSubject {
     List<EvidenceReportCharacteristic> characteristic,
     List<Annotation> note,
   }) = _EvidenceReportSubject;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory EvidenceReportSubject.fromYaml(dynamic yaml) => yaml is String
+      ? EvidenceReportSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? EvidenceReportSubject.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory EvidenceReportSubject.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportSubjectFromJson(json);
@@ -775,6 +1113,17 @@ abstract class EvidenceReportCharacteristic
     Period period,
   }) = _EvidenceReportCharacteristic;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory EvidenceReportCharacteristic.fromYaml(dynamic yaml) => yaml is String
+      ? EvidenceReportCharacteristic.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? EvidenceReportCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory EvidenceReportCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportCharacteristicFromJson(json);
 }
@@ -792,6 +1141,16 @@ abstract class EvidenceReportRelatesTo implements _$EvidenceReportRelatesTo {
     Identifier targetIdentifier,
     Reference targetReference,
   }) = _EvidenceReportRelatesTo;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory EvidenceReportRelatesTo.fromYaml(dynamic yaml) => yaml is String
+      ? EvidenceReportRelatesTo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? EvidenceReportRelatesTo.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory EvidenceReportRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportRelatesToFromJson(json);
@@ -818,6 +1177,16 @@ abstract class EvidenceReportSection implements _$EvidenceReportSection {
     CodeableConcept emptyReason,
     List<EvidenceReportSection> section,
   }) = _EvidenceReportSection;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory EvidenceReportSection.fromYaml(dynamic yaml) => yaml is String
+      ? EvidenceReportSection.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? EvidenceReportSection.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory EvidenceReportSection.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportSectionFromJson(json);

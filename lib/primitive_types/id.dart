@@ -1,3 +1,8 @@
+import 'dart:convert';
+// import 'package:flutter/foundation.dart';
+
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 import 'package:dartz/dartz.dart';
 
 import 'primitive_failures.dart';
@@ -15,6 +20,16 @@ class Id extends PrimitiveObject<String> {
   }
 
   const Id._(this.value);
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Id.fromYaml(dynamic yaml) => yaml is String
+      ? Id.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Id.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory Id.fromJson(String json) => Id(json);
 }

@@ -1,3 +1,8 @@
+import 'dart:convert';
+// import 'package:flutter/foundation.dart';
+
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 import 'package:dartz/dartz.dart';
 
 import 'primitive_failures.dart';
@@ -15,6 +20,16 @@ class Time extends PrimitiveObject<String> {
   }
 
   const Time._(this.value);
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Time.fromYaml(dynamic yaml) => yaml is String
+      ? Time.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Time.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory Time.fromJson(String json) => Time(json);
 }

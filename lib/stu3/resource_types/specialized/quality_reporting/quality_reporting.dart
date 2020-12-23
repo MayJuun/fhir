@@ -1,5 +1,9 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'dart:convert';
 // import 'package:flutter/foundation.dart';
+
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 
 import '../../../../stu3.dart';
 
@@ -85,6 +89,16 @@ abstract class Measure with Resource implements _$Measure {
     List<MeasureSupplementalData> supplementalData,
   }) = _Measure;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Measure.fromYaml(dynamic yaml) => yaml is String
+      ? Measure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Measure.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Measure.fromJson(Map<String, dynamic> json) =>
       _$MeasureFromJson(json);
 }
@@ -101,6 +115,16 @@ abstract class MeasureGroup implements _$MeasureGroup {
     List<MeasurePopulation> population,
     List<MeasureStratifier> stratifier,
   }) = _MeasureGroup;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MeasureGroup.fromYaml(dynamic yaml) => yaml is String
+      ? MeasureGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MeasureGroup.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory MeasureGroup.fromJson(Map<String, dynamic> json) =>
       _$MeasureGroupFromJson(json);
@@ -120,6 +144,16 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
     @JsonKey(name: '_criteria') Element criteriaElement,
   }) = _MeasurePopulation;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MeasurePopulation.fromYaml(dynamic yaml) => yaml is String
+      ? MeasurePopulation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MeasurePopulation.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory MeasurePopulation.fromJson(Map<String, dynamic> json) =>
       _$MeasurePopulationFromJson(json);
 }
@@ -134,6 +168,16 @@ abstract class MeasureStratifier implements _$MeasureStratifier {
     String path,
     @JsonKey(name: '_path') Element pathElement,
   }) = _MeasureStratifier;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MeasureStratifier.fromYaml(dynamic yaml) => yaml is String
+      ? MeasureStratifier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MeasureStratifier.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory MeasureStratifier.fromJson(Map<String, dynamic> json) =>
       _$MeasureStratifierFromJson(json);
@@ -150,6 +194,16 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
     String path,
     @JsonKey(name: '_path') Element pathElement,
   }) = _MeasureSupplementalData;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MeasureSupplementalData.fromYaml(dynamic yaml) => yaml is String
+      ? MeasureSupplementalData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MeasureSupplementalData.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
       _$MeasureSupplementalDataFromJson(json);
@@ -185,6 +239,16 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
     Reference evaluatedResources,
   }) = _MeasureReport;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MeasureReport.fromYaml(dynamic yaml) => yaml is String
+      ? MeasureReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MeasureReport.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory MeasureReport.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportFromJson(json);
 }
@@ -199,6 +263,16 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
     @JsonKey(name: '_measureScore') Element measureScoreElement,
     List<MeasureReportStratifier> stratifier,
   }) = _MeasureReportGroup;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MeasureReportGroup.fromYaml(dynamic yaml) => yaml is String
+      ? MeasureReportGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MeasureReportGroup.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportGroupFromJson(json);
@@ -215,6 +289,16 @@ abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
     Reference patients,
   }) = _MeasureReportPopulation;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MeasureReportPopulation.fromYaml(dynamic yaml) => yaml is String
+      ? MeasureReportPopulation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MeasureReportPopulation.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportPopulationFromJson(json);
 }
@@ -226,6 +310,16 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
     Identifier identifier,
     List<MeasureReportStratum> stratum,
   }) = _MeasureReportStratifier;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MeasureReportStratifier.fromYaml(dynamic yaml) => yaml is String
+      ? MeasureReportStratifier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MeasureReportStratifier.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportStratifierFromJson(json);
@@ -242,6 +336,16 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
     @JsonKey(name: '_measureScore') Element measureScoreElement,
   }) = _MeasureReportStratum;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MeasureReportStratum.fromYaml(dynamic yaml) => yaml is String
+      ? MeasureReportStratum.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MeasureReportStratum.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportStratumFromJson(json);
 }
@@ -256,6 +360,17 @@ abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
     @JsonKey(name: '_count') Element countElement,
     Reference patients,
   }) = _MeasureReportPopulation1;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MeasureReportPopulation1.fromYaml(dynamic yaml) => yaml is String
+      ? MeasureReportPopulation1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MeasureReportPopulation1.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportPopulation1FromJson(json);

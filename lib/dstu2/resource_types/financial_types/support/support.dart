@@ -1,5 +1,9 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'dart:convert';
 // import 'package:flutter/foundation.dart';
+
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 
 import '../../../../dstu2.dart';
 
@@ -41,6 +45,16 @@ abstract class Coverage with Resource implements _$Coverage {
     List<Reference> contract,
   }) = _Coverage;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Coverage.fromYaml(dynamic yaml) => yaml is String
+      ? Coverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Coverage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Coverage.fromJson(Map<String, dynamic> json) =>
       _$CoverageFromJson(json);
 }
@@ -71,6 +85,16 @@ abstract class EligibilityRequest
     Reference provider,
     Reference organization,
   }) = _EligibilityRequest;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory EligibilityRequest.fromYaml(dynamic yaml) => yaml is String
+      ? EligibilityRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? EligibilityRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory EligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$EligibilityRequestFromJson(json);
@@ -109,6 +133,16 @@ abstract class EligibilityResponse
     Reference requestOrganization,
   }) = _EligibilityResponse;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory EligibilityResponse.fromYaml(dynamic yaml) => yaml is String
+      ? EligibilityResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? EligibilityResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseFromJson(json);
 }
@@ -140,6 +174,16 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
     @JsonKey(required: true) @required Reference coverage,
     @JsonKey(required: true) @required Coding relationship,
   }) = _EnrollmentRequest;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
+      ? EnrollmentRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? EnrollmentRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentRequestFromJson(json);
@@ -177,6 +221,16 @@ abstract class EnrollmentResponse
     Reference requestProvider,
     Reference requestOrganization,
   }) = _EnrollmentResponse;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String
+      ? EnrollmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? EnrollmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentResponseFromJson(json);

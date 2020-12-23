@@ -1,5 +1,9 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'dart:convert';
 // import 'package:flutter/foundation.dart';
+
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 
 import '../../r4.dart';
 
@@ -20,6 +24,16 @@ abstract class Population implements _$Population {
     CodeableConcept physiologicalCondition,
   }) = _Population;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Population.fromYaml(dynamic yaml) => yaml is String
+      ? Population.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Population.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Population.fromJson(Map<String, dynamic> json) =>
       _$PopulationFromJson(json);
 }
@@ -36,6 +50,16 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
     @required Quantity period,
     List<CodeableConcept> specialPrecautionsForStorage,
   }) = _ProductShelfLife;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ProductShelfLife.fromYaml(dynamic yaml) => yaml is String
+      ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ProductShelfLife.fromJson(Map<String, dynamic> json) =>
       _$ProductShelfLifeFromJson(json);
@@ -64,6 +88,16 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
     CodeableConcept scoring,
   }) = _ProdCharacteristic;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ProdCharacteristic.fromYaml(dynamic yaml) => yaml is String
+      ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$ProdCharacteristicFromJson(json);
 }
@@ -82,6 +116,16 @@ abstract class MarketingStatus implements _$MarketingStatus {
     FhirDateTime restoreDate,
     @JsonKey(name: '_restoreDate') Element restoreDateElement,
   }) = _MarketingStatus;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MarketingStatus.fromYaml(dynamic yaml) => yaml is String
+      ? MarketingStatus.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MarketingStatus.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory MarketingStatus.fromJson(Map<String, dynamic> json) =>
       _$MarketingStatusFromJson(json);
@@ -104,6 +148,16 @@ abstract class SubstanceAmount implements _$SubstanceAmount {
     SubstanceAmountReferenceRange referenceRange,
   }) = _SubstanceAmount;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SubstanceAmount.fromYaml(dynamic yaml) => yaml is String
+      ? SubstanceAmount.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SubstanceAmount.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory SubstanceAmount.fromJson(Map<String, dynamic> json) =>
       _$SubstanceAmountFromJson(json);
 }
@@ -119,6 +173,17 @@ abstract class SubstanceAmountReferenceRange
     Quantity lowLimit,
     Quantity highLimit,
   }) = _SubstanceAmountReferenceRange;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SubstanceAmountReferenceRange.fromYaml(dynamic yaml) => yaml is String
+      ? SubstanceAmountReferenceRange.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SubstanceAmountReferenceRange.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory SubstanceAmountReferenceRange.fromJson(Map<String, dynamic> json) =>
       _$SubstanceAmountReferenceRangeFromJson(json);

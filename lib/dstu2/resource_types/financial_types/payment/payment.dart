@@ -1,5 +1,9 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'dart:convert';
 // import 'package:flutter/foundation.dart';
+
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 
 import '../../../../dstu2.dart';
 
@@ -34,6 +38,16 @@ abstract class PaymentNotice with Resource implements _$PaymentNotice {
     Reference response,
     @JsonKey(required: true) @required Coding paymentStatus,
   }) = _PaymentNotice;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory PaymentNotice.fromYaml(dynamic yaml) => yaml is String
+      ? PaymentNotice.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? PaymentNotice.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$PaymentNoticeFromJson(json);
@@ -79,6 +93,16 @@ abstract class PaymentReconciliation
     List<PaymentReconciliationNote> note,
   }) = _PaymentReconciliation;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory PaymentReconciliation.fromYaml(dynamic yaml) => yaml is String
+      ? PaymentReconciliation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? PaymentReconciliation.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationFromJson(json);
 }
@@ -100,6 +124,17 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
     Quantity amount,
   }) = _PaymentReconciliationDetail;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory PaymentReconciliationDetail.fromYaml(dynamic yaml) => yaml is String
+      ? PaymentReconciliationDetail.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? PaymentReconciliationDetail.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationDetailFromJson(json);
 }
@@ -116,6 +151,17 @@ abstract class PaymentReconciliationNote with _$PaymentReconciliationNote {
     String text,
     @JsonKey(name: '_text') Element textElement,
   }) = _PaymentReconciliationNote;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory PaymentReconciliationNote.fromYaml(dynamic yaml) => yaml is String
+      ? PaymentReconciliationNote.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? PaymentReconciliationNote.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationNoteFromJson(json);

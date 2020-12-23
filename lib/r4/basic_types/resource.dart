@@ -30,9 +30,9 @@ class Resource {
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
   static Resource fromYaml(dynamic yaml) => yaml is String
-      ? fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Resource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Resource.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
   Map<String, dynamic> toJson() {

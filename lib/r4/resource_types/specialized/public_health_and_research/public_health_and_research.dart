@@ -1,5 +1,9 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'dart:convert';
 // import 'package:flutter/foundation.dart';
+
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 
 import '../../../../r4.dart';
 
@@ -52,6 +56,16 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
     List<ResearchStudyObjective> objective,
   }) = _ResearchStudy;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ResearchStudy.fromYaml(dynamic yaml) => yaml is String
+      ? ResearchStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ResearchStudy.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyFromJson(json);
 }
@@ -70,6 +84,16 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _ResearchStudyArm;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ResearchStudyArm.fromYaml(dynamic yaml) => yaml is String
+      ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyArmFromJson(json);
 }
@@ -85,6 +109,16 @@ abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
     @JsonKey(name: '_name') Element nameElement,
     CodeableConcept type,
   }) = _ResearchStudyObjective;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ResearchStudyObjective.fromYaml(dynamic yaml) => yaml is String
+      ? ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyObjectiveFromJson(json);
@@ -118,6 +152,16 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
     @JsonKey(name: '_actualArm') Element actualArmElement,
     Reference consent,
   }) = _ResearchSubject;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ResearchSubject.fromYaml(dynamic yaml) => yaml is String
+      ? ResearchSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ResearchSubject.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
       _$ResearchSubjectFromJson(json);

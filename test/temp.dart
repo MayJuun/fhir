@@ -1,21 +1,9 @@
 import 'dart:convert';
 
 import 'package:fhir/r4.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
 
 void main() {
-  final jsonString = '''{
-  "resourceType": "Patient",
-  "name": 
-  [
-    {
-      "given": 
-      	["Grey"],
-      "family": "Faulkenberry"
-    }
-  ]
-}''';
   final yamlString = '''resourceType: Patient
 name:
 - given:

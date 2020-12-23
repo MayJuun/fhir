@@ -1,3 +1,8 @@
+import 'dart:convert';
+// import 'package:flutter/foundation.dart';
+
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 import 'package:dartz/dartz.dart';
 
 import 'dates.dart';
@@ -18,5 +23,15 @@ class FhirDateTime extends Dates {
   }
 
   FhirDateTime._(this.value, this.format);
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory FhirDateTime.fromYaml(dynamic yaml) => yaml is String
+      ? FhirDateTime.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? FhirDateTime.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory FhirDateTime.fromJson(String json) => FhirDateTime(json);
 }

@@ -1,3 +1,8 @@
+import 'dart:convert';
+// import 'package:flutter/foundation.dart';
+
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 import 'package:dartz/dartz.dart';
 
 import 'primitive_failures.dart';
@@ -15,6 +20,16 @@ class Decimal extends PrimitiveObject<double> {
   }
 
   const Decimal._(this.value);
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Decimal.fromYaml(dynamic yaml) => yaml is String
+      ? Decimal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Decimal.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory Decimal.fromJson(dynamic json) => Decimal(json);
 

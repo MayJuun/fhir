@@ -1,3 +1,8 @@
+import 'dart:convert';
+// import 'package:flutter/foundation.dart';
+
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 import 'package:dartz/dartz.dart';
 
 import 'primitive_failures.dart';
@@ -14,6 +19,16 @@ class Boolean extends PrimitiveObject<bool> {
     );
   }
   const Boolean._(this.value);
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Boolean.fromYaml(dynamic yaml) => yaml is String
+      ? Boolean.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Boolean.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory Boolean.fromJson(dynamic json) => Boolean(json);
 

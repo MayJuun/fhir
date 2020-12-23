@@ -1,5 +1,9 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'dart:convert';
 // import 'package:flutter/foundation.dart';
+
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 
 import '../../r5.dart';
 
@@ -15,6 +19,16 @@ abstract class BackboneType implements _$BackboneType {
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
   }) = _BackboneType;
+
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory BackboneType.fromYaml(dynamic yaml) => yaml is String
+  //     ? BackboneType.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? BackboneType.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
 
   factory BackboneType.fromJson(Map<String, dynamic> json) =>
       _$BackboneTypeFromJson(json);
@@ -34,6 +48,16 @@ abstract class Annotation implements _$Annotation {
     Markdown text,
     @JsonKey(name: '_text') Element textElement,
   }) = _Annotation;
+
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory Annotation.fromYaml(dynamic yaml) => yaml is String
+  //     ? Annotation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? Annotation.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
 
   factory Annotation.fromJson(Map<String, dynamic> json) =>
       _$AnnotationFromJson(json);
@@ -73,6 +97,16 @@ abstract class Attachment implements _$Attachment {
     @JsonKey(name: '_pages') Element pagesElement,
   }) = _Attachment;
 
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory Attachment.fromYaml(dynamic yaml) => yaml is String
+  //     ? Attachment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? Attachment.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
+
   factory Attachment.fromJson(Map<String, dynamic> json) =>
       _$AttachmentFromJson(json);
 }
@@ -94,6 +128,16 @@ abstract class Identifier implements _$Identifier {
     Reference assigner,
   }) = _Identifier;
 
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory Identifier.fromYaml(dynamic yaml) => yaml is String
+  //     ? Identifier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? Identifier.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
+
   factory Identifier.fromJson(Map<String, dynamic> json) =>
       _$IdentifierFromJson(json);
 }
@@ -108,6 +152,16 @@ abstract class CodeableConcept implements _$CodeableConcept {
     String text,
     @JsonKey(name: '_text') Element textElement,
   }) = _CodeableConcept;
+
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory CodeableConcept.fromYaml(dynamic yaml) => yaml is String
+  //     ? CodeableConcept.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? CodeableConcept.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
 
   factory CodeableConcept.fromJson(Map<String, dynamic> json) =>
       _$CodeableConceptFromJson(json);
@@ -131,6 +185,16 @@ abstract class Coding implements _$Coding {
     @JsonKey(name: '_userSelected') Element userSelectedElement,
   }) = _Coding;
 
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory Coding.fromYaml(dynamic yaml) => yaml is String
+  //     ? Coding.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? Coding.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
+
   factory Coding.fromJson(Map<String, dynamic> json) => _$CodingFromJson(json);
 }
 
@@ -152,6 +216,16 @@ abstract class Quantity implements _$Quantity {
     Code code,
     @JsonKey(name: '_code') Element codeElement,
   }) = _Quantity;
+
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory Quantity.fromYaml(dynamic yaml) => yaml is String
+  //     ? Quantity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? Quantity.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
 
   factory Quantity.fromJson(Map<String, dynamic> json) =>
       _$QuantityFromJson(json);
@@ -176,6 +250,16 @@ abstract class FhirDuration implements _$FhirDuration {
     @JsonKey(name: '_code') Element codeElement,
   }) = _FhirDuration;
 
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory FhirDuration.fromYaml(dynamic yaml) => yaml is String
+  //     ? FhirDuration.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? FhirDuration.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
+
   factory FhirDuration.fromJson(Map<String, dynamic> json) =>
       _$FhirDurationFromJson(json);
 }
@@ -198,6 +282,16 @@ abstract class Distance implements _$Distance {
     Code code,
     @JsonKey(name: '_code') Element codeElement,
   }) = _Distance;
+
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory Distance.fromYaml(dynamic yaml) => yaml is String
+  //     ? Distance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? Distance.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
 
   factory Distance.fromJson(Map<String, dynamic> json) =>
       _$DistanceFromJson(json);
@@ -222,6 +316,16 @@ abstract class Count implements _$Count {
     @JsonKey(name: '_code') Element codeElement,
   }) = _Count;
 
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory Count.fromYaml(dynamic yaml) => yaml is String
+  //     ? Count.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? Count.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
+
   factory Count.fromJson(Map<String, dynamic> json) => _$CountFromJson(json);
 }
 
@@ -236,6 +340,16 @@ abstract class Money implements _$Money {
     Code currency,
     @JsonKey(name: '_currency') Element currencyElement,
   }) = _Money;
+
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory Money.fromYaml(dynamic yaml) => yaml is String
+  //     ? Money.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? Money.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
 
   factory Money.fromJson(Map<String, dynamic> json) => _$MoneyFromJson(json);
 }
@@ -258,6 +372,16 @@ abstract class Age implements _$Age {
     @JsonKey(name: '_code') Element codeElement,
   }) = _Age;
 
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory Age.fromYaml(dynamic yaml) => yaml is String
+  //     ? Age.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? Age.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
+
   factory Age.fromJson(Map<String, dynamic> json) => _$AgeFromJson(json);
 }
 
@@ -270,6 +394,16 @@ abstract class Range implements _$Range {
     Quantity low,
     Quantity high,
   }) = _Range;
+
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory Range.fromYaml(dynamic yaml) => yaml is String
+  //     ? Range.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? Range.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
 
   factory Range.fromJson(Map<String, dynamic> json) => _$RangeFromJson(json);
 }
@@ -286,6 +420,16 @@ abstract class Period implements _$Period {
     @JsonKey(name: '_end') Element endElement,
   }) = _Period;
 
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory Period.fromYaml(dynamic yaml) => yaml is String
+  //     ? Period.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? Period.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
+
   factory Period.fromJson(Map<String, dynamic> json) => _$PeriodFromJson(json);
 }
 
@@ -298,6 +442,16 @@ abstract class Ratio implements _$Ratio {
     Quantity numerator,
     Quantity denominator,
   }) = _Ratio;
+
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory Ratio.fromYaml(dynamic yaml) => yaml is String
+  //     ? Ratio.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? Ratio.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
 
   factory Ratio.fromJson(Map<String, dynamic> json) => _$RatioFromJson(json);
 }
@@ -323,6 +477,16 @@ abstract class SampledData implements _$SampledData {
     @JsonKey(name: '_data') Element dataElement,
   }) = _SampledData;
 
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory SampledData.fromYaml(dynamic yaml) => yaml is String
+  //     ? SampledData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? SampledData.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
+
   factory SampledData.fromJson(Map<String, dynamic> json) =>
       _$SampledDataFromJson(json);
 }
@@ -345,6 +509,16 @@ abstract class Signature implements _$Signature {
     Base64Binary data,
     @JsonKey(name: '_data') Element dataElement,
   }) = _Signature;
+
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory Signature.fromYaml(dynamic yaml) => yaml is String
+  //     ? Signature.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? Signature.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
 
   factory Signature.fromJson(Map<String, dynamic> json) =>
       _$SignatureFromJson(json);
@@ -370,6 +544,16 @@ abstract class HumanName implements _$HumanName {
     @JsonKey(name: '_suffix') List<Element> suffixElement,
     Period period,
   }) = _HumanName;
+
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory HumanName.fromYaml(dynamic yaml) => yaml is String
+  //     ? HumanName.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? HumanName.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
 
   factory HumanName.fromJson(Map<String, dynamic> json) =>
       _$HumanNameFromJson(json);
@@ -402,6 +586,16 @@ abstract class Address implements _$Address {
     Period period,
   }) = _Address;
 
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory Address.fromYaml(dynamic yaml) => yaml is String
+  //     ? Address.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? Address.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
+
   factory Address.fromJson(Map<String, dynamic> json) =>
       _$AddressFromJson(json);
 }
@@ -424,6 +618,16 @@ abstract class ContactPoint implements _$ContactPoint {
     Period period,
   }) = _ContactPoint;
 
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory ContactPoint.fromYaml(dynamic yaml) => yaml is String
+  //     ? ContactPoint.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? ContactPoint.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
+
   factory ContactPoint.fromJson(Map<String, dynamic> json) =>
       _$ContactPointFromJson(json);
 }
@@ -440,6 +644,16 @@ abstract class Timing implements _$Timing {
     TimingRepeat repeat,
     CodeableConcept code,
   }) = _Timing;
+
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory Timing.fromYaml(dynamic yaml) => yaml is String
+  //     ? Timing.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? Timing.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
 
   factory Timing.fromJson(Map<String, dynamic> json) => _$TimingFromJson(json);
 }
@@ -485,6 +699,16 @@ abstract class TimingRepeat implements _$TimingRepeat {
     UnsignedInt offset,
     @JsonKey(name: '_offset') Element offsetElement,
   }) = _TimingRepeat;
+
+  // String toYamlString() => json2yaml(toJson());
+
+  // YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  // factory TimingRepeat.fromYaml(dynamic yaml) => yaml is String
+  //     ? TimingRepeat.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  //     : yaml is YamlMap
+  //         ? TimingRepeat.fromJson(jsonDecode(jsonEncode(yaml)))
+  //         : null;
 
   factory TimingRepeat.fromJson(Map<String, dynamic> json) =>
       _$TimingRepeatFromJson(json);

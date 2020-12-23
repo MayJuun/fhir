@@ -1,5 +1,9 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'dart:convert';
 // import 'package:flutter/foundation.dart';
+
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 
 import '../../../../dstu2.dart';
 
@@ -40,6 +44,16 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
     Period period,
   }) = _ProcessRequest;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ProcessRequest.fromYaml(dynamic yaml) => yaml is String
+      ? ProcessRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ProcessRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestFromJson(json);
 }
@@ -53,6 +67,16 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
     List<FhirExtension> modifierExtension,
     @JsonKey(required: true) @required Integer sequenceLinkId,
   }) = _ProcessRequestItem;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ProcessRequestItem.fromYaml(dynamic yaml) => yaml is String
+      ? ProcessRequestItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ProcessRequestItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestItemFromJson(json);
@@ -86,6 +110,16 @@ abstract class ProcessResponse with Resource implements _$ProcessResponse {
     List<Coding> error,
   }) = _ProcessResponse;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ProcessResponse.fromYaml(dynamic yaml) => yaml is String
+      ? ProcessResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ProcessResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseFromJson(json);
 }
@@ -100,6 +134,16 @@ abstract class ProcessResponseNotes with _$ProcessResponseNotes {
     Coding type,
     String text,
   }) = _ProcessResponseNotes;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ProcessResponseNotes.fromYaml(dynamic yaml) => yaml is String
+      ? ProcessResponseNotes.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ProcessResponseNotes.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ProcessResponseNotes.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseNotesFromJson(json);
@@ -135,6 +179,16 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
     SupplyRequestWhen when,
   }) = _SupplyRequest;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SupplyRequest.fromYaml(dynamic yaml) => yaml is String
+      ? SupplyRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SupplyRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestFromJson(json);
 }
@@ -149,6 +203,16 @@ abstract class SupplyRequestWhen with _$SupplyRequestWhen {
     CodeableConcept code,
     Timing schedule,
   }) = _SupplyRequestWhen;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SupplyRequestWhen.fromYaml(dynamic yaml) => yaml is String
+      ? SupplyRequestWhen.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SupplyRequestWhen.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory SupplyRequestWhen.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestWhenFromJson(json);
@@ -183,6 +247,16 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
     Reference destination,
     List<Reference> receiver,
   }) = _SupplyDelivery;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SupplyDelivery.fromYaml(dynamic yaml) => yaml is String
+      ? SupplyDelivery.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SupplyDelivery.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliveryFromJson(json);

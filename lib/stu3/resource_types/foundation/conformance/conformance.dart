@@ -1,5 +1,9 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'dart:convert';
 // import 'package:flutter/foundation.dart';
+
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 
 import '../../../../stu3.dart';
 
@@ -72,6 +76,16 @@ abstract class CapabilityStatement
     List<CapabilityStatementDocument> document,
   }) = _CapabilityStatement;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatement.fromYaml(dynamic yaml) => yaml is String
+      ? CapabilityStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CapabilityStatement.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementFromJson(json);
 }
@@ -89,6 +103,17 @@ abstract class CapabilityStatementSoftware
     @JsonKey(name: '_releaseDate') Element releaseDateElement,
   }) = _CapabilityStatementSoftware;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatementSoftware.fromYaml(dynamic yaml) => yaml is String
+      ? CapabilityStatementSoftware.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CapabilityStatementSoftware.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSoftwareFromJson(json);
 }
@@ -103,6 +128,19 @@ abstract class CapabilityStatementImplementation
     String url,
     @JsonKey(name: '_url') Element urlElement,
   }) = _CapabilityStatementImplementation;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatementImplementation.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? CapabilityStatementImplementation.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? CapabilityStatementImplementation.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory CapabilityStatementImplementation.fromJson(
           Map<String, dynamic> json) =>
@@ -126,6 +164,16 @@ abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
     @JsonKey(name: '_compartment') List<Element> compartmentElement,
   }) = _CapabilityStatementRest;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatementRest.fromYaml(dynamic yaml) => yaml is String
+      ? CapabilityStatementRest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CapabilityStatementRest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CapabilityStatementRest.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementRestFromJson(json);
 }
@@ -144,6 +192,17 @@ abstract class CapabilityStatementSecurity
     List<CapabilityStatementCertificate> certificate,
   }) = _CapabilityStatementSecurity;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatementSecurity.fromYaml(dynamic yaml) => yaml is String
+      ? CapabilityStatementSecurity.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CapabilityStatementSecurity.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSecurityFromJson(json);
 }
@@ -158,6 +217,19 @@ abstract class CapabilityStatementCertificate
     String blob,
     @JsonKey(name: '_blob') Element blobElement,
   }) = _CapabilityStatementCertificate;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatementCertificate.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? CapabilityStatementCertificate.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? CapabilityStatementCertificate.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory CapabilityStatementCertificate.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementCertificateFromJson(json);
@@ -197,6 +269,17 @@ abstract class CapabilityStatementResource
     List<CapabilityStatementSearchParam> searchParam,
   }) = _CapabilityStatementResource;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatementResource.fromYaml(dynamic yaml) => yaml is String
+      ? CapabilityStatementResource.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CapabilityStatementResource.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CapabilityStatementResource.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementResourceFromJson(json);
 }
@@ -211,6 +294,19 @@ abstract class CapabilityStatementInteraction
     String documentation,
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementInteraction;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatementInteraction.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? CapabilityStatementInteraction.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? CapabilityStatementInteraction.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteractionFromJson(json);
@@ -231,6 +327,19 @@ abstract class CapabilityStatementSearchParam
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementSearchParam;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatementSearchParam.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? CapabilityStatementSearchParam.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? CapabilityStatementSearchParam.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSearchParamFromJson(json);
 }
@@ -246,6 +355,19 @@ abstract class CapabilityStatementInteraction1
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementInteraction1;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatementInteraction1.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? CapabilityStatementInteraction1.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? CapabilityStatementInteraction1.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteraction1FromJson(json);
 }
@@ -259,6 +381,17 @@ abstract class CapabilityStatementOperation
     @JsonKey(name: '_name') Element nameElement,
     @required Reference definition,
   }) = _CapabilityStatementOperation;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatementOperation.fromYaml(dynamic yaml) => yaml is String
+      ? CapabilityStatementOperation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CapabilityStatementOperation.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementOperationFromJson(json);
@@ -278,6 +411,17 @@ abstract class CapabilityStatementMessaging
     List<CapabilityStatementEvent> event,
   }) = _CapabilityStatementMessaging;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatementMessaging.fromYaml(dynamic yaml) => yaml is String
+      ? CapabilityStatementMessaging.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CapabilityStatementMessaging.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementMessagingFromJson(json);
 }
@@ -292,6 +436,17 @@ abstract class CapabilityStatementEndpoint
     @JsonKey(name: '_address') Element addressElement,
   }) = _CapabilityStatementEndpoint;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatementEndpoint.fromYaml(dynamic yaml) => yaml is String
+      ? CapabilityStatementEndpoint.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CapabilityStatementEndpoint.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementEndpointFromJson(json);
 }
@@ -305,6 +460,19 @@ abstract class CapabilityStatementSupportedMessage
     @JsonKey(name: '_mode') Element modeElement,
     @required Reference definition,
   }) = _CapabilityStatementSupportedMessage;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatementSupportedMessage.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? CapabilityStatementSupportedMessage.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? CapabilityStatementSupportedMessage.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory CapabilityStatementSupportedMessage.fromJson(
           Map<String, dynamic> json) =>
@@ -328,6 +496,17 @@ abstract class CapabilityStatementEvent implements _$CapabilityStatementEvent {
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementEvent;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatementEvent.fromYaml(dynamic yaml) => yaml is String
+      ? CapabilityStatementEvent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CapabilityStatementEvent.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CapabilityStatementEvent.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementEventFromJson(json);
 }
@@ -343,6 +522,17 @@ abstract class CapabilityStatementDocument
     @JsonKey(name: '_documentation') Element documentationElement,
     @required Reference profile,
   }) = _CapabilityStatementDocument;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatementDocument.fromYaml(dynamic yaml) => yaml is String
+      ? CapabilityStatementDocument.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CapabilityStatementDocument.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementDocumentFromJson(json);
@@ -395,6 +585,16 @@ abstract class CompartmentDefinition
     List<CompartmentDefinitionResource> resource,
   }) = _CompartmentDefinition;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CompartmentDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? CompartmentDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CompartmentDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CompartmentDefinition.fromJson(Map<String, dynamic> json) =>
       _$CompartmentDefinitionFromJson(json);
 }
@@ -411,6 +611,17 @@ abstract class CompartmentDefinitionResource
     String documentation,
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CompartmentDefinitionResource;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CompartmentDefinitionResource.fromYaml(dynamic yaml) => yaml is String
+      ? CompartmentDefinitionResource.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CompartmentDefinitionResource.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory CompartmentDefinitionResource.fromJson(Map<String, dynamic> json) =>
       _$CompartmentDefinitionResourceFromJson(json);
@@ -459,6 +670,16 @@ abstract class DataElement with Resource implements _$DataElement {
     @required List<ElementDefinition> element,
   }) = _DataElement;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DataElement.fromYaml(dynamic yaml) => yaml is String
+      ? DataElement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DataElement.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory DataElement.fromJson(Map<String, dynamic> json) =>
       _$DataElementFromJson(json);
 }
@@ -476,6 +697,16 @@ abstract class DataElementMapping implements _$DataElementMapping {
     String comment,
     @JsonKey(name: '_comment') Element commentElement,
   }) = _DataElementMapping;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DataElementMapping.fromYaml(dynamic yaml) => yaml is String
+      ? DataElementMapping.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DataElementMapping.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory DataElementMapping.fromJson(Map<String, dynamic> json) =>
       _$DataElementMappingFromJson(json);
@@ -524,6 +755,16 @@ abstract class GraphDefinition with Resource implements _$GraphDefinition {
     List<GraphDefinitionLink> link,
   }) = _GraphDefinition;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory GraphDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? GraphDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? GraphDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory GraphDefinition.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionFromJson(json);
 }
@@ -545,6 +786,16 @@ abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
     @required List<GraphDefinitionTarget> target,
   }) = _GraphDefinitionLink;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory GraphDefinitionLink.fromYaml(dynamic yaml) => yaml is String
+      ? GraphDefinitionLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? GraphDefinitionLink.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory GraphDefinitionLink.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionLinkFromJson(json);
 }
@@ -560,6 +811,16 @@ abstract class GraphDefinitionTarget implements _$GraphDefinitionTarget {
     List<GraphDefinitionCompartment> compartment,
     List<GraphDefinitionLink> link,
   }) = _GraphDefinitionTarget;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory GraphDefinitionTarget.fromYaml(dynamic yaml) => yaml is String
+      ? GraphDefinitionTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? GraphDefinitionTarget.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory GraphDefinitionTarget.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionTargetFromJson(json);
@@ -579,6 +840,17 @@ abstract class GraphDefinitionCompartment
     String description,
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _GraphDefinitionCompartment;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory GraphDefinitionCompartment.fromYaml(dynamic yaml) => yaml is String
+      ? GraphDefinitionCompartment.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? GraphDefinitionCompartment.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionCompartmentFromJson(json);
@@ -632,6 +904,16 @@ abstract class ImplementationGuide
     ImplementationGuidePage page,
   }) = _ImplementationGuide;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ImplementationGuide.fromYaml(dynamic yaml) => yaml is String
+      ? ImplementationGuide.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ImplementationGuide.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideFromJson(json);
 }
@@ -646,6 +928,17 @@ abstract class ImplementationGuideDependency
     String uri,
     @JsonKey(name: '_uri') Element uriElement,
   }) = _ImplementationGuideDependency;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ImplementationGuideDependency.fromYaml(dynamic yaml) => yaml is String
+      ? ImplementationGuideDependency.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ImplementationGuideDependency.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideDependencyFromJson(json);
@@ -662,6 +955,17 @@ abstract class ImplementationGuidePackage
     @JsonKey(name: '_description') Element descriptionElement,
     @required List<ImplementationGuideResource> resource,
   }) = _ImplementationGuidePackage;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ImplementationGuidePackage.fromYaml(dynamic yaml) => yaml is String
+      ? ImplementationGuidePackage.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ImplementationGuidePackage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePackageFromJson(json);
@@ -686,6 +990,17 @@ abstract class ImplementationGuideResource
     Reference exampleFor,
   }) = _ImplementationGuideResource;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ImplementationGuideResource.fromYaml(dynamic yaml) => yaml is String
+      ? ImplementationGuideResource.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ImplementationGuideResource.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideResourceFromJson(json);
 }
@@ -699,6 +1014,17 @@ abstract class ImplementationGuideGlobal
     @JsonKey(name: '_type') Element typeElement,
     @required Reference profile,
   }) = _ImplementationGuideGlobal;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ImplementationGuideGlobal.fromYaml(dynamic yaml) => yaml is String
+      ? ImplementationGuideGlobal.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ImplementationGuideGlobal.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideGlobalFromJson(json);
@@ -722,6 +1048,16 @@ abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
     @JsonKey(name: '_format') Element formatElement,
     List<ImplementationGuidePage> page,
   }) = _ImplementationGuidePage;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ImplementationGuidePage.fromYaml(dynamic yaml) => yaml is String
+      ? ImplementationGuidePage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ImplementationGuidePage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePageFromJson(json);
@@ -780,6 +1116,16 @@ abstract class MessageDefinition with Resource implements _$MessageDefinition {
     List<MessageDefinitionAllowedResponse> allowedResponse,
   }) = _MessageDefinition;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MessageDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? MessageDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MessageDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory MessageDefinition.fromJson(Map<String, dynamic> json) =>
       _$MessageDefinitionFromJson(json);
 }
@@ -797,6 +1143,16 @@ abstract class MessageDefinitionFocus implements _$MessageDefinitionFocus {
     @JsonKey(name: '_max') Element maxElement,
   }) = _MessageDefinitionFocus;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MessageDefinitionFocus.fromYaml(dynamic yaml) => yaml is String
+      ? MessageDefinitionFocus.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MessageDefinitionFocus.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory MessageDefinitionFocus.fromJson(Map<String, dynamic> json) =>
       _$MessageDefinitionFocusFromJson(json);
 }
@@ -810,6 +1166,19 @@ abstract class MessageDefinitionAllowedResponse
     String situation,
     @JsonKey(name: '_situation') Element situationElement,
   }) = _MessageDefinitionAllowedResponse;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MessageDefinitionAllowedResponse.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? MessageDefinitionAllowedResponse.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? MessageDefinitionAllowedResponse.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory MessageDefinitionAllowedResponse.fromJson(
           Map<String, dynamic> json) =>
@@ -875,6 +1244,16 @@ abstract class OperationDefinition
     List<OperationDefinitionOverload> overload,
   }) = _OperationDefinition;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory OperationDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? OperationDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? OperationDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionFromJson(json);
 }
@@ -903,6 +1282,17 @@ abstract class OperationDefinitionParameter
     @JsonKey(name: 'part') List<OperationDefinitionParameter> part_,
   }) = _OperationDefinitionParameter;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory OperationDefinitionParameter.fromYaml(dynamic yaml) => yaml is String
+      ? OperationDefinitionParameter.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? OperationDefinitionParameter.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionParameterFromJson(json);
 }
@@ -920,6 +1310,17 @@ abstract class OperationDefinitionBinding
     Reference valueSetReference,
   }) = _OperationDefinitionBinding;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory OperationDefinitionBinding.fromYaml(dynamic yaml) => yaml is String
+      ? OperationDefinitionBinding.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? OperationDefinitionBinding.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionBindingFromJson(json);
 }
@@ -934,6 +1335,17 @@ abstract class OperationDefinitionOverload
     String comment,
     @JsonKey(name: '_comment') Element commentElement,
   }) = _OperationDefinitionOverload;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory OperationDefinitionOverload.fromYaml(dynamic yaml) => yaml is String
+      ? OperationDefinitionOverload.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? OperationDefinitionOverload.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionOverloadFromJson(json);
@@ -1000,6 +1412,16 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     List<SearchParameterComponent> component,
   }) = _SearchParameter;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SearchParameter.fromYaml(dynamic yaml) => yaml is String
+      ? SearchParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SearchParameter.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterFromJson(json);
 }
@@ -1012,6 +1434,17 @@ abstract class SearchParameterComponent implements _$SearchParameterComponent {
     String expression,
     @JsonKey(name: '_expression') Element expressionElement,
   }) = _SearchParameterComponent;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SearchParameterComponent.fromYaml(dynamic yaml) => yaml is String
+      ? SearchParameterComponent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SearchParameterComponent.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory SearchParameterComponent.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterComponentFromJson(json);
@@ -1084,6 +1517,16 @@ abstract class StructureDefinition
     StructureDefinitionDifferential differential,
   }) = _StructureDefinition;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory StructureDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? StructureDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? StructureDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionFromJson(json);
 }
@@ -1103,6 +1546,17 @@ abstract class StructureDefinitionMapping
     @JsonKey(name: '_comment') Element commentElement,
   }) = _StructureDefinitionMapping;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory StructureDefinitionMapping.fromYaml(dynamic yaml) => yaml is String
+      ? StructureDefinitionMapping.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? StructureDefinitionMapping.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionMappingFromJson(json);
 }
@@ -1115,6 +1569,17 @@ abstract class StructureDefinitionSnapshot
     @required List<ElementDefinition> element,
   }) = _StructureDefinitionSnapshot;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory StructureDefinitionSnapshot.fromYaml(dynamic yaml) => yaml is String
+      ? StructureDefinitionSnapshot.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? StructureDefinitionSnapshot.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionSnapshotFromJson(json);
 }
@@ -1126,6 +1591,19 @@ abstract class StructureDefinitionDifferential
   factory StructureDefinitionDifferential({
     @required List<ElementDefinition> element,
   }) = _StructureDefinitionDifferential;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory StructureDefinitionDifferential.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? StructureDefinitionDifferential.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? StructureDefinitionDifferential.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionDifferentialFromJson(json);
@@ -1178,6 +1656,16 @@ abstract class StructureMap with Resource implements _$StructureMap {
     @required List<StructureMapGroup> group,
   }) = _StructureMap;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory StructureMap.fromYaml(dynamic yaml) => yaml is String
+      ? StructureMap.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? StructureMap.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory StructureMap.fromJson(Map<String, dynamic> json) =>
       _$StructureMapFromJson(json);
 }
@@ -1195,6 +1683,16 @@ abstract class StructureMapStructure implements _$StructureMapStructure {
     String documentation,
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _StructureMapStructure;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory StructureMapStructure.fromYaml(dynamic yaml) => yaml is String
+      ? StructureMapStructure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? StructureMapStructure.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory StructureMapStructure.fromJson(Map<String, dynamic> json) =>
       _$StructureMapStructureFromJson(json);
@@ -1216,6 +1714,16 @@ abstract class StructureMapGroup implements _$StructureMapGroup {
     @required List<StructureMapRule> rule,
   }) = _StructureMapGroup;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory StructureMapGroup.fromYaml(dynamic yaml) => yaml is String
+      ? StructureMapGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? StructureMapGroup.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory StructureMapGroup.fromJson(Map<String, dynamic> json) =>
       _$StructureMapGroupFromJson(json);
 }
@@ -1234,6 +1742,16 @@ abstract class StructureMapInput implements _$StructureMapInput {
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _StructureMapInput;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory StructureMapInput.fromYaml(dynamic yaml) => yaml is String
+      ? StructureMapInput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? StructureMapInput.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory StructureMapInput.fromJson(Map<String, dynamic> json) =>
       _$StructureMapInputFromJson(json);
 }
@@ -1251,6 +1769,16 @@ abstract class StructureMapRule implements _$StructureMapRule {
     String documentation,
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _StructureMapRule;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory StructureMapRule.fromYaml(dynamic yaml) => yaml is String
+      ? StructureMapRule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? StructureMapRule.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory StructureMapRule.fromJson(Map<String, dynamic> json) =>
       _$StructureMapRuleFromJson(json);
@@ -1353,6 +1881,16 @@ abstract class StructureMapSource implements _$StructureMapSource {
     @JsonKey(name: '_check') Element checkElement,
   }) = _StructureMapSource;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory StructureMapSource.fromYaml(dynamic yaml) => yaml is String
+      ? StructureMapSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? StructureMapSource.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory StructureMapSource.fromJson(Map<String, dynamic> json) =>
       _$StructureMapSourceFromJson(json);
 }
@@ -1378,6 +1916,16 @@ abstract class StructureMapTarget implements _$StructureMapTarget {
     List<StructureMapParameter> parameter,
   }) = _StructureMapTarget;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory StructureMapTarget.fromYaml(dynamic yaml) => yaml is String
+      ? StructureMapTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? StructureMapTarget.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory StructureMapTarget.fromJson(Map<String, dynamic> json) =>
       _$StructureMapTargetFromJson(json);
 }
@@ -1398,6 +1946,16 @@ abstract class StructureMapParameter implements _$StructureMapParameter {
     @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
   }) = _StructureMapParameter;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory StructureMapParameter.fromYaml(dynamic yaml) => yaml is String
+      ? StructureMapParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? StructureMapParameter.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory StructureMapParameter.fromJson(Map<String, dynamic> json) =>
       _$StructureMapParameterFromJson(json);
 }
@@ -1411,6 +1969,16 @@ abstract class StructureMapDependent implements _$StructureMapDependent {
     List<String> variable,
     @JsonKey(name: '_variable') List<Element> variableElement,
   }) = _StructureMapDependent;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory StructureMapDependent.fromYaml(dynamic yaml) => yaml is String
+      ? StructureMapDependent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? StructureMapDependent.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory StructureMapDependent.fromJson(Map<String, dynamic> json) =>
       _$StructureMapDependentFromJson(json);
