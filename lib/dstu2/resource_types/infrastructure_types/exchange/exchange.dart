@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -35,6 +39,16 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     List<Reference> data,
   }) = _MessageHeader;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MessageHeader.fromYaml(dynamic yaml) => yaml is String
+      ? MessageHeader.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MessageHeader.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory MessageHeader.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderFromJson(json);
 }
@@ -54,6 +68,16 @@ abstract class MessageHeaderResponse with _$MessageHeaderResponse {
     @JsonKey(name: '_code') Element codeElement,
     Reference details,
   }) = _MessageHeaderResponse;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MessageHeaderResponse.fromYaml(dynamic yaml) => yaml is String
+      ? MessageHeaderResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MessageHeaderResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderResponseFromJson(json);
@@ -77,6 +101,16 @@ abstract class MessageHeaderSource with _$MessageHeaderSource {
     @JsonKey(name: '_endpoint') Element endpointElement,
   }) = _MessageHeaderSource;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MessageHeaderSource.fromYaml(dynamic yaml) => yaml is String
+      ? MessageHeaderSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MessageHeaderSource.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderSourceFromJson(json);
 }
@@ -94,6 +128,17 @@ abstract class MessageHeaderDestination with _$MessageHeaderDestination {
     @JsonKey(required: true) @required FhirUri endpoint,
     @JsonKey(name: '_endpoint') Element endpointElement,
   }) = _MessageHeaderDestination;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory MessageHeaderDestination.fromYaml(dynamic yaml) => yaml is String
+      ? MessageHeaderDestination.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? MessageHeaderDestination.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderDestinationFromJson(json);
@@ -118,6 +163,16 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     @JsonKey(required: true) @required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory OperationOutcome.fromYaml(dynamic yaml) => yaml is String
+      ? OperationOutcome.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? OperationOutcome.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeFromJson(json);
 }
@@ -138,6 +193,16 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
     List<String> location,
   }) = _OperationOutcomeIssue;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory OperationOutcomeIssue.fromYaml(dynamic yaml) => yaml is String
+      ? OperationOutcomeIssue.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? OperationOutcomeIssue.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeIssueFromJson(json);
 }
@@ -155,6 +220,16 @@ abstract class Parameters with Resource implements _$Parameters {
     @JsonKey(name: '_language') Element languageElement,
     List<ParametersParameter> parameter,
   }) = _Parameters;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Parameters.fromYaml(dynamic yaml) => yaml is String
+      ? Parameters.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Parameters.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory Parameters.fromJson(Map<String, dynamic> json) =>
       _$ParametersFromJson(json);
@@ -206,6 +281,16 @@ abstract class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: 'part') List<ParametersParameter> part_,
   }) = _ParametersParameter;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ParametersParameter.fromYaml(dynamic yaml) => yaml is String
+      ? ParametersParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ParametersParameter.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
       _$ParametersParameterFromJson(json);
 }
@@ -242,6 +327,16 @@ abstract class Subscription with Resource implements _$Subscription {
     List<Coding> tag,
   }) = _Subscription;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Subscription.fromYaml(dynamic yaml) => yaml is String
+      ? Subscription.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Subscription.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Subscription.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionFromJson(json);
 }
@@ -264,6 +359,16 @@ abstract class SubscriptionChannel with _$SubscriptionChannel {
     String header,
     @JsonKey(name: '_header') List<Element> headerElement,
   }) = _SubscriptionChannel;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SubscriptionChannel.fromYaml(dynamic yaml) => yaml is String
+      ? SubscriptionChannel.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SubscriptionChannel.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionChannelFromJson(json);

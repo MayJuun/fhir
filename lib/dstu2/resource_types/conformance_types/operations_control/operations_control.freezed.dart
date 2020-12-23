@@ -2147,13 +2147,14 @@ class __$ConformanceContactCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_ConformanceContact implements _ConformanceContact {
+class _$_ConformanceContact extends _ConformanceContact {
   _$_ConformanceContact(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.name,
-      this.telecom});
+      this.telecom})
+      : super._();
 
   factory _$_ConformanceContact.fromJson(Map<String, dynamic> json) =>
       _$_$_ConformanceContactFromJson(json);
@@ -2212,7 +2213,8 @@ class _$_ConformanceContact implements _ConformanceContact {
   }
 }
 
-abstract class _ConformanceContact implements ConformanceContact {
+abstract class _ConformanceContact extends ConformanceContact {
+  _ConformanceContact._() : super._();
   factory _ConformanceContact(
       {Id id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

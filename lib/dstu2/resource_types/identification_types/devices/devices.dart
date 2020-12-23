@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -46,6 +50,16 @@ abstract class Device with Resource implements _$Device {
     @JsonKey(name: '_url') Element urlElement,
   }) = _Device;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Device.fromYaml(dynamic yaml) => yaml is String
+      ? Device.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Device.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
 }
 
@@ -76,6 +90,16 @@ abstract class DeviceComponent with Resource implements _$DeviceComponent {
     CodeableConcept languageCode,
   }) = _DeviceComponent;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DeviceComponent.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceComponent.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory DeviceComponent.fromJson(Map<String, dynamic> json) =>
       _$DeviceComponentFromJson(json);
 }
@@ -92,6 +116,19 @@ abstract class DeviceComponentProductionSpecification
     Identifier componentId,
     String productionSpec,
   }) = _DeviceComponentProductionSpecification;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DeviceComponentProductionSpecification.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? DeviceComponentProductionSpecification.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? DeviceComponentProductionSpecification.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory DeviceComponentProductionSpecification.fromJson(
           Map<String, dynamic> json) =>
@@ -132,6 +169,16 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
     List<DeviceMetricCalibration> calibration,
   }) = _DeviceMetric;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DeviceMetric.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceMetric.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceMetric.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricFromJson(json);
 }
@@ -150,6 +197,16 @@ abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
     Instant time,
     @JsonKey(name: '_time') Element timeElement,
   }) = _DeviceMetricCalibration;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DeviceMetricCalibration.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricCalibrationFromJson(json);

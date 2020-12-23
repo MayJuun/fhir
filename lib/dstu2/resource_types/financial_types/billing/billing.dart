@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -37,6 +41,16 @@ abstract class Account with Resource implements _$Account {
     String description,
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _Account;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Account.fromYaml(dynamic yaml) => yaml is String
+      ? Account.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Account.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory Account.fromJson(Map<String, dynamic> json) =>
       _$AccountFromJson(json);
@@ -92,6 +106,16 @@ abstract class Claim with Resource implements _$Claim {
     List<ClaimMissingTeeth> missingTeeth,
   }) = _Claim;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Claim.fromYaml(dynamic yaml) => yaml is String
+      ? Claim.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Claim.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
 }
 
@@ -108,6 +132,16 @@ abstract class ClaimPayee with _$ClaimPayee {
     Reference person,
   }) = _ClaimPayee;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimPayee.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimPayee.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimPayee.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ClaimPayee.fromJson(Map<String, dynamic> json) =>
       _$ClaimPayeeFromJson(json);
 }
@@ -123,6 +157,16 @@ abstract class ClaimDiagnosis with _$ClaimDiagnosis {
     @JsonKey(name: '_sequence') Element sequenceElement,
     @JsonKey(required: true) @required Coding diagnosis,
   }) = _ClaimDiagnosis;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimDiagnosis.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimDiagnosis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimDiagnosis.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$ClaimDiagnosisFromJson(json);
@@ -144,6 +188,16 @@ abstract class ClaimCoverage with _$ClaimCoverage {
     Reference claimResponse,
     Coding originalRuleset,
   }) = _ClaimCoverage;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimCoverage.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimCoverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimCoverage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ClaimCoverage.fromJson(Map<String, dynamic> json) =>
       _$ClaimCoverageFromJson(json);
@@ -178,6 +232,16 @@ abstract class ClaimItem with _$ClaimItem {
     ClaimItemProsthesis prosthesis,
   }) = _ClaimItem;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimItem.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ClaimItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemFromJson(json);
 }
@@ -203,6 +267,16 @@ abstract class ClaimItemDetail with _$ClaimItemDetail {
     List<ClaimDetailSubDetail> subDetail,
   }) = _ClaimItemDetail;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimItemDetail.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimItemDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimItemDetail.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ClaimItemDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemDetailFromJson(json);
 }
@@ -227,6 +301,16 @@ abstract class ClaimDetailSubDetail with _$ClaimDetailSubDetail {
     Coding udi,
   }) = _ClaimDetailSubDetail;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimDetailSubDetail.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimDetailSubDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimDetailSubDetail.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ClaimDetailSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimDetailSubDetailFromJson(json);
 }
@@ -243,6 +327,16 @@ abstract class ClaimItemProsthesis with _$ClaimItemProsthesis {
     Coding priorMaterial,
   }) = _ClaimItemProsthesis;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimItemProsthesis.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimItemProsthesis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimItemProsthesis.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ClaimItemProsthesis.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemProsthesisFromJson(json);
 }
@@ -258,6 +352,16 @@ abstract class ClaimMissingTeeth with _$ClaimMissingTeeth {
     Coding reason,
     Date extractionDate,
   }) = _ClaimMissingTeeth;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimMissingTeeth.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimMissingTeeth.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimMissingTeeth.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ClaimMissingTeeth.fromJson(Map<String, dynamic> json) =>
       _$ClaimMissingTeethFromJson(json);
@@ -311,6 +415,16 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
     List<ClaimResponseCoverage> coverage,
   }) = _ClaimResponse;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimResponse.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseFromJson(json);
 }
@@ -330,6 +444,16 @@ abstract class ClaimResponseItem with _$ClaimResponseItem {
     List<ClaimResponseItemDetail> detail,
   }) = _ClaimResponseItem;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimResponseItem.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimResponseItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimResponseItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseItemFromJson(json);
 }
@@ -348,6 +472,17 @@ abstract class ClaimResponseItemAdjudication
     @JsonKey(name: '_value') Element valueElement,
   }) = _ClaimResponseItemAdjudication;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimResponseItemAdjudication.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimResponseItemAdjudication.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimResponseItemAdjudication.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ClaimResponseItemAdjudication.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseItemAdjudicationFromJson(json);
 }
@@ -364,6 +499,16 @@ abstract class ClaimResponseItemDetail with _$ClaimResponseItemDetail {
     List<ClaimResponseDetailSubDetail> subDetail,
   }) = _ClaimResponseItemDetail;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimResponseItemDetail.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimResponseItemDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimResponseItemDetail.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ClaimResponseItemDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseItemDetailFromJson(json);
 }
@@ -379,6 +524,17 @@ abstract class ClaimResponseDetailSubDetail
     @JsonKey(required: true) @required PositiveInt sequenceLinkId,
     List<ClaimResponseItemAdjudication> adjudication,
   }) = _ClaimResponseDetailSubDetail;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimResponseDetailSubDetail.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimResponseDetailSubDetail.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimResponseDetailSubDetail.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ClaimResponseDetailSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseDetailSubDetailFromJson(json);
@@ -399,6 +555,16 @@ abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
     ClaimResponseAddItemDetail detail,
   }) = _ClaimResponseAddItem;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimResponseAddItem.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimResponseAddItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimResponseAddItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAddItemFromJson(json);
 }
@@ -414,6 +580,17 @@ abstract class ClaimResponseAddItemDetail with _$ClaimResponseAddItemDetail {
     Quantity fee,
     List<ClaimResponseItemAdjudication> adjudication,
   }) = _ClaimResponseAddItemDetail;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimResponseAddItemDetail.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimResponseAddItemDetail.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimResponseAddItemDetail.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ClaimResponseAddItemDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAddItemDetailFromJson(json);
@@ -431,6 +608,16 @@ abstract class ClaimResponseError with _$ClaimResponseError {
     PositiveInt subdetailSequenceLinkId,
     @JsonKey(required: true) @required Coding code,
   }) = _ClaimResponseError;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimResponseError.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimResponseError.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimResponseError.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseErrorFromJson(json);
@@ -450,6 +637,16 @@ abstract class ClaimResponseNote with _$ClaimResponseNote {
     String text,
     @JsonKey(name: '_text') Element textElement,
   }) = _ClaimResponseNote;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimResponseNote.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimResponseNote.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimResponseNote.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ClaimResponseNote.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseNoteFromJson(json);
@@ -471,6 +668,16 @@ abstract class ClaimResponseCoverage with _$ClaimResponseCoverage {
     Reference claimResponse,
     Coding originalRuleset,
   }) = _ClaimResponseCoverage;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ClaimResponseCoverage.fromYaml(dynamic yaml) => yaml is String
+      ? ClaimResponseCoverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ClaimResponseCoverage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ClaimResponseCoverage.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseCoverageFromJson(json);

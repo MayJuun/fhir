@@ -1,4 +1,8 @@
+import 'dart:convert';
+
+import 'package:json2yaml/json2yaml.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:yaml/yaml.dart';
 
 import '../../r5.dart';
 
@@ -14,6 +18,16 @@ class Resource {
   @JsonKey(name: 'extension')
   List<FhirExtension> extension_;
   List<FhirExtension> modifierExtension;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  static Resource fromYaml(dynamic yaml) => yaml is String
+      ? fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   Map<String, dynamic> toJson() {
     final val = <String, dynamic>{};

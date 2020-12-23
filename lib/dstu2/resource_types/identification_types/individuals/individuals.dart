@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -51,6 +55,16 @@ abstract class Patient with Resource implements _$Patient {
     List<PatientLink> link,
   }) = _Patient;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Patient.fromYaml(dynamic yaml) => yaml is String
+      ? Patient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Patient.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Patient.fromJson(Map<String, dynamic> json) =>
       _$PatientFromJson(json);
 }
@@ -72,6 +86,16 @@ abstract class PatientContact with _$PatientContact {
     Period period,
   }) = _PatientContact;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory PatientContact.fromYaml(dynamic yaml) => yaml is String
+      ? PatientContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? PatientContact.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory PatientContact.fromJson(Map<String, dynamic> json) =>
       _$PatientContactFromJson(json);
 }
@@ -88,6 +112,16 @@ abstract class PatientAnimal with _$PatientAnimal {
     CodeableConcept genderStatus,
   }) = _PatientAnimal;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory PatientAnimal.fromYaml(dynamic yaml) => yaml is String
+      ? PatientAnimal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? PatientAnimal.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory PatientAnimal.fromJson(Map<String, dynamic> json) =>
       _$PatientAnimalFromJson(json);
 }
@@ -103,6 +137,16 @@ abstract class PatientCommunication with _$PatientCommunication {
     Boolean preferred,
     @JsonKey(name: '_preferred') Element preferredElement,
   }) = _PatientCommunication;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory PatientCommunication.fromYaml(dynamic yaml) => yaml is String
+      ? PatientCommunication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? PatientCommunication.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
       _$PatientCommunicationFromJson(json);
@@ -121,6 +165,16 @@ abstract class PatientLink with _$PatientLink {
         LinkType type,
     @JsonKey(name: '_type') Element typeElement,
   }) = _PatientLink;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory PatientLink.fromYaml(dynamic yaml) => yaml is String
+      ? PatientLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? PatientLink.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory PatientLink.fromJson(Map<String, dynamic> json) =>
       _$PatientLinkFromJson(json);
@@ -158,6 +212,16 @@ abstract class Practitioner with Resource implements _$Practitioner {
     List<CodeableConcept> communication,
   }) = _Practitioner;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Practitioner.fromYaml(dynamic yaml) => yaml is String
+      ? Practitioner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Practitioner.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Practitioner.fromJson(Map<String, dynamic> json) =>
       _$PractitionerFromJson(json);
 }
@@ -179,6 +243,17 @@ abstract class PractitionerPractitionerRole
     List<Reference> healthcareService,
   }) = _PractitionerPractitionerRole;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory PractitionerPractitionerRole.fromYaml(dynamic yaml) => yaml is String
+      ? PractitionerPractitionerRole.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? PractitionerPractitionerRole.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory PractitionerPractitionerRole.fromJson(Map<String, dynamic> json) =>
       _$PractitionerPractitionerRoleFromJson(json);
 }
@@ -195,6 +270,17 @@ abstract class PractitionerQualification with _$PractitionerQualification {
     Period period,
     Reference issuer,
   }) = _PractitionerQualification;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory PractitionerQualification.fromYaml(dynamic yaml) => yaml is String
+      ? PractitionerQualification.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? PractitionerQualification.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
       _$PractitionerQualificationFromJson(json);
@@ -231,6 +317,16 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
 
     // @JsonKey(name: '_active') Element activeElement,
   }) = _RelatedPerson;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory RelatedPerson.fromYaml(dynamic yaml) => yaml is String
+      ? RelatedPerson.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? RelatedPerson.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
       _$RelatedPersonFromJson(json);

@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -51,6 +55,16 @@ abstract class Conformance with Resource implements _$Conformance {
     List<ConformanceDocument> document,
   }) = _Conformance;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Conformance.fromYaml(dynamic yaml) => yaml is String
+      ? Conformance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Conformance.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Conformance.fromJson(Map<String, dynamic> json) =>
       _$ConformanceFromJson(json);
 }
@@ -101,12 +115,23 @@ abstract class CapabilityStatement
     List<ConformanceDocument> document,
   }) = _CapabilityStatement;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory CapabilityStatement.fromYaml(dynamic yaml) => yaml is String
+      ? CapabilityStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? CapabilityStatement.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementFromJson(json);
 }
 
 @freezed
 abstract class ConformanceContact with _$ConformanceContact {
+  ConformanceContact._();
   factory ConformanceContact({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -115,12 +140,23 @@ abstract class ConformanceContact with _$ConformanceContact {
     List<ContactPoint> telecom,
   }) = _ConformanceContact;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConformanceContact.fromYaml(dynamic yaml) => yaml is String
+      ? ConformanceContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConformanceContact.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ConformanceContact.fromJson(Map<String, dynamic> json) =>
       _$ConformanceContactFromJson(json);
 }
 
 @freezed
 abstract class ConformanceSoftware with _$ConformanceSoftware {
+  ConformanceSoftware._();
   factory ConformanceSoftware({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -129,6 +165,16 @@ abstract class ConformanceSoftware with _$ConformanceSoftware {
     String version,
     FhirDateTime releaseDate,
   }) = _ConformanceSoftware;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConformanceSoftware.fromYaml(dynamic yaml) => yaml is String
+      ? ConformanceSoftware.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConformanceSoftware.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ConformanceSoftware.fromJson(Map<String, dynamic> json) =>
       _$ConformanceSoftwareFromJson(json);
@@ -143,6 +189,17 @@ abstract class ConformanceImplementation with _$ConformanceImplementation {
     @JsonKey(required: true) @required String description,
     FhirUri url,
   }) = _ConformanceImplementation;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConformanceImplementation.fromYaml(dynamic yaml) => yaml is String
+      ? ConformanceImplementation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConformanceImplementation.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ConformanceImplementation.fromJson(Map<String, dynamic> json) =>
       _$ConformanceImplementationFromJson(json);
@@ -170,6 +227,16 @@ abstract class ConformanceRest with _$ConformanceRest {
     List<FhirUri> compartment,
   }) = _ConformanceRest;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConformanceRest.fromYaml(dynamic yaml) => yaml is String
+      ? ConformanceRest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConformanceRest.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ConformanceRest.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestFromJson(json);
 }
@@ -186,6 +253,16 @@ abstract class ConformanceMessaging with _$ConformanceMessaging {
     String documentation,
     @JsonKey(required: true) @required List<ConformanceMessagingEvent> event,
   }) = _ConformanceMessaging;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConformanceMessaging.fromYaml(dynamic yaml) => yaml is String
+      ? ConformanceMessaging.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConformanceMessaging.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ConformanceMessaging.fromJson(Map<String, dynamic> json) =>
       _$ConformanceMessagingFromJson(json);
@@ -205,6 +282,16 @@ abstract class ConformanceDocument with _$ConformanceDocument {
     @JsonKey(required: true) @required Reference profile,
   }) = _ConformanceDocument;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConformanceDocument.fromYaml(dynamic yaml) => yaml is String
+      ? ConformanceDocument.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConformanceDocument.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ConformanceDocument.fromJson(Map<String, dynamic> json) =>
       _$ConformanceDocumentFromJson(json);
 }
@@ -221,6 +308,16 @@ abstract class ConformanceRestSecurity with _$ConformanceRestSecurity {
     String description,
     List<ConformanceSecurityCertificate> certificate,
   }) = _ConformanceRestSecurity;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConformanceRestSecurity.fromYaml(dynamic yaml) => yaml is String
+      ? ConformanceRestSecurity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConformanceRestSecurity.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ConformanceRestSecurity.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestSecurityFromJson(json);
@@ -255,6 +352,16 @@ abstract class ConformanceRestResource with _$ConformanceRestResource {
     List<ConformanceResourceSearchParam> searchParam,
   }) = _ConformanceRestResource;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConformanceRestResource.fromYaml(dynamic yaml) => yaml is String
+      ? ConformanceRestResource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConformanceRestResource.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ConformanceRestResource.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestResourceFromJson(json);
 }
@@ -272,6 +379,19 @@ abstract class ConformanceResourceInteraction
     String documentation,
   }) = _ConformanceResourceInteraction;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConformanceResourceInteraction.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? ConformanceResourceInteraction.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? ConformanceResourceInteraction.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory ConformanceResourceInteraction.fromJson(Map<String, dynamic> json) =>
       _$ConformanceResourceInteractionFromJson(json);
 }
@@ -286,6 +406,17 @@ abstract class ConformanceRestOperation with _$ConformanceRestOperation {
     @JsonKey(required: true) @required String name,
     @JsonKey(required: true) @required Reference definition,
   }) = _ConformanceRestOperation;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConformanceRestOperation.fromYaml(dynamic yaml) => yaml is String
+      ? ConformanceRestOperation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConformanceRestOperation.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ConformanceRestOperation.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestOperationFromJson(json);
@@ -302,6 +433,17 @@ abstract class ConformanceMessagingEndpoint
     @JsonKey(required: true) @required FhirUri address,
     @JsonKey(name: '_address') Element addressElement,
   }) = _ConformanceMessagingEndpoint;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConformanceMessagingEndpoint.fromYaml(dynamic yaml) => yaml is String
+      ? ConformanceMessagingEndpoint.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConformanceMessagingEndpoint.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json) =>
       _$ConformanceMessagingEndpointFromJson(json);
@@ -325,6 +467,17 @@ abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
     String documentation,
   }) = _ConformanceMessagingEvent;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConformanceMessagingEvent.fromYaml(dynamic yaml) => yaml is String
+      ? ConformanceMessagingEvent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConformanceMessagingEvent.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ConformanceMessagingEvent.fromJson(Map<String, dynamic> json) =>
       _$ConformanceMessagingEventFromJson(json);
 }
@@ -341,6 +494,19 @@ abstract class ConformanceSecurityCertificate
     @JsonKey(name: '_blob') Element blobElement,
   }) = _ConformanceSecurityCertificate;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConformanceSecurityCertificate.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? ConformanceSecurityCertificate.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? ConformanceSecurityCertificate.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory ConformanceSecurityCertificate.fromJson(Map<String, dynamic> json) =>
       _$ConformanceSecurityCertificateFromJson(json);
 }
@@ -356,6 +522,17 @@ abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
         RestInteractionCode code,
     String documentation,
   }) = _ConformanceRestInteraction;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConformanceRestInteraction.fromYaml(dynamic yaml) => yaml is String
+      ? ConformanceRestInteraction.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConformanceRestInteraction.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestInteractionFromJson(json);
@@ -379,6 +556,19 @@ abstract class ConformanceResourceSearchParam
     List<SearchParamModifier> modifier,
     List<String> chain,
   }) = _ConformanceResourceSearchParam;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConformanceResourceSearchParam.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? ConformanceResourceSearchParam.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? ConformanceResourceSearchParam.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory ConformanceResourceSearchParam.fromJson(Map<String, dynamic> json) =>
       _$ConformanceResourceSearchParamFromJson(json);
@@ -425,6 +615,16 @@ abstract class OperationDefinition
     List<OperationDefinitionParameter> parameter,
   }) = _OperationDefinition;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory OperationDefinition.fromYaml(dynamic yaml) => yaml is String
+      ? OperationDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? OperationDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionFromJson(json);
 }
@@ -438,6 +638,17 @@ abstract class OperationDefinitionContact with _$OperationDefinitionContact {
     String name,
     List<ContactPoint> telecom,
   }) = _OperationDefinitionContact;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory OperationDefinitionContact.fromYaml(dynamic yaml) => yaml is String
+      ? OperationDefinitionContact.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? OperationDefinitionContact.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory OperationDefinitionContact.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionContactFromJson(json);
@@ -464,6 +675,17 @@ abstract class OperationDefinitionParameter
     @JsonKey(name: 'part') List<OperationDefinitionParameter> part_,
   }) = _OperationDefinitionParameter;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory OperationDefinitionParameter.fromYaml(dynamic yaml) => yaml is String
+      ? OperationDefinitionParameter.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? OperationDefinitionParameter.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionParameterFromJson(json);
 }
@@ -484,6 +706,19 @@ abstract class OperationDefinitionParameterBinding
     FhirUri valueSetUri,
     Reference valueSetReference,
   }) = _OperationDefinitionParameterBinding;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory OperationDefinitionParameterBinding.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? OperationDefinitionParameterBinding.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? OperationDefinitionParameterBinding.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory OperationDefinitionParameterBinding.fromJson(
           Map<String, dynamic> json) =>
@@ -525,6 +760,16 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     List<Code> target,
   }) = _SearchParameter;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SearchParameter.fromYaml(dynamic yaml) => yaml is String
+      ? SearchParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SearchParameter.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterFromJson(json);
 }
@@ -538,6 +783,16 @@ abstract class SearchParameterContact with _$SearchParameterContact {
     String name,
     List<ContactPoint> telecom,
   }) = _SearchParameterContact;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SearchParameterContact.fromYaml(dynamic yaml) => yaml is String
+      ? SearchParameterContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SearchParameterContact.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory SearchParameterContact.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterContactFromJson(json);

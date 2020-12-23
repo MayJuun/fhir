@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -57,6 +61,16 @@ abstract class ValueSet with Resource implements _$ValueSet {
     ValueSetExpansion expansion,
   }) = _ValueSet;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ValueSet.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSet.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ValueSet.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ValueSet.fromJson(Map<String, dynamic> json) =>
       _$ValueSetFromJson(json);
 }
@@ -72,6 +86,16 @@ abstract class ValueSetContact with _$ValueSetContact {
     String name,
     List<ContactPoint> telecom,
   }) = _ValueSetContact;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ValueSetContact.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ValueSetContact.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ValueSetContact.fromJson(Map<String, dynamic> json) =>
       _$ValueSetContactFromJson(json);
@@ -93,6 +117,16 @@ abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
     @JsonKey(name: '_caseSensitive') Element caseSensitiveElement,
     @JsonKey(required: true) @required List<ValueSetCodeSystemConcept> concept,
   }) = _ValueSetCodeSystem;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ValueSetCodeSystem.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetCodeSystem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ValueSetCodeSystem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =>
       _$ValueSetCodeSystemFromJson(json);
@@ -116,6 +150,17 @@ abstract class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
     List<ValueSetCodeSystemConcept> concept,
   }) = _ValueSetCodeSystemConcept;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ValueSetCodeSystemConcept.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetCodeSystemConcept.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ValueSetCodeSystemConcept.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json) =>
       _$ValueSetCodeSystemConceptFromJson(json);
 }
@@ -134,6 +179,17 @@ abstract class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
     @JsonKey(name: '_value') Element valueElement,
   }) = _ValueSetConceptDesignation;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ValueSetConceptDesignation.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetConceptDesignation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ValueSetConceptDesignation.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ValueSetConceptDesignation.fromJson(Map<String, dynamic> json) =>
       _$ValueSetConceptDesignationFromJson(json);
 }
@@ -150,6 +206,16 @@ abstract class ValueSetCompose with _$ValueSetCompose {
     List<ValueSetComposeInclude> include,
     List<ValueSetComposeInclude> exclude,
   }) = _ValueSetCompose;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ValueSetCompose.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetCompose.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ValueSetCompose.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
       _$ValueSetComposeFromJson(json);
@@ -171,6 +237,16 @@ abstract class ValueSetComposeInclude with _$ValueSetComposeInclude {
     List<ValueSetIncludeFilter> filter,
   }) = _ValueSetComposeInclude;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ValueSetComposeInclude.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetComposeInclude.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ValueSetComposeInclude.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ValueSetComposeInclude.fromJson(Map<String, dynamic> json) =>
       _$ValueSetComposeIncludeFromJson(json);
 }
@@ -189,6 +265,16 @@ abstract class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
     @JsonKey(name: '_display') Element displayElement,
     List<ValueSetConceptDesignation> designation,
   }) = _ValueSetIncludeConcept;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ValueSetIncludeConcept.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetIncludeConcept.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ValueSetIncludeConcept.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ValueSetIncludeConcept.fromJson(Map<String, dynamic> json) =>
       _$ValueSetIncludeConceptFromJson(json);
@@ -211,6 +297,16 @@ abstract class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
     @JsonKey(required: true) @required Code value,
     @JsonKey(name: '_value') Element valueElement,
   }) = _ValueSetIncludeFilter;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ValueSetIncludeFilter.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetIncludeFilter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ValueSetIncludeFilter.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ValueSetIncludeFilter.fromJson(Map<String, dynamic> json) =>
       _$ValueSetIncludeFilterFromJson(json);
@@ -235,6 +331,16 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
     List<ValueSetExpansionParameter> parameter,
     List<ValueSetExpansionContains> contains,
   }) = _ValueSetExpansion;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ValueSetExpansion.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetExpansion.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ValueSetExpansion.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
       _$ValueSetExpansionFromJson(json);
@@ -264,6 +370,17 @@ abstract class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
     @JsonKey(name: '_valueCode') Element valueCodeElement,
   }) = _ValueSetExpansionParameter;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ValueSetExpansionParameter.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetExpansionParameter.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ValueSetExpansionParameter.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ValueSetExpansionParameter.fromJson(Map<String, dynamic> json) =>
       _$ValueSetExpansionParameterFromJson(json);
 }
@@ -288,6 +405,17 @@ abstract class ValueSetExpansionContains with _$ValueSetExpansionContains {
     @JsonKey(name: '_display') Element displayElement,
     List<ValueSetExpansionContains> contains,
   }) = _ValueSetExpansionContains;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ValueSetExpansionContains.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetExpansionContains.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ValueSetExpansionContains.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ValueSetExpansionContains.fromJson(Map<String, dynamic> json) =>
       _$ValueSetExpansionContainsFromJson(json);
@@ -341,6 +469,16 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
     @JsonKey(name: '_date') Element dateElement,
   }) = _ConceptMap;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConceptMap.fromYaml(dynamic yaml) => yaml is String
+      ? ConceptMap.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConceptMap.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapFromJson(json);
 }
@@ -355,6 +493,16 @@ abstract class ConceptMapContact with _$ConceptMapContact {
     String name,
     List<ContactPoint> telecom,
   }) = _ConceptMapContact;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConceptMapContact.fromYaml(dynamic yaml) => yaml is String
+      ? ConceptMapContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConceptMapContact.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ConceptMapContact.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapContactFromJson(json);
@@ -372,6 +520,16 @@ abstract class ConceptMapElement with _$ConceptMapElement {
     @JsonKey(name: '_code') Element codeElement,
     List<ConceptMapElementTarget> target,
   }) = _ConceptMapElement;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConceptMapElement.fromYaml(dynamic yaml) => yaml is String
+      ? ConceptMapElement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConceptMapElement.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapElementFromJson(json);
@@ -397,6 +555,16 @@ abstract class ConceptMapElementTarget with _$ConceptMapElementTarget {
     List<ConceptMapTargetDependsOn> product,
   }) = _ConceptMapElementTarget;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConceptMapElementTarget.fromYaml(dynamic yaml) => yaml is String
+      ? ConceptMapElementTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConceptMapElementTarget.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ConceptMapElementTarget.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapElementTargetFromJson(json);
 }
@@ -412,6 +580,17 @@ abstract class ConceptMapTargetDependsOn with _$ConceptMapTargetDependsOn {
     @JsonKey(required: true) @required FhirUri codeSystem,
     @JsonKey(required: true) @required String code,
   }) = _ConceptMapTargetDependsOn;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ConceptMapTargetDependsOn.fromYaml(dynamic yaml) => yaml is String
+      ? ConceptMapTargetDependsOn.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ConceptMapTargetDependsOn.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ConceptMapTargetDependsOn.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapTargetDependsOnFromJson(json);
@@ -459,6 +638,16 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     Reference replacedBy,
   }) = _NamingSystem;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory NamingSystem.fromYaml(dynamic yaml) => yaml is String
+      ? NamingSystem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? NamingSystem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory NamingSystem.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemFromJson(json);
 }
@@ -473,6 +662,16 @@ abstract class NamingSystemContact with _$NamingSystemContact {
     String name,
     List<ContactPoint> telecom,
   }) = _NamingSystemContact;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory NamingSystemContact.fromYaml(dynamic yaml) => yaml is String
+      ? NamingSystemContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? NamingSystemContact.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory NamingSystemContact.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemContactFromJson(json);
@@ -495,6 +694,16 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
     @JsonKey(name: '_preferred') Element preferredElement,
     Period period,
   }) = _NamingSystemUniqueId;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory NamingSystemUniqueId.fromYaml(dynamic yaml) => yaml is String
+      ? NamingSystemUniqueId.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? NamingSystemUniqueId.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemUniqueIdFromJson(json);

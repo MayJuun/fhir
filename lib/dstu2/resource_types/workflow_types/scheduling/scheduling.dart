@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -45,6 +49,16 @@ abstract class Appointment with Resource implements _$Appointment {
     @JsonKey(required: true) @required List<AppointmentParticipant> participant,
   }) = _Appointment;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Appointment.fromYaml(dynamic yaml) => yaml is String
+      ? Appointment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Appointment.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Appointment.fromJson(Map<String, dynamic> json) =>
       _$AppointmentFromJson(json);
 }
@@ -66,6 +80,16 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
         ParticipantStatus status,
     @JsonKey(name: '_status') Element statusElement,
   }) = _AppointmentParticipant;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory AppointmentParticipant.fromYaml(dynamic yaml) => yaml is String
+      ? AppointmentParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? AppointmentParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$AppointmentParticipantFromJson(json);
@@ -106,6 +130,16 @@ abstract class AppointmentResponse
     @JsonKey(name: '_comment') Element commentElement,
   }) = _AppointmentResponse;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
+      ? AppointmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? AppointmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$AppointmentResponseFromJson(json);
 }
@@ -132,6 +166,16 @@ abstract class Schedule with Resource implements _$Schedule {
     String comment,
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Schedule;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Schedule.fromYaml(dynamic yaml) => yaml is String
+      ? Schedule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Schedule.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory Schedule.fromJson(Map<String, dynamic> json) =>
       _$ScheduleFromJson(json);
@@ -167,6 +211,16 @@ abstract class Slot with Resource implements _$Slot {
     String comment,
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Slot;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Slot.fromYaml(dynamic yaml) => yaml is String
+      ? Slot.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Slot.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
 }

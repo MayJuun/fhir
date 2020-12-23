@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json2yaml/json2yaml.dart';
+import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -63,6 +67,16 @@ abstract class Observation with Resource implements _$Observation {
     List<ObservationComponent> component,
   }) = _Observation;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Observation.fromYaml(dynamic yaml) => yaml is String
+      ? Observation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Observation.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Observation.fromJson(Map<String, dynamic> json) =>
       _$ObservationFromJson(json);
 }
@@ -83,6 +97,17 @@ abstract class ObservationReferenceRange with _$ObservationReferenceRange {
     @JsonKey(name: '_text') Element textElement,
   }) = _ObservationReferenceRange;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ObservationReferenceRange.fromYaml(dynamic yaml) => yaml is String
+      ? ObservationReferenceRange.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ObservationReferenceRange.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
       _$ObservationReferenceRangeFromJson(json);
 }
@@ -98,6 +123,16 @@ abstract class ObservationRelated with _$ObservationRelated {
     @JsonKey(unknownEnumValue: RelatedType.unknown) RelatedType type,
     @JsonKey(required: true) @required Reference target,
   }) = _ObservationRelated;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ObservationRelated.fromYaml(dynamic yaml) => yaml is String
+      ? ObservationRelated.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ObservationRelated.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ObservationRelated.fromJson(Map<String, dynamic> json) =>
       _$ObservationRelatedFromJson(json);
@@ -128,6 +163,16 @@ abstract class ObservationComponent with _$ObservationComponent {
     CodeableConcept dataAbsentReason,
     List<ObservationReferenceRange> referenceRange,
   }) = _ObservationComponent;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ObservationComponent.fromYaml(dynamic yaml) => yaml is String
+      ? ObservationComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ObservationComponent.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
       _$ObservationComponentFromJson(json);
@@ -174,6 +219,16 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
     List<Attachment> presentedForm,
   }) = _DiagnosticReport;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DiagnosticReport.fromYaml(dynamic yaml) => yaml is String
+      ? DiagnosticReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DiagnosticReport.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportFromJson(json);
 }
@@ -189,6 +244,16 @@ abstract class DiagnosticReportImage with _$DiagnosticReportImage {
     @JsonKey(name: '_comment') Element commentElement,
     @JsonKey(required: true) @required Reference link,
   }) = _DiagnosticReportImage;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DiagnosticReportImage.fromYaml(dynamic yaml) => yaml is String
+      ? DiagnosticReportImage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DiagnosticReportImage.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportImageFromJson(json);
@@ -223,6 +288,16 @@ abstract class DiagnosticOrder with Resource implements _$DiagnosticOrder {
     List<Annotation> note,
   }) = _DiagnosticOrder;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DiagnosticOrder.fromYaml(dynamic yaml) => yaml is String
+      ? DiagnosticOrder.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DiagnosticOrder.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory DiagnosticOrder.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticOrderFromJson(json);
 }
@@ -242,6 +317,16 @@ abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
     Reference actor,
   }) = _DiagnosticOrderEvent;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DiagnosticOrderEvent.fromYaml(dynamic yaml) => yaml is String
+      ? DiagnosticOrderEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DiagnosticOrderEvent.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory DiagnosticOrderEvent.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticOrderEventFromJson(json);
 }
@@ -259,6 +344,16 @@ abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
     @JsonKey(unknownEnumValue: ItemStatus.unknown) ItemStatus status,
     List<DiagnosticOrderEvent> event,
   }) = _DiagnosticOrderItem;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory DiagnosticOrderItem.fromYaml(dynamic yaml) => yaml is String
+      ? DiagnosticOrderItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? DiagnosticOrderItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory DiagnosticOrderItem.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticOrderItemFromJson(json);
@@ -293,6 +388,16 @@ abstract class Specimen with Resource implements _$Specimen {
     List<SpecimenContainer> container,
   }) = _Specimen;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory Specimen.fromYaml(dynamic yaml) => yaml is String
+      ? Specimen.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? Specimen.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory Specimen.fromJson(Map<String, dynamic> json) =>
       _$SpecimenFromJson(json);
 }
@@ -315,6 +420,16 @@ abstract class SpecimenCollection with _$SpecimenCollection {
     CodeableConcept bodySite,
   }) = _SpecimenCollection;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SpecimenCollection.fromYaml(dynamic yaml) => yaml is String
+      ? SpecimenCollection.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SpecimenCollection.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
       _$SpecimenCollectionFromJson(json);
 }
@@ -330,6 +445,16 @@ abstract class SpecimenTreatment with _$SpecimenTreatment {
     CodeableConcept procedure,
     List<Reference> additive,
   }) = _SpecimenTreatment;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SpecimenTreatment.fromYaml(dynamic yaml) => yaml is String
+      ? SpecimenTreatment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SpecimenTreatment.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory SpecimenTreatment.fromJson(Map<String, dynamic> json) =>
       _$SpecimenTreatmentFromJson(json);
@@ -351,6 +476,16 @@ abstract class SpecimenContainer with _$SpecimenContainer {
     CodeableConcept additiveCodeableConcept,
     Reference additiveReference,
   }) = _SpecimenContainer;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory SpecimenContainer.fromYaml(dynamic yaml) => yaml is String
+      ? SpecimenContainer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? SpecimenContainer.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
       _$SpecimenContainerFromJson(json);
@@ -376,6 +511,16 @@ abstract class BodySite with Resource implements _$BodySite {
     String description,
     List<Attachment> image,
   }) = _BodySite;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory BodySite.fromYaml(dynamic yaml) => yaml is String
+      ? BodySite.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? BodySite.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory BodySite.fromJson(Map<String, dynamic> json) =>
       _$BodySiteFromJson(json);
@@ -419,6 +564,16 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
     List<ImagingStudySeries> series,
   }) = _ImagingStudy;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ImagingStudy.fromYaml(dynamic yaml) => yaml is String
+      ? ImagingStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ImagingStudy.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyFromJson(json);
 }
@@ -449,6 +604,16 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
     List<ImagingStudySeriesInstance> instance,
   }) = _ImagingStudySeries;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ImagingStudySeries.fromYaml(dynamic yaml) => yaml is String
+      ? ImagingStudySeries.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ImagingStudySeries.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudySeriesFromJson(json);
 }
@@ -470,6 +635,17 @@ abstract class ImagingStudySeriesInstance with _$ImagingStudySeriesInstance {
     @JsonKey(name: '_title') Element titleElement,
     List<Attachment> content,
   }) = _ImagingStudySeriesInstance;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ImagingStudySeriesInstance.fromYaml(dynamic yaml) => yaml is String
+      ? ImagingStudySeriesInstance.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ImagingStudySeriesInstance.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ImagingStudySeriesInstance.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudySeriesInstanceFromJson(json);
@@ -501,6 +677,16 @@ abstract class ImagingObjectSelection
     @JsonKey(required: true) @required List<ImagingObjectSelectionStudy> study,
   }) = _ImagingObjectSelection;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ImagingObjectSelection.fromYaml(dynamic yaml) => yaml is String
+      ? ImagingObjectSelection.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ImagingObjectSelection.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
+
   factory ImagingObjectSelection.fromJson(Map<String, dynamic> json) =>
       _$ImagingObjectSelectionFromJson(json);
 }
@@ -519,6 +705,17 @@ abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
     @required
         List<ImagingObjectSelectionStudySeries> series,
   }) = _ImagingObjectSelectionStudy;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ImagingObjectSelectionStudy.fromYaml(dynamic yaml) => yaml is String
+      ? ImagingObjectSelectionStudy.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
+          ? ImagingObjectSelectionStudy.fromJson(jsonDecode(jsonEncode(yaml)))
+          : null;
 
   factory ImagingObjectSelectionStudy.fromJson(Map<String, dynamic> json) =>
       _$ImagingObjectSelectionStudyFromJson(json);
@@ -539,6 +736,19 @@ abstract class ImagingObjectSelectionStudySeries
         List<ImagingObjectSelectionSeriesInstance> instance,
   }) = _ImagingObjectSelectionStudySeries;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ImagingObjectSelectionStudySeries.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? ImagingObjectSelectionStudySeries.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? ImagingObjectSelectionStudySeries.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory ImagingObjectSelectionStudySeries.fromJson(
           Map<String, dynamic> json) =>
       _$ImagingObjectSelectionStudySeriesFromJson(json);
@@ -558,6 +768,19 @@ abstract class ImagingObjectSelectionSeriesInstance
     List<ImagingObjectSelectionInstanceFrames> frames,
   }) = _ImagingObjectSelectionSeriesInstance;
 
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ImagingObjectSelectionSeriesInstance.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? ImagingObjectSelectionSeriesInstance.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? ImagingObjectSelectionSeriesInstance.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
+
   factory ImagingObjectSelectionSeriesInstance.fromJson(
           Map<String, dynamic> json) =>
       _$ImagingObjectSelectionSeriesInstanceFromJson(json);
@@ -574,6 +797,19 @@ abstract class ImagingObjectSelectionInstanceFrames
     @JsonKey(required: true) @required List<UnsignedInt> frameNumbers,
     @JsonKey(required: true) @required FhirUri url,
   }) = _ImagingObjectSelectionInstanceFrames;
+
+  String toYamlString() => json2yaml(toJson());
+
+  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+
+  factory ImagingObjectSelectionInstanceFrames.fromYaml(dynamic yaml) =>
+      yaml is String
+          ? ImagingObjectSelectionInstanceFrames.fromJson(
+              jsonDecode(jsonEncode(loadYaml(yaml))))
+          : yaml is YamlMap
+              ? ImagingObjectSelectionInstanceFrames.fromJson(
+                  jsonDecode(jsonEncode(yaml)))
+              : null;
 
   factory ImagingObjectSelectionInstanceFrames.fromJson(
           Map<String, dynamic> json) =>
