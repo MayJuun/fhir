@@ -110,8 +110,9 @@ class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_Element implements _Element {
-  _$_Element({this.id, @JsonKey(name: 'extension') this.extension_});
+class _$_Element extends _Element {
+  _$_Element({this.id, @JsonKey(name: 'extension') this.extension_})
+      : super._();
 
   factory _$_Element.fromJson(Map<String, dynamic> json) =>
       _$_$_ElementFromJson(json);
@@ -154,7 +155,8 @@ class _$_Element implements _Element {
   }
 }
 
-abstract class _Element implements Element {
+abstract class _Element extends Element {
+  _Element._() : super._();
   factory _Element(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_}) = _$_Element;

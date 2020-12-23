@@ -1720,7 +1720,7 @@ class __$FhirExtensionCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_FhirExtension implements _FhirExtension {
+class _$_FhirExtension extends _FhirExtension {
   _$_FhirExtension(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
@@ -1795,7 +1795,8 @@ class _$_FhirExtension implements _FhirExtension {
       this.valueUsageContext,
       this.valueDataRequirement,
       this.valueParameterDefinition,
-      this.valueTriggerDefinition});
+      this.valueTriggerDefinition})
+      : super._();
 
   factory _$_FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$_$_FhirExtensionFromJson(json);
@@ -2180,7 +2181,8 @@ class _$_FhirExtension implements _FhirExtension {
   }
 }
 
-abstract class _FhirExtension implements FhirExtension {
+abstract class _FhirExtension extends FhirExtension {
+  _FhirExtension._() : super._();
   factory _FhirExtension(
       {String id,
       @JsonKey(name: 'extension') List<FhirExtension> extension_,

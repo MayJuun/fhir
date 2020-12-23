@@ -12,6 +12,7 @@ part 'fhir_extension.g.dart';
 
 @freezed
 abstract class FhirExtension with _$FhirExtension {
+  FhirExtension._();
   factory FhirExtension({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
