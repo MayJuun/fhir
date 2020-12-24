@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
@@ -42,7 +42,7 @@ abstract class Group with Resource implements _$Group {
     List<GroupMember> member,
   }) = _Group;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -70,7 +70,7 @@ abstract class GroupCharacteristic implements _$GroupCharacteristic {
     Period period,
   }) = _GroupCharacteristic;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -94,7 +94,7 @@ abstract class GroupMember implements _$GroupMember {
     @JsonKey(name: '_inactive') Element inactiveElement,
   }) = _GroupMember;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -151,7 +151,7 @@ abstract class Patient with Resource implements _$Patient {
     List<PatientLink> link,
   }) = _Patient;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -179,7 +179,7 @@ abstract class PatientContact implements _$PatientContact {
     Period period,
   }) = _PatientContact;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -202,7 +202,7 @@ abstract class PatientAnimal implements _$PatientAnimal {
     CodeableConcept genderStatus,
   }) = _PatientAnimal;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -225,7 +225,7 @@ abstract class PatientCommunication implements _$PatientCommunication {
     @JsonKey(name: '_preferred') Element preferredElement,
   }) = _PatientCommunication;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -248,7 +248,7 @@ abstract class PatientLink implements _$PatientLink {
     @JsonKey(name: '_type') Element typeElement,
   }) = _PatientLink;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -292,7 +292,7 @@ abstract class Person with Resource implements _$Person {
     List<PersonLink> link,
   }) = _Person;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -314,7 +314,7 @@ abstract class PersonLink implements _$PersonLink {
     @JsonKey(name: '_assurance') Element assuranceElement,
   }) = _PersonLink;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -358,7 +358,7 @@ abstract class Practitioner with Resource implements _$Practitioner {
     List<CodeableConcept> communication,
   }) = _Practitioner;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -383,7 +383,7 @@ abstract class PractitionerQualification
     Reference issuer,
   }) = _PractitionerQualification;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -432,7 +432,7 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
     List<Reference> endpoint,
   }) = _PractitionerRole;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -461,7 +461,7 @@ abstract class PractitionerRoleAvailableTime
     @JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
   }) = _PractitionerRoleAvailableTime;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -486,7 +486,7 @@ abstract class PractitionerRoleNotAvailable
     Period during,
   }) = _PractitionerRoleNotAvailable;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -532,7 +532,7 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
     Period period,
   }) = _RelatedPerson;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

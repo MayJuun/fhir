@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
@@ -55,7 +55,7 @@ abstract class Immunization with Resource implements _$Immunization {
     List<ImmunizationVaccinationProtocol> vaccinationProtocol,
   }) = _Immunization;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -77,7 +77,7 @@ abstract class ImmunizationPractitioner implements _$ImmunizationPractitioner {
     @required Reference actor,
   }) = _ImmunizationPractitioner;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -100,7 +100,7 @@ abstract class ImmunizationExplanation implements _$ImmunizationExplanation {
     List<CodeableConcept> reasonNotGiven,
   }) = _ImmunizationExplanation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -125,7 +125,7 @@ abstract class ImmunizationReaction implements _$ImmunizationReaction {
     @JsonKey(name: '_reported') Element reportedElement,
   }) = _ImmunizationReaction;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -158,7 +158,7 @@ abstract class ImmunizationVaccinationProtocol
     CodeableConcept doseStatusReason,
   }) = _ImmunizationVaccinationProtocol;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -199,7 +199,7 @@ abstract class ImmunizationRecommendation
     @required List<ImmunizationRecommendationRecommendation> recommendation,
   }) = _ImmunizationRecommendation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -232,7 +232,7 @@ abstract class ImmunizationRecommendationRecommendation
     List<Reference> supportingPatientInformation,
   }) = _ImmunizationRecommendationRecommendation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -260,7 +260,7 @@ abstract class ImmunizationRecommendationDateCriterion
     @JsonKey(name: '_value') Element valueElement,
   }) = _ImmunizationRecommendationDateCriterion;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -292,7 +292,7 @@ abstract class ImmunizationRecommendationProtocol
     @JsonKey(name: '_series') Element seriesElement,
   }) = _ImmunizationRecommendationProtocol;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -339,7 +339,7 @@ abstract class Medication with Resource implements _$Medication {
     List<Attachment> image,
   }) = _Medication;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -364,7 +364,7 @@ abstract class MedicationIngredient implements _$MedicationIngredient {
     Ratio amount,
   }) = _MedicationIngredient;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -387,7 +387,7 @@ abstract class MedicationPackage implements _$MedicationPackage {
     List<MedicationBatch> batch,
   }) = _MedicationPackage;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -410,7 +410,7 @@ abstract class MedicationContent implements _$MedicationContent {
     Quantity amount,
   }) = _MedicationContent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -434,7 +434,7 @@ abstract class MedicationBatch implements _$MedicationBatch {
     @JsonKey(name: '_expirationDate') Element expirationDateElement,
   }) = _MedicationBatch;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -494,7 +494,7 @@ abstract class MedicationAdministration
     List<Reference> eventHistory,
   }) = _MedicationAdministration;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -518,7 +518,7 @@ abstract class MedicationAdministrationPerformer
     Reference onBehalfOf,
   }) = _MedicationAdministrationPerformer;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -551,7 +551,7 @@ abstract class MedicationAdministrationDosage
     Quantity rateSimpleQuantity,
   }) = _MedicationAdministrationDosage;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -617,7 +617,7 @@ abstract class MedicationDispense
     List<Reference> eventHistory,
   }) = _MedicationDispense;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -640,7 +640,7 @@ abstract class MedicationDispensePerformer
     Reference onBehalfOf,
   }) = _MedicationDispensePerformer;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -667,7 +667,7 @@ abstract class MedicationDispenseSubstitution
     List<Reference> responsibleParty,
   }) = _MedicationDispenseSubstitution;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -730,7 +730,7 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
     List<Reference> eventHistory,
   }) = _MedicationRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -753,7 +753,7 @@ abstract class MedicationRequestRequester
     Reference onBehalfOf,
   }) = _MedicationRequestRequester;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -782,7 +782,7 @@ abstract class MedicationRequestDispenseRequest
     Reference performer,
   }) = _MedicationRequestDispenseRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -810,7 +810,7 @@ abstract class MedicationRequestSubstitution
     CodeableConcept reason,
   }) = _MedicationRequestSubstitution;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -868,7 +868,7 @@ abstract class MedicationStatement
     List<Dosage> dosage,
   }) = _MedicationStatement;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

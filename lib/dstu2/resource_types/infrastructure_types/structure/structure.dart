@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -47,7 +47,7 @@ abstract class Media with Resource implements _$Media {
     @JsonKey(required: true) @required Attachment content,
   }) = _Media;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -76,7 +76,7 @@ abstract class Binary with Resource implements _$Binary {
     Base64Binary content,
   }) = _Binary;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -111,7 +111,7 @@ abstract class Bundle with Resource implements _$Bundle {
     Signature signature,
   }) = _Bundle;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -138,7 +138,7 @@ abstract class BundleLink with _$BundleLink {
     @JsonKey(name: '_url') Element urlElement,
   }) = _BundleLink;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -169,7 +169,7 @@ abstract class BundleEntry with _$BundleEntry {
     BundleEntryResponse response,
   }) = _BundleEntry;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -197,7 +197,7 @@ abstract class BundleEntrySearch with _$BundleEntrySearch {
     @JsonKey(name: '_score') Element scoreElement,
   }) = _BundleEntrySearch;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -235,7 +235,7 @@ abstract class BundleEntryRequest with _$BundleEntryRequest {
     @JsonKey(name: '_ifNoneExist') Element ifNoneExistElement,
   }) = _BundleEntryRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -267,7 +267,7 @@ abstract class BundleEntryResponse with _$BundleEntryResponse {
     @JsonKey(name: '_lastModified') Element lastModifiedElement,
   }) = _BundleEntryResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -304,7 +304,7 @@ abstract class Basic with Resource implements _$Basic {
     @JsonKey(name: '_created') Element createdElement,
   }) = _Basic;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

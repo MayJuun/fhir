@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -49,7 +49,7 @@ abstract class Appointment with Resource implements _$Appointment {
     @JsonKey(required: true) @required List<AppointmentParticipant> participant,
   }) = _Appointment;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -81,7 +81,7 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
     @JsonKey(name: '_status') Element statusElement,
   }) = _AppointmentParticipant;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -130,7 +130,7 @@ abstract class AppointmentResponse
     @JsonKey(name: '_comment') Element commentElement,
   }) = _AppointmentResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -167,7 +167,7 @@ abstract class Schedule with Resource implements _$Schedule {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Schedule;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -212,7 +212,7 @@ abstract class Slot with Resource implements _$Slot {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Slot;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

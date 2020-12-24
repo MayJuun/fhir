@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -55,7 +55,7 @@ abstract class Patient with Resource implements _$Patient {
     List<PatientLink> link,
   }) = _Patient;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -86,7 +86,7 @@ abstract class PatientContact with _$PatientContact {
     Period period,
   }) = _PatientContact;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -112,7 +112,7 @@ abstract class PatientAnimal with _$PatientAnimal {
     CodeableConcept genderStatus,
   }) = _PatientAnimal;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -138,7 +138,7 @@ abstract class PatientCommunication with _$PatientCommunication {
     @JsonKey(name: '_preferred') Element preferredElement,
   }) = _PatientCommunication;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -166,7 +166,7 @@ abstract class PatientLink with _$PatientLink {
     @JsonKey(name: '_type') Element typeElement,
   }) = _PatientLink;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -212,7 +212,7 @@ abstract class Practitioner with Resource implements _$Practitioner {
     List<CodeableConcept> communication,
   }) = _Practitioner;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -243,7 +243,7 @@ abstract class PractitionerPractitionerRole
     List<Reference> healthcareService,
   }) = _PractitionerPractitionerRole;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -271,7 +271,7 @@ abstract class PractitionerQualification with _$PractitionerQualification {
     Reference issuer,
   }) = _PractitionerQualification;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -318,7 +318,7 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
     // @JsonKey(name: '_active') Element activeElement,
   }) = _RelatedPerson;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

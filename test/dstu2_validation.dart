@@ -41,35 +41,9 @@ Future<List<String>> dstu2ValidationYaml() async {
 
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
-    var resource = dstu2.Resource.fromJson(json.decode(contents));
 
-    final yamlEditor = YamlEditor(resource.toJson().toString());
-    // print(yamlEditor);
-
-    // var yam = loadYaml(jsonEncode(resource.toJson()));
-    // print('*************************************************');
-    // print(yam);
-    // print(jsonEncode(resource.toJson()));
-    // print(json2yaml(resource.toJson(), yamlStyle: YamlStyle.pubspecLock));
-    //   String toYamlString() => json2yaml(toJson());
-    // var resourceYaml = resource.toYamlString();
-
-    // print(resourceYaml);
-    // print('*************************************************');
-    // print(loadYaml(resourceYaml));
-
-    // var res = (loadYaml(resourceYaml));
-    // print(res);
-
-    // static Resource fromYaml(dynamic yaml) => yaml is String
-    //     ? Resource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-    //     : yaml is YamlMap
-    //         ? Resource.fromJson(jsonDecode(jsonEncode(yaml)))
-    //         : null;
-
-    // print(resourceYaml);
-    // var resourceFromYaml = dstu2.Resource.fromYaml(resourceYaml);
-    // print(resourceFromYaml.toJson());
+    var resource = dstu2.Resource.fromYaml(
+        (dstu2.Resource.fromJson(json.decode(contents)).toYaml()));
 
     if (resource == null) {
       print(file);
@@ -84,7 +58,10 @@ Future<List<String>> dstu2ValidationYaml() async {
 
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
-    var resource = dstu2.Resource.fromJson(json.decode(contents));
+
+    var resource = dstu2.Resource.fromYaml(
+        (dstu2.Resource.fromJson(json.decode(contents)).toYaml()));
+
     if (resource == null) {
       print(file);
     } else {

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
@@ -53,7 +53,7 @@ abstract class Device with Resource implements _$Device {
     List<CodeableConcept> safety,
   }) = _Device;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -86,7 +86,7 @@ abstract class DeviceUdi implements _$DeviceUdi {
     @JsonKey(name: '_entryType') Element entryTypeElement,
   }) = _DeviceUdi;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -129,7 +129,7 @@ abstract class DeviceComponent with Resource implements _$DeviceComponent {
     CodeableConcept languageCode,
   }) = _DeviceComponent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -154,7 +154,7 @@ abstract class DeviceComponentProductionSpecification
     @JsonKey(name: '_productionSpec') Element productionSpecElement,
   }) = _DeviceComponentProductionSpecification;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -202,7 +202,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
     List<DeviceMetricCalibration> calibration,
   }) = _DeviceMetric;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -228,7 +228,7 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
     @JsonKey(name: '_time') Element timeElement,
   }) = _DeviceMetricCalibration;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -275,7 +275,7 @@ abstract class Endpoint with Resource implements _$Endpoint {
     @JsonKey(name: '_header') List<Element> headerElement,
   }) = _Endpoint;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -339,7 +339,7 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
     List<Reference> endpoint,
   }) = _HealthcareService;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -368,7 +368,7 @@ abstract class HealthcareServiceAvailableTime
     @JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
   }) = _HealthcareServiceAvailableTime;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -395,7 +395,7 @@ abstract class HealthcareServiceNotAvailable
     Period during,
   }) = _HealthcareServiceNotAvailable;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -447,7 +447,7 @@ abstract class Location with Resource implements _$Location {
     List<Reference> endpoint,
   }) = _Location;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -473,7 +473,7 @@ abstract class LocationPosition implements _$LocationPosition {
     @JsonKey(name: '_altitude') Element altitudeElement,
   }) = _LocationPosition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -517,7 +517,7 @@ abstract class Organization with Resource implements _$Organization {
     List<Reference> endpoint,
   }) = _Organization;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -541,7 +541,7 @@ abstract class OrganizationContact implements _$OrganizationContact {
     Address address,
   }) = _OrganizationContact;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -581,7 +581,7 @@ abstract class Substance with Resource implements _$Substance {
     List<SubstanceIngredient> ingredient,
   }) = _Substance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -605,7 +605,7 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
     Quantity quantity,
   }) = _SubstanceInstance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -628,7 +628,7 @@ abstract class SubstanceIngredient implements _$SubstanceIngredient {
     Reference substanceReference,
   }) = _SubstanceIngredient;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

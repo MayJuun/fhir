@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
@@ -84,7 +84,7 @@ abstract class ActivityDefinition
     List<ActivityDefinitionDynamicValue> dynamicValue,
   }) = _ActivityDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -108,7 +108,7 @@ abstract class ActivityDefinitionParticipant
     CodeableConcept role,
   }) = _ActivityDefinitionParticipant;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -138,7 +138,7 @@ abstract class ActivityDefinitionDynamicValue
     @JsonKey(name: '_expression') Element expressionElement,
   }) = _ActivityDefinitionDynamicValue;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -212,7 +212,7 @@ abstract class PlanDefinition with Resource implements _$PlanDefinition {
     List<PlanDefinitionAction> action,
   }) = _PlanDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -239,7 +239,7 @@ abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
     List<PlanDefinitionTarget> target,
   }) = _PlanDefinitionGoal;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -264,7 +264,7 @@ abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
     FhirDuration due,
   }) = _PlanDefinitionTarget;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -324,7 +324,7 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
     List<PlanDefinitionAction> action,
   }) = _PlanDefinitionAction;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -352,7 +352,7 @@ abstract class PlanDefinitionCondition implements _$PlanDefinitionCondition {
     @JsonKey(name: '_expression') Element expressionElement,
   }) = _PlanDefinitionCondition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -379,7 +379,7 @@ abstract class PlanDefinitionRelatedAction
     Range offsetRange,
   }) = _PlanDefinitionRelatedAction;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -404,7 +404,7 @@ abstract class PlanDefinitionParticipant
     CodeableConcept role,
   }) = _PlanDefinitionParticipant;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -434,7 +434,7 @@ abstract class PlanDefinitionDynamicValue
     @JsonKey(name: '_expression') Element expressionElement,
   }) = _PlanDefinitionDynamicValue;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -501,7 +501,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
     List<QuestionnaireItem> item,
   }) = _Questionnaire;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -565,7 +565,7 @@ abstract class QuestionnaireItem implements _$QuestionnaireItem {
     List<QuestionnaireItem> item,
   }) = _QuestionnaireItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -609,7 +609,7 @@ abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
     Reference answerReference,
   }) = _QuestionnaireEnableWhen;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -638,7 +638,7 @@ abstract class QuestionnaireOption implements _$QuestionnaireOption {
     Coding valueCoding,
   }) = _QuestionnaireOption;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -708,7 +708,7 @@ abstract class ServiceDefinition with Resource implements _$ServiceDefinition {
     Reference operationDefinition,
   }) = _ServiceDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

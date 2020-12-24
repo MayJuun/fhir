@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -52,7 +52,7 @@ abstract class Encounter with Resource implements _$Encounter {
     Reference partOf,
   }) = _Encounter;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -80,7 +80,7 @@ abstract class EncounterStatusHistory with _$EncounterStatusHistory {
     @JsonKey(required: true) @required Period period,
   }) = _EncounterStatusHistory;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -106,7 +106,7 @@ abstract class EncounterParticipant with _$EncounterParticipant {
     Reference individual,
   }) = _EncounterParticipant;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -141,7 +141,7 @@ abstract class EncounterHospitalization with _$EncounterHospitalization {
     List<Reference> dischargeDiagnosis,
   }) = _EncounterHospitalization;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -170,7 +170,7 @@ abstract class EncounterLocation with _$EncounterLocation {
     Period period,
   }) = _EncounterLocation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -215,7 +215,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
     List<EpisodeOfCareCareTeam> careTeam,
   }) = _EpisodeOfCare;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -244,7 +244,7 @@ abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
     @JsonKey(required: true) @required Period period,
   }) = _EpisodeOfCareStatusHistory;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -271,7 +271,7 @@ abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
     Reference member,
   }) = _EpisodeOfCareCareTeam;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -319,7 +319,7 @@ abstract class Communication with Resource implements _$Communication {
     Reference requestDetail,
   }) = _Communication;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -346,7 +346,7 @@ abstract class CommunicationPayload with _$CommunicationPayload {
     Reference contentReference,
   }) = _CommunicationPayload;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -388,7 +388,7 @@ abstract class Flag with Resource implements _$Flag {
     @JsonKey(required: true) @required CodeableConcept code,
   }) = _Flag;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

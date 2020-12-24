@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -42,7 +42,7 @@ abstract class Account with Resource implements _$Account {
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _Account;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -106,7 +106,7 @@ abstract class Claim with Resource implements _$Claim {
     List<ClaimMissingTeeth> missingTeeth,
   }) = _Claim;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -132,7 +132,7 @@ abstract class ClaimPayee with _$ClaimPayee {
     Reference person,
   }) = _ClaimPayee;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -158,7 +158,7 @@ abstract class ClaimDiagnosis with _$ClaimDiagnosis {
     @JsonKey(required: true) @required Coding diagnosis,
   }) = _ClaimDiagnosis;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -189,7 +189,7 @@ abstract class ClaimCoverage with _$ClaimCoverage {
     Coding originalRuleset,
   }) = _ClaimCoverage;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -232,7 +232,7 @@ abstract class ClaimItem with _$ClaimItem {
     ClaimItemProsthesis prosthesis,
   }) = _ClaimItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -267,7 +267,7 @@ abstract class ClaimItemDetail with _$ClaimItemDetail {
     List<ClaimDetailSubDetail> subDetail,
   }) = _ClaimItemDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -301,7 +301,7 @@ abstract class ClaimDetailSubDetail with _$ClaimDetailSubDetail {
     Coding udi,
   }) = _ClaimDetailSubDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -327,7 +327,7 @@ abstract class ClaimItemProsthesis with _$ClaimItemProsthesis {
     Coding priorMaterial,
   }) = _ClaimItemProsthesis;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -353,7 +353,7 @@ abstract class ClaimMissingTeeth with _$ClaimMissingTeeth {
     Date extractionDate,
   }) = _ClaimMissingTeeth;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -415,7 +415,7 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
     List<ClaimResponseCoverage> coverage,
   }) = _ClaimResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -444,7 +444,7 @@ abstract class ClaimResponseItem with _$ClaimResponseItem {
     List<ClaimResponseItemDetail> detail,
   }) = _ClaimResponseItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -472,7 +472,7 @@ abstract class ClaimResponseItemAdjudication
     @JsonKey(name: '_value') Element valueElement,
   }) = _ClaimResponseItemAdjudication;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -499,7 +499,7 @@ abstract class ClaimResponseItemDetail with _$ClaimResponseItemDetail {
     List<ClaimResponseDetailSubDetail> subDetail,
   }) = _ClaimResponseItemDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -525,7 +525,7 @@ abstract class ClaimResponseDetailSubDetail
     List<ClaimResponseItemAdjudication> adjudication,
   }) = _ClaimResponseDetailSubDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -555,7 +555,7 @@ abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
     ClaimResponseAddItemDetail detail,
   }) = _ClaimResponseAddItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -581,7 +581,7 @@ abstract class ClaimResponseAddItemDetail with _$ClaimResponseAddItemDetail {
     List<ClaimResponseItemAdjudication> adjudication,
   }) = _ClaimResponseAddItemDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -609,7 +609,7 @@ abstract class ClaimResponseError with _$ClaimResponseError {
     @JsonKey(required: true) @required Coding code,
   }) = _ClaimResponseError;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -638,7 +638,7 @@ abstract class ClaimResponseNote with _$ClaimResponseNote {
     @JsonKey(name: '_text') Element textElement,
   }) = _ClaimResponseNote;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -669,7 +669,7 @@ abstract class ClaimResponseCoverage with _$ClaimResponseCoverage {
     Coding originalRuleset,
   }) = _ClaimResponseCoverage;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

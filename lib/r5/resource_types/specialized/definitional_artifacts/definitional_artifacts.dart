@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r5.dart';
@@ -104,7 +104,7 @@ abstract class ActivityDefinition
     List<ActivityDefinitionDynamicValue> dynamicValue,
   }) = _ActivityDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -131,7 +131,7 @@ abstract class ActivityDefinitionParticipant
     CodeableConcept role,
   }) = _ActivityDefinitionParticipant;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -159,7 +159,7 @@ abstract class ActivityDefinitionDynamicValue
     @required Expression expression,
   }) = _ActivityDefinitionDynamicValue;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -247,7 +247,7 @@ abstract class ConditionDefinition
     List<ConditionDefinitionPlan> plan,
   }) = _ConditionDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -273,7 +273,7 @@ abstract class ConditionDefinitionObservation
     CodeableConcept code,
   }) = _ConditionDefinitionObservation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -302,7 +302,7 @@ abstract class ConditionDefinitionMedication
     CodeableConcept code,
   }) = _ConditionDefinitionMedication;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -333,7 +333,7 @@ abstract class ConditionDefinitionPrecondition
     Quantity valueQuantity,
   }) = _ConditionDefinitionPrecondition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -364,7 +364,7 @@ abstract class ConditionDefinitionQuestionnaire
     @required Reference reference,
   }) = _ConditionDefinitionQuestionnaire;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -393,7 +393,7 @@ abstract class ConditionDefinitionPlan implements _$ConditionDefinitionPlan {
     @required Reference reference,
   }) = _ConditionDefinitionPlan;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -450,7 +450,7 @@ abstract class DeviceDefinition with Resource implements _$DeviceDefinition {
     List<DeviceDefinitionMaterial> material,
   }) = _DeviceDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -480,7 +480,7 @@ abstract class DeviceDefinitionUdiDeviceIdentifier
     @JsonKey(name: '_jurisdiction') Element jurisdictionElement,
   }) = _DeviceDefinitionUdiDeviceIdentifier;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -513,7 +513,7 @@ abstract class DeviceDefinitionDeviceName
     @JsonKey(name: '_type') Element typeElement,
   }) = _DeviceDefinitionDeviceName;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -542,7 +542,7 @@ abstract class DeviceDefinitionSpecialization
     @JsonKey(name: '_version') Element versionElement,
   }) = _DeviceDefinitionSpecialization;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -571,7 +571,7 @@ abstract class DeviceDefinitionCapability
     List<CodeableConcept> description,
   }) = _DeviceDefinitionCapability;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -598,7 +598,7 @@ abstract class DeviceDefinitionProperty implements _$DeviceDefinitionProperty {
     List<CodeableConcept> valueCode,
   }) = _DeviceDefinitionProperty;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -627,7 +627,7 @@ abstract class DeviceDefinitionMaterial implements _$DeviceDefinitionMaterial {
     @JsonKey(name: '_allergenicIndicator') Element allergenicIndicatorElement,
   }) = _DeviceDefinitionMaterial;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -704,7 +704,7 @@ abstract class EventDefinition with Resource implements _$EventDefinition {
     @required List<TriggerDefinition> trigger,
   }) = _EventDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -794,7 +794,7 @@ abstract class ObservationDefinition
     List<ObservationDefinitionComponent> component,
   }) = _ObservationDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -824,7 +824,7 @@ abstract class ObservationDefinitionQuantitativeDetails
     @JsonKey(name: '_decimalPrecision') Element decimalPrecisionElement,
   }) = _ObservationDefinitionQuantitativeDetails;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -867,7 +867,7 @@ abstract class ObservationDefinitionQualifiedInterval
     @JsonKey(name: '_condition') Element conditionElement,
   }) = _ObservationDefinitionQualifiedInterval;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -900,7 +900,7 @@ abstract class ObservationDefinitionComponent
     List<ObservationDefinitionQualifiedInterval> qualifiedInterval,
   }) = _ObservationDefinitionComponent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -982,7 +982,7 @@ abstract class PlanDefinition with Resource implements _$PlanDefinition {
     List<PlanDefinitionAction> action,
   }) = _PlanDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1012,7 +1012,7 @@ abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
     List<PlanDefinitionTarget> target,
   }) = _PlanDefinitionGoal;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1040,7 +1040,7 @@ abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
     FhirDuration due,
   }) = _PlanDefinitionTarget;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1116,7 +1116,7 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
     List<PlanDefinitionAction> action,
   }) = _PlanDefinitionAction;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1143,7 +1143,7 @@ abstract class PlanDefinitionCondition implements _$PlanDefinitionCondition {
     Expression expression,
   }) = _PlanDefinitionCondition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1174,7 +1174,7 @@ abstract class PlanDefinitionRelatedAction
     Range offsetRange,
   }) = _PlanDefinitionRelatedAction;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1203,7 +1203,7 @@ abstract class PlanDefinitionParticipant
     CodeableConcept role,
   }) = _PlanDefinitionParticipant;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1231,7 +1231,7 @@ abstract class PlanDefinitionDynamicValue
     Expression expression,
   }) = _PlanDefinitionDynamicValue;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1300,7 +1300,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
     List<QuestionnaireItem> item,
   }) = _Questionnaire;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1351,7 +1351,7 @@ abstract class QuestionnaireItem implements _$QuestionnaireItem {
     List<QuestionnaireItem> item,
   }) = _QuestionnaireItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1396,7 +1396,7 @@ abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
     Reference answerReference,
   }) = _QuestionnaireEnableWhen;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1432,7 +1432,7 @@ abstract class QuestionnaireAnswerOption
     @JsonKey(name: '_initialSelected') Element initialSelectedElement,
   }) = _QuestionnaireAnswerOption;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1476,7 +1476,7 @@ abstract class QuestionnaireInitial implements _$QuestionnaireInitial {
     Reference valueReference,
   }) = _QuestionnaireInitial;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1548,7 +1548,7 @@ abstract class SpecimenDefinition
     List<SpecimenDefinitionTypeTested> typeTested,
   }) = _SpecimenDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1587,7 +1587,7 @@ abstract class SpecimenDefinitionTypeTested
     List<CodeableConcept> testingDestination,
   }) = _SpecimenDefinitionTypeTested;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1624,7 +1624,7 @@ abstract class SpecimenDefinitionContainer
     @JsonKey(name: '_preparation') Element preparationElement,
   }) = _SpecimenDefinitionContainer;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1651,7 +1651,7 @@ abstract class SpecimenDefinitionAdditive
     Reference additiveReference,
   }) = _SpecimenDefinitionAdditive;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1681,7 +1681,7 @@ abstract class SpecimenDefinitionHandling
     @JsonKey(name: '_instruction') Element instructionElement,
   }) = _SpecimenDefinitionHandling;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

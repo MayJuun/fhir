@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r4.dart';
@@ -45,7 +45,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
     List<AuditEventEntity> entity,
   }) = _AuditEvent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -83,7 +83,7 @@ abstract class AuditEventAgent implements _$AuditEventAgent {
     List<CodeableConcept> purposeOfUse,
   }) = _AuditEventAgent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -111,7 +111,7 @@ abstract class AuditEventNetwork implements _$AuditEventNetwork {
     @JsonKey(name: '_type') Element typeElement,
   }) = _AuditEventNetwork;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -138,7 +138,7 @@ abstract class AuditEventSource implements _$AuditEventSource {
     List<Coding> type,
   }) = _AuditEventSource;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -173,7 +173,7 @@ abstract class AuditEventEntity implements _$AuditEventEntity {
     List<AuditEventDetail> detail,
   }) = _AuditEventEntity;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -202,7 +202,7 @@ abstract class AuditEventDetail implements _$AuditEventDetail {
     @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
   }) = _AuditEventDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -249,7 +249,7 @@ abstract class Consent with Resource implements _$Consent {
     ConsentProvision provision,
   }) = _Consent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -276,7 +276,7 @@ abstract class ConsentPolicy implements _$ConsentPolicy {
     @JsonKey(name: '_uri') Element uriElement,
   }) = _ConsentPolicy;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -304,7 +304,7 @@ abstract class ConsentVerification implements _$ConsentVerification {
     @JsonKey(name: '_verificationDate') Element verificationDateElement,
   }) = _ConsentVerification;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -340,7 +340,7 @@ abstract class ConsentProvision implements _$ConsentProvision {
     List<ConsentProvision> provision,
   }) = _ConsentProvision;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -365,7 +365,7 @@ abstract class ConsentActor implements _$ConsentActor {
     @required Reference reference,
   }) = _ConsentActor;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -392,7 +392,7 @@ abstract class ConsentData implements _$ConsentData {
     @required Reference reference,
   }) = _ConsentData;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -437,7 +437,7 @@ abstract class Provenance with Resource implements _$Provenance {
     List<Signature> signature,
   }) = _Provenance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -464,7 +464,7 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
     Reference onBehalfOf,
   }) = _ProvenanceAgent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -492,7 +492,7 @@ abstract class ProvenanceEntity implements _$ProvenanceEntity {
     List<ProvenanceAgent> agent,
   }) = _ProvenanceEntity;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

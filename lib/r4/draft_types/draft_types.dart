@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../r4.dart';
@@ -24,7 +24,7 @@ abstract class Population implements _$Population {
     CodeableConcept physiologicalCondition,
   }) = _Population;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -51,7 +51,7 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
     List<CodeableConcept> specialPrecautionsForStorage,
   }) = _ProductShelfLife;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -88,7 +88,7 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
     CodeableConcept scoring,
   }) = _ProdCharacteristic;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -117,7 +117,7 @@ abstract class MarketingStatus implements _$MarketingStatus {
     @JsonKey(name: '_restoreDate') Element restoreDateElement,
   }) = _MarketingStatus;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -148,7 +148,7 @@ abstract class SubstanceAmount implements _$SubstanceAmount {
     SubstanceAmountReferenceRange referenceRange,
   }) = _SubstanceAmount;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -174,7 +174,7 @@ abstract class SubstanceAmountReferenceRange
     Quantity highLimit,
   }) = _SubstanceAmountReferenceRange;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

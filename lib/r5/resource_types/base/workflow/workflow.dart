@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r5.dart';
@@ -59,7 +59,7 @@ abstract class Appointment with Resource implements _$Appointment {
     List<Period> requestedPeriod,
   }) = _Appointment;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -91,7 +91,7 @@ abstract class AppointmentParticipant implements _$AppointmentParticipant {
     Period period,
   }) = _AppointmentParticipant;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -136,7 +136,7 @@ abstract class AppointmentResponse
     @JsonKey(name: '_comment') Element commentElement,
   }) = _AppointmentResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -177,7 +177,7 @@ abstract class Schedule with Resource implements _$Schedule {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Schedule;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -224,7 +224,7 @@ abstract class Slot with Resource implements _$Slot {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Slot;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -292,7 +292,7 @@ abstract class Task with Resource implements _$Task {
     List<TaskOutput> output,
   }) = _Task;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -318,7 +318,7 @@ abstract class TaskRestriction implements _$TaskRestriction {
     List<Reference> recipient,
   }) = _TaskRestriction;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -413,7 +413,7 @@ abstract class TaskInput implements _$TaskInput {
     Meta valueMeta,
   }) = _TaskInput;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -508,7 +508,7 @@ abstract class TaskOutput implements _$TaskOutput {
     Meta valueMeta,
   }) = _TaskOutput;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -560,7 +560,7 @@ abstract class VerificationResult
     List<VerificationResultValidator> validator,
   }) = _VerificationResult;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -592,7 +592,7 @@ abstract class VerificationResultPrimarySource
     List<CodeableConcept> pushTypeAvailable,
   }) = _VerificationResultPrimarySource;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -632,7 +632,7 @@ abstract class VerificationResultAttestation
     Signature sourceSignature,
   }) = _VerificationResultAttestation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -661,7 +661,7 @@ abstract class VerificationResultValidator
     Signature attestationSignature,
   }) = _VerificationResultValidator;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

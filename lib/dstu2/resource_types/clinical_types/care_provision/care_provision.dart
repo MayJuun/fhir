@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -48,7 +48,7 @@ abstract class CarePlan with Resource implements _$CarePlan {
     Annotation note,
   }) = _CarePlan;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -73,7 +73,7 @@ abstract class CarePlanRelatedPlan with _$CarePlanRelatedPlan {
     @JsonKey(required: true) @required Reference plan,
   }) = _CarePlanRelatedPlan;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -98,7 +98,7 @@ abstract class CarePlanParticipant with _$CarePlanParticipant {
     Reference member,
   }) = _CarePlanParticipant;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -126,7 +126,7 @@ abstract class CarePlanActivity with _$CarePlanActivity {
     CarePlanActivityDetail detail,
   }) = _CarePlanActivity;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -171,7 +171,7 @@ abstract class CarePlanActivityDetail with _$CarePlanActivityDetail {
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _CarePlanActivityDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -223,7 +223,7 @@ abstract class Goal with Resource implements _$Goal {
     List<GoalOutcome> outcome,
   }) = _Goal;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -247,7 +247,7 @@ abstract class GoalOutcome with _$GoalOutcome {
     Reference resultReference,
   }) = _GoalOutcome;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -294,7 +294,7 @@ abstract class ReferralRequest with Resource implements _$ReferralRequest {
     Period fulfillmentTime,
   }) = _ReferralRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -343,7 +343,7 @@ abstract class ProcedureRequest with Resource implements _$ProcedureRequest {
         ProcedureRequestPriority priority,
   }) = _ProcedureRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -389,7 +389,7 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
     NutritionOrderEnteralFormula enteralFormula,
   }) = _NutritionOrder;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -420,7 +420,7 @@ abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
     @JsonKey(name: '_instruction') Element instructionElement,
   }) = _NutritionOrderOralDiet;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -451,7 +451,7 @@ abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
     @JsonKey(name: '_instruction') Element instructionElement,
   }) = _NutritionOrderSupplement;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -491,7 +491,7 @@ abstract class NutritionOrderEnteralFormula
         Element administrationInstructionElement,
   }) = _NutritionOrderEnteralFormula;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -519,7 +519,7 @@ abstract class NutritionOrderOralDietNutrient
     Quantity amount,
   }) = _NutritionOrderOralDietNutrient;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -549,7 +549,7 @@ abstract class NutritionOrderOralDietTexture
     CodeableConcept foodType,
   }) = _NutritionOrderOralDietTexture;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -578,7 +578,7 @@ abstract class NutritionOrderEnteralFormulaAdministration
     Ratio rateRatio,
   }) = _NutritionOrderEnteralFormulaAdministration;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -620,7 +620,7 @@ abstract class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
     String notes,
   }) = _VisionPrescriptionDispense;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -663,7 +663,7 @@ abstract class VisionPrescription
     List<VisionPrescriptionDispense> dispense,
   }) = _VisionPrescription;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

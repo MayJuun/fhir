@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r4.dart';
@@ -34,7 +34,7 @@ abstract class Basic with Resource implements _$Basic {
     Reference author,
   }) = _Basic;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -65,7 +65,7 @@ abstract class Binary with Resource implements _$Binary {
     @JsonKey(name: '_data') Element dataElement,
   }) = _Binary;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -101,7 +101,7 @@ abstract class Bundle with Resource implements _$Bundle {
     Signature signature,
   }) = _Bundle;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -127,7 +127,7 @@ abstract class BundleLink implements _$BundleLink {
     @JsonKey(name: '_url') Element urlElement,
   }) = _BundleLink;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -157,7 +157,7 @@ abstract class BundleEntry implements _$BundleEntry {
     BundleResponse response,
   }) = _BundleEntry;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -184,7 +184,7 @@ abstract class BundleSearch implements _$BundleSearch {
     @JsonKey(name: '_score') Element scoreElement,
   }) = _BundleSearch;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -220,7 +220,7 @@ abstract class BundleRequest implements _$BundleRequest {
     @JsonKey(name: '_ifNoneExist') Element ifNoneExistElement,
   }) = _BundleRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -252,7 +252,7 @@ abstract class BundleResponse implements _$BundleResponse {
     Resource outcome,
   }) = _BundleResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -287,7 +287,7 @@ abstract class Linkage with Resource implements _$Linkage {
     @required List<LinkageItem> item,
   }) = _Linkage;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -313,7 +313,7 @@ abstract class LinkageItem implements _$LinkageItem {
     @required Reference resource,
   }) = _LinkageItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -357,7 +357,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     Canonical definition,
   }) = _MessageHeader;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -386,7 +386,7 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
     Reference receiver,
   }) = _MessageHeaderDestination;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -419,7 +419,7 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
     @JsonKey(name: '_endpoint') Element endpointElement,
   }) = _MessageHeaderSource;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -448,7 +448,7 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
     Reference details,
   }) = _MessageHeaderResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -480,7 +480,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     @required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -516,7 +516,7 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
     @JsonKey(name: '_expression') List<Element> expressionElement,
   }) = _OperationOutcomeIssue;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -544,7 +544,7 @@ abstract class Parameters with Resource implements _$Parameters {
     List<ParametersParameter> parameter,
   }) = _Parameters;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -640,7 +640,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
     @JsonKey(name: 'part') List<ParametersParameter> part_,
   }) = _ParametersParameter;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -684,7 +684,7 @@ abstract class Subscription with Resource implements _$Subscription {
     @required SubscriptionChannel channel,
   }) = _Subscription;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -716,7 +716,7 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
     @JsonKey(name: '_header') List<Element> headerElement,
   }) = _SubscriptionChannel;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

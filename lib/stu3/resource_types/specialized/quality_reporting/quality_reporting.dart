@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
@@ -89,7 +89,7 @@ abstract class Measure with Resource implements _$Measure {
     List<MeasureSupplementalData> supplementalData,
   }) = _Measure;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -116,7 +116,7 @@ abstract class MeasureGroup implements _$MeasureGroup {
     List<MeasureStratifier> stratifier,
   }) = _MeasureGroup;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -144,7 +144,7 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
     @JsonKey(name: '_criteria') Element criteriaElement,
   }) = _MeasurePopulation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -169,7 +169,7 @@ abstract class MeasureStratifier implements _$MeasureStratifier {
     @JsonKey(name: '_path') Element pathElement,
   }) = _MeasureStratifier;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -195,7 +195,7 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
     @JsonKey(name: '_path') Element pathElement,
   }) = _MeasureSupplementalData;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -239,7 +239,7 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
     Reference evaluatedResources,
   }) = _MeasureReport;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -264,7 +264,7 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
     List<MeasureReportStratifier> stratifier,
   }) = _MeasureReportGroup;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -289,7 +289,7 @@ abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
     Reference patients,
   }) = _MeasureReportPopulation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -311,7 +311,7 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
     List<MeasureReportStratum> stratum,
   }) = _MeasureReportStratifier;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -336,7 +336,7 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
     @JsonKey(name: '_measureScore') Element measureScoreElement,
   }) = _MeasureReportStratum;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -361,7 +361,7 @@ abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
     Reference patients,
   }) = _MeasureReportPopulation1;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
@@ -76,7 +76,7 @@ abstract class CapabilityStatement
     List<CapabilityStatementDocument> document,
   }) = _CapabilityStatement;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -103,7 +103,7 @@ abstract class CapabilityStatementSoftware
     @JsonKey(name: '_releaseDate') Element releaseDateElement,
   }) = _CapabilityStatementSoftware;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -129,7 +129,7 @@ abstract class CapabilityStatementImplementation
     @JsonKey(name: '_url') Element urlElement,
   }) = _CapabilityStatementImplementation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -164,7 +164,7 @@ abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
     @JsonKey(name: '_compartment') List<Element> compartmentElement,
   }) = _CapabilityStatementRest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -192,7 +192,7 @@ abstract class CapabilityStatementSecurity
     List<CapabilityStatementCertificate> certificate,
   }) = _CapabilityStatementSecurity;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -218,7 +218,7 @@ abstract class CapabilityStatementCertificate
     @JsonKey(name: '_blob') Element blobElement,
   }) = _CapabilityStatementCertificate;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -269,7 +269,7 @@ abstract class CapabilityStatementResource
     List<CapabilityStatementSearchParam> searchParam,
   }) = _CapabilityStatementResource;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -295,7 +295,7 @@ abstract class CapabilityStatementInteraction
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementInteraction;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -327,7 +327,7 @@ abstract class CapabilityStatementSearchParam
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementSearchParam;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -355,7 +355,7 @@ abstract class CapabilityStatementInteraction1
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementInteraction1;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -382,7 +382,7 @@ abstract class CapabilityStatementOperation
     @required Reference definition,
   }) = _CapabilityStatementOperation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -411,7 +411,7 @@ abstract class CapabilityStatementMessaging
     List<CapabilityStatementEvent> event,
   }) = _CapabilityStatementMessaging;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -436,7 +436,7 @@ abstract class CapabilityStatementEndpoint
     @JsonKey(name: '_address') Element addressElement,
   }) = _CapabilityStatementEndpoint;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -461,7 +461,7 @@ abstract class CapabilityStatementSupportedMessage
     @required Reference definition,
   }) = _CapabilityStatementSupportedMessage;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -496,7 +496,7 @@ abstract class CapabilityStatementEvent implements _$CapabilityStatementEvent {
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CapabilityStatementEvent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -523,7 +523,7 @@ abstract class CapabilityStatementDocument
     @required Reference profile,
   }) = _CapabilityStatementDocument;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -585,7 +585,7 @@ abstract class CompartmentDefinition
     List<CompartmentDefinitionResource> resource,
   }) = _CompartmentDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -612,7 +612,7 @@ abstract class CompartmentDefinitionResource
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _CompartmentDefinitionResource;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -670,7 +670,7 @@ abstract class DataElement with Resource implements _$DataElement {
     @required List<ElementDefinition> element,
   }) = _DataElement;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -698,7 +698,7 @@ abstract class DataElementMapping implements _$DataElementMapping {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _DataElementMapping;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -755,7 +755,7 @@ abstract class GraphDefinition with Resource implements _$GraphDefinition {
     List<GraphDefinitionLink> link,
   }) = _GraphDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -786,7 +786,7 @@ abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
     @required List<GraphDefinitionTarget> target,
   }) = _GraphDefinitionLink;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -812,7 +812,7 @@ abstract class GraphDefinitionTarget implements _$GraphDefinitionTarget {
     List<GraphDefinitionLink> link,
   }) = _GraphDefinitionTarget;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -841,7 +841,7 @@ abstract class GraphDefinitionCompartment
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _GraphDefinitionCompartment;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -904,7 +904,7 @@ abstract class ImplementationGuide
     ImplementationGuidePage page,
   }) = _ImplementationGuide;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -929,7 +929,7 @@ abstract class ImplementationGuideDependency
     @JsonKey(name: '_uri') Element uriElement,
   }) = _ImplementationGuideDependency;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -956,7 +956,7 @@ abstract class ImplementationGuidePackage
     @required List<ImplementationGuideResource> resource,
   }) = _ImplementationGuidePackage;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -990,7 +990,7 @@ abstract class ImplementationGuideResource
     Reference exampleFor,
   }) = _ImplementationGuideResource;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1015,7 +1015,7 @@ abstract class ImplementationGuideGlobal
     @required Reference profile,
   }) = _ImplementationGuideGlobal;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1049,7 +1049,7 @@ abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
     List<ImplementationGuidePage> page,
   }) = _ImplementationGuidePage;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1116,7 +1116,7 @@ abstract class MessageDefinition with Resource implements _$MessageDefinition {
     List<MessageDefinitionAllowedResponse> allowedResponse,
   }) = _MessageDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1143,7 +1143,7 @@ abstract class MessageDefinitionFocus implements _$MessageDefinitionFocus {
     @JsonKey(name: '_max') Element maxElement,
   }) = _MessageDefinitionFocus;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1167,7 +1167,7 @@ abstract class MessageDefinitionAllowedResponse
     @JsonKey(name: '_situation') Element situationElement,
   }) = _MessageDefinitionAllowedResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1244,7 +1244,7 @@ abstract class OperationDefinition
     List<OperationDefinitionOverload> overload,
   }) = _OperationDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1282,7 +1282,7 @@ abstract class OperationDefinitionParameter
     @JsonKey(name: 'part') List<OperationDefinitionParameter> part_,
   }) = _OperationDefinitionParameter;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1310,7 +1310,7 @@ abstract class OperationDefinitionBinding
     Reference valueSetReference,
   }) = _OperationDefinitionBinding;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1336,7 +1336,7 @@ abstract class OperationDefinitionOverload
     @JsonKey(name: '_comment') Element commentElement,
   }) = _OperationDefinitionOverload;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1412,7 +1412,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     List<SearchParameterComponent> component,
   }) = _SearchParameter;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1435,7 +1435,7 @@ abstract class SearchParameterComponent implements _$SearchParameterComponent {
     @JsonKey(name: '_expression') Element expressionElement,
   }) = _SearchParameterComponent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1517,7 +1517,7 @@ abstract class StructureDefinition
     StructureDefinitionDifferential differential,
   }) = _StructureDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1546,7 +1546,7 @@ abstract class StructureDefinitionMapping
     @JsonKey(name: '_comment') Element commentElement,
   }) = _StructureDefinitionMapping;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1569,7 +1569,7 @@ abstract class StructureDefinitionSnapshot
     @required List<ElementDefinition> element,
   }) = _StructureDefinitionSnapshot;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1592,7 +1592,7 @@ abstract class StructureDefinitionDifferential
     @required List<ElementDefinition> element,
   }) = _StructureDefinitionDifferential;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1656,7 +1656,7 @@ abstract class StructureMap with Resource implements _$StructureMap {
     @required List<StructureMapGroup> group,
   }) = _StructureMap;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1684,7 +1684,7 @@ abstract class StructureMapStructure implements _$StructureMapStructure {
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _StructureMapStructure;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1714,7 +1714,7 @@ abstract class StructureMapGroup implements _$StructureMapGroup {
     @required List<StructureMapRule> rule,
   }) = _StructureMapGroup;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1742,7 +1742,7 @@ abstract class StructureMapInput implements _$StructureMapInput {
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _StructureMapInput;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1770,7 +1770,7 @@ abstract class StructureMapRule implements _$StructureMapRule {
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _StructureMapRule;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1881,7 +1881,7 @@ abstract class StructureMapSource implements _$StructureMapSource {
     @JsonKey(name: '_check') Element checkElement,
   }) = _StructureMapSource;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1916,7 +1916,7 @@ abstract class StructureMapTarget implements _$StructureMapTarget {
     List<StructureMapParameter> parameter,
   }) = _StructureMapTarget;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1946,7 +1946,7 @@ abstract class StructureMapParameter implements _$StructureMapParameter {
     @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
   }) = _StructureMapParameter;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1970,7 +1970,7 @@ abstract class StructureMapDependent implements _$StructureMapDependent {
     @JsonKey(name: '_variable') List<Element> variableElement,
   }) = _StructureMapDependent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

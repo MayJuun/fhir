@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r5.dart';
@@ -55,7 +55,7 @@ abstract class Communication with Resource implements _$Communication {
     List<Annotation> note,
   }) = _Communication;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -81,7 +81,7 @@ abstract class CommunicationPayload implements _$CommunicationPayload {
     CodeableConcept contentCodeableConcept,
   }) = _CommunicationPayload;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -143,7 +143,7 @@ abstract class CommunicationRequest
     List<Annotation> note,
   }) = _CommunicationRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -170,7 +170,7 @@ abstract class CommunicationRequestPayload
     CodeableConcept contentCodeableConcept,
   }) = _CommunicationRequestPayload;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -234,7 +234,7 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
     List<Reference> relevantHistory,
   }) = _DeviceRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -263,7 +263,7 @@ abstract class DeviceRequestParameter implements _$DeviceRequestParameter {
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
   }) = _DeviceRequestParameter;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -320,7 +320,7 @@ abstract class DeviceUseStatement
     List<Annotation> note,
   }) = _DeviceUseStatement;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -372,7 +372,7 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
     List<DataRequirement> dataRequirement,
   }) = _GuidanceResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -419,7 +419,7 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
     List<Reference> receiver,
   }) = _SupplyDelivery;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -446,7 +446,7 @@ abstract class SupplyDeliverySuppliedItem
     Reference itemReference,
   }) = _SupplyDeliverySuppliedItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -500,7 +500,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
     Reference deliverTo,
   }) = _SupplyRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -529,7 +529,7 @@ abstract class SupplyRequestParameter implements _$SupplyRequestParameter {
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
   }) = _SupplyRequestParameter;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

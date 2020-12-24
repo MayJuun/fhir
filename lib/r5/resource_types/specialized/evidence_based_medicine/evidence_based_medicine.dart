@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r5.dart';
@@ -75,7 +75,7 @@ abstract class Evidence with Resource implements _$Evidence {
     List<EvidenceCertainty> certainty,
   }) = _Evidence;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -106,7 +106,7 @@ abstract class EvidenceVariableDefinition
     CodeableConcept directnessMatch,
   }) = _EvidenceVariableDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -137,7 +137,7 @@ abstract class EvidenceCertainty implements _$EvidenceCertainty {
     List<EvidenceCertaintySubcomponent> certaintySubcomponent,
   }) = _EvidenceCertainty;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -168,7 +168,7 @@ abstract class EvidenceCertaintySubcomponent
     List<CodeableConcept> rating,
   }) = _EvidenceCertaintySubcomponent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -253,7 +253,7 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
     List<EvidenceVariableCategory> category,
   }) = _EvidenceVariable;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -292,7 +292,7 @@ abstract class EvidenceVariableCharacteristic
     @JsonKey(name: '_groupMeasure') Element groupMeasureElement,
   }) = _EvidenceVariableCharacteristic;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -324,7 +324,7 @@ abstract class EvidenceVariableTimeFromStart
     List<Annotation> note,
   }) = _EvidenceVariableTimeFromStart;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -353,7 +353,7 @@ abstract class EvidenceVariableCategory implements _$EvidenceVariableCategory {
     Range valueRange,
   }) = _EvidenceVariableCategory;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

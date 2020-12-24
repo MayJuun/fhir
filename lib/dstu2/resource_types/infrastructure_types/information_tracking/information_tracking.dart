@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -44,7 +44,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
     @JsonKey(required: true) @required QuestionnaireGroup group,
   }) = _Questionnaire;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -78,7 +78,7 @@ abstract class QuestionnaireGroup with _$QuestionnaireGroup {
     List<QuestionnaireGroupQuestion> question,
   }) = _QuestionnaireGroup;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -112,7 +112,7 @@ abstract class QuestionnaireGroupQuestion with _$QuestionnaireGroupQuestion {
     List<QuestionnaireGroup> group,
   }) = _QuestionnaireGroupQuestion;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -163,7 +163,7 @@ abstract class QuestionnaireResponse
     QuestionnaireResponseGroup group,
   }) = _QuestionnaireResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -195,7 +195,7 @@ abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
     List<QuestionnaireResponseGroupQuestion> question,
   }) = _QuestionnaireResponseGroup;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -225,7 +225,7 @@ abstract class QuestionnaireResponseGroupQuestion
     List<QuestionnaireResponseQuestionAnswer> answer,
   }) = _QuestionnaireResponseGroupQuestion;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -277,7 +277,7 @@ abstract class QuestionnaireResponseQuestionAnswer
     List<QuestionnaireResponseGroup> group,
   }) = _QuestionnaireResponseQuestionAnswer;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -324,7 +324,7 @@ abstract class Provenance with Resource implements _$Provenance {
     List<Signature> signature,
   }) = _Provenance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -352,7 +352,7 @@ abstract class ProvenanceAgent with _$ProvenanceAgent {
     List<ProvenanceAgentRelatedAgent> relatedAgent,
   }) = _ProvenanceAgent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -385,7 +385,7 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
     ProvenanceAgent agent,
   }) = _ProvenanceEntity;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -410,7 +410,7 @@ abstract class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent {
     @JsonKey(required: true) @required FhirUri target,
   }) = _ProvenanceAgentRelatedAgent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -446,7 +446,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
     List<AuditEventObject> object,
   }) = _AuditEvent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -476,7 +476,7 @@ abstract class AuditEventEvent with _$AuditEventEvent {
     List<Coding> purposeOfEvent,
   }) = _AuditEventEvent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -511,7 +511,7 @@ abstract class AuditEventParticipant with _$AuditEventParticipant {
     List<Coding> purposeOfUse,
   }) = _AuditEventParticipant;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -538,7 +538,7 @@ abstract class AuditEventSource with _$AuditEventSource {
     List<Coding> type,
   }) = _AuditEventSource;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -572,7 +572,7 @@ abstract class AuditEventObject with _$AuditEventObject {
     List<AuditEventObjectDetail> detail,
   }) = _AuditEventObject;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -600,7 +600,7 @@ abstract class AuditEventParticipantNetwork
     @JsonKey(name: '_type') Element typeElement,
   }) = _AuditEventParticipantNetwork;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -627,7 +627,7 @@ abstract class AuditEventObjectDetail with _$AuditEventObjectDetail {
     @JsonKey(required: true) @required Base64Binary value,
   }) = _AuditEventObjectDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

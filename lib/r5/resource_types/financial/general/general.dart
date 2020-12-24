@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r5.dart';
@@ -42,7 +42,7 @@ abstract class Account with Resource implements _$Account {
     Reference partOf,
   }) = _Account;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -68,7 +68,7 @@ abstract class AccountCoverage implements _$AccountCoverage {
     @JsonKey(name: '_priority') Element priorityElement,
   }) = _AccountCoverage;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -95,7 +95,7 @@ abstract class AccountGuarantor implements _$AccountGuarantor {
     Period period,
   }) = _AccountGuarantor;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -162,7 +162,7 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
     List<Reference> supportingInformation,
   }) = _ChargeItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -187,7 +187,7 @@ abstract class ChargeItemPerformer implements _$ChargeItemPerformer {
     @required Reference actor,
   }) = _ChargeItemPerformer;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -262,7 +262,7 @@ abstract class ChargeItemDefinition
     List<ChargeItemDefinitionPropertyGroup> propertyGroup,
   }) = _ChargeItemDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -292,7 +292,7 @@ abstract class ChargeItemDefinitionApplicability
     @JsonKey(name: '_expression') Element expressionElement,
   }) = _ChargeItemDefinitionApplicability;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -322,7 +322,7 @@ abstract class ChargeItemDefinitionPropertyGroup
     List<ChargeItemDefinitionPriceComponent> priceComponent,
   }) = _ChargeItemDefinitionPropertyGroup;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -356,7 +356,7 @@ abstract class ChargeItemDefinitionPriceComponent
     Money amount,
   }) = _ChargeItemDefinitionPriceComponent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -435,7 +435,7 @@ abstract class Contract with Resource implements _$Contract {
     Reference legallyBindingReference,
   }) = _Contract;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -468,7 +468,7 @@ abstract class ContractContentDefinition
     @JsonKey(name: '_copyright') Element copyrightElement,
   }) = _ContractContentDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -507,7 +507,7 @@ abstract class ContractTerm implements _$ContractTerm {
     List<ContractTerm> group,
   }) = _ContractTerm;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -535,7 +535,7 @@ abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
     List<Coding> control,
   }) = _ContractSecurityLabel;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -572,7 +572,7 @@ abstract class ContractOffer implements _$ContractOffer {
         List<Element> securityLabelNumberElement,
   }) = _ContractOffer;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -597,7 +597,7 @@ abstract class ContractParty implements _$ContractParty {
     @required CodeableConcept role,
   }) = _ContractParty;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -640,7 +640,7 @@ abstract class ContractAnswer implements _$ContractAnswer {
     Reference valueReference,
   }) = _ContractAnswer;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -683,7 +683,7 @@ abstract class ContractAsset implements _$ContractAsset {
     List<ContractValuedItem> valuedItem,
   }) = _ContractAsset;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -710,7 +710,7 @@ abstract class ContractContext implements _$ContractContext {
     @JsonKey(name: '_text') Element textElement,
   }) = _ContractContext;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -756,7 +756,7 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
         List<Element> securityLabelNumberElement,
   }) = _ContractValuedItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -809,7 +809,7 @@ abstract class ContractAction implements _$ContractAction {
         List<Element> securityLabelNumberElement,
   }) = _ContractAction;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -834,7 +834,7 @@ abstract class ContractSubject implements _$ContractSubject {
     CodeableConcept role,
   }) = _ContractSubject;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -860,7 +860,7 @@ abstract class ContractSigner implements _$ContractSigner {
     @required List<Signature> signature,
   }) = _ContractSigner;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -885,7 +885,7 @@ abstract class ContractFriendly implements _$ContractFriendly {
     Reference contentReference,
   }) = _ContractFriendly;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -910,7 +910,7 @@ abstract class ContractLegal implements _$ContractLegal {
     Reference contentReference,
   }) = _ContractLegal;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -935,7 +935,7 @@ abstract class ContractRule implements _$ContractRule {
     Reference contentReference,
   }) = _ContractRule;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1021,7 +1021,7 @@ abstract class ExplanationOfBenefit
     List<ExplanationOfBenefitBenefitBalance> benefitBalance,
   }) = _ExplanationOfBenefit;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1048,7 +1048,7 @@ abstract class ExplanationOfBenefitRelated
     Identifier reference,
   }) = _ExplanationOfBenefitRelated;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1075,7 +1075,7 @@ abstract class ExplanationOfBenefitPayee
     Reference party,
   }) = _ExplanationOfBenefitPayee;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1107,7 +1107,7 @@ abstract class ExplanationOfBenefitCareTeam
     CodeableConcept qualification,
   }) = _ExplanationOfBenefitCareTeam;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1147,7 +1147,7 @@ abstract class ExplanationOfBenefitSupportingInfo
     Coding reason,
   }) = _ExplanationOfBenefitSupportingInfo;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1182,7 +1182,7 @@ abstract class ExplanationOfBenefitDiagnosis
     CodeableConcept packageCode,
   }) = _ExplanationOfBenefitDiagnosis;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1215,7 +1215,7 @@ abstract class ExplanationOfBenefitProcedure
     List<Reference> udi,
   }) = _ExplanationOfBenefitProcedure;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1245,7 +1245,7 @@ abstract class ExplanationOfBenefitInsurance
     @JsonKey(name: '_preAuthRef') List<Element> preAuthRefElement,
   }) = _ExplanationOfBenefitInsurance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1275,7 +1275,7 @@ abstract class ExplanationOfBenefitAccident
     Reference locationReference,
   }) = _ExplanationOfBenefitAccident;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1334,7 +1334,7 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
     List<ExplanationOfBenefitDetail> detail,
   }) = _ExplanationOfBenefitItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1364,7 +1364,7 @@ abstract class ExplanationOfBenefitAdjudication
     @JsonKey(name: '_value') Element valueElement,
   }) = _ExplanationOfBenefitAdjudication;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1409,7 +1409,7 @@ abstract class ExplanationOfBenefitDetail
     List<ExplanationOfBenefitSubDetail> subDetail,
   }) = _ExplanationOfBenefitDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1450,7 +1450,7 @@ abstract class ExplanationOfBenefitSubDetail
     List<ExplanationOfBenefitAdjudication> adjudication,
   }) = _ExplanationOfBenefitSubDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1502,7 +1502,7 @@ abstract class ExplanationOfBenefitAddItem
     List<ExplanationOfBenefitDetail1> detail,
   }) = _ExplanationOfBenefitAddItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1538,7 +1538,7 @@ abstract class ExplanationOfBenefitDetail1
     List<ExplanationOfBenefitSubDetail1> subDetail,
   }) = _ExplanationOfBenefitDetail1;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1573,7 +1573,7 @@ abstract class ExplanationOfBenefitSubDetail1
     List<ExplanationOfBenefitAdjudication> adjudication,
   }) = _ExplanationOfBenefitSubDetail1;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1602,7 +1602,7 @@ abstract class ExplanationOfBenefitTotal
     @required Money amount,
   }) = _ExplanationOfBenefitTotal;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1634,7 +1634,7 @@ abstract class ExplanationOfBenefitPayment
     Identifier identifier,
   }) = _ExplanationOfBenefitPayment;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1667,7 +1667,7 @@ abstract class ExplanationOfBenefitProcessNote
     CodeableConcept language,
   }) = _ExplanationOfBenefitProcessNote;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1705,7 +1705,7 @@ abstract class ExplanationOfBenefitBenefitBalance
     List<ExplanationOfBenefitFinancial> financial,
   }) = _ExplanationOfBenefitBenefitBalance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1742,7 +1742,7 @@ abstract class ExplanationOfBenefitFinancial
     Money usedMoney,
   }) = _ExplanationOfBenefitFinancial;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1792,7 +1792,7 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
     List<InsurancePlanPlan> plan,
   }) = _InsurancePlan;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1819,7 +1819,7 @@ abstract class InsurancePlanContact implements _$InsurancePlanContact {
     Address address,
   }) = _InsurancePlanContact;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1845,7 +1845,7 @@ abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage {
     @required List<InsurancePlanBenefit> benefit,
   }) = _InsurancePlanCoverage;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1872,7 +1872,7 @@ abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit {
     List<InsurancePlanLimit> limit,
   }) = _InsurancePlanBenefit;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1897,7 +1897,7 @@ abstract class InsurancePlanLimit implements _$InsurancePlanLimit {
     CodeableConcept code,
   }) = _InsurancePlanLimit;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1926,7 +1926,7 @@ abstract class InsurancePlanPlan implements _$InsurancePlanPlan {
     List<InsurancePlanSpecificCost> specificCost,
   }) = _InsurancePlanPlan;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1955,7 +1955,7 @@ abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _InsurancePlanGeneralCost;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1982,7 +1982,7 @@ abstract class InsurancePlanSpecificCost
     List<InsurancePlanBenefit1> benefit,
   }) = _InsurancePlanSpecificCost;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -2008,7 +2008,7 @@ abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1 {
     List<InsurancePlanCost> cost,
   }) = _InsurancePlanBenefit1;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -2035,7 +2035,7 @@ abstract class InsurancePlanCost implements _$InsurancePlanCost {
     Quantity value,
   }) = _InsurancePlanCost;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r5.dart';
@@ -74,7 +74,7 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
     List<CodeSystemConcept> concept,
   }) = _CodeSystem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -105,7 +105,7 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
     @JsonKey(name: '_value') Element valueElement,
   }) = _CodeSystemFilter;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -137,7 +137,7 @@ abstract class CodeSystemProperty implements _$CodeSystemProperty {
     @JsonKey(name: '_type') Element typeElement,
   }) = _CodeSystemProperty;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -169,7 +169,7 @@ abstract class CodeSystemConcept implements _$CodeSystemConcept {
     List<CodeSystemConcept> concept,
   }) = _CodeSystemConcept;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -197,7 +197,7 @@ abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
     @JsonKey(name: '_value') Element valueElement,
   }) = _CodeSystemDesignation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -235,7 +235,7 @@ abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
     @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
   }) = _CodeSystemProperty1;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -302,7 +302,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
     List<ConceptMapGroup> group,
   }) = _ConceptMap;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -335,7 +335,7 @@ abstract class ConceptMapGroup implements _$ConceptMapGroup {
     ConceptMapUnmapped unmapped,
   }) = _ConceptMapGroup;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -365,7 +365,7 @@ abstract class ConceptMapElement implements _$ConceptMapElement {
     List<ConceptMapTarget> target,
   }) = _ConceptMapElement;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -399,7 +399,7 @@ abstract class ConceptMapTarget implements _$ConceptMapTarget {
     List<ConceptMapDependsOn> product,
   }) = _ConceptMapTarget;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -429,7 +429,7 @@ abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
     @JsonKey(name: '_display') Element displayElement,
   }) = _ConceptMapDependsOn;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -460,7 +460,7 @@ abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
     Canonical url,
   }) = _ConceptMapUnmapped;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -526,7 +526,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     @required List<NamingSystemUniqueId> uniqueId,
   }) = _NamingSystem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -559,7 +559,7 @@ abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
     Period period,
   }) = _NamingSystemUniqueId;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -635,7 +635,7 @@ abstract class TerminologyCapabilities
     TerminologyCapabilitiesClosure closure,
   }) = _TerminologyCapabilities;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -663,7 +663,7 @@ abstract class TerminologyCapabilitiesSoftware
     @JsonKey(name: '_version') Element versionElement,
   }) = _TerminologyCapabilitiesSoftware;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -694,7 +694,7 @@ abstract class TerminologyCapabilitiesImplementation
     @JsonKey(name: '_url') Element urlElement,
   }) = _TerminologyCapabilitiesImplementation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -726,7 +726,7 @@ abstract class TerminologyCapabilitiesCodeSystem
     @JsonKey(name: '_subsumption') Element subsumptionElement,
   }) = _TerminologyCapabilitiesCodeSystem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -765,7 +765,7 @@ abstract class TerminologyCapabilitiesVersion
     @JsonKey(name: '_property') List<Element> propertyElement,
   }) = _TerminologyCapabilitiesVersion;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -796,7 +796,7 @@ abstract class TerminologyCapabilitiesFilter
     @JsonKey(name: '_op') List<Element> opElement,
   }) = _TerminologyCapabilitiesFilter;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -830,7 +830,7 @@ abstract class TerminologyCapabilitiesExpansion
     @JsonKey(name: '_textFilter') Element textFilterElement,
   }) = _TerminologyCapabilitiesExpansion;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -862,7 +862,7 @@ abstract class TerminologyCapabilitiesParameter
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _TerminologyCapabilitiesParameter;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -892,7 +892,7 @@ abstract class TerminologyCapabilitiesValidateCode
     @JsonKey(name: '_translations') Element translationsElement,
   }) = _TerminologyCapabilitiesValidateCode;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -922,7 +922,7 @@ abstract class TerminologyCapabilitiesTranslation
     @JsonKey(name: '_needsMap') Element needsMapElement,
   }) = _TerminologyCapabilitiesTranslation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -952,7 +952,7 @@ abstract class TerminologyCapabilitiesClosure
     @JsonKey(name: '_translation') Element translationElement,
   }) = _TerminologyCapabilitiesClosure;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1016,7 +1016,7 @@ abstract class ValueSet with Resource implements _$ValueSet {
     ValueSetExpansion expansion,
   }) = _ValueSet;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1047,7 +1047,7 @@ abstract class ValueSetCompose implements _$ValueSetCompose {
     @JsonKey(name: '_property') List<Element> propertyElement,
   }) = _ValueSetCompose;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1077,7 +1077,7 @@ abstract class ValueSetInclude implements _$ValueSetInclude {
     List<Canonical> valueSet,
   }) = _ValueSetInclude;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1105,7 +1105,7 @@ abstract class ValueSetConcept implements _$ValueSetConcept {
     List<ValueSetDesignation> designation,
   }) = _ValueSetConcept;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1133,7 +1133,7 @@ abstract class ValueSetDesignation implements _$ValueSetDesignation {
     @JsonKey(name: '_value') Element valueElement,
   }) = _ValueSetDesignation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1162,7 +1162,7 @@ abstract class ValueSetFilter implements _$ValueSetFilter {
     @JsonKey(name: '_value') Element valueElement,
   }) = _ValueSetFilter;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1196,7 +1196,7 @@ abstract class ValueSetExpansion implements _$ValueSetExpansion {
     List<ValueSetContains> contains,
   }) = _ValueSetExpansion;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1235,7 +1235,7 @@ abstract class ValueSetParameter implements _$ValueSetParameter {
     @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
   }) = _ValueSetParameter;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1262,7 +1262,7 @@ abstract class ValueSetProperty implements _$ValueSetProperty {
     @JsonKey(name: '_uri') Element uriElement,
   }) = _ValueSetProperty;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1300,7 +1300,7 @@ abstract class ValueSetContains implements _$ValueSetContains {
     List<ValueSetContains> contains,
   }) = _ValueSetContains;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1338,7 +1338,7 @@ abstract class ValueSetProperty1 implements _$ValueSetProperty1 {
     @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
   }) = _ValueSetProperty1;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

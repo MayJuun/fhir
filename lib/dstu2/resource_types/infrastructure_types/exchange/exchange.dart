@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -39,7 +39,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     List<Reference> data,
   }) = _MessageHeader;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -69,7 +69,7 @@ abstract class MessageHeaderResponse with _$MessageHeaderResponse {
     Reference details,
   }) = _MessageHeaderResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -101,7 +101,7 @@ abstract class MessageHeaderSource with _$MessageHeaderSource {
     @JsonKey(name: '_endpoint') Element endpointElement,
   }) = _MessageHeaderSource;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -129,7 +129,7 @@ abstract class MessageHeaderDestination with _$MessageHeaderDestination {
     @JsonKey(name: '_endpoint') Element endpointElement,
   }) = _MessageHeaderDestination;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -163,7 +163,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     @JsonKey(required: true) @required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -193,7 +193,7 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
     List<String> location,
   }) = _OperationOutcomeIssue;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -221,7 +221,7 @@ abstract class Parameters with Resource implements _$Parameters {
     List<ParametersParameter> parameter,
   }) = _Parameters;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -281,7 +281,7 @@ abstract class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: 'part') List<ParametersParameter> part_,
   }) = _ParametersParameter;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -327,7 +327,7 @@ abstract class Subscription with Resource implements _$Subscription {
     List<Coding> tag,
   }) = _Subscription;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -360,7 +360,7 @@ abstract class SubscriptionChannel with _$SubscriptionChannel {
     @JsonKey(name: '_header') List<Element> headerElement,
   }) = _SubscriptionChannel;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

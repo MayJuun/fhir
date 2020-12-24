@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
@@ -50,7 +50,7 @@ abstract class Coverage with Resource implements _$Coverage {
     List<Reference> contract,
   }) = _Coverage;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -94,7 +94,7 @@ abstract class CoverageGrouping implements _$CoverageGrouping {
     @JsonKey(name: '_subClassDisplay') Element subClassDisplayElement,
   }) = _CoverageGrouping;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -147,7 +147,7 @@ abstract class EligibilityRequest
     CodeableConcept benefitSubCategory,
   }) = _EligibilityRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -197,7 +197,7 @@ abstract class EligibilityResponse
     List<EligibilityResponseError> error,
   }) = _EligibilityResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -221,7 +221,7 @@ abstract class EligibilityResponseInsurance
     List<EligibilityResponseBenefitBalance> benefitBalance,
   }) = _EligibilityResponseInsurance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -255,7 +255,7 @@ abstract class EligibilityResponseBenefitBalance
     List<EligibilityResponseFinancial> financial,
   }) = _EligibilityResponseBenefitBalance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -289,7 +289,7 @@ abstract class EligibilityResponseFinancial
     Money usedMoney,
   }) = _EligibilityResponseFinancial;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -311,7 +311,7 @@ abstract class EligibilityResponseError implements _$EligibilityResponseError {
     @required CodeableConcept code,
   }) = _EligibilityResponseError;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -353,7 +353,7 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
     Reference coverage,
   }) = _EnrollmentRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -398,7 +398,7 @@ abstract class EnrollmentResponse
     Reference requestOrganization,
   }) = _EnrollmentResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

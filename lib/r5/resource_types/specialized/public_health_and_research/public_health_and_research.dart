@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r5.dart';
@@ -56,7 +56,7 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
     List<ResearchStudyObjective> objective,
   }) = _ResearchStudy;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -84,7 +84,7 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _ResearchStudyArm;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -110,7 +110,7 @@ abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
     CodeableConcept type,
   }) = _ResearchStudyObjective;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -154,7 +154,7 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
     Reference consent,
   }) = _ResearchSubject;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -183,7 +183,7 @@ abstract class ResearchSubjectProgress implements _$ResearchSubjectProgress {
     @JsonKey(name: '_startDate') Element startDateElement,
   }) = _ResearchSubjectProgress;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

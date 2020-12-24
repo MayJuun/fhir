@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r4.dart';
@@ -53,7 +53,7 @@ abstract class AdverseEvent with Resource implements _$AdverseEvent {
     List<Reference> study,
   }) = _AdverseEvent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -79,7 +79,7 @@ abstract class AdverseEventSuspectEntity
     List<AdverseEventCausality> causality,
   }) = _AdverseEventSuspectEntity;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -108,7 +108,7 @@ abstract class AdverseEventCausality implements _$AdverseEventCausality {
     CodeableConcept method,
   }) = _AdverseEventCausality;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -170,7 +170,7 @@ abstract class AllergyIntolerance
     List<AllergyIntoleranceReaction> reaction,
   }) = _AllergyIntolerance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -205,7 +205,7 @@ abstract class AllergyIntoleranceReaction
     List<Annotation> note,
   }) = _AllergyIntoleranceReaction;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -266,7 +266,7 @@ abstract class ClinicalImpression
     List<Annotation> note,
   }) = _ClinicalImpression;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -292,7 +292,7 @@ abstract class ClinicalImpressionInvestigation
     List<Reference> item,
   }) = _ClinicalImpressionInvestigation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -323,7 +323,7 @@ abstract class ClinicalImpressionFinding
     @JsonKey(name: '_basis') Element basisElement,
   }) = _ClinicalImpressionFinding;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -385,7 +385,7 @@ abstract class Condition with Resource implements _$Condition {
     List<Annotation> note,
   }) = _Condition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -411,7 +411,7 @@ abstract class ConditionStage implements _$ConditionStage {
     CodeableConcept type,
   }) = _ConditionStage;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -436,7 +436,7 @@ abstract class ConditionEvidence implements _$ConditionEvidence {
     List<Reference> detail,
   }) = _ConditionEvidence;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -486,7 +486,7 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
     List<DetectedIssueMitigation> mitigation,
   }) = _DetectedIssue;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -511,7 +511,7 @@ abstract class DetectedIssueEvidence implements _$DetectedIssueEvidence {
     List<Reference> detail,
   }) = _DetectedIssueEvidence;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -538,7 +538,7 @@ abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
     Reference author,
   }) = _DetectedIssueMitigation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -609,7 +609,7 @@ abstract class FamilyMemberHistory
     List<FamilyMemberHistoryCondition> condition,
   }) = _FamilyMemberHistory;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -643,7 +643,7 @@ abstract class FamilyMemberHistoryCondition
     List<Annotation> note,
   }) = _FamilyMemberHistoryCondition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -711,7 +711,7 @@ abstract class Procedure with Resource implements _$Procedure {
     List<CodeableConcept> usedCode,
   }) = _Procedure;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -737,7 +737,7 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
     Reference onBehalfOf,
   }) = _ProcedurePerformer;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -762,7 +762,7 @@ abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
     @required Reference manipulated,
   }) = _ProcedureFocalDevice;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

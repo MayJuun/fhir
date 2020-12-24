@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -67,7 +67,7 @@ abstract class Observation with Resource implements _$Observation {
     List<ObservationComponent> component,
   }) = _Observation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -97,7 +97,7 @@ abstract class ObservationReferenceRange with _$ObservationReferenceRange {
     @JsonKey(name: '_text') Element textElement,
   }) = _ObservationReferenceRange;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -124,7 +124,7 @@ abstract class ObservationRelated with _$ObservationRelated {
     @JsonKey(required: true) @required Reference target,
   }) = _ObservationRelated;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -164,7 +164,7 @@ abstract class ObservationComponent with _$ObservationComponent {
     List<ObservationReferenceRange> referenceRange,
   }) = _ObservationComponent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -219,7 +219,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
     List<Attachment> presentedForm,
   }) = _DiagnosticReport;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -245,7 +245,7 @@ abstract class DiagnosticReportImage with _$DiagnosticReportImage {
     @JsonKey(required: true) @required Reference link,
   }) = _DiagnosticReportImage;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -288,7 +288,7 @@ abstract class DiagnosticOrder with Resource implements _$DiagnosticOrder {
     List<Annotation> note,
   }) = _DiagnosticOrder;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -317,7 +317,7 @@ abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
     Reference actor,
   }) = _DiagnosticOrderEvent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -345,7 +345,7 @@ abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
     List<DiagnosticOrderEvent> event,
   }) = _DiagnosticOrderItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -388,7 +388,7 @@ abstract class Specimen with Resource implements _$Specimen {
     List<SpecimenContainer> container,
   }) = _Specimen;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -420,7 +420,7 @@ abstract class SpecimenCollection with _$SpecimenCollection {
     CodeableConcept bodySite,
   }) = _SpecimenCollection;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -446,7 +446,7 @@ abstract class SpecimenTreatment with _$SpecimenTreatment {
     List<Reference> additive,
   }) = _SpecimenTreatment;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -477,7 +477,7 @@ abstract class SpecimenContainer with _$SpecimenContainer {
     Reference additiveReference,
   }) = _SpecimenContainer;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -512,7 +512,7 @@ abstract class BodySite with Resource implements _$BodySite {
     List<Attachment> image,
   }) = _BodySite;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -564,7 +564,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
     List<ImagingStudySeries> series,
   }) = _ImagingStudy;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -604,7 +604,7 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
     List<ImagingStudySeriesInstance> instance,
   }) = _ImagingStudySeries;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -636,7 +636,7 @@ abstract class ImagingStudySeriesInstance with _$ImagingStudySeriesInstance {
     List<Attachment> content,
   }) = _ImagingStudySeriesInstance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -677,7 +677,7 @@ abstract class ImagingObjectSelection
     @JsonKey(required: true) @required List<ImagingObjectSelectionStudy> study,
   }) = _ImagingObjectSelection;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -706,7 +706,7 @@ abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
         List<ImagingObjectSelectionStudySeries> series,
   }) = _ImagingObjectSelectionStudy;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -736,7 +736,7 @@ abstract class ImagingObjectSelectionStudySeries
         List<ImagingObjectSelectionSeriesInstance> instance,
   }) = _ImagingObjectSelectionStudySeries;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -768,7 +768,7 @@ abstract class ImagingObjectSelectionSeriesInstance
     List<ImagingObjectSelectionInstanceFrames> frames,
   }) = _ImagingObjectSelectionSeriesInstance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -798,7 +798,7 @@ abstract class ImagingObjectSelectionInstanceFrames
     @JsonKey(required: true) @required FhirUri url,
   }) = _ImagingObjectSelectionInstanceFrames;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

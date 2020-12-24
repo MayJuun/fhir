@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -50,7 +50,7 @@ abstract class Device with Resource implements _$Device {
     @JsonKey(name: '_url') Element urlElement,
   }) = _Device;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -90,7 +90,7 @@ abstract class DeviceComponent with Resource implements _$DeviceComponent {
     CodeableConcept languageCode,
   }) = _DeviceComponent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -117,7 +117,7 @@ abstract class DeviceComponentProductionSpecification
     String productionSpec,
   }) = _DeviceComponentProductionSpecification;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -169,7 +169,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
     List<DeviceMetricCalibration> calibration,
   }) = _DeviceMetric;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -198,7 +198,7 @@ abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
     @JsonKey(name: '_time') Element timeElement,
   }) = _DeviceMetricCalibration;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

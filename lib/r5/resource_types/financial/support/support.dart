@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r5.dart';
@@ -50,7 +50,7 @@ abstract class Coverage with Resource implements _$Coverage {
     List<Reference> contract,
   }) = _Coverage;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -78,7 +78,7 @@ abstract class CoverageClass implements _$CoverageClass {
     @JsonKey(name: '_name') Element nameElement,
   }) = _CoverageClass;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -106,7 +106,7 @@ abstract class CoverageCostToBeneficiary
     List<CoverageException> exception,
   }) = _CoverageCostToBeneficiary;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -132,7 +132,7 @@ abstract class CoverageException implements _$CoverageException {
     Period period,
   }) = _CoverageException;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -186,7 +186,7 @@ abstract class CoverageEligibilityRequest
     List<CoverageEligibilityRequestItem> item,
   }) = _CoverageEligibilityRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -216,7 +216,7 @@ abstract class CoverageEligibilityRequestSupportingInfo
     @JsonKey(name: '_appliesToAll') Element appliesToAllElement,
   }) = _CoverageEligibilityRequestSupportingInfo;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -249,7 +249,7 @@ abstract class CoverageEligibilityRequestInsurance
     @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
   }) = _CoverageEligibilityRequestInsurance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -289,7 +289,7 @@ abstract class CoverageEligibilityRequestItem
     List<Reference> detail,
   }) = _CoverageEligibilityRequestItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -318,7 +318,7 @@ abstract class CoverageEligibilityRequestDiagnosis
     Reference diagnosisReference,
   }) = _CoverageEligibilityRequestDiagnosis;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -381,7 +381,7 @@ abstract class CoverageEligibilityResponse
     List<CoverageEligibilityResponseError> error,
   }) = _CoverageEligibilityResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -411,7 +411,7 @@ abstract class CoverageEligibilityResponseInsurance
     List<CoverageEligibilityResponseItem> item,
   }) = _CoverageEligibilityResponseInsurance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -459,7 +459,7 @@ abstract class CoverageEligibilityResponseItem
     @JsonKey(name: '_authorizationUrl') Element authorizationUrlElement,
   }) = _CoverageEligibilityResponseItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -497,7 +497,7 @@ abstract class CoverageEligibilityResponseBenefit
     Money usedMoney,
   }) = _CoverageEligibilityResponseBenefit;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -526,7 +526,7 @@ abstract class CoverageEligibilityResponseError
     @required CodeableConcept code,
   }) = _CoverageEligibilityResponseError;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -570,7 +570,7 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
     Reference coverage,
   }) = _EnrollmentRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -616,7 +616,7 @@ abstract class EnrollmentResponse
     Reference requestProvider,
   }) = _EnrollmentResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

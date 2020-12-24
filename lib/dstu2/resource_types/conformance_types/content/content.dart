@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -74,7 +74,7 @@ abstract class StructureDefinition
     StructureDefinitionDifferential differential,
   }) = _StructureDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -99,7 +99,7 @@ abstract class StructureDefinitionContact with _$StructureDefinitionContact {
     List<ContactPoint> telecom,
   }) = _StructureDefinitionContact;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -132,7 +132,7 @@ abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
     @JsonKey(name: '_comments') Element commentElement,
   }) = _StructureDefinitionMapping;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -157,7 +157,7 @@ abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
     @JsonKey(required: true) @required List<ElementDefinition> element,
   }) = _StructureDefinitionSnapshot;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -183,7 +183,7 @@ abstract class StructureDefinitionDifferential
     @JsonKey(required: true) @required List<ElementDefinition> element,
   }) = _StructureDefinitionDifferential;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -232,7 +232,7 @@ abstract class DataElement with Resource implements _$DataElement {
     @JsonKey(required: true) @required List<ElementDefinition> element,
   }) = _DataElement;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -257,7 +257,7 @@ abstract class DataElementContact with _$DataElementContact {
     List<ContactPoint> telecom,
   }) = _DataElementContact;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -289,7 +289,7 @@ abstract class DataElementMapping with _$DataElementMapping {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _DataElementMapping;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

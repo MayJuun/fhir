@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r4.dart';
@@ -44,7 +44,7 @@ abstract class Endpoint with Resource implements _$Endpoint {
     @JsonKey(name: '_header') List<Element> headerElement,
   }) = _Endpoint;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -106,7 +106,7 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
     List<Reference> endpoint,
   }) = _HealthcareService;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -133,7 +133,7 @@ abstract class HealthcareServiceEligibility
     @JsonKey(name: '_comment') Element commentElement,
   }) = _HealthcareServiceEligibility;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -166,7 +166,7 @@ abstract class HealthcareServiceAvailableTime
     @JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
   }) = _HealthcareServiceAvailableTime;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -196,7 +196,7 @@ abstract class HealthcareServiceNotAvailable
     Period during,
   }) = _HealthcareServiceNotAvailable;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -252,7 +252,7 @@ abstract class Location with Resource implements _$Location {
     List<Reference> endpoint,
   }) = _Location;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -281,7 +281,7 @@ abstract class LocationPosition implements _$LocationPosition {
     @JsonKey(name: '_altitude') Element altitudeElement,
   }) = _LocationPosition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -312,7 +312,7 @@ abstract class LocationHoursOfOperation implements _$LocationHoursOfOperation {
     @JsonKey(name: '_closingTime') Element closingTimeElement,
   }) = _LocationHoursOfOperation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -357,7 +357,7 @@ abstract class Organization with Resource implements _$Organization {
     List<Reference> endpoint,
   }) = _Organization;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -384,7 +384,7 @@ abstract class OrganizationContact implements _$OrganizationContact {
     Address address,
   }) = _OrganizationContact;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -432,7 +432,7 @@ abstract class OrganizationAffiliation
     List<Reference> endpoint,
   }) = _OrganizationAffiliation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

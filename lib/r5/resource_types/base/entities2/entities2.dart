@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r5.dart';
@@ -48,7 +48,7 @@ abstract class BiologicallyDerivedProduct
     List<BiologicallyDerivedProductStorage> storage,
   }) = _BiologicallyDerivedProduct;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -78,7 +78,7 @@ abstract class BiologicallyDerivedProductCollection
     Period collectedPeriod,
   }) = _BiologicallyDerivedProductCollection;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -113,7 +113,7 @@ abstract class BiologicallyDerivedProductProcessing
     Period timePeriod,
   }) = _BiologicallyDerivedProductProcessing;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -146,7 +146,7 @@ abstract class BiologicallyDerivedProductManipulation
     Period timePeriod,
   }) = _BiologicallyDerivedProductManipulation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -182,7 +182,7 @@ abstract class BiologicallyDerivedProductStorage
     Period duration,
   }) = _BiologicallyDerivedProductStorage;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -257,7 +257,7 @@ abstract class Device with Resource implements _$Device {
     Reference parent,
   }) = _Device;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -292,7 +292,7 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
     @JsonKey(name: '_entryType') Element entryTypeElement,
   }) = _DeviceUdiCarrier;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -320,7 +320,7 @@ abstract class DeviceDeviceName implements _$DeviceDeviceName {
     @JsonKey(name: '_type') Element typeElement,
   }) = _DeviceDeviceName;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -346,7 +346,7 @@ abstract class DeviceSpecialization implements _$DeviceSpecialization {
     @JsonKey(name: '_version') Element versionElement,
   }) = _DeviceSpecialization;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -373,7 +373,7 @@ abstract class DeviceVersion implements _$DeviceVersion {
     @JsonKey(name: '_value') Element valueElement,
   }) = _DeviceVersion;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -399,7 +399,7 @@ abstract class DeviceProperty implements _$DeviceProperty {
     List<CodeableConcept> valueCode,
   }) = _DeviceProperty;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -424,7 +424,7 @@ abstract class DeviceOperationalStatus implements _$DeviceOperationalStatus {
     List<CodeableConcept> reason,
   }) = _DeviceOperationalStatus;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -449,7 +449,7 @@ abstract class DeviceAssociationStatus implements _$DeviceAssociationStatus {
     List<CodeableConcept> reason,
   }) = _DeviceAssociationStatus;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -496,7 +496,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
     List<DeviceMetricCalibration> calibration,
   }) = _DeviceMetric;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -527,7 +527,7 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
     @JsonKey(name: '_time') Element timeElement,
   }) = _DeviceMetricCalibration;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -570,7 +570,7 @@ abstract class NutritionProduct with Resource implements _$NutritionProduct {
     List<Annotation> note,
   }) = _NutritionProduct;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -596,7 +596,7 @@ abstract class NutritionProductNutrient implements _$NutritionProductNutrient {
     List<Ratio> amount,
   }) = _NutritionProductNutrient;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -624,7 +624,7 @@ abstract class NutritionProductIngredient
     List<Ratio> amount,
   }) = _NutritionProductIngredient;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -659,7 +659,7 @@ abstract class NutritionProductProductCharacteristic
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
   }) = _NutritionProductProductCharacteristic;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -694,7 +694,7 @@ abstract class NutritionProductInstance implements _$NutritionProductInstance {
     @JsonKey(name: '_useBy') Element useByElement,
   }) = _NutritionProductInstance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -735,7 +735,7 @@ abstract class Substance with Resource implements _$Substance {
     List<SubstanceIngredient> ingredient,
   }) = _Substance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -762,7 +762,7 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
     Quantity quantity,
   }) = _SubstanceInstance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -788,7 +788,7 @@ abstract class SubstanceIngredient implements _$SubstanceIngredient {
     Reference substanceReference,
   }) = _SubstanceIngredient;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

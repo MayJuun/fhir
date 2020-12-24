@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -35,7 +35,7 @@ abstract class Order with Resource implements _$Order {
     @JsonKey(required: true) @required List<Reference> detail,
   }) = _Order;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -60,7 +60,7 @@ abstract class OrderWhen with _$OrderWhen {
     Timing schedule,
   }) = _OrderWhen;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -99,7 +99,7 @@ abstract class OrderResponse with Resource implements _$OrderResponse {
     List<Reference> fulfillment,
   }) = _OrderResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -152,7 +152,7 @@ abstract class CommunicationRequest
     @JsonKey(name: '_priority') Element priorityElement,
   }) = _CommunicationRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -179,7 +179,7 @@ abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
     Reference contentReference,
   }) = _CommunicationRequestPayload;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -231,7 +231,7 @@ abstract class DeviceUseRequest with Resource implements _$DeviceUseRequest {
     @JsonKey(name: '_priority') Element priorityElement,
   }) = _DeviceUseRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -278,7 +278,7 @@ abstract class DeviceUseStatement
     @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
   }) = _DeviceUseStatement;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -44,7 +44,7 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
     Period period,
   }) = _ProcessRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -68,7 +68,7 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
     @JsonKey(required: true) @required Integer sequenceLinkId,
   }) = _ProcessRequestItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -110,7 +110,7 @@ abstract class ProcessResponse with Resource implements _$ProcessResponse {
     List<Coding> error,
   }) = _ProcessResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -135,7 +135,7 @@ abstract class ProcessResponseNotes with _$ProcessResponseNotes {
     String text,
   }) = _ProcessResponseNotes;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -179,7 +179,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
     SupplyRequestWhen when,
   }) = _SupplyRequest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -204,7 +204,7 @@ abstract class SupplyRequestWhen with _$SupplyRequestWhen {
     Timing schedule,
   }) = _SupplyRequestWhen;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -248,7 +248,7 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
     List<Reference> receiver,
   }) = _SupplyDelivery;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../r5.dart';
@@ -22,7 +22,7 @@ abstract class ContactDetail implements _$ContactDetail {
     List<ContactPoint> telecom,
   }) = _ContactDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -49,7 +49,7 @@ abstract class Contributor implements _$Contributor {
     List<ContactDetail> contact,
   }) = _Contributor;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -83,7 +83,7 @@ abstract class DataRequirement implements _$DataRequirement {
     List<DataRequirementSort> sort,
   }) = _DataRequirement;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -113,7 +113,7 @@ abstract class DataRequirementCodeFilter
     List<Coding> code,
   }) = _DataRequirementCodeFilter;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -146,7 +146,7 @@ abstract class DataRequirementDateFilter
     FhirDuration valueDuration,
   }) = _DataRequirementDateFilter;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -175,7 +175,7 @@ abstract class DataRequirementSort implements _$DataRequirementSort {
     @JsonKey(name: '_direction') Element directionElement,
   }) = _DataRequirementSort;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -210,7 +210,7 @@ abstract class ParameterDefinition implements _$ParameterDefinition {
     Canonical profile,
   }) = _ParameterDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -245,7 +245,7 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
     Canonical resource,
   }) = _RelatedArtifact;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -280,7 +280,7 @@ abstract class TriggerDefinition implements _$TriggerDefinition {
     Expression condition,
   }) = _TriggerDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -307,7 +307,7 @@ abstract class UsageContext implements _$UsageContext {
     Reference valueReference,
   }) = _UsageContext;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -339,7 +339,7 @@ abstract class Expression implements _$Expression {
     @JsonKey(name: '_reference') Element referenceElement,
   }) = _Expression;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

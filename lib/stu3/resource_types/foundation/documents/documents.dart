@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../stu3.dart';
@@ -47,7 +47,7 @@ abstract class Composition with Resource implements _$Composition {
     List<CompositionSection> section,
   }) = _Composition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -72,7 +72,7 @@ abstract class CompositionAttester implements _$CompositionAttester {
     Reference party,
   }) = _CompositionAttester;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -96,7 +96,7 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
     Reference targetReference,
   }) = _CompositionRelatesTo;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -119,7 +119,7 @@ abstract class CompositionEvent implements _$CompositionEvent {
     List<Reference> detail,
   }) = _CompositionEvent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -149,7 +149,7 @@ abstract class CompositionSection implements _$CompositionSection {
     List<CompositionSection> section,
   }) = _CompositionSection;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -196,7 +196,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
     List<DocumentManifestRelated> related,
   }) = _DocumentManifest;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -218,7 +218,7 @@ abstract class DocumentManifestContent implements _$DocumentManifestContent {
     Reference pReference,
   }) = _DocumentManifestContent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -240,7 +240,7 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
     Reference ref,
   }) = _DocumentManifestRelated;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -293,7 +293,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     DocumentReferenceContext context,
   }) = _DocumentReference;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -317,7 +317,7 @@ abstract class DocumentReferenceRelatesTo
     @required Reference target,
   }) = _DocumentReferenceRelatesTo;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -340,7 +340,7 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
     Coding format,
   }) = _DocumentReferenceContent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -368,7 +368,7 @@ abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
     List<DocumentReferenceRelated> related,
   }) = _DocumentReferenceContext;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -391,7 +391,7 @@ abstract class DocumentReferenceRelated implements _$DocumentReferenceRelated {
     Reference ref,
   }) = _DocumentReferenceRelated;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

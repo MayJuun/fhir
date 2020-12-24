@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -44,7 +44,7 @@ abstract class Location with Resource implements _$Location {
     Reference partOf,
   }) = _Location;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -73,7 +73,7 @@ abstract class LocationPosition with _$LocationPosition {
     @JsonKey(name: '_altitude') Element altitudeElement,
   }) = _LocationPosition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -111,7 +111,7 @@ abstract class Substance with Resource implements _$Substance {
     List<SubstanceIngredient> ingredient,
   }) = _Substance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -138,7 +138,7 @@ abstract class SubstanceInstance with _$SubstanceInstance {
     Quantity quantity,
   }) = _SubstanceInstance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -163,7 +163,7 @@ abstract class SubstanceIngredient with _$SubstanceIngredient {
     @JsonKey(required: true) @required Reference substance,
   }) = _SubstanceIngredient;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -207,7 +207,7 @@ abstract class Person with Resource implements _$Person {
     List<PersonLink> link,
   }) = _Person;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -232,7 +232,7 @@ abstract class PersonLink with _$PersonLink {
     @JsonKey(name: '_assurance') Element assuranceElement,
   }) = _PersonLink;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -283,7 +283,7 @@ abstract class Contract with Resource implements _$Contract {
     List<ContractRule> rule,
   }) = _Contract;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -308,7 +308,7 @@ abstract class ContractActor with _$ContractActor {
     List<CodeableConcept> role,
   }) = _ContractActor;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -344,7 +344,7 @@ abstract class ContractValuedItem with _$ContractValuedItem {
     List<Element> securityLabelNumberElement,
   }) = _ContractValuedItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -370,7 +370,7 @@ abstract class ContractSigner with _$ContractSigner {
     @JsonKey(required: true) @required String signature,
   }) = _ContractSigner;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -407,7 +407,7 @@ abstract class ContractTerm with _$ContractTerm {
     List<ContractTerm> group,
   }) = _ContractTerm;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -432,7 +432,7 @@ abstract class ContractTermActor with _$ContractTermActor {
     List<CodeableConcept> role,
   }) = _ContractTermActor;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -457,7 +457,7 @@ abstract class ContractFriendly with _$ContractFriendly {
     Reference contactReference,
   }) = _ContractFriendly;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -482,7 +482,7 @@ abstract class ContractLegal with _$ContractLegal {
     Reference content,
   }) = _ContractLegal;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -507,7 +507,7 @@ abstract class ContractRule with _$ContractRule {
     Reference contentReference,
   }) = _ContractRule;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

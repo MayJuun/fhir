@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r4.dart';
@@ -58,7 +58,7 @@ abstract class Claim with Resource implements _$Claim {
     Money total,
   }) = _Claim;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -83,7 +83,7 @@ abstract class ClaimRelated implements _$ClaimRelated {
     Identifier reference,
   }) = _ClaimRelated;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -108,7 +108,7 @@ abstract class ClaimPayee implements _$ClaimPayee {
     Reference party,
   }) = _ClaimPayee;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -138,7 +138,7 @@ abstract class ClaimCareTeam implements _$ClaimCareTeam {
     CodeableConcept qualification,
   }) = _ClaimCareTeam;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -176,7 +176,7 @@ abstract class ClaimSupportingInfo implements _$ClaimSupportingInfo {
     CodeableConcept reason,
   }) = _ClaimSupportingInfo;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -206,7 +206,7 @@ abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
     CodeableConcept packageCode,
   }) = _ClaimDiagnosis;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -237,7 +237,7 @@ abstract class ClaimProcedure implements _$ClaimProcedure {
     List<Reference> udi,
   }) = _ClaimProcedure;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -271,7 +271,7 @@ abstract class ClaimInsurance implements _$ClaimInsurance {
     Reference claimResponse,
   }) = _ClaimInsurance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -299,7 +299,7 @@ abstract class ClaimAccident implements _$ClaimAccident {
     Reference locationReference,
   }) = _ClaimAccident;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -354,7 +354,7 @@ abstract class ClaimItem implements _$ClaimItem {
     List<ClaimDetail> detail,
   }) = _ClaimItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -391,7 +391,7 @@ abstract class ClaimDetail implements _$ClaimDetail {
     List<ClaimSubDetail> subDetail,
   }) = _ClaimDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -427,7 +427,7 @@ abstract class ClaimSubDetail implements _$ClaimSubDetail {
     List<Reference> udi,
   }) = _ClaimSubDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -491,7 +491,7 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
     List<ClaimResponseError> error,
   }) = _ClaimResponse;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -520,7 +520,7 @@ abstract class ClaimResponseItem implements _$ClaimResponseItem {
     List<ClaimResponseDetail> detail,
   }) = _ClaimResponseItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -549,7 +549,7 @@ abstract class ClaimResponseAdjudication
     @JsonKey(name: '_value') Element valueElement,
   }) = _ClaimResponseAdjudication;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -579,7 +579,7 @@ abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
     List<ClaimResponseSubDetail> subDetail,
   }) = _ClaimResponseDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -607,7 +607,7 @@ abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
     List<ClaimResponseAdjudication> adjudication,
   }) = _ClaimResponseSubDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -657,7 +657,7 @@ abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
     List<ClaimResponseDetail1> detail,
   }) = _ClaimResponseAddItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -691,7 +691,7 @@ abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
     List<ClaimResponseSubDetail1> subDetail,
   }) = _ClaimResponseDetail1;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -724,7 +724,7 @@ abstract class ClaimResponseSubDetail1 implements _$ClaimResponseSubDetail1 {
     @required List<ClaimResponseAdjudication> adjudication,
   }) = _ClaimResponseSubDetail1;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -749,7 +749,7 @@ abstract class ClaimResponseTotal implements _$ClaimResponseTotal {
     @required Money amount,
   }) = _ClaimResponseTotal;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -779,7 +779,7 @@ abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
     Identifier identifier,
   }) = _ClaimResponsePayment;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -810,7 +810,7 @@ abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
     CodeableConcept language,
   }) = _ClaimResponseProcessNote;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -842,7 +842,7 @@ abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
     Reference claimResponse,
   }) = _ClaimResponseInsurance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -872,7 +872,7 @@ abstract class ClaimResponseError implements _$ClaimResponseError {
     @required CodeableConcept code,
   }) = _ClaimResponseError;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -923,7 +923,7 @@ abstract class Invoice with Resource implements _$Invoice {
     List<Annotation> note,
   }) = _Invoice;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -948,7 +948,7 @@ abstract class InvoiceParticipant implements _$InvoiceParticipant {
     @required Reference actor,
   }) = _InvoiceParticipant;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -976,7 +976,7 @@ abstract class InvoiceLineItem implements _$InvoiceLineItem {
     List<InvoicePriceComponent> priceComponent,
   }) = _InvoiceLineItem;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1006,7 +1006,7 @@ abstract class InvoicePriceComponent implements _$InvoicePriceComponent {
     Money amount,
   }) = _InvoicePriceComponent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

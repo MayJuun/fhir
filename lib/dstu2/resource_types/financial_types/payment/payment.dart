@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../dstu2.dart';
@@ -39,7 +39,7 @@ abstract class PaymentNotice with Resource implements _$PaymentNotice {
     @JsonKey(required: true) @required Coding paymentStatus,
   }) = _PaymentNotice;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -93,7 +93,7 @@ abstract class PaymentReconciliation
     List<PaymentReconciliationNote> note,
   }) = _PaymentReconciliation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -124,7 +124,7 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
     Quantity amount,
   }) = _PaymentReconciliationDetail;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -152,7 +152,7 @@ abstract class PaymentReconciliationNote with _$PaymentReconciliationNote {
     @JsonKey(name: '_text') Element textElement,
   }) = _PaymentReconciliationNote;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

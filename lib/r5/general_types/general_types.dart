@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../r5.dart';
@@ -20,7 +20,7 @@ abstract class BackboneType implements _$BackboneType {
     List<FhirExtension> modifierExtension,
   }) = _BackboneType;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -49,7 +49,7 @@ abstract class Annotation implements _$Annotation {
     @JsonKey(name: '_text') Element textElement,
   }) = _Annotation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -97,7 +97,7 @@ abstract class Attachment implements _$Attachment {
     @JsonKey(name: '_pages') Element pagesElement,
   }) = _Attachment;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -128,7 +128,7 @@ abstract class Identifier implements _$Identifier {
     Reference assigner,
   }) = _Identifier;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -153,7 +153,7 @@ abstract class CodeableConcept implements _$CodeableConcept {
     @JsonKey(name: '_text') Element textElement,
   }) = _CodeableConcept;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -185,7 +185,7 @@ abstract class Coding implements _$Coding {
     @JsonKey(name: '_userSelected') Element userSelectedElement,
   }) = _Coding;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -217,7 +217,7 @@ abstract class Quantity implements _$Quantity {
     @JsonKey(name: '_code') Element codeElement,
   }) = _Quantity;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -250,7 +250,7 @@ abstract class FhirDuration implements _$FhirDuration {
     @JsonKey(name: '_code') Element codeElement,
   }) = _FhirDuration;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -283,7 +283,7 @@ abstract class Distance implements _$Distance {
     @JsonKey(name: '_code') Element codeElement,
   }) = _Distance;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -316,7 +316,7 @@ abstract class Count implements _$Count {
     @JsonKey(name: '_code') Element codeElement,
   }) = _Count;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -341,7 +341,7 @@ abstract class Money implements _$Money {
     @JsonKey(name: '_currency') Element currencyElement,
   }) = _Money;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -372,7 +372,7 @@ abstract class Age implements _$Age {
     @JsonKey(name: '_code') Element codeElement,
   }) = _Age;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -395,7 +395,7 @@ abstract class Range implements _$Range {
     Quantity high,
   }) = _Range;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -420,7 +420,7 @@ abstract class Period implements _$Period {
     @JsonKey(name: '_end') Element endElement,
   }) = _Period;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -443,7 +443,7 @@ abstract class Ratio implements _$Ratio {
     Quantity denominator,
   }) = _Ratio;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -477,7 +477,7 @@ abstract class SampledData implements _$SampledData {
     @JsonKey(name: '_data') Element dataElement,
   }) = _SampledData;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -510,7 +510,7 @@ abstract class Signature implements _$Signature {
     @JsonKey(name: '_data') Element dataElement,
   }) = _Signature;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -545,7 +545,7 @@ abstract class HumanName implements _$HumanName {
     Period period,
   }) = _HumanName;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -586,7 +586,7 @@ abstract class Address implements _$Address {
     Period period,
   }) = _Address;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -618,7 +618,7 @@ abstract class ContactPoint implements _$ContactPoint {
     Period period,
   }) = _ContactPoint;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -645,7 +645,7 @@ abstract class Timing implements _$Timing {
     CodeableConcept code,
   }) = _Timing;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -700,7 +700,7 @@ abstract class TimingRepeat implements _$TimingRepeat {
     @JsonKey(name: '_offset') Element offsetElement,
   }) = _TimingRepeat;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../r5.dart';
@@ -25,7 +25,7 @@ abstract class Population implements _$Population {
     CodeableConcept physiologicalCondition,
   }) = _Population;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -53,7 +53,7 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
     List<CodeableConcept> specialPrecautionsForStorage,
   }) = _ProductShelfLife;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -90,7 +90,7 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
     CodeableConcept scoring,
   }) = _ProdCharacteristic;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -119,7 +119,7 @@ abstract class MarketingStatus implements _$MarketingStatus {
     @JsonKey(name: '_restoreDate') Element restoreDateElement,
   }) = _MarketingStatus;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -207,7 +207,7 @@ abstract class Citation implements _$Citation {
     CitationMedlinePubMed medlinePubMed,
   }) = _Citation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -233,7 +233,7 @@ abstract class CitationSummary implements _$CitationSummary {
     @JsonKey(name: '_text') Element textElement,
   }) = _CitationSummary;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -260,7 +260,7 @@ abstract class CitationVariantCitation implements _$CitationVariantCitation {
     Reference baseCitation,
   }) = _CitationVariantCitation;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -289,7 +289,7 @@ abstract class CitationJournal implements _$CitationJournal {
     @JsonKey(name: '_title') Element titleElement,
   }) = _CitationJournal;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -318,7 +318,7 @@ abstract class CitationJournalIssue implements _$CitationJournalIssue {
     CitationPublicationDate publicationDate,
   }) = _CitationJournalIssue;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -353,7 +353,7 @@ abstract class CitationPublicationDate implements _$CitationPublicationDate {
     @JsonKey(name: '_text') Element textElement,
   }) = _CitationPublicationDate;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -383,7 +383,7 @@ abstract class CitationPublicationInfo implements _$CitationPublicationInfo {
     @JsonKey(name: '_pageCount') Element pageCountElement,
   }) = _CitationPublicationInfo;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -415,7 +415,7 @@ abstract class CitationPublishedIn implements _$CitationPublishedIn {
     @JsonKey(name: '_startDate') Element startDateElement,
   }) = _CitationPublishedIn;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -442,7 +442,7 @@ abstract class CitationAlternativeTitle implements _$CitationAlternativeTitle {
     @JsonKey(name: '_title') Element titleElement,
   }) = _CitationAlternativeTitle;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -472,7 +472,7 @@ abstract class CitationPagination implements _$CitationPagination {
     @JsonKey(name: '_lastPage') Element lastPageElement,
   }) = _CitationPagination;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -498,7 +498,7 @@ abstract class CitationArticleUrl implements _$CitationArticleUrl {
     @JsonKey(name: '_url') Element urlElement,
   }) = _CitationArticleUrl;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -528,7 +528,7 @@ abstract class CitationAlternativeAbstract
     @JsonKey(name: '_abstractCopyright') Element abstractCopyrightElement,
   }) = _CitationAlternativeAbstract;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -556,7 +556,7 @@ abstract class CitationContributorship implements _$CitationContributorship {
     List<CitationSummary1> summary,
   }) = _CitationContributorship;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -595,7 +595,7 @@ abstract class CitationEntry implements _$CitationEntry {
     @JsonKey(name: '_listOrder') Element listOrderElement,
   }) = _CitationEntry;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -623,7 +623,7 @@ abstract class CitationAffiliationInfo implements _$CitationAffiliationInfo {
     List<Identifier> identifier,
   }) = _CitationAffiliationInfo;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -651,7 +651,7 @@ abstract class CitationSummary1 implements _$CitationSummary1 {
     @JsonKey(name: '_value') Element valueElement,
   }) = _CitationSummary1;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -679,7 +679,7 @@ abstract class CitationAlternativeForm implements _$CitationAlternativeForm {
     CitationPublicationInfo1 publicationInfo,
   }) = _CitationAlternativeForm;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -708,7 +708,7 @@ abstract class CitationJournalIssue1 implements _$CitationJournalIssue1 {
     CitationPublicationDate1 publicationDate,
   }) = _CitationJournalIssue1;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -743,7 +743,7 @@ abstract class CitationPublicationDate1 implements _$CitationPublicationDate1 {
     @JsonKey(name: '_text') Element textElement,
   }) = _CitationPublicationDate1;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -773,7 +773,7 @@ abstract class CitationPagination1 implements _$CitationPagination1 {
     @JsonKey(name: '_lastPage') Element lastPageElement,
   }) = _CitationPagination1;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -803,7 +803,7 @@ abstract class CitationPublicationInfo1 implements _$CitationPublicationInfo1 {
     @JsonKey(name: '_pageCount') Element pageCountElement,
   }) = _CitationPublicationInfo1;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -835,7 +835,7 @@ abstract class CitationPublishedIn1 implements _$CitationPublishedIn1 {
     @JsonKey(name: '_startDate') Element startDateElement,
   }) = _CitationPublishedIn1;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -861,7 +861,7 @@ abstract class CitationKeywordList implements _$CitationKeywordList {
     @required List<CitationKeyword> keyword,
   }) = _CitationKeywordList;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -888,7 +888,7 @@ abstract class CitationKeyword implements _$CitationKeyword {
     @JsonKey(name: '_value') Element valueElement,
   }) = _CitationKeyword;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -926,7 +926,7 @@ abstract class CitationMedlinePubMed implements _$CitationMedlinePubMed {
     List<CitationRelatedArticle> relatedArticle,
   }) = _CitationMedlinePubMed;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -952,7 +952,7 @@ abstract class CitationPubMedPubDate implements _$CitationPubMedPubDate {
     @JsonKey(name: '_date') Element dateElement,
   }) = _CitationPubMedPubDate;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -979,7 +979,7 @@ abstract class CitationRelatedArticle implements _$CitationRelatedArticle {
     List<Identifier> identifier,
   }) = _CitationRelatedArticle;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1054,7 +1054,7 @@ abstract class EvidenceReport implements _$EvidenceReport {
     List<EvidenceReportSection> section,
   }) = _EvidenceReport;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1079,7 +1079,7 @@ abstract class EvidenceReportSubject implements _$EvidenceReportSubject {
     List<Annotation> note,
   }) = _EvidenceReportSubject;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1113,7 +1113,7 @@ abstract class EvidenceReportCharacteristic
     Period period,
   }) = _EvidenceReportCharacteristic;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1142,7 +1142,7 @@ abstract class EvidenceReportRelatesTo implements _$EvidenceReportRelatesTo {
     Reference targetReference,
   }) = _EvidenceReportRelatesTo;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -1178,7 +1178,7 @@ abstract class EvidenceReportSection implements _$EvidenceReportSection {
     List<EvidenceReportSection> section,
   }) = _EvidenceReportSection;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

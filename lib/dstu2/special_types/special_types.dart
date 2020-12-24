@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../dstu2.dart';
@@ -27,7 +27,7 @@ abstract class Meta implements _$Meta {
     List<Coding> tag,
   }) = _Meta;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -53,7 +53,7 @@ abstract class Reference implements _$Reference {
     @JsonKey(name: '_display') Element displayElement,
   }) = _Reference;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -410,7 +410,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     List<ElementDefinitionMapping> mapping,
   }) = _ElementDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -438,7 +438,7 @@ abstract class Narrative implements _$Narrative {
     @JsonKey(required: true) @required String div,
   }) = _Narrative;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -469,7 +469,7 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
     @JsonKey(name: '_rules') Element rulesElement,
   }) = _ElementDefinitionSlicing;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -498,7 +498,7 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
     @JsonKey(name: '_max') Element maxElement,
   }) = _ElementDefinitionBase;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -526,7 +526,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
     @JsonKey(name: 'fhir_comments') List<String> fhirElement,
   }) = _ElementDefinitionType;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -547,7 +547,7 @@ abstract class TypeCodeExtension implements _$TypeCodeExtension {
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
   }) = _TypeCodeExtension;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -582,7 +582,7 @@ abstract class ElementDefinitionConstraint
     @JsonKey(name: '_xpath') Element xpathElement,
   }) = _ElementDefinitionConstraint;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -615,7 +615,7 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
     Reference valueSetReference,
   }) = _ElementDefinitionBinding;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -645,7 +645,7 @@ abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
     @JsonKey(name: '_map') Element mapElement,
   }) = _ElementDefinitionMapping;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 

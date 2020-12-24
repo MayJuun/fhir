@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json2yaml/json2yaml.dart';
 import 'package:yaml/yaml.dart';
+import 'package:yaml_modify/yaml_modify.dart';
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r4.dart';
@@ -77,7 +77,7 @@ abstract class EffectEvidenceSynthesis
     List<EffectEvidenceSynthesisCertainty> certainty,
   }) = _EffectEvidenceSynthesis;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -107,7 +107,7 @@ abstract class EffectEvidenceSynthesisSampleSize
     @JsonKey(name: '_numberOfParticipants') Element numberOfParticipantsElement,
   }) = _EffectEvidenceSynthesisSampleSize;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -144,7 +144,7 @@ abstract class EffectEvidenceSynthesisResultsByExposure
     @required Reference riskEvidenceSynthesis,
   }) = _EffectEvidenceSynthesisResultsByExposure;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -180,7 +180,7 @@ abstract class EffectEvidenceSynthesisEffectEstimate
     List<EffectEvidenceSynthesisPrecisionEstimate> precisionEstimate,
   }) = _EffectEvidenceSynthesisEffectEstimate;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -215,7 +215,7 @@ abstract class EffectEvidenceSynthesisPrecisionEstimate
     @JsonKey(name: '_to') Element toElement,
   }) = _EffectEvidenceSynthesisPrecisionEstimate;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -246,7 +246,7 @@ abstract class EffectEvidenceSynthesisCertainty
     List<EffectEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent,
   }) = _EffectEvidenceSynthesisCertainty;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -277,7 +277,7 @@ abstract class EffectEvidenceSynthesisCertaintySubcomponent
     List<Annotation> note,
   }) = _EffectEvidenceSynthesisCertaintySubcomponent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -353,7 +353,7 @@ abstract class Evidence with Resource implements _$Evidence {
     List<Reference> outcome,
   }) = _Evidence;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -427,7 +427,7 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
     @required List<EvidenceVariableCharacteristic> characteristic,
   }) = _EvidenceVariable;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -473,7 +473,7 @@ abstract class EvidenceVariableCharacteristic
     @JsonKey(name: '_groupMeasure') Element groupMeasureElement,
   }) = _EvidenceVariableCharacteristic;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -562,7 +562,7 @@ abstract class ResearchDefinition
     Reference outcome,
   }) = _ResearchDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -653,7 +653,7 @@ abstract class ResearchElementDefinition
     @required List<ResearchElementDefinitionCharacteristic> characteristic,
   }) = _ResearchElementDefinition;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -723,7 +723,7 @@ abstract class ResearchElementDefinitionCharacteristic
         Element participantEffectiveGroupMeasureElement,
   }) = _ResearchElementDefinitionCharacteristic;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -805,7 +805,7 @@ abstract class RiskEvidenceSynthesis
     List<RiskEvidenceSynthesisCertainty> certainty,
   }) = _RiskEvidenceSynthesis;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -835,7 +835,7 @@ abstract class RiskEvidenceSynthesisSampleSize
     @JsonKey(name: '_numberOfParticipants') Element numberOfParticipantsElement,
   }) = _RiskEvidenceSynthesisSampleSize;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -873,7 +873,7 @@ abstract class RiskEvidenceSynthesisRiskEstimate
     List<RiskEvidenceSynthesisPrecisionEstimate> precisionEstimate,
   }) = _RiskEvidenceSynthesisRiskEstimate;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -908,7 +908,7 @@ abstract class RiskEvidenceSynthesisPrecisionEstimate
     @JsonKey(name: '_to') Element toElement,
   }) = _RiskEvidenceSynthesisPrecisionEstimate;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -939,7 +939,7 @@ abstract class RiskEvidenceSynthesisCertainty
     List<RiskEvidenceSynthesisCertaintySubcomponent> certaintySubcomponent,
   }) = _RiskEvidenceSynthesisCertainty;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
@@ -969,7 +969,7 @@ abstract class RiskEvidenceSynthesisCertaintySubcomponent
     List<Annotation> note,
   }) = _RiskEvidenceSynthesisCertaintySubcomponent;
 
-  String toYamlString() => json2yaml(toJson());
+  String toYaml() => toYamlString(toJson());
 
   YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
 
