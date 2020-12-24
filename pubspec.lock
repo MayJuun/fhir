@@ -517,7 +517,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "56174b80283b50c6b5d97e4367b0099d3c2a40e1"
+      resolved-ref: "1e5894616494b0c1edc480b8cb653b6e4ff045f6"
       url: "git://github.com/Dokotela/yaml_modify.git"
     source: git
     version: "0.1.3"
