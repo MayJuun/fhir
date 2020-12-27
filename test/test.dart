@@ -1,9 +1,7 @@
-import 'dart:convert';
-import 'dart:io';
-
 import 'package:test/test.dart';
 
 import 'expected_json.dart';
+import 'expected_yaml.dart';
 import 'validation/validation.dart';
 
 Future main() async {
@@ -15,28 +13,24 @@ Future main() async {
     'files with errors are printed out in the debug console, and the errors are '
     'compared with the expected errors stored in the map in "expected.dart". ',
     () {
-      // test(
-      //   'Validating Json',
-      //   () async {
-      //     var testMap = await jsonValidation();
+      test(
+        'Validating Json',
+        () async {
+          var testMap = await jsonValidation();
 
-      //     var expectMap = expectedJson;
+          var expectMap = expectedJson;
 
-      //     await File('./test/zz3.json').writeAsString(jsonEncode(testMap));
-
-      //     expect(testMap, expectMap);
-      //   },
-      //   timeout: Timeout(Duration(minutes: 10)),
-      // );
+          expect(testMap, expectMap);
+        },
+        timeout: Timeout(Duration(minutes: 10)),
+      );
 
       test(
         'Validating Yaml',
         () async {
           var testMap = await yamlValidation();
 
-          var expectMap = expectedJson;
-
-          await File('./test/zz3.json').writeAsString(jsonEncode(testMap));
+          var expectMap = expectedYaml;
 
           expect(testMap, expectMap);
         },
