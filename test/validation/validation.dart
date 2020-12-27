@@ -11,15 +11,21 @@ part 'r4_validation.dart';
 part 'r5_validation.dart';
 part 'stu3_validation.dart';
 
-Future<Map<String, List<String>>> validation() async {
+Future<Map<String, List<String>>> jsonValidation() async {
   var tested = <String, List<String>>{};
-  // tested['dstu2'] = await dstu2Validation();
-  tested['dstu2'] = await dstu2ValidationYaml();
-  // tested['stu3'] = await stu3Validation();
-  tested['stu3'] = await stu3ValidationYaml();
-  // tested['r4'] = await r4Validation();
-  tested['r4'] = await r4ValidationYaml();
+  tested['dstu2'] = await dstu2Validation();
+  tested['stu3'] = await stu3Validation();
+  tested['r4'] = await r4Validation();
   // string['r5'] = await r5Validation();
+
+  return tested;
+}
+
+Future<Map<String, List<String>>> yamlValidation() async {
+  var tested = <String, List<String>>{};
+  tested['dstu2'] = await dstu2ValidationYaml();
+  tested['stu3'] = await stu3ValidationYaml();
+  tested['r4'] = await r4ValidationYaml();
   // string['r5'] = await r5ValidationYaml();
 
   return tested;

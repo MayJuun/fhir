@@ -3,11 +3,10 @@ import 'dart:io';
 
 import 'package:yaml/yaml.dart';
 
-import 'json2yaml.dart';
-
 Future main() async {
-  var contents =
-      await File('./test/dstu2_examples/json-edge-cases.json').readAsString();
+  var contents = await File(
+          './test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json')
+      .readAsString();
   var mapped = jsonDecode(contents);
   await File('./test/temp1.json').writeAsString(jsonEncode(mapped));
   var yaml = json2yaml(mapped);

@@ -95,7 +95,7 @@ String _formatValue(
         value[value.length - 1] == ' ' ||
         (_containsFloatingPointPattern(value) &&
             style != YamlStyle.pubspecYaml)) {
-      return value.contains("'") ? ' "${_withEscapes(value)}"' : " '$value'";
+      return ' "${_withEscapes(value)}"';
     }
     if (_isNumber(value)) {
       return " '$value'";
@@ -152,7 +152,5 @@ String _withEscapes(String s) => s
     .replaceAll('\t', '\\t')
     .replaceAll('\n', '\\n')
     .replaceAll('\"', '\\"')
-    .replaceAll('©', '\xA9')
-    .replaceAll('®', '\xAE')
     .replaceAll('', '\x99')
     .replaceAll('', '\x9D');
