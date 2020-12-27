@@ -35,9 +35,7 @@ abstract class Order with Resource implements _$Order {
     @JsonKey(required: true) @required List<Reference> detail,
   }) = _Order;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Order.fromYaml(dynamic yaml) => yaml is String
       ? Order.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -60,9 +58,7 @@ abstract class OrderWhen with _$OrderWhen {
     Timing schedule,
   }) = _OrderWhen;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory OrderWhen.fromYaml(dynamic yaml) => yaml is String
       ? OrderWhen.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -99,9 +95,7 @@ abstract class OrderResponse with Resource implements _$OrderResponse {
     List<Reference> fulfillment,
   }) = _OrderResponse;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory OrderResponse.fromYaml(dynamic yaml) => yaml is String
       ? OrderResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -152,9 +146,7 @@ abstract class CommunicationRequest
     @JsonKey(name: '_priority') Element priorityElement,
   }) = _CommunicationRequest;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CommunicationRequest.fromYaml(dynamic yaml) => yaml is String
       ? CommunicationRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -179,9 +171,7 @@ abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
     Reference contentReference,
   }) = _CommunicationRequestPayload;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CommunicationRequestPayload.fromYaml(dynamic yaml) => yaml is String
       ? CommunicationRequestPayload.fromJson(
@@ -231,9 +221,7 @@ abstract class DeviceUseRequest with Resource implements _$DeviceUseRequest {
     @JsonKey(name: '_priority') Element priorityElement,
   }) = _DeviceUseRequest;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DeviceUseRequest.fromYaml(dynamic yaml) => yaml is String
       ? DeviceUseRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -278,9 +266,7 @@ abstract class DeviceUseStatement
     @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
   }) = _DeviceUseStatement;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DeviceUseStatement.fromYaml(dynamic yaml) => yaml is String
       ? DeviceUseStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

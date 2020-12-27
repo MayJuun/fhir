@@ -47,9 +47,7 @@ abstract class Media with Resource implements _$Media {
     @JsonKey(required: true) @required Attachment content,
   }) = _Media;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Media.fromYaml(dynamic yaml) => yaml is String
       ? Media.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -76,9 +74,7 @@ abstract class Binary with Resource implements _$Binary {
     Base64Binary content,
   }) = _Binary;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Binary.fromYaml(dynamic yaml) => yaml is String
       ? Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -111,9 +107,7 @@ abstract class Bundle with Resource implements _$Bundle {
     Signature signature,
   }) = _Bundle;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Bundle.fromYaml(dynamic yaml) => yaml is String
       ? Bundle.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -138,9 +132,7 @@ abstract class BundleLink with _$BundleLink {
     @JsonKey(name: '_url') Element urlElement,
   }) = _BundleLink;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory BundleLink.fromYaml(dynamic yaml) => yaml is String
       ? BundleLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -169,9 +161,7 @@ abstract class BundleEntry with _$BundleEntry {
     BundleEntryResponse response,
   }) = _BundleEntry;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory BundleEntry.fromYaml(dynamic yaml) => yaml is String
       ? BundleEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -197,9 +187,7 @@ abstract class BundleEntrySearch with _$BundleEntrySearch {
     @JsonKey(name: '_score') Element scoreElement,
   }) = _BundleEntrySearch;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory BundleEntrySearch.fromYaml(dynamic yaml) => yaml is String
       ? BundleEntrySearch.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -235,9 +223,7 @@ abstract class BundleEntryRequest with _$BundleEntryRequest {
     @JsonKey(name: '_ifNoneExist') Element ifNoneExistElement,
   }) = _BundleEntryRequest;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory BundleEntryRequest.fromYaml(dynamic yaml) => yaml is String
       ? BundleEntryRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -267,9 +253,7 @@ abstract class BundleEntryResponse with _$BundleEntryResponse {
     @JsonKey(name: '_lastModified') Element lastModifiedElement,
   }) = _BundleEntryResponse;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory BundleEntryResponse.fromYaml(dynamic yaml) => yaml is String
       ? BundleEntryResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -304,9 +288,7 @@ abstract class Basic with Resource implements _$Basic {
     @JsonKey(name: '_created') Element createdElement,
   }) = _Basic;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Basic.fromYaml(dynamic yaml) => yaml is String
       ? Basic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

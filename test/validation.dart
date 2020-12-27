@@ -13,11 +13,11 @@ part 'stu3_validation.dart';
 
 Future<Map<String, List<String>>> validation() async {
   var tested = <String, List<String>>{};
-  tested['dstu2'] = await dstu2Validation();
+  // tested['dstu2'] = await dstu2Validation();
   tested['dstu2'] = await dstu2ValidationYaml();
-  tested['stu3'] = await stu3Validation();
+  // tested['stu3'] = await stu3Validation();
   tested['stu3'] = await stu3ValidationYaml();
-  tested['r4'] = await r4Validation();
+  // tested['r4'] = await r4Validation();
   tested['r4'] = await r4ValidationYaml();
   // string['r5'] = await r5Validation();
   // string['r5'] = await r5ValidationYaml();

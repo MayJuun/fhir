@@ -46,9 +46,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
     List<AuditEventEntity> entity,
   }) = _AuditEvent;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AuditEvent.fromYaml(dynamic yaml) => yaml is String
       ? AuditEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -84,9 +82,7 @@ abstract class AuditEventAgent implements _$AuditEventAgent {
     List<CodeableConcept> purposeOfUse,
   }) = _AuditEventAgent;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AuditEventAgent.fromYaml(dynamic yaml) => yaml is String
       ? AuditEventAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -112,9 +108,7 @@ abstract class AuditEventNetwork implements _$AuditEventNetwork {
     @JsonKey(name: '_type') Element typeElement,
   }) = _AuditEventNetwork;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AuditEventNetwork.fromYaml(dynamic yaml) => yaml is String
       ? AuditEventNetwork.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -139,9 +133,7 @@ abstract class AuditEventSource implements _$AuditEventSource {
     List<Coding> type,
   }) = _AuditEventSource;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AuditEventSource.fromYaml(dynamic yaml) => yaml is String
       ? AuditEventSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -172,9 +164,7 @@ abstract class AuditEventEntity implements _$AuditEventEntity {
     List<AuditEventDetail> detail,
   }) = _AuditEventEntity;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AuditEventEntity.fromYaml(dynamic yaml) => yaml is String
       ? AuditEventEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -201,9 +191,7 @@ abstract class AuditEventDetail implements _$AuditEventDetail {
     @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
   }) = _AuditEventDetail;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AuditEventDetail.fromYaml(dynamic yaml) => yaml is String
       ? AuditEventDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -249,9 +237,7 @@ abstract class Consent with Resource implements _$Consent {
     ConsentProvision provision,
   }) = _Consent;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Consent.fromYaml(dynamic yaml) => yaml is String
       ? Consent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -276,9 +262,7 @@ abstract class ConsentPolicy implements _$ConsentPolicy {
     @JsonKey(name: '_uri') Element uriElement,
   }) = _ConsentPolicy;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ConsentPolicy.fromYaml(dynamic yaml) => yaml is String
       ? ConsentPolicy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -306,9 +290,7 @@ abstract class ConsentVerification implements _$ConsentVerification {
     @JsonKey(name: '_verificationDate') List<Element> verificationDateElement,
   }) = _ConsentVerification;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ConsentVerification.fromYaml(dynamic yaml) => yaml is String
       ? ConsentVerification.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -342,9 +324,7 @@ abstract class ConsentProvision implements _$ConsentProvision {
     List<ConsentProvision> provision,
   }) = _ConsentProvision;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ConsentProvision.fromYaml(dynamic yaml) => yaml is String
       ? ConsentProvision.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -367,9 +347,7 @@ abstract class ConsentActor implements _$ConsentActor {
     @required Reference reference,
   }) = _ConsentActor;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ConsentActor.fromYaml(dynamic yaml) => yaml is String
       ? ConsentActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -394,9 +372,7 @@ abstract class ConsentData implements _$ConsentData {
     @required Reference reference,
   }) = _ConsentData;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ConsentData.fromYaml(dynamic yaml) => yaml is String
       ? ConsentData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -438,9 +414,7 @@ abstract class Permission with Resource implements _$Permission {
     List<CodeableConcept> usageLimitations,
   }) = _Permission;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Permission.fromYaml(dynamic yaml) => yaml is String
       ? Permission.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -465,9 +439,7 @@ abstract class PermissionProcessingActivity
     List<CodeableConcept> purpose,
   }) = _PermissionProcessingActivity;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PermissionProcessingActivity.fromYaml(dynamic yaml) => yaml is String
       ? PermissionProcessingActivity.fromJson(
@@ -491,9 +463,7 @@ abstract class PermissionJustification implements _$PermissionJustification {
     List<CodeableConcept> grounds,
   }) = _PermissionJustification;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PermissionJustification.fromYaml(dynamic yaml) => yaml is String
       ? PermissionJustification.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -536,9 +506,7 @@ abstract class Provenance with Resource implements _$Provenance {
     List<Signature> signature,
   }) = _Provenance;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Provenance.fromYaml(dynamic yaml) => yaml is String
       ? Provenance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -563,9 +531,7 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
     Reference onBehalfOf,
   }) = _ProvenanceAgent;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ProvenanceAgent.fromYaml(dynamic yaml) => yaml is String
       ? ProvenanceAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -591,9 +557,7 @@ abstract class ProvenanceEntity implements _$ProvenanceEntity {
     List<ProvenanceAgent> agent,
   }) = _ProvenanceEntity;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ProvenanceEntity.fromYaml(dynamic yaml) => yaml is String
       ? ProvenanceEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

@@ -43,9 +43,7 @@ abstract class AdministrableProductDefinition
             routeOfAdministration,
   }) = _AdministrableProductDefinition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AdministrableProductDefinition.fromYaml(dynamic yaml) =>
       yaml is String
@@ -79,9 +77,7 @@ abstract class AdministrableProductDefinitionProperty
     CodeableConcept status,
   }) = _AdministrableProductDefinitionProperty;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AdministrableProductDefinitionProperty.fromYaml(dynamic yaml) =>
       yaml is String
@@ -114,9 +110,7 @@ abstract class AdministrableProductDefinitionRouteOfAdministration
     List<AdministrableProductDefinitionTargetSpecies> targetSpecies,
   }) = _AdministrableProductDefinitionRouteOfAdministration;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AdministrableProductDefinitionRouteOfAdministration.fromYaml(
           dynamic yaml) =>
@@ -145,9 +139,7 @@ abstract class AdministrableProductDefinitionTargetSpecies
     List<AdministrableProductDefinitionWithdrawalPeriod> withdrawalPeriod,
   }) = _AdministrableProductDefinitionTargetSpecies;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AdministrableProductDefinitionTargetSpecies.fromYaml(dynamic yaml) =>
       yaml is String
@@ -178,9 +170,7 @@ abstract class AdministrableProductDefinitionWithdrawalPeriod
         Element supportingInformationElement,
   }) = _AdministrableProductDefinitionWithdrawalPeriod;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AdministrableProductDefinitionWithdrawalPeriod.fromYaml(
           dynamic yaml) =>
@@ -228,9 +218,7 @@ abstract class ClinicalUseIssue with Resource implements _$ClinicalUseIssue {
     ClinicalUseIssueUndesirableEffect undesirableEffect,
   }) = _ClinicalUseIssue;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClinicalUseIssue.fromYaml(dynamic yaml) => yaml is String
       ? ClinicalUseIssue.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -257,9 +245,7 @@ abstract class ClinicalUseIssueContraindication
     List<ClinicalUseIssueOtherTherapy> otherTherapy,
   }) = _ClinicalUseIssueContraindication;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClinicalUseIssueContraindication.fromYaml(dynamic yaml) =>
       yaml is String
@@ -288,9 +274,7 @@ abstract class ClinicalUseIssueOtherTherapy
     Reference medicationReference,
   }) = _ClinicalUseIssueOtherTherapy;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClinicalUseIssueOtherTherapy.fromYaml(dynamic yaml) => yaml is String
       ? ClinicalUseIssueOtherTherapy.fromJson(
@@ -320,9 +304,7 @@ abstract class ClinicalUseIssueIndication
     List<ClinicalUseIssueOtherTherapy> otherTherapy,
   }) = _ClinicalUseIssueIndication;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClinicalUseIssueIndication.fromYaml(dynamic yaml) => yaml is String
       ? ClinicalUseIssueIndication.fromJson(
@@ -350,9 +332,7 @@ abstract class ClinicalUseIssueInteraction
     CodeableConcept management,
   }) = _ClinicalUseIssueInteraction;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClinicalUseIssueInteraction.fromYaml(dynamic yaml) => yaml is String
       ? ClinicalUseIssueInteraction.fromJson(
@@ -377,9 +357,7 @@ abstract class ClinicalUseIssueInteractant
     CodeableConcept itemCodeableConcept,
   }) = _ClinicalUseIssueInteractant;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClinicalUseIssueInteractant.fromYaml(dynamic yaml) => yaml is String
       ? ClinicalUseIssueInteractant.fromJson(
@@ -405,9 +383,7 @@ abstract class ClinicalUseIssueUndesirableEffect
     CodeableConcept frequencyOfOccurrence,
   }) = _ClinicalUseIssueUndesirableEffect;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClinicalUseIssueUndesirableEffect.fromYaml(dynamic yaml) =>
       yaml is String
@@ -450,9 +426,7 @@ abstract class Ingredient with Resource implements _$Ingredient {
     List<IngredientSpecifiedSubstance> specifiedSubstance,
   }) = _Ingredient;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Ingredient.fromYaml(dynamic yaml) => yaml is String
       ? Ingredient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -476,9 +450,7 @@ abstract class IngredientSubstance implements _$IngredientSubstance {
     List<IngredientStrength> strength,
   }) = _IngredientSubstance;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory IngredientSubstance.fromYaml(dynamic yaml) => yaml is String
       ? IngredientSubstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -511,9 +483,7 @@ abstract class IngredientStrength implements _$IngredientStrength {
     List<IngredientReferenceStrength> referenceStrength,
   }) = _IngredientStrength;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory IngredientStrength.fromYaml(dynamic yaml) => yaml is String
       ? IngredientStrength.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -542,9 +512,7 @@ abstract class IngredientReferenceStrength
     List<CodeableConcept> country,
   }) = _IngredientReferenceStrength;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory IngredientReferenceStrength.fromYaml(dynamic yaml) => yaml is String
       ? IngredientReferenceStrength.fromJson(
@@ -572,9 +540,7 @@ abstract class IngredientSpecifiedSubstance
     List<IngredientStrength> strength,
   }) = _IngredientSpecifiedSubstance;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory IngredientSpecifiedSubstance.fromYaml(dynamic yaml) => yaml is String
       ? IngredientSpecifiedSubstance.fromJson(
@@ -614,9 +580,7 @@ abstract class ManufacturedItemDefinition
     List<ManufacturedItemDefinitionProperty> property,
   }) = _ManufacturedItemDefinition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ManufacturedItemDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ManufacturedItemDefinition.fromJson(
@@ -647,9 +611,7 @@ abstract class ManufacturedItemDefinitionProperty
     Attachment valueAttachment,
   }) = _ManufacturedItemDefinitionProperty;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ManufacturedItemDefinitionProperty.fromYaml(dynamic yaml) =>
       yaml is String
@@ -718,9 +680,7 @@ abstract class MedicinalProductDefinition
         manufacturingBusinessOperation,
   }) = _MedicinalProductDefinition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicinalProductDefinition.fromYaml(dynamic yaml) => yaml is String
       ? MedicinalProductDefinition.fromJson(
@@ -745,9 +705,7 @@ abstract class MedicinalProductDefinitionContact
     @required Reference contact,
   }) = _MedicinalProductDefinitionContact;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicinalProductDefinitionContact.fromYaml(dynamic yaml) =>
       yaml is String
@@ -778,9 +736,7 @@ abstract class MedicinalProductDefinitionName
     List<MedicinalProductDefinitionCountryLanguage> countryLanguage,
   }) = _MedicinalProductDefinitionName;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicinalProductDefinitionName.fromYaml(dynamic yaml) =>
       yaml is String
@@ -808,9 +764,7 @@ abstract class MedicinalProductDefinitionNamePart
     @required CodeableConcept type,
   }) = _MedicinalProductDefinitionNamePart;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicinalProductDefinitionNamePart.fromYaml(dynamic yaml) =>
       yaml is String
@@ -839,9 +793,7 @@ abstract class MedicinalProductDefinitionCountryLanguage
     @required CodeableConcept language,
   }) = _MedicinalProductDefinitionCountryLanguage;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicinalProductDefinitionCountryLanguage.fromYaml(dynamic yaml) =>
       yaml is String
@@ -870,9 +822,7 @@ abstract class MedicinalProductDefinitionCrossReference
     CodeableConcept type,
   }) = _MedicinalProductDefinitionCrossReference;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicinalProductDefinitionCrossReference.fromYaml(dynamic yaml) =>
       yaml is String
@@ -904,9 +854,7 @@ abstract class MedicinalProductDefinitionManufacturingBusinessOperation
     CodeableConcept confidentialityIndicator,
   }) = _MedicinalProductDefinitionManufacturingBusinessOperation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicinalProductDefinitionManufacturingBusinessOperation.fromYaml(
           dynamic yaml) =>
@@ -963,9 +911,7 @@ abstract class PackagedProductDefinition
     List<PackagedProductDefinitionPackage> package,
   }) = _PackagedProductDefinition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PackagedProductDefinition.fromYaml(dynamic yaml) => yaml is String
       ? PackagedProductDefinition.fromJson(
@@ -990,9 +936,7 @@ abstract class PackagedProductDefinitionBatchIdentifier
     Identifier immediatePackaging,
   }) = _PackagedProductDefinitionBatchIdentifier;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PackagedProductDefinitionBatchIdentifier.fromYaml(dynamic yaml) =>
       yaml is String
@@ -1029,9 +973,7 @@ abstract class PackagedProductDefinitionPackage
     List<PackagedProductDefinitionPackage> package,
   }) = _PackagedProductDefinitionPackage;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PackagedProductDefinitionPackage.fromYaml(dynamic yaml) =>
       yaml is String
@@ -1065,9 +1007,7 @@ abstract class PackagedProductDefinitionProperty
     Attachment valueAttachment,
   }) = _PackagedProductDefinitionProperty;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PackagedProductDefinitionProperty.fromYaml(dynamic yaml) =>
       yaml is String
@@ -1097,9 +1037,7 @@ abstract class PackagedProductDefinitionContainedItem
     @JsonKey(name: '_amountInteger') Element amountIntegerElement,
   }) = _PackagedProductDefinitionContainedItem;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PackagedProductDefinitionContainedItem.fromYaml(dynamic yaml) =>
       yaml is String
@@ -1155,9 +1093,7 @@ abstract class RegulatedAuthorization
     @JsonKey(name: 'case') RegulatedAuthorizationCase case_,
   }) = _RegulatedAuthorization;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory RegulatedAuthorization.fromYaml(dynamic yaml) => yaml is String
       ? RegulatedAuthorization.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1183,9 +1119,7 @@ abstract class RegulatedAuthorizationRelatedDate
     @required CodeableConcept type,
   }) = _RegulatedAuthorizationRelatedDate;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory RegulatedAuthorizationRelatedDate.fromYaml(dynamic yaml) =>
       yaml is String
@@ -1218,9 +1152,7 @@ abstract class RegulatedAuthorizationCase
     List<RegulatedAuthorizationCase> application,
   }) = _RegulatedAuthorizationCase;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory RegulatedAuthorizationCase.fromYaml(dynamic yaml) => yaml is String
       ? RegulatedAuthorizationCase.fromJson(
@@ -1277,9 +1209,7 @@ abstract class SubstanceDefinition
     Reference sourceMaterial,
   }) = _SubstanceDefinition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinition.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1313,9 +1243,7 @@ abstract class SubstanceDefinitionMoiety
     CodeableConcept amountType,
   }) = _SubstanceDefinitionMoiety;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionMoiety.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceDefinitionMoiety.fromJson(
@@ -1349,9 +1277,7 @@ abstract class SubstanceDefinitionProperty
     List<Reference> source,
   }) = _SubstanceDefinitionProperty;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionProperty.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceDefinitionProperty.fromJson(
@@ -1386,9 +1312,7 @@ abstract class SubstanceDefinitionStructure
     List<SubstanceDefinitionRepresentation> representation,
   }) = _SubstanceDefinitionStructure;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionStructure.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceDefinitionStructure.fromJson(
@@ -1416,9 +1340,7 @@ abstract class SubstanceDefinitionIsotope
     SubstanceDefinitionMolecularWeight molecularWeight,
   }) = _SubstanceDefinitionIsotope;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionIsotope.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceDefinitionIsotope.fromJson(
@@ -1444,9 +1366,7 @@ abstract class SubstanceDefinitionMolecularWeight
     Quantity amount,
   }) = _SubstanceDefinitionMolecularWeight;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionMolecularWeight.fromYaml(dynamic yaml) =>
       yaml is String
@@ -1477,9 +1397,7 @@ abstract class SubstanceDefinitionRepresentation
     Reference document,
   }) = _SubstanceDefinitionRepresentation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionRepresentation.fromYaml(dynamic yaml) =>
       yaml is String
@@ -1510,9 +1428,7 @@ abstract class SubstanceDefinitionCode implements _$SubstanceDefinitionCode {
     List<Reference> source,
   }) = _SubstanceDefinitionCode;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionCode.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceDefinitionCode.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1546,9 +1462,7 @@ abstract class SubstanceDefinitionName implements _$SubstanceDefinitionName {
     List<Reference> source,
   }) = _SubstanceDefinitionName;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionName.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceDefinitionName.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1574,9 +1488,7 @@ abstract class SubstanceDefinitionOfficial
     @JsonKey(name: '_date') Element dateElement,
   }) = _SubstanceDefinitionOfficial;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionOfficial.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceDefinitionOfficial.fromJson(
@@ -1612,9 +1524,7 @@ abstract class SubstanceDefinitionRelationship
     List<Reference> source,
   }) = _SubstanceDefinitionRelationship;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionRelationship.fromYaml(dynamic yaml) =>
       yaml is String
@@ -1657,9 +1567,7 @@ abstract class SubstanceNucleicAcid
     List<SubstanceNucleicAcidSubunit> subunit,
   }) = _SubstanceNucleicAcid;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceNucleicAcid.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceNucleicAcid.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1692,9 +1600,7 @@ abstract class SubstanceNucleicAcidSubunit
     List<SubstanceNucleicAcidSugar> sugar,
   }) = _SubstanceNucleicAcidSubunit;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceNucleicAcidSubunit.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceNucleicAcidSubunit.fromJson(
@@ -1724,9 +1630,7 @@ abstract class SubstanceNucleicAcidLinkage
     @JsonKey(name: '_residueSite') Element residueSiteElement,
   }) = _SubstanceNucleicAcidLinkage;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceNucleicAcidLinkage.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceNucleicAcidLinkage.fromJson(
@@ -1754,9 +1658,7 @@ abstract class SubstanceNucleicAcidSugar
     @JsonKey(name: '_residueSite') Element residueSiteElement,
   }) = _SubstanceNucleicAcidSugar;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceNucleicAcidSugar.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceNucleicAcidSugar.fromJson(
@@ -1794,9 +1696,7 @@ abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
     List<SubstancePolymerRepeat> repeat,
   }) = _SubstancePolymer;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstancePolymer.fromYaml(dynamic yaml) => yaml is String
       ? SubstancePolymer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1820,9 +1720,7 @@ abstract class SubstancePolymerMonomerSet
     List<SubstancePolymerStartingMaterial> startingMaterial,
   }) = _SubstancePolymerMonomerSet;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstancePolymerMonomerSet.fromYaml(dynamic yaml) => yaml is String
       ? SubstancePolymerMonomerSet.fromJson(
@@ -1850,9 +1748,7 @@ abstract class SubstancePolymerStartingMaterial
     Quantity amount,
   }) = _SubstancePolymerStartingMaterial;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstancePolymerStartingMaterial.fromYaml(dynamic yaml) =>
       yaml is String
@@ -1882,9 +1778,7 @@ abstract class SubstancePolymerRepeat implements _$SubstancePolymerRepeat {
     List<SubstancePolymerRepeatUnit> repeatUnit,
   }) = _SubstancePolymerRepeat;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstancePolymerRepeat.fromYaml(dynamic yaml) => yaml is String
       ? SubstancePolymerRepeat.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1913,9 +1807,7 @@ abstract class SubstancePolymerRepeatUnit
     List<SubstancePolymerStructuralRepresentation> structuralRepresentation,
   }) = _SubstancePolymerRepeatUnit;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstancePolymerRepeatUnit.fromYaml(dynamic yaml) => yaml is String
       ? SubstancePolymerRepeatUnit.fromJson(
@@ -1945,9 +1837,7 @@ abstract class SubstancePolymerDegreeOfPolymerisation
     @JsonKey(name: '_high') Element highElement,
   }) = _SubstancePolymerDegreeOfPolymerisation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstancePolymerDegreeOfPolymerisation.fromYaml(dynamic yaml) =>
       yaml is String
@@ -1978,9 +1868,7 @@ abstract class SubstancePolymerStructuralRepresentation
     Attachment attachment,
   }) = _SubstancePolymerStructuralRepresentation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstancePolymerStructuralRepresentation.fromYaml(dynamic yaml) =>
       yaml is String
@@ -2019,9 +1907,7 @@ abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
     List<SubstanceProteinSubunit> subunit,
   }) = _SubstanceProtein;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceProtein.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceProtein.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2057,9 +1943,7 @@ abstract class SubstanceProteinSubunit implements _$SubstanceProteinSubunit {
         Element cTerminalModificationElement,
   }) = _SubstanceProteinSubunit;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceProteinSubunit.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceProteinSubunit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2097,9 +1981,7 @@ abstract class SubstanceReferenceInformation
     List<SubstanceReferenceInformationTarget> target,
   }) = _SubstanceReferenceInformation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceReferenceInformation.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceReferenceInformation.fromJson(
@@ -2125,9 +2007,7 @@ abstract class SubstanceReferenceInformationGene
     List<Reference> source,
   }) = _SubstanceReferenceInformationGene;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceReferenceInformationGene.fromYaml(dynamic yaml) =>
       yaml is String
@@ -2156,9 +2036,7 @@ abstract class SubstanceReferenceInformationGeneElement
     List<Reference> source,
   }) = _SubstanceReferenceInformationGeneElement;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceReferenceInformationGeneElement.fromYaml(dynamic yaml) =>
       yaml is String
@@ -2195,9 +2073,7 @@ abstract class SubstanceReferenceInformationTarget
     List<Reference> source,
   }) = _SubstanceReferenceInformationTarget;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceReferenceInformationTarget.fromYaml(dynamic yaml) =>
       yaml is String
@@ -2252,9 +2128,7 @@ abstract class SubstanceSourceMaterial
     List<SubstanceSourceMaterialPartDescription> partDescription,
   }) = _SubstanceSourceMaterial;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceSourceMaterial.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceSourceMaterial.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2279,9 +2153,7 @@ abstract class SubstanceSourceMaterialFractionDescription
     CodeableConcept materialType,
   }) = _SubstanceSourceMaterialFractionDescription;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceSourceMaterialFractionDescription.fromYaml(dynamic yaml) =>
       yaml is String
@@ -2317,9 +2189,7 @@ abstract class SubstanceSourceMaterialOrganism
     SubstanceSourceMaterialOrganismGeneral organismGeneral,
   }) = _SubstanceSourceMaterialOrganism;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceSourceMaterialOrganism.fromYaml(dynamic yaml) =>
       yaml is String
@@ -2347,9 +2217,7 @@ abstract class SubstanceSourceMaterialAuthor
     @JsonKey(name: '_authorDescription') Element authorDescriptionElement,
   }) = _SubstanceSourceMaterialAuthor;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceSourceMaterialAuthor.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceSourceMaterialAuthor.fromJson(
@@ -2381,9 +2249,7 @@ abstract class SubstanceSourceMaterialHybrid
     CodeableConcept hybridType,
   }) = _SubstanceSourceMaterialHybrid;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceSourceMaterialHybrid.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceSourceMaterialHybrid.fromJson(
@@ -2410,9 +2276,7 @@ abstract class SubstanceSourceMaterialOrganismGeneral
     CodeableConcept order,
   }) = _SubstanceSourceMaterialOrganismGeneral;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceSourceMaterialOrganismGeneral.fromYaml(dynamic yaml) =>
       yaml is String
@@ -2440,9 +2304,7 @@ abstract class SubstanceSourceMaterialPartDescription
     CodeableConcept partLocation,
   }) = _SubstanceSourceMaterialPartDescription;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceSourceMaterialPartDescription.fromYaml(dynamic yaml) =>
       yaml is String

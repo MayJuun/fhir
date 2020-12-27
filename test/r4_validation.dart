@@ -41,11 +41,12 @@ Future<List<String>> r4ValidationYaml() async {
 
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
-    var resource = r4.Resource.fromYaml(
-        r4.Resource.fromJson(json.decode(contents)).toYaml());
-    if (resource == null) {
+    var tempResource = r4.Resource.fromJson(json.decode(contents));
+
+    if (tempResource == null) {
       print(file);
     } else {
+      var resource = r4.Resource.fromYaml(tempResource.toYaml());
       var result = await checkMapEquality(
           json.decode(contents), resource.toJson(), file.toString());
       if (result != null && result != '') {
@@ -56,11 +57,12 @@ Future<List<String>> r4ValidationYaml() async {
 
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
-    var resource = r4.Resource.fromYaml(
-        r4.Resource.fromJson(json.decode(contents)).toYaml());
-    if (resource == null) {
+    var tempResource = r4.Resource.fromJson(json.decode(contents));
+
+    if (tempResource == null) {
       print(file);
     } else {
+      var resource = r4.Resource.fromYaml(tempResource.toYaml());
       var result = await checkMapEquality(
           resource.toJson(), json.decode(contents), file.toString());
       if (result != null && result != '') {

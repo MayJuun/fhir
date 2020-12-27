@@ -58,9 +58,7 @@ abstract class Claim with Resource implements _$Claim {
     Money total,
   }) = _Claim;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Claim.fromYaml(dynamic yaml) => yaml is String
       ? Claim.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -83,9 +81,7 @@ abstract class ClaimRelated implements _$ClaimRelated {
     Identifier reference,
   }) = _ClaimRelated;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimRelated.fromYaml(dynamic yaml) => yaml is String
       ? ClaimRelated.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -108,9 +104,7 @@ abstract class ClaimPayee implements _$ClaimPayee {
     Reference party,
   }) = _ClaimPayee;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimPayee.fromYaml(dynamic yaml) => yaml is String
       ? ClaimPayee.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -138,9 +132,7 @@ abstract class ClaimCareTeam implements _$ClaimCareTeam {
     CodeableConcept qualification,
   }) = _ClaimCareTeam;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimCareTeam.fromYaml(dynamic yaml) => yaml is String
       ? ClaimCareTeam.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -176,9 +168,7 @@ abstract class ClaimSupportingInfo implements _$ClaimSupportingInfo {
     CodeableConcept reason,
   }) = _ClaimSupportingInfo;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimSupportingInfo.fromYaml(dynamic yaml) => yaml is String
       ? ClaimSupportingInfo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -206,9 +196,7 @@ abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
     CodeableConcept packageCode,
   }) = _ClaimDiagnosis;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimDiagnosis.fromYaml(dynamic yaml) => yaml is String
       ? ClaimDiagnosis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -237,9 +225,7 @@ abstract class ClaimProcedure implements _$ClaimProcedure {
     List<Reference> udi,
   }) = _ClaimProcedure;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimProcedure.fromYaml(dynamic yaml) => yaml is String
       ? ClaimProcedure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -271,9 +257,7 @@ abstract class ClaimInsurance implements _$ClaimInsurance {
     Reference claimResponse,
   }) = _ClaimInsurance;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimInsurance.fromYaml(dynamic yaml) => yaml is String
       ? ClaimInsurance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -299,9 +283,7 @@ abstract class ClaimAccident implements _$ClaimAccident {
     Reference locationReference,
   }) = _ClaimAccident;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimAccident.fromYaml(dynamic yaml) => yaml is String
       ? ClaimAccident.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -354,9 +336,7 @@ abstract class ClaimItem implements _$ClaimItem {
     List<ClaimDetail> detail,
   }) = _ClaimItem;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimItem.fromYaml(dynamic yaml) => yaml is String
       ? ClaimItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -391,9 +371,7 @@ abstract class ClaimDetail implements _$ClaimDetail {
     List<ClaimSubDetail> subDetail,
   }) = _ClaimDetail;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimDetail.fromYaml(dynamic yaml) => yaml is String
       ? ClaimDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -427,9 +405,7 @@ abstract class ClaimSubDetail implements _$ClaimSubDetail {
     List<Reference> udi,
   }) = _ClaimSubDetail;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimSubDetail.fromYaml(dynamic yaml) => yaml is String
       ? ClaimSubDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -491,9 +467,7 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
     List<ClaimResponseError> error,
   }) = _ClaimResponse;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimResponse.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -520,9 +494,7 @@ abstract class ClaimResponseItem implements _$ClaimResponseItem {
     List<ClaimResponseDetail> detail,
   }) = _ClaimResponseItem;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseItem.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -549,9 +521,7 @@ abstract class ClaimResponseAdjudication
     @JsonKey(name: '_value') Element valueElement,
   }) = _ClaimResponseAdjudication;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseAdjudication.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseAdjudication.fromJson(
@@ -579,9 +549,7 @@ abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
     List<ClaimResponseSubDetail> subDetail,
   }) = _ClaimResponseDetail;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseDetail.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -607,9 +575,7 @@ abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
     List<ClaimResponseAdjudication> adjudication,
   }) = _ClaimResponseSubDetail;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseSubDetail.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseSubDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -657,9 +623,7 @@ abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
     List<ClaimResponseDetail1> detail,
   }) = _ClaimResponseAddItem;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseAddItem.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseAddItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -691,9 +655,7 @@ abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
     List<ClaimResponseSubDetail1> subDetail,
   }) = _ClaimResponseDetail1;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseDetail1.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseDetail1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -724,9 +686,7 @@ abstract class ClaimResponseSubDetail1 implements _$ClaimResponseSubDetail1 {
     @required List<ClaimResponseAdjudication> adjudication,
   }) = _ClaimResponseSubDetail1;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseSubDetail1.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseSubDetail1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -749,9 +709,7 @@ abstract class ClaimResponseTotal implements _$ClaimResponseTotal {
     @required Money amount,
   }) = _ClaimResponseTotal;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseTotal.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseTotal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -779,9 +737,7 @@ abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
     Identifier identifier,
   }) = _ClaimResponsePayment;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimResponsePayment.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponsePayment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -810,9 +766,7 @@ abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
     CodeableConcept language,
   }) = _ClaimResponseProcessNote;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseProcessNote.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseProcessNote.fromJson(
@@ -842,9 +796,7 @@ abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
     Reference claimResponse,
   }) = _ClaimResponseInsurance;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseInsurance.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseInsurance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -872,9 +824,7 @@ abstract class ClaimResponseError implements _$ClaimResponseError {
     @required CodeableConcept code,
   }) = _ClaimResponseError;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseError.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponseError.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -923,9 +873,7 @@ abstract class Invoice with Resource implements _$Invoice {
     List<Annotation> note,
   }) = _Invoice;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Invoice.fromYaml(dynamic yaml) => yaml is String
       ? Invoice.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -948,9 +896,7 @@ abstract class InvoiceParticipant implements _$InvoiceParticipant {
     @required Reference actor,
   }) = _InvoiceParticipant;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory InvoiceParticipant.fromYaml(dynamic yaml) => yaml is String
       ? InvoiceParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -976,9 +922,7 @@ abstract class InvoiceLineItem implements _$InvoiceLineItem {
     List<InvoicePriceComponent> priceComponent,
   }) = _InvoiceLineItem;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory InvoiceLineItem.fromYaml(dynamic yaml) => yaml is String
       ? InvoiceLineItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1006,9 +950,7 @@ abstract class InvoicePriceComponent implements _$InvoicePriceComponent {
     Money amount,
   }) = _InvoicePriceComponent;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory InvoicePriceComponent.fromYaml(dynamic yaml) => yaml is String
       ? InvoicePriceComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

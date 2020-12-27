@@ -57,9 +57,7 @@ abstract class CarePlan with Resource implements _$CarePlan {
     List<Annotation> note,
   }) = _CarePlan;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CarePlan.fromYaml(dynamic yaml) => yaml is String
       ? CarePlan.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -84,9 +82,7 @@ abstract class CarePlanActivity implements _$CarePlanActivity {
     CarePlanDetail detail,
   }) = _CarePlanActivity;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CarePlanActivity.fromYaml(dynamic yaml) => yaml is String
       ? CarePlanActivity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -137,9 +133,7 @@ abstract class CarePlanDetail implements _$CarePlanDetail {
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _CarePlanDetail;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CarePlanDetail.fromYaml(dynamic yaml) => yaml is String
       ? CarePlanDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -181,9 +175,7 @@ abstract class CareTeam with Resource implements _$CareTeam {
     List<Annotation> note,
   }) = _CareTeam;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CareTeam.fromYaml(dynamic yaml) => yaml is String
       ? CareTeam.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -209,9 +201,7 @@ abstract class CareTeamParticipant implements _$CareTeamParticipant {
     Timing coverageTiming,
   }) = _CareTeamParticipant;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CareTeamParticipant.fromYaml(dynamic yaml) => yaml is String
       ? CareTeamParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -263,9 +253,7 @@ abstract class Goal with Resource implements _$Goal {
     List<CodeableReference> outcome,
   }) = _Goal;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Goal.fromYaml(dynamic yaml) => yaml is String
       ? Goal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -299,9 +287,7 @@ abstract class GoalTarget implements _$GoalTarget {
     FhirDuration dueDuration,
   }) = _GoalTarget;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory GoalTarget.fromYaml(dynamic yaml) => yaml is String
       ? GoalTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -357,9 +343,7 @@ abstract class NutritionIntake with Resource implements _$NutritionIntake {
     List<Annotation> note,
   }) = _NutritionIntake;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory NutritionIntake.fromYaml(dynamic yaml) => yaml is String
       ? NutritionIntake.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -390,9 +374,7 @@ abstract class NutritionIntakeConsumedItem
     CodeableConcept notConsumedReason,
   }) = _NutritionIntakeConsumedItem;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory NutritionIntakeConsumedItem.fromYaml(dynamic yaml) => yaml is String
       ? NutritionIntakeConsumedItem.fromJson(
@@ -418,9 +400,7 @@ abstract class NutritionIntakeIngredientLabel
     @required Quantity amount,
   }) = _NutritionIntakeIngredientLabel;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory NutritionIntakeIngredientLabel.fromYaml(dynamic yaml) =>
       yaml is String
@@ -446,9 +426,7 @@ abstract class NutritionIntakePerformer implements _$NutritionIntakePerformer {
     @required Reference actor,
   }) = _NutritionIntakePerformer;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory NutritionIntakePerformer.fromYaml(dynamic yaml) => yaml is String
       ? NutritionIntakePerformer.fromJson(
@@ -500,9 +478,7 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
     List<Annotation> note,
   }) = _NutritionOrder;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory NutritionOrder.fromYaml(dynamic yaml) => yaml is String
       ? NutritionOrder.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -530,9 +506,7 @@ abstract class NutritionOrderOralDiet implements _$NutritionOrderOralDiet {
     @JsonKey(name: '_instruction') Element instructionElement,
   }) = _NutritionOrderOralDiet;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory NutritionOrderOralDiet.fromYaml(dynamic yaml) => yaml is String
       ? NutritionOrderOralDiet.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -555,9 +529,7 @@ abstract class NutritionOrderNutrient implements _$NutritionOrderNutrient {
     Quantity amount,
   }) = _NutritionOrderNutrient;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory NutritionOrderNutrient.fromYaml(dynamic yaml) => yaml is String
       ? NutritionOrderNutrient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -580,9 +552,7 @@ abstract class NutritionOrderTexture implements _$NutritionOrderTexture {
     CodeableConcept foodType,
   }) = _NutritionOrderTexture;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory NutritionOrderTexture.fromYaml(dynamic yaml) => yaml is String
       ? NutritionOrderTexture.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -610,9 +580,7 @@ abstract class NutritionOrderSupplement implements _$NutritionOrderSupplement {
     @JsonKey(name: '_instruction') Element instructionElement,
   }) = _NutritionOrderSupplement;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory NutritionOrderSupplement.fromYaml(dynamic yaml) => yaml is String
       ? NutritionOrderSupplement.fromJson(
@@ -649,9 +617,7 @@ abstract class NutritionOrderEnteralFormula
         Element administrationInstructionElement,
   }) = _NutritionOrderEnteralFormula;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory NutritionOrderEnteralFormula.fromYaml(dynamic yaml) => yaml is String
       ? NutritionOrderEnteralFormula.fromJson(
@@ -678,9 +644,7 @@ abstract class NutritionOrderAdministration
     Ratio rateRatio,
   }) = _NutritionOrderAdministration;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory NutritionOrderAdministration.fromYaml(dynamic yaml) => yaml is String
       ? NutritionOrderAdministration.fromJson(
@@ -734,9 +698,7 @@ abstract class RequestGroup with Resource implements _$RequestGroup {
     List<RequestGroupAction> action,
   }) = _RequestGroup;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory RequestGroup.fromYaml(dynamic yaml) => yaml is String
       ? RequestGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -792,9 +754,7 @@ abstract class RequestGroupAction implements _$RequestGroupAction {
     List<RequestGroupAction> action,
   }) = _RequestGroupAction;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory RequestGroupAction.fromYaml(dynamic yaml) => yaml is String
       ? RequestGroupAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -818,9 +778,7 @@ abstract class RequestGroupCondition implements _$RequestGroupCondition {
     Expression expression,
   }) = _RequestGroupCondition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory RequestGroupCondition.fromYaml(dynamic yaml) => yaml is String
       ? RequestGroupCondition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -848,9 +806,7 @@ abstract class RequestGroupRelatedAction
     Range offsetRange,
   }) = _RequestGroupRelatedAction;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory RequestGroupRelatedAction.fromYaml(dynamic yaml) => yaml is String
       ? RequestGroupRelatedAction.fromJson(
@@ -900,9 +856,7 @@ abstract class RiskAssessment with Resource implements _$RiskAssessment {
     List<Annotation> note,
   }) = _RiskAssessment;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory RiskAssessment.fromYaml(dynamic yaml) => yaml is String
       ? RiskAssessment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -934,9 +888,7 @@ abstract class RiskAssessmentPrediction implements _$RiskAssessmentPrediction {
     @JsonKey(name: '_rationale') Element rationaleElement,
   }) = _RiskAssessmentPrediction;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory RiskAssessmentPrediction.fromYaml(dynamic yaml) => yaml is String
       ? RiskAssessmentPrediction.fromJson(
@@ -1011,9 +963,7 @@ abstract class ServiceRequest with Resource implements _$ServiceRequest {
     List<Reference> relevantHistory,
   }) = _ServiceRequest;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ServiceRequest.fromYaml(dynamic yaml) => yaml is String
       ? ServiceRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1055,9 +1005,7 @@ abstract class VisionPrescription
     @required List<VisionPrescriptionLensSpecification> lensSpecification,
   }) = _VisionPrescription;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory VisionPrescription.fromYaml(dynamic yaml) => yaml is String
       ? VisionPrescription.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1104,9 +1052,7 @@ abstract class VisionPrescriptionLensSpecification
     List<Annotation> note,
   }) = _VisionPrescriptionLensSpecification;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory VisionPrescriptionLensSpecification.fromYaml(dynamic yaml) =>
       yaml is String
@@ -1136,9 +1082,7 @@ abstract class VisionPrescriptionPrism implements _$VisionPrescriptionPrism {
     @JsonKey(name: '_base') Element baseElement,
   }) = _VisionPrescriptionPrism;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory VisionPrescriptionPrism.fromYaml(dynamic yaml) => yaml is String
       ? VisionPrescriptionPrism.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

@@ -7,8 +7,9 @@ Future<List<String>> dstu2Validation() async {
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
     var resource = dstu2.Resource.fromJson(json.decode(contents));
+
     if (resource == null) {
-      print(file);
+      print('nullFile: $file');
     } else {
       var result = await checkMapEquality(
           json.decode(contents), resource.toJson(), file.toString());
@@ -21,8 +22,9 @@ Future<List<String>> dstu2Validation() async {
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
     var resource = dstu2.Resource.fromJson(json.decode(contents));
+
     if (resource == null) {
-      print(file);
+      print('nullFile: $file');
     } else {
       var result = await checkMapEquality(
           resource.toJson(), json.decode(contents), file.toString());
@@ -42,12 +44,11 @@ Future<List<String>> dstu2ValidationYaml() async {
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
     print(file.path);
-
     var resource = dstu2.Resource.fromYaml(
         (dstu2.Resource.fromJson(json.decode(contents)).toYaml()));
 
     if (resource == null) {
-      print(file);
+      print('nullFile: $file');
     } else {
       var result = await checkMapEquality(
           json.decode(contents), resource.toJson(), file.toString());
@@ -59,12 +60,13 @@ Future<List<String>> dstu2ValidationYaml() async {
 
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
+    print(file.path);
 
     var resource = dstu2.Resource.fromYaml(
         (dstu2.Resource.fromJson(json.decode(contents)).toYaml()));
 
     if (resource == null) {
-      print(file);
+      print('nullFile: $file');
     } else {
       var result = await checkMapEquality(
           resource.toJson(), json.decode(contents), file.toString());

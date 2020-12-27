@@ -20,9 +20,7 @@ class Resource {
   List<FhirExtension> extension_;
   List<FhirExtension> modifierExtension;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   static Resource fromYaml(dynamic yaml) => yaml is String
       ? fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

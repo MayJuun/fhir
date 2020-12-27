@@ -15,14 +15,14 @@ As well as the R5 Preview #3:
 ## Say Hello!
 
 - As all parts of this are new (FHIR, Flutter, using the two together), I'd love to hear from you if you're working in this space.
-You can email me at <jgfaulkenberry@gmail.com>.
+You can email me at <grey@fhirfli.dev>.
 
 ## How To Use
 
 In order to use this package in your app, you must include the following in your pubspec.yaml file under dependencies:
 ```
 dependencies:
-  fhir: ^0.0.8
+  fhir: ^0.0.13
 ```
 Or if you want to include the most recent unreleased version from Github
 ```
@@ -89,13 +89,16 @@ input: ```FhirDateTime('2015-02-07T13:28:17')```, output: ```2015-02-07T13:28:17
 input: ```FhirDateTime('2017-01-01T00:00:00.000Z')```, output: ```2017-01-01T00:00:00.000Z```
 
 ## Upcoming
-There are two big items I would really like to get to work to add functionality:
-1. Database - I'm working on a locally embedded, encrypted database using [Sembast](https://pub.dev/packages/sembast) and [SQFlite](https://pub.dev/packages/sqflite). Feel free to take a look, it's in the basic branch of my [vigor repository](https://github.com/Dokotela/vigor).
-2. SMART - this one I could really use some help with. I think I understand the pieces, but I'm not sure the best way to try and implement it. But I do realize it's necessary to truly making this a useful package.
+Two affiliated packages that add more function to this one are:
+1. [fhir_at_rest](https://github.com/fhir-fli/fhir_at_rest) is a package to assist with any RESTful requests that will follow the FHIR spec
+2. [fhir_db](https://github.com/fhir-fli/fhir_db) is essentially just the [Sembast_SQFLite](https://pub.dev/packages/sembast_sqflite) by [Alex Tekartik](https://www.tekartik.com/) that I added some convenience functions to store FHIR resources. 
+2. I am also working on an auth package that will include Smart on FHIR, but that hasn't been fully implemented yet.
 
 
 ## Validation
 - For validation testing, I run all of the sample files from hl7 through a tester. There is an errors.txt file in the test folder where all of the errors are reported (the file name and then the specific field). Currently the only errors involve Codes and IDs. The Codes have to due with the fact that [code is not supposed to have leading or trailing white space](https://www.hl7.org/fhir/datatypes.html#code). The issues with the IDs are that [IDs are not supposed to be more than 64 characters](https://www.hl7.org/fhir/datatypes.html#id), and these are 65. However, if it turns out that no one wants to enforce these as strictly as I do, I may relax them. Also, for r5, there are some fields that I'm not sure if they're supposed to be lists or not, and there are a number of reference I'm not sure if I have the correct name (because the names differe on the website vs. the downloadable schema). I've kept whichever one seemed to be present in the examples.
+- For validating the toYaml() functions, I first read the map into a Resource, convert it into Yaml, convert it back into a Resource, and then use that in the validation function above.
+- There are two files that seem to have random nulls in the middle, I'm not sure why, they don't seem to serve any purpose, and they don't currently transfer into Yaml at this point.
 
 ## First Package
 

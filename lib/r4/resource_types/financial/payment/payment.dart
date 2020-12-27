@@ -43,9 +43,7 @@ abstract class PaymentNotice with Resource implements _$PaymentNotice {
     CodeableConcept paymentStatus,
   }) = _PaymentNotice;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PaymentNotice.fromYaml(dynamic yaml) => yaml is String
       ? PaymentNotice.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -99,9 +97,7 @@ abstract class PaymentReconciliation
     List<PaymentReconciliationProcessNote> processNote,
   }) = _PaymentReconciliation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PaymentReconciliation.fromYaml(dynamic yaml) => yaml is String
       ? PaymentReconciliation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -134,9 +130,7 @@ abstract class PaymentReconciliationDetail
     Money amount,
   }) = _PaymentReconciliationDetail;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PaymentReconciliationDetail.fromYaml(dynamic yaml) => yaml is String
       ? PaymentReconciliationDetail.fromJson(
@@ -164,9 +158,7 @@ abstract class PaymentReconciliationProcessNote
     @JsonKey(name: '_text') Element textElement,
   }) = _PaymentReconciliationProcessNote;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PaymentReconciliationProcessNote.fromYaml(dynamic yaml) =>
       yaml is String

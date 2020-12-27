@@ -84,9 +84,7 @@ abstract class ActivityDefinition
     List<ActivityDefinitionDynamicValue> dynamicValue,
   }) = _ActivityDefinition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ActivityDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ActivityDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -108,9 +106,7 @@ abstract class ActivityDefinitionParticipant
     CodeableConcept role,
   }) = _ActivityDefinitionParticipant;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ActivityDefinitionParticipant.fromYaml(dynamic yaml) => yaml is String
       ? ActivityDefinitionParticipant.fromJson(
@@ -138,9 +134,7 @@ abstract class ActivityDefinitionDynamicValue
     @JsonKey(name: '_expression') Element expressionElement,
   }) = _ActivityDefinitionDynamicValue;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ActivityDefinitionDynamicValue.fromYaml(dynamic yaml) =>
       yaml is String
@@ -212,9 +206,7 @@ abstract class PlanDefinition with Resource implements _$PlanDefinition {
     List<PlanDefinitionAction> action,
   }) = _PlanDefinition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PlanDefinition.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -239,9 +231,7 @@ abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
     List<PlanDefinitionTarget> target,
   }) = _PlanDefinitionGoal;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PlanDefinitionGoal.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionGoal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -264,9 +254,7 @@ abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
     FhirDuration due,
   }) = _PlanDefinitionTarget;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PlanDefinitionTarget.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -324,9 +312,7 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
     List<PlanDefinitionAction> action,
   }) = _PlanDefinitionAction;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PlanDefinitionAction.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -352,9 +338,7 @@ abstract class PlanDefinitionCondition implements _$PlanDefinitionCondition {
     @JsonKey(name: '_expression') Element expressionElement,
   }) = _PlanDefinitionCondition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PlanDefinitionCondition.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionCondition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -379,9 +363,7 @@ abstract class PlanDefinitionRelatedAction
     Range offsetRange,
   }) = _PlanDefinitionRelatedAction;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PlanDefinitionRelatedAction.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionRelatedAction.fromJson(
@@ -404,9 +386,7 @@ abstract class PlanDefinitionParticipant
     CodeableConcept role,
   }) = _PlanDefinitionParticipant;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PlanDefinitionParticipant.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionParticipant.fromJson(
@@ -434,9 +414,7 @@ abstract class PlanDefinitionDynamicValue
     @JsonKey(name: '_expression') Element expressionElement,
   }) = _PlanDefinitionDynamicValue;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PlanDefinitionDynamicValue.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionDynamicValue.fromJson(
@@ -501,9 +479,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
     List<QuestionnaireItem> item,
   }) = _Questionnaire;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Questionnaire.fromYaml(dynamic yaml) => yaml is String
       ? Questionnaire.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -565,9 +541,7 @@ abstract class QuestionnaireItem implements _$QuestionnaireItem {
     List<QuestionnaireItem> item,
   }) = _QuestionnaireItem;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory QuestionnaireItem.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -609,9 +583,7 @@ abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
     Reference answerReference,
   }) = _QuestionnaireEnableWhen;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory QuestionnaireEnableWhen.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireEnableWhen.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -638,9 +610,7 @@ abstract class QuestionnaireOption implements _$QuestionnaireOption {
     Coding valueCoding,
   }) = _QuestionnaireOption;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory QuestionnaireOption.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireOption.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -708,9 +678,7 @@ abstract class ServiceDefinition with Resource implements _$ServiceDefinition {
     Reference operationDefinition,
   }) = _ServiceDefinition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ServiceDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ServiceDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

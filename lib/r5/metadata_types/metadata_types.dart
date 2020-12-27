@@ -22,9 +22,7 @@ abstract class ContactDetail implements _$ContactDetail {
     List<ContactPoint> telecom,
   }) = _ContactDetail;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ContactDetail.fromYaml(dynamic yaml) => yaml is String
       ? ContactDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -49,9 +47,7 @@ abstract class Contributor implements _$Contributor {
     List<ContactDetail> contact,
   }) = _Contributor;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Contributor.fromYaml(dynamic yaml) => yaml is String
       ? Contributor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -83,9 +79,7 @@ abstract class DataRequirement implements _$DataRequirement {
     List<DataRequirementSort> sort,
   }) = _DataRequirement;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DataRequirement.fromYaml(dynamic yaml) => yaml is String
       ? DataRequirement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -113,9 +107,7 @@ abstract class DataRequirementCodeFilter
     List<Coding> code,
   }) = _DataRequirementCodeFilter;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DataRequirementCodeFilter.fromYaml(dynamic yaml) => yaml is String
       ? DataRequirementCodeFilter.fromJson(
@@ -146,9 +138,7 @@ abstract class DataRequirementDateFilter
     FhirDuration valueDuration,
   }) = _DataRequirementDateFilter;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DataRequirementDateFilter.fromYaml(dynamic yaml) => yaml is String
       ? DataRequirementDateFilter.fromJson(
@@ -175,9 +165,7 @@ abstract class DataRequirementSort implements _$DataRequirementSort {
     @JsonKey(name: '_direction') Element directionElement,
   }) = _DataRequirementSort;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DataRequirementSort.fromYaml(dynamic yaml) => yaml is String
       ? DataRequirementSort.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -210,9 +198,7 @@ abstract class ParameterDefinition implements _$ParameterDefinition {
     Canonical profile,
   }) = _ParameterDefinition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ParameterDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ParameterDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -245,9 +231,7 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
     Canonical resource,
   }) = _RelatedArtifact;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory RelatedArtifact.fromYaml(dynamic yaml) => yaml is String
       ? RelatedArtifact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -280,9 +264,7 @@ abstract class TriggerDefinition implements _$TriggerDefinition {
     Expression condition,
   }) = _TriggerDefinition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TriggerDefinition.fromYaml(dynamic yaml) => yaml is String
       ? TriggerDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -307,9 +289,7 @@ abstract class UsageContext implements _$UsageContext {
     Reference valueReference,
   }) = _UsageContext;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory UsageContext.fromYaml(dynamic yaml) => yaml is String
       ? UsageContext.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -339,9 +319,7 @@ abstract class Expression implements _$Expression {
     @JsonKey(name: '_reference') Element referenceElement,
   }) = _Expression;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Expression.fromYaml(dynamic yaml) => yaml is String
       ? Expression.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

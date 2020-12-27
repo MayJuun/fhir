@@ -50,9 +50,7 @@ abstract class Encounter with Resource implements _$Encounter {
     Reference partOf,
   }) = _Encounter;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Encounter.fromYaml(dynamic yaml) => yaml is String
       ? Encounter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -73,9 +71,7 @@ abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
     @required Period period,
   }) = _EncounterStatusHistory;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory EncounterStatusHistory.fromYaml(dynamic yaml) => yaml is String
       ? EncounterStatusHistory.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -95,9 +91,7 @@ abstract class EncounterClassHistory implements _$EncounterClassHistory {
     @required Period period,
   }) = _EncounterClassHistory;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory EncounterClassHistory.fromYaml(dynamic yaml) => yaml is String
       ? EncounterClassHistory.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -118,9 +112,7 @@ abstract class EncounterParticipant implements _$EncounterParticipant {
     Reference individual,
   }) = _EncounterParticipant;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory EncounterParticipant.fromYaml(dynamic yaml) => yaml is String
       ? EncounterParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -142,9 +134,7 @@ abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
     @JsonKey(name: '_rank') Element rankElement,
   }) = _EncounterDiagnosis;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory EncounterDiagnosis.fromYaml(dynamic yaml) => yaml is String
       ? EncounterDiagnosis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -171,9 +161,7 @@ abstract class EncounterHospitalization implements _$EncounterHospitalization {
     CodeableConcept dischargeDisposition,
   }) = _EncounterHospitalization;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory EncounterHospitalization.fromYaml(dynamic yaml) => yaml is String
       ? EncounterHospitalization.fromJson(
@@ -196,9 +184,7 @@ abstract class EncounterLocation implements _$EncounterLocation {
     Period period,
   }) = _EncounterLocation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory EncounterLocation.fromYaml(dynamic yaml) => yaml is String
       ? EncounterLocation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -240,9 +226,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
     List<Reference> account,
   }) = _EpisodeOfCare;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory EpisodeOfCare.fromYaml(dynamic yaml) => yaml is String
       ? EpisodeOfCare.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -264,9 +248,7 @@ abstract class EpisodeOfCareStatusHistory
     @required Period period,
   }) = _EpisodeOfCareStatusHistory;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory EpisodeOfCareStatusHistory.fromYaml(dynamic yaml) => yaml is String
       ? EpisodeOfCareStatusHistory.fromJson(
@@ -289,9 +271,7 @@ abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
     @JsonKey(name: '_rank') Element rankElement,
   }) = _EpisodeOfCareDiagnosis;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory EpisodeOfCareDiagnosis.fromYaml(dynamic yaml) => yaml is String
       ? EpisodeOfCareDiagnosis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -329,9 +309,7 @@ abstract class Flag with Resource implements _$Flag {
     Reference author,
   }) = _Flag;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Flag.fromYaml(dynamic yaml) => yaml is String
       ? Flag.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -399,9 +377,7 @@ abstract class Library with Resource implements _$Library {
     List<Attachment> content,
   }) = _Library;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Library.fromYaml(dynamic yaml) => yaml is String
       ? Library.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -447,9 +423,7 @@ abstract class List_ with Resource implements _$List_ {
     CodeableConcept emptyReason,
   }) = _List_;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory List_.fromYaml(dynamic yaml) => yaml is String
       ? List_.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -472,9 +446,7 @@ abstract class ListEntry implements _$ListEntry {
     @required Reference item,
   }) = _ListEntry;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ListEntry.fromYaml(dynamic yaml) => yaml is String
       ? ListEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

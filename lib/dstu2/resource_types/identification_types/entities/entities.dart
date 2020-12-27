@@ -44,9 +44,7 @@ abstract class Location with Resource implements _$Location {
     Reference partOf,
   }) = _Location;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Location.fromYaml(dynamic yaml) => yaml is String
       ? Location.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -73,9 +71,7 @@ abstract class LocationPosition with _$LocationPosition {
     @JsonKey(name: '_altitude') Element altitudeElement,
   }) = _LocationPosition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory LocationPosition.fromYaml(dynamic yaml) => yaml is String
       ? LocationPosition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -111,9 +107,7 @@ abstract class Substance with Resource implements _$Substance {
     List<SubstanceIngredient> ingredient,
   }) = _Substance;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Substance.fromYaml(dynamic yaml) => yaml is String
       ? Substance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -138,9 +132,7 @@ abstract class SubstanceInstance with _$SubstanceInstance {
     Quantity quantity,
   }) = _SubstanceInstance;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceInstance.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -163,9 +155,7 @@ abstract class SubstanceIngredient with _$SubstanceIngredient {
     @JsonKey(required: true) @required Reference substance,
   }) = _SubstanceIngredient;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceIngredient.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceIngredient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -207,9 +197,7 @@ abstract class Person with Resource implements _$Person {
     List<PersonLink> link,
   }) = _Person;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Person.fromYaml(dynamic yaml) => yaml is String
       ? Person.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -232,9 +220,7 @@ abstract class PersonLink with _$PersonLink {
     @JsonKey(name: '_assurance') Element assuranceElement,
   }) = _PersonLink;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PersonLink.fromYaml(dynamic yaml) => yaml is String
       ? PersonLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -283,9 +269,7 @@ abstract class Contract with Resource implements _$Contract {
     List<ContractRule> rule,
   }) = _Contract;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Contract.fromYaml(dynamic yaml) => yaml is String
       ? Contract.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -308,9 +292,7 @@ abstract class ContractActor with _$ContractActor {
     List<CodeableConcept> role,
   }) = _ContractActor;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ContractActor.fromYaml(dynamic yaml) => yaml is String
       ? ContractActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -344,9 +326,7 @@ abstract class ContractValuedItem with _$ContractValuedItem {
     List<Element> securityLabelNumberElement,
   }) = _ContractValuedItem;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ContractValuedItem.fromYaml(dynamic yaml) => yaml is String
       ? ContractValuedItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -370,9 +350,7 @@ abstract class ContractSigner with _$ContractSigner {
     @JsonKey(required: true) @required String signature,
   }) = _ContractSigner;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ContractSigner.fromYaml(dynamic yaml) => yaml is String
       ? ContractSigner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -407,9 +385,7 @@ abstract class ContractTerm with _$ContractTerm {
     List<ContractTerm> group,
   }) = _ContractTerm;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ContractTerm.fromYaml(dynamic yaml) => yaml is String
       ? ContractTerm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -432,9 +408,7 @@ abstract class ContractTermActor with _$ContractTermActor {
     List<CodeableConcept> role,
   }) = _ContractTermActor;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ContractTermActor.fromYaml(dynamic yaml) => yaml is String
       ? ContractTermActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -457,9 +431,7 @@ abstract class ContractFriendly with _$ContractFriendly {
     Reference contactReference,
   }) = _ContractFriendly;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ContractFriendly.fromYaml(dynamic yaml) => yaml is String
       ? ContractFriendly.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -482,9 +454,7 @@ abstract class ContractLegal with _$ContractLegal {
     Reference content,
   }) = _ContractLegal;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ContractLegal.fromYaml(dynamic yaml) => yaml is String
       ? ContractLegal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -507,9 +477,7 @@ abstract class ContractRule with _$ContractRule {
     Reference contentReference,
   }) = _ContractRule;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ContractRule.fromYaml(dynamic yaml) => yaml is String
       ? ContractRule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

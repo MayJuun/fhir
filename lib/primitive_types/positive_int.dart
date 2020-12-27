@@ -20,9 +20,7 @@ class PositiveInt extends PrimitiveObject<int> {
 
   const PositiveInt._(this.value);
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PositiveInt.fromYaml(dynamic yaml) => yaml is String
       ? PositiveInt.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

@@ -69,9 +69,7 @@ abstract class FhirExtension with _$FhirExtension {
     Meta valueMeta,
   }) = _FhirExtension;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory FhirExtension.fromYaml(dynamic yaml) => yaml is String
       ? FhirExtension.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

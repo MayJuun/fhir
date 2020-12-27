@@ -19,9 +19,7 @@ class Boolean extends PrimitiveObject<bool> {
   }
   const Boolean._(this.value);
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Boolean.fromYaml(dynamic yaml) => yaml is String
       ? Boolean.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

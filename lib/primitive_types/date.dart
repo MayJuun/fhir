@@ -22,9 +22,7 @@ class Date extends Dates {
   }
 
   Date._(this.value, this.format);
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Date.fromYaml(dynamic yaml) => yaml is String
       ? Date.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

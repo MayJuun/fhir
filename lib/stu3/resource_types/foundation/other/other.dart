@@ -34,9 +34,7 @@ abstract class Basic with Resource implements _$Basic {
     Reference author,
   }) = _Basic;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Basic.fromYaml(dynamic yaml) => yaml is String
       ? Basic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -69,9 +67,7 @@ abstract class Binary with Resource implements _$Binary {
     @JsonKey(name: '_content') Element contentElement,
   }) = _Binary;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Binary.fromYaml(dynamic yaml) => yaml is String
       ? Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -107,9 +103,7 @@ abstract class Bundle with Resource implements _$Bundle {
     Signature signature,
   }) = _Bundle;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Bundle.fromYaml(dynamic yaml) => yaml is String
       ? Bundle.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -130,9 +124,7 @@ abstract class BundleLink implements _$BundleLink {
     @JsonKey(name: '_url') Element urlElement,
   }) = _BundleLink;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory BundleLink.fromYaml(dynamic yaml) => yaml is String
       ? BundleLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -157,9 +149,7 @@ abstract class BundleEntry implements _$BundleEntry {
     BundleResponse response,
   }) = _BundleEntry;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory BundleEntry.fromYaml(dynamic yaml) => yaml is String
       ? BundleEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -181,9 +171,7 @@ abstract class BundleSearch implements _$BundleSearch {
     @JsonKey(name: '_score') Element scoreElement,
   }) = _BundleSearch;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory BundleSearch.fromYaml(dynamic yaml) => yaml is String
       ? BundleSearch.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -213,9 +201,7 @@ abstract class BundleRequest implements _$BundleRequest {
     @JsonKey(name: '_ifNoneExist') Element ifNoneExistElement,
   }) = _BundleRequest;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory BundleRequest.fromYaml(dynamic yaml) => yaml is String
       ? BundleRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -242,9 +228,7 @@ abstract class BundleResponse implements _$BundleResponse {
     Resource outcome,
   }) = _BundleResponse;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory BundleResponse.fromYaml(dynamic yaml) => yaml is String
       ? BundleResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -277,9 +261,7 @@ abstract class Linkage with Resource implements _$Linkage {
     @required List<LinkageItem> item,
   }) = _Linkage;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Linkage.fromYaml(dynamic yaml) => yaml is String
       ? Linkage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -300,9 +282,7 @@ abstract class LinkageItem implements _$LinkageItem {
     @required Reference resource,
   }) = _LinkageItem;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory LinkageItem.fromYaml(dynamic yaml) => yaml is String
       ? LinkageItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -356,9 +336,7 @@ abstract class Media with Resource implements _$Media {
     List<Annotation> note,
   }) = _Media;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Media.fromYaml(dynamic yaml) => yaml is String
       ? Media.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -399,9 +377,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     List<Reference> focus,
   }) = _MessageHeader;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MessageHeader.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeader.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -424,9 +400,7 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
     @JsonKey(name: '_endpoint') Element endpointElement,
   }) = _MessageHeaderDestination;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MessageHeaderDestination.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeaderDestination.fromJson(
@@ -454,9 +428,7 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
     @JsonKey(name: '_endpoint') Element endpointElement,
   }) = _MessageHeaderSource;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MessageHeaderSource.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeaderSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -479,9 +451,7 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
     Reference details,
   }) = _MessageHeaderResponse;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MessageHeaderResponse.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeaderResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -511,9 +481,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     @required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory OperationOutcome.fromYaml(dynamic yaml) => yaml is String
       ? OperationOutcome.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -542,9 +510,7 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
     @JsonKey(name: '_expression') List<Element> expressionElement,
   }) = _OperationOutcomeIssue;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory OperationOutcomeIssue.fromYaml(dynamic yaml) => yaml is String
       ? OperationOutcomeIssue.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -574,9 +540,7 @@ abstract class Parameters with Resource implements _$Parameters {
     List<ParametersParameter> parameter,
   }) = _Parameters;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Parameters.fromYaml(dynamic yaml) => yaml is String
       ? Parameters.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -668,9 +632,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
     @JsonKey(name: 'part') List<ParametersParameter> part_,
   }) = _ParametersParameter;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ParametersParameter.fromYaml(dynamic yaml) => yaml is String
       ? ParametersParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -712,9 +674,7 @@ abstract class Subscription with Resource implements _$Subscription {
     List<Coding> tag,
   }) = _Subscription;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Subscription.fromYaml(dynamic yaml) => yaml is String
       ? Subscription.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -740,9 +700,7 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
     @JsonKey(name: '_header') List<Element> headerElement,
   }) = _SubscriptionChannel;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubscriptionChannel.fromYaml(dynamic yaml) => yaml is String
       ? SubscriptionChannel.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

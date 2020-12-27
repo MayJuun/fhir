@@ -55,9 +55,7 @@ abstract class Communication with Resource implements _$Communication {
     List<Annotation> note,
   }) = _Communication;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Communication.fromYaml(dynamic yaml) => yaml is String
       ? Communication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -81,9 +79,7 @@ abstract class CommunicationPayload implements _$CommunicationPayload {
     CodeableConcept contentCodeableConcept,
   }) = _CommunicationPayload;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CommunicationPayload.fromYaml(dynamic yaml) => yaml is String
       ? CommunicationPayload.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -143,9 +139,7 @@ abstract class CommunicationRequest
     List<Annotation> note,
   }) = _CommunicationRequest;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CommunicationRequest.fromYaml(dynamic yaml) => yaml is String
       ? CommunicationRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -170,9 +164,7 @@ abstract class CommunicationRequestPayload
     CodeableConcept contentCodeableConcept,
   }) = _CommunicationRequestPayload;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CommunicationRequestPayload.fromYaml(dynamic yaml) => yaml is String
       ? CommunicationRequestPayload.fromJson(
@@ -234,9 +226,7 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
     List<Reference> relevantHistory,
   }) = _DeviceRequest;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DeviceRequest.fromYaml(dynamic yaml) => yaml is String
       ? DeviceRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -263,9 +253,7 @@ abstract class DeviceRequestParameter implements _$DeviceRequestParameter {
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
   }) = _DeviceRequestParameter;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DeviceRequestParameter.fromYaml(dynamic yaml) => yaml is String
       ? DeviceRequestParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -320,9 +308,7 @@ abstract class DeviceUseStatement
     List<Annotation> note,
   }) = _DeviceUseStatement;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DeviceUseStatement.fromYaml(dynamic yaml) => yaml is String
       ? DeviceUseStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -372,9 +358,7 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
     List<DataRequirement> dataRequirement,
   }) = _GuidanceResponse;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory GuidanceResponse.fromYaml(dynamic yaml) => yaml is String
       ? GuidanceResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -419,9 +403,7 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
     List<Reference> receiver,
   }) = _SupplyDelivery;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SupplyDelivery.fromYaml(dynamic yaml) => yaml is String
       ? SupplyDelivery.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -446,9 +428,7 @@ abstract class SupplyDeliverySuppliedItem
     Reference itemReference,
   }) = _SupplyDeliverySuppliedItem;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SupplyDeliverySuppliedItem.fromYaml(dynamic yaml) => yaml is String
       ? SupplyDeliverySuppliedItem.fromJson(
@@ -500,9 +480,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
     Reference deliverTo,
   }) = _SupplyRequest;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SupplyRequest.fromYaml(dynamic yaml) => yaml is String
       ? SupplyRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -529,9 +507,7 @@ abstract class SupplyRequestParameter implements _$SupplyRequestParameter {
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
   }) = _SupplyRequestParameter;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SupplyRequestParameter.fromYaml(dynamic yaml) => yaml is String
       ? SupplyRequestParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

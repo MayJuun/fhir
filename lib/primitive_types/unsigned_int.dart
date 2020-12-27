@@ -20,9 +20,7 @@ class UnsignedInt extends PrimitiveObject<int> {
 
   const UnsignedInt._(this.value);
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory UnsignedInt.fromYaml(dynamic yaml) => yaml is String
       ? UnsignedInt.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

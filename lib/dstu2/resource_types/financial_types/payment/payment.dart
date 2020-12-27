@@ -39,9 +39,7 @@ abstract class PaymentNotice with Resource implements _$PaymentNotice {
     @JsonKey(required: true) @required Coding paymentStatus,
   }) = _PaymentNotice;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PaymentNotice.fromYaml(dynamic yaml) => yaml is String
       ? PaymentNotice.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -93,9 +91,7 @@ abstract class PaymentReconciliation
     List<PaymentReconciliationNote> note,
   }) = _PaymentReconciliation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PaymentReconciliation.fromYaml(dynamic yaml) => yaml is String
       ? PaymentReconciliation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -124,9 +120,7 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
     Quantity amount,
   }) = _PaymentReconciliationDetail;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PaymentReconciliationDetail.fromYaml(dynamic yaml) => yaml is String
       ? PaymentReconciliationDetail.fromJson(
@@ -152,9 +146,7 @@ abstract class PaymentReconciliationNote with _$PaymentReconciliationNote {
     @JsonKey(name: '_text') Element textElement,
   }) = _PaymentReconciliationNote;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory PaymentReconciliationNote.fromYaml(dynamic yaml) => yaml is String
       ? PaymentReconciliationNote.fromJson(

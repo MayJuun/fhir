@@ -40,9 +40,7 @@ abstract class Organization with Resource implements _$Organization {
     // @JsonKey(name: '_alias') Element aliasElement,
   }) = _Organization;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Organization.fromYaml(dynamic yaml) => yaml is String
       ? Organization.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -68,9 +66,7 @@ abstract class OrganizationContact with _$OrganizationContact {
     Address address,
   }) = _OrganizationContact;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory OrganizationContact.fromYaml(dynamic yaml) => yaml is String
       ? OrganizationContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -126,9 +122,7 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
         Element availabilityExceptionsElement,
   }) = _HealthcareService;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory HealthcareService.fromYaml(dynamic yaml) => yaml is String
       ? HealthcareService.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -152,9 +146,7 @@ abstract class HealthcareServiceServiceType
     List<CodeableConcept> specialty,
   }) = _HealthcareServiceServiceType;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory HealthcareServiceServiceType.fromYaml(dynamic yaml) => yaml is String
       ? HealthcareServiceServiceType.fromJson(
@@ -185,9 +177,7 @@ abstract class HealthcareServiceAvailableTime
     @JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
   }) = _HealthcareServiceAvailableTime;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) =>
       yaml is String
@@ -215,9 +205,7 @@ abstract class HealthcareServiceNotAvailable
     Period during,
   }) = _HealthcareServiceNotAvailable;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory HealthcareServiceNotAvailable.fromYaml(dynamic yaml) => yaml is String
       ? HealthcareServiceNotAvailable.fromJson(
@@ -261,9 +249,7 @@ abstract class Group with Resource implements _$Group {
     List<GroupMember> member,
   }) = _Group;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Group.fromYaml(dynamic yaml) => yaml is String
       ? Group.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -291,9 +277,7 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
     Period period,
   }) = _GroupCharacteristic;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory GroupCharacteristic.fromYaml(dynamic yaml) => yaml is String
       ? GroupCharacteristic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -318,9 +302,7 @@ abstract class GroupMember with _$GroupMember {
     @JsonKey(name: '_inactive') Element inactiveElement,
   }) = _GroupMember;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory GroupMember.fromYaml(dynamic yaml) => yaml is String
       ? GroupMember.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

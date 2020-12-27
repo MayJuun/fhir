@@ -46,9 +46,7 @@ abstract class TestReport with Resource implements _$TestReport {
     TestReportTeardown teardown,
   }) = _TestReport;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestReport.fromYaml(dynamic yaml) => yaml is String
       ? TestReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -72,9 +70,7 @@ abstract class TestReportParticipant implements _$TestReportParticipant {
     @JsonKey(name: '_display') Element displayElement,
   }) = _TestReportParticipant;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestReportParticipant.fromYaml(dynamic yaml) => yaml is String
       ? TestReportParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -93,9 +89,7 @@ abstract class TestReportSetup implements _$TestReportSetup {
     @required List<TestReportAction> action,
   }) = _TestReportSetup;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestReportSetup.fromYaml(dynamic yaml) => yaml is String
       ? TestReportSetup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -115,9 +109,7 @@ abstract class TestReportAction implements _$TestReportAction {
     @JsonKey(name: 'assert') TestReportAssert assert_,
   }) = _TestReportAction;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestReportAction.fromYaml(dynamic yaml) => yaml is String
       ? TestReportAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -141,9 +133,7 @@ abstract class TestReportOperation implements _$TestReportOperation {
     @JsonKey(name: '_detail') Element detailElement,
   }) = _TestReportOperation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestReportOperation.fromYaml(dynamic yaml) => yaml is String
       ? TestReportOperation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -167,9 +157,7 @@ abstract class TestReportAssert implements _$TestReportAssert {
     @JsonKey(name: '_detail') Element detailElement,
   }) = _TestReportAssert;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestReportAssert.fromYaml(dynamic yaml) => yaml is String
       ? TestReportAssert.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -192,9 +180,7 @@ abstract class TestReportTest implements _$TestReportTest {
     @required List<TestReportAction1> action,
   }) = _TestReportTest;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestReportTest.fromYaml(dynamic yaml) => yaml is String
       ? TestReportTest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -214,9 +200,7 @@ abstract class TestReportAction1 implements _$TestReportAction1 {
     @JsonKey(name: 'assert') TestReportAssert assert_,
   }) = _TestReportAction1;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestReportAction1.fromYaml(dynamic yaml) => yaml is String
       ? TestReportAction1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -235,9 +219,7 @@ abstract class TestReportTeardown implements _$TestReportTeardown {
     @required List<TestReportAction2> action,
   }) = _TestReportTeardown;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestReportTeardown.fromYaml(dynamic yaml) => yaml is String
       ? TestReportTeardown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -256,9 +238,7 @@ abstract class TestReportAction2 implements _$TestReportAction2 {
     @required TestReportOperation operation,
   }) = _TestReportAction2;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestReportAction2.fromYaml(dynamic yaml) => yaml is String
       ? TestReportAction2.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -324,9 +304,7 @@ abstract class TestScript with Resource implements _$TestScript {
     TestScriptTeardown teardown,
   }) = _TestScript;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScript.fromYaml(dynamic yaml) => yaml is String
       ? TestScript.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -347,9 +325,7 @@ abstract class TestScriptOrigin implements _$TestScriptOrigin {
     @required Coding profile,
   }) = _TestScriptOrigin;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptOrigin.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptOrigin.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -370,9 +346,7 @@ abstract class TestScriptDestination implements _$TestScriptDestination {
     @required Coding profile,
   }) = _TestScriptDestination;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptDestination.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptDestination.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -392,9 +366,7 @@ abstract class TestScriptMetadata implements _$TestScriptMetadata {
     @required List<TestScriptCapability> capability,
   }) = _TestScriptMetadata;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptMetadata.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptMetadata.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -416,9 +388,7 @@ abstract class TestScriptLink implements _$TestScriptLink {
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _TestScriptLink;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptLink.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -449,9 +419,7 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
     @required Reference capabilities,
   }) = _TestScriptCapability;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptCapability.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptCapability.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -474,9 +442,7 @@ abstract class TestScriptFixture implements _$TestScriptFixture {
     Reference resource,
   }) = _TestScriptFixture;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptFixture.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptFixture.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -510,9 +476,7 @@ abstract class TestScriptVariable implements _$TestScriptVariable {
     @JsonKey(name: '_sourceId') Element sourceIdElement,
   }) = _TestScriptVariable;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptVariable.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -532,9 +496,7 @@ abstract class TestScriptRule implements _$TestScriptRule {
     List<TestScriptParam> param,
   }) = _TestScriptRule;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptRule.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptRule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -556,9 +518,7 @@ abstract class TestScriptParam implements _$TestScriptParam {
     @JsonKey(name: '_value') Element valueElement,
   }) = _TestScriptParam;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptParam.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptParam.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -578,9 +538,7 @@ abstract class TestScriptRuleset implements _$TestScriptRuleset {
     @required List<TestScriptRule1> rule,
   }) = _TestScriptRuleset;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptRuleset.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptRuleset.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -601,9 +559,7 @@ abstract class TestScriptRule1 implements _$TestScriptRule1 {
     List<TestScriptParam1> param,
   }) = _TestScriptRule1;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptRule1.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptRule1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -625,9 +581,7 @@ abstract class TestScriptParam1 implements _$TestScriptParam1 {
     @JsonKey(name: '_value') Element valueElement,
   }) = _TestScriptParam1;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptParam1.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptParam1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -646,9 +600,7 @@ abstract class TestScriptSetup implements _$TestScriptSetup {
     @required List<TestScriptAction> action,
   }) = _TestScriptSetup;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptSetup.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptSetup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -668,9 +620,7 @@ abstract class TestScriptAction implements _$TestScriptAction {
     @JsonKey(name: 'assert') TestScriptAssert assert_,
   }) = _TestScriptAction;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptAction.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -718,9 +668,7 @@ abstract class TestScriptOperation implements _$TestScriptOperation {
     @JsonKey(name: '_url') Element urlElement,
   }) = _TestScriptOperation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptOperation.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptOperation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -742,9 +690,7 @@ abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
     @JsonKey(name: '_value') Element valueElement,
   }) = _TestScriptRequestHeader;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptRequestHeader.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptRequestHeader.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -809,9 +755,7 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
     @JsonKey(name: '_warningOnly') Element warningOnlyElement,
   }) = _TestScriptAssert;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptAssert.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptAssert.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -832,9 +776,7 @@ abstract class TestScriptRule2 implements _$TestScriptRule2 {
     List<TestScriptParam2> param,
   }) = _TestScriptRule2;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptRule2.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptRule2.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -856,9 +798,7 @@ abstract class TestScriptParam2 implements _$TestScriptParam2 {
     @JsonKey(name: '_value') Element valueElement,
   }) = _TestScriptParam2;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptParam2.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptParam2.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -879,9 +819,7 @@ abstract class TestScriptRuleset1 implements _$TestScriptRuleset1 {
     List<TestScriptRule3> rule,
   }) = _TestScriptRuleset1;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptRuleset1.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptRuleset1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -902,9 +840,7 @@ abstract class TestScriptRule3 implements _$TestScriptRule3 {
     List<TestScriptParam3> param,
   }) = _TestScriptRule3;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptRule3.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptRule3.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -926,9 +862,7 @@ abstract class TestScriptParam3 implements _$TestScriptParam3 {
     @JsonKey(name: '_value') Element valueElement,
   }) = _TestScriptParam3;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptParam3.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptParam3.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -951,9 +885,7 @@ abstract class TestScriptTest implements _$TestScriptTest {
     @required List<TestScriptAction1> action,
   }) = _TestScriptTest;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptTest.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptTest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -973,9 +905,7 @@ abstract class TestScriptAction1 implements _$TestScriptAction1 {
     @JsonKey(name: 'assert') TestScriptAssert assert_,
   }) = _TestScriptAction1;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptAction1.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptAction1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -994,9 +924,7 @@ abstract class TestScriptTeardown implements _$TestScriptTeardown {
     @required List<TestScriptAction2> action,
   }) = _TestScriptTeardown;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptTeardown.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptTeardown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1015,9 +943,7 @@ abstract class TestScriptAction2 implements _$TestScriptAction2 {
     @required TestScriptOperation operation,
   }) = _TestScriptAction2;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TestScriptAction2.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptAction2.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

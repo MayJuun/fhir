@@ -19,9 +19,7 @@ class Base64Binary extends PrimitiveObject<String> {
   }
   const Base64Binary._(this.value);
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Base64Binary.fromYaml(dynamic yaml) => yaml is String
       ? Base64Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

@@ -71,9 +71,7 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
     List<CodeSystemConcept> concept,
   }) = _CodeSystem;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CodeSystem.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -99,9 +97,7 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
     @JsonKey(name: '_value') Element valueElement,
   }) = _CodeSystemFilter;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CodeSystemFilter.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystemFilter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -127,9 +123,7 @@ abstract class CodeSystemProperty implements _$CodeSystemProperty {
     @JsonKey(name: '_type') Element typeElement,
   }) = _CodeSystemProperty;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CodeSystemProperty.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystemProperty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -157,9 +151,7 @@ abstract class CodeSystemConcept implements _$CodeSystemConcept {
     List<CodeSystemConcept> concept,
   }) = _CodeSystemConcept;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CodeSystemConcept.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystemConcept.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -182,9 +174,7 @@ abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
     @JsonKey(name: '_value') Element valueElement,
   }) = _CodeSystemDesignation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CodeSystemDesignation.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystemDesignation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -215,9 +205,7 @@ abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
     @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
   }) = _CodeSystemProperty1;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CodeSystemProperty1.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystemProperty1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -279,9 +267,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
     List<ConceptMapGroup> group,
   }) = _ConceptMap;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ConceptMap.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMap.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -309,9 +295,7 @@ abstract class ConceptMapGroup implements _$ConceptMapGroup {
     ConceptMapUnmapped unmapped,
   }) = _ConceptMapGroup;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ConceptMapGroup.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMapGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -334,9 +318,7 @@ abstract class ConceptMapElement implements _$ConceptMapElement {
     List<ConceptMapTarget> target,
   }) = _ConceptMapElement;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ConceptMapElement.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMapElement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -364,9 +346,7 @@ abstract class ConceptMapTarget implements _$ConceptMapTarget {
     List<ConceptMapDependsOn> product,
   }) = _ConceptMapTarget;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ConceptMapTarget.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMapTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -392,9 +372,7 @@ abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
     @JsonKey(name: '_display') Element displayElement,
   }) = _ConceptMapDependsOn;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ConceptMapDependsOn.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMapDependsOn.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -420,9 +398,7 @@ abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
     @JsonKey(name: '_url') Element urlElement,
   }) = _ConceptMapUnmapped;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ConceptMapUnmapped.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMapUnmapped.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -491,9 +467,7 @@ abstract class ExpansionProfile with Resource implements _$ExpansionProfile {
     @JsonKey(name: '_limitedExpansion') Element limitedExpansionElement,
   }) = _ExpansionProfile;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ExpansionProfile.fromYaml(dynamic yaml) => yaml is String
       ? ExpansionProfile.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -518,9 +492,7 @@ abstract class ExpansionProfileFixedVersion
     @JsonKey(name: '_mode') Element modeElement,
   }) = _ExpansionProfileFixedVersion;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ExpansionProfileFixedVersion.fromYaml(dynamic yaml) => yaml is String
       ? ExpansionProfileFixedVersion.fromJson(
@@ -544,9 +516,7 @@ abstract class ExpansionProfileExcludedSystem
     @JsonKey(name: '_version') Element versionElement,
   }) = _ExpansionProfileExcludedSystem;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ExpansionProfileExcludedSystem.fromYaml(dynamic yaml) =>
       yaml is String
@@ -570,9 +540,7 @@ abstract class ExpansionProfileDesignation
     ExpansionProfileExclude exclude,
   }) = _ExpansionProfileDesignation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ExpansionProfileDesignation.fromYaml(dynamic yaml) => yaml is String
       ? ExpansionProfileDesignation.fromJson(
@@ -592,9 +560,7 @@ abstract class ExpansionProfileInclude implements _$ExpansionProfileInclude {
     List<ExpansionProfileDesignation1> designation,
   }) = _ExpansionProfileInclude;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ExpansionProfileInclude.fromYaml(dynamic yaml) => yaml is String
       ? ExpansionProfileInclude.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -616,9 +582,7 @@ abstract class ExpansionProfileDesignation1
     Coding use,
   }) = _ExpansionProfileDesignation1;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ExpansionProfileDesignation1.fromYaml(dynamic yaml) => yaml is String
       ? ExpansionProfileDesignation1.fromJson(
@@ -638,9 +602,7 @@ abstract class ExpansionProfileExclude implements _$ExpansionProfileExclude {
     List<ExpansionProfileDesignation2> designation,
   }) = _ExpansionProfileExclude;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ExpansionProfileExclude.fromYaml(dynamic yaml) => yaml is String
       ? ExpansionProfileExclude.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -662,9 +624,7 @@ abstract class ExpansionProfileDesignation2
     Coding use,
   }) = _ExpansionProfileDesignation2;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ExpansionProfileDesignation2.fromYaml(dynamic yaml) => yaml is String
       ? ExpansionProfileDesignation2.fromJson(
@@ -716,9 +676,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     Reference replacedBy,
   }) = _NamingSystem;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory NamingSystem.fromYaml(dynamic yaml) => yaml is String
       ? NamingSystem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -745,9 +703,7 @@ abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
     Period period,
   }) = _NamingSystemUniqueId;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory NamingSystemUniqueId.fromYaml(dynamic yaml) => yaml is String
       ? NamingSystemUniqueId.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -808,9 +764,7 @@ abstract class ValueSet with Resource implements _$ValueSet {
     ValueSetExpansion expansion,
   }) = _ValueSet;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ValueSet.fromYaml(dynamic yaml) => yaml is String
       ? ValueSet.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -834,9 +788,7 @@ abstract class ValueSetCompose implements _$ValueSetCompose {
     List<ValueSetInclude> exclude,
   }) = _ValueSetCompose;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ValueSetCompose.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetCompose.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -863,9 +815,7 @@ abstract class ValueSetInclude implements _$ValueSetInclude {
     @JsonKey(name: '_valueSet') List<Element> valueSetElement,
   }) = _ValueSetInclude;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ValueSetInclude.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetInclude.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -889,9 +839,7 @@ abstract class ValueSetConcept implements _$ValueSetConcept {
     List<ValueSetDesignation> designation,
   }) = _ValueSetConcept;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ValueSetConcept.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetConcept.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -914,9 +862,7 @@ abstract class ValueSetDesignation implements _$ValueSetDesignation {
     @JsonKey(name: '_value') Element valueElement,
   }) = _ValueSetDesignation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ValueSetDesignation.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetDesignation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -940,9 +886,7 @@ abstract class ValueSetFilter implements _$ValueSetFilter {
     @JsonKey(name: '_value') Element valueElement,
   }) = _ValueSetFilter;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ValueSetFilter.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetFilter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -970,9 +914,7 @@ abstract class ValueSetExpansion implements _$ValueSetExpansion {
     List<ValueSetContains> contains,
   }) = _ValueSetExpansion;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ValueSetExpansion.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetExpansion.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1004,9 +946,7 @@ abstract class ValueSetParameter implements _$ValueSetParameter {
     @JsonKey(name: '_valueCode') Element valueCodeElement,
   }) = _ValueSetParameter;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ValueSetParameter.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1038,9 +978,7 @@ abstract class ValueSetContains implements _$ValueSetContains {
     List<ValueSetContains> contains,
   }) = _ValueSetContains;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ValueSetContains.fromYaml(dynamic yaml) => yaml is String
       ? ValueSetContains.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

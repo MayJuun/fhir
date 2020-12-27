@@ -58,9 +58,7 @@ abstract class AdverseEvent with Resource implements _$AdverseEvent {
     List<Reference> study,
   }) = _AdverseEvent;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AdverseEvent.fromYaml(dynamic yaml) => yaml is String
       ? AdverseEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -83,9 +81,7 @@ abstract class AdverseEventParticipant implements _$AdverseEventParticipant {
     @required Reference actor,
   }) = _AdverseEventParticipant;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AdverseEventParticipant.fromYaml(dynamic yaml) => yaml is String
       ? AdverseEventParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -110,9 +106,7 @@ abstract class AdverseEventSuspectEntity
     AdverseEventCausality causality,
   }) = _AdverseEventSuspectEntity;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AdverseEventSuspectEntity.fromYaml(dynamic yaml) => yaml is String
       ? AdverseEventSuspectEntity.fromJson(
@@ -137,9 +131,7 @@ abstract class AdverseEventCausality implements _$AdverseEventCausality {
     Reference author,
   }) = _AdverseEventCausality;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AdverseEventCausality.fromYaml(dynamic yaml) => yaml is String
       ? AdverseEventCausality.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -163,9 +155,7 @@ abstract class AdverseEventContributingFactor
     CodeableConcept itemCodeableConcept,
   }) = _AdverseEventContributingFactor;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AdverseEventContributingFactor.fromYaml(dynamic yaml) =>
       yaml is String
@@ -192,9 +182,7 @@ abstract class AdverseEventPreventiveAction
     CodeableConcept itemCodeableConcept,
   }) = _AdverseEventPreventiveAction;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AdverseEventPreventiveAction.fromYaml(dynamic yaml) => yaml is String
       ? AdverseEventPreventiveAction.fromJson(
@@ -219,9 +207,7 @@ abstract class AdverseEventMitigatingAction
     CodeableConcept itemCodeableConcept,
   }) = _AdverseEventMitigatingAction;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AdverseEventMitigatingAction.fromYaml(dynamic yaml) => yaml is String
       ? AdverseEventMitigatingAction.fromJson(
@@ -246,9 +232,7 @@ abstract class AdverseEventSupportingInfo
     CodeableConcept itemCodeableConcept,
   }) = _AdverseEventSupportingInfo;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AdverseEventSupportingInfo.fromYaml(dynamic yaml) => yaml is String
       ? AdverseEventSupportingInfo.fromJson(
@@ -309,9 +293,7 @@ abstract class AllergyIntolerance
     List<AllergyIntoleranceReaction> reaction,
   }) = _AllergyIntolerance;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AllergyIntolerance.fromYaml(dynamic yaml) => yaml is String
       ? AllergyIntolerance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -344,9 +326,7 @@ abstract class AllergyIntoleranceReaction
     List<Annotation> note,
   }) = _AllergyIntoleranceReaction;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AllergyIntoleranceReaction.fromYaml(dynamic yaml) => yaml is String
       ? AllergyIntoleranceReaction.fromJson(
@@ -403,9 +383,7 @@ abstract class ClinicalImpression
     List<Annotation> note,
   }) = _ClinicalImpression;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClinicalImpression.fromYaml(dynamic yaml) => yaml is String
       ? ClinicalImpression.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -431,9 +409,7 @@ abstract class ClinicalImpressionFinding
     @JsonKey(name: '_basis') Element basisElement,
   }) = _ClinicalImpressionFinding;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ClinicalImpressionFinding.fromYaml(dynamic yaml) => yaml is String
       ? ClinicalImpressionFinding.fromJson(
@@ -493,9 +469,7 @@ abstract class Condition with Resource implements _$Condition {
     List<Annotation> note,
   }) = _Condition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Condition.fromYaml(dynamic yaml) => yaml is String
       ? Condition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -519,9 +493,7 @@ abstract class ConditionStage implements _$ConditionStage {
     CodeableConcept type,
   }) = _ConditionStage;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ConditionStage.fromYaml(dynamic yaml) => yaml is String
       ? ConditionStage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -544,9 +516,7 @@ abstract class ConditionEvidence implements _$ConditionEvidence {
     List<Reference> detail,
   }) = _ConditionEvidence;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ConditionEvidence.fromYaml(dynamic yaml) => yaml is String
       ? ConditionEvidence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -594,9 +564,7 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
     List<DetectedIssueMitigation> mitigation,
   }) = _DetectedIssue;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DetectedIssue.fromYaml(dynamic yaml) => yaml is String
       ? DetectedIssue.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -619,9 +587,7 @@ abstract class DetectedIssueEvidence implements _$DetectedIssueEvidence {
     List<Reference> detail,
   }) = _DetectedIssueEvidence;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DetectedIssueEvidence.fromYaml(dynamic yaml) => yaml is String
       ? DetectedIssueEvidence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -646,9 +612,7 @@ abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
     Reference author,
   }) = _DetectedIssueMitigation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DetectedIssueMitigation.fromYaml(dynamic yaml) => yaml is String
       ? DetectedIssueMitigation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -717,9 +681,7 @@ abstract class FamilyMemberHistory
     List<FamilyMemberHistoryProcedure> procedure,
   }) = _FamilyMemberHistory;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory FamilyMemberHistory.fromYaml(dynamic yaml) => yaml is String
       ? FamilyMemberHistory.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -751,9 +713,7 @@ abstract class FamilyMemberHistoryCondition
     List<Annotation> note,
   }) = _FamilyMemberHistoryCondition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory FamilyMemberHistoryCondition.fromYaml(dynamic yaml) => yaml is String
       ? FamilyMemberHistoryCondition.fromJson(
@@ -788,9 +748,7 @@ abstract class FamilyMemberHistoryProcedure
     List<Annotation> note,
   }) = _FamilyMemberHistoryProcedure;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory FamilyMemberHistoryProcedure.fromYaml(dynamic yaml) => yaml is String
       ? FamilyMemberHistoryProcedure.fromJson(
@@ -859,9 +817,7 @@ abstract class Procedure with Resource implements _$Procedure {
     List<CodeableReference> used,
   }) = _Procedure;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Procedure.fromYaml(dynamic yaml) => yaml is String
       ? Procedure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -885,9 +841,7 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
     Reference onBehalfOf,
   }) = _ProcedurePerformer;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ProcedurePerformer.fromYaml(dynamic yaml) => yaml is String
       ? ProcedurePerformer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -910,9 +864,7 @@ abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
     @required Reference manipulated,
   }) = _ProcedureFocalDevice;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ProcedureFocalDevice.fromYaml(dynamic yaml) => yaml is String
       ? ProcedureFocalDevice.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

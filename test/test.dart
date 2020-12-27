@@ -13,10 +13,12 @@ Future main() async {
     'compared with the expected errors stored in the map in "expected.dart". ',
     () async {
       var testMap = await validation();
+
       var expectMap = expected;
+
       for (var k in expectMap.keys) {
         for (var j in expectMap[k]) {
-          testMap[k].removeWhere((i) => i == j);
+          testMap[k].remove((i) => i == j);
         }
       }
       for (var k in testMap.keys) {

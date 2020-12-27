@@ -38,9 +38,7 @@ abstract class BodyStructure with Resource implements _$BodyStructure {
     @required Reference patient,
   }) = _BodyStructure;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory BodyStructure.fromYaml(dynamic yaml) => yaml is String
       ? BodyStructure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -93,9 +91,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
     List<Attachment> presentedForm,
   }) = _DiagnosticReport;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DiagnosticReport.fromYaml(dynamic yaml) => yaml is String
       ? DiagnosticReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -119,9 +115,7 @@ abstract class DiagnosticReportMedia implements _$DiagnosticReportMedia {
     @required Reference link,
   }) = _DiagnosticReportMedia;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DiagnosticReportMedia.fromYaml(dynamic yaml) => yaml is String
       ? DiagnosticReportMedia.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -174,9 +168,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
     List<ImagingStudySeries> series,
   }) = _ImagingStudy;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ImagingStudy.fromYaml(dynamic yaml) => yaml is String
       ? ImagingStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -199,9 +191,7 @@ abstract class ImagingStudyProcedure implements _$ImagingStudyProcedure {
     CodeableConcept valueCodeableConcept,
   }) = _ImagingStudyProcedure;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ImagingStudyProcedure.fromYaml(dynamic yaml) => yaml is String
       ? ImagingStudyProcedure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -239,9 +229,7 @@ abstract class ImagingStudySeries implements _$ImagingStudySeries {
     List<ImagingStudyInstance> instance,
   }) = _ImagingStudySeries;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ImagingStudySeries.fromYaml(dynamic yaml) => yaml is String
       ? ImagingStudySeries.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -264,9 +252,7 @@ abstract class ImagingStudyPerformer implements _$ImagingStudyPerformer {
     @required Reference actor,
   }) = _ImagingStudyPerformer;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ImagingStudyPerformer.fromYaml(dynamic yaml) => yaml is String
       ? ImagingStudyPerformer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -294,9 +280,7 @@ abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
     @JsonKey(name: '_title') Element titleElement,
   }) = _ImagingStudyInstance;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ImagingStudyInstance.fromYaml(dynamic yaml) => yaml is String
       ? ImagingStudyInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -346,9 +330,7 @@ abstract class MolecularSequence with Resource implements _$MolecularSequence {
     List<MolecularSequenceStructureVariant> structureVariant,
   }) = _MolecularSequence;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MolecularSequence.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -387,9 +369,7 @@ abstract class MolecularSequenceReferenceSeq
     @JsonKey(name: '_windowEnd') Element windowEndElement,
   }) = _MolecularSequenceReferenceSeq;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MolecularSequenceReferenceSeq.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequenceReferenceSeq.fromJson(
@@ -422,9 +402,7 @@ abstract class MolecularSequenceVariant implements _$MolecularSequenceVariant {
     Reference variantPointer,
   }) = _MolecularSequenceVariant;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MolecularSequenceVariant.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequenceVariant.fromJson(
@@ -473,9 +451,7 @@ abstract class MolecularSequenceQuality implements _$MolecularSequenceQuality {
     MolecularSequenceRoc roc,
   }) = _MolecularSequenceQuality;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MolecularSequenceQuality.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequenceQuality.fromJson(
@@ -511,9 +487,7 @@ abstract class MolecularSequenceRoc implements _$MolecularSequenceRoc {
     @JsonKey(name: '_fMeasure') List<Element> fMeasureElement,
   }) = _MolecularSequenceRoc;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MolecularSequenceRoc.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequenceRoc.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -548,9 +522,7 @@ abstract class MolecularSequenceRepository
     @JsonKey(name: '_readsetId') Element readsetIdElement,
   }) = _MolecularSequenceRepository;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MolecularSequenceRepository.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequenceRepository.fromJson(
@@ -580,9 +552,7 @@ abstract class MolecularSequenceStructureVariant
     MolecularSequenceInner inner,
   }) = _MolecularSequenceStructureVariant;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MolecularSequenceStructureVariant.fromYaml(dynamic yaml) =>
       yaml is String
@@ -611,9 +581,7 @@ abstract class MolecularSequenceOuter implements _$MolecularSequenceOuter {
     @JsonKey(name: '_end') Element endElement,
   }) = _MolecularSequenceOuter;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MolecularSequenceOuter.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequenceOuter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -638,9 +606,7 @@ abstract class MolecularSequenceInner implements _$MolecularSequenceInner {
     @JsonKey(name: '_end') Element endElement,
   }) = _MolecularSequenceInner;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MolecularSequenceInner.fromYaml(dynamic yaml) => yaml is String
       ? MolecularSequenceInner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -717,9 +683,7 @@ abstract class Observation with Resource implements _$Observation {
     List<ObservationComponent> component,
   }) = _Observation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Observation.fromYaml(dynamic yaml) => yaml is String
       ? Observation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -748,9 +712,7 @@ abstract class ObservationReferenceRange
     @JsonKey(name: '_text') Element textElement,
   }) = _ObservationReferenceRange;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ObservationReferenceRange.fromYaml(dynamic yaml) => yaml is String
       ? ObservationReferenceRange.fromJson(
@@ -793,9 +755,7 @@ abstract class ObservationComponent implements _$ObservationComponent {
     List<ObservationReferenceRange> referenceRange,
   }) = _ObservationComponent;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ObservationComponent.fromYaml(dynamic yaml) => yaml is String
       ? ObservationComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -842,9 +802,7 @@ abstract class QuestionnaireResponse
     List<QuestionnaireResponseItem> item,
   }) = _QuestionnaireResponse;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory QuestionnaireResponse.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -874,9 +832,7 @@ abstract class QuestionnaireResponseItem
     List<QuestionnaireResponseItem> item,
   }) = _QuestionnaireResponseItem;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory QuestionnaireResponseItem.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireResponseItem.fromJson(
@@ -920,9 +876,7 @@ abstract class QuestionnaireResponseAnswer
     List<QuestionnaireResponseItem> item,
   }) = _QuestionnaireResponseAnswer;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory QuestionnaireResponseAnswer.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireResponseAnswer.fromJson(
@@ -967,9 +921,7 @@ abstract class Specimen with Resource implements _$Specimen {
     List<Annotation> note,
   }) = _Specimen;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Specimen.fromYaml(dynamic yaml) => yaml is String
       ? Specimen.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1000,9 +952,7 @@ abstract class SpecimenCollection implements _$SpecimenCollection {
     FhirDuration fastingStatusDuration,
   }) = _SpecimenCollection;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SpecimenCollection.fromYaml(dynamic yaml) => yaml is String
       ? SpecimenCollection.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1030,9 +980,7 @@ abstract class SpecimenProcessing implements _$SpecimenProcessing {
     Period timePeriod,
   }) = _SpecimenProcessing;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SpecimenProcessing.fromYaml(dynamic yaml) => yaml is String
       ? SpecimenProcessing.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1061,9 +1009,7 @@ abstract class SpecimenContainer implements _$SpecimenContainer {
     Reference additiveReference,
   }) = _SpecimenContainer;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SpecimenContainer.fromYaml(dynamic yaml) => yaml is String
       ? SpecimenContainer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

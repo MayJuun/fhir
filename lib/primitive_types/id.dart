@@ -20,9 +20,7 @@ class Id extends PrimitiveObject<String> {
 
   const Id._(this.value);
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Id.fromYaml(dynamic yaml) => yaml is String
       ? Id.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

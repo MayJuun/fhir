@@ -56,9 +56,7 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
     List<ResearchStudyObjective> objective,
   }) = _ResearchStudy;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ResearchStudy.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -84,9 +82,7 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _ResearchStudyArm;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ResearchStudyArm.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -110,9 +106,7 @@ abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
     CodeableConcept type,
   }) = _ResearchStudyObjective;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ResearchStudyObjective.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -153,9 +147,7 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
     Reference consent,
   }) = _ResearchSubject;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ResearchSubject.fromYaml(dynamic yaml) => yaml is String
       ? ResearchSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

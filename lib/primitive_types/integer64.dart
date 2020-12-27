@@ -20,9 +20,7 @@ class Integer64 extends PrimitiveObject<int> {
 
   const Integer64._(this.value);
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Integer64.fromYaml(dynamic yaml) => yaml is String
       ? Integer64.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

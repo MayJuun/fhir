@@ -20,9 +20,7 @@ class FhirUrl extends PrimitiveObject<Uri> {
 
   const FhirUrl._(this.value);
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory FhirUrl.fromYaml(dynamic yaml) => yaml is String
       ? FhirUrl.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

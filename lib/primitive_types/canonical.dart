@@ -20,9 +20,7 @@ class Canonical extends PrimitiveObject<String> {
 
   const Canonical._(this.value);
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Canonical.fromYaml(dynamic yaml) => yaml is String
       ? Canonical.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

@@ -24,9 +24,7 @@ abstract class Population implements _$Population {
     CodeableConcept physiologicalCondition,
   }) = _Population;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Population.fromYaml(dynamic yaml) => yaml is String
       ? Population.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -51,9 +49,7 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
     List<CodeableConcept> specialPrecautionsForStorage,
   }) = _ProductShelfLife;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ProductShelfLife.fromYaml(dynamic yaml) => yaml is String
       ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -88,9 +84,7 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
     CodeableConcept scoring,
   }) = _ProdCharacteristic;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ProdCharacteristic.fromYaml(dynamic yaml) => yaml is String
       ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -117,9 +111,7 @@ abstract class MarketingStatus implements _$MarketingStatus {
     @JsonKey(name: '_restoreDate') Element restoreDateElement,
   }) = _MarketingStatus;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MarketingStatus.fromYaml(dynamic yaml) => yaml is String
       ? MarketingStatus.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -148,9 +140,7 @@ abstract class SubstanceAmount implements _$SubstanceAmount {
     SubstanceAmountReferenceRange referenceRange,
   }) = _SubstanceAmount;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceAmount.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceAmount.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -174,9 +164,7 @@ abstract class SubstanceAmountReferenceRange
     Quantity highLimit,
   }) = _SubstanceAmountReferenceRange;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory SubstanceAmountReferenceRange.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceAmountReferenceRange.fromJson(

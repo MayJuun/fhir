@@ -45,9 +45,7 @@ abstract class Coverage with Resource implements _$Coverage {
     List<Reference> contract,
   }) = _Coverage;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Coverage.fromYaml(dynamic yaml) => yaml is String
       ? Coverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -86,9 +84,7 @@ abstract class EligibilityRequest
     Reference organization,
   }) = _EligibilityRequest;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory EligibilityRequest.fromYaml(dynamic yaml) => yaml is String
       ? EligibilityRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -133,9 +129,7 @@ abstract class EligibilityResponse
     Reference requestOrganization,
   }) = _EligibilityResponse;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory EligibilityResponse.fromYaml(dynamic yaml) => yaml is String
       ? EligibilityResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -175,9 +169,7 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
     @JsonKey(required: true) @required Coding relationship,
   }) = _EnrollmentRequest;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
       ? EnrollmentRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -222,9 +214,7 @@ abstract class EnrollmentResponse
     Reference requestOrganization,
   }) = _EnrollmentResponse;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String
       ? EnrollmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

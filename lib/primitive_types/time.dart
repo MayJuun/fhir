@@ -20,9 +20,7 @@ class Time extends PrimitiveObject<String> {
 
   const Time._(this.value);
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Time.fromYaml(dynamic yaml) => yaml is String
       ? Time.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

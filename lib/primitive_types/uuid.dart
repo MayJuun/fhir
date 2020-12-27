@@ -20,9 +20,7 @@ class Uuid extends PrimitiveObject<String> {
 
   const Uuid._(this.value);
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Uuid.fromYaml(dynamic yaml) => yaml is String
       ? Uuid.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

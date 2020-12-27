@@ -46,9 +46,7 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
     List<CatalogEntryRelatedEntry> relatedEntry,
   }) = _CatalogEntry;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CatalogEntry.fromYaml(dynamic yaml) => yaml is String
       ? CatalogEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -73,9 +71,7 @@ abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
     @required Reference item,
   }) = _CatalogEntryRelatedEntry;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CatalogEntryRelatedEntry.fromYaml(dynamic yaml) => yaml is String
       ? CatalogEntryRelatedEntry.fromJson(
@@ -125,9 +121,7 @@ abstract class Composition with Resource implements _$Composition {
     List<CompositionSection> section,
   }) = _Composition;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Composition.fromYaml(dynamic yaml) => yaml is String
       ? Composition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -154,9 +148,7 @@ abstract class CompositionAttester implements _$CompositionAttester {
     Reference party,
   }) = _CompositionAttester;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CompositionAttester.fromYaml(dynamic yaml) => yaml is String
       ? CompositionAttester.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -181,9 +173,7 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
     Reference targetReference,
   }) = _CompositionRelatesTo;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CompositionRelatesTo.fromYaml(dynamic yaml) => yaml is String
       ? CompositionRelatesTo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -207,9 +197,7 @@ abstract class CompositionEvent implements _$CompositionEvent {
     List<Reference> detail,
   }) = _CompositionEvent;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CompositionEvent.fromYaml(dynamic yaml) => yaml is String
       ? CompositionEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -242,9 +230,7 @@ abstract class CompositionSection implements _$CompositionSection {
     List<CompositionSection> section,
   }) = _CompositionSection;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory CompositionSection.fromYaml(dynamic yaml) => yaml is String
       ? CompositionSection.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -290,9 +276,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
     List<DocumentManifestRelated> related,
   }) = _DocumentManifest;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DocumentManifest.fromYaml(dynamic yaml) => yaml is String
       ? DocumentManifest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -315,9 +299,7 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
     Reference ref,
   }) = _DocumentManifestRelated;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DocumentManifestRelated.fromYaml(dynamic yaml) => yaml is String
       ? DocumentManifestRelated.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -367,9 +349,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     DocumentReferenceContext context,
   }) = _DocumentReference;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DocumentReference.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReference.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -395,9 +375,7 @@ abstract class DocumentReferenceRelatesTo
     @required Reference target,
   }) = _DocumentReferenceRelatesTo;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DocumentReferenceRelatesTo.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReferenceRelatesTo.fromJson(
@@ -421,9 +399,7 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
     Coding format,
   }) = _DocumentReferenceContent;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DocumentReferenceContent.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReferenceContent.fromJson(
@@ -452,9 +428,7 @@ abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
     List<Reference> related,
   }) = _DocumentReferenceContext;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory DocumentReferenceContext.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReferenceContext.fromJson(

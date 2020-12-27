@@ -22,9 +22,7 @@ class FhirDateTime extends Dates {
   }
 
   FhirDateTime._(this.value, this.format);
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory FhirDateTime.fromYaml(dynamic yaml) => yaml is String
       ? FhirDateTime.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

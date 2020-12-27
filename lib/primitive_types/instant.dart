@@ -22,9 +22,7 @@ class Instant extends Dates {
   }
 
   Instant._(this.value, this.format);
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Instant.fromYaml(dynamic yaml) => yaml is String
       ? Instant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

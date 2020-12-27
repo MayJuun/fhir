@@ -20,9 +20,7 @@ class FhirUri extends PrimitiveObject<Uri> {
 
   const FhirUri._(this.value);
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory FhirUri.fromYaml(dynamic yaml) => yaml is String
       ? FhirUri.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

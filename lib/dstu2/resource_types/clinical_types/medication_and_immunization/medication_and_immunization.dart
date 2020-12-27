@@ -33,9 +33,7 @@ abstract class Medication with Resource implements _$Medication {
     MedicationPackage package,
   }) = _Medication;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Medication.fromYaml(dynamic yaml) => yaml is String
       ? Medication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -60,9 +58,7 @@ abstract class MedicationProduct with _$MedicationProduct {
     List<MedicationProductBatch> batch,
   }) = _MedicationProduct;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationProduct.fromYaml(dynamic yaml) => yaml is String
       ? MedicationProduct.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -85,9 +81,7 @@ abstract class MedicationProductIngredient with _$MedicationProductIngredient {
     Ratio amount,
   }) = _MedicationProductIngredient;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationProductIngredient.fromYaml(dynamic yaml) => yaml is String
       ? MedicationProductIngredient.fromJson(
@@ -113,9 +107,7 @@ abstract class MedicationProductBatch with _$MedicationProductBatch {
     @JsonKey(name: '_expirationDate') Element expirationDateElement,
   }) = _MedicationProductBatch;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationProductBatch.fromYaml(dynamic yaml) => yaml is String
       ? MedicationProductBatch.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -139,9 +131,7 @@ abstract class MedicationPackage with _$MedicationPackage {
     List<MedicationPackageContent> content,
   }) = _MedicationPackage;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationPackage.fromYaml(dynamic yaml) => yaml is String
       ? MedicationPackage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -164,9 +154,7 @@ abstract class MedicationPackageContent with _$MedicationPackageContent {
     Quantity amount,
   }) = _MedicationPackageContent;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationPackageContent.fromYaml(dynamic yaml) => yaml is String
       ? MedicationPackageContent.fromJson(
@@ -214,9 +202,7 @@ abstract class MedicationOrder with Resource implements _$MedicationOrder {
     Reference priorPrescription,
   }) = _MedicationOrder;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationOrder.fromYaml(dynamic yaml) => yaml is String
       ? MedicationOrder.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -252,9 +238,7 @@ abstract class MedicationOrderDosageInstruction
     Ratio maxDosePerPeriod,
   }) = _MedicationOrderDosageInstruction;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationOrderDosageInstruction.fromYaml(dynamic yaml) =>
       yaml is String
@@ -286,9 +270,7 @@ abstract class MedicationOrderDispenseRequest
     Quantity expectedSupplyDuration,
   }) = _MedicationOrderDispenseRequest;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationOrderDispenseRequest.fromYaml(dynamic yaml) =>
       yaml is String
@@ -314,9 +296,7 @@ abstract class MedicationOrderSubstitution with _$MedicationOrderSubstitution {
     CodeableConcept reason,
   }) = _MedicationOrderSubstitution;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationOrderSubstitution.fromYaml(dynamic yaml) => yaml is String
       ? MedicationOrderSubstitution.fromJson(
@@ -372,9 +352,7 @@ abstract class MedicationAdministration
     MedicationAdministrationDosage dosage,
   }) = _MedicationAdministration;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationAdministration.fromYaml(dynamic yaml) => yaml is String
       ? MedicationAdministration.fromJson(
@@ -406,9 +384,7 @@ abstract class MedicationAdministrationDosage
     Range rateRange,
   }) = _MedicationAdministrationDosage;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationAdministrationDosage.fromYaml(dynamic yaml) =>
       yaml is String
@@ -463,9 +439,7 @@ abstract class MedicationDispense
     MedicationDispenseSubstitution substitution,
   }) = _MedicationDispense;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationDispense.fromYaml(dynamic yaml) => yaml is String
       ? MedicationDispense.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -501,9 +475,7 @@ abstract class MedicationDispenseDosageInstruction
     Ratio maxDosePerPeriod,
   }) = _MedicationDispenseDosageInstruction;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationDispenseDosageInstruction.fromYaml(dynamic yaml) =>
       yaml is String
@@ -532,9 +504,7 @@ abstract class MedicationDispenseSubstitution
     List<Reference> responsibleParty,
   }) = _MedicationDispenseSubstitution;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationDispenseSubstitution.fromYaml(dynamic yaml) =>
       yaml is String
@@ -590,9 +560,7 @@ abstract class MedicationStatement
     List<MedicationStatementDosage> dosage,
   }) = _MedicationStatement;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationStatement.fromYaml(dynamic yaml) => yaml is String
       ? MedicationStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -626,9 +594,7 @@ abstract class MedicationStatementDosage with _$MedicationStatementDosage {
     Ratio maxDosePerPeriod,
   }) = _MedicationStatementDosage;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory MedicationStatementDosage.fromYaml(dynamic yaml) => yaml is String
       ? MedicationStatementDosage.fromJson(
@@ -684,9 +650,7 @@ abstract class Immunization with Resource implements _$Immunization {
     List<ImmunizationVaccinationProtocol> vaccinationProtocol,
   }) = _Immunization;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Immunization.fromYaml(dynamic yaml) => yaml is String
       ? Immunization.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -709,9 +673,7 @@ abstract class ImmunizationExplanation with _$ImmunizationExplanation {
     List<CodeableConcept> reasonNotGiven,
   }) = _ImmunizationExplanation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ImmunizationExplanation.fromYaml(dynamic yaml) => yaml is String
       ? ImmunizationExplanation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -737,9 +699,7 @@ abstract class ImmunizationReaction with _$ImmunizationReaction {
     @JsonKey(name: '_reported') Element reportedElement,
   }) = _ImmunizationReaction;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ImmunizationReaction.fromYaml(dynamic yaml) => yaml is String
       ? ImmunizationReaction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -770,9 +730,7 @@ abstract class ImmunizationVaccinationProtocol
     CodeableConcept doseStatusReason,
   }) = _ImmunizationVaccinationProtocol;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ImmunizationVaccinationProtocol.fromYaml(dynamic yaml) =>
       yaml is String
@@ -813,9 +771,7 @@ abstract class ImmunizationRecommendation
         List<ImmunizationRecommendationRecommendation> recommendation,
   }) = _ImmunizationRecommendation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ImmunizationRecommendation.fromYaml(dynamic yaml) => yaml is String
       ? ImmunizationRecommendation.fromJson(
@@ -846,9 +802,7 @@ abstract class ImmunizationRecommendationRecommendation
     List<Reference> supportingPatientInformation,
   }) = _ImmunizationRecommendationRecommendation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ImmunizationRecommendationRecommendation.fromYaml(dynamic yaml) =>
       yaml is String
@@ -877,9 +831,7 @@ abstract class ImmunizationRecommendationRecommendationDateCriterion
     @JsonKey(name: '_value') Element valueElement,
   }) = _ImmunizationRecommendationRecommendationDateCriterion;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ImmunizationRecommendationRecommendationDateCriterion.fromYaml(
           dynamic yaml) =>
@@ -911,9 +863,7 @@ abstract class ImmunizationRecommendationRecommendationProtocol
     @JsonKey(name: '_series') Element seriesElement,
   }) = _ImmunizationRecommendationRecommendationProtocol;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory ImmunizationRecommendationRecommendationProtocol.fromYaml(
           dynamic yaml) =>

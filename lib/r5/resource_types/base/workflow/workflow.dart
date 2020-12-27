@@ -59,9 +59,7 @@ abstract class Appointment with Resource implements _$Appointment {
     List<Period> requestedPeriod,
   }) = _Appointment;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Appointment.fromYaml(dynamic yaml) => yaml is String
       ? Appointment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -91,9 +89,7 @@ abstract class AppointmentParticipant implements _$AppointmentParticipant {
     Period period,
   }) = _AppointmentParticipant;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AppointmentParticipant.fromYaml(dynamic yaml) => yaml is String
       ? AppointmentParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -136,9 +132,7 @@ abstract class AppointmentResponse
     @JsonKey(name: '_comment') Element commentElement,
   }) = _AppointmentResponse;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
       ? AppointmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -177,9 +171,7 @@ abstract class Schedule with Resource implements _$Schedule {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Schedule;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Schedule.fromYaml(dynamic yaml) => yaml is String
       ? Schedule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -224,9 +216,7 @@ abstract class Slot with Resource implements _$Slot {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Slot;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Slot.fromYaml(dynamic yaml) => yaml is String
       ? Slot.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -292,9 +282,7 @@ abstract class Task with Resource implements _$Task {
     List<TaskOutput> output,
   }) = _Task;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory Task.fromYaml(dynamic yaml) => yaml is String
       ? Task.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -318,9 +306,7 @@ abstract class TaskRestriction implements _$TaskRestriction {
     List<Reference> recipient,
   }) = _TaskRestriction;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TaskRestriction.fromYaml(dynamic yaml) => yaml is String
       ? TaskRestriction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -413,9 +399,7 @@ abstract class TaskInput implements _$TaskInput {
     Meta valueMeta,
   }) = _TaskInput;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TaskInput.fromYaml(dynamic yaml) => yaml is String
       ? TaskInput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -508,9 +492,7 @@ abstract class TaskOutput implements _$TaskOutput {
     Meta valueMeta,
   }) = _TaskOutput;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory TaskOutput.fromYaml(dynamic yaml) => yaml is String
       ? TaskOutput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -560,9 +542,7 @@ abstract class VerificationResult
     List<VerificationResultValidator> validator,
   }) = _VerificationResult;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory VerificationResult.fromYaml(dynamic yaml) => yaml is String
       ? VerificationResult.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -592,9 +572,7 @@ abstract class VerificationResultPrimarySource
     List<CodeableConcept> pushTypeAvailable,
   }) = _VerificationResultPrimarySource;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory VerificationResultPrimarySource.fromYaml(dynamic yaml) =>
       yaml is String
@@ -632,9 +610,7 @@ abstract class VerificationResultAttestation
     Signature sourceSignature,
   }) = _VerificationResultAttestation;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory VerificationResultAttestation.fromYaml(dynamic yaml) => yaml is String
       ? VerificationResultAttestation.fromJson(
@@ -661,9 +637,7 @@ abstract class VerificationResultValidator
     Signature attestationSignature,
   }) = _VerificationResultValidator;
 
-  String toYaml() => toYamlString(toJson());
-
-  YamlMap toYamlMap() => loadYaml(jsonEncode(toJson()));
+  String toYaml() => json2yaml(toJson());
 
   factory VerificationResultValidator.fromYaml(dynamic yaml) => yaml is String
       ? VerificationResultValidator.fromJson(
