@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:test/test.dart';
 
 import 'expected_json.dart';
@@ -14,25 +16,39 @@ Future main() async {
     'compared with the expected errors stored in the map in "expected.dart". ',
     () {
       test(
-        'Validating Json',
+        '\n****Validating Json****',
         () async {
-          var testMap = await jsonValidation();
+          var testList = await jsonValidation();
 
-          var expectMap = expectedJson;
+          var expectList = expectedJson.toList();
 
-          expect(testMap, expectMap);
+          final compareList = expectedJson.toList();
+
+          compareList.forEach((file) {
+            testList.remove(file);
+            expectList.remove(file);
+          });
+
+          expect(testList, expectList);
         },
         timeout: Timeout(Duration(minutes: 10)),
       );
 
       test(
-        'Validating Yaml',
+        '\n****Validating Yaml****',
         () async {
-          var testMap = await yamlValidation();
+          var testList = await yamlValidation();
 
-          var expectMap = expectedYaml;
+          var expectList = expectedYaml.toList();
 
-          expect(testMap, expectMap);
+          final compareList = expectedYaml.toList();
+
+          compareList.forEach((file) {
+            testList.remove(file);
+            expectList.remove(file);
+          });
+
+          expect(testList, expectList);
         },
         timeout: Timeout(Duration(minutes: 10)),
       );
