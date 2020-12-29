@@ -144,9 +144,7 @@ abstract class CoverageEligibilityRequest
     implements _$CoverageEligibilityRequest {
   CoverageEligibilityRequest._();
   factory CoverageEligibilityRequest({
-    @JsonKey(defaultValue: 'CoverageEligibilityRequest')
-    @required
-        String resourceType,
+    @Default('CoverageEligibilityRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -324,9 +322,7 @@ abstract class CoverageEligibilityResponse
     implements _$CoverageEligibilityResponse {
   CoverageEligibilityResponse._();
   factory CoverageEligibilityResponse({
-    @JsonKey(defaultValue: 'CoverageEligibilityResponse')
-    @required
-        String resourceType,
+    @Default('CoverageEligibilityResponse') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

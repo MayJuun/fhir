@@ -197,9 +197,7 @@ abstract class ChargeItemDefinition
     implements _$ChargeItemDefinition {
   ChargeItemDefinition._();
   factory ChargeItemDefinition({
-    @JsonKey(defaultValue: 'ChargeItemDefinition')
-    @required
-        String resourceType,
+    @Default('ChargeItemDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -905,9 +903,7 @@ abstract class ExplanationOfBenefit
     implements _$ExplanationOfBenefit {
   ExplanationOfBenefit._();
   factory ExplanationOfBenefit({
-    @JsonKey(defaultValue: 'ExplanationOfBenefit')
-    @required
-        String resourceType,
+    @Default('ExplanationOfBenefit') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

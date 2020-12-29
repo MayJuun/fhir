@@ -1430,49 +1430,39 @@ class _$CommunicationRequestTearOff {
 
 // ignore: unused_element
   _CommunicationRequest call(
-      {@required
-      @JsonKey(defaultValue: 'CommunicationRequest')
-          String resourceType,
+      {String resourceType = 'CommunicationRequest',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
       Code status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       CodeableConcept statusReason,
       List<CodeableConcept> category,
       Code priority,
-      @JsonKey(name: '_priority')
-          Element priorityElement,
+      @JsonKey(name: '_priority') Element priorityElement,
       Boolean doNotPerform,
-      @JsonKey(name: '_doNotPerform')
-          Element doNotPerformElement,
+      @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
       List<CodeableConcept> medium,
       Reference subject,
       List<Reference> about,
       Reference encounter,
       List<CommunicationRequestPayload> payload,
       FhirDateTime occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       FhirDateTime authoredOn,
-      @JsonKey(name: '_authoredOn')
-          Element authoredOnElement,
+      @JsonKey(name: '_authoredOn') Element authoredOnElement,
       Reference requester,
       List<Reference> recipient,
       List<Reference> informationProvider,
@@ -1532,7 +1522,6 @@ const $CommunicationRequest = _$CommunicationRequestTearOff();
 
 /// @nodoc
 mixin _$CommunicationRequest {
-  @JsonKey(defaultValue: 'CommunicationRequest')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1590,7 +1579,7 @@ abstract class $CommunicationRequestCopyWith<$Res> {
           $Res Function(CommunicationRequest) then) =
       _$CommunicationRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'CommunicationRequest') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1947,7 +1936,7 @@ abstract class _$CommunicationRequestCopyWith<$Res>
       __$CommunicationRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'CommunicationRequest') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2168,49 +2157,39 @@ class __$CommunicationRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_CommunicationRequest extends _CommunicationRequest {
   _$_CommunicationRequest(
-      {@required
-      @JsonKey(defaultValue: 'CommunicationRequest')
-          this.resourceType,
+      {this.resourceType = 'CommunicationRequest',
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.basedOn,
       this.replaces,
       this.groupIdentifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.statusReason,
       this.category,
       this.priority,
-      @JsonKey(name: '_priority')
-          this.priorityElement,
+      @JsonKey(name: '_priority') this.priorityElement,
       this.doNotPerform,
-      @JsonKey(name: '_doNotPerform')
-          this.doNotPerformElement,
+      @JsonKey(name: '_doNotPerform') this.doNotPerformElement,
       this.medium,
       this.subject,
       this.about,
       this.encounter,
       this.payload,
       this.occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          this.occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
       this.occurrencePeriod,
       this.authoredOn,
-      @JsonKey(name: '_authoredOn')
-          this.authoredOnElement,
+      @JsonKey(name: '_authoredOn') this.authoredOnElement,
       this.requester,
       this.recipient,
       this.informationProvider,
@@ -2222,8 +2201,8 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   factory _$_CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationRequestFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'CommunicationRequest')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -2456,49 +2435,39 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 abstract class _CommunicationRequest extends CommunicationRequest {
   _CommunicationRequest._() : super._();
   factory _CommunicationRequest(
-      {@required
-      @JsonKey(defaultValue: 'CommunicationRequest')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> replaces,
       Identifier groupIdentifier,
       Code status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       CodeableConcept statusReason,
       List<CodeableConcept> category,
       Code priority,
-      @JsonKey(name: '_priority')
-          Element priorityElement,
+      @JsonKey(name: '_priority') Element priorityElement,
       Boolean doNotPerform,
-      @JsonKey(name: '_doNotPerform')
-          Element doNotPerformElement,
+      @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
       List<CodeableConcept> medium,
       Reference subject,
       List<Reference> about,
       Reference encounter,
       List<CommunicationRequestPayload> payload,
       FhirDateTime occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       FhirDateTime authoredOn,
-      @JsonKey(name: '_authoredOn')
-          Element authoredOnElement,
+      @JsonKey(name: '_authoredOn') Element authoredOnElement,
       Reference requester,
       List<Reference> recipient,
       List<Reference> informationProvider,
@@ -2509,7 +2478,6 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       _$_CommunicationRequest.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'CommunicationRequest')
   String get resourceType;
   @override
   Id get id;

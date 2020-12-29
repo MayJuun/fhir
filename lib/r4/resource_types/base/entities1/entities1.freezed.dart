@@ -6121,26 +6121,20 @@ class _$OrganizationAffiliationTearOff {
 
 // ignore: unused_element
   _OrganizationAffiliation call(
-      {@required
-      @JsonKey(defaultValue: 'OrganizationAffiliation')
-          String resourceType,
+      {String resourceType = 'OrganizationAffiliation',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active')
-          Element activeElement,
+      @JsonKey(name: '_active') Element activeElement,
       Period period,
       Reference organization,
       Reference participatingOrganization,
@@ -6191,7 +6185,6 @@ const $OrganizationAffiliation = _$OrganizationAffiliationTearOff();
 
 /// @nodoc
 mixin _$OrganizationAffiliation {
-  @JsonKey(defaultValue: 'OrganizationAffiliation')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -6231,7 +6224,7 @@ abstract class $OrganizationAffiliationCopyWith<$Res> {
           $Res Function(OrganizationAffiliation) then) =
       _$OrganizationAffiliationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'OrganizationAffiliation') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6447,7 +6440,7 @@ abstract class _$OrganizationAffiliationCopyWith<$Res>
       __$OrganizationAffiliationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'OrganizationAffiliation') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6591,26 +6584,20 @@ class __$OrganizationAffiliationCopyWithImpl<$Res>
 /// @nodoc
 class _$_OrganizationAffiliation extends _OrganizationAffiliation {
   _$_OrganizationAffiliation(
-      {@required
-      @JsonKey(defaultValue: 'OrganizationAffiliation')
-          this.resourceType,
+      {this.resourceType = 'OrganizationAffiliation',
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
-      @JsonKey(name: '_active')
-          this.activeElement,
+      @JsonKey(name: '_active') this.activeElement,
       this.period,
       this.organization,
       this.participatingOrganization,
@@ -6627,8 +6614,8 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
   factory _$_OrganizationAffiliation.fromJson(Map<String, dynamic> json) =>
       _$_$_OrganizationAffiliationFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'OrganizationAffiliation')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -6799,26 +6786,20 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
 abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   _OrganizationAffiliation._() : super._();
   factory _OrganizationAffiliation(
-      {@required
-      @JsonKey(defaultValue: 'OrganizationAffiliation')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active')
-          Element activeElement,
+      @JsonKey(name: '_active') Element activeElement,
       Period period,
       Reference organization,
       Reference participatingOrganization,
@@ -6834,7 +6815,6 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
       _$_OrganizationAffiliation.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'OrganizationAffiliation')
   String get resourceType;
   @override
   Id get id;

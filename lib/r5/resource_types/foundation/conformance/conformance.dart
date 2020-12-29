@@ -503,9 +503,7 @@ abstract class CapabilityStatement2
     implements _$CapabilityStatement2 {
   CapabilityStatement2._();
   factory CapabilityStatement2({
-    @JsonKey(defaultValue: 'CapabilityStatement2')
-    @required
-        String resourceType,
+    @Default('CapabilityStatement2') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -821,9 +819,7 @@ abstract class CompartmentDefinition
     implements _$CompartmentDefinition {
   CompartmentDefinition._();
   factory CompartmentDefinition({
-    @JsonKey(defaultValue: 'CompartmentDefinition')
-    @required
-        String resourceType,
+    @Default('CompartmentDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

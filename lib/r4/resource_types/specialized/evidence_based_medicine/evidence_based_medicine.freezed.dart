@@ -19,9 +19,7 @@ class _$EffectEvidenceSynthesisTearOff {
 
 // ignore: unused_element
   _EffectEvidenceSynthesis call(
-      {@required
-      @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
-          String resourceType,
+      {String resourceType = 'EffectEvidenceSynthesis',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -166,7 +164,6 @@ const $EffectEvidenceSynthesis = _$EffectEvidenceSynthesisTearOff();
 
 /// @nodoc
 mixin _$EffectEvidenceSynthesis {
-  @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -248,8 +245,7 @@ abstract class $EffectEvidenceSynthesisCopyWith<$Res> {
           $Res Function(EffectEvidenceSynthesis) then) =
       _$EffectEvidenceSynthesisCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'EffectEvidenceSynthesis')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -780,8 +776,7 @@ abstract class _$EffectEvidenceSynthesisCopyWith<$Res>
       __$EffectEvidenceSynthesisCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'EffectEvidenceSynthesis')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1104,9 +1099,7 @@ class __$EffectEvidenceSynthesisCopyWithImpl<$Res>
 /// @nodoc
 class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   _$_EffectEvidenceSynthesis(
-      {@required
-      @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
-          this.resourceType,
+      {this.resourceType = 'EffectEvidenceSynthesis',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1190,8 +1183,8 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   factory _$_EffectEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$_$_EffectEvidenceSynthesisFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1499,9 +1492,7 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
 abstract class _EffectEvidenceSynthesis extends EffectEvidenceSynthesis {
   _EffectEvidenceSynthesis._() : super._();
   factory _EffectEvidenceSynthesis(
-          {@required
-          @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
-              String resourceType,
+          {String resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -1581,7 +1572,6 @@ abstract class _EffectEvidenceSynthesis extends EffectEvidenceSynthesis {
       _$_EffectEvidenceSynthesis.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
   String get resourceType;
   @override
   Id get id;
@@ -9904,9 +9894,7 @@ class _$ResearchElementDefinitionTearOff {
 
 // ignore: unused_element
   _ResearchElementDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'ResearchElementDefinition')
-          String resourceType,
+      {String resourceType = 'ResearchElementDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10077,7 +10065,6 @@ const $ResearchElementDefinition = _$ResearchElementDefinitionTearOff();
 
 /// @nodoc
 mixin _$ResearchElementDefinition {
-  @JsonKey(defaultValue: 'ResearchElementDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -10179,8 +10166,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
           $Res Function(ResearchElementDefinition) then) =
       _$ResearchElementDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ResearchElementDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10784,8 +10770,7 @@ abstract class _$ResearchElementDefinitionCopyWith<$Res>
       __$ResearchElementDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ResearchElementDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11163,9 +11148,7 @@ class __$ResearchElementDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   _$_ResearchElementDefinition(
-      {@required
-      @JsonKey(defaultValue: 'ResearchElementDefinition')
-          this.resourceType,
+      {this.resourceType = 'ResearchElementDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -11263,8 +11246,8 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   factory _$_ResearchElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchElementDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ResearchElementDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -11620,9 +11603,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   _ResearchElementDefinition._() : super._();
   factory _ResearchElementDefinition(
-      {@required
-      @JsonKey(defaultValue: 'ResearchElementDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11719,7 +11700,6 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
       _$_ResearchElementDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ResearchElementDefinition')
   String get resourceType;
   @override
   Id get id;
@@ -13179,9 +13159,7 @@ class _$RiskEvidenceSynthesisTearOff {
 
 // ignore: unused_element
   _RiskEvidenceSynthesis call(
-      {@required
-      @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
-          String resourceType,
+      {String resourceType = 'RiskEvidenceSynthesis',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -13320,7 +13298,6 @@ const $RiskEvidenceSynthesis = _$RiskEvidenceSynthesisTearOff();
 
 /// @nodoc
 mixin _$RiskEvidenceSynthesis {
-  @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -13400,8 +13377,7 @@ abstract class $RiskEvidenceSynthesisCopyWith<$Res> {
           $Res Function(RiskEvidenceSynthesis) then) =
       _$RiskEvidenceSynthesisCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'RiskEvidenceSynthesis')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -13923,8 +13899,7 @@ abstract class _$RiskEvidenceSynthesisCopyWith<$Res>
       __$RiskEvidenceSynthesisCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'RiskEvidenceSynthesis')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -14236,9 +14211,7 @@ class __$RiskEvidenceSynthesisCopyWithImpl<$Res>
 /// @nodoc
 class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
   _$_RiskEvidenceSynthesis(
-      {@required
-      @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
-          this.resourceType,
+      {this.resourceType = 'RiskEvidenceSynthesis',
       this.id,
       this.meta,
       this.implicitRules,
@@ -14316,8 +14289,8 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
   factory _$_RiskEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$_$_RiskEvidenceSynthesisFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -14617,9 +14590,7 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
 abstract class _RiskEvidenceSynthesis extends RiskEvidenceSynthesis {
   _RiskEvidenceSynthesis._() : super._();
   factory _RiskEvidenceSynthesis(
-          {@required
-          @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
-              String resourceType,
+          {String resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -14695,7 +14666,6 @@ abstract class _RiskEvidenceSynthesis extends RiskEvidenceSynthesis {
       _$_RiskEvidenceSynthesis.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
   String get resourceType;
   @override
   Id get id;

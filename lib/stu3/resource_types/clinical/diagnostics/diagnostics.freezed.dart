@@ -8501,34 +8501,27 @@ class _$QuestionnaireResponseTearOff {
 
 // ignore: unused_element
   _QuestionnaireResponse call(
-      {@required
-      @JsonKey(defaultValue: 'QuestionnaireResponse')
-          String resourceType,
+      {String resourceType = 'QuestionnaireResponse',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       List<Reference> basedOn,
       List<Reference> parent,
       Reference questionnaire,
       QuestionnaireResponseStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       Reference subject,
       Reference context,
       String authored,
-      @JsonKey(name: '_authored')
-          Element authoredElement,
+      @JsonKey(name: '_authored') Element authoredElement,
       Reference author,
       Reference source,
       List<QuestionnaireResponseItem> item}) {
@@ -8572,7 +8565,6 @@ const $QuestionnaireResponse = _$QuestionnaireResponseTearOff();
 
 /// @nodoc
 mixin _$QuestionnaireResponse {
-  @JsonKey(defaultValue: 'QuestionnaireResponse')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -8613,7 +8605,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
           $Res Function(QuestionnaireResponse) then) =
       _$QuestionnaireResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'QuestionnaireResponse') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8869,7 +8861,7 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
       __$QuestionnaireResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'QuestionnaireResponse') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9016,34 +9008,27 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   _$_QuestionnaireResponse(
-      {@required
-      @JsonKey(defaultValue: 'QuestionnaireResponse')
-          this.resourceType,
+      {this.resourceType = 'QuestionnaireResponse',
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.basedOn,
       this.parent,
       this.questionnaire,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.subject,
       this.context,
       this.authored,
-      @JsonKey(name: '_authored')
-          this.authoredElement,
+      @JsonKey(name: '_authored') this.authoredElement,
       this.author,
       this.source,
       this.item})
@@ -9053,8 +9038,8 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   factory _$_QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireResponseFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'QuestionnaireResponse')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -9225,34 +9210,27 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
 abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   _QuestionnaireResponse._() : super._();
   factory _QuestionnaireResponse(
-      {@required
-      @JsonKey(defaultValue: 'QuestionnaireResponse')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       List<Reference> basedOn,
       List<Reference> parent,
       Reference questionnaire,
       QuestionnaireResponseStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       Reference subject,
       Reference context,
       String authored,
-      @JsonKey(name: '_authored')
-          Element authoredElement,
+      @JsonKey(name: '_authored') Element authoredElement,
       Reference author,
       Reference source,
       List<QuestionnaireResponseItem> item}) = _$_QuestionnaireResponse;
@@ -9261,7 +9239,6 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       _$_QuestionnaireResponse.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'QuestionnaireResponse')
   String get resourceType;
   @override
   Id get id;

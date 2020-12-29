@@ -113,9 +113,7 @@ abstract class CommunicationRequest
     implements _$CommunicationRequest {
   CommunicationRequest._();
   factory CommunicationRequest({
-    @JsonKey(defaultValue: 'CommunicationRequest')
-    @required
-        String resourceType,
+    @Default('CommunicationRequest') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

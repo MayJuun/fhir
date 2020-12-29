@@ -7917,9 +7917,7 @@ class _$ObservationDefinitionTearOff {
 
 // ignore: unused_element
   _ObservationDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'ObservationDefinition')
-          String resourceType,
+      {String resourceType = 'ObservationDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7996,7 +7994,6 @@ const $ObservationDefinition = _$ObservationDefinitionTearOff();
 
 /// @nodoc
 mixin _$ObservationDefinition {
-  @JsonKey(defaultValue: 'ObservationDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -8041,8 +8038,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
           $Res Function(ObservationDefinition) then) =
       _$ObservationDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ObservationDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8345,8 +8341,7 @@ abstract class _$ObservationDefinitionCopyWith<$Res>
       __$ObservationDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ObservationDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8528,9 +8523,7 @@ class __$ObservationDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_ObservationDefinition extends _ObservationDefinition {
   _$_ObservationDefinition(
-      {@required
-      @JsonKey(defaultValue: 'ObservationDefinition')
-          this.resourceType,
+      {this.resourceType = 'ObservationDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -8571,8 +8564,8 @@ class _$_ObservationDefinition extends _ObservationDefinition {
   factory _$_ObservationDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ObservationDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ObservationDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -8755,9 +8748,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
 abstract class _ObservationDefinition extends ObservationDefinition {
   _ObservationDefinition._() : super._();
   factory _ObservationDefinition(
-      {@required
-      @JsonKey(defaultValue: 'ObservationDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8796,7 +8787,6 @@ abstract class _ObservationDefinition extends ObservationDefinition {
       _$_ObservationDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ObservationDefinition')
   String get resourceType;
   @override
   Id get id;

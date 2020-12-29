@@ -127,9 +127,7 @@ abstract class QuestionnaireResponse
     implements _$QuestionnaireResponse {
   QuestionnaireResponse._();
   factory QuestionnaireResponse({
-    @JsonKey(defaultValue: 'QuestionnaireResponse')
-    @required
-        String resourceType,
+    @Default('QuestionnaireResponse') String resourceType,
     Id id,
     @JsonKey(name: '_id') Element idElement,
     Meta meta,

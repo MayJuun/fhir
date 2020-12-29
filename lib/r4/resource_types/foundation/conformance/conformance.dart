@@ -502,9 +502,7 @@ abstract class CompartmentDefinition
     implements _$CompartmentDefinition {
   CompartmentDefinition._();
   factory CompartmentDefinition({
-    @JsonKey(defaultValue: 'CompartmentDefinition')
-    @required
-        String resourceType,
+    @Default('CompartmentDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

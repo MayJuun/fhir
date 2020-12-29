@@ -473,9 +473,7 @@ abstract class ObservationDefinition
     implements _$ObservationDefinition {
   ObservationDefinition._();
   factory ObservationDefinition({
-    @JsonKey(defaultValue: 'ObservationDefinition')
-    @required
-        String resourceType,
+    @Default('ObservationDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

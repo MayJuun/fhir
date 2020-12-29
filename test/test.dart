@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:test/test.dart';
 
 import 'expected_json.dart';

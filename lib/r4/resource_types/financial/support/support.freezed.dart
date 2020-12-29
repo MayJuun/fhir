@@ -2027,43 +2027,32 @@ class _$CoverageEligibilityRequestTearOff {
 
 // ignore: unused_element
   _CoverageEligibilityRequest call(
-      {@required
-      @JsonKey(defaultValue: 'CoverageEligibilityRequest')
-          String resourceType,
+      {String resourceType = 'CoverageEligibilityRequest',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       CodeableConcept priority,
       List<CoverageEligibilityRequestPurpose> purpose,
-      @JsonKey(name: '_purpose')
-          List<Element> purposeElement,
-      @required
-          Reference patient,
+      @JsonKey(name: '_purpose') List<Element> purposeElement,
+      @required Reference patient,
       Date servicedDate,
-      @JsonKey(name: '_servicedDate')
-          Element servicedDateElement,
+      @JsonKey(name: '_servicedDate') Element servicedDateElement,
       Period servicedPeriod,
       FhirDateTime created,
-      @JsonKey(name: '_created')
-          Element createdElement,
+      @JsonKey(name: '_created') Element createdElement,
       Reference enterer,
       Reference provider,
-      @required
-          Reference insurer,
+      @required Reference insurer,
       Reference facility,
       List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
       List<CoverageEligibilityRequestInsurance> insurance,
@@ -2114,7 +2103,6 @@ const $CoverageEligibilityRequest = _$CoverageEligibilityRequestTearOff();
 
 /// @nodoc
 mixin _$CoverageEligibilityRequest {
-  @JsonKey(defaultValue: 'CoverageEligibilityRequest')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -2163,7 +2151,7 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
           $Res Function(CoverageEligibilityRequest) then) =
       _$CoverageEligibilityRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'CoverageEligibilityRequest') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2471,7 +2459,7 @@ abstract class _$CoverageEligibilityRequestCopyWith<$Res>
       __$CoverageEligibilityRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'CoverageEligibilityRequest') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2652,43 +2640,32 @@ class __$CoverageEligibilityRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   _$_CoverageEligibilityRequest(
-      {@required
-      @JsonKey(defaultValue: 'CoverageEligibilityRequest')
-          this.resourceType,
+      {this.resourceType = 'CoverageEligibilityRequest',
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.priority,
       this.purpose,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
-      @required
-          this.patient,
+      @JsonKey(name: '_purpose') this.purposeElement,
+      @required this.patient,
       this.servicedDate,
-      @JsonKey(name: '_servicedDate')
-          this.servicedDateElement,
+      @JsonKey(name: '_servicedDate') this.servicedDateElement,
       this.servicedPeriod,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.enterer,
       this.provider,
-      @required
-          this.insurer,
+      @required this.insurer,
       this.facility,
       this.supportingInfo,
       this.insurance,
@@ -2701,8 +2678,8 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   factory _$_CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_CoverageEligibilityRequestFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'CoverageEligibilityRequest')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -2902,43 +2879,32 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
 abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   _CoverageEligibilityRequest._() : super._();
   factory _CoverageEligibilityRequest(
-          {@required
-          @JsonKey(defaultValue: 'CoverageEligibilityRequest')
-              String resourceType,
+          {String resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules')
-              Element implicitRulesElement,
+          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
           Code language,
-          @JsonKey(name: '_language')
-              Element languageElement,
+          @JsonKey(name: '_language') Element languageElement,
           Narrative text,
           List<Resource> contained,
-          @JsonKey(name: 'extension')
-              List<FhirExtension> extension_,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           List<Identifier> identifier,
           Code status,
-          @JsonKey(name: '_status')
-              Element statusElement,
+          @JsonKey(name: '_status') Element statusElement,
           CodeableConcept priority,
           List<CoverageEligibilityRequestPurpose> purpose,
-          @JsonKey(name: '_purpose')
-              List<Element> purposeElement,
-          @required
-              Reference patient,
+          @JsonKey(name: '_purpose') List<Element> purposeElement,
+          @required Reference patient,
           Date servicedDate,
-          @JsonKey(name: '_servicedDate')
-              Element servicedDateElement,
+          @JsonKey(name: '_servicedDate') Element servicedDateElement,
           Period servicedPeriod,
           FhirDateTime created,
-          @JsonKey(name: '_created')
-              Element createdElement,
+          @JsonKey(name: '_created') Element createdElement,
           Reference enterer,
           Reference provider,
-          @required
-              Reference insurer,
+          @required Reference insurer,
           Reference facility,
           List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
           List<CoverageEligibilityRequestInsurance> insurance,
@@ -2949,7 +2915,6 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
       _$_CoverageEligibilityRequest.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'CoverageEligibilityRequest')
   String get resourceType;
   @override
   Id get id;
@@ -4618,9 +4583,7 @@ class _$CoverageEligibilityResponseTearOff {
 
 // ignore: unused_element
   _CoverageEligibilityResponse call(
-      {@required
-      @JsonKey(defaultValue: 'CoverageEligibilityResponse')
-          String resourceType,
+      {String resourceType = 'CoverageEligibilityResponse',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4718,7 +4681,6 @@ const $CoverageEligibilityResponse = _$CoverageEligibilityResponseTearOff();
 
 /// @nodoc
 mixin _$CoverageEligibilityResponse {
-  @JsonKey(defaultValue: 'CoverageEligibilityResponse')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -4777,8 +4739,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
           $Res Function(CoverageEligibilityResponse) then) =
       _$CoverageEligibilityResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'CoverageEligibilityResponse')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5139,8 +5100,7 @@ abstract class _$CoverageEligibilityResponseCopyWith<$Res>
       __$CoverageEligibilityResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'CoverageEligibilityResponse')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5357,9 +5317,7 @@ class __$CoverageEligibilityResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   _$_CoverageEligibilityResponse(
-      {@required
-      @JsonKey(defaultValue: 'CoverageEligibilityResponse')
-          this.resourceType,
+      {this.resourceType = 'CoverageEligibilityResponse',
       this.id,
       this.meta,
       this.implicitRules,
@@ -5416,8 +5374,8 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   factory _$_CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_CoverageEligibilityResponseFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'CoverageEligibilityResponse')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -5638,9 +5596,7 @@ abstract class _CoverageEligibilityResponse
     extends CoverageEligibilityResponse {
   _CoverageEligibilityResponse._() : super._();
   factory _CoverageEligibilityResponse(
-          {@required
-          @JsonKey(defaultValue: 'CoverageEligibilityResponse')
-              String resourceType,
+          {String resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -5694,7 +5650,6 @@ abstract class _CoverageEligibilityResponse
       _$_CoverageEligibilityResponse.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'CoverageEligibilityResponse')
   String get resourceType;
   @override
   Id get id;

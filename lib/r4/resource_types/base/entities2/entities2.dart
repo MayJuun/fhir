@@ -17,9 +17,7 @@ abstract class BiologicallyDerivedProduct
     implements _$BiologicallyDerivedProduct {
   BiologicallyDerivedProduct._();
   factory BiologicallyDerivedProduct({
-    @JsonKey(defaultValue: 'BiologicallyDerivedProduct')
-    @required
-        String resourceType,
+    @Default('BiologicallyDerivedProduct') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

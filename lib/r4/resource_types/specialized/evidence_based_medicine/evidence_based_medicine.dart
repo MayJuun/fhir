@@ -17,9 +17,7 @@ abstract class EffectEvidenceSynthesis
     implements _$EffectEvidenceSynthesis {
   EffectEvidenceSynthesis._();
   factory EffectEvidenceSynthesis({
-    @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
-    @required
-        String resourceType,
+    @Default('EffectEvidenceSynthesis') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -560,9 +558,7 @@ abstract class ResearchElementDefinition
     implements _$ResearchElementDefinition {
   ResearchElementDefinition._();
   factory ResearchElementDefinition({
-    @JsonKey(defaultValue: 'ResearchElementDefinition')
-    @required
-        String resourceType,
+    @Default('ResearchElementDefinition') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -721,9 +717,7 @@ abstract class RiskEvidenceSynthesis
     implements _$RiskEvidenceSynthesis {
   RiskEvidenceSynthesis._();
   factory RiskEvidenceSynthesis({
-    @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
-    @required
-        String resourceType,
+    @Default('RiskEvidenceSynthesis') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -214,9 +214,7 @@ abstract class MedicinalProductAuthorization
     implements _$MedicinalProductAuthorization {
   MedicinalProductAuthorization._();
   factory MedicinalProductAuthorization({
-    @JsonKey(defaultValue: 'MedicinalProductAuthorization')
-    @required
-        String resourceType,
+    @Default('MedicinalProductAuthorization') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -335,9 +333,7 @@ abstract class MedicinalProductContraindication
     implements _$MedicinalProductContraindication {
   MedicinalProductContraindication._();
   factory MedicinalProductContraindication({
-    @JsonKey(defaultValue: 'MedicinalProductContraindication')
-    @required
-        String resourceType,
+    @Default('MedicinalProductContraindication') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -408,9 +404,7 @@ abstract class MedicinalProductIndication
     implements _$MedicinalProductIndication {
   MedicinalProductIndication._();
   factory MedicinalProductIndication({
-    @JsonKey(defaultValue: 'MedicinalProductIndication')
-    @required
-        String resourceType,
+    @Default('MedicinalProductIndication') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -480,9 +474,7 @@ abstract class MedicinalProductIngredient
     implements _$MedicinalProductIngredient {
   MedicinalProductIngredient._();
   factory MedicinalProductIngredient({
-    @JsonKey(defaultValue: 'MedicinalProductIngredient')
-    @required
-        String resourceType,
+    @Default('MedicinalProductIngredient') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -645,9 +637,7 @@ abstract class MedicinalProductInteraction
     implements _$MedicinalProductInteraction {
   MedicinalProductInteraction._();
   factory MedicinalProductInteraction({
-    @JsonKey(defaultValue: 'MedicinalProductInteraction')
-    @required
-        String resourceType,
+    @Default('MedicinalProductInteraction') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -715,9 +705,7 @@ abstract class MedicinalProductManufactured
     implements _$MedicinalProductManufactured {
   MedicinalProductManufactured._();
   factory MedicinalProductManufactured({
-    @JsonKey(defaultValue: 'MedicinalProductManufactured')
-    @required
-        String resourceType,
+    @Default('MedicinalProductManufactured') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -756,9 +744,7 @@ abstract class MedicinalProductPackaged
     implements _$MedicinalProductPackaged {
   MedicinalProductPackaged._();
   factory MedicinalProductPackaged({
-    @JsonKey(defaultValue: 'MedicinalProductPackaged')
-    @required
-        String resourceType,
+    @Default('MedicinalProductPackaged') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -866,9 +852,7 @@ abstract class MedicinalProductPharmaceutical
     implements _$MedicinalProductPharmaceutical {
   MedicinalProductPharmaceutical._();
   factory MedicinalProductPharmaceutical({
-    @JsonKey(defaultValue: 'MedicinalProductPharmaceutical')
-    @required
-        String resourceType,
+    @Default('MedicinalProductPharmaceutical') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1034,9 +1018,7 @@ abstract class MedicinalProductUndesirableEffect
     implements _$MedicinalProductUndesirableEffect {
   MedicinalProductUndesirableEffect._();
   factory MedicinalProductUndesirableEffect({
-    @JsonKey(defaultValue: 'MedicinalProductUndesirableEffect')
-    @required
-        String resourceType,
+    @Default('MedicinalProductUndesirableEffect') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1076,9 +1058,7 @@ abstract class SubstanceNucleicAcid
     implements _$SubstanceNucleicAcid {
   SubstanceNucleicAcid._();
   factory SubstanceNucleicAcid({
-    @JsonKey(defaultValue: 'SubstanceNucleicAcid')
-    @required
-        String resourceType,
+    @Default('SubstanceNucleicAcid') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1486,9 +1466,7 @@ abstract class SubstanceReferenceInformation
     implements _$SubstanceReferenceInformation {
   SubstanceReferenceInformation._();
   factory SubstanceReferenceInformation({
-    @JsonKey(defaultValue: 'SubstanceReferenceInformation')
-    @required
-        String resourceType,
+    @Default('SubstanceReferenceInformation') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1651,9 +1629,7 @@ abstract class SubstanceSourceMaterial
     implements _$SubstanceSourceMaterial {
   SubstanceSourceMaterial._();
   factory SubstanceSourceMaterial({
-    @JsonKey(defaultValue: 'SubstanceSourceMaterial')
-    @required
-        String resourceType,
+    @Default('SubstanceSourceMaterial') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1882,9 +1858,7 @@ abstract class SubstanceSpecification
     implements _$SubstanceSpecification {
   SubstanceSpecification._();
   factory SubstanceSpecification({
-    @JsonKey(defaultValue: 'SubstanceSpecification')
-    @required
-        String resourceType,
+    @Default('SubstanceSpecification') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

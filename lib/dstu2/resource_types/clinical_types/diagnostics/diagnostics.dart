@@ -623,9 +623,7 @@ abstract class ImagingObjectSelection
     implements _$ImagingObjectSelection {
   ImagingObjectSelection._();
   factory ImagingObjectSelection({
-    @JsonKey(defaultValue: 'ImagingObjectSelection')
-    @required
-        String resourceType,
+    @Default('ImagingObjectSelection') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

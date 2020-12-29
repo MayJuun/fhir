@@ -9618,9 +9618,7 @@ class _$TerminologyCapabilitiesTearOff {
 
 // ignore: unused_element
   _TerminologyCapabilities call(
-      {@required
-      @JsonKey(defaultValue: 'TerminologyCapabilities')
-          String resourceType,
+      {String resourceType = 'TerminologyCapabilities',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9755,7 +9753,6 @@ const $TerminologyCapabilities = _$TerminologyCapabilitiesTearOff();
 
 /// @nodoc
 mixin _$TerminologyCapabilities {
-  @JsonKey(defaultValue: 'TerminologyCapabilities')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -9836,8 +9833,7 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
           $Res Function(TerminologyCapabilities) then) =
       _$TerminologyCapabilitiesCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'TerminologyCapabilities')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10371,8 +10367,7 @@ abstract class _$TerminologyCapabilitiesCopyWith<$Res>
       __$TerminologyCapabilitiesCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'TerminologyCapabilities')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10684,9 +10679,7 @@ class __$TerminologyCapabilitiesCopyWithImpl<$Res>
 /// @nodoc
 class _$_TerminologyCapabilities extends _TerminologyCapabilities {
   _$_TerminologyCapabilities(
-      {@required
-      @JsonKey(defaultValue: 'TerminologyCapabilities')
-          this.resourceType,
+      {this.resourceType = 'TerminologyCapabilities',
       this.id,
       this.meta,
       this.implicitRules,
@@ -10761,8 +10754,8 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
   factory _$_TerminologyCapabilities.fromJson(Map<String, dynamic> json) =>
       _$_$_TerminologyCapabilitiesFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'TerminologyCapabilities')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -11054,9 +11047,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
 abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   _TerminologyCapabilities._() : super._();
   factory _TerminologyCapabilities(
-      {@required
-      @JsonKey(defaultValue: 'TerminologyCapabilities')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11130,7 +11121,6 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
       _$_TerminologyCapabilities.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'TerminologyCapabilities')
   String get resourceType;
   @override
   Id get id;

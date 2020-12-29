@@ -801,9 +801,7 @@ class _$PaymentReconciliationTearOff {
 
 // ignore: unused_element
   _PaymentReconciliation call(
-      {@required
-      @JsonKey(defaultValue: 'PaymentReconciliation')
-          String resourceType,
+      {String resourceType = 'PaymentReconciliation',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -886,7 +884,6 @@ const $PaymentReconciliation = _$PaymentReconciliationTearOff();
 
 /// @nodoc
 mixin _$PaymentReconciliation {
-  @JsonKey(defaultValue: 'PaymentReconciliation')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -935,8 +932,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
           $Res Function(PaymentReconciliation) then) =
       _$PaymentReconciliationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'PaymentReconciliation')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1271,8 +1267,7 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
       __$PaymentReconciliationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'PaymentReconciliation')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1462,9 +1457,7 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
 /// @nodoc
 class _$_PaymentReconciliation extends _PaymentReconciliation {
   _$_PaymentReconciliation(
-      {@required
-      @JsonKey(defaultValue: 'PaymentReconciliation')
-          this.resourceType,
+      {this.resourceType = 'PaymentReconciliation',
       this.id,
       this.meta,
       this.implicitRules,
@@ -1509,8 +1502,8 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentReconciliationFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'PaymentReconciliation')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1707,9 +1700,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 abstract class _PaymentReconciliation extends PaymentReconciliation {
   _PaymentReconciliation._() : super._();
   factory _PaymentReconciliation(
-      {@required
-      @JsonKey(defaultValue: 'PaymentReconciliation')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1752,7 +1743,6 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
       _$_PaymentReconciliation.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'PaymentReconciliation')
   String get resourceType;
   @override
   Id get id;

@@ -59,9 +59,7 @@ abstract class PaymentReconciliation
     implements _$PaymentReconciliation {
   PaymentReconciliation._();
   factory PaymentReconciliation({
-    @JsonKey(defaultValue: 'PaymentReconciliation')
-    @required
-        String resourceType,
+    @Default('PaymentReconciliation') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

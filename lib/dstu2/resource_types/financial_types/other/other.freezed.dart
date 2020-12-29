@@ -18,9 +18,7 @@ class _$ExplanationOfBenefitTearOff {
 
 // ignore: unused_element
   _ExplanationOfBenefit call(
-      {@required
-      @JsonKey(defaultValue: 'ExplanationOfBenefit')
-          String resourceType,
+      {String resourceType = 'ExplanationOfBenefit',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -91,7 +89,6 @@ const $ExplanationOfBenefit = _$ExplanationOfBenefitTearOff();
 
 /// @nodoc
 mixin _$ExplanationOfBenefit {
-  @JsonKey(defaultValue: 'ExplanationOfBenefit')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -134,8 +131,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
           $Res Function(ExplanationOfBenefit) then) =
       _$ExplanationOfBenefitCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ExplanationOfBenefit')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -417,8 +413,7 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
       __$ExplanationOfBenefitCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ExplanationOfBenefit')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -582,9 +577,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
 /// @nodoc
 class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   _$_ExplanationOfBenefit(
-      {@required
-      @JsonKey(defaultValue: 'ExplanationOfBenefit')
-          this.resourceType,
+      {this.resourceType = 'ExplanationOfBenefit',
       this.id,
       this.meta,
       this.implicitRules,
@@ -621,8 +614,8 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   factory _$_ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ExplanationOfBenefit')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -798,9 +791,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   _ExplanationOfBenefit._() : super._();
   factory _ExplanationOfBenefit(
-      {@required
-      @JsonKey(defaultValue: 'ExplanationOfBenefit')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -836,7 +827,6 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
       _$_ExplanationOfBenefit.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ExplanationOfBenefit')
   String get resourceType;
   @override
   Id get id;

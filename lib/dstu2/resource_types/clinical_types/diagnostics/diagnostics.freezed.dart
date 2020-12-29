@@ -10492,9 +10492,7 @@ class _$ImagingObjectSelectionTearOff {
 
 // ignore: unused_element
   _ImagingObjectSelection call(
-      {@required
-      @JsonKey(defaultValue: 'ImagingObjectSelection')
-          String resourceType,
+      {String resourceType = 'ImagingObjectSelection',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10551,7 +10549,6 @@ const $ImagingObjectSelection = _$ImagingObjectSelectionTearOff();
 
 /// @nodoc
 mixin _$ImagingObjectSelection {
-  @JsonKey(defaultValue: 'ImagingObjectSelection')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -10584,7 +10581,7 @@ abstract class $ImagingObjectSelectionCopyWith<$Res> {
           $Res Function(ImagingObjectSelection) then) =
       _$ImagingObjectSelectionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ImagingObjectSelection') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10729,7 +10726,7 @@ abstract class _$ImagingObjectSelectionCopyWith<$Res>
       __$ImagingObjectSelectionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ImagingObjectSelection') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10828,33 +10825,22 @@ class __$ImagingObjectSelectionCopyWithImpl<$Res>
 /// @nodoc
 class _$_ImagingObjectSelection extends _ImagingObjectSelection {
   _$_ImagingObjectSelection(
-      {@required
-      @JsonKey(defaultValue: 'ImagingObjectSelection')
-          this.resourceType,
+      {this.resourceType = 'ImagingObjectSelection',
       this.id,
       this.meta,
       this.implicitRules,
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required
-      @JsonKey(required: true)
-          this.uid,
-      @required
-      @JsonKey(required: true)
-          this.patient,
-      @required
-      @JsonKey(required: true)
-          this.title,
+      @required @JsonKey(required: true) this.uid,
+      @required @JsonKey(required: true) this.patient,
+      @required @JsonKey(required: true) this.title,
       this.description,
       this.author,
       this.authoringTime,
-      @required
-      @JsonKey(required: true)
-          this.study})
+      @required @JsonKey(required: true) this.study})
       : assert(resourceType != null),
         assert(uid != null),
         assert(patient != null),
@@ -10865,8 +10851,8 @@ class _$_ImagingObjectSelection extends _ImagingObjectSelection {
   factory _$_ImagingObjectSelection.fromJson(Map<String, dynamic> json) =>
       _$_$_ImagingObjectSelectionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ImagingObjectSelection')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -10990,9 +10976,7 @@ class _$_ImagingObjectSelection extends _ImagingObjectSelection {
 abstract class _ImagingObjectSelection extends ImagingObjectSelection {
   _ImagingObjectSelection._() : super._();
   factory _ImagingObjectSelection(
-      {@required
-      @JsonKey(defaultValue: 'ImagingObjectSelection')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11022,7 +11006,6 @@ abstract class _ImagingObjectSelection extends ImagingObjectSelection {
       _$_ImagingObjectSelection.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ImagingObjectSelection')
   String get resourceType;
   @override
   Id get id;

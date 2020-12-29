@@ -6589,33 +6589,26 @@ class _$ExplanationOfBenefitTearOff {
 
 // ignore: unused_element
   _ExplanationOfBenefit call(
-      {@required
-      @JsonKey(defaultValue: 'ExplanationOfBenefit')
-          String resourceType,
+      {String resourceType = 'ExplanationOfBenefit',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       ExplanationOfBenefitStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       CodeableConcept type,
       List<CodeableConcept> subType,
       Reference patient,
       Period billablePeriod,
       String created,
-      @JsonKey(name: '_created')
-          Element createdElement,
+      @JsonKey(name: '_created') Element createdElement,
       Reference enterer,
       Reference insurer,
       Reference provider,
@@ -6626,8 +6619,7 @@ class _$ExplanationOfBenefitTearOff {
       Reference claimResponse,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition')
-          Element dispositionElement,
+      @JsonKey(name: '_disposition') Element dispositionElement,
       List<ExplanationOfBenefitRelated> related,
       Reference prescription,
       Reference originalPrescription,
@@ -6637,8 +6629,7 @@ class _$ExplanationOfBenefitTearOff {
       List<ExplanationOfBenefitDiagnosis> diagnosis,
       List<ExplanationOfBenefitProcedure> procedure,
       Decimal precedence,
-      @JsonKey(name: '_precedence')
-          Element precedenceElement,
+      @JsonKey(name: '_precedence') Element precedenceElement,
       ExplanationOfBenefitInsurance insurance,
       ExplanationOfBenefitAccident accident,
       Period employmentImpacted,
@@ -6722,7 +6713,6 @@ const $ExplanationOfBenefit = _$ExplanationOfBenefitTearOff();
 
 /// @nodoc
 mixin _$ExplanationOfBenefit {
-  @JsonKey(defaultValue: 'ExplanationOfBenefit')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -6795,7 +6785,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
           $Res Function(ExplanationOfBenefit) then) =
       _$ExplanationOfBenefitCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ExplanationOfBenefit') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7410,7 +7400,7 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
       __$ExplanationOfBenefitCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ExplanationOfBenefit') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7734,33 +7724,26 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
 /// @nodoc
 class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   _$_ExplanationOfBenefit(
-      {@required
-      @JsonKey(defaultValue: 'ExplanationOfBenefit')
-          this.resourceType,
+      {this.resourceType = 'ExplanationOfBenefit',
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.type,
       this.subType,
       this.patient,
       this.billablePeriod,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.enterer,
       this.insurer,
       this.provider,
@@ -7771,8 +7754,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
       this.claimResponse,
       this.outcome,
       this.disposition,
-      @JsonKey(name: '_disposition')
-          this.dispositionElement,
+      @JsonKey(name: '_disposition') this.dispositionElement,
       this.related,
       this.prescription,
       this.originalPrescription,
@@ -7782,8 +7764,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
       this.diagnosis,
       this.procedure,
       this.precedence,
-      @JsonKey(name: '_precedence')
-          this.precedenceElement,
+      @JsonKey(name: '_precedence') this.precedenceElement,
       this.insurance,
       this.accident,
       this.employmentImpacted,
@@ -7803,8 +7784,8 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   factory _$_ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ExplanationOfBenefit')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -8100,33 +8081,26 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   _ExplanationOfBenefit._() : super._();
   factory _ExplanationOfBenefit(
-          {@required
-          @JsonKey(defaultValue: 'ExplanationOfBenefit')
-              String resourceType,
+          {String resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules')
-              Element implicitRulesElement,
+          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
           Code language,
-          @JsonKey(name: '_language')
-              Element languageElement,
+          @JsonKey(name: '_language') Element languageElement,
           Narrative text,
           List<Resource> contained,
-          @JsonKey(name: 'extension')
-              List<FhirExtension> extension_,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           List<Identifier> identifier,
           ExplanationOfBenefitStatus status,
-          @JsonKey(name: '_status')
-              Element statusElement,
+          @JsonKey(name: '_status') Element statusElement,
           CodeableConcept type,
           List<CodeableConcept> subType,
           Reference patient,
           Period billablePeriod,
           String created,
-          @JsonKey(name: '_created')
-              Element createdElement,
+          @JsonKey(name: '_created') Element createdElement,
           Reference enterer,
           Reference insurer,
           Reference provider,
@@ -8137,8 +8111,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
           Reference claimResponse,
           CodeableConcept outcome,
           String disposition,
-          @JsonKey(name: '_disposition')
-              Element dispositionElement,
+          @JsonKey(name: '_disposition') Element dispositionElement,
           List<ExplanationOfBenefitRelated> related,
           Reference prescription,
           Reference originalPrescription,
@@ -8148,8 +8121,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
           List<ExplanationOfBenefitDiagnosis> diagnosis,
           List<ExplanationOfBenefitProcedure> procedure,
           Decimal precedence,
-          @JsonKey(name: '_precedence')
-              Element precedenceElement,
+          @JsonKey(name: '_precedence') Element precedenceElement,
           ExplanationOfBenefitInsurance insurance,
           ExplanationOfBenefitAccident accident,
           Period employmentImpacted,
@@ -8169,7 +8141,6 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
       _$_ExplanationOfBenefit.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ExplanationOfBenefit')
   String get resourceType;
   @override
   Id get id;

@@ -1823,9 +1823,7 @@ class _$QuestionnaireResponseTearOff {
 
 // ignore: unused_element
   _QuestionnaireResponse call(
-      {@required
-      @JsonKey(defaultValue: 'QuestionnaireResponse')
-          String resourceType,
+      {String resourceType = 'QuestionnaireResponse',
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -1895,7 +1893,6 @@ const $QuestionnaireResponse = _$QuestionnaireResponseTearOff();
 
 /// @nodoc
 mixin _$QuestionnaireResponse {
-  @JsonKey(defaultValue: 'QuestionnaireResponse')
   String get resourceType;
   Id get id;
   @JsonKey(name: '_id')
@@ -1938,8 +1935,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
           $Res Function(QuestionnaireResponse) then) =
       _$QuestionnaireResponseCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'QuestionnaireResponse')
-          String resourceType,
+      {String resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -2222,8 +2218,7 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
       __$QuestionnaireResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'QuestionnaireResponse')
-          String resourceType,
+      {String resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -2379,9 +2374,7 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   _$_QuestionnaireResponse(
-      {@required
-      @JsonKey(defaultValue: 'QuestionnaireResponse')
-          this.resourceType,
+      {this.resourceType = 'QuestionnaireResponse',
       this.id,
       @JsonKey(name: '_id')
           this.idElement,
@@ -2419,8 +2412,8 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   factory _$_QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_QuestionnaireResponseFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'QuestionnaireResponse')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -2589,9 +2582,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
 abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   _QuestionnaireResponse._() : super._();
   factory _QuestionnaireResponse(
-      {@required
-      @JsonKey(defaultValue: 'QuestionnaireResponse')
-          String resourceType,
+      {String resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -2627,7 +2618,6 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       _$_QuestionnaireResponse.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'QuestionnaireResponse')
   String get resourceType;
   @override
   Id get id;

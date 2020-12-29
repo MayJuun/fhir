@@ -2386,9 +2386,7 @@ class _$ImmunizationRecommendationTearOff {
 
 // ignore: unused_element
   _ImmunizationRecommendation call(
-      {@required
-      @JsonKey(defaultValue: 'ImmunizationRecommendation')
-          String resourceType,
+      {String resourceType = 'ImmunizationRecommendation',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2437,7 +2435,6 @@ const $ImmunizationRecommendation = _$ImmunizationRecommendationTearOff();
 
 /// @nodoc
 mixin _$ImmunizationRecommendation {
-  @JsonKey(defaultValue: 'ImmunizationRecommendation')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -2466,7 +2463,7 @@ abstract class $ImmunizationRecommendationCopyWith<$Res> {
           $Res Function(ImmunizationRecommendation) then) =
       _$ImmunizationRecommendationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'ImmunizationRecommendation') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2609,7 +2606,7 @@ abstract class _$ImmunizationRecommendationCopyWith<$Res>
       __$ImmunizationRecommendationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'ImmunizationRecommendation') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2706,27 +2703,20 @@ class __$ImmunizationRecommendationCopyWithImpl<$Res>
 /// @nodoc
 class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   _$_ImmunizationRecommendation(
-      {@required
-      @JsonKey(defaultValue: 'ImmunizationRecommendation')
-          this.resourceType,
+      {this.resourceType = 'ImmunizationRecommendation',
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
-      @required
-          this.patient,
-      @required
-          this.recommendation})
+      @required this.patient,
+      @required this.recommendation})
       : assert(resourceType != null),
         assert(patient != null),
         assert(recommendation != null),
@@ -2735,8 +2725,8 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   factory _$_ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
       _$_$_ImmunizationRecommendationFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'ImmunizationRecommendation')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -2850,9 +2840,7 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
 abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   _ImmunizationRecommendation._() : super._();
   factory _ImmunizationRecommendation(
-          {@required
-          @JsonKey(defaultValue: 'ImmunizationRecommendation')
-              String resourceType,
+          {String resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -2877,7 +2865,6 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
       _$_ImmunizationRecommendation.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'ImmunizationRecommendation')
   String get resourceType;
   @override
   Id get id;
@@ -5781,43 +5768,34 @@ class _$MedicationAdministrationTearOff {
 
 // ignore: unused_element
   _MedicationAdministration call(
-      {@required
-      @JsonKey(defaultValue: 'MedicationAdministration')
-          String resourceType,
+      {String resourceType = 'MedicationAdministration',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
       List<Reference> partOf,
       MedicationAdministrationStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
       Reference medicationReference,
-      @required
-          Reference subject,
+      @required Reference subject,
       Reference context,
       List<Reference> supportingInformation,
       FhirDateTime effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime')
-          Element effectiveDateTimeElement,
+      @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
       Period effectivePeriod,
       List<MedicationAdministrationPerformer> performer,
       Boolean notGiven,
-      @JsonKey(name: '_notGiven')
-          Element notGivenElement,
+      @JsonKey(name: '_notGiven') Element notGivenElement,
       List<CodeableConcept> reasonNotGiven,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
@@ -5878,7 +5856,6 @@ const $MedicationAdministration = _$MedicationAdministrationTearOff();
 
 /// @nodoc
 mixin _$MedicationAdministration {
-  @JsonKey(defaultValue: 'MedicationAdministration')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -5932,7 +5909,7 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
           $Res Function(MedicationAdministration) then) =
       _$MedicationAdministrationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'MedicationAdministration') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6285,7 +6262,7 @@ abstract class _$MedicationAdministrationCopyWith<$Res>
       __$MedicationAdministrationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'MedicationAdministration') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6501,43 +6478,34 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
 /// @nodoc
 class _$_MedicationAdministration extends _MedicationAdministration {
   _$_MedicationAdministration(
-      {@required
-      @JsonKey(defaultValue: 'MedicationAdministration')
-          this.resourceType,
+      {this.resourceType = 'MedicationAdministration',
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.definition,
       this.partOf,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.category,
       this.medicationCodeableConcept,
       this.medicationReference,
-      @required
-          this.subject,
+      @required this.subject,
       this.context,
       this.supportingInformation,
       this.effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime')
-          this.effectiveDateTimeElement,
+      @JsonKey(name: '_effectiveDateTime') this.effectiveDateTimeElement,
       this.effectivePeriod,
       this.performer,
       this.notGiven,
-      @JsonKey(name: '_notGiven')
-          this.notGivenElement,
+      @JsonKey(name: '_notGiven') this.notGivenElement,
       this.reasonNotGiven,
       this.reasonCode,
       this.reasonReference,
@@ -6553,8 +6521,8 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   factory _$_MedicationAdministration.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicationAdministrationFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'MedicationAdministration')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -6775,43 +6743,34 @@ class _$_MedicationAdministration extends _MedicationAdministration {
 abstract class _MedicationAdministration extends MedicationAdministration {
   _MedicationAdministration._() : super._();
   factory _MedicationAdministration(
-      {@required
-      @JsonKey(defaultValue: 'MedicationAdministration')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
       List<Reference> partOf,
       MedicationAdministrationStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       CodeableConcept category,
       CodeableConcept medicationCodeableConcept,
       Reference medicationReference,
-      @required
-          Reference subject,
+      @required Reference subject,
       Reference context,
       List<Reference> supportingInformation,
       FhirDateTime effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime')
-          Element effectiveDateTimeElement,
+      @JsonKey(name: '_effectiveDateTime') Element effectiveDateTimeElement,
       Period effectivePeriod,
       List<MedicationAdministrationPerformer> performer,
       Boolean notGiven,
-      @JsonKey(name: '_notGiven')
-          Element notGivenElement,
+      @JsonKey(name: '_notGiven') Element notGivenElement,
       List<CodeableConcept> reasonNotGiven,
       List<CodeableConcept> reasonCode,
       List<Reference> reasonReference,
@@ -6825,7 +6784,6 @@ abstract class _MedicationAdministration extends MedicationAdministration {
       _$_MedicationAdministration.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'MedicationAdministration')
   String get resourceType;
   @override
   Id get id;

@@ -7209,9 +7209,7 @@ class _$CapabilityStatement2TearOff {
 
 // ignore: unused_element
   _CapabilityStatement2 call(
-      {@required
-      @JsonKey(defaultValue: 'CapabilityStatement2')
-          String resourceType,
+      {String resourceType = 'CapabilityStatement2',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7349,7 +7347,6 @@ const $CapabilityStatement2 = _$CapabilityStatement2TearOff();
 
 /// @nodoc
 mixin _$CapabilityStatement2 {
-  @JsonKey(defaultValue: 'CapabilityStatement2')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -7432,8 +7429,7 @@ abstract class $CapabilityStatement2CopyWith<$Res> {
           $Res Function(CapabilityStatement2) then) =
       _$CapabilityStatement2CopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'CapabilityStatement2')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7911,8 +7907,7 @@ abstract class _$CapabilityStatement2CopyWith<$Res>
       __$CapabilityStatement2CopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'CapabilityStatement2')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8216,9 +8211,7 @@ class __$CapabilityStatement2CopyWithImpl<$Res>
 /// @nodoc
 class _$_CapabilityStatement2 extends _CapabilityStatement2 {
   _$_CapabilityStatement2(
-      {@required
-      @JsonKey(defaultValue: 'CapabilityStatement2')
-          this.resourceType,
+      {this.resourceType = 'CapabilityStatement2',
       this.id,
       this.meta,
       this.implicitRules,
@@ -8295,8 +8288,8 @@ class _$_CapabilityStatement2 extends _CapabilityStatement2 {
   factory _$_CapabilityStatement2.fromJson(Map<String, dynamic> json) =>
       _$_$_CapabilityStatement2FromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'CapabilityStatement2')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -8593,9 +8586,7 @@ class _$_CapabilityStatement2 extends _CapabilityStatement2 {
 abstract class _CapabilityStatement2 extends CapabilityStatement2 {
   _CapabilityStatement2._() : super._();
   factory _CapabilityStatement2(
-      {@required
-      @JsonKey(defaultValue: 'CapabilityStatement2')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8671,7 +8662,6 @@ abstract class _CapabilityStatement2 extends CapabilityStatement2 {
       _$_CapabilityStatement2.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'CapabilityStatement2')
   String get resourceType;
   @override
   Id get id;
@@ -11884,9 +11874,7 @@ class _$CompartmentDefinitionTearOff {
 
 // ignore: unused_element
   _CompartmentDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'CompartmentDefinition')
-          String resourceType,
+      {String resourceType = 'CompartmentDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -12004,7 +11992,6 @@ const $CompartmentDefinition = _$CompartmentDefinitionTearOff();
 
 /// @nodoc
 mixin _$CompartmentDefinition {
-  @JsonKey(defaultValue: 'CompartmentDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -12076,8 +12063,7 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
           $Res Function(CompartmentDefinition) then) =
       _$CompartmentDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'CompartmentDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -12486,8 +12472,7 @@ abstract class _$CompartmentDefinitionCopyWith<$Res>
       __$CompartmentDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'CompartmentDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -12742,9 +12727,7 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_CompartmentDefinition extends _CompartmentDefinition {
   _$_CompartmentDefinition(
-      {@required
-      @JsonKey(defaultValue: 'CompartmentDefinition')
-          this.resourceType,
+      {this.resourceType = 'CompartmentDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -12810,8 +12793,8 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   factory _$_CompartmentDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_CompartmentDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'CompartmentDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -13070,9 +13053,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
 abstract class _CompartmentDefinition extends CompartmentDefinition {
   _CompartmentDefinition._() : super._();
   factory _CompartmentDefinition(
-      {@required
-      @JsonKey(defaultValue: 'CompartmentDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -13137,7 +13118,6 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
       _$_CompartmentDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'CompartmentDefinition')
   String get resourceType;
   @override
   Id get id;

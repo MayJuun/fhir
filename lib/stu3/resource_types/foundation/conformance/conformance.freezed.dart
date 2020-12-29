@@ -6945,58 +6945,42 @@ class _$CompartmentDefinitionTearOff {
 
 // ignore: unused_element
   _CompartmentDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'CompartmentDefinition')
-          String resourceType,
+      {String resourceType = 'CompartmentDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
-      @JsonKey(name: '_url')
-          Element urlElement,
+      @JsonKey(name: '_url') Element urlElement,
       String name,
-      @JsonKey(name: '_name')
-          Element nameElement,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(name: '_title')
-          Element titleElement,
+      @JsonKey(name: '_title') Element titleElement,
       CompartmentDefinitionStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
+      @JsonKey(name: '_experimental') Element experimentalElement,
       FhirDateTime date,
-      @JsonKey(name: '_date')
-          Element dateElement,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
+      @JsonKey(name: '_publisher') Element publisherElement,
       List<ContactDetail> contact,
       String description,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
+      @JsonKey(name: '_purpose') Element purposeElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       CompartmentDefinitionCode code,
-      @JsonKey(name: '_code')
-          Element codeElement,
+      @JsonKey(name: '_code') Element codeElement,
       Boolean search,
-      @JsonKey(name: '_search')
-          Element searchElement,
+      @JsonKey(name: '_search') Element searchElement,
       List<CompartmentDefinitionResource> resource}) {
     return _CompartmentDefinition(
       resourceType: resourceType,
@@ -7051,7 +7035,6 @@ const $CompartmentDefinition = _$CompartmentDefinitionTearOff();
 
 /// @nodoc
 mixin _$CompartmentDefinition {
-  @JsonKey(defaultValue: 'CompartmentDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -7114,7 +7097,7 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
           $Res Function(CompartmentDefinition) then) =
       _$CompartmentDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'CompartmentDefinition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7461,7 +7444,7 @@ abstract class _$CompartmentDefinitionCopyWith<$Res>
       __$CompartmentDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'CompartmentDefinition') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7672,58 +7655,42 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_CompartmentDefinition extends _CompartmentDefinition {
   _$_CompartmentDefinition(
-      {@required
-      @JsonKey(defaultValue: 'CompartmentDefinition')
-          this.resourceType,
+      {this.resourceType = 'CompartmentDefinition',
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
+      @JsonKey(name: '_title') this.titleElement,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       this.contact,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.purpose,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.useContext,
       this.jurisdiction,
       this.code,
-      @JsonKey(name: '_code')
-          this.codeElement,
+      @JsonKey(name: '_code') this.codeElement,
       this.search,
-      @JsonKey(name: '_search')
-          this.searchElement,
+      @JsonKey(name: '_search') this.searchElement,
       this.resource})
       : assert(resourceType != null),
         super._();
@@ -7731,8 +7698,8 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   factory _$_CompartmentDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_CompartmentDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'CompartmentDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -7967,65 +7934,48 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
 abstract class _CompartmentDefinition extends CompartmentDefinition {
   _CompartmentDefinition._() : super._();
   factory _CompartmentDefinition(
-      {@required
-      @JsonKey(defaultValue: 'CompartmentDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
-      @JsonKey(name: '_url')
-          Element urlElement,
+      @JsonKey(name: '_url') Element urlElement,
       String name,
-      @JsonKey(name: '_name')
-          Element nameElement,
+      @JsonKey(name: '_name') Element nameElement,
       String title,
-      @JsonKey(name: '_title')
-          Element titleElement,
+      @JsonKey(name: '_title') Element titleElement,
       CompartmentDefinitionStatus status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       Boolean experimental,
-      @JsonKey(name: '_experimental')
-          Element experimentalElement,
+      @JsonKey(name: '_experimental') Element experimentalElement,
       FhirDateTime date,
-      @JsonKey(name: '_date')
-          Element dateElement,
+      @JsonKey(name: '_date') Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher')
-          Element publisherElement,
+      @JsonKey(name: '_publisher') Element publisherElement,
       List<ContactDetail> contact,
       String description,
-      @JsonKey(name: '_description')
-          Element descriptionElement,
+      @JsonKey(name: '_description') Element descriptionElement,
       String purpose,
-      @JsonKey(name: '_purpose')
-          Element purposeElement,
+      @JsonKey(name: '_purpose') Element purposeElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       CompartmentDefinitionCode code,
-      @JsonKey(name: '_code')
-          Element codeElement,
+      @JsonKey(name: '_code') Element codeElement,
       Boolean search,
-      @JsonKey(name: '_search')
-          Element searchElement,
+      @JsonKey(name: '_search') Element searchElement,
       List<CompartmentDefinitionResource> resource}) = _$_CompartmentDefinition;
 
   factory _CompartmentDefinition.fromJson(Map<String, dynamic> json) =
       _$_CompartmentDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'CompartmentDefinition')
   String get resourceType;
   @override
   Id get id;

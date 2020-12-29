@@ -315,9 +315,7 @@ abstract class MedicationAdministration
     implements _$MedicationAdministration {
   MedicationAdministration._();
   factory MedicationAdministration({
-    @JsonKey(defaultValue: 'MedicationAdministration')
-    @required
-        String resourceType,
+    @Default('MedicationAdministration') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -751,9 +749,7 @@ abstract class ImmunizationRecommendation
     implements _$ImmunizationRecommendation {
   ImmunizationRecommendation._();
   factory ImmunizationRecommendation({
-    @JsonKey(defaultValue: 'ImmunizationRecommendation')
-    @required
-        String resourceType,
+    @Default('ImmunizationRecommendation') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

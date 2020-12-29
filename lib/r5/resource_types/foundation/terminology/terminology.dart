@@ -551,9 +551,7 @@ abstract class TerminologyCapabilities
     implements _$TerminologyCapabilities {
   TerminologyCapabilities._();
   factory TerminologyCapabilities({
-    @JsonKey(defaultValue: 'TerminologyCapabilities')
-    @required
-        String resourceType,
+    @Default('TerminologyCapabilities') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

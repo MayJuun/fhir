@@ -1503,9 +1503,7 @@ class _$CommunicationRequestTearOff {
 
 // ignore: unused_element
   _CommunicationRequest call(
-      {@required
-      @JsonKey(defaultValue: 'CommunicationRequest')
-          String resourceType,
+      {String resourceType = 'CommunicationRequest',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1583,7 +1581,6 @@ const $CommunicationRequest = _$CommunicationRequestTearOff();
 
 /// @nodoc
 mixin _$CommunicationRequest {
-  @JsonKey(defaultValue: 'CommunicationRequest')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -1629,8 +1626,7 @@ abstract class $CommunicationRequestCopyWith<$Res> {
           $Res Function(CommunicationRequest) then) =
       _$CommunicationRequestCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'CommunicationRequest')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1939,8 +1935,7 @@ abstract class _$CommunicationRequestCopyWith<$Res>
       __$CommunicationRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'CommunicationRequest')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2122,9 +2117,7 @@ class __$CommunicationRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_CommunicationRequest extends _CommunicationRequest {
   _$_CommunicationRequest(
-      {@required
-      @JsonKey(defaultValue: 'CommunicationRequest')
-          this.resourceType,
+      {this.resourceType = 'CommunicationRequest',
       this.id,
       this.meta,
       this.implicitRules,
@@ -2164,8 +2157,8 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   factory _$_CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationRequestFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'CommunicationRequest')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -2356,9 +2349,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 abstract class _CommunicationRequest extends CommunicationRequest {
   _CommunicationRequest._() : super._();
   factory _CommunicationRequest(
-      {@required
-      @JsonKey(defaultValue: 'CommunicationRequest')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2397,7 +2388,6 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       _$_CommunicationRequest.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'CommunicationRequest')
   String get resourceType;
   @override
   Id get id;

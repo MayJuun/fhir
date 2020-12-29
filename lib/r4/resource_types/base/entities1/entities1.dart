@@ -384,9 +384,7 @@ abstract class OrganizationAffiliation
     implements _$OrganizationAffiliation {
   OrganizationAffiliation._();
   factory OrganizationAffiliation({
-    @JsonKey(defaultValue: 'OrganizationAffiliation')
-    @required
-        String resourceType,
+    @Default('OrganizationAffiliation') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

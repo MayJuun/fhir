@@ -453,9 +453,7 @@ abstract class ExplanationOfBenefit
     implements _$ExplanationOfBenefit {
   ExplanationOfBenefit._();
   factory ExplanationOfBenefit({
-    @JsonKey(defaultValue: 'ExplanationOfBenefit')
-    @required
-        String resourceType,
+    @Default('ExplanationOfBenefit') String resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

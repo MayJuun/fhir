@@ -845,36 +845,28 @@ class _$PaymentReconciliationTearOff {
 
 // ignore: unused_element
   _PaymentReconciliation call(
-      {@required
-      @JsonKey(defaultValue: 'PaymentReconciliation')
-          String resourceType,
+      {String resourceType = 'PaymentReconciliation',
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language')
-          Element languageElement,
+      @JsonKey(name: '_language') Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
+      @JsonKey(name: 'extension') List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status')
-          Element statusElement,
+      @JsonKey(name: '_status') Element statusElement,
       Period period,
       String created,
-      @JsonKey(name: '_created')
-          Element createdElement,
+      @JsonKey(name: '_created') Element createdElement,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition')
-          Element dispositionElement,
+      @JsonKey(name: '_disposition') Element dispositionElement,
       Reference requestProvider,
       Reference requestOrganization,
       List<PaymentReconciliationDetail> detail,
@@ -925,7 +917,6 @@ const $PaymentReconciliation = _$PaymentReconciliationTearOff();
 
 /// @nodoc
 mixin _$PaymentReconciliation {
-  @JsonKey(defaultValue: 'PaymentReconciliation')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -971,7 +962,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
           $Res Function(PaymentReconciliation) then) =
       _$PaymentReconciliationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'PaymentReconciliation') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1280,7 +1271,7 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
       __$PaymentReconciliationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'PaymentReconciliation') String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1453,36 +1444,28 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
 /// @nodoc
 class _$_PaymentReconciliation extends _PaymentReconciliation {
   _$_PaymentReconciliation(
-      {@required
-      @JsonKey(defaultValue: 'PaymentReconciliation')
-          this.resourceType,
+      {this.resourceType = 'PaymentReconciliation',
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.period,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.organization,
       this.request,
       this.outcome,
       this.disposition,
-      @JsonKey(name: '_disposition')
-          this.dispositionElement,
+      @JsonKey(name: '_disposition') this.dispositionElement,
       this.requestProvider,
       this.requestOrganization,
       this.detail,
@@ -1495,8 +1478,8 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentReconciliationFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'PaymentReconciliation')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -1687,36 +1670,28 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 abstract class _PaymentReconciliation extends PaymentReconciliation {
   _PaymentReconciliation._() : super._();
   factory _PaymentReconciliation(
-          {@required
-          @JsonKey(defaultValue: 'PaymentReconciliation')
-              String resourceType,
+          {String resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules')
-              Element implicitRulesElement,
+          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
           Code language,
-          @JsonKey(name: '_language')
-              Element languageElement,
+          @JsonKey(name: '_language') Element languageElement,
           Narrative text,
           List<Resource> contained,
-          @JsonKey(name: 'extension')
-              List<FhirExtension> extension_,
+          @JsonKey(name: 'extension') List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           List<Identifier> identifier,
           String status,
-          @JsonKey(name: '_status')
-              Element statusElement,
+          @JsonKey(name: '_status') Element statusElement,
           Period period,
           String created,
-          @JsonKey(name: '_created')
-              Element createdElement,
+          @JsonKey(name: '_created') Element createdElement,
           Reference organization,
           Reference request,
           CodeableConcept outcome,
           String disposition,
-          @JsonKey(name: '_disposition')
-              Element dispositionElement,
+          @JsonKey(name: '_disposition') Element dispositionElement,
           Reference requestProvider,
           Reference requestOrganization,
           List<PaymentReconciliationDetail> detail,
@@ -1729,7 +1704,6 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
       _$_PaymentReconciliation.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'PaymentReconciliation')
   String get resourceType;
   @override
   Id get id;

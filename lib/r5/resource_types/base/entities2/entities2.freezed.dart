@@ -20,9 +20,7 @@ class _$BiologicallyDerivedProductTearOff {
 // ignore: unused_element
   _BiologicallyDerivedProduct
       call(
-          {@required
-          @JsonKey(defaultValue: 'BiologicallyDerivedProduct')
-              String resourceType,
+          {String resourceType = 'BiologicallyDerivedProduct',
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -98,7 +96,6 @@ const $BiologicallyDerivedProduct = _$BiologicallyDerivedProductTearOff();
 
 /// @nodoc
 mixin _$BiologicallyDerivedProduct {
-  @JsonKey(defaultValue: 'BiologicallyDerivedProduct')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -144,8 +141,7 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res> {
       _$BiologicallyDerivedProductCopyWithImpl<$Res>;
   $Res
       call(
-          {@JsonKey(defaultValue: 'BiologicallyDerivedProduct')
-              String resourceType,
+          {String resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -407,8 +403,7 @@ abstract class _$BiologicallyDerivedProductCopyWith<$Res>
   @override
   $Res
       call(
-          {@JsonKey(defaultValue: 'BiologicallyDerivedProduct')
-              String resourceType,
+          {String resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -576,9 +571,7 @@ class __$BiologicallyDerivedProductCopyWithImpl<$Res>
 /// @nodoc
 class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   _$_BiologicallyDerivedProduct(
-      {@required
-      @JsonKey(defaultValue: 'BiologicallyDerivedProduct')
-          this.resourceType,
+      {this.resourceType = 'BiologicallyDerivedProduct',
       this.id,
       this.meta,
       this.implicitRules,
@@ -617,8 +610,8 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   factory _$_BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json) =>
       _$_$_BiologicallyDerivedProductFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'BiologicallyDerivedProduct')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -798,9 +791,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
 abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   _BiologicallyDerivedProduct._() : super._();
   factory _BiologicallyDerivedProduct(
-      {@required
-      @JsonKey(defaultValue: 'BiologicallyDerivedProduct')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -838,7 +829,6 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
       _$_BiologicallyDerivedProduct.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'BiologicallyDerivedProduct')
   String get resourceType;
   @override
   Id get id;

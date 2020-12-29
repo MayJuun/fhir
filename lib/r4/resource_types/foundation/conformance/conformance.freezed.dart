@@ -7189,9 +7189,7 @@ class _$CompartmentDefinitionTearOff {
 
 // ignore: unused_element
   _CompartmentDefinition call(
-      {@required
-      @JsonKey(defaultValue: 'CompartmentDefinition')
-          String resourceType,
+      {String resourceType = 'CompartmentDefinition',
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7295,7 +7293,6 @@ const $CompartmentDefinition = _$CompartmentDefinitionTearOff();
 
 /// @nodoc
 mixin _$CompartmentDefinition {
-  @JsonKey(defaultValue: 'CompartmentDefinition')
   String get resourceType;
   Id get id;
   Meta get meta;
@@ -7359,8 +7356,7 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
           $Res Function(CompartmentDefinition) then) =
       _$CompartmentDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(defaultValue: 'CompartmentDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7718,8 +7714,7 @@ abstract class _$CompartmentDefinitionCopyWith<$Res>
       __$CompartmentDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(defaultValue: 'CompartmentDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7941,9 +7936,7 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_CompartmentDefinition extends _CompartmentDefinition {
   _$_CompartmentDefinition(
-      {@required
-      @JsonKey(defaultValue: 'CompartmentDefinition')
-          this.resourceType,
+      {this.resourceType = 'CompartmentDefinition',
       this.id,
       this.meta,
       this.implicitRules,
@@ -8001,8 +7994,8 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   factory _$_CompartmentDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_CompartmentDefinitionFromJson(json);
 
-  @override
   @JsonKey(defaultValue: 'CompartmentDefinition')
+  @override
   final String resourceType;
   @override
   final Id id;
@@ -8235,9 +8228,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
 abstract class _CompartmentDefinition extends CompartmentDefinition {
   _CompartmentDefinition._() : super._();
   factory _CompartmentDefinition(
-      {@required
-      @JsonKey(defaultValue: 'CompartmentDefinition')
-          String resourceType,
+      {String resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8294,7 +8285,6 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
       _$_CompartmentDefinition.fromJson;
 
   @override
-  @JsonKey(defaultValue: 'CompartmentDefinition')
   String get resourceType;
   @override
   Id get id;
