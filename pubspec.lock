@@ -232,15 +232,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.2"
-  json2yaml:
-    dependency: "direct main"
-    description:
-      path: "."
-      ref: HEAD
-      resolved-ref: f328f9fc79a506a96e1b896ffafc32e363a8855a
-      url: "git://github.com/Dokotela/json2yaml.git"
-    source: git
-    version: "1.0.1+1"
   json_annotation:
     dependency: "direct main"
     description:
@@ -479,6 +470,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.1+2"
+  to_yaml:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "3032e65b8d38ef23a3061b1f46260a79d19890dd"
+      url: "git://github.com/fhir-fli/to_yaml.git"
+    source: git
+    version: "0.0.1"
   typed_data:
     dependency: transitive
     description:

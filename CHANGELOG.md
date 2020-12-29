@@ -3,6 +3,7 @@
 * New Function toYamlString() changes resource to string formatted in YAML.
 * New Function toYamlMap() changes resource to map but YAML format specific.
 * New Function fromYaml, parses a string or yamlMap and creates the resource.
+* Fixed some resourceType fields that weren't defined properly
 
 ## [0.0.12]
 * Updating to removed fields that are named using Dart reserved words. I thought I had caught all of them previously, but apparently not. Dart has a number of [words that are reserved](https://dart.dev/guides/language/language-tour#keywords), and I was still using some of them. These included: extension, part, import, get, on, operator and set. As previously, they have had an underscore added (```get``` becomes ```get_```, ```extension``` becomes ```extension_``` etc.). However, these are not changed in the json, so the input and out put remains unchanged.
