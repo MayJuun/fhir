@@ -14,7 +14,7 @@ Future main() async {
     'compared with the expected errors stored in the map in "expected.dart". ',
     () {
       test(
-        '\n****Validating Json****',
+        '\n\n****Validating Json****',
         () async {
           var testList = await jsonValidation();
 
@@ -33,7 +33,7 @@ Future main() async {
       );
 
       test(
-        '\n****Validating Yaml****',
+        '\n\n****Validating Yaml****',
         () async {
           var testList = await yamlValidation();
 

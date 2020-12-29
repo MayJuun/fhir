@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:to_yaml/to_yaml.dart';
+import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:yaml/yaml.dart';
 
 Future main() async {

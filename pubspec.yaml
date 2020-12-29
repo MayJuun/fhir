@@ -13,9 +13,7 @@ dependencies:
   string_validator: ^0.1.4
   freezed_annotation: ^0.12.0
   yaml: ^2.2.1
-  to_yaml:
-    git:
-      url: git://github.com/fhir-fli/to_yaml.git
+  fhir_yaml: ^0.0.1
 
 dev_dependencies:
   json_serializable: ^3.5.1

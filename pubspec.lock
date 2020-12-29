@@ -162,6 +162,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.2"
+  fhir_yaml:
+    dependency: "direct main"
+    description:
+      name: fhir_yaml
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.1"
   fixnum:
     dependency: transitive
     description:
@@ -470,15 +477,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.1+2"
-  to_yaml:
-    dependency: "direct main"
-    description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "3032e65b8d38ef23a3061b1f46260a79d19890dd"
-      url: "git://github.com/fhir-fli/to_yaml.git"
-    source: git
-    version: "0.0.1"
   typed_data:
     dependency: transitive
     description:
