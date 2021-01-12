@@ -77,6 +77,7 @@ abstract class StructureDefinition
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory StructureDefinition.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -101,6 +102,7 @@ abstract class StructureDefinitionContact with _$StructureDefinitionContact {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory StructureDefinitionContact.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinitionContact.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -133,6 +135,7 @@ abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory StructureDefinitionMapping.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinitionMapping.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -157,6 +160,7 @@ abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory StructureDefinitionSnapshot.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinitionSnapshot.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -182,6 +186,7 @@ abstract class StructureDefinitionDifferential
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory StructureDefinitionDifferential.fromYaml(dynamic yaml) =>
       yaml is String
           ? StructureDefinitionDifferential.fromJson(
@@ -230,6 +235,7 @@ abstract class DataElement with Resource implements _$DataElement {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DataElement.fromYaml(dynamic yaml) => yaml is String
       ? DataElement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -254,6 +260,7 @@ abstract class DataElementContact with _$DataElementContact {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DataElementContact.fromYaml(dynamic yaml) => yaml is String
       ? DataElementContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -285,6 +292,7 @@ abstract class DataElementMapping with _$DataElementMapping {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DataElementMapping.fromYaml(dynamic yaml) => yaml is String
       ? DataElementMapping.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

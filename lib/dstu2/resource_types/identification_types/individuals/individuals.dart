@@ -58,6 +58,7 @@ abstract class Patient with Resource implements _$Patient {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Patient.fromYaml(dynamic yaml) => yaml is String
       ? Patient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -88,6 +89,7 @@ abstract class PatientContact with _$PatientContact {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory PatientContact.fromYaml(dynamic yaml) => yaml is String
       ? PatientContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -113,6 +115,7 @@ abstract class PatientAnimal with _$PatientAnimal {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory PatientAnimal.fromYaml(dynamic yaml) => yaml is String
       ? PatientAnimal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -138,6 +141,7 @@ abstract class PatientCommunication with _$PatientCommunication {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory PatientCommunication.fromYaml(dynamic yaml) => yaml is String
       ? PatientCommunication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -165,6 +169,7 @@ abstract class PatientLink with _$PatientLink {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory PatientLink.fromYaml(dynamic yaml) => yaml is String
       ? PatientLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -210,6 +215,7 @@ abstract class Practitioner with Resource implements _$Practitioner {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Practitioner.fromYaml(dynamic yaml) => yaml is String
       ? Practitioner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -240,6 +246,7 @@ abstract class PractitionerPractitionerRole
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory PractitionerPractitionerRole.fromYaml(dynamic yaml) => yaml is String
       ? PractitionerPractitionerRole.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -267,6 +274,7 @@ abstract class PractitionerQualification with _$PractitionerQualification {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory PractitionerQualification.fromYaml(dynamic yaml) => yaml is String
       ? PractitionerQualification.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -313,6 +321,7 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory RelatedPerson.fromYaml(dynamic yaml) => yaml is String
       ? RelatedPerson.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

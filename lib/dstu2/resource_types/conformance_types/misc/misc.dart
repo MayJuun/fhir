@@ -63,6 +63,7 @@ abstract class ImplementationGuide
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ImplementationGuide.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuide.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -87,6 +88,7 @@ abstract class ImplementationGuideContact with _$ImplementationGuideContact {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ImplementationGuideContact.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideContact.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -116,6 +118,7 @@ abstract class ImplementationGuideDependency
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ImplementationGuideDependency.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideDependency.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -144,6 +147,7 @@ abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ImplementationGuidePackage.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuidePackage.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -170,6 +174,7 @@ abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ImplementationGuideGlobal.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideGlobal.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -202,6 +207,7 @@ abstract class ImplementationGuidePage with _$ImplementationGuidePage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ImplementationGuidePage.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuidePage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -235,6 +241,7 @@ abstract class ImplementationGuidePackageResource
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ImplementationGuidePackageResource.fromYaml(dynamic yaml) =>
       yaml is String
           ? ImplementationGuidePackageResource.fromJson(
@@ -300,6 +307,7 @@ abstract class TestScript with Resource implements _$TestScript {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TestScript.fromYaml(dynamic yaml) => yaml is String
       ? TestScript.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -324,6 +332,7 @@ abstract class TestScriptContact with _$TestScriptContact {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TestScriptContact.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -350,6 +359,7 @@ abstract class TestScriptMetadata with _$TestScriptMetadata {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TestScriptMetadata.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptMetadata.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -376,6 +386,7 @@ abstract class TestScriptMetadataLink with _$TestScriptMetadataLink {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TestScriptMetadataLink.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptMetadataLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -410,6 +421,7 @@ abstract class TestScriptMetadataCapability
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TestScriptMetadataCapability.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptMetadataCapability.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -438,6 +450,7 @@ abstract class TestScriptFixture with _$TestScriptFixture {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TestScriptFixture.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptFixture.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -468,6 +481,7 @@ abstract class TestScriptVariable with _$TestScriptVariable {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TestScriptVariable.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -492,6 +506,7 @@ abstract class TestScriptSetup with _$TestScriptSetup {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TestScriptSetup.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptSetup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -517,6 +532,7 @@ abstract class TestScriptSetupAction with _$TestScriptSetupAction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TestScriptSetupAction.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptSetupAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -567,6 +583,7 @@ abstract class TestScriptActionOperation with _$TestScriptActionOperation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TestScriptActionOperation.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptActionOperation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -595,6 +612,7 @@ abstract class TestScriptOperationRequestHeader
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TestScriptOperationRequestHeader.fromYaml(dynamic yaml) =>
       yaml is String
           ? TestScriptOperationRequestHeader.fromJson(
@@ -659,6 +677,7 @@ abstract class TestScriptActionAssert with _$TestScriptActionAssert {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TestScriptActionAssert.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptActionAssert.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -687,6 +706,7 @@ abstract class TestScriptTest with _$TestScriptTest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TestScriptTest.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptTest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -710,6 +730,7 @@ abstract class TestScriptTeardown with _$TestScriptTeardown {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TestScriptTeardown.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptTeardown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -734,6 +755,7 @@ abstract class TestScriptTeardownAction with _$TestScriptTeardownAction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TestScriptTeardownAction.fromYaml(dynamic yaml) => yaml is String
       ? TestScriptTeardownAction.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))

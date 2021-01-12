@@ -21,6 +21,7 @@ abstract class Element with _$Element {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Element.fromYaml(dynamic yaml) => yaml is String
       ? Element.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

@@ -43,6 +43,7 @@ abstract class Organization with Resource implements _$Organization {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Organization.fromYaml(dynamic yaml) => yaml is String
       ? Organization.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -70,6 +71,7 @@ abstract class OrganizationContact with _$OrganizationContact {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory OrganizationContact.fromYaml(dynamic yaml) => yaml is String
       ? OrganizationContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -127,6 +129,7 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory HealthcareService.fromYaml(dynamic yaml) => yaml is String
       ? HealthcareService.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -152,6 +155,7 @@ abstract class HealthcareServiceServiceType
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory HealthcareServiceServiceType.fromYaml(dynamic yaml) => yaml is String
       ? HealthcareServiceServiceType.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -184,6 +188,7 @@ abstract class HealthcareServiceAvailableTime
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) =>
       yaml is String
           ? HealthcareServiceAvailableTime.fromJson(
@@ -213,6 +218,7 @@ abstract class HealthcareServiceNotAvailable
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory HealthcareServiceNotAvailable.fromYaml(dynamic yaml) => yaml is String
       ? HealthcareServiceNotAvailable.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -258,6 +264,7 @@ abstract class Group with Resource implements _$Group {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Group.fromYaml(dynamic yaml) => yaml is String
       ? Group.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -287,6 +294,7 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory GroupCharacteristic.fromYaml(dynamic yaml) => yaml is String
       ? GroupCharacteristic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -313,6 +321,7 @@ abstract class GroupMember with _$GroupMember {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory GroupMember.fromYaml(dynamic yaml) => yaml is String
       ? GroupMember.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

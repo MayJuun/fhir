@@ -52,6 +52,7 @@ abstract class Appointment with Resource implements _$Appointment {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Appointment.fromYaml(dynamic yaml) => yaml is String
       ? Appointment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -83,6 +84,7 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory AppointmentParticipant.fromYaml(dynamic yaml) => yaml is String
       ? AppointmentParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -131,6 +133,7 @@ abstract class AppointmentResponse
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
       ? AppointmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -167,6 +170,7 @@ abstract class Schedule with Resource implements _$Schedule {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Schedule.fromYaml(dynamic yaml) => yaml is String
       ? Schedule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -211,6 +215,7 @@ abstract class Slot with Resource implements _$Slot {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Slot.fromYaml(dynamic yaml) => yaml is String
       ? Slot.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

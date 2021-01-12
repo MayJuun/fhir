@@ -53,6 +53,7 @@ abstract class Device with Resource implements _$Device {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Device.fromYaml(dynamic yaml) => yaml is String
       ? Device.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -92,6 +93,7 @@ abstract class DeviceComponent with Resource implements _$DeviceComponent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DeviceComponent.fromYaml(dynamic yaml) => yaml is String
       ? DeviceComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -118,6 +120,7 @@ abstract class DeviceComponentProductionSpecification
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DeviceComponentProductionSpecification.fromYaml(dynamic yaml) =>
       yaml is String
           ? DeviceComponentProductionSpecification.fromJson(
@@ -169,6 +172,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DeviceMetric.fromYaml(dynamic yaml) => yaml is String
       ? DeviceMetric.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -197,6 +201,7 @@ abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DeviceMetricCalibration.fromYaml(dynamic yaml) => yaml is String
       ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

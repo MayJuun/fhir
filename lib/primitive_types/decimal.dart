@@ -23,6 +23,7 @@ class Decimal extends PrimitiveObject<double> {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Decimal.fromYaml(dynamic yaml) => yaml is String
       ? Decimal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

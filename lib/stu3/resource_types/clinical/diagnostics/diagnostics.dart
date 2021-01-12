@@ -40,6 +40,7 @@ abstract class BodySite with Resource implements _$BodySite {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory BodySite.fromYaml(dynamic yaml) => yaml is String
       ? BodySite.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -92,6 +93,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DiagnosticReport.fromYaml(dynamic yaml) => yaml is String
       ? DiagnosticReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -114,6 +116,7 @@ abstract class DiagnosticReportPerformer
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DiagnosticReportPerformer.fromYaml(dynamic yaml) => yaml is String
       ? DiagnosticReportPerformer.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -137,6 +140,7 @@ abstract class DiagnosticReportImage implements _$DiagnosticReportImage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DiagnosticReportImage.fromYaml(dynamic yaml) => yaml is String
       ? DiagnosticReportImage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -175,6 +179,7 @@ abstract class ImagingManifest with Resource implements _$ImagingManifest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ImagingManifest.fromYaml(dynamic yaml) => yaml is String
       ? ImagingManifest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -199,6 +204,7 @@ abstract class ImagingManifestStudy implements _$ImagingManifestStudy {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ImagingManifestStudy.fromYaml(dynamic yaml) => yaml is String
       ? ImagingManifestStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -222,6 +228,7 @@ abstract class ImagingManifestSeries implements _$ImagingManifestSeries {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ImagingManifestSeries.fromYaml(dynamic yaml) => yaml is String
       ? ImagingManifestSeries.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -245,6 +252,7 @@ abstract class ImagingManifestInstance implements _$ImagingManifestInstance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ImagingManifestInstance.fromYaml(dynamic yaml) => yaml is String
       ? ImagingManifestInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -300,6 +308,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ImagingStudy.fromYaml(dynamic yaml) => yaml is String
       ? ImagingStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -337,6 +346,7 @@ abstract class ImagingStudySeries implements _$ImagingStudySeries {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ImagingStudySeries.fromYaml(dynamic yaml) => yaml is String
       ? ImagingStudySeries.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -364,6 +374,7 @@ abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ImagingStudyInstance.fromYaml(dynamic yaml) => yaml is String
       ? ImagingStudyInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -434,6 +445,7 @@ abstract class Observation with Resource implements _$Observation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Observation.fromYaml(dynamic yaml) => yaml is String
       ? Observation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -461,6 +473,7 @@ abstract class ObservationReferenceRange
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ObservationReferenceRange.fromYaml(dynamic yaml) => yaml is String
       ? ObservationReferenceRange.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -484,6 +497,7 @@ abstract class ObservationRelated implements _$ObservationRelated {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ObservationRelated.fromYaml(dynamic yaml) => yaml is String
       ? ObservationRelated.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -520,6 +534,7 @@ abstract class ObservationComponent implements _$ObservationComponent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ObservationComponent.fromYaml(dynamic yaml) => yaml is String
       ? ObservationComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -565,6 +580,7 @@ abstract class QuestionnaireResponse
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory QuestionnaireResponse.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -594,6 +610,7 @@ abstract class QuestionnaireResponseItem
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory QuestionnaireResponseItem.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireResponseItem.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -636,6 +653,7 @@ abstract class QuestionnaireResponseAnswer
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory QuestionnaireResponseAnswer.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireResponseAnswer.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -686,6 +704,7 @@ abstract class Sequence with Resource implements _$Sequence {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Sequence.fromYaml(dynamic yaml) => yaml is String
       ? Sequence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -718,6 +737,7 @@ abstract class SequenceReferenceSeq implements _$SequenceReferenceSeq {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory SequenceReferenceSeq.fromYaml(dynamic yaml) => yaml is String
       ? SequenceReferenceSeq.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -748,6 +768,7 @@ abstract class SequenceVariant implements _$SequenceVariant {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory SequenceVariant.fromYaml(dynamic yaml) => yaml is String
       ? SequenceVariant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -792,6 +813,7 @@ abstract class SequenceQuality implements _$SequenceQuality {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory SequenceQuality.fromYaml(dynamic yaml) => yaml is String
       ? SequenceQuality.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -823,6 +845,7 @@ abstract class SequenceRepository implements _$SequenceRepository {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory SequenceRepository.fromYaml(dynamic yaml) => yaml is String
       ? SequenceRepository.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -867,6 +890,7 @@ abstract class Specimen with Resource implements _$Specimen {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Specimen.fromYaml(dynamic yaml) => yaml is String
       ? Specimen.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -893,6 +917,7 @@ abstract class SpecimenCollection implements _$SpecimenCollection {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory SpecimenCollection.fromYaml(dynamic yaml) => yaml is String
       ? SpecimenCollection.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -919,6 +944,7 @@ abstract class SpecimenProcessing implements _$SpecimenProcessing {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory SpecimenProcessing.fromYaml(dynamic yaml) => yaml is String
       ? SpecimenProcessing.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -946,6 +972,7 @@ abstract class SpecimenContainer implements _$SpecimenContainer {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory SpecimenContainer.fromYaml(dynamic yaml) => yaml is String
       ? SpecimenContainer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

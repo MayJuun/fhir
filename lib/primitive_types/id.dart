@@ -23,6 +23,7 @@ class Id extends PrimitiveObject<String> {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Id.fromYaml(dynamic yaml) => yaml is String
       ? Id.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

@@ -23,6 +23,7 @@ abstract class ContactDetail implements _$ContactDetail {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ContactDetail.fromYaml(dynamic yaml) => yaml is String
       ? ContactDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -47,6 +48,7 @@ abstract class Contributor implements _$Contributor {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Contributor.fromYaml(dynamic yaml) => yaml is String
       ? Contributor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -76,6 +78,7 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory RelatedArtifact.fromYaml(dynamic yaml) => yaml is String
       ? RelatedArtifact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -99,6 +102,7 @@ abstract class UsageContext implements _$UsageContext {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory UsageContext.fromYaml(dynamic yaml) => yaml is String
       ? UsageContext.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -126,6 +130,7 @@ abstract class DataRequirement implements _$DataRequirement {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DataRequirement.fromYaml(dynamic yaml) => yaml is String
       ? DataRequirement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -155,6 +160,7 @@ abstract class DataRequirementCodeFilter
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DataRequirementCodeFilter.fromYaml(dynamic yaml) => yaml is String
       ? DataRequirementCodeFilter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -182,6 +188,7 @@ abstract class DataRequirementDateFilter
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DataRequirementDateFilter.fromYaml(dynamic yaml) => yaml is String
       ? DataRequirementDateFilter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -215,6 +222,7 @@ abstract class ParameterDefinition implements _$ParameterDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ParameterDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ParameterDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -245,6 +253,7 @@ abstract class TriggerDefinition implements _$TriggerDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TriggerDefinition.fromYaml(dynamic yaml) => yaml is String
       ? TriggerDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

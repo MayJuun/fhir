@@ -58,6 +58,7 @@ abstract class Conformance with Resource implements _$Conformance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Conformance.fromYaml(dynamic yaml) => yaml is String
       ? Conformance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -117,6 +118,7 @@ abstract class CapabilityStatement
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory CapabilityStatement.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -141,6 +143,7 @@ abstract class ConformanceContact with _$ConformanceContact {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ConformanceContact.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -166,6 +169,7 @@ abstract class ConformanceSoftware with _$ConformanceSoftware {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ConformanceSoftware.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceSoftware.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -190,6 +194,7 @@ abstract class ConformanceImplementation with _$ConformanceImplementation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ConformanceImplementation.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceImplementation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -227,6 +232,7 @@ abstract class ConformanceRest with _$ConformanceRest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ConformanceRest.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceRest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -254,6 +260,7 @@ abstract class ConformanceMessaging with _$ConformanceMessaging {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ConformanceMessaging.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceMessaging.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -282,6 +289,7 @@ abstract class ConformanceDocument with _$ConformanceDocument {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ConformanceDocument.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceDocument.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -309,6 +317,7 @@ abstract class ConformanceRestSecurity with _$ConformanceRestSecurity {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ConformanceRestSecurity.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceRestSecurity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -352,6 +361,7 @@ abstract class ConformanceRestResource with _$ConformanceRestResource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ConformanceRestResource.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceRestResource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -379,6 +389,7 @@ abstract class ConformanceResourceInteraction
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ConformanceResourceInteraction.fromYaml(dynamic yaml) =>
       yaml is String
           ? ConformanceResourceInteraction.fromJson(
@@ -407,6 +418,7 @@ abstract class ConformanceRestOperation with _$ConformanceRestOperation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ConformanceRestOperation.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceRestOperation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -434,6 +446,7 @@ abstract class ConformanceMessagingEndpoint
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ConformanceMessagingEndpoint.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceMessagingEndpoint.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -467,6 +480,7 @@ abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ConformanceMessagingEvent.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceMessagingEvent.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -494,6 +508,7 @@ abstract class ConformanceSecurityCertificate
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ConformanceSecurityCertificate.fromYaml(dynamic yaml) =>
       yaml is String
           ? ConformanceSecurityCertificate.fromJson(
@@ -523,6 +538,7 @@ abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ConformanceRestInteraction.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceRestInteraction.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -557,6 +573,7 @@ abstract class ConformanceResourceSearchParam
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ConformanceResourceSearchParam.fromYaml(dynamic yaml) =>
       yaml is String
           ? ConformanceResourceSearchParam.fromJson(
@@ -614,6 +631,7 @@ abstract class OperationDefinition
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory OperationDefinition.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -638,6 +656,7 @@ abstract class OperationDefinitionContact with _$OperationDefinitionContact {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory OperationDefinitionContact.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinitionContact.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -674,6 +693,7 @@ abstract class OperationDefinitionParameter
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory OperationDefinitionParameter.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinitionParameter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -706,6 +726,7 @@ abstract class OperationDefinitionParameterBinding
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory OperationDefinitionParameterBinding.fromYaml(dynamic yaml) =>
       yaml is String
           ? OperationDefinitionParameterBinding.fromJson(
@@ -758,6 +779,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory SearchParameter.fromYaml(dynamic yaml) => yaml is String
       ? SearchParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -782,6 +804,7 @@ abstract class SearchParameterContact with _$SearchParameterContact {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory SearchParameterContact.fromYaml(dynamic yaml) => yaml is String
       ? SearchParameterContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

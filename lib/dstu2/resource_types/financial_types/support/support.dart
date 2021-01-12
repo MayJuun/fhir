@@ -48,6 +48,7 @@ abstract class Coverage with Resource implements _$Coverage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Coverage.fromYaml(dynamic yaml) => yaml is String
       ? Coverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -88,6 +89,7 @@ abstract class EligibilityRequest
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory EligibilityRequest.fromYaml(dynamic yaml) => yaml is String
       ? EligibilityRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -134,6 +136,7 @@ abstract class EligibilityResponse
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory EligibilityResponse.fromYaml(dynamic yaml) => yaml is String
       ? EligibilityResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -175,6 +178,7 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
       ? EnrollmentRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -221,6 +225,7 @@ abstract class EnrollmentResponse
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String
       ? EnrollmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

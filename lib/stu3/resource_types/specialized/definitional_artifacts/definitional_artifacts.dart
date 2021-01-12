@@ -87,6 +87,7 @@ abstract class ActivityDefinition
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ActivityDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ActivityDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -110,6 +111,7 @@ abstract class ActivityDefinitionParticipant
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ActivityDefinitionParticipant.fromYaml(dynamic yaml) => yaml is String
       ? ActivityDefinitionParticipant.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -139,6 +141,7 @@ abstract class ActivityDefinitionDynamicValue
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ActivityDefinitionDynamicValue.fromYaml(dynamic yaml) =>
       yaml is String
           ? ActivityDefinitionDynamicValue.fromJson(
@@ -212,6 +215,7 @@ abstract class PlanDefinition with Resource implements _$PlanDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory PlanDefinition.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -238,6 +242,7 @@ abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory PlanDefinitionGoal.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionGoal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -262,6 +267,7 @@ abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory PlanDefinitionTarget.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -321,6 +327,7 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory PlanDefinitionAction.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -348,6 +355,7 @@ abstract class PlanDefinitionCondition implements _$PlanDefinitionCondition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory PlanDefinitionCondition.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionCondition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -374,6 +382,7 @@ abstract class PlanDefinitionRelatedAction
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory PlanDefinitionRelatedAction.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionRelatedAction.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -398,6 +407,7 @@ abstract class PlanDefinitionParticipant
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory PlanDefinitionParticipant.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionParticipant.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -427,6 +437,7 @@ abstract class PlanDefinitionDynamicValue
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory PlanDefinitionDynamicValue.fromYaml(dynamic yaml) => yaml is String
       ? PlanDefinitionDynamicValue.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -493,6 +504,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Questionnaire.fromYaml(dynamic yaml) => yaml is String
       ? Questionnaire.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -556,6 +568,7 @@ abstract class QuestionnaireItem implements _$QuestionnaireItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory QuestionnaireItem.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -599,6 +612,7 @@ abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory QuestionnaireEnableWhen.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireEnableWhen.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -627,6 +641,7 @@ abstract class QuestionnaireOption implements _$QuestionnaireOption {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory QuestionnaireOption.fromYaml(dynamic yaml) => yaml is String
       ? QuestionnaireOption.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -696,6 +711,7 @@ abstract class ServiceDefinition with Resource implements _$ServiceDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ServiceDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ServiceDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

@@ -1,7 +1,9 @@
-## [0.0.14]
+## [0.1.0]
+* That's right, a whole other version number!
 * added a thisReference method for resources
 * moved fromJson to its own file
 * added a newVersion method (stolen from DB), because it seemed like something that is generally useful
+* I think I'm finally going to try and add comments
 
 ## [0.0.13]
 * Added some YAML functionality. 

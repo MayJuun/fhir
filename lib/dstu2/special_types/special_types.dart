@@ -30,6 +30,7 @@ abstract class Meta implements _$Meta {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Meta.fromYaml(dynamic yaml) => yaml is String
       ? Meta.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -55,6 +56,7 @@ abstract class Reference implements _$Reference {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Reference.fromYaml(dynamic yaml) => yaml is String
       ? Reference.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -411,6 +413,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ElementDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -438,6 +441,7 @@ abstract class Narrative implements _$Narrative {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Narrative.fromYaml(dynamic yaml) => yaml is String
       ? Narrative.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -468,6 +472,7 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ElementDefinitionSlicing.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionSlicing.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -496,6 +501,7 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ElementDefinitionBase.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionBase.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -523,6 +529,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ElementDefinitionType.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionType.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -543,6 +550,7 @@ abstract class TypeCodeExtension implements _$TypeCodeExtension {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory TypeCodeExtension.fromYaml(dynamic yaml) => yaml is String
       ? TypeCodeExtension.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -577,6 +585,7 @@ abstract class ElementDefinitionConstraint
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ElementDefinitionConstraint.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionConstraint.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -609,6 +618,7 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ElementDefinitionBinding.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionBinding.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -638,6 +648,7 @@ abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory ElementDefinitionMapping.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionMapping.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))

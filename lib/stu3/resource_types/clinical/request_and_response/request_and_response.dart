@@ -55,6 +55,7 @@ abstract class Communication with Resource implements _$Communication {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Communication.fromYaml(dynamic yaml) => yaml is String
       ? Communication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -78,6 +79,7 @@ abstract class CommunicationPayload implements _$CommunicationPayload {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory CommunicationPayload.fromYaml(dynamic yaml) => yaml is String
       ? CommunicationPayload.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -135,6 +137,7 @@ abstract class CommunicationRequest
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory CommunicationRequest.fromYaml(dynamic yaml) => yaml is String
       ? CommunicationRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -159,6 +162,7 @@ abstract class CommunicationRequestPayload
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory CommunicationRequestPayload.fromYaml(dynamic yaml) => yaml is String
       ? CommunicationRequestPayload.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -182,6 +186,7 @@ abstract class CommunicationRequestRequester
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory CommunicationRequestRequester.fromYaml(dynamic yaml) => yaml is String
       ? CommunicationRequestRequester.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -241,6 +246,7 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DeviceRequest.fromYaml(dynamic yaml) => yaml is String
       ? DeviceRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -262,6 +268,7 @@ abstract class DeviceRequestRequester implements _$DeviceRequestRequester {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DeviceRequestRequester.fromYaml(dynamic yaml) => yaml is String
       ? DeviceRequestRequester.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -310,6 +317,7 @@ abstract class DeviceUseStatement
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory DeviceUseStatement.fromYaml(dynamic yaml) => yaml is String
       ? DeviceUseStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -355,6 +363,7 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory SupplyDelivery.fromYaml(dynamic yaml) => yaml is String
       ? SupplyDelivery.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -378,6 +387,7 @@ abstract class SupplyDeliverySuppliedItem
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory SupplyDeliverySuppliedItem.fromYaml(dynamic yaml) => yaml is String
       ? SupplyDeliverySuppliedItem.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -428,6 +438,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory SupplyRequest.fromYaml(dynamic yaml) => yaml is String
       ? SupplyRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -450,6 +461,7 @@ abstract class SupplyRequestOrderedItem implements _$SupplyRequestOrderedItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory SupplyRequestOrderedItem.fromYaml(dynamic yaml) => yaml is String
       ? SupplyRequestOrderedItem.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -472,6 +484,7 @@ abstract class SupplyRequestRequester implements _$SupplyRequestRequester {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory SupplyRequestRequester.fromYaml(dynamic yaml) => yaml is String
       ? SupplyRequestRequester.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
