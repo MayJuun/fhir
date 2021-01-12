@@ -46,6 +46,7 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
     List<DataRequirement> dataRequirement,
   }) = _GuidanceResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory GuidanceResponse.fromYaml(dynamic yaml) => yaml is String

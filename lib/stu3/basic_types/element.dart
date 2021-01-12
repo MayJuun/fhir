@@ -18,6 +18,7 @@ abstract class Element with _$Element {
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
   }) = _Element;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Element.fromYaml(dynamic yaml) => yaml is String

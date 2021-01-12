@@ -1,3 +1,8 @@
+## [0.0.14]
+* added a thisReference method for resources
+* moved fromJson to its own file
+* added a newVersion method (stolen from DB), because it seemed like something that is generally useful
+
 ## [0.0.13]
 * Added some YAML functionality. 
 * New Function toYamlString() changes resource to string formatted in YAML.

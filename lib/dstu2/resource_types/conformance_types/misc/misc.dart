@@ -60,6 +60,7 @@ abstract class ImplementationGuide
     @JsonKey(required: true) @required ImplementationGuidePage page,
   }) = _ImplementationGuide;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImplementationGuide.fromYaml(dynamic yaml) => yaml is String
@@ -83,6 +84,7 @@ abstract class ImplementationGuideContact with _$ImplementationGuideContact {
     List<ContactPoint> telecom,
   }) = _ImplementationGuideContact;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImplementationGuideContact.fromYaml(dynamic yaml) => yaml is String
@@ -111,6 +113,7 @@ abstract class ImplementationGuideDependency
     @JsonKey(name: '_uri') Element uriElement,
   }) = _ImplementationGuideDependency;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImplementationGuideDependency.fromYaml(dynamic yaml) => yaml is String
@@ -138,6 +141,7 @@ abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
         List<ImplementationGuidePackageResource> resource,
   }) = _ImplementationGuidePackage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImplementationGuidePackage.fromYaml(dynamic yaml) => yaml is String
@@ -163,6 +167,7 @@ abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
     @JsonKey(required: true) @required Reference profile,
   }) = _ImplementationGuideGlobal;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImplementationGuideGlobal.fromYaml(dynamic yaml) => yaml is String
@@ -194,6 +199,7 @@ abstract class ImplementationGuidePage with _$ImplementationGuidePage {
     List<ImplementationGuidePage> page,
   }) = _ImplementationGuidePage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImplementationGuidePage.fromYaml(dynamic yaml) => yaml is String
@@ -226,6 +232,7 @@ abstract class ImplementationGuidePackageResource
     Reference exampleFor,
   }) = _ImplementationGuidePackageResource;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImplementationGuidePackageResource.fromYaml(dynamic yaml) =>
@@ -290,6 +297,7 @@ abstract class TestScript with Resource implements _$TestScript {
     TestScriptTeardown teardown,
   }) = _TestScript;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScript.fromYaml(dynamic yaml) => yaml is String
@@ -313,6 +321,7 @@ abstract class TestScriptContact with _$TestScriptContact {
     List<ContactPoint> telecom,
   }) = _TestScriptContact;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptContact.fromYaml(dynamic yaml) => yaml is String
@@ -338,6 +347,7 @@ abstract class TestScriptMetadata with _$TestScriptMetadata {
         List<TestScriptMetadataCapability> capability,
   }) = _TestScriptMetadata;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptMetadata.fromYaml(dynamic yaml) => yaml is String
@@ -363,6 +373,7 @@ abstract class TestScriptMetadataLink with _$TestScriptMetadataLink {
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _TestScriptMetadataLink;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptMetadataLink.fromYaml(dynamic yaml) => yaml is String
@@ -396,6 +407,7 @@ abstract class TestScriptMetadataCapability
     @JsonKey(required: true) @required Reference conformance,
   }) = _TestScriptMetadataCapability;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptMetadataCapability.fromYaml(dynamic yaml) => yaml is String
@@ -423,6 +435,7 @@ abstract class TestScriptFixture with _$TestScriptFixture {
     Reference resource,
   }) = _TestScriptFixture;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptFixture.fromYaml(dynamic yaml) => yaml is String
@@ -452,6 +465,7 @@ abstract class TestScriptVariable with _$TestScriptVariable {
     @JsonKey(name: '_sourceId') Element sourceIdElement,
   }) = _TestScriptVariable;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptVariable.fromYaml(dynamic yaml) => yaml is String
@@ -475,6 +489,7 @@ abstract class TestScriptSetup with _$TestScriptSetup {
     @JsonKey(required: true) @required List<TestScriptSetupAction> action,
   }) = _TestScriptSetup;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptSetup.fromYaml(dynamic yaml) => yaml is String
@@ -499,6 +514,7 @@ abstract class TestScriptSetupAction with _$TestScriptSetupAction {
     @JsonKey(name: 'assert') TestScriptActionAssert assert_,
   }) = _TestScriptSetupAction;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptSetupAction.fromYaml(dynamic yaml) => yaml is String
@@ -548,6 +564,7 @@ abstract class TestScriptActionOperation with _$TestScriptActionOperation {
     @JsonKey(name: '_url') Element urlElement,
   }) = _TestScriptActionOperation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptActionOperation.fromYaml(dynamic yaml) => yaml is String
@@ -575,6 +592,7 @@ abstract class TestScriptOperationRequestHeader
     @JsonKey(name: '_value') Element valueElement,
   }) = _TestScriptOperationRequestHeader;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptOperationRequestHeader.fromYaml(dynamic yaml) =>
@@ -638,6 +656,7 @@ abstract class TestScriptActionAssert with _$TestScriptActionAssert {
     @JsonKey(name: '_warningOnly') Element warningOnlyElement,
   }) = _TestScriptActionAssert;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptActionAssert.fromYaml(dynamic yaml) => yaml is String
@@ -665,6 +684,7 @@ abstract class TestScriptTest with _$TestScriptTest {
     @JsonKey(required: true) @required List<TestScriptSetupAction> action,
   }) = _TestScriptTest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptTest.fromYaml(dynamic yaml) => yaml is String
@@ -687,6 +707,7 @@ abstract class TestScriptTeardown with _$TestScriptTeardown {
     @JsonKey(required: true) @required List<TestScriptTeardownAction> action,
   }) = _TestScriptTeardown;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptTeardown.fromYaml(dynamic yaml) => yaml is String
@@ -710,6 +731,7 @@ abstract class TestScriptTeardownAction with _$TestScriptTeardownAction {
     TestScriptActionOperation operation,
   }) = _TestScriptTeardownAction;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptTeardownAction.fromYaml(dynamic yaml) => yaml is String

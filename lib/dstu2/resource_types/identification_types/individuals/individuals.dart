@@ -55,6 +55,7 @@ abstract class Patient with Resource implements _$Patient {
     List<PatientLink> link,
   }) = _Patient;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Patient.fromYaml(dynamic yaml) => yaml is String
@@ -84,6 +85,7 @@ abstract class PatientContact with _$PatientContact {
     Period period,
   }) = _PatientContact;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PatientContact.fromYaml(dynamic yaml) => yaml is String
@@ -108,6 +110,7 @@ abstract class PatientAnimal with _$PatientAnimal {
     CodeableConcept genderStatus,
   }) = _PatientAnimal;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PatientAnimal.fromYaml(dynamic yaml) => yaml is String
@@ -132,6 +135,7 @@ abstract class PatientCommunication with _$PatientCommunication {
     @JsonKey(name: '_preferred') Element preferredElement,
   }) = _PatientCommunication;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PatientCommunication.fromYaml(dynamic yaml) => yaml is String
@@ -158,6 +162,7 @@ abstract class PatientLink with _$PatientLink {
     @JsonKey(name: '_type') Element typeElement,
   }) = _PatientLink;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PatientLink.fromYaml(dynamic yaml) => yaml is String
@@ -202,6 +207,7 @@ abstract class Practitioner with Resource implements _$Practitioner {
     List<CodeableConcept> communication,
   }) = _Practitioner;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Practitioner.fromYaml(dynamic yaml) => yaml is String
@@ -231,6 +237,7 @@ abstract class PractitionerPractitionerRole
     List<Reference> healthcareService,
   }) = _PractitionerPractitionerRole;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PractitionerPractitionerRole.fromYaml(dynamic yaml) => yaml is String
@@ -257,6 +264,7 @@ abstract class PractitionerQualification with _$PractitionerQualification {
     Reference issuer,
   }) = _PractitionerQualification;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PractitionerQualification.fromYaml(dynamic yaml) => yaml is String
@@ -302,6 +310,7 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
     // @JsonKey(name: '_active') Element activeElement,
   }) = _RelatedPerson;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory RelatedPerson.fromYaml(dynamic yaml) => yaml is String

@@ -20,6 +20,7 @@ class FhirUri extends PrimitiveObject<Uri> {
 
   const FhirUri._(this.value);
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory FhirUri.fromYaml(dynamic yaml) => yaml is String

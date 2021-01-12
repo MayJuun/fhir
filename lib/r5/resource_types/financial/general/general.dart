@@ -42,6 +42,7 @@ abstract class Account with Resource implements _$Account {
     Reference partOf,
   }) = _Account;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Account.fromYaml(dynamic yaml) => yaml is String
@@ -66,6 +67,7 @@ abstract class AccountCoverage implements _$AccountCoverage {
     @JsonKey(name: '_priority') Element priorityElement,
   }) = _AccountCoverage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AccountCoverage.fromYaml(dynamic yaml) => yaml is String
@@ -91,6 +93,7 @@ abstract class AccountGuarantor implements _$AccountGuarantor {
     Period period,
   }) = _AccountGuarantor;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AccountGuarantor.fromYaml(dynamic yaml) => yaml is String
@@ -156,6 +159,7 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
     List<Reference> supportingInformation,
   }) = _ChargeItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ChargeItem.fromYaml(dynamic yaml) => yaml is String
@@ -179,6 +183,7 @@ abstract class ChargeItemPerformer implements _$ChargeItemPerformer {
     @required Reference actor,
   }) = _ChargeItemPerformer;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ChargeItemPerformer.fromYaml(dynamic yaml) => yaml is String
@@ -250,6 +255,7 @@ abstract class ChargeItemDefinition
     List<ChargeItemDefinitionPropertyGroup> propertyGroup,
   }) = _ChargeItemDefinition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ChargeItemDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -278,6 +284,7 @@ abstract class ChargeItemDefinitionApplicability
     @JsonKey(name: '_expression') Element expressionElement,
   }) = _ChargeItemDefinitionApplicability;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ChargeItemDefinitionApplicability.fromYaml(dynamic yaml) =>
@@ -306,6 +313,7 @@ abstract class ChargeItemDefinitionPropertyGroup
     List<ChargeItemDefinitionPriceComponent> priceComponent,
   }) = _ChargeItemDefinitionPropertyGroup;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ChargeItemDefinitionPropertyGroup.fromYaml(dynamic yaml) =>
@@ -338,6 +346,7 @@ abstract class ChargeItemDefinitionPriceComponent
     Money amount,
   }) = _ChargeItemDefinitionPriceComponent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ChargeItemDefinitionPriceComponent.fromYaml(dynamic yaml) =>
@@ -415,6 +424,7 @@ abstract class Contract with Resource implements _$Contract {
     Reference legallyBindingReference,
   }) = _Contract;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Contract.fromYaml(dynamic yaml) => yaml is String
@@ -446,6 +456,7 @@ abstract class ContractContentDefinition
     @JsonKey(name: '_copyright') Element copyrightElement,
   }) = _ContractContentDefinition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractContentDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -483,6 +494,7 @@ abstract class ContractTerm implements _$ContractTerm {
     List<ContractTerm> group,
   }) = _ContractTerm;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractTerm.fromYaml(dynamic yaml) => yaml is String
@@ -509,6 +521,7 @@ abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
     List<Coding> control,
   }) = _ContractSecurityLabel;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractSecurityLabel.fromYaml(dynamic yaml) => yaml is String
@@ -544,6 +557,7 @@ abstract class ContractOffer implements _$ContractOffer {
         List<Element> securityLabelNumberElement,
   }) = _ContractOffer;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractOffer.fromYaml(dynamic yaml) => yaml is String
@@ -567,6 +581,7 @@ abstract class ContractParty implements _$ContractParty {
     @required CodeableConcept role,
   }) = _ContractParty;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractParty.fromYaml(dynamic yaml) => yaml is String
@@ -608,6 +623,7 @@ abstract class ContractAnswer implements _$ContractAnswer {
     Reference valueReference,
   }) = _ContractAnswer;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractAnswer.fromYaml(dynamic yaml) => yaml is String
@@ -649,6 +665,7 @@ abstract class ContractAsset implements _$ContractAsset {
     List<ContractValuedItem> valuedItem,
   }) = _ContractAsset;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractAsset.fromYaml(dynamic yaml) => yaml is String
@@ -674,6 +691,7 @@ abstract class ContractContext implements _$ContractContext {
     @JsonKey(name: '_text') Element textElement,
   }) = _ContractContext;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractContext.fromYaml(dynamic yaml) => yaml is String
@@ -718,6 +736,7 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
         List<Element> securityLabelNumberElement,
   }) = _ContractValuedItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractValuedItem.fromYaml(dynamic yaml) => yaml is String
@@ -769,6 +788,7 @@ abstract class ContractAction implements _$ContractAction {
         List<Element> securityLabelNumberElement,
   }) = _ContractAction;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractAction.fromYaml(dynamic yaml) => yaml is String
@@ -792,6 +812,7 @@ abstract class ContractSubject implements _$ContractSubject {
     CodeableConcept role,
   }) = _ContractSubject;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractSubject.fromYaml(dynamic yaml) => yaml is String
@@ -816,6 +837,7 @@ abstract class ContractSigner implements _$ContractSigner {
     @required List<Signature> signature,
   }) = _ContractSigner;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractSigner.fromYaml(dynamic yaml) => yaml is String
@@ -839,6 +861,7 @@ abstract class ContractFriendly implements _$ContractFriendly {
     Reference contentReference,
   }) = _ContractFriendly;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractFriendly.fromYaml(dynamic yaml) => yaml is String
@@ -862,6 +885,7 @@ abstract class ContractLegal implements _$ContractLegal {
     Reference contentReference,
   }) = _ContractLegal;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractLegal.fromYaml(dynamic yaml) => yaml is String
@@ -885,6 +909,7 @@ abstract class ContractRule implements _$ContractRule {
     Reference contentReference,
   }) = _ContractRule;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractRule.fromYaml(dynamic yaml) => yaml is String
@@ -967,6 +992,7 @@ abstract class ExplanationOfBenefit
     List<ExplanationOfBenefitBenefitBalance> benefitBalance,
   }) = _ExplanationOfBenefit;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefit.fromYaml(dynamic yaml) => yaml is String
@@ -992,6 +1018,7 @@ abstract class ExplanationOfBenefitRelated
     Identifier reference,
   }) = _ExplanationOfBenefitRelated;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitRelated.fromYaml(dynamic yaml) => yaml is String
@@ -1017,6 +1044,7 @@ abstract class ExplanationOfBenefitPayee
     Reference party,
   }) = _ExplanationOfBenefitPayee;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitPayee.fromYaml(dynamic yaml) => yaml is String
@@ -1047,6 +1075,7 @@ abstract class ExplanationOfBenefitCareTeam
     CodeableConcept qualification,
   }) = _ExplanationOfBenefitCareTeam;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitCareTeam.fromYaml(dynamic yaml) => yaml is String
@@ -1085,6 +1114,7 @@ abstract class ExplanationOfBenefitSupportingInfo
     Coding reason,
   }) = _ExplanationOfBenefitSupportingInfo;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitSupportingInfo.fromYaml(dynamic yaml) =>
@@ -1118,6 +1148,7 @@ abstract class ExplanationOfBenefitDiagnosis
     CodeableConcept packageCode,
   }) = _ExplanationOfBenefitDiagnosis;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitDiagnosis.fromYaml(dynamic yaml) => yaml is String
@@ -1149,6 +1180,7 @@ abstract class ExplanationOfBenefitProcedure
     List<Reference> udi,
   }) = _ExplanationOfBenefitProcedure;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitProcedure.fromYaml(dynamic yaml) => yaml is String
@@ -1177,6 +1209,7 @@ abstract class ExplanationOfBenefitInsurance
     @JsonKey(name: '_preAuthRef') List<Element> preAuthRefElement,
   }) = _ExplanationOfBenefitInsurance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitInsurance.fromYaml(dynamic yaml) => yaml is String
@@ -1205,6 +1238,7 @@ abstract class ExplanationOfBenefitAccident
     Reference locationReference,
   }) = _ExplanationOfBenefitAccident;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitAccident.fromYaml(dynamic yaml) => yaml is String
@@ -1262,6 +1296,7 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
     List<ExplanationOfBenefitDetail> detail,
   }) = _ExplanationOfBenefitItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitItem.fromYaml(dynamic yaml) => yaml is String
@@ -1290,6 +1325,7 @@ abstract class ExplanationOfBenefitAdjudication
     @JsonKey(name: '_value') Element valueElement,
   }) = _ExplanationOfBenefitAdjudication;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitAdjudication.fromYaml(dynamic yaml) =>
@@ -1333,6 +1369,7 @@ abstract class ExplanationOfBenefitDetail
     List<ExplanationOfBenefitSubDetail> subDetail,
   }) = _ExplanationOfBenefitDetail;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitDetail.fromYaml(dynamic yaml) => yaml is String
@@ -1372,6 +1409,7 @@ abstract class ExplanationOfBenefitSubDetail
     List<ExplanationOfBenefitAdjudication> adjudication,
   }) = _ExplanationOfBenefitSubDetail;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitSubDetail.fromYaml(dynamic yaml) => yaml is String
@@ -1422,6 +1460,7 @@ abstract class ExplanationOfBenefitAddItem
     List<ExplanationOfBenefitDetail1> detail,
   }) = _ExplanationOfBenefitAddItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitAddItem.fromYaml(dynamic yaml) => yaml is String
@@ -1456,6 +1495,7 @@ abstract class ExplanationOfBenefitDetail1
     List<ExplanationOfBenefitSubDetail1> subDetail,
   }) = _ExplanationOfBenefitDetail1;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitDetail1.fromYaml(dynamic yaml) => yaml is String
@@ -1489,6 +1529,7 @@ abstract class ExplanationOfBenefitSubDetail1
     List<ExplanationOfBenefitAdjudication> adjudication,
   }) = _ExplanationOfBenefitSubDetail1;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitSubDetail1.fromYaml(dynamic yaml) =>
@@ -1516,6 +1557,7 @@ abstract class ExplanationOfBenefitTotal
     @required Money amount,
   }) = _ExplanationOfBenefitTotal;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitTotal.fromYaml(dynamic yaml) => yaml is String
@@ -1546,6 +1588,7 @@ abstract class ExplanationOfBenefitPayment
     Identifier identifier,
   }) = _ExplanationOfBenefitPayment;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitPayment.fromYaml(dynamic yaml) => yaml is String
@@ -1577,6 +1620,7 @@ abstract class ExplanationOfBenefitProcessNote
     CodeableConcept language,
   }) = _ExplanationOfBenefitProcessNote;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitProcessNote.fromYaml(dynamic yaml) =>
@@ -1613,6 +1657,7 @@ abstract class ExplanationOfBenefitBenefitBalance
     List<ExplanationOfBenefitFinancial> financial,
   }) = _ExplanationOfBenefitBenefitBalance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitBenefitBalance.fromYaml(dynamic yaml) =>
@@ -1648,6 +1693,7 @@ abstract class ExplanationOfBenefitFinancial
     Money usedMoney,
   }) = _ExplanationOfBenefitFinancial;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefitFinancial.fromYaml(dynamic yaml) => yaml is String
@@ -1696,6 +1742,7 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
     List<InsurancePlanPlan> plan,
   }) = _InsurancePlan;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory InsurancePlan.fromYaml(dynamic yaml) => yaml is String
@@ -1721,6 +1768,7 @@ abstract class InsurancePlanContact implements _$InsurancePlanContact {
     Address address,
   }) = _InsurancePlanContact;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory InsurancePlanContact.fromYaml(dynamic yaml) => yaml is String
@@ -1745,6 +1793,7 @@ abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage {
     @required List<InsurancePlanBenefit> benefit,
   }) = _InsurancePlanCoverage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory InsurancePlanCoverage.fromYaml(dynamic yaml) => yaml is String
@@ -1770,6 +1819,7 @@ abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit {
     List<InsurancePlanLimit> limit,
   }) = _InsurancePlanBenefit;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory InsurancePlanBenefit.fromYaml(dynamic yaml) => yaml is String
@@ -1793,6 +1843,7 @@ abstract class InsurancePlanLimit implements _$InsurancePlanLimit {
     CodeableConcept code,
   }) = _InsurancePlanLimit;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory InsurancePlanLimit.fromYaml(dynamic yaml) => yaml is String
@@ -1820,6 +1871,7 @@ abstract class InsurancePlanPlan implements _$InsurancePlanPlan {
     List<InsurancePlanSpecificCost> specificCost,
   }) = _InsurancePlanPlan;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory InsurancePlanPlan.fromYaml(dynamic yaml) => yaml is String
@@ -1847,6 +1899,7 @@ abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _InsurancePlanGeneralCost;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory InsurancePlanGeneralCost.fromYaml(dynamic yaml) => yaml is String
@@ -1872,6 +1925,7 @@ abstract class InsurancePlanSpecificCost
     List<InsurancePlanBenefit1> benefit,
   }) = _InsurancePlanSpecificCost;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory InsurancePlanSpecificCost.fromYaml(dynamic yaml) => yaml is String
@@ -1896,6 +1950,7 @@ abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1 {
     List<InsurancePlanCost> cost,
   }) = _InsurancePlanBenefit1;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory InsurancePlanBenefit1.fromYaml(dynamic yaml) => yaml is String
@@ -1921,6 +1976,7 @@ abstract class InsurancePlanCost implements _$InsurancePlanCost {
     Quantity value,
   }) = _InsurancePlanCost;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory InsurancePlanCost.fromYaml(dynamic yaml) => yaml is String

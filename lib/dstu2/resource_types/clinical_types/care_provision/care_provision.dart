@@ -48,6 +48,7 @@ abstract class CarePlan with Resource implements _$CarePlan {
     Annotation note,
   }) = _CarePlan;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CarePlan.fromYaml(dynamic yaml) => yaml is String
@@ -71,6 +72,7 @@ abstract class CarePlanRelatedPlan with _$CarePlanRelatedPlan {
     @JsonKey(required: true) @required Reference plan,
   }) = _CarePlanRelatedPlan;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CarePlanRelatedPlan.fromYaml(dynamic yaml) => yaml is String
@@ -94,6 +96,7 @@ abstract class CarePlanParticipant with _$CarePlanParticipant {
     Reference member,
   }) = _CarePlanParticipant;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CarePlanParticipant.fromYaml(dynamic yaml) => yaml is String
@@ -120,6 +123,7 @@ abstract class CarePlanActivity with _$CarePlanActivity {
     CarePlanActivityDetail detail,
   }) = _CarePlanActivity;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CarePlanActivity.fromYaml(dynamic yaml) => yaml is String
@@ -163,6 +167,7 @@ abstract class CarePlanActivityDetail with _$CarePlanActivityDetail {
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _CarePlanActivityDetail;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CarePlanActivityDetail.fromYaml(dynamic yaml) => yaml is String
@@ -213,6 +218,7 @@ abstract class Goal with Resource implements _$Goal {
     List<GoalOutcome> outcome,
   }) = _Goal;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Goal.fromYaml(dynamic yaml) => yaml is String
@@ -235,6 +241,7 @@ abstract class GoalOutcome with _$GoalOutcome {
     Reference resultReference,
   }) = _GoalOutcome;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory GoalOutcome.fromYaml(dynamic yaml) => yaml is String
@@ -280,6 +287,7 @@ abstract class ReferralRequest with Resource implements _$ReferralRequest {
     Period fulfillmentTime,
   }) = _ReferralRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ReferralRequest.fromYaml(dynamic yaml) => yaml is String
@@ -327,6 +335,7 @@ abstract class ProcedureRequest with Resource implements _$ProcedureRequest {
         ProcedureRequestPriority priority,
   }) = _ProcedureRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProcedureRequest.fromYaml(dynamic yaml) => yaml is String
@@ -371,6 +380,7 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
     NutritionOrderEnteralFormula enteralFormula,
   }) = _NutritionOrder;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory NutritionOrder.fromYaml(dynamic yaml) => yaml is String
@@ -400,6 +410,7 @@ abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
     @JsonKey(name: '_instruction') Element instructionElement,
   }) = _NutritionOrderOralDiet;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory NutritionOrderOralDiet.fromYaml(dynamic yaml) => yaml is String
@@ -429,6 +440,7 @@ abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
     @JsonKey(name: '_instruction') Element instructionElement,
   }) = _NutritionOrderSupplement;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory NutritionOrderSupplement.fromYaml(dynamic yaml) => yaml is String
@@ -467,6 +479,7 @@ abstract class NutritionOrderEnteralFormula
         Element administrationInstructionElement,
   }) = _NutritionOrderEnteralFormula;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory NutritionOrderEnteralFormula.fromYaml(dynamic yaml) => yaml is String
@@ -493,6 +506,7 @@ abstract class NutritionOrderOralDietNutrient
     Quantity amount,
   }) = _NutritionOrderOralDietNutrient;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory NutritionOrderOralDietNutrient.fromYaml(dynamic yaml) =>
@@ -521,6 +535,7 @@ abstract class NutritionOrderOralDietTexture
     CodeableConcept foodType,
   }) = _NutritionOrderOralDietTexture;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory NutritionOrderOralDietTexture.fromYaml(dynamic yaml) => yaml is String
@@ -548,6 +563,7 @@ abstract class NutritionOrderEnteralFormulaAdministration
     Ratio rateRatio,
   }) = _NutritionOrderEnteralFormulaAdministration;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory NutritionOrderEnteralFormulaAdministration.fromYaml(dynamic yaml) =>
@@ -588,6 +604,7 @@ abstract class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
     String notes,
   }) = _VisionPrescriptionDispense;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory VisionPrescriptionDispense.fromYaml(dynamic yaml) => yaml is String
@@ -629,6 +646,7 @@ abstract class VisionPrescription
     List<VisionPrescriptionDispense> dispense,
   }) = _VisionPrescription;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory VisionPrescription.fromYaml(dynamic yaml) => yaml is String

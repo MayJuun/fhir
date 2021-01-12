@@ -49,6 +49,7 @@ abstract class Appointment with Resource implements _$Appointment {
     @JsonKey(required: true) @required List<AppointmentParticipant> participant,
   }) = _Appointment;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Appointment.fromYaml(dynamic yaml) => yaml is String
@@ -79,6 +80,7 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
     @JsonKey(name: '_status') Element statusElement,
   }) = _AppointmentParticipant;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AppointmentParticipant.fromYaml(dynamic yaml) => yaml is String
@@ -126,6 +128,7 @@ abstract class AppointmentResponse
     @JsonKey(name: '_comment') Element commentElement,
   }) = _AppointmentResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
@@ -161,6 +164,7 @@ abstract class Schedule with Resource implements _$Schedule {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Schedule;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Schedule.fromYaml(dynamic yaml) => yaml is String
@@ -204,6 +208,7 @@ abstract class Slot with Resource implements _$Slot {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Slot;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Slot.fromYaml(dynamic yaml) => yaml is String

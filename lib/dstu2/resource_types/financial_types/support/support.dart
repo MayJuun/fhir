@@ -45,6 +45,7 @@ abstract class Coverage with Resource implements _$Coverage {
     List<Reference> contract,
   }) = _Coverage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Coverage.fromYaml(dynamic yaml) => yaml is String
@@ -84,6 +85,7 @@ abstract class EligibilityRequest
     Reference organization,
   }) = _EligibilityRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EligibilityRequest.fromYaml(dynamic yaml) => yaml is String
@@ -129,6 +131,7 @@ abstract class EligibilityResponse
     Reference requestOrganization,
   }) = _EligibilityResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EligibilityResponse.fromYaml(dynamic yaml) => yaml is String
@@ -169,6 +172,7 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
     @JsonKey(required: true) @required Coding relationship,
   }) = _EnrollmentRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
@@ -214,6 +218,7 @@ abstract class EnrollmentResponse
     Reference requestOrganization,
   }) = _EnrollmentResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String

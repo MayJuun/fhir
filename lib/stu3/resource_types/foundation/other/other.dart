@@ -34,6 +34,7 @@ abstract class Basic with Resource implements _$Basic {
     Reference author,
   }) = _Basic;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Basic.fromYaml(dynamic yaml) => yaml is String
@@ -67,6 +68,7 @@ abstract class Binary with Resource implements _$Binary {
     @JsonKey(name: '_content') Element contentElement,
   }) = _Binary;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Binary.fromYaml(dynamic yaml) => yaml is String
@@ -103,6 +105,7 @@ abstract class Bundle with Resource implements _$Bundle {
     Signature signature,
   }) = _Bundle;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Bundle.fromYaml(dynamic yaml) => yaml is String
@@ -124,6 +127,7 @@ abstract class BundleLink implements _$BundleLink {
     @JsonKey(name: '_url') Element urlElement,
   }) = _BundleLink;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BundleLink.fromYaml(dynamic yaml) => yaml is String
@@ -149,6 +153,7 @@ abstract class BundleEntry implements _$BundleEntry {
     BundleResponse response,
   }) = _BundleEntry;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BundleEntry.fromYaml(dynamic yaml) => yaml is String
@@ -171,6 +176,7 @@ abstract class BundleSearch implements _$BundleSearch {
     @JsonKey(name: '_score') Element scoreElement,
   }) = _BundleSearch;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BundleSearch.fromYaml(dynamic yaml) => yaml is String
@@ -201,6 +207,7 @@ abstract class BundleRequest implements _$BundleRequest {
     @JsonKey(name: '_ifNoneExist') Element ifNoneExistElement,
   }) = _BundleRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BundleRequest.fromYaml(dynamic yaml) => yaml is String
@@ -228,6 +235,7 @@ abstract class BundleResponse implements _$BundleResponse {
     Resource outcome,
   }) = _BundleResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BundleResponse.fromYaml(dynamic yaml) => yaml is String
@@ -261,6 +269,7 @@ abstract class Linkage with Resource implements _$Linkage {
     @required List<LinkageItem> item,
   }) = _Linkage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Linkage.fromYaml(dynamic yaml) => yaml is String
@@ -282,6 +291,7 @@ abstract class LinkageItem implements _$LinkageItem {
     @required Reference resource,
   }) = _LinkageItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory LinkageItem.fromYaml(dynamic yaml) => yaml is String
@@ -336,6 +346,7 @@ abstract class Media with Resource implements _$Media {
     List<Annotation> note,
   }) = _Media;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Media.fromYaml(dynamic yaml) => yaml is String
@@ -377,6 +388,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     List<Reference> focus,
   }) = _MessageHeader;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MessageHeader.fromYaml(dynamic yaml) => yaml is String
@@ -400,6 +412,7 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
     @JsonKey(name: '_endpoint') Element endpointElement,
   }) = _MessageHeaderDestination;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MessageHeaderDestination.fromYaml(dynamic yaml) => yaml is String
@@ -428,6 +441,7 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
     @JsonKey(name: '_endpoint') Element endpointElement,
   }) = _MessageHeaderSource;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MessageHeaderSource.fromYaml(dynamic yaml) => yaml is String
@@ -451,6 +465,7 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
     Reference details,
   }) = _MessageHeaderResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MessageHeaderResponse.fromYaml(dynamic yaml) => yaml is String
@@ -481,6 +496,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     @required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory OperationOutcome.fromYaml(dynamic yaml) => yaml is String
@@ -510,6 +526,7 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
     @JsonKey(name: '_expression') List<Element> expressionElement,
   }) = _OperationOutcomeIssue;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory OperationOutcomeIssue.fromYaml(dynamic yaml) => yaml is String
@@ -540,6 +557,7 @@ abstract class Parameters with Resource implements _$Parameters {
     List<ParametersParameter> parameter,
   }) = _Parameters;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Parameters.fromYaml(dynamic yaml) => yaml is String
@@ -632,6 +650,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
     @JsonKey(name: 'part') List<ParametersParameter> part_,
   }) = _ParametersParameter;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ParametersParameter.fromYaml(dynamic yaml) => yaml is String
@@ -674,6 +693,7 @@ abstract class Subscription with Resource implements _$Subscription {
     List<Coding> tag,
   }) = _Subscription;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Subscription.fromYaml(dynamic yaml) => yaml is String
@@ -700,6 +720,7 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
     @JsonKey(name: '_header') List<Element> headerElement,
   }) = _SubscriptionChannel;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubscriptionChannel.fromYaml(dynamic yaml) => yaml is String

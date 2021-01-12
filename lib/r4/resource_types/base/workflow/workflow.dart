@@ -60,6 +60,7 @@ abstract class Appointment with Resource implements _$Appointment {
     List<Period> requestedPeriod,
   }) = _Appointment;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Appointment.fromYaml(dynamic yaml) => yaml is String
@@ -90,6 +91,7 @@ abstract class AppointmentParticipant implements _$AppointmentParticipant {
     Period period,
   }) = _AppointmentParticipant;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AppointmentParticipant.fromYaml(dynamic yaml) => yaml is String
@@ -133,6 +135,7 @@ abstract class AppointmentResponse
     @JsonKey(name: '_comment') Element commentElement,
   }) = _AppointmentResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
@@ -172,6 +175,7 @@ abstract class Schedule with Resource implements _$Schedule {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Schedule;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Schedule.fromYaml(dynamic yaml) => yaml is String
@@ -217,6 +221,7 @@ abstract class Slot with Resource implements _$Slot {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Slot;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Slot.fromYaml(dynamic yaml) => yaml is String
@@ -283,6 +288,7 @@ abstract class Task with Resource implements _$Task {
     List<TaskOutput> output,
   }) = _Task;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Task.fromYaml(dynamic yaml) => yaml is String
@@ -307,6 +313,7 @@ abstract class TaskRestriction implements _$TaskRestriction {
     List<Reference> recipient,
   }) = _TaskRestriction;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TaskRestriction.fromYaml(dynamic yaml) => yaml is String
@@ -398,6 +405,7 @@ abstract class TaskInput implements _$TaskInput {
     Meta valueMeta,
   }) = _TaskInput;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TaskInput.fromYaml(dynamic yaml) => yaml is String
@@ -489,6 +497,7 @@ abstract class TaskOutput implements _$TaskOutput {
     Meta valueMeta,
   }) = _TaskOutput;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TaskOutput.fromYaml(dynamic yaml) => yaml is String
@@ -539,6 +548,7 @@ abstract class VerificationResult
     List<VerificationResultValidator> validator,
   }) = _VerificationResult;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory VerificationResult.fromYaml(dynamic yaml) => yaml is String
@@ -569,6 +579,7 @@ abstract class VerificationResultPrimarySource
     List<CodeableConcept> pushTypeAvailable,
   }) = _VerificationResultPrimarySource;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory VerificationResultPrimarySource.fromYaml(dynamic yaml) =>
@@ -607,6 +618,7 @@ abstract class VerificationResultAttestation
     Signature sourceSignature,
   }) = _VerificationResultAttestation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory VerificationResultAttestation.fromYaml(dynamic yaml) => yaml is String
@@ -634,6 +646,7 @@ abstract class VerificationResultValidator
     Signature attestationSignature,
   }) = _VerificationResultValidator;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory VerificationResultValidator.fromYaml(dynamic yaml) => yaml is String

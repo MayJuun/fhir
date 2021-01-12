@@ -52,6 +52,7 @@ abstract class Encounter with Resource implements _$Encounter {
     Reference partOf,
   }) = _Encounter;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Encounter.fromYaml(dynamic yaml) => yaml is String
@@ -78,6 +79,7 @@ abstract class EncounterStatusHistory with _$EncounterStatusHistory {
     @JsonKey(required: true) @required Period period,
   }) = _EncounterStatusHistory;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EncounterStatusHistory.fromYaml(dynamic yaml) => yaml is String
@@ -102,6 +104,7 @@ abstract class EncounterParticipant with _$EncounterParticipant {
     Reference individual,
   }) = _EncounterParticipant;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EncounterParticipant.fromYaml(dynamic yaml) => yaml is String
@@ -135,6 +138,7 @@ abstract class EncounterHospitalization with _$EncounterHospitalization {
     List<Reference> dischargeDiagnosis,
   }) = _EncounterHospitalization;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EncounterHospitalization.fromYaml(dynamic yaml) => yaml is String
@@ -162,6 +166,7 @@ abstract class EncounterLocation with _$EncounterLocation {
     Period period,
   }) = _EncounterLocation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EncounterLocation.fromYaml(dynamic yaml) => yaml is String
@@ -205,6 +210,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
     List<EpisodeOfCareCareTeam> careTeam,
   }) = _EpisodeOfCare;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EpisodeOfCare.fromYaml(dynamic yaml) => yaml is String
@@ -232,6 +238,7 @@ abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
     @JsonKey(required: true) @required Period period,
   }) = _EpisodeOfCareStatusHistory;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EpisodeOfCareStatusHistory.fromYaml(dynamic yaml) => yaml is String
@@ -257,6 +264,7 @@ abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
     Reference member,
   }) = _EpisodeOfCareCareTeam;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EpisodeOfCareCareTeam.fromYaml(dynamic yaml) => yaml is String
@@ -303,6 +311,7 @@ abstract class Communication with Resource implements _$Communication {
     Reference requestDetail,
   }) = _Communication;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Communication.fromYaml(dynamic yaml) => yaml is String
@@ -328,6 +337,7 @@ abstract class CommunicationPayload with _$CommunicationPayload {
     Reference contentReference,
   }) = _CommunicationPayload;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CommunicationPayload.fromYaml(dynamic yaml) => yaml is String
@@ -368,6 +378,7 @@ abstract class Flag with Resource implements _$Flag {
     @JsonKey(required: true) @required CodeableConcept code,
   }) = _Flag;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Flag.fromYaml(dynamic yaml) => yaml is String

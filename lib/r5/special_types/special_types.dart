@@ -22,6 +22,7 @@ abstract class Narrative implements _$Narrative {
     @required String div,
   }) = _Narrative;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Narrative.fromYaml(dynamic yaml) => yaml is String
@@ -44,6 +45,7 @@ abstract class CodeableReference implements _$CodeableReference {
     Reference reference,
   }) = _CodeableReference;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CodeableReference.fromYaml(dynamic yaml) => yaml is String
@@ -71,6 +73,7 @@ abstract class Reference implements _$Reference {
     @JsonKey(name: '_display') Element displayElement,
   }) = _Reference;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Reference.fromYaml(dynamic yaml) => yaml is String
@@ -102,6 +105,7 @@ abstract class Statistic implements _$Statistic {
     List<StatisticModelCharacteristic> modelCharacteristic,
   }) = _Statistic;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Statistic.fromYaml(dynamic yaml) => yaml is String
@@ -132,6 +136,7 @@ abstract class StatisticSampleSize implements _$StatisticSampleSize {
     @JsonKey(name: '_knownDataCount') Element knownDataCountElement,
   }) = _StatisticSampleSize;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory StatisticSampleSize.fromYaml(dynamic yaml) => yaml is String
@@ -163,6 +168,7 @@ abstract class StatisticAttributeEstimate
     List<StatisticAttributeEstimate1> attributeEstimate,
   }) = _StatisticAttributeEstimate;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory StatisticAttributeEstimate.fromYaml(dynamic yaml) => yaml is String
@@ -194,6 +200,7 @@ abstract class StatisticAttributeEstimate1
     Range range,
   }) = _StatisticAttributeEstimate1;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory StatisticAttributeEstimate1.fromYaml(dynamic yaml) => yaml is String
@@ -224,6 +231,7 @@ abstract class StatisticModelCharacteristic
     List<StatisticVariable> variable,
   }) = _StatisticModelCharacteristic;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory StatisticModelCharacteristic.fromYaml(dynamic yaml) => yaml is String
@@ -252,6 +260,7 @@ abstract class StatisticVariable implements _$StatisticVariable {
     List<Range> valueRange,
   }) = _StatisticVariable;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory StatisticVariable.fromYaml(dynamic yaml) => yaml is String
@@ -281,6 +290,7 @@ abstract class OrderedDistribution implements _$OrderedDistribution {
     Quantity topOfInterval,
   }) = _OrderedDistribution;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory OrderedDistribution.fromYaml(dynamic yaml) => yaml is String
@@ -306,6 +316,7 @@ abstract class OrderedDistributionInterval
     List<Statistic> intervalStatistic,
   }) = _OrderedDistributionInterval;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory OrderedDistributionInterval.fromYaml(dynamic yaml) => yaml is String
@@ -336,6 +347,7 @@ abstract class Meta implements _$Meta {
     List<Coding> tag,
   }) = _Meta;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Meta.fromYaml(dynamic yaml) => yaml is String
@@ -374,6 +386,7 @@ abstract class Dosage implements _$Dosage {
     Quantity maxDosePerLifetime,
   }) = _Dosage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Dosage.fromYaml(dynamic yaml) => yaml is String
@@ -400,6 +413,7 @@ abstract class DosageDoseAndRate implements _$DosageDoseAndRate {
     Quantity rateQuantity,
   }) = _DosageDoseAndRate;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DosageDoseAndRate.fromYaml(dynamic yaml) => yaml is String
@@ -727,6 +741,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     List<ElementDefinitionMapping> mapping,
   }) = _ElementDefinition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ElementDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -756,6 +771,7 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
     @JsonKey(name: '_rules') Element rulesElement,
   }) = _ElementDefinitionSlicing;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ElementDefinitionSlicing.fromYaml(dynamic yaml) => yaml is String
@@ -784,6 +800,7 @@ abstract class ElementDefinitionDiscriminator
     @JsonKey(name: '_path') Element pathElement,
   }) = _ElementDefinitionDiscriminator;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ElementDefinitionDiscriminator.fromYaml(dynamic yaml) =>
@@ -814,6 +831,7 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
     @JsonKey(name: '_max') Element maxElement,
   }) = _ElementDefinitionBase;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ElementDefinitionBase.fromYaml(dynamic yaml) => yaml is String
@@ -844,6 +862,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
     @JsonKey(name: '_versioning') Element versioningElement,
   }) = _ElementDefinitionType;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ElementDefinitionType.fromYaml(dynamic yaml) => yaml is String
@@ -938,6 +957,7 @@ abstract class ElementDefinitionExample implements _$ElementDefinitionExample {
     Meta valueMeta,
   }) = _ElementDefinitionExample;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ElementDefinitionExample.fromYaml(dynamic yaml) => yaml is String
@@ -975,6 +995,7 @@ abstract class ElementDefinitionConstraint
     Canonical source,
   }) = _ElementDefinitionConstraint;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ElementDefinitionConstraint.fromYaml(dynamic yaml) => yaml is String
@@ -1003,6 +1024,7 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
     Canonical valueSet,
   }) = _ElementDefinitionBinding;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ElementDefinitionBinding.fromYaml(dynamic yaml) => yaml is String
@@ -1033,6 +1055,7 @@ abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _ElementDefinitionMapping;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ElementDefinitionMapping.fromYaml(dynamic yaml) => yaml is String

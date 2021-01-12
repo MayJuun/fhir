@@ -75,6 +75,7 @@ abstract class Evidence with Resource implements _$Evidence {
     List<EvidenceCertainty> certainty,
   }) = _Evidence;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Evidence.fromYaml(dynamic yaml) => yaml is String
@@ -104,6 +105,7 @@ abstract class EvidenceVariableDefinition
     CodeableConcept directnessMatch,
   }) = _EvidenceVariableDefinition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EvidenceVariableDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -133,6 +135,7 @@ abstract class EvidenceCertainty implements _$EvidenceCertainty {
     List<EvidenceCertaintySubcomponent> certaintySubcomponent,
   }) = _EvidenceCertainty;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EvidenceCertainty.fromYaml(dynamic yaml) => yaml is String
@@ -162,6 +165,7 @@ abstract class EvidenceCertaintySubcomponent
     List<CodeableConcept> rating,
   }) = _EvidenceCertaintySubcomponent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EvidenceCertaintySubcomponent.fromYaml(dynamic yaml) => yaml is String
@@ -245,6 +249,7 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
     List<EvidenceVariableCategory> category,
   }) = _EvidenceVariable;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EvidenceVariable.fromYaml(dynamic yaml) => yaml is String
@@ -282,6 +287,7 @@ abstract class EvidenceVariableCharacteristic
     @JsonKey(name: '_groupMeasure') Element groupMeasureElement,
   }) = _EvidenceVariableCharacteristic;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EvidenceVariableCharacteristic.fromYaml(dynamic yaml) =>
@@ -312,6 +318,7 @@ abstract class EvidenceVariableTimeFromStart
     List<Annotation> note,
   }) = _EvidenceVariableTimeFromStart;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EvidenceVariableTimeFromStart.fromYaml(dynamic yaml) => yaml is String
@@ -339,6 +346,7 @@ abstract class EvidenceVariableCategory implements _$EvidenceVariableCategory {
     Range valueRange,
   }) = _EvidenceVariableCategory;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EvidenceVariableCategory.fromYaml(dynamic yaml) => yaml is String

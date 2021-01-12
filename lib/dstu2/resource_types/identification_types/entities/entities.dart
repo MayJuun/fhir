@@ -44,6 +44,7 @@ abstract class Location with Resource implements _$Location {
     Reference partOf,
   }) = _Location;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Location.fromYaml(dynamic yaml) => yaml is String
@@ -71,6 +72,7 @@ abstract class LocationPosition with _$LocationPosition {
     @JsonKey(name: '_altitude') Element altitudeElement,
   }) = _LocationPosition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory LocationPosition.fromYaml(dynamic yaml) => yaml is String
@@ -107,6 +109,7 @@ abstract class Substance with Resource implements _$Substance {
     List<SubstanceIngredient> ingredient,
   }) = _Substance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Substance.fromYaml(dynamic yaml) => yaml is String
@@ -132,6 +135,7 @@ abstract class SubstanceInstance with _$SubstanceInstance {
     Quantity quantity,
   }) = _SubstanceInstance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceInstance.fromYaml(dynamic yaml) => yaml is String
@@ -155,6 +159,7 @@ abstract class SubstanceIngredient with _$SubstanceIngredient {
     @JsonKey(required: true) @required Reference substance,
   }) = _SubstanceIngredient;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceIngredient.fromYaml(dynamic yaml) => yaml is String
@@ -197,6 +202,7 @@ abstract class Person with Resource implements _$Person {
     List<PersonLink> link,
   }) = _Person;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Person.fromYaml(dynamic yaml) => yaml is String
@@ -220,6 +226,7 @@ abstract class PersonLink with _$PersonLink {
     @JsonKey(name: '_assurance') Element assuranceElement,
   }) = _PersonLink;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PersonLink.fromYaml(dynamic yaml) => yaml is String
@@ -269,6 +276,7 @@ abstract class Contract with Resource implements _$Contract {
     List<ContractRule> rule,
   }) = _Contract;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Contract.fromYaml(dynamic yaml) => yaml is String
@@ -292,6 +300,7 @@ abstract class ContractActor with _$ContractActor {
     List<CodeableConcept> role,
   }) = _ContractActor;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractActor.fromYaml(dynamic yaml) => yaml is String
@@ -326,6 +335,7 @@ abstract class ContractValuedItem with _$ContractValuedItem {
     List<Element> securityLabelNumberElement,
   }) = _ContractValuedItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractValuedItem.fromYaml(dynamic yaml) => yaml is String
@@ -350,6 +360,7 @@ abstract class ContractSigner with _$ContractSigner {
     @JsonKey(required: true) @required String signature,
   }) = _ContractSigner;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractSigner.fromYaml(dynamic yaml) => yaml is String
@@ -385,6 +396,7 @@ abstract class ContractTerm with _$ContractTerm {
     List<ContractTerm> group,
   }) = _ContractTerm;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractTerm.fromYaml(dynamic yaml) => yaml is String
@@ -408,6 +420,7 @@ abstract class ContractTermActor with _$ContractTermActor {
     List<CodeableConcept> role,
   }) = _ContractTermActor;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractTermActor.fromYaml(dynamic yaml) => yaml is String
@@ -431,6 +444,7 @@ abstract class ContractFriendly with _$ContractFriendly {
     Reference contactReference,
   }) = _ContractFriendly;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractFriendly.fromYaml(dynamic yaml) => yaml is String
@@ -454,6 +468,7 @@ abstract class ContractLegal with _$ContractLegal {
     Reference content,
   }) = _ContractLegal;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractLegal.fromYaml(dynamic yaml) => yaml is String
@@ -477,6 +492,7 @@ abstract class ContractRule with _$ContractRule {
     Reference contentReference,
   }) = _ContractRule;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContractRule.fromYaml(dynamic yaml) => yaml is String

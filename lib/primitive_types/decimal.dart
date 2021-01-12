@@ -20,6 +20,7 @@ class Decimal extends PrimitiveObject<double> {
 
   const Decimal._(this.value);
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Decimal.fromYaml(dynamic yaml) => yaml is String

@@ -39,6 +39,7 @@ abstract class PaymentNotice with Resource implements _$PaymentNotice {
     @JsonKey(required: true) @required Coding paymentStatus,
   }) = _PaymentNotice;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PaymentNotice.fromYaml(dynamic yaml) => yaml is String
@@ -89,6 +90,7 @@ abstract class PaymentReconciliation
     List<PaymentReconciliationNote> note,
   }) = _PaymentReconciliation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PaymentReconciliation.fromYaml(dynamic yaml) => yaml is String
@@ -118,6 +120,7 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
     Quantity amount,
   }) = _PaymentReconciliationDetail;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PaymentReconciliationDetail.fromYaml(dynamic yaml) => yaml is String
@@ -144,6 +147,7 @@ abstract class PaymentReconciliationNote with _$PaymentReconciliationNote {
     @JsonKey(name: '_text') Element textElement,
   }) = _PaymentReconciliationNote;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PaymentReconciliationNote.fromYaml(dynamic yaml) => yaml is String

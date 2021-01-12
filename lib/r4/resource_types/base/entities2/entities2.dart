@@ -46,6 +46,7 @@ abstract class BiologicallyDerivedProduct
     List<BiologicallyDerivedProductStorage> storage,
   }) = _BiologicallyDerivedProduct;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BiologicallyDerivedProduct.fromYaml(dynamic yaml) => yaml is String
@@ -74,6 +75,7 @@ abstract class BiologicallyDerivedProductCollection
     Period collectedPeriod,
   }) = _BiologicallyDerivedProductCollection;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BiologicallyDerivedProductCollection.fromYaml(dynamic yaml) =>
@@ -107,6 +109,7 @@ abstract class BiologicallyDerivedProductProcessing
     Period timePeriod,
   }) = _BiologicallyDerivedProductProcessing;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BiologicallyDerivedProductProcessing.fromYaml(dynamic yaml) =>
@@ -138,6 +141,7 @@ abstract class BiologicallyDerivedProductManipulation
     Period timePeriod,
   }) = _BiologicallyDerivedProductManipulation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BiologicallyDerivedProductManipulation.fromYaml(dynamic yaml) =>
@@ -172,6 +176,7 @@ abstract class BiologicallyDerivedProductStorage
     Period duration,
   }) = _BiologicallyDerivedProductStorage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BiologicallyDerivedProductStorage.fromYaml(dynamic yaml) =>
@@ -241,6 +246,7 @@ abstract class Device with Resource implements _$Device {
     Reference parent,
   }) = _Device;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Device.fromYaml(dynamic yaml) => yaml is String
@@ -274,6 +280,7 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
     @JsonKey(name: '_entryType') Element entryTypeElement,
   }) = _DeviceUdiCarrier;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceUdiCarrier.fromYaml(dynamic yaml) => yaml is String
@@ -300,6 +307,7 @@ abstract class DeviceDeviceName implements _$DeviceDeviceName {
     @JsonKey(name: '_type') Element typeElement,
   }) = _DeviceDeviceName;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceDeviceName.fromYaml(dynamic yaml) => yaml is String
@@ -324,6 +332,7 @@ abstract class DeviceSpecialization implements _$DeviceSpecialization {
     @JsonKey(name: '_version') Element versionElement,
   }) = _DeviceSpecialization;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceSpecialization.fromYaml(dynamic yaml) => yaml is String
@@ -349,6 +358,7 @@ abstract class DeviceVersion implements _$DeviceVersion {
     @JsonKey(name: '_value') Element valueElement,
   }) = _DeviceVersion;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceVersion.fromYaml(dynamic yaml) => yaml is String
@@ -373,6 +383,7 @@ abstract class DeviceProperty implements _$DeviceProperty {
     List<CodeableConcept> valueCode,
   }) = _DeviceProperty;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceProperty.fromYaml(dynamic yaml) => yaml is String
@@ -418,6 +429,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
     List<DeviceMetricCalibration> calibration,
   }) = _DeviceMetric;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceMetric.fromYaml(dynamic yaml) => yaml is String
@@ -447,6 +459,7 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
     @JsonKey(name: '_time') Element timeElement,
   }) = _DeviceMetricCalibration;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceMetricCalibration.fromYaml(dynamic yaml) => yaml is String
@@ -485,6 +498,7 @@ abstract class Substance with Resource implements _$Substance {
     List<SubstanceIngredient> ingredient,
   }) = _Substance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Substance.fromYaml(dynamic yaml) => yaml is String
@@ -510,6 +524,7 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
     Quantity quantity,
   }) = _SubstanceInstance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceInstance.fromYaml(dynamic yaml) => yaml is String
@@ -534,6 +549,7 @@ abstract class SubstanceIngredient implements _$SubstanceIngredient {
     Reference substanceReference,
   }) = _SubstanceIngredient;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceIngredient.fromYaml(dynamic yaml) => yaml is String

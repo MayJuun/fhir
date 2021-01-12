@@ -20,6 +20,7 @@ class Code extends PrimitiveObject<String> {
 
   const Code._(this.value);
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Code.fromYaml(dynamic yaml) => yaml is String

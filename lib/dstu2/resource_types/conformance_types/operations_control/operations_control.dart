@@ -55,6 +55,7 @@ abstract class Conformance with Resource implements _$Conformance {
     List<ConformanceDocument> document,
   }) = _Conformance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Conformance.fromYaml(dynamic yaml) => yaml is String
@@ -113,6 +114,7 @@ abstract class CapabilityStatement
     List<ConformanceDocument> document,
   }) = _CapabilityStatement;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CapabilityStatement.fromYaml(dynamic yaml) => yaml is String
@@ -136,6 +138,7 @@ abstract class ConformanceContact with _$ConformanceContact {
     List<ContactPoint> telecom,
   }) = _ConformanceContact;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConformanceContact.fromYaml(dynamic yaml) => yaml is String
@@ -160,6 +163,7 @@ abstract class ConformanceSoftware with _$ConformanceSoftware {
     FhirDateTime releaseDate,
   }) = _ConformanceSoftware;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConformanceSoftware.fromYaml(dynamic yaml) => yaml is String
@@ -183,6 +187,7 @@ abstract class ConformanceImplementation with _$ConformanceImplementation {
     FhirUri url,
   }) = _ConformanceImplementation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConformanceImplementation.fromYaml(dynamic yaml) => yaml is String
@@ -219,6 +224,7 @@ abstract class ConformanceRest with _$ConformanceRest {
     List<FhirUri> compartment,
   }) = _ConformanceRest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConformanceRest.fromYaml(dynamic yaml) => yaml is String
@@ -245,6 +251,7 @@ abstract class ConformanceMessaging with _$ConformanceMessaging {
     @JsonKey(required: true) @required List<ConformanceMessagingEvent> event,
   }) = _ConformanceMessaging;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConformanceMessaging.fromYaml(dynamic yaml) => yaml is String
@@ -272,6 +279,7 @@ abstract class ConformanceDocument with _$ConformanceDocument {
     @JsonKey(required: true) @required Reference profile,
   }) = _ConformanceDocument;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConformanceDocument.fromYaml(dynamic yaml) => yaml is String
@@ -298,6 +306,7 @@ abstract class ConformanceRestSecurity with _$ConformanceRestSecurity {
     List<ConformanceSecurityCertificate> certificate,
   }) = _ConformanceRestSecurity;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConformanceRestSecurity.fromYaml(dynamic yaml) => yaml is String
@@ -340,6 +349,7 @@ abstract class ConformanceRestResource with _$ConformanceRestResource {
     List<ConformanceResourceSearchParam> searchParam,
   }) = _ConformanceRestResource;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConformanceRestResource.fromYaml(dynamic yaml) => yaml is String
@@ -366,6 +376,7 @@ abstract class ConformanceResourceInteraction
     String documentation,
   }) = _ConformanceResourceInteraction;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConformanceResourceInteraction.fromYaml(dynamic yaml) =>
@@ -393,6 +404,7 @@ abstract class ConformanceRestOperation with _$ConformanceRestOperation {
     @JsonKey(required: true) @required Reference definition,
   }) = _ConformanceRestOperation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConformanceRestOperation.fromYaml(dynamic yaml) => yaml is String
@@ -419,6 +431,7 @@ abstract class ConformanceMessagingEndpoint
     @JsonKey(name: '_address') Element addressElement,
   }) = _ConformanceMessagingEndpoint;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConformanceMessagingEndpoint.fromYaml(dynamic yaml) => yaml is String
@@ -451,6 +464,7 @@ abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
     String documentation,
   }) = _ConformanceMessagingEvent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConformanceMessagingEvent.fromYaml(dynamic yaml) => yaml is String
@@ -477,6 +491,7 @@ abstract class ConformanceSecurityCertificate
     @JsonKey(name: '_blob') Element blobElement,
   }) = _ConformanceSecurityCertificate;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConformanceSecurityCertificate.fromYaml(dynamic yaml) =>
@@ -505,6 +520,7 @@ abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
     String documentation,
   }) = _ConformanceRestInteraction;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConformanceRestInteraction.fromYaml(dynamic yaml) => yaml is String
@@ -538,6 +554,7 @@ abstract class ConformanceResourceSearchParam
     List<String> chain,
   }) = _ConformanceResourceSearchParam;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConformanceResourceSearchParam.fromYaml(dynamic yaml) =>
@@ -594,6 +611,7 @@ abstract class OperationDefinition
     List<OperationDefinitionParameter> parameter,
   }) = _OperationDefinition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory OperationDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -617,6 +635,7 @@ abstract class OperationDefinitionContact with _$OperationDefinitionContact {
     List<ContactPoint> telecom,
   }) = _OperationDefinitionContact;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory OperationDefinitionContact.fromYaml(dynamic yaml) => yaml is String
@@ -652,6 +671,7 @@ abstract class OperationDefinitionParameter
     @JsonKey(name: 'part') List<OperationDefinitionParameter> part_,
   }) = _OperationDefinitionParameter;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory OperationDefinitionParameter.fromYaml(dynamic yaml) => yaml is String
@@ -683,6 +703,7 @@ abstract class OperationDefinitionParameterBinding
     Reference valueSetReference,
   }) = _OperationDefinitionParameterBinding;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory OperationDefinitionParameterBinding.fromYaml(dynamic yaml) =>
@@ -734,6 +755,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     List<Code> target,
   }) = _SearchParameter;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SearchParameter.fromYaml(dynamic yaml) => yaml is String
@@ -757,6 +779,7 @@ abstract class SearchParameterContact with _$SearchParameterContact {
     List<ContactPoint> telecom,
   }) = _SearchParameterContact;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SearchParameterContact.fromYaml(dynamic yaml) => yaml is String

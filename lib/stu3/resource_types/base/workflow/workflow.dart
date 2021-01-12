@@ -56,6 +56,7 @@ abstract class Appointment with Resource implements _$Appointment {
     List<Period> requestedPeriod,
   }) = _Appointment;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Appointment.fromYaml(dynamic yaml) => yaml is String
@@ -80,6 +81,7 @@ abstract class AppointmentParticipant implements _$AppointmentParticipant {
     @JsonKey(name: '_status') Element statusElement,
   }) = _AppointmentParticipant;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AppointmentParticipant.fromYaml(dynamic yaml) => yaml is String
@@ -123,6 +125,7 @@ abstract class AppointmentResponse
     @JsonKey(name: '_comment') Element commentElement,
   }) = _AppointmentResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
@@ -174,6 +177,7 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
     Period period,
   }) = _ProcessRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProcessRequest.fromYaml(dynamic yaml) => yaml is String
@@ -194,6 +198,7 @@ abstract class ProcessRequestItem implements _$ProcessRequestItem {
     @JsonKey(name: '_sequenceLinkId') Element sequenceLinkIdElement,
   }) = _ProcessRequestItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProcessRequestItem.fromYaml(dynamic yaml) => yaml is String
@@ -239,6 +244,7 @@ abstract class ProcessResponse with Resource implements _$ProcessResponse {
     List<Reference> communicationRequest,
   }) = _ProcessResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProcessResponse.fromYaml(dynamic yaml) => yaml is String
@@ -261,6 +267,7 @@ abstract class ProcessResponseProcessNote
     @JsonKey(name: '_text') Element textElement,
   }) = _ProcessResponseProcessNote;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProcessResponseProcessNote.fromYaml(dynamic yaml) => yaml is String
@@ -311,6 +318,7 @@ abstract class RequestGroup with Resource implements _$RequestGroup {
     List<RequestGroupAction> action,
   }) = _RequestGroup;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory RequestGroup.fromYaml(dynamic yaml) => yaml is String
@@ -361,6 +369,7 @@ abstract class RequestGroupAction implements _$RequestGroupAction {
     List<RequestGroupAction> action,
   }) = _RequestGroupAction;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory RequestGroupAction.fromYaml(dynamic yaml) => yaml is String
@@ -387,6 +396,7 @@ abstract class RequestGroupCondition implements _$RequestGroupCondition {
     @JsonKey(name: '_expression') Element expressionElement,
   }) = _RequestGroupCondition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory RequestGroupCondition.fromYaml(dynamic yaml) => yaml is String
@@ -412,6 +422,7 @@ abstract class RequestGroupRelatedAction
     Range offsetRange,
   }) = _RequestGroupRelatedAction;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory RequestGroupRelatedAction.fromYaml(dynamic yaml) => yaml is String
@@ -452,6 +463,7 @@ abstract class Schedule with Resource implements _$Schedule {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Schedule;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Schedule.fromYaml(dynamic yaml) => yaml is String
@@ -497,6 +509,7 @@ abstract class Slot with Resource implements _$Slot {
     @JsonKey(name: '_comment') Element commentElement,
   }) = _Slot;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Slot.fromYaml(dynamic yaml) => yaml is String
@@ -560,6 +573,7 @@ abstract class Task with Resource implements _$Task {
     List<TaskOutput> output,
   }) = _Task;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Task.fromYaml(dynamic yaml) => yaml is String
@@ -579,6 +593,7 @@ abstract class TaskRequester implements _$TaskRequester {
     Reference onBehalfOf,
   }) = _TaskRequester;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TaskRequester.fromYaml(dynamic yaml) => yaml is String
@@ -601,6 +616,7 @@ abstract class TaskRestriction implements _$TaskRestriction {
     List<Reference> recipient,
   }) = _TaskRestriction;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TaskRestriction.fromYaml(dynamic yaml) => yaml is String
@@ -690,6 +706,7 @@ abstract class TaskInput implements _$TaskInput {
     TriggerDefinition valueTriggerDefinition,
   }) = _TaskInput;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TaskInput.fromYaml(dynamic yaml) => yaml is String
@@ -779,6 +796,7 @@ abstract class TaskOutput implements _$TaskOutput {
     TriggerDefinition valueTriggerDefinition,
   }) = _TaskOutput;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TaskOutput.fromYaml(dynamic yaml) => yaml is String

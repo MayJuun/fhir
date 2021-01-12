@@ -26,6 +26,7 @@ abstract class Annotation implements _$Annotation {
     @JsonKey(name: '_text') Element textElement,
   }) = _Annotation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Annotation.fromYaml(dynamic yaml) => yaml is String
@@ -62,6 +63,7 @@ abstract class Attachment implements _$Attachment {
     @JsonKey(name: '_creation') Element creationElement,
   }) = _Attachment;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Attachment.fromYaml(dynamic yaml) => yaml is String
@@ -91,6 +93,7 @@ abstract class Identifier implements _$Identifier {
     Reference assigner,
   }) = _Identifier;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Identifier.fromYaml(dynamic yaml) => yaml is String
@@ -114,6 +117,7 @@ abstract class CodeableConcept implements _$CodeableConcept {
     @JsonKey(name: '_text') Element textElement,
   }) = _CodeableConcept;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CodeableConcept.fromYaml(dynamic yaml) => yaml is String
@@ -144,6 +148,7 @@ abstract class Coding implements _$Coding {
     @JsonKey(name: '_userSelected') Element userSelectedElement,
   }) = _Coding;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Coding.fromYaml(dynamic yaml) => yaml is String
@@ -174,6 +179,7 @@ abstract class Quantity implements _$Quantity {
     @JsonKey(name: '_code') Element codeElement,
   }) = _Quantity;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Quantity.fromYaml(dynamic yaml) => yaml is String
@@ -205,6 +211,7 @@ abstract class FhirDuration implements _$FhirDuration {
     @JsonKey(name: '_code') Element codeElement,
   }) = _FhirDuration;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory FhirDuration.fromYaml(dynamic yaml) => yaml is String
@@ -236,6 +243,7 @@ abstract class Distance implements _$Distance {
     @JsonKey(name: '_code') Element codeElement,
   }) = _Distance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Distance.fromYaml(dynamic yaml) => yaml is String
@@ -267,6 +275,7 @@ abstract class Count implements _$Count {
     @JsonKey(name: '_code') Element codeElement,
   }) = _Count;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Count.fromYaml(dynamic yaml) => yaml is String
@@ -290,6 +299,7 @@ abstract class Money implements _$Money {
     @JsonKey(name: '_currency') Element currencyElement,
   }) = _Money;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Money.fromYaml(dynamic yaml) => yaml is String
@@ -319,6 +329,7 @@ abstract class Age implements _$Age {
     @JsonKey(name: '_code') Element codeElement,
   }) = _Age;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Age.fromYaml(dynamic yaml) => yaml is String
@@ -340,6 +351,7 @@ abstract class Range implements _$Range {
     Quantity high,
   }) = _Range;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Range.fromYaml(dynamic yaml) => yaml is String
@@ -363,6 +375,7 @@ abstract class Period implements _$Period {
     @JsonKey(name: '_end') Element endElement,
   }) = _Period;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Period.fromYaml(dynamic yaml) => yaml is String
@@ -384,6 +397,7 @@ abstract class Ratio implements _$Ratio {
     Quantity denominator,
   }) = _Ratio;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Ratio.fromYaml(dynamic yaml) => yaml is String
@@ -416,6 +430,7 @@ abstract class SampledData implements _$SampledData {
     @JsonKey(name: '_data') Element dataElement,
   }) = _SampledData;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SampledData.fromYaml(dynamic yaml) => yaml is String
@@ -447,6 +462,7 @@ abstract class Signature implements _$Signature {
     @JsonKey(name: '_data') Element dataElement,
   }) = _Signature;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Signature.fromYaml(dynamic yaml) => yaml is String
@@ -480,6 +496,7 @@ abstract class HumanName implements _$HumanName {
     Period period,
   }) = _HumanName;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory HumanName.fromYaml(dynamic yaml) => yaml is String
@@ -519,6 +536,7 @@ abstract class Address implements _$Address {
     Period period,
   }) = _Address;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Address.fromYaml(dynamic yaml) => yaml is String
@@ -549,6 +567,7 @@ abstract class ContactPoint implements _$ContactPoint {
     Period period,
   }) = _ContactPoint;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContactPoint.fromYaml(dynamic yaml) => yaml is String
@@ -574,6 +593,7 @@ abstract class Timing implements _$Timing {
     CodeableConcept code,
   }) = _Timing;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Timing.fromYaml(dynamic yaml) => yaml is String
@@ -627,6 +647,7 @@ abstract class TimingRepeat implements _$TimingRepeat {
     @JsonKey(name: '_offset') Element offsetElement,
   }) = _TimingRepeat;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TimingRepeat.fromYaml(dynamic yaml) => yaml is String

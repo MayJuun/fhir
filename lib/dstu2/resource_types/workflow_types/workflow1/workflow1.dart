@@ -35,6 +35,7 @@ abstract class Order with Resource implements _$Order {
     @JsonKey(required: true) @required List<Reference> detail,
   }) = _Order;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Order.fromYaml(dynamic yaml) => yaml is String
@@ -58,6 +59,7 @@ abstract class OrderWhen with _$OrderWhen {
     Timing schedule,
   }) = _OrderWhen;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory OrderWhen.fromYaml(dynamic yaml) => yaml is String
@@ -95,6 +97,7 @@ abstract class OrderResponse with Resource implements _$OrderResponse {
     List<Reference> fulfillment,
   }) = _OrderResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory OrderResponse.fromYaml(dynamic yaml) => yaml is String
@@ -144,6 +147,7 @@ abstract class CommunicationRequest
     @JsonKey(name: '_priority') Element priorityElement,
   }) = _CommunicationRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CommunicationRequest.fromYaml(dynamic yaml) => yaml is String
@@ -169,6 +173,7 @@ abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
     Reference contentReference,
   }) = _CommunicationRequestPayload;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CommunicationRequestPayload.fromYaml(dynamic yaml) => yaml is String
@@ -219,6 +224,7 @@ abstract class DeviceUseRequest with Resource implements _$DeviceUseRequest {
     @JsonKey(name: '_priority') Element priorityElement,
   }) = _DeviceUseRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceUseRequest.fromYaml(dynamic yaml) => yaml is String
@@ -264,6 +270,7 @@ abstract class DeviceUseStatement
     @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
   }) = _DeviceUseStatement;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceUseStatement.fromYaml(dynamic yaml) => yaml is String

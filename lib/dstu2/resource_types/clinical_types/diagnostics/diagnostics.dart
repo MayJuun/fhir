@@ -67,6 +67,7 @@ abstract class Observation with Resource implements _$Observation {
     List<ObservationComponent> component,
   }) = _Observation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Observation.fromYaml(dynamic yaml) => yaml is String
@@ -95,6 +96,7 @@ abstract class ObservationReferenceRange with _$ObservationReferenceRange {
     @JsonKey(name: '_text') Element textElement,
   }) = _ObservationReferenceRange;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ObservationReferenceRange.fromYaml(dynamic yaml) => yaml is String
@@ -120,6 +122,7 @@ abstract class ObservationRelated with _$ObservationRelated {
     @JsonKey(required: true) @required Reference target,
   }) = _ObservationRelated;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ObservationRelated.fromYaml(dynamic yaml) => yaml is String
@@ -158,6 +161,7 @@ abstract class ObservationComponent with _$ObservationComponent {
     List<ObservationReferenceRange> referenceRange,
   }) = _ObservationComponent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ObservationComponent.fromYaml(dynamic yaml) => yaml is String
@@ -211,6 +215,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
     List<Attachment> presentedForm,
   }) = _DiagnosticReport;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DiagnosticReport.fromYaml(dynamic yaml) => yaml is String
@@ -235,6 +240,7 @@ abstract class DiagnosticReportImage with _$DiagnosticReportImage {
     @JsonKey(required: true) @required Reference link,
   }) = _DiagnosticReportImage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DiagnosticReportImage.fromYaml(dynamic yaml) => yaml is String
@@ -276,6 +282,7 @@ abstract class DiagnosticOrder with Resource implements _$DiagnosticOrder {
     List<Annotation> note,
   }) = _DiagnosticOrder;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DiagnosticOrder.fromYaml(dynamic yaml) => yaml is String
@@ -303,6 +310,7 @@ abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
     Reference actor,
   }) = _DiagnosticOrderEvent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DiagnosticOrderEvent.fromYaml(dynamic yaml) => yaml is String
@@ -329,6 +337,7 @@ abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
     List<DiagnosticOrderEvent> event,
   }) = _DiagnosticOrderItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DiagnosticOrderItem.fromYaml(dynamic yaml) => yaml is String
@@ -370,6 +379,7 @@ abstract class Specimen with Resource implements _$Specimen {
     List<SpecimenContainer> container,
   }) = _Specimen;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Specimen.fromYaml(dynamic yaml) => yaml is String
@@ -400,6 +410,7 @@ abstract class SpecimenCollection with _$SpecimenCollection {
     CodeableConcept bodySite,
   }) = _SpecimenCollection;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SpecimenCollection.fromYaml(dynamic yaml) => yaml is String
@@ -424,6 +435,7 @@ abstract class SpecimenTreatment with _$SpecimenTreatment {
     List<Reference> additive,
   }) = _SpecimenTreatment;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SpecimenTreatment.fromYaml(dynamic yaml) => yaml is String
@@ -453,6 +465,7 @@ abstract class SpecimenContainer with _$SpecimenContainer {
     Reference additiveReference,
   }) = _SpecimenContainer;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SpecimenContainer.fromYaml(dynamic yaml) => yaml is String
@@ -486,6 +499,7 @@ abstract class BodySite with Resource implements _$BodySite {
     List<Attachment> image,
   }) = _BodySite;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BodySite.fromYaml(dynamic yaml) => yaml is String
@@ -536,6 +550,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
     List<ImagingStudySeries> series,
   }) = _ImagingStudy;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImagingStudy.fromYaml(dynamic yaml) => yaml is String
@@ -574,6 +589,7 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
     List<ImagingStudySeriesInstance> instance,
   }) = _ImagingStudySeries;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImagingStudySeries.fromYaml(dynamic yaml) => yaml is String
@@ -604,6 +620,7 @@ abstract class ImagingStudySeriesInstance with _$ImagingStudySeriesInstance {
     List<Attachment> content,
   }) = _ImagingStudySeriesInstance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImagingStudySeriesInstance.fromYaml(dynamic yaml) => yaml is String
@@ -641,6 +658,7 @@ abstract class ImagingObjectSelection
     @JsonKey(required: true) @required List<ImagingObjectSelectionStudy> study,
   }) = _ImagingObjectSelection;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImagingObjectSelection.fromYaml(dynamic yaml) => yaml is String
@@ -668,6 +686,7 @@ abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
         List<ImagingObjectSelectionStudySeries> series,
   }) = _ImagingObjectSelectionStudy;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImagingObjectSelectionStudy.fromYaml(dynamic yaml) => yaml is String
@@ -696,6 +715,7 @@ abstract class ImagingObjectSelectionStudySeries
         List<ImagingObjectSelectionSeriesInstance> instance,
   }) = _ImagingObjectSelectionStudySeries;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImagingObjectSelectionStudySeries.fromYaml(dynamic yaml) =>
@@ -726,6 +746,7 @@ abstract class ImagingObjectSelectionSeriesInstance
     List<ImagingObjectSelectionInstanceFrames> frames,
   }) = _ImagingObjectSelectionSeriesInstance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImagingObjectSelectionSeriesInstance.fromYaml(dynamic yaml) =>
@@ -754,6 +775,7 @@ abstract class ImagingObjectSelectionInstanceFrames
     @JsonKey(required: true) @required FhirUri url,
   }) = _ImagingObjectSelectionInstanceFrames;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImagingObjectSelectionInstanceFrames.fromYaml(dynamic yaml) =>

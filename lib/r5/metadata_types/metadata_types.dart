@@ -22,6 +22,7 @@ abstract class ContactDetail implements _$ContactDetail {
     List<ContactPoint> telecom,
   }) = _ContactDetail;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ContactDetail.fromYaml(dynamic yaml) => yaml is String
@@ -47,6 +48,7 @@ abstract class Contributor implements _$Contributor {
     List<ContactDetail> contact,
   }) = _Contributor;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Contributor.fromYaml(dynamic yaml) => yaml is String
@@ -79,6 +81,7 @@ abstract class DataRequirement implements _$DataRequirement {
     List<DataRequirementSort> sort,
   }) = _DataRequirement;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DataRequirement.fromYaml(dynamic yaml) => yaml is String
@@ -107,6 +110,7 @@ abstract class DataRequirementCodeFilter
     List<Coding> code,
   }) = _DataRequirementCodeFilter;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DataRequirementCodeFilter.fromYaml(dynamic yaml) => yaml is String
@@ -138,6 +142,7 @@ abstract class DataRequirementDateFilter
     FhirDuration valueDuration,
   }) = _DataRequirementDateFilter;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DataRequirementDateFilter.fromYaml(dynamic yaml) => yaml is String
@@ -165,6 +170,7 @@ abstract class DataRequirementSort implements _$DataRequirementSort {
     @JsonKey(name: '_direction') Element directionElement,
   }) = _DataRequirementSort;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DataRequirementSort.fromYaml(dynamic yaml) => yaml is String
@@ -198,6 +204,7 @@ abstract class ParameterDefinition implements _$ParameterDefinition {
     Canonical profile,
   }) = _ParameterDefinition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ParameterDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -231,6 +238,7 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
     Canonical resource,
   }) = _RelatedArtifact;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory RelatedArtifact.fromYaml(dynamic yaml) => yaml is String
@@ -264,6 +272,7 @@ abstract class TriggerDefinition implements _$TriggerDefinition {
     Expression condition,
   }) = _TriggerDefinition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TriggerDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -289,6 +298,7 @@ abstract class UsageContext implements _$UsageContext {
     Reference valueReference,
   }) = _UsageContext;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory UsageContext.fromYaml(dynamic yaml) => yaml is String
@@ -319,6 +329,7 @@ abstract class Expression implements _$Expression {
     @JsonKey(name: '_reference') Element referenceElement,
   }) = _Expression;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Expression.fromYaml(dynamic yaml) => yaml is String

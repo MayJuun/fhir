@@ -54,6 +54,7 @@ abstract class AllergyIntolerance
     List<AllergyIntoleranceReaction> reaction,
   }) = _AllergyIntolerance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AllergyIntolerance.fromYaml(dynamic yaml) => yaml is String
@@ -90,6 +91,7 @@ abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
     Annotation note,
   }) = _AllergyIntoleranceReaction;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AllergyIntoleranceReaction.fromYaml(dynamic yaml) => yaml is String
@@ -154,6 +156,7 @@ abstract class Condition with Resource implements _$Condition {
     String notes,
   }) = _Condition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Condition.fromYaml(dynamic yaml) => yaml is String
@@ -178,6 +181,7 @@ abstract class ConditionStage with _$ConditionStage {
     List<Reference> assessment,
   }) = _ConditionStage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConditionStage.fromYaml(dynamic yaml) => yaml is String
@@ -202,6 +206,7 @@ abstract class ConditionEvidence with _$ConditionEvidence {
     List<Reference> detail,
   }) = _ConditionEvidence;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConditionEvidence.fromYaml(dynamic yaml) => yaml is String
@@ -258,6 +263,7 @@ abstract class Procedure with Resource implements _$Procedure {
     List<Reference> used,
   }) = _Procedure;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Procedure.fromYaml(dynamic yaml) => yaml is String
@@ -282,6 +288,7 @@ abstract class ProcedurePerformer with _$ProcedurePerformer {
     CodeableConcept role,
   }) = _ProcedurePerformer;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProcedurePerformer.fromYaml(dynamic yaml) => yaml is String
@@ -305,6 +312,7 @@ abstract class ProcedureFocalDevice with _$ProcedureFocalDevice {
     @JsonKey(required: true) @required Reference manipulated,
   }) = _ProcedureFocalDevice;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProcedureFocalDevice.fromYaml(dynamic yaml) => yaml is String
@@ -361,6 +369,7 @@ abstract class ClinicalImpression
     List<Reference> action,
   }) = _ClinicalImpression;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClinicalImpression.fromYaml(dynamic yaml) => yaml is String
@@ -385,6 +394,7 @@ abstract class ClinicalImpressionInvestigations
     List<Reference> item,
   }) = _ClinicalImpressionInvestigations;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClinicalImpressionInvestigations.fromYaml(dynamic yaml) =>
@@ -412,6 +422,7 @@ abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
     String cause,
   }) = _ClinicalImpressionFinding;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClinicalImpressionFinding.fromYaml(dynamic yaml) => yaml is String
@@ -436,6 +447,7 @@ abstract class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut {
     String reason,
   }) = _ClinicalImpressionRuledOut;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClinicalImpressionRuledOut.fromYaml(dynamic yaml) => yaml is String
@@ -501,6 +513,7 @@ abstract class FamilyMemberHistory
     List<FamilyMemberHistoryCondition> condition,
   }) = _FamilyMemberHistory;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory FamilyMemberHistory.fromYaml(dynamic yaml) => yaml is String
@@ -531,6 +544,7 @@ abstract class FamilyMemberHistoryCondition
     Annotation note,
   }) = _FamilyMemberHistoryCondition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory FamilyMemberHistoryCondition.fromYaml(dynamic yaml) => yaml is String
@@ -572,6 +586,7 @@ abstract class RiskAssessment with Resource implements _$RiskAssessment {
     @JsonKey(name: '_mitigation') Element mitigationElement,
   }) = _RiskAssessment;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory RiskAssessment.fromYaml(dynamic yaml) => yaml is String
@@ -604,6 +619,7 @@ abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
     @JsonKey(name: '_rationale') Element rationaleElement,
   }) = _RiskAssessmentPrediction;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory RiskAssessmentPrediction.fromYaml(dynamic yaml) => yaml is String
@@ -648,6 +664,7 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
     List<DetectedIssueMitigation> mitigation,
   }) = _DetectedIssue;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DetectedIssue.fromYaml(dynamic yaml) => yaml is String
@@ -672,6 +689,7 @@ abstract class DetectedIssueMitigation with _$DetectedIssueMitigation {
     Reference author,
   }) = _DetectedIssueMitigation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DetectedIssueMitigation.fromYaml(dynamic yaml) => yaml is String

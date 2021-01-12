@@ -53,6 +53,7 @@ abstract class Device with Resource implements _$Device {
     List<CodeableConcept> safety,
   }) = _Device;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Device.fromYaml(dynamic yaml) => yaml is String
@@ -84,6 +85,7 @@ abstract class DeviceUdi implements _$DeviceUdi {
     @JsonKey(name: '_entryType') Element entryTypeElement,
   }) = _DeviceUdi;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceUdi.fromYaml(dynamic yaml) => yaml is String
@@ -125,6 +127,7 @@ abstract class DeviceComponent with Resource implements _$DeviceComponent {
     CodeableConcept languageCode,
   }) = _DeviceComponent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceComponent.fromYaml(dynamic yaml) => yaml is String
@@ -148,6 +151,7 @@ abstract class DeviceComponentProductionSpecification
     @JsonKey(name: '_productionSpec') Element productionSpecElement,
   }) = _DeviceComponentProductionSpecification;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceComponentProductionSpecification.fromYaml(dynamic yaml) =>
@@ -194,6 +198,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
     List<DeviceMetricCalibration> calibration,
   }) = _DeviceMetric;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceMetric.fromYaml(dynamic yaml) => yaml is String
@@ -218,6 +223,7 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
     @JsonKey(name: '_time') Element timeElement,
   }) = _DeviceMetricCalibration;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceMetricCalibration.fromYaml(dynamic yaml) => yaml is String
@@ -263,6 +269,7 @@ abstract class Endpoint with Resource implements _$Endpoint {
     @JsonKey(name: '_header') List<Element> headerElement,
   }) = _Endpoint;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Endpoint.fromYaml(dynamic yaml) => yaml is String
@@ -325,6 +332,7 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
     List<Reference> endpoint,
   }) = _HealthcareService;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory HealthcareService.fromYaml(dynamic yaml) => yaml is String
@@ -352,6 +360,7 @@ abstract class HealthcareServiceAvailableTime
     @JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
   }) = _HealthcareServiceAvailableTime;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) =>
@@ -377,6 +386,7 @@ abstract class HealthcareServiceNotAvailable
     Period during,
   }) = _HealthcareServiceNotAvailable;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory HealthcareServiceNotAvailable.fromYaml(dynamic yaml) => yaml is String
@@ -427,6 +437,7 @@ abstract class Location with Resource implements _$Location {
     List<Reference> endpoint,
   }) = _Location;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Location.fromYaml(dynamic yaml) => yaml is String
@@ -451,6 +462,7 @@ abstract class LocationPosition implements _$LocationPosition {
     @JsonKey(name: '_altitude') Element altitudeElement,
   }) = _LocationPosition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory LocationPosition.fromYaml(dynamic yaml) => yaml is String
@@ -493,6 +505,7 @@ abstract class Organization with Resource implements _$Organization {
     List<Reference> endpoint,
   }) = _Organization;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Organization.fromYaml(dynamic yaml) => yaml is String
@@ -515,6 +528,7 @@ abstract class OrganizationContact implements _$OrganizationContact {
     Address address,
   }) = _OrganizationContact;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory OrganizationContact.fromYaml(dynamic yaml) => yaml is String
@@ -553,6 +567,7 @@ abstract class Substance with Resource implements _$Substance {
     List<SubstanceIngredient> ingredient,
   }) = _Substance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Substance.fromYaml(dynamic yaml) => yaml is String
@@ -575,6 +590,7 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
     Quantity quantity,
   }) = _SubstanceInstance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceInstance.fromYaml(dynamic yaml) => yaml is String
@@ -596,6 +612,7 @@ abstract class SubstanceIngredient implements _$SubstanceIngredient {
     Reference substanceReference,
   }) = _SubstanceIngredient;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceIngredient.fromYaml(dynamic yaml) => yaml is String

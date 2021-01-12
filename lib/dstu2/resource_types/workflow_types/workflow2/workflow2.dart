@@ -44,6 +44,7 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
     Period period,
   }) = _ProcessRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProcessRequest.fromYaml(dynamic yaml) => yaml is String
@@ -66,6 +67,7 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
     @JsonKey(required: true) @required Integer sequenceLinkId,
   }) = _ProcessRequestItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProcessRequestItem.fromYaml(dynamic yaml) => yaml is String
@@ -106,6 +108,7 @@ abstract class ProcessResponse with Resource implements _$ProcessResponse {
     List<Coding> error,
   }) = _ProcessResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProcessResponse.fromYaml(dynamic yaml) => yaml is String
@@ -129,6 +132,7 @@ abstract class ProcessResponseNotes with _$ProcessResponseNotes {
     String text,
   }) = _ProcessResponseNotes;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProcessResponseNotes.fromYaml(dynamic yaml) => yaml is String
@@ -171,6 +175,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
     SupplyRequestWhen when,
   }) = _SupplyRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SupplyRequest.fromYaml(dynamic yaml) => yaml is String
@@ -194,6 +199,7 @@ abstract class SupplyRequestWhen with _$SupplyRequestWhen {
     Timing schedule,
   }) = _SupplyRequestWhen;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SupplyRequestWhen.fromYaml(dynamic yaml) => yaml is String
@@ -236,6 +242,7 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
     List<Reference> receiver,
   }) = _SupplyDelivery;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SupplyDelivery.fromYaml(dynamic yaml) => yaml is String

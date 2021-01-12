@@ -41,6 +41,7 @@ abstract class AdministrableProductDefinition
             routeOfAdministration,
   }) = _AdministrableProductDefinition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AdministrableProductDefinition.fromYaml(dynamic yaml) =>
@@ -75,6 +76,7 @@ abstract class AdministrableProductDefinitionProperty
     CodeableConcept status,
   }) = _AdministrableProductDefinitionProperty;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AdministrableProductDefinitionProperty.fromYaml(dynamic yaml) =>
@@ -108,6 +110,7 @@ abstract class AdministrableProductDefinitionRouteOfAdministration
     List<AdministrableProductDefinitionTargetSpecies> targetSpecies,
   }) = _AdministrableProductDefinitionRouteOfAdministration;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AdministrableProductDefinitionRouteOfAdministration.fromYaml(
@@ -137,6 +140,7 @@ abstract class AdministrableProductDefinitionTargetSpecies
     List<AdministrableProductDefinitionWithdrawalPeriod> withdrawalPeriod,
   }) = _AdministrableProductDefinitionTargetSpecies;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AdministrableProductDefinitionTargetSpecies.fromYaml(dynamic yaml) =>
@@ -168,6 +172,7 @@ abstract class AdministrableProductDefinitionWithdrawalPeriod
         Element supportingInformationElement,
   }) = _AdministrableProductDefinitionWithdrawalPeriod;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AdministrableProductDefinitionWithdrawalPeriod.fromYaml(
@@ -216,6 +221,7 @@ abstract class ClinicalUseIssue with Resource implements _$ClinicalUseIssue {
     ClinicalUseIssueUndesirableEffect undesirableEffect,
   }) = _ClinicalUseIssue;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClinicalUseIssue.fromYaml(dynamic yaml) => yaml is String
@@ -243,6 +249,7 @@ abstract class ClinicalUseIssueContraindication
     List<ClinicalUseIssueOtherTherapy> otherTherapy,
   }) = _ClinicalUseIssueContraindication;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClinicalUseIssueContraindication.fromYaml(dynamic yaml) =>
@@ -272,6 +279,7 @@ abstract class ClinicalUseIssueOtherTherapy
     Reference medicationReference,
   }) = _ClinicalUseIssueOtherTherapy;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClinicalUseIssueOtherTherapy.fromYaml(dynamic yaml) => yaml is String
@@ -302,6 +310,7 @@ abstract class ClinicalUseIssueIndication
     List<ClinicalUseIssueOtherTherapy> otherTherapy,
   }) = _ClinicalUseIssueIndication;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClinicalUseIssueIndication.fromYaml(dynamic yaml) => yaml is String
@@ -330,6 +339,7 @@ abstract class ClinicalUseIssueInteraction
     CodeableConcept management,
   }) = _ClinicalUseIssueInteraction;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClinicalUseIssueInteraction.fromYaml(dynamic yaml) => yaml is String
@@ -355,6 +365,7 @@ abstract class ClinicalUseIssueInteractant
     CodeableConcept itemCodeableConcept,
   }) = _ClinicalUseIssueInteractant;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClinicalUseIssueInteractant.fromYaml(dynamic yaml) => yaml is String
@@ -381,6 +392,7 @@ abstract class ClinicalUseIssueUndesirableEffect
     CodeableConcept frequencyOfOccurrence,
   }) = _ClinicalUseIssueUndesirableEffect;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClinicalUseIssueUndesirableEffect.fromYaml(dynamic yaml) =>
@@ -424,6 +436,7 @@ abstract class Ingredient with Resource implements _$Ingredient {
     List<IngredientSpecifiedSubstance> specifiedSubstance,
   }) = _Ingredient;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Ingredient.fromYaml(dynamic yaml) => yaml is String
@@ -448,6 +461,7 @@ abstract class IngredientSubstance implements _$IngredientSubstance {
     List<IngredientStrength> strength,
   }) = _IngredientSubstance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory IngredientSubstance.fromYaml(dynamic yaml) => yaml is String
@@ -481,6 +495,7 @@ abstract class IngredientStrength implements _$IngredientStrength {
     List<IngredientReferenceStrength> referenceStrength,
   }) = _IngredientStrength;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory IngredientStrength.fromYaml(dynamic yaml) => yaml is String
@@ -510,6 +525,7 @@ abstract class IngredientReferenceStrength
     List<CodeableConcept> country,
   }) = _IngredientReferenceStrength;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory IngredientReferenceStrength.fromYaml(dynamic yaml) => yaml is String
@@ -538,6 +554,7 @@ abstract class IngredientSpecifiedSubstance
     List<IngredientStrength> strength,
   }) = _IngredientSpecifiedSubstance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory IngredientSpecifiedSubstance.fromYaml(dynamic yaml) => yaml is String
@@ -576,6 +593,7 @@ abstract class ManufacturedItemDefinition
     List<ManufacturedItemDefinitionProperty> property,
   }) = _ManufacturedItemDefinition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ManufacturedItemDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -607,6 +625,7 @@ abstract class ManufacturedItemDefinitionProperty
     Attachment valueAttachment,
   }) = _ManufacturedItemDefinitionProperty;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ManufacturedItemDefinitionProperty.fromYaml(dynamic yaml) =>
@@ -674,6 +693,7 @@ abstract class MedicinalProductDefinition
         manufacturingBusinessOperation,
   }) = _MedicinalProductDefinition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicinalProductDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -699,6 +719,7 @@ abstract class MedicinalProductDefinitionContact
     @required Reference contact,
   }) = _MedicinalProductDefinitionContact;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicinalProductDefinitionContact.fromYaml(dynamic yaml) =>
@@ -730,6 +751,7 @@ abstract class MedicinalProductDefinitionName
     List<MedicinalProductDefinitionCountryLanguage> countryLanguage,
   }) = _MedicinalProductDefinitionName;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicinalProductDefinitionName.fromYaml(dynamic yaml) =>
@@ -758,6 +780,7 @@ abstract class MedicinalProductDefinitionNamePart
     @required CodeableConcept type,
   }) = _MedicinalProductDefinitionNamePart;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicinalProductDefinitionNamePart.fromYaml(dynamic yaml) =>
@@ -787,6 +810,7 @@ abstract class MedicinalProductDefinitionCountryLanguage
     @required CodeableConcept language,
   }) = _MedicinalProductDefinitionCountryLanguage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicinalProductDefinitionCountryLanguage.fromYaml(dynamic yaml) =>
@@ -816,6 +840,7 @@ abstract class MedicinalProductDefinitionCrossReference
     CodeableConcept type,
   }) = _MedicinalProductDefinitionCrossReference;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicinalProductDefinitionCrossReference.fromYaml(dynamic yaml) =>
@@ -848,6 +873,7 @@ abstract class MedicinalProductDefinitionManufacturingBusinessOperation
     CodeableConcept confidentialityIndicator,
   }) = _MedicinalProductDefinitionManufacturingBusinessOperation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicinalProductDefinitionManufacturingBusinessOperation.fromYaml(
@@ -903,6 +929,7 @@ abstract class PackagedProductDefinition
     List<PackagedProductDefinitionPackage> package,
   }) = _PackagedProductDefinition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PackagedProductDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -928,6 +955,7 @@ abstract class PackagedProductDefinitionBatchIdentifier
     Identifier immediatePackaging,
   }) = _PackagedProductDefinitionBatchIdentifier;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PackagedProductDefinitionBatchIdentifier.fromYaml(dynamic yaml) =>
@@ -965,6 +993,7 @@ abstract class PackagedProductDefinitionPackage
     List<PackagedProductDefinitionPackage> package,
   }) = _PackagedProductDefinitionPackage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PackagedProductDefinitionPackage.fromYaml(dynamic yaml) =>
@@ -999,6 +1028,7 @@ abstract class PackagedProductDefinitionProperty
     Attachment valueAttachment,
   }) = _PackagedProductDefinitionProperty;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PackagedProductDefinitionProperty.fromYaml(dynamic yaml) =>
@@ -1029,6 +1059,7 @@ abstract class PackagedProductDefinitionContainedItem
     @JsonKey(name: '_amountInteger') Element amountIntegerElement,
   }) = _PackagedProductDefinitionContainedItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PackagedProductDefinitionContainedItem.fromYaml(dynamic yaml) =>
@@ -1083,6 +1114,7 @@ abstract class RegulatedAuthorization
     @JsonKey(name: 'case') RegulatedAuthorizationCase case_,
   }) = _RegulatedAuthorization;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory RegulatedAuthorization.fromYaml(dynamic yaml) => yaml is String
@@ -1109,6 +1141,7 @@ abstract class RegulatedAuthorizationRelatedDate
     @required CodeableConcept type,
   }) = _RegulatedAuthorizationRelatedDate;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory RegulatedAuthorizationRelatedDate.fromYaml(dynamic yaml) =>
@@ -1142,6 +1175,7 @@ abstract class RegulatedAuthorizationCase
     List<RegulatedAuthorizationCase> application,
   }) = _RegulatedAuthorizationCase;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory RegulatedAuthorizationCase.fromYaml(dynamic yaml) => yaml is String
@@ -1199,6 +1233,7 @@ abstract class SubstanceDefinition
     Reference sourceMaterial,
   }) = _SubstanceDefinition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -1233,6 +1268,7 @@ abstract class SubstanceDefinitionMoiety
     CodeableConcept amountType,
   }) = _SubstanceDefinitionMoiety;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionMoiety.fromYaml(dynamic yaml) => yaml is String
@@ -1267,6 +1303,7 @@ abstract class SubstanceDefinitionProperty
     List<Reference> source,
   }) = _SubstanceDefinitionProperty;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionProperty.fromYaml(dynamic yaml) => yaml is String
@@ -1302,6 +1339,7 @@ abstract class SubstanceDefinitionStructure
     List<SubstanceDefinitionRepresentation> representation,
   }) = _SubstanceDefinitionStructure;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionStructure.fromYaml(dynamic yaml) => yaml is String
@@ -1330,6 +1368,7 @@ abstract class SubstanceDefinitionIsotope
     SubstanceDefinitionMolecularWeight molecularWeight,
   }) = _SubstanceDefinitionIsotope;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionIsotope.fromYaml(dynamic yaml) => yaml is String
@@ -1356,6 +1395,7 @@ abstract class SubstanceDefinitionMolecularWeight
     Quantity amount,
   }) = _SubstanceDefinitionMolecularWeight;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionMolecularWeight.fromYaml(dynamic yaml) =>
@@ -1387,6 +1427,7 @@ abstract class SubstanceDefinitionRepresentation
     Reference document,
   }) = _SubstanceDefinitionRepresentation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionRepresentation.fromYaml(dynamic yaml) =>
@@ -1418,6 +1459,7 @@ abstract class SubstanceDefinitionCode implements _$SubstanceDefinitionCode {
     List<Reference> source,
   }) = _SubstanceDefinitionCode;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionCode.fromYaml(dynamic yaml) => yaml is String
@@ -1452,6 +1494,7 @@ abstract class SubstanceDefinitionName implements _$SubstanceDefinitionName {
     List<Reference> source,
   }) = _SubstanceDefinitionName;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionName.fromYaml(dynamic yaml) => yaml is String
@@ -1478,6 +1521,7 @@ abstract class SubstanceDefinitionOfficial
     @JsonKey(name: '_date') Element dateElement,
   }) = _SubstanceDefinitionOfficial;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionOfficial.fromYaml(dynamic yaml) => yaml is String
@@ -1514,6 +1558,7 @@ abstract class SubstanceDefinitionRelationship
     List<Reference> source,
   }) = _SubstanceDefinitionRelationship;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceDefinitionRelationship.fromYaml(dynamic yaml) =>
@@ -1555,6 +1600,7 @@ abstract class SubstanceNucleicAcid
     List<SubstanceNucleicAcidSubunit> subunit,
   }) = _SubstanceNucleicAcid;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceNucleicAcid.fromYaml(dynamic yaml) => yaml is String
@@ -1588,6 +1634,7 @@ abstract class SubstanceNucleicAcidSubunit
     List<SubstanceNucleicAcidSugar> sugar,
   }) = _SubstanceNucleicAcidSubunit;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceNucleicAcidSubunit.fromYaml(dynamic yaml) => yaml is String
@@ -1618,6 +1665,7 @@ abstract class SubstanceNucleicAcidLinkage
     @JsonKey(name: '_residueSite') Element residueSiteElement,
   }) = _SubstanceNucleicAcidLinkage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceNucleicAcidLinkage.fromYaml(dynamic yaml) => yaml is String
@@ -1646,6 +1694,7 @@ abstract class SubstanceNucleicAcidSugar
     @JsonKey(name: '_residueSite') Element residueSiteElement,
   }) = _SubstanceNucleicAcidSugar;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceNucleicAcidSugar.fromYaml(dynamic yaml) => yaml is String
@@ -1684,6 +1733,7 @@ abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
     List<SubstancePolymerRepeat> repeat,
   }) = _SubstancePolymer;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstancePolymer.fromYaml(dynamic yaml) => yaml is String
@@ -1708,6 +1758,7 @@ abstract class SubstancePolymerMonomerSet
     List<SubstancePolymerStartingMaterial> startingMaterial,
   }) = _SubstancePolymerMonomerSet;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstancePolymerMonomerSet.fromYaml(dynamic yaml) => yaml is String
@@ -1736,6 +1787,7 @@ abstract class SubstancePolymerStartingMaterial
     Quantity amount,
   }) = _SubstancePolymerStartingMaterial;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstancePolymerStartingMaterial.fromYaml(dynamic yaml) =>
@@ -1766,6 +1818,7 @@ abstract class SubstancePolymerRepeat implements _$SubstancePolymerRepeat {
     List<SubstancePolymerRepeatUnit> repeatUnit,
   }) = _SubstancePolymerRepeat;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstancePolymerRepeat.fromYaml(dynamic yaml) => yaml is String
@@ -1795,6 +1848,7 @@ abstract class SubstancePolymerRepeatUnit
     List<SubstancePolymerStructuralRepresentation> structuralRepresentation,
   }) = _SubstancePolymerRepeatUnit;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstancePolymerRepeatUnit.fromYaml(dynamic yaml) => yaml is String
@@ -1825,6 +1879,7 @@ abstract class SubstancePolymerDegreeOfPolymerisation
     @JsonKey(name: '_high') Element highElement,
   }) = _SubstancePolymerDegreeOfPolymerisation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstancePolymerDegreeOfPolymerisation.fromYaml(dynamic yaml) =>
@@ -1856,6 +1911,7 @@ abstract class SubstancePolymerStructuralRepresentation
     Attachment attachment,
   }) = _SubstancePolymerStructuralRepresentation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstancePolymerStructuralRepresentation.fromYaml(dynamic yaml) =>
@@ -1895,6 +1951,7 @@ abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
     List<SubstanceProteinSubunit> subunit,
   }) = _SubstanceProtein;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceProtein.fromYaml(dynamic yaml) => yaml is String
@@ -1931,6 +1988,7 @@ abstract class SubstanceProteinSubunit implements _$SubstanceProteinSubunit {
         Element cTerminalModificationElement,
   }) = _SubstanceProteinSubunit;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceProteinSubunit.fromYaml(dynamic yaml) => yaml is String
@@ -1967,6 +2025,7 @@ abstract class SubstanceReferenceInformation
     List<SubstanceReferenceInformationTarget> target,
   }) = _SubstanceReferenceInformation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceReferenceInformation.fromYaml(dynamic yaml) => yaml is String
@@ -1993,6 +2052,7 @@ abstract class SubstanceReferenceInformationGene
     List<Reference> source,
   }) = _SubstanceReferenceInformationGene;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceReferenceInformationGene.fromYaml(dynamic yaml) =>
@@ -2022,6 +2082,7 @@ abstract class SubstanceReferenceInformationGeneElement
     List<Reference> source,
   }) = _SubstanceReferenceInformationGeneElement;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceReferenceInformationGeneElement.fromYaml(dynamic yaml) =>
@@ -2059,6 +2120,7 @@ abstract class SubstanceReferenceInformationTarget
     List<Reference> source,
   }) = _SubstanceReferenceInformationTarget;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceReferenceInformationTarget.fromYaml(dynamic yaml) =>
@@ -2112,6 +2174,7 @@ abstract class SubstanceSourceMaterial
     List<SubstanceSourceMaterialPartDescription> partDescription,
   }) = _SubstanceSourceMaterial;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceSourceMaterial.fromYaml(dynamic yaml) => yaml is String
@@ -2137,6 +2200,7 @@ abstract class SubstanceSourceMaterialFractionDescription
     CodeableConcept materialType,
   }) = _SubstanceSourceMaterialFractionDescription;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceSourceMaterialFractionDescription.fromYaml(dynamic yaml) =>
@@ -2173,6 +2237,7 @@ abstract class SubstanceSourceMaterialOrganism
     SubstanceSourceMaterialOrganismGeneral organismGeneral,
   }) = _SubstanceSourceMaterialOrganism;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceSourceMaterialOrganism.fromYaml(dynamic yaml) =>
@@ -2201,6 +2266,7 @@ abstract class SubstanceSourceMaterialAuthor
     @JsonKey(name: '_authorDescription') Element authorDescriptionElement,
   }) = _SubstanceSourceMaterialAuthor;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceSourceMaterialAuthor.fromYaml(dynamic yaml) => yaml is String
@@ -2233,6 +2299,7 @@ abstract class SubstanceSourceMaterialHybrid
     CodeableConcept hybridType,
   }) = _SubstanceSourceMaterialHybrid;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceSourceMaterialHybrid.fromYaml(dynamic yaml) => yaml is String
@@ -2260,6 +2327,7 @@ abstract class SubstanceSourceMaterialOrganismGeneral
     CodeableConcept order,
   }) = _SubstanceSourceMaterialOrganismGeneral;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceSourceMaterialOrganismGeneral.fromYaml(dynamic yaml) =>
@@ -2288,6 +2356,7 @@ abstract class SubstanceSourceMaterialPartDescription
     CodeableConcept partLocation,
   }) = _SubstanceSourceMaterialPartDescription;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceSourceMaterialPartDescription.fromYaml(dynamic yaml) =>

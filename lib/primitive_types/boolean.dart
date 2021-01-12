@@ -19,6 +19,7 @@ class Boolean extends PrimitiveObject<bool> {
   }
   const Boolean._(this.value);
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Boolean.fromYaml(dynamic yaml) => yaml is String

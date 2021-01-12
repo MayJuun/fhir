@@ -22,6 +22,8 @@ class Instant extends Dates {
   }
 
   Instant._(this.value, this.format);
+
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Instant.fromYaml(dynamic yaml) => yaml is String

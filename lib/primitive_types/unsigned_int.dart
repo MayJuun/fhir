@@ -20,6 +20,7 @@ class UnsignedInt extends PrimitiveObject<int> {
 
   const UnsignedInt._(this.value);
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory UnsignedInt.fromYaml(dynamic yaml) => yaml is String

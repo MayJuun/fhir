@@ -22,6 +22,8 @@ class FhirDateTime extends Dates {
   }
 
   FhirDateTime._(this.value, this.format);
+
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory FhirDateTime.fromYaml(dynamic yaml) => yaml is String

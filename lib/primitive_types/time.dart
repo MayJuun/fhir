@@ -20,6 +20,7 @@ class Time extends PrimitiveObject<String> {
 
   const Time._(this.value);
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Time.fromYaml(dynamic yaml) => yaml is String

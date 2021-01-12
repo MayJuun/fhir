@@ -50,6 +50,7 @@ abstract class Device with Resource implements _$Device {
     @JsonKey(name: '_url') Element urlElement,
   }) = _Device;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Device.fromYaml(dynamic yaml) => yaml is String
@@ -88,6 +89,7 @@ abstract class DeviceComponent with Resource implements _$DeviceComponent {
     CodeableConcept languageCode,
   }) = _DeviceComponent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceComponent.fromYaml(dynamic yaml) => yaml is String
@@ -113,6 +115,7 @@ abstract class DeviceComponentProductionSpecification
     String productionSpec,
   }) = _DeviceComponentProductionSpecification;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceComponentProductionSpecification.fromYaml(dynamic yaml) =>
@@ -163,6 +166,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
     List<DeviceMetricCalibration> calibration,
   }) = _DeviceMetric;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceMetric.fromYaml(dynamic yaml) => yaml is String
@@ -190,6 +194,7 @@ abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
     @JsonKey(name: '_time') Element timeElement,
   }) = _DeviceMetricCalibration;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceMetricCalibration.fromYaml(dynamic yaml) => yaml is String

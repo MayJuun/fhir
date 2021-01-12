@@ -89,6 +89,7 @@ abstract class Measure with Resource implements _$Measure {
     List<MeasureSupplementalData> supplementalData,
   }) = _Measure;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Measure.fromYaml(dynamic yaml) => yaml is String
@@ -114,6 +115,7 @@ abstract class MeasureGroup implements _$MeasureGroup {
     List<MeasureStratifier> stratifier,
   }) = _MeasureGroup;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureGroup.fromYaml(dynamic yaml) => yaml is String
@@ -140,6 +142,7 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
     @JsonKey(name: '_criteria') Element criteriaElement,
   }) = _MeasurePopulation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasurePopulation.fromYaml(dynamic yaml) => yaml is String
@@ -163,6 +166,7 @@ abstract class MeasureStratifier implements _$MeasureStratifier {
     @JsonKey(name: '_path') Element pathElement,
   }) = _MeasureStratifier;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureStratifier.fromYaml(dynamic yaml) => yaml is String
@@ -187,6 +191,7 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
     @JsonKey(name: '_path') Element pathElement,
   }) = _MeasureSupplementalData;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureSupplementalData.fromYaml(dynamic yaml) => yaml is String
@@ -229,6 +234,7 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
     Reference evaluatedResources,
   }) = _MeasureReport;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureReport.fromYaml(dynamic yaml) => yaml is String
@@ -252,6 +258,7 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
     List<MeasureReportStratifier> stratifier,
   }) = _MeasureReportGroup;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureReportGroup.fromYaml(dynamic yaml) => yaml is String
@@ -275,6 +282,7 @@ abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
     Reference patients,
   }) = _MeasureReportPopulation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureReportPopulation.fromYaml(dynamic yaml) => yaml is String
@@ -295,6 +303,7 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
     List<MeasureReportStratum> stratum,
   }) = _MeasureReportStratifier;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureReportStratifier.fromYaml(dynamic yaml) => yaml is String
@@ -318,6 +327,7 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
     @JsonKey(name: '_measureScore') Element measureScoreElement,
   }) = _MeasureReportStratum;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureReportStratum.fromYaml(dynamic yaml) => yaml is String
@@ -341,6 +351,7 @@ abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
     Reference patients,
   }) = _MeasureReportPopulation1;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureReportPopulation1.fromYaml(dynamic yaml) => yaml is String

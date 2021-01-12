@@ -20,6 +20,7 @@ class Markdown extends PrimitiveObject<String> {
 
   const Markdown._(this.value);
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Markdown.fromYaml(dynamic yaml) => yaml is String

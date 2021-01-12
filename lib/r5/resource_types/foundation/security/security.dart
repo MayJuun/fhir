@@ -46,6 +46,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
     List<AuditEventEntity> entity,
   }) = _AuditEvent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AuditEvent.fromYaml(dynamic yaml) => yaml is String
@@ -82,6 +83,7 @@ abstract class AuditEventAgent implements _$AuditEventAgent {
     List<CodeableConcept> purposeOfUse,
   }) = _AuditEventAgent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AuditEventAgent.fromYaml(dynamic yaml) => yaml is String
@@ -108,6 +110,7 @@ abstract class AuditEventNetwork implements _$AuditEventNetwork {
     @JsonKey(name: '_type') Element typeElement,
   }) = _AuditEventNetwork;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AuditEventNetwork.fromYaml(dynamic yaml) => yaml is String
@@ -133,6 +136,7 @@ abstract class AuditEventSource implements _$AuditEventSource {
     List<Coding> type,
   }) = _AuditEventSource;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AuditEventSource.fromYaml(dynamic yaml) => yaml is String
@@ -164,6 +168,7 @@ abstract class AuditEventEntity implements _$AuditEventEntity {
     List<AuditEventDetail> detail,
   }) = _AuditEventEntity;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AuditEventEntity.fromYaml(dynamic yaml) => yaml is String
@@ -191,6 +196,7 @@ abstract class AuditEventDetail implements _$AuditEventDetail {
     @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
   }) = _AuditEventDetail;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AuditEventDetail.fromYaml(dynamic yaml) => yaml is String
@@ -237,6 +243,7 @@ abstract class Consent with Resource implements _$Consent {
     ConsentProvision provision,
   }) = _Consent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Consent.fromYaml(dynamic yaml) => yaml is String
@@ -262,6 +269,7 @@ abstract class ConsentPolicy implements _$ConsentPolicy {
     @JsonKey(name: '_uri') Element uriElement,
   }) = _ConsentPolicy;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConsentPolicy.fromYaml(dynamic yaml) => yaml is String
@@ -290,6 +298,7 @@ abstract class ConsentVerification implements _$ConsentVerification {
     @JsonKey(name: '_verificationDate') List<Element> verificationDateElement,
   }) = _ConsentVerification;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConsentVerification.fromYaml(dynamic yaml) => yaml is String
@@ -324,6 +333,7 @@ abstract class ConsentProvision implements _$ConsentProvision {
     List<ConsentProvision> provision,
   }) = _ConsentProvision;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConsentProvision.fromYaml(dynamic yaml) => yaml is String
@@ -347,6 +357,7 @@ abstract class ConsentActor implements _$ConsentActor {
     @required Reference reference,
   }) = _ConsentActor;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConsentActor.fromYaml(dynamic yaml) => yaml is String
@@ -372,6 +383,7 @@ abstract class ConsentData implements _$ConsentData {
     @required Reference reference,
   }) = _ConsentData;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConsentData.fromYaml(dynamic yaml) => yaml is String
@@ -414,6 +426,7 @@ abstract class Permission with Resource implements _$Permission {
     List<CodeableConcept> usageLimitations,
   }) = _Permission;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Permission.fromYaml(dynamic yaml) => yaml is String
@@ -439,6 +452,7 @@ abstract class PermissionProcessingActivity
     List<CodeableConcept> purpose,
   }) = _PermissionProcessingActivity;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PermissionProcessingActivity.fromYaml(dynamic yaml) => yaml is String
@@ -463,6 +477,7 @@ abstract class PermissionJustification implements _$PermissionJustification {
     List<CodeableConcept> grounds,
   }) = _PermissionJustification;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PermissionJustification.fromYaml(dynamic yaml) => yaml is String
@@ -506,6 +521,7 @@ abstract class Provenance with Resource implements _$Provenance {
     List<Signature> signature,
   }) = _Provenance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Provenance.fromYaml(dynamic yaml) => yaml is String
@@ -531,6 +547,7 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
     Reference onBehalfOf,
   }) = _ProvenanceAgent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProvenanceAgent.fromYaml(dynamic yaml) => yaml is String
@@ -557,6 +574,7 @@ abstract class ProvenanceEntity implements _$ProvenanceEntity {
     List<ProvenanceAgent> agent,
   }) = _ProvenanceEntity;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProvenanceEntity.fromYaml(dynamic yaml) => yaml is String

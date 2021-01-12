@@ -69,6 +69,7 @@ abstract class FhirExtension with _$FhirExtension {
     Meta valueMeta,
   }) = _FhirExtension;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory FhirExtension.fromYaml(dynamic yaml) => yaml is String

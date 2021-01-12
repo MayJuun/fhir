@@ -61,6 +61,7 @@ abstract class ValueSet with Resource implements _$ValueSet {
     ValueSetExpansion expansion,
   }) = _ValueSet;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSet.fromYaml(dynamic yaml) => yaml is String
@@ -85,6 +86,7 @@ abstract class ValueSetContact with _$ValueSetContact {
     List<ContactPoint> telecom,
   }) = _ValueSetContact;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetContact.fromYaml(dynamic yaml) => yaml is String
@@ -114,6 +116,7 @@ abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
     @JsonKey(required: true) @required List<ValueSetCodeSystemConcept> concept,
   }) = _ValueSetCodeSystem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetCodeSystem.fromYaml(dynamic yaml) => yaml is String
@@ -144,6 +147,7 @@ abstract class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
     List<ValueSetCodeSystemConcept> concept,
   }) = _ValueSetCodeSystemConcept;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetCodeSystemConcept.fromYaml(dynamic yaml) => yaml is String
@@ -171,6 +175,7 @@ abstract class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
     @JsonKey(name: '_value') Element valueElement,
   }) = _ValueSetConceptDesignation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetConceptDesignation.fromYaml(dynamic yaml) => yaml is String
@@ -197,6 +202,7 @@ abstract class ValueSetCompose with _$ValueSetCompose {
     List<ValueSetComposeInclude> exclude,
   }) = _ValueSetCompose;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetCompose.fromYaml(dynamic yaml) => yaml is String
@@ -225,6 +231,7 @@ abstract class ValueSetComposeInclude with _$ValueSetComposeInclude {
     List<ValueSetIncludeFilter> filter,
   }) = _ValueSetComposeInclude;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetComposeInclude.fromYaml(dynamic yaml) => yaml is String
@@ -252,6 +259,7 @@ abstract class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
     List<ValueSetConceptDesignation> designation,
   }) = _ValueSetIncludeConcept;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetIncludeConcept.fromYaml(dynamic yaml) => yaml is String
@@ -282,6 +290,7 @@ abstract class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
     @JsonKey(name: '_value') Element valueElement,
   }) = _ValueSetIncludeFilter;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetIncludeFilter.fromYaml(dynamic yaml) => yaml is String
@@ -314,6 +323,7 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
     List<ValueSetExpansionContains> contains,
   }) = _ValueSetExpansion;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetExpansion.fromYaml(dynamic yaml) => yaml is String
@@ -350,6 +360,7 @@ abstract class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
     @JsonKey(name: '_valueCode') Element valueCodeElement,
   }) = _ValueSetExpansionParameter;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetExpansionParameter.fromYaml(dynamic yaml) => yaml is String
@@ -384,6 +395,7 @@ abstract class ValueSetExpansionContains with _$ValueSetExpansionContains {
     List<ValueSetExpansionContains> contains,
   }) = _ValueSetExpansionContains;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetExpansionContains.fromYaml(dynamic yaml) => yaml is String
@@ -445,6 +457,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
     @JsonKey(name: '_date') Element dateElement,
   }) = _ConceptMap;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConceptMap.fromYaml(dynamic yaml) => yaml is String
@@ -468,6 +481,7 @@ abstract class ConceptMapContact with _$ConceptMapContact {
     List<ContactPoint> telecom,
   }) = _ConceptMapContact;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConceptMapContact.fromYaml(dynamic yaml) => yaml is String
@@ -493,6 +507,7 @@ abstract class ConceptMapElement with _$ConceptMapElement {
     List<ConceptMapElementTarget> target,
   }) = _ConceptMapElement;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConceptMapElement.fromYaml(dynamic yaml) => yaml is String
@@ -525,6 +540,7 @@ abstract class ConceptMapElementTarget with _$ConceptMapElementTarget {
     List<ConceptMapTargetDependsOn> product,
   }) = _ConceptMapElementTarget;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConceptMapElementTarget.fromYaml(dynamic yaml) => yaml is String
@@ -549,6 +565,7 @@ abstract class ConceptMapTargetDependsOn with _$ConceptMapTargetDependsOn {
     @JsonKey(required: true) @required String code,
   }) = _ConceptMapTargetDependsOn;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConceptMapTargetDependsOn.fromYaml(dynamic yaml) => yaml is String
@@ -604,6 +621,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     Reference replacedBy,
   }) = _NamingSystem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory NamingSystem.fromYaml(dynamic yaml) => yaml is String
@@ -627,6 +645,7 @@ abstract class NamingSystemContact with _$NamingSystemContact {
     List<ContactPoint> telecom,
   }) = _NamingSystemContact;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory NamingSystemContact.fromYaml(dynamic yaml) => yaml is String
@@ -657,6 +676,7 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
     Period period,
   }) = _NamingSystemUniqueId;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory NamingSystemUniqueId.fromYaml(dynamic yaml) => yaml is String

@@ -22,6 +22,8 @@ class Date extends Dates {
   }
 
   Date._(this.value, this.format);
+
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Date.fromYaml(dynamic yaml) => yaml is String

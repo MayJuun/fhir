@@ -47,6 +47,7 @@ abstract class Media with Resource implements _$Media {
     @JsonKey(required: true) @required Attachment content,
   }) = _Media;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Media.fromYaml(dynamic yaml) => yaml is String
@@ -74,6 +75,7 @@ abstract class Binary with Resource implements _$Binary {
     Base64Binary content,
   }) = _Binary;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Binary.fromYaml(dynamic yaml) => yaml is String
@@ -107,6 +109,7 @@ abstract class Bundle with Resource implements _$Bundle {
     Signature signature,
   }) = _Bundle;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Bundle.fromYaml(dynamic yaml) => yaml is String
@@ -132,6 +135,7 @@ abstract class BundleLink with _$BundleLink {
     @JsonKey(name: '_url') Element urlElement,
   }) = _BundleLink;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BundleLink.fromYaml(dynamic yaml) => yaml is String
@@ -161,6 +165,7 @@ abstract class BundleEntry with _$BundleEntry {
     BundleEntryResponse response,
   }) = _BundleEntry;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BundleEntry.fromYaml(dynamic yaml) => yaml is String
@@ -187,6 +192,7 @@ abstract class BundleEntrySearch with _$BundleEntrySearch {
     @JsonKey(name: '_score') Element scoreElement,
   }) = _BundleEntrySearch;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BundleEntrySearch.fromYaml(dynamic yaml) => yaml is String
@@ -223,6 +229,7 @@ abstract class BundleEntryRequest with _$BundleEntryRequest {
     @JsonKey(name: '_ifNoneExist') Element ifNoneExistElement,
   }) = _BundleEntryRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BundleEntryRequest.fromYaml(dynamic yaml) => yaml is String
@@ -253,6 +260,7 @@ abstract class BundleEntryResponse with _$BundleEntryResponse {
     @JsonKey(name: '_lastModified') Element lastModifiedElement,
   }) = _BundleEntryResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory BundleEntryResponse.fromYaml(dynamic yaml) => yaml is String
@@ -288,6 +296,7 @@ abstract class Basic with Resource implements _$Basic {
     @JsonKey(name: '_created') Element createdElement,
   }) = _Basic;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Basic.fromYaml(dynamic yaml) => yaml is String

@@ -56,6 +56,7 @@ abstract class Communication with Resource implements _$Communication {
     List<Annotation> note,
   }) = _Communication;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Communication.fromYaml(dynamic yaml) => yaml is String
@@ -81,6 +82,7 @@ abstract class CommunicationPayload implements _$CommunicationPayload {
     Reference contentReference,
   }) = _CommunicationPayload;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CommunicationPayload.fromYaml(dynamic yaml) => yaml is String
@@ -140,6 +142,7 @@ abstract class CommunicationRequest
     List<Annotation> note,
   }) = _CommunicationRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CommunicationRequest.fromYaml(dynamic yaml) => yaml is String
@@ -166,6 +169,7 @@ abstract class CommunicationRequestPayload
     Reference contentReference,
   }) = _CommunicationRequestPayload;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CommunicationRequestPayload.fromYaml(dynamic yaml) => yaml is String
@@ -229,6 +233,7 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
     List<Reference> relevantHistory,
   }) = _DeviceRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceRequest.fromYaml(dynamic yaml) => yaml is String
@@ -256,6 +261,7 @@ abstract class DeviceRequestParameter implements _$DeviceRequestParameter {
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
   }) = _DeviceRequestParameter;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceRequestParameter.fromYaml(dynamic yaml) => yaml is String
@@ -306,6 +312,7 @@ abstract class DeviceUseStatement
     List<Annotation> note,
   }) = _DeviceUseStatement;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DeviceUseStatement.fromYaml(dynamic yaml) => yaml is String
@@ -357,6 +364,7 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
     List<DataRequirement> dataRequirement,
   }) = _GuidanceResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory GuidanceResponse.fromYaml(dynamic yaml) => yaml is String
@@ -402,6 +410,7 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
     List<Reference> receiver,
   }) = _SupplyDelivery;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SupplyDelivery.fromYaml(dynamic yaml) => yaml is String
@@ -427,6 +436,7 @@ abstract class SupplyDeliverySuppliedItem
     Reference itemReference,
   }) = _SupplyDeliverySuppliedItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SupplyDeliverySuppliedItem.fromYaml(dynamic yaml) => yaml is String
@@ -480,6 +490,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
     Reference deliverTo,
   }) = _SupplyRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SupplyRequest.fromYaml(dynamic yaml) => yaml is String
@@ -507,6 +518,7 @@ abstract class SupplyRequestParameter implements _$SupplyRequestParameter {
     @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
   }) = _SupplyRequestParameter;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SupplyRequestParameter.fromYaml(dynamic yaml) => yaml is String

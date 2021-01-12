@@ -20,6 +20,7 @@ class PositiveInt extends PrimitiveObject<int> {
 
   const PositiveInt._(this.value);
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory PositiveInt.fromYaml(dynamic yaml) => yaml is String

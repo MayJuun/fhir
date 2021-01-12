@@ -19,6 +19,7 @@ abstract class Element with _$Element {
     @JsonKey(name: 'fhir_comments') List<String> fhirComments,
   }) = _Element;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Element.fromYaml(dynamic yaml) => yaml is String

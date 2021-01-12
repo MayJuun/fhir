@@ -50,6 +50,7 @@ abstract class Coverage with Resource implements _$Coverage {
     List<Reference> contract,
   }) = _Coverage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Coverage.fromYaml(dynamic yaml) => yaml is String
@@ -76,6 +77,7 @@ abstract class CoverageClass implements _$CoverageClass {
     @JsonKey(name: '_name') Element nameElement,
   }) = _CoverageClass;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CoverageClass.fromYaml(dynamic yaml) => yaml is String
@@ -102,6 +104,7 @@ abstract class CoverageCostToBeneficiary
     List<CoverageException> exception,
   }) = _CoverageCostToBeneficiary;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CoverageCostToBeneficiary.fromYaml(dynamic yaml) => yaml is String
@@ -126,6 +129,7 @@ abstract class CoverageException implements _$CoverageException {
     Period period,
   }) = _CoverageException;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CoverageException.fromYaml(dynamic yaml) => yaml is String
@@ -176,6 +180,7 @@ abstract class CoverageEligibilityRequest
     List<CoverageEligibilityRequestItem> item,
   }) = _CoverageEligibilityRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CoverageEligibilityRequest.fromYaml(dynamic yaml) => yaml is String
@@ -204,6 +209,7 @@ abstract class CoverageEligibilityRequestSupportingInfo
     @JsonKey(name: '_appliesToAll') Element appliesToAllElement,
   }) = _CoverageEligibilityRequestSupportingInfo;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CoverageEligibilityRequestSupportingInfo.fromYaml(dynamic yaml) =>
@@ -235,6 +241,7 @@ abstract class CoverageEligibilityRequestInsurance
     @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
   }) = _CoverageEligibilityRequestInsurance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CoverageEligibilityRequestInsurance.fromYaml(dynamic yaml) =>
@@ -273,6 +280,7 @@ abstract class CoverageEligibilityRequestItem
     List<Reference> detail,
   }) = _CoverageEligibilityRequestItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CoverageEligibilityRequestItem.fromYaml(dynamic yaml) =>
@@ -300,6 +308,7 @@ abstract class CoverageEligibilityRequestDiagnosis
     Reference diagnosisReference,
   }) = _CoverageEligibilityRequestDiagnosis;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CoverageEligibilityRequestDiagnosis.fromYaml(dynamic yaml) =>
@@ -359,6 +368,7 @@ abstract class CoverageEligibilityResponse
     List<CoverageEligibilityResponseError> error,
   }) = _CoverageEligibilityResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CoverageEligibilityResponse.fromYaml(dynamic yaml) => yaml is String
@@ -387,6 +397,7 @@ abstract class CoverageEligibilityResponseInsurance
     List<CoverageEligibilityResponseItem> item,
   }) = _CoverageEligibilityResponseInsurance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CoverageEligibilityResponseInsurance.fromYaml(dynamic yaml) =>
@@ -433,6 +444,7 @@ abstract class CoverageEligibilityResponseItem
     @JsonKey(name: '_authorizationUrl') Element authorizationUrlElement,
   }) = _CoverageEligibilityResponseItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CoverageEligibilityResponseItem.fromYaml(dynamic yaml) =>
@@ -469,6 +481,7 @@ abstract class CoverageEligibilityResponseBenefit
     Money usedMoney,
   }) = _CoverageEligibilityResponseBenefit;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CoverageEligibilityResponseBenefit.fromYaml(dynamic yaml) =>
@@ -496,6 +509,7 @@ abstract class CoverageEligibilityResponseError
     @required CodeableConcept code,
   }) = _CoverageEligibilityResponseError;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CoverageEligibilityResponseError.fromYaml(dynamic yaml) =>
@@ -538,6 +552,7 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
     Reference coverage,
   }) = _EnrollmentRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
@@ -582,6 +597,7 @@ abstract class EnrollmentResponse
     Reference requestProvider,
   }) = _EnrollmentResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String

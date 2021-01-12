@@ -55,6 +55,7 @@ abstract class Immunization with Resource implements _$Immunization {
     List<ImmunizationVaccinationProtocol> vaccinationProtocol,
   }) = _Immunization;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Immunization.fromYaml(dynamic yaml) => yaml is String
@@ -75,6 +76,7 @@ abstract class ImmunizationPractitioner implements _$ImmunizationPractitioner {
     @required Reference actor,
   }) = _ImmunizationPractitioner;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImmunizationPractitioner.fromYaml(dynamic yaml) => yaml is String
@@ -96,6 +98,7 @@ abstract class ImmunizationExplanation implements _$ImmunizationExplanation {
     List<CodeableConcept> reasonNotGiven,
   }) = _ImmunizationExplanation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImmunizationExplanation.fromYaml(dynamic yaml) => yaml is String
@@ -119,6 +122,7 @@ abstract class ImmunizationReaction implements _$ImmunizationReaction {
     @JsonKey(name: '_reported') Element reportedElement,
   }) = _ImmunizationReaction;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImmunizationReaction.fromYaml(dynamic yaml) => yaml is String
@@ -150,6 +154,7 @@ abstract class ImmunizationVaccinationProtocol
     CodeableConcept doseStatusReason,
   }) = _ImmunizationVaccinationProtocol;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImmunizationVaccinationProtocol.fromYaml(dynamic yaml) =>
@@ -187,6 +192,7 @@ abstract class ImmunizationRecommendation
     @required List<ImmunizationRecommendationRecommendation> recommendation,
   }) = _ImmunizationRecommendation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImmunizationRecommendation.fromYaml(dynamic yaml) => yaml is String
@@ -218,6 +224,7 @@ abstract class ImmunizationRecommendationRecommendation
     List<Reference> supportingPatientInformation,
   }) = _ImmunizationRecommendationRecommendation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImmunizationRecommendationRecommendation.fromYaml(dynamic yaml) =>
@@ -244,6 +251,7 @@ abstract class ImmunizationRecommendationDateCriterion
     @JsonKey(name: '_value') Element valueElement,
   }) = _ImmunizationRecommendationDateCriterion;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImmunizationRecommendationDateCriterion.fromYaml(dynamic yaml) =>
@@ -274,6 +282,7 @@ abstract class ImmunizationRecommendationProtocol
     @JsonKey(name: '_series') Element seriesElement,
   }) = _ImmunizationRecommendationProtocol;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ImmunizationRecommendationProtocol.fromYaml(dynamic yaml) =>
@@ -319,6 +328,7 @@ abstract class Medication with Resource implements _$Medication {
     List<Attachment> image,
   }) = _Medication;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Medication.fromYaml(dynamic yaml) => yaml is String
@@ -342,6 +352,7 @@ abstract class MedicationIngredient implements _$MedicationIngredient {
     Ratio amount,
   }) = _MedicationIngredient;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicationIngredient.fromYaml(dynamic yaml) => yaml is String
@@ -363,6 +374,7 @@ abstract class MedicationPackage implements _$MedicationPackage {
     List<MedicationBatch> batch,
   }) = _MedicationPackage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicationPackage.fromYaml(dynamic yaml) => yaml is String
@@ -384,6 +396,7 @@ abstract class MedicationContent implements _$MedicationContent {
     Quantity amount,
   }) = _MedicationContent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicationContent.fromYaml(dynamic yaml) => yaml is String
@@ -406,6 +419,7 @@ abstract class MedicationBatch implements _$MedicationBatch {
     @JsonKey(name: '_expirationDate') Element expirationDateElement,
   }) = _MedicationBatch;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicationBatch.fromYaml(dynamic yaml) => yaml is String
@@ -462,6 +476,7 @@ abstract class MedicationAdministration
     List<Reference> eventHistory,
   }) = _MedicationAdministration;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicationAdministration.fromYaml(dynamic yaml) => yaml is String
@@ -484,6 +499,7 @@ abstract class MedicationAdministrationPerformer
     Reference onBehalfOf,
   }) = _MedicationAdministrationPerformer;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicationAdministrationPerformer.fromYaml(dynamic yaml) =>
@@ -515,6 +531,7 @@ abstract class MedicationAdministrationDosage
     Quantity rateSimpleQuantity,
   }) = _MedicationAdministrationDosage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicationAdministrationDosage.fromYaml(dynamic yaml) =>
@@ -579,6 +596,7 @@ abstract class MedicationDispense
     List<Reference> eventHistory,
   }) = _MedicationDispense;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicationDispense.fromYaml(dynamic yaml) => yaml is String
@@ -600,6 +618,7 @@ abstract class MedicationDispensePerformer
     Reference onBehalfOf,
   }) = _MedicationDispensePerformer;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicationDispensePerformer.fromYaml(dynamic yaml) => yaml is String
@@ -625,6 +644,7 @@ abstract class MedicationDispenseSubstitution
     List<Reference> responsibleParty,
   }) = _MedicationDispenseSubstitution;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicationDispenseSubstitution.fromYaml(dynamic yaml) =>
@@ -686,6 +706,7 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
     List<Reference> eventHistory,
   }) = _MedicationRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicationRequest.fromYaml(dynamic yaml) => yaml is String
@@ -707,6 +728,7 @@ abstract class MedicationRequestRequester
     Reference onBehalfOf,
   }) = _MedicationRequestRequester;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicationRequestRequester.fromYaml(dynamic yaml) => yaml is String
@@ -734,6 +756,7 @@ abstract class MedicationRequestDispenseRequest
     Reference performer,
   }) = _MedicationRequestDispenseRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicationRequestDispenseRequest.fromYaml(dynamic yaml) =>
@@ -760,6 +783,7 @@ abstract class MedicationRequestSubstitution
     CodeableConcept reason,
   }) = _MedicationRequestSubstitution;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicationRequestSubstitution.fromYaml(dynamic yaml) => yaml is String
@@ -816,6 +840,7 @@ abstract class MedicationStatement
     List<Dosage> dosage,
   }) = _MedicationStatement;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MedicationStatement.fromYaml(dynamic yaml) => yaml is String

@@ -47,6 +47,7 @@ abstract class Composition with Resource implements _$Composition {
     List<CompositionSection> section,
   }) = _Composition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Composition.fromYaml(dynamic yaml) => yaml is String
@@ -70,6 +71,7 @@ abstract class CompositionAttester implements _$CompositionAttester {
     Reference party,
   }) = _CompositionAttester;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CompositionAttester.fromYaml(dynamic yaml) => yaml is String
@@ -92,6 +94,7 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
     Reference targetReference,
   }) = _CompositionRelatesTo;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CompositionRelatesTo.fromYaml(dynamic yaml) => yaml is String
@@ -113,6 +116,7 @@ abstract class CompositionEvent implements _$CompositionEvent {
     List<Reference> detail,
   }) = _CompositionEvent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CompositionEvent.fromYaml(dynamic yaml) => yaml is String
@@ -141,6 +145,7 @@ abstract class CompositionSection implements _$CompositionSection {
     List<CompositionSection> section,
   }) = _CompositionSection;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CompositionSection.fromYaml(dynamic yaml) => yaml is String
@@ -186,6 +191,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
     List<DocumentManifestRelated> related,
   }) = _DocumentManifest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DocumentManifest.fromYaml(dynamic yaml) => yaml is String
@@ -206,6 +212,7 @@ abstract class DocumentManifestContent implements _$DocumentManifestContent {
     Reference pReference,
   }) = _DocumentManifestContent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DocumentManifestContent.fromYaml(dynamic yaml) => yaml is String
@@ -226,6 +233,7 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
     Reference ref,
   }) = _DocumentManifestRelated;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DocumentManifestRelated.fromYaml(dynamic yaml) => yaml is String
@@ -277,6 +285,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     DocumentReferenceContext context,
   }) = _DocumentReference;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DocumentReference.fromYaml(dynamic yaml) => yaml is String
@@ -299,6 +308,7 @@ abstract class DocumentReferenceRelatesTo
     @required Reference target,
   }) = _DocumentReferenceRelatesTo;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DocumentReferenceRelatesTo.fromYaml(dynamic yaml) => yaml is String
@@ -320,6 +330,7 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
     Coding format,
   }) = _DocumentReferenceContent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DocumentReferenceContent.fromYaml(dynamic yaml) => yaml is String
@@ -346,6 +357,7 @@ abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
     List<DocumentReferenceRelated> related,
   }) = _DocumentReferenceContext;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DocumentReferenceContext.fromYaml(dynamic yaml) => yaml is String
@@ -367,6 +379,7 @@ abstract class DocumentReferenceRelated implements _$DocumentReferenceRelated {
     Reference ref,
   }) = _DocumentReferenceRelated;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory DocumentReferenceRelated.fromYaml(dynamic yaml) => yaml is String

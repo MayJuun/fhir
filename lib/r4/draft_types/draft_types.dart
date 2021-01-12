@@ -24,6 +24,7 @@ abstract class Population implements _$Population {
     CodeableConcept physiologicalCondition,
   }) = _Population;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Population.fromYaml(dynamic yaml) => yaml is String
@@ -49,6 +50,7 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
     List<CodeableConcept> specialPrecautionsForStorage,
   }) = _ProductShelfLife;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProductShelfLife.fromYaml(dynamic yaml) => yaml is String
@@ -84,6 +86,7 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
     CodeableConcept scoring,
   }) = _ProdCharacteristic;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProdCharacteristic.fromYaml(dynamic yaml) => yaml is String
@@ -111,6 +114,7 @@ abstract class MarketingStatus implements _$MarketingStatus {
     @JsonKey(name: '_restoreDate') Element restoreDateElement,
   }) = _MarketingStatus;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MarketingStatus.fromYaml(dynamic yaml) => yaml is String
@@ -140,6 +144,7 @@ abstract class SubstanceAmount implements _$SubstanceAmount {
     SubstanceAmountReferenceRange referenceRange,
   }) = _SubstanceAmount;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceAmount.fromYaml(dynamic yaml) => yaml is String
@@ -164,6 +169,7 @@ abstract class SubstanceAmountReferenceRange
     Quantity highLimit,
   }) = _SubstanceAmountReferenceRange;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory SubstanceAmountReferenceRange.fromYaml(dynamic yaml) => yaml is String

@@ -20,6 +20,7 @@ class Integer extends PrimitiveObject<int> {
 
   const Integer._(this.value);
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Integer.fromYaml(dynamic yaml) => yaml is String

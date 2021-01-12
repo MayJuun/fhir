@@ -42,6 +42,7 @@ abstract class Account with Resource implements _$Account {
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _Account;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Account.fromYaml(dynamic yaml) => yaml is String
@@ -104,6 +105,7 @@ abstract class Claim with Resource implements _$Claim {
     List<ClaimMissingTeeth> missingTeeth,
   }) = _Claim;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Claim.fromYaml(dynamic yaml) => yaml is String
@@ -128,6 +130,7 @@ abstract class ClaimPayee with _$ClaimPayee {
     Reference person,
   }) = _ClaimPayee;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimPayee.fromYaml(dynamic yaml) => yaml is String
@@ -152,6 +155,7 @@ abstract class ClaimDiagnosis with _$ClaimDiagnosis {
     @JsonKey(required: true) @required Coding diagnosis,
   }) = _ClaimDiagnosis;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimDiagnosis.fromYaml(dynamic yaml) => yaml is String
@@ -181,6 +185,7 @@ abstract class ClaimCoverage with _$ClaimCoverage {
     Coding originalRuleset,
   }) = _ClaimCoverage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimCoverage.fromYaml(dynamic yaml) => yaml is String
@@ -222,6 +227,7 @@ abstract class ClaimItem with _$ClaimItem {
     ClaimItemProsthesis prosthesis,
   }) = _ClaimItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimItem.fromYaml(dynamic yaml) => yaml is String
@@ -255,6 +261,7 @@ abstract class ClaimItemDetail with _$ClaimItemDetail {
     List<ClaimDetailSubDetail> subDetail,
   }) = _ClaimItemDetail;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimItemDetail.fromYaml(dynamic yaml) => yaml is String
@@ -287,6 +294,7 @@ abstract class ClaimDetailSubDetail with _$ClaimDetailSubDetail {
     Coding udi,
   }) = _ClaimDetailSubDetail;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimDetailSubDetail.fromYaml(dynamic yaml) => yaml is String
@@ -311,6 +319,7 @@ abstract class ClaimItemProsthesis with _$ClaimItemProsthesis {
     Coding priorMaterial,
   }) = _ClaimItemProsthesis;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimItemProsthesis.fromYaml(dynamic yaml) => yaml is String
@@ -335,6 +344,7 @@ abstract class ClaimMissingTeeth with _$ClaimMissingTeeth {
     Date extractionDate,
   }) = _ClaimMissingTeeth;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimMissingTeeth.fromYaml(dynamic yaml) => yaml is String
@@ -395,6 +405,7 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
     List<ClaimResponseCoverage> coverage,
   }) = _ClaimResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimResponse.fromYaml(dynamic yaml) => yaml is String
@@ -422,6 +433,7 @@ abstract class ClaimResponseItem with _$ClaimResponseItem {
     List<ClaimResponseItemDetail> detail,
   }) = _ClaimResponseItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseItem.fromYaml(dynamic yaml) => yaml is String
@@ -448,6 +460,7 @@ abstract class ClaimResponseItemAdjudication
     @JsonKey(name: '_value') Element valueElement,
   }) = _ClaimResponseItemAdjudication;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseItemAdjudication.fromYaml(dynamic yaml) => yaml is String
@@ -473,6 +486,7 @@ abstract class ClaimResponseItemDetail with _$ClaimResponseItemDetail {
     List<ClaimResponseDetailSubDetail> subDetail,
   }) = _ClaimResponseItemDetail;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseItemDetail.fromYaml(dynamic yaml) => yaml is String
@@ -497,6 +511,7 @@ abstract class ClaimResponseDetailSubDetail
     List<ClaimResponseItemAdjudication> adjudication,
   }) = _ClaimResponseDetailSubDetail;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseDetailSubDetail.fromYaml(dynamic yaml) => yaml is String
@@ -525,6 +540,7 @@ abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
     ClaimResponseAddItemDetail detail,
   }) = _ClaimResponseAddItem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseAddItem.fromYaml(dynamic yaml) => yaml is String
@@ -549,6 +565,7 @@ abstract class ClaimResponseAddItemDetail with _$ClaimResponseAddItemDetail {
     List<ClaimResponseItemAdjudication> adjudication,
   }) = _ClaimResponseAddItemDetail;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseAddItemDetail.fromYaml(dynamic yaml) => yaml is String
@@ -575,6 +592,7 @@ abstract class ClaimResponseError with _$ClaimResponseError {
     @JsonKey(required: true) @required Coding code,
   }) = _ClaimResponseError;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseError.fromYaml(dynamic yaml) => yaml is String
@@ -602,6 +620,7 @@ abstract class ClaimResponseNote with _$ClaimResponseNote {
     @JsonKey(name: '_text') Element textElement,
   }) = _ClaimResponseNote;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseNote.fromYaml(dynamic yaml) => yaml is String
@@ -631,6 +650,7 @@ abstract class ClaimResponseCoverage with _$ClaimResponseCoverage {
     Coding originalRuleset,
   }) = _ClaimResponseCoverage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ClaimResponseCoverage.fromYaml(dynamic yaml) => yaml is String

@@ -44,6 +44,7 @@ abstract class ExplanationOfBenefit
     Reference requestOrganization,
   }) = _ExplanationOfBenefit;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ExplanationOfBenefit.fromYaml(dynamic yaml) => yaml is String

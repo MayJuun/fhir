@@ -93,6 +93,7 @@ abstract class Measure with Resource implements _$Measure {
     List<MeasureSupplementalData> supplementalData,
   }) = _Measure;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Measure.fromYaml(dynamic yaml) => yaml is String
@@ -119,6 +120,7 @@ abstract class MeasureGroup implements _$MeasureGroup {
     List<MeasureStratifier> stratifier,
   }) = _MeasureGroup;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureGroup.fromYaml(dynamic yaml) => yaml is String
@@ -144,6 +146,7 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
     @required Expression criteria,
   }) = _MeasurePopulation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasurePopulation.fromYaml(dynamic yaml) => yaml is String
@@ -170,6 +173,7 @@ abstract class MeasureStratifier implements _$MeasureStratifier {
     List<MeasureComponent> component,
   }) = _MeasureStratifier;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureStratifier.fromYaml(dynamic yaml) => yaml is String
@@ -195,6 +199,7 @@ abstract class MeasureComponent implements _$MeasureComponent {
     @required Expression criteria,
   }) = _MeasureComponent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureComponent.fromYaml(dynamic yaml) => yaml is String
@@ -221,6 +226,7 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
     @required Expression criteria,
   }) = _MeasureSupplementalData;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureSupplementalData.fromYaml(dynamic yaml) => yaml is String
@@ -266,6 +272,7 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
     List<Reference> evaluatedResource,
   }) = _MeasureReport;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureReport.fromYaml(dynamic yaml) => yaml is String
@@ -291,6 +298,7 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
     List<MeasureReportStratifier> stratifier,
   }) = _MeasureReportGroup;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureReportGroup.fromYaml(dynamic yaml) => yaml is String
@@ -316,6 +324,7 @@ abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
     Reference subjectResults,
   }) = _MeasureReportPopulation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureReportPopulation.fromYaml(dynamic yaml) => yaml is String
@@ -339,6 +348,7 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
     List<MeasureReportStratum> stratum,
   }) = _MeasureReportStratifier;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureReportStratifier.fromYaml(dynamic yaml) => yaml is String
@@ -364,6 +374,7 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
     Quantity measureScore,
   }) = _MeasureReportStratum;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureReportStratum.fromYaml(dynamic yaml) => yaml is String
@@ -387,6 +398,7 @@ abstract class MeasureReportComponent implements _$MeasureReportComponent {
     @required CodeableConcept value,
   }) = _MeasureReportComponent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureReportComponent.fromYaml(dynamic yaml) => yaml is String
@@ -412,6 +424,7 @@ abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
     Reference subjectResults,
   }) = _MeasureReportPopulation1;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory MeasureReportPopulation1.fromYaml(dynamic yaml) => yaml is String
@@ -462,6 +475,7 @@ abstract class TestReport with Resource implements _$TestReport {
     TestReportTeardown teardown,
   }) = _TestReport;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestReport.fromYaml(dynamic yaml) => yaml is String
@@ -490,6 +504,7 @@ abstract class TestReportParticipant implements _$TestReportParticipant {
     @JsonKey(name: '_display') Element displayElement,
   }) = _TestReportParticipant;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestReportParticipant.fromYaml(dynamic yaml) => yaml is String
@@ -512,6 +527,7 @@ abstract class TestReportSetup implements _$TestReportSetup {
     @required List<TestReportAction> action,
   }) = _TestReportSetup;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestReportSetup.fromYaml(dynamic yaml) => yaml is String
@@ -535,6 +551,7 @@ abstract class TestReportAction implements _$TestReportAction {
     @JsonKey(name: 'assert') TestReportAssert assert_,
   }) = _TestReportAction;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestReportAction.fromYaml(dynamic yaml) => yaml is String
@@ -563,6 +580,7 @@ abstract class TestReportOperation implements _$TestReportOperation {
     @JsonKey(name: '_detail') Element detailElement,
   }) = _TestReportOperation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestReportOperation.fromYaml(dynamic yaml) => yaml is String
@@ -591,6 +609,7 @@ abstract class TestReportAssert implements _$TestReportAssert {
     @JsonKey(name: '_detail') Element detailElement,
   }) = _TestReportAssert;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestReportAssert.fromYaml(dynamic yaml) => yaml is String
@@ -617,6 +636,7 @@ abstract class TestReportTest implements _$TestReportTest {
     @required List<TestReportAction1> action,
   }) = _TestReportTest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestReportTest.fromYaml(dynamic yaml) => yaml is String
@@ -640,6 +660,7 @@ abstract class TestReportAction1 implements _$TestReportAction1 {
     @JsonKey(name: 'assert') TestReportAssert assert_,
   }) = _TestReportAction1;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestReportAction1.fromYaml(dynamic yaml) => yaml is String
@@ -662,6 +683,7 @@ abstract class TestReportTeardown implements _$TestReportTeardown {
     @required List<TestReportAction2> action,
   }) = _TestReportTeardown;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestReportTeardown.fromYaml(dynamic yaml) => yaml is String
@@ -684,6 +706,7 @@ abstract class TestReportAction2 implements _$TestReportAction2 {
     @required TestReportOperation operation,
   }) = _TestReportAction2;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestReportAction2.fromYaml(dynamic yaml) => yaml is String
@@ -749,6 +772,7 @@ abstract class TestScript with Resource implements _$TestScript {
     TestScriptTeardown teardown,
   }) = _TestScript;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScript.fromYaml(dynamic yaml) => yaml is String
@@ -773,6 +797,7 @@ abstract class TestScriptOrigin implements _$TestScriptOrigin {
     @required Coding profile,
   }) = _TestScriptOrigin;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptOrigin.fromYaml(dynamic yaml) => yaml is String
@@ -797,6 +822,7 @@ abstract class TestScriptDestination implements _$TestScriptDestination {
     @required Coding profile,
   }) = _TestScriptDestination;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptDestination.fromYaml(dynamic yaml) => yaml is String
@@ -820,6 +846,7 @@ abstract class TestScriptMetadata implements _$TestScriptMetadata {
     @required List<TestScriptCapability> capability,
   }) = _TestScriptMetadata;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptMetadata.fromYaml(dynamic yaml) => yaml is String
@@ -845,6 +872,7 @@ abstract class TestScriptLink implements _$TestScriptLink {
     @JsonKey(name: '_description') Element descriptionElement,
   }) = _TestScriptLink;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptLink.fromYaml(dynamic yaml) => yaml is String
@@ -879,6 +907,7 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
     @required Canonical capabilities,
   }) = _TestScriptCapability;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptCapability.fromYaml(dynamic yaml) => yaml is String
@@ -905,6 +934,7 @@ abstract class TestScriptFixture implements _$TestScriptFixture {
     Reference resource,
   }) = _TestScriptFixture;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptFixture.fromYaml(dynamic yaml) => yaml is String
@@ -942,6 +972,7 @@ abstract class TestScriptVariable implements _$TestScriptVariable {
     @JsonKey(name: '_sourceId') Element sourceIdElement,
   }) = _TestScriptVariable;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptVariable.fromYaml(dynamic yaml) => yaml is String
@@ -964,6 +995,7 @@ abstract class TestScriptSetup implements _$TestScriptSetup {
     @required List<TestScriptAction> action,
   }) = _TestScriptSetup;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptSetup.fromYaml(dynamic yaml) => yaml is String
@@ -987,6 +1019,7 @@ abstract class TestScriptAction implements _$TestScriptAction {
     @JsonKey(name: 'assert') TestScriptAssert assert_,
   }) = _TestScriptAction;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptAction.fromYaml(dynamic yaml) => yaml is String
@@ -1041,6 +1074,7 @@ abstract class TestScriptOperation implements _$TestScriptOperation {
     @JsonKey(name: '_url') Element urlElement,
   }) = _TestScriptOperation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptOperation.fromYaml(dynamic yaml) => yaml is String
@@ -1066,6 +1100,7 @@ abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
     @JsonKey(name: '_value') Element valueElement,
   }) = _TestScriptRequestHeader;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptRequestHeader.fromYaml(dynamic yaml) => yaml is String
@@ -1136,6 +1171,7 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
     @JsonKey(name: '_warningOnly') Element warningOnlyElement,
   }) = _TestScriptAssert;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptAssert.fromYaml(dynamic yaml) => yaml is String
@@ -1162,6 +1198,7 @@ abstract class TestScriptTest implements _$TestScriptTest {
     @required List<TestScriptAction1> action,
   }) = _TestScriptTest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptTest.fromYaml(dynamic yaml) => yaml is String
@@ -1185,6 +1222,7 @@ abstract class TestScriptAction1 implements _$TestScriptAction1 {
     @JsonKey(name: 'assert') TestScriptAssert assert_,
   }) = _TestScriptAction1;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptAction1.fromYaml(dynamic yaml) => yaml is String
@@ -1207,6 +1245,7 @@ abstract class TestScriptTeardown implements _$TestScriptTeardown {
     @required List<TestScriptAction2> action,
   }) = _TestScriptTeardown;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptTeardown.fromYaml(dynamic yaml) => yaml is String
@@ -1229,6 +1268,7 @@ abstract class TestScriptAction2 implements _$TestScriptAction2 {
     @required TestScriptOperation operation,
   }) = _TestScriptAction2;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TestScriptAction2.fromYaml(dynamic yaml) => yaml is String

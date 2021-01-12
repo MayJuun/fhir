@@ -44,6 +44,7 @@ abstract class Endpoint with Resource implements _$Endpoint {
     @JsonKey(name: '_header') List<Element> headerElement,
   }) = _Endpoint;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Endpoint.fromYaml(dynamic yaml) => yaml is String
@@ -104,6 +105,7 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
     List<Reference> endpoint,
   }) = _HealthcareService;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory HealthcareService.fromYaml(dynamic yaml) => yaml is String
@@ -129,6 +131,7 @@ abstract class HealthcareServiceEligibility
     @JsonKey(name: '_comment') Element commentElement,
   }) = _HealthcareServiceEligibility;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory HealthcareServiceEligibility.fromYaml(dynamic yaml) => yaml is String
@@ -160,6 +163,7 @@ abstract class HealthcareServiceAvailableTime
     @JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
   }) = _HealthcareServiceAvailableTime;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) =>
@@ -188,6 +192,7 @@ abstract class HealthcareServiceNotAvailable
     Period during,
   }) = _HealthcareServiceNotAvailable;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory HealthcareServiceNotAvailable.fromYaml(dynamic yaml) => yaml is String
@@ -242,6 +247,7 @@ abstract class Location with Resource implements _$Location {
     List<Reference> endpoint,
   }) = _Location;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Location.fromYaml(dynamic yaml) => yaml is String
@@ -269,6 +275,7 @@ abstract class LocationPosition implements _$LocationPosition {
     @JsonKey(name: '_altitude') Element altitudeElement,
   }) = _LocationPosition;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory LocationPosition.fromYaml(dynamic yaml) => yaml is String
@@ -298,6 +305,7 @@ abstract class LocationHoursOfOperation implements _$LocationHoursOfOperation {
     @JsonKey(name: '_closingTime') Element closingTimeElement,
   }) = _LocationHoursOfOperation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory LocationHoursOfOperation.fromYaml(dynamic yaml) => yaml is String
@@ -341,6 +349,7 @@ abstract class Organization with Resource implements _$Organization {
     List<Reference> endpoint,
   }) = _Organization;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Organization.fromYaml(dynamic yaml) => yaml is String
@@ -366,6 +375,7 @@ abstract class OrganizationContact implements _$OrganizationContact {
     Address address,
   }) = _OrganizationContact;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory OrganizationContact.fromYaml(dynamic yaml) => yaml is String
@@ -410,6 +420,7 @@ abstract class OrganizationAffiliation
     List<Reference> endpoint,
   }) = _OrganizationAffiliation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory OrganizationAffiliation.fromYaml(dynamic yaml) => yaml is String

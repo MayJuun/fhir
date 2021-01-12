@@ -19,6 +19,7 @@ class Base64Binary extends PrimitiveObject<String> {
   }
   const Base64Binary._(this.value);
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Base64Binary.fromYaml(dynamic yaml) => yaml is String

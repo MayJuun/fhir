@@ -40,6 +40,7 @@ abstract class Organization with Resource implements _$Organization {
     // @JsonKey(name: '_alias') Element aliasElement,
   }) = _Organization;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Organization.fromYaml(dynamic yaml) => yaml is String
@@ -66,6 +67,7 @@ abstract class OrganizationContact with _$OrganizationContact {
     Address address,
   }) = _OrganizationContact;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory OrganizationContact.fromYaml(dynamic yaml) => yaml is String
@@ -122,6 +124,7 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
         Element availabilityExceptionsElement,
   }) = _HealthcareService;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory HealthcareService.fromYaml(dynamic yaml) => yaml is String
@@ -146,6 +149,7 @@ abstract class HealthcareServiceServiceType
     List<CodeableConcept> specialty,
   }) = _HealthcareServiceServiceType;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory HealthcareServiceServiceType.fromYaml(dynamic yaml) => yaml is String
@@ -177,6 +181,7 @@ abstract class HealthcareServiceAvailableTime
     @JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
   }) = _HealthcareServiceAvailableTime;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) =>
@@ -205,6 +210,7 @@ abstract class HealthcareServiceNotAvailable
     Period during,
   }) = _HealthcareServiceNotAvailable;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory HealthcareServiceNotAvailable.fromYaml(dynamic yaml) => yaml is String
@@ -249,6 +255,7 @@ abstract class Group with Resource implements _$Group {
     List<GroupMember> member,
   }) = _Group;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Group.fromYaml(dynamic yaml) => yaml is String
@@ -277,6 +284,7 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
     Period period,
   }) = _GroupCharacteristic;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory GroupCharacteristic.fromYaml(dynamic yaml) => yaml is String
@@ -302,6 +310,7 @@ abstract class GroupMember with _$GroupMember {
     @JsonKey(name: '_inactive') Element inactiveElement,
   }) = _GroupMember;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory GroupMember.fromYaml(dynamic yaml) => yaml is String

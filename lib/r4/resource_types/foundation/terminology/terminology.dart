@@ -74,6 +74,7 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
     List<CodeSystemConcept> concept,
   }) = _CodeSystem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CodeSystem.fromYaml(dynamic yaml) => yaml is String
@@ -103,6 +104,7 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
     @JsonKey(name: '_value') Element valueElement,
   }) = _CodeSystemFilter;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CodeSystemFilter.fromYaml(dynamic yaml) => yaml is String
@@ -133,6 +135,7 @@ abstract class CodeSystemProperty implements _$CodeSystemProperty {
     @JsonKey(name: '_type') Element typeElement,
   }) = _CodeSystemProperty;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CodeSystemProperty.fromYaml(dynamic yaml) => yaml is String
@@ -163,6 +166,7 @@ abstract class CodeSystemConcept implements _$CodeSystemConcept {
     List<CodeSystemConcept> concept,
   }) = _CodeSystemConcept;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CodeSystemConcept.fromYaml(dynamic yaml) => yaml is String
@@ -189,6 +193,7 @@ abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
     @JsonKey(name: '_value') Element valueElement,
   }) = _CodeSystemDesignation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CodeSystemDesignation.fromYaml(dynamic yaml) => yaml is String
@@ -225,6 +230,7 @@ abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
     @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
   }) = _CodeSystemProperty1;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CodeSystemProperty1.fromYaml(dynamic yaml) => yaml is String
@@ -290,6 +296,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
     List<ConceptMapGroup> group,
   }) = _ConceptMap;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConceptMap.fromYaml(dynamic yaml) => yaml is String
@@ -321,6 +328,7 @@ abstract class ConceptMapGroup implements _$ConceptMapGroup {
     ConceptMapUnmapped unmapped,
   }) = _ConceptMapGroup;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConceptMapGroup.fromYaml(dynamic yaml) => yaml is String
@@ -347,6 +355,7 @@ abstract class ConceptMapElement implements _$ConceptMapElement {
     List<ConceptMapTarget> target,
   }) = _ConceptMapElement;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConceptMapElement.fromYaml(dynamic yaml) => yaml is String
@@ -379,6 +388,7 @@ abstract class ConceptMapTarget implements _$ConceptMapTarget {
     List<ConceptMapDependsOn> product,
   }) = _ConceptMapTarget;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConceptMapTarget.fromYaml(dynamic yaml) => yaml is String
@@ -407,6 +417,7 @@ abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
     @JsonKey(name: '_display') Element displayElement,
   }) = _ConceptMapDependsOn;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConceptMapDependsOn.fromYaml(dynamic yaml) => yaml is String
@@ -436,6 +447,7 @@ abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
     Canonical url,
   }) = _ConceptMapUnmapped;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ConceptMapUnmapped.fromYaml(dynamic yaml) => yaml is String
@@ -487,6 +499,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     @required List<NamingSystemUniqueId> uniqueId,
   }) = _NamingSystem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory NamingSystem.fromYaml(dynamic yaml) => yaml is String
@@ -518,6 +531,7 @@ abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
     Period period,
   }) = _NamingSystemUniqueId;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory NamingSystemUniqueId.fromYaml(dynamic yaml) => yaml is String
@@ -589,6 +603,7 @@ abstract class TerminologyCapabilities
     TerminologyCapabilitiesClosure closure,
   }) = _TerminologyCapabilities;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TerminologyCapabilities.fromYaml(dynamic yaml) => yaml is String
@@ -615,6 +630,7 @@ abstract class TerminologyCapabilitiesSoftware
     @JsonKey(name: '_version') Element versionElement,
   }) = _TerminologyCapabilitiesSoftware;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TerminologyCapabilitiesSoftware.fromYaml(dynamic yaml) =>
@@ -644,6 +660,7 @@ abstract class TerminologyCapabilitiesImplementation
     @JsonKey(name: '_url') Element urlElement,
   }) = _TerminologyCapabilitiesImplementation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TerminologyCapabilitiesImplementation.fromYaml(dynamic yaml) =>
@@ -674,6 +691,7 @@ abstract class TerminologyCapabilitiesCodeSystem
     @JsonKey(name: '_subsumption') Element subsumptionElement,
   }) = _TerminologyCapabilitiesCodeSystem;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TerminologyCapabilitiesCodeSystem.fromYaml(dynamic yaml) =>
@@ -711,6 +729,7 @@ abstract class TerminologyCapabilitiesVersion
     @JsonKey(name: '_property') List<Element> propertyElement,
   }) = _TerminologyCapabilitiesVersion;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TerminologyCapabilitiesVersion.fromYaml(dynamic yaml) =>
@@ -740,6 +759,7 @@ abstract class TerminologyCapabilitiesFilter
     @JsonKey(name: '_op') List<Element> opElement,
   }) = _TerminologyCapabilitiesFilter;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TerminologyCapabilitiesFilter.fromYaml(dynamic yaml) => yaml is String
@@ -772,6 +792,7 @@ abstract class TerminologyCapabilitiesExpansion
     @JsonKey(name: '_textFilter') Element textFilterElement,
   }) = _TerminologyCapabilitiesExpansion;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TerminologyCapabilitiesExpansion.fromYaml(dynamic yaml) =>
@@ -802,6 +823,7 @@ abstract class TerminologyCapabilitiesParameter
     @JsonKey(name: '_documentation') Element documentationElement,
   }) = _TerminologyCapabilitiesParameter;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TerminologyCapabilitiesParameter.fromYaml(dynamic yaml) =>
@@ -830,6 +852,7 @@ abstract class TerminologyCapabilitiesValidateCode
     @JsonKey(name: '_translations') Element translationsElement,
   }) = _TerminologyCapabilitiesValidateCode;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TerminologyCapabilitiesValidateCode.fromYaml(dynamic yaml) =>
@@ -858,6 +881,7 @@ abstract class TerminologyCapabilitiesTranslation
     @JsonKey(name: '_needsMap') Element needsMapElement,
   }) = _TerminologyCapabilitiesTranslation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TerminologyCapabilitiesTranslation.fromYaml(dynamic yaml) =>
@@ -886,6 +910,7 @@ abstract class TerminologyCapabilitiesClosure
     @JsonKey(name: '_translation') Element translationElement,
   }) = _TerminologyCapabilitiesClosure;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory TerminologyCapabilitiesClosure.fromYaml(dynamic yaml) =>
@@ -948,6 +973,7 @@ abstract class ValueSet with Resource implements _$ValueSet {
     ValueSetExpansion expansion,
   }) = _ValueSet;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSet.fromYaml(dynamic yaml) => yaml is String
@@ -975,6 +1001,7 @@ abstract class ValueSetCompose implements _$ValueSetCompose {
     List<ValueSetInclude> exclude,
   }) = _ValueSetCompose;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetCompose.fromYaml(dynamic yaml) => yaml is String
@@ -1003,6 +1030,7 @@ abstract class ValueSetInclude implements _$ValueSetInclude {
     List<Canonical> valueSet,
   }) = _ValueSetInclude;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetInclude.fromYaml(dynamic yaml) => yaml is String
@@ -1029,6 +1057,7 @@ abstract class ValueSetConcept implements _$ValueSetConcept {
     List<ValueSetDesignation> designation,
   }) = _ValueSetConcept;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetConcept.fromYaml(dynamic yaml) => yaml is String
@@ -1055,6 +1084,7 @@ abstract class ValueSetDesignation implements _$ValueSetDesignation {
     @JsonKey(name: '_value') Element valueElement,
   }) = _ValueSetDesignation;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetDesignation.fromYaml(dynamic yaml) => yaml is String
@@ -1082,6 +1112,7 @@ abstract class ValueSetFilter implements _$ValueSetFilter {
     @JsonKey(name: '_value') Element valueElement,
   }) = _ValueSetFilter;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetFilter.fromYaml(dynamic yaml) => yaml is String
@@ -1113,6 +1144,7 @@ abstract class ValueSetExpansion implements _$ValueSetExpansion {
     List<ValueSetContains> contains,
   }) = _ValueSetExpansion;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetExpansion.fromYaml(dynamic yaml) => yaml is String
@@ -1150,6 +1182,7 @@ abstract class ValueSetParameter implements _$ValueSetParameter {
     @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
   }) = _ValueSetParameter;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetParameter.fromYaml(dynamic yaml) => yaml is String
@@ -1185,6 +1218,7 @@ abstract class ValueSetContains implements _$ValueSetContains {
     List<ValueSetContains> contains,
   }) = _ValueSetContains;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ValueSetContains.fromYaml(dynamic yaml) => yaml is String

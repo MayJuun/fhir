@@ -50,6 +50,7 @@ abstract class Coverage with Resource implements _$Coverage {
     List<Reference> contract,
   }) = _Coverage;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Coverage.fromYaml(dynamic yaml) => yaml is String
@@ -92,6 +93,7 @@ abstract class CoverageGrouping implements _$CoverageGrouping {
     @JsonKey(name: '_subClassDisplay') Element subClassDisplayElement,
   }) = _CoverageGrouping;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory CoverageGrouping.fromYaml(dynamic yaml) => yaml is String
@@ -143,6 +145,7 @@ abstract class EligibilityRequest
     CodeableConcept benefitSubCategory,
   }) = _EligibilityRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EligibilityRequest.fromYaml(dynamic yaml) => yaml is String
@@ -191,6 +194,7 @@ abstract class EligibilityResponse
     List<EligibilityResponseError> error,
   }) = _EligibilityResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EligibilityResponse.fromYaml(dynamic yaml) => yaml is String
@@ -213,6 +217,7 @@ abstract class EligibilityResponseInsurance
     List<EligibilityResponseBenefitBalance> benefitBalance,
   }) = _EligibilityResponseInsurance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EligibilityResponseInsurance.fromYaml(dynamic yaml) => yaml is String
@@ -245,6 +250,7 @@ abstract class EligibilityResponseBenefitBalance
     List<EligibilityResponseFinancial> financial,
   }) = _EligibilityResponseBenefitBalance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EligibilityResponseBenefitBalance.fromYaml(dynamic yaml) =>
@@ -277,6 +283,7 @@ abstract class EligibilityResponseFinancial
     Money usedMoney,
   }) = _EligibilityResponseFinancial;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EligibilityResponseFinancial.fromYaml(dynamic yaml) => yaml is String
@@ -297,6 +304,7 @@ abstract class EligibilityResponseError implements _$EligibilityResponseError {
     @required CodeableConcept code,
   }) = _EligibilityResponseError;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EligibilityResponseError.fromYaml(dynamic yaml) => yaml is String
@@ -337,6 +345,7 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
     Reference coverage,
   }) = _EnrollmentRequest;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
@@ -380,6 +389,7 @@ abstract class EnrollmentResponse
     Reference requestOrganization,
   }) = _EnrollmentResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String

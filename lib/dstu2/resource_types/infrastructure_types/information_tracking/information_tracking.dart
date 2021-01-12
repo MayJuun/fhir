@@ -44,6 +44,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
     @JsonKey(required: true) @required QuestionnaireGroup group,
   }) = _Questionnaire;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Questionnaire.fromYaml(dynamic yaml) => yaml is String
@@ -76,6 +77,7 @@ abstract class QuestionnaireGroup with _$QuestionnaireGroup {
     List<QuestionnaireGroupQuestion> question,
   }) = _QuestionnaireGroup;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory QuestionnaireGroup.fromYaml(dynamic yaml) => yaml is String
@@ -108,6 +110,7 @@ abstract class QuestionnaireGroupQuestion with _$QuestionnaireGroupQuestion {
     List<QuestionnaireGroup> group,
   }) = _QuestionnaireGroupQuestion;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory QuestionnaireGroupQuestion.fromYaml(dynamic yaml) => yaml is String
@@ -155,6 +158,7 @@ abstract class QuestionnaireResponse
     QuestionnaireResponseGroup group,
   }) = _QuestionnaireResponse;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory QuestionnaireResponse.fromYaml(dynamic yaml) => yaml is String
@@ -185,6 +189,7 @@ abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
     List<QuestionnaireResponseGroupQuestion> question,
   }) = _QuestionnaireResponseGroup;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory QuestionnaireResponseGroup.fromYaml(dynamic yaml) => yaml is String
@@ -213,6 +218,7 @@ abstract class QuestionnaireResponseGroupQuestion
     List<QuestionnaireResponseQuestionAnswer> answer,
   }) = _QuestionnaireResponseGroupQuestion;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory QuestionnaireResponseGroupQuestion.fromYaml(dynamic yaml) =>
@@ -263,6 +269,7 @@ abstract class QuestionnaireResponseQuestionAnswer
     List<QuestionnaireResponseGroup> group,
   }) = _QuestionnaireResponseQuestionAnswer;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory QuestionnaireResponseQuestionAnswer.fromYaml(dynamic yaml) =>
@@ -308,6 +315,7 @@ abstract class Provenance with Resource implements _$Provenance {
     List<Signature> signature,
   }) = _Provenance;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory Provenance.fromYaml(dynamic yaml) => yaml is String
@@ -334,6 +342,7 @@ abstract class ProvenanceAgent with _$ProvenanceAgent {
     List<ProvenanceAgentRelatedAgent> relatedAgent,
   }) = _ProvenanceAgent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProvenanceAgent.fromYaml(dynamic yaml) => yaml is String
@@ -365,6 +374,7 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
     ProvenanceAgent agent,
   }) = _ProvenanceEntity;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProvenanceEntity.fromYaml(dynamic yaml) => yaml is String
@@ -388,6 +398,7 @@ abstract class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent {
     @JsonKey(required: true) @required FhirUri target,
   }) = _ProvenanceAgentRelatedAgent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory ProvenanceAgentRelatedAgent.fromYaml(dynamic yaml) => yaml is String
@@ -422,6 +433,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
     List<AuditEventObject> object,
   }) = _AuditEvent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AuditEvent.fromYaml(dynamic yaml) => yaml is String
@@ -450,6 +462,7 @@ abstract class AuditEventEvent with _$AuditEventEvent {
     List<Coding> purposeOfEvent,
   }) = _AuditEventEvent;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AuditEventEvent.fromYaml(dynamic yaml) => yaml is String
@@ -483,6 +496,7 @@ abstract class AuditEventParticipant with _$AuditEventParticipant {
     List<Coding> purposeOfUse,
   }) = _AuditEventParticipant;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AuditEventParticipant.fromYaml(dynamic yaml) => yaml is String
@@ -508,6 +522,7 @@ abstract class AuditEventSource with _$AuditEventSource {
     List<Coding> type,
   }) = _AuditEventSource;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AuditEventSource.fromYaml(dynamic yaml) => yaml is String
@@ -540,6 +555,7 @@ abstract class AuditEventObject with _$AuditEventObject {
     List<AuditEventObjectDetail> detail,
   }) = _AuditEventObject;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AuditEventObject.fromYaml(dynamic yaml) => yaml is String
@@ -566,6 +582,7 @@ abstract class AuditEventParticipantNetwork
     @JsonKey(name: '_type') Element typeElement,
   }) = _AuditEventParticipantNetwork;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AuditEventParticipantNetwork.fromYaml(dynamic yaml) => yaml is String
@@ -582,6 +599,8 @@ abstract class AuditEventParticipantNetwork
 @freezed
 abstract class AuditEventObjectDetail with _$AuditEventObjectDetail {
   AuditEventObjectDetail._();
+
+  /// 444444444444444444444444444444444444444444444444444444444444
   factory AuditEventObjectDetail({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -591,6 +610,7 @@ abstract class AuditEventObjectDetail with _$AuditEventObjectDetail {
     @JsonKey(required: true) @required Base64Binary value,
   }) = _AuditEventObjectDetail;
 
+  /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   factory AuditEventObjectDetail.fromYaml(dynamic yaml) => yaml is String
