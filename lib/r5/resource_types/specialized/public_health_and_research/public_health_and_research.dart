@@ -59,6 +59,7 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ResearchStudy.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -86,6 +87,7 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ResearchStudyArm.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -111,6 +113,7 @@ abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ResearchStudyObjective.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -154,6 +157,7 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ResearchSubject.fromYaml(dynamic yaml) => yaml is String
       ? ResearchSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -182,6 +186,7 @@ abstract class ResearchSubjectProgress implements _$ResearchSubjectProgress {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ResearchSubjectProgress.fromYaml(dynamic yaml) => yaml is String
       ? ResearchSubjectProgress.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

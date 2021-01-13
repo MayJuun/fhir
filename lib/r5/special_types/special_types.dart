@@ -25,6 +25,7 @@ abstract class Narrative implements _$Narrative {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Narrative.fromYaml(dynamic yaml) => yaml is String
       ? Narrative.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -48,6 +49,7 @@ abstract class CodeableReference implements _$CodeableReference {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CodeableReference.fromYaml(dynamic yaml) => yaml is String
       ? CodeableReference.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -76,6 +78,7 @@ abstract class Reference implements _$Reference {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Reference.fromYaml(dynamic yaml) => yaml is String
       ? Reference.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -108,6 +111,7 @@ abstract class Statistic implements _$Statistic {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Statistic.fromYaml(dynamic yaml) => yaml is String
       ? Statistic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -139,6 +143,7 @@ abstract class StatisticSampleSize implements _$StatisticSampleSize {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StatisticSampleSize.fromYaml(dynamic yaml) => yaml is String
       ? StatisticSampleSize.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -171,6 +176,7 @@ abstract class StatisticAttributeEstimate
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StatisticAttributeEstimate.fromYaml(dynamic yaml) => yaml is String
       ? StatisticAttributeEstimate.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -203,6 +209,7 @@ abstract class StatisticAttributeEstimate1
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StatisticAttributeEstimate1.fromYaml(dynamic yaml) => yaml is String
       ? StatisticAttributeEstimate1.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -234,6 +241,7 @@ abstract class StatisticModelCharacteristic
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StatisticModelCharacteristic.fromYaml(dynamic yaml) => yaml is String
       ? StatisticModelCharacteristic.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -263,6 +271,7 @@ abstract class StatisticVariable implements _$StatisticVariable {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StatisticVariable.fromYaml(dynamic yaml) => yaml is String
       ? StatisticVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -293,6 +302,7 @@ abstract class OrderedDistribution implements _$OrderedDistribution {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory OrderedDistribution.fromYaml(dynamic yaml) => yaml is String
       ? OrderedDistribution.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -319,6 +329,7 @@ abstract class OrderedDistributionInterval
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory OrderedDistributionInterval.fromYaml(dynamic yaml) => yaml is String
       ? OrderedDistributionInterval.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -350,6 +361,7 @@ abstract class Meta implements _$Meta {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Meta.fromYaml(dynamic yaml) => yaml is String
       ? Meta.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -389,6 +401,7 @@ abstract class Dosage implements _$Dosage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Dosage.fromYaml(dynamic yaml) => yaml is String
       ? Dosage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -416,6 +429,7 @@ abstract class DosageDoseAndRate implements _$DosageDoseAndRate {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DosageDoseAndRate.fromYaml(dynamic yaml) => yaml is String
       ? DosageDoseAndRate.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -744,6 +758,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ElementDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -774,6 +789,7 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ElementDefinitionSlicing.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionSlicing.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -803,6 +819,7 @@ abstract class ElementDefinitionDiscriminator
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ElementDefinitionDiscriminator.fromYaml(dynamic yaml) =>
       yaml is String
           ? ElementDefinitionDiscriminator.fromJson(
@@ -834,6 +851,7 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ElementDefinitionBase.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionBase.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -865,6 +883,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ElementDefinitionType.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionType.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -960,6 +979,7 @@ abstract class ElementDefinitionExample implements _$ElementDefinitionExample {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ElementDefinitionExample.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionExample.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -998,6 +1018,7 @@ abstract class ElementDefinitionConstraint
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ElementDefinitionConstraint.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionConstraint.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1027,6 +1048,7 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ElementDefinitionBinding.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionBinding.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1058,6 +1080,7 @@ abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ElementDefinitionMapping.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionMapping.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))

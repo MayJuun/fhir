@@ -56,6 +56,7 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CatalogEntry.fromYaml(dynamic yaml) => yaml is String
       ? CatalogEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -82,6 +83,7 @@ abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CatalogEntryRelatedEntry.fromYaml(dynamic yaml) => yaml is String
       ? CatalogEntryRelatedEntry.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -133,6 +135,7 @@ abstract class Composition with Resource implements _$Composition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Composition.fromYaml(dynamic yaml) => yaml is String
       ? Composition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -161,6 +164,7 @@ abstract class CompositionAttester implements _$CompositionAttester {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CompositionAttester.fromYaml(dynamic yaml) => yaml is String
       ? CompositionAttester.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -187,6 +191,7 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CompositionRelatesTo.fromYaml(dynamic yaml) => yaml is String
       ? CompositionRelatesTo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -212,6 +217,7 @@ abstract class CompositionEvent implements _$CompositionEvent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CompositionEvent.fromYaml(dynamic yaml) => yaml is String
       ? CompositionEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -246,6 +252,7 @@ abstract class CompositionSection implements _$CompositionSection {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CompositionSection.fromYaml(dynamic yaml) => yaml is String
       ? CompositionSection.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -293,6 +300,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DocumentManifest.fromYaml(dynamic yaml) => yaml is String
       ? DocumentManifest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -317,6 +325,7 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DocumentManifestRelated.fromYaml(dynamic yaml) => yaml is String
       ? DocumentManifestRelated.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -374,6 +383,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DocumentReference.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReference.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -403,6 +413,7 @@ abstract class DocumentReferenceAttester
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DocumentReferenceAttester.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReferenceAttester.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -431,6 +442,7 @@ abstract class DocumentReferenceRelatesTo
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DocumentReferenceRelatesTo.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReferenceRelatesTo.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -457,6 +469,7 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DocumentReferenceContent.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReferenceContent.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))

@@ -16,6 +16,201 @@ abstract class CapabilityStatement
     with Resource
     implements _$CapabilityStatement {
   CapabilityStatement._();
+
+  /// [CapabilityStatement]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [resourceType]: This is a CapabilityStatement resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance 
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [url]: An absolute URI that is used to identify this capability statement
+  /// when it is referenced in a specification, model, design or an instance;
+  /// also called its canonical identifier. This SHOULD be globally unique and
+  /// SHOULD be a literal address at which at which an authoritative instance of
+  /// this capability statement is (or will be) published. This URL can be the
+  /// target of a canonical reference. It SHALL remain the same when the
+  ///  capability statement is stored on different servers.
+  ///
+  /// [_url]: Extensions for url
+  ///
+  /// [version]: The identifier that is used to identify this version of the
+  /// capability statement when it is referenced in a specification, model,
+  /// design or instance. This is an arbitrary value managed by the capability
+  /// statement author and is not expected to be globally unique. For example,
+  /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
+  /// available. There is also no expectation that versions can be placed in a
+  ///  lexicographical sequence.
+  ///
+  /// [_version]: Extensions for version
+  ///
+  /// [name]: A natural language name identifying the capability statement. This
+  /// name should be usable as an identifier for the module by machine
+  ///  processing applications such as code generation.
+  ///
+  /// [_name]: Extensions for name
+  ///
+  /// [title]: A short, descriptive, user-friendly title for the capability
+  ///  statement.
+  ///
+  /// [_title]: Extensions for title
+  ///
+  /// [status]: The status of this capability statement. Enables tracking the
+  ///  life-cycle of the content.
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [experimental]: A Boolean value to indicate that this capability statement
+  /// is authored for testing purposes (or education/evaluation/marketing) and
+  ///  is not intended to be used for genuine usage.
+  ///
+  /// [_experimental]: Extensions for experimental
+  ///
+  /// [date]: The date  (and optionally time) when the capability statement was
+  /// published. The date must change when the business version changes and it
+  /// must change if the status code changes. In addition, it should change when
+  ///  the substantive content of the capability statement changes.
+  ///
+  /// [_date]: Extensions for date
+  ///
+  /// [publisher]: The name of the organization or individual that published the
+  ///  capability statement.
+  ///
+  /// [_publisher]: Extensions for publisher
+  ///
+  /// [contact]: Contact details to assist a user in finding and communicating
+  ///  with the publisher.
+  ///
+  /// [description]: A free text natural language description of the capability
+  /// statement from a consumer's perspective. Typically, this is used when the
+  /// capability statement describes a desired rather than an actual solution,
+  ///  for example as a formal expression of requirements as part of an RFP.
+  ///
+  /// [_description]: Extensions for description
+  ///
+  /// [useContext]: The content was developed with a focus and intent of
+  /// supporting the contexts that are listed. These contexts may be general
+  /// categories (gender, age, ...) or may be references to specific programs
+  /// (insurance plans, studies, ...) and may be used to assist with indexing
+  ///  and searching for appropriate capability statement instances.
+  ///
+  /// [jurisdiction]: A legal or geographic region in which the capability
+  ///  statement is intended to be used.
+  ///
+  /// [purpose]: Explanation of why this capability statement is needed and why
+  ///  it has been designed as it has.
+  ///
+  /// [_purpose]: Extensions for purpose
+  ///
+  /// [copyright]: A copyright statement relating to the capability statement
+  /// and/or its contents. Copyright statements are generally legal restrictions
+  ///  on the use and publishing of the capability statement.
+  ///
+  /// [_copyright]: Extensions for copyright
+  ///
+  /// [kind]: The way that this statement is intended to be used, to describe an
+  /// actual running instance of software, a particular product (kind, not
+  /// instance of software) or a class of implementation (e.g. a desired
+  ///  purchase).
+  ///
+  /// [_kind]: Extensions for kind
+  ///
+  /// [instantiates]: Reference to a canonical URL of another
+  /// CapabilityStatement that this software implements. This capability
+  /// statement is a published API description that corresponds to a business
+  /// service. The server may actually implement a subset of the capability
+  /// statement it claims to implement, so the capability statement must specify
+  ///  the full capability details.
+  ///
+  /// [imports]: Reference to a canonical URL of another CapabilityStatement
+  /// that this software adds to. The capability statement automatically
+  /// includes everything in the other statement, and it is not duplicated,
+  /// though the server may repeat the same resources, interactions and
+  ///  operations to add additional details to them.
+  ///
+  /// [software]: Software that is covered by this capability statement.  It is
+  /// used when the capability statement describes the capabilities of a
+  ///  particular software version, independent of an installation.
+  ///
+  /// [implementation]: Identifies a specific implementation instance that is
+  /// described by the capability statement - i.e. a particular installation,
+  ///  rather than the capabilities of a software program.
+  ///
+  /// [fhirVersion]: The version of the FHIR specification that this
+  /// CapabilityStatement describes (which SHALL be the same as the FHIR version
+  ///  of the CapabilityStatement itself). There is no default value.
+  ///
+  /// [_fhirVersion]: Extensions for fhirVersion
+  ///
+  /// [format]: A list of the formats supported by this implementation using
+  ///  their content types.
+  ///
+  /// [_format]: Extensions for format
+  ///
+  /// [patchFormat]: A list of the patch formats supported by this
+  ///  implementation using their content types.
+  ///
+  /// [_patchFormat]: Extensions for patchFormat
+  ///
+  /// [implementationGuide]: A list of implementation guides that the server
+  ///  does (or should) support in their entirety.
+  ///
+  /// [rest]: A definition of the restful capabilities of the solution, if any.
+  ///
+  /// [messaging]: A description of the messaging capabilities of the solution.
+  ///
+  /// [document]: A document definition.
   factory CapabilityStatement({
     @Default('CapabilityStatement') String resourceType,
     Id id,
@@ -77,6 +272,7 @@ abstract class CapabilityStatement
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatement.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -91,6 +287,48 @@ abstract class CapabilityStatement
 abstract class CapabilityStatementSoftware
     implements _$CapabilityStatementSoftware {
   CapabilityStatementSoftware._();
+
+  /// [CapabilityStatement_Software]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [name]: Name the software is known by.
+  ///
+  /// [_name]: Extensions for name
+  ///
+  /// [version]: The version identifier for the software covered by this
+  ///  statement.
+  ///
+  /// [_version]: Extensions for version
+  ///
+  /// [releaseDate]: Date this version of the software was released.
+  ///
+  /// [_releaseDate]: Extensions for releaseDate
   factory CapabilityStatementSoftware({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -106,6 +344,7 @@ abstract class CapabilityStatementSoftware
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementSoftware.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementSoftware.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -121,6 +360,48 @@ abstract class CapabilityStatementSoftware
 abstract class CapabilityStatementImplementation
     implements _$CapabilityStatementImplementation {
   CapabilityStatementImplementation._();
+
+  /// [CapabilityStatement_Implementation]: A Capability Statement documents a
+  /// set of capabilities (behaviors) of a FHIR Server for a particular version
+  /// of FHIR that may be used as a statement of actual server functionality or
+  ///  a statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [description]: Information about the specific installation that this
+  ///  capability statement relates to.
+  ///
+  /// [_description]: Extensions for description
+  ///
+  /// [url]: An absolute base URL for the implementation.  This forms the base
+  ///  for REST interfaces as well as the mailbox and document interfaces.
+  ///
+  /// [_url]: Extensions for url
+  ///
+  /// [custodian]: The organization responsible for the management of the
+  ///  instance and oversight of the data on the server at the specified URL.
   factory CapabilityStatementImplementation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -135,6 +416,7 @@ abstract class CapabilityStatementImplementation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementImplementation.fromYaml(dynamic yaml) =>
       yaml is String
           ? CapabilityStatementImplementation.fromJson(
@@ -152,6 +434,66 @@ abstract class CapabilityStatementImplementation
 @freezed
 abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
   CapabilityStatementRest._();
+
+  /// [CapabilityStatement_Rest]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [mode]: Identifies whether this portion of the statement is describing the
+  ///  ability to initiate or receive restful operations.
+  ///
+  /// [_mode]: Extensions for mode
+  ///
+  /// [documentation]: Information about the system's restful capabilities that
+  ///  apply across all applications, such as security.
+  ///
+  /// [_documentation]: Extensions for documentation
+  ///
+  /// [security]: Information about security implementation from an interface
+  ///  perspective - what a client needs to know.
+  ///
+  /// [resource]: A specification of the restful capabilities of the solution
+  ///  for a specific resource type.
+  ///
+  /// [interaction]: A specification of restful operations supported by the
+  ///  system.
+  ///
+  /// [searchParam]: Search parameters that are supported for searching all
+  /// resources for implementations to support and/or make use of - either
+  /// references to ones defined in the specification, or additional ones
+  ///  defined for/by the implementation.
+  ///
+  /// [operation]: Definition of an operation or a named query together with its
+  ///  parameters and their meaning and type.
+  ///
+  /// [compartment]: An absolute URI which is a reference to the definition of a
+  /// compartment that the system supports. The reference is to a
+  ///  CompartmentDefinition resource by its canonical URL .
   factory CapabilityStatementRest({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -172,6 +514,7 @@ abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementRest.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementRest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -186,6 +529,47 @@ abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
 abstract class CapabilityStatementSecurity
     implements _$CapabilityStatementSecurity {
   CapabilityStatementSecurity._();
+
+  /// [CapabilityStatement_Security]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [cors]: Server adds CORS headers when responding to requests - this
+  ///  enables Javascript applications to use the server.
+  ///
+  /// [_cors]: Extensions for cors
+  ///
+  /// [service]: Types of security services that are supported/required by the
+  ///  system.
+  ///
+  /// [description]: General description of how security works.
+  ///
+  /// [_description]: Extensions for description
   factory CapabilityStatementSecurity({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -200,6 +584,7 @@ abstract class CapabilityStatementSecurity
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementSecurity.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementSecurity.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -215,6 +600,125 @@ abstract class CapabilityStatementSecurity
 abstract class CapabilityStatementResource
     implements _$CapabilityStatementResource {
   CapabilityStatementResource._();
+
+  /// [CapabilityStatement_Resource]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: A type of resource exposed via the restful interface.
+  ///
+  /// [_type]: Extensions for type
+  ///
+  /// [profile]: A specification of the profile that describes the solution's
+  /// overall support for the resource, including any constraints on
+  /// cardinality, bindings, lengths or other limitations. See further
+  ///  discussion in [Using Profiles](profiling.html#profile-uses).
+  ///
+  /// [supportedProfile]: A list of profiles that represent different use cases
+  /// supported by the system. For a server, "supported by the system" means the
+  /// system hosts/produces a set of resources that are conformant to a
+  /// particular profile, and allows clients that use its services to search
+  /// using this profile and to find appropriate data. For a client, it means
+  /// the system will search by this profile and process data according to the
+  /// guidance implicit in the profile. See further discussion in [Using
+  ///  Profiles](profiling.html#profile-uses).
+  ///
+  /// [documentation]: Additional information about the resource type used by
+  ///  the system.
+  ///
+  /// [_documentation]: Extensions for documentation
+  ///
+  /// [interaction]: Identifies a restful operation supported by the solution.
+  ///
+  /// [versioning]: This field is set to no-version to specify that the system
+  /// does not support (server) or use (client) versioning for this resource
+  /// type. If this has some other value, the server must at least correctly
+  /// track and populate the versionId meta-property on resources. If the value
+  /// is 'versioned-update', then the server supports all the versioning
+  ///  features, including using e-tags for version integrity in the API.
+  ///
+  /// [_versioning]: Extensions for versioning
+  ///
+  /// [readHistory]: A flag for whether the server is able to return past
+  ///  versions as part of the vRead operation.
+  ///
+  /// [_readHistory]: Extensions for readHistory
+  ///
+  /// [updateCreate]: A flag to indicate that the server allows or needs to
+  /// allow the client to create new identities on the server (that is, the
+  /// client PUTs to a location where there is no existing resource). Allowing
+  /// this operation means that the server allows the client to create new
+  ///  identities on the server.
+  ///
+  /// [_updateCreate]: Extensions for updateCreate
+  ///
+  /// [conditionalCreate]: A flag that indicates that the server supports
+  ///  conditional create.
+  ///
+  /// [_conditionalCreate]: Extensions for conditionalCreate
+  ///
+  /// [conditionalRead]: A code that indicates how the server supports
+  ///  conditional read.
+  ///
+  /// [_conditionalRead]: Extensions for conditionalRead
+  ///
+  /// [conditionalUpdate]: A flag that indicates that the server supports
+  ///  conditional update.
+  ///
+  /// [_conditionalUpdate]: Extensions for conditionalUpdate
+  ///
+  /// [conditionalDelete]: A code that indicates how the server supports
+  ///  conditional delete.
+  ///
+  /// [_conditionalDelete]: Extensions for conditionalDelete
+  ///
+  /// [referencePolicy]: A set of flags that defines how references are
+  ///  supported.
+  ///
+  /// [_referencePolicy]: Extensions for referencePolicy
+  ///
+  /// [searchInclude]: A list of _include values supported by the server.
+  ///
+  /// [_searchInclude]: Extensions for searchInclude
+  ///
+  /// [searchRevInclude]: A list of _revinclude (reverse include) values
+  ///  supported by the server.
+  ///
+  /// [_searchRevInclude]: Extensions for searchRevInclude
+  ///
+  /// [searchParam]: Search parameters for implementations to support and/or
+  /// make use of - either references to ones defined in the specification, or
+  ///  additional ones defined for/by the implementation.
+  ///
+  /// [operation]: Definition of an operation or a named query together with its
+  /// parameters and their meaning and type. Consult the definition of the
+  /// operation for details about how to invoke the operation, and the
+  ///  parameters.
   factory CapabilityStatementResource({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -256,6 +760,7 @@ abstract class CapabilityStatementResource
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementResource.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementResource.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -271,6 +776,47 @@ abstract class CapabilityStatementResource
 abstract class CapabilityStatementInteraction
     implements _$CapabilityStatementInteraction {
   CapabilityStatementInteraction._();
+
+  /// [CapabilityStatement_Interaction]: A Capability Statement documents a set
+  /// of capabilities (behaviors) of a FHIR Server for a particular version of
+  /// FHIR that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [code]: Coded identifier of the operation, supported by the system
+  ///  resource.
+  ///
+  /// [_code]: Extensions for code
+  ///
+  /// [documentation]: Guidance specific to the implementation of this
+  /// operation, such as 'delete is a logical delete' or 'updates are only
+  /// allowed with version id' or 'creates permitted from pre-authorized
+  ///  certificates only'.
+  ///
+  /// [_documentation]: Extensions for documentation
   factory CapabilityStatementInteraction({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -285,6 +831,7 @@ abstract class CapabilityStatementInteraction
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementInteraction.fromYaml(dynamic yaml) =>
       yaml is String
           ? CapabilityStatementInteraction.fromJson(
@@ -302,6 +849,57 @@ abstract class CapabilityStatementInteraction
 abstract class CapabilityStatementSearchParam
     implements _$CapabilityStatementSearchParam {
   CapabilityStatementSearchParam._();
+
+  /// [CapabilityStatement_SearchParam]: A Capability Statement documents a set
+  /// of capabilities (behaviors) of a FHIR Server for a particular version of
+  /// FHIR that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [name]: The name of the search parameter used in the interface.
+  ///
+  /// [_name]: Extensions for name
+  ///
+  /// [definition]: An absolute URI that is a formal reference to where this
+  /// parameter was first defined, so that a client can be confident of the
+  /// meaning of the search parameter (a reference to
+  ///
+  /// [[[SearchParameter.url]]]). This element SHALL be populated if the search
+  /// parameter refers to a SearchParameter defined by the FHIR core
+  ///  specification or externally defined IGs.
+  ///
+  /// [type]: The type of value a search parameter refers to, and how the
+  ///  content is interpreted.
+  ///
+  /// [_type]: Extensions for type
+  ///
+  /// [documentation]: This allows documentation of any distinct behaviors about
+  ///  how the search parameter is used.  For example, text matching algorithms.
+  ///
+  /// [_documentation]: Extensions for documentation
   factory CapabilityStatementSearchParam({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -319,6 +917,7 @@ abstract class CapabilityStatementSearchParam
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementSearchParam.fromYaml(dynamic yaml) =>
       yaml is String
           ? CapabilityStatementSearchParam.fromJson(
@@ -336,6 +935,57 @@ abstract class CapabilityStatementSearchParam
 abstract class CapabilityStatementOperation
     implements _$CapabilityStatementOperation {
   CapabilityStatementOperation._();
+
+  /// [CapabilityStatement_Operation]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [name]: The name of the operation or query. For an operation, this is the
+  /// name  prefixed with $ and used in the URL. For a query, this is the name
+  ///  used in the _query parameter when the query is called.
+  ///
+  /// [_name]: Extensions for name
+  ///
+  /// [definition]: Where the formal definition can be found. If a server
+  /// references the base definition of an Operation (i.e. from the
+  /// specification itself such as
+  /// ```http://hl7.org/fhir/OperationDefinition/ValueSet-expand```), that means
+  /// it supports the full capabilities of the operation - e.g. both GET and
+  /// POST invocation.  If it only supports a subset, it must define its own
+  /// custom [[[OperationDefinition]]] with a 'base' of the original
+  /// OperationDefinition.  The custom definition would describe the specific
+  ///  subset of functionality supported.
+  ///
+  /// [documentation]: Documentation that describes anything special about the
+  /// operation behavior, possibly detailing different behavior for system, type
+  ///  and instance-level invocation of the operation.
+  ///
+  /// [_documentation]: Extensions for documentation
   factory CapabilityStatementOperation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -350,6 +1000,7 @@ abstract class CapabilityStatementOperation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementOperation.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementOperation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -365,6 +1016,45 @@ abstract class CapabilityStatementOperation
 abstract class CapabilityStatementInteraction1
     implements _$CapabilityStatementInteraction1 {
   CapabilityStatementInteraction1._();
+
+  /// [CapabilityStatement_Interaction1]: A Capability Statement documents a set
+  /// of capabilities (behaviors) of a FHIR Server for a particular version of
+  /// FHIR that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [code]: A coded identifier of the operation, supported by the system.
+  ///
+  /// [_code]: Extensions for code
+  ///
+  /// [documentation]: Guidance specific to the implementation of this
+  /// operation, such as limitations on the kind of transactions allowed, or
+  ///  information about system wide search is implemented.
+  ///
+  /// [_documentation]: Extensions for documentation
   factory CapabilityStatementInteraction1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -379,6 +1069,7 @@ abstract class CapabilityStatementInteraction1
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementInteraction1.fromYaml(dynamic yaml) =>
       yaml is String
           ? CapabilityStatementInteraction1.fromJson(
@@ -396,6 +1087,54 @@ abstract class CapabilityStatementInteraction1
 abstract class CapabilityStatementMessaging
     implements _$CapabilityStatementMessaging {
   CapabilityStatementMessaging._();
+
+  /// [CapabilityStatement_Messaging]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [endpoint]: An endpoint (network accessible address) to which messages
+  ///  and/or replies are to be sent.
+  ///
+  /// [reliableCache]: Length if the receiver's reliable messaging cache in
+  /// minutes (if a receiver) or how long the cache length on the receiver
+  ///  should be (if a sender).
+  ///
+  /// [_reliableCache]: Extensions for reliableCache
+  ///
+  /// [documentation]: Documentation about the system's messaging capabilities
+  /// for this endpoint not otherwise documented by the capability statement. 
+  /// For example, the process for becoming an authorized messaging exchange
+  ///  partner.
+  ///
+  /// [_documentation]: Extensions for documentation
+  ///
+  /// [supportedMessage]: References to message definitions for messages this
+  ///  system can send or receive.
   factory CapabilityStatementMessaging({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -411,6 +1150,7 @@ abstract class CapabilityStatementMessaging
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementMessaging.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementMessaging.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -426,6 +1166,43 @@ abstract class CapabilityStatementMessaging
 abstract class CapabilityStatementEndpoint
     implements _$CapabilityStatementEndpoint {
   CapabilityStatementEndpoint._();
+
+  /// [CapabilityStatement_Endpoint]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [protocol]: A list of the messaging transport protocol(s) identifiers,
+  ///  supported by this endpoint.
+  ///
+  /// [address]: The network address of the endpoint. For solutions that do not
+  ///  use network addresses for routing, it can be just an identifier.
+  ///
+  /// [_address]: Extensions for address
   factory CapabilityStatementEndpoint({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -438,6 +1215,7 @@ abstract class CapabilityStatementEndpoint
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementEndpoint.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementEndpoint.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -453,6 +1231,43 @@ abstract class CapabilityStatementEndpoint
 abstract class CapabilityStatementSupportedMessage
     implements _$CapabilityStatementSupportedMessage {
   CapabilityStatementSupportedMessage._();
+
+  /// [CapabilityStatement_SupportedMessage]: A Capability Statement documents a
+  /// set of capabilities (behaviors) of a FHIR Server for a particular version
+  /// of FHIR that may be used as a statement of actual server functionality or
+  ///  a statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [mode]: The mode of this event declaration - whether application is sender
+  ///  or receiver.
+  ///
+  /// [_mode]: Extensions for mode
+  ///
+  /// [definition]: Points to a message definition that identifies the messaging
+  ///  event, message structure, allowed responses, etc.
   factory CapabilityStatementSupportedMessage({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -466,6 +1281,7 @@ abstract class CapabilityStatementSupportedMessage
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementSupportedMessage.fromYaml(dynamic yaml) =>
       yaml is String
           ? CapabilityStatementSupportedMessage.fromJson(
@@ -484,6 +1300,49 @@ abstract class CapabilityStatementSupportedMessage
 abstract class CapabilityStatementDocument
     implements _$CapabilityStatementDocument {
   CapabilityStatementDocument._();
+
+  /// [CapabilityStatement_Document]: A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [mode]: Mode of this document declaration - whether an application is a
+  ///  producer or consumer.
+  ///
+  /// [_mode]: Extensions for mode
+  ///
+  /// [documentation]: A description of how the application supports or uses the
+  /// specified document profile.  For example, when documents are created, what
+  ///  action is taken with consumed documents, etc.
+  ///
+  /// [_documentation]: Extensions for documentation
+  ///
+  /// [profile]: A profile on the document Bundle that constrains which
+  ///  resources are present, and their contents.
   factory CapabilityStatementDocument({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -499,6 +1358,7 @@ abstract class CapabilityStatementDocument
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CapabilityStatementDocument.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatementDocument.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -515,6 +1375,142 @@ abstract class CompartmentDefinition
     with Resource
     implements _$CompartmentDefinition {
   CompartmentDefinition._();
+
+  /// [CompartmentDefinition]: A compartment definition that defines how
+  ///  resources are accessed on a server.
+  ///
+  /// [resourceType]: This is a CompartmentDefinition resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance 
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [url]: An absolute URI that is used to identify this compartment
+  /// definition when it is referenced in a specification, model, design or an
+  /// instance; also called its canonical identifier. This SHOULD be globally
+  /// unique and SHOULD be a literal address at which at which an authoritative
+  /// instance of this compartment definition is (or will be) published. This
+  /// URL can be the target of a canonical reference. It SHALL remain the same
+  ///  when the compartment definition is stored on different servers.
+  ///
+  /// [_url]: Extensions for url
+  ///
+  /// [version]: The identifier that is used to identify this version of the
+  /// compartment definition when it is referenced in a specification, model,
+  /// design or instance. This is an arbitrary value managed by the compartment
+  /// definition author and is not expected to be globally unique. For example,
+  /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
+  /// available. There is also no expectation that versions can be placed in a
+  ///  lexicographical sequence.
+  ///
+  /// [_version]: Extensions for version
+  ///
+  /// [name]: A natural language name identifying the compartment definition.
+  /// This name should be usable as an identifier for the module by machine
+  ///  processing applications such as code generation.
+  ///
+  /// [_name]: Extensions for name
+  ///
+  /// [status]: The status of this compartment definition. Enables tracking the
+  ///  life-cycle of the content.
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [experimental]: A Boolean value to indicate that this compartment
+  /// definition is authored for testing purposes (or
+  /// education/evaluation/marketing) and is not intended to be used for genuine
+  ///  usage.
+  ///
+  /// [_experimental]: Extensions for experimental
+  ///
+  /// [date]: The date  (and optionally time) when the compartment definition
+  /// was published. The date must change when the business version changes and
+  /// it must change if the status code changes. In addition, it should change
+  ///  when the substantive content of the compartment definition changes.
+  ///
+  /// [_date]: Extensions for date
+  ///
+  /// [publisher]: The name of the organization or individual that published the
+  ///  compartment definition.
+  ///
+  /// [_publisher]: Extensions for publisher
+  ///
+  /// [contact]: Contact details to assist a user in finding and communicating
+  ///  with the publisher.
+  ///
+  /// [description]: A free text natural language description of the compartment
+  ///  definition from a consumer's perspective.
+  ///
+  /// [_description]: Extensions for description
+  ///
+  /// [useContext]: The content was developed with a focus and intent of
+  /// supporting the contexts that are listed. These contexts may be general
+  /// categories (gender, age, ...) or may be references to specific programs
+  /// (insurance plans, studies, ...) and may be used to assist with indexing
+  ///  and searching for appropriate compartment definition instances.
+  ///
+  /// [purpose]: Explanation of why this compartment definition is needed and
+  ///  why it has been designed as it has.
+  ///
+  /// [_purpose]: Extensions for purpose
+  ///
+  /// [code]: Which compartment this definition describes.
+  ///
+  /// [_code]: Extensions for code
+  ///
+  /// [search]: Whether the search syntax is supported,.
+  ///
+  /// [_search]: Extensions for search
+  ///
+  /// [resource]: Information about how a resource is related to the
+  ///  compartment.
   factory CompartmentDefinition({
     @Default('CompartmentDefinition') String resourceType,
     Id id,
@@ -559,6 +1555,7 @@ abstract class CompartmentDefinition
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CompartmentDefinition.fromYaml(dynamic yaml) => yaml is String
       ? CompartmentDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -573,6 +1570,48 @@ abstract class CompartmentDefinition
 abstract class CompartmentDefinitionResource
     implements _$CompartmentDefinitionResource {
   CompartmentDefinitionResource._();
+
+  /// [CompartmentDefinition_Resource]: A compartment definition that defines
+  ///  how resources are accessed on a server.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [code]: The name of a resource supported by the server.
+  ///
+  /// [_code]: Extensions for code
+  ///
+  /// [param]: The name of a search parameter that represents the link to the
+  /// compartment. More than one may be listed because a resource may be linked
+  ///  to a compartment in more than one way,.
+  ///
+  /// [_param]: Extensions for param
+  ///
+  /// [documentation]: Additional documentation about the resource and
+  ///  compartment.
+  ///
+  /// [_documentation]: Extensions for documentation
   factory CompartmentDefinitionResource({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -588,6 +1627,7 @@ abstract class CompartmentDefinitionResource
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CompartmentDefinitionResource.fromYaml(dynamic yaml) => yaml is String
       ? CompartmentDefinitionResource.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -646,6 +1686,7 @@ abstract class ExampleScenario with Resource implements _$ExampleScenario {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExampleScenario.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenario.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -677,6 +1718,7 @@ abstract class ExampleScenarioActor implements _$ExampleScenarioActor {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExampleScenarioActor.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -709,6 +1751,7 @@ abstract class ExampleScenarioInstance implements _$ExampleScenarioInstance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExampleScenarioInstance.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -735,6 +1778,7 @@ abstract class ExampleScenarioVersion implements _$ExampleScenarioVersion {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExampleScenarioVersion.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioVersion.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -762,6 +1806,7 @@ abstract class ExampleScenarioContainedInstance
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExampleScenarioContainedInstance.fromYaml(dynamic yaml) =>
       yaml is String
           ? ExampleScenarioContainedInstance.fromJson(
@@ -797,6 +1842,7 @@ abstract class ExampleScenarioProcess implements _$ExampleScenarioProcess {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExampleScenarioProcess.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioProcess.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -824,6 +1870,7 @@ abstract class ExampleScenarioStep implements _$ExampleScenarioStep {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExampleScenarioStep.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioStep.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -864,6 +1911,7 @@ abstract class ExampleScenarioOperation implements _$ExampleScenarioOperation {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExampleScenarioOperation.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioOperation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -893,6 +1941,7 @@ abstract class ExampleScenarioAlternative
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExampleScenarioAlternative.fromYaml(dynamic yaml) => yaml is String
       ? ExampleScenarioAlternative.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -950,6 +1999,7 @@ abstract class GraphDefinition with Resource implements _$GraphDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory GraphDefinition.fromYaml(dynamic yaml) => yaml is String
       ? GraphDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -983,6 +2033,7 @@ abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory GraphDefinitionLink.fromYaml(dynamic yaml) => yaml is String
       ? GraphDefinitionLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1012,6 +2063,7 @@ abstract class GraphDefinitionTarget implements _$GraphDefinitionTarget {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory GraphDefinitionTarget.fromYaml(dynamic yaml) => yaml is String
       ? GraphDefinitionTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1047,6 +2099,7 @@ abstract class GraphDefinitionCompartment
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory GraphDefinitionCompartment.fromYaml(dynamic yaml) => yaml is String
       ? GraphDefinitionCompartment.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1115,6 +2168,7 @@ abstract class ImplementationGuide
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ImplementationGuide.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuide.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1143,6 +2197,7 @@ abstract class ImplementationGuideDependsOn
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ImplementationGuideDependsOn.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideDependsOn.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1170,6 +2225,7 @@ abstract class ImplementationGuideGlobal
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ImplementationGuideGlobal.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideGlobal.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1199,6 +2255,7 @@ abstract class ImplementationGuideDefinition
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ImplementationGuideDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideDefinition.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1227,6 +2284,7 @@ abstract class ImplementationGuideGrouping
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ImplementationGuideGrouping.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideGrouping.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1264,6 +2322,7 @@ abstract class ImplementationGuideResource
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ImplementationGuideResource.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideResource.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1296,6 +2355,7 @@ abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ImplementationGuidePage.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuidePage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1324,6 +2384,7 @@ abstract class ImplementationGuideParameter
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ImplementationGuideParameter.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideParameter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1354,6 +2415,7 @@ abstract class ImplementationGuideTemplate
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ImplementationGuideTemplate.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideTemplate.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1386,6 +2448,7 @@ abstract class ImplementationGuideManifest
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ImplementationGuideManifest.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideManifest.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1417,6 +2480,7 @@ abstract class ImplementationGuideResource1
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ImplementationGuideResource1.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuideResource1.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1446,6 +2510,7 @@ abstract class ImplementationGuidePage1 implements _$ImplementationGuidePage1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ImplementationGuidePage1.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuidePage1.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1519,6 +2584,7 @@ abstract class MessageDefinition with Resource implements _$MessageDefinition {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory MessageDefinition.fromYaml(dynamic yaml) => yaml is String
       ? MessageDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1548,6 +2614,7 @@ abstract class MessageDefinitionFocus implements _$MessageDefinitionFocus {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory MessageDefinitionFocus.fromYaml(dynamic yaml) => yaml is String
       ? MessageDefinitionFocus.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1574,6 +2641,7 @@ abstract class MessageDefinitionAllowedResponse
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory MessageDefinitionAllowedResponse.fromYaml(dynamic yaml) =>
       yaml is String
           ? MessageDefinitionAllowedResponse.fromJson(
@@ -1656,6 +2724,7 @@ abstract class OperationDefinition
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory OperationDefinition.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1699,6 +2768,7 @@ abstract class OperationDefinitionParameter
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory OperationDefinitionParameter.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinitionParameter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1727,6 +2797,7 @@ abstract class OperationDefinitionBinding
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory OperationDefinitionBinding.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinitionBinding.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1755,6 +2826,7 @@ abstract class OperationDefinitionReferencedFrom
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory OperationDefinitionReferencedFrom.fromYaml(dynamic yaml) =>
       yaml is String
           ? OperationDefinitionReferencedFrom.fromJson(
@@ -1786,6 +2858,7 @@ abstract class OperationDefinitionOverload
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory OperationDefinitionOverload.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinitionOverload.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1867,6 +2940,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory SearchParameter.fromYaml(dynamic yaml) => yaml is String
       ? SearchParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1892,6 +2966,7 @@ abstract class SearchParameterComponent implements _$SearchParameterComponent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory SearchParameterComponent.fromYaml(dynamic yaml) => yaml is String
       ? SearchParameterComponent.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1974,6 +3049,7 @@ abstract class StructureDefinition
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StructureDefinition.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2005,6 +3081,7 @@ abstract class StructureDefinitionMapping
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StructureDefinitionMapping.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinitionMapping.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2034,6 +3111,7 @@ abstract class StructureDefinitionContext
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StructureDefinitionContext.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinitionContext.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2059,6 +3137,7 @@ abstract class StructureDefinitionSnapshot
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StructureDefinitionSnapshot.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinitionSnapshot.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -2084,6 +3163,7 @@ abstract class StructureDefinitionDifferential
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StructureDefinitionDifferential.fromYaml(dynamic yaml) =>
       yaml is String
           ? StructureDefinitionDifferential.fromJson(
@@ -2147,6 +3227,7 @@ abstract class StructureMap with Resource implements _$StructureMap {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StructureMap.fromYaml(dynamic yaml) => yaml is String
       ? StructureMap.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2177,6 +3258,7 @@ abstract class StructureMapStructure implements _$StructureMapStructure {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StructureMapStructure.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapStructure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2210,6 +3292,7 @@ abstract class StructureMapGroup implements _$StructureMapGroup {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StructureMapGroup.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2241,6 +3324,7 @@ abstract class StructureMapInput implements _$StructureMapInput {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StructureMapInput.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapInput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2271,6 +3355,7 @@ abstract class StructureMapRule implements _$StructureMapRule {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StructureMapRule.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapRule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2387,6 +3472,7 @@ abstract class StructureMapSource implements _$StructureMapSource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StructureMapSource.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2426,6 +3512,7 @@ abstract class StructureMapTarget implements _$StructureMapTarget {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StructureMapTarget.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2458,6 +3545,7 @@ abstract class StructureMapParameter implements _$StructureMapParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StructureMapParameter.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -2484,6 +3572,7 @@ abstract class StructureMapDependent implements _$StructureMapDependent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory StructureMapDependent.fromYaml(dynamic yaml) => yaml is String
       ? StructureMapDependent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

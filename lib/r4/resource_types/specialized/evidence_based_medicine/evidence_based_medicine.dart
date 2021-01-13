@@ -78,6 +78,7 @@ abstract class EffectEvidenceSynthesis
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EffectEvidenceSynthesis.fromYaml(dynamic yaml) => yaml is String
       ? EffectEvidenceSynthesis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -107,6 +108,7 @@ abstract class EffectEvidenceSynthesisSampleSize
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EffectEvidenceSynthesisSampleSize.fromYaml(dynamic yaml) =>
       yaml is String
           ? EffectEvidenceSynthesisSampleSize.fromJson(
@@ -143,6 +145,7 @@ abstract class EffectEvidenceSynthesisResultsByExposure
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EffectEvidenceSynthesisResultsByExposure.fromYaml(dynamic yaml) =>
       yaml is String
           ? EffectEvidenceSynthesisResultsByExposure.fromJson(
@@ -178,6 +181,7 @@ abstract class EffectEvidenceSynthesisEffectEstimate
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EffectEvidenceSynthesisEffectEstimate.fromYaml(dynamic yaml) =>
       yaml is String
           ? EffectEvidenceSynthesisEffectEstimate.fromJson(
@@ -212,6 +216,7 @@ abstract class EffectEvidenceSynthesisPrecisionEstimate
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EffectEvidenceSynthesisPrecisionEstimate.fromYaml(dynamic yaml) =>
       yaml is String
           ? EffectEvidenceSynthesisPrecisionEstimate.fromJson(
@@ -242,6 +247,7 @@ abstract class EffectEvidenceSynthesisCertainty
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EffectEvidenceSynthesisCertainty.fromYaml(dynamic yaml) =>
       yaml is String
           ? EffectEvidenceSynthesisCertainty.fromJson(
@@ -272,6 +278,7 @@ abstract class EffectEvidenceSynthesisCertaintySubcomponent
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EffectEvidenceSynthesisCertaintySubcomponent.fromYaml(dynamic yaml) =>
       yaml is String
           ? EffectEvidenceSynthesisCertaintySubcomponent.fromJson(
@@ -347,6 +354,7 @@ abstract class Evidence with Resource implements _$Evidence {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Evidence.fromYaml(dynamic yaml) => yaml is String
       ? Evidence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -420,6 +428,7 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EvidenceVariable.fromYaml(dynamic yaml) => yaml is String
       ? EvidenceVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -465,6 +474,7 @@ abstract class EvidenceVariableCharacteristic
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EvidenceVariableCharacteristic.fromYaml(dynamic yaml) =>
       yaml is String
           ? EvidenceVariableCharacteristic.fromJson(
@@ -553,6 +563,7 @@ abstract class ResearchDefinition
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ResearchDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ResearchDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -641,6 +652,7 @@ abstract class ResearchElementDefinition
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ResearchElementDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ResearchElementDefinition.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -710,6 +722,7 @@ abstract class ResearchElementDefinitionCharacteristic
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ResearchElementDefinitionCharacteristic.fromYaml(dynamic yaml) =>
       yaml is String
           ? ResearchElementDefinitionCharacteristic.fromJson(
@@ -789,6 +802,7 @@ abstract class RiskEvidenceSynthesis
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory RiskEvidenceSynthesis.fromYaml(dynamic yaml) => yaml is String
       ? RiskEvidenceSynthesis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -818,6 +832,7 @@ abstract class RiskEvidenceSynthesisSampleSize
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory RiskEvidenceSynthesisSampleSize.fromYaml(dynamic yaml) =>
       yaml is String
           ? RiskEvidenceSynthesisSampleSize.fromJson(
@@ -855,6 +870,7 @@ abstract class RiskEvidenceSynthesisRiskEstimate
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory RiskEvidenceSynthesisRiskEstimate.fromYaml(dynamic yaml) =>
       yaml is String
           ? RiskEvidenceSynthesisRiskEstimate.fromJson(
@@ -889,6 +905,7 @@ abstract class RiskEvidenceSynthesisPrecisionEstimate
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory RiskEvidenceSynthesisPrecisionEstimate.fromYaml(dynamic yaml) =>
       yaml is String
           ? RiskEvidenceSynthesisPrecisionEstimate.fromJson(
@@ -919,6 +936,7 @@ abstract class RiskEvidenceSynthesisCertainty
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory RiskEvidenceSynthesisCertainty.fromYaml(dynamic yaml) =>
       yaml is String
           ? RiskEvidenceSynthesisCertainty.fromJson(
@@ -948,6 +966,7 @@ abstract class RiskEvidenceSynthesisCertaintySubcomponent
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory RiskEvidenceSynthesisCertaintySubcomponent.fromYaml(dynamic yaml) =>
       yaml is String
           ? RiskEvidenceSynthesisCertaintySubcomponent.fromJson(

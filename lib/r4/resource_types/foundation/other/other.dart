@@ -14,6 +14,79 @@ part 'other.g.dart';
 @freezed
 abstract class Basic with Resource implements _$Basic {
   Basic._();
+
+  /// [Basic]: Basic is used for handling concepts not yet defined in FHIR,
+  /// narrative-only resources that don't map to an existing resource, and
+  ///  custom resources not appropriate for inclusion in the FHIR specification.
+  ///
+  /// [resourceType]: This is a Basic resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance 
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: Identifier assigned to the resource for business purposes,
+  ///  outside the context of FHIR.
+  ///
+  /// [code]: Identifies the 'type' of resource - equivalent to the resource
+  ///  name for other resources.
+  ///
+  /// [subject]: Identifies the patient, practitioner, device or any other
+  ///  resource that is the "focus" of this resource.
+  ///
+  /// [created]: Identifies when the resource was first created.
+  ///
+  /// [_created]: Extensions for created
+  ///
+  /// [author]: Indicates who was responsible for creating the resource
+  ///  instance.
   factory Basic({
     @Default('Basic') String resourceType,
     Id id,
@@ -37,6 +110,7 @@ abstract class Basic with Resource implements _$Basic {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Basic.fromYaml(dynamic yaml) => yaml is String
       ? Basic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -49,6 +123,51 @@ abstract class Basic with Resource implements _$Basic {
 @freezed
 abstract class Binary with Resource implements _$Binary {
   Binary._();
+
+  /// [Binary]: A resource that represents the data of a single raw artifact as
+  /// digital content accessible in its native format.  A Binary resource can
+  ///  contain any content, whether text, image, pdf, zip archive, etc.
+  ///
+  /// [resourceType]: This is a Binary resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [contentType]: MimeType of the binary content represented as a standard
+  ///  MimeType (BCP 13).
+  ///
+  /// [_contentType]: Extensions for contentType
+  ///
+  /// [securityContext]: This element identifies another resource that can be
+  /// used as a proxy of the security sensitivity to use when deciding and
+  /// enforcing access control rules for the Binary resource. Given that the
+  /// Binary resource contains very few elements that can be used to determine
+  /// the sensitivity of the data and relationships to individuals, the
+  /// referenced resource stands in as a proxy equivalent for this purpose. This
+  /// referenced resource may be related to the Binary (e.g. Media,
+  /// DocumentReference), or may be some non-related Resource purely as a
+  /// security proxy. E.g. to identify that the binary resource relates to a
+  /// patient, and access should only be granted to applications that have
+  ///  access to the patient.
+  ///
+  /// [data]: The actual content, base64 encoded.
+  ///
+  /// [_data]: Extensions for data
   factory Binary({
     @Default('Binary') String resourceType,
     Id id,
@@ -67,6 +186,7 @@ abstract class Binary with Resource implements _$Binary {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Binary.fromYaml(dynamic yaml) => yaml is String
       ? Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -79,6 +199,55 @@ abstract class Binary with Resource implements _$Binary {
 @freezed
 abstract class Bundle with Resource implements _$Bundle {
   Bundle._();
+
+  /// [Bundle]: A container for a collection of resources.
+  ///
+  /// [resourceType]: This is a Bundle resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [identifier]: A persistent identifier for the bundle that won't change as
+  ///  a bundle is copied from server to server.
+  ///
+  /// [type]: Indicates the purpose of this bundle - how it is intended to be
+  ///  used.
+  ///
+  /// [_type]: Extensions for type
+  ///
+  /// [timestamp]: The date/time that the bundle was assembled - i.e. when the
+  ///  resources were placed in the bundle.
+  ///
+  /// [_timestamp]: Extensions for timestamp
+  ///
+  /// [total]: If a set of search matches, this is the total number of entries
+  /// of type 'match' across all pages in the search.  It does not include
+  /// search.mode = 'include' or 'outcome' entries and it does not provide a
+  ///  count of the number of entries in the Bundle.
+  ///
+  /// [_total]: Extensions for total
+  ///
+  /// [link]: A series of links that provide context to this bundle.
+  ///
+  /// [entry]: An entry in a bundle resource - will either contain a resource or
+  ///  information about a resource (transactions and history only).
+  ///
+  /// [signature]: Digital Signature - base64 encoded. XML-DSig or a JWT.
   factory Bundle({
     @Default('Bundle') String resourceType,
     Id id,
@@ -102,6 +271,7 @@ abstract class Bundle with Resource implements _$Bundle {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Bundle.fromYaml(dynamic yaml) => yaml is String
       ? Bundle.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -114,6 +284,41 @@ abstract class Bundle with Resource implements _$Bundle {
 @freezed
 abstract class BundleLink implements _$BundleLink {
   BundleLink._();
+
+  /// [Bundle_Link]: A container for a collection of resources.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [relation]: A name which details the functional use for this link - see
+  /// [http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1](http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1).
+  ///
+  /// [_relation]: Extensions for relation
+  ///
+  /// [url]: The reference details for the link.
+  ///
+  /// [_url]: Extensions for url
   factory BundleLink({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -127,6 +332,7 @@ abstract class BundleLink implements _$BundleLink {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory BundleLink.fromYaml(dynamic yaml) => yaml is String
       ? BundleLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -140,6 +346,59 @@ abstract class BundleLink implements _$BundleLink {
 @freezed
 abstract class BundleEntry implements _$BundleEntry {
   BundleEntry._();
+
+  /// [Bundle_Entry]: A container for a collection of resources.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [link]: A series of links that provide context to this entry.
+  ///
+  /// [fullUrl]: The Absolute URL for the resource.  The fullUrl SHALL NOT
+  /// disagree with the id in the resource - i.e. if the fullUrl is not a
+  /// urn:uuid, the URL shall be version-independent URL consistent with the
+  /// Resource.id. The fullUrl is a version independent reference to the
+  ///  resource. The fullUrl element SHALL have a value except that: 
+  /// * fullUrl can be empty on a POST (although it does not need to when
+  ///  specifying a temporary id for reference in the bundle)
+  /// * Results from operations might involve resources that are not identified.
+  ///
+  /// [_fullUrl]: Extensions for fullUrl
+  ///
+  /// [resource]: The Resource for the entry. The purpose/meaning of the
+  ///  resource is determined by the Bundle.type.
+  ///
+  /// [search]: Information about the search process that lead to the creation
+  ///  of this entry.
+  ///
+  /// [request]: Additional information about how this entry should be processed
+  /// as part of a transaction or batch.  For history, it shows how the entry
+  ///  was processed to create the version contained in the entry.
+  ///
+  /// [response]: Indicates the results of processing the corresponding
+  /// 'request' entry in the batch or transaction being responded to or what the
+  ///  results of an operation where when returning history.
   factory BundleEntry({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -156,6 +415,7 @@ abstract class BundleEntry implements _$BundleEntry {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory BundleEntry.fromYaml(dynamic yaml) => yaml is String
       ? BundleEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -169,6 +429,42 @@ abstract class BundleEntry implements _$BundleEntry {
 @freezed
 abstract class BundleSearch implements _$BundleSearch {
   BundleSearch._();
+
+  /// [Bundle_Search]: A container for a collection of resources.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [mode]: Why this entry is in the result set - whether it's included as a
+  /// match or because of an _include requirement, or to convey information or
+  ///  warning information about the search process.
+  ///
+  /// [_mode]: Extensions for mode
+  ///
+  /// [score]: When searching, the server's search ranking score for the entry.
+  ///
+  /// [_score]: Extensions for score
   factory BundleSearch({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -182,6 +478,7 @@ abstract class BundleSearch implements _$BundleSearch {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory BundleSearch.fromYaml(dynamic yaml) => yaml is String
       ? BundleSearch.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -195,6 +492,68 @@ abstract class BundleSearch implements _$BundleSearch {
 @freezed
 abstract class BundleRequest implements _$BundleRequest {
   BundleRequest._();
+
+  /// [Bundle_Request]: A container for a collection of resources.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [method]: In a transaction or batch, this is the HTTP action to be
+  /// executed for this entry. In a history bundle, this indicates the HTTP
+  ///  action that occurred.
+  ///
+  /// [_method]: Extensions for method
+  ///
+  /// [url]: The URL for this entry, relative to the root (the address to which
+  ///  the request is posted).
+  ///
+  /// [_url]: Extensions for url
+  ///
+  /// [ifNoneMatch]: If the ETag values match, return a 304 Not Modified status.
+  ///  See the API documentation for ["Conditional Read"](http.html#cread).
+  ///
+  /// [_ifNoneMatch]: Extensions for ifNoneMatch
+  ///
+  /// [ifModifiedSince]: Only perform the operation if the last updated date
+  /// matches. See the API documentation for ["Conditional
+  ///  Read"](http.html#cread).
+  ///
+  /// [_ifModifiedSince]: Extensions for ifModifiedSince
+  ///
+  /// [ifMatch]: Only perform the operation if the Etag value matches. For more
+  /// information, see the API section ["Managing Resource
+  ///  Contention"](http.html#concurrency).
+  ///
+  /// [_ifMatch]: Extensions for ifMatch
+  ///
+  /// [ifNoneExist]: Instruct the server not to perform the create if a
+  /// specified resource already exists. For further information, see the API
+  /// documentation for ["Conditional Create"](http.html#ccreate). This is just
+  /// the query portion of the URL - what follows the "?" (not including the
+  ///  "?").
+  ///
+  /// [_ifNoneExist]: Extensions for ifNoneExist
   factory BundleRequest({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -217,6 +576,7 @@ abstract class BundleRequest implements _$BundleRequest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory BundleRequest.fromYaml(dynamic yaml) => yaml is String
       ? BundleRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -230,6 +590,58 @@ abstract class BundleRequest implements _$BundleRequest {
 @freezed
 abstract class BundleResponse implements _$BundleResponse {
   BundleResponse._();
+
+  /// [Bundle_Response]: A container for a collection of resources.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [status]: The status code returned by processing this entry. The status
+  /// SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the
+  ///  standard HTTP description associated with the status code.
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [location]: The location header created by processing this operation,
+  ///  populated if the operation returns a location.
+  ///
+  /// [_location]: Extensions for location
+  ///
+  /// [etag]: The Etag for the resource, if the operation for the entry produced
+  /// a versioned resource (see [Resource Metadata and
+  /// Versioning](http.html#versioning) and [Managing Resource
+  ///  Contention](http.html#concurrency)).
+  ///
+  /// [_etag]: Extensions for etag
+  ///
+  /// [lastModified]: The date/time that the resource was modified on the
+  ///  server.
+  ///
+  /// [_lastModified]: Extensions for lastModified
+  ///
+  /// [outcome]: An OperationOutcome containing hints and warnings produced as
+  ///  part of processing this entry in a batch or transaction.
   factory BundleResponse({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -248,6 +660,7 @@ abstract class BundleResponse implements _$BundleResponse {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory BundleResponse.fromYaml(dynamic yaml) => yaml is String
       ? BundleResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -282,6 +695,7 @@ abstract class Linkage with Resource implements _$Linkage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Linkage.fromYaml(dynamic yaml) => yaml is String
       ? Linkage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -307,6 +721,7 @@ abstract class LinkageItem implements _$LinkageItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory LinkageItem.fromYaml(dynamic yaml) => yaml is String
       ? LinkageItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -350,6 +765,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory MessageHeader.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeader.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -378,6 +794,7 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory MessageHeaderDestination.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeaderDestination.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -410,6 +827,7 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory MessageHeaderSource.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeaderSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -438,6 +856,7 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory MessageHeaderResponse.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeaderResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -469,6 +888,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory OperationOutcome.fromYaml(dynamic yaml) => yaml is String
       ? OperationOutcome.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -504,6 +924,7 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory OperationOutcomeIssue.fromYaml(dynamic yaml) => yaml is String
       ? OperationOutcomeIssue.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -531,6 +952,7 @@ abstract class Parameters with Resource implements _$Parameters {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Parameters.fromYaml(dynamic yaml) => yaml is String
       ? Parameters.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -626,6 +1048,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ParametersParameter.fromYaml(dynamic yaml) => yaml is String
       ? ParametersParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -669,6 +1092,7 @@ abstract class Subscription with Resource implements _$Subscription {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Subscription.fromYaml(dynamic yaml) => yaml is String
       ? Subscription.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -700,6 +1124,7 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory SubscriptionChannel.fromYaml(dynamic yaml) => yaml is String
       ? SubscriptionChannel.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

@@ -78,6 +78,7 @@ abstract class Evidence with Resource implements _$Evidence {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Evidence.fromYaml(dynamic yaml) => yaml is String
       ? Evidence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -108,6 +109,7 @@ abstract class EvidenceVariableDefinition
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EvidenceVariableDefinition.fromYaml(dynamic yaml) => yaml is String
       ? EvidenceVariableDefinition.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -138,6 +140,7 @@ abstract class EvidenceCertainty implements _$EvidenceCertainty {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EvidenceCertainty.fromYaml(dynamic yaml) => yaml is String
       ? EvidenceCertainty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -168,6 +171,7 @@ abstract class EvidenceCertaintySubcomponent
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EvidenceCertaintySubcomponent.fromYaml(dynamic yaml) => yaml is String
       ? EvidenceCertaintySubcomponent.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -252,6 +256,7 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EvidenceVariable.fromYaml(dynamic yaml) => yaml is String
       ? EvidenceVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -290,6 +295,7 @@ abstract class EvidenceVariableCharacteristic
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EvidenceVariableCharacteristic.fromYaml(dynamic yaml) =>
       yaml is String
           ? EvidenceVariableCharacteristic.fromJson(
@@ -321,6 +327,7 @@ abstract class EvidenceVariableTimeFromStart
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EvidenceVariableTimeFromStart.fromYaml(dynamic yaml) => yaml is String
       ? EvidenceVariableTimeFromStart.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -349,6 +356,7 @@ abstract class EvidenceVariableCategory implements _$EvidenceVariableCategory {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EvidenceVariableCategory.fromYaml(dynamic yaml) => yaml is String
       ? EvidenceVariableCategory.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))

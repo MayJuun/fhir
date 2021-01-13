@@ -46,6 +46,7 @@ abstract class PaymentNotice with Resource implements _$PaymentNotice {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory PaymentNotice.fromYaml(dynamic yaml) => yaml is String
       ? PaymentNotice.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -99,6 +100,7 @@ abstract class PaymentReconciliation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory PaymentReconciliation.fromYaml(dynamic yaml) => yaml is String
       ? PaymentReconciliation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -133,6 +135,7 @@ abstract class PaymentReconciliationDetail
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory PaymentReconciliationDetail.fromYaml(dynamic yaml) => yaml is String
       ? PaymentReconciliationDetail.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -162,6 +165,7 @@ abstract class PaymentReconciliationProcessNote
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory PaymentReconciliationProcessNote.fromYaml(dynamic yaml) =>
       yaml is String
           ? PaymentReconciliationProcessNote.fromJson(

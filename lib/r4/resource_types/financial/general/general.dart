@@ -14,6 +14,100 @@ part 'general.g.dart';
 @freezed
 abstract class Account with Resource implements _$Account {
   Account._();
+
+  /// [Account]: A financial tool for tracking value accrued for a particular
+  /// purpose.  In the healthcare field, used to track charges for a patient,
+  ///  cost centers, etc.
+  ///
+  /// [resourceType]: This is a Account resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance 
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: Unique identifier used to reference the account.  Might or
+  ///  might not be intended for human use (e.g. credit card number).
+  ///
+  /// [status]: Indicates whether the account is presently used/usable or not.
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [type]: Categorizes the account for reporting and searching purposes.
+  ///
+  /// [name]: Name used for the account when displaying it to humans in reports,
+  ///  etc.
+  ///
+  /// [_name]: Extensions for name
+  ///
+  /// [subject]: Identifies the entity which incurs the expenses. While the
+  /// immediate recipients of services or goods might be entities related to the
+  /// subject, the expenses were ultimately incurred by the subject of the
+  ///  Account.
+  ///
+  /// [servicePeriod]: The date range of services associated with this account.
+  ///
+  /// [coverage]: The party(s) that are responsible for covering the payment of
+  ///  this account, and what order should they be applied to the account.
+  ///
+  /// [owner]: Indicates the service area, hospital, department, etc. with
+  ///  responsibility for managing the Account.
+  ///
+  /// [description]: Provides additional information about what the account
+  ///  tracks and how it is used.
+  ///
+  /// [_description]: Extensions for description
+  ///
+  /// [guarantor]: The parties responsible for balancing the account if other
+  ///  payment options fall short.
+  ///
+  /// [partOf]: Reference to a parent Account.
   factory Account({
     @Default('Account') String resourceType,
     Id id,
@@ -45,6 +139,7 @@ abstract class Account with Resource implements _$Account {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Account.fromYaml(dynamic yaml) => yaml is String
       ? Account.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -58,6 +153,44 @@ abstract class Account with Resource implements _$Account {
 @freezed
 abstract class AccountCoverage implements _$AccountCoverage {
   AccountCoverage._();
+
+  /// [Account_Coverage]: A financial tool for tracking value accrued for a
+  /// particular purpose.  In the healthcare field, used to track charges for a
+  ///  patient, cost centers, etc.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [coverage]: The party(s) that contribute to payment (or part of) of the
+  ///  charges applied to this account (including self-pay).
+  /// A coverage may only be responsible for specific types of charges, and the
+  /// sequence of the coverages in the account could be important when
+  ///  processing billing.
+  ///
+  /// [priority]: The priority of the coverage in the context of this account.
+  ///
+  /// [_priority]: Extensions for priority
   factory AccountCoverage({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -70,6 +203,7 @@ abstract class AccountCoverage implements _$AccountCoverage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory AccountCoverage.fromYaml(dynamic yaml) => yaml is String
       ? AccountCoverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -83,6 +217,44 @@ abstract class AccountCoverage implements _$AccountCoverage {
 @freezed
 abstract class AccountGuarantor implements _$AccountGuarantor {
   AccountGuarantor._();
+  
+  /// [Account_Guarantor]: A financial tool for tracking value accrued for a
+  /// particular purpose.  In the healthcare field, used to track charges for a
+  ///  patient, cost centers, etc.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [party]: The entity who is responsible.
+  ///
+  /// [onHold]: A guarantor may be placed on credit hold or otherwise have their
+  ///  role temporarily suspended.
+  ///
+  /// [_onHold]: Extensions for onHold
+  ///
+  /// [period]: The timeframe during which the guarantor accepts responsibility
+  ///  for the account.
   factory AccountGuarantor({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -96,6 +268,7 @@ abstract class AccountGuarantor implements _$AccountGuarantor {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory AccountGuarantor.fromYaml(dynamic yaml) => yaml is String
       ? AccountGuarantor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -109,6 +282,155 @@ abstract class AccountGuarantor implements _$AccountGuarantor {
 @freezed
 abstract class ChargeItem with Resource implements _$ChargeItem {
   ChargeItem._();
+
+  /// [ChargeItem]: The resource ChargeItem describes the provision of
+  /// healthcare provider products for a certain patient, therefore referring
+  /// not only to the product, but containing in addition details of the
+  /// provision, like date, time, amounts and participating organizations and
+  /// persons. Main Usage of the ChargeItem is to enable the billing process and
+  ///  internal cost allocation.
+  ///
+  /// [resourceType]: This is a ChargeItem resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance 
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: Identifiers assigned to this event performer or other
+  ///  systems.
+  ///
+  /// [definitionUri]: References the (external) source of pricing information,
+  ///  rules of application for the code this ChargeItem uses.
+  ///
+  /// [_definitionUri]: Extensions for definitionUri
+  ///
+  /// [definitionCanonical]: References the source of pricing information, rules
+  ///  of application for the code this ChargeItem uses.
+  ///
+  /// [status]: The current state of the ChargeItem.
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [partOf]: ChargeItems can be grouped to larger ChargeItems covering the
+  ///  whole set.
+  ///
+  /// [code]: A code that identifies the charge, like a billing code.
+  ///
+  /// [subject]: The individual or set of individuals the action is being or was
+  ///  performed on.
+  ///
+  /// [context]: The encounter or episode of care that establishes the context
+  ///  for this event.
+  ///
+  /// [occurrenceDateTime]: Date/time(s) or duration when the charged service
+  ///  was applied.
+  ///
+  /// [_occurrenceDateTime]: Extensions for occurrenceDateTime
+  ///
+  /// [occurrencePeriod]: Date/time(s) or duration when the charged service was
+  ///  applied.
+  ///
+  /// [occurrenceTiming]: Date/time(s) or duration when the charged service was
+  ///  applied.
+  ///
+  /// [performer]: Indicates who or what performed or participated in the
+  ///  charged service.
+  ///
+  /// [performingOrganization]: The organization requesting the service.
+  ///
+  /// [requestingOrganization]: The organization performing the service.
+  ///
+  /// [costCenter]: The financial cost center permits the tracking of charge
+  ///  attribution.
+  ///
+  /// [quantity]: Quantity of which the charge item has been serviced.
+  ///
+  /// [bodysite]: The anatomical location where the related service has been
+  ///  applied.
+  ///
+  /// [factorOverride]: Factor overriding the factor determined by the rules
+  ///  associated with the code.
+  ///
+  /// [_factorOverride]: Extensions for factorOverride
+  ///
+  /// [priceOverride]: Total price of the charge overriding the list price
+  ///  associated with the code.
+  ///
+  /// [overrideReason]: If the list price or the rule-based factor associated
+  /// with the code is overridden, this attribute can capture a text to indicate
+  ///  the  reason for this action.
+  ///
+  /// [_overrideReason]: Extensions for overrideReason
+  ///
+  /// [enterer]: The device, practitioner, etc. who entered the charge item.
+  ///
+  /// [enteredDate]: Date the charge item was entered.
+  ///
+  /// [_enteredDate]: Extensions for enteredDate
+  ///
+  /// [reason]: Describes why the event occurred in coded or textual form.
+  ///
+  /// [service]: Indicated the rendered service that caused this charge.
+  ///
+  /// [productReference]: Identifies the device, food, drug or other product
+  ///  being charged either by type code or reference to an instance.
+  ///
+  /// [productCodeableConcept]: Identifies the device, food, drug or other
+  ///  product being charged either by type code or reference to an instance.
+  ///
+  /// [account]: Account into which this ChargeItems belongs.
+  ///
+  /// [note]: Comments made about the event by the performer, subject or other
+  ///  participants.
+  ///
+  /// [supportingInformation]: Further information supporting this charge.
   factory ChargeItem({
     @Default('ChargeItem') String resourceType,
     Id id,
@@ -162,6 +484,7 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ChargeItem.fromYaml(dynamic yaml) => yaml is String
       ? ChargeItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -175,6 +498,43 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
 @freezed
 abstract class ChargeItemPerformer implements _$ChargeItemPerformer {
   ChargeItemPerformer._();
+
+  /// [ChargeItem_Performer]: The resource ChargeItem describes the provision of
+  /// healthcare provider products for a certain patient, therefore referring
+  /// not only to the product, but containing in addition details of the
+  /// provision, like date, time, amounts and participating organizations and
+  /// persons. Main Usage of the ChargeItem is to enable the billing process and
+  ///  internal cost allocation.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [function]: Describes the type of performance or participation(e.g.
+  ///  primary surgeon, anesthesiologiest, etc.).
+  ///
+  /// [actor]: The device, practitioner, etc. who performed or participated in
+  ///  the service.
   factory ChargeItemPerformer({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -186,6 +546,7 @@ abstract class ChargeItemPerformer implements _$ChargeItemPerformer {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ChargeItemPerformer.fromYaml(dynamic yaml) => yaml is String
       ? ChargeItemPerformer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -201,6 +562,183 @@ abstract class ChargeItemDefinition
     with Resource
     implements _$ChargeItemDefinition {
   ChargeItemDefinition._();
+
+  /// [ChargeItemDefinition]: The ChargeItemDefinition resource provides the
+  /// properties that apply to the (billing) codes necessary to calculate costs
+  /// and prices. The properties may differ largely depending on type and realm,
+  /// therefore this resource gives only a rough structure and requires
+  ///  profiling for each type of billing code system.
+  ///
+  /// [resourceType]: This is a ChargeItemDefinition resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance 
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [url]: An absolute URI that is used to identify this charge item
+  /// definition when it is referenced in a specification, model, design or an
+  /// instance; also called its canonical identifier. This SHOULD be globally
+  /// unique and SHOULD be a literal address at which at which an authoritative
+  /// instance of this charge item definition is (or will be) published. This
+  /// URL can be the target of a canonical reference. It SHALL remain the same
+  ///  when the charge item definition is stored on different servers.
+  ///
+  /// [_url]: Extensions for url
+  ///
+  /// [identifier]: A formal identifier that is used to identify this charge
+  /// item definition when it is represented in other formats, or referenced in
+  ///  a specification, model, design or an instance.
+  ///
+  /// [version]: The identifier that is used to identify this version of the
+  /// charge item definition when it is referenced in a specification, model,
+  /// design or instance. This is an arbitrary value managed by the charge item
+  /// definition author and is not expected to be globally unique. For example,
+  /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
+  /// available. There is also no expectation that versions can be placed in a
+  /// lexicographical sequence. To provide a version consistent with the
+  /// Decision Support Service specification, use the format
+  /// Major.Minor.Revision (e.g. 1.0.0). For more information on versioning
+  /// knowledge assets, refer to the Decision Support Service specification.
+  ///  Note that a version is required for non-experimental active assets.
+  ///
+  /// [_version]: Extensions for version
+  ///
+  /// [title]: A short, descriptive, user-friendly title for the charge item
+  ///  definition.
+  ///
+  /// [_title]: Extensions for title
+  ///
+  /// [derivedFromUri]: The URL pointing to an externally-defined charge item
+  ///  definition that is adhered to in whole or in part by this definition.
+  ///
+  /// [_derivedFromUri]: Extensions for derivedFromUri
+  ///
+  /// [partOf]: A larger definition of which this particular definition is a
+  ///  component or step.
+  ///
+  /// [replaces]: As new versions of a protocol or guideline are defined, allows
+  ///  identification of what versions are replaced by a new instance.
+  ///
+  /// [status]: The current state of the ChargeItemDefinition.
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [experimental]: A Boolean value to indicate that this charge item
+  /// definition is authored for testing purposes (or
+  /// education/evaluation/marketing) and is not intended to be used for genuine
+  ///  usage.
+  ///
+  /// [_experimental]: Extensions for experimental
+  ///
+  /// [date]: The date  (and optionally time) when the charge item definition
+  /// was published. The date must change when the business version changes and
+  /// it must change if the status code changes. In addition, it should change
+  ///  when the substantive content of the charge item definition changes.
+  ///
+  /// [_date]: Extensions for date
+  ///
+  /// [publisher]: The name of the organization or individual that published the
+  ///  charge item definition.
+  ///
+  /// [_publisher]: Extensions for publisher
+  ///
+  /// [contact]: Contact details to assist a user in finding and communicating
+  ///  with the publisher.
+  ///
+  /// [description]: A free text natural language description of the charge item
+  ///  definition from a consumer's perspective.
+  ///
+  /// [_description]: Extensions for description
+  ///
+  /// [useContext]: The content was developed with a focus and intent of
+  /// supporting the contexts that are listed. These contexts may be general
+  /// categories (gender, age, ...) or may be references to specific programs
+  /// (insurance plans, studies, ...) and may be used to assist with indexing
+  ///  and searching for appropriate charge item definition instances.
+  ///
+  /// [jurisdiction]: A legal or geographic region in which the charge item
+  ///  definition is intended to be used.
+  ///
+  /// [copyright]: A copyright statement relating to the charge item definition
+  /// and/or its contents. Copyright statements are generally legal restrictions
+  ///  on the use and publishing of the charge item definition.
+  ///
+  /// [_copyright]: Extensions for copyright
+  ///
+  /// [approvalDate]: The date on which the resource content was approved by the
+  /// publisher. Approval happens once when the content is officially approved
+  ///  for usage.
+  ///
+  /// [_approvalDate]: Extensions for approvalDate
+  ///
+  /// [lastReviewDate]: The date on which the resource content was last
+  /// reviewed. Review happens periodically after approval but does not change
+  ///  the original approval date.
+  ///
+  /// [_lastReviewDate]: Extensions for lastReviewDate
+  ///
+  /// [effectivePeriod]: The period during which the charge item definition
+  ///  content was or is planned to be in active use.
+  ///
+  /// [code]: The defined billing details in this resource pertain to the given
+  ///  billing code.
+  ///
+  /// [instance]: The defined billing details in this resource pertain to the
+  ///  given product instance(s).
+  ///
+  /// [applicability]: Expressions that describe applicability criteria for the
+  ///  billing code.
+  ///
+  /// [propertyGroup]: Group of properties which are applicable under the same
+  /// conditions. If no applicability rules are established for the group, then
+  ///  all properties always apply.
   factory ChargeItemDefinition({
     @Default('ChargeItemDefinition') String resourceType,
     Id id,
@@ -254,6 +792,7 @@ abstract class ChargeItemDefinition
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ChargeItemDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ChargeItemDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -268,6 +807,54 @@ abstract class ChargeItemDefinition
 abstract class ChargeItemDefinitionApplicability
     implements _$ChargeItemDefinitionApplicability {
   ChargeItemDefinitionApplicability._();
+
+  /// [ChargeItemDefinition_Applicability]: The ChargeItemDefinition resource
+  /// provides the properties that apply to the (billing) codes necessary to
+  /// calculate costs and prices. The properties may differ largely depending on
+  /// type and realm, therefore this resource gives only a rough structure and
+  ///  requires profiling for each type of billing code system.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [description]: A brief, natural language description of the condition that
+  ///  effectively communicates the intended semantics.
+  ///
+  /// [_description]: Extensions for description
+  ///
+  /// [language]: The media type of the language for the expression, e.g.
+  /// "text/cql" for Clinical Query Language expressions or "text/fhirpath" for
+  ///  FHIRPath expressions.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [expression]: An expression that returns true or false, indicating whether
+  /// the condition is satisfied. When using FHIRPath expressions, the %context
+  /// environment variable must be replaced at runtime with the ChargeItem
+  ///  resource to which this definition is applied.
+  ///
+  /// [_expression]: Extensions for expression
   factory ChargeItemDefinitionApplicability({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -283,6 +870,7 @@ abstract class ChargeItemDefinitionApplicability
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ChargeItemDefinitionApplicability.fromYaml(dynamic yaml) =>
       yaml is String
           ? ChargeItemDefinitionApplicability.fromJson(
@@ -301,6 +889,46 @@ abstract class ChargeItemDefinitionApplicability
 abstract class ChargeItemDefinitionPropertyGroup
     implements _$ChargeItemDefinitionPropertyGroup {
   ChargeItemDefinitionPropertyGroup._();
+
+  /// [ChargeItemDefinition_PropertyGroup]: The ChargeItemDefinition resource
+  /// provides the properties that apply to the (billing) codes necessary to
+  /// calculate costs and prices. The properties may differ largely depending on
+  /// type and realm, therefore this resource gives only a rough structure and
+  ///  requires profiling for each type of billing code system.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [applicability]: Expressions that describe applicability criteria for the
+  ///  priceComponent.
+  ///
+  /// [priceComponent]: The price for a ChargeItem may be calculated as a base
+  /// price with surcharges/deductions that apply in certain conditions. A
+  /// ChargeItemDefinition resource that defines the prices, factors and
+  /// conditions that apply to a billing code is currently under development.
+  /// The priceComponent element can be used to offer transparency to the
+  ///  recipient of the Invoice of how the prices have been calculated.
   factory ChargeItemDefinitionPropertyGroup({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -312,6 +940,7 @@ abstract class ChargeItemDefinitionPropertyGroup
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ChargeItemDefinitionPropertyGroup.fromYaml(dynamic yaml) =>
       yaml is String
           ? ChargeItemDefinitionPropertyGroup.fromJson(
@@ -330,6 +959,50 @@ abstract class ChargeItemDefinitionPropertyGroup
 abstract class ChargeItemDefinitionPriceComponent
     implements _$ChargeItemDefinitionPriceComponent {
   ChargeItemDefinitionPriceComponent._();
+
+  /// [ChargeItemDefinition_PriceComponent]: The ChargeItemDefinition resource
+  /// provides the properties that apply to the (billing) codes necessary to
+  /// calculate costs and prices. The properties may differ largely depending on
+  /// type and realm, therefore this resource gives only a rough structure and
+  ///  requires profiling for each type of billing code system.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: This code identifies the type of the component.
+  ///
+  /// [_type]: Extensions for type
+  ///
+  /// [code]: A code that identifies the component. Codes may be used to
+  ///  differentiate between kinds of taxes, surcharges, discounts etc.
+  ///
+  /// [factor]: The factor that has been applied on the base price for
+  ///  calculating this component.
+  ///
+  /// [_factor]: Extensions for factor
+  ///
+  /// [amount]: The amount calculated for this component.
   factory ChargeItemDefinitionPriceComponent({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -345,6 +1018,7 @@ abstract class ChargeItemDefinitionPriceComponent
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ChargeItemDefinitionPriceComponent.fromYaml(dynamic yaml) =>
       yaml is String
           ? ChargeItemDefinitionPriceComponent.fromJson(
@@ -423,6 +1097,7 @@ abstract class Contract with Resource implements _$Contract {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Contract.fromYaml(dynamic yaml) => yaml is String
       ? Contract.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -455,6 +1130,7 @@ abstract class ContractContentDefinition
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ContractContentDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ContractContentDefinition.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -493,6 +1169,7 @@ abstract class ContractTerm implements _$ContractTerm {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ContractTerm.fromYaml(dynamic yaml) => yaml is String
       ? ContractTerm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -520,6 +1197,7 @@ abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ContractSecurityLabel.fromYaml(dynamic yaml) => yaml is String
       ? ContractSecurityLabel.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -556,6 +1234,7 @@ abstract class ContractOffer implements _$ContractOffer {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ContractOffer.fromYaml(dynamic yaml) => yaml is String
       ? ContractOffer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -580,6 +1259,7 @@ abstract class ContractParty implements _$ContractParty {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ContractParty.fromYaml(dynamic yaml) => yaml is String
       ? ContractParty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -622,6 +1302,7 @@ abstract class ContractAnswer implements _$ContractAnswer {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ContractAnswer.fromYaml(dynamic yaml) => yaml is String
       ? ContractAnswer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -664,6 +1345,7 @@ abstract class ContractAsset implements _$ContractAsset {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ContractAsset.fromYaml(dynamic yaml) => yaml is String
       ? ContractAsset.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -690,6 +1372,7 @@ abstract class ContractContext implements _$ContractContext {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ContractContext.fromYaml(dynamic yaml) => yaml is String
       ? ContractContext.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -735,6 +1418,7 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ContractValuedItem.fromYaml(dynamic yaml) => yaml is String
       ? ContractValuedItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -790,6 +1474,7 @@ abstract class ContractAction implements _$ContractAction {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ContractAction.fromYaml(dynamic yaml) => yaml is String
       ? ContractAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -814,6 +1499,7 @@ abstract class ContractSubject implements _$ContractSubject {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ContractSubject.fromYaml(dynamic yaml) => yaml is String
       ? ContractSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -839,6 +1525,7 @@ abstract class ContractSigner implements _$ContractSigner {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ContractSigner.fromYaml(dynamic yaml) => yaml is String
       ? ContractSigner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -863,6 +1550,7 @@ abstract class ContractFriendly implements _$ContractFriendly {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ContractFriendly.fromYaml(dynamic yaml) => yaml is String
       ? ContractFriendly.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -887,6 +1575,7 @@ abstract class ContractLegal implements _$ContractLegal {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ContractLegal.fromYaml(dynamic yaml) => yaml is String
       ? ContractLegal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -911,6 +1600,7 @@ abstract class ContractRule implements _$ContractRule {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ContractRule.fromYaml(dynamic yaml) => yaml is String
       ? ContractRule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -994,6 +1684,7 @@ abstract class ExplanationOfBenefit
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefit.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1020,6 +1711,7 @@ abstract class ExplanationOfBenefitRelated
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitRelated.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitRelated.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1046,6 +1738,7 @@ abstract class ExplanationOfBenefitPayee
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitPayee.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitPayee.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1077,6 +1770,7 @@ abstract class ExplanationOfBenefitCareTeam
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitCareTeam.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitCareTeam.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1116,6 +1810,7 @@ abstract class ExplanationOfBenefitSupportingInfo
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitSupportingInfo.fromYaml(dynamic yaml) =>
       yaml is String
           ? ExplanationOfBenefitSupportingInfo.fromJson(
@@ -1150,6 +1845,7 @@ abstract class ExplanationOfBenefitDiagnosis
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitDiagnosis.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitDiagnosis.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1182,6 +1878,7 @@ abstract class ExplanationOfBenefitProcedure
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitProcedure.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitProcedure.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1211,6 +1908,7 @@ abstract class ExplanationOfBenefitInsurance
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitInsurance.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitInsurance.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1240,6 +1938,7 @@ abstract class ExplanationOfBenefitAccident
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitAccident.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitAccident.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1298,6 +1997,7 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitItem.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitItem.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1327,6 +2027,7 @@ abstract class ExplanationOfBenefitAdjudication
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitAdjudication.fromYaml(dynamic yaml) =>
       yaml is String
           ? ExplanationOfBenefitAdjudication.fromJson(
@@ -1371,6 +2072,7 @@ abstract class ExplanationOfBenefitDetail
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitDetail.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitDetail.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1411,6 +2113,7 @@ abstract class ExplanationOfBenefitSubDetail
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitSubDetail.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitSubDetail.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1462,6 +2165,7 @@ abstract class ExplanationOfBenefitAddItem
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitAddItem.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitAddItem.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1497,6 +2201,7 @@ abstract class ExplanationOfBenefitDetail1
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitDetail1.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitDetail1.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1531,6 +2236,7 @@ abstract class ExplanationOfBenefitSubDetail1
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitSubDetail1.fromYaml(dynamic yaml) =>
       yaml is String
           ? ExplanationOfBenefitSubDetail1.fromJson(
@@ -1559,6 +2265,7 @@ abstract class ExplanationOfBenefitTotal
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitTotal.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitTotal.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1590,6 +2297,7 @@ abstract class ExplanationOfBenefitPayment
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitPayment.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitPayment.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1622,6 +2330,7 @@ abstract class ExplanationOfBenefitProcessNote
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitProcessNote.fromYaml(dynamic yaml) =>
       yaml is String
           ? ExplanationOfBenefitProcessNote.fromJson(
@@ -1659,6 +2368,7 @@ abstract class ExplanationOfBenefitBenefitBalance
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitBenefitBalance.fromYaml(dynamic yaml) =>
       yaml is String
           ? ExplanationOfBenefitBenefitBalance.fromJson(
@@ -1695,6 +2405,7 @@ abstract class ExplanationOfBenefitFinancial
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ExplanationOfBenefitFinancial.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitFinancial.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1744,6 +2455,7 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory InsurancePlan.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlan.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1770,6 +2482,7 @@ abstract class InsurancePlanContact implements _$InsurancePlanContact {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory InsurancePlanContact.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1795,6 +2508,7 @@ abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory InsurancePlanCoverage.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanCoverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1821,6 +2535,7 @@ abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory InsurancePlanBenefit.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanBenefit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1845,6 +2560,7 @@ abstract class InsurancePlanLimit implements _$InsurancePlanLimit {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory InsurancePlanLimit.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanLimit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1873,6 +2589,7 @@ abstract class InsurancePlanPlan implements _$InsurancePlanPlan {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory InsurancePlanPlan.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanPlan.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1901,6 +2618,7 @@ abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory InsurancePlanGeneralCost.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanGeneralCost.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1927,6 +2645,7 @@ abstract class InsurancePlanSpecificCost
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory InsurancePlanSpecificCost.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanSpecificCost.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -1952,6 +2671,7 @@ abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1 {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory InsurancePlanBenefit1.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanBenefit1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -1978,6 +2698,7 @@ abstract class InsurancePlanCost implements _$InsurancePlanCost {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory InsurancePlanCost.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanCost.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

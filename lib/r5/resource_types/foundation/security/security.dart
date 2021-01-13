@@ -49,6 +49,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory AuditEvent.fromYaml(dynamic yaml) => yaml is String
       ? AuditEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -86,6 +87,7 @@ abstract class AuditEventAgent implements _$AuditEventAgent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory AuditEventAgent.fromYaml(dynamic yaml) => yaml is String
       ? AuditEventAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -113,6 +115,7 @@ abstract class AuditEventNetwork implements _$AuditEventNetwork {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory AuditEventNetwork.fromYaml(dynamic yaml) => yaml is String
       ? AuditEventNetwork.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -139,6 +142,7 @@ abstract class AuditEventSource implements _$AuditEventSource {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory AuditEventSource.fromYaml(dynamic yaml) => yaml is String
       ? AuditEventSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -171,6 +175,7 @@ abstract class AuditEventEntity implements _$AuditEventEntity {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory AuditEventEntity.fromYaml(dynamic yaml) => yaml is String
       ? AuditEventEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -199,6 +204,7 @@ abstract class AuditEventDetail implements _$AuditEventDetail {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory AuditEventDetail.fromYaml(dynamic yaml) => yaml is String
       ? AuditEventDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -246,6 +252,7 @@ abstract class Consent with Resource implements _$Consent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Consent.fromYaml(dynamic yaml) => yaml is String
       ? Consent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -272,6 +279,7 @@ abstract class ConsentPolicy implements _$ConsentPolicy {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ConsentPolicy.fromYaml(dynamic yaml) => yaml is String
       ? ConsentPolicy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -301,6 +309,7 @@ abstract class ConsentVerification implements _$ConsentVerification {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ConsentVerification.fromYaml(dynamic yaml) => yaml is String
       ? ConsentVerification.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -336,6 +345,7 @@ abstract class ConsentProvision implements _$ConsentProvision {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ConsentProvision.fromYaml(dynamic yaml) => yaml is String
       ? ConsentProvision.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -360,6 +370,7 @@ abstract class ConsentActor implements _$ConsentActor {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ConsentActor.fromYaml(dynamic yaml) => yaml is String
       ? ConsentActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -386,6 +397,7 @@ abstract class ConsentData implements _$ConsentData {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ConsentData.fromYaml(dynamic yaml) => yaml is String
       ? ConsentData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -429,6 +441,7 @@ abstract class Permission with Resource implements _$Permission {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Permission.fromYaml(dynamic yaml) => yaml is String
       ? Permission.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -455,6 +468,7 @@ abstract class PermissionProcessingActivity
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory PermissionProcessingActivity.fromYaml(dynamic yaml) => yaml is String
       ? PermissionProcessingActivity.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -480,6 +494,7 @@ abstract class PermissionJustification implements _$PermissionJustification {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory PermissionJustification.fromYaml(dynamic yaml) => yaml is String
       ? PermissionJustification.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -524,6 +539,7 @@ abstract class Provenance with Resource implements _$Provenance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Provenance.fromYaml(dynamic yaml) => yaml is String
       ? Provenance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -550,6 +566,7 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ProvenanceAgent.fromYaml(dynamic yaml) => yaml is String
       ? ProvenanceAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -577,6 +594,7 @@ abstract class ProvenanceEntity implements _$ProvenanceEntity {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory ProvenanceEntity.fromYaml(dynamic yaml) => yaml is String
       ? ProvenanceEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

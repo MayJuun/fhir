@@ -54,6 +54,7 @@ abstract class Coverage with Resource implements _$Coverage {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Coverage.fromYaml(dynamic yaml) => yaml is String
       ? Coverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -81,6 +82,7 @@ abstract class CoverageClass implements _$CoverageClass {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CoverageClass.fromYaml(dynamic yaml) => yaml is String
       ? CoverageClass.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -108,6 +110,7 @@ abstract class CoverageCostToBeneficiary
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CoverageCostToBeneficiary.fromYaml(dynamic yaml) => yaml is String
       ? CoverageCostToBeneficiary.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -133,6 +136,7 @@ abstract class CoverageException implements _$CoverageException {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CoverageException.fromYaml(dynamic yaml) => yaml is String
       ? CoverageException.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -184,6 +188,7 @@ abstract class CoverageEligibilityRequest
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CoverageEligibilityRequest.fromYaml(dynamic yaml) => yaml is String
       ? CoverageEligibilityRequest.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -213,6 +218,7 @@ abstract class CoverageEligibilityRequestSupportingInfo
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CoverageEligibilityRequestSupportingInfo.fromYaml(dynamic yaml) =>
       yaml is String
           ? CoverageEligibilityRequestSupportingInfo.fromJson(
@@ -245,6 +251,7 @@ abstract class CoverageEligibilityRequestInsurance
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CoverageEligibilityRequestInsurance.fromYaml(dynamic yaml) =>
       yaml is String
           ? CoverageEligibilityRequestInsurance.fromJson(
@@ -284,6 +291,7 @@ abstract class CoverageEligibilityRequestItem
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CoverageEligibilityRequestItem.fromYaml(dynamic yaml) =>
       yaml is String
           ? CoverageEligibilityRequestItem.fromJson(
@@ -312,6 +320,7 @@ abstract class CoverageEligibilityRequestDiagnosis
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CoverageEligibilityRequestDiagnosis.fromYaml(dynamic yaml) =>
       yaml is String
           ? CoverageEligibilityRequestDiagnosis.fromJson(
@@ -372,6 +381,7 @@ abstract class CoverageEligibilityResponse
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CoverageEligibilityResponse.fromYaml(dynamic yaml) => yaml is String
       ? CoverageEligibilityResponse.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -401,6 +411,7 @@ abstract class CoverageEligibilityResponseInsurance
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CoverageEligibilityResponseInsurance.fromYaml(dynamic yaml) =>
       yaml is String
           ? CoverageEligibilityResponseInsurance.fromJson(
@@ -448,6 +459,7 @@ abstract class CoverageEligibilityResponseItem
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CoverageEligibilityResponseItem.fromYaml(dynamic yaml) =>
       yaml is String
           ? CoverageEligibilityResponseItem.fromJson(
@@ -485,6 +497,7 @@ abstract class CoverageEligibilityResponseBenefit
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CoverageEligibilityResponseBenefit.fromYaml(dynamic yaml) =>
       yaml is String
           ? CoverageEligibilityResponseBenefit.fromJson(
@@ -513,6 +526,7 @@ abstract class CoverageEligibilityResponseError
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory CoverageEligibilityResponseError.fromYaml(dynamic yaml) =>
       yaml is String
           ? CoverageEligibilityResponseError.fromJson(
@@ -556,6 +570,7 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
       ? EnrollmentRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -601,6 +616,7 @@ abstract class EnrollmentResponse
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String
       ? EnrollmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap

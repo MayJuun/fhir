@@ -1,8 +1,11 @@
 part of 'resource.dart';
 
+/// Returns an [Id] if one is passed, otherwise generates a new one
 Id _getId(int resourcehashCode, Id id) =>
     id ?? Id('fhirfli-$resourcehashCode-${DateTime.now().hashCode}');
 
+/// Returns a [Meta] object, creates a new one if none is passed, otherwise
+/// updates the [lastUpdated] and increases the [version] by 1
 Meta _updateMetaVersion(Meta oldMeta) {
   final version =
       oldMeta == null ? 1 : int.parse(oldMeta.versionId.toString()) + 1;
@@ -12,6 +15,8 @@ Meta _updateMetaVersion(Meta oldMeta) {
   );
 }
 
+/// Updates the [meta] field of this Resource, updates the [lastUpdated], adds
+/// 1 to the version number and adds an [Id] if there is not already one
 Resource _newResourceVersion(Resource resource) {
   switch (resource.resourceType) {
     case 'Account':

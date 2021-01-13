@@ -49,6 +49,7 @@ abstract class BiologicallyDerivedProduct
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory BiologicallyDerivedProduct.fromYaml(dynamic yaml) => yaml is String
       ? BiologicallyDerivedProduct.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -78,6 +79,7 @@ abstract class BiologicallyDerivedProductCollection
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory BiologicallyDerivedProductCollection.fromYaml(dynamic yaml) =>
       yaml is String
           ? BiologicallyDerivedProductCollection.fromJson(
@@ -112,6 +114,7 @@ abstract class BiologicallyDerivedProductProcessing
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory BiologicallyDerivedProductProcessing.fromYaml(dynamic yaml) =>
       yaml is String
           ? BiologicallyDerivedProductProcessing.fromJson(
@@ -144,6 +147,7 @@ abstract class BiologicallyDerivedProductManipulation
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory BiologicallyDerivedProductManipulation.fromYaml(dynamic yaml) =>
       yaml is String
           ? BiologicallyDerivedProductManipulation.fromJson(
@@ -179,6 +183,7 @@ abstract class BiologicallyDerivedProductStorage
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory BiologicallyDerivedProductStorage.fromYaml(dynamic yaml) =>
       yaml is String
           ? BiologicallyDerivedProductStorage.fromJson(
@@ -253,6 +258,7 @@ abstract class Device with Resource implements _$Device {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Device.fromYaml(dynamic yaml) => yaml is String
       ? Device.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -287,6 +293,7 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DeviceUdiCarrier.fromYaml(dynamic yaml) => yaml is String
       ? DeviceUdiCarrier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -314,6 +321,7 @@ abstract class DeviceDeviceName implements _$DeviceDeviceName {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DeviceDeviceName.fromYaml(dynamic yaml) => yaml is String
       ? DeviceDeviceName.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -339,6 +347,7 @@ abstract class DeviceSpecialization implements _$DeviceSpecialization {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DeviceSpecialization.fromYaml(dynamic yaml) => yaml is String
       ? DeviceSpecialization.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -365,6 +374,7 @@ abstract class DeviceVersion implements _$DeviceVersion {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DeviceVersion.fromYaml(dynamic yaml) => yaml is String
       ? DeviceVersion.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -390,6 +400,7 @@ abstract class DeviceProperty implements _$DeviceProperty {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DeviceProperty.fromYaml(dynamic yaml) => yaml is String
       ? DeviceProperty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -414,6 +425,7 @@ abstract class DeviceOperationalStatus implements _$DeviceOperationalStatus {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DeviceOperationalStatus.fromYaml(dynamic yaml) => yaml is String
       ? DeviceOperationalStatus.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -438,6 +450,7 @@ abstract class DeviceAssociationStatus implements _$DeviceAssociationStatus {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DeviceAssociationStatus.fromYaml(dynamic yaml) => yaml is String
       ? DeviceAssociationStatus.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -484,6 +497,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DeviceMetric.fromYaml(dynamic yaml) => yaml is String
       ? DeviceMetric.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -514,6 +528,7 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory DeviceMetricCalibration.fromYaml(dynamic yaml) => yaml is String
       ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -556,6 +571,7 @@ abstract class NutritionProduct with Resource implements _$NutritionProduct {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory NutritionProduct.fromYaml(dynamic yaml) => yaml is String
       ? NutritionProduct.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -581,6 +597,7 @@ abstract class NutritionProductNutrient implements _$NutritionProductNutrient {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory NutritionProductNutrient.fromYaml(dynamic yaml) => yaml is String
       ? NutritionProductNutrient.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -608,6 +625,7 @@ abstract class NutritionProductIngredient
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory NutritionProductIngredient.fromYaml(dynamic yaml) => yaml is String
       ? NutritionProductIngredient.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -642,6 +660,7 @@ abstract class NutritionProductProductCharacteristic
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory NutritionProductProductCharacteristic.fromYaml(dynamic yaml) =>
       yaml is String
           ? NutritionProductProductCharacteristic.fromJson(
@@ -676,6 +695,7 @@ abstract class NutritionProductInstance implements _$NutritionProductInstance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory NutritionProductInstance.fromYaml(dynamic yaml) => yaml is String
       ? NutritionProductInstance.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -716,6 +736,7 @@ abstract class Substance with Resource implements _$Substance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory Substance.fromYaml(dynamic yaml) => yaml is String
       ? Substance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -742,6 +763,7 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory SubstanceInstance.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
@@ -767,6 +789,7 @@ abstract class SubstanceIngredient implements _$SubstanceIngredient {
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
+  /// Factory constructor that accepts [Yaml String] as an argument
   factory SubstanceIngredient.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceIngredient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
