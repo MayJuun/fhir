@@ -55,7 +55,7 @@ abstract class AdverseEvent with Resource implements _$AdverseEvent {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -371,7 +371,7 @@ abstract class AllergyIntolerance
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -420,7 +420,7 @@ abstract class AllergyIntolerance
   /// adverse reaction risk (e.g., "Latex"), an allergy or intolerance condition
   /// (e.g., "Latex allergy"), or a negated/excluded code for a specific
   /// substance or class (e.g., "No latex allergy") or a general or categorical
-  /// negated statement (e.g.,  "No known allergy", "No known drug allergies"). 
+  /// negated statement (e.g.,  "No known allergy", "No known drug allergies").
   /// Note: the substance for a specific reaction may be different from the
   /// substance identified as the cause of the risk, but it must be consistent
   /// with it. For instance, it may be a more specific substance (e.g. a brand
@@ -681,7 +681,7 @@ abstract class ClinicalImpression
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1011,7 +1011,7 @@ abstract class Condition with Resource implements _$Condition {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1304,6 +1304,114 @@ abstract class ConditionEvidence implements _$ConditionEvidence {
 @freezed
 abstract class DetectedIssue with Resource implements _$DetectedIssue {
   DetectedIssue._();
+
+  /// [DetectedIssue]: Indicates an actual or potential clinical issue with or
+  /// between one or more active or proposed clinical actions for a patient;
+  /// e.g. Drug-drug interaction, Ineffective treatment frequency,
+  ///  Procedure-condition conflict, etc.
+  ///
+  /// [resourceType]: This is a DetectedIssue resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: Business identifier associated with the detected issue
+  ///  record.
+  ///
+  /// [status]: Indicates the status of the detected issue.
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [code]: Identifies the general type of issue identified.
+  ///
+  /// [severity]: Indicates the degree of importance associated with the
+  ///  identified issue based on the potential impact on the patient.
+  ///
+  /// [_severity]: Extensions for severity
+  ///
+  /// [patient]: Indicates the patient whose record the detected issue is
+  ///  associated with.
+  ///
+  /// [identifiedDateTime]: The date or period when the detected issue was
+  ///  initially identified.
+  ///
+  /// [_identifiedDateTime]: Extensions for identifiedDateTime
+  ///
+  /// [identifiedPeriod]: The date or period when the detected issue was
+  ///  initially identified.
+  ///
+  /// [author]: Individual or device responsible for the issue being raised.
+  /// For example, a decision support application or a pharmacist conducting a
+  ///  medication review.
+  ///
+  /// [implicated]: Indicates the resource representing the current activity or
+  ///  proposed activity that is potentially problematic.
+  ///
+  /// [evidence]: Supporting evidence or manifestations that provide the basis
+  /// for identifying the detected issue such as a GuidanceResponse or
+  ///  MeasureReport.
+  ///
+  /// [detail]: A textual explanation of the detected issue.
+  ///
+  /// [_detail]: Extensions for detail
+  ///
+  /// [reference]: The literature, knowledge-base or similar reference that
+  ///  describes the propensity for the detected issue identified.
+  ///
+  /// [_reference]: Extensions for reference
+  ///
+  /// [mitigation]: Indicates an action that has been taken or is committed to
+  /// reduce or eliminate the likelihood of the risk identified by the detected
+  /// issue from manifesting.  Can also reflect an observation of known
+  ///  mitigating factors that may reduce/eliminate the need for any action.
   factory DetectedIssue({
     @Default('DetectedIssue') String resourceType,
     Id id,
@@ -1354,6 +1462,40 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
 @freezed
 abstract class DetectedIssueEvidence implements _$DetectedIssueEvidence {
   DetectedIssueEvidence._();
+
+  /// [DetectedIssue_Evidence]: Indicates an actual or potential clinical issue
+  /// with or between one or more active or proposed clinical actions for a
+  /// patient; e.g. Drug-drug interaction, Ineffective treatment frequency,
+  ///  Procedure-condition conflict, etc.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [code]: A manifestation that led to the recording of this detected issue.
+  ///
+  /// [detail]: Links to resources that constitute evidence for the detected
+  ///  issue such as a GuidanceResponse or MeasureReport.
   factory DetectedIssueEvidence({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1379,6 +1521,46 @@ abstract class DetectedIssueEvidence implements _$DetectedIssueEvidence {
 @freezed
 abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
   DetectedIssueMitigation._();
+
+  /// [DetectedIssue_Mitigation]: Indicates an actual or potential clinical
+  /// issue with or between one or more active or proposed clinical actions for
+  /// a patient; e.g. Drug-drug interaction, Ineffective treatment frequency,
+  ///  Procedure-condition conflict, etc.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [action]: Describes the action that was taken or the observation that was
+  /// made that reduces/eliminates the risk associated with the identified
+  ///  issue.
+  ///
+  /// [date]: Indicates when the mitigating action was documented.
+  ///
+  /// [_date]: Extensions for date
+  ///
+  /// [author]: Identifies the practitioner who determined the mitigation and
+  ///  takes responsibility for the mitigation step occurring.
   factory DetectedIssueMitigation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1408,6 +1590,163 @@ abstract class FamilyMemberHistory
     with Resource
     implements _$FamilyMemberHistory {
   FamilyMemberHistory._();
+
+  /// [FamilyMemberHistory]: Significant health conditions for a person related
+  ///  to the patient relevant in the context of care for the patient.
+  ///
+  /// [resourceType]: This is a FamilyMemberHistory resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: Business identifiers assigned to this family member history
+  /// by the performer or other systems which remain constant as the resource is
+  ///  updated and propagates from server to server.
+  ///
+  /// [instantiatesCanonical]: The URL pointing to a FHIR-defined protocol,
+  /// guideline, orderset or other definition that is adhered to in whole or in
+  ///  part by this FamilyMemberHistory.
+  ///
+  /// [instantiatesUri]: The URL pointing to an externally maintained protocol,
+  /// guideline, orderset or other definition that is adhered to in whole or in
+  ///  part by this FamilyMemberHistory.
+  ///
+  /// [_instantiatesUri]: Extensions for instantiatesUri
+  ///
+  /// [status]: A code specifying the status of the record of the family history
+  ///  of a specific family member.
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [dataAbsentReason]: Describes why the family member's history is not
+  ///  available.
+  ///
+  /// [patient]: The person who this history concerns.
+  ///
+  /// [date]: The date (and possibly time) when the family member history was
+  ///  recorded or last updated.
+  ///
+  /// [_date]: Extensions for date
+  ///
+  /// [name]: This will either be a name or a description; e.g. "Aunt Susan",
+  ///  "my cousin with the red hair".
+  ///
+  /// [_name]: Extensions for name
+  ///
+  /// [relationship]: The type of relationship this person has to the patient
+  ///  (father, mother, brother etc.).
+  ///
+  /// [sex]: The birth sex of the family member.
+  ///
+  /// [bornPeriod]: The actual or approximate date of birth of the relative.
+  ///
+  /// [bornDate]: The actual or approximate date of birth of the relative.
+  ///
+  /// [_bornDate]: Extensions for bornDate
+  ///
+  /// [bornString]: The actual or approximate date of birth of the relative.
+  ///
+  /// [_bornString]: Extensions for bornString
+  ///
+  /// [ageAge]: The age of the relative at the time the family member history is
+  ///  recorded.
+  ///
+  /// [ageRange]: The age of the relative at the time the family member history
+  ///  is recorded.
+  ///
+  /// [ageString]: The age of the relative at the time the family member history
+  ///  is recorded.
+  ///
+  /// [_ageString]: Extensions for ageString
+  ///
+  /// [estimatedAge]: If true, indicates that the age value specified is an
+  ///  estimated value.
+  ///
+  /// [_estimatedAge]: Extensions for estimatedAge
+  ///
+  /// [deceasedBoolean]: Deceased flag or the actual or approximate age of the
+  ///  relative at the time of death for the family member history record.
+  ///
+  /// [_deceasedBoolean]: Extensions for deceasedBoolean
+  ///
+  /// [deceasedAge]: Deceased flag or the actual or approximate age of the
+  ///  relative at the time of death for the family member history record.
+  ///
+  /// [deceasedRange]: Deceased flag or the actual or approximate age of the
+  ///  relative at the time of death for the family member history record.
+  ///
+  /// [deceasedDate]: Deceased flag or the actual or approximate age of the
+  ///  relative at the time of death for the family member history record.
+  ///
+  /// [_deceasedDate]: Extensions for deceasedDate
+  ///
+  /// [deceasedString]: Deceased flag or the actual or approximate age of the
+  ///  relative at the time of death for the family member history record.
+  ///
+  /// [_deceasedString]: Extensions for deceasedString
+  ///
+  /// [reasonCode]: Describes why the family member history occurred in coded or
+  ///  textual form.
+  ///
+  /// [reasonReference]: Indicates a Condition, Observation, AllergyIntolerance,
+  ///  or QuestionnaireResponse that justifies this family member history event.
+  ///
+  /// [note]: This property allows a non condition-specific note to the made
+  /// about the related person. Ideally, the note would be in the condition
+  ///  property, but this is not always possible.
+  ///
+  /// [condition]: The significant Conditions (or condition) that the family
+  /// member had. This is a repeating section to allow a system to represent
+  /// more than one condition per resource, though there is nothing stopping
+  ///  multiple resources - one per condition.
   factory FamilyMemberHistory({
     @Default('FamilyMemberHistory') String resourceType,
     Id id,
@@ -1478,6 +1817,69 @@ abstract class FamilyMemberHistory
 abstract class FamilyMemberHistoryCondition
     implements _$FamilyMemberHistoryCondition {
   FamilyMemberHistoryCondition._();
+
+  /// [FamilyMemberHistory_Condition]: Significant health conditions for a
+  /// person related to the patient relevant in the context of care for the
+  ///  patient.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [code]: The actual condition specified. Could be a coded condition (like
+  /// MI or Diabetes) or a less specific string like 'cancer' depending on how
+  /// much is known about the condition and the capabilities of the creating
+  ///  system.
+  ///
+  /// [outcome]: Indicates what happened following the condition.  If the
+  ///  condition resulted in death, deceased date is captured on the relation.
+  ///
+  /// [contributedToDeath]: This condition contributed to the cause of death of
+  /// the related person. If contributedToDeath is not populated, then it is
+  ///  unknown.
+  ///
+  /// [_contributedToDeath]: Extensions for contributedToDeath
+  ///
+  /// [onsetAge]: Either the age of onset, range of approximate age or
+  /// descriptive string can be recorded.  For conditions with multiple
+  ///  occurrences, this describes the first known occurrence.
+  ///
+  /// [onsetRange]: Either the age of onset, range of approximate age or
+  /// descriptive string can be recorded.  For conditions with multiple
+  ///  occurrences, this describes the first known occurrence.
+  ///
+  /// [onsetPeriod]: Either the age of onset, range of approximate age or
+  /// descriptive string can be recorded.  For conditions with multiple
+  ///  occurrences, this describes the first known occurrence.
+  ///
+  /// [onsetString]: Either the age of onset, range of approximate age or
+  /// descriptive string can be recorded.  For conditions with multiple
+  ///  occurrences, this describes the first known occurrence.
+  ///
+  /// [_onsetString]: Extensions for onsetString
+  ///
+  /// [note]: An area where general notes can be placed about this specific
+  ///  condition.
   factory FamilyMemberHistoryCondition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1512,6 +1914,183 @@ abstract class FamilyMemberHistoryCondition
 @freezed
 abstract class Procedure with Resource implements _$Procedure {
   Procedure._();
+
+  /// [Procedure]: An action that is or was performed on or for a patient. This
+  /// can be a physical intervention like an operation, or less invasive like
+  ///  long term services, counseling, or hypnotherapy.
+  ///
+  /// [resourceType]: This is a Procedure resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance 
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: Business identifiers assigned to this procedure by the
+  /// performer or other systems which remain constant as the resource is
+  ///  updated and is propagated from server to server.
+  ///
+  /// [instantiatesCanonical]: The URL pointing to a FHIR-defined protocol,
+  /// guideline, order set or other definition that is adhered to in whole or in
+  ///  part by this Procedure.
+  ///
+  /// [instantiatesUri]: The URL pointing to an externally maintained protocol,
+  /// guideline, order set or other definition that is adhered to in whole or in
+  ///  part by this Procedure.
+  ///
+  /// [_instantiatesUri]: Extensions for instantiatesUri
+  ///
+  /// [basedOn]: A reference to a resource that contains details of the request
+  ///  for this procedure.
+  ///
+  /// [partOf]: A larger event of which this particular procedure is a component
+  ///  or step.
+  ///
+  /// [status]: A code specifying the state of the procedure. Generally, this
+  ///  will be the in-progress or completed state.
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [statusReason]: Captures the reason for the current state of the
+  ///  procedure.
+  ///
+  /// [category]: A code that classifies the procedure for searching, sorting
+  ///  and display purposes (e.g. "Surgical Procedure").
+  ///
+  /// [code]: The specific procedure that is performed. Use text if the exact
+  /// nature of the procedure cannot be coded (e.g. "Laparoscopic
+  ///  Appendectomy").
+  ///
+  /// [subject]: The person, animal or group on which the procedure was
+  ///  performed.
+  ///
+  /// [encounter]: The Encounter during which this Procedure was created or
+  ///  performed or to which the creation of this record is tightly associated.
+  ///
+  /// [performedDateTime]: Estimated or actual date, date-time, period, or age
+  /// when the procedure was performed.  Allows a period to support complex
+  /// procedures that span more than one date, and also allows for the length of
+  ///  the procedure to be captured.
+  ///
+  /// [_performedDateTime]: Extensions for performedDateTime
+  ///
+  /// [performedPeriod]: Estimated or actual date, date-time, period, or age
+  /// when the procedure was performed.  Allows a period to support complex
+  /// procedures that span more than one date, and also allows for the length of
+  ///  the procedure to be captured.
+  ///
+  /// [performedString]: Estimated or actual date, date-time, period, or age
+  /// when the procedure was performed.  Allows a period to support complex
+  /// procedures that span more than one date, and also allows for the length of
+  ///  the procedure to be captured.
+  ///
+  /// [_performedString]: Extensions for performedString
+  ///
+  /// [performedAge]: Estimated or actual date, date-time, period, or age when
+  /// the procedure was performed.  Allows a period to support complex
+  /// procedures that span more than one date, and also allows for the length of
+  ///  the procedure to be captured.
+  ///
+  /// [performedRange]: Estimated or actual date, date-time, period, or age when
+  /// the procedure was performed.  Allows a period to support complex
+  /// procedures that span more than one date, and also allows for the length of
+  ///  the procedure to be captured.
+  ///
+  /// [recorder]: Individual who recorded the record and takes responsibility
+  ///  for its content.
+  ///
+  /// [asserter]: Individual who is making the procedure statement.
+  ///
+  /// [performer]: Limited to "real" people rather than equipment.
+  ///
+  /// [location]: The location where the procedure actually happened.  E.g. a
+  ///  newborn at home, a tracheostomy at a restaurant.
+  ///
+  /// [reasonCode]: The coded reason why the procedure was performed. This may
+  ///  be a coded entity of some type, or may simply be present as text.
+  ///
+  /// [reasonReference]: The justification of why the procedure was performed.
+  ///
+  /// [bodySite]: Detailed and structured anatomical location information.
+  /// Multiple locations are allowed - e.g. multiple punch biopsies of a
+  ///  lesion.
+  ///
+  /// [outcome]: The outcome of the procedure - did it resolve the reasons for
+  ///  the procedure being performed?
+  ///
+  /// [report]: This could be a histology result, pathology report, surgical
+  ///  report, etc.
+  ///
+  /// [complication]: Any complications that occurred during the procedure, or
+  /// in the immediate post-performance period. These are generally tracked
+  /// separately from the notes, which will typically describe the procedure
+  ///  itself rather than any 'post procedure' issues.
+  ///
+  /// [complicationDetail]: Any complications that occurred during the
+  ///  procedure, or in the immediate post-performance period.
+  ///
+  /// [followUp]: If the procedure required specific follow up - e.g. removal of
+  /// sutures. The follow up may be represented as a simple note or could
+  /// potentially be more complex, in which case the CarePlan resource can be
+  ///  used.
+  ///
+  /// [note]: Any other notes and comments about the procedure.
+  ///
+  /// [focalDevice]: A device that is implanted, removed or otherwise
+  /// manipulated (calibration, battery replacement, fitting a prosthesis,
+  ///  attaching a wound-vac, etc.) as a focal portion of the Procedure.
+  ///
+  /// [usedReference]: Identifies medications, devices and any other substance
+  ///  used as part of the procedure.
+  ///
+  /// [usedCode]: Identifies coded items that were used as part of the
+  ///  procedure.
   factory Procedure({
     @Default('Procedure') String resourceType,
     Id id,
@@ -1579,6 +2158,42 @@ abstract class Procedure with Resource implements _$Procedure {
 @freezed
 abstract class ProcedurePerformer implements _$ProcedurePerformer {
   ProcedurePerformer._();
+
+  /// [Procedure_Performer]: An action that is or was performed on or for a
+  /// patient. This can be a physical intervention like an operation, or less
+  ///  invasive like long term services, counseling, or hypnotherapy.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [function]: Distinguishes the type of involvement of the performer in the
+  ///  procedure. For example, surgeon, anaesthetist, endoscopist.
+  ///
+  /// [actor]: The practitioner who was involved in the procedure.
+  ///
+  /// [onBehalfOf]: The organization the device or practitioner was acting on
+  ///  behalf of.
   factory ProcedurePerformer({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1605,6 +2220,40 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
 @freezed
 abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
   ProcedureFocalDevice._();
+
+  /// [Procedure_FocalDevice]: An action that is or was performed on or for a
+  /// patient. This can be a physical intervention like an operation, or less
+  ///  invasive like long term services, counseling, or hypnotherapy.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [action]: The kind of change that happened to the device during the
+  ///  procedure.
+  ///
+  /// [manipulated]: The device that was manipulated (changed) during the
+  ///  procedure.
   factory ProcedureFocalDevice({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,

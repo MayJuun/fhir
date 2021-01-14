@@ -2394,6 +2394,116 @@ abstract class ClaimResponseError implements _$ClaimResponseError {
 @freezed
 abstract class Invoice with Resource implements _$Invoice {
   Invoice._();
+
+  /// [Invoice]: Invoice containing collected ChargeItems from an Account with
+  ///  calculated individual and total price for Billing purpose.
+  ///
+  /// [resourceType]: This is a Invoice resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance 
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: Identifier of this Invoice, often used for reference in
+  ///  correspondence about this invoice or for tracking of payments.
+  ///
+  /// [status]: The current state of the Invoice.
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [cancelledReason]: In case of Invoice cancellation a reason must be given
+  ///  (entered in error, superseded by corrected invoice etc.).
+  ///
+  /// [_cancelledReason]: Extensions for cancelledReason
+  ///
+  /// [type]: Type of Invoice depending on domain, realm an usage (e.g.
+  ///  internal/external, dental, preliminary).
+  ///
+  /// [subject]: The individual or set of individuals receiving the goods and
+  ///  services billed in this invoice.
+  ///
+  /// [recipient]: The individual or Organization responsible for balancing of
+  ///  this invoice.
+  ///
+  /// [date]: Date/time(s) of when this Invoice was posted.
+  ///
+  /// [_date]: Extensions for date
+  ///
+  /// [participant]: Indicates who or what performed or participated in the
+  ///  charged service.
+  ///
+  /// [issuer]: The organizationissuing the Invoice.
+  ///
+  /// [account]: Account which is supposed to be balanced with this Invoice.
+  ///
+  /// [lineItem]: Each line item represents one charge for goods and services
+  /// rendered. Details such as date, code and amount are found in the
+  ///  referenced ChargeItem resource.
+  ///
+  /// [totalPriceComponent]: The total amount for the Invoice may be calculated
+  /// as the sum of the line items with surcharges/deductions that apply in
+  /// certain conditions.  The priceComponent element can be used to offer
+  /// transparency to the recipient of the Invoice of how the total price was
+  ///  calculated.
+  ///
+  /// [totalNet]: Invoice total , taxes excluded.
+  ///
+  /// [totalGross]: Invoice total, tax included.
+  ///
+  /// [paymentTerms]: Payment details such as banking details, period of
+  ///  payment, deductibles, methods of payment.
+  ///
+  /// [_paymentTerms]: Extensions for paymentTerms
+  ///
+  /// [note]: Comments made about the invoice by the issuer, subject, or other
+  ///  participants.
   factory Invoice({
     @Default('Invoice') String resourceType,
     Id id,
@@ -2445,6 +2555,40 @@ abstract class Invoice with Resource implements _$Invoice {
 @freezed
 abstract class InvoiceParticipant implements _$InvoiceParticipant {
   InvoiceParticipant._();
+
+  /// [Invoice_Participant]: Invoice containing collected ChargeItems from an
+  ///  Account with calculated individual and total price for Billing purpose.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [role]: Describes the type of involvement (e.g. transcriptionist, creator
+  /// etc.). If the invoice has been created automatically, the Participant may
+  ///  be a billing engine or another kind of device.
+  ///
+  /// [actor]: The device, practitioner, etc. who performed or participated in
+  ///  the service.
   factory InvoiceParticipant({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2470,6 +2614,54 @@ abstract class InvoiceParticipant implements _$InvoiceParticipant {
 @freezed
 abstract class InvoiceLineItem implements _$InvoiceLineItem {
   InvoiceLineItem._();
+
+  /// [Invoice_LineItem]: Invoice containing collected ChargeItems from an
+  ///  Account with calculated individual and total price for Billing purpose.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [sequence]: Sequence in which the items appear on the invoice.
+  ///
+  /// [_sequence]: Extensions for sequence
+  ///
+  /// [chargeItemReference]: The ChargeItem contains information such as the
+  /// billing code, date, amount etc. If no further details are required for the
+  /// lineItem, inline billing codes can be added using the CodeableConcept data
+  ///  type instead of the Reference.
+  ///
+  /// [chargeItemCodeableConcept]: The ChargeItem contains information such as
+  /// the billing code, date, amount etc. If no further details are required for
+  /// the lineItem, inline billing codes can be added using the CodeableConcept
+  ///  data type instead of the Reference.
+  ///
+  /// [priceComponent]: The price for a ChargeItem may be calculated as a base
+  /// price with surcharges/deductions that apply in certain conditions. A
+  /// ChargeItemDefinition resource that defines the prices, factors and
+  /// conditions that apply to a billing code is currently under development.
+  /// The priceComponent element can be used to offer transparency to the
+  ///  recipient of the Invoice as to how the prices have been calculated.
   factory InvoiceLineItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2498,6 +2690,47 @@ abstract class InvoiceLineItem implements _$InvoiceLineItem {
 @freezed
 abstract class InvoicePriceComponent implements _$InvoicePriceComponent {
   InvoicePriceComponent._();
+
+  /// [Invoice_PriceComponent]: Invoice containing collected ChargeItems from an
+  ///  Account with calculated individual and total price for Billing purpose.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: This code identifies the type of the component.
+  ///
+  /// [_type]: Extensions for type
+  ///
+  /// [code]: A code that identifies the component. Codes may be used to
+  ///  differentiate between kinds of taxes, surcharges, discounts etc.
+  ///
+  /// [factor]: The factor that has been applied on the base price for
+  ///  calculating this component.
+  ///
+  /// [_factor]: Extensions for factor
+  ///
+  /// [amount]: The amount calculated for this component.
   factory InvoicePriceComponent({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,

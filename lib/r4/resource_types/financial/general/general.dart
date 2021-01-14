@@ -53,7 +53,7 @@ abstract class Account with Resource implements _$Account {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -217,7 +217,7 @@ abstract class AccountCoverage implements _$AccountCoverage {
 @freezed
 abstract class AccountGuarantor implements _$AccountGuarantor {
   AccountGuarantor._();
-  
+
   /// [Account_Guarantor]: A financial tool for tracking value accrued for a
   /// particular purpose.  In the healthcare field, used to track charges for a
   ///  patient, cost centers, etc.
@@ -324,7 +324,7 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -603,7 +603,7 @@ abstract class ChargeItemDefinition
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1036,6 +1036,214 @@ abstract class ChargeItemDefinitionPriceComponent
 @freezed
 abstract class Contract with Resource implements _$Contract {
   Contract._();
+
+  /// [Contract]: Legally enforceable, formally recorded unilateral or bilateral
+  ///  directive i.e., a policy or agreement.
+  ///
+  /// [resourceType]: This is a Contract resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: Unique identifier for this Contract or a derivative that
+  ///  references a Source Contract.
+  ///
+  /// [url]: Canonical identifier for this contract, represented as a URI
+  ///  (globally unique).
+  ///
+  /// [_url]: Extensions for url
+  ///
+  /// [version]: An edition identifier used for business purposes to label
+  ///  business significant variants.
+  ///
+  /// [_version]: Extensions for version
+  ///
+  /// [status]: The status of the resource instance.
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [legalState]: Legal states of the formation of a legal instrument, which
+  /// is a formally executed written document that can be formally attributed to
+  /// its author, records and formally expresses a legally enforceable act,
+  /// process, or contractual duty, obligation, or right, and therefore
+  ///  evidences that act, process, or agreement.
+  ///
+  /// [instantiatesCanonical]: The URL pointing to a FHIR-defined Contract
+  ///  Definition that is adhered to in whole or part by this Contract.
+  ///
+  /// [instantiatesUri]: The URL pointing to an externally maintained definition
+  ///  that is adhered to in whole or in part by this Contract.
+  ///
+  /// [_instantiatesUri]: Extensions for instantiatesUri
+  ///
+  /// [contentDerivative]: The minimal content derived from the basal
+  ///  information source at a specific stage in its lifecycle.
+  ///
+  /// [issued]: When this  Contract was issued.
+  ///
+  /// [_issued]: Extensions for issued
+  ///
+  /// [applies]: Relevant time or time-period when this Contract is applicable.
+  ///
+  /// [expirationType]: Event resulting in discontinuation or termination of
+  ///  this Contract instance by one or more parties to the contract.
+  ///
+  /// [subject]: The target entity impacted by or of interest to parties to the
+  ///  agreement.
+  ///
+  /// [authority]: A formally or informally recognized grouping of people,
+  /// principals, organizations, or jurisdictions formed for the purpose of
+  /// achieving some form of collective action such as the promulgation,
+  ///  administration and enforcement of contracts and policies.
+  ///
+  /// [domain]: Recognized governance framework or system operating with a
+  /// circumscribed scope in accordance with specified principles, policies,
+  /// processes or procedures for managing rights, actions, or behaviors of
+  ///  parties or principals relative to resources.
+  ///
+  /// [site]: Sites in which the contract is complied with,  exercised, or in
+  ///  force.
+  ///
+  /// [name]: A natural language name identifying this Contract definition,
+  /// derivative, or instance in any legal state. Provides additional
+  /// information about its content. This name should be usable as an identifier
+  /// for the module by machine processing applications such as code
+  ///  generation.
+  ///
+  /// [_name]: Extensions for name
+  ///
+  /// [title]: A short, descriptive, user-friendly title for this Contract
+  /// definition, derivative, or instance in any legal state.t giving additional
+  ///  information about its content.
+  ///
+  /// [_title]: Extensions for title
+  ///
+  /// [subtitle]: An explanatory or alternate user-friendly title for this
+  /// Contract definition, derivative, or instance in any legal state.t giving
+  ///  additional information about its content.
+  ///
+  /// [_subtitle]: Extensions for subtitle
+  ///
+  /// [alias]: Alternative representation of the title for this Contract
+  /// definition, derivative, or instance in any legal state., e.g., a domain
+  ///  specific contract number related to legislation.
+  ///
+  /// [_alias]: Extensions for alias
+  ///
+  /// [author]: The individual or organization that authored the Contract
+  ///  definition, derivative, or instance in any legal state.
+  ///
+  /// [scope]: A selector of legal concerns for this Contract definition,
+  ///  derivative, or instance in any legal state.
+  ///
+  /// [topicCodeableConcept]: Narrows the range of legal concerns to focus on
+  ///  the achievement of specific contractual objectives.
+  ///
+  /// [topicReference]: Narrows the range of legal concerns to focus on the
+  ///  achievement of specific contractual objectives.
+  ///
+  /// [type]: A high-level category for the legal instrument, whether
+  /// constructed as a Contract definition, derivative, or instance in any legal
+  /// state.  Provides additional information about its content within the
+  /// context of the Contract's scope to distinguish the kinds of systems that
+  ///  would be interested in the contract.
+  ///
+  /// [subType]: Sub-category for the Contract that distinguishes the kinds of
+  /// systems that would be interested in the Contract within the context of the
+  ///  Contract's scope.
+  ///
+  /// [contentDefinition]: Precusory content developed with a focus and intent
+  /// of supporting the formation a Contract instance, which may be associated
+  ///  with and transformable into a Contract.
+  ///
+  /// [term]: One or more Contract Provisions, which may be related and conveyed
+  ///  as a group, and may contain nested groups.
+  ///
+  /// [supportingInfo]: Information that may be needed by/relevant to the
+  ///  performer in their execution of this term action.
+  ///
+  /// [relevantHistory]: Links to Provenance records for past versions of this
+  /// Contract definition, derivative, or instance, which identify key state
+  /// transitions or updates that are likely to be relevant to a user looking at
+  /// the current version of the Contract.  The Provence.entity indicates the
+  /// target that was changed in the update.
+  ///  http://build.fhir.org/provenance-definitions.html#Provenance.entity.
+  ///
+  /// [signer]: Parties with legal standing in the Contract, including the
+  /// principal parties, the grantor(s) and grantee(s), which are any person or
+  /// organization bound by the contract, and any ancillary parties, which
+  ///  facilitate the execution of the contract such as a notary or witness.
+  ///
+  /// [friendly]: The "patient friendly language" versionof the Contract in
+  /// whole or in parts. "Patient friendly language" means the representation of
+  /// the Contract and Contract Provisions in a manner that is readily
+  /// accessible and understandable by a layperson in accordance with best
+  /// practices for communication styles that ensure that those agreeing to or
+  /// signing the Contract understand the roles, actions, obligations,
+  ///  responsibilities, and implication of the agreement.
+  ///
+  /// [legal]: List of Legal expressions or representations of this Contract.
+  ///
+  /// [rule]: List of Computable Policy Rule Language Representations of this
+  ///  Contract.
+  ///
+  /// [legallyBindingAttachment]: Legally binding Contract: This is the signed
+  /// and legally recognized representation of the Contract, which is considered
+  /// the "source of truth" and which would be the basis for legal action
+  ///  related to enforcement of this Contract.
+  ///
+  /// [legallyBindingReference]: Legally binding Contract: This is the signed
+  /// and legally recognized representation of the Contract, which is considered
+  /// the "source of truth" and which would be the basis for legal action
+  ///  related to enforcement of this Contract.
   factory Contract({
     @Default('Contract') String resourceType,
     Id id,
@@ -1112,6 +1320,61 @@ abstract class Contract with Resource implements _$Contract {
 abstract class ContractContentDefinition
     implements _$ContractContentDefinition {
   ContractContentDefinition._();
+
+  /// [Contract_ContentDefinition]: Legally enforceable, formally recorded
+  ///  unilateral or bilateral directive i.e., a policy or agreement.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: Precusory content structure and use, i.e., a boilerplate,
+  /// template, application for a contract such as an insurance policy or
+  ///  benefits under a program, e.g., workers compensation.
+  ///
+  /// [subType]: Detailed Precusory content type.
+  ///
+  /// [publisher]: The  individual or organization that published the Contract
+  ///  precursor content.
+  ///
+  /// [publicationDate]: The date (and optionally time) when the contract was
+  /// published. The date must change when the business version changes and it
+  /// must change if the status code changes. In addition, it should change when
+  ///  the substantive content of the contract changes.
+  ///
+  /// [_publicationDate]: Extensions for publicationDate
+  ///
+  /// [publicationStatus]: amended | appended | cancelled | disputed |
+  /// entered-in-error | executable | executed | negotiable | offered | policy |
+  ///  rejected | renewed | revoked | resolved | terminated.
+  ///
+  /// [_publicationStatus]: Extensions for publicationStatus
+  ///
+  /// [copyright]: A copyright statement relating to Contract precursor content.
+  /// Copyright statements are generally legal restrictions on the use and
+  ///  publishing of the Contract precursor content.
+  ///
+  /// [_copyright]: Extensions for copyright
   factory ContractContentDefinition({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1145,6 +1408,71 @@ abstract class ContractContentDefinition
 @freezed
 abstract class ContractTerm implements _$ContractTerm {
   ContractTerm._();
+
+  /// [Contract_Term]: Legally enforceable, formally recorded unilateral or
+  ///  bilateral directive i.e., a policy or agreement.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: Unique identifier for this particular Contract Provision.
+  ///
+  /// [issued]: When this Contract Provision was issued.
+  ///
+  /// [_issued]: Extensions for issued
+  ///
+  /// [applies]: Relevant time or time-period when this Contract Provision is
+  ///  applicable.
+  ///
+  /// [topicCodeableConcept]: The entity that the term applies to.
+  ///
+  /// [topicReference]: The entity that the term applies to.
+  ///
+  /// [type]: A legal clause or condition contained within a contract that
+  /// requires one or both parties to perform a particular requirement by some
+  /// specified time or prevents one or both parties from performing a
+  ///  particular requirement by some specified time.
+  ///
+  /// [subType]: A specialized legal clause or condition based on overarching
+  ///  contract type.
+  ///
+  /// [text]: Statement of a provision in a policy or a contract.
+  ///
+  /// [_text]: Extensions for text
+  ///
+  /// [securityLabel]: Security labels that protect the handling of information
+  ///  about the term and its elements, which may be specifically identified..
+  ///
+  /// [offer]: The matter of concern in the context of this provision of the
+  ///  agrement.
+  ///
+  /// [asset]: Contract Term Asset List.
+  ///
+  /// [action]: An actor taking a role in an activity for which it can be
+  ///  assigned some degree of responsibility for the activity taking place.
+  ///
+  /// [group]: Nested group of Contract Provisions.
   factory ContractTerm({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1183,6 +1511,47 @@ abstract class ContractTerm implements _$ContractTerm {
 @freezed
 abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
   ContractSecurityLabel._();
+
+  /// [Contract_SecurityLabel]: Legally enforceable, formally recorded
+  ///  unilateral or bilateral directive i.e., a policy or agreement.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [number]: Number used to link this term or term element to the applicable
+  ///  Security Label.
+  ///
+  /// [_number]: Extensions for number
+  ///
+  /// [classification]: Security label privacy tag that species the level of
+  ///  confidentiality protection required for this term and/or term elements.
+  ///
+  /// [category]: Security label privacy tag that species the applicable privacy
+  ///  and security policies governing this term and/or term elements.
+  ///
+  /// [control]: Security label privacy tag that species the manner in which
+  ///  term and/or term elements are to be protected.
   factory ContractSecurityLabel({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1211,6 +1580,64 @@ abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
 @freezed
 abstract class ContractOffer implements _$ContractOffer {
   ContractOffer._();
+
+  /// [Contract_Offer]: Legally enforceable, formally recorded unilateral or
+  ///  bilateral directive i.e., a policy or agreement.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: Unique identifier for this particular Contract Provision.
+  ///
+  /// [party]: Offer Recipient.
+  ///
+  /// [topic]: The owner of an asset has the residual control rights over the
+  /// asset: the right to decide all usages of the asset in any way not
+  ///  inconsistent with a prior contract, custom, or law (Hart, 1995, p. 30).
+  ///
+  /// [type]: Type of Contract Provision such as specific requirements, purposes
+  ///  for actions, obligations, prohibitions, e.g. life time maximum benefit.
+  ///
+  /// [decision]: Type of choice made by accepting party with respect to an
+  ///  offer made by an offeror/ grantee.
+  ///
+  /// [decisionMode]: How the decision about a Contract was conveyed.
+  ///
+  /// [answer]: Response to offer text.
+  ///
+  /// [text]: Human readable form of this Contract Offer.
+  ///
+  /// [_text]: Extensions for text
+  ///
+  /// [linkId]: The id of the clause or question text of the offer in the
+  ///  referenced questionnaire/response.
+  ///
+  /// [_linkId]: Extensions for linkId
+  ///
+  /// [securityLabelNumber]: Security labels that protects the offer.
+  ///
+  /// [_securityLabelNumber]: Extensions for securityLabelNumber
   factory ContractOffer({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1248,6 +1675,37 @@ abstract class ContractOffer implements _$ContractOffer {
 @freezed
 abstract class ContractParty implements _$ContractParty {
   ContractParty._();
+
+  /// [Contract_Party]: Legally enforceable, formally recorded unilateral or
+  ///  bilateral directive i.e., a policy or agreement.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [reference]: Participant in the offer.
+  ///
+  /// [role]: How the party participates in the offer.
   factory ContractParty({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1273,6 +1731,109 @@ abstract class ContractParty implements _$ContractParty {
 @freezed
 abstract class ContractAnswer implements _$ContractAnswer {
   ContractAnswer._();
+
+  /// [Contract_Answer]: Legally enforceable, formally recorded unilateral or
+  ///  bilateral directive i.e., a policy or agreement.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [valueBoolean]: Response to an offer clause or question text,  which
+  /// enables selection of values to be agreed to, e.g., the period of
+  /// participation, the date of occupancy of a rental, warrently duration, or
+  ///  whether biospecimen may be used for further research.
+  ///
+  /// [_valueBoolean]: Extensions for valueBoolean
+  ///
+  /// [valueDecimal]: Response to an offer clause or question text,  which
+  /// enables selection of values to be agreed to, e.g., the period of
+  /// participation, the date of occupancy of a rental, warrently duration, or
+  ///  whether biospecimen may be used for further research.
+  ///
+  /// [_valueDecimal]: Extensions for valueDecimal
+  ///
+  /// [valueInteger]: Response to an offer clause or question text,  which
+  /// enables selection of values to be agreed to, e.g., the period of
+  /// participation, the date of occupancy of a rental, warrently duration, or
+  ///  whether biospecimen may be used for further research.
+  ///
+  /// [_valueInteger]: Extensions for valueInteger
+  ///
+  /// [valueDate]: Response to an offer clause or question text,  which enables
+  /// selection of values to be agreed to, e.g., the period of participation,
+  /// the date of occupancy of a rental, warrently duration, or whether
+  ///  biospecimen may be used for further research.
+  ///
+  /// [_valueDate]: Extensions for valueDate
+  ///
+  /// [valueDateTime]: Response to an offer clause or question text,  which
+  /// enables selection of values to be agreed to, e.g., the period of
+  /// participation, the date of occupancy of a rental, warrently duration, or
+  ///  whether biospecimen may be used for further research.
+  ///
+  /// [_valueDateTime]: Extensions for valueDateTime
+  ///
+  /// [valueTime]: Response to an offer clause or question text,  which enables
+  /// selection of values to be agreed to, e.g., the period of participation,
+  /// the date of occupancy of a rental, warrently duration, or whether
+  ///  biospecimen may be used for further research.
+  ///
+  /// [_valueTime]: Extensions for valueTime
+  ///
+  /// [valueString]: Response to an offer clause or question text,  which
+  /// enables selection of values to be agreed to, e.g., the period of
+  /// participation, the date of occupancy of a rental, warrently duration, or
+  ///  whether biospecimen may be used for further research.
+  ///
+  /// [_valueString]: Extensions for valueString
+  ///
+  /// [valueUri]: Response to an offer clause or question text,  which enables
+  /// selection of values to be agreed to, e.g., the period of participation,
+  /// the date of occupancy of a rental, warrently duration, or whether
+  ///  biospecimen may be used for further research.
+  ///
+  /// [_valueUri]: Extensions for valueUri
+  ///
+  /// [valueAttachment]: Response to an offer clause or question text,  which
+  /// enables selection of values to be agreed to, e.g., the period of
+  /// participation, the date of occupancy of a rental, warrently duration, or
+  ///  whether biospecimen may be used for further research.
+  ///
+  /// [valueCoding]: Response to an offer clause or question text,  which
+  /// enables selection of values to be agreed to, e.g., the period of
+  /// participation, the date of occupancy of a rental, warrently duration, or
+  ///  whether biospecimen may be used for further research.
+  ///
+  /// [valueQuantity]: Response to an offer clause or question text,  which
+  /// enables selection of values to be agreed to, e.g., the period of
+  /// participation, the date of occupancy of a rental, warrently duration, or
+  ///  whether biospecimen may be used for further research.
+  ///
+  /// [valueReference]: Response to an offer clause or question text,  which
+  /// enables selection of values to be agreed to, e.g., the period of
+  /// participation, the date of occupancy of a rental, warrently duration, or
+  ///  whether biospecimen may be used for further research.
   factory ContractAnswer({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1316,6 +1877,77 @@ abstract class ContractAnswer implements _$ContractAnswer {
 @freezed
 abstract class ContractAsset implements _$ContractAsset {
   ContractAsset._();
+
+  /// [Contract_Asset]: Legally enforceable, formally recorded unilateral or
+  ///  bilateral directive i.e., a policy or agreement.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [scope]: Differentiates the kind of the asset .
+  ///
+  /// [type]: Target entity type about which the term may be concerned.
+  ///
+  /// [typeReference]: Associated entities.
+  ///
+  /// [subtype]: May be a subtype or part of an offered asset.
+  ///
+  /// [relationship]: Specifies the applicability of the term to an asset
+  /// resource instance, and instances it refers to orinstances that refer to
+  ///  it, and/or are owned by the offeree.
+  ///
+  /// [context]: Circumstance of the asset.
+  ///
+  /// [condition]: Description of the quality and completeness of the asset that
+  ///  imay be a factor in its valuation.
+  ///
+  /// [_condition]: Extensions for condition
+  ///
+  /// [periodType]: Type of Asset availability for use or ownership.
+  ///
+  /// [period]: Asset relevant contractual time period.
+  ///
+  /// [usePeriod]: Time period of asset use.
+  ///
+  /// [text]: Clause or question text (Prose Object) concerning the asset in a
+  /// linked form, such as a QuestionnaireResponse used in the formation of the
+  ///  contract.
+  ///
+  /// [_text]: Extensions for text
+  ///
+  /// [linkId]: Id [identifier??] of the clause or question text about the asset
+  ///  in the referenced form or QuestionnaireResponse.
+  ///
+  /// [_linkId]: Extensions for linkId
+  ///
+  /// [answer]: Response to assets.
+  ///
+  /// [securityLabelNumber]: Security labels that protects the asset.
+  ///
+  /// [_securityLabelNumber]: Extensions for securityLabelNumber
+  ///
+  /// [valuedItem]: Contract Valued Item List.
   factory ContractAsset({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1359,6 +1991,44 @@ abstract class ContractAsset implements _$ContractAsset {
 @freezed
 abstract class ContractContext implements _$ContractContext {
   ContractContext._();
+
+  /// [Contract_Context]: Legally enforceable, formally recorded unilateral or
+  ///  bilateral directive i.e., a policy or agreement.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [reference]: Asset context reference may include the creator, custodian,
+  /// or owning Person or Organization (e.g., bank, repository),  location held,
+  ///  e.g., building,  jurisdiction.
+  ///
+  /// [code]: Coded representation of the context generally or of the Referenced
+  ///  entity, such as the asset holder type or location.
+  ///
+  /// [text]: Context description.
+  ///
+  /// [_text]: Extensions for text
   factory ContractContext({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1386,6 +2056,94 @@ abstract class ContractContext implements _$ContractContext {
 @freezed
 abstract class ContractValuedItem implements _$ContractValuedItem {
   ContractValuedItem._();
+
+  /// [Contract_ValuedItem]: Legally enforceable, formally recorded unilateral
+  ///  or bilateral directive i.e., a policy or agreement.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [entityCodeableConcept]: Specific type of Contract Valued Item that may be
+  ///  priced.
+  ///
+  /// [entityReference]: Specific type of Contract Valued Item that may be
+  ///  priced.
+  ///
+  /// [identifier]: Identifies a Contract Valued Item instance.
+  ///
+  /// [effectiveTime]: Indicates the time during which this Contract ValuedItem
+  ///  information is effective.
+  ///
+  /// [_effectiveTime]: Extensions for effectiveTime
+  ///
+  /// [quantity]: Specifies the units by which the Contract Valued Item is
+  /// measured or counted, and quantifies the countable or measurable Contract
+  ///  Valued Item instances.
+  ///
+  /// [unitPrice]: A Contract Valued Item unit valuation measure.
+  ///
+  /// [factor]: A real number that represents a multiplier used in determining
+  /// the overall value of the Contract Valued Item delivered. The concept of a
+  /// Factor allows for a discount or surcharge multiplier to be applied to a
+  ///  monetary amount.
+  ///
+  /// [_factor]: Extensions for factor
+  ///
+  /// [points]: An amount that expresses the weighting (based on difficulty,
+  /// cost and/or resource intensiveness) associated with the Contract Valued
+  /// Item delivered. The concept of Points allows for assignment of point
+  /// values for a Contract Valued Item, such that a monetary amount can be
+  ///  assigned to each point.
+  ///
+  /// [_points]: Extensions for points
+  ///
+  /// [net]: Expresses the product of the Contract Valued Item unitQuantity and
+  /// the unitPriceAmt. For example, the formula: unit Quantity * unit Price
+  /// (Cost per Point) * factor Number  * points = net Amount. Quantity, factor
+  ///  and points are assumed to be 1 if not supplied.
+  ///
+  /// [payment]: Terms of valuation.
+  ///
+  /// [_payment]: Extensions for payment
+  ///
+  /// [paymentDate]: When payment is due.
+  ///
+  /// [_paymentDate]: Extensions for paymentDate
+  ///
+  /// [responsible]: Who will make payment.
+  ///
+  /// [recipient]: Who will receive payment.
+  ///
+  /// [linkId]: Id  of the clause or question text related to the context of
+  ///  this valuedItem in the referenced form or QuestionnaireResponse.
+  ///
+  /// [_linkId]: Extensions for linkId
+  ///
+  /// [securityLabelNumber]: A set of security labels that define which terms
+  ///  are controlled by this condition.
+  ///
+  /// [_securityLabelNumber]: Extensions for securityLabelNumber
   factory ContractValuedItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1432,6 +2190,117 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
 @freezed
 abstract class ContractAction implements _$ContractAction {
   ContractAction._();
+
+  /// [Contract_Action]: Legally enforceable, formally recorded unilateral or
+  ///  bilateral directive i.e., a policy or agreement.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [doNotPerform]: True if the term prohibits the  action.
+  ///
+  /// [_doNotPerform]: Extensions for doNotPerform
+  ///
+  /// [type]: Activity or service obligation to be done or not done, performed
+  ///  or not performed, effectuated or not by this Contract term.
+  ///
+  /// [subject]: Entity of the action.
+  ///
+  /// [intent]: Reason or purpose for the action stipulated by this Contract
+  ///  Provision.
+  ///
+  /// [linkId]: Id [identifier??] of the clause or question text related to this
+  ///  action in the referenced form or QuestionnaireResponse.
+  ///
+  /// [_linkId]: Extensions for linkId
+  ///
+  /// [status]: Current state of the term action.
+  ///
+  /// [context]: Encounter or Episode with primary association to specified term
+  ///  activity.
+  ///
+  /// [contextLinkId]: Id [identifier??] of the clause or question text related
+  /// to the requester of this action in the referenced form or
+  ///  QuestionnaireResponse.
+  ///
+  /// [_contextLinkId]: Extensions for contextLinkId
+  ///
+  /// [occurrenceDateTime]: When action happens.
+  ///
+  /// [_occurrenceDateTime]: Extensions for occurrenceDateTime
+  ///
+  /// [occurrencePeriod]: When action happens.
+  ///
+  /// [occurrenceTiming]: When action happens.
+  ///
+  /// [requester]: Who or what initiated the action and has responsibility for
+  ///  its activation.
+  ///
+  /// [requesterLinkId]: Id [identifier??] of the clause or question text
+  /// related to the requester of this action in the referenced form or
+  ///  QuestionnaireResponse.
+  ///
+  /// [_requesterLinkId]: Extensions for requesterLinkId
+  ///
+  /// [performerType]: The type of individual that is desired or required to
+  ///  perform or not perform the action.
+  ///
+  /// [performerRole]: The type of role or competency of an individual desired
+  ///  or required to perform or not perform the action.
+  ///
+  /// [performer]: Indicates who or what is being asked to perform (or not
+  ///  perform) the ction.
+  ///
+  /// [performerLinkId]: Id [identifier??] of the clause or question text
+  /// related to the reason type or reference of this  action in the referenced
+  ///  form or QuestionnaireResponse.
+  ///
+  /// [_performerLinkId]: Extensions for performerLinkId
+  ///
+  /// [reasonCode]: Rationale for the action to be performed or not performed.
+  ///  Describes why the action is permitted or prohibited.
+  ///
+  /// [reasonReference]: Indicates another resource whose existence justifies
+  ///  permitting or not permitting this action.
+  ///
+  /// [reason]: Describes why the action is to be performed or not performed in
+  ///  textual form.
+  ///
+  /// [_reason]: Extensions for reason
+  ///
+  /// [reasonLinkId]: Id [identifier??] of the clause or question text related
+  /// to the reason type or reference of this  action in the referenced form or
+  ///  QuestionnaireResponse.
+  ///
+  /// [_reasonLinkId]: Extensions for reasonLinkId
+  ///
+  /// [note]: Comments made about the term action made by the requester,
+  ///  performer, subject or other participants.
+  ///
+  /// [securityLabelNumber]: Security labels that protects the action.
+  ///
+  /// [_securityLabelNumber]: Extensions for securityLabelNumber
   factory ContractAction({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1488,6 +2357,38 @@ abstract class ContractAction implements _$ContractAction {
 @freezed
 abstract class ContractSubject implements _$ContractSubject {
   ContractSubject._();
+
+  /// [Contract_Subject]: Legally enforceable, formally recorded unilateral or
+  ///  bilateral directive i.e., a policy or agreement.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [reference]: The entity the action is performed or not performed on or
+  ///  for.
+  ///
+  /// [role]: Role type of agent assigned roles in this Contract.
   factory ContractSubject({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1513,6 +2414,39 @@ abstract class ContractSubject implements _$ContractSubject {
 @freezed
 abstract class ContractSigner implements _$ContractSigner {
   ContractSigner._();
+
+  /// [Contract_Signer]: Legally enforceable, formally recorded unilateral or
+  ///  bilateral directive i.e., a policy or agreement.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: Role of this Contract signer, e.g. notary, grantee.
+  ///
+  /// [party]: Party which is a signator to this Contract.
+  ///
+  /// [signature]: Legally binding Contract DSIG signature contents in Base64.
   factory ContractSigner({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1539,6 +2473,41 @@ abstract class ContractSigner implements _$ContractSigner {
 @freezed
 abstract class ContractFriendly implements _$ContractFriendly {
   ContractFriendly._();
+
+  /// [Contract_Friendly]: Legally enforceable, formally recorded unilateral or
+  ///  bilateral directive i.e., a policy or agreement.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [contentAttachment]: Human readable rendering of this Contract in a format
+  /// and representation intended to enhance comprehension and ensure
+  ///  understandability.
+  ///
+  /// [contentReference]: Human readable rendering of this Contract in a format
+  /// and representation intended to enhance comprehension and ensure
+  ///  understandability.
   factory ContractFriendly({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1564,6 +2533,37 @@ abstract class ContractFriendly implements _$ContractFriendly {
 @freezed
 abstract class ContractLegal implements _$ContractLegal {
   ContractLegal._();
+
+  /// [Contract_Legal]: Legally enforceable, formally recorded unilateral or
+  ///  bilateral directive i.e., a policy or agreement.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [contentAttachment]: Contract legal text in human renderable form.
+  ///
+  /// [contentReference]: Contract legal text in human renderable form.
   factory ContractLegal({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1589,6 +2589,39 @@ abstract class ContractLegal implements _$ContractLegal {
 @freezed
 abstract class ContractRule implements _$ContractRule {
   ContractRule._();
+
+  /// [Contract_Rule]: Legally enforceable, formally recorded unilateral or
+  ///  bilateral directive i.e., a policy or agreement.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [contentAttachment]: Computable Contract conveyed using a policy rule
+  ///  language (e.g. XACML, DKAL, SecPal).
+  ///
+  /// [contentReference]: Computable Contract conveyed using a policy rule
+  ///  language (e.g. XACML, DKAL, SecPal).
   factory ContractRule({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1616,6 +2649,204 @@ abstract class ExplanationOfBenefit
     with Resource
     implements _$ExplanationOfBenefit {
   ExplanationOfBenefit._();
+
+  /// [ExplanationOfBenefit]: This resource provides: the claim details;
+  /// adjudication details from the processing of a Claim; and optionally
+  /// account balance information, for informing the subscriber of the benefits
+  ///  provided.
+  ///
+  /// [resourceType]: This is a ExplanationOfBenefit resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: A unique identifier assigned to this explanation of benefit.
+  ///
+  /// [status]: The status of the resource instance.
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [type]: The category of claim, e.g. oral, pharmacy, vision, institutional,
+  ///  professional.
+  ///
+  /// [subType]: A finer grained suite of claim type codes which may convey
+  /// additional information such as Inpatient vs Outpatient and/or a specialty
+  ///  service.
+  ///
+  /// [use]: A code to indicate whether the nature of the request is: to request
+  /// adjudication of products and services previously rendered; or requesting
+  /// authorization and adjudication for provision in the future; or requesting
+  /// the non-binding adjudication of the listed products and services which
+  ///  could be provided in the future.
+  ///
+  /// [_use]: Extensions for use
+  ///
+  /// [patient]: The party to whom the professional services and/or products
+  /// have been supplied or are being considered and for whom actual for
+  ///  forecast reimbursement is sought.
+  ///
+  /// [billablePeriod]: The period for which charges are being submitted.
+  ///
+  /// [created]: The date this resource was created.
+  ///
+  /// [_created]: Extensions for created
+  ///
+  /// [enterer]: Individual who created the claim, predetermination or
+  ///  preauthorization.
+  ///
+  /// [insurer]: The party responsible for authorization, adjudication and
+  ///  reimbursement.
+  ///
+  /// [provider]: The provider which is responsible for the claim,
+  ///  predetermination or preauthorization.
+  ///
+  /// [priority]: The provider-required urgency of processing the request.
+  ///  Typical values include: stat, routine deferred.
+  ///
+  /// [fundsReserveRequested]: A code to indicate whether and for whom funds are
+  ///  to be reserved for future claims.
+  ///
+  /// [fundsReserve]: A code, used only on a response to a preauthorization, to
+  ///  indicate whether the benefits payable have been reserved and for whom.
+  ///
+  /// [related]: Other claims which are related to this claim such as prior
+  ///  submissions or claims for related services or for the same event.
+  ///
+  /// [prescription]: Prescription to support the dispensing of pharmacy, device
+  ///  or vision products.
+  ///
+  /// [originalPrescription]: Original prescription which has been superseded by
+  /// this prescription to support the dispensing of pharmacy services,
+  ///  medications or products.
+  ///
+  /// [payee]: The party to be reimbursed for cost of the products and services
+  ///  according to the terms of the policy.
+  ///
+  /// [referral]: A reference to a referral resource.
+  ///
+  /// [facility]: Facility where the services were provided.
+  ///
+  /// [claim]: The business identifier for the instance of the adjudication
+  ///  request: claim predetermination or preauthorization.
+  ///
+  /// [claimResponse]: The business identifier for the instance of the
+  /// adjudication response: claim, predetermination or preauthorization
+  ///  response.
+  ///
+  /// [outcome]: The outcome of the claim, predetermination, or preauthorization
+  ///  processing.
+  ///
+  /// [_outcome]: Extensions for outcome
+  ///
+  /// [disposition]: A human readable description of the status of the
+  ///  adjudication.
+  ///
+  /// [_disposition]: Extensions for disposition
+  ///
+  /// [preAuthRef]: Reference from the Insurer which is used in later
+  ///  communications which refers to this adjudication.
+  ///
+  /// [_preAuthRef]: Extensions for preAuthRef
+  ///
+  /// [preAuthRefPeriod]: The timeframe during which the supplied
+  /// preauthorization reference may be quoted on claims to obtain the
+  ///  adjudication as provided.
+  ///
+  /// [careTeam]: The members of the team who provided the products and
+  ///  services.
+  ///
+  /// [supportingInfo]: Additional information codes regarding exceptions,
+  /// special considerations, the condition, situation, prior or concurrent
+  ///  issues.
+  ///
+  /// [diagnosis]: Information about diagnoses relevant to the claim items.
+  ///
+  /// [procedure]: Procedures performed on the patient relevant to the billing
+  ///  items with the claim.
+  ///
+  /// [precedence]: This indicates the relative order of a series of EOBs
+  ///  related to different coverages for the same suite of services.
+  ///
+  /// [_precedence]: Extensions for precedence
+  ///
+  /// [insurance]: Financial instruments for reimbursement for the health care
+  ///  products and services specified on the claim.
+  ///
+  /// [accident]: Details of a accident which resulted in injuries which
+  ///  required the products and services listed in the claim.
+  ///
+  /// [item]: A claim line. Either a simple (a product or service) or a 'group'
+  ///  of details which can also be a simple items or groups of sub-details.
+  ///
+  /// [addItem]: The first-tier service adjudications for payor added product or
+  ///  service lines.
+  ///
+  /// [adjudication]: The adjudication results which are presented at the header
+  ///  level rather than at the line-item or add-item levels.
+  ///
+  /// [total]: Categorized monetary totals for the adjudication.
+  ///
+  /// [payment]: Payment details for the adjudication of the claim.
+  ///
+  /// [formCode]: A code for the form to be used for printing the content.
+  ///
+  /// [form]: The actual form, by reference or inclusion, for printing the
+  ///  content or an EOB.
+  ///
+  /// [processNote]: A note that describes or explains adjudication results in a
+  ///  human readable form.
+  ///
+  /// [benefitPeriod]: The term of the benefits documented in this response.
+  ///
+  /// [benefitBalance]: Balance by Benefit Category.
   factory ExplanationOfBenefit({
     @Default('ExplanationOfBenefit') String resourceType,
     Id id,
@@ -1699,6 +2930,42 @@ abstract class ExplanationOfBenefit
 abstract class ExplanationOfBenefitRelated
     implements _$ExplanationOfBenefitRelated {
   ExplanationOfBenefitRelated._();
+
+  /// [ExplanationOfBenefit_Related]: This resource provides: the claim details;
+  /// adjudication details from the processing of a Claim; and optionally
+  /// account balance information, for informing the subscriber of the benefits
+  ///  provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [claim]: Reference to a related claim.
+  ///
+  /// [relationship]: A code to convey how the claims are related.
+  ///
+  /// [reference]: An alternate organizational reference to the case or file to
+  ///  which this particular claim pertains.
   factory ExplanationOfBenefitRelated({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1727,6 +2994,40 @@ abstract class ExplanationOfBenefitRelated
 abstract class ExplanationOfBenefitPayee
     implements _$ExplanationOfBenefitPayee {
   ExplanationOfBenefitPayee._();
+
+  /// [ExplanationOfBenefit_Payee]: This resource provides: the claim details;
+  /// adjudication details from the processing of a Claim; and optionally
+  /// account balance information, for informing the subscriber of the benefits
+  ///  provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: Type of Party to be reimbursed: Subscriber, provider, other.
+  ///
+  /// [party]: Reference to the individual or organization to whom any payment
+  ///  will be made.
   factory ExplanationOfBenefitPayee({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1754,6 +3055,52 @@ abstract class ExplanationOfBenefitPayee
 abstract class ExplanationOfBenefitCareTeam
     implements _$ExplanationOfBenefitCareTeam {
   ExplanationOfBenefitCareTeam._();
+
+  /// [ExplanationOfBenefit_CareTeam]: This resource provides: the claim
+  /// details; adjudication details from the processing of a Claim; and
+  /// optionally account balance information, for informing the subscriber of
+  ///  the benefits provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [sequence]: A number to uniquely identify care team entries.
+  ///
+  /// [_sequence]: Extensions for sequence
+  ///
+  /// [provider]: Member of the team who provided the product or service.
+  ///
+  /// [responsible]: The party who is billing and/or responsible for the claimed
+  ///  products or services.
+  ///
+  /// [_responsible]: Extensions for responsible
+  ///
+  /// [role]: The lead, assisting or supervising practitioner and their
+  ///  discipline if a multidisciplinary team.
+  ///
+  /// [qualification]: The qualification of the practitioner which is applicable
+  ///  for this service.
   factory ExplanationOfBenefitCareTeam({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1786,6 +3133,79 @@ abstract class ExplanationOfBenefitCareTeam
 abstract class ExplanationOfBenefitSupportingInfo
     implements _$ExplanationOfBenefitSupportingInfo {
   ExplanationOfBenefitSupportingInfo._();
+
+  /// [ExplanationOfBenefit_SupportingInfo]: This resource provides: the claim
+  /// details; adjudication details from the processing of a Claim; and
+  /// optionally account balance information, for informing the subscriber of
+  ///  the benefits provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [sequence]: A number to uniquely identify supporting information entries.
+  ///
+  /// [_sequence]: Extensions for sequence
+  ///
+  /// [category]: The general class of the information supplied: information;
+  ///  exception; accident, employment; onset, etc.
+  ///
+  /// [code]: System and code pertaining to the specific information regarding
+  /// special conditions relating to the setting, treatment or patient  for
+  ///  which care is sought.
+  ///
+  /// [timingDate]: The date when or period to which this information refers.
+  ///
+  /// [_timingDate]: Extensions for timingDate
+  ///
+  /// [timingPeriod]: The date when or period to which this information refers.
+  ///
+  /// [valueBoolean]: Additional data or information such as resources,
+  /// documents, images etc. including references to the data or the actual
+  ///  inclusion of the data.
+  ///
+  /// [_valueBoolean]: Extensions for valueBoolean
+  ///
+  /// [valueString]: Additional data or information such as resources,
+  /// documents, images etc. including references to the data or the actual
+  ///  inclusion of the data.
+  ///
+  /// [_valueString]: Extensions for valueString
+  ///
+  /// [valueQuantity]: Additional data or information such as resources,
+  /// documents, images etc. including references to the data or the actual
+  ///  inclusion of the data.
+  ///
+  /// [valueAttachment]: Additional data or information such as resources,
+  /// documents, images etc. including references to the data or the actual
+  ///  inclusion of the data.
+  ///
+  /// [valueReference]: Additional data or information such as resources,
+  /// documents, images etc. including references to the data or the actual
+  ///  inclusion of the data.
+  ///
+  /// [reason]: Provides the reason in the situation where a reason code is
+  ///  required in addition to the content.
   factory ExplanationOfBenefitSupportingInfo({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1829,6 +3249,54 @@ abstract class ExplanationOfBenefitSupportingInfo
 abstract class ExplanationOfBenefitDiagnosis
     implements _$ExplanationOfBenefitDiagnosis {
   ExplanationOfBenefitDiagnosis._();
+
+  /// [ExplanationOfBenefit_Diagnosis]: This resource provides: the claim
+  /// details; adjudication details from the processing of a Claim; and
+  /// optionally account balance information, for informing the subscriber of
+  ///  the benefits provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [sequence]: A number to uniquely identify diagnosis entries.
+  ///
+  /// [_sequence]: Extensions for sequence
+  ///
+  /// [diagnosisCodeableConcept]: The nature of illness or problem in a coded
+  ///  form or as a reference to an external defined Condition.
+  ///
+  /// [diagnosisReference]: The nature of illness or problem in a coded form or
+  ///  as a reference to an external defined Condition.
+  ///
+  /// [type]: When the condition was observed or the relative ranking.
+  ///
+  /// [onAdmission]: Indication of whether the diagnosis was present on
+  ///  admission to a facility.
+  ///
+  /// [packageCode]: A package billing code or bundle code used to group
+  /// products and services to a particular health condition (such as heart
+  ///  attack) which is based on a predetermined grouping code system.
   factory ExplanationOfBenefitDiagnosis({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1861,6 +3329,53 @@ abstract class ExplanationOfBenefitDiagnosis
 abstract class ExplanationOfBenefitProcedure
     implements _$ExplanationOfBenefitProcedure {
   ExplanationOfBenefitProcedure._();
+
+  /// [ExplanationOfBenefit_Procedure]: This resource provides: the claim
+  /// details; adjudication details from the processing of a Claim; and
+  /// optionally account balance information, for informing the subscriber of
+  ///  the benefits provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [sequence]: A number to uniquely identify procedure entries.
+  ///
+  /// [_sequence]: Extensions for sequence
+  ///
+  /// [type]: When the condition was observed or the relative ranking.
+  ///
+  /// [date]: Date and optionally time the procedure was performed.
+  ///
+  /// [_date]: Extensions for date
+  ///
+  /// [procedureCodeableConcept]: The code or reference to a Procedure resource
+  ///  which identifies the clinical intervention performed.
+  ///
+  /// [procedureReference]: The code or reference to a Procedure resource which
+  ///  identifies the clinical intervention performed.
+  ///
+  /// [udi]: Unique Device Identifiers associated with this line item.
   factory ExplanationOfBenefitProcedure({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1894,6 +3409,51 @@ abstract class ExplanationOfBenefitProcedure
 abstract class ExplanationOfBenefitInsurance
     implements _$ExplanationOfBenefitInsurance {
   ExplanationOfBenefitInsurance._();
+
+  /// [ExplanationOfBenefit_Insurance]: This resource provides: the claim
+  /// details; adjudication details from the processing of a Claim; and
+  /// optionally account balance information, for informing the subscriber of
+  ///  the benefits provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [focal]: A flag to indicate that this Coverage is to be used for
+  ///  adjudication of this claim when set to true.
+  ///
+  /// [_focal]: Extensions for focal
+  ///
+  /// [coverage]: Reference to the insurance card level information contained in
+  /// the Coverage resource. The coverage issuing insurer will use these details
+  /// to locate the patient's actual coverage within the insurer's information
+  ///  system.
+  ///
+  /// [preAuthRef]: Reference numbers previously provided by the insurer to the
+  /// provider to be quoted on subsequent claims containing services or products
+  ///  related to the prior authorization.
+  ///
+  /// [_preAuthRef]: Extensions for preAuthRef
   factory ExplanationOfBenefitInsurance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1924,6 +3484,48 @@ abstract class ExplanationOfBenefitInsurance
 abstract class ExplanationOfBenefitAccident
     implements _$ExplanationOfBenefitAccident {
   ExplanationOfBenefitAccident._();
+
+  /// [ExplanationOfBenefit_Accident]: This resource provides: the claim
+  /// details; adjudication details from the processing of a Claim; and
+  /// optionally account balance information, for informing the subscriber of
+  ///  the benefits provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [date]: Date of an accident event  related to the products and services
+  ///  contained in the claim.
+  ///
+  /// [_date]: Extensions for date
+  ///
+  /// [type]: The type or context of the accident event for the purposes of
+  /// selection of potential insurance coverages and determination of
+  ///  coordination between insurers.
+  ///
+  /// [locationAddress]: The physical location of the accident event.
+  ///
+  /// [locationReference]: The physical location of the accident event.
   factory ExplanationOfBenefitAccident({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -1953,6 +3555,122 @@ abstract class ExplanationOfBenefitAccident
 @freezed
 abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
   ExplanationOfBenefitItem._();
+
+  /// [ExplanationOfBenefit_Item]: This resource provides: the claim details;
+  /// adjudication details from the processing of a Claim; and optionally
+  /// account balance information, for informing the subscriber of the benefits
+  ///  provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [sequence]: A number to uniquely identify item entries.
+  ///
+  /// [_sequence]: Extensions for sequence
+  ///
+  /// [careTeamSequence]: Care team members related to this service or product.
+  ///
+  /// [_careTeamSequence]: Extensions for careTeamSequence
+  ///
+  /// [diagnosisSequence]: Diagnoses applicable for this service or product.
+  ///
+  /// [_diagnosisSequence]: Extensions for diagnosisSequence
+  ///
+  /// [procedureSequence]: Procedures applicable for this service or product.
+  ///
+  /// [_procedureSequence]: Extensions for procedureSequence
+  ///
+  /// [informationSequence]: Exceptions, special conditions and supporting
+  ///  information applicable for this service or product.
+  ///
+  /// [_informationSequence]: Extensions for informationSequence
+  ///
+  /// [revenue]: The type of revenue or cost center providing the product and/or
+  ///  service.
+  ///
+  /// [category]: Code to identify the general type of benefits under which
+  ///  products and services are provided.
+  ///
+  /// [productOrService]: When the value is a group code then this item collects
+  /// a set of related claim details, otherwise this contains the product,
+  ///  service, drug or other billing code for the item.
+  ///
+  /// [modifier]: Item typification or modifiers codes to convey additional
+  ///  context for the product or service.
+  ///
+  /// [programCode]: Identifies the program under which this may be recovered.
+  ///
+  /// [servicedDate]: The date or dates when the service or product was
+  ///  supplied, performed or completed.
+  ///
+  /// [_servicedDate]: Extensions for servicedDate
+  ///
+  /// [servicedPeriod]: The date or dates when the service or product was
+  ///  supplied, performed or completed.
+  ///
+  /// [locationCodeableConcept]: Where the product or service was provided.
+  ///
+  /// [locationAddress]: Where the product or service was provided.
+  ///
+  /// [locationReference]: Where the product or service was provided.
+  ///
+  /// [quantity]: The number of repetitions of a service or product.
+  ///
+  /// [unitPrice]: If the item is not a group then this is the fee for the
+  /// product or service, otherwise this is the total of the fees for the
+  ///  details of the group.
+  ///
+  /// [factor]: A real number that represents a multiplier used in determining
+  /// the overall value of services delivered and/or goods received. The concept
+  /// of a Factor allows for a discount or surcharge multiplier to be applied to
+  ///  a monetary amount.
+  ///
+  /// [_factor]: Extensions for factor
+  ///
+  /// [net]: The quantity times the unit price for an additional service or
+  ///  product or charge.
+  ///
+  /// [udi]: Unique Device Identifiers associated with this line item.
+  ///
+  /// [bodySite]: Physical service site on the patient (limb, tooth, etc.).
+  ///
+  /// [subSite]: A region or surface of the bodySite, e.g. limb region or tooth
+  ///  surface(s).
+  ///
+  /// [encounter]: A billed item may include goods or services provided in
+  ///  multiple encounters.
+  ///
+  /// [noteNumber]: The numbers associated with notes below which apply to the
+  ///  adjudication of this item.
+  ///
+  /// [_noteNumber]: Extensions for noteNumber
+  ///
+  /// [adjudication]: If this item is a group then the values here are a summary
+  /// of the adjudication of the detail items. If this item is a simple product
+  ///  or service then this is the result of the adjudication of this item.
+  ///
+  /// [detail]: Second-tier of goods and services.
   factory ExplanationOfBenefitItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2013,6 +3731,51 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
 abstract class ExplanationOfBenefitAdjudication
     implements _$ExplanationOfBenefitAdjudication {
   ExplanationOfBenefitAdjudication._();
+
+  /// [ExplanationOfBenefit_Adjudication]: This resource provides: the claim
+  /// details; adjudication details from the processing of a Claim; and
+  /// optionally account balance information, for informing the subscriber of
+  ///  the benefits provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [category]: A code to indicate the information type of this adjudication
+  /// record. Information types may include: the value submitted, maximum values
+  /// or percentages allowed or payable under the plan, amounts that the patient
+  /// is responsible for in-aggregate or pertaining to this item, amounts paid
+  ///  by other coverages, and the benefit payable for this item.
+  ///
+  /// [reason]: A code supporting the understanding of the adjudication result
+  ///  and explaining variance from expected amount.
+  ///
+  /// [amount]: Monetary amount associated with the category.
+  ///
+  /// [value]: A non-monetary value associated with the category. Mutually
+  ///  exclusive to the amount element above.
+  ///
+  /// [_value]: Extensions for value
   factory ExplanationOfBenefitAdjudication({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2046,6 +3809,82 @@ abstract class ExplanationOfBenefitAdjudication
 abstract class ExplanationOfBenefitDetail
     implements _$ExplanationOfBenefitDetail {
   ExplanationOfBenefitDetail._();
+
+  /// [ExplanationOfBenefit_Detail]: This resource provides: the claim details;
+  /// adjudication details from the processing of a Claim; and optionally
+  /// account balance information, for informing the subscriber of the benefits
+  ///  provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [sequence]: A claim detail line. Either a simple (a product or service) or
+  ///  a 'group' of sub-details which are simple items.
+  ///
+  /// [_sequence]: Extensions for sequence
+  ///
+  /// [revenue]: The type of revenue or cost center providing the product and/or
+  ///  service.
+  ///
+  /// [category]: Code to identify the general type of benefits under which
+  ///  products and services are provided.
+  ///
+  /// [productOrService]: When the value is a group code then this item collects
+  /// a set of related claim details, otherwise this contains the product,
+  ///  service, drug or other billing code for the item.
+  ///
+  /// [modifier]: Item typification or modifiers codes to convey additional
+  ///  context for the product or service.
+  ///
+  /// [programCode]: Identifies the program under which this may be recovered.
+  ///
+  /// [quantity]: The number of repetitions of a service or product.
+  ///
+  /// [unitPrice]: If the item is not a group then this is the fee for the
+  /// product or service, otherwise this is the total of the fees for the
+  ///  details of the group.
+  ///
+  /// [factor]: A real number that represents a multiplier used in determining
+  /// the overall value of services delivered and/or goods received. The concept
+  /// of a Factor allows for a discount or surcharge multiplier to be applied to
+  ///  a monetary amount.
+  ///
+  /// [_factor]: Extensions for factor
+  ///
+  /// [net]: The quantity times the unit price for an additional service or
+  ///  product or charge.
+  ///
+  /// [udi]: Unique Device Identifiers associated with this line item.
+  ///
+  /// [noteNumber]: The numbers associated with notes below which apply to the
+  ///  adjudication of this item.
+  ///
+  /// [_noteNumber]: Extensions for noteNumber
+  ///
+  /// [adjudication]: The adjudication results.
+  ///
+  /// [subDetail]: Third-tier of goods and services.
   factory ExplanationOfBenefitDetail({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2088,6 +3927,80 @@ abstract class ExplanationOfBenefitDetail
 abstract class ExplanationOfBenefitSubDetail
     implements _$ExplanationOfBenefitSubDetail {
   ExplanationOfBenefitSubDetail._();
+
+  /// [ExplanationOfBenefit_SubDetail]: This resource provides: the claim
+  /// details; adjudication details from the processing of a Claim; and
+  /// optionally account balance information, for informing the subscriber of
+  ///  the benefits provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [sequence]: A claim detail line. Either a simple (a product or service) or
+  ///  a 'group' of sub-details which are simple items.
+  ///
+  /// [_sequence]: Extensions for sequence
+  ///
+  /// [revenue]: The type of revenue or cost center providing the product and/or
+  ///  service.
+  ///
+  /// [category]: Code to identify the general type of benefits under which
+  ///  products and services are provided.
+  ///
+  /// [productOrService]: When the value is a group code then this item collects
+  /// a set of related claim details, otherwise this contains the product,
+  ///  service, drug or other billing code for the item.
+  ///
+  /// [modifier]: Item typification or modifiers codes to convey additional
+  ///  context for the product or service.
+  ///
+  /// [programCode]: Identifies the program under which this may be recovered.
+  ///
+  /// [quantity]: The number of repetitions of a service or product.
+  ///
+  /// [unitPrice]: If the item is not a group then this is the fee for the
+  /// product or service, otherwise this is the total of the fees for the
+  ///  details of the group.
+  ///
+  /// [factor]: A real number that represents a multiplier used in determining
+  /// the overall value of services delivered and/or goods received. The concept
+  /// of a Factor allows for a discount or surcharge multiplier to be applied to
+  ///  a monetary amount.
+  ///
+  /// [_factor]: Extensions for factor
+  ///
+  /// [net]: The quantity times the unit price for an additional service or
+  ///  product or charge.
+  ///
+  /// [udi]: Unique Device Identifiers associated with this line item.
+  ///
+  /// [noteNumber]: The numbers associated with notes below which apply to the
+  ///  adjudication of this item.
+  ///
+  /// [_noteNumber]: Extensions for noteNumber
+  ///
+  /// [adjudication]: The adjudication results.
   factory ExplanationOfBenefitSubDetail({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2129,6 +4042,106 @@ abstract class ExplanationOfBenefitSubDetail
 abstract class ExplanationOfBenefitAddItem
     implements _$ExplanationOfBenefitAddItem {
   ExplanationOfBenefitAddItem._();
+
+  /// [ExplanationOfBenefit_AddItem]: This resource provides: the claim details;
+  /// adjudication details from the processing of a Claim; and optionally
+  /// account balance information, for informing the subscriber of the benefits
+  ///  provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [itemSequence]: Claim items which this service line is intended to
+  ///  replace.
+  ///
+  /// [_itemSequence]: Extensions for itemSequence
+  ///
+  /// [detailSequence]: The sequence number of the details within the claim item
+  ///  which this line is intended to replace.
+  ///
+  /// [_detailSequence]: Extensions for detailSequence
+  ///
+  /// [subDetailSequence]: The sequence number of the sub-details woithin the
+  ///  details within the claim item which this line is intended to replace.
+  ///
+  /// [_subDetailSequence]: Extensions for subDetailSequence
+  ///
+  /// [provider]: The providers who are authorized for the services rendered to
+  ///  the patient.
+  ///
+  /// [productOrService]: When the value is a group code then this item collects
+  /// a set of related claim details, otherwise this contains the product,
+  ///  service, drug or other billing code for the item.
+  ///
+  /// [modifier]: Item typification or modifiers codes to convey additional
+  ///  context for the product or service.
+  ///
+  /// [programCode]: Identifies the program under which this may be recovered.
+  ///
+  /// [servicedDate]: The date or dates when the service or product was
+  ///  supplied, performed or completed.
+  ///
+  /// [_servicedDate]: Extensions for servicedDate
+  ///
+  /// [servicedPeriod]: The date or dates when the service or product was
+  ///  supplied, performed or completed.
+  ///
+  /// [locationCodeableConcept]: Where the product or service was provided.
+  ///
+  /// [locationAddress]: Where the product or service was provided.
+  ///
+  /// [locationReference]: Where the product or service was provided.
+  ///
+  /// [quantity]: The number of repetitions of a service or product.
+  ///
+  /// [unitPrice]: If the item is not a group then this is the fee for the
+  /// product or service, otherwise this is the total of the fees for the
+  ///  details of the group.
+  ///
+  /// [factor]: A real number that represents a multiplier used in determining
+  /// the overall value of services delivered and/or goods received. The concept
+  /// of a Factor allows for a discount or surcharge multiplier to be applied to
+  ///  a monetary amount.
+  ///
+  /// [_factor]: Extensions for factor
+  ///
+  /// [net]: The quantity times the unit price for an additional service or
+  ///  product or charge.
+  ///
+  /// [bodySite]: Physical service site on the patient (limb, tooth, etc.).
+  ///
+  /// [subSite]: A region or surface of the bodySite, e.g. limb region or tooth
+  ///  surface(s).
+  ///
+  /// [noteNumber]: The numbers associated with notes below which apply to the
+  ///  adjudication of this item.
+  ///
+  /// [_noteNumber]: Extensions for noteNumber
+  ///
+  /// [adjudication]: The adjudication results.
+  ///
+  /// [detail]: The second-tier service adjudications for payor added services.
   factory ExplanationOfBenefitAddItem({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2181,6 +4194,68 @@ abstract class ExplanationOfBenefitAddItem
 abstract class ExplanationOfBenefitDetail1
     implements _$ExplanationOfBenefitDetail1 {
   ExplanationOfBenefitDetail1._();
+
+  /// [ExplanationOfBenefit_Detail1]: This resource provides: the claim details;
+  /// adjudication details from the processing of a Claim; and optionally
+  /// account balance information, for informing the subscriber of the benefits
+  ///  provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [productOrService]: When the value is a group code then this item collects
+  /// a set of related claim details, otherwise this contains the product,
+  ///  service, drug or other billing code for the item.
+  ///
+  /// [modifier]: Item typification or modifiers codes to convey additional
+  ///  context for the product or service.
+  ///
+  /// [quantity]: The number of repetitions of a service or product.
+  ///
+  /// [unitPrice]: If the item is not a group then this is the fee for the
+  /// product or service, otherwise this is the total of the fees for the
+  ///  details of the group.
+  ///
+  /// [factor]: A real number that represents a multiplier used in determining
+  /// the overall value of services delivered and/or goods received. The concept
+  /// of a Factor allows for a discount or surcharge multiplier to be applied to
+  ///  a monetary amount.
+  ///
+  /// [_factor]: Extensions for factor
+  ///
+  /// [net]: The quantity times the unit price for an additional service or
+  ///  product or charge.
+  ///
+  /// [noteNumber]: The numbers associated with notes below which apply to the
+  ///  adjudication of this item.
+  ///
+  /// [_noteNumber]: Extensions for noteNumber
+  ///
+  /// [adjudication]: The adjudication results.
+  ///
+  /// [subDetail]: The third-tier service adjudications for payor added
+  ///  services.
   factory ExplanationOfBenefitDetail1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2217,6 +4292,65 @@ abstract class ExplanationOfBenefitDetail1
 abstract class ExplanationOfBenefitSubDetail1
     implements _$ExplanationOfBenefitSubDetail1 {
   ExplanationOfBenefitSubDetail1._();
+
+  /// [ExplanationOfBenefit_SubDetail1]: This resource provides: the claim
+  /// details; adjudication details from the processing of a Claim; and
+  /// optionally account balance information, for informing the subscriber of
+  ///  the benefits provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [productOrService]: When the value is a group code then this item collects
+  /// a set of related claim details, otherwise this contains the product,
+  ///  service, drug or other billing code for the item.
+  ///
+  /// [modifier]: Item typification or modifiers codes to convey additional
+  ///  context for the product or service.
+  ///
+  /// [quantity]: The number of repetitions of a service or product.
+  ///
+  /// [unitPrice]: If the item is not a group then this is the fee for the
+  /// product or service, otherwise this is the total of the fees for the
+  ///  details of the group.
+  ///
+  /// [factor]: A real number that represents a multiplier used in determining
+  /// the overall value of services delivered and/or goods received. The concept
+  /// of a Factor allows for a discount or surcharge multiplier to be applied to
+  ///  a monetary amount.
+  ///
+  /// [_factor]: Extensions for factor
+  ///
+  /// [net]: The quantity times the unit price for an additional service or
+  ///  product or charge.
+  ///
+  /// [noteNumber]: The numbers associated with notes below which apply to the
+  ///  adjudication of this item.
+  ///
+  /// [_noteNumber]: Extensions for noteNumber
+  ///
+  /// [adjudication]: The adjudication results.
   factory ExplanationOfBenefitSubDetail1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2254,6 +4388,43 @@ abstract class ExplanationOfBenefitSubDetail1
 abstract class ExplanationOfBenefitTotal
     implements _$ExplanationOfBenefitTotal {
   ExplanationOfBenefitTotal._();
+
+  /// [ExplanationOfBenefit_Total]: This resource provides: the claim details;
+  /// adjudication details from the processing of a Claim; and optionally
+  /// account balance information, for informing the subscriber of the benefits
+  ///  provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [category]: A code to indicate the information type of this adjudication
+  /// record. Information types may include: the value submitted, maximum values
+  /// or percentages allowed or payable under the plan, amounts that the patient
+  /// is responsible for in aggregate or pertaining to this item, amounts paid
+  ///  by other coverages, and the benefit payable for this item.
+  ///
+  /// [amount]: Monetary total amount associated with the category.
   factory ExplanationOfBenefitTotal({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2281,6 +4452,52 @@ abstract class ExplanationOfBenefitTotal
 abstract class ExplanationOfBenefitPayment
     implements _$ExplanationOfBenefitPayment {
   ExplanationOfBenefitPayment._();
+
+  /// [ExplanationOfBenefit_Payment]: This resource provides: the claim details;
+  /// adjudication details from the processing of a Claim; and optionally
+  /// account balance information, for informing the subscriber of the benefits
+  ///  provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: Whether this represents partial or complete payment of the
+  ///  benefits payable.
+  ///
+  /// [adjustment]: Total amount of all adjustments to this payment included in
+  ///  this transaction which are not related to this claim's adjudication.
+  ///
+  /// [adjustmentReason]: Reason for the payment adjustment.
+  ///
+  /// [date]: Estimated date the payment will be issued or the actual issue date
+  ///  of payment.
+  ///
+  /// [_date]: Extensions for date
+  ///
+  /// [amount]: Benefits payable less any payment adjustment.
+  ///
+  /// [identifier]: Issuer's unique identifier for the payment instrument.
   factory ExplanationOfBenefitPayment({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2313,6 +4530,49 @@ abstract class ExplanationOfBenefitPayment
 abstract class ExplanationOfBenefitProcessNote
     implements _$ExplanationOfBenefitProcessNote {
   ExplanationOfBenefitProcessNote._();
+
+  /// [ExplanationOfBenefit_ProcessNote]: This resource provides: the claim
+  /// details; adjudication details from the processing of a Claim; and
+  /// optionally account balance information, for informing the subscriber of
+  ///  the benefits provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [number]: A number to uniquely identify a note entry.
+  ///
+  /// [_number]: Extensions for number
+  ///
+  /// [type]: The business purpose of the note text.
+  ///
+  /// [_type]: Extensions for type
+  ///
+  /// [text]: The explanation or description associated with the processing.
+  ///
+  /// [_text]: Extensions for text
+  ///
+  /// [language]: A code to define the language used in the text of the note.
   factory ExplanationOfBenefitProcessNote({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2348,6 +4608,62 @@ abstract class ExplanationOfBenefitProcessNote
 abstract class ExplanationOfBenefitBenefitBalance
     implements _$ExplanationOfBenefitBenefitBalance {
   ExplanationOfBenefitBenefitBalance._();
+
+  /// [ExplanationOfBenefit_BenefitBalance]: This resource provides: the claim
+  /// details; adjudication details from the processing of a Claim; and
+  /// optionally account balance information, for informing the subscriber of
+  ///  the benefits provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [category]: Code to identify the general type of benefits under which
+  ///  products and services are provided.
+  ///
+  /// [excluded]: True if the indicated class of service is excluded from the
+  /// plan, missing or False indicates the product or service is included in the
+  ///  coverage.
+  ///
+  /// [_excluded]: Extensions for excluded
+  ///
+  /// [name]: A short name or tag for the benefit.
+  ///
+  /// [_name]: Extensions for name
+  ///
+  /// [description]: A richer description of the benefit or services covered.
+  ///
+  /// [_description]: Extensions for description
+  ///
+  /// [network]: Is a flag to indicate whether the benefits refer to in-network
+  ///  providers or out-of-network providers.
+  ///
+  /// [unit]: Indicates if the benefits apply to an individual or to the family.
+  ///
+  /// [term]: The term or period of the values such as 'maximum lifetime
+  ///  benefit' or 'maximum annual visits'.
+  ///
+  /// [financial]: Benefits Used to date.
   factory ExplanationOfBenefitBenefitBalance({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2387,6 +4703,57 @@ abstract class ExplanationOfBenefitBenefitBalance
 abstract class ExplanationOfBenefitFinancial
     implements _$ExplanationOfBenefitFinancial {
   ExplanationOfBenefitFinancial._();
+
+  /// [ExplanationOfBenefit_Financial]: This resource provides: the claim
+  /// details; adjudication details from the processing of a Claim; and
+  /// optionally account balance information, for informing the subscriber of
+  ///  the benefits provided.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: Classification of benefit being provided.
+  ///
+  /// [allowedUnsignedInt]: The quantity of the benefit which is permitted under
+  ///  the coverage.
+  ///
+  /// [_allowedUnsignedInt]: Extensions for allowedUnsignedInt
+  ///
+  /// [allowedString]: The quantity of the benefit which is permitted under the
+  ///  coverage.
+  ///
+  /// [_allowedString]: Extensions for allowedString
+  ///
+  /// [allowedMoney]: The quantity of the benefit which is permitted under the
+  ///  coverage.
+  ///
+  /// [usedUnsignedInt]: The quantity of the benefit which have been consumed to
+  ///  date.
+  ///
+  /// [_usedUnsignedInt]: Extensions for usedUnsignedInt
+  ///
+  /// [usedMoney]: The quantity of the benefit which have been consumed to date.
   factory ExplanationOfBenefitFinancial({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2420,6 +4787,110 @@ abstract class ExplanationOfBenefitFinancial
 @freezed
 abstract class InsurancePlan with Resource implements _$InsurancePlan {
   InsurancePlan._();
+
+  /// [InsurancePlan]: Details of a Health Insurance product/plan provided by an
+  ///  organization.
+  ///
+  /// [resourceType]: This is a InsurancePlan resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: Business identifiers assigned to this health insurance
+  /// product which remain constant as the resource is updated and propagates
+  ///  from server to server.
+  ///
+  /// [status]: The current state of the health insurance product.
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [type]: The kind of health insurance product.
+  ///
+  /// [name]: Official name of the health insurance product as designated by the
+  ///  owner.
+  ///
+  /// [_name]: Extensions for name
+  ///
+  /// [alias]: A list of alternate names that the product is known as, or was
+  ///  known as in the past.
+  ///
+  /// [_alias]: Extensions for alias
+  ///
+  /// [period]: The period of time that the health insurance product is
+  ///  available.
+  ///
+  /// [ownedBy]: The entity that is providing  the health insurance product and
+  /// underwriting the risk.  This is typically an insurance carriers, other
+  /// third-party payers, or health plan sponsors comonly referred to as
+  ///  'payers'.
+  ///
+  /// [administeredBy]: An organization which administer other services such as
+  /// underwriting, customer service and/or claims processing on behalf of the
+  ///  health insurance product owner.
+  ///
+  /// [coverageArea]: The geographic region in which a health insurance
+  ///  product's benefits apply.
+  ///
+  /// [contact]: The contact for the health insurance product for a certain
+  ///  purpose.
+  ///
+  /// [endpoint]: The technical endpoints providing access to services operated
+  ///  for the health insurance product.
+  ///
+  /// [network]: Reference to the network included in the health insurance
+  ///  product.
+  ///
+  /// [coverage]: Details about the coverage offered by the insurance product.
+  ///
+  /// [plan]: Details about an insurance plan.
   factory InsurancePlan({
     @Default('InsurancePlan') String resourceType,
     Id id,
@@ -2469,6 +4940,42 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
 @freezed
 abstract class InsurancePlanContact implements _$InsurancePlanContact {
   InsurancePlanContact._();
+
+  /// [InsurancePlan_Contact]: Details of a Health Insurance product/plan
+  ///  provided by an organization.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [purpose]: Indicates a purpose for which the contact can be reached.
+  ///
+  /// [name]: A name associated with the contact.
+  ///
+  /// [telecom]: A contact detail (e.g. a telephone number or an email address)
+  ///  by which the party may be contacted.
+  ///
+  /// [address]: Visiting or postal addresses for the contact.
   factory InsurancePlanContact({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2496,6 +5003,40 @@ abstract class InsurancePlanContact implements _$InsurancePlanContact {
 @freezed
 abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage {
   InsurancePlanCoverage._();
+
+  /// [InsurancePlan_Coverage]: Details of a Health Insurance product/plan
+  ///  provided by an organization.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: Type of coverage  (Medical; Dental; Mental Health; Substance
+  ///  Abuse; Vision; Drug; Short Term; Long Term Care; Hospice; Home Health).
+  ///
+  /// [network]: Reference to the network that providing the type of coverage.
+  ///
+  /// [benefit]: Specific benefits under this type of coverage.
   factory InsurancePlanCoverage({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2522,6 +5063,43 @@ abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage {
 @freezed
 abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit {
   InsurancePlanBenefit._();
+
+  /// [InsurancePlan_Benefit]: Details of a Health Insurance product/plan
+  ///  provided by an organization.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: Type of benefit (primary care; speciality care; inpatient;
+  ///  outpatient).
+  ///
+  /// [requirement]: The referral requirements to have access/coverage for this
+  ///  benefit.
+  ///
+  /// [_requirement]: Extensions for requirement
+  ///
+  /// [limit]: The specific limits on the benefit.
   factory InsurancePlanBenefit({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2549,6 +5127,38 @@ abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit {
 @freezed
 abstract class InsurancePlanLimit implements _$InsurancePlanLimit {
   InsurancePlanLimit._();
+
+  /// [InsurancePlan_Limit]: Details of a Health Insurance product/plan provided
+  ///  by an organization.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [value]: The maximum amount of a service item a plan will pay for a
+  ///  covered benefit.  For examples. wellness visits, or eyeglasses.
+  ///
+  /// [code]: The specific limit on the benefit.
   factory InsurancePlanLimit({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2574,6 +5184,49 @@ abstract class InsurancePlanLimit implements _$InsurancePlanLimit {
 @freezed
 abstract class InsurancePlanPlan implements _$InsurancePlanPlan {
   InsurancePlanPlan._();
+
+  /// [InsurancePlan_Plan]: Details of a Health Insurance product/plan provided
+  ///  by an organization.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: Business identifiers assigned to this health insurance plan
+  /// which remain constant as the resource is updated and propagates from
+  ///  server to server.
+  ///
+  /// [type]: Type of plan. For example, "Platinum" or "High Deductable".
+  ///
+  /// [coverageArea]: The geographic region in which a health insurance plan's
+  ///  benefits apply.
+  ///
+  /// [network]: Reference to the network that providing the type of coverage.
+  ///
+  /// [generalCost]: Overall costs associated with the plan.
+  ///
+  /// [specificCost]: Costs associated with the coverage provided by the
+  ///  product.
   factory InsurancePlanPlan({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2603,6 +5256,46 @@ abstract class InsurancePlanPlan implements _$InsurancePlanPlan {
 @freezed
 abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost {
   InsurancePlanGeneralCost._();
+
+  /// [InsurancePlan_GeneralCost]: Details of a Health Insurance product/plan
+  ///  provided by an organization.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: Type of cost.
+  ///
+  /// [groupSize]: Number of participants enrolled in the plan.
+  ///
+  /// [_groupSize]: Extensions for groupSize
+  ///
+  /// [cost]: Value of the cost.
+  ///
+  /// [comment]: Additional information about the general costs associated with
+  ///  this plan.
+  ///
+  /// [_comment]: Extensions for comment
   factory InsurancePlanGeneralCost({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2634,6 +5327,38 @@ abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost {
 abstract class InsurancePlanSpecificCost
     implements _$InsurancePlanSpecificCost {
   InsurancePlanSpecificCost._();
+
+  /// [InsurancePlan_SpecificCost]: Details of a Health Insurance product/plan
+  ///  provided by an organization.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [category]: General category of benefit (Medical; Dental; Vision; Drug;
+  ///  Mental Health; Substance Abuse; Hospice, Home Health).
+  ///
+  /// [benefit]: List of the specific benefits under this category of benefit.
   factory InsurancePlanSpecificCost({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2660,6 +5385,38 @@ abstract class InsurancePlanSpecificCost
 @freezed
 abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1 {
   InsurancePlanBenefit1._();
+
+  /// [InsurancePlan_Benefit1]: Details of a Health Insurance product/plan
+  ///  provided by an organization.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: Type of specific benefit (preventative; primary care office visit;
+  ///  speciality office visit; hospitalization; emergency room; urgent care).
+  ///
+  /// [cost]: List of the costs associated with a specific benefit.
   factory InsurancePlanBenefit1({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -2685,6 +5442,45 @@ abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1 {
 @freezed
 abstract class InsurancePlanCost implements _$InsurancePlanCost {
   InsurancePlanCost._();
+
+  /// [InsurancePlan_Cost]: Details of a Health Insurance product/plan provided
+  ///  by an organization.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: Type of cost (copay; individual cap; family cap; coinsurance;
+  ///  deductible).
+  ///
+  /// [applicability]: Whether the cost applies to in-network or out-of-network
+  ///  providers (in-network; out-of-network; other).
+  ///
+  /// [qualifiers]: Additional information about the cost, such as information
+  ///  about funding sources (e.g. HSA, HRA, FSA, RRA).
+  ///
+  /// [value]: The actual cost value. (some of the costs may be represented as
+  ///  percentages rather than currency, e.g. 10% coinsurance).
   factory InsurancePlanCost({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,

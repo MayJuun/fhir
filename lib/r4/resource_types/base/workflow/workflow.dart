@@ -450,6 +450,93 @@ abstract class AppointmentResponse
 @freezed
 abstract class Schedule with Resource implements _$Schedule {
   Schedule._();
+
+  /// [Schedule]: A container for slots of time that may be available for
+  ///  booking appointments.
+  ///
+  /// [resourceType]: This is a Schedule resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance 
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: External Ids for this item.
+  ///
+  /// [active]: Whether this schedule record is in active use or should not be
+  ///  used (such as was entered in error).
+  ///
+  /// [_active]: Extensions for active
+  ///
+  /// [serviceCategory]: A broad categorization of the service that is to be
+  ///  performed during this appointment.
+  ///
+  /// [serviceType]: The specific service that is to be performed during this
+  ///  appointment.
+  ///
+  /// [specialty]: The specialty of a practitioner that would be required to
+  ///  perform the service requested in this appointment.
+  ///
+  /// [actor]: Slots that reference this schedule resource provide the
+  ///  availability details to these referenced resource(s).
+  ///
+  /// [planningHorizon]: The period of time that the slots that reference this
+  /// Schedule resource cover (even if none exist). These  cover the amount of
+  /// time that an organization's planning horizon; the interval for which they
+  /// are currently accepting appointments. This does not define a "template"
+  ///  for planning outside these dates.
+  ///
+  /// [comment]: Comments on the availability to describe any extended
+  /// information. Such as custom constraints on the slots that may be
+  ///  associated.
+  ///
+  /// [_comment]: Extensions for comment
   factory Schedule({
     @Default('Schedule') String resourceType,
     Id id,
@@ -491,6 +578,104 @@ abstract class Schedule with Resource implements _$Schedule {
 @freezed
 abstract class Slot with Resource implements _$Slot {
   Slot._();
+
+  /// [Slot]: A slot of time on a schedule that may be available for booking
+  ///  appointments.
+  ///
+  /// [resourceType]: This is a Slot resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance 
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: External Ids for this item.
+  ///
+  /// [serviceCategory]: A broad categorization of the service that is to be
+  ///  performed during this appointment.
+  ///
+  /// [serviceType]: The type of appointments that can be booked into this slot
+  /// (ideally this would be an identifiable service - which is at a location,
+  /// rather than the location itself). If provided then this overrides the
+  ///  value provided on the availability resource.
+  ///
+  /// [specialty]: The specialty of a practitioner that would be required to
+  ///  perform the service requested in this appointment.
+  ///
+  /// [appointmentType]: The style of appointment or patient that may be booked
+  ///  in the slot (not service type).
+  ///
+  /// [schedule]: The schedule resource that this slot defines an interval of
+  ///  status information.
+  ///
+  /// [status]: busy | free | busy-unavailable | busy-tentative |
+  ///  entered-in-error.
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [start]: Date/Time that the slot is to begin.
+  ///
+  /// [_start]: Extensions for start
+  ///
+  /// [end]: Date/Time that the slot is to conclude.
+  ///
+  /// [_end]: Extensions for end
+  ///
+  /// [overbooked]: This slot has already been overbooked, appointments are
+  ///  unlikely to be accepted for this time.
+  ///
+  /// [_overbooked]: Extensions for overbooked
+  ///
+  /// [comment]: Comments on the slot to describe any extended information. Such
+  ///  as custom constraints on the slot.
+  ///
+  /// [_comment]: Extensions for comment
   factory Slot({
     @Default('Slot') String resourceType,
     Id id,
@@ -537,6 +722,169 @@ abstract class Slot with Resource implements _$Slot {
 @freezed
 abstract class Task with Resource implements _$Task {
   Task._();
+
+  /// [Task]: A task to be performed.
+  ///
+  /// [resourceType]: This is a Task resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance 
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [identifier]: The business identifier for this task.
+  ///
+  /// [instantiatesCanonical]: The URL pointing to a *FHIR*-defined protocol,
+  /// guideline, orderset or other definition that is adhered to in whole or in
+  ///  part by this Task.
+  ///
+  /// [instantiatesUri]: The URL pointing to an *externally* maintained 
+  /// protocol, guideline, orderset or other definition that is adhered to in
+  ///  whole or in part by this Task.
+  ///
+  /// [_instantiatesUri]: Extensions for instantiatesUri
+  ///
+  /// [basedOn]: BasedOn refers to a higher-level authorization that triggered
+  /// the creation of the task.  It references a "request" resource such as a
+  /// ServiceRequest, MedicationRequest, ServiceRequest, CarePlan, etc. which is
+  /// distinct from the "request" resource the task is seeking to fulfill.  This
+  /// latter resource is referenced by FocusOn.  For example, based on a
+  /// ServiceRequest (= BasedOn), a task is created to fulfill a
+  ///  procedureRequest ( = FocusOn ) to collect a specimen from a patient.
+  ///
+  /// [groupIdentifier]: An identifier that links together multiple tasks and
+  ///  other requests that were created in the same context.
+  ///
+  /// [partOf]: Task that this particular task is part of.
+  ///
+  /// [status]: The current status of the task.
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [statusReason]: An explanation as to why this task is held, failed, was
+  ///  refused, etc.
+  ///
+  /// [businessStatus]: Contains business-specific nuances of the business
+  ///  state.
+  ///
+  /// [intent]: Indicates the "level" of actionability associated with the Task,
+  /// i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task,
+  ///  etc.
+  ///
+  /// [_intent]: Extensions for intent
+  ///
+  /// [priority]: Indicates how quickly the Task should be addressed with
+  ///  respect to other requests.
+  ///
+  /// [_priority]: Extensions for priority
+  ///
+  /// [code]: A name or code (or both) briefly describing what the task
+  ///  involves.
+  ///
+  /// [description]: A free-text description of what is to be performed.
+  ///
+  /// [_description]: Extensions for description
+  ///
+  /// [focus]: The request being actioned or the resource being manipulated by
+  ///  this task.
+  ///
+  /// [for]: The entity who benefits from the performance of the service
+  ///  specified in the task (e.g., the patient).
+  ///
+  /// [encounter]: The healthcare event  (e.g. a patient and healthcare provider
+  ///  interaction) during which this task was created.
+  ///
+  /// [executionPeriod]: Identifies the time action was first taken against the
+  /// task (start) and/or the time final action was taken against the task prior
+  ///  to marking it as completed (end).
+  ///
+  /// [authoredOn]: The date and time this task was created.
+  ///
+  /// [_authoredOn]: Extensions for authoredOn
+  ///
+  /// [lastModified]: The date and time of last modification to this task.
+  ///
+  /// [_lastModified]: Extensions for lastModified
+  ///
+  /// [requester]: The creator of the task.
+  ///
+  /// [performerType]: The kind of participant that should perform the task.
+  ///
+  /// [owner]: Individual organization or Device currently responsible for task
+  ///  execution.
+  ///
+  /// [location]: Principal physical location where the this task is performed.
+  ///
+  /// [reasonCode]: A description or code indicating why this task needs to be
+  ///  performed.
+  ///
+  /// [reasonReference]: A resource reference indicating why this task needs to
+  ///  be performed.
+  ///
+  /// [insurance]: Insurance plans, coverage extensions, pre-authorizations
+  ///  and/or pre-determinations that may be relevant to the Task.
+  ///
+  /// [note]: Free-text information captured about the task as it progresses.
+  ///
+  /// [relevantHistory]: Links to Provenance records for past versions of this
+  /// Task that identify key state transitions or updates that are likely to be
+  ///  relevant to a user looking at the current version of the task.
+  ///
+  /// [restriction]: If the Task.focus is a request resource and the task is
+  /// seeking fulfillment (i.e. is asking for the request to be actioned), this
+  /// element identifies any limitations on what parts of the referenced request
+  ///  should be actioned.
+  ///
+  /// [input]: Additional information that may be needed in the execution of the
+  ///  task.
+  ///
+  /// [output]: Outputs produced by the Task.
   factory Task({
     @Default('Task') String resourceType,
     Id id,
@@ -605,6 +953,42 @@ abstract class Task with Resource implements _$Task {
 @freezed
 abstract class TaskRestriction implements _$TaskRestriction {
   TaskRestriction._();
+
+  /// [Task_Restriction]: A task to be performed.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [repetitions]: Indicates the number of times the requested action should
+  ///  occur.
+  ///
+  /// [_repetitions]: Extensions for repetitions
+  ///
+  /// [period]: Over what time-period is fulfillment sought.
+  ///
+  /// [recipient]: For requests that are targeted to more than on potential
+  ///  recipient/target, for whom is fulfillment sought?
   factory TaskRestriction({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -632,6 +1016,175 @@ abstract class TaskRestriction implements _$TaskRestriction {
 @freezed
 abstract class TaskInput implements _$TaskInput {
   TaskInput._();
+
+  /// [Task_Input]: A task to be performed.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: A code or description indicating how the input is intended to be
+  ///  used as part of the task execution.
+  ///
+  /// [valueBase64Binary]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueBase64Binary]: Extensions for valueBase64Binary
+  ///
+  /// [valueBoolean]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueBoolean]: Extensions for valueBoolean
+  ///
+  /// [valueCanonical]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueCanonical]: Extensions for valueCanonical
+  ///
+  /// [valueCode]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueCode]: Extensions for valueCode
+  ///
+  /// [valueDate]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueDate]: Extensions for valueDate
+  ///
+  /// [valueDateTime]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueDateTime]: Extensions for valueDateTime
+  ///
+  /// [valueDecimal]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueDecimal]: Extensions for valueDecimal
+  ///
+  /// [valueId]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueId]: Extensions for valueId
+  ///
+  /// [valueInstant]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueInstant]: Extensions for valueInstant
+  ///
+  /// [valueInteger]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueInteger]: Extensions for valueInteger
+  ///
+  /// [valueMarkdown]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueMarkdown]: Extensions for valueMarkdown
+  ///
+  /// [valueOid]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueOid]: Extensions for valueOid
+  ///
+  /// [valuePositiveInt]: The value of the input parameter as a basic type.
+  ///
+  /// [_valuePositiveInt]: Extensions for valuePositiveInt
+  ///
+  /// [valueString]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueString]: Extensions for valueString
+  ///
+  /// [valueTime]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueTime]: Extensions for valueTime
+  ///
+  /// [valueUnsignedInt]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueUnsignedInt]: Extensions for valueUnsignedInt
+  ///
+  /// [valueUri]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueUri]: Extensions for valueUri
+  ///
+  /// [valueUrl]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueUrl]: Extensions for valueUrl
+  ///
+  /// [valueUuid]: The value of the input parameter as a basic type.
+  ///
+  /// [_valueUuid]: Extensions for valueUuid
+  ///
+  /// [valueAddress]: The value of the input parameter as a basic type.
+  ///
+  /// [valueAge]: The value of the input parameter as a basic type.
+  ///
+  /// [valueAnnotation]: The value of the input parameter as a basic type.
+  ///
+  /// [valueAttachment]: The value of the input parameter as a basic type.
+  ///
+  /// [valueCodeableConcept]: The value of the input parameter as a basic type.
+  ///
+  /// [valueCoding]: The value of the input parameter as a basic type.
+  ///
+  /// [valueContactPoint]: The value of the input parameter as a basic type.
+  ///
+  /// [valueCount]: The value of the input parameter as a basic type.
+  ///
+  /// [valueDistance]: The value of the input parameter as a basic type.
+  ///
+  /// [valueDuration]: The value of the input parameter as a basic type.
+  ///
+  /// [valueHumanName]: The value of the input parameter as a basic type.
+  ///
+  /// [valueIdentifier]: The value of the input parameter as a basic type.
+  ///
+  /// [valueMoney]: The value of the input parameter as a basic type.
+  ///
+  /// [valuePeriod]: The value of the input parameter as a basic type.
+  ///
+  /// [valueQuantity]: The value of the input parameter as a basic type.
+  ///
+  /// [valueRange]: The value of the input parameter as a basic type.
+  ///
+  /// [valueRatio]: The value of the input parameter as a basic type.
+  ///
+  /// [valueReference]: The value of the input parameter as a basic type.
+  ///
+  /// [valueSampledData]: The value of the input parameter as a basic type.
+  ///
+  /// [valueSignature]: The value of the input parameter as a basic type.
+  ///
+  /// [valueTiming]: The value of the input parameter as a basic type.
+  ///
+  /// [valueContactDetail]: The value of the input parameter as a basic type.
+  ///
+  /// [valueContributor]: The value of the input parameter as a basic type.
+  ///
+  /// [valueDataRequirement]: The value of the input parameter as a basic type.
+  ///
+  /// [valueExpression]: The value of the input parameter as a basic type.
+  ///
+  /// [valueParameterDefinition]: The value of the input parameter as a basic
+  ///  type.
+  ///
+  /// [valueRelatedArtifact]: The value of the input parameter as a basic type.
+  ///
+  /// [valueTriggerDefinition]: The value of the input parameter as a basic
+  ///  type.
+  ///
+  /// [valueUsageContext]: The value of the input parameter as a basic type.
+  ///
+  /// [valueDosage]: The value of the input parameter as a basic type.
+  ///
+  /// [valueMeta]: The value of the input parameter as a basic type.
   factory TaskInput({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -725,6 +1278,174 @@ abstract class TaskInput implements _$TaskInput {
 @freezed
 abstract class TaskOutput implements _$TaskOutput {
   TaskOutput._();
+
+  /// [Task_Output]: A task to be performed.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [type]: The name of the Output parameter.
+  ///
+  /// [valueBase64Binary]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueBase64Binary]: Extensions for valueBase64Binary
+  ///
+  /// [valueBoolean]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueBoolean]: Extensions for valueBoolean
+  ///
+  /// [valueCanonical]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueCanonical]: Extensions for valueCanonical
+  ///
+  /// [valueCode]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueCode]: Extensions for valueCode
+  ///
+  /// [valueDate]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueDate]: Extensions for valueDate
+  ///
+  /// [valueDateTime]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueDateTime]: Extensions for valueDateTime
+  ///
+  /// [valueDecimal]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueDecimal]: Extensions for valueDecimal
+  ///
+  /// [valueId]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueId]: Extensions for valueId
+  ///
+  /// [valueInstant]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueInstant]: Extensions for valueInstant
+  ///
+  /// [valueInteger]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueInteger]: Extensions for valueInteger
+  ///
+  /// [valueMarkdown]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueMarkdown]: Extensions for valueMarkdown
+  ///
+  /// [valueOid]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueOid]: Extensions for valueOid
+  ///
+  /// [valuePositiveInt]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valuePositiveInt]: Extensions for valuePositiveInt
+  ///
+  /// [valueString]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueString]: Extensions for valueString
+  ///
+  /// [valueTime]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueTime]: Extensions for valueTime
+  ///
+  /// [valueUnsignedInt]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueUnsignedInt]: Extensions for valueUnsignedInt
+  ///
+  /// [valueUri]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueUri]: Extensions for valueUri
+  ///
+  /// [valueUrl]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueUrl]: Extensions for valueUrl
+  ///
+  /// [valueUuid]: The value of the Output parameter as a basic type.
+  ///
+  /// [_valueUuid]: Extensions for valueUuid
+  ///
+  /// [valueAddress]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueAge]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueAnnotation]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueAttachment]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueCodeableConcept]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueCoding]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueContactPoint]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueCount]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueDistance]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueDuration]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueHumanName]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueIdentifier]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueMoney]: The value of the Output parameter as a basic type.
+  ///
+  /// [valuePeriod]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueQuantity]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueRange]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueRatio]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueReference]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueSampledData]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueSignature]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueTiming]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueContactDetail]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueContributor]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueDataRequirement]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueExpression]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueParameterDefinition]: The value of the Output parameter as a basic
+  ///  type.
+  ///
+  /// [valueRelatedArtifact]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueTriggerDefinition]: The value of the Output parameter as a basic
+  ///  type.
+  ///
+  /// [valueUsageContext]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueDosage]: The value of the Output parameter as a basic type.
+  ///
+  /// [valueMeta]: The value of the Output parameter as a basic type.
   factory TaskOutput({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -820,6 +1541,109 @@ abstract class VerificationResult
     with Resource
     implements _$VerificationResult {
   VerificationResult._();
+
+  /// [VerificationResult]: Describes validation requirements, source(s), status
+  ///  and dates for one or more elements.
+  ///
+  /// [resourceType]: This is a VerificationResult resource
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  ///
+  /// [meta]: The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not always
+  ///  be associated with version changes to the resource.
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the
+  /// resource was constructed, and which must be understood when processing the
+  /// content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
+  ///
+  /// [_implicitRules]: Extensions for implicitRules
+  ///
+  /// [language]: The base language in which the resource is written.
+  ///
+  /// [_language]: Extensions for language
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource
+  /// and can be used to represent the content of the resource to a human. The
+  /// narrative need not encode all the structured data, but is required to
+  /// contain sufficient detail to make it "clinically safe" for a human to just
+  /// read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
+  ///
+  /// [contained]: These resources do not have an independent existence apart
+  /// from the resource that contains them - they cannot be identified
+  /// independently, and nor can they have their own independent transaction
+  ///  scope.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the resource. To make the use of
+  /// extensions safe and manageable, there is a strict set of governance 
+  /// applied to the definition and use of extensions. Though any implementer
+  /// can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the resource and that modifies the
+  /// understanding of the element that contains it and/or the understanding of
+  /// the containing element's descendants. Usually modifier elements provide
+  /// negation or qualification. To make the use of extensions safe and
+  /// manageable, there is a strict set of governance applied to the definition
+  /// and use of extensions. Though any implementer is allowed to define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [target]: A resource that was validated.
+  ///
+  /// [targetLocation]: The fhirpath location(s) within the resource that was
+  ///  validated.
+  ///
+  /// [_targetLocation]: Extensions for targetLocation
+  ///
+  /// [need]: The frequency with which the target must be validated (none;
+  ///  initial; periodic).
+  ///
+  /// [status]: The validation status of the target (attested; validated; in
+  ///  process; requires revalidation; validation failed; revalidation failed).
+  ///
+  /// [_status]: Extensions for status
+  ///
+  /// [statusDate]: When the validation status was updated.
+  ///
+  /// [_statusDate]: Extensions for statusDate
+  ///
+  /// [validationType]: What the target is validated against (nothing; primary
+  ///  source; multiple sources).
+  ///
+  /// [validationProcess]: The primary process by which the target is validated
+  /// (edit check; value set; primary source; multiple sources; standalone; in
+  ///  context).
+  ///
+  /// [frequency]: Frequency of revalidation.
+  ///
+  /// [lastPerformed]: The date/time validation was last completed (including
+  ///  failed validations).
+  ///
+  /// [_lastPerformed]: Extensions for lastPerformed
+  ///
+  /// [nextScheduled]: The date when target is next validated, if appropriate.
+  ///
+  /// [_nextScheduled]: Extensions for nextScheduled
+  ///
+  /// [failureAction]: The result if validation fails (fatal; warning; record
+  ///  only; none).
+  ///
+  /// [primarySource]: Information about the primary source(s) involved in
+  ///  validation.
+  ///
+  /// [attestation]: Information about the entity attesting to information.
+  ///
+  /// [validator]: Information about the entity validating information.
   factory VerificationResult({
     @Default('VerificationResult') String resourceType,
     Id id,
@@ -871,6 +1695,56 @@ abstract class VerificationResult
 abstract class VerificationResultPrimarySource
     implements _$VerificationResultPrimarySource {
   VerificationResultPrimarySource._();
+
+  /// [VerificationResult_PrimarySource]: Describes validation requirements,
+  ///  source(s), status and dates for one or more elements.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [who]: Reference to the primary source.
+  ///
+  /// [type]: Type of primary source (License Board; Primary Education;
+  /// Continuing Education; Postal Service; Relationship owner; Registration
+  ///  Authority; legal source; issuing source; authoritative source).
+  ///
+  /// [communicationMethod]: Method for communicating with the primary source
+  ///  (manual; API; Push).
+  ///
+  /// [validationStatus]: Status of the validation of the target against the
+  ///  primary source (successful; failed; unknown).
+  ///
+  /// [validationDate]: When the target was validated against the primary
+  ///  source.
+  ///
+  /// [_validationDate]: Extensions for validationDate
+  ///
+  /// [canPushUpdates]: Ability of the primary source to push updates/alerts
+  ///  (yes; no; undetermined).
+  ///
+  /// [pushTypeAvailable]: Type of alerts/updates the primary source can send
+  ///  (specific requested changes; any changes; as defined by source).
   factory VerificationResultPrimarySource({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -906,6 +1780,63 @@ abstract class VerificationResultPrimarySource
 abstract class VerificationResultAttestation
     implements _$VerificationResultAttestation {
   VerificationResultAttestation._();
+
+  /// [VerificationResult_Attestation]: Describes validation requirements,
+  ///  source(s), status and dates for one or more elements.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [who]: The individual or organization attesting to information.
+  ///
+  /// [onBehalfOf]: When the who is asserting on behalf of another (organization
+  ///  or individual).
+  ///
+  /// [communicationMethod]: The method by which attested information was
+  ///  submitted/retrieved (manual; API; Push).
+  ///
+  /// [date]: The date the information was attested to.
+  ///
+  /// [_date]: Extensions for date
+  ///
+  /// [sourceIdentityCertificate]: A digital identity certificate associated
+  ///  with the attestation source.
+  ///
+  /// [_sourceIdentityCertificate]: Extensions for sourceIdentityCertificate
+  ///
+  /// [proxyIdentityCertificate]: A digital identity certificate associated with
+  /// the proxy entity submitting attested information on behalf of the
+  ///  attestation source.
+  ///
+  /// [_proxyIdentityCertificate]: Extensions for proxyIdentityCertificate
+  ///
+  /// [proxySignature]: Signed assertion by the proxy entity indicating that
+  /// they have the right to submit attested information on behalf of the
+  ///  attestation source.
+  ///
+  /// [sourceSignature]: Signed assertion by the attestation source that they
+  ///  have attested to the information.
   factory VerificationResultAttestation({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -944,6 +1875,43 @@ abstract class VerificationResultAttestation
 abstract class VerificationResultValidator
     implements _$VerificationResultValidator {
   VerificationResultValidator._();
+
+  /// [VerificationResult_Validator]: Describes validation requirements,
+  ///  source(s), status and dates for one or more elements.
+  ///
+  /// [id]: Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension]: May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension.
+  ///
+  /// [modifierExtension]: May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of the
+  /// definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.
+  /// Modifier extensions SHALL NOT change the meaning of any elements on
+  /// Resource or DomainResource (including cannot change the meaning of
+  ///  modifierExtension itself).
+  ///
+  /// [organization]: Reference to the organization validating information.
+  ///
+  /// [identityCertificate]: A digital identity certificate associated with the
+  ///  validator.
+  ///
+  /// [_identityCertificate]: Extensions for identityCertificate
+  ///
+  /// [attestationSignature]: Signed assertion by the validator that they have
+  ///  validated the information.
   factory VerificationResultValidator({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
