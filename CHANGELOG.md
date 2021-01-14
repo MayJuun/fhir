@@ -3,7 +3,7 @@
 * added a thisReference method for resources
 * moved fromJson to its own file
 * added a newVersion method (stolen from DB), because it seemed like something that is generally useful
-* I think I'm finally going to try and add comments
+* Commented all of R4
 
 ## [0.0.13]
 * Added some YAML functionality. 
