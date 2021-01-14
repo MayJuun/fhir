@@ -53,6 +53,7 @@ abstract class Group with Resource implements _$Group {
           ? Group.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
 }
 
@@ -85,6 +86,7 @@ abstract class GroupCharacteristic implements _$GroupCharacteristic {
           ? GroupCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$GroupCharacteristicFromJson(json);
 }
@@ -112,6 +114,7 @@ abstract class GroupMember implements _$GroupMember {
           ? GroupMember.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GroupMember.fromJson(Map<String, dynamic> json) =>
       _$GroupMemberFromJson(json);
 }
@@ -168,6 +171,7 @@ abstract class Patient with Resource implements _$Patient {
           ? Patient.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Patient.fromJson(Map<String, dynamic> json) =>
       _$PatientFromJson(json);
 }
@@ -200,6 +204,7 @@ abstract class PatientContact implements _$PatientContact {
           ? PatientContact.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PatientContact.fromJson(Map<String, dynamic> json) =>
       _$PatientContactFromJson(json);
 }
@@ -226,6 +231,7 @@ abstract class PatientCommunication implements _$PatientCommunication {
           ? PatientCommunication.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
       _$PatientCommunicationFromJson(json);
 }
@@ -252,6 +258,7 @@ abstract class PatientLink implements _$PatientLink {
           ? PatientLink.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PatientLink.fromJson(Map<String, dynamic> json) =>
       _$PatientLinkFromJson(json);
 }
@@ -296,6 +303,7 @@ abstract class Person with Resource implements _$Person {
           ? Person.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
 }
 
@@ -322,6 +330,7 @@ abstract class PersonLink implements _$PersonLink {
           ? PersonLink.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PersonLink.fromJson(Map<String, dynamic> json) =>
       _$PersonLinkFromJson(json);
 }
@@ -367,6 +376,7 @@ abstract class Practitioner with Resource implements _$Practitioner {
           ? Practitioner.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Practitioner.fromJson(Map<String, dynamic> json) =>
       _$PractitionerFromJson(json);
 }
@@ -396,6 +406,7 @@ abstract class PractitionerQualification
           ? PractitionerQualification.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
       _$PractitionerQualificationFromJson(json);
 }
@@ -444,6 +455,7 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
           ? PractitionerRole.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerRole.fromJson(Map<String, dynamic> json) =>
       _$PractitionerRoleFromJson(json);
 }
@@ -477,6 +489,7 @@ abstract class PractitionerRoleAvailableTime
           ? PractitionerRoleAvailableTime.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerRoleAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$PractitionerRoleAvailableTimeFromJson(json);
 }
@@ -505,6 +518,7 @@ abstract class PractitionerRoleNotAvailable
           ? PractitionerRoleNotAvailable.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =>
       _$PractitionerRoleNotAvailableFromJson(json);
 }
@@ -552,6 +566,7 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
           ? RelatedPerson.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
       _$RelatedPersonFromJson(json);
 }
@@ -580,6 +595,7 @@ abstract class RelatedPersonCommunication
           ? RelatedPersonCommunication.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RelatedPersonCommunication.fromJson(Map<String, dynamic> json) =>
       _$RelatedPersonCommunicationFromJson(json);
 }

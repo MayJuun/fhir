@@ -57,6 +57,7 @@ abstract class Composition with Resource implements _$Composition {
           ? Composition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Composition.fromJson(Map<String, dynamic> json) =>
       _$CompositionFromJson(json);
 }
@@ -82,6 +83,7 @@ abstract class CompositionAttester implements _$CompositionAttester {
           ? CompositionAttester.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
       _$CompositionAttesterFromJson(json);
 }
@@ -106,6 +108,7 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
           ? CompositionRelatesTo.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompositionRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$CompositionRelatesToFromJson(json);
 }
@@ -129,6 +132,7 @@ abstract class CompositionEvent implements _$CompositionEvent {
           ? CompositionEvent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
       _$CompositionEventFromJson(json);
 }
@@ -159,6 +163,7 @@ abstract class CompositionSection implements _$CompositionSection {
           ? CompositionSection.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompositionSection.fromJson(Map<String, dynamic> json) =>
       _$CompositionSectionFromJson(json);
 }
@@ -206,6 +211,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
           ? DocumentManifest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestFromJson(json);
 }
@@ -228,6 +234,7 @@ abstract class DocumentManifestContent implements _$DocumentManifestContent {
           ? DocumentManifestContent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestContentFromJson(json);
 }
@@ -250,6 +257,7 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
           ? DocumentManifestRelated.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestRelatedFromJson(json);
 }
@@ -303,6 +311,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
           ? DocumentReference.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceFromJson(json);
 }
@@ -328,6 +337,7 @@ abstract class DocumentReferenceRelatesTo
           ? DocumentReferenceRelatesTo.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceRelatesToFromJson(json);
 }
@@ -351,6 +361,7 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
           ? DocumentReferenceContent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContentFromJson(json);
 }
@@ -379,6 +390,7 @@ abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
           ? DocumentReferenceContext.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContextFromJson(json);
 }
@@ -402,6 +414,7 @@ abstract class DocumentReferenceRelated implements _$DocumentReferenceRelated {
           ? DocumentReferenceRelated.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceRelated.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceRelatedFromJson(json);
 }

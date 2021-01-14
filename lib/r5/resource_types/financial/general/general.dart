@@ -52,6 +52,7 @@ abstract class Account with Resource implements _$Account {
           ? Account.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Account.fromJson(Map<String, dynamic> json) =>
       _$AccountFromJson(json);
 }
@@ -78,6 +79,7 @@ abstract class AccountCoverage implements _$AccountCoverage {
           ? AccountCoverage.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AccountCoverage.fromJson(Map<String, dynamic> json) =>
       _$AccountCoverageFromJson(json);
 }
@@ -105,6 +107,7 @@ abstract class AccountGuarantor implements _$AccountGuarantor {
           ? AccountGuarantor.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AccountGuarantor.fromJson(Map<String, dynamic> json) =>
       _$AccountGuarantorFromJson(json);
 }
@@ -172,6 +175,7 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
           ? ChargeItem.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ChargeItem.fromJson(Map<String, dynamic> json) =>
       _$ChargeItemFromJson(json);
 }
@@ -197,6 +201,7 @@ abstract class ChargeItemPerformer implements _$ChargeItemPerformer {
           ? ChargeItemPerformer.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ChargeItemPerformer.fromJson(Map<String, dynamic> json) =>
       _$ChargeItemPerformerFromJson(json);
 }
@@ -270,6 +275,7 @@ abstract class ChargeItemDefinition
           ? ChargeItemDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ChargeItemDefinition.fromJson(Map<String, dynamic> json) =>
       _$ChargeItemDefinitionFromJson(json);
 }
@@ -443,6 +449,7 @@ abstract class Contract with Resource implements _$Contract {
           ? Contract.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Contract.fromJson(Map<String, dynamic> json) =>
       _$ContractFromJson(json);
 }
@@ -477,6 +484,7 @@ abstract class ContractContentDefinition
           ? ContractContentDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractContentDefinition.fromJson(Map<String, dynamic> json) =>
       _$ContractContentDefinitionFromJson(json);
 }
@@ -515,6 +523,7 @@ abstract class ContractTerm implements _$ContractTerm {
           ? ContractTerm.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractTerm.fromJson(Map<String, dynamic> json) =>
       _$ContractTermFromJson(json);
 }
@@ -543,6 +552,7 @@ abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
           ? ContractSecurityLabel.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractSecurityLabel.fromJson(Map<String, dynamic> json) =>
       _$ContractSecurityLabelFromJson(json);
 }
@@ -580,6 +590,7 @@ abstract class ContractOffer implements _$ContractOffer {
           ? ContractOffer.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractOffer.fromJson(Map<String, dynamic> json) =>
       _$ContractOfferFromJson(json);
 }
@@ -605,6 +616,7 @@ abstract class ContractParty implements _$ContractParty {
           ? ContractParty.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractParty.fromJson(Map<String, dynamic> json) =>
       _$ContractPartyFromJson(json);
 }
@@ -648,6 +660,7 @@ abstract class ContractAnswer implements _$ContractAnswer {
           ? ContractAnswer.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractAnswer.fromJson(Map<String, dynamic> json) =>
       _$ContractAnswerFromJson(json);
 }
@@ -691,6 +704,7 @@ abstract class ContractAsset implements _$ContractAsset {
           ? ContractAsset.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractAsset.fromJson(Map<String, dynamic> json) =>
       _$ContractAssetFromJson(json);
 }
@@ -718,6 +732,7 @@ abstract class ContractContext implements _$ContractContext {
           ? ContractContext.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractContext.fromJson(Map<String, dynamic> json) =>
       _$ContractContextFromJson(json);
 }
@@ -764,6 +779,7 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
           ? ContractValuedItem.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
       _$ContractValuedItemFromJson(json);
 }
@@ -817,6 +833,7 @@ abstract class ContractAction implements _$ContractAction {
           ? ContractAction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractAction.fromJson(Map<String, dynamic> json) =>
       _$ContractActionFromJson(json);
 }
@@ -842,6 +859,7 @@ abstract class ContractSubject implements _$ContractSubject {
           ? ContractSubject.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractSubject.fromJson(Map<String, dynamic> json) =>
       _$ContractSubjectFromJson(json);
 }
@@ -868,6 +886,7 @@ abstract class ContractSigner implements _$ContractSigner {
           ? ContractSigner.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractSigner.fromJson(Map<String, dynamic> json) =>
       _$ContractSignerFromJson(json);
 }
@@ -893,6 +912,7 @@ abstract class ContractFriendly implements _$ContractFriendly {
           ? ContractFriendly.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
       _$ContractFriendlyFromJson(json);
 }
@@ -918,6 +938,7 @@ abstract class ContractLegal implements _$ContractLegal {
           ? ContractLegal.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractLegal.fromJson(Map<String, dynamic> json) =>
       _$ContractLegalFromJson(json);
 }
@@ -943,6 +964,7 @@ abstract class ContractRule implements _$ContractRule {
           ? ContractRule.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractRule.fromJson(Map<String, dynamic> json) =>
       _$ContractRuleFromJson(json);
 }
@@ -1027,6 +1049,7 @@ abstract class ExplanationOfBenefit
           ? ExplanationOfBenefit.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitFromJson(json);
 }
@@ -1055,6 +1078,7 @@ abstract class ExplanationOfBenefitRelated
           ? ExplanationOfBenefitRelated.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitRelatedFromJson(json);
 }
@@ -1082,6 +1106,7 @@ abstract class ExplanationOfBenefitPayee
           ? ExplanationOfBenefitPayee.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitPayeeFromJson(json);
 }
@@ -1114,6 +1139,7 @@ abstract class ExplanationOfBenefitCareTeam
           ? ExplanationOfBenefitCareTeam.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitCareTeamFromJson(json);
 }
@@ -1189,6 +1215,7 @@ abstract class ExplanationOfBenefitDiagnosis
           ? ExplanationOfBenefitDiagnosis.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDiagnosisFromJson(json);
 }
@@ -1222,6 +1249,7 @@ abstract class ExplanationOfBenefitProcedure
           ? ExplanationOfBenefitProcedure.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitProcedure.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitProcedureFromJson(json);
 }
@@ -1252,6 +1280,7 @@ abstract class ExplanationOfBenefitInsurance
           ? ExplanationOfBenefitInsurance.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitInsurance.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitInsuranceFromJson(json);
 }
@@ -1282,6 +1311,7 @@ abstract class ExplanationOfBenefitAccident
           ? ExplanationOfBenefitAccident.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitAccidentFromJson(json);
 }
@@ -1341,6 +1371,7 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
           ? ExplanationOfBenefitItem.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitItemFromJson(json);
 }
@@ -1416,6 +1447,7 @@ abstract class ExplanationOfBenefitDetail
           ? ExplanationOfBenefitDetail.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDetailFromJson(json);
 }
@@ -1457,6 +1489,7 @@ abstract class ExplanationOfBenefitSubDetail
           ? ExplanationOfBenefitSubDetail.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitSubDetailFromJson(json);
 }
@@ -1509,6 +1542,7 @@ abstract class ExplanationOfBenefitAddItem
           ? ExplanationOfBenefitAddItem.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitAddItemFromJson(json);
 }
@@ -1545,6 +1579,7 @@ abstract class ExplanationOfBenefitDetail1
           ? ExplanationOfBenefitDetail1.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitDetail1FromJson(json);
 }
@@ -1582,6 +1617,7 @@ abstract class ExplanationOfBenefitSubDetail1
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitSubDetail1.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitSubDetail1FromJson(json);
 }
@@ -1609,6 +1645,7 @@ abstract class ExplanationOfBenefitTotal
           ? ExplanationOfBenefitTotal.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitTotal.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitTotalFromJson(json);
 }
@@ -1641,6 +1678,7 @@ abstract class ExplanationOfBenefitPayment
           ? ExplanationOfBenefitPayment.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitPaymentFromJson(json);
 }
@@ -1676,6 +1714,7 @@ abstract class ExplanationOfBenefitProcessNote
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitProcessNoteFromJson(json);
 }
@@ -1749,6 +1788,7 @@ abstract class ExplanationOfBenefitFinancial
           ? ExplanationOfBenefitFinancial.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitFinancial.fromJson(Map<String, dynamic> json) =>
       _$ExplanationOfBenefitFinancialFromJson(json);
 }
@@ -1798,6 +1838,7 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
           ? InsurancePlan.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlan.fromJson(Map<String, dynamic> json) =>
       _$InsurancePlanFromJson(json);
 }
@@ -1825,6 +1866,7 @@ abstract class InsurancePlanContact implements _$InsurancePlanContact {
           ? InsurancePlanContact.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanContact.fromJson(Map<String, dynamic> json) =>
       _$InsurancePlanContactFromJson(json);
 }
@@ -1851,6 +1893,7 @@ abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage {
           ? InsurancePlanCoverage.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanCoverage.fromJson(Map<String, dynamic> json) =>
       _$InsurancePlanCoverageFromJson(json);
 }
@@ -1878,6 +1921,7 @@ abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit {
           ? InsurancePlanBenefit.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanBenefit.fromJson(Map<String, dynamic> json) =>
       _$InsurancePlanBenefitFromJson(json);
 }
@@ -1903,6 +1947,7 @@ abstract class InsurancePlanLimit implements _$InsurancePlanLimit {
           ? InsurancePlanLimit.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanLimit.fromJson(Map<String, dynamic> json) =>
       _$InsurancePlanLimitFromJson(json);
 }
@@ -1932,6 +1977,7 @@ abstract class InsurancePlanPlan implements _$InsurancePlanPlan {
           ? InsurancePlanPlan.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanPlan.fromJson(Map<String, dynamic> json) =>
       _$InsurancePlanPlanFromJson(json);
 }
@@ -1962,6 +2008,7 @@ abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost {
           ? InsurancePlanGeneralCost.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanGeneralCost.fromJson(Map<String, dynamic> json) =>
       _$InsurancePlanGeneralCostFromJson(json);
 }
@@ -1989,6 +2036,7 @@ abstract class InsurancePlanSpecificCost
           ? InsurancePlanSpecificCost.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanSpecificCost.fromJson(Map<String, dynamic> json) =>
       _$InsurancePlanSpecificCostFromJson(json);
 }
@@ -2014,6 +2062,7 @@ abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1 {
           ? InsurancePlanBenefit1.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanBenefit1.fromJson(Map<String, dynamic> json) =>
       _$InsurancePlanBenefit1FromJson(json);
 }
@@ -2041,6 +2090,7 @@ abstract class InsurancePlanCost implements _$InsurancePlanCost {
           ? InsurancePlanCost.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanCost.fromJson(Map<String, dynamic> json) =>
       _$InsurancePlanCostFromJson(json);
 }

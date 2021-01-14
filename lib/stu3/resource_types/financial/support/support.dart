@@ -60,6 +60,7 @@ abstract class Coverage with Resource implements _$Coverage {
           ? Coverage.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Coverage.fromJson(Map<String, dynamic> json) =>
       _$CoverageFromJson(json);
 }
@@ -104,6 +105,7 @@ abstract class CoverageGrouping implements _$CoverageGrouping {
           ? CoverageGrouping.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageGrouping.fromJson(Map<String, dynamic> json) =>
       _$CoverageGroupingFromJson(json);
 }
@@ -157,6 +159,7 @@ abstract class EligibilityRequest
           ? EligibilityRequest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$EligibilityRequestFromJson(json);
 }
@@ -207,6 +210,7 @@ abstract class EligibilityResponse
           ? EligibilityResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseFromJson(json);
 }
@@ -232,6 +236,7 @@ abstract class EligibilityResponseInsurance
           ? EligibilityResponseInsurance.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseInsuranceFromJson(json);
 }
@@ -300,6 +305,7 @@ abstract class EligibilityResponseFinancial
           ? EligibilityResponseFinancial.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseFinancialFromJson(json);
 }
@@ -322,6 +328,7 @@ abstract class EligibilityResponseError implements _$EligibilityResponseError {
           ? EligibilityResponseError.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EligibilityResponseError.fromJson(Map<String, dynamic> json) =>
       _$EligibilityResponseErrorFromJson(json);
 }
@@ -363,6 +370,7 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
           ? EnrollmentRequest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentRequestFromJson(json);
 }
@@ -408,6 +416,7 @@ abstract class EnrollmentResponse
           ? EnrollmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentResponseFromJson(json);
 }

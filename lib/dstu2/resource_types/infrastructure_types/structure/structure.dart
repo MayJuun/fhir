@@ -57,6 +57,7 @@ abstract class Media with Resource implements _$Media {
           ? Media.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
 }
 
@@ -86,6 +87,7 @@ abstract class Binary with Resource implements _$Binary {
           ? Binary.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
 }
 
@@ -121,6 +123,7 @@ abstract class Bundle with Resource implements _$Bundle {
           ? Bundle.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
 }
 
@@ -148,6 +151,7 @@ abstract class BundleLink with _$BundleLink {
           ? BundleLink.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleLink.fromJson(Map<String, dynamic> json) =>
       _$BundleLinkFromJson(json);
 }
@@ -179,6 +183,7 @@ abstract class BundleEntry with _$BundleEntry {
           ? BundleEntry.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleEntry.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryFromJson(json);
 }
@@ -207,6 +212,7 @@ abstract class BundleEntrySearch with _$BundleEntrySearch {
           ? BundleEntrySearch.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleEntrySearch.fromJson(Map<String, dynamic> json) =>
       _$BundleEntrySearchFromJson(json);
 }
@@ -245,6 +251,7 @@ abstract class BundleEntryRequest with _$BundleEntryRequest {
           ? BundleEntryRequest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleEntryRequest.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryRequestFromJson(json);
 }
@@ -277,6 +284,7 @@ abstract class BundleEntryResponse with _$BundleEntryResponse {
           ? BundleEntryResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleEntryResponse.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryResponseFromJson(json);
 }
@@ -314,5 +322,6 @@ abstract class Basic with Resource implements _$Basic {
           ? Basic.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
 }

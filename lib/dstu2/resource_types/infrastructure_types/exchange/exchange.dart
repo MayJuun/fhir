@@ -49,6 +49,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
           ? MessageHeader.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeader.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderFromJson(json);
 }
@@ -79,6 +80,7 @@ abstract class MessageHeaderResponse with _$MessageHeaderResponse {
           ? MessageHeaderResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderResponseFromJson(json);
 }
@@ -111,6 +113,7 @@ abstract class MessageHeaderSource with _$MessageHeaderSource {
           ? MessageHeaderSource.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderSourceFromJson(json);
 }
@@ -140,6 +143,7 @@ abstract class MessageHeaderDestination with _$MessageHeaderDestination {
           ? MessageHeaderDestination.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderDestinationFromJson(json);
 }
@@ -173,6 +177,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
           ? OperationOutcome.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeFromJson(json);
 }
@@ -203,6 +208,7 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
           ? OperationOutcomeIssue.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeIssueFromJson(json);
 }
@@ -231,6 +237,7 @@ abstract class Parameters with Resource implements _$Parameters {
           ? Parameters.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Parameters.fromJson(Map<String, dynamic> json) =>
       _$ParametersFromJson(json);
 }
@@ -291,6 +298,7 @@ abstract class ParametersParameter with _$ParametersParameter {
           ? ParametersParameter.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
       _$ParametersParameterFromJson(json);
 }
@@ -337,6 +345,7 @@ abstract class Subscription with Resource implements _$Subscription {
           ? Subscription.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Subscription.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionFromJson(json);
 }
@@ -370,6 +379,7 @@ abstract class SubscriptionChannel with _$SubscriptionChannel {
           ? SubscriptionChannel.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionChannelFromJson(json);
 }

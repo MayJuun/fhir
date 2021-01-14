@@ -59,6 +59,7 @@ abstract class Appointment with Resource implements _$Appointment {
           ? Appointment.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Appointment.fromJson(Map<String, dynamic> json) =>
       _$AppointmentFromJson(json);
 }
@@ -91,6 +92,7 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
           ? AppointmentParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$AppointmentParticipantFromJson(json);
 }
@@ -140,6 +142,7 @@ abstract class AppointmentResponse
           ? AppointmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$AppointmentResponseFromJson(json);
 }
@@ -177,6 +180,7 @@ abstract class Schedule with Resource implements _$Schedule {
           ? Schedule.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Schedule.fromJson(Map<String, dynamic> json) =>
       _$ScheduleFromJson(json);
 }
@@ -222,5 +226,6 @@ abstract class Slot with Resource implements _$Slot {
           ? Slot.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
 }

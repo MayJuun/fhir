@@ -226,6 +226,7 @@ abstract class Immunization with Resource implements _$Immunization {
           ? Immunization.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Immunization.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationFromJson(json);
 }
@@ -284,6 +285,7 @@ abstract class ImmunizationPerformer implements _$ImmunizationPerformer {
           ? ImmunizationPerformer.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImmunizationPerformer.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationPerformerFromJson(json);
 }
@@ -361,6 +363,7 @@ abstract class ImmunizationEducation implements _$ImmunizationEducation {
           ? ImmunizationEducation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImmunizationEducation.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationEducationFromJson(json);
 }
@@ -427,6 +430,7 @@ abstract class ImmunizationReaction implements _$ImmunizationReaction {
           ? ImmunizationReaction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImmunizationReaction.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationReactionFromJson(json);
 }
@@ -522,6 +526,7 @@ abstract class ImmunizationProtocolApplied
           ? ImmunizationProtocolApplied.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImmunizationProtocolApplied.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationProtocolAppliedFromJson(json);
 }
@@ -693,6 +698,7 @@ abstract class ImmunizationEvaluation
           ? ImmunizationEvaluation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImmunizationEvaluation.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationEvaluationFromJson(json);
 }
@@ -804,6 +810,7 @@ abstract class ImmunizationRecommendation
           ? ImmunizationRecommendation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
       _$ImmunizationRecommendationFromJson(json);
 }
@@ -1047,7 +1054,7 @@ abstract class Medication with Resource implements _$Medication {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1127,6 +1134,7 @@ abstract class Medication with Resource implements _$Medication {
           ? Medication.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Medication.fromJson(Map<String, dynamic> json) =>
       _$MedicationFromJson(json);
 }
@@ -1199,6 +1207,7 @@ abstract class MedicationIngredient implements _$MedicationIngredient {
           ? MedicationIngredient.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationIngredient.fromJson(Map<String, dynamic> json) =>
       _$MedicationIngredientFromJson(json);
 }
@@ -1263,6 +1272,7 @@ abstract class MedicationBatch implements _$MedicationBatch {
           ? MedicationBatch.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationBatch.fromJson(Map<String, dynamic> json) =>
       _$MedicationBatchFromJson(json);
 }
@@ -1313,7 +1323,7 @@ abstract class MedicationAdministration
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1402,7 +1412,7 @@ abstract class MedicationAdministration
   /// [request]: The original request, instruction or authority to perform the
   ///  administration.
   ///
-  /// [device]: The device used in administering the medication to the patient. 
+  /// [device]: The device used in administering the medication to the patient.
   ///  For example, a particular infusion pump.
   ///
   /// [note]: Extra information about the medication administration that is not
@@ -1462,6 +1472,7 @@ abstract class MedicationAdministration
           ? MedicationAdministration.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationAdministration.fromJson(Map<String, dynamic> json) =>
       _$MedicationAdministrationFromJson(json);
 }
@@ -1473,7 +1484,7 @@ abstract class MedicationAdministrationPerformer
 
   /// [MedicationAdministration_Performer]: Describes the event of a patient
   /// consuming or otherwise being administered a medication.  This may be as
-  /// simple as swallowing a tablet or it may be a long running infusion. 
+  /// simple as swallowing a tablet or it may be a long running infusion.
   /// Related resources tie this event to the authorizing prescription, and the
   ///  specific encounter between patient and health care practitioner.
   ///
@@ -1538,7 +1549,7 @@ abstract class MedicationAdministrationDosage
 
   /// [MedicationAdministration_Dosage]: Describes the event of a patient
   /// consuming or otherwise being administered a medication.  This may be as
-  /// simple as swallowing a tablet or it may be a long running infusion. 
+  /// simple as swallowing a tablet or it may be a long running infusion.
   /// Related resources tie this event to the authorizing prescription, and the
   ///  specific encounter between patient and health care practitioner.
   ///
@@ -1583,10 +1594,10 @@ abstract class MedicationAdministrationDosage
   ///
   /// [method]: A coded value indicating the method by which the medication is
   /// intended to be or was introduced into or on the body.  This attribute will
-  /// most often NOT be populated.  It is most commonly used for injections. 
+  /// most often NOT be populated.  It is most commonly used for injections.
   ///  For example, Slow Push, Deep IV.
   ///
-  /// [dose]: The amount of the medication given at one administration event.  
+  /// [dose]: The amount of the medication given at one administration event.
   /// Use this value when the administration is essentially an instantaneous
   ///  event such as a swallowing a tablet or giving an injection.
   ///
@@ -1628,6 +1639,7 @@ abstract class MedicationAdministrationDosage
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =>
       _$MedicationAdministrationDosageFromJson(json);
 }
@@ -1678,7 +1690,7 @@ abstract class MedicationDispense
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1844,6 +1856,7 @@ abstract class MedicationDispense
           ? MedicationDispense.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationDispense.fromJson(Map<String, dynamic> json) =>
       _$MedicationDispenseFromJson(json);
 }
@@ -1907,6 +1920,7 @@ abstract class MedicationDispensePerformer
           ? MedicationDispensePerformer.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationDispensePerformer.fromJson(Map<String, dynamic> json) =>
       _$MedicationDispensePerformerFromJson(json);
 }
@@ -1983,6 +1997,7 @@ abstract class MedicationDispenseSubstitution
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json) =>
       _$MedicationDispenseSubstitutionFromJson(json);
 }
@@ -2030,7 +2045,7 @@ abstract class MedicationKnowledge
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -2175,6 +2190,7 @@ abstract class MedicationKnowledge
           ? MedicationKnowledge.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledge.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeFromJson(json);
 }
@@ -2297,6 +2313,7 @@ abstract class MedicationKnowledgeMonograph
           ? MedicationKnowledgeMonograph.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeMonograph.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeMonographFromJson(json);
 }
@@ -2369,6 +2386,7 @@ abstract class MedicationKnowledgeIngredient
           ? MedicationKnowledgeIngredient.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeIngredient.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeIngredientFromJson(json);
 }
@@ -2432,6 +2450,7 @@ abstract class MedicationKnowledgeCost implements _$MedicationKnowledgeCost {
           ? MedicationKnowledgeCost.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeCost.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeCostFromJson(json);
 }
@@ -2626,6 +2645,7 @@ abstract class MedicationKnowledgeDosage
           ? MedicationKnowledgeDosage.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeDosage.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeDosageFromJson(json);
 }
@@ -2818,6 +2838,7 @@ abstract class MedicationKnowledgePackaging
           ? MedicationKnowledgePackaging.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgePackaging.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgePackagingFromJson(json);
 }
@@ -2961,6 +2982,7 @@ abstract class MedicationKnowledgeRegulatory
           ? MedicationKnowledgeRegulatory.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeRegulatory.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeRegulatoryFromJson(json);
 }
@@ -3025,6 +3047,7 @@ abstract class MedicationKnowledgeSubstitution
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeSubstitution.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeSubstitutionFromJson(json);
 }
@@ -3080,6 +3103,7 @@ abstract class MedicationKnowledgeSchedule
           ? MedicationKnowledgeSchedule.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeSchedule.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeScheduleFromJson(json);
 }
@@ -3141,6 +3165,7 @@ abstract class MedicationKnowledgeMaxDispense
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeMaxDispense.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeMaxDispenseFromJson(json);
 }
@@ -3204,6 +3229,7 @@ abstract class MedicationKnowledgeKinetics
           ? MedicationKnowledgeKinetics.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationKnowledgeKinetics.fromJson(Map<String, dynamic> json) =>
       _$MedicationKnowledgeKineticsFromJson(json);
 }
@@ -3253,7 +3279,7 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -3479,6 +3505,7 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
           ? MedicationRequest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationRequest.fromJson(Map<String, dynamic> json) =>
       _$MedicationRequestFromJson(json);
 }
@@ -3640,6 +3667,7 @@ abstract class MedicationRequestInitialFill
           ? MedicationRequestInitialFill.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationRequestInitialFill.fromJson(Map<String, dynamic> json) =>
       _$MedicationRequestInitialFillFromJson(json);
 }
@@ -3711,6 +3739,7 @@ abstract class MedicationRequestSubstitution
           ? MedicationRequestSubstitution.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationRequestSubstitution.fromJson(Map<String, dynamic> json) =>
       _$MedicationRequestSubstitutionFromJson(json);
 }
@@ -3730,7 +3759,7 @@ abstract class MedicationStatement
   /// during the history taking process during a patient visit or stay.   The
   /// medication information may come from sources such as the patient's memory,
   /// from a prescription bottle,  or from a list of medications the patient,
-  ///  clinician or other party maintains. 
+  ///  clinician or other party maintains.
   /// The primary difference between a medication statement and a medication
   /// administration is that the medication administration has complete
   /// administration information and is based on actual administration
@@ -3779,7 +3808,7 @@ abstract class MedicationStatement
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -3918,6 +3947,7 @@ abstract class MedicationStatement
           ? MedicationStatement.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicationStatement.fromJson(Map<String, dynamic> json) =>
       _$MedicationStatementFromJson(json);
 }

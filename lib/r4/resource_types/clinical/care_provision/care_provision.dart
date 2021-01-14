@@ -208,6 +208,7 @@ abstract class CarePlan with Resource implements _$CarePlan {
           ? CarePlan.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CarePlan.fromJson(Map<String, dynamic> json) =>
       _$CarePlanFromJson(json);
 }
@@ -284,6 +285,7 @@ abstract class CarePlanActivity implements _$CarePlanActivity {
           ? CarePlanActivity.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CarePlanActivity.fromJson(Map<String, dynamic> json) =>
       _$CarePlanActivityFromJson(json);
 }
@@ -446,6 +448,7 @@ abstract class CarePlanDetail implements _$CarePlanDetail {
           ? CarePlanDetail.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CarePlanDetail.fromJson(Map<String, dynamic> json) =>
       _$CarePlanDetailFromJson(json);
 }
@@ -589,6 +592,7 @@ abstract class CareTeam with Resource implements _$CareTeam {
           ? CareTeam.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CareTeam.fromJson(Map<String, dynamic> json) =>
       _$CareTeamFromJson(json);
 }
@@ -656,6 +660,7 @@ abstract class CareTeamParticipant implements _$CareTeamParticipant {
           ? CareTeamParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CareTeamParticipant.fromJson(Map<String, dynamic> json) =>
       _$CareTeamParticipantFromJson(json);
 }
@@ -822,6 +827,7 @@ abstract class Goal with Resource implements _$Goal {
           ? Goal.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Goal.fromJson(Map<String, dynamic> json) => _$GoalFromJson(json);
 }
 
@@ -954,6 +960,7 @@ abstract class GoalTarget implements _$GoalTarget {
           ? GoalTarget.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GoalTarget.fromJson(Map<String, dynamic> json) =>
       _$GoalTargetFromJson(json);
 }
@@ -999,7 +1006,7 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1059,7 +1066,7 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
   /// [orderer]: The practitioner that holds legal responsibility for ordering
   ///  the diet, nutritional supplement, or formula feedings.
   ///
-  /// [allergyIntolerance]: A link to a record of allergies or intolerances 
+  /// [allergyIntolerance]: A link to a record of allergies or intolerances
   ///  which should be included in the nutrition order.
   ///
   /// [foodPreferenceModifier]: This modifier is used to convey order-specific
@@ -1072,7 +1079,7 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
   /// [excludeFoodModifier]: This modifier is used to convey Order-specific
   /// modifier about the type of oral food or oral fluids that should not be
   /// given. These can be derived from patient allergies, intolerances, or
-  /// preferences such as No Red Meat, No Soy or No Wheat or  Gluten-Free. 
+  /// preferences such as No Red Meat, No Soy or No Wheat or  Gluten-Free.
   /// While it should not be necessary to repeat allergy or intolerance
   /// information captured in the referenced AllergyIntolerance resource in the
   /// excludeFoodModifier, this element may be used to convey additional
@@ -1138,6 +1145,7 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
           ? NutritionOrder.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionOrder.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderFromJson(json);
 }
@@ -1218,6 +1226,7 @@ abstract class NutritionOrderOralDiet implements _$NutritionOrderOralDiet {
           ? NutritionOrderOralDiet.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionOrderOralDiet.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderOralDietFromJson(json);
 }
@@ -1275,6 +1284,7 @@ abstract class NutritionOrderNutrient implements _$NutritionOrderNutrient {
           ? NutritionOrderNutrient.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionOrderNutrient.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderNutrientFromJson(json);
 }
@@ -1333,6 +1343,7 @@ abstract class NutritionOrderTexture implements _$NutritionOrderTexture {
           ? NutritionOrderTexture.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionOrderTexture.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderTextureFromJson(json);
 }
@@ -1410,6 +1421,7 @@ abstract class NutritionOrderSupplement implements _$NutritionOrderSupplement {
           ? NutritionOrderSupplement.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionOrderSupplement.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderSupplementFromJson(json);
 }
@@ -1472,7 +1484,7 @@ abstract class NutritionOrderEnteralFormula
   /// into the patient's gastrointestinal  tract for purposes of providing the
   ///  formula feeding, e.g. nasogastric tube.
   ///
-  /// [administration]: Formula administration instructions as structured data. 
+  /// [administration]: Formula administration instructions as structured data.
   /// This repeating structure allows for changing the administration rate or
   /// volume over time for both bolus and continuous feeding.  An example of
   /// this would be an instruction to increase the rate of continuous feeding
@@ -1517,6 +1529,7 @@ abstract class NutritionOrderEnteralFormula
           ? NutritionOrderEnteralFormula.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionOrderEnteralFormula.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderEnteralFormulaFromJson(json);
 }
@@ -1585,6 +1598,7 @@ abstract class NutritionOrderAdministration
           ? NutritionOrderAdministration.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionOrderAdministration.fromJson(Map<String, dynamic> json) =>
       _$NutritionOrderAdministrationFromJson(json);
 }
@@ -1631,7 +1645,7 @@ abstract class RequestGroup with Resource implements _$RequestGroup {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1761,6 +1775,7 @@ abstract class RequestGroup with Resource implements _$RequestGroup {
           ? RequestGroup.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RequestGroup.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupFromJson(json);
 }
@@ -1941,6 +1956,7 @@ abstract class RequestGroupAction implements _$RequestGroupAction {
           ? RequestGroupAction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RequestGroupAction.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupActionFromJson(json);
 }
@@ -2002,6 +2018,7 @@ abstract class RequestGroupCondition implements _$RequestGroupCondition {
           ? RequestGroupCondition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RequestGroupCondition.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupConditionFromJson(json);
 }
@@ -2075,6 +2092,7 @@ abstract class RequestGroupRelatedAction
           ? RequestGroupRelatedAction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupRelatedActionFromJson(json);
 }
@@ -2120,7 +2138,7 @@ abstract class RiskAssessment with Resource implements _$RiskAssessment {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -2235,6 +2253,7 @@ abstract class RiskAssessment with Resource implements _$RiskAssessment {
           ? RiskAssessment.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskAssessment.fromJson(Map<String, dynamic> json) =>
       _$RiskAssessmentFromJson(json);
 }
@@ -2329,6 +2348,7 @@ abstract class RiskAssessmentPrediction implements _$RiskAssessmentPrediction {
           ? RiskAssessmentPrediction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskAssessmentPrediction.fromJson(Map<String, dynamic> json) =>
       _$RiskAssessmentPredictionFromJson(json);
 }
@@ -2374,7 +2394,7 @@ abstract class ServiceRequest with Resource implements _$ServiceRequest {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -2522,12 +2542,12 @@ abstract class ServiceRequest with Resource implements _$ServiceRequest {
   ///  service.
   ///
   /// [supportingInfo]: Additional clinical information about the patient or
-  /// specimen that may influence the services or their interpretations.    
+  /// specimen that may influence the services or their interpretations.
   /// This information includes diagnosis, clinical findings and other
   /// observations.  In laboratory ordering these are typically referred to as
   /// "ask at order entry questions (AOEs)".  This includes observations
   /// explicitly requested by the producer (filler) to provide context or
-  /// supporting information needed to complete the order. For example, 
+  /// supporting information needed to complete the order. For example,
   ///  reporting the amount of inspired oxygen for blood gas measurements.
   ///
   /// [specimen]: One or more specimens that the laboratory procedure will use.
@@ -2615,6 +2635,7 @@ abstract class ServiceRequest with Resource implements _$ServiceRequest {
           ? ServiceRequest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ServiceRequest.fromJson(Map<String, dynamic> json) =>
       _$ServiceRequestFromJson(json);
 }
@@ -2662,7 +2683,7 @@ abstract class VisionPrescription
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -2744,6 +2765,7 @@ abstract class VisionPrescription
           ? VisionPrescription.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VisionPrescription.fromJson(Map<String, dynamic> json) =>
       _$VisionPrescriptionFromJson(json);
 }
@@ -2940,6 +2962,7 @@ abstract class VisionPrescriptionPrism implements _$VisionPrescriptionPrism {
           ? VisionPrescriptionPrism.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VisionPrescriptionPrism.fromJson(Map<String, dynamic> json) =>
       _$VisionPrescriptionPrismFromJson(json);
 }

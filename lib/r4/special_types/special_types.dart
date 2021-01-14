@@ -32,6 +32,7 @@ abstract class Narrative implements _$Narrative {
           ? Narrative.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Narrative.fromJson(Map<String, dynamic> json) =>
       _$NarrativeFromJson(json);
 }
@@ -110,6 +111,7 @@ abstract class Reference implements _$Reference {
           ? Reference.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Reference.fromJson(Map<String, dynamic> json) =>
       _$ReferenceFromJson(json);
 }
@@ -186,6 +188,7 @@ abstract class Meta with _$Meta {
           ? Meta.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
 }
 
@@ -299,6 +302,7 @@ abstract class Dosage implements _$Dosage {
           ? Dosage.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Dosage.fromJson(Map<String, dynamic> json) => _$DosageFromJson(json);
 }
 
@@ -367,6 +371,7 @@ abstract class DosageDoseAndRate implements _$DosageDoseAndRate {
           ? DosageDoseAndRate.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DosageDoseAndRate.fromJson(Map<String, dynamic> json) =>
       _$DosageDoseAndRateFromJson(json);
 }
@@ -375,7 +380,7 @@ abstract class DosageDoseAndRate implements _$DosageDoseAndRate {
 abstract class ElementDefinition implements _$ElementDefinition {
   ElementDefinition._();
 
-    /// [ElementDefinition]: Captures constraints on each element within the
+  /// [ElementDefinition]: Captures constraints on each element within the
   ///  resource, profile, or extension.
   ///
   /// [id]: Unique id for the element within a resource (for internal
@@ -758,7 +763,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   ///
   /// [_orderMeaning]: Extensions for orderMeaning
   ///
-  /// [fixedBase64Binary]: Specifies a value that SHALL be exactly the value 
+  /// [fixedBase64Binary]: Specifies a value that SHALL be exactly the value
   /// for this element in the instance. For purposes of comparison,
   /// non-significant whitespace is ignored, and all values must be an exact
   /// match (case and accent sensitive). Missing elements/attributes must also
@@ -912,7 +917,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [fixedCodeableConcept]: Specifies a value that SHALL be exactly the value 
+  /// [fixedCodeableConcept]: Specifies a value that SHALL be exactly the value
   /// for this element in the instance. For purposes of comparison,
   /// non-significant whitespace is ignored, and all values must be an exact
   /// match (case and accent sensitive). Missing elements/attributes must also
@@ -923,7 +928,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [fixedContactPoint]: Specifies a value that SHALL be exactly the value 
+  /// [fixedContactPoint]: Specifies a value that SHALL be exactly the value
   /// for this element in the instance. For purposes of comparison,
   /// non-significant whitespace is ignored, and all values must be an exact
   /// match (case and accent sensitive). Missing elements/attributes must also
@@ -999,7 +1004,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [fixedContactDetail]: Specifies a value that SHALL be exactly the value 
+  /// [fixedContactDetail]: Specifies a value that SHALL be exactly the value
   /// for this element in the instance. For purposes of comparison,
   /// non-significant whitespace is ignored, and all values must be an exact
   /// match (case and accent sensitive). Missing elements/attributes must also
@@ -1010,7 +1015,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// whitespace is ignored, and all values must be an exact match (case and
   ///  accent sensitive). Missing elements/attributes must also be missing.
   ///
-  /// [fixedDataRequirement]: Specifies a value that SHALL be exactly the value 
+  /// [fixedDataRequirement]: Specifies a value that SHALL be exactly the value
   /// for this element in the instance. For purposes of comparison,
   /// non-significant whitespace is ignored, and all values must be an exact
   /// match (case and accent sensitive). Missing elements/attributes must also
@@ -1027,7 +1032,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// match (case and accent sensitive). Missing elements/attributes must also
   ///  be missing.
   ///
-  /// [fixedRelatedArtifact]: Specifies a value that SHALL be exactly the value 
+  /// [fixedRelatedArtifact]: Specifies a value that SHALL be exactly the value
   /// for this element in the instance. For purposes of comparison,
   /// non-significant whitespace is ignored, and all values must be an exact
   /// match (case and accent sensitive). Missing elements/attributes must also
@@ -1039,7 +1044,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// match (case and accent sensitive). Missing elements/attributes must also
   ///  be missing.
   ///
-  /// [fixedUsageContext]: Specifies a value that SHALL be exactly the value 
+  /// [fixedUsageContext]: Specifies a value that SHALL be exactly the value
   /// for this element in the instance. For purposes of comparison,
   /// non-significant whitespace is ignored, and all values must be an exact
   /// match (case and accent sensitive). Missing elements/attributes must also
@@ -1058,7 +1063,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternBase64Binary]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
-  ///  constraint by example.  
+  ///  constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1076,7 +1081,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternBoolean]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1094,7 +1099,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternCanonical]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1112,7 +1117,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternCode]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1130,7 +1135,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternDate]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1148,7 +1153,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternDateTime]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1166,7 +1171,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternDecimal]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1184,7 +1189,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternId]: Specifies a value that the value in the instance SHALL follow
   /// - that is, any value in the pattern must be found in the instance. Other
   /// additional values may be found too. This is effectively constraint by
-  ///  example.  
+  ///  example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1202,7 +1207,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternInstant]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1220,7 +1225,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternInteger]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1238,7 +1243,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternMarkdown]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1256,7 +1261,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternOid]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1274,7 +1279,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternPositiveInt]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
-  ///  constraint by example.  
+  ///  constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1292,7 +1297,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternString]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1310,7 +1315,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternTime]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1328,7 +1333,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternUnsignedInt]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
-  ///  constraint by example.  
+  ///  constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1346,7 +1351,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternUri]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1364,7 +1369,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternUrl]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1382,7 +1387,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternUuid]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1400,7 +1405,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternAddress]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1416,7 +1421,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternAge]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1432,7 +1437,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternAnnotation]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
-  ///  constraint by example.  
+  ///  constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1448,7 +1453,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternAttachment]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
-  ///  constraint by example.  
+  ///  constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1464,7 +1469,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternCodeableConcept]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
-  ///  constraint by example.  
+  ///  constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1480,7 +1485,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternCoding]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1496,7 +1501,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternContactPoint]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
-  ///  constraint by example.  
+  ///  constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1512,7 +1517,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternCount]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1528,7 +1533,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternDistance]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1544,7 +1549,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternDuration]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1560,7 +1565,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternHumanName]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1576,7 +1581,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternIdentifier]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
-  ///  constraint by example.  
+  ///  constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1592,7 +1597,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternMoney]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1608,7 +1613,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternPeriod]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1624,7 +1629,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternQuantity]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1640,7 +1645,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternRange]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1656,7 +1661,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternRatio]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1672,7 +1677,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternReference]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1688,7 +1693,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternSampledData]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
-  ///  constraint by example.  
+  ///  constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1704,7 +1709,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternSignature]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1720,7 +1725,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternTiming]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1736,7 +1741,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternContactDetail]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
-  ///  constraint by example.  
+  ///  constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1752,7 +1757,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternContributor]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
-  ///  constraint by example.  
+  ///  constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1768,7 +1773,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternDataRequirement]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
-  ///  constraint by example.  
+  ///  constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1784,7 +1789,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternExpression]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
-  ///  constraint by example.  
+  ///  constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1800,7 +1805,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternParameterDefinition]: Specifies a value that the value in the
   /// instance SHALL follow - that is, any value in the pattern must be found in
   /// the instance. Other additional values may be found too. This is
-  ///  effectively constraint by example.  
+  ///  effectively constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1816,7 +1821,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternRelatedArtifact]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
-  ///  constraint by example.  
+  ///  constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1832,7 +1837,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternTriggerDefinition]: Specifies a value that the value in the
   /// instance SHALL follow - that is, any value in the pattern must be found in
   /// the instance. Other additional values may be found too. This is
-  ///  effectively constraint by example.  
+  ///  effectively constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1848,7 +1853,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternUsageContext]: Specifies a value that the value in the instance
   /// SHALL follow - that is, any value in the pattern must be found in the
   /// instance. Other additional values may be found too. This is effectively
-  ///  constraint by example.  
+  ///  constraint by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1864,7 +1869,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternDosage]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -1880,7 +1885,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [patternMeta]: Specifies a value that the value in the instance SHALL
   /// follow - that is, any value in the pattern must be found in the instance.
   /// Other additional values may be found too. This is effectively constraint
-  ///  by example.  
+  ///  by example.
   /// When pattern[x] is used to constrain a primitive, it means that the value
   ///  provided in the pattern[x] must match the instance value exactly.
   /// When pattern[x] is used to constrain an array, it means that each element
@@ -2359,6 +2364,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
           ? ElementDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionFromJson(json);
 }
@@ -2443,6 +2449,7 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
           ? ElementDefinitionSlicing.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionSlicingFromJson(json);
 }
@@ -2513,6 +2520,7 @@ abstract class ElementDefinitionDiscriminator
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionDiscriminatorFromJson(json);
 }
@@ -2584,6 +2592,7 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
           ? ElementDefinitionBase.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionBaseFromJson(json);
 }
@@ -2681,6 +2690,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
           ? ElementDefinitionType.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionTypeFromJson(json);
 }
@@ -2995,6 +3005,7 @@ abstract class ElementDefinitionExample implements _$ElementDefinitionExample {
           ? ElementDefinitionExample.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionExample.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionExampleFromJson(json);
 }
@@ -3095,6 +3106,7 @@ abstract class ElementDefinitionConstraint
           ? ElementDefinitionConstraint.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionConstraintFromJson(json);
 }
@@ -3165,6 +3177,7 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
           ? ElementDefinitionBinding.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionBindingFromJson(json);
 }
@@ -3242,6 +3255,7 @@ abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
           ? ElementDefinitionMapping.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionMappingFromJson(json);
 }

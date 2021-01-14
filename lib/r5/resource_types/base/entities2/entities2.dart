@@ -57,6 +57,7 @@ abstract class BiologicallyDerivedProduct
           ? BiologicallyDerivedProduct.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json) =>
       _$BiologicallyDerivedProductFromJson(json);
 }
@@ -265,6 +266,7 @@ abstract class Device with Resource implements _$Device {
           ? Device.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
 }
 
@@ -300,6 +302,7 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
           ? DeviceUdiCarrier.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceUdiCarrier.fromJson(Map<String, dynamic> json) =>
       _$DeviceUdiCarrierFromJson(json);
 }
@@ -328,6 +331,7 @@ abstract class DeviceDeviceName implements _$DeviceDeviceName {
           ? DeviceDeviceName.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceDeviceName.fromJson(Map<String, dynamic> json) =>
       _$DeviceDeviceNameFromJson(json);
 }
@@ -354,6 +358,7 @@ abstract class DeviceSpecialization implements _$DeviceSpecialization {
           ? DeviceSpecialization.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceSpecialization.fromJson(Map<String, dynamic> json) =>
       _$DeviceSpecializationFromJson(json);
 }
@@ -381,6 +386,7 @@ abstract class DeviceVersion implements _$DeviceVersion {
           ? DeviceVersion.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceVersion.fromJson(Map<String, dynamic> json) =>
       _$DeviceVersionFromJson(json);
 }
@@ -407,6 +413,7 @@ abstract class DeviceProperty implements _$DeviceProperty {
           ? DeviceProperty.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceProperty.fromJson(Map<String, dynamic> json) =>
       _$DevicePropertyFromJson(json);
 }
@@ -432,6 +439,7 @@ abstract class DeviceOperationalStatus implements _$DeviceOperationalStatus {
           ? DeviceOperationalStatus.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceOperationalStatus.fromJson(Map<String, dynamic> json) =>
       _$DeviceOperationalStatusFromJson(json);
 }
@@ -457,6 +465,7 @@ abstract class DeviceAssociationStatus implements _$DeviceAssociationStatus {
           ? DeviceAssociationStatus.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceAssociationStatus.fromJson(Map<String, dynamic> json) =>
       _$DeviceAssociationStatusFromJson(json);
 }
@@ -504,6 +513,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
           ? DeviceMetric.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricFromJson(json);
 }
@@ -535,6 +545,7 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
           ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricCalibrationFromJson(json);
 }
@@ -578,6 +589,7 @@ abstract class NutritionProduct with Resource implements _$NutritionProduct {
           ? NutritionProduct.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionProduct.fromJson(Map<String, dynamic> json) =>
       _$NutritionProductFromJson(json);
 }
@@ -605,6 +617,7 @@ abstract class NutritionProductNutrient implements _$NutritionProductNutrient {
           ? NutritionProductNutrient.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionProductNutrient.fromJson(Map<String, dynamic> json) =>
       _$NutritionProductNutrientFromJson(json);
 }
@@ -633,6 +646,7 @@ abstract class NutritionProductIngredient
           ? NutritionProductIngredient.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionProductIngredient.fromJson(Map<String, dynamic> json) =>
       _$NutritionProductIngredientFromJson(json);
 }
@@ -703,6 +717,7 @@ abstract class NutritionProductInstance implements _$NutritionProductInstance {
           ? NutritionProductInstance.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionProductInstance.fromJson(Map<String, dynamic> json) =>
       _$NutritionProductInstanceFromJson(json);
 }
@@ -743,6 +758,7 @@ abstract class Substance with Resource implements _$Substance {
           ? Substance.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Substance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceFromJson(json);
 }
@@ -770,6 +786,7 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
           ? SubstanceInstance.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceInstanceFromJson(json);
 }
@@ -796,6 +813,7 @@ abstract class SubstanceIngredient implements _$SubstanceIngredient {
           ? SubstanceIngredient.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
       _$SubstanceIngredientFromJson(json);
 }

@@ -54,6 +54,7 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
           ? ProcessRequest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestFromJson(json);
 }
@@ -78,6 +79,7 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
           ? ProcessRequestItem.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestItemFromJson(json);
 }
@@ -120,6 +122,7 @@ abstract class ProcessResponse with Resource implements _$ProcessResponse {
           ? ProcessResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseFromJson(json);
 }
@@ -145,6 +148,7 @@ abstract class ProcessResponseNotes with _$ProcessResponseNotes {
           ? ProcessResponseNotes.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcessResponseNotes.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseNotesFromJson(json);
 }
@@ -189,6 +193,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
           ? SupplyRequest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestFromJson(json);
 }
@@ -214,6 +219,7 @@ abstract class SupplyRequestWhen with _$SupplyRequestWhen {
           ? SupplyRequestWhen.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SupplyRequestWhen.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestWhenFromJson(json);
 }
@@ -258,6 +264,7 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
           ? SupplyDelivery.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliveryFromJson(json);
 }

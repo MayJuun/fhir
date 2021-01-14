@@ -19,7 +19,7 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
   /// then executes a series of steps intended to increase the field of
   /// healthcare-related knowledge.  This includes studies of safety, efficacy,
   /// comparative effectiveness and other information about medications,
-  /// devices, therapies and other interventional and investigative techniques. 
+  /// devices, therapies and other interventional and investigative techniques.
   /// A ResearchStudy involves the gathering of information about human or
   ///  animal subjects.
   ///
@@ -57,7 +57,7 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -208,6 +208,7 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
           ? ResearchStudy.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyFromJson(json);
 }
@@ -220,7 +221,7 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
   /// and then executes a series of steps intended to increase the field of
   /// healthcare-related knowledge.  This includes studies of safety, efficacy,
   /// comparative effectiveness and other information about medications,
-  /// devices, therapies and other interventional and investigative techniques. 
+  /// devices, therapies and other interventional and investigative techniques.
   /// A ResearchStudy involves the gathering of information about human or
   ///  animal subjects.
   ///
@@ -280,6 +281,7 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
           ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyArmFromJson(json);
 }
@@ -344,6 +346,7 @@ abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
           ? ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyObjectiveFromJson(json);
 }
@@ -389,7 +392,7 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -470,6 +473,7 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
           ? ResearchSubject.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
       _$ResearchSubjectFromJson(json);
 }

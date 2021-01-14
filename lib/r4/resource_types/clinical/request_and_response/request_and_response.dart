@@ -205,6 +205,7 @@ abstract class Communication with Resource implements _$Communication {
           ? Communication.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Communication.fromJson(Map<String, dynamic> json) =>
       _$CommunicationFromJson(json);
 }
@@ -271,6 +272,7 @@ abstract class CommunicationPayload implements _$CommunicationPayload {
           ? CommunicationPayload.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationPayloadFromJson(json);
 }
@@ -469,6 +471,7 @@ abstract class CommunicationRequest
           ? CommunicationRequest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestFromJson(json);
 }
@@ -538,6 +541,7 @@ abstract class CommunicationRequestPayload
           ? CommunicationRequestPayload.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestPayloadFromJson(json);
 }
@@ -753,6 +757,7 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
           ? DeviceRequest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceRequest.fromJson(Map<String, dynamic> json) =>
       _$DeviceRequestFromJson(json);
 }
@@ -822,6 +827,7 @@ abstract class DeviceRequestParameter implements _$DeviceRequestParameter {
           ? DeviceRequestParameter.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceRequestParameter.fromJson(Map<String, dynamic> json) =>
       _$DeviceRequestParameterFromJson(json);
 }
@@ -977,6 +983,7 @@ abstract class DeviceUseStatement
           ? DeviceUseStatement.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseStatementFromJson(json);
 }
@@ -1024,7 +1031,7 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1164,6 +1171,7 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
           ? GuidanceResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$GuidanceResponseFromJson(json);
 }
@@ -1208,7 +1216,7 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1304,6 +1312,7 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
           ? SupplyDelivery.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliveryFromJson(json);
 }
@@ -1369,6 +1378,7 @@ abstract class SupplyDeliverySuppliedItem
           ? SupplyDeliverySuppliedItem.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliverySuppliedItemFromJson(json);
 }
@@ -1414,7 +1424,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1532,6 +1542,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
           ? SupplyRequest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestFromJson(json);
 }
@@ -1600,6 +1611,7 @@ abstract class SupplyRequestParameter implements _$SupplyRequestParameter {
           ? SupplyRequestParameter.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SupplyRequestParameter.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestParameterFromJson(json);
 }

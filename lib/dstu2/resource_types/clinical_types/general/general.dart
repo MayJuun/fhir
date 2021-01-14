@@ -64,6 +64,7 @@ abstract class AllergyIntolerance
           ? AllergyIntolerance.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceFromJson(json);
 }
@@ -103,6 +104,7 @@ abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
           ? AllergyIntoleranceReaction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceReactionFromJson(json);
 }
@@ -168,6 +170,7 @@ abstract class Condition with Resource implements _$Condition {
           ? Condition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Condition.fromJson(Map<String, dynamic> json) =>
       _$ConditionFromJson(json);
 }
@@ -194,6 +197,7 @@ abstract class ConditionStage with _$ConditionStage {
           ? ConditionStage.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConditionStage.fromJson(Map<String, dynamic> json) =>
       _$ConditionStageFromJson(json);
 }
@@ -220,6 +224,7 @@ abstract class ConditionEvidence with _$ConditionEvidence {
           ? ConditionEvidence.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConditionEvidence.fromJson(Map<String, dynamic> json) =>
       _$ConditionEvidenceFromJson(json);
 }
@@ -278,6 +283,7 @@ abstract class Procedure with Resource implements _$Procedure {
           ? Procedure.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Procedure.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFromJson(json);
 }
@@ -304,6 +310,7 @@ abstract class ProcedurePerformer with _$ProcedurePerformer {
           ? ProcedurePerformer.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
       _$ProcedurePerformerFromJson(json);
 }
@@ -329,6 +336,7 @@ abstract class ProcedureFocalDevice with _$ProcedureFocalDevice {
           ? ProcedureFocalDevice.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFocalDeviceFromJson(json);
 }
@@ -387,6 +395,7 @@ abstract class ClinicalImpression
           ? ClinicalImpression.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalImpression.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionFromJson(json);
 }
@@ -443,6 +452,7 @@ abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
           ? ClinicalImpressionFinding.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionFindingFromJson(json);
 }
@@ -469,6 +479,7 @@ abstract class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut {
           ? ClinicalImpressionRuledOut.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalImpressionRuledOut.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionRuledOutFromJson(json);
 }
@@ -535,6 +546,7 @@ abstract class FamilyMemberHistory
           ? FamilyMemberHistory.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryFromJson(json);
 }
@@ -568,6 +580,7 @@ abstract class FamilyMemberHistoryCondition
           ? FamilyMemberHistoryCondition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryConditionFromJson(json);
 }
@@ -610,6 +623,7 @@ abstract class RiskAssessment with Resource implements _$RiskAssessment {
           ? RiskAssessment.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskAssessment.fromJson(Map<String, dynamic> json) =>
       _$RiskAssessmentFromJson(json);
 }
@@ -645,6 +659,7 @@ abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
           ? RiskAssessmentPrediction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskAssessmentPrediction.fromJson(Map<String, dynamic> json) =>
       _$RiskAssessmentPredictionFromJson(json);
 }
@@ -690,6 +705,7 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
           ? DetectedIssue.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DetectedIssue.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueFromJson(json);
 }
@@ -716,6 +732,7 @@ abstract class DetectedIssueMitigation with _$DetectedIssueMitigation {
           ? DetectedIssueMitigation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueMitigationFromJson(json);
 }

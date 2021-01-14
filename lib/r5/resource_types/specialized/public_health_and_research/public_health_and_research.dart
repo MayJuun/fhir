@@ -66,6 +66,7 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
           ? ResearchStudy.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyFromJson(json);
 }
@@ -94,6 +95,7 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
           ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyArmFromJson(json);
 }
@@ -120,6 +122,7 @@ abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
           ? ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyObjectiveFromJson(json);
 }
@@ -164,6 +167,7 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
           ? ResearchSubject.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
       _$ResearchSubjectFromJson(json);
 }
@@ -193,6 +197,7 @@ abstract class ResearchSubjectProgress implements _$ResearchSubjectProgress {
           ? ResearchSubjectProgress.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchSubjectProgress.fromJson(Map<String, dynamic> json) =>
       _$ResearchSubjectProgressFromJson(json);
 }

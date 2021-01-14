@@ -100,6 +100,7 @@ abstract class FhirExtension with _$FhirExtension {
           ? FhirExtension.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$FhirExtensionFromJson(json);
 }

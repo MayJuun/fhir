@@ -40,6 +40,7 @@ abstract class Element with _$Element {
           ? Element.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Element.fromJson(Map<String, dynamic> json) =>
       _$ElementFromJson(json);
 }

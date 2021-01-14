@@ -37,6 +37,7 @@ abstract class Meta implements _$Meta {
           ? Meta.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
 }
 
@@ -63,6 +64,7 @@ abstract class Reference implements _$Reference {
           ? Reference.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Reference.fromJson(Map<String, dynamic> json) =>
       _$ReferenceFromJson(json);
 }
@@ -420,6 +422,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
           ? ElementDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionFromJson(json);
 }
@@ -448,6 +451,7 @@ abstract class Narrative implements _$Narrative {
           ? Narrative.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Narrative.fromJson(Map<String, dynamic> json) =>
       _$NarrativeFromJson(json);
 }
@@ -480,6 +484,7 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
           ? ElementDefinitionSlicing.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionSlicingFromJson(json);
 }
@@ -508,6 +513,7 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
           ? ElementDefinitionBase.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionBaseFromJson(json);
 }
@@ -536,6 +542,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
           ? ElementDefinitionType.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionTypeFromJson(json);
 }
@@ -557,6 +564,7 @@ abstract class TypeCodeExtension implements _$TypeCodeExtension {
           ? TypeCodeExtension.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TypeCodeExtension.fromJson(Map<String, dynamic> json) =>
       _$TypeCodeExtensionFromJson(json);
 }
@@ -593,6 +601,7 @@ abstract class ElementDefinitionConstraint
           ? ElementDefinitionConstraint.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionConstraintFromJson(json);
 }
@@ -626,6 +635,7 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
           ? ElementDefinitionBinding.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionBindingFromJson(json);
 }
@@ -656,6 +666,7 @@ abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
           ? ElementDefinitionMapping.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionMappingFromJson(json);
 }

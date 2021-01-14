@@ -71,6 +71,7 @@ abstract class Population implements _$Population {
           ? Population.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Population.fromJson(Map<String, dynamic> json) =>
       _$PopulationFromJson(json);
 }
@@ -143,6 +144,7 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
           ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProductShelfLife.fromJson(Map<String, dynamic> json) =>
       _$ProductShelfLifeFromJson(json);
 }
@@ -261,6 +263,7 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
           ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$ProdCharacteristicFromJson(json);
 }
@@ -350,6 +353,7 @@ abstract class MarketingStatus implements _$MarketingStatus {
           ? MarketingStatus.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MarketingStatus.fromJson(Map<String, dynamic> json) =>
       _$MarketingStatusFromJson(json);
 }
@@ -444,6 +448,7 @@ abstract class SubstanceAmount implements _$SubstanceAmount {
           ? SubstanceAmount.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceAmount.fromJson(Map<String, dynamic> json) =>
       _$SubstanceAmountFromJson(json);
 }
@@ -507,6 +512,7 @@ abstract class SubstanceAmountReferenceRange
           ? SubstanceAmountReferenceRange.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceAmountReferenceRange.fromJson(Map<String, dynamic> json) =>
       _$SubstanceAmountReferenceRangeFromJson(json);
 }

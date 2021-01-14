@@ -282,6 +282,7 @@ abstract class EffectEvidenceSynthesis
           ? EffectEvidenceSynthesis.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EffectEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$EffectEvidenceSynthesisFromJson(json);
 }
@@ -781,7 +782,7 @@ abstract class Evidence with Resource implements _$Evidence {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -999,6 +1000,7 @@ abstract class Evidence with Resource implements _$Evidence {
           ? Evidence.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Evidence.fromJson(Map<String, dynamic> json) =>
       _$EvidenceFromJson(json);
 }
@@ -1044,7 +1046,7 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1266,6 +1268,7 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
           ? EvidenceVariable.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariable.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableFromJson(json);
 }
@@ -1410,6 +1413,7 @@ abstract class EvidenceVariableCharacteristic
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableCharacteristicFromJson(json);
 }
@@ -1459,7 +1463,7 @@ abstract class ResearchDefinition
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1723,6 +1727,7 @@ abstract class ResearchDefinition
           ? ResearchDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchDefinition.fromJson(Map<String, dynamic> json) =>
       _$ResearchDefinitionFromJson(json);
 }
@@ -1771,7 +1776,7 @@ abstract class ResearchElementDefinition
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -2047,6 +2052,7 @@ abstract class ResearchElementDefinition
           ? ResearchElementDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$ResearchElementDefinitionFromJson(json);
 }
@@ -2283,7 +2289,7 @@ abstract class RiskEvidenceSynthesis
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -2501,6 +2507,7 @@ abstract class RiskEvidenceSynthesis
           ? RiskEvidenceSynthesis.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$RiskEvidenceSynthesisFromJson(json);
 }
@@ -2576,6 +2583,7 @@ abstract class RiskEvidenceSynthesisSampleSize
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskEvidenceSynthesisSampleSize.fromJson(Map<String, dynamic> json) =>
       _$RiskEvidenceSynthesisSampleSizeFromJson(json);
 }
@@ -2814,6 +2822,7 @@ abstract class RiskEvidenceSynthesisCertainty
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskEvidenceSynthesisCertainty.fromJson(Map<String, dynamic> json) =>
       _$RiskEvidenceSynthesisCertaintyFromJson(json);
 }

@@ -34,6 +34,7 @@ abstract class Period implements _$Period {
           ? Period.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Period.fromJson(Map<String, dynamic> json) => _$PeriodFromJson(json);
 }
 
@@ -66,6 +67,7 @@ abstract class Coding implements _$Coding {
           ? Coding.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Coding.fromJson(Map<String, dynamic> json) => _$CodingFromJson(json);
 }
 
@@ -89,6 +91,7 @@ abstract class Range implements _$Range {
           ? Range.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Range.fromJson(Map<String, dynamic> json) => _$RangeFromJson(json);
 }
 
@@ -122,6 +125,7 @@ abstract class Quantity implements _$Quantity {
           ? Quantity.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Quantity.fromJson(Map<String, dynamic> json) =>
       _$QuantityFromJson(json);
 }
@@ -161,6 +165,7 @@ abstract class Attachment implements _$Attachment {
           ? Attachment.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Attachment.fromJson(Map<String, dynamic> json) =>
       _$AttachmentFromJson(json);
 }
@@ -185,6 +190,7 @@ abstract class Ratio implements _$Ratio {
           ? Ratio.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Ratio.fromJson(Map<String, dynamic> json) => _$RatioFromJson(json);
 }
 
@@ -214,6 +220,7 @@ abstract class Annotation implements _$Annotation {
           ? Annotation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Annotation.fromJson(Map<String, dynamic> json) =>
       _$AnnotationFromJson(json);
 }
@@ -249,6 +256,7 @@ abstract class SampledData implements _$SampledData {
           ? SampledData.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SampledData.fromJson(Map<String, dynamic> json) =>
       _$SampledDataFromJson(json);
 }
@@ -275,6 +283,7 @@ abstract class CodeableConcept implements _$CodeableConcept {
           ? CodeableConcept.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CodeableConcept.fromJson(Map<String, dynamic> json) =>
       _$CodeableConceptFromJson(json);
 }
@@ -307,6 +316,7 @@ abstract class Identifier implements _$Identifier {
           ? Identifier.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Identifier.fromJson(Map<String, dynamic> json) =>
       _$IdentifierFromJson(json);
 }
@@ -340,6 +350,7 @@ abstract class Signature implements _$Signature {
           ? Signature.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Signature.fromJson(Map<String, dynamic> json) =>
       _$SignatureFromJson(json);
 }
@@ -367,6 +378,7 @@ abstract class Timing implements _$Timing {
           ? Timing.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Timing.fromJson(Map<String, dynamic> json) => _$TimingFromJson(json);
 }
 
@@ -408,6 +420,7 @@ abstract class Address implements _$Address {
           ? Address.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Address.fromJson(Map<String, dynamic> json) =>
       _$AddressFromJson(json);
 }
@@ -444,6 +457,7 @@ abstract class HumanName implements _$HumanName {
           ? HumanName.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory HumanName.fromJson(Map<String, dynamic> json) =>
       _$HumanNameFromJson(json);
 }
@@ -477,6 +491,7 @@ abstract class ContactPoint implements _$ContactPoint {
           ? ContactPoint.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContactPoint.fromJson(Map<String, dynamic> json) =>
       _$ContactPointFromJson(json);
 }
@@ -523,6 +538,7 @@ abstract class TimingRepeat implements _$TimingRepeat {
           ? TimingRepeat.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TimingRepeat.fromJson(Map<String, dynamic> json) =>
       _$TimingRepeatFromJson(json);
 }

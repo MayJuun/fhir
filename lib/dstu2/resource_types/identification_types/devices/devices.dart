@@ -60,6 +60,7 @@ abstract class Device with Resource implements _$Device {
           ? Device.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
 }
 
@@ -100,6 +101,7 @@ abstract class DeviceComponent with Resource implements _$DeviceComponent {
           ? DeviceComponent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceComponent.fromJson(Map<String, dynamic> json) =>
       _$DeviceComponentFromJson(json);
 }
@@ -179,6 +181,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
           ? DeviceMetric.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricFromJson(json);
 }
@@ -208,6 +211,7 @@ abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
           ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricCalibrationFromJson(json);
 }

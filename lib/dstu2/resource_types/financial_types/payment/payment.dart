@@ -49,6 +49,7 @@ abstract class PaymentNotice with Resource implements _$PaymentNotice {
           ? PaymentNotice.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$PaymentNoticeFromJson(json);
 }
@@ -101,6 +102,7 @@ abstract class PaymentReconciliation
           ? PaymentReconciliation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationFromJson(json);
 }
@@ -133,6 +135,7 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
           ? PaymentReconciliationDetail.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationDetailFromJson(json);
 }
@@ -161,6 +164,7 @@ abstract class PaymentReconciliationNote with _$PaymentReconciliationNote {
           ? PaymentReconciliationNote.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationNoteFromJson(json);
 }

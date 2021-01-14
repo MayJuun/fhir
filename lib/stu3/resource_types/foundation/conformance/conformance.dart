@@ -86,6 +86,7 @@ abstract class CapabilityStatement
           ? CapabilityStatement.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementFromJson(json);
 }
@@ -114,6 +115,7 @@ abstract class CapabilityStatementSoftware
           ? CapabilityStatementSoftware.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSoftwareFromJson(json);
 }
@@ -174,6 +176,7 @@ abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
           ? CapabilityStatementRest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementRest.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementRestFromJson(json);
 }
@@ -203,6 +206,7 @@ abstract class CapabilityStatementSecurity
           ? CapabilityStatementSecurity.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSecurityFromJson(json);
 }
@@ -231,6 +235,7 @@ abstract class CapabilityStatementCertificate
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementCertificate.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementCertificateFromJson(json);
 }
@@ -280,6 +285,7 @@ abstract class CapabilityStatementResource
           ? CapabilityStatementResource.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementResource.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementResourceFromJson(json);
 }
@@ -308,6 +314,7 @@ abstract class CapabilityStatementInteraction
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteractionFromJson(json);
 }
@@ -340,6 +347,7 @@ abstract class CapabilityStatementSearchParam
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSearchParamFromJson(json);
 }
@@ -368,6 +376,7 @@ abstract class CapabilityStatementInteraction1
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteraction1FromJson(json);
 }
@@ -393,6 +402,7 @@ abstract class CapabilityStatementOperation
           ? CapabilityStatementOperation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementOperationFromJson(json);
 }
@@ -422,6 +432,7 @@ abstract class CapabilityStatementMessaging
           ? CapabilityStatementMessaging.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementMessagingFromJson(json);
 }
@@ -447,6 +458,7 @@ abstract class CapabilityStatementEndpoint
           ? CapabilityStatementEndpoint.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementEndpointFromJson(json);
 }
@@ -507,6 +519,7 @@ abstract class CapabilityStatementEvent implements _$CapabilityStatementEvent {
           ? CapabilityStatementEvent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementEvent.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementEventFromJson(json);
 }
@@ -534,6 +547,7 @@ abstract class CapabilityStatementDocument
           ? CapabilityStatementDocument.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementDocumentFromJson(json);
 }
@@ -593,6 +607,7 @@ abstract class CompartmentDefinition
           ? CompartmentDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompartmentDefinition.fromJson(Map<String, dynamic> json) =>
       _$CompartmentDefinitionFromJson(json);
 }
@@ -621,6 +636,7 @@ abstract class CompartmentDefinitionResource
           ? CompartmentDefinitionResource.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompartmentDefinitionResource.fromJson(Map<String, dynamic> json) =>
       _$CompartmentDefinitionResourceFromJson(json);
 }
@@ -678,6 +694,7 @@ abstract class DataElement with Resource implements _$DataElement {
           ? DataElement.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DataElement.fromJson(Map<String, dynamic> json) =>
       _$DataElementFromJson(json);
 }
@@ -706,6 +723,7 @@ abstract class DataElementMapping implements _$DataElementMapping {
           ? DataElementMapping.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DataElementMapping.fromJson(Map<String, dynamic> json) =>
       _$DataElementMappingFromJson(json);
 }
@@ -763,6 +781,7 @@ abstract class GraphDefinition with Resource implements _$GraphDefinition {
           ? GraphDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GraphDefinition.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionFromJson(json);
 }
@@ -794,6 +813,7 @@ abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
           ? GraphDefinitionLink.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GraphDefinitionLink.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionLinkFromJson(json);
 }
@@ -820,6 +840,7 @@ abstract class GraphDefinitionTarget implements _$GraphDefinitionTarget {
           ? GraphDefinitionTarget.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GraphDefinitionTarget.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionTargetFromJson(json);
 }
@@ -850,6 +871,7 @@ abstract class GraphDefinitionCompartment
           ? GraphDefinitionCompartment.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =>
       _$GraphDefinitionCompartmentFromJson(json);
 }
@@ -912,6 +934,7 @@ abstract class ImplementationGuide
           ? ImplementationGuide.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideFromJson(json);
 }
@@ -938,6 +961,7 @@ abstract class ImplementationGuideDependency
           ? ImplementationGuideDependency.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideDependencyFromJson(json);
 }
@@ -965,6 +989,7 @@ abstract class ImplementationGuidePackage
           ? ImplementationGuidePackage.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePackageFromJson(json);
 }
@@ -999,6 +1024,7 @@ abstract class ImplementationGuideResource
           ? ImplementationGuideResource.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideResourceFromJson(json);
 }
@@ -1024,6 +1050,7 @@ abstract class ImplementationGuideGlobal
           ? ImplementationGuideGlobal.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideGlobalFromJson(json);
 }
@@ -1057,6 +1084,7 @@ abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
           ? ImplementationGuidePage.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuidePageFromJson(json);
 }
@@ -1124,6 +1152,7 @@ abstract class MessageDefinition with Resource implements _$MessageDefinition {
           ? MessageDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageDefinition.fromJson(Map<String, dynamic> json) =>
       _$MessageDefinitionFromJson(json);
 }
@@ -1151,6 +1180,7 @@ abstract class MessageDefinitionFocus implements _$MessageDefinitionFocus {
           ? MessageDefinitionFocus.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageDefinitionFocus.fromJson(Map<String, dynamic> json) =>
       _$MessageDefinitionFocusFromJson(json);
 }
@@ -1252,6 +1282,7 @@ abstract class OperationDefinition
           ? OperationDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionFromJson(json);
 }
@@ -1291,6 +1322,7 @@ abstract class OperationDefinitionParameter
           ? OperationDefinitionParameter.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionParameterFromJson(json);
 }
@@ -1319,6 +1351,7 @@ abstract class OperationDefinitionBinding
           ? OperationDefinitionBinding.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionBindingFromJson(json);
 }
@@ -1345,6 +1378,7 @@ abstract class OperationDefinitionOverload
           ? OperationDefinitionOverload.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionOverloadFromJson(json);
 }
@@ -1420,6 +1454,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
           ? SearchParameter.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterFromJson(json);
 }
@@ -1444,6 +1479,7 @@ abstract class SearchParameterComponent implements _$SearchParameterComponent {
           ? SearchParameterComponent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SearchParameterComponent.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterComponentFromJson(json);
 }
@@ -1525,6 +1561,7 @@ abstract class StructureDefinition
           ? StructureDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionFromJson(json);
 }
@@ -1555,6 +1592,7 @@ abstract class StructureDefinitionMapping
           ? StructureDefinitionMapping.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionMappingFromJson(json);
 }
@@ -1578,6 +1616,7 @@ abstract class StructureDefinitionSnapshot
           ? StructureDefinitionSnapshot.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionSnapshotFromJson(json);
 }
@@ -1603,6 +1642,7 @@ abstract class StructureDefinitionDifferential
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionDifferentialFromJson(json);
 }
@@ -1664,6 +1704,7 @@ abstract class StructureMap with Resource implements _$StructureMap {
           ? StructureMap.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureMap.fromJson(Map<String, dynamic> json) =>
       _$StructureMapFromJson(json);
 }
@@ -1692,6 +1733,7 @@ abstract class StructureMapStructure implements _$StructureMapStructure {
           ? StructureMapStructure.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureMapStructure.fromJson(Map<String, dynamic> json) =>
       _$StructureMapStructureFromJson(json);
 }
@@ -1722,6 +1764,7 @@ abstract class StructureMapGroup implements _$StructureMapGroup {
           ? StructureMapGroup.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureMapGroup.fromJson(Map<String, dynamic> json) =>
       _$StructureMapGroupFromJson(json);
 }
@@ -1750,6 +1793,7 @@ abstract class StructureMapInput implements _$StructureMapInput {
           ? StructureMapInput.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureMapInput.fromJson(Map<String, dynamic> json) =>
       _$StructureMapInputFromJson(json);
 }
@@ -1778,6 +1822,7 @@ abstract class StructureMapRule implements _$StructureMapRule {
           ? StructureMapRule.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureMapRule.fromJson(Map<String, dynamic> json) =>
       _$StructureMapRuleFromJson(json);
 }
@@ -1889,6 +1934,7 @@ abstract class StructureMapSource implements _$StructureMapSource {
           ? StructureMapSource.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureMapSource.fromJson(Map<String, dynamic> json) =>
       _$StructureMapSourceFromJson(json);
 }
@@ -1924,6 +1970,7 @@ abstract class StructureMapTarget implements _$StructureMapTarget {
           ? StructureMapTarget.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureMapTarget.fromJson(Map<String, dynamic> json) =>
       _$StructureMapTargetFromJson(json);
 }
@@ -1954,6 +2001,7 @@ abstract class StructureMapParameter implements _$StructureMapParameter {
           ? StructureMapParameter.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureMapParameter.fromJson(Map<String, dynamic> json) =>
       _$StructureMapParameterFromJson(json);
 }
@@ -1978,6 +2026,7 @@ abstract class StructureMapDependent implements _$StructureMapDependent {
           ? StructureMapDependent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureMapDependent.fromJson(Map<String, dynamic> json) =>
       _$StructureMapDependentFromJson(json);
 }

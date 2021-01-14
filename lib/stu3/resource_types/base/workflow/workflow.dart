@@ -66,6 +66,7 @@ abstract class Appointment with Resource implements _$Appointment {
           ? Appointment.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Appointment.fromJson(Map<String, dynamic> json) =>
       _$AppointmentFromJson(json);
 }
@@ -92,6 +93,7 @@ abstract class AppointmentParticipant implements _$AppointmentParticipant {
           ? AppointmentParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$AppointmentParticipantFromJson(json);
 }
@@ -137,6 +139,7 @@ abstract class AppointmentResponse
           ? AppointmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$AppointmentResponseFromJson(json);
 }
@@ -190,6 +193,7 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
           ? ProcessRequest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestFromJson(json);
 }
@@ -212,6 +216,7 @@ abstract class ProcessRequestItem implements _$ProcessRequestItem {
           ? ProcessRequestItem.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
       _$ProcessRequestItemFromJson(json);
 }
@@ -259,6 +264,7 @@ abstract class ProcessResponse with Resource implements _$ProcessResponse {
           ? ProcessResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseFromJson(json);
 }
@@ -284,6 +290,7 @@ abstract class ProcessResponseProcessNote
           ? ProcessResponseProcessNote.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcessResponseProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ProcessResponseProcessNoteFromJson(json);
 }
@@ -335,6 +342,7 @@ abstract class RequestGroup with Resource implements _$RequestGroup {
           ? RequestGroup.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RequestGroup.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupFromJson(json);
 }
@@ -387,6 +395,7 @@ abstract class RequestGroupAction implements _$RequestGroupAction {
           ? RequestGroupAction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RequestGroupAction.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupActionFromJson(json);
 }
@@ -415,6 +424,7 @@ abstract class RequestGroupCondition implements _$RequestGroupCondition {
           ? RequestGroupCondition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RequestGroupCondition.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupConditionFromJson(json);
 }
@@ -443,6 +453,7 @@ abstract class RequestGroupRelatedAction
           ? RequestGroupRelatedAction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =>
       _$RequestGroupRelatedActionFromJson(json);
 }
@@ -484,6 +495,7 @@ abstract class Schedule with Resource implements _$Schedule {
           ? Schedule.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Schedule.fromJson(Map<String, dynamic> json) =>
       _$ScheduleFromJson(json);
 }
@@ -531,6 +543,7 @@ abstract class Slot with Resource implements _$Slot {
           ? Slot.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
 }
 
@@ -596,6 +609,7 @@ abstract class Task with Resource implements _$Task {
           ? Task.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
 }
 
@@ -617,6 +631,7 @@ abstract class TaskRequester implements _$TaskRequester {
           ? TaskRequester.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TaskRequester.fromJson(Map<String, dynamic> json) =>
       _$TaskRequesterFromJson(json);
 }
@@ -641,6 +656,7 @@ abstract class TaskRestriction implements _$TaskRestriction {
           ? TaskRestriction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TaskRestriction.fromJson(Map<String, dynamic> json) =>
       _$TaskRestrictionFromJson(json);
 }
@@ -732,6 +748,7 @@ abstract class TaskInput implements _$TaskInput {
           ? TaskInput.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TaskInput.fromJson(Map<String, dynamic> json) =>
       _$TaskInputFromJson(json);
 }
@@ -823,6 +840,7 @@ abstract class TaskOutput implements _$TaskOutput {
           ? TaskOutput.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TaskOutput.fromJson(Map<String, dynamic> json) =>
       _$TaskOutputFromJson(json);
 }

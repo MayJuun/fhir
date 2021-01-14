@@ -56,6 +56,7 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
           ? GuidanceResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$GuidanceResponseFromJson(json);
 }

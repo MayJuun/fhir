@@ -45,6 +45,7 @@ abstract class Order with Resource implements _$Order {
           ? Order.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Order.fromJson(Map<String, dynamic> json) => _$OrderFromJson(json);
 }
 
@@ -70,6 +71,7 @@ abstract class OrderWhen with _$OrderWhen {
           ? OrderWhen.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OrderWhen.fromJson(Map<String, dynamic> json) =>
       _$OrderWhenFromJson(json);
 }
@@ -109,6 +111,7 @@ abstract class OrderResponse with Resource implements _$OrderResponse {
           ? OrderResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OrderResponse.fromJson(Map<String, dynamic> json) =>
       _$OrderResponseFromJson(json);
 }
@@ -160,6 +163,7 @@ abstract class CommunicationRequest
           ? CommunicationRequest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestFromJson(json);
 }
@@ -188,6 +192,7 @@ abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
           ? CommunicationRequestPayload.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestPayloadFromJson(json);
 }
@@ -239,6 +244,7 @@ abstract class DeviceUseRequest with Resource implements _$DeviceUseRequest {
           ? DeviceUseRequest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseRequestFromJson(json);
 }
@@ -286,6 +292,7 @@ abstract class DeviceUseStatement
           ? DeviceUseStatement.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseStatementFromJson(json);
 }

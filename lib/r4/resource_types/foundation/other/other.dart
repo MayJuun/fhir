@@ -53,7 +53,7 @@ abstract class Basic with Resource implements _$Basic {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -117,6 +117,7 @@ abstract class Basic with Resource implements _$Basic {
           ? Basic.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
 }
 
@@ -193,6 +194,7 @@ abstract class Binary with Resource implements _$Binary {
           ? Binary.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
 }
 
@@ -278,6 +280,7 @@ abstract class Bundle with Resource implements _$Bundle {
           ? Bundle.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
 }
 
@@ -339,6 +342,7 @@ abstract class BundleLink implements _$BundleLink {
           ? BundleLink.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleLink.fromJson(Map<String, dynamic> json) =>
       _$BundleLinkFromJson(json);
 }
@@ -379,7 +383,7 @@ abstract class BundleEntry implements _$BundleEntry {
   /// disagree with the id in the resource - i.e. if the fullUrl is not a
   /// urn:uuid, the URL shall be version-independent URL consistent with the
   /// Resource.id. The fullUrl is a version independent reference to the
-  ///  resource. The fullUrl element SHALL have a value except that: 
+  ///  resource. The fullUrl element SHALL have a value except that:
   /// * fullUrl can be empty on a POST (although it does not need to when
   ///  specifying a temporary id for reference in the bundle)
   /// * Results from operations might involve resources that are not identified.
@@ -422,6 +426,7 @@ abstract class BundleEntry implements _$BundleEntry {
           ? BundleEntry.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleEntry.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryFromJson(json);
 }
@@ -485,6 +490,7 @@ abstract class BundleSearch implements _$BundleSearch {
           ? BundleSearch.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleSearch.fromJson(Map<String, dynamic> json) =>
       _$BundleSearchFromJson(json);
 }
@@ -583,6 +589,7 @@ abstract class BundleRequest implements _$BundleRequest {
           ? BundleRequest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleRequest.fromJson(Map<String, dynamic> json) =>
       _$BundleRequestFromJson(json);
 }
@@ -667,6 +674,7 @@ abstract class BundleResponse implements _$BundleResponse {
           ? BundleResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleResponse.fromJson(Map<String, dynamic> json) =>
       _$BundleResponseFromJson(json);
 }
@@ -712,7 +720,7 @@ abstract class Linkage with Resource implements _$Linkage {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -771,6 +779,7 @@ abstract class Linkage with Resource implements _$Linkage {
           ? Linkage.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Linkage.fromJson(Map<String, dynamic> json) =>
       _$LinkageFromJson(json);
 }
@@ -831,6 +840,7 @@ abstract class LinkageItem implements _$LinkageItem {
           ? LinkageItem.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory LinkageItem.fromJson(Map<String, dynamic> json) =>
       _$LinkageItemFromJson(json);
 }
@@ -879,7 +889,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -980,6 +990,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
           ? MessageHeader.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeader.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderFromJson(json);
 }
@@ -1055,6 +1066,7 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
           ? MessageHeaderDestination.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderDestinationFromJson(json);
 }
@@ -1138,6 +1150,7 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
           ? MessageHeaderSource.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderSourceFromJson(json);
 }
@@ -1209,6 +1222,7 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
           ? MessageHeaderResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
       _$MessageHeaderResponseFromJson(json);
 }
@@ -1254,7 +1268,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1300,6 +1314,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
           ? OperationOutcome.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeFromJson(json);
 }
@@ -1356,7 +1371,7 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
   ///
   /// [location]: This element is deprecated because it is XML specific. It is
   /// replaced by issue.expression, which is format independent, and simpler to
-  ///  parse. 
+  ///  parse.
   /// For resource issues, this will be a simple XPath limited to element names,
   /// repetition indicators and the default child accessor that identifies one
   /// of the elements in the resource that caused this issue to be raised.  For
@@ -1399,6 +1414,7 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
           ? OperationOutcomeIssue.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeIssueFromJson(json);
 }
@@ -1453,6 +1469,7 @@ abstract class Parameters with Resource implements _$Parameters {
           ? Parameters.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Parameters.fromJson(Map<String, dynamic> json) =>
       _$ParametersFromJson(json);
 }
@@ -1723,6 +1740,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
           ? ParametersParameter.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
       _$ParametersParameterFromJson(json);
 }
@@ -1772,7 +1790,7 @@ abstract class Subscription with Resource implements _$Subscription {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1856,6 +1874,7 @@ abstract class Subscription with Resource implements _$Subscription {
           ? Subscription.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Subscription.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionFromJson(json);
 }
@@ -1941,6 +1960,7 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
           ? SubscriptionChannel.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
       _$SubscriptionChannelFromJson(json);
 }

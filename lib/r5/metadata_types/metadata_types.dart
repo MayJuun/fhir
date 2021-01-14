@@ -32,6 +32,7 @@ abstract class ContactDetail implements _$ContactDetail {
           ? ContactDetail.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContactDetail.fromJson(Map<String, dynamic> json) =>
       _$ContactDetailFromJson(json);
 }
@@ -59,6 +60,7 @@ abstract class Contributor implements _$Contributor {
           ? Contributor.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Contributor.fromJson(Map<String, dynamic> json) =>
       _$ContributorFromJson(json);
 }
@@ -93,6 +95,7 @@ abstract class DataRequirement implements _$DataRequirement {
           ? DataRequirement.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DataRequirement.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementFromJson(json);
 }
@@ -124,6 +127,7 @@ abstract class DataRequirementCodeFilter
           ? DataRequirementCodeFilter.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementCodeFilterFromJson(json);
 }
@@ -157,6 +161,7 @@ abstract class DataRequirementDateFilter
           ? DataRequirementDateFilter.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementDateFilterFromJson(json);
 }
@@ -185,6 +190,7 @@ abstract class DataRequirementSort implements _$DataRequirementSort {
           ? DataRequirementSort.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DataRequirementSort.fromJson(Map<String, dynamic> json) =>
       _$DataRequirementSortFromJson(json);
 }
@@ -220,6 +226,7 @@ abstract class ParameterDefinition implements _$ParameterDefinition {
           ? ParameterDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ParameterDefinition.fromJson(Map<String, dynamic> json) =>
       _$ParameterDefinitionFromJson(json);
 }
@@ -255,6 +262,7 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
           ? RelatedArtifact.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RelatedArtifact.fromJson(Map<String, dynamic> json) =>
       _$RelatedArtifactFromJson(json);
 }
@@ -290,6 +298,7 @@ abstract class TriggerDefinition implements _$TriggerDefinition {
           ? TriggerDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TriggerDefinition.fromJson(Map<String, dynamic> json) =>
       _$TriggerDefinitionFromJson(json);
 }
@@ -317,6 +326,7 @@ abstract class UsageContext implements _$UsageContext {
           ? UsageContext.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory UsageContext.fromJson(Map<String, dynamic> json) =>
       _$UsageContextFromJson(json);
 }
@@ -349,6 +359,7 @@ abstract class Expression implements _$Expression {
           ? Expression.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Expression.fromJson(Map<String, dynamic> json) =>
       _$ExpressionFromJson(json);
 }

@@ -53,7 +53,7 @@ abstract class Appointment with Resource implements _$Appointment {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -229,6 +229,7 @@ abstract class Appointment with Resource implements _$Appointment {
           ? Appointment.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Appointment.fromJson(Map<String, dynamic> json) =>
       _$AppointmentFromJson(json);
 }
@@ -307,6 +308,7 @@ abstract class AppointmentParticipant implements _$AppointmentParticipant {
           ? AppointmentParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$AppointmentParticipantFromJson(json);
 }
@@ -354,7 +356,7 @@ abstract class AppointmentResponse
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -443,6 +445,7 @@ abstract class AppointmentResponse
           ? AppointmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$AppointmentResponseFromJson(json);
 }
@@ -488,7 +491,7 @@ abstract class Schedule with Resource implements _$Schedule {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -571,6 +574,7 @@ abstract class Schedule with Resource implements _$Schedule {
           ? Schedule.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Schedule.fromJson(Map<String, dynamic> json) =>
       _$ScheduleFromJson(json);
 }
@@ -616,7 +620,7 @@ abstract class Slot with Resource implements _$Slot {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -716,6 +720,7 @@ abstract class Slot with Resource implements _$Slot {
           ? Slot.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
 }
 
@@ -759,7 +764,7 @@ abstract class Task with Resource implements _$Task {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -784,7 +789,7 @@ abstract class Task with Resource implements _$Task {
   /// guideline, orderset or other definition that is adhered to in whole or in
   ///  part by this Task.
   ///
-  /// [instantiatesUri]: The URL pointing to an *externally* maintained 
+  /// [instantiatesUri]: The URL pointing to an *externally* maintained
   /// protocol, guideline, orderset or other definition that is adhered to in
   ///  whole or in part by this Task.
   ///
@@ -947,6 +952,7 @@ abstract class Task with Resource implements _$Task {
           ? Task.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
 }
 
@@ -1009,6 +1015,7 @@ abstract class TaskRestriction implements _$TaskRestriction {
           ? TaskRestriction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TaskRestriction.fromJson(Map<String, dynamic> json) =>
       _$TaskRestrictionFromJson(json);
 }
@@ -1271,6 +1278,7 @@ abstract class TaskInput implements _$TaskInput {
           ? TaskInput.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TaskInput.fromJson(Map<String, dynamic> json) =>
       _$TaskInputFromJson(json);
 }
@@ -1532,6 +1540,7 @@ abstract class TaskOutput implements _$TaskOutput {
           ? TaskOutput.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TaskOutput.fromJson(Map<String, dynamic> json) =>
       _$TaskOutputFromJson(json);
 }
@@ -1579,7 +1588,7 @@ abstract class VerificationResult
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1687,6 +1696,7 @@ abstract class VerificationResult
           ? VerificationResult.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VerificationResult.fromJson(Map<String, dynamic> json) =>
       _$VerificationResultFromJson(json);
 }
@@ -1772,6 +1782,7 @@ abstract class VerificationResultPrimarySource
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VerificationResultPrimarySource.fromJson(Map<String, dynamic> json) =>
       _$VerificationResultPrimarySourceFromJson(json);
 }
@@ -1867,6 +1878,7 @@ abstract class VerificationResultAttestation
           ? VerificationResultAttestation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VerificationResultAttestation.fromJson(Map<String, dynamic> json) =>
       _$VerificationResultAttestationFromJson(json);
 }
@@ -1933,6 +1945,7 @@ abstract class VerificationResultValidator
           ? VerificationResultValidator.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VerificationResultValidator.fromJson(Map<String, dynamic> json) =>
       _$VerificationResultValidatorFromJson(json);
 }

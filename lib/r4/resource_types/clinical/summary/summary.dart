@@ -191,6 +191,7 @@ abstract class AdverseEvent with Resource implements _$AdverseEvent {
           ? AdverseEvent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AdverseEvent.fromJson(Map<String, dynamic> json) =>
       _$AdverseEventFromJson(json);
 }
@@ -254,6 +255,7 @@ abstract class AdverseEventSuspectEntity
           ? AdverseEventSuspectEntity.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =>
       _$AdverseEventSuspectEntityFromJson(json);
 }
@@ -323,6 +325,7 @@ abstract class AdverseEventCausality implements _$AdverseEventCausality {
           ? AdverseEventCausality.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AdverseEventCausality.fromJson(Map<String, dynamic> json) =>
       _$AdverseEventCausalityFromJson(json);
 }
@@ -529,6 +532,7 @@ abstract class AllergyIntolerance
           ? AllergyIntolerance.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceFromJson(json);
 }
@@ -628,6 +632,7 @@ abstract class AllergyIntoleranceReaction
           ? AllergyIntoleranceReaction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceReactionFromJson(json);
 }
@@ -824,6 +829,7 @@ abstract class ClinicalImpression
           ? ClinicalImpression.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalImpression.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionFromJson(json);
 }
@@ -893,6 +899,7 @@ abstract class ClinicalImpressionInvestigation
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalImpressionInvestigation.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionInvestigationFromJson(json);
 }
@@ -965,6 +972,7 @@ abstract class ClinicalImpressionFinding
           ? ClinicalImpressionFinding.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionFindingFromJson(json);
 }
@@ -1176,6 +1184,7 @@ abstract class Condition with Resource implements _$Condition {
           ? Condition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Condition.fromJson(Map<String, dynamic> json) =>
       _$ConditionFromJson(json);
 }
@@ -1238,6 +1247,7 @@ abstract class ConditionStage implements _$ConditionStage {
           ? ConditionStage.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConditionStage.fromJson(Map<String, dynamic> json) =>
       _$ConditionStageFromJson(json);
 }
@@ -1297,6 +1307,7 @@ abstract class ConditionEvidence implements _$ConditionEvidence {
           ? ConditionEvidence.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConditionEvidence.fromJson(Map<String, dynamic> json) =>
       _$ConditionEvidenceFromJson(json);
 }
@@ -1455,6 +1466,7 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
           ? DetectedIssue.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DetectedIssue.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueFromJson(json);
 }
@@ -1514,6 +1526,7 @@ abstract class DetectedIssueEvidence implements _$DetectedIssueEvidence {
           ? DetectedIssueEvidence.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DetectedIssueEvidence.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueEvidenceFromJson(json);
 }
@@ -1581,6 +1594,7 @@ abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
           ? DetectedIssueMitigation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueMitigationFromJson(json);
 }
@@ -1809,6 +1823,7 @@ abstract class FamilyMemberHistory
           ? FamilyMemberHistory.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryFromJson(json);
 }
@@ -1907,6 +1922,7 @@ abstract class FamilyMemberHistoryCondition
           ? FamilyMemberHistoryCondition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryConditionFromJson(json);
 }
@@ -1953,7 +1969,7 @@ abstract class Procedure with Resource implements _$Procedure {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -2151,6 +2167,7 @@ abstract class Procedure with Resource implements _$Procedure {
           ? Procedure.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Procedure.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFromJson(json);
 }
@@ -2213,6 +2230,7 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
           ? ProcedurePerformer.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
       _$ProcedurePerformerFromJson(json);
 }
@@ -2272,6 +2290,7 @@ abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
           ? ProcedureFocalDevice.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFocalDeviceFromJson(json);
 }

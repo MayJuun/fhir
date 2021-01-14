@@ -35,6 +35,7 @@ abstract class Population implements _$Population {
           ? Population.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Population.fromJson(Map<String, dynamic> json) =>
       _$PopulationFromJson(json);
 }
@@ -63,6 +64,7 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
           ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProductShelfLife.fromJson(Map<String, dynamic> json) =>
       _$ProductShelfLifeFromJson(json);
 }
@@ -100,6 +102,7 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
           ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$ProdCharacteristicFromJson(json);
 }
@@ -129,6 +132,7 @@ abstract class MarketingStatus implements _$MarketingStatus {
           ? MarketingStatus.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MarketingStatus.fromJson(Map<String, dynamic> json) =>
       _$MarketingStatusFromJson(json);
 }
@@ -217,6 +221,7 @@ abstract class Citation implements _$Citation {
           ? Citation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Citation.fromJson(Map<String, dynamic> json) =>
       _$CitationFromJson(json);
 }
@@ -243,6 +248,7 @@ abstract class CitationSummary implements _$CitationSummary {
           ? CitationSummary.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationSummary.fromJson(Map<String, dynamic> json) =>
       _$CitationSummaryFromJson(json);
 }
@@ -270,6 +276,7 @@ abstract class CitationVariantCitation implements _$CitationVariantCitation {
           ? CitationVariantCitation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationVariantCitation.fromJson(Map<String, dynamic> json) =>
       _$CitationVariantCitationFromJson(json);
 }
@@ -299,6 +306,7 @@ abstract class CitationJournal implements _$CitationJournal {
           ? CitationJournal.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationJournal.fromJson(Map<String, dynamic> json) =>
       _$CitationJournalFromJson(json);
 }
@@ -328,6 +336,7 @@ abstract class CitationJournalIssue implements _$CitationJournalIssue {
           ? CitationJournalIssue.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationJournalIssue.fromJson(Map<String, dynamic> json) =>
       _$CitationJournalIssueFromJson(json);
 }
@@ -363,6 +372,7 @@ abstract class CitationPublicationDate implements _$CitationPublicationDate {
           ? CitationPublicationDate.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPublicationDate.fromJson(Map<String, dynamic> json) =>
       _$CitationPublicationDateFromJson(json);
 }
@@ -393,6 +403,7 @@ abstract class CitationPublicationInfo implements _$CitationPublicationInfo {
           ? CitationPublicationInfo.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPublicationInfo.fromJson(Map<String, dynamic> json) =>
       _$CitationPublicationInfoFromJson(json);
 }
@@ -425,6 +436,7 @@ abstract class CitationPublishedIn implements _$CitationPublishedIn {
           ? CitationPublishedIn.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPublishedIn.fromJson(Map<String, dynamic> json) =>
       _$CitationPublishedInFromJson(json);
 }
@@ -453,6 +465,7 @@ abstract class CitationAlternativeTitle implements _$CitationAlternativeTitle {
           ? CitationAlternativeTitle.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationAlternativeTitle.fromJson(Map<String, dynamic> json) =>
       _$CitationAlternativeTitleFromJson(json);
 }
@@ -482,6 +495,7 @@ abstract class CitationPagination implements _$CitationPagination {
           ? CitationPagination.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPagination.fromJson(Map<String, dynamic> json) =>
       _$CitationPaginationFromJson(json);
 }
@@ -508,6 +522,7 @@ abstract class CitationArticleUrl implements _$CitationArticleUrl {
           ? CitationArticleUrl.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationArticleUrl.fromJson(Map<String, dynamic> json) =>
       _$CitationArticleUrlFromJson(json);
 }
@@ -539,6 +554,7 @@ abstract class CitationAlternativeAbstract
           ? CitationAlternativeAbstract.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationAlternativeAbstract.fromJson(Map<String, dynamic> json) =>
       _$CitationAlternativeAbstractFromJson(json);
 }
@@ -566,6 +582,7 @@ abstract class CitationContributorship implements _$CitationContributorship {
           ? CitationContributorship.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationContributorship.fromJson(Map<String, dynamic> json) =>
       _$CitationContributorshipFromJson(json);
 }
@@ -605,6 +622,7 @@ abstract class CitationEntry implements _$CitationEntry {
           ? CitationEntry.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationEntry.fromJson(Map<String, dynamic> json) =>
       _$CitationEntryFromJson(json);
 }
@@ -633,6 +651,7 @@ abstract class CitationAffiliationInfo implements _$CitationAffiliationInfo {
           ? CitationAffiliationInfo.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationAffiliationInfo.fromJson(Map<String, dynamic> json) =>
       _$CitationAffiliationInfoFromJson(json);
 }
@@ -661,6 +680,7 @@ abstract class CitationSummary1 implements _$CitationSummary1 {
           ? CitationSummary1.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationSummary1.fromJson(Map<String, dynamic> json) =>
       _$CitationSummary1FromJson(json);
 }
@@ -689,6 +709,7 @@ abstract class CitationAlternativeForm implements _$CitationAlternativeForm {
           ? CitationAlternativeForm.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationAlternativeForm.fromJson(Map<String, dynamic> json) =>
       _$CitationAlternativeFormFromJson(json);
 }
@@ -718,6 +739,7 @@ abstract class CitationJournalIssue1 implements _$CitationJournalIssue1 {
           ? CitationJournalIssue1.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationJournalIssue1.fromJson(Map<String, dynamic> json) =>
       _$CitationJournalIssue1FromJson(json);
 }
@@ -754,6 +776,7 @@ abstract class CitationPublicationDate1 implements _$CitationPublicationDate1 {
           ? CitationPublicationDate1.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPublicationDate1.fromJson(Map<String, dynamic> json) =>
       _$CitationPublicationDate1FromJson(json);
 }
@@ -783,6 +806,7 @@ abstract class CitationPagination1 implements _$CitationPagination1 {
           ? CitationPagination1.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPagination1.fromJson(Map<String, dynamic> json) =>
       _$CitationPagination1FromJson(json);
 }
@@ -814,6 +838,7 @@ abstract class CitationPublicationInfo1 implements _$CitationPublicationInfo1 {
           ? CitationPublicationInfo1.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPublicationInfo1.fromJson(Map<String, dynamic> json) =>
       _$CitationPublicationInfo1FromJson(json);
 }
@@ -845,6 +870,7 @@ abstract class CitationPublishedIn1 implements _$CitationPublishedIn1 {
           ? CitationPublishedIn1.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPublishedIn1.fromJson(Map<String, dynamic> json) =>
       _$CitationPublishedIn1FromJson(json);
 }
@@ -871,6 +897,7 @@ abstract class CitationKeywordList implements _$CitationKeywordList {
           ? CitationKeywordList.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationKeywordList.fromJson(Map<String, dynamic> json) =>
       _$CitationKeywordListFromJson(json);
 }
@@ -898,6 +925,7 @@ abstract class CitationKeyword implements _$CitationKeyword {
           ? CitationKeyword.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationKeyword.fromJson(Map<String, dynamic> json) =>
       _$CitationKeywordFromJson(json);
 }
@@ -936,6 +964,7 @@ abstract class CitationMedlinePubMed implements _$CitationMedlinePubMed {
           ? CitationMedlinePubMed.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationMedlinePubMed.fromJson(Map<String, dynamic> json) =>
       _$CitationMedlinePubMedFromJson(json);
 }
@@ -962,6 +991,7 @@ abstract class CitationPubMedPubDate implements _$CitationPubMedPubDate {
           ? CitationPubMedPubDate.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPubMedPubDate.fromJson(Map<String, dynamic> json) =>
       _$CitationPubMedPubDateFromJson(json);
 }
@@ -989,6 +1019,7 @@ abstract class CitationRelatedArticle implements _$CitationRelatedArticle {
           ? CitationRelatedArticle.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationRelatedArticle.fromJson(Map<String, dynamic> json) =>
       _$CitationRelatedArticleFromJson(json);
 }
@@ -1064,6 +1095,7 @@ abstract class EvidenceReport implements _$EvidenceReport {
           ? EvidenceReport.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceReport.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportFromJson(json);
 }
@@ -1089,6 +1121,7 @@ abstract class EvidenceReportSubject implements _$EvidenceReportSubject {
           ? EvidenceReportSubject.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceReportSubject.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportSubjectFromJson(json);
 }
@@ -1124,6 +1157,7 @@ abstract class EvidenceReportCharacteristic
           ? EvidenceReportCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceReportCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportCharacteristicFromJson(json);
 }
@@ -1152,6 +1186,7 @@ abstract class EvidenceReportRelatesTo implements _$EvidenceReportRelatesTo {
           ? EvidenceReportRelatesTo.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceReportRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportRelatesToFromJson(json);
 }
@@ -1188,6 +1223,7 @@ abstract class EvidenceReportSection implements _$EvidenceReportSection {
           ? EvidenceReportSection.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceReportSection.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportSectionFromJson(json);
 }

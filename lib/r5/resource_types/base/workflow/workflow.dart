@@ -69,6 +69,7 @@ abstract class Appointment with Resource implements _$Appointment {
           ? Appointment.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Appointment.fromJson(Map<String, dynamic> json) =>
       _$AppointmentFromJson(json);
 }
@@ -101,6 +102,7 @@ abstract class AppointmentParticipant implements _$AppointmentParticipant {
           ? AppointmentParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$AppointmentParticipantFromJson(json);
 }
@@ -146,6 +148,7 @@ abstract class AppointmentResponse
           ? AppointmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$AppointmentResponseFromJson(json);
 }
@@ -187,6 +190,7 @@ abstract class Schedule with Resource implements _$Schedule {
           ? Schedule.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Schedule.fromJson(Map<String, dynamic> json) =>
       _$ScheduleFromJson(json);
 }
@@ -234,6 +238,7 @@ abstract class Slot with Resource implements _$Slot {
           ? Slot.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
 }
 
@@ -302,6 +307,7 @@ abstract class Task with Resource implements _$Task {
           ? Task.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
 }
 
@@ -328,6 +334,7 @@ abstract class TaskRestriction implements _$TaskRestriction {
           ? TaskRestriction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TaskRestriction.fromJson(Map<String, dynamic> json) =>
       _$TaskRestrictionFromJson(json);
 }
@@ -423,6 +430,7 @@ abstract class TaskInput implements _$TaskInput {
           ? TaskInput.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TaskInput.fromJson(Map<String, dynamic> json) =>
       _$TaskInputFromJson(json);
 }
@@ -518,6 +526,7 @@ abstract class TaskOutput implements _$TaskOutput {
           ? TaskOutput.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TaskOutput.fromJson(Map<String, dynamic> json) =>
       _$TaskOutputFromJson(json);
 }
@@ -570,6 +579,7 @@ abstract class VerificationResult
           ? VerificationResult.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VerificationResult.fromJson(Map<String, dynamic> json) =>
       _$VerificationResultFromJson(json);
 }
@@ -605,6 +615,7 @@ abstract class VerificationResultPrimarySource
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VerificationResultPrimarySource.fromJson(Map<String, dynamic> json) =>
       _$VerificationResultPrimarySourceFromJson(json);
 }
@@ -643,6 +654,7 @@ abstract class VerificationResultAttestation
           ? VerificationResultAttestation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VerificationResultAttestation.fromJson(Map<String, dynamic> json) =>
       _$VerificationResultAttestationFromJson(json);
 }
@@ -672,6 +684,7 @@ abstract class VerificationResultValidator
           ? VerificationResultValidator.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VerificationResultValidator.fromJson(Map<String, dynamic> json) =>
       _$VerificationResultValidatorFromJson(json);
 }

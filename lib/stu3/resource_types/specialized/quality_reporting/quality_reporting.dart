@@ -99,6 +99,7 @@ abstract class Measure with Resource implements _$Measure {
           ? Measure.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Measure.fromJson(Map<String, dynamic> json) =>
       _$MeasureFromJson(json);
 }
@@ -126,6 +127,7 @@ abstract class MeasureGroup implements _$MeasureGroup {
           ? MeasureGroup.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureGroup.fromJson(Map<String, dynamic> json) =>
       _$MeasureGroupFromJson(json);
 }
@@ -154,6 +156,7 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
           ? MeasurePopulation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasurePopulation.fromJson(Map<String, dynamic> json) =>
       _$MeasurePopulationFromJson(json);
 }
@@ -179,6 +182,7 @@ abstract class MeasureStratifier implements _$MeasureStratifier {
           ? MeasureStratifier.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureStratifier.fromJson(Map<String, dynamic> json) =>
       _$MeasureStratifierFromJson(json);
 }
@@ -205,6 +209,7 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
           ? MeasureSupplementalData.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
       _$MeasureSupplementalDataFromJson(json);
 }
@@ -249,6 +254,7 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
           ? MeasureReport.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReport.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportFromJson(json);
 }
@@ -274,6 +280,7 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
           ? MeasureReportGroup.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportGroupFromJson(json);
 }
@@ -299,6 +306,7 @@ abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
           ? MeasureReportPopulation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportPopulationFromJson(json);
 }
@@ -321,6 +329,7 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
           ? MeasureReportStratifier.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportStratifierFromJson(json);
 }
@@ -346,6 +355,7 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
           ? MeasureReportStratum.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportStratumFromJson(json);
 }
@@ -372,6 +382,7 @@ abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
           ? MeasureReportPopulation1.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportPopulation1FromJson(json);
 }

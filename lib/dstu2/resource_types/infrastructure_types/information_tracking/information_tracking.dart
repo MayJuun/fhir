@@ -54,6 +54,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
           ? Questionnaire.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Questionnaire.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireFromJson(json);
 }
@@ -88,6 +89,7 @@ abstract class QuestionnaireGroup with _$QuestionnaireGroup {
           ? QuestionnaireGroup.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory QuestionnaireGroup.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireGroupFromJson(json);
 }
@@ -123,6 +125,7 @@ abstract class QuestionnaireGroupQuestion with _$QuestionnaireGroupQuestion {
           ? QuestionnaireGroupQuestion.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireGroupQuestionFromJson(json);
 }
@@ -171,6 +174,7 @@ abstract class QuestionnaireResponse
           ? QuestionnaireResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseFromJson(json);
 }
@@ -204,6 +208,7 @@ abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
           ? QuestionnaireResponseGroup.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseGroupFromJson(json);
 }
@@ -332,6 +337,7 @@ abstract class Provenance with Resource implements _$Provenance {
           ? Provenance.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Provenance.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceFromJson(json);
 }
@@ -360,6 +366,7 @@ abstract class ProvenanceAgent with _$ProvenanceAgent {
           ? ProvenanceAgent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceAgentFromJson(json);
 }
@@ -393,6 +400,7 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
           ? ProvenanceEntity.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceEntityFromJson(json);
 }
@@ -419,6 +427,7 @@ abstract class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent {
           ? ProvenanceAgentRelatedAgent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProvenanceAgentRelatedAgent.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceAgentRelatedAgentFromJson(json);
 }
@@ -454,6 +463,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
           ? AuditEvent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventFromJson(json);
 }
@@ -484,6 +494,7 @@ abstract class AuditEventEvent with _$AuditEventEvent {
           ? AuditEventEvent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventEvent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventEventFromJson(json);
 }
@@ -519,6 +530,7 @@ abstract class AuditEventParticipant with _$AuditEventParticipant {
           ? AuditEventParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventParticipant.fromJson(Map<String, dynamic> json) =>
       _$AuditEventParticipantFromJson(json);
 }
@@ -546,6 +558,7 @@ abstract class AuditEventSource with _$AuditEventSource {
           ? AuditEventSource.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
       _$AuditEventSourceFromJson(json);
 }
@@ -580,6 +593,7 @@ abstract class AuditEventObject with _$AuditEventObject {
           ? AuditEventObject.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventObject.fromJson(Map<String, dynamic> json) =>
       _$AuditEventObjectFromJson(json);
 }
@@ -609,6 +623,7 @@ abstract class AuditEventParticipantNetwork
           ? AuditEventParticipantNetwork.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventParticipantNetwork.fromJson(Map<String, dynamic> json) =>
       _$AuditEventParticipantNetworkFromJson(json);
 }
@@ -637,6 +652,7 @@ abstract class AuditEventObjectDetail with _$AuditEventObjectDetail {
           ? AuditEventObjectDetail.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =>
       _$AuditEventObjectDetailFromJson(json);
 }

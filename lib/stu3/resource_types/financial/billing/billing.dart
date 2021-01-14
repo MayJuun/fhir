@@ -71,6 +71,7 @@ abstract class Claim with Resource implements _$Claim {
           ? Claim.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
 }
 
@@ -93,6 +94,7 @@ abstract class ClaimRelated implements _$ClaimRelated {
           ? ClaimRelated.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimRelated.fromJson(Map<String, dynamic> json) =>
       _$ClaimRelatedFromJson(json);
 }
@@ -115,6 +117,7 @@ abstract class ClaimPayee implements _$ClaimPayee {
           ? ClaimPayee.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimPayee.fromJson(Map<String, dynamic> json) =>
       _$ClaimPayeeFromJson(json);
 }
@@ -142,6 +145,7 @@ abstract class ClaimCareTeam implements _$ClaimCareTeam {
           ? ClaimCareTeam.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimCareTeam.fromJson(Map<String, dynamic> json) =>
       _$ClaimCareTeamFromJson(json);
 }
@@ -175,6 +179,7 @@ abstract class ClaimInformation implements _$ClaimInformation {
           ? ClaimInformation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimInformation.fromJson(Map<String, dynamic> json) =>
       _$ClaimInformationFromJson(json);
 }
@@ -201,6 +206,7 @@ abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
           ? ClaimDiagnosis.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$ClaimDiagnosisFromJson(json);
 }
@@ -227,6 +233,7 @@ abstract class ClaimProcedure implements _$ClaimProcedure {
           ? ClaimProcedure.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimProcedure.fromJson(Map<String, dynamic> json) =>
       _$ClaimProcedureFromJson(json);
 }
@@ -257,6 +264,7 @@ abstract class ClaimInsurance implements _$ClaimInsurance {
           ? ClaimInsurance.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimInsurance.fromJson(Map<String, dynamic> json) =>
       _$ClaimInsuranceFromJson(json);
 }
@@ -282,6 +290,7 @@ abstract class ClaimAccident implements _$ClaimAccident {
           ? ClaimAccident.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimAccident.fromJson(Map<String, dynamic> json) =>
       _$ClaimAccidentFromJson(json);
 }
@@ -333,6 +342,7 @@ abstract class ClaimItem implements _$ClaimItem {
           ? ClaimItem.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimItemFromJson(json);
 }
@@ -367,6 +377,7 @@ abstract class ClaimDetail implements _$ClaimDetail {
           ? ClaimDetail.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimDetailFromJson(json);
 }
@@ -400,6 +411,7 @@ abstract class ClaimSubDetail implements _$ClaimSubDetail {
           ? ClaimSubDetail.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimSubDetailFromJson(json);
 }
@@ -457,6 +469,7 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
           ? ClaimResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseFromJson(json);
 }
@@ -483,6 +496,7 @@ abstract class ClaimResponseItem implements _$ClaimResponseItem {
           ? ClaimResponseItem.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseItemFromJson(json);
 }
@@ -510,6 +524,7 @@ abstract class ClaimResponseAdjudication
           ? ClaimResponseAdjudication.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAdjudicationFromJson(json);
 }
@@ -536,6 +551,7 @@ abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
           ? ClaimResponseDetail.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseDetailFromJson(json);
 }
@@ -561,6 +577,7 @@ abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
           ? ClaimResponseSubDetail.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseSubDetailFromJson(json);
 }
@@ -592,6 +609,7 @@ abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
           ? ClaimResponseAddItem.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseAddItemFromJson(json);
 }
@@ -620,6 +638,7 @@ abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
           ? ClaimResponseDetail1.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseDetail1FromJson(json);
 }
@@ -648,6 +667,7 @@ abstract class ClaimResponseError implements _$ClaimResponseError {
           ? ClaimResponseError.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseErrorFromJson(json);
 }
@@ -675,6 +695,7 @@ abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
           ? ClaimResponsePayment.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponsePayment.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponsePaymentFromJson(json);
 }
@@ -702,6 +723,7 @@ abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
           ? ClaimResponseProcessNote.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseProcessNoteFromJson(json);
 }
@@ -732,6 +754,7 @@ abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
           ? ClaimResponseInsurance.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =>
       _$ClaimResponseInsuranceFromJson(json);
 }

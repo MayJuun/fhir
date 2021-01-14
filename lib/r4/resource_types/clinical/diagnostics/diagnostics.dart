@@ -53,7 +53,7 @@ abstract class BodyStructure with Resource implements _$BodyStructure {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -131,6 +131,7 @@ abstract class BodyStructure with Resource implements _$BodyStructure {
           ? BodyStructure.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BodyStructure.fromJson(Map<String, dynamic> json) =>
       _$BodyStructureFromJson(json);
 }
@@ -180,7 +181,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -322,6 +323,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
           ? DiagnosticReport.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportFromJson(json);
 }
@@ -330,7 +332,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
 abstract class DiagnosticReportMedia implements _$DiagnosticReportMedia {
   DiagnosticReportMedia._();
 
-  /// [DiagnosticReport_Media]: The findings and interpretation of diagnostic 
+  /// [DiagnosticReport_Media]: The findings and interpretation of diagnostic
   /// tests performed on patients, groups of patients, devices, and locations,
   /// and/or specimens derived from these. The report includes clinical context
   /// such as requesting and provider information, and some mix of atomic
@@ -387,6 +389,7 @@ abstract class DiagnosticReportMedia implements _$DiagnosticReportMedia {
           ? DiagnosticReportMedia.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DiagnosticReportMedia.fromJson(Map<String, dynamic> json) =>
       _$DiagnosticReportMediaFromJson(json);
 }
@@ -436,7 +439,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -578,6 +581,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
           ? ImagingStudy.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyFromJson(json);
 }
@@ -699,6 +703,7 @@ abstract class ImagingStudySeries implements _$ImagingStudySeries {
           ? ImagingStudySeries.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudySeriesFromJson(json);
 }
@@ -760,6 +765,7 @@ abstract class ImagingStudyPerformer implements _$ImagingStudyPerformer {
           ? ImagingStudyPerformer.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImagingStudyPerformer.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyPerformerFromJson(json);
 }
@@ -835,6 +841,7 @@ abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
           ? ImagingStudyInstance.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
       _$ImagingStudyInstanceFromJson(json);
 }
@@ -881,7 +888,7 @@ abstract class Media with Resource implements _$Media {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1035,6 +1042,7 @@ abstract class Media with Resource implements _$Media {
           ? Media.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
 }
 
@@ -1078,7 +1086,7 @@ abstract class MolecularSequence with Resource implements _$MolecularSequence {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1200,6 +1208,7 @@ abstract class MolecularSequence with Resource implements _$MolecularSequence {
           ? MolecularSequence.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MolecularSequence.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceFromJson(json);
 }
@@ -1318,6 +1327,7 @@ abstract class MolecularSequenceReferenceSeq
           ? MolecularSequenceReferenceSeq.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MolecularSequenceReferenceSeq.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceReferenceSeqFromJson(json);
 }
@@ -1367,7 +1377,7 @@ abstract class MolecularSequenceVariant implements _$MolecularSequenceVariant {
   ///
   /// [observedAllele]: An allele is one of a set of coexisting sequence
   /// variants of a gene
-  /// ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)). 
+  /// ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).
   /// Nucleotide(s)/amino acids from start position of sequence to stop position
   /// of sequence on the positive (+) strand of the observed  sequence. When the
   /// sequence  type is DNA, it should be the sequence on the positive (+)
@@ -1421,6 +1431,7 @@ abstract class MolecularSequenceVariant implements _$MolecularSequenceVariant {
           ? MolecularSequenceVariant.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MolecularSequenceVariant.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceVariantFromJson(json);
 }
@@ -1574,6 +1585,7 @@ abstract class MolecularSequenceQuality implements _$MolecularSequenceQuality {
           ? MolecularSequenceQuality.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MolecularSequenceQuality.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceQualityFromJson(json);
 }
@@ -1672,6 +1684,7 @@ abstract class MolecularSequenceRoc implements _$MolecularSequenceRoc {
           ? MolecularSequenceRoc.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MolecularSequenceRoc.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceRocFromJson(json);
 }
@@ -1767,6 +1780,7 @@ abstract class MolecularSequenceRepository
           ? MolecularSequenceRepository.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MolecularSequenceRepository.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceRepositoryFromJson(json);
 }
@@ -1910,6 +1924,7 @@ abstract class MolecularSequenceOuter implements _$MolecularSequenceOuter {
           ? MolecularSequenceOuter.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MolecularSequenceOuter.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceOuterFromJson(json);
 }
@@ -1975,6 +1990,7 @@ abstract class MolecularSequenceInner implements _$MolecularSequenceInner {
           ? MolecularSequenceInner.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MolecularSequenceInner.fromJson(Map<String, dynamic> json) =>
       _$MolecularSequenceInnerFromJson(json);
 }
@@ -2020,7 +2036,7 @@ abstract class Observation with Resource implements _$Observation {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -2189,7 +2205,7 @@ abstract class Observation with Resource implements _$Observation {
   /// which this observation value is derived. For example, a calculated anion
   ///  gap or a fetal measurement based on an ultrasound image.
   ///
-  /// [component]: Some observations have multiple component observations. 
+  /// [component]: Some observations have multiple component observations.
   /// These component observations are expressed as separate code value pairs
   /// that share the same attributes.  Examples include systolic and diastolic
   /// component observations for blood pressure measurement and multiple
@@ -2265,6 +2281,7 @@ abstract class Observation with Resource implements _$Observation {
           ? Observation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Observation.fromJson(Map<String, dynamic> json) =>
       _$ObservationFromJson(json);
 }
@@ -2307,7 +2324,7 @@ abstract class ObservationReferenceRange
   ///  meaningless (e.g. reference range is <=2.3).
   ///
   /// [high]: The value of the high bound of the reference range.  The high
-  /// bound of the reference range endpoint is inclusive of the value (e.g. 
+  /// bound of the reference range endpoint is inclusive of the value (e.g.
   /// reference range is >=5 - <=9). If the high bound is omitted,  it is
   ///  assumed to be meaningless (e.g. reference range is >= 2.3).
   ///
@@ -2354,6 +2371,7 @@ abstract class ObservationReferenceRange
           ? ObservationReferenceRange.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
       _$ObservationReferenceRangeFromJson(json);
 }
@@ -2479,6 +2497,7 @@ abstract class ObservationComponent implements _$ObservationComponent {
           ? ObservationComponent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
       _$ObservationComponentFromJson(json);
 }
@@ -2527,7 +2546,7 @@ abstract class QuestionnaireResponse
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -2623,6 +2642,7 @@ abstract class QuestionnaireResponse
           ? QuestionnaireResponse.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseFromJson(json);
 }
@@ -2704,6 +2724,7 @@ abstract class QuestionnaireResponseItem
           ? QuestionnaireResponseItem.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseItemFromJson(json);
 }
@@ -2834,6 +2855,7 @@ abstract class QuestionnaireResponseAnswer
           ? QuestionnaireResponseAnswer.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
       _$QuestionnaireResponseAnswerFromJson(json);
 }
@@ -2878,7 +2900,7 @@ abstract class Specimen with Resource implements _$Specimen {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -2976,6 +2998,7 @@ abstract class Specimen with Resource implements _$Specimen {
           ? Specimen.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Specimen.fromJson(Map<String, dynamic> json) =>
       _$SpecimenFromJson(json);
 }
@@ -3065,6 +3088,7 @@ abstract class SpecimenCollection implements _$SpecimenCollection {
           ? SpecimenCollection.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
       _$SpecimenCollectionFromJson(json);
 }
@@ -3140,6 +3164,7 @@ abstract class SpecimenProcessing implements _$SpecimenProcessing {
           ? SpecimenProcessing.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SpecimenProcessing.fromJson(Map<String, dynamic> json) =>
       _$SpecimenProcessingFromJson(json);
 }
@@ -3221,6 +3246,7 @@ abstract class SpecimenContainer implements _$SpecimenContainer {
           ? SpecimenContainer.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
       _$SpecimenContainerFromJson(json);
 }

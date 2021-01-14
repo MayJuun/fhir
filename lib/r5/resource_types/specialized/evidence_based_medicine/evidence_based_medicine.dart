@@ -85,6 +85,7 @@ abstract class Evidence with Resource implements _$Evidence {
           ? Evidence.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Evidence.fromJson(Map<String, dynamic> json) =>
       _$EvidenceFromJson(json);
 }
@@ -117,6 +118,7 @@ abstract class EvidenceVariableDefinition
           ? EvidenceVariableDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableDefinition.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableDefinitionFromJson(json);
 }
@@ -147,6 +149,7 @@ abstract class EvidenceCertainty implements _$EvidenceCertainty {
           ? EvidenceCertainty.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceCertainty.fromJson(Map<String, dynamic> json) =>
       _$EvidenceCertaintyFromJson(json);
 }
@@ -179,6 +182,7 @@ abstract class EvidenceCertaintySubcomponent
           ? EvidenceCertaintySubcomponent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceCertaintySubcomponent.fromJson(Map<String, dynamic> json) =>
       _$EvidenceCertaintySubcomponentFromJson(json);
 }
@@ -263,6 +267,7 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
           ? EvidenceVariable.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariable.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableFromJson(json);
 }
@@ -305,6 +310,7 @@ abstract class EvidenceVariableCharacteristic
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableCharacteristicFromJson(json);
 }
@@ -335,6 +341,7 @@ abstract class EvidenceVariableTimeFromStart
           ? EvidenceVariableTimeFromStart.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableTimeFromStart.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableTimeFromStartFromJson(json);
 }
@@ -364,6 +371,7 @@ abstract class EvidenceVariableCategory implements _$EvidenceVariableCategory {
           ? EvidenceVariableCategory.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableCategoryFromJson(json);
 }

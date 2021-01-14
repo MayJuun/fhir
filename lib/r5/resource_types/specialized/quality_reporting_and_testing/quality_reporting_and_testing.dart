@@ -103,6 +103,7 @@ abstract class Measure with Resource implements _$Measure {
           ? Measure.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Measure.fromJson(Map<String, dynamic> json) =>
       _$MeasureFromJson(json);
 }
@@ -131,6 +132,7 @@ abstract class MeasureGroup implements _$MeasureGroup {
           ? MeasureGroup.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureGroup.fromJson(Map<String, dynamic> json) =>
       _$MeasureGroupFromJson(json);
 }
@@ -158,6 +160,7 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
           ? MeasurePopulation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasurePopulation.fromJson(Map<String, dynamic> json) =>
       _$MeasurePopulationFromJson(json);
 }
@@ -186,6 +189,7 @@ abstract class MeasureStratifier implements _$MeasureStratifier {
           ? MeasureStratifier.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureStratifier.fromJson(Map<String, dynamic> json) =>
       _$MeasureStratifierFromJson(json);
 }
@@ -213,6 +217,7 @@ abstract class MeasureComponent implements _$MeasureComponent {
           ? MeasureComponent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureComponent.fromJson(Map<String, dynamic> json) =>
       _$MeasureComponentFromJson(json);
 }
@@ -241,6 +246,7 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
           ? MeasureSupplementalData.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
       _$MeasureSupplementalDataFromJson(json);
 }
@@ -288,6 +294,7 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
           ? MeasureReport.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReport.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportFromJson(json);
 }
@@ -315,6 +322,7 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
           ? MeasureReportGroup.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportGroupFromJson(json);
 }
@@ -342,6 +350,7 @@ abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
           ? MeasureReportPopulation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportPopulationFromJson(json);
 }
@@ -367,6 +376,7 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
           ? MeasureReportStratifier.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportStratifierFromJson(json);
 }
@@ -394,6 +404,7 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
           ? MeasureReportStratum.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportStratumFromJson(json);
 }
@@ -419,6 +430,7 @@ abstract class MeasureReportComponent implements _$MeasureReportComponent {
           ? MeasureReportComponent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportComponent.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportComponentFromJson(json);
 }
@@ -447,6 +459,7 @@ abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
           ? MeasureReportPopulation1.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportPopulation1FromJson(json);
 }
@@ -498,6 +511,7 @@ abstract class TestReport with Resource implements _$TestReport {
           ? TestReport.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReport.fromJson(Map<String, dynamic> json) =>
       _$TestReportFromJson(json);
 }
@@ -528,6 +542,7 @@ abstract class TestReportParticipant implements _$TestReportParticipant {
           ? TestReportParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportParticipant.fromJson(Map<String, dynamic> json) =>
       _$TestReportParticipantFromJson(json);
 }
@@ -552,6 +567,7 @@ abstract class TestReportSetup implements _$TestReportSetup {
           ? TestReportSetup.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportSetup.fromJson(Map<String, dynamic> json) =>
       _$TestReportSetupFromJson(json);
 }
@@ -577,6 +593,7 @@ abstract class TestReportAction implements _$TestReportAction {
           ? TestReportAction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportAction.fromJson(Map<String, dynamic> json) =>
       _$TestReportActionFromJson(json);
 }
@@ -607,6 +624,7 @@ abstract class TestReportOperation implements _$TestReportOperation {
           ? TestReportOperation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportOperation.fromJson(Map<String, dynamic> json) =>
       _$TestReportOperationFromJson(json);
 }
@@ -637,6 +655,7 @@ abstract class TestReportAssert implements _$TestReportAssert {
           ? TestReportAssert.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportAssert.fromJson(Map<String, dynamic> json) =>
       _$TestReportAssertFromJson(json);
 }
@@ -665,6 +684,7 @@ abstract class TestReportTest implements _$TestReportTest {
           ? TestReportTest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportTest.fromJson(Map<String, dynamic> json) =>
       _$TestReportTestFromJson(json);
 }
@@ -690,6 +710,7 @@ abstract class TestReportAction1 implements _$TestReportAction1 {
           ? TestReportAction1.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportAction1.fromJson(Map<String, dynamic> json) =>
       _$TestReportAction1FromJson(json);
 }
@@ -714,6 +735,7 @@ abstract class TestReportTeardown implements _$TestReportTeardown {
           ? TestReportTeardown.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportTeardown.fromJson(Map<String, dynamic> json) =>
       _$TestReportTeardownFromJson(json);
 }
@@ -738,6 +760,7 @@ abstract class TestReportAction2 implements _$TestReportAction2 {
           ? TestReportAction2.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportAction2.fromJson(Map<String, dynamic> json) =>
       _$TestReportAction2FromJson(json);
 }
@@ -805,6 +828,7 @@ abstract class TestScript with Resource implements _$TestScript {
           ? TestScript.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScript.fromJson(Map<String, dynamic> json) =>
       _$TestScriptFromJson(json);
 }
@@ -831,6 +855,7 @@ abstract class TestScriptOrigin implements _$TestScriptOrigin {
           ? TestScriptOrigin.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptOrigin.fromJson(Map<String, dynamic> json) =>
       _$TestScriptOriginFromJson(json);
 }
@@ -857,6 +882,7 @@ abstract class TestScriptDestination implements _$TestScriptDestination {
           ? TestScriptDestination.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptDestination.fromJson(Map<String, dynamic> json) =>
       _$TestScriptDestinationFromJson(json);
 }
@@ -882,6 +908,7 @@ abstract class TestScriptMetadata implements _$TestScriptMetadata {
           ? TestScriptMetadata.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
       _$TestScriptMetadataFromJson(json);
 }
@@ -909,6 +936,7 @@ abstract class TestScriptLink implements _$TestScriptLink {
           ? TestScriptLink.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptLink.fromJson(Map<String, dynamic> json) =>
       _$TestScriptLinkFromJson(json);
 }
@@ -945,6 +973,7 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
           ? TestScriptCapability.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptCapability.fromJson(Map<String, dynamic> json) =>
       _$TestScriptCapabilityFromJson(json);
 }
@@ -973,6 +1002,7 @@ abstract class TestScriptFixture implements _$TestScriptFixture {
           ? TestScriptFixture.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
       _$TestScriptFixtureFromJson(json);
 }
@@ -1012,6 +1042,7 @@ abstract class TestScriptVariable implements _$TestScriptVariable {
           ? TestScriptVariable.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
       _$TestScriptVariableFromJson(json);
 }
@@ -1036,6 +1067,7 @@ abstract class TestScriptSetup implements _$TestScriptSetup {
           ? TestScriptSetup.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
       _$TestScriptSetupFromJson(json);
 }
@@ -1061,6 +1093,7 @@ abstract class TestScriptAction implements _$TestScriptAction {
           ? TestScriptAction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptAction.fromJson(Map<String, dynamic> json) =>
       _$TestScriptActionFromJson(json);
 }
@@ -1117,6 +1150,7 @@ abstract class TestScriptOperation implements _$TestScriptOperation {
           ? TestScriptOperation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptOperation.fromJson(Map<String, dynamic> json) =>
       _$TestScriptOperationFromJson(json);
 }
@@ -1144,6 +1178,7 @@ abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
           ? TestScriptRequestHeader.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRequestHeaderFromJson(json);
 }
@@ -1216,6 +1251,7 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
           ? TestScriptAssert.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptAssert.fromJson(Map<String, dynamic> json) =>
       _$TestScriptAssertFromJson(json);
 }
@@ -1244,6 +1280,7 @@ abstract class TestScriptTest implements _$TestScriptTest {
           ? TestScriptTest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTestFromJson(json);
 }
@@ -1269,6 +1306,7 @@ abstract class TestScriptAction1 implements _$TestScriptAction1 {
           ? TestScriptAction1.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptAction1.fromJson(Map<String, dynamic> json) =>
       _$TestScriptAction1FromJson(json);
 }
@@ -1293,6 +1331,7 @@ abstract class TestScriptTeardown implements _$TestScriptTeardown {
           ? TestScriptTeardown.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTeardownFromJson(json);
 }
@@ -1317,6 +1356,7 @@ abstract class TestScriptAction2 implements _$TestScriptAction2 {
           ? TestScriptAction2.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptAction2.fromJson(Map<String, dynamic> json) =>
       _$TestScriptAction2FromJson(json);
 }

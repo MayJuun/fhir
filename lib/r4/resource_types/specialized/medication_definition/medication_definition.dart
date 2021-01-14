@@ -51,7 +51,7 @@ abstract class MedicinalProduct with Resource implements _$MedicinalProduct {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -170,6 +170,7 @@ abstract class MedicinalProduct with Resource implements _$MedicinalProduct {
           ? MedicinalProduct.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProduct.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductFromJson(json);
 }
@@ -232,6 +233,7 @@ abstract class MedicinalProductName implements _$MedicinalProductName {
           ? MedicinalProductName.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductName.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductNameFromJson(json);
 }
@@ -292,6 +294,7 @@ abstract class MedicinalProductNamePart implements _$MedicinalProductNamePart {
           ? MedicinalProductNamePart.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductNamePart.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductNamePartFromJson(json);
 }
@@ -356,6 +359,7 @@ abstract class MedicinalProductCountryLanguage
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductCountryLanguage.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductCountryLanguageFromJson(json);
 }
@@ -568,7 +572,7 @@ abstract class MedicinalProductAuthorization
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -685,6 +689,7 @@ abstract class MedicinalProductAuthorization
           ? MedicinalProductAuthorization.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductAuthorization.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductAuthorizationFromJson(json);
 }
@@ -878,7 +883,7 @@ abstract class MedicinalProductContraindication
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1064,7 +1069,7 @@ abstract class MedicinalProductIndication
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1140,6 +1145,7 @@ abstract class MedicinalProductIndication
           ? MedicinalProductIndication.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductIndication.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductIndicationFromJson(json);
 }
@@ -1256,7 +1262,7 @@ abstract class MedicinalProductIngredient
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1323,6 +1329,7 @@ abstract class MedicinalProductIngredient
           ? MedicinalProductIngredient.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductIngredient.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductIngredientFromJson(json);
 }
@@ -1662,7 +1669,7 @@ abstract class MedicinalProductInteraction
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1732,6 +1739,7 @@ abstract class MedicinalProductInteraction
           ? MedicinalProductInteraction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductInteraction.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductInteractionFromJson(json);
 }
@@ -1843,7 +1851,7 @@ abstract class MedicinalProductManufactured
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -1910,6 +1918,7 @@ abstract class MedicinalProductManufactured
           ? MedicinalProductManufactured.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductManufactured.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductManufacturedFromJson(json);
 }
@@ -1956,7 +1965,7 @@ abstract class MedicinalProductPackaged
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -2031,6 +2040,7 @@ abstract class MedicinalProductPackaged
           ? MedicinalProductPackaged.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductPackaged.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductPackagedFromJson(json);
 }
@@ -2234,7 +2244,7 @@ abstract class MedicinalProductPharmaceutical
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -2304,6 +2314,7 @@ abstract class MedicinalProductPharmaceutical
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductPharmaceutical.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductPharmaceuticalFromJson(json);
 }
@@ -2632,7 +2643,7 @@ abstract class MedicinalProductUndesirableEffect
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -2742,7 +2753,7 @@ abstract class SubstanceNucleicAcid
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -2816,6 +2827,7 @@ abstract class SubstanceNucleicAcid
           ? SubstanceNucleicAcid.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceNucleicAcid.fromJson(Map<String, dynamic> json) =>
       _$SubstanceNucleicAcidFromJson(json);
 }
@@ -2914,6 +2926,7 @@ abstract class SubstanceNucleicAcidSubunit
           ? SubstanceNucleicAcidSubunit.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceNucleicAcidSubunit.fromJson(Map<String, dynamic> json) =>
       _$SubstanceNucleicAcidSubunitFromJson(json);
 }
@@ -2996,6 +3009,7 @@ abstract class SubstanceNucleicAcidLinkage
           ? SubstanceNucleicAcidLinkage.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceNucleicAcidLinkage.fromJson(Map<String, dynamic> json) =>
       _$SubstanceNucleicAcidLinkageFromJson(json);
 }
@@ -3069,6 +3083,7 @@ abstract class SubstanceNucleicAcidSugar
           ? SubstanceNucleicAcidSugar.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceNucleicAcidSugar.fromJson(Map<String, dynamic> json) =>
       _$SubstanceNucleicAcidSugarFromJson(json);
 }
@@ -3113,7 +3128,7 @@ abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -3176,6 +3191,7 @@ abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
           ? SubstancePolymer.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstancePolymer.fromJson(Map<String, dynamic> json) =>
       _$SubstancePolymerFromJson(json);
 }
@@ -3233,6 +3249,7 @@ abstract class SubstancePolymerMonomerSet
           ? SubstancePolymerMonomerSet.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstancePolymerMonomerSet.fromJson(Map<String, dynamic> json) =>
       _$SubstancePolymerMonomerSetFromJson(json);
 }
@@ -3370,6 +3387,7 @@ abstract class SubstancePolymerRepeat implements _$SubstancePolymerRepeat {
           ? SubstancePolymerRepeat.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstancePolymerRepeat.fromJson(Map<String, dynamic> json) =>
       _$SubstancePolymerRepeatFromJson(json);
 }
@@ -3439,6 +3457,7 @@ abstract class SubstancePolymerRepeatUnit
           ? SubstancePolymerRepeatUnit.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstancePolymerRepeatUnit.fromJson(Map<String, dynamic> json) =>
       _$SubstancePolymerRepeatUnitFromJson(json);
 }
@@ -3616,7 +3635,7 @@ abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -3694,6 +3713,7 @@ abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
           ? SubstanceProtein.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceProtein.fromJson(Map<String, dynamic> json) =>
       _$SubstanceProteinFromJson(json);
 }
@@ -3814,6 +3834,7 @@ abstract class SubstanceProteinSubunit implements _$SubstanceProteinSubunit {
           ? SubstanceProteinSubunit.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceProteinSubunit.fromJson(Map<String, dynamic> json) =>
       _$SubstanceProteinSubunitFromJson(json);
 }
@@ -3860,7 +3881,7 @@ abstract class SubstanceReferenceInformation
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -3921,6 +3942,7 @@ abstract class SubstanceReferenceInformation
           ? SubstanceReferenceInformation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceReferenceInformation.fromJson(Map<String, dynamic> json) =>
       _$SubstanceReferenceInformationFromJson(json);
 }
@@ -4259,7 +4281,7 @@ abstract class SubstanceSourceMaterial
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -4377,6 +4399,7 @@ abstract class SubstanceSourceMaterial
           ? SubstanceSourceMaterial.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceSourceMaterial.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSourceMaterialFromJson(json);
 }
@@ -4560,6 +4583,7 @@ abstract class SubstanceSourceMaterialOrganism
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceSourceMaterialOrganism.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSourceMaterialOrganismFromJson(json);
 }
@@ -4641,6 +4665,7 @@ abstract class SubstanceSourceMaterialAuthor
           ? SubstanceSourceMaterialAuthor.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceSourceMaterialAuthor.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSourceMaterialAuthorFromJson(json);
 }
@@ -4741,6 +4766,7 @@ abstract class SubstanceSourceMaterialHybrid
           ? SubstanceSourceMaterialHybrid.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceSourceMaterialHybrid.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSourceMaterialHybridFromJson(json);
 }
@@ -4944,7 +4970,7 @@ abstract class SubstanceSpecification
   ///
   /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
-  /// extensions safe and manageable, there is a strict set of governance 
+  /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
@@ -5053,6 +5079,7 @@ abstract class SubstanceSpecification
           ? SubstanceSpecification.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceSpecification.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSpecificationFromJson(json);
 }
@@ -5138,6 +5165,7 @@ abstract class SubstanceSpecificationMoiety
           ? SubstanceSpecificationMoiety.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceSpecificationMoiety.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSpecificationMoietyFromJson(json);
 }
@@ -5223,6 +5251,7 @@ abstract class SubstanceSpecificationProperty
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceSpecificationProperty.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSpecificationPropertyFromJson(json);
 }
@@ -5312,6 +5341,7 @@ abstract class SubstanceSpecificationStructure
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceSpecificationStructure.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSpecificationStructureFromJson(json);
 }
@@ -5381,6 +5411,7 @@ abstract class SubstanceSpecificationIsotope
           ? SubstanceSpecificationIsotope.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceSpecificationIsotope.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSpecificationIsotopeFromJson(json);
 }
@@ -5591,6 +5622,7 @@ abstract class SubstanceSpecificationCode
           ? SubstanceSpecificationCode.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceSpecificationCode.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSpecificationCodeFromJson(json);
 }
@@ -5683,6 +5715,7 @@ abstract class SubstanceSpecificationName
           ? SubstanceSpecificationName.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceSpecificationName.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSpecificationNameFromJson(json);
 }
@@ -5749,6 +5782,7 @@ abstract class SubstanceSpecificationOfficial
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceSpecificationOfficial.fromJson(Map<String, dynamic> json) =>
       _$SubstanceSpecificationOfficialFromJson(json);
 }

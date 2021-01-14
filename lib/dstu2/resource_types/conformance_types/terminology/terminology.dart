@@ -71,6 +71,7 @@ abstract class ValueSet with Resource implements _$ValueSet {
           ? ValueSet.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSet.fromJson(Map<String, dynamic> json) =>
       _$ValueSetFromJson(json);
 }
@@ -97,6 +98,7 @@ abstract class ValueSetContact with _$ValueSetContact {
           ? ValueSetContact.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetContact.fromJson(Map<String, dynamic> json) =>
       _$ValueSetContactFromJson(json);
 }
@@ -128,6 +130,7 @@ abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
           ? ValueSetCodeSystem.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =>
       _$ValueSetCodeSystemFromJson(json);
 }
@@ -161,6 +164,7 @@ abstract class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
           ? ValueSetCodeSystemConcept.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json) =>
       _$ValueSetCodeSystemConceptFromJson(json);
 }
@@ -190,6 +194,7 @@ abstract class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
           ? ValueSetConceptDesignation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetConceptDesignation.fromJson(Map<String, dynamic> json) =>
       _$ValueSetConceptDesignationFromJson(json);
 }
@@ -217,6 +222,7 @@ abstract class ValueSetCompose with _$ValueSetCompose {
           ? ValueSetCompose.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
       _$ValueSetComposeFromJson(json);
 }
@@ -247,6 +253,7 @@ abstract class ValueSetComposeInclude with _$ValueSetComposeInclude {
           ? ValueSetComposeInclude.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetComposeInclude.fromJson(Map<String, dynamic> json) =>
       _$ValueSetComposeIncludeFromJson(json);
 }
@@ -276,6 +283,7 @@ abstract class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
           ? ValueSetIncludeConcept.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetIncludeConcept.fromJson(Map<String, dynamic> json) =>
       _$ValueSetIncludeConceptFromJson(json);
 }
@@ -308,6 +316,7 @@ abstract class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
           ? ValueSetIncludeFilter.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetIncludeFilter.fromJson(Map<String, dynamic> json) =>
       _$ValueSetIncludeFilterFromJson(json);
 }
@@ -342,6 +351,7 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
           ? ValueSetExpansion.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
       _$ValueSetExpansionFromJson(json);
 }
@@ -381,6 +391,7 @@ abstract class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
           ? ValueSetExpansionParameter.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetExpansionParameter.fromJson(Map<String, dynamic> json) =>
       _$ValueSetExpansionParameterFromJson(json);
 }
@@ -417,6 +428,7 @@ abstract class ValueSetExpansionContains with _$ValueSetExpansionContains {
           ? ValueSetExpansionContains.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetExpansionContains.fromJson(Map<String, dynamic> json) =>
       _$ValueSetExpansionContainsFromJson(json);
 }
@@ -479,6 +491,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
           ? ConceptMap.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapFromJson(json);
 }
@@ -504,6 +517,7 @@ abstract class ConceptMapContact with _$ConceptMapContact {
           ? ConceptMapContact.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMapContact.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapContactFromJson(json);
 }
@@ -531,6 +545,7 @@ abstract class ConceptMapElement with _$ConceptMapElement {
           ? ConceptMapElement.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapElementFromJson(json);
 }
@@ -565,6 +580,7 @@ abstract class ConceptMapElementTarget with _$ConceptMapElementTarget {
           ? ConceptMapElementTarget.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMapElementTarget.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapElementTargetFromJson(json);
 }
@@ -592,6 +608,7 @@ abstract class ConceptMapTargetDependsOn with _$ConceptMapTargetDependsOn {
           ? ConceptMapTargetDependsOn.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMapTargetDependsOn.fromJson(Map<String, dynamic> json) =>
       _$ConceptMapTargetDependsOnFromJson(json);
 }
@@ -648,6 +665,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
           ? NamingSystem.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NamingSystem.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemFromJson(json);
 }
@@ -673,6 +691,7 @@ abstract class NamingSystemContact with _$NamingSystemContact {
           ? NamingSystemContact.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NamingSystemContact.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemContactFromJson(json);
 }
@@ -705,6 +724,7 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
           ? NamingSystemUniqueId.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
       _$NamingSystemUniqueIdFromJson(json);
 }

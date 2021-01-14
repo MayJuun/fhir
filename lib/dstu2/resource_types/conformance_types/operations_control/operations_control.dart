@@ -65,6 +65,7 @@ abstract class Conformance with Resource implements _$Conformance {
           ? Conformance.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Conformance.fromJson(Map<String, dynamic> json) =>
       _$ConformanceFromJson(json);
 }
@@ -125,6 +126,7 @@ abstract class CapabilityStatement
           ? CapabilityStatement.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementFromJson(json);
 }
@@ -150,6 +152,7 @@ abstract class ConformanceContact with _$ConformanceContact {
           ? ConformanceContact.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceContact.fromJson(Map<String, dynamic> json) =>
       _$ConformanceContactFromJson(json);
 }
@@ -176,6 +179,7 @@ abstract class ConformanceSoftware with _$ConformanceSoftware {
           ? ConformanceSoftware.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceSoftware.fromJson(Map<String, dynamic> json) =>
       _$ConformanceSoftwareFromJson(json);
 }
@@ -202,6 +206,7 @@ abstract class ConformanceImplementation with _$ConformanceImplementation {
           ? ConformanceImplementation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceImplementation.fromJson(Map<String, dynamic> json) =>
       _$ConformanceImplementationFromJson(json);
 }
@@ -239,6 +244,7 @@ abstract class ConformanceRest with _$ConformanceRest {
           ? ConformanceRest.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceRest.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestFromJson(json);
 }
@@ -267,6 +273,7 @@ abstract class ConformanceMessaging with _$ConformanceMessaging {
           ? ConformanceMessaging.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceMessaging.fromJson(Map<String, dynamic> json) =>
       _$ConformanceMessagingFromJson(json);
 }
@@ -296,6 +303,7 @@ abstract class ConformanceDocument with _$ConformanceDocument {
           ? ConformanceDocument.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceDocument.fromJson(Map<String, dynamic> json) =>
       _$ConformanceDocumentFromJson(json);
 }
@@ -324,6 +332,7 @@ abstract class ConformanceRestSecurity with _$ConformanceRestSecurity {
           ? ConformanceRestSecurity.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceRestSecurity.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestSecurityFromJson(json);
 }
@@ -368,6 +377,7 @@ abstract class ConformanceRestResource with _$ConformanceRestResource {
           ? ConformanceRestResource.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceRestResource.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestResourceFromJson(json);
 }
@@ -399,6 +409,7 @@ abstract class ConformanceResourceInteraction
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceResourceInteraction.fromJson(Map<String, dynamic> json) =>
       _$ConformanceResourceInteractionFromJson(json);
 }
@@ -426,6 +437,7 @@ abstract class ConformanceRestOperation with _$ConformanceRestOperation {
           ? ConformanceRestOperation.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceRestOperation.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestOperationFromJson(json);
 }
@@ -454,6 +466,7 @@ abstract class ConformanceMessagingEndpoint
           ? ConformanceMessagingEndpoint.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json) =>
       _$ConformanceMessagingEndpointFromJson(json);
 }
@@ -488,6 +501,7 @@ abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
           ? ConformanceMessagingEvent.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceMessagingEvent.fromJson(Map<String, dynamic> json) =>
       _$ConformanceMessagingEventFromJson(json);
 }
@@ -518,6 +532,7 @@ abstract class ConformanceSecurityCertificate
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceSecurityCertificate.fromJson(Map<String, dynamic> json) =>
       _$ConformanceSecurityCertificateFromJson(json);
 }
@@ -546,6 +561,7 @@ abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
           ? ConformanceRestInteraction.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =>
       _$ConformanceRestInteractionFromJson(json);
 }
@@ -583,6 +599,7 @@ abstract class ConformanceResourceSearchParam
                   jsonDecode(jsonEncode(yaml)))
               : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceResourceSearchParam.fromJson(Map<String, dynamic> json) =>
       _$ConformanceResourceSearchParamFromJson(json);
 }
@@ -638,6 +655,7 @@ abstract class OperationDefinition
           ? OperationDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionFromJson(json);
 }
@@ -664,6 +682,7 @@ abstract class OperationDefinitionContact with _$OperationDefinitionContact {
           ? OperationDefinitionContact.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationDefinitionContact.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionContactFromJson(json);
 }
@@ -701,6 +720,7 @@ abstract class OperationDefinitionParameter
           ? OperationDefinitionParameter.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionParameterFromJson(json);
 }
@@ -786,6 +806,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
           ? SearchParameter.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterFromJson(json);
 }
@@ -811,6 +832,7 @@ abstract class SearchParameterContact with _$SearchParameterContact {
           ? SearchParameterContact.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SearchParameterContact.fromJson(Map<String, dynamic> json) =>
       _$SearchParameterContactFromJson(json);
 }
