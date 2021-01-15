@@ -15,7 +15,9 @@ part 'terminology.g.dart';
 abstract class ValueSet with Resource implements _$ValueSet {
   ValueSet._();
   factory ValueSet({
-    @Default('ValueSet') String resourceType,
+    @Default(Dstu2ResourceType.ValueSet)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
+        Dstu2ResourceType resourceType,
     Id id,
     @JsonKey(name: '_id') Element idElement,
     Meta meta,
@@ -437,7 +439,9 @@ abstract class ValueSetExpansionContains with _$ValueSetExpansionContains {
 abstract class ConceptMap with Resource implements _$ConceptMap {
   ConceptMap._();
   factory ConceptMap({
-    @Default('ConceptMap') String resourceType,
+    @Default(Dstu2ResourceType.ConceptMap)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -617,7 +621,9 @@ abstract class ConceptMapTargetDependsOn with _$ConceptMapTargetDependsOn {
 abstract class NamingSystem with Resource implements _$NamingSystem {
   NamingSystem._();
   factory NamingSystem({
-    @Default('NamingSystem') String resourceType,
+    @Default(Dstu2ResourceType.NamingSystem)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

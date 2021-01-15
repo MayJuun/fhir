@@ -17,7 +17,9 @@ abstract class StructureDefinition
     implements _$StructureDefinition {
   StructureDefinition._();
   factory StructureDefinition({
-    @Default('StructureDefinition') String resourceType,
+    @Default(Dstu2ResourceType.StructureDefinition)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -209,7 +211,9 @@ abstract class StructureDefinitionDifferential
 abstract class DataElement with Resource implements _$DataElement {
   DataElement._();
   factory DataElement({
-    @Default('DataElement') String resourceType,
+    @Default(Dstu2ResourceType.DataElement)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

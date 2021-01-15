@@ -8,7 +8,9 @@ part of 'support.dart';
 
 _$_Coverage _$_$_CoverageFromJson(Map<String, dynamic> json) {
   return _$_Coverage(
-    resourceType: json['resourceType'] as String ?? 'Coverage',
+    resourceType: _$enumDecodeNullable(
+        _$Dstu2ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: Dstu2ResourceType.Coverage),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -101,7 +103,8 @@ Map<String, dynamic> _$_$_CoverageToJson(_$_Coverage instance) {
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -137,10 +140,142 @@ Map<String, dynamic> _$_$_CoverageToJson(_$_Coverage instance) {
   return val;
 }
 
+T _$enumDecode<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    throw ArgumentError('A value must be provided. Supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+
+  final value = enumValues.entries
+      .singleWhere((e) => e.value == source, orElse: () => null)
+      ?.key;
+
+  if (value == null && unknownValue == null) {
+    throw ArgumentError('`$source` is not one of the supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+  return value ?? unknownValue;
+}
+
+T _$enumDecodeNullable<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
+}
+
+const _$Dstu2ResourceTypeEnumMap = {
+  Dstu2ResourceType.Account: 'Account',
+  Dstu2ResourceType.AllergyIntolerance: 'AllergyIntolerance',
+  Dstu2ResourceType.Appointment: 'Appointment',
+  Dstu2ResourceType.AppointmentResponse: 'AppointmentResponse',
+  Dstu2ResourceType.AuditEvent: 'AuditEvent',
+  Dstu2ResourceType.Basic: 'Basic',
+  Dstu2ResourceType.Binary: 'Binary',
+  Dstu2ResourceType.BodySite: 'BodySite',
+  Dstu2ResourceType.Bundle: 'Bundle',
+  Dstu2ResourceType.CapabilityStatement: 'CapabilityStatement',
+  Dstu2ResourceType.CarePlan: 'CarePlan',
+  Dstu2ResourceType.Claim: 'Claim',
+  Dstu2ResourceType.ClaimResponse: 'ClaimResponse',
+  Dstu2ResourceType.ClinicalImpression: 'ClinicalImpression',
+  Dstu2ResourceType.Communication: 'Communication',
+  Dstu2ResourceType.CommunicationRequest: 'CommunicationRequest',
+  Dstu2ResourceType.Composition: 'Composition',
+  Dstu2ResourceType.ConceptMap: 'ConceptMap',
+  Dstu2ResourceType.Condition: 'Condition',
+  Dstu2ResourceType.Conformance: 'Conformance',
+  Dstu2ResourceType.Contract: 'Contract',
+  Dstu2ResourceType.Coverage: 'Coverage',
+  Dstu2ResourceType.DataElement: 'DataElement',
+  Dstu2ResourceType.DetectedIssue: 'DetectedIssue',
+  Dstu2ResourceType.Device: 'Device',
+  Dstu2ResourceType.DeviceComponent: 'DeviceComponent',
+  Dstu2ResourceType.DeviceMetric: 'DeviceMetric',
+  Dstu2ResourceType.DeviceUseRequest: 'DeviceUseRequest',
+  Dstu2ResourceType.DeviceUseStatement: 'DeviceUseStatement',
+  Dstu2ResourceType.DiagnosticOrder: 'DiagnosticOrder',
+  Dstu2ResourceType.DiagnosticReport: 'DiagnosticReport',
+  Dstu2ResourceType.DocumentManifest: 'DocumentManifest',
+  Dstu2ResourceType.DocumentReference: 'DocumentReference',
+  Dstu2ResourceType.EligibilityRequest: 'EligibilityRequest',
+  Dstu2ResourceType.EligibilityResponse: 'EligibilityResponse',
+  Dstu2ResourceType.Encounter: 'Encounter',
+  Dstu2ResourceType.EnrollmentRequest: 'EnrollmentRequest',
+  Dstu2ResourceType.EnrollmentResponse: 'EnrollmentResponse',
+  Dstu2ResourceType.EpisodeOfCare: 'EpisodeOfCare',
+  Dstu2ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
+  Dstu2ResourceType.FamilyMemberHistory: 'FamilyMemberHistory',
+  Dstu2ResourceType.Flag: 'Flag',
+  Dstu2ResourceType.Goal: 'Goal',
+  Dstu2ResourceType.Group: 'Group',
+  Dstu2ResourceType.HealthcareService: 'HealthcareService',
+  Dstu2ResourceType.ImagingObjectSelection: 'ImagingObjectSelection',
+  Dstu2ResourceType.ImagingStudy: 'ImagingStudy',
+  Dstu2ResourceType.Immunization: 'Immunization',
+  Dstu2ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
+  Dstu2ResourceType.ImplementationGuide: 'ImplementationGuide',
+  Dstu2ResourceType.List: 'List',
+  Dstu2ResourceType.Location: 'Location',
+  Dstu2ResourceType.Media: 'Media',
+  Dstu2ResourceType.Medication: 'Medication',
+  Dstu2ResourceType.MedicationAdministration: 'MedicationAdministration',
+  Dstu2ResourceType.MedicationDispense: 'MedicationDispense',
+  Dstu2ResourceType.MedicationOrder: 'MedicationOrder',
+  Dstu2ResourceType.MedicationStatement: 'MedicationStatement',
+  Dstu2ResourceType.MessageHeader: 'MessageHeader',
+  Dstu2ResourceType.NamingSystem: 'NamingSystem',
+  Dstu2ResourceType.NutritionOrder: 'NutritionOrder',
+  Dstu2ResourceType.Observation: 'Observation',
+  Dstu2ResourceType.OperationDefinition: 'OperationDefinition',
+  Dstu2ResourceType.OperationOutcome: 'OperationOutcome',
+  Dstu2ResourceType.Order: 'Order',
+  Dstu2ResourceType.OrderResponse: 'OrderResponse',
+  Dstu2ResourceType.Organization: 'Organization',
+  Dstu2ResourceType.Parameters: 'Parameters',
+  Dstu2ResourceType.Patient: 'Patient',
+  Dstu2ResourceType.PaymentNotice: 'PaymentNotice',
+  Dstu2ResourceType.PaymentReconciliation: 'PaymentReconciliation',
+  Dstu2ResourceType.Person: 'Person',
+  Dstu2ResourceType.Practitioner: 'Practitioner',
+  Dstu2ResourceType.Procedure: 'Procedure',
+  Dstu2ResourceType.ProcedureRequest: 'ProcedureRequest',
+  Dstu2ResourceType.ProcessRequest: 'ProcessRequest',
+  Dstu2ResourceType.ProcessResponse: 'ProcessResponse',
+  Dstu2ResourceType.Provenance: 'Provenance',
+  Dstu2ResourceType.Questionnaire: 'Questionnaire',
+  Dstu2ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  Dstu2ResourceType.ReferralRequest: 'ReferralRequest',
+  Dstu2ResourceType.RelatedPerson: 'RelatedPerson',
+  Dstu2ResourceType.RiskAssessment: 'RiskAssessment',
+  Dstu2ResourceType.Schedule: 'Schedule',
+  Dstu2ResourceType.SearchParameter: 'SearchParameter',
+  Dstu2ResourceType.Slot: 'Slot',
+  Dstu2ResourceType.Specimen: 'Specimen',
+  Dstu2ResourceType.StructureDefinition: 'StructureDefinition',
+  Dstu2ResourceType.Subscription: 'Subscription',
+  Dstu2ResourceType.Substance: 'Substance',
+  Dstu2ResourceType.SupplyDelivery: 'SupplyDelivery',
+  Dstu2ResourceType.SupplyRequest: 'SupplyRequest',
+  Dstu2ResourceType.TestScript: 'TestScript',
+  Dstu2ResourceType.ValueSet: 'ValueSet',
+  Dstu2ResourceType.VisionPrescription: 'VisionPrescription',
+};
+
 _$_EligibilityRequest _$_$_EligibilityRequestFromJson(
     Map<String, dynamic> json) {
   return _$_EligibilityRequest(
-    resourceType: json['resourceType'] as String ?? 'EligibilityRequest',
+    resourceType: _$enumDecodeNullable(
+        _$Dstu2ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: Dstu2ResourceType.EligibilityRequest),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -212,7 +347,8 @@ Map<String, dynamic> _$_$_EligibilityRequestToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -241,7 +377,9 @@ Map<String, dynamic> _$_$_EligibilityRequestToJson(
 _$_EligibilityResponse _$_$_EligibilityResponseFromJson(
     Map<String, dynamic> json) {
   return _$_EligibilityResponse(
-    resourceType: json['resourceType'] as String ?? 'EligibilityResponse',
+    resourceType: _$enumDecodeNullable(
+        _$Dstu2ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: Dstu2ResourceType.EligibilityResponse),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -327,7 +465,8 @@ Map<String, dynamic> _$_$_EligibilityResponseToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -359,38 +498,6 @@ Map<String, dynamic> _$_$_EligibilityResponseToJson(
   return val;
 }
 
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
-}
-
 const _$EligibilityResponseOutcomeEnumMap = {
   EligibilityResponseOutcome.complete: 'complete',
   EligibilityResponseOutcome.error: 'error',
@@ -400,7 +507,9 @@ const _$EligibilityResponseOutcomeEnumMap = {
 _$_EnrollmentRequest _$_$_EnrollmentRequestFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['subject', 'coverage', 'relationship']);
   return _$_EnrollmentRequest(
-    resourceType: json['resourceType'] as String ?? 'EnrollmentRequest',
+    resourceType: _$enumDecodeNullable(
+        _$Dstu2ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: Dstu2ResourceType.EnrollmentRequest),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -481,7 +590,8 @@ Map<String, dynamic> _$_$_EnrollmentRequestToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -513,7 +623,9 @@ Map<String, dynamic> _$_$_EnrollmentRequestToJson(
 _$_EnrollmentResponse _$_$_EnrollmentResponseFromJson(
     Map<String, dynamic> json) {
   return _$_EnrollmentResponse(
-    resourceType: json['resourceType'] as String ?? 'EnrollmentResponse',
+    resourceType: _$enumDecodeNullable(
+        _$Dstu2ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: Dstu2ResourceType.EnrollmentResponse),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -599,7 +711,8 @@ Map<String, dynamic> _$_$_EnrollmentResponseToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

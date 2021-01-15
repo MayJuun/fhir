@@ -18,7 +18,8 @@ class _$EncounterTearOff {
 
 // ignore: unused_element
   _Encounter call(
-      {String resourceType = 'Encounter',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.Encounter,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -106,7 +107,8 @@ const $Encounter = _$EncounterTearOff();
 
 /// @nodoc
 mixin _$Encounter {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -155,7 +157,8 @@ abstract class $EncounterCopyWith<$Res> {
   factory $EncounterCopyWith(Encounter value, $Res Function(Encounter) then) =
       _$EncounterCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -257,7 +260,7 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -478,7 +481,8 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       __$EncounterCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -595,7 +599,7 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
     return _then(_Encounter(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -673,7 +677,8 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
 /// @nodoc
 class _$_Encounter extends _Encounter {
   _$_Encounter(
-      {this.resourceType = 'Encounter',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
+          this.resourceType = Dstu2ResourceType.Encounter,
       this.id,
       this.meta,
       this.implicitRules,
@@ -720,9 +725,9 @@ class _$_Encounter extends _Encounter {
   factory _$_Encounter.fromJson(Map<String, dynamic> json) =>
       _$_$_EncounterFromJson(json);
 
-  @JsonKey(defaultValue: 'Encounter')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -928,7 +933,8 @@ class _$_Encounter extends _Encounter {
 abstract class _Encounter extends Encounter {
   _Encounter._() : super._();
   factory _Encounter(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -973,7 +979,8 @@ abstract class _Encounter extends Encounter {
       _$_Encounter.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -2573,7 +2580,8 @@ class _$EpisodeOfCareTearOff {
 
 // ignore: unused_element
   _EpisodeOfCare call(
-      {String resourceType = 'EpisodeOfCare',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.EpisodeOfCare,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2643,7 +2651,8 @@ const $EpisodeOfCare = _$EpisodeOfCareTearOff();
 
 /// @nodoc
 mixin _$EpisodeOfCare {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2683,7 +2692,8 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
           EpisodeOfCare value, $Res Function(EpisodeOfCare) then) =
       _$EpisodeOfCareCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2762,7 +2772,7 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2914,7 +2924,8 @@ abstract class _$EpisodeOfCareCopyWith<$Res>
       __$EpisodeOfCareCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3004,7 +3015,7 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
     return _then(_EpisodeOfCare(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3063,7 +3074,8 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
 /// @nodoc
 class _$_EpisodeOfCare extends _EpisodeOfCare {
   _$_EpisodeOfCare(
-      {this.resourceType = 'EpisodeOfCare',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
+          this.resourceType = Dstu2ResourceType.EpisodeOfCare,
       this.id,
       this.meta,
       this.implicitRules,
@@ -3102,9 +3114,9 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   factory _$_EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
       _$_$_EpisodeOfCareFromJson(json);
 
-  @JsonKey(defaultValue: 'EpisodeOfCare')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -3270,7 +3282,8 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
 abstract class _EpisodeOfCare extends EpisodeOfCare {
   _EpisodeOfCare._() : super._();
   factory _EpisodeOfCare(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3306,7 +3319,8 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
       _$_EpisodeOfCare.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -3986,7 +4000,8 @@ class _$CommunicationTearOff {
 
 // ignore: unused_element
   _Communication call(
-      {String resourceType = 'Communication',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.Communication,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4063,7 +4078,8 @@ const $Communication = _$CommunicationTearOff();
 
 /// @nodoc
 mixin _$Communication {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -4108,7 +4124,8 @@ abstract class $CommunicationCopyWith<$Res> {
           Communication value, $Res Function(Communication) then) =
       _$CommunicationCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4199,7 +4216,7 @@ class _$CommunicationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4387,7 +4404,8 @@ abstract class _$CommunicationCopyWith<$Res>
       __$CommunicationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4492,7 +4510,7 @@ class __$CommunicationCopyWithImpl<$Res>
     return _then(_Communication(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4557,16 +4575,20 @@ class __$CommunicationCopyWithImpl<$Res>
 /// @nodoc
 class _$_Communication extends _Communication {
   _$_Communication(
-      {this.resourceType = 'Communication',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
+          this.resourceType = Dstu2ResourceType.Communication,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.category,
@@ -4574,13 +4596,17 @@ class _$_Communication extends _Communication {
       this.recipient,
       this.payload,
       this.medium,
-      @JsonKey(unknownEnumValue: CommunicationStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.encounter,
       this.sent,
-      @JsonKey(name: '_sent') this.sentElement,
+      @JsonKey(name: '_sent')
+          this.sentElement,
       this.received,
-      @JsonKey(name: '_received') this.receivedElement,
+      @JsonKey(name: '_received')
+          this.receivedElement,
       this.reason,
       this.subject,
       this.requestDetail})
@@ -4590,9 +4616,9 @@ class _$_Communication extends _Communication {
   factory _$_Communication.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationFromJson(json);
 
-  @JsonKey(defaultValue: 'Communication')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -4778,7 +4804,8 @@ class _$_Communication extends _Communication {
 abstract class _Communication extends Communication {
   _Communication._() : super._();
   factory _Communication(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4817,7 +4844,8 @@ abstract class _Communication extends Communication {
       _$_Communication.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -5227,7 +5255,8 @@ class _$FlagTearOff {
 
 // ignore: unused_element
   _Flag call(
-      {String resourceType = 'Flag',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.Flag,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5293,7 +5322,8 @@ const $Flag = _$FlagTearOff();
 
 /// @nodoc
 mixin _$Flag {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -5330,7 +5360,8 @@ abstract class $FlagCopyWith<$Res> {
   factory $FlagCopyWith(Flag value, $Res Function(Flag) then) =
       _$FlagCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5405,7 +5436,7 @@ class _$FlagCopyWithImpl<$Res> implements $FlagCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5562,7 +5593,8 @@ abstract class _$FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
       __$FlagCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5649,7 +5681,7 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
     return _then(_Flag(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5695,7 +5727,8 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
 /// @nodoc
 class _$_Flag extends _Flag {
   _$_Flag(
-      {this.resourceType = 'Flag',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
+          this.resourceType = Dstu2ResourceType.Flag,
       this.id,
       this.meta,
       this.implicitRules,
@@ -5734,9 +5767,9 @@ class _$_Flag extends _Flag {
   factory _$_Flag.fromJson(Map<String, dynamic> json) =>
       _$_$_FlagFromJson(json);
 
-  @JsonKey(defaultValue: 'Flag')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -5884,7 +5917,8 @@ class _$_Flag extends _Flag {
 abstract class _Flag extends Flag {
   _Flag._() : super._();
   factory _Flag(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5918,7 +5952,8 @@ abstract class _Flag extends Flag {
   factory _Flag.fromJson(Map<String, dynamic> json) = _$_Flag.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override

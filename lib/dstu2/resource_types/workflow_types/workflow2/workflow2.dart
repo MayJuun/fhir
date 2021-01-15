@@ -15,7 +15,9 @@ part 'workflow2.g.dart';
 abstract class ProcessRequest with Resource implements _$ProcessRequest {
   ProcessRequest._();
   factory ProcessRequest({
-    @Default('ProcessRequest') String resourceType,
+    @Default(Dstu2ResourceType.ProcessRequest)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -88,7 +90,9 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
 abstract class ProcessResponse with Resource implements _$ProcessResponse {
   ProcessResponse._();
   factory ProcessResponse({
-    @Default('ProcessResponse') String resourceType,
+    @Default(Dstu2ResourceType.ProcessResponse)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -157,7 +161,9 @@ abstract class ProcessResponseNotes with _$ProcessResponseNotes {
 abstract class SupplyRequest with Resource implements _$SupplyRequest {
   SupplyRequest._();
   factory SupplyRequest({
-    @Default('SupplyRequest') String resourceType,
+    @Default(Dstu2ResourceType.SupplyRequest)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -228,7 +234,9 @@ abstract class SupplyRequestWhen with _$SupplyRequestWhen {
 abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
   SupplyDelivery._();
   factory SupplyDelivery({
-    @Default('SupplyDelivery') String resourceType,
+    @Default(Dstu2ResourceType.SupplyDelivery)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

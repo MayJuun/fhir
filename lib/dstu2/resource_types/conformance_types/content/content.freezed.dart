@@ -18,7 +18,9 @@ class _$StructureDefinitionTearOff {
 
 // ignore: unused_element
   _StructureDefinition call(
-      {String resourceType = 'StructureDefinition',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
+          Dstu2ResourceType
+              resourceType = Dstu2ResourceType.StructureDefinition,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -159,7 +161,8 @@ const $StructureDefinition = _$StructureDefinitionTearOff();
 
 /// @nodoc
 mixin _$StructureDefinition {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -241,7 +244,8 @@ abstract class $StructureDefinitionCopyWith<$Res> {
           StructureDefinition value, $Res Function(StructureDefinition) then) =
       _$StructureDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -398,7 +402,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -707,7 +711,8 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       __$StructureDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -885,7 +890,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
     return _then(_StructureDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1000,7 +1005,8 @@ class __$StructureDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_StructureDefinition extends _StructureDefinition {
   _$_StructureDefinition(
-      {this.resourceType = 'StructureDefinition',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
+          this.resourceType = Dstu2ResourceType.StructureDefinition,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1087,9 +1093,9 @@ class _$_StructureDefinition extends _StructureDefinition {
   factory _$_StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_StructureDefinitionFromJson(json);
 
-  @JsonKey(defaultValue: 'StructureDefinition')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -1379,7 +1385,8 @@ class _$_StructureDefinition extends _StructureDefinition {
 abstract class _StructureDefinition extends StructureDefinition {
   _StructureDefinition._() : super._();
   factory _StructureDefinition(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1460,7 +1467,8 @@ abstract class _StructureDefinition extends StructureDefinition {
       _$_StructureDefinition.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -2771,7 +2779,8 @@ class _$DataElementTearOff {
 
 // ignore: unused_element
   _DataElement call(
-      {String resourceType = 'DataElement',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.DataElement,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2839,7 +2848,8 @@ const $DataElement = _$DataElementTearOff();
 
 /// @nodoc
 mixin _$DataElement {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2877,7 +2887,8 @@ abstract class $DataElementCopyWith<$Res> {
           DataElement value, $Res Function(DataElement) then) =
       _$DataElementCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2946,7 +2957,7 @@ class _$DataElementCopyWithImpl<$Res> implements $DataElementCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3022,7 +3033,8 @@ abstract class _$DataElementCopyWith<$Res>
       __$DataElementCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3095,7 +3107,7 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
     return _then(_DataElement(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3148,7 +3160,8 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
 /// @nodoc
 class _$_DataElement extends _DataElement {
   _$_DataElement(
-      {this.resourceType = 'DataElement',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
+          this.resourceType = Dstu2ResourceType.DataElement,
       this.id,
       this.meta,
       this.implicitRules,
@@ -3185,9 +3198,9 @@ class _$_DataElement extends _DataElement {
   factory _$_DataElement.fromJson(Map<String, dynamic> json) =>
       _$_$_DataElementFromJson(json);
 
-  @JsonKey(defaultValue: 'DataElement')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -3349,7 +3362,8 @@ class _$_DataElement extends _DataElement {
 abstract class _DataElement extends DataElement {
   _DataElement._() : super._();
   factory _DataElement(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3383,7 +3397,8 @@ abstract class _DataElement extends DataElement {
       _$_DataElement.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override

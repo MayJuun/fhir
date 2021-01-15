@@ -15,7 +15,9 @@ part 'exchange.g.dart';
 abstract class MessageHeader with Resource implements _$MessageHeader {
   MessageHeader._();
   factory MessageHeader({
-    @Default('MessageHeader') String resourceType,
+    @Default(Dstu2ResourceType.MessageHeader)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -152,7 +154,9 @@ abstract class MessageHeaderDestination with _$MessageHeaderDestination {
 abstract class OperationOutcome with Resource implements _$OperationOutcome {
   OperationOutcome._();
   factory OperationOutcome({
-    @Default('OperationOutcome') String resourceType,
+    @Default(Dstu2ResourceType.OperationOutcome)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
+        Dstu2ResourceType resourceType,
     Id id,
     @JsonKey(name: '_id') Element idElement,
     Meta meta,
@@ -217,7 +221,9 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
 abstract class Parameters with Resource implements _$Parameters {
   Parameters._();
   factory Parameters({
-    @Default('Parameters') String resourceType,
+    @Default(Dstu2ResourceType.Parameters)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -307,7 +313,9 @@ abstract class ParametersParameter with _$ParametersParameter {
 abstract class Subscription with Resource implements _$Subscription {
   Subscription._();
   factory Subscription({
-    @Default('Subscription') String resourceType,
+    @Default(Dstu2ResourceType.Subscription)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

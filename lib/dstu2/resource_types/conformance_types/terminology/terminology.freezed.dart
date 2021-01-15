@@ -18,7 +18,8 @@ class _$ValueSetTearOff {
 
 // ignore: unused_element
   _ValueSet call(
-      {String resourceType = 'ValueSet',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.ValueSet,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -135,7 +136,8 @@ const $ValueSet = _$ValueSetTearOff();
 
 /// @nodoc
 mixin _$ValueSet {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
+  Dstu2ResourceType get resourceType;
   Id get id;
   @JsonKey(name: '_id')
   Element get idElement;
@@ -203,7 +205,8 @@ abstract class $ValueSetCopyWith<$Res> {
   factory $ValueSetCopyWith(ValueSet value, $Res Function(ValueSet) then) =
       _$ValueSetCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
+          Dstu2ResourceType resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -340,7 +343,7 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       idElement: idElement == freezed ? _value.idElement : idElement as Element,
       meta: meta == freezed ? _value.meta : meta as Meta,
@@ -638,7 +641,8 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       __$ValueSetCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
+          Dstu2ResourceType resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -796,7 +800,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
     return _then(_ValueSet(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       idElement: idElement == freezed ? _value.idElement : idElement as Element,
       meta: meta == freezed ? _value.meta : meta as Meta,
@@ -893,7 +897,8 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
 /// @nodoc
 class _$_ValueSet extends _ValueSet {
   _$_ValueSet(
-      {this.resourceType = 'ValueSet',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
+          this.resourceType = Dstu2ResourceType.ValueSet,
       this.id,
       @JsonKey(name: '_id')
           this.idElement,
@@ -959,9 +964,9 @@ class _$_ValueSet extends _ValueSet {
   factory _$_ValueSet.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetFromJson(json);
 
-  @JsonKey(defaultValue: 'ValueSet')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -1216,7 +1221,8 @@ class _$_ValueSet extends _ValueSet {
 abstract class _ValueSet extends ValueSet {
   _ValueSet._() : super._();
   factory _ValueSet(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
+          Dstu2ResourceType resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -1279,7 +1285,8 @@ abstract class _ValueSet extends ValueSet {
   factory _ValueSet.fromJson(Map<String, dynamic> json) = _$_ValueSet.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -6109,7 +6116,8 @@ class _$ConceptMapTearOff {
 
 // ignore: unused_element
   _ConceptMap call(
-      {String resourceType = 'ConceptMap',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.ConceptMap,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6221,7 +6229,8 @@ const $ConceptMap = _$ConceptMapTearOff();
 
 /// @nodoc
 mixin _$ConceptMap {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -6287,7 +6296,8 @@ abstract class $ConceptMapCopyWith<$Res> {
           ConceptMap value, $Res Function(ConceptMap) then) =
       _$ConceptMapCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6417,7 +6427,7 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6694,7 +6704,8 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       __$ConceptMapCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6844,7 +6855,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
     return _then(_ConceptMap(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6939,7 +6950,8 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
 /// @nodoc
 class _$_ConceptMap extends _ConceptMap {
   _$_ConceptMap(
-      {this.resourceType = 'ConceptMap',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
+          this.resourceType = Dstu2ResourceType.ConceptMap,
       this.id,
       this.meta,
       this.implicitRules,
@@ -7002,9 +7014,9 @@ class _$_ConceptMap extends _ConceptMap {
   factory _$_ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapFromJson(json);
 
-  @JsonKey(defaultValue: 'ConceptMap')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -7250,7 +7262,8 @@ class _$_ConceptMap extends _ConceptMap {
 abstract class _ConceptMap extends ConceptMap {
   _ConceptMap._() : super._();
   factory _ConceptMap(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7311,7 +7324,8 @@ abstract class _ConceptMap extends ConceptMap {
       _$_ConceptMap.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -8706,7 +8720,8 @@ class _$NamingSystemTearOff {
 
 // ignore: unused_element
   _NamingSystem call(
-      {String resourceType = 'NamingSystem',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.NamingSystem,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8807,7 +8822,8 @@ const $NamingSystem = _$NamingSystemTearOff();
 
 /// @nodoc
 mixin _$NamingSystem {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -8866,7 +8882,8 @@ abstract class $NamingSystemCopyWith<$Res> {
           NamingSystem value, $Res Function(NamingSystem) then) =
       _$NamingSystemCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8977,7 +8994,7 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -9194,7 +9211,8 @@ abstract class _$NamingSystemCopyWith<$Res>
       __$NamingSystemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9321,7 +9339,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
     return _then(_NamingSystem(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -9395,7 +9413,8 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
 /// @nodoc
 class _$_NamingSystem extends _NamingSystem {
   _$_NamingSystem(
-      {this.resourceType = 'NamingSystem',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
+          this.resourceType = Dstu2ResourceType.NamingSystem,
       this.id,
       this.meta,
       this.implicitRules,
@@ -9459,9 +9478,9 @@ class _$_NamingSystem extends _NamingSystem {
   factory _$_NamingSystem.fromJson(Map<String, dynamic> json) =>
       _$_$_NamingSystemFromJson(json);
 
-  @JsonKey(defaultValue: 'NamingSystem')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -9676,7 +9695,8 @@ class _$_NamingSystem extends _NamingSystem {
 abstract class _NamingSystem extends NamingSystem {
   _NamingSystem._() : super._();
   factory _NamingSystem(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9734,7 +9754,8 @@ abstract class _NamingSystem extends NamingSystem {
       _$_NamingSystem.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override

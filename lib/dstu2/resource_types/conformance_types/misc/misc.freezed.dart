@@ -18,7 +18,9 @@ class _$ImplementationGuideTearOff {
 
 // ignore: unused_element
   _ImplementationGuide call(
-      {String resourceType = 'ImplementationGuide',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
+          Dstu2ResourceType
+              resourceType = Dstu2ResourceType.ImplementationGuide,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -133,7 +135,8 @@ const $ImplementationGuide = _$ImplementationGuideTearOff();
 
 /// @nodoc
 mixin _$ImplementationGuide {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -200,7 +203,8 @@ abstract class $ImplementationGuideCopyWith<$Res> {
           ImplementationGuide value, $Res Function(ImplementationGuide) then) =
       _$ImplementationGuideCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -326,7 +330,7 @@ class _$ImplementationGuideCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -560,7 +564,8 @@ abstract class _$ImplementationGuideCopyWith<$Res>
       __$ImplementationGuideCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -702,7 +707,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
     return _then(_ImplementationGuide(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -793,7 +798,8 @@ class __$ImplementationGuideCopyWithImpl<$Res>
 /// @nodoc
 class _$_ImplementationGuide extends _ImplementationGuide {
   _$_ImplementationGuide(
-      {this.resourceType = 'ImplementationGuide',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
+          this.resourceType = Dstu2ResourceType.ImplementationGuide,
       this.id,
       this.meta,
       this.implicitRules,
@@ -865,9 +871,9 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   factory _$_ImplementationGuide.fromJson(Map<String, dynamic> json) =>
       _$_$_ImplementationGuideFromJson(json);
 
-  @JsonKey(defaultValue: 'ImplementationGuide')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -1109,7 +1115,8 @@ class _$_ImplementationGuide extends _ImplementationGuide {
 abstract class _ImplementationGuide extends ImplementationGuide {
   _ImplementationGuide._() : super._();
   factory _ImplementationGuide(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1175,7 +1182,8 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       _$_ImplementationGuide.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -3247,7 +3255,8 @@ class _$TestScriptTearOff {
 
 // ignore: unused_element
   _TestScript call(
-      {String resourceType = 'TestScript',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.TestScript,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3360,7 +3369,8 @@ const $TestScript = _$TestScriptTearOff();
 
 /// @nodoc
 mixin _$TestScript {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -3425,7 +3435,8 @@ abstract class $TestScriptCopyWith<$Res> {
           TestScript value, $Res Function(TestScript) then) =
       _$TestScriptCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3552,7 +3563,7 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3806,7 +3817,8 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       __$TestScriptCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3951,7 +3963,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
     return _then(_TestScript(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4043,7 +4055,8 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
 /// @nodoc
 class _$_TestScript extends _TestScript {
   _$_TestScript(
-      {this.resourceType = 'TestScript',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
+          this.resourceType = Dstu2ResourceType.TestScript,
       this.id,
       this.meta,
       this.implicitRules,
@@ -4109,9 +4122,9 @@ class _$_TestScript extends _TestScript {
   factory _$_TestScript.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptFromJson(json);
 
-  @JsonKey(defaultValue: 'TestScript')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -4356,7 +4369,8 @@ class _$_TestScript extends _TestScript {
 abstract class _TestScript extends TestScript {
   _TestScript._() : super._();
   factory _TestScript(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4418,7 +4432,8 @@ abstract class _TestScript extends TestScript {
       _$_TestScript.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override

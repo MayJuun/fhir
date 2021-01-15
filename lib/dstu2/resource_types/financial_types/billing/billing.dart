@@ -15,7 +15,9 @@ part 'billing.g.dart';
 abstract class Account with Resource implements _$Account {
   Account._();
   factory Account({
-    @Default('Account') String resourceType,
+    @Default(Dstu2ResourceType.Account)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -61,7 +63,9 @@ abstract class Account with Resource implements _$Account {
 abstract class Claim with Resource implements _$Claim {
   Claim._();
   factory Claim({
-    @Default('Claim') String resourceType,
+    @Default(Dstu2ResourceType.Claim)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -381,7 +385,9 @@ abstract class ClaimMissingTeeth with _$ClaimMissingTeeth {
 abstract class ClaimResponse with Resource implements _$ClaimResponse {
   ClaimResponse._();
   factory ClaimResponse({
-    @Default('ClaimResponse') String resourceType,
+    @Default(Dstu2ResourceType.ClaimResponse)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -15,7 +15,9 @@ part 'entities.g.dart';
 abstract class Location with Resource implements _$Location {
   Location._();
   factory Location({
-    @Default('Location') String resourceType,
+    @Default(Dstu2ResourceType.Location)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -93,7 +95,9 @@ abstract class LocationPosition with _$LocationPosition {
 abstract class Substance with Resource implements _$Substance {
   Substance._();
   factory Substance({
-    @Default('Substance') String resourceType,
+    @Default(Dstu2ResourceType.Substance)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Substance)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -186,7 +190,9 @@ abstract class SubstanceIngredient with _$SubstanceIngredient {
 abstract class Person with Resource implements _$Person {
   Person._();
   factory Person({
-    @Default('Person') String resourceType,
+    @Default(Dstu2ResourceType.Person)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Person)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -257,7 +263,9 @@ abstract class PersonLink with _$PersonLink {
 abstract class Contract with Resource implements _$Contract {
   Contract._();
   factory Contract({
-    @Default('Contract') String resourceType,
+    @Default(Dstu2ResourceType.Contract)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Contract)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

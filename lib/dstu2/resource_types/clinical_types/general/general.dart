@@ -17,7 +17,9 @@ abstract class AllergyIntolerance
     implements _$AllergyIntolerance {
   AllergyIntolerance._();
   factory AllergyIntolerance({
-    @Default('AllergyIntolerance') String resourceType,
+    @Default(Dstu2ResourceType.AllergyIntolerance)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.AllergyIntolerance)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -113,7 +115,9 @@ abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
 abstract class Condition with Resource implements _$Condition {
   Condition._();
   factory Condition({
-    @Default('Condition') String resourceType,
+    @Default(Dstu2ResourceType.Condition)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Condition)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -233,7 +237,9 @@ abstract class ConditionEvidence with _$ConditionEvidence {
 abstract class Procedure with Resource implements _$Procedure {
   Procedure._();
   factory Procedure({
-    @Default('Procedure') String resourceType,
+    @Default(Dstu2ResourceType.Procedure)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Procedure)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -347,7 +353,9 @@ abstract class ClinicalImpression
     implements _$ClinicalImpression {
   ClinicalImpression._();
   factory ClinicalImpression({
-    @Default('ClinicalImpression') String resourceType,
+    @Default(Dstu2ResourceType.ClinicalImpression)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.ClinicalImpression)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -490,7 +498,9 @@ abstract class FamilyMemberHistory
     implements _$FamilyMemberHistory {
   FamilyMemberHistory._();
   factory FamilyMemberHistory({
-    @Default('FamilyMemberHistory') String resourceType,
+    @Default(Dstu2ResourceType.FamilyMemberHistory)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.FamilyMemberHistory)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -589,7 +599,9 @@ abstract class FamilyMemberHistoryCondition
 abstract class RiskAssessment with Resource implements _$RiskAssessment {
   RiskAssessment._();
   factory RiskAssessment({
-    @Default('RiskAssessment') String resourceType,
+    @Default(Dstu2ResourceType.RiskAssessment)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.RiskAssessment)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -668,7 +680,9 @@ abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
 abstract class DetectedIssue with Resource implements _$DetectedIssue {
   DetectedIssue._();
   factory DetectedIssue({
-    @Default('DetectedIssue') String resourceType,
+    @Default(Dstu2ResourceType.DetectedIssue)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.DetectedIssue)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

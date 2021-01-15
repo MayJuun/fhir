@@ -18,23 +18,30 @@ class _$AccountTearOff {
 
 // ignore: unused_element
   _Account call(
-      {String resourceType = 'Account',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.Account,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       CodeableConcept type,
-      @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown)
+          AccountStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Period activePeriod,
       Coding currency,
       Quantity balance,
@@ -42,7 +49,8 @@ class _$AccountTearOff {
       Reference subject,
       Reference owner,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement}) {
+      @JsonKey(name: '_description')
+          Element descriptionElement}) {
     return _Account(
       resourceType: resourceType,
       id: id,
@@ -84,7 +92,8 @@ const $Account = _$AccountTearOff();
 
 /// @nodoc
 mixin _$Account {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -126,23 +135,30 @@ abstract class $AccountCopyWith<$Res> {
   factory $AccountCopyWith(Account value, $Res Function(Account) then) =
       _$AccountCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       CodeableConcept type,
-      @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown)
+          AccountStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Period activePeriod,
       Coding currency,
       Quantity balance,
@@ -150,7 +166,8 @@ abstract class $AccountCopyWith<$Res> {
       Reference subject,
       Reference owner,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement});
+      @JsonKey(name: '_description')
+          Element descriptionElement});
 
   $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
@@ -207,7 +224,7 @@ class _$AccountCopyWithImpl<$Res> implements $AccountCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -405,23 +422,30 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       __$AccountCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       CodeableConcept type,
-      @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown)
+          AccountStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Period activePeriod,
       Coding currency,
       Quantity balance,
@@ -429,7 +453,8 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       Reference subject,
       Reference owner,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement});
+      @JsonKey(name: '_description')
+          Element descriptionElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -501,7 +526,7 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
     return _then(_Account(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -558,23 +583,30 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
 /// @nodoc
 class _$_Account extends _Account {
   _$_Account(
-      {this.resourceType = 'Account',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
+          this.resourceType = Dstu2ResourceType.Account,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.type,
-      @JsonKey(unknownEnumValue: AccountStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.activePeriod,
       this.currency,
       this.balance,
@@ -582,16 +614,17 @@ class _$_Account extends _Account {
       this.subject,
       this.owner,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement})
+      @JsonKey(name: '_description')
+          this.descriptionElement})
       : assert(resourceType != null),
         super._();
 
   factory _$_Account.fromJson(Map<String, dynamic> json) =>
       _$_$_AccountFromJson(json);
 
-  @JsonKey(defaultValue: 'Account')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -769,23 +802,30 @@ class _$_Account extends _Account {
 abstract class _Account extends Account {
   _Account._() : super._();
   factory _Account(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       CodeableConcept type,
-      @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown)
+          AccountStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Period activePeriod,
       Coding currency,
       Quantity balance,
@@ -793,12 +833,14 @@ abstract class _Account extends Account {
       Reference subject,
       Reference owner,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement}) = _$_Account;
+      @JsonKey(name: '_description')
+          Element descriptionElement}) = _$_Account;
 
   factory _Account.fromJson(Map<String, dynamic> json) = _$_Account.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -868,7 +910,8 @@ class _$ClaimTearOff {
 
 // ignore: unused_element
   _Claim call(
-      {String resourceType = 'Claim',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.Claim,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -978,7 +1021,8 @@ const $Claim = _$ClaimTearOff();
 
 /// @nodoc
 mixin _$Claim {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1038,7 +1082,8 @@ abstract class $ClaimCopyWith<$Res> {
   factory $ClaimCopyWith(Claim value, $Res Function(Claim) then) =
       _$ClaimCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1168,7 +1213,7 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1470,7 +1515,8 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       __$ClaimCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1622,7 +1668,7 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
     return _then(_Claim(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1713,7 +1759,8 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
 /// @nodoc
 class _$_Claim extends _Claim {
   _$_Claim(
-      {this.resourceType = 'Claim',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
+          this.resourceType = Dstu2ResourceType.Claim,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1773,9 +1820,9 @@ class _$_Claim extends _Claim {
   factory _$_Claim.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimFromJson(json);
 
-  @JsonKey(defaultValue: 'Claim')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -2022,7 +2069,8 @@ class _$_Claim extends _Claim {
 abstract class _Claim extends Claim {
   _Claim._() : super._();
   factory _Claim(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2078,7 +2126,8 @@ abstract class _Claim extends Claim {
   factory _Claim.fromJson(Map<String, dynamic> json) = _$_Claim.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -5689,7 +5738,8 @@ class _$ClaimResponseTearOff {
 
 // ignore: unused_element
   _ClaimResponse call(
-      {String resourceType = 'ClaimResponse',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.ClaimResponse,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5795,7 +5845,8 @@ const $ClaimResponse = _$ClaimResponseTearOff();
 
 /// @nodoc
 mixin _$ClaimResponse {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -5855,7 +5906,8 @@ abstract class $ClaimResponseCopyWith<$Res> {
           ClaimResponse value, $Res Function(ClaimResponse) then) =
       _$ClaimResponseCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5987,7 +6039,7 @@ class _$ClaimResponseCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6329,7 +6381,8 @@ abstract class _$ClaimResponseCopyWith<$Res>
       __$ClaimResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6487,7 +6540,7 @@ class __$ClaimResponseCopyWithImpl<$Res>
     return _then(_ClaimResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6586,30 +6639,38 @@ class __$ClaimResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_ClaimResponse extends _ClaimResponse {
   _$_ClaimResponse(
-      {this.resourceType = 'ClaimResponse',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
+          this.resourceType = Dstu2ResourceType.ClaimResponse,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.request,
       this.ruleset,
       this.originalRuleset,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.organization,
       this.requestProvider,
       this.requestOrganization,
-      @JsonKey(unknownEnumValue: ClaimResponseOutcome.unknown) this.outcome,
-      @JsonKey(name: '_outcome') this.outcomeElement,
+      @JsonKey(unknownEnumValue: ClaimResponseOutcome.unknown)
+          this.outcome,
+      @JsonKey(name: '_outcome')
+          this.outcomeElement,
       this.disposition,
-      @JsonKey(name: '_disposition') this.dispositionElement,
+      @JsonKey(name: '_disposition')
+          this.dispositionElement,
       this.payeeType,
       this.item,
       this.addItem,
@@ -6620,7 +6681,8 @@ class _$_ClaimResponse extends _ClaimResponse {
       this.paymentAdjustment,
       this.paymentAdjustmentReason,
       this.paymentDate,
-      @JsonKey(name: '_paymentDate') this.paymentDateElement,
+      @JsonKey(name: '_paymentDate')
+          this.paymentDateElement,
       this.paymentAmount,
       this.paymentRef,
       this.reserved,
@@ -6633,9 +6695,9 @@ class _$_ClaimResponse extends _ClaimResponse {
   factory _$_ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseFromJson(json);
 
-  @JsonKey(defaultValue: 'ClaimResponse')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -6878,7 +6940,8 @@ class _$_ClaimResponse extends _ClaimResponse {
 abstract class _ClaimResponse extends ClaimResponse {
   _ClaimResponse._() : super._();
   factory _ClaimResponse(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6932,7 +6995,8 @@ abstract class _ClaimResponse extends ClaimResponse {
       _$_ClaimResponse.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override

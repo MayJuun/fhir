@@ -15,7 +15,9 @@ part 'structure.g.dart';
 abstract class Media with Resource implements _$Media {
   Media._();
   factory Media({
-    @Default('Media') String resourceType,
+    @Default(Dstu2ResourceType.Media)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -65,7 +67,9 @@ abstract class Media with Resource implements _$Media {
 abstract class Binary with Resource implements _$Binary {
   Binary._();
   factory Binary({
-    @Default('Binary') String resourceType,
+    @Default(Dstu2ResourceType.Binary)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -95,7 +99,9 @@ abstract class Binary with Resource implements _$Binary {
 abstract class Bundle with Resource implements _$Bundle {
   Bundle._();
   factory Bundle({
-    @Default('Bundle') String resourceType,
+    @Default(Dstu2ResourceType.Bundle)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -293,7 +299,9 @@ abstract class BundleEntryResponse with _$BundleEntryResponse {
 abstract class Basic with Resource implements _$Basic {
   Basic._();
   factory Basic({
-    @Default('Basic') String resourceType,
+    @Default(Dstu2ResourceType.Basic)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

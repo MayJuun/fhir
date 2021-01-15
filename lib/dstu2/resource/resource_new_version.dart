@@ -19,471 +19,471 @@ Meta _updateMetaVersion(Meta oldMeta) {
 /// 1 to the version number and adds an [Id] if there is not already one
 Resource _newResourceVersion(Resource resource) {
   switch (resource.resourceType) {
-    case 'Account':
+    case Dstu2ResourceType.Account:
       return (resource as Account).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'AllergyIntolerance':
+    case Dstu2ResourceType.AllergyIntolerance:
       return (resource as AllergyIntolerance).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Appointment':
+    case Dstu2ResourceType.Appointment:
       return (resource as Appointment).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'AppointmentResponse':
+    case Dstu2ResourceType.AppointmentResponse:
       return (resource as AppointmentResponse).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'AuditEvent':
+    case Dstu2ResourceType.AuditEvent:
       return (resource as AuditEvent).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Basic':
+    case Dstu2ResourceType.Basic:
       return (resource as Basic).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Binary':
+    case Dstu2ResourceType.Binary:
       return (resource as Binary).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'BodySite':
+    case Dstu2ResourceType.BodySite:
       return (resource as BodySite).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Bundle':
+    case Dstu2ResourceType.Bundle:
       return (resource as Bundle).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'CarePlan':
+    case Dstu2ResourceType.CarePlan:
       return (resource as CarePlan).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Claim':
+    case Dstu2ResourceType.Claim:
       return (resource as Claim).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'ClaimResponse':
+    case Dstu2ResourceType.ClaimResponse:
       return (resource as ClaimResponse).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'ClinicalImpression':
+    case Dstu2ResourceType.ClinicalImpression:
       return (resource as ClinicalImpression).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Communication':
+    case Dstu2ResourceType.Communication:
       return (resource as Communication).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'CommunicationRequest':
+    case Dstu2ResourceType.CommunicationRequest:
       return (resource as CommunicationRequest).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Composition':
+    case Dstu2ResourceType.Composition:
       return (resource as Composition).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'ConceptMap':
+    case Dstu2ResourceType.ConceptMap:
       return (resource as ConceptMap).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Condition':
+    case Dstu2ResourceType.Condition:
       return (resource as Condition).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Conformance':
+    case Dstu2ResourceType.Conformance:
       return (resource as Conformance).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Contract':
+    case Dstu2ResourceType.Contract:
       return (resource as Contract).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'DetectedIssue':
+    case Dstu2ResourceType.DetectedIssue:
       return (resource as DetectedIssue).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Coverage':
+    case Dstu2ResourceType.Coverage:
       return (resource as Coverage).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'DataElement':
+    case Dstu2ResourceType.DataElement:
       return (resource as DataElement).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Device':
+    case Dstu2ResourceType.Device:
       return (resource as Device).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'DeviceComponent':
+    case Dstu2ResourceType.DeviceComponent:
       return (resource as DeviceComponent).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'DeviceMetric':
+    case Dstu2ResourceType.DeviceMetric:
       return (resource as DeviceMetric).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'DeviceUseRequest':
+    case Dstu2ResourceType.DeviceUseRequest:
       return (resource as DeviceUseRequest).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'DeviceUseStatement':
+    case Dstu2ResourceType.DeviceUseStatement:
       return (resource as DeviceUseStatement).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'DiagnosticOrder':
+    case Dstu2ResourceType.DiagnosticOrder:
       return (resource as DiagnosticOrder).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'DiagnosticReport':
+    case Dstu2ResourceType.DiagnosticReport:
       return (resource as DiagnosticReport).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'DocumentManifest':
+    case Dstu2ResourceType.DocumentManifest:
       return (resource as DocumentManifest).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'DocumentReference':
+    case Dstu2ResourceType.DocumentReference:
       return (resource as DocumentReference).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'EligibilityRequest':
+    case Dstu2ResourceType.EligibilityRequest:
       return (resource as EligibilityRequest).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'EligibilityResponse':
+    case Dstu2ResourceType.EligibilityResponse:
       return (resource as EligibilityResponse).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Encounter':
+    case Dstu2ResourceType.Encounter:
       return (resource as Encounter).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'EnrollmentRequest':
+    case Dstu2ResourceType.EnrollmentRequest:
       return (resource as EnrollmentRequest).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'EnrollmentResponse':
+    case Dstu2ResourceType.EnrollmentResponse:
       return (resource as EnrollmentResponse).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'EpisodeOfCare':
+    case Dstu2ResourceType.EpisodeOfCare:
       return (resource as EpisodeOfCare).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'ExplanationOfBenefit':
+    case Dstu2ResourceType.ExplanationOfBenefit:
       return (resource as ExplanationOfBenefit).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'FamilyMemberHistory':
+    case Dstu2ResourceType.FamilyMemberHistory:
       return (resource as FamilyMemberHistory).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Flag':
+    case Dstu2ResourceType.Flag:
       return (resource as Flag).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
-    case 'Goal':
+    case Dstu2ResourceType.Goal:
       return (resource as Goal).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Group':
+    case Dstu2ResourceType.Group:
       return (resource as Group).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'HealthcareService':
+    case Dstu2ResourceType.HealthcareService:
       return (resource as HealthcareService).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'ImagingObjectSelection':
+    case Dstu2ResourceType.ImagingObjectSelection:
       return (resource as ImagingObjectSelection).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'ImagingStudy':
+    case Dstu2ResourceType.ImagingStudy:
       return (resource as ImagingStudy).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Immunization':
+    case Dstu2ResourceType.Immunization:
       return (resource as Immunization).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'ImmunizationRecommendation':
+    case Dstu2ResourceType.ImmunizationRecommendation:
       return (resource as ImmunizationRecommendation).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'ImplementationGuide':
+    case Dstu2ResourceType.ImplementationGuide:
       return (resource as ImplementationGuide).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'List':
+    case Dstu2ResourceType.List:
       return (resource as List_).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Location':
+    case Dstu2ResourceType.Location:
       return (resource as Location).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Media':
+    case Dstu2ResourceType.Media:
       return (resource as Media).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Medication':
+    case Dstu2ResourceType.Medication:
       return (resource as Medication).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'MedicationAdministration':
+    case Dstu2ResourceType.MedicationAdministration:
       return (resource as MedicationAdministration).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'MedicationDispense':
+    case Dstu2ResourceType.MedicationDispense:
       return (resource as MedicationDispense).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'MedicationOrder':
+    case Dstu2ResourceType.MedicationOrder:
       return (resource as MedicationOrder).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'MedicationStatement':
+    case Dstu2ResourceType.MedicationStatement:
       return (resource as MedicationStatement).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'MessageHeader':
+    case Dstu2ResourceType.MessageHeader:
       return (resource as MessageHeader).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'NamingSystem':
+    case Dstu2ResourceType.NamingSystem:
       return (resource as NamingSystem).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'NutritionOrder':
+    case Dstu2ResourceType.NutritionOrder:
       return (resource as NutritionOrder).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Observation':
+    case Dstu2ResourceType.Observation:
       return (resource as Observation).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'OperationDefinition':
+    case Dstu2ResourceType.OperationDefinition:
       return (resource as OperationDefinition).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'OperationOutcome':
+    case Dstu2ResourceType.OperationOutcome:
       return (resource as OperationOutcome).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Order':
+    case Dstu2ResourceType.Order:
       return (resource as Order).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'OrderResponse':
+    case Dstu2ResourceType.OrderResponse:
       return (resource as OrderResponse).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Organization':
+    case Dstu2ResourceType.Organization:
       return (resource as Organization).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Parameters':
+    case Dstu2ResourceType.Parameters:
       return (resource as Parameters).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Patient':
+    case Dstu2ResourceType.Patient:
       return (resource as Patient).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'PaymentNotice':
+    case Dstu2ResourceType.PaymentNotice:
       return (resource as PaymentNotice).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'PaymentReconciliation':
+    case Dstu2ResourceType.PaymentReconciliation:
       return (resource as PaymentReconciliation).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Person':
+    case Dstu2ResourceType.Person:
       return (resource as Person).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Practitioner':
+    case Dstu2ResourceType.Practitioner:
       return (resource as Practitioner).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Procedure':
+    case Dstu2ResourceType.Procedure:
       return (resource as Procedure).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'ProcessRequest':
+    case Dstu2ResourceType.ProcessRequest:
       return (resource as ProcessRequest).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'ProcessResponse':
+    case Dstu2ResourceType.ProcessResponse:
       return (resource as ProcessResponse).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'ProcedureRequest':
+    case Dstu2ResourceType.ProcedureRequest:
       return (resource as ProcedureRequest).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Provenance':
+    case Dstu2ResourceType.Provenance:
       return (resource as Provenance).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Questionnaire':
+    case Dstu2ResourceType.Questionnaire:
       return (resource as Questionnaire).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'QuestionnaireResponse':
+    case Dstu2ResourceType.QuestionnaireResponse:
       return (resource as QuestionnaireResponse).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'ReferralRequest':
+    case Dstu2ResourceType.ReferralRequest:
       return (resource as ReferralRequest).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'RelatedPerson':
+    case Dstu2ResourceType.RelatedPerson:
       return (resource as RelatedPerson).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'RiskAssessment':
+    case Dstu2ResourceType.RiskAssessment:
       return (resource as RiskAssessment).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Schedule':
+    case Dstu2ResourceType.Schedule:
       return (resource as Schedule).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'SearchParameter':
+    case Dstu2ResourceType.SearchParameter:
       return (resource as SearchParameter).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Slot':
+    case Dstu2ResourceType.Slot:
       return (resource as Slot).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Specimen':
+    case Dstu2ResourceType.Specimen:
       return (resource as Specimen).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'StructureDefinition':
+    case Dstu2ResourceType.StructureDefinition:
       return (resource as StructureDefinition).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Subscription':
+    case Dstu2ResourceType.Subscription:
       return (resource as Subscription).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'Substance':
+    case Dstu2ResourceType.Substance:
       return (resource as Substance).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'SupplyRequest':
+    case Dstu2ResourceType.SupplyRequest:
       return (resource as SupplyRequest).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'SupplyDelivery':
+    case Dstu2ResourceType.SupplyDelivery:
       return (resource as SupplyDelivery).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'TestScript':
+    case Dstu2ResourceType.TestScript:
       return (resource as TestScript).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'ValueSet':
+    case Dstu2ResourceType.ValueSet:
       return (resource as ValueSet).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case 'VisionPrescription':
+    case Dstu2ResourceType.VisionPrescription:
       return (resource as VisionPrescription).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));

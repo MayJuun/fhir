@@ -15,7 +15,9 @@ part 'patient_management.g.dart';
 abstract class Encounter with Resource implements _$Encounter {
   Encounter._();
   factory Encounter({
-    @Default('Encounter') String resourceType,
+    @Default(Dstu2ResourceType.Encounter)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -193,7 +195,9 @@ abstract class EncounterLocation with _$EncounterLocation {
 abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
   EpisodeOfCare._();
   factory EpisodeOfCare({
-    @Default('EpisodeOfCare') String resourceType,
+    @Default(Dstu2ResourceType.EpisodeOfCare)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -297,7 +301,9 @@ abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
 abstract class Communication with Resource implements _$Communication {
   Communication._();
   factory Communication({
-    @Default('Communication') String resourceType,
+    @Default(Dstu2ResourceType.Communication)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -374,7 +380,9 @@ abstract class CommunicationPayload with _$CommunicationPayload {
 abstract class Flag with Resource implements _$Flag {
   Flag._();
   factory Flag({
-    @Default('Flag') String resourceType,
+    @Default(Dstu2ResourceType.Flag)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

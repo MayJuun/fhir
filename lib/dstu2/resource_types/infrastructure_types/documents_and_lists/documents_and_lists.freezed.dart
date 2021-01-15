@@ -18,7 +18,8 @@ class _$CompositionTearOff {
 
 // ignore: unused_element
   _Composition call(
-      {String resourceType = 'Composition',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.Composition,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -112,7 +113,8 @@ const $Composition = _$CompositionTearOff();
 
 /// @nodoc
 mixin _$Composition {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -166,7 +168,8 @@ abstract class $CompositionCopyWith<$Res> {
           Composition value, $Res Function(Composition) then) =
       _$CompositionCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -269,7 +272,7 @@ class _$CompositionCopyWithImpl<$Res> implements $CompositionCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -477,7 +480,8 @@ abstract class _$CompositionCopyWith<$Res>
       __$CompositionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -596,7 +600,7 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
     return _then(_Composition(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -661,7 +665,8 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
 /// @nodoc
 class _$_Composition extends _Composition {
   _$_Composition(
-      {this.resourceType = 'Composition',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
+          this.resourceType = Dstu2ResourceType.Composition,
       this.id,
       this.meta,
       this.implicitRules,
@@ -722,9 +727,9 @@ class _$_Composition extends _Composition {
   factory _$_Composition.fromJson(Map<String, dynamic> json) =>
       _$_$_CompositionFromJson(json);
 
-  @JsonKey(defaultValue: 'Composition')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -924,7 +929,8 @@ class _$_Composition extends _Composition {
 abstract class _Composition extends Composition {
   _Composition._() : super._();
   factory _Composition(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -978,7 +984,8 @@ abstract class _Composition extends Composition {
       _$_Composition.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -2194,7 +2201,8 @@ class _$DocumentManifestTearOff {
 
 // ignore: unused_element
   _DocumentManifest call(
-      {String resourceType = 'DocumentManifest',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.DocumentManifest,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2275,7 +2283,8 @@ const $DocumentManifest = _$DocumentManifestTearOff();
 
 /// @nodoc
 mixin _$DocumentManifest {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2322,7 +2331,8 @@ abstract class $DocumentManifestCopyWith<$Res> {
           DocumentManifest value, $Res Function(DocumentManifest) then) =
       _$DocumentManifestCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2414,7 +2424,7 @@ class _$DocumentManifestCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2594,7 +2604,8 @@ abstract class _$DocumentManifestCopyWith<$Res>
       __$DocumentManifestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2699,7 +2710,7 @@ class __$DocumentManifestCopyWithImpl<$Res>
     return _then(_DocumentManifest(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2766,7 +2777,8 @@ class __$DocumentManifestCopyWithImpl<$Res>
 /// @nodoc
 class _$_DocumentManifest extends _DocumentManifest {
   _$_DocumentManifest(
-      {this.resourceType = 'DocumentManifest',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
+          this.resourceType = Dstu2ResourceType.DocumentManifest,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2812,9 +2824,9 @@ class _$_DocumentManifest extends _DocumentManifest {
   factory _$_DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentManifestFromJson(json);
 
-  @JsonKey(defaultValue: 'DocumentManifest')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -3002,7 +3014,8 @@ class _$_DocumentManifest extends _DocumentManifest {
 abstract class _DocumentManifest extends DocumentManifest {
   _DocumentManifest._() : super._();
   factory _DocumentManifest(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3045,7 +3058,8 @@ abstract class _DocumentManifest extends DocumentManifest {
       _$_DocumentManifest.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -3664,7 +3678,8 @@ class _$DocumentReferenceTearOff {
 
 // ignore: unused_element
   _DocumentReference call(
-      {String resourceType = 'DocumentReference',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.DocumentReference,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3757,7 +3772,8 @@ const $DocumentReference = _$DocumentReferenceTearOff();
 
 /// @nodoc
 mixin _$DocumentReference {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -3810,7 +3826,8 @@ abstract class $DocumentReferenceCopyWith<$Res> {
           DocumentReference value, $Res Function(DocumentReference) then) =
       _$DocumentReferenceCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3916,7 +3933,7 @@ class _$DocumentReferenceCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4145,7 +4162,8 @@ abstract class _$DocumentReferenceCopyWith<$Res>
       __$DocumentReferenceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4268,7 +4286,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
     return _then(_DocumentReference(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4344,7 +4362,8 @@ class __$DocumentReferenceCopyWithImpl<$Res>
 /// @nodoc
 class _$_DocumentReference extends _DocumentReference {
   _$_DocumentReference(
-      {this.resourceType = 'DocumentReference',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
+          this.resourceType = Dstu2ResourceType.DocumentReference,
       this.id,
       this.meta,
       this.implicitRules,
@@ -4400,9 +4419,9 @@ class _$_DocumentReference extends _DocumentReference {
   factory _$_DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentReferenceFromJson(json);
 
-  @JsonKey(defaultValue: 'DocumentReference')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -4608,7 +4627,8 @@ class _$_DocumentReference extends _DocumentReference {
 abstract class _DocumentReference extends DocumentReference {
   _DocumentReference._() : super._();
   factory _DocumentReference(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4659,7 +4679,8 @@ abstract class _DocumentReference extends DocumentReference {
       _$_DocumentReference.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -6027,7 +6048,8 @@ class _$List_TearOff {
 
 // ignore: unused_element
   _List_ call(
-      {String resourceType = 'List',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.List,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6110,7 +6132,8 @@ const $List_ = _$List_TearOff();
 
 /// @nodoc
 mixin _$List_ {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -6157,7 +6180,8 @@ abstract class $List_CopyWith<$Res> {
   factory $List_CopyWith(List_ value, $Res Function(List_) then) =
       _$List_CopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6253,7 +6277,7 @@ class _$List_CopyWithImpl<$Res> implements $List_CopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6455,7 +6479,8 @@ abstract class _$List_CopyWith<$Res> implements $List_CopyWith<$Res> {
       __$List_CopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6566,7 +6591,7 @@ class __$List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
     return _then(_List_(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6627,7 +6652,8 @@ class __$List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
 /// @nodoc
 class _$_List_ extends _List_ {
   _$_List_(
-      {this.resourceType = 'List',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+          this.resourceType = Dstu2ResourceType.List,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6674,9 +6700,9 @@ class _$_List_ extends _List_ {
   factory _$_List_.fromJson(Map<String, dynamic> json) =>
       _$_$_List_FromJson(json);
 
-  @JsonKey(defaultValue: 'List')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -6868,7 +6894,8 @@ class _$_List_ extends _List_ {
 abstract class _List_ extends List_ {
   _List_._() : super._();
   factory _List_(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6911,7 +6938,8 @@ abstract class _List_ extends List_ {
   factory _List_.fromJson(Map<String, dynamic> json) = _$_List_.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override

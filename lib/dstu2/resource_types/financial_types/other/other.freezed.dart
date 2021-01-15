@@ -18,7 +18,9 @@ class _$ExplanationOfBenefitTearOff {
 
 // ignore: unused_element
   _ExplanationOfBenefit call(
-      {String resourceType = 'ExplanationOfBenefit',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
+          Dstu2ResourceType
+              resourceType = Dstu2ResourceType.ExplanationOfBenefit,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -89,7 +91,8 @@ const $ExplanationOfBenefit = _$ExplanationOfBenefitTearOff();
 
 /// @nodoc
 mixin _$ExplanationOfBenefit {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -131,7 +134,8 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
           $Res Function(ExplanationOfBenefit) then) =
       _$ExplanationOfBenefitCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -217,7 +221,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -413,7 +417,8 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
       __$ExplanationOfBenefitCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -514,7 +519,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
     return _then(_ExplanationOfBenefit(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -577,7 +582,8 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
 /// @nodoc
 class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   _$_ExplanationOfBenefit(
-      {this.resourceType = 'ExplanationOfBenefit',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
+          this.resourceType = Dstu2ResourceType.ExplanationOfBenefit,
       this.id,
       this.meta,
       this.implicitRules,
@@ -614,9 +620,9 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   factory _$_ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitFromJson(json);
 
-  @JsonKey(defaultValue: 'ExplanationOfBenefit')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -791,7 +797,8 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   _ExplanationOfBenefit._() : super._();
   factory _ExplanationOfBenefit(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -827,7 +834,8 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
       _$_ExplanationOfBenefit.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override

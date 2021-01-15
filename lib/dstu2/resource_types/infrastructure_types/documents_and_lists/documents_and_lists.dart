@@ -15,7 +15,9 @@ part 'documents_and_lists.g.dart';
 abstract class Composition with Resource implements _$Composition {
   Composition._();
   factory Composition({
-    @Default('Composition') String resourceType,
+    @Default(Dstu2ResourceType.Composition)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -158,7 +160,9 @@ abstract class CompositionSection with _$CompositionSection {
 abstract class DocumentManifest with Resource implements _$DocumentManifest {
   DocumentManifest._();
   factory DocumentManifest({
-    @Default('DocumentManifest') String resourceType,
+    @Default(Dstu2ResourceType.DocumentManifest)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -260,7 +264,9 @@ abstract class DocumentManifestRelated with _$DocumentManifestRelated {
 abstract class DocumentReference with Resource implements _$DocumentReference {
   DocumentReference._();
   factory DocumentReference({
-    @Default('DocumentReference') String resourceType,
+    @Default(Dstu2ResourceType.DocumentReference)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -433,7 +439,9 @@ abstract class DocumentReferenceContextRelated
 abstract class List_ with Resource implements _$List_ {
   List_._();
   factory List_({
-    @Default('List') String resourceType,
+    @Default(Dstu2ResourceType.List)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

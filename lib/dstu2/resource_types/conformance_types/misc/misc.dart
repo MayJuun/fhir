@@ -17,7 +17,9 @@ abstract class ImplementationGuide
     implements _$ImplementationGuide {
   ImplementationGuide._();
   factory ImplementationGuide({
-    @Default('ImplementationGuide') String resourceType,
+    @Default(Dstu2ResourceType.ImplementationGuide)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -266,7 +268,9 @@ abstract class ImplementationGuidePackageResource
 abstract class TestScript with Resource implements _$TestScript {
   TestScript._();
   factory TestScript({
-    @Default('TestScript') String resourceType,
+    @Default(Dstu2ResourceType.TestScript)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

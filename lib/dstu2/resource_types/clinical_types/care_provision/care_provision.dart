@@ -15,7 +15,9 @@ part 'care_provision.g.dart';
 abstract class CarePlan with Resource implements _$CarePlan {
   CarePlan._();
   factory CarePlan({
-    @Default('CarePlan') String resourceType,
+    @Default(Dstu2ResourceType.CarePlan)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.CarePlan)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -194,7 +196,9 @@ abstract class CarePlanActivityDetail with _$CarePlanActivityDetail {
 abstract class Goal with Resource implements _$Goal {
   Goal._();
   factory Goal({
-    @Default('Goal') String resourceType,
+    @Default(Dstu2ResourceType.Goal)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Goal)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -272,7 +276,9 @@ abstract class GoalOutcome with _$GoalOutcome {
 abstract class ReferralRequest with Resource implements _$ReferralRequest {
   ReferralRequest._();
   factory ReferralRequest({
-    @Default('ReferralRequest') String resourceType,
+    @Default(Dstu2ResourceType.ReferralRequest)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.ReferralRequest)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -320,7 +326,9 @@ abstract class ReferralRequest with Resource implements _$ReferralRequest {
 abstract class ProcedureRequest with Resource implements _$ProcedureRequest {
   ProcedureRequest._();
   factory ProcedureRequest({
-    @Default('ProcedureRequest') String resourceType,
+    @Default(Dstu2ResourceType.ProcedureRequest)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcedureRequest)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -370,7 +378,9 @@ abstract class ProcedureRequest with Resource implements _$ProcedureRequest {
 abstract class NutritionOrder with Resource implements _$NutritionOrder {
   NutritionOrder._();
   factory NutritionOrder({
-    @Default('NutritionOrder') String resourceType,
+    @Default(Dstu2ResourceType.NutritionOrder)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.NutritionOrder)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -657,7 +667,9 @@ abstract class VisionPrescription
     implements _$VisionPrescription {
   VisionPrescription._();
   factory VisionPrescription({
-    @Default('VisionPrescription') String resourceType,
+    @Default(Dstu2ResourceType.VisionPrescription)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.VisionPrescription)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -18,33 +18,40 @@ class _$CoverageTearOff {
 
 // ignore: unused_element
   _Coverage call(
-      {String resourceType = 'Coverage',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.Coverage,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Reference issuer,
       Identifier bin,
       Period period,
       Coding type,
       Identifier subscriberId,
-      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
+      @JsonKey(name: '_subscriberId')
+          Element subscriberIdElement,
       List<Identifier> identifier,
       String group,
       String plan,
       String subPlan,
       PositiveInt dependent,
-      @JsonKey(name: '_dependent') Element dependentElement,
+      @JsonKey(name: '_dependent')
+          Element dependentElement,
       PositiveInt sequence,
       Reference subscriber,
       Identifier network,
-      @JsonKey(name: '_network') Element networkElement,
+      @JsonKey(name: '_network')
+          Element networkElement,
       List<Reference> contract}) {
     return _Coverage(
       resourceType: resourceType,
@@ -90,7 +97,8 @@ const $Coverage = _$CoverageTearOff();
 
 /// @nodoc
 mixin _$Coverage {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -134,33 +142,40 @@ abstract class $CoverageCopyWith<$Res> {
   factory $CoverageCopyWith(Coverage value, $Res Function(Coverage) then) =
       _$CoverageCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Reference issuer,
       Identifier bin,
       Period period,
       Coding type,
       Identifier subscriberId,
-      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
+      @JsonKey(name: '_subscriberId')
+          Element subscriberIdElement,
       List<Identifier> identifier,
       String group,
       String plan,
       String subPlan,
       PositiveInt dependent,
-      @JsonKey(name: '_dependent') Element dependentElement,
+      @JsonKey(name: '_dependent')
+          Element dependentElement,
       PositiveInt sequence,
       Reference subscriber,
       Identifier network,
-      @JsonKey(name: '_network') Element networkElement,
+      @JsonKey(name: '_network')
+          Element networkElement,
       List<Reference> contract});
 
   $MetaCopyWith<$Res> get meta;
@@ -221,7 +236,7 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -423,33 +438,40 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       __$CoverageCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Reference issuer,
       Identifier bin,
       Period period,
       Coding type,
       Identifier subscriberId,
-      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
+      @JsonKey(name: '_subscriberId')
+          Element subscriberIdElement,
       List<Identifier> identifier,
       String group,
       String plan,
       String subPlan,
       PositiveInt dependent,
-      @JsonKey(name: '_dependent') Element dependentElement,
+      @JsonKey(name: '_dependent')
+          Element dependentElement,
       PositiveInt sequence,
       Reference subscriber,
       Identifier network,
-      @JsonKey(name: '_network') Element networkElement,
+      @JsonKey(name: '_network')
+          Element networkElement,
       List<Reference> contract});
 
   @override
@@ -525,7 +547,7 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
     return _then(_Coverage(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -586,33 +608,40 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
 /// @nodoc
 class _$_Coverage extends _Coverage {
   _$_Coverage(
-      {this.resourceType = 'Coverage',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
+          this.resourceType = Dstu2ResourceType.Coverage,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.issuer,
       this.bin,
       this.period,
       this.type,
       this.subscriberId,
-      @JsonKey(name: '_subscriberId') this.subscriberIdElement,
+      @JsonKey(name: '_subscriberId')
+          this.subscriberIdElement,
       this.identifier,
       this.group,
       this.plan,
       this.subPlan,
       this.dependent,
-      @JsonKey(name: '_dependent') this.dependentElement,
+      @JsonKey(name: '_dependent')
+          this.dependentElement,
       this.sequence,
       this.subscriber,
       this.network,
-      @JsonKey(name: '_network') this.networkElement,
+      @JsonKey(name: '_network')
+          this.networkElement,
       this.contract})
       : assert(resourceType != null),
         super._();
@@ -620,9 +649,9 @@ class _$_Coverage extends _Coverage {
   factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
       _$_$_CoverageFromJson(json);
 
-  @JsonKey(defaultValue: 'Coverage')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -811,39 +840,47 @@ class _$_Coverage extends _Coverage {
 abstract class _Coverage extends Coverage {
   _Coverage._() : super._();
   factory _Coverage(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Reference issuer,
       Identifier bin,
       Period period,
       Coding type,
       Identifier subscriberId,
-      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
+      @JsonKey(name: '_subscriberId')
+          Element subscriberIdElement,
       List<Identifier> identifier,
       String group,
       String plan,
       String subPlan,
       PositiveInt dependent,
-      @JsonKey(name: '_dependent') Element dependentElement,
+      @JsonKey(name: '_dependent')
+          Element dependentElement,
       PositiveInt sequence,
       Reference subscriber,
       Identifier network,
-      @JsonKey(name: '_network') Element networkElement,
+      @JsonKey(name: '_network')
+          Element networkElement,
       List<Reference> contract}) = _$_Coverage;
 
   factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -918,22 +955,27 @@ class _$EligibilityRequestTearOff {
 
 // ignore: unused_element
   _EligibilityRequest call(
-      {String resourceType = 'EligibilityRequest',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.EligibilityRequest,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference target,
       Reference provider,
       Reference organization}) {
@@ -972,7 +1014,8 @@ const $EligibilityRequest = _$EligibilityRequestTearOff();
 
 /// @nodoc
 mixin _$EligibilityRequest {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1006,22 +1049,27 @@ abstract class $EligibilityRequestCopyWith<$Res> {
           EligibilityRequest value, $Res Function(EligibilityRequest) then) =
       _$EligibilityRequestCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference target,
       Reference provider,
       Reference organization});
@@ -1072,7 +1120,7 @@ class _$EligibilityRequestCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1222,22 +1270,27 @@ abstract class _$EligibilityRequestCopyWith<$Res>
       __$EligibilityRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference target,
       Reference provider,
       Reference organization});
@@ -1300,7 +1353,7 @@ class __$EligibilityRequestCopyWithImpl<$Res>
     return _then(_EligibilityRequest(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1347,22 +1400,27 @@ class __$EligibilityRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_EligibilityRequest extends _EligibilityRequest {
   _$_EligibilityRequest(
-      {this.resourceType = 'EligibilityRequest',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
+          this.resourceType = Dstu2ResourceType.EligibilityRequest,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.ruleset,
       this.originalRuleset,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.target,
       this.provider,
       this.organization})
@@ -1372,9 +1430,9 @@ class _$_EligibilityRequest extends _EligibilityRequest {
   factory _$_EligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityRequestFromJson(json);
 
-  @JsonKey(defaultValue: 'EligibilityRequest')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -1516,22 +1574,27 @@ class _$_EligibilityRequest extends _EligibilityRequest {
 abstract class _EligibilityRequest extends EligibilityRequest {
   _EligibilityRequest._() : super._();
   factory _EligibilityRequest(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference target,
       Reference provider,
       Reference organization}) = _$_EligibilityRequest;
@@ -1540,7 +1603,8 @@ abstract class _EligibilityRequest extends EligibilityRequest {
       _$_EligibilityRequest.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -1595,7 +1659,9 @@ class _$EligibilityResponseTearOff {
 
 // ignore: unused_element
   _EligibilityResponse call(
-      {String resourceType = 'EligibilityResponse',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
+          Dstu2ResourceType
+              resourceType = Dstu2ResourceType.EligibilityResponse,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1666,7 +1732,8 @@ const $EligibilityResponse = _$EligibilityResponseTearOff();
 
 /// @nodoc
 mixin _$EligibilityResponse {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1708,7 +1775,8 @@ abstract class $EligibilityResponseCopyWith<$Res> {
           EligibilityResponse value, $Res Function(EligibilityResponse) then) =
       _$EligibilityResponseCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1794,7 +1862,7 @@ class _$EligibilityResponseCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1990,7 +2058,8 @@ abstract class _$EligibilityResponseCopyWith<$Res>
       __$EligibilityResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2091,7 +2160,7 @@ class __$EligibilityResponseCopyWithImpl<$Res>
     return _then(_EligibilityResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2154,7 +2223,8 @@ class __$EligibilityResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_EligibilityResponse extends _EligibilityResponse {
   _$_EligibilityResponse(
-      {this.resourceType = 'EligibilityResponse',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
+          this.resourceType = Dstu2ResourceType.EligibilityResponse,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2191,9 +2261,9 @@ class _$_EligibilityResponse extends _EligibilityResponse {
   factory _$_EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityResponseFromJson(json);
 
-  @JsonKey(defaultValue: 'EligibilityResponse')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -2368,7 +2438,8 @@ class _$_EligibilityResponse extends _EligibilityResponse {
 abstract class _EligibilityResponse extends EligibilityResponse {
   _EligibilityResponse._() : super._();
   factory _EligibilityResponse(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2404,7 +2475,8 @@ abstract class _EligibilityResponse extends EligibilityResponse {
       _$_EligibilityResponse.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -2472,28 +2544,39 @@ class _$EnrollmentRequestTearOff {
 
 // ignore: unused_element
   _EnrollmentRequest call(
-      {String resourceType = 'EnrollmentRequest',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.EnrollmentRequest,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference target,
       Reference provider,
       Reference organization,
-      @required @JsonKey(required: true) Reference subject,
-      @required @JsonKey(required: true) Reference coverage,
-      @required @JsonKey(required: true) Coding relationship}) {
+      @required
+      @JsonKey(required: true)
+          Reference subject,
+      @required
+      @JsonKey(required: true)
+          Reference coverage,
+      @required
+      @JsonKey(required: true)
+          Coding relationship}) {
     return _EnrollmentRequest(
       resourceType: resourceType,
       id: id,
@@ -2532,7 +2615,8 @@ const $EnrollmentRequest = _$EnrollmentRequestTearOff();
 
 /// @nodoc
 mixin _$EnrollmentRequest {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2572,28 +2656,36 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
           EnrollmentRequest value, $Res Function(EnrollmentRequest) then) =
       _$EnrollmentRequestCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference target,
       Reference provider,
       Reference organization,
-      @JsonKey(required: true) Reference subject,
-      @JsonKey(required: true) Reference coverage,
-      @JsonKey(required: true) Coding relationship});
+      @JsonKey(required: true)
+          Reference subject,
+      @JsonKey(required: true)
+          Reference coverage,
+      @JsonKey(required: true)
+          Coding relationship});
 
   $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
@@ -2647,7 +2739,7 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2832,28 +2924,36 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
       __$EnrollmentRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Coding ruleset,
       Coding originalRuleset,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference target,
       Reference provider,
       Reference organization,
-      @JsonKey(required: true) Reference subject,
-      @JsonKey(required: true) Reference coverage,
-      @JsonKey(required: true) Coding relationship});
+      @JsonKey(required: true)
+          Reference subject,
+      @JsonKey(required: true)
+          Reference coverage,
+      @JsonKey(required: true)
+          Coding relationship});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -2922,7 +3022,7 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
     return _then(_EnrollmentRequest(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2974,28 +3074,39 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_EnrollmentRequest extends _EnrollmentRequest {
   _$_EnrollmentRequest(
-      {this.resourceType = 'EnrollmentRequest',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
+          this.resourceType = Dstu2ResourceType.EnrollmentRequest,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.ruleset,
       this.originalRuleset,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.target,
       this.provider,
       this.organization,
-      @required @JsonKey(required: true) this.subject,
-      @required @JsonKey(required: true) this.coverage,
-      @required @JsonKey(required: true) this.relationship})
+      @required
+      @JsonKey(required: true)
+          this.subject,
+      @required
+      @JsonKey(required: true)
+          this.coverage,
+      @required
+      @JsonKey(required: true)
+          this.relationship})
       : assert(resourceType != null),
         assert(subject != null),
         assert(coverage != null),
@@ -3005,9 +3116,9 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_EnrollmentRequestFromJson(json);
 
-  @JsonKey(defaultValue: 'EnrollmentRequest')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -3170,35 +3281,46 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 abstract class _EnrollmentRequest extends EnrollmentRequest {
   _EnrollmentRequest._() : super._();
   factory _EnrollmentRequest(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-          Code language,
-          @JsonKey(name: '_language') Element languageElement,
-          Narrative text,
-          List<Resource> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          List<Identifier> identifier,
-          Coding ruleset,
-          Coding originalRuleset,
-          FhirDateTime created,
-          @JsonKey(name: '_created') Element createdElement,
-          Reference target,
-          Reference provider,
-          Reference organization,
-          @required @JsonKey(required: true) Reference subject,
-          @required @JsonKey(required: true) Reference coverage,
-          @required @JsonKey(required: true) Coding relationship}) =
-      _$_EnrollmentRequest;
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
+          Dstu2ResourceType resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
+      Coding ruleset,
+      Coding originalRuleset,
+      FhirDateTime created,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      Reference target,
+      Reference provider,
+      Reference organization,
+      @required
+      @JsonKey(required: true)
+          Reference subject,
+      @required
+      @JsonKey(required: true)
+          Reference coverage,
+      @required
+      @JsonKey(required: true)
+          Coding relationship}) = _$_EnrollmentRequest;
 
   factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentRequest.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -3262,7 +3384,8 @@ class _$EnrollmentResponseTearOff {
 
 // ignore: unused_element
   _EnrollmentResponse call(
-      {String resourceType = 'EnrollmentResponse',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.EnrollmentResponse,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3333,7 +3456,8 @@ const $EnrollmentResponse = _$EnrollmentResponseTearOff();
 
 /// @nodoc
 mixin _$EnrollmentResponse {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -3375,7 +3499,8 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
           EnrollmentResponse value, $Res Function(EnrollmentResponse) then) =
       _$EnrollmentResponseCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3461,7 +3586,7 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3657,7 +3782,8 @@ abstract class _$EnrollmentResponseCopyWith<$Res>
       __$EnrollmentResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3758,7 +3884,7 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
     return _then(_EnrollmentResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3821,7 +3947,8 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_EnrollmentResponse extends _EnrollmentResponse {
   _$_EnrollmentResponse(
-      {this.resourceType = 'EnrollmentResponse',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
+          this.resourceType = Dstu2ResourceType.EnrollmentResponse,
       this.id,
       this.meta,
       this.implicitRules,
@@ -3858,9 +3985,9 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_EnrollmentResponseFromJson(json);
 
-  @JsonKey(defaultValue: 'EnrollmentResponse')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -4034,7 +4161,8 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 abstract class _EnrollmentResponse extends EnrollmentResponse {
   _EnrollmentResponse._() : super._();
   factory _EnrollmentResponse(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4070,7 +4198,8 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       _$_EnrollmentResponse.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override

@@ -18,7 +18,8 @@ class _$ConformanceTearOff {
 
 // ignore: unused_element
   _Conformance call(
-      {String resourceType = 'Conformance',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.Conformance,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -115,7 +116,8 @@ const $Conformance = _$ConformanceTearOff();
 
 /// @nodoc
 mixin _$Conformance {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -169,7 +171,8 @@ abstract class $ConformanceCopyWith<$Res> {
           Conformance value, $Res Function(Conformance) then) =
       _$ConformanceCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -269,7 +272,7 @@ class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -416,7 +419,8 @@ abstract class _$ConformanceCopyWith<$Res>
       __$ConformanceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -525,7 +529,7 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
     return _then(_Conformance(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -598,7 +602,8 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
 /// @nodoc
 class _$_Conformance extends _Conformance {
   _$_Conformance(
-      {this.resourceType = 'Conformance',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
+          this.resourceType = Dstu2ResourceType.Conformance,
       this.id,
       this.meta,
       this.implicitRules,
@@ -657,9 +662,9 @@ class _$_Conformance extends _Conformance {
   factory _$_Conformance.fromJson(Map<String, dynamic> json) =>
       _$_$_ConformanceFromJson(json);
 
-  @JsonKey(defaultValue: 'Conformance')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -872,7 +877,8 @@ class _$_Conformance extends _Conformance {
 abstract class _Conformance extends Conformance {
   _Conformance._() : super._();
   factory _Conformance(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -925,7 +931,8 @@ abstract class _Conformance extends Conformance {
       _$_Conformance.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -1014,7 +1021,9 @@ class _$CapabilityStatementTearOff {
 
 // ignore: unused_element
   _CapabilityStatement call(
-      {String resourceType = 'CapabilityStatement',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
+          Dstu2ResourceType
+              resourceType = Dstu2ResourceType.CapabilityStatement,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1111,7 +1120,8 @@ const $CapabilityStatement = _$CapabilityStatementTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatement {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1165,7 +1175,8 @@ abstract class $CapabilityStatementCopyWith<$Res> {
           CapabilityStatement value, $Res Function(CapabilityStatement) then) =
       _$CapabilityStatementCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1266,7 +1277,7 @@ class _$CapabilityStatementCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1413,7 +1424,8 @@ abstract class _$CapabilityStatementCopyWith<$Res>
       __$CapabilityStatementCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1523,7 +1535,7 @@ class __$CapabilityStatementCopyWithImpl<$Res>
     return _then(_CapabilityStatement(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1596,7 +1608,8 @@ class __$CapabilityStatementCopyWithImpl<$Res>
 /// @nodoc
 class _$_CapabilityStatement extends _CapabilityStatement {
   _$_CapabilityStatement(
-      {this.resourceType = 'CapabilityStatement',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
+          this.resourceType = Dstu2ResourceType.CapabilityStatement,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1655,9 +1668,9 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   factory _$_CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$_$_CapabilityStatementFromJson(json);
 
-  @JsonKey(defaultValue: 'CapabilityStatement')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -1871,7 +1884,8 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 abstract class _CapabilityStatement extends CapabilityStatement {
   _CapabilityStatement._() : super._();
   factory _CapabilityStatement(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1924,7 +1938,8 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       _$_CapabilityStatement.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -7334,7 +7349,9 @@ class _$OperationDefinitionTearOff {
 
 // ignore: unused_element
   _OperationDefinition call(
-      {String resourceType = 'OperationDefinition',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
+          Dstu2ResourceType
+              resourceType = Dstu2ResourceType.OperationDefinition,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7419,7 +7436,8 @@ const $OperationDefinition = _$OperationDefinitionTearOff();
 
 /// @nodoc
 mixin _$OperationDefinition {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -7465,7 +7483,8 @@ abstract class $OperationDefinitionCopyWith<$Res> {
           OperationDefinition value, $Res Function(OperationDefinition) then) =
       _$OperationDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7549,7 +7568,7 @@ class _$OperationDefinitionCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7638,7 +7657,8 @@ abstract class _$OperationDefinitionCopyWith<$Res>
       __$OperationDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7727,7 +7747,7 @@ class __$OperationDefinitionCopyWithImpl<$Res>
     return _then(_OperationDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7783,7 +7803,8 @@ class __$OperationDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_OperationDefinition extends _OperationDefinition {
   _$_OperationDefinition(
-      {this.resourceType = 'OperationDefinition',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
+          this.resourceType = Dstu2ResourceType.OperationDefinition,
       this.id,
       this.meta,
       this.implicitRules,
@@ -7836,9 +7857,9 @@ class _$_OperationDefinition extends _OperationDefinition {
   factory _$_OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_OperationDefinitionFromJson(json);
 
-  @JsonKey(defaultValue: 'OperationDefinition')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -8029,7 +8050,8 @@ class _$_OperationDefinition extends _OperationDefinition {
 abstract class _OperationDefinition extends OperationDefinition {
   _OperationDefinition._() : super._();
   factory _OperationDefinition(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8075,7 +8097,8 @@ abstract class _OperationDefinition extends OperationDefinition {
       _$_OperationDefinition.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -9236,7 +9259,8 @@ class _$SearchParameterTearOff {
 
 // ignore: unused_element
   _SearchParameter call(
-      {String resourceType = 'SearchParameter',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.SearchParameter,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9314,7 +9338,8 @@ const $SearchParameter = _$SearchParameterTearOff();
 
 /// @nodoc
 mixin _$SearchParameter {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -9358,7 +9383,8 @@ abstract class $SearchParameterCopyWith<$Res> {
           SearchParameter value, $Res Function(SearchParameter) then) =
       _$SearchParameterCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9437,7 +9463,7 @@ class _$SearchParameterCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -9523,7 +9549,8 @@ abstract class _$SearchParameterCopyWith<$Res>
       __$SearchParameterCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9607,7 +9634,7 @@ class __$SearchParameterCopyWithImpl<$Res>
     return _then(_SearchParameter(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -9660,7 +9687,8 @@ class __$SearchParameterCopyWithImpl<$Res>
 /// @nodoc
 class _$_SearchParameter extends _SearchParameter {
   _$_SearchParameter(
-      {this.resourceType = 'SearchParameter',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
+          this.resourceType = Dstu2ResourceType.SearchParameter,
       this.id,
       this.meta,
       this.implicitRules,
@@ -9707,9 +9735,9 @@ class _$_SearchParameter extends _SearchParameter {
   factory _$_SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$_$_SearchParameterFromJson(json);
 
-  @JsonKey(defaultValue: 'SearchParameter')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -9883,7 +9911,8 @@ class _$_SearchParameter extends _SearchParameter {
 abstract class _SearchParameter extends SearchParameter {
   _SearchParameter._() : super._();
   factory _SearchParameter(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9925,7 +9954,8 @@ abstract class _SearchParameter extends SearchParameter {
       _$_SearchParameter.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override

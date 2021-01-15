@@ -18,16 +18,20 @@ class _$MedicationTearOff {
 
 // ignore: unused_element
   _Medication call(
-      {String resourceType = 'Medication',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.Medication,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept code,
       Boolean isBrand,
@@ -66,7 +70,8 @@ const $Medication = _$MedicationTearOff();
 
 /// @nodoc
 mixin _$Medication {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -96,16 +101,20 @@ abstract class $MedicationCopyWith<$Res> {
           Medication value, $Res Function(Medication) then) =
       _$MedicationCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept code,
       Boolean isBrand,
@@ -153,7 +162,7 @@ class _$MedicationCopyWithImpl<$Res> implements $MedicationCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -275,16 +284,20 @@ abstract class _$MedicationCopyWith<$Res> implements $MedicationCopyWith<$Res> {
       __$MedicationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept code,
       Boolean isBrand,
@@ -342,7 +355,7 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
     return _then(_Medication(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -382,16 +395,20 @@ class __$MedicationCopyWithImpl<$Res> extends _$MedicationCopyWithImpl<$Res>
 /// @nodoc
 class _$_Medication extends _Medication {
   _$_Medication(
-      {this.resourceType = 'Medication',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
+          this.resourceType = Dstu2ResourceType.Medication,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.code,
       this.isBrand,
@@ -404,9 +421,9 @@ class _$_Medication extends _Medication {
   factory _$_Medication.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicationFromJson(json);
 
-  @JsonKey(defaultValue: 'Medication')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -528,16 +545,20 @@ class _$_Medication extends _Medication {
 abstract class _Medication extends Medication {
   _Medication._() : super._();
   factory _Medication(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept code,
       Boolean isBrand,
@@ -549,7 +570,8 @@ abstract class _Medication extends Medication {
       _$_Medication.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -2055,7 +2077,8 @@ class _$MedicationOrderTearOff {
 
 // ignore: unused_element
   _MedicationOrder call(
-      {String resourceType = 'MedicationOrder',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.MedicationOrder,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -2131,7 +2154,8 @@ const $MedicationOrder = _$MedicationOrderTearOff();
 
 /// @nodoc
 mixin _$MedicationOrder {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
+  Dstu2ResourceType get resourceType;
   Id get id;
   @JsonKey(name: '_id')
   Element get idElement;
@@ -2174,7 +2198,8 @@ abstract class $MedicationOrderCopyWith<$Res> {
           MedicationOrder value, $Res Function(MedicationOrder) then) =
       _$MedicationOrderCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
+          Dstu2ResourceType resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -2267,7 +2292,7 @@ class _$MedicationOrderCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       idElement: idElement == freezed ? _value.idElement : idElement as Element,
       meta: meta == freezed ? _value.meta : meta as Meta,
@@ -2496,7 +2521,8 @@ abstract class _$MedicationOrderCopyWith<$Res>
       __$MedicationOrderCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
+          Dstu2ResourceType resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -2606,7 +2632,7 @@ class __$MedicationOrderCopyWithImpl<$Res>
     return _then(_MedicationOrder(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       idElement: idElement == freezed ? _value.idElement : idElement as Element,
       meta: meta == freezed ? _value.meta : meta as Meta,
@@ -2678,20 +2704,25 @@ class __$MedicationOrderCopyWithImpl<$Res>
 /// @nodoc
 class _$_MedicationOrder extends _MedicationOrder {
   _$_MedicationOrder(
-      {this.resourceType = 'MedicationOrder',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
+          this.resourceType = Dstu2ResourceType.MedicationOrder,
       this.id,
-      @JsonKey(name: '_id') this.idElement,
+      @JsonKey(name: '_id')
+          this.idElement,
       this.meta,
       this.implicitRules,
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.dateWritten,
-      @JsonKey(unknownEnumValue: MedicationOrderStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(unknownEnumValue: MedicationOrderStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.dateEnded,
       this.reasonEnded,
       this.patient,
@@ -2712,9 +2743,9 @@ class _$_MedicationOrder extends _MedicationOrder {
   factory _$_MedicationOrder.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicationOrderFromJson(json);
 
-  @JsonKey(defaultValue: 'MedicationOrder')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -2900,7 +2931,8 @@ class _$_MedicationOrder extends _MedicationOrder {
 abstract class _MedicationOrder extends MedicationOrder {
   _MedicationOrder._() : super._();
   factory _MedicationOrder(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
+          Dstu2ResourceType resourceType,
       Id id,
       @JsonKey(name: '_id')
           Element idElement,
@@ -2937,7 +2969,8 @@ abstract class _MedicationOrder extends MedicationOrder {
       _$_MedicationOrder.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -4364,7 +4397,9 @@ class _$MedicationAdministrationTearOff {
 
 // ignore: unused_element
   _MedicationAdministration call(
-      {String resourceType = 'MedicationAdministration',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
+          Dstu2ResourceType
+              resourceType = Dstu2ResourceType.MedicationAdministration,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4447,7 +4482,8 @@ const $MedicationAdministration = _$MedicationAdministrationTearOff();
 
 /// @nodoc
 mixin _$MedicationAdministration {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -4495,7 +4531,8 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
           $Res Function(MedicationAdministration) then) =
       _$MedicationAdministrationCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4592,7 +4629,7 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4814,7 +4851,8 @@ abstract class _$MedicationAdministrationCopyWith<$Res>
       __$MedicationAdministrationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4928,7 +4966,7 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
     return _then(_MedicationAdministration(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5005,7 +5043,8 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
 /// @nodoc
 class _$_MedicationAdministration extends _MedicationAdministration {
   _$_MedicationAdministration(
-      {this.resourceType = 'MedicationAdministration',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
+          this.resourceType = Dstu2ResourceType.MedicationAdministration,
       this.id,
       this.meta,
       this.implicitRules,
@@ -5051,9 +5090,9 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   factory _$_MedicationAdministration.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicationAdministrationFromJson(json);
 
-  @JsonKey(defaultValue: 'MedicationAdministration')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -5248,7 +5287,8 @@ class _$_MedicationAdministration extends _MedicationAdministration {
 abstract class _MedicationAdministration extends MedicationAdministration {
   _MedicationAdministration._() : super._();
   factory _MedicationAdministration(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5291,7 +5331,8 @@ abstract class _MedicationAdministration extends MedicationAdministration {
       _$_MedicationAdministration.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -5868,7 +5909,8 @@ class _$MedicationDispenseTearOff {
 
 // ignore: unused_element
   _MedicationDispense call(
-      {String resourceType = 'MedicationDispense',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.MedicationDispense,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5953,7 +5995,8 @@ const $MedicationDispense = _$MedicationDispenseTearOff();
 
 /// @nodoc
 mixin _$MedicationDispense {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -6002,7 +6045,8 @@ abstract class $MedicationDispenseCopyWith<$Res> {
           MedicationDispense value, $Res Function(MedicationDispense) then) =
       _$MedicationDispenseCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6106,7 +6150,7 @@ class _$MedicationDispenseCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6360,7 +6404,8 @@ abstract class _$MedicationDispenseCopyWith<$Res>
       __$MedicationDispenseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6483,7 +6528,7 @@ class __$MedicationDispenseCopyWithImpl<$Res>
     return _then(_MedicationDispense(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6562,20 +6607,26 @@ class __$MedicationDispenseCopyWithImpl<$Res>
 /// @nodoc
 class _$_MedicationDispense extends _MedicationDispense {
   _$_MedicationDispense(
-      {this.resourceType = 'MedicationDispense',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
+          this.resourceType = Dstu2ResourceType.MedicationDispense,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.patient,
       this.dispenser,
       this.authorizingPrescription,
@@ -6585,9 +6636,11 @@ class _$_MedicationDispense extends _MedicationDispense {
       this.medicationCodeableConcept,
       this.medicationReference,
       this.whenPrepared,
-      @JsonKey(name: '_whenPrepared') this.whenPreparedElement,
+      @JsonKey(name: '_whenPrepared')
+          this.whenPreparedElement,
       this.whenHandedOver,
-      @JsonKey(name: '_whenHandedOver') this.whenHandedOverElement,
+      @JsonKey(name: '_whenHandedOver')
+          this.whenHandedOverElement,
       this.destination,
       this.receiver,
       this.note,
@@ -6599,9 +6652,9 @@ class _$_MedicationDispense extends _MedicationDispense {
   factory _$_MedicationDispense.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicationDispenseFromJson(json);
 
-  @JsonKey(defaultValue: 'MedicationDispense')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -6800,7 +6853,8 @@ class _$_MedicationDispense extends _MedicationDispense {
 abstract class _MedicationDispense extends MedicationDispense {
   _MedicationDispense._() : super._();
   factory _MedicationDispense(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6843,7 +6897,8 @@ abstract class _MedicationDispense extends MedicationDispense {
       _$_MedicationDispense.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -7880,7 +7935,9 @@ class _$MedicationStatementTearOff {
 
 // ignore: unused_element
   _MedicationStatement call(
-      {String resourceType = 'MedicationStatement',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
+          Dstu2ResourceType
+              resourceType = Dstu2ResourceType.MedicationStatement,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7966,7 +8023,8 @@ const $MedicationStatement = _$MedicationStatementTearOff();
 
 /// @nodoc
 mixin _$MedicationStatement {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -8015,7 +8073,8 @@ abstract class $MedicationStatementCopyWith<$Res> {
           MedicationStatement value, $Res Function(MedicationStatement) then) =
       _$MedicationStatementCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8115,7 +8174,7 @@ class _$MedicationStatementCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -8343,7 +8402,8 @@ abstract class _$MedicationStatementCopyWith<$Res>
       __$MedicationStatementCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8459,7 +8519,7 @@ class __$MedicationStatementCopyWithImpl<$Res>
     return _then(_MedicationStatement(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -8542,7 +8602,8 @@ class __$MedicationStatementCopyWithImpl<$Res>
 /// @nodoc
 class _$_MedicationStatement extends _MedicationStatement {
   _$_MedicationStatement(
-      {this.resourceType = 'MedicationStatement',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
+          this.resourceType = Dstu2ResourceType.MedicationStatement,
       this.id,
       this.meta,
       this.implicitRules,
@@ -8590,9 +8651,9 @@ class _$_MedicationStatement extends _MedicationStatement {
   factory _$_MedicationStatement.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicationStatementFromJson(json);
 
-  @JsonKey(defaultValue: 'MedicationStatement')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -8791,7 +8852,8 @@ class _$_MedicationStatement extends _MedicationStatement {
 abstract class _MedicationStatement extends MedicationStatement {
   _MedicationStatement._() : super._();
   factory _MedicationStatement(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8836,7 +8898,8 @@ abstract class _MedicationStatement extends MedicationStatement {
       _$_MedicationStatement.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -9538,7 +9601,8 @@ class _$ImmunizationTearOff {
 
 // ignore: unused_element
   _Immunization call(
-      {String resourceType = 'Immunization',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.Immunization,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9640,7 +9704,8 @@ const $Immunization = _$ImmunizationTearOff();
 
 /// @nodoc
 mixin _$Immunization {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -9697,7 +9762,8 @@ abstract class $ImmunizationCopyWith<$Res> {
           Immunization value, $Res Function(Immunization) then) =
       _$ImmunizationCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9813,7 +9879,7 @@ class _$ImmunizationCopyWithImpl<$Res> implements $ImmunizationCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -10077,7 +10143,8 @@ abstract class _$ImmunizationCopyWith<$Res>
       __$ImmunizationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10213,7 +10280,7 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
     return _then(_Immunization(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -10294,7 +10361,8 @@ class __$ImmunizationCopyWithImpl<$Res> extends _$ImmunizationCopyWithImpl<$Res>
 /// @nodoc
 class _$_Immunization extends _Immunization {
   _$_Immunization(
-      {this.resourceType = 'Immunization',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
+          this.resourceType = Dstu2ResourceType.Immunization,
       this.id,
       this.meta,
       this.implicitRules,
@@ -10356,9 +10424,9 @@ class _$_Immunization extends _Immunization {
   factory _$_Immunization.fromJson(Map<String, dynamic> json) =>
       _$_$_ImmunizationFromJson(json);
 
-  @JsonKey(defaultValue: 'Immunization')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -10580,7 +10648,8 @@ class _$_Immunization extends _Immunization {
 abstract class _Immunization extends Immunization {
   _Immunization._() : super._();
   factory _Immunization(
-          {String resourceType,
+          {@JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
+              Dstu2ResourceType resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -10637,7 +10706,8 @@ abstract class _Immunization extends Immunization {
       _$_Immunization.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -11798,7 +11868,9 @@ class _$ImmunizationRecommendationTearOff {
 
 // ignore: unused_element
   _ImmunizationRecommendation call(
-      {String resourceType = 'ImmunizationRecommendation',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
+          Dstu2ResourceType
+              resourceType = Dstu2ResourceType.ImmunizationRecommendation,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11849,7 +11921,8 @@ const $ImmunizationRecommendation = _$ImmunizationRecommendationTearOff();
 
 /// @nodoc
 mixin _$ImmunizationRecommendation {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -11879,7 +11952,8 @@ abstract class $ImmunizationRecommendationCopyWith<$Res> {
           $Res Function(ImmunizationRecommendation) then) =
       _$ImmunizationRecommendationCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11935,7 +12009,7 @@ class _$ImmunizationRecommendationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -12027,7 +12101,8 @@ abstract class _$ImmunizationRecommendationCopyWith<$Res>
       __$ImmunizationRecommendationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -12091,7 +12166,7 @@ class __$ImmunizationRecommendationCopyWithImpl<$Res>
     return _then(_ImmunizationRecommendation(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -12129,20 +12204,28 @@ class __$ImmunizationRecommendationCopyWithImpl<$Res>
 /// @nodoc
 class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   _$_ImmunizationRecommendation(
-      {this.resourceType = 'ImmunizationRecommendation',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
+          this.resourceType = Dstu2ResourceType.ImmunizationRecommendation,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
-      @required @JsonKey(required: true) this.patient,
-      @required @JsonKey(required: true) this.recommendation})
+      @required
+      @JsonKey(required: true)
+          this.patient,
+      @required
+      @JsonKey(required: true)
+          this.recommendation})
       : assert(resourceType != null),
         assert(patient != null),
         assert(recommendation != null),
@@ -12151,9 +12234,9 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   factory _$_ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
       _$_$_ImmunizationRecommendationFromJson(json);
 
-  @JsonKey(defaultValue: 'ImmunizationRecommendation')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -12268,34 +12351,36 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
 abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
   _ImmunizationRecommendation._() : super._();
   factory _ImmunizationRecommendation(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules')
-              Element implicitRulesElement,
-          Code language,
-          @JsonKey(name: '_language')
-              Element languageElement,
-          Narrative text,
-          List<Resource> contained,
-          @JsonKey(name: 'extension')
-              List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          List<Identifier> identifier,
-          @required
-          @JsonKey(required: true)
-              Reference patient,
-          @required
-          @JsonKey(required: true)
-              List<ImmunizationRecommendationRecommendation> recommendation}) =
-      _$_ImmunizationRecommendation;
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
+          Dstu2ResourceType resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
+      @required
+      @JsonKey(required: true)
+          Reference patient,
+      @required
+      @JsonKey(required: true)
+          List<ImmunizationRecommendationRecommendation>
+              recommendation}) = _$_ImmunizationRecommendation;
 
   factory _ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =
       _$_ImmunizationRecommendation.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override

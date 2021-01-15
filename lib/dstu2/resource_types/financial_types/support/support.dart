@@ -15,7 +15,9 @@ part 'support.g.dart';
 abstract class Coverage with Resource implements _$Coverage {
   Coverage._();
   factory Coverage({
-    @Default('Coverage') String resourceType,
+    @Default(Dstu2ResourceType.Coverage)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -66,7 +68,9 @@ abstract class EligibilityRequest
     implements _$EligibilityRequest {
   EligibilityRequest._();
   factory EligibilityRequest({
-    @Default('EligibilityRequest') String resourceType,
+    @Default(Dstu2ResourceType.EligibilityRequest)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -108,7 +112,9 @@ abstract class EligibilityResponse
     implements _$EligibilityResponse {
   EligibilityResponse._();
   factory EligibilityResponse({
-    @Default('EligibilityResponse') String resourceType,
+    @Default(Dstu2ResourceType.EligibilityResponse)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -154,7 +160,9 @@ abstract class EligibilityResponse
 abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
   EnrollmentRequest._();
   factory EnrollmentRequest({
-    @Default('EnrollmentRequest') String resourceType,
+    @Default(Dstu2ResourceType.EnrollmentRequest)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -199,7 +207,9 @@ abstract class EnrollmentResponse
     implements _$EnrollmentResponse {
   EnrollmentResponse._();
   factory EnrollmentResponse({
-    @Default('EnrollmentResponse') String resourceType,
+    @Default(Dstu2ResourceType.EnrollmentResponse)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -15,7 +15,9 @@ part 'workflow1.g.dart';
 abstract class Order with Resource implements _$Order {
   Order._();
   factory Order({
-    @Default('Order') String resourceType,
+    @Default(Dstu2ResourceType.Order)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -80,7 +82,9 @@ abstract class OrderWhen with _$OrderWhen {
 abstract class OrderResponse with Resource implements _$OrderResponse {
   OrderResponse._();
   factory OrderResponse({
-    @Default('OrderResponse') String resourceType,
+    @Default(Dstu2ResourceType.OrderResponse)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -122,7 +126,9 @@ abstract class CommunicationRequest
     implements _$CommunicationRequest {
   CommunicationRequest._();
   factory CommunicationRequest({
-    @Default('CommunicationRequest') String resourceType,
+    @Default(Dstu2ResourceType.CommunicationRequest)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -201,7 +207,9 @@ abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
 abstract class DeviceUseRequest with Resource implements _$DeviceUseRequest {
   DeviceUseRequest._();
   factory DeviceUseRequest({
-    @Default('DeviceUseRequest') String resourceType,
+    @Default(Dstu2ResourceType.DeviceUseRequest)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -255,7 +263,9 @@ abstract class DeviceUseStatement
     implements _$DeviceUseStatement {
   DeviceUseStatement._();
   factory DeviceUseStatement({
-    @Default('DeviceUseStatement') String resourceType,
+    @Default(Dstu2ResourceType.DeviceUseStatement)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

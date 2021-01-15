@@ -15,7 +15,9 @@ part 'devices.g.dart';
 abstract class Device with Resource implements _$Device {
   Device._();
   factory Device({
-    @Default('Device') String resourceType,
+    @Default(Dstu2ResourceType.Device)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -68,7 +70,9 @@ abstract class Device with Resource implements _$Device {
 abstract class DeviceComponent with Resource implements _$DeviceComponent {
   DeviceComponent._();
   factory DeviceComponent({
-    @Default('DeviceComponent') String resourceType,
+    @Default(Dstu2ResourceType.DeviceComponent)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
+        Dstu2ResourceType resourceType,
     Id id,
     @JsonKey(name: '_id') Element idElement,
     Meta meta,
@@ -141,7 +145,9 @@ abstract class DeviceComponentProductionSpecification
 abstract class DeviceMetric with Resource implements _$DeviceMetric {
   DeviceMetric._();
   factory DeviceMetric({
-    @Default('DeviceMetric') String resourceType,
+    @Default(Dstu2ResourceType.DeviceMetric)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

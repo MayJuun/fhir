@@ -18,7 +18,8 @@ class _$AppointmentTearOff {
 
 // ignore: unused_element
   _Appointment call(
-      {String resourceType = 'Appointment',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.Appointment,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -108,7 +109,8 @@ const $Appointment = _$AppointmentTearOff();
 
 /// @nodoc
 mixin _$Appointment {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -161,7 +163,8 @@ abstract class $AppointmentCopyWith<$Res> {
           Appointment value, $Res Function(Appointment) then) =
       _$AppointmentCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -263,7 +266,7 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -466,7 +469,8 @@ abstract class _$AppointmentCopyWith<$Res>
       __$AppointmentCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -583,7 +587,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
     return _then(_Appointment(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -653,7 +657,8 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
 /// @nodoc
 class _$_Appointment extends _Appointment {
   _$_Appointment(
-      {this.resourceType = 'Appointment',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
+          this.resourceType = Dstu2ResourceType.Appointment,
       this.id,
       this.meta,
       this.implicitRules,
@@ -705,9 +710,9 @@ class _$_Appointment extends _Appointment {
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentFromJson(json);
 
-  @JsonKey(defaultValue: 'Appointment')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -910,7 +915,8 @@ class _$_Appointment extends _Appointment {
 abstract class _Appointment extends Appointment {
   _Appointment._() : super._();
   factory _Appointment(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -959,7 +965,8 @@ abstract class _Appointment extends Appointment {
       _$_Appointment.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -1450,7 +1457,9 @@ class _$AppointmentResponseTearOff {
 
 // ignore: unused_element
   _AppointmentResponse call(
-      {String resourceType = 'AppointmentResponse',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
+          Dstu2ResourceType
+              resourceType = Dstu2ResourceType.AppointmentResponse,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1523,7 +1532,8 @@ const $AppointmentResponse = _$AppointmentResponseTearOff();
 
 /// @nodoc
 mixin _$AppointmentResponse {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1568,7 +1578,8 @@ abstract class $AppointmentResponseCopyWith<$Res> {
           AppointmentResponse value, $Res Function(AppointmentResponse) then) =
       _$AppointmentResponseCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1651,7 +1662,7 @@ class _$AppointmentResponseCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1812,7 +1823,8 @@ abstract class _$AppointmentResponseCopyWith<$Res>
       __$AppointmentResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1907,7 +1919,7 @@ class __$AppointmentResponseCopyWithImpl<$Res>
     return _then(_AppointmentResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1965,7 +1977,8 @@ class __$AppointmentResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_AppointmentResponse extends _AppointmentResponse {
   _$_AppointmentResponse(
-      {this.resourceType = 'AppointmentResponse',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
+          this.resourceType = Dstu2ResourceType.AppointmentResponse,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2007,9 +2020,9 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentResponseFromJson(json);
 
-  @JsonKey(defaultValue: 'AppointmentResponse')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -2183,7 +2196,8 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 abstract class _AppointmentResponse extends AppointmentResponse {
   _AppointmentResponse._() : super._();
   factory _AppointmentResponse(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2222,7 +2236,8 @@ abstract class _AppointmentResponse extends AppointmentResponse {
       _$_AppointmentResponse.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -2292,23 +2307,30 @@ class _$ScheduleTearOff {
 
 // ignore: unused_element
   _Schedule call(
-      {String resourceType = 'Schedule',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.Schedule,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<CodeableConcept> type,
-      @required @JsonKey(required: true) Reference actor,
+      @required
+      @JsonKey(required: true)
+          Reference actor,
       Period planningHorizon,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement}) {
+      @JsonKey(name: '_comment')
+          Element commentElement}) {
     return _Schedule(
       resourceType: resourceType,
       id: id,
@@ -2342,7 +2364,8 @@ const $Schedule = _$ScheduleTearOff();
 
 /// @nodoc
 mixin _$Schedule {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2374,23 +2397,29 @@ abstract class $ScheduleCopyWith<$Res> {
   factory $ScheduleCopyWith(Schedule value, $Res Function(Schedule) then) =
       _$ScheduleCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<CodeableConcept> type,
-      @JsonKey(required: true) Reference actor,
+      @JsonKey(required: true)
+          Reference actor,
       Period planningHorizon,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement});
+      @JsonKey(name: '_comment')
+          Element commentElement});
 
   $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
@@ -2432,7 +2461,7 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2546,23 +2575,29 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
       __$ScheduleCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<CodeableConcept> type,
-      @JsonKey(required: true) Reference actor,
+      @JsonKey(required: true)
+          Reference actor,
       Period planningHorizon,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement});
+      @JsonKey(name: '_comment')
+          Element commentElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -2612,7 +2647,7 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
     return _then(_Schedule(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2655,23 +2690,30 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
 /// @nodoc
 class _$_Schedule extends _Schedule {
   _$_Schedule(
-      {this.resourceType = 'Schedule',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
+          this.resourceType = Dstu2ResourceType.Schedule,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.type,
-      @required @JsonKey(required: true) this.actor,
+      @required
+      @JsonKey(required: true)
+          this.actor,
       this.planningHorizon,
       this.comment,
-      @JsonKey(name: '_comment') this.commentElement})
+      @JsonKey(name: '_comment')
+          this.commentElement})
       : assert(resourceType != null),
         assert(actor != null),
         super._();
@@ -2679,9 +2721,9 @@ class _$_Schedule extends _Schedule {
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
       _$_$_ScheduleFromJson(json);
 
-  @JsonKey(defaultValue: 'Schedule')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -2811,28 +2853,36 @@ class _$_Schedule extends _Schedule {
 abstract class _Schedule extends Schedule {
   _Schedule._() : super._();
   factory _Schedule(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<CodeableConcept> type,
-      @required @JsonKey(required: true) Reference actor,
+      @required
+      @JsonKey(required: true)
+          Reference actor,
       Period planningHorizon,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement}) = _$_Schedule;
+      @JsonKey(name: '_comment')
+          Element commentElement}) = _$_Schedule;
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -2884,7 +2934,8 @@ class _$SlotTearOff {
 
 // ignore: unused_element
   _Slot call(
-      {String resourceType = 'Slot',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.Slot,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2961,7 +3012,8 @@ const $Slot = _$SlotTearOff();
 
 /// @nodoc
 mixin _$Slot {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -3005,7 +3057,8 @@ abstract class $SlotCopyWith<$Res> {
   factory $SlotCopyWith(Slot value, $Res Function(Slot) then) =
       _$SlotCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3089,7 +3142,7 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3245,7 +3298,8 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       __$SlotCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3340,7 +3394,7 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
     return _then(_Slot(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3395,7 +3449,8 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
 /// @nodoc
 class _$_Slot extends _Slot {
   _$_Slot(
-      {this.resourceType = 'Slot',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
+          this.resourceType = Dstu2ResourceType.Slot,
       this.id,
       this.meta,
       this.implicitRules,
@@ -3443,9 +3498,9 @@ class _$_Slot extends _Slot {
   factory _$_Slot.fromJson(Map<String, dynamic> json) =>
       _$_$_SlotFromJson(json);
 
-  @JsonKey(defaultValue: 'Slot')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -3616,7 +3671,8 @@ class _$_Slot extends _Slot {
 abstract class _Slot extends Slot {
   _Slot._() : super._();
   factory _Slot(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3658,7 +3714,8 @@ abstract class _Slot extends Slot {
   factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override

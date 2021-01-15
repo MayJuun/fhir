@@ -15,7 +15,9 @@ part 'operations_control.g.dart';
 abstract class Conformance with Resource implements _$Conformance {
   Conformance._();
   factory Conformance({
-    @Default('Conformance') String resourceType,
+    @Default(Dstu2ResourceType.Conformance)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -76,7 +78,9 @@ abstract class CapabilityStatement
     implements _$CapabilityStatement {
   CapabilityStatement._();
   factory CapabilityStatement({
-    @Default('CapabilityStatement') String resourceType,
+    @Default(Dstu2ResourceType.CapabilityStatement)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -610,7 +614,9 @@ abstract class OperationDefinition
     implements _$OperationDefinition {
   OperationDefinition._();
   factory OperationDefinition({
-    @Default('OperationDefinition') String resourceType,
+    @Default(Dstu2ResourceType.OperationDefinition)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -765,7 +771,9 @@ abstract class OperationDefinitionParameterBinding
 abstract class SearchParameter with Resource implements _$SearchParameter {
   SearchParameter._();
   factory SearchParameter({
-    @Default('SearchParameter') String resourceType,
+    @Default(Dstu2ResourceType.SearchParameter)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

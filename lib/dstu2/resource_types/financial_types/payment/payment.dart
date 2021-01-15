@@ -15,7 +15,9 @@ part 'payment.g.dart';
 abstract class PaymentNotice with Resource implements _$PaymentNotice {
   PaymentNotice._();
   factory PaymentNotice({
-    @Default('PaymentNotice') String resourceType,
+    @Default(Dstu2ResourceType.PaymentNotice)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentNotice)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -60,7 +62,9 @@ abstract class PaymentReconciliation
     implements _$PaymentReconciliation {
   PaymentReconciliation._();
   factory PaymentReconciliation({
-    @Default('PaymentReconciliation') String resourceType,
+    @Default(Dstu2ResourceType.PaymentReconciliation)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentReconciliation)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

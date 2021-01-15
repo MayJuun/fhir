@@ -15,7 +15,9 @@ part 'scheduling.g.dart';
 abstract class Appointment with Resource implements _$Appointment {
   Appointment._();
   factory Appointment({
-    @Default('Appointment') String resourceType,
+    @Default(Dstu2ResourceType.Appointment)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -103,7 +105,9 @@ abstract class AppointmentResponse
     implements _$AppointmentResponse {
   AppointmentResponse._();
   factory AppointmentResponse({
-    @Default('AppointmentResponse') String resourceType,
+    @Default(Dstu2ResourceType.AppointmentResponse)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -151,7 +155,9 @@ abstract class AppointmentResponse
 abstract class Schedule with Resource implements _$Schedule {
   Schedule._();
   factory Schedule({
-    @Default('Schedule') String resourceType,
+    @Default(Dstu2ResourceType.Schedule)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -189,7 +195,9 @@ abstract class Schedule with Resource implements _$Schedule {
 abstract class Slot with Resource implements _$Slot {
   Slot._();
   factory Slot({
-    @Default('Slot') String resourceType,
+    @Default(Dstu2ResourceType.Slot)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

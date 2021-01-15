@@ -15,7 +15,9 @@ part 'diagnostics.g.dart';
 abstract class Observation with Resource implements _$Observation {
   Observation._();
   factory Observation({
-    @Default('Observation') String resourceType,
+    @Default(Dstu2ResourceType.Observation)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Observation)
+        Dstu2ResourceType resourceType,
     Id id,
     @JsonKey(name: '_id') Element idElement,
     Meta meta,
@@ -186,7 +188,9 @@ abstract class ObservationComponent with _$ObservationComponent {
 abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
   DiagnosticReport._();
   factory DiagnosticReport({
-    @Default('DiagnosticReport') String resourceType,
+    @Default(Dstu2ResourceType.DiagnosticReport)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -269,7 +273,9 @@ abstract class DiagnosticReportImage with _$DiagnosticReportImage {
 abstract class DiagnosticOrder with Resource implements _$DiagnosticOrder {
   DiagnosticOrder._();
   factory DiagnosticOrder({
-    @Default('DiagnosticOrder') String resourceType,
+    @Default(Dstu2ResourceType.DiagnosticOrder)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -372,7 +378,9 @@ abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
 abstract class Specimen with Resource implements _$Specimen {
   Specimen._();
   factory Specimen({
-    @Default('Specimen') String resourceType,
+    @Default(Dstu2ResourceType.Specimen)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -508,7 +516,9 @@ abstract class SpecimenContainer with _$SpecimenContainer {
 abstract class BodySite with Resource implements _$BodySite {
   BodySite._();
   factory BodySite({
-    @Default('BodySite') String resourceType,
+    @Default(Dstu2ResourceType.BodySite)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -544,7 +554,9 @@ abstract class BodySite with Resource implements _$BodySite {
 abstract class ImagingStudy with Resource implements _$ImagingStudy {
   ImagingStudy._();
   factory ImagingStudy({
-    @Default('ImagingStudy') String resourceType,
+    @Default(Dstu2ResourceType.ImagingStudy)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -674,7 +686,9 @@ abstract class ImagingObjectSelection
     implements _$ImagingObjectSelection {
   ImagingObjectSelection._();
   factory ImagingObjectSelection({
-    @Default('ImagingObjectSelection') String resourceType,
+    @Default(Dstu2ResourceType.ImagingObjectSelection)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

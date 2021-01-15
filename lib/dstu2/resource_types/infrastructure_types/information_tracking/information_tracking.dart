@@ -15,7 +15,9 @@ part 'information_tracking.g.dart';
 abstract class Questionnaire with Resource implements _$Questionnaire {
   Questionnaire._();
   factory Questionnaire({
-    @Default('Questionnaire') String resourceType,
+    @Default(Dstu2ResourceType.Questionnaire)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
+        Dstu2ResourceType resourceType,
     Id id,
     @JsonKey(name: '_id') Element idElement,
     Meta meta,
@@ -136,7 +138,9 @@ abstract class QuestionnaireResponse
     implements _$QuestionnaireResponse {
   QuestionnaireResponse._();
   factory QuestionnaireResponse({
-    @Default('QuestionnaireResponse') String resourceType,
+    @Default(Dstu2ResourceType.QuestionnaireResponse)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
+        Dstu2ResourceType resourceType,
     Id id,
     @JsonKey(name: '_id') Element idElement,
     Meta meta,
@@ -302,7 +306,9 @@ abstract class QuestionnaireResponseQuestionAnswer
 abstract class Provenance with Resource implements _$Provenance {
   Provenance._();
   factory Provenance({
-    @Default('Provenance') String resourceType,
+    @Default(Dstu2ResourceType.Provenance)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -436,7 +442,9 @@ abstract class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent {
 abstract class AuditEvent with Resource implements _$AuditEvent {
   AuditEvent._();
   factory AuditEvent({
-    @Default('AuditEvent') String resourceType,
+    @Default(Dstu2ResourceType.AuditEvent)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
+        Dstu2ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

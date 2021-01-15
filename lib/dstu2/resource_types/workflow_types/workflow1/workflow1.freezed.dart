@@ -18,14 +18,16 @@ class _$OrderTearOff {
 
 // ignore: unused_element
   _Order call(
-      {String resourceType = 'Order',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.Order,
       Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       FhirDateTime date,
@@ -35,7 +37,9 @@ class _$OrderTearOff {
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
       OrderWhen when,
-      @required @JsonKey(required: true) List<Reference> detail}) {
+      @required
+      @JsonKey(required: true)
+          List<Reference> detail}) {
     return _Order(
       resourceType: resourceType,
       id: id,
@@ -70,7 +74,8 @@ const $Order = _$OrderTearOff();
 
 /// @nodoc
 mixin _$Order {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -100,14 +105,16 @@ abstract class $OrderCopyWith<$Res> {
   factory $OrderCopyWith(Order value, $Res Function(Order) then) =
       _$OrderCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       FhirDateTime date,
@@ -117,7 +124,8 @@ abstract class $OrderCopyWith<$Res> {
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
       OrderWhen when,
-      @JsonKey(required: true) List<Reference> detail});
+      @JsonKey(required: true)
+          List<Reference> detail});
 
   $MetaCopyWith<$Res> get meta;
   $NarrativeCopyWith<$Res> get text;
@@ -161,7 +169,7 @@ class _$OrderCopyWithImpl<$Res> implements $OrderCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -283,14 +291,16 @@ abstract class _$OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
       __$OrderCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       FhirDateTime date,
@@ -300,7 +310,8 @@ abstract class _$OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
       OrderWhen when,
-      @JsonKey(required: true) List<Reference> detail});
+      @JsonKey(required: true)
+          List<Reference> detail});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -353,7 +364,7 @@ class __$OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res>
     return _then(_Order(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -393,14 +404,16 @@ class __$OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res>
 /// @nodoc
 class _$_Order extends _Order {
   _$_Order(
-      {this.resourceType = 'Order',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
+          this.resourceType = Dstu2ResourceType.Order,
       this.id,
       this.meta,
       this.implicitRules,
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.date,
@@ -410,7 +423,9 @@ class _$_Order extends _Order {
       this.reasonCodeableConcept,
       this.reasonReference,
       this.when,
-      @required @JsonKey(required: true) this.detail})
+      @required
+      @JsonKey(required: true)
+          this.detail})
       : assert(resourceType != null),
         assert(detail != null),
         super._();
@@ -418,9 +433,9 @@ class _$_Order extends _Order {
   factory _$_Order.fromJson(Map<String, dynamic> json) =>
       _$_$_OrderFromJson(json);
 
-  @JsonKey(defaultValue: 'Order')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -550,14 +565,16 @@ class _$_Order extends _Order {
 abstract class _Order extends Order {
   _Order._() : super._();
   factory _Order(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
       Code language,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       FhirDateTime date,
@@ -567,12 +584,15 @@ abstract class _Order extends Order {
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
       OrderWhen when,
-      @required @JsonKey(required: true) List<Reference> detail}) = _$_Order;
+      @required
+      @JsonKey(required: true)
+          List<Reference> detail}) = _$_Order;
 
   factory _Order.fromJson(Map<String, dynamic> json) = _$_Order.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -908,7 +928,8 @@ class _$OrderResponseTearOff {
 
 // ignore: unused_element
   _OrderResponse call(
-      {String resourceType = 'OrderResponse',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.OrderResponse,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -964,7 +985,8 @@ const $OrderResponse = _$OrderResponseTearOff();
 
 /// @nodoc
 mixin _$OrderResponse {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -996,7 +1018,8 @@ abstract class $OrderResponseCopyWith<$Res> {
           OrderResponse value, $Res Function(OrderResponse) then) =
       _$OrderResponseCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1057,7 +1080,7 @@ class _$OrderResponseCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1152,7 +1175,8 @@ abstract class _$OrderResponseCopyWith<$Res>
       __$OrderResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1220,7 +1244,7 @@ class __$OrderResponseCopyWithImpl<$Res>
     return _then(_OrderResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1262,7 +1286,8 @@ class __$OrderResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_OrderResponse extends _OrderResponse {
   _$_OrderResponse(
-      {this.resourceType = 'OrderResponse',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
+          this.resourceType = Dstu2ResourceType.OrderResponse,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1293,9 +1318,9 @@ class _$_OrderResponse extends _OrderResponse {
   factory _$_OrderResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_OrderResponseFromJson(json);
 
-  @JsonKey(defaultValue: 'OrderResponse')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -1424,7 +1449,8 @@ class _$_OrderResponse extends _OrderResponse {
 abstract class _OrderResponse extends OrderResponse {
   _OrderResponse._() : super._();
   factory _OrderResponse(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1452,7 +1478,8 @@ abstract class _OrderResponse extends OrderResponse {
       _$_OrderResponse.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -1503,7 +1530,9 @@ class _$CommunicationRequestTearOff {
 
 // ignore: unused_element
   _CommunicationRequest call(
-      {String resourceType = 'CommunicationRequest',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
+          Dstu2ResourceType
+              resourceType = Dstu2ResourceType.CommunicationRequest,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1581,7 +1610,8 @@ const $CommunicationRequest = _$CommunicationRequestTearOff();
 
 /// @nodoc
 mixin _$CommunicationRequest {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1626,7 +1656,8 @@ abstract class $CommunicationRequestCopyWith<$Res> {
           $Res Function(CommunicationRequest) then) =
       _$CommunicationRequestCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1720,7 +1751,7 @@ class _$CommunicationRequestCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1935,7 +1966,8 @@ abstract class _$CommunicationRequestCopyWith<$Res>
       __$CommunicationRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2045,7 +2077,7 @@ class __$CommunicationRequestCopyWithImpl<$Res>
     return _then(_CommunicationRequest(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2117,7 +2149,8 @@ class __$CommunicationRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_CommunicationRequest extends _CommunicationRequest {
   _$_CommunicationRequest(
-      {this.resourceType = 'CommunicationRequest',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
+          this.resourceType = Dstu2ResourceType.CommunicationRequest,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2157,9 +2190,9 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   factory _$_CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunicationRequestFromJson(json);
 
-  @JsonKey(defaultValue: 'CommunicationRequest')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -2349,7 +2382,8 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 abstract class _CommunicationRequest extends CommunicationRequest {
   _CommunicationRequest._() : super._();
   factory _CommunicationRequest(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2388,7 +2422,8 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       _$_CommunicationRequest.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -2807,7 +2842,8 @@ class _$DeviceUseRequestTearOff {
 
 // ignore: unused_element
   _DeviceUseRequest call(
-      {String resourceType = 'DeviceUseRequest',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.DeviceUseRequest,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2892,7 +2928,8 @@ const $DeviceUseRequest = _$DeviceUseRequestTearOff();
 
 /// @nodoc
 mixin _$DeviceUseRequest {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2941,7 +2978,8 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
           DeviceUseRequest value, $Res Function(DeviceUseRequest) then) =
       _$DeviceUseRequestCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3039,7 +3077,7 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3249,7 +3287,8 @@ abstract class _$DeviceUseRequestCopyWith<$Res>
       __$DeviceUseRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3362,7 +3401,7 @@ class __$DeviceUseRequestCopyWithImpl<$Res>
     return _then(_DeviceUseRequest(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3438,7 +3477,8 @@ class __$DeviceUseRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_DeviceUseRequest extends _DeviceUseRequest {
   _$_DeviceUseRequest(
-      {this.resourceType = 'DeviceUseRequest',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
+          this.resourceType = Dstu2ResourceType.DeviceUseRequest,
       this.id,
       this.meta,
       this.implicitRules,
@@ -3486,9 +3526,9 @@ class _$_DeviceUseRequest extends _DeviceUseRequest {
   factory _$_DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceUseRequestFromJson(json);
 
-  @JsonKey(defaultValue: 'DeviceUseRequest')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -3679,7 +3719,8 @@ class _$_DeviceUseRequest extends _DeviceUseRequest {
 abstract class _DeviceUseRequest extends DeviceUseRequest {
   _DeviceUseRequest._() : super._();
   factory _DeviceUseRequest(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3724,7 +3765,8 @@ abstract class _DeviceUseRequest extends DeviceUseRequest {
       _$_DeviceUseRequest.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -3804,31 +3846,41 @@ class _$DeviceUseStatementTearOff {
 
 // ignore: unused_element
   _DeviceUseStatement call(
-      {String resourceType = 'DeviceUseStatement',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.DeviceUseStatement,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept bodySiteCodeableConcept,
       Reference bodySiteReference,
       Period whenUsed,
-      @required @JsonKey(required: true) Reference device,
+      @required
+      @JsonKey(required: true)
+          Reference device,
       List<Identifier> identifier,
       List<CodeableConcept> indication,
       List<String> notes,
       FhirDateTime recordedOn,
-      @JsonKey(name: '_recordedOn') Element recordedOnElement,
-      @required @JsonKey(required: true) Reference subject,
+      @JsonKey(name: '_recordedOn')
+          Element recordedOnElement,
+      @required
+      @JsonKey(required: true)
+          Reference subject,
       Timing timingTiming,
       Period timingPeriod,
       FhirDateTime timingDateTime,
-      @JsonKey(name: '_timingDateTime') Element timingDateTimeElement}) {
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement}) {
     return _DeviceUseStatement(
       resourceType: resourceType,
       id: id,
@@ -3870,7 +3922,8 @@ const $DeviceUseStatement = _$DeviceUseStatementTearOff();
 
 /// @nodoc
 mixin _$DeviceUseStatement {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
+  Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -3913,31 +3966,39 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
           DeviceUseStatement value, $Res Function(DeviceUseStatement) then) =
       _$DeviceUseStatementCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept bodySiteCodeableConcept,
       Reference bodySiteReference,
       Period whenUsed,
-      @JsonKey(required: true) Reference device,
+      @JsonKey(required: true)
+          Reference device,
       List<Identifier> identifier,
       List<CodeableConcept> indication,
       List<String> notes,
       FhirDateTime recordedOn,
-      @JsonKey(name: '_recordedOn') Element recordedOnElement,
-      @JsonKey(required: true) Reference subject,
+      @JsonKey(name: '_recordedOn')
+          Element recordedOnElement,
+      @JsonKey(required: true)
+          Reference subject,
       Timing timingTiming,
       Period timingPeriod,
       FhirDateTime timingDateTime,
-      @JsonKey(name: '_timingDateTime') Element timingDateTimeElement});
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement});
 
   $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
@@ -3994,7 +4055,7 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4193,31 +4254,39 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
       __$DeviceUseStatementCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
+          Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept bodySiteCodeableConcept,
       Reference bodySiteReference,
       Period whenUsed,
-      @JsonKey(required: true) Reference device,
+      @JsonKey(required: true)
+          Reference device,
       List<Identifier> identifier,
       List<CodeableConcept> indication,
       List<String> notes,
       FhirDateTime recordedOn,
-      @JsonKey(name: '_recordedOn') Element recordedOnElement,
-      @JsonKey(required: true) Reference subject,
+      @JsonKey(name: '_recordedOn')
+          Element recordedOnElement,
+      @JsonKey(required: true)
+          Reference subject,
       Timing timingTiming,
       Period timingPeriod,
       FhirDateTime timingDateTime,
-      @JsonKey(name: '_timingDateTime') Element timingDateTimeElement});
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -4289,7 +4358,7 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
     return _then(_DeviceUseStatement(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Dstu2ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4354,31 +4423,41 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
 /// @nodoc
 class _$_DeviceUseStatement extends _DeviceUseStatement {
   _$_DeviceUseStatement(
-      {this.resourceType = 'DeviceUseStatement',
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
+          this.resourceType = Dstu2ResourceType.DeviceUseStatement,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.bodySiteCodeableConcept,
       this.bodySiteReference,
       this.whenUsed,
-      @required @JsonKey(required: true) this.device,
+      @required
+      @JsonKey(required: true)
+          this.device,
       this.identifier,
       this.indication,
       this.notes,
       this.recordedOn,
-      @JsonKey(name: '_recordedOn') this.recordedOnElement,
-      @required @JsonKey(required: true) this.subject,
+      @JsonKey(name: '_recordedOn')
+          this.recordedOnElement,
+      @required
+      @JsonKey(required: true)
+          this.subject,
       this.timingTiming,
       this.timingPeriod,
       this.timingDateTime,
-      @JsonKey(name: '_timingDateTime') this.timingDateTimeElement})
+      @JsonKey(name: '_timingDateTime')
+          this.timingDateTimeElement})
       : assert(resourceType != null),
         assert(device != null),
         assert(subject != null),
@@ -4387,9 +4466,9 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   factory _$_DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceUseStatementFromJson(json);
 
-  @JsonKey(defaultValue: 'DeviceUseStatement')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
+  final Dstu2ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -4562,38 +4641,48 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
 abstract class _DeviceUseStatement extends DeviceUseStatement {
   _DeviceUseStatement._() : super._();
   factory _DeviceUseStatement(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-          Code language,
-          @JsonKey(name: '_language') Element languageElement,
-          Narrative text,
-          List<Resource> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          CodeableConcept bodySiteCodeableConcept,
-          Reference bodySiteReference,
-          Period whenUsed,
-          @required @JsonKey(required: true) Reference device,
-          List<Identifier> identifier,
-          List<CodeableConcept> indication,
-          List<String> notes,
-          FhirDateTime recordedOn,
-          @JsonKey(name: '_recordedOn') Element recordedOnElement,
-          @required @JsonKey(required: true) Reference subject,
-          Timing timingTiming,
-          Period timingPeriod,
-          FhirDateTime timingDateTime,
-          @JsonKey(name: '_timingDateTime') Element timingDateTimeElement}) =
-      _$_DeviceUseStatement;
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
+          Dstu2ResourceType resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      CodeableConcept bodySiteCodeableConcept,
+      Reference bodySiteReference,
+      Period whenUsed,
+      @required
+      @JsonKey(required: true)
+          Reference device,
+      List<Identifier> identifier,
+      List<CodeableConcept> indication,
+      List<String> notes,
+      FhirDateTime recordedOn,
+      @JsonKey(name: '_recordedOn')
+          Element recordedOnElement,
+      @required
+      @JsonKey(required: true)
+          Reference subject,
+      Timing timingTiming,
+      Period timingPeriod,
+      FhirDateTime timingDateTime,
+      @JsonKey(name: '_timingDateTime')
+          Element timingDateTimeElement}) = _$_DeviceUseStatement;
 
   factory _DeviceUseStatement.fromJson(Map<String, dynamic> json) =
       _$_DeviceUseStatement.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
+  Dstu2ResourceType get resourceType;
   @override
   Id get id;
   @override
