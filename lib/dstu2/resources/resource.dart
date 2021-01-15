@@ -65,7 +65,7 @@ class Resource {
     return val;
   }
 
-  /// Acts like a constructor, returns a [Resource], accepts a 
+  /// Acts like a constructor, returns a [Resource], accepts a
   /// [Map<String, Dyamic] as an argument
   static Resource fromJson(Map<String, dynamic> json) =>
       _resourceFromJson(json);

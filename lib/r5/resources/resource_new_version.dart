@@ -1,4 +1,4 @@
-part of 'resource.dart';
+part of '../resources/resource.dart';
 
 /// Returns an [Id] if one is passed, otherwise generates a new one
 Id _getId(int resourcehashCode, Id id) =>
@@ -55,8 +55,12 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as Binary).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
-    case 'BodySite':
-      return (resource as BodySite).copyWith(
+    case 'BiologicallyDerivedProduct':
+      return (resource as BiologicallyDerivedProduct).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'BodyStructure':
+      return (resource as BodyStructure).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'Bundle':
@@ -67,6 +71,10 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as CapabilityStatement).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
+    case 'CapabilityStatement2':
+      return (resource as CapabilityStatement2).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
     case 'CarePlan':
       return (resource as CarePlan).copyWith(
           id: _getId(resource.hashCode, resource.id),
@@ -75,8 +83,16 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as CareTeam).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
+    case 'CatalogEntry':
+      return (resource as CatalogEntry).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
     case 'ChargeItem':
       return (resource as ChargeItem).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'ChargeItemDefinition':
+      return (resource as ChargeItemDefinition).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'Claim':
@@ -89,6 +105,10 @@ Resource _newResourceVersion(Resource resource) {
           meta: _updateMetaVersion(resource.meta));
     case 'ClinicalImpression':
       return (resource as ClinicalImpression).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'ClinicalUseIssue':
+      return (resource as ClinicalUseIssue).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'CodeSystem':
@@ -119,6 +139,10 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as Condition).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
+    case 'ConditionDefinition':
+      return (resource as ConditionDefinition).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
     case 'Consent':
       return (resource as Consent).copyWith(
           id: _getId(resource.hashCode, resource.id),
@@ -131,8 +155,12 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as Coverage).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
-    case 'DataElement':
-      return (resource as DataElement).copyWith(
+    case 'CoverageEligibilityRequest':
+      return (resource as CoverageEligibilityRequest).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'CoverageEligibilityResponse':
+      return (resource as CoverageEligibilityResponse).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'DetectedIssue':
@@ -143,8 +171,8 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as Device).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
-    case 'DeviceComponent':
-      return (resource as DeviceComponent).copyWith(
+    case 'DeviceDefinition':
+      return (resource as DeviceDefinition).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'DeviceMetric':
@@ -171,14 +199,6 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as DocumentReference).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
-    case 'EligibilityRequest':
-      return (resource as EligibilityRequest).copyWith(
-          id: _getId(resource.hashCode, resource.id),
-          meta: _updateMetaVersion(resource.meta));
-    case 'EligibilityResponse':
-      return (resource as EligibilityResponse).copyWith(
-          id: _getId(resource.hashCode, resource.id),
-          meta: _updateMetaVersion(resource.meta));
     case 'Encounter':
       return (resource as Encounter).copyWith(
           id: _getId(resource.hashCode, resource.id),
@@ -199,8 +219,20 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as EpisodeOfCare).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
-    case 'ExpansionProfile':
-      return (resource as ExpansionProfile).copyWith(
+    case 'EventDefinition':
+      return (resource as EventDefinition).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'Evidence':
+      return (resource as Evidence).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'EvidenceVariable':
+      return (resource as EvidenceVariable).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'ExampleScenario':
+      return (resource as ExampleScenario).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'ExplanationOfBenefit':
@@ -235,10 +267,6 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as HealthcareService).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
-    case 'ImagingManifest':
-      return (resource as ImagingManifest).copyWith(
-          id: _getId(resource.hashCode, resource.id),
-          meta: _updateMetaVersion(resource.meta));
     case 'ImagingStudy':
       return (resource as ImagingStudy).copyWith(
           id: _getId(resource.hashCode, resource.id),
@@ -247,12 +275,24 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as Immunization).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
+    case 'ImmunizationEvaluation':
+      return (resource as ImmunizationEvaluation).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
     case 'ImmunizationRecommendation':
       return (resource as ImmunizationRecommendation).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'ImplementationGuide':
       return (resource as ImplementationGuide).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'InsurancePlan':
+      return (resource as InsurancePlan).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'Invoice':
+      return (resource as Invoice).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'Library':
@@ -279,10 +319,6 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as MeasureReport).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
-    case 'Media':
-      return (resource as Media).copyWith(
-          id: _getId(resource.hashCode, resource.id),
-          meta: _updateMetaVersion(resource.meta));
     case 'Medication':
       return (resource as Medication).copyWith(
           id: _getId(resource.hashCode, resource.id),
@@ -295,12 +331,40 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as MedicationDispense).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
+    case 'MedicationKnowledge':
+      return (resource as MedicationKnowledge).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
     case 'MedicationRequest':
       return (resource as MedicationRequest).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
-    case 'MedicationStatement':
-      return (resource as MedicationStatement).copyWith(
+    case 'MedicationUsage':
+      return (resource as MedicationUsage).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'MedicinalProductDefinition':
+      return (resource as MedicinalProductDefinition).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'RegulatedAuthorization':
+      return (resource as RegulatedAuthorization).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'Ingredient':
+      return (resource as Ingredient).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'ManufacturedItemDefinition':
+      return (resource as ManufacturedItemDefinition).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'PackagedProductDefinition':
+      return (resource as PackagedProductDefinition).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'AdministrableProductDefinition':
+      return (resource as AdministrableProductDefinition).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'MessageDefinition':
@@ -311,8 +375,16 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as MessageHeader).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
+    case 'MolecularSequence':
+      return (resource as MolecularSequence).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
     case 'NamingSystem':
       return (resource as NamingSystem).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'NutritionIntake':
+      return (resource as NutritionIntake).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'NutritionOrder':
@@ -321,6 +393,10 @@ Resource _newResourceVersion(Resource resource) {
           meta: _updateMetaVersion(resource.meta));
     case 'Observation':
       return (resource as Observation).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'ObservationDefinition':
+      return (resource as ObservationDefinition).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'OperationDefinition':
@@ -333,6 +409,10 @@ Resource _newResourceVersion(Resource resource) {
           meta: _updateMetaVersion(resource.meta));
     case 'Organization':
       return (resource as Organization).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'OrganizationAffiliation':
+      return (resource as OrganizationAffiliation).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'Parameters':
@@ -371,18 +451,6 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as Procedure).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
-    case 'ProcedureRequest':
-      return (resource as ProcedureRequest).copyWith(
-          id: _getId(resource.hashCode, resource.id),
-          meta: _updateMetaVersion(resource.meta));
-    case 'ProcessRequest':
-      return (resource as ProcessRequest).copyWith(
-          id: _getId(resource.hashCode, resource.id),
-          meta: _updateMetaVersion(resource.meta));
-    case 'ProcessResponse':
-      return (resource as ProcessResponse).copyWith(
-          id: _getId(resource.hashCode, resource.id),
-          meta: _updateMetaVersion(resource.meta));
     case 'Provenance':
       return (resource as Provenance).copyWith(
           id: _getId(resource.hashCode, resource.id),
@@ -393,10 +461,6 @@ Resource _newResourceVersion(Resource resource) {
           meta: _updateMetaVersion(resource.meta));
     case 'QuestionnaireResponse':
       return (resource as QuestionnaireResponse).copyWith(
-          id: _getId(resource.hashCode, resource.id),
-          meta: _updateMetaVersion(resource.meta));
-    case 'ReferralRequest':
-      return (resource as ReferralRequest).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'RelatedPerson':
@@ -427,12 +491,8 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as SearchParameter).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
-    case 'Sequence':
-      return (resource as Sequence).copyWith(
-          id: _getId(resource.hashCode, resource.id),
-          meta: _updateMetaVersion(resource.meta));
-    case 'ServiceDefinition':
-      return (resource as ServiceDefinition).copyWith(
+    case 'ServiceRequest':
+      return (resource as ServiceRequest).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'Slot':
@@ -441,6 +501,10 @@ Resource _newResourceVersion(Resource resource) {
           meta: _updateMetaVersion(resource.meta));
     case 'Specimen':
       return (resource as Specimen).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'SpecimenDefinition':
+      return (resource as SpecimenDefinition).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'StructureDefinition':
@@ -459,6 +523,30 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as Substance).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
+    case 'SubstanceDefinition':
+      return (resource as SubstanceDefinition).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'SubstanceNucleicAcid':
+      return (resource as SubstanceNucleicAcid).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'SubstancePolymer':
+      return (resource as SubstancePolymer).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'SubstanceProtein':
+      return (resource as SubstanceProtein).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'SubstanceReferenceInformation':
+      return (resource as SubstanceReferenceInformation).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'SubstanceSourceMaterial':
+      return (resource as SubstanceSourceMaterial).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
     case 'SupplyDelivery':
       return (resource as SupplyDelivery).copyWith(
           id: _getId(resource.hashCode, resource.id),
@@ -471,6 +559,10 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as Task).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
+    case 'TerminologyCapabilities':
+      return (resource as TerminologyCapabilities).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
     case 'TestReport':
       return (resource as TestReport).copyWith(
           id: _getId(resource.hashCode, resource.id),
@@ -479,8 +571,16 @@ Resource _newResourceVersion(Resource resource) {
       return (resource as TestScript).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
+    // case 'Topic':
+    //   return (resource as Topic).copyWith(
+    //       id: _getId(resource.hashCode, resource.id),
+    //       meta: _updateMetaVersion(resource.meta));
     case 'ValueSet':
       return (resource as ValueSet).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(resource.meta));
+    case 'VerificationResult':
+      return (resource as VerificationResult).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
     case 'VisionPrescription':

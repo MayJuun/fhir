@@ -5,11 +5,17 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
-import '../../r5.dart';
+import '../../r4.dart';
 
 part 'resource_from_json.dart';
 part 'resource_new_version.dart';
 
+/// This class ends up functioning mostly like an abstract superclass. Some of
+/// the fields in other classes contain a generic resource, so in order for
+/// them to be able to implement a resource.toJson() function, it also has to
+/// be implemented here (although it is always overridden). Each resource
+/// class also has it's own fromJson() function as well. The fromJson function
+/// in this class is only used if the resourceType is not previously known
 @JsonSerializable()
 class Resource {
   Id id;
@@ -31,9 +37,9 @@ class Resource {
 
   /// Returns a Resource, accepts [Yaml String] as an argument
   static Resource fromYaml(dynamic yaml) => yaml is String
-      ? fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Resource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Resource.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
   /// Returns a [Map<String, dynamic>] of the [Resource]
@@ -59,7 +65,7 @@ class Resource {
     return val;
   }
 
-  /// Acts like a constructor, returns a [Resource], accepts a 
+  /// Acts like a constructor, returns a [Resource], accepts a
   /// [Map<String, Dyamic] as an argument
   static Resource fromJson(Map<String, dynamic> json) =>
       _resourceFromJson(json);

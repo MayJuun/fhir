@@ -5,7 +5,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
-import '../../r4.dart';
+import '../../stu3.dart';
 
 part 'resource_from_json.dart';
 part 'resource_new_version.dart';
@@ -32,14 +32,14 @@ class Resource {
   /// Convenience method to return a [Reference] referring to that [Resource]
   Reference thisReference() => Reference(reference: '$resourceType/$id');
 
-  /// Produces a Yaml formatted String version of the object
+  /// Produces a [Yaml] formatted [String] version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Returns a Resource, accepts [Yaml String] as an argument
   static Resource fromYaml(dynamic yaml) => yaml is String
-      ? Resource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
-          ? Resource.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
   /// Returns a [Map<String, dynamic>] of the [Resource]
@@ -65,7 +65,7 @@ class Resource {
     return val;
   }
 
-  /// Acts like a constructor, returns a [Resource], accepts a 
+  /// Acts like a constructor, returns a [Resource], accepts a
   /// [Map<String, Dyamic] as an argument
   static Resource fromJson(Map<String, dynamic> json) =>
       _resourceFromJson(json);
