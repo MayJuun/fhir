@@ -22,7 +22,7 @@ You can email me at <grey@fhirfli.dev>.
 In order to use this package in your app, you must include the following in your pubspec.yaml file under dependencies:
 ```
 dependencies:
-  fhir: ^0.1.1
+  fhir: ^0.1.3
 ```
 Or if you want to include the most recent unreleased version from Github
 ```
