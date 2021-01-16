@@ -18,7 +18,7 @@ Meta _updateMetaVersion(Meta oldMeta) {
 /// Updates the [meta] field of this Resource, updates the [lastUpdated], adds
 /// 1 to the version number and adds an [Id] if there is not already one
 Resource _newResourceVersion(Resource resource) {
-  switch (resource.resourceType.value) {
+  switch (resource.resourceType) {
     case Dstu2ResourceType.Account:
       return (resource as Account).copyWith(
           id: _getId(resource.hashCode, resource.id),
