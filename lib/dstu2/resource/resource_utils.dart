@@ -1,4 +1,4 @@
-import '../../dstu2.dart';
+import '../dstu2.dart';
 
 class ResourceUtils {
   static const resourceTypeFromStringMap = {

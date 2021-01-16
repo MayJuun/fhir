@@ -1,4 +1,4 @@
-part of '../resources/resource.dart';
+part of 'resource.dart';
 
 /// Returns an [Id] if one is passed, otherwise generates a new one
 Id _getId(int resourcehashCode, Id id) =>

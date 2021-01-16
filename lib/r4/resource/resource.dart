@@ -9,6 +9,7 @@ import '../../r4.dart';
 
 part 'resource_from_json.dart';
 part 'resource_new_version.dart';
+part 'resource_types_enum.dart';
 
 /// This class ends up functioning mostly like an abstract superclass. Some of
 /// the fields in other classes contain a generic resource, so in order for

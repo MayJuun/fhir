@@ -1,4 +1,4 @@
-part of '../resources/resource.dart';
+part of 'resource.dart';
 
 /// Acts like a constructor, returns a [Resource], accepts a
 /// [Map<String, Dyamic] as an argument
