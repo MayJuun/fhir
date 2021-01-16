@@ -1,7 +1,9 @@
+## [0.1.2]
+* replaced resourceType in each resource with enum instead of String
+
 ## [0.1.1]
 * Changed resource_utils to use enums instead of runtimeType (because runtimeType doesn't work)
 * moved all resource, resource_utils and enums into a separate folder
-* replaced resourceType in each resource with enum instead of String
 
 ## [0.1.0]
 * That's right, a whole other version number!
