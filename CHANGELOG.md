@@ -1,3 +1,7 @@
+## [0.1.4]
+* trying to make the resourceType more useful
+* put it in its own class to allow easier access, plus methods
+
 ## [0.1.3]
 * added a resourceTypeString() method to easily get string from enum (needed for Db)
 

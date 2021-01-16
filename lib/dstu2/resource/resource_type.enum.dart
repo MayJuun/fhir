@@ -1,4 +1,4 @@
-part of 'resource.dart';
+part of 'resource_type.dart';
 
 enum Dstu2ResourceType {
   @JsonValue('Account')
