@@ -1,3 +1,7 @@
+## [0.1.4]
+* just little tweaks
+* newVersion method will update resource meta, or allows a separate meta to update and include with resource
+
 ## [0.1.3]
 * added a resourceTypeString() method to easily get string from enum (needed for Db)
 
