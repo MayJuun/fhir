@@ -109,7 +109,9 @@ abstract class Account with Resource implements _$Account {
   ///
   /// [partOf]: Reference to a parent Account.
   factory Account({
-    @Default('Account') String resourceType,
+    @Default(R4ResourceType.Account)
+    @JsonKey(unknownEnumValue: R4ResourceType.Account)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -435,7 +437,9 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
   ///
   /// [supportingInformation]: Further information supporting this charge.
   factory ChargeItem({
-    @Default('ChargeItem') String resourceType,
+    @Default(R4ResourceType.ChargeItem)
+    @JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -745,7 +749,9 @@ abstract class ChargeItemDefinition
   /// conditions. If no applicability rules are established for the group, then
   ///  all properties always apply.
   factory ChargeItemDefinition({
-    @Default('ChargeItemDefinition') String resourceType,
+    @Default(R4ResourceType.ChargeItemDefinition)
+    @JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1251,7 +1257,9 @@ abstract class Contract with Resource implements _$Contract {
   /// the "source of truth" and which would be the basis for legal action
   ///  related to enforcement of this Contract.
   factory Contract({
-    @Default('Contract') String resourceType,
+    @Default(R4ResourceType.Contract)
+    @JsonKey(unknownEnumValue: R4ResourceType.Contract)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2870,7 +2878,9 @@ abstract class ExplanationOfBenefit
   ///
   /// [benefitBalance]: Balance by Benefit Category.
   factory ExplanationOfBenefit({
-    @Default('ExplanationOfBenefit') String resourceType,
+    @Default(R4ResourceType.ExplanationOfBenefit)
+    @JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -4932,7 +4942,9 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
   ///
   /// [plan]: Details about an insurance plan.
   factory InsurancePlan({
-    @Default('InsurancePlan') String resourceType,
+    @Default(R4ResourceType.InsurancePlan)
+    @JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -166,7 +166,9 @@ abstract class Immunization with Resource implements _$Immunization {
   /// [protocolApplied]: The protocol (set of recommendations) being followed by
   ///  the provider who administered the dose.
   factory Immunization({
-    @Default('Immunization') String resourceType,
+    @Default(R4ResourceType.Immunization)
+    @JsonKey(unknownEnumValue: R4ResourceType.Immunization)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -650,7 +652,9 @@ abstract class ImmunizationEvaluation
   ///
   /// [_seriesDosesString]: Extensions for seriesDosesString
   factory ImmunizationEvaluation({
-    @Default('ImmunizationEvaluation') String resourceType,
+    @Default(R4ResourceType.ImmunizationEvaluation)
+    @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -780,7 +784,9 @@ abstract class ImmunizationRecommendation
   ///
   /// [recommendation]: Vaccine administration recommendations.
   factory ImmunizationRecommendation({
-    @Default('ImmunizationRecommendation') String resourceType,
+    @Default(R4ResourceType.ImmunizationRecommendation)
+    @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationRecommendation)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1102,7 +1108,9 @@ abstract class Medication with Resource implements _$Medication {
   ///
   /// [batch]: Information that only applies to packages (not products).
   factory Medication({
-    @Default('Medication') String resourceType,
+    @Default(R4ResourceType.Medication)
+    @JsonKey(unknownEnumValue: R4ResourceType.Medication)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1424,7 +1432,9 @@ abstract class MedicationAdministration
   /// [eventHistory]: A summary of the events of interest that have occurred,
   ///  such as when the administration was verified.
   factory MedicationAdministration({
-    @Default('MedicationAdministration') String resourceType,
+    @Default(R4ResourceType.MedicationAdministration)
+    @JsonKey(unknownEnumValue: R4ResourceType.MedicationAdministration)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1804,7 +1814,9 @@ abstract class MedicationDispense
   /// [eventHistory]: A summary of the events of interest that have occurred,
   ///  such as when the dispense was verified.
   factory MedicationDispense({
-    @Default('MedicationDispense') String resourceType,
+    @Default(R4ResourceType.MedicationDispense)
+    @JsonKey(unknownEnumValue: R4ResourceType.MedicationDispense)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2140,7 +2152,9 @@ abstract class MedicationKnowledge
   /// [kinetics]: The time course of drug absorption, distribution, metabolism
   ///  and excretion of a medication from the body.
   factory MedicationKnowledge({
-    @Default('MedicationKnowledge') String resourceType,
+    @Default(R4ResourceType.MedicationKnowledge)
+    @JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -3439,7 +3453,9 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
   /// transitions or updates that are likely to be relevant to a user looking at
   ///  the current version of the resource.
   factory MedicationRequest({
-    @Default('MedicationRequest') String resourceType,
+    @Default(R4ResourceType.MedicationRequest)
+    @JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -3902,7 +3918,9 @@ abstract class MedicationStatement
   /// [dosage]: Indicates how the medication is/was or should be taken by the
   ///  patient.
   factory MedicationStatement({
-    @Default('MedicationStatement') String resourceType,
+    @Default(R4ResourceType.MedicationStatement)
+    @JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -174,7 +174,9 @@ abstract class Appointment with Resource implements _$Appointment {
   /// actual allocated time. However, in other situations the duration may be
   ///  calculated by the scheduling system.
   factory Appointment({
-    @Default('Appointment') String resourceType,
+    @Default(R4ResourceType.Appointment)
+    @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -410,7 +412,9 @@ abstract class AppointmentResponse
   ///
   /// [_comment]: Extensions for comment
   factory AppointmentResponse({
-    @Default('AppointmentResponse') String resourceType,
+    @Default(R4ResourceType.AppointmentResponse)
+    @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -541,7 +545,9 @@ abstract class Schedule with Resource implements _$Schedule {
   ///
   /// [_comment]: Extensions for comment
   factory Schedule({
-    @Default('Schedule') String resourceType,
+    @Default(R4ResourceType.Schedule)
+    @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -681,7 +687,9 @@ abstract class Slot with Resource implements _$Slot {
   ///
   /// [_comment]: Extensions for comment
   factory Slot({
-    @Default('Slot') String resourceType,
+    @Default(R4ResourceType.Slot)
+    @JsonKey(unknownEnumValue: R4ResourceType.Slot)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -891,7 +899,9 @@ abstract class Task with Resource implements _$Task {
   ///
   /// [output]: Outputs produced by the Task.
   factory Task({
-    @Default('Task') String resourceType,
+    @Default(R4ResourceType.Task)
+    @JsonKey(unknownEnumValue: R4ResourceType.Task)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1654,7 +1664,9 @@ abstract class VerificationResult
   ///
   /// [validator]: Information about the entity validating information.
   factory VerificationResult({
-    @Default('VerificationResult') String resourceType,
+    @Default(R4ResourceType.VerificationResult)
+    @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -152,7 +152,9 @@ abstract class Encounter with Resource implements _$Encounter {
   /// [partOf]: Another Encounter of which this encounter is a part of
   ///  (administratively or in time).
   factory Encounter({
-    @Default('Encounter') String resourceType,
+    @Default(R4ResourceType.Encounter)
+    @JsonKey(unknownEnumValue: R4ResourceType.Encounter)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -712,7 +714,9 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
   /// [account]: The set of accounts that may be used for billing for this
   ///  EpisodeOfCare.
   factory EpisodeOfCare({
-    @Default('EpisodeOfCare') String resourceType,
+    @Default(R4ResourceType.EpisodeOfCare)
+    @JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -973,7 +977,9 @@ abstract class Flag with Resource implements _$Flag {
   ///
   /// [author]: The person, organization or device that created the flag.
   factory Flag({
-    @Default('Flag') String resourceType,
+    @Default(R4ResourceType.Flag)
+    @JsonKey(unknownEnumValue: R4ResourceType.Flag)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1226,7 +1232,9 @@ abstract class Library with Resource implements _$Library {
   /// Either way, the contentType of the attachment determines how to interpret
   ///  the content.
   factory Library({
-    @Default('Library') String resourceType,
+    @Default(R4ResourceType.Library)
+    @JsonKey(unknownEnumValue: R4ResourceType.Library)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1402,7 +1410,9 @@ abstract class List_ with Resource implements _$List_ {
   ///
   /// [emptyReason]: If the list is empty, why the list is empty.
   factory List_({
-    @Default('List_') String resourceType,
+    @Default(R4ResourceType.List_)
+    @JsonKey(unknownEnumValue: R4ResourceType.List_)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -263,7 +263,7 @@ Resource _newResourceVersion(Resource resource) {
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));
 
-    case Dstu2ResourceType.List:
+    case Dstu2ResourceType.List_:
       return (resource as List_).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(resource.meta));

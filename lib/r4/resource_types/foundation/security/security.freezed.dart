@@ -18,7 +18,8 @@ class _$AuditEventTearOff {
 
 // ignore: unused_element
   _AuditEvent call(
-      {String resourceType = 'AuditEvent',
+      {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+          R4ResourceType resourceType = R4ResourceType.AuditEvent,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -98,7 +99,8 @@ const $AuditEvent = _$AuditEventTearOff();
 
 /// @nodoc
 mixin _$AuditEvent {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -144,7 +146,8 @@ abstract class $AuditEventCopyWith<$Res> {
           AuditEvent value, $Res Function(AuditEvent) then) =
       _$AuditEventCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -233,7 +236,7 @@ class _$AuditEventCopyWithImpl<$Res> implements $AuditEventCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -404,7 +407,8 @@ abstract class _$AuditEventCopyWith<$Res> implements $AuditEventCopyWith<$Res> {
       __$AuditEventCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -506,7 +510,7 @@ class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
     return _then(_AuditEvent(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -565,31 +569,44 @@ class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
 /// @nodoc
 class _$_AuditEvent extends _AuditEvent {
   _$_AuditEvent(
-      {this.resourceType = 'AuditEvent',
+      {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+          this.resourceType = R4ResourceType.AuditEvent,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      @required this.type,
+      @required
+          this.type,
       this.subtype,
-      @JsonKey(unknownEnumValue: AuditEventAction.unknown) this.action,
-      @JsonKey(name: '_action') this.actionElement,
+      @JsonKey(unknownEnumValue: AuditEventAction.unknown)
+          this.action,
+      @JsonKey(name: '_action')
+          this.actionElement,
       this.period,
       this.recorded,
-      @JsonKey(name: '_recorded') this.recordedElement,
-      @JsonKey(unknownEnumValue: AuditEventOutcome.unknown) this.outcome,
-      @JsonKey(name: '_outcome') this.outcomeElement,
+      @JsonKey(name: '_recorded')
+          this.recordedElement,
+      @JsonKey(unknownEnumValue: AuditEventOutcome.unknown)
+          this.outcome,
+      @JsonKey(name: '_outcome')
+          this.outcomeElement,
       this.outcomeDesc,
-      @JsonKey(name: '_outcomeDesc') this.outcomeDescElement,
+      @JsonKey(name: '_outcomeDesc')
+          this.outcomeDescElement,
       this.purposeOfEvent,
-      @required this.agent,
-      @required this.source,
+      @required
+          this.agent,
+      @required
+          this.source,
       this.entity})
       : assert(resourceType != null),
         assert(type != null),
@@ -600,9 +617,9 @@ class _$_AuditEvent extends _AuditEvent {
   factory _$_AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$_$_AuditEventFromJson(json);
 
-  @JsonKey(defaultValue: 'AuditEvent')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -786,7 +803,8 @@ class _$_AuditEvent extends _AuditEvent {
 abstract class _AuditEvent extends AuditEvent {
   _AuditEvent._() : super._();
   factory _AuditEvent(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -829,7 +847,8 @@ abstract class _AuditEvent extends AuditEvent {
       _$_AuditEvent.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -3082,25 +3101,34 @@ class _$ConsentTearOff {
 
 // ignore: unused_element
   _Consent call(
-      {String resourceType = 'Consent',
+      {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
+          R4ResourceType resourceType = R4ResourceType.Consent,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: ConsentStatus.unknown) ConsentStatus status,
-      @JsonKey(name: '_status') Element statusElement,
-      @required CodeableConcept scope,
-      @required List<CodeableConcept> category,
+      @JsonKey(unknownEnumValue: ConsentStatus.unknown)
+          ConsentStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @required
+          CodeableConcept scope,
+      @required
+          List<CodeableConcept> category,
       Reference patient,
       FhirDateTime dateTime,
-      @JsonKey(name: '_dateTime') Element dateTimeElement,
+      @JsonKey(name: '_dateTime')
+          Element dateTimeElement,
       List<Reference> performer,
       List<Reference> organization,
       Attachment sourceAttachment,
@@ -3152,7 +3180,8 @@ const $Consent = _$ConsentTearOff();
 
 /// @nodoc
 mixin _$Consent {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Consent)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -3195,25 +3224,32 @@ abstract class $ConsentCopyWith<$Res> {
   factory $ConsentCopyWith(Consent value, $Res Function(Consent) then) =
       _$ConsentCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: ConsentStatus.unknown) ConsentStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(unknownEnumValue: ConsentStatus.unknown)
+          ConsentStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept scope,
       List<CodeableConcept> category,
       Reference patient,
       FhirDateTime dateTime,
-      @JsonKey(name: '_dateTime') Element dateTimeElement,
+      @JsonKey(name: '_dateTime')
+          Element dateTimeElement,
       List<Reference> performer,
       List<Reference> organization,
       Attachment sourceAttachment,
@@ -3278,7 +3314,7 @@ class _$ConsentCopyWithImpl<$Res> implements $ConsentCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3469,25 +3505,32 @@ abstract class _$ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
       __$ConsentCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: ConsentStatus.unknown) ConsentStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(unknownEnumValue: ConsentStatus.unknown)
+          ConsentStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept scope,
       List<CodeableConcept> category,
       Reference patient,
       FhirDateTime dateTime,
-      @JsonKey(name: '_dateTime') Element dateTimeElement,
+      @JsonKey(name: '_dateTime')
+          Element dateTimeElement,
       List<Reference> performer,
       List<Reference> organization,
       Attachment sourceAttachment,
@@ -3565,7 +3608,7 @@ class __$ConsentCopyWithImpl<$Res> extends _$ConsentCopyWithImpl<$Res>
     return _then(_Consent(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3635,25 +3678,34 @@ class __$ConsentCopyWithImpl<$Res> extends _$ConsentCopyWithImpl<$Res>
 /// @nodoc
 class _$_Consent extends _Consent {
   _$_Consent(
-      {this.resourceType = 'Consent',
+      {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
+          this.resourceType = R4ResourceType.Consent,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: ConsentStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
-      @required this.scope,
-      @required this.category,
+      @JsonKey(unknownEnumValue: ConsentStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @required
+          this.scope,
+      @required
+          this.category,
       this.patient,
       this.dateTime,
-      @JsonKey(name: '_dateTime') this.dateTimeElement,
+      @JsonKey(name: '_dateTime')
+          this.dateTimeElement,
       this.performer,
       this.organization,
       this.sourceAttachment,
@@ -3670,9 +3722,9 @@ class _$_Consent extends _Consent {
   factory _$_Consent.fromJson(Map<String, dynamic> json) =>
       _$_$_ConsentFromJson(json);
 
-  @JsonKey(defaultValue: 'Consent')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Consent)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -3857,25 +3909,34 @@ class _$_Consent extends _Consent {
 abstract class _Consent extends Consent {
   _Consent._() : super._();
   factory _Consent(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      @JsonKey(unknownEnumValue: ConsentStatus.unknown) ConsentStatus status,
-      @JsonKey(name: '_status') Element statusElement,
-      @required CodeableConcept scope,
-      @required List<CodeableConcept> category,
+      @JsonKey(unknownEnumValue: ConsentStatus.unknown)
+          ConsentStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @required
+          CodeableConcept scope,
+      @required
+          List<CodeableConcept> category,
       Reference patient,
       FhirDateTime dateTime,
-      @JsonKey(name: '_dateTime') Element dateTimeElement,
+      @JsonKey(name: '_dateTime')
+          Element dateTimeElement,
       List<Reference> performer,
       List<Reference> organization,
       Attachment sourceAttachment,
@@ -3888,7 +3949,8 @@ abstract class _Consent extends Consent {
   factory _Consent.fromJson(Map<String, dynamic> json) = _$_Consent.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Consent)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -5714,29 +5776,38 @@ class _$ProvenanceTearOff {
 
 // ignore: unused_element
   _Provenance call(
-      {String resourceType = 'Provenance',
+      {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+          R4ResourceType resourceType = R4ResourceType.Provenance,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @required List<Reference> target,
+      @required
+          List<Reference> target,
       Period occurredPeriod,
       FhirDateTime occurredDateTime,
-      @JsonKey(name: '_occurredDateTime') Element occurredDateTimeElement,
+      @JsonKey(name: '_occurredDateTime')
+          Element occurredDateTimeElement,
       Instant recorded,
-      @JsonKey(name: '_recorded') Element recordedElement,
+      @JsonKey(name: '_recorded')
+          Element recordedElement,
       List<FhirUri> policy,
-      @JsonKey(name: '_policy') List<Element> policyElement,
+      @JsonKey(name: '_policy')
+          List<Element> policyElement,
       Reference location,
       List<CodeableConcept> reason,
       CodeableConcept activity,
-      @required List<ProvenanceAgent> agent,
+      @required
+          List<ProvenanceAgent> agent,
       List<ProvenanceEntity> entity,
       List<Signature> signature}) {
     return _Provenance(
@@ -5780,7 +5851,8 @@ const $Provenance = _$ProvenanceTearOff();
 
 /// @nodoc
 mixin _$Provenance {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -5822,25 +5894,32 @@ abstract class $ProvenanceCopyWith<$Res> {
           Provenance value, $Res Function(Provenance) then) =
       _$ProvenanceCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       Period occurredPeriod,
       FhirDateTime occurredDateTime,
-      @JsonKey(name: '_occurredDateTime') Element occurredDateTimeElement,
+      @JsonKey(name: '_occurredDateTime')
+          Element occurredDateTimeElement,
       Instant recorded,
-      @JsonKey(name: '_recorded') Element recordedElement,
+      @JsonKey(name: '_recorded')
+          Element recordedElement,
       List<FhirUri> policy,
-      @JsonKey(name: '_policy') List<Element> policyElement,
+      @JsonKey(name: '_policy')
+          List<Element> policyElement,
       Reference location,
       List<CodeableConcept> reason,
       CodeableConcept activity,
@@ -5898,7 +5977,7 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6050,25 +6129,32 @@ abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
       __$ProvenanceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Reference> target,
       Period occurredPeriod,
       FhirDateTime occurredDateTime,
-      @JsonKey(name: '_occurredDateTime') Element occurredDateTimeElement,
+      @JsonKey(name: '_occurredDateTime')
+          Element occurredDateTimeElement,
       Instant recorded,
-      @JsonKey(name: '_recorded') Element recordedElement,
+      @JsonKey(name: '_recorded')
+          Element recordedElement,
       List<FhirUri> policy,
-      @JsonKey(name: '_policy') List<Element> policyElement,
+      @JsonKey(name: '_policy')
+          List<Element> policyElement,
       Reference location,
       List<CodeableConcept> reason,
       CodeableConcept activity,
@@ -6137,7 +6223,7 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
     return _then(_Provenance(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6197,29 +6283,38 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
 /// @nodoc
 class _$_Provenance extends _Provenance {
   _$_Provenance(
-      {this.resourceType = 'Provenance',
+      {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+          this.resourceType = R4ResourceType.Provenance,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      @required this.target,
+      @required
+          this.target,
       this.occurredPeriod,
       this.occurredDateTime,
-      @JsonKey(name: '_occurredDateTime') this.occurredDateTimeElement,
+      @JsonKey(name: '_occurredDateTime')
+          this.occurredDateTimeElement,
       this.recorded,
-      @JsonKey(name: '_recorded') this.recordedElement,
+      @JsonKey(name: '_recorded')
+          this.recordedElement,
       this.policy,
-      @JsonKey(name: '_policy') this.policyElement,
+      @JsonKey(name: '_policy')
+          this.policyElement,
       this.location,
       this.reason,
       this.activity,
-      @required this.agent,
+      @required
+          this.agent,
       this.entity,
       this.signature})
       : assert(resourceType != null),
@@ -6230,9 +6325,9 @@ class _$_Provenance extends _Provenance {
   factory _$_Provenance.fromJson(Map<String, dynamic> json) =>
       _$_$_ProvenanceFromJson(json);
 
-  @JsonKey(defaultValue: 'Provenance')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -6406,29 +6501,38 @@ class _$_Provenance extends _Provenance {
 abstract class _Provenance extends Provenance {
   _Provenance._() : super._();
   factory _Provenance(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @required List<Reference> target,
+      @required
+          List<Reference> target,
       Period occurredPeriod,
       FhirDateTime occurredDateTime,
-      @JsonKey(name: '_occurredDateTime') Element occurredDateTimeElement,
+      @JsonKey(name: '_occurredDateTime')
+          Element occurredDateTimeElement,
       Instant recorded,
-      @JsonKey(name: '_recorded') Element recordedElement,
+      @JsonKey(name: '_recorded')
+          Element recordedElement,
       List<FhirUri> policy,
-      @JsonKey(name: '_policy') List<Element> policyElement,
+      @JsonKey(name: '_policy')
+          List<Element> policyElement,
       Reference location,
       List<CodeableConcept> reason,
       CodeableConcept activity,
-      @required List<ProvenanceAgent> agent,
+      @required
+          List<ProvenanceAgent> agent,
       List<ProvenanceEntity> entity,
       List<Signature> signature}) = _$_Provenance;
 
@@ -6436,7 +6540,8 @@ abstract class _Provenance extends Provenance {
       _$_Provenance.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override

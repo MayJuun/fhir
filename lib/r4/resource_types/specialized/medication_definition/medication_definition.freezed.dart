@@ -18,16 +18,20 @@ class _$MedicinalProductTearOff {
 
 // ignore: unused_element
   _MedicinalProduct call(
-      {String resourceType = 'MedicinalProduct',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProduct)
+          R4ResourceType resourceType = R4ResourceType.MedicinalProduct,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept type,
@@ -36,7 +40,8 @@ class _$MedicinalProductTearOff {
       CodeableConcept legalStatusOfSupply,
       CodeableConcept additionalMonitoringIndicator,
       List<String> specialMeasures,
-      @JsonKey(name: '_specialMeasures') List<Element> specialMeasuresElement,
+      @JsonKey(name: '_specialMeasures')
+          List<Element> specialMeasuresElement,
       CodeableConcept paediatricUseIndicator,
       List<CodeableConcept> productClassification,
       List<MarketingStatus> marketingStatus,
@@ -46,7 +51,8 @@ class _$MedicinalProductTearOff {
       List<Reference> masterFile,
       List<Reference> contact,
       List<Reference> clinicalTrial,
-      @required List<MedicinalProductName> name,
+      @required
+          List<MedicinalProductName> name,
       List<Identifier> crossReference,
       List<MedicinalProductManufacturingBusinessOperation>
           manufacturingBusinessOperation,
@@ -99,7 +105,8 @@ const $MedicinalProduct = _$MedicinalProductTearOff();
 
 /// @nodoc
 mixin _$MedicinalProduct {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProduct)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -147,16 +154,20 @@ abstract class $MedicinalProductCopyWith<$Res> {
           MedicinalProduct value, $Res Function(MedicinalProduct) then) =
       _$MedicinalProductCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProduct)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept type,
@@ -165,7 +176,8 @@ abstract class $MedicinalProductCopyWith<$Res> {
       CodeableConcept legalStatusOfSupply,
       CodeableConcept additionalMonitoringIndicator,
       List<String> specialMeasures,
-      @JsonKey(name: '_specialMeasures') List<Element> specialMeasuresElement,
+      @JsonKey(name: '_specialMeasures')
+          List<Element> specialMeasuresElement,
       CodeableConcept paediatricUseIndicator,
       List<CodeableConcept> productClassification,
       List<MarketingStatus> marketingStatus,
@@ -240,7 +252,7 @@ class _$MedicinalProductCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -433,16 +445,20 @@ abstract class _$MedicinalProductCopyWith<$Res>
       __$MedicinalProductCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProduct)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept type,
@@ -451,7 +467,8 @@ abstract class _$MedicinalProductCopyWith<$Res>
       CodeableConcept legalStatusOfSupply,
       CodeableConcept additionalMonitoringIndicator,
       List<String> specialMeasures,
-      @JsonKey(name: '_specialMeasures') List<Element> specialMeasuresElement,
+      @JsonKey(name: '_specialMeasures')
+          List<Element> specialMeasuresElement,
       CodeableConcept paediatricUseIndicator,
       List<CodeableConcept> productClassification,
       List<MarketingStatus> marketingStatus,
@@ -538,7 +555,7 @@ class __$MedicinalProductCopyWithImpl<$Res>
     return _then(_MedicinalProduct(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -625,16 +642,20 @@ class __$MedicinalProductCopyWithImpl<$Res>
 /// @nodoc
 class _$_MedicinalProduct extends _MedicinalProduct {
   _$_MedicinalProduct(
-      {this.resourceType = 'MedicinalProduct',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProduct)
+          this.resourceType = R4ResourceType.MedicinalProduct,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.type,
@@ -643,7 +664,8 @@ class _$_MedicinalProduct extends _MedicinalProduct {
       this.legalStatusOfSupply,
       this.additionalMonitoringIndicator,
       this.specialMeasures,
-      @JsonKey(name: '_specialMeasures') this.specialMeasuresElement,
+      @JsonKey(name: '_specialMeasures')
+          this.specialMeasuresElement,
       this.paediatricUseIndicator,
       this.productClassification,
       this.marketingStatus,
@@ -653,7 +675,8 @@ class _$_MedicinalProduct extends _MedicinalProduct {
       this.masterFile,
       this.contact,
       this.clinicalTrial,
-      @required this.name,
+      @required
+          this.name,
       this.crossReference,
       this.manufacturingBusinessOperation,
       this.specialDesignation})
@@ -664,9 +687,9 @@ class _$_MedicinalProduct extends _MedicinalProduct {
   factory _$_MedicinalProduct.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicinalProductFromJson(json);
 
-  @JsonKey(defaultValue: 'MedicinalProduct')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProduct)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -865,46 +888,53 @@ class _$_MedicinalProduct extends _MedicinalProduct {
 abstract class _MedicinalProduct extends MedicinalProduct {
   _MedicinalProduct._() : super._();
   factory _MedicinalProduct(
-      {String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      Code language,
-      @JsonKey(name: '_language') Element languageElement,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      CodeableConcept type,
-      Coding domain,
-      CodeableConcept combinedPharmaceuticalDoseForm,
-      CodeableConcept legalStatusOfSupply,
-      CodeableConcept additionalMonitoringIndicator,
-      List<String> specialMeasures,
-      @JsonKey(name: '_specialMeasures') List<Element> specialMeasuresElement,
-      CodeableConcept paediatricUseIndicator,
-      List<CodeableConcept> productClassification,
-      List<MarketingStatus> marketingStatus,
-      List<Reference> pharmaceuticalProduct,
-      List<Reference> packagedMedicinalProduct,
-      List<Reference> attachedDocument,
-      List<Reference> masterFile,
-      List<Reference> contact,
-      List<Reference> clinicalTrial,
-      @required List<MedicinalProductName> name,
-      List<Identifier> crossReference,
-      List<MedicinalProductManufacturingBusinessOperation>
-          manufacturingBusinessOperation,
-      List<MedicinalProductSpecialDesignation>
-          specialDesignation}) = _$_MedicinalProduct;
+          {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProduct)
+              R4ResourceType resourceType,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
+          @JsonKey(name: '_implicitRules')
+              Element implicitRulesElement,
+          Code language,
+          @JsonKey(name: '_language')
+              Element languageElement,
+          Narrative text,
+          List<Resource> contained,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          List<Identifier> identifier,
+          CodeableConcept type,
+          Coding domain,
+          CodeableConcept combinedPharmaceuticalDoseForm,
+          CodeableConcept legalStatusOfSupply,
+          CodeableConcept additionalMonitoringIndicator,
+          List<String> specialMeasures,
+          @JsonKey(name: '_specialMeasures')
+              List<Element> specialMeasuresElement,
+          CodeableConcept paediatricUseIndicator,
+          List<CodeableConcept> productClassification,
+          List<MarketingStatus> marketingStatus,
+          List<Reference> pharmaceuticalProduct,
+          List<Reference> packagedMedicinalProduct,
+          List<Reference> attachedDocument,
+          List<Reference> masterFile,
+          List<Reference> contact,
+          List<Reference> clinicalTrial,
+          @required
+              List<MedicinalProductName> name,
+          List<Identifier> crossReference,
+          List<MedicinalProductManufacturingBusinessOperation>
+              manufacturingBusinessOperation,
+          List<MedicinalProductSpecialDesignation> specialDesignation}) =
+      _$_MedicinalProduct;
 
   factory _MedicinalProduct.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProduct.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProduct)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -2858,7 +2888,9 @@ class _$MedicinalProductAuthorizationTearOff {
 
 // ignore: unused_element
   _MedicinalProductAuthorization call(
-      {String resourceType = 'MedicinalProductAuthorization',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductAuthorization)
+          R4ResourceType
+              resourceType = R4ResourceType.MedicinalProductAuthorization,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2944,7 +2976,8 @@ const $MedicinalProductAuthorization = _$MedicinalProductAuthorizationTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductAuthorization {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductAuthorization)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2996,7 +3029,8 @@ abstract class $MedicinalProductAuthorizationCopyWith<$Res> {
           $Res Function(MedicinalProductAuthorization) then) =
       _$MedicinalProductAuthorizationCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductAuthorization)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3100,7 +3134,7 @@ class _$MedicinalProductAuthorizationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3353,7 +3387,8 @@ abstract class _$MedicinalProductAuthorizationCopyWith<$Res>
       __$MedicinalProductAuthorizationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductAuthorization)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3477,7 +3512,7 @@ class __$MedicinalProductAuthorizationCopyWithImpl<$Res>
     return _then(_MedicinalProductAuthorization(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3563,7 +3598,8 @@ class __$MedicinalProductAuthorizationCopyWithImpl<$Res>
 /// @nodoc
 class _$_MedicinalProductAuthorization extends _MedicinalProductAuthorization {
   _$_MedicinalProductAuthorization(
-      {this.resourceType = 'MedicinalProductAuthorization',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductAuthorization)
+          this.resourceType = R4ResourceType.MedicinalProductAuthorization,
       this.id,
       this.meta,
       this.implicitRules,
@@ -3608,9 +3644,9 @@ class _$_MedicinalProductAuthorization extends _MedicinalProductAuthorization {
           Map<String, dynamic> json) =>
       _$_$_MedicinalProductAuthorizationFromJson(json);
 
-  @JsonKey(defaultValue: 'MedicinalProductAuthorization')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductAuthorization)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -3814,52 +3850,54 @@ abstract class _MedicinalProductAuthorization
     extends MedicinalProductAuthorization {
   _MedicinalProductAuthorization._() : super._();
   factory _MedicinalProductAuthorization(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules')
-              Element implicitRulesElement,
-          Code language,
-          @JsonKey(name: '_language')
-              Element languageElement,
-          Narrative text,
-          List<Resource> contained,
-          @JsonKey(name: 'extension')
-              List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          List<Identifier> identifier,
-          Reference subject,
-          List<CodeableConcept> country,
-          List<CodeableConcept> jurisdiction,
-          CodeableConcept status,
-          FhirDateTime statusDate,
-          @JsonKey(name: '_statusDate')
-              Element statusDateElement,
-          FhirDateTime restoreDate,
-          @JsonKey(name: '_restoreDate')
-              Element restoreDateElement,
-          Period validityPeriod,
-          Period dataExclusivityPeriod,
-          FhirDateTime dateOfFirstAuthorization,
-          @JsonKey(name: '_dateOfFirstAuthorization')
-              Element dateOfFirstAuthorizationElement,
-          FhirDateTime internationalBirthDate,
-          @JsonKey(name: '_internationalBirthDate')
-              Element internationalBirthDateElement,
-          CodeableConcept legalBasis,
-          List<MedicinalProductAuthorizationJurisdictionalAuthorization>
-              jurisdictionalAuthorization,
-          Reference holder,
-          Reference regulator,
-          MedicinalProductAuthorizationProcedure procedure}) =
-      _$_MedicinalProductAuthorization;
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductAuthorization)
+          R4ResourceType resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
+      Reference subject,
+      List<CodeableConcept> country,
+      List<CodeableConcept> jurisdiction,
+      CodeableConcept status,
+      FhirDateTime statusDate,
+      @JsonKey(name: '_statusDate')
+          Element statusDateElement,
+      FhirDateTime restoreDate,
+      @JsonKey(name: '_restoreDate')
+          Element restoreDateElement,
+      Period validityPeriod,
+      Period dataExclusivityPeriod,
+      FhirDateTime dateOfFirstAuthorization,
+      @JsonKey(name: '_dateOfFirstAuthorization')
+          Element dateOfFirstAuthorizationElement,
+      FhirDateTime internationalBirthDate,
+      @JsonKey(name: '_internationalBirthDate')
+          Element internationalBirthDateElement,
+      CodeableConcept legalBasis,
+      List<MedicinalProductAuthorizationJurisdictionalAuthorization>
+          jurisdictionalAuthorization,
+      Reference holder,
+      Reference regulator,
+      MedicinalProductAuthorizationProcedure
+          procedure}) = _$_MedicinalProductAuthorization;
 
   factory _MedicinalProductAuthorization.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductAuthorization.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductAuthorization)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -4744,16 +4782,21 @@ class _$MedicinalProductContraindicationTearOff {
 
 // ignore: unused_element
   _MedicinalProductContraindication call(
-      {String resourceType = 'MedicinalProductContraindication',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductContraindication)
+          R4ResourceType
+              resourceType = R4ResourceType.MedicinalProductContraindication,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Reference> subject,
       CodeableConcept disease,
@@ -4797,7 +4840,8 @@ const $MedicinalProductContraindication =
 
 /// @nodoc
 mixin _$MedicinalProductContraindication {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductContraindication)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -4831,16 +4875,20 @@ abstract class $MedicinalProductContraindicationCopyWith<$Res> {
           $Res Function(MedicinalProductContraindication) then) =
       _$MedicinalProductContraindicationCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductContraindication)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Reference> subject,
       CodeableConcept disease,
@@ -4891,7 +4939,7 @@ class _$MedicinalProductContraindicationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5003,16 +5051,20 @@ abstract class _$MedicinalProductContraindicationCopyWith<$Res>
       __$MedicinalProductContraindicationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductContraindication)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Reference> subject,
       CodeableConcept disease,
@@ -5073,7 +5125,7 @@ class __$MedicinalProductContraindicationCopyWithImpl<$Res>
     return _then(_MedicinalProductContraindication(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5122,16 +5174,20 @@ class __$MedicinalProductContraindicationCopyWithImpl<$Res>
 class _$_MedicinalProductContraindication
     extends _MedicinalProductContraindication {
   _$_MedicinalProductContraindication(
-      {this.resourceType = 'MedicinalProductContraindication',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductContraindication)
+          this.resourceType = R4ResourceType.MedicinalProductContraindication,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.subject,
       this.disease,
@@ -5147,9 +5203,9 @@ class _$_MedicinalProductContraindication
           Map<String, dynamic> json) =>
       _$_$_MedicinalProductContraindicationFromJson(json);
 
-  @JsonKey(defaultValue: 'MedicinalProductContraindication')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductContraindication)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -5287,16 +5343,20 @@ abstract class _MedicinalProductContraindication
     extends MedicinalProductContraindication {
   _MedicinalProductContraindication._() : super._();
   factory _MedicinalProductContraindication(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductContraindication)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Reference> subject,
       CodeableConcept disease,
@@ -5310,7 +5370,8 @@ abstract class _MedicinalProductContraindication
       Map<String, dynamic> json) = _$_MedicinalProductContraindication.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductContraindication)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -5699,16 +5760,21 @@ class _$MedicinalProductIndicationTearOff {
 
 // ignore: unused_element
   _MedicinalProductIndication call(
-      {String resourceType = 'MedicinalProductIndication',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIndication)
+          R4ResourceType
+              resourceType = R4ResourceType.MedicinalProductIndication,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Reference> subject,
       CodeableConcept diseaseSymptomProcedure,
@@ -5755,7 +5821,8 @@ const $MedicinalProductIndication = _$MedicinalProductIndicationTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductIndication {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIndication)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -5789,16 +5856,20 @@ abstract class $MedicinalProductIndicationCopyWith<$Res> {
           $Res Function(MedicinalProductIndication) then) =
       _$MedicinalProductIndicationCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIndication)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Reference> subject,
       CodeableConcept diseaseSymptomProcedure,
@@ -5855,7 +5926,7 @@ class _$MedicinalProductIndicationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5994,16 +6065,20 @@ abstract class _$MedicinalProductIndicationCopyWith<$Res>
       __$MedicinalProductIndicationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIndication)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Reference> subject,
       CodeableConcept diseaseSymptomProcedure,
@@ -6071,7 +6146,7 @@ class __$MedicinalProductIndicationCopyWithImpl<$Res>
     return _then(_MedicinalProductIndication(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6125,16 +6200,20 @@ class __$MedicinalProductIndicationCopyWithImpl<$Res>
 /// @nodoc
 class _$_MedicinalProductIndication extends _MedicinalProductIndication {
   _$_MedicinalProductIndication(
-      {this.resourceType = 'MedicinalProductIndication',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIndication)
+          this.resourceType = R4ResourceType.MedicinalProductIndication,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.subject,
       this.diseaseSymptomProcedure,
@@ -6151,9 +6230,9 @@ class _$_MedicinalProductIndication extends _MedicinalProductIndication {
   factory _$_MedicinalProductIndication.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicinalProductIndicationFromJson(json);
 
-  @JsonKey(defaultValue: 'MedicinalProductIndication')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIndication)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -6303,16 +6382,20 @@ class _$_MedicinalProductIndication extends _MedicinalProductIndication {
 abstract class _MedicinalProductIndication extends MedicinalProductIndication {
   _MedicinalProductIndication._() : super._();
   factory _MedicinalProductIndication(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIndication)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Reference> subject,
       CodeableConcept diseaseSymptomProcedure,
@@ -6328,7 +6411,8 @@ abstract class _MedicinalProductIndication extends MedicinalProductIndication {
       _$_MedicinalProductIndication.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIndication)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -6718,21 +6802,28 @@ class _$MedicinalProductIngredientTearOff {
 
 // ignore: unused_element
   _MedicinalProductIngredient call(
-      {String resourceType = 'MedicinalProductIngredient',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIngredient)
+          R4ResourceType
+              resourceType = R4ResourceType.MedicinalProductIngredient,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
-      @required CodeableConcept role,
+      @required
+          CodeableConcept role,
       Boolean allergenicIndicator,
-      @JsonKey(name: '_allergenicIndicator') Element allergenicIndicatorElement,
+      @JsonKey(name: '_allergenicIndicator')
+          Element allergenicIndicatorElement,
       List<Reference> manufacturer,
       List<MedicinalProductIngredientSpecifiedSubstance> specifiedSubstance,
       MedicinalProductIngredientSubstance substance}) {
@@ -6770,7 +6861,8 @@ const $MedicinalProductIngredient = _$MedicinalProductIngredientTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductIngredient {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIngredient)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -6803,21 +6895,26 @@ abstract class $MedicinalProductIngredientCopyWith<$Res> {
           $Res Function(MedicinalProductIngredient) then) =
       _$MedicinalProductIngredientCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIngredient)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       CodeableConcept role,
       Boolean allergenicIndicator,
-      @JsonKey(name: '_allergenicIndicator') Element allergenicIndicatorElement,
+      @JsonKey(name: '_allergenicIndicator')
+          Element allergenicIndicatorElement,
       List<Reference> manufacturer,
       List<MedicinalProductIngredientSpecifiedSubstance> specifiedSubstance,
       MedicinalProductIngredientSubstance substance});
@@ -6865,7 +6962,7 @@ class _$MedicinalProductIngredientCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7000,21 +7097,26 @@ abstract class _$MedicinalProductIngredientCopyWith<$Res>
       __$MedicinalProductIngredientCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIngredient)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       CodeableConcept role,
       Boolean allergenicIndicator,
-      @JsonKey(name: '_allergenicIndicator') Element allergenicIndicatorElement,
+      @JsonKey(name: '_allergenicIndicator')
+          Element allergenicIndicatorElement,
       List<Reference> manufacturer,
       List<MedicinalProductIngredientSpecifiedSubstance> specifiedSubstance,
       MedicinalProductIngredientSubstance substance});
@@ -7073,7 +7175,7 @@ class __$MedicinalProductIngredientCopyWithImpl<$Res>
     return _then(_MedicinalProductIngredient(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7123,21 +7225,27 @@ class __$MedicinalProductIngredientCopyWithImpl<$Res>
 /// @nodoc
 class _$_MedicinalProductIngredient extends _MedicinalProductIngredient {
   _$_MedicinalProductIngredient(
-      {this.resourceType = 'MedicinalProductIngredient',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIngredient)
+          this.resourceType = R4ResourceType.MedicinalProductIngredient,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
-      @required this.role,
+      @required
+          this.role,
       this.allergenicIndicator,
-      @JsonKey(name: '_allergenicIndicator') this.allergenicIndicatorElement,
+      @JsonKey(name: '_allergenicIndicator')
+          this.allergenicIndicatorElement,
       this.manufacturer,
       this.specifiedSubstance,
       this.substance})
@@ -7148,9 +7256,9 @@ class _$_MedicinalProductIngredient extends _MedicinalProductIngredient {
   factory _$_MedicinalProductIngredient.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicinalProductIngredientFromJson(json);
 
-  @JsonKey(defaultValue: 'MedicinalProductIngredient')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIngredient)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -7289,31 +7397,38 @@ class _$_MedicinalProductIngredient extends _MedicinalProductIngredient {
 abstract class _MedicinalProductIngredient extends MedicinalProductIngredient {
   _MedicinalProductIngredient._() : super._();
   factory _MedicinalProductIngredient(
-      {String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      Code language,
-      @JsonKey(name: '_language') Element languageElement,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Identifier identifier,
-      @required CodeableConcept role,
-      Boolean allergenicIndicator,
-      @JsonKey(name: '_allergenicIndicator') Element allergenicIndicatorElement,
-      List<Reference> manufacturer,
-      List<MedicinalProductIngredientSpecifiedSubstance> specifiedSubstance,
-      MedicinalProductIngredientSubstance
-          substance}) = _$_MedicinalProductIngredient;
+          {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIngredient)
+              R4ResourceType resourceType,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
+          @JsonKey(name: '_implicitRules')
+              Element implicitRulesElement,
+          Code language,
+          @JsonKey(name: '_language')
+              Element languageElement,
+          Narrative text,
+          List<Resource> contained,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          Identifier identifier,
+          @required
+              CodeableConcept role,
+          Boolean allergenicIndicator,
+          @JsonKey(name: '_allergenicIndicator')
+              Element allergenicIndicatorElement,
+          List<Reference> manufacturer,
+          List<MedicinalProductIngredientSpecifiedSubstance> specifiedSubstance,
+          MedicinalProductIngredientSubstance substance}) =
+      _$_MedicinalProductIngredient;
 
   factory _MedicinalProductIngredient.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductIngredient.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIngredient)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -8864,20 +8979,26 @@ class _$MedicinalProductInteractionTearOff {
 
 // ignore: unused_element
   _MedicinalProductInteraction call(
-      {String resourceType = 'MedicinalProductInteraction',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductInteraction)
+          R4ResourceType
+              resourceType = R4ResourceType.MedicinalProductInteraction,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Reference> subject,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<MedicinalProductInteractionInteractant> interactant,
       CodeableConcept type,
       CodeableConcept effect,
@@ -8918,7 +9039,8 @@ const $MedicinalProductInteraction = _$MedicinalProductInteractionTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductInteraction {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductInteraction)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -8954,20 +9076,25 @@ abstract class $MedicinalProductInteractionCopyWith<$Res> {
           $Res Function(MedicinalProductInteraction) then) =
       _$MedicinalProductInteractionCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductInteraction)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Reference> subject,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<MedicinalProductInteractionInteractant> interactant,
       CodeableConcept type,
       CodeableConcept effect,
@@ -9019,7 +9146,7 @@ class _$MedicinalProductInteractionCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -9161,20 +9288,25 @@ abstract class _$MedicinalProductInteractionCopyWith<$Res>
       __$MedicinalProductInteractionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductInteraction)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Reference> subject,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<MedicinalProductInteractionInteractant> interactant,
       CodeableConcept type,
       CodeableConcept effect,
@@ -9239,7 +9371,7 @@ class __$MedicinalProductInteractionCopyWithImpl<$Res>
     return _then(_MedicinalProductInteraction(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -9287,20 +9419,25 @@ class __$MedicinalProductInteractionCopyWithImpl<$Res>
 /// @nodoc
 class _$_MedicinalProductInteraction extends _MedicinalProductInteraction {
   _$_MedicinalProductInteraction(
-      {this.resourceType = 'MedicinalProductInteraction',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductInteraction)
+          this.resourceType = R4ResourceType.MedicinalProductInteraction,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.subject,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.interactant,
       this.type,
       this.effect,
@@ -9312,9 +9449,9 @@ class _$_MedicinalProductInteraction extends _MedicinalProductInteraction {
   factory _$_MedicinalProductInteraction.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicinalProductInteractionFromJson(json);
 
-  @JsonKey(defaultValue: 'MedicinalProductInteraction')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductInteraction)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -9457,20 +9594,25 @@ abstract class _MedicinalProductInteraction
     extends MedicinalProductInteraction {
   _MedicinalProductInteraction._() : super._();
   factory _MedicinalProductInteraction(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductInteraction)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Reference> subject,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<MedicinalProductInteractionInteractant> interactant,
       CodeableConcept type,
       CodeableConcept effect,
@@ -9481,7 +9623,8 @@ abstract class _MedicinalProductInteraction
       _$_MedicinalProductInteraction.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductInteraction)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -9828,20 +9971,27 @@ class _$MedicinalProductManufacturedTearOff {
 
 // ignore: unused_element
   _MedicinalProductManufactured call(
-      {String resourceType = 'MedicinalProductManufactured',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductManufactured)
+          R4ResourceType
+              resourceType = R4ResourceType.MedicinalProductManufactured,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @required CodeableConcept manufacturedDoseForm,
+      @required
+          CodeableConcept manufacturedDoseForm,
       CodeableConcept unitOfPresentation,
-      @required Quantity quantity,
+      @required
+          Quantity quantity,
       List<Reference> manufacturer,
       List<Reference> ingredient,
       ProdCharacteristic physicalCharacteristics,
@@ -9880,7 +10030,8 @@ const $MedicinalProductManufactured = _$MedicinalProductManufacturedTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductManufactured {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductManufactured)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -9914,16 +10065,20 @@ abstract class $MedicinalProductManufacturedCopyWith<$Res> {
           $Res Function(MedicinalProductManufactured) then) =
       _$MedicinalProductManufacturedCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductManufactured)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept manufacturedDoseForm,
       CodeableConcept unitOfPresentation,
@@ -9976,7 +10131,7 @@ class _$MedicinalProductManufacturedCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -10111,16 +10266,20 @@ abstract class _$MedicinalProductManufacturedCopyWith<$Res>
       __$MedicinalProductManufacturedCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductManufactured)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept manufacturedDoseForm,
       CodeableConcept unitOfPresentation,
@@ -10185,7 +10344,7 @@ class __$MedicinalProductManufacturedCopyWithImpl<$Res>
     return _then(_MedicinalProductManufactured(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -10235,20 +10394,26 @@ class __$MedicinalProductManufacturedCopyWithImpl<$Res>
 /// @nodoc
 class _$_MedicinalProductManufactured extends _MedicinalProductManufactured {
   _$_MedicinalProductManufactured(
-      {this.resourceType = 'MedicinalProductManufactured',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductManufactured)
+          this.resourceType = R4ResourceType.MedicinalProductManufactured,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      @required this.manufacturedDoseForm,
+      @required
+          this.manufacturedDoseForm,
       this.unitOfPresentation,
-      @required this.quantity,
+      @required
+          this.quantity,
       this.manufacturer,
       this.ingredient,
       this.physicalCharacteristics,
@@ -10261,9 +10426,9 @@ class _$_MedicinalProductManufactured extends _MedicinalProductManufactured {
   factory _$_MedicinalProductManufactured.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicinalProductManufacturedFromJson(json);
 
-  @JsonKey(defaultValue: 'MedicinalProductManufactured')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductManufactured)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -10402,31 +10567,38 @@ abstract class _MedicinalProductManufactured
     extends MedicinalProductManufactured {
   _MedicinalProductManufactured._() : super._();
   factory _MedicinalProductManufactured(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-          Code language,
-          @JsonKey(name: '_language') Element languageElement,
-          Narrative text,
-          List<Resource> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          @required CodeableConcept manufacturedDoseForm,
-          CodeableConcept unitOfPresentation,
-          @required Quantity quantity,
-          List<Reference> manufacturer,
-          List<Reference> ingredient,
-          ProdCharacteristic physicalCharacteristics,
-          List<CodeableConcept> otherCharacteristics}) =
-      _$_MedicinalProductManufactured;
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductManufactured)
+          R4ResourceType resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      @required
+          CodeableConcept manufacturedDoseForm,
+      CodeableConcept unitOfPresentation,
+      @required
+          Quantity quantity,
+      List<Reference> manufacturer,
+      List<Reference> ingredient,
+      ProdCharacteristic physicalCharacteristics,
+      List<CodeableConcept>
+          otherCharacteristics}) = _$_MedicinalProductManufactured;
 
   factory _MedicinalProductManufactured.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductManufactured.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductManufactured)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -10480,27 +10652,33 @@ class _$MedicinalProductPackagedTearOff {
 
 // ignore: unused_element
   _MedicinalProductPackaged call(
-      {String resourceType = 'MedicinalProductPackaged',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPackaged)
+          R4ResourceType resourceType = R4ResourceType.MedicinalProductPackaged,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> subject,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       CodeableConcept legalStatusOfSupply,
       List<MarketingStatus> marketingStatus,
       Reference marketingAuthorization,
       List<Reference> manufacturer,
       List<MedicinalProductPackagedBatchIdentifier> batchIdentifier,
-      @required List<MedicinalProductPackagedPackageItem> packageItem}) {
+      @required
+          List<MedicinalProductPackagedPackageItem> packageItem}) {
     return _MedicinalProductPackaged(
       resourceType: resourceType,
       id: id,
@@ -10538,7 +10716,8 @@ const $MedicinalProductPackaged = _$MedicinalProductPackagedTearOff();
 
 /// @nodoc
 mixin _$MedicinalProductPackaged {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPackaged)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -10574,21 +10753,26 @@ abstract class $MedicinalProductPackagedCopyWith<$Res> {
           $Res Function(MedicinalProductPackaged) then) =
       _$MedicinalProductPackagedCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPackaged)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> subject,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       CodeableConcept legalStatusOfSupply,
       List<MarketingStatus> marketingStatus,
       Reference marketingAuthorization,
@@ -10641,7 +10825,7 @@ class _$MedicinalProductPackagedCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -10772,21 +10956,26 @@ abstract class _$MedicinalProductPackagedCopyWith<$Res>
       __$MedicinalProductPackagedCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPackaged)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> subject,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       CodeableConcept legalStatusOfSupply,
       List<MarketingStatus> marketingStatus,
       Reference marketingAuthorization,
@@ -10849,7 +11038,7 @@ class __$MedicinalProductPackagedCopyWithImpl<$Res>
     return _then(_MedicinalProductPackaged(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -10907,27 +11096,33 @@ class __$MedicinalProductPackagedCopyWithImpl<$Res>
 /// @nodoc
 class _$_MedicinalProductPackaged extends _MedicinalProductPackaged {
   _$_MedicinalProductPackaged(
-      {this.resourceType = 'MedicinalProductPackaged',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPackaged)
+          this.resourceType = R4ResourceType.MedicinalProductPackaged,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.subject,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.legalStatusOfSupply,
       this.marketingStatus,
       this.marketingAuthorization,
       this.manufacturer,
       this.batchIdentifier,
-      @required this.packageItem})
+      @required
+          this.packageItem})
       : assert(resourceType != null),
         assert(packageItem != null),
         super._();
@@ -10935,9 +11130,9 @@ class _$_MedicinalProductPackaged extends _MedicinalProductPackaged {
   factory _$_MedicinalProductPackaged.fromJson(Map<String, dynamic> json) =>
       _$_$_MedicinalProductPackagedFromJson(json);
 
-  @JsonKey(defaultValue: 'MedicinalProductPackaged')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPackaged)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -11093,34 +11288,41 @@ class _$_MedicinalProductPackaged extends _MedicinalProductPackaged {
 abstract class _MedicinalProductPackaged extends MedicinalProductPackaged {
   _MedicinalProductPackaged._() : super._();
   factory _MedicinalProductPackaged(
-          {String resourceType,
+          {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPackaged)
+              R4ResourceType resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+          @JsonKey(name: '_implicitRules')
+              Element implicitRulesElement,
           Code language,
-          @JsonKey(name: '_language') Element languageElement,
+          @JsonKey(name: '_language')
+              Element languageElement,
           Narrative text,
           List<Resource> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           List<Identifier> identifier,
           List<Reference> subject,
           String description,
-          @JsonKey(name: '_description') Element descriptionElement,
+          @JsonKey(name: '_description')
+              Element descriptionElement,
           CodeableConcept legalStatusOfSupply,
           List<MarketingStatus> marketingStatus,
           Reference marketingAuthorization,
           List<Reference> manufacturer,
           List<MedicinalProductPackagedBatchIdentifier> batchIdentifier,
-          @required List<MedicinalProductPackagedPackageItem> packageItem}) =
+          @required
+              List<MedicinalProductPackagedPackageItem> packageItem}) =
       _$_MedicinalProductPackaged;
 
   factory _MedicinalProductPackaged.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductPackaged.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPackaged)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -11992,7 +12194,9 @@ class _$MedicinalProductPharmaceuticalTearOff {
 
 // ignore: unused_element
   _MedicinalProductPharmaceutical call(
-      {String resourceType = 'MedicinalProductPharmaceutical',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPharmaceutical)
+          R4ResourceType
+              resourceType = R4ResourceType.MedicinalProductPharmaceutical,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -12051,7 +12255,8 @@ const $MedicinalProductPharmaceutical =
 
 /// @nodoc
 mixin _$MedicinalProductPharmaceutical {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPharmaceutical)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -12086,16 +12291,20 @@ abstract class $MedicinalProductPharmaceuticalCopyWith<$Res> {
           $Res Function(MedicinalProductPharmaceutical) then) =
       _$MedicinalProductPharmaceuticalCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPharmaceutical)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept administrableDoseForm,
@@ -12147,7 +12356,7 @@ class _$MedicinalProductPharmaceuticalCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -12264,16 +12473,20 @@ abstract class _$MedicinalProductPharmaceuticalCopyWith<$Res>
       __$MedicinalProductPharmaceuticalCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPharmaceutical)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept administrableDoseForm,
@@ -12335,7 +12548,7 @@ class __$MedicinalProductPharmaceuticalCopyWithImpl<$Res>
     return _then(_MedicinalProductPharmaceutical(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -12388,24 +12601,30 @@ class __$MedicinalProductPharmaceuticalCopyWithImpl<$Res>
 class _$_MedicinalProductPharmaceutical
     extends _MedicinalProductPharmaceutical {
   _$_MedicinalProductPharmaceutical(
-      {this.resourceType = 'MedicinalProductPharmaceutical',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPharmaceutical)
+          this.resourceType = R4ResourceType.MedicinalProductPharmaceutical,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
-      @required this.administrableDoseForm,
+      @required
+          this.administrableDoseForm,
       this.unitOfPresentation,
       this.ingredient,
       this.device,
       this.characteristics,
-      @required this.routeOfAdministration})
+      @required
+          this.routeOfAdministration})
       : assert(resourceType != null),
         assert(administrableDoseForm != null),
         assert(routeOfAdministration != null),
@@ -12415,9 +12634,9 @@ class _$_MedicinalProductPharmaceutical
           Map<String, dynamic> json) =>
       _$_$_MedicinalProductPharmaceuticalFromJson(json);
 
-  @JsonKey(defaultValue: 'MedicinalProductPharmaceutical')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPharmaceutical)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -12555,7 +12774,8 @@ abstract class _MedicinalProductPharmaceutical
     extends MedicinalProductPharmaceutical {
   _MedicinalProductPharmaceutical._() : super._();
   factory _MedicinalProductPharmaceutical(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPharmaceutical)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -12584,7 +12804,8 @@ abstract class _MedicinalProductPharmaceutical
       _$_MedicinalProductPharmaceutical.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPharmaceutical)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -14034,23 +14255,32 @@ class _$MedicinalProductUndesirableEffectTearOff {
   const _$MedicinalProductUndesirableEffectTearOff();
 
 // ignore: unused_element
-  _MedicinalProductUndesirableEffect call(
-      {String resourceType = 'MedicinalProductUndesirableEffect',
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      Code language,
-      @JsonKey(name: '_language') Element languageElement,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Reference> subject,
-      CodeableConcept symptomConditionEffect,
-      CodeableConcept classification,
-      CodeableConcept frequencyOfOccurrence,
-      List<Population> population}) {
+  _MedicinalProductUndesirableEffect
+      call(
+          {@JsonKey(
+              unknownEnumValue:
+                  R4ResourceType.MedicinalProductUndesirableEffect)
+              R4ResourceType
+                  resourceType =
+              R4ResourceType.MedicinalProductUndesirableEffect,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
+          @JsonKey(name: '_implicitRules')
+              Element implicitRulesElement,
+          Code language,
+          @JsonKey(name: '_language')
+              Element languageElement,
+          Narrative text,
+          List<Resource> contained,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          List<Reference> subject,
+          CodeableConcept symptomConditionEffect,
+          CodeableConcept classification,
+          CodeableConcept frequencyOfOccurrence,
+          List<Population> population}) {
     return _MedicinalProductUndesirableEffect(
       resourceType: resourceType,
       id: id,
@@ -14084,7 +14314,8 @@ const $MedicinalProductUndesirableEffect =
 
 /// @nodoc
 mixin _$MedicinalProductUndesirableEffect {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductUndesirableEffect)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -14115,23 +14346,30 @@ abstract class $MedicinalProductUndesirableEffectCopyWith<$Res> {
           MedicinalProductUndesirableEffect value,
           $Res Function(MedicinalProductUndesirableEffect) then) =
       _$MedicinalProductUndesirableEffectCopyWithImpl<$Res>;
-  $Res call(
-      {String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      Code language,
-      @JsonKey(name: '_language') Element languageElement,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Reference> subject,
-      CodeableConcept symptomConditionEffect,
-      CodeableConcept classification,
-      CodeableConcept frequencyOfOccurrence,
-      List<Population> population});
+  $Res
+      call(
+          {@JsonKey(
+              unknownEnumValue:
+                  R4ResourceType.MedicinalProductUndesirableEffect)
+              R4ResourceType resourceType,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
+          @JsonKey(name: '_implicitRules')
+              Element implicitRulesElement,
+          Code language,
+          @JsonKey(name: '_language')
+              Element languageElement,
+          Narrative text,
+          List<Resource> contained,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          List<Reference> subject,
+          CodeableConcept symptomConditionEffect,
+          CodeableConcept classification,
+          CodeableConcept frequencyOfOccurrence,
+          List<Population> population});
 
   $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
@@ -14173,7 +14411,7 @@ class _$MedicinalProductUndesirableEffectCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -14292,23 +14530,30 @@ abstract class _$MedicinalProductUndesirableEffectCopyWith<$Res>
           $Res Function(_MedicinalProductUndesirableEffect) then) =
       __$MedicinalProductUndesirableEffectCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {String resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-      Code language,
-      @JsonKey(name: '_language') Element languageElement,
-      Narrative text,
-      List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Reference> subject,
-      CodeableConcept symptomConditionEffect,
-      CodeableConcept classification,
-      CodeableConcept frequencyOfOccurrence,
-      List<Population> population});
+  $Res
+      call(
+          {@JsonKey(
+              unknownEnumValue:
+                  R4ResourceType.MedicinalProductUndesirableEffect)
+              R4ResourceType resourceType,
+          Id id,
+          Meta meta,
+          FhirUri implicitRules,
+          @JsonKey(name: '_implicitRules')
+              Element implicitRulesElement,
+          Code language,
+          @JsonKey(name: '_language')
+              Element languageElement,
+          Narrative text,
+          List<Resource> contained,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> extension_,
+          List<FhirExtension> modifierExtension,
+          List<Reference> subject,
+          CodeableConcept symptomConditionEffect,
+          CodeableConcept classification,
+          CodeableConcept frequencyOfOccurrence,
+          List<Population> population});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -14361,7 +14606,7 @@ class __$MedicinalProductUndesirableEffectCopyWithImpl<$Res>
     return _then(_MedicinalProductUndesirableEffect(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -14406,16 +14651,20 @@ class __$MedicinalProductUndesirableEffectCopyWithImpl<$Res>
 class _$_MedicinalProductUndesirableEffect
     extends _MedicinalProductUndesirableEffect {
   _$_MedicinalProductUndesirableEffect(
-      {this.resourceType = 'MedicinalProductUndesirableEffect',
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductUndesirableEffect)
+          this.resourceType = R4ResourceType.MedicinalProductUndesirableEffect,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.subject,
       this.symptomConditionEffect,
@@ -14429,9 +14678,9 @@ class _$_MedicinalProductUndesirableEffect
           Map<String, dynamic> json) =>
       _$_$_MedicinalProductUndesirableEffectFromJson(json);
 
-  @JsonKey(defaultValue: 'MedicinalProductUndesirableEffect')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductUndesirableEffect)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -14558,16 +14807,20 @@ abstract class _MedicinalProductUndesirableEffect
     extends MedicinalProductUndesirableEffect {
   _MedicinalProductUndesirableEffect._() : super._();
   factory _MedicinalProductUndesirableEffect(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductUndesirableEffect)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Reference> subject,
       CodeableConcept symptomConditionEffect,
@@ -14580,7 +14833,8 @@ abstract class _MedicinalProductUndesirableEffect
       _$_MedicinalProductUndesirableEffect.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductUndesirableEffect)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -14629,22 +14883,28 @@ class _$SubstanceNucleicAcidTearOff {
 
 // ignore: unused_element
   _SubstanceNucleicAcid call(
-      {String resourceType = 'SubstanceNucleicAcid',
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceNucleicAcid)
+          R4ResourceType resourceType = R4ResourceType.SubstanceNucleicAcid,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept sequenceType,
       Integer numberOfSubunits,
-      @JsonKey(name: '_numberOfSubunits') Element numberOfSubunitsElement,
+      @JsonKey(name: '_numberOfSubunits')
+          Element numberOfSubunitsElement,
       String areaOfHybridisation,
-      @JsonKey(name: '_areaOfHybridisation') Element areaOfHybridisationElement,
+      @JsonKey(name: '_areaOfHybridisation')
+          Element areaOfHybridisationElement,
       CodeableConcept oligoNucleotideType,
       List<SubstanceNucleicAcidSubunit> subunit}) {
     return _SubstanceNucleicAcid(
@@ -14681,7 +14941,8 @@ const $SubstanceNucleicAcid = _$SubstanceNucleicAcidTearOff();
 
 /// @nodoc
 mixin _$SubstanceNucleicAcid {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstanceNucleicAcid)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -14715,22 +14976,28 @@ abstract class $SubstanceNucleicAcidCopyWith<$Res> {
           $Res Function(SubstanceNucleicAcid) then) =
       _$SubstanceNucleicAcidCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceNucleicAcid)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept sequenceType,
       Integer numberOfSubunits,
-      @JsonKey(name: '_numberOfSubunits') Element numberOfSubunitsElement,
+      @JsonKey(name: '_numberOfSubunits')
+          Element numberOfSubunitsElement,
       String areaOfHybridisation,
-      @JsonKey(name: '_areaOfHybridisation') Element areaOfHybridisationElement,
+      @JsonKey(name: '_areaOfHybridisation')
+          Element areaOfHybridisationElement,
       CodeableConcept oligoNucleotideType,
       List<SubstanceNucleicAcidSubunit> subunit});
 
@@ -14777,7 +15044,7 @@ class _$SubstanceNucleicAcidCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -14912,22 +15179,28 @@ abstract class _$SubstanceNucleicAcidCopyWith<$Res>
       __$SubstanceNucleicAcidCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceNucleicAcid)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept sequenceType,
       Integer numberOfSubunits,
-      @JsonKey(name: '_numberOfSubunits') Element numberOfSubunitsElement,
+      @JsonKey(name: '_numberOfSubunits')
+          Element numberOfSubunitsElement,
       String areaOfHybridisation,
-      @JsonKey(name: '_areaOfHybridisation') Element areaOfHybridisationElement,
+      @JsonKey(name: '_areaOfHybridisation')
+          Element areaOfHybridisationElement,
       CodeableConcept oligoNucleotideType,
       List<SubstanceNucleicAcidSubunit> subunit});
 
@@ -14984,7 +15257,7 @@ class __$SubstanceNucleicAcidCopyWithImpl<$Res>
     return _then(_SubstanceNucleicAcid(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -15036,22 +15309,28 @@ class __$SubstanceNucleicAcidCopyWithImpl<$Res>
 /// @nodoc
 class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
   _$_SubstanceNucleicAcid(
-      {this.resourceType = 'SubstanceNucleicAcid',
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceNucleicAcid)
+          this.resourceType = R4ResourceType.SubstanceNucleicAcid,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.sequenceType,
       this.numberOfSubunits,
-      @JsonKey(name: '_numberOfSubunits') this.numberOfSubunitsElement,
+      @JsonKey(name: '_numberOfSubunits')
+          this.numberOfSubunitsElement,
       this.areaOfHybridisation,
-      @JsonKey(name: '_areaOfHybridisation') this.areaOfHybridisationElement,
+      @JsonKey(name: '_areaOfHybridisation')
+          this.areaOfHybridisationElement,
       this.oligoNucleotideType,
       this.subunit})
       : assert(resourceType != null),
@@ -15060,9 +15339,9 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
   factory _$_SubstanceNucleicAcid.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstanceNucleicAcidFromJson(json);
 
-  @JsonKey(defaultValue: 'SubstanceNucleicAcid')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstanceNucleicAcid)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -15203,22 +15482,28 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
 abstract class _SubstanceNucleicAcid extends SubstanceNucleicAcid {
   _SubstanceNucleicAcid._() : super._();
   factory _SubstanceNucleicAcid(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceNucleicAcid)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept sequenceType,
       Integer numberOfSubunits,
-      @JsonKey(name: '_numberOfSubunits') Element numberOfSubunitsElement,
+      @JsonKey(name: '_numberOfSubunits')
+          Element numberOfSubunitsElement,
       String areaOfHybridisation,
-      @JsonKey(name: '_areaOfHybridisation') Element areaOfHybridisationElement,
+      @JsonKey(name: '_areaOfHybridisation')
+          Element areaOfHybridisationElement,
       CodeableConcept oligoNucleotideType,
       List<SubstanceNucleicAcidSubunit> subunit}) = _$_SubstanceNucleicAcid;
 
@@ -15226,7 +15511,8 @@ abstract class _SubstanceNucleicAcid extends SubstanceNucleicAcid {
       _$_SubstanceNucleicAcid.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstanceNucleicAcid)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -16593,22 +16879,28 @@ class _$SubstancePolymerTearOff {
 
 // ignore: unused_element
   _SubstancePolymer call(
-      {String resourceType = 'SubstancePolymer',
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstancePolymer)
+          R4ResourceType resourceType = R4ResourceType.SubstancePolymer,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(name: 'class') CodeableConcept class_,
+      @JsonKey(name: 'class')
+          CodeableConcept class_,
       CodeableConcept geometry,
       List<CodeableConcept> copolymerConnectivity,
       List<String> modification,
-      @JsonKey(name: '_modification') List<Element> modificationElement,
+      @JsonKey(name: '_modification')
+          List<Element> modificationElement,
       List<SubstancePolymerMonomerSet> monomerSet,
       List<SubstancePolymerRepeat> repeat}) {
     return _SubstancePolymer(
@@ -16645,7 +16937,8 @@ const $SubstancePolymer = _$SubstancePolymerTearOff();
 
 /// @nodoc
 mixin _$SubstancePolymer {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstancePolymer)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -16679,22 +16972,28 @@ abstract class $SubstancePolymerCopyWith<$Res> {
           SubstancePolymer value, $Res Function(SubstancePolymer) then) =
       _$SubstancePolymerCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstancePolymer)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(name: 'class') CodeableConcept class_,
+      @JsonKey(name: 'class')
+          CodeableConcept class_,
       CodeableConcept geometry,
       List<CodeableConcept> copolymerConnectivity,
       List<String> modification,
-      @JsonKey(name: '_modification') List<Element> modificationElement,
+      @JsonKey(name: '_modification')
+          List<Element> modificationElement,
       List<SubstancePolymerMonomerSet> monomerSet,
       List<SubstancePolymerRepeat> repeat});
 
@@ -16739,7 +17038,7 @@ class _$SubstancePolymerCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -16851,22 +17150,28 @@ abstract class _$SubstancePolymerCopyWith<$Res>
       __$SubstancePolymerCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstancePolymer)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(name: 'class') CodeableConcept class_,
+      @JsonKey(name: 'class')
+          CodeableConcept class_,
       CodeableConcept geometry,
       List<CodeableConcept> copolymerConnectivity,
       List<String> modification,
-      @JsonKey(name: '_modification') List<Element> modificationElement,
+      @JsonKey(name: '_modification')
+          List<Element> modificationElement,
       List<SubstancePolymerMonomerSet> monomerSet,
       List<SubstancePolymerRepeat> repeat});
 
@@ -16919,7 +17224,7 @@ class __$SubstancePolymerCopyWithImpl<$Res>
     return _then(_SubstancePolymer(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -16968,22 +17273,28 @@ class __$SubstancePolymerCopyWithImpl<$Res>
 /// @nodoc
 class _$_SubstancePolymer extends _SubstancePolymer {
   _$_SubstancePolymer(
-      {this.resourceType = 'SubstancePolymer',
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstancePolymer)
+          this.resourceType = R4ResourceType.SubstancePolymer,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      @JsonKey(name: 'class') this.class_,
+      @JsonKey(name: 'class')
+          this.class_,
       this.geometry,
       this.copolymerConnectivity,
       this.modification,
-      @JsonKey(name: '_modification') this.modificationElement,
+      @JsonKey(name: '_modification')
+          this.modificationElement,
       this.monomerSet,
       this.repeat})
       : assert(resourceType != null),
@@ -16992,9 +17303,9 @@ class _$_SubstancePolymer extends _SubstancePolymer {
   factory _$_SubstancePolymer.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstancePolymerFromJson(json);
 
-  @JsonKey(defaultValue: 'SubstancePolymer')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstancePolymer)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -17130,22 +17441,28 @@ class _$_SubstancePolymer extends _SubstancePolymer {
 abstract class _SubstancePolymer extends SubstancePolymer {
   _SubstancePolymer._() : super._();
   factory _SubstancePolymer(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstancePolymer)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      @JsonKey(name: 'class') CodeableConcept class_,
+      @JsonKey(name: 'class')
+          CodeableConcept class_,
       CodeableConcept geometry,
       List<CodeableConcept> copolymerConnectivity,
       List<String> modification,
-      @JsonKey(name: '_modification') List<Element> modificationElement,
+      @JsonKey(name: '_modification')
+          List<Element> modificationElement,
       List<SubstancePolymerMonomerSet> monomerSet,
       List<SubstancePolymerRepeat> repeat}) = _$_SubstancePolymer;
 
@@ -17153,7 +17470,8 @@ abstract class _SubstancePolymer extends SubstancePolymer {
       _$_SubstancePolymer.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstancePolymer)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -19260,22 +19578,28 @@ class _$SubstanceProteinTearOff {
 
 // ignore: unused_element
   _SubstanceProtein call(
-      {String resourceType = 'SubstanceProtein',
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceProtein)
+          R4ResourceType resourceType = R4ResourceType.SubstanceProtein,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept sequenceType,
       Integer numberOfSubunits,
-      @JsonKey(name: '_numberOfSubunits') Element numberOfSubunitsElement,
+      @JsonKey(name: '_numberOfSubunits')
+          Element numberOfSubunitsElement,
       List<String> disulfideLinkage,
-      @JsonKey(name: '_disulfideLinkage') List<Element> disulfideLinkageElement,
+      @JsonKey(name: '_disulfideLinkage')
+          List<Element> disulfideLinkageElement,
       List<SubstanceProteinSubunit> subunit}) {
     return _SubstanceProtein(
       resourceType: resourceType,
@@ -19310,7 +19634,8 @@ const $SubstanceProtein = _$SubstanceProteinTearOff();
 
 /// @nodoc
 mixin _$SubstanceProtein {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstanceProtein)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -19343,22 +19668,28 @@ abstract class $SubstanceProteinCopyWith<$Res> {
           SubstanceProtein value, $Res Function(SubstanceProtein) then) =
       _$SubstanceProteinCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceProtein)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept sequenceType,
       Integer numberOfSubunits,
-      @JsonKey(name: '_numberOfSubunits') Element numberOfSubunitsElement,
+      @JsonKey(name: '_numberOfSubunits')
+          Element numberOfSubunitsElement,
       List<String> disulfideLinkage,
-      @JsonKey(name: '_disulfideLinkage') List<Element> disulfideLinkageElement,
+      @JsonKey(name: '_disulfideLinkage')
+          List<Element> disulfideLinkageElement,
       List<SubstanceProteinSubunit> subunit});
 
   $MetaCopyWith<$Res> get meta;
@@ -19401,7 +19732,7 @@ class _$SubstanceProteinCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -19513,22 +19844,28 @@ abstract class _$SubstanceProteinCopyWith<$Res>
       __$SubstanceProteinCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceProtein)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept sequenceType,
       Integer numberOfSubunits,
-      @JsonKey(name: '_numberOfSubunits') Element numberOfSubunitsElement,
+      @JsonKey(name: '_numberOfSubunits')
+          Element numberOfSubunitsElement,
       List<String> disulfideLinkage,
-      @JsonKey(name: '_disulfideLinkage') List<Element> disulfideLinkageElement,
+      @JsonKey(name: '_disulfideLinkage')
+          List<Element> disulfideLinkageElement,
       List<SubstanceProteinSubunit> subunit});
 
   @override
@@ -19579,7 +19916,7 @@ class __$SubstanceProteinCopyWithImpl<$Res>
     return _then(_SubstanceProtein(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -19628,22 +19965,28 @@ class __$SubstanceProteinCopyWithImpl<$Res>
 /// @nodoc
 class _$_SubstanceProtein extends _SubstanceProtein {
   _$_SubstanceProtein(
-      {this.resourceType = 'SubstanceProtein',
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceProtein)
+          this.resourceType = R4ResourceType.SubstanceProtein,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.sequenceType,
       this.numberOfSubunits,
-      @JsonKey(name: '_numberOfSubunits') this.numberOfSubunitsElement,
+      @JsonKey(name: '_numberOfSubunits')
+          this.numberOfSubunitsElement,
       this.disulfideLinkage,
-      @JsonKey(name: '_disulfideLinkage') this.disulfideLinkageElement,
+      @JsonKey(name: '_disulfideLinkage')
+          this.disulfideLinkageElement,
       this.subunit})
       : assert(resourceType != null),
         super._();
@@ -19651,9 +19994,9 @@ class _$_SubstanceProtein extends _SubstanceProtein {
   factory _$_SubstanceProtein.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstanceProteinFromJson(json);
 
-  @JsonKey(defaultValue: 'SubstanceProtein')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstanceProtein)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -19786,29 +20129,36 @@ class _$_SubstanceProtein extends _SubstanceProtein {
 abstract class _SubstanceProtein extends SubstanceProtein {
   _SubstanceProtein._() : super._();
   factory _SubstanceProtein(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceProtein)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       CodeableConcept sequenceType,
       Integer numberOfSubunits,
-      @JsonKey(name: '_numberOfSubunits') Element numberOfSubunitsElement,
+      @JsonKey(name: '_numberOfSubunits')
+          Element numberOfSubunitsElement,
       List<String> disulfideLinkage,
-      @JsonKey(name: '_disulfideLinkage') List<Element> disulfideLinkageElement,
+      @JsonKey(name: '_disulfideLinkage')
+          List<Element> disulfideLinkageElement,
       List<SubstanceProteinSubunit> subunit}) = _$_SubstanceProtein;
 
   factory _SubstanceProtein.fromJson(Map<String, dynamic> json) =
       _$_SubstanceProtein.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstanceProtein)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -20502,19 +20852,25 @@ class _$SubstanceReferenceInformationTearOff {
 
 // ignore: unused_element
   _SubstanceReferenceInformation call(
-      {String resourceType = 'SubstanceReferenceInformation',
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceReferenceInformation)
+          R4ResourceType
+              resourceType = R4ResourceType.SubstanceReferenceInformation,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
       List<SubstanceReferenceInformationGene> gene,
       List<SubstanceReferenceInformationGeneElement> geneElement,
       List<SubstanceReferenceInformationClassification> classification,
@@ -20552,7 +20908,8 @@ const $SubstanceReferenceInformation = _$SubstanceReferenceInformationTearOff();
 
 /// @nodoc
 mixin _$SubstanceReferenceInformation {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstanceReferenceInformation)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -20586,19 +20943,24 @@ abstract class $SubstanceReferenceInformationCopyWith<$Res> {
           $Res Function(SubstanceReferenceInformation) then) =
       _$SubstanceReferenceInformationCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceReferenceInformation)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
       List<SubstanceReferenceInformationGene> gene,
       List<SubstanceReferenceInformationGeneElement> geneElement,
       List<SubstanceReferenceInformationClassification> classification,
@@ -20643,7 +21005,7 @@ class _$SubstanceReferenceInformationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -20744,19 +21106,24 @@ abstract class _$SubstanceReferenceInformationCopyWith<$Res>
       __$SubstanceReferenceInformationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceReferenceInformation)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
       List<SubstanceReferenceInformationGene> gene,
       List<SubstanceReferenceInformationGeneElement> geneElement,
       List<SubstanceReferenceInformationClassification> classification,
@@ -20810,7 +21177,7 @@ class __$SubstanceReferenceInformationCopyWithImpl<$Res>
     return _then(_SubstanceReferenceInformation(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -20857,19 +21224,24 @@ class __$SubstanceReferenceInformationCopyWithImpl<$Res>
 /// @nodoc
 class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
   _$_SubstanceReferenceInformation(
-      {this.resourceType = 'SubstanceReferenceInformation',
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceReferenceInformation)
+          this.resourceType = R4ResourceType.SubstanceReferenceInformation,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.comment,
-      @JsonKey(name: '_comment') this.commentElement,
+      @JsonKey(name: '_comment')
+          this.commentElement,
       this.gene,
       this.geneElement,
       this.classification,
@@ -20881,9 +21253,9 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
           Map<String, dynamic> json) =>
       _$_$_SubstanceReferenceInformationFromJson(json);
 
-  @JsonKey(defaultValue: 'SubstanceReferenceInformation')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstanceReferenceInformation)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -21014,30 +21386,36 @@ abstract class _SubstanceReferenceInformation
     extends SubstanceReferenceInformation {
   _SubstanceReferenceInformation._() : super._();
   factory _SubstanceReferenceInformation(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-          Code language,
-          @JsonKey(name: '_language') Element languageElement,
-          Narrative text,
-          List<Resource> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          String comment,
-          @JsonKey(name: '_comment') Element commentElement,
-          List<SubstanceReferenceInformationGene> gene,
-          List<SubstanceReferenceInformationGeneElement> geneElement,
-          List<SubstanceReferenceInformationClassification> classification,
-          List<SubstanceReferenceInformationTarget> target}) =
-      _$_SubstanceReferenceInformation;
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceReferenceInformation)
+          R4ResourceType resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      String comment,
+      @JsonKey(name: '_comment')
+          Element commentElement,
+      List<SubstanceReferenceInformationGene> gene,
+      List<SubstanceReferenceInformationGeneElement> geneElement,
+      List<SubstanceReferenceInformationClassification> classification,
+      List<SubstanceReferenceInformationTarget>
+          target}) = _$_SubstanceReferenceInformation;
 
   factory _SubstanceReferenceInformation.fromJson(Map<String, dynamic> json) =
       _$_SubstanceReferenceInformation.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstanceReferenceInformation)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -22586,7 +22964,8 @@ class _$SubstanceSourceMaterialTearOff {
 
 // ignore: unused_element
   _SubstanceSourceMaterial call(
-      {String resourceType = 'SubstanceSourceMaterial',
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceSourceMaterial)
+          R4ResourceType resourceType = R4ResourceType.SubstanceSourceMaterial,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -22662,7 +23041,8 @@ const $SubstanceSourceMaterial = _$SubstanceSourceMaterialTearOff();
 
 /// @nodoc
 mixin _$SubstanceSourceMaterial {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstanceSourceMaterial)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -22706,7 +23086,8 @@ abstract class $SubstanceSourceMaterialCopyWith<$Res> {
           $Res Function(SubstanceSourceMaterial) then) =
       _$SubstanceSourceMaterialCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceSourceMaterial)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -22795,7 +23176,7 @@ class _$SubstanceSourceMaterialCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -22988,7 +23369,8 @@ abstract class _$SubstanceSourceMaterialCopyWith<$Res>
       __$SubstanceSourceMaterialCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceSourceMaterial)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -23091,7 +23473,7 @@ class __$SubstanceSourceMaterialCopyWithImpl<$Res>
     return _then(_SubstanceSourceMaterial(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -23170,29 +23552,36 @@ class __$SubstanceSourceMaterialCopyWithImpl<$Res>
 /// @nodoc
 class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
   _$_SubstanceSourceMaterial(
-      {this.resourceType = 'SubstanceSourceMaterial',
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceSourceMaterial)
+          this.resourceType = R4ResourceType.SubstanceSourceMaterial,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.sourceMaterialClass,
       this.sourceMaterialType,
       this.sourceMaterialState,
       this.organismId,
       this.organismName,
-      @JsonKey(name: '_organismName') this.organismNameElement,
+      @JsonKey(name: '_organismName')
+          this.organismNameElement,
       this.parentSubstanceId,
       this.parentSubstanceName,
-      @JsonKey(name: '_parentSubstanceName') this.parentSubstanceNameElement,
+      @JsonKey(name: '_parentSubstanceName')
+          this.parentSubstanceNameElement,
       this.countryOfOrigin,
       this.geographicalLocation,
-      @JsonKey(name: '_geographicalLocation') this.geographicalLocationElement,
+      @JsonKey(name: '_geographicalLocation')
+          this.geographicalLocationElement,
       this.developmentStage,
       this.fractionDescription,
       this.organism,
@@ -23203,9 +23592,9 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
   factory _$_SubstanceSourceMaterial.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstanceSourceMaterialFromJson(json);
 
-  @JsonKey(defaultValue: 'SubstanceSourceMaterial')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstanceSourceMaterial)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -23390,7 +23779,8 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
 abstract class _SubstanceSourceMaterial extends SubstanceSourceMaterial {
   _SubstanceSourceMaterial._() : super._();
   factory _SubstanceSourceMaterial(
-          {String resourceType,
+          {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceSourceMaterial)
+              R4ResourceType resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -23429,7 +23819,8 @@ abstract class _SubstanceSourceMaterial extends SubstanceSourceMaterial {
       _$_SubstanceSourceMaterial.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstanceSourceMaterial)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -25799,26 +26190,32 @@ class _$SubstanceSpecificationTearOff {
 
 // ignore: unused_element
   _SubstanceSpecification call(
-      {String resourceType = 'SubstanceSpecification',
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceSpecification)
+          R4ResourceType resourceType = R4ResourceType.SubstanceSpecification,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       CodeableConcept type,
       CodeableConcept status,
       CodeableConcept domain,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<Reference> source,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
       List<SubstanceSpecificationMoiety> moiety,
       List<SubstanceSpecificationProperty> property,
       Reference referenceInformation,
@@ -25879,7 +26276,8 @@ const $SubstanceSpecification = _$SubstanceSpecificationTearOff();
 
 /// @nodoc
 mixin _$SubstanceSpecification {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstanceSpecification)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -25927,26 +26325,32 @@ abstract class $SubstanceSpecificationCopyWith<$Res> {
           $Res Function(SubstanceSpecification) then) =
       _$SubstanceSpecificationCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceSpecification)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       CodeableConcept type,
       CodeableConcept status,
       CodeableConcept domain,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<Reference> source,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
       List<SubstanceSpecificationMoiety> moiety,
       List<SubstanceSpecificationProperty> property,
       Reference referenceInformation,
@@ -26025,7 +26429,7 @@ class _$SubstanceSpecificationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -26267,26 +26671,32 @@ abstract class _$SubstanceSpecificationCopyWith<$Res>
       __$SubstanceSpecificationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceSpecification)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       CodeableConcept type,
       CodeableConcept status,
       CodeableConcept domain,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<Reference> source,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
       List<SubstanceSpecificationMoiety> moiety,
       List<SubstanceSpecificationProperty> property,
       Reference referenceInformation,
@@ -26383,7 +26793,7 @@ class __$SubstanceSpecificationCopyWithImpl<$Res>
     return _then(_SubstanceSpecification(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -26461,26 +26871,32 @@ class __$SubstanceSpecificationCopyWithImpl<$Res>
 /// @nodoc
 class _$_SubstanceSpecification extends _SubstanceSpecification {
   _$_SubstanceSpecification(
-      {this.resourceType = 'SubstanceSpecification',
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceSpecification)
+          this.resourceType = R4ResourceType.SubstanceSpecification,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.type,
       this.status,
       this.domain,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.source,
       this.comment,
-      @JsonKey(name: '_comment') this.commentElement,
+      @JsonKey(name: '_comment')
+          this.commentElement,
       this.moiety,
       this.property,
       this.referenceInformation,
@@ -26499,9 +26915,9 @@ class _$_SubstanceSpecification extends _SubstanceSpecification {
   factory _$_SubstanceSpecification.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstanceSpecificationFromJson(json);
 
-  @JsonKey(defaultValue: 'SubstanceSpecification')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstanceSpecification)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -26705,26 +27121,32 @@ class _$_SubstanceSpecification extends _SubstanceSpecification {
 abstract class _SubstanceSpecification extends SubstanceSpecification {
   _SubstanceSpecification._() : super._();
   factory _SubstanceSpecification(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.SubstanceSpecification)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       CodeableConcept type,
       CodeableConcept status,
       CodeableConcept domain,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<Reference> source,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
       List<SubstanceSpecificationMoiety> moiety,
       List<SubstanceSpecificationProperty> property,
       Reference referenceInformation,
@@ -26742,7 +27164,8 @@ abstract class _SubstanceSpecification extends SubstanceSpecification {
       _$_SubstanceSpecification.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.SubstanceSpecification)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override

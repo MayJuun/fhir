@@ -112,7 +112,9 @@ abstract class Group with Resource implements _$Group {
   ///
   /// [member]: Identifies the resource instances that are members of the group.
   factory Group({
-    @Default('Group') String resourceType,
+    @Default(R4ResourceType.Group)
+    @JsonKey(unknownEnumValue: R4ResourceType.Group)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -437,7 +439,9 @@ abstract class Patient with Resource implements _$Patient {
   /// [link]: Link to another patient resource that concerns the same actual
   ///  patient.
   factory Patient({
-    @Default('Patient') String resourceType,
+    @Default(R4ResourceType.Patient)
+    @JsonKey(unknownEnumValue: R4ResourceType.Patient)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -786,7 +790,9 @@ abstract class Person with Resource implements _$Person {
   ///
   /// [link]: Link to a resource that concerns the same actual person.
   factory Person({
-    @Default('Person') String resourceType,
+    @Default(R4ResourceType.Person)
+    @JsonKey(unknownEnumValue: R4ResourceType.Person)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -984,7 +990,9 @@ abstract class Practitioner with Resource implements _$Practitioner {
   /// [communication]: A language the practitioner can use in patient
   ///  communication.
   factory Practitioner({
-    @Default('Practitioner') String resourceType,
+    @Default(R4ResourceType.Practitioner)
+    @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1195,7 +1203,9 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
   /// [endpoint]: Technical endpoints providing access to services operated for
   ///  the practitioner with this role.
   factory PractitionerRole({
-    @Default('PractitionerRole') String resourceType,
+    @Default(R4ResourceType.PractitionerRole)
+    @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1483,7 +1493,9 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
   /// [communication]: A language which may be used to communicate with about
   ///  the patient's health.
   factory RelatedPerson({
-    @Default('RelatedPerson') String resourceType,
+    @Default(R4ResourceType.RelatedPerson)
+    @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

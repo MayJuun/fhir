@@ -308,7 +308,9 @@ abstract class ActivityDefinition
   /// would be used to specify an expression that calculated the weight, and the
   ///  path on the request resource that would contain the result.
   factory ActivityDefinition({
-    @Default('ActivityDefinition') String resourceType,
+    @Default(R4ResourceType.ActivityDefinition)
+    @JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -678,7 +680,9 @@ abstract class DeviceDefinition with Resource implements _$DeviceDefinition {
   /// [material]: A substance used to create the material(s) of which the device
   ///  is made.
   factory DeviceDefinition({
-    @Default('DeviceDefinition') String resourceType,
+    @Default(R4ResourceType.DeviceDefinition)
+    @JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1335,7 +1339,9 @@ abstract class EventDefinition with Resource implements _$EventDefinition {
   /// one trigger condition is specified, the event fires whenever any one of
   ///  the trigger conditions is met.
   factory EventDefinition({
-    @Default('EventDefinition') String resourceType,
+    @Default(R4ResourceType.EventDefinition)
+    @JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1515,7 +1521,9 @@ abstract class ObservationDefinition
   /// [criticalCodedValueSet]: The set of critical coded results for the
   ///  observation conforming to this ObservationDefinition.
   factory ObservationDefinition({
-    @Default('ObservationDefinition') String resourceType,
+    @Default(R4ResourceType.ObservationDefinition)
+    @JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1953,7 +1961,9 @@ abstract class PlanDefinition with Resource implements _$PlanDefinition {
   ///
   /// [action]: An action or group of actions to be taken as part of the plan.
   factory PlanDefinition({
-    @Default('PlanDefinition') String resourceType,
+    @Default(R4ResourceType.PlanDefinition)
+    @JsonKey(unknownEnumValue: R4ResourceType.PlanDefinition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2897,7 +2907,9 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
   /// [item]: A particular question, question grouping or display text that is
   ///  part of the questionnaire.
   factory Questionnaire({
-    @Default('Questionnaire') String resourceType,
+    @Default(R4ResourceType.Questionnaire)
+    @JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -3546,7 +3558,9 @@ abstract class SpecimenDefinition
   /// [typeTested]: Specimen conditioned in a container as expected by the
   ///  testing laboratory.
   factory SpecimenDefinition({
-    @Default('SpecimenDefinition') String resourceType,
+    @Default(R4ResourceType.SpecimenDefinition)
+    @JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

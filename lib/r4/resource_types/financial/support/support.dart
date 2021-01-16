@@ -137,7 +137,9 @@ abstract class Coverage with Resource implements _$Coverage {
   ///
   /// [contract]: The policy(s) which constitute this insurance coverage.
   factory Coverage({
-    @Default('Coverage') String resourceType,
+    @Default(R4ResourceType.Coverage)
+    @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -501,7 +503,9 @@ abstract class CoverageEligibilityRequest
   /// and/or an authorization prior to service delivery may be required by the
   ///  payor.
   factory CoverageEligibilityRequest({
-    @Default('CoverageEligibilityRequest') String resourceType,
+    @Default(R4ResourceType.CoverageEligibilityRequest)
+    @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -990,7 +994,9 @@ abstract class CoverageEligibilityResponse
   ///
   /// [error]: Errors encountered during the processing of the request.
   factory CoverageEligibilityResponse({
-    @Default('CoverageEligibilityResponse') String resourceType,
+    @Default(R4ResourceType.CoverageEligibilityResponse)
+    @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1479,7 +1485,9 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
   /// [coverage]: Reference to the program or plan identification, underwriter
   ///  or payor.
   factory EnrollmentRequest({
-    @Default('EnrollmentRequest') String resourceType,
+    @Default(R4ResourceType.EnrollmentRequest)
+    @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1604,7 +1612,9 @@ abstract class EnrollmentResponse
   /// [requestProvider]: The practitioner who is responsible for the services
   ///  rendered to the patient.
   factory EnrollmentResponse({
-    @Default('EnrollmentResponse') String resourceType,
+    @Default(R4ResourceType.EnrollmentResponse)
+    @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

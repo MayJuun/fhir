@@ -20,7 +20,9 @@ class _$BiologicallyDerivedProductTearOff {
 // ignore: unused_element
   _BiologicallyDerivedProduct
       call(
-          {String resourceType = 'BiologicallyDerivedProduct',
+          {@JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+              R4ResourceType
+                  resourceType = R4ResourceType.BiologicallyDerivedProduct,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -96,7 +98,8 @@ const $BiologicallyDerivedProduct = _$BiologicallyDerivedProductTearOff();
 
 /// @nodoc
 mixin _$BiologicallyDerivedProduct {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -141,7 +144,8 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res> {
       _$BiologicallyDerivedProductCopyWithImpl<$Res>;
   $Res
       call(
-          {String resourceType,
+          {@JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+              R4ResourceType resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -229,7 +233,7 @@ class _$BiologicallyDerivedProductCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -403,7 +407,8 @@ abstract class _$BiologicallyDerivedProductCopyWith<$Res>
   @override
   $Res
       call(
-          {String resourceType,
+          {@JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+              R4ResourceType resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -504,7 +509,7 @@ class __$BiologicallyDerivedProductCopyWithImpl<$Res>
     return _then(_BiologicallyDerivedProduct(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -571,7 +576,8 @@ class __$BiologicallyDerivedProductCopyWithImpl<$Res>
 /// @nodoc
 class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   _$_BiologicallyDerivedProduct(
-      {this.resourceType = 'BiologicallyDerivedProduct',
+      {@JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+          this.resourceType = R4ResourceType.BiologicallyDerivedProduct,
       this.id,
       this.meta,
       this.implicitRules,
@@ -610,9 +616,9 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   factory _$_BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json) =>
       _$_$_BiologicallyDerivedProductFromJson(json);
 
-  @JsonKey(defaultValue: 'BiologicallyDerivedProduct')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -791,7 +797,8 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
 abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   _BiologicallyDerivedProduct._() : super._();
   factory _BiologicallyDerivedProduct(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -829,7 +836,8 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
       _$_BiologicallyDerivedProduct.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -2549,40 +2557,54 @@ class _$DeviceTearOff {
 
 // ignore: unused_element
   _Device call(
-      {String resourceType = 'Device',
+      {@JsonKey(unknownEnumValue: R4ResourceType.Device)
+          R4ResourceType resourceType = R4ResourceType.Device,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Reference definition,
       List<DeviceUdiCarrier> udiCarrier,
-      @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(unknownEnumValue: DeviceStatus.unknown)
+          DeviceStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       List<CodeableConcept> statusReason,
       String distinctIdentifier,
-      @JsonKey(name: '_distinctIdentifier') Element distinctIdentifierElement,
+      @JsonKey(name: '_distinctIdentifier')
+          Element distinctIdentifierElement,
       String manufacturer,
-      @JsonKey(name: '_manufacturer') Element manufacturerElement,
+      @JsonKey(name: '_manufacturer')
+          Element manufacturerElement,
       FhirDateTime manufactureDate,
-      @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
+      @JsonKey(name: '_manufactureDate')
+          Element manufactureDateElement,
       FhirDateTime expirationDate,
-      @JsonKey(name: '_expirationDate') Element expirationDateElement,
+      @JsonKey(name: '_expirationDate')
+          Element expirationDateElement,
       String lotNumber,
-      @JsonKey(name: '_lotNumber') Element lotNumberElement,
+      @JsonKey(name: '_lotNumber')
+          Element lotNumberElement,
       String serialNumber,
-      @JsonKey(name: '_serialNumber') Element serialNumberElement,
+      @JsonKey(name: '_serialNumber')
+          Element serialNumberElement,
       List<DeviceDeviceName> deviceName,
       String modelNumber,
-      @JsonKey(name: '_modelNumber') Element modelNumberElement,
+      @JsonKey(name: '_modelNumber')
+          Element modelNumberElement,
       String partNumber,
-      @JsonKey(name: '_partNumber') Element partNumberElement,
+      @JsonKey(name: '_partNumber')
+          Element partNumberElement,
       CodeableConcept type,
       List<DeviceSpecialization> specialization,
       List<DeviceVersion> version,
@@ -2592,7 +2614,8 @@ class _$DeviceTearOff {
       List<ContactPoint> contact,
       Reference location,
       FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Annotation> note,
       List<CodeableConcept> safety,
       Reference parent}) {
@@ -2659,7 +2682,8 @@ const $Device = _$DeviceTearOff();
 
 /// @nodoc
 mixin _$Device {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Device)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2730,40 +2754,54 @@ abstract class $DeviceCopyWith<$Res> {
   factory $DeviceCopyWith(Device value, $Res Function(Device) then) =
       _$DeviceCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Device)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Reference definition,
       List<DeviceUdiCarrier> udiCarrier,
-      @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(unknownEnumValue: DeviceStatus.unknown)
+          DeviceStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       List<CodeableConcept> statusReason,
       String distinctIdentifier,
-      @JsonKey(name: '_distinctIdentifier') Element distinctIdentifierElement,
+      @JsonKey(name: '_distinctIdentifier')
+          Element distinctIdentifierElement,
       String manufacturer,
-      @JsonKey(name: '_manufacturer') Element manufacturerElement,
+      @JsonKey(name: '_manufacturer')
+          Element manufacturerElement,
       FhirDateTime manufactureDate,
-      @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
+      @JsonKey(name: '_manufactureDate')
+          Element manufactureDateElement,
       FhirDateTime expirationDate,
-      @JsonKey(name: '_expirationDate') Element expirationDateElement,
+      @JsonKey(name: '_expirationDate')
+          Element expirationDateElement,
       String lotNumber,
-      @JsonKey(name: '_lotNumber') Element lotNumberElement,
+      @JsonKey(name: '_lotNumber')
+          Element lotNumberElement,
       String serialNumber,
-      @JsonKey(name: '_serialNumber') Element serialNumberElement,
+      @JsonKey(name: '_serialNumber')
+          Element serialNumberElement,
       List<DeviceDeviceName> deviceName,
       String modelNumber,
-      @JsonKey(name: '_modelNumber') Element modelNumberElement,
+      @JsonKey(name: '_modelNumber')
+          Element modelNumberElement,
       String partNumber,
-      @JsonKey(name: '_partNumber') Element partNumberElement,
+      @JsonKey(name: '_partNumber')
+          Element partNumberElement,
       CodeableConcept type,
       List<DeviceSpecialization> specialization,
       List<DeviceVersion> version,
@@ -2773,7 +2811,8 @@ abstract class $DeviceCopyWith<$Res> {
       List<ContactPoint> contact,
       Reference location,
       FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Annotation> note,
       List<CodeableConcept> safety,
       Reference parent});
@@ -2861,7 +2900,7 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3176,40 +3215,54 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       __$DeviceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Device)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Reference definition,
       List<DeviceUdiCarrier> udiCarrier,
-      @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(unknownEnumValue: DeviceStatus.unknown)
+          DeviceStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       List<CodeableConcept> statusReason,
       String distinctIdentifier,
-      @JsonKey(name: '_distinctIdentifier') Element distinctIdentifierElement,
+      @JsonKey(name: '_distinctIdentifier')
+          Element distinctIdentifierElement,
       String manufacturer,
-      @JsonKey(name: '_manufacturer') Element manufacturerElement,
+      @JsonKey(name: '_manufacturer')
+          Element manufacturerElement,
       FhirDateTime manufactureDate,
-      @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
+      @JsonKey(name: '_manufactureDate')
+          Element manufactureDateElement,
       FhirDateTime expirationDate,
-      @JsonKey(name: '_expirationDate') Element expirationDateElement,
+      @JsonKey(name: '_expirationDate')
+          Element expirationDateElement,
       String lotNumber,
-      @JsonKey(name: '_lotNumber') Element lotNumberElement,
+      @JsonKey(name: '_lotNumber')
+          Element lotNumberElement,
       String serialNumber,
-      @JsonKey(name: '_serialNumber') Element serialNumberElement,
+      @JsonKey(name: '_serialNumber')
+          Element serialNumberElement,
       List<DeviceDeviceName> deviceName,
       String modelNumber,
-      @JsonKey(name: '_modelNumber') Element modelNumberElement,
+      @JsonKey(name: '_modelNumber')
+          Element modelNumberElement,
       String partNumber,
-      @JsonKey(name: '_partNumber') Element partNumberElement,
+      @JsonKey(name: '_partNumber')
+          Element partNumberElement,
       CodeableConcept type,
       List<DeviceSpecialization> specialization,
       List<DeviceVersion> version,
@@ -3219,7 +3272,8 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       List<ContactPoint> contact,
       Reference location,
       FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Annotation> note,
       List<CodeableConcept> safety,
       Reference parent});
@@ -3328,7 +3382,7 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
     return _then(_Device(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3442,40 +3496,54 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
 /// @nodoc
 class _$_Device extends _Device {
   _$_Device(
-      {this.resourceType = 'Device',
+      {@JsonKey(unknownEnumValue: R4ResourceType.Device)
+          this.resourceType = R4ResourceType.Device,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.definition,
       this.udiCarrier,
-      @JsonKey(unknownEnumValue: DeviceStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(unknownEnumValue: DeviceStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.statusReason,
       this.distinctIdentifier,
-      @JsonKey(name: '_distinctIdentifier') this.distinctIdentifierElement,
+      @JsonKey(name: '_distinctIdentifier')
+          this.distinctIdentifierElement,
       this.manufacturer,
-      @JsonKey(name: '_manufacturer') this.manufacturerElement,
+      @JsonKey(name: '_manufacturer')
+          this.manufacturerElement,
       this.manufactureDate,
-      @JsonKey(name: '_manufactureDate') this.manufactureDateElement,
+      @JsonKey(name: '_manufactureDate')
+          this.manufactureDateElement,
       this.expirationDate,
-      @JsonKey(name: '_expirationDate') this.expirationDateElement,
+      @JsonKey(name: '_expirationDate')
+          this.expirationDateElement,
       this.lotNumber,
-      @JsonKey(name: '_lotNumber') this.lotNumberElement,
+      @JsonKey(name: '_lotNumber')
+          this.lotNumberElement,
       this.serialNumber,
-      @JsonKey(name: '_serialNumber') this.serialNumberElement,
+      @JsonKey(name: '_serialNumber')
+          this.serialNumberElement,
       this.deviceName,
       this.modelNumber,
-      @JsonKey(name: '_modelNumber') this.modelNumberElement,
+      @JsonKey(name: '_modelNumber')
+          this.modelNumberElement,
       this.partNumber,
-      @JsonKey(name: '_partNumber') this.partNumberElement,
+      @JsonKey(name: '_partNumber')
+          this.partNumberElement,
       this.type,
       this.specialization,
       this.version,
@@ -3485,7 +3553,8 @@ class _$_Device extends _Device {
       this.contact,
       this.location,
       this.url,
-      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
       this.note,
       this.safety,
       this.parent})
@@ -3495,9 +3564,9 @@ class _$_Device extends _Device {
   factory _$_Device.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceFromJson(json);
 
-  @JsonKey(defaultValue: 'Device')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Device)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -3769,40 +3838,54 @@ class _$_Device extends _Device {
 abstract class _Device extends Device {
   _Device._() : super._();
   factory _Device(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Device)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Reference definition,
       List<DeviceUdiCarrier> udiCarrier,
-      @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(unknownEnumValue: DeviceStatus.unknown)
+          DeviceStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       List<CodeableConcept> statusReason,
       String distinctIdentifier,
-      @JsonKey(name: '_distinctIdentifier') Element distinctIdentifierElement,
+      @JsonKey(name: '_distinctIdentifier')
+          Element distinctIdentifierElement,
       String manufacturer,
-      @JsonKey(name: '_manufacturer') Element manufacturerElement,
+      @JsonKey(name: '_manufacturer')
+          Element manufacturerElement,
       FhirDateTime manufactureDate,
-      @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
+      @JsonKey(name: '_manufactureDate')
+          Element manufactureDateElement,
       FhirDateTime expirationDate,
-      @JsonKey(name: '_expirationDate') Element expirationDateElement,
+      @JsonKey(name: '_expirationDate')
+          Element expirationDateElement,
       String lotNumber,
-      @JsonKey(name: '_lotNumber') Element lotNumberElement,
+      @JsonKey(name: '_lotNumber')
+          Element lotNumberElement,
       String serialNumber,
-      @JsonKey(name: '_serialNumber') Element serialNumberElement,
+      @JsonKey(name: '_serialNumber')
+          Element serialNumberElement,
       List<DeviceDeviceName> deviceName,
       String modelNumber,
-      @JsonKey(name: '_modelNumber') Element modelNumberElement,
+      @JsonKey(name: '_modelNumber')
+          Element modelNumberElement,
       String partNumber,
-      @JsonKey(name: '_partNumber') Element partNumberElement,
+      @JsonKey(name: '_partNumber')
+          Element partNumberElement,
       CodeableConcept type,
       List<DeviceSpecialization> specialization,
       List<DeviceVersion> version,
@@ -3812,7 +3895,8 @@ abstract class _Device extends Device {
       List<ContactPoint> contact,
       Reference location,
       FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Annotation> note,
       List<CodeableConcept> safety,
       Reference parent}) = _$_Device;
@@ -3820,7 +3904,8 @@ abstract class _Device extends Device {
   factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Device)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -5781,7 +5866,8 @@ class _$DeviceMetricTearOff {
 
 // ignore: unused_element
   _DeviceMetric call(
-      {String resourceType = 'DeviceMetric',
+      {@JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+          R4ResourceType resourceType = R4ResourceType.DeviceMetric,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5855,7 +5941,8 @@ const $DeviceMetric = _$DeviceMetricTearOff();
 
 /// @nodoc
 mixin _$DeviceMetric {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -5899,7 +5986,8 @@ abstract class $DeviceMetricCopyWith<$Res> {
           DeviceMetric value, $Res Function(DeviceMetric) then) =
       _$DeviceMetricCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5985,7 +6073,7 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6168,7 +6256,8 @@ abstract class _$DeviceMetricCopyWith<$Res>
       __$DeviceMetricCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6268,7 +6357,7 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
     return _then(_DeviceMetric(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6328,7 +6417,8 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
 /// @nodoc
 class _$_DeviceMetric extends _DeviceMetric {
   _$_DeviceMetric(
-      {this.resourceType = 'DeviceMetric',
+      {@JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+          this.resourceType = R4ResourceType.DeviceMetric,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6369,9 +6459,9 @@ class _$_DeviceMetric extends _DeviceMetric {
   factory _$_DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$_$_DeviceMetricFromJson(json);
 
-  @JsonKey(defaultValue: 'DeviceMetric')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -6545,7 +6635,8 @@ class _$_DeviceMetric extends _DeviceMetric {
 abstract class _DeviceMetric extends DeviceMetric {
   _DeviceMetric._() : super._();
   factory _DeviceMetric(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6584,7 +6675,8 @@ abstract class _DeviceMetric extends DeviceMetric {
       _$_DeviceMetric.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -7065,7 +7157,8 @@ class _$SubstanceTearOff {
 
 // ignore: unused_element
   _Substance call(
-      {String resourceType = 'Substance',
+      {@JsonKey(unknownEnumValue: R4ResourceType.Substance)
+          R4ResourceType resourceType = R4ResourceType.Substance,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7128,7 +7221,8 @@ const $Substance = _$SubstanceTearOff();
 
 /// @nodoc
 mixin _$Substance {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Substance)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -7164,7 +7258,8 @@ abstract class $SubstanceCopyWith<$Res> {
   factory $SubstanceCopyWith(Substance value, $Res Function(Substance) then) =
       _$SubstanceCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Substance)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7234,7 +7329,7 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7359,7 +7454,8 @@ abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
       __$SubstanceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Substance)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7437,7 +7533,7 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
     return _then(_Substance(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7490,24 +7586,32 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
 /// @nodoc
 class _$_Substance extends _Substance {
   _$_Substance(
-      {this.resourceType = 'Substance',
+      {@JsonKey(unknownEnumValue: R4ResourceType.Substance)
+          this.resourceType = R4ResourceType.Substance,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: SubstanceStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.category,
-      @required this.code,
+      @required
+          this.code,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.instance,
       this.ingredient})
       : assert(resourceType != null),
@@ -7517,9 +7621,9 @@ class _$_Substance extends _Substance {
   factory _$_Substance.fromJson(Map<String, dynamic> json) =>
       _$_$_SubstanceFromJson(json);
 
-  @JsonKey(defaultValue: 'Substance')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Substance)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -7668,7 +7772,8 @@ class _$_Substance extends _Substance {
 abstract class _Substance extends Substance {
   _Substance._() : super._();
   factory _Substance(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Substance)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7700,7 +7805,8 @@ abstract class _Substance extends Substance {
       _$_Substance.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Substance)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override

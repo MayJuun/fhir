@@ -113,7 +113,9 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
   /// [relatedEntry]: Used for example, to point to a substance, or to a device
   ///  used to administer a medication.
   factory CatalogEntry({
-    @Default('CatalogEntry') String resourceType,
+    @Default(R4ResourceType.CatalogEntry)
+    @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -346,7 +348,9 @@ abstract class Composition with Resource implements _$Composition {
   ///
   /// [section]: The root of the sections that make up the composition.
   factory Composition({
-    @Default('Composition') String resourceType,
+    @Default(R4ResourceType.Composition)
+    @JsonKey(unknownEnumValue: R4ResourceType.Composition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -842,7 +846,9 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
   /// [related]: Related identifiers or resources associated with the
   ///  DocumentManifest.
   factory DocumentManifest({
-    @Default('DocumentManifest') String resourceType,
+    @Default(R4ResourceType.DocumentManifest)
+    @JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1071,7 +1077,9 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
   ///
   /// [context]: The clinical context in which the document was prepared.
   factory DocumentReference({
-    @Default('DocumentReference') String resourceType,
+    @Default(R4ResourceType.DocumentReference)
+    @JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

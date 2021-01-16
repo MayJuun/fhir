@@ -157,7 +157,9 @@ abstract class Claim with Resource implements _$Claim {
   ///
   /// [total]: The total value of the all the items in the claim.
   factory Claim({
-    @Default('Claim') String resourceType,
+    @Default(R4ResourceType.Claim)
+    @JsonKey(unknownEnumValue: R4ResourceType.Claim)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1364,7 +1366,9 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
   ///
   /// [error]: Errors encountered during the processing of the adjudication.
   factory ClaimResponse({
-    @Default('ClaimResponse') String resourceType,
+    @Default(R4ResourceType.ClaimResponse)
+    @JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2530,7 +2534,9 @@ abstract class Invoice with Resource implements _$Invoice {
   /// [note]: Comments made about the invoice by the issuer, subject, or other
   ///  participants.
   factory Invoice({
-    @Default('Invoice') String resourceType,
+    @Default(R4ResourceType.Invoice)
+    @JsonKey(unknownEnumValue: R4ResourceType.Invoice)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

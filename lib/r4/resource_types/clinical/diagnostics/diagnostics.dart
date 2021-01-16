@@ -98,7 +98,9 @@ abstract class BodyStructure with Resource implements _$BodyStructure {
   ///
   /// [patient]: The person to which the body site belongs.
   factory BodyStructure({
-    @Default('BodyStructure') String resourceType,
+    @Default(R4ResourceType.BodyStructure)
+    @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -276,7 +278,9 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
   /// by the diagnostic service. Multiple formats are allowed but they SHALL be
   ///  semantically equivalent.
   factory DiagnosticReport({
-    @Default('DiagnosticReport') String resourceType,
+    @Default(R4ResourceType.DiagnosticReport)
+    @JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -532,7 +536,9 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
   ///
   /// [series]: Each study has one or more series of images or other content.
   factory ImagingStudy({
-    @Default('ImagingStudy') String resourceType,
+    @Default(R4ResourceType.ImagingStudy)
+    @JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -988,7 +994,9 @@ abstract class Media with Resource implements _$Media {
   /// [note]: Comments made about the media by the performer, subject or other
   ///  participants.
   factory Media({
-    @Default('Media') String resourceType,
+    @Default(R4ResourceType.Media)
+    @JsonKey(unknownEnumValue: R4ResourceType.Media)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1164,7 +1172,9 @@ abstract class MolecularSequence with Resource implements _$MolecularSequence {
   ///
   /// [structureVariant]: Information about chromosome structure variation.
   factory MolecularSequence({
-    @Default('MolecularSequence') String resourceType,
+    @Default(R4ResourceType.MolecularSequence)
+    @JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2211,7 +2221,9 @@ abstract class Observation with Resource implements _$Observation {
   /// component observations for blood pressure measurement and multiple
   ///  component observations for genetics observations.
   factory Observation({
-    @Default('Observation') String resourceType,
+    @Default(R4ResourceType.Observation)
+    @JsonKey(unknownEnumValue: R4ResourceType.Observation)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2605,7 +2617,9 @@ abstract class QuestionnaireResponse
   /// [item]: A group or question item from the original questionnaire for which
   ///  answers are provided.
   factory QuestionnaireResponse({
-    @Default('QuestionnaireResponse') String resourceType,
+    @Default(R4ResourceType.QuestionnaireResponse)
+    @JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2960,7 +2974,9 @@ abstract class Specimen with Resource implements _$Specimen {
   /// the specimen collection. (for example: broken vial, sent with patient,
   ///  frozen).
   factory Specimen({
-    @Default('Specimen') String resourceType,
+    @Default(R4ResourceType.Specimen)
+    @JsonKey(unknownEnumValue: R4ResourceType.Specimen)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

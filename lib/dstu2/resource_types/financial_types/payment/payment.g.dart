@@ -204,7 +204,7 @@ const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.Immunization: 'Immunization',
   Dstu2ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   Dstu2ResourceType.ImplementationGuide: 'ImplementationGuide',
-  Dstu2ResourceType.List: 'List',
+  Dstu2ResourceType.List_: 'List',
   Dstu2ResourceType.Location: 'Location',
   Dstu2ResourceType.Media: 'Media',
   Dstu2ResourceType.Medication: 'Medication',

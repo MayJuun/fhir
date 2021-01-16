@@ -18,39 +18,52 @@ class _$CoverageTearOff {
 
 // ignore: unused_element
   _Coverage call(
-      {String resourceType = 'Coverage',
+      {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
+          R4ResourceType resourceType = R4ResourceType.Coverage,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       Reference policyHolder,
       Reference subscriber,
       String subscriberId,
-      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
-      @required Reference beneficiary,
+      @JsonKey(name: '_subscriberId')
+          Element subscriberIdElement,
+      @required
+          Reference beneficiary,
       String dependent,
-      @JsonKey(name: '_dependent') Element dependentElement,
+      @JsonKey(name: '_dependent')
+          Element dependentElement,
       CodeableConcept relationship,
       Period period,
-      @required List<Reference> payor,
-      @JsonKey(name: 'class') List<CoverageClass> class_,
+      @required
+          List<Reference> payor,
+      @JsonKey(name: 'class')
+          List<CoverageClass> class_,
       PositiveInt order,
-      @JsonKey(name: '_order') Element orderElement,
+      @JsonKey(name: '_order')
+          Element orderElement,
       String network,
-      @JsonKey(name: '_network') Element networkElement,
+      @JsonKey(name: '_network')
+          Element networkElement,
       List<CoverageCostToBeneficiary> costToBeneficiary,
       Boolean subrogation,
-      @JsonKey(name: '_subrogation') Element subrogationElement,
+      @JsonKey(name: '_subrogation')
+          Element subrogationElement,
       List<Reference> contract}) {
     return _Coverage(
       resourceType: resourceType,
@@ -102,7 +115,8 @@ const $Coverage = _$CoverageTearOff();
 
 /// @nodoc
 mixin _$Coverage {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -156,39 +170,50 @@ abstract class $CoverageCopyWith<$Res> {
   factory $CoverageCopyWith(Coverage value, $Res Function(Coverage) then) =
       _$CoverageCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       Reference policyHolder,
       Reference subscriber,
       String subscriberId,
-      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
+      @JsonKey(name: '_subscriberId')
+          Element subscriberIdElement,
       Reference beneficiary,
       String dependent,
-      @JsonKey(name: '_dependent') Element dependentElement,
+      @JsonKey(name: '_dependent')
+          Element dependentElement,
       CodeableConcept relationship,
       Period period,
       List<Reference> payor,
-      @JsonKey(name: 'class') List<CoverageClass> class_,
+      @JsonKey(name: 'class')
+          List<CoverageClass> class_,
       PositiveInt order,
-      @JsonKey(name: '_order') Element orderElement,
+      @JsonKey(name: '_order')
+          Element orderElement,
       String network,
-      @JsonKey(name: '_network') Element networkElement,
+      @JsonKey(name: '_network')
+          Element networkElement,
       List<CoverageCostToBeneficiary> costToBeneficiary,
       Boolean subrogation,
-      @JsonKey(name: '_subrogation') Element subrogationElement,
+      @JsonKey(name: '_subrogation')
+          Element subrogationElement,
       List<Reference> contract});
 
   $MetaCopyWith<$Res> get meta;
@@ -257,7 +282,7 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -499,39 +524,50 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       __$CoverageCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       Reference policyHolder,
       Reference subscriber,
       String subscriberId,
-      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
+      @JsonKey(name: '_subscriberId')
+          Element subscriberIdElement,
       Reference beneficiary,
       String dependent,
-      @JsonKey(name: '_dependent') Element dependentElement,
+      @JsonKey(name: '_dependent')
+          Element dependentElement,
       CodeableConcept relationship,
       Period period,
       List<Reference> payor,
-      @JsonKey(name: 'class') List<CoverageClass> class_,
+      @JsonKey(name: 'class')
+          List<CoverageClass> class_,
       PositiveInt order,
-      @JsonKey(name: '_order') Element orderElement,
+      @JsonKey(name: '_order')
+          Element orderElement,
       String network,
-      @JsonKey(name: '_network') Element networkElement,
+      @JsonKey(name: '_network')
+          Element networkElement,
       List<CoverageCostToBeneficiary> costToBeneficiary,
       Boolean subrogation,
-      @JsonKey(name: '_subrogation') Element subrogationElement,
+      @JsonKey(name: '_subrogation')
+          Element subrogationElement,
       List<Reference> contract});
 
   @override
@@ -617,7 +653,7 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
     return _then(_Coverage(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -698,39 +734,52 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
 /// @nodoc
 class _$_Coverage extends _Coverage {
   _$_Coverage(
-      {this.resourceType = 'Coverage',
+      {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
+          this.resourceType = R4ResourceType.Coverage,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.type,
       this.policyHolder,
       this.subscriber,
       this.subscriberId,
-      @JsonKey(name: '_subscriberId') this.subscriberIdElement,
-      @required this.beneficiary,
+      @JsonKey(name: '_subscriberId')
+          this.subscriberIdElement,
+      @required
+          this.beneficiary,
       this.dependent,
-      @JsonKey(name: '_dependent') this.dependentElement,
+      @JsonKey(name: '_dependent')
+          this.dependentElement,
       this.relationship,
       this.period,
-      @required this.payor,
-      @JsonKey(name: 'class') this.class_,
+      @required
+          this.payor,
+      @JsonKey(name: 'class')
+          this.class_,
       this.order,
-      @JsonKey(name: '_order') this.orderElement,
+      @JsonKey(name: '_order')
+          this.orderElement,
       this.network,
-      @JsonKey(name: '_network') this.networkElement,
+      @JsonKey(name: '_network')
+          this.networkElement,
       this.costToBeneficiary,
       this.subrogation,
-      @JsonKey(name: '_subrogation') this.subrogationElement,
+      @JsonKey(name: '_subrogation')
+          this.subrogationElement,
       this.contract})
       : assert(resourceType != null),
         assert(beneficiary != null),
@@ -740,9 +789,9 @@ class _$_Coverage extends _Coverage {
   factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
       _$_$_CoverageFromJson(json);
 
-  @JsonKey(defaultValue: 'Coverage')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -959,45 +1008,59 @@ class _$_Coverage extends _Coverage {
 abstract class _Coverage extends Coverage {
   _Coverage._() : super._();
   factory _Coverage(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       Reference policyHolder,
       Reference subscriber,
       String subscriberId,
-      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
-      @required Reference beneficiary,
+      @JsonKey(name: '_subscriberId')
+          Element subscriberIdElement,
+      @required
+          Reference beneficiary,
       String dependent,
-      @JsonKey(name: '_dependent') Element dependentElement,
+      @JsonKey(name: '_dependent')
+          Element dependentElement,
       CodeableConcept relationship,
       Period period,
-      @required List<Reference> payor,
-      @JsonKey(name: 'class') List<CoverageClass> class_,
+      @required
+          List<Reference> payor,
+      @JsonKey(name: 'class')
+          List<CoverageClass> class_,
       PositiveInt order,
-      @JsonKey(name: '_order') Element orderElement,
+      @JsonKey(name: '_order')
+          Element orderElement,
       String network,
-      @JsonKey(name: '_network') Element networkElement,
+      @JsonKey(name: '_network')
+          Element networkElement,
       List<CoverageCostToBeneficiary> costToBeneficiary,
       Boolean subrogation,
-      @JsonKey(name: '_subrogation') Element subrogationElement,
+      @JsonKey(name: '_subrogation')
+          Element subrogationElement,
       List<Reference> contract}) = _$_Coverage;
 
   factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -2027,32 +2090,43 @@ class _$CoverageEligibilityRequestTearOff {
 
 // ignore: unused_element
   _CoverageEligibilityRequest call(
-      {String resourceType = 'CoverageEligibilityRequest',
+      {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
+          R4ResourceType
+              resourceType = R4ResourceType.CoverageEligibilityRequest,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept priority,
       List<CoverageEligibilityRequestPurpose> purpose,
-      @JsonKey(name: '_purpose') List<Element> purposeElement,
-      @required Reference patient,
+      @JsonKey(name: '_purpose')
+          List<Element> purposeElement,
+      @required
+          Reference patient,
       Date servicedDate,
-      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference provider,
-      @required Reference insurer,
+      @required
+          Reference insurer,
       Reference facility,
       List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
       List<CoverageEligibilityRequestInsurance> insurance,
@@ -2103,7 +2177,8 @@ const $CoverageEligibilityRequest = _$CoverageEligibilityRequestTearOff();
 
 /// @nodoc
 mixin _$CoverageEligibilityRequest {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2151,29 +2226,37 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
           $Res Function(CoverageEligibilityRequest) then) =
       _$CoverageEligibilityRequestCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept priority,
       List<CoverageEligibilityRequestPurpose> purpose,
-      @JsonKey(name: '_purpose') List<Element> purposeElement,
+      @JsonKey(name: '_purpose')
+          List<Element> purposeElement,
       Reference patient,
       Date servicedDate,
-      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference provider,
       Reference insurer,
@@ -2243,7 +2326,7 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2459,29 +2542,37 @@ abstract class _$CoverageEligibilityRequestCopyWith<$Res>
       __$CoverageEligibilityRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept priority,
       List<CoverageEligibilityRequestPurpose> purpose,
-      @JsonKey(name: '_purpose') List<Element> purposeElement,
+      @JsonKey(name: '_purpose')
+          List<Element> purposeElement,
       Reference patient,
       Date servicedDate,
-      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference provider,
       Reference insurer,
@@ -2568,7 +2659,7 @@ class __$CoverageEligibilityRequestCopyWithImpl<$Res>
     return _then(_CoverageEligibilityRequest(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2640,32 +2731,42 @@ class __$CoverageEligibilityRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   _$_CoverageEligibilityRequest(
-      {this.resourceType = 'CoverageEligibilityRequest',
+      {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
+          this.resourceType = R4ResourceType.CoverageEligibilityRequest,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.priority,
       this.purpose,
-      @JsonKey(name: '_purpose') this.purposeElement,
-      @required this.patient,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
+      @required
+          this.patient,
       this.servicedDate,
-      @JsonKey(name: '_servicedDate') this.servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          this.servicedDateElement,
       this.servicedPeriod,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.enterer,
       this.provider,
-      @required this.insurer,
+      @required
+          this.insurer,
       this.facility,
       this.supportingInfo,
       this.insurance,
@@ -2678,9 +2779,9 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   factory _$_CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_CoverageEligibilityRequestFromJson(json);
 
-  @JsonKey(defaultValue: 'CoverageEligibilityRequest')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -2879,32 +2980,42 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
 abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   _CoverageEligibilityRequest._() : super._();
   factory _CoverageEligibilityRequest(
-          {String resourceType,
+          {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
+              R4ResourceType resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+          @JsonKey(name: '_implicitRules')
+              Element implicitRulesElement,
           Code language,
-          @JsonKey(name: '_language') Element languageElement,
+          @JsonKey(name: '_language')
+              Element languageElement,
           Narrative text,
           List<Resource> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           List<Identifier> identifier,
           Code status,
-          @JsonKey(name: '_status') Element statusElement,
+          @JsonKey(name: '_status')
+              Element statusElement,
           CodeableConcept priority,
           List<CoverageEligibilityRequestPurpose> purpose,
-          @JsonKey(name: '_purpose') List<Element> purposeElement,
-          @required Reference patient,
+          @JsonKey(name: '_purpose')
+              List<Element> purposeElement,
+          @required
+              Reference patient,
           Date servicedDate,
-          @JsonKey(name: '_servicedDate') Element servicedDateElement,
+          @JsonKey(name: '_servicedDate')
+              Element servicedDateElement,
           Period servicedPeriod,
           FhirDateTime created,
-          @JsonKey(name: '_created') Element createdElement,
+          @JsonKey(name: '_created')
+              Element createdElement,
           Reference enterer,
           Reference provider,
-          @required Reference insurer,
+          @required
+              Reference insurer,
           Reference facility,
           List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
           List<CoverageEligibilityRequestInsurance> insurance,
@@ -2915,7 +3026,8 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
       _$_CoverageEligibilityRequest.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -4583,7 +4695,9 @@ class _$CoverageEligibilityResponseTearOff {
 
 // ignore: unused_element
   _CoverageEligibilityResponse call(
-      {String resourceType = 'CoverageEligibilityResponse',
+      {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
+          R4ResourceType
+              resourceType = R4ResourceType.CoverageEligibilityResponse,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4681,7 +4795,8 @@ const $CoverageEligibilityResponse = _$CoverageEligibilityResponseTearOff();
 
 /// @nodoc
 mixin _$CoverageEligibilityResponse {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -4739,7 +4854,8 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
           $Res Function(CoverageEligibilityResponse) then) =
       _$CoverageEligibilityResponseCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4852,7 +4968,7 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5100,7 +5216,8 @@ abstract class _$CoverageEligibilityResponseCopyWith<$Res>
       __$CoverageEligibilityResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5233,7 +5350,7 @@ class __$CoverageEligibilityResponseCopyWithImpl<$Res>
     return _then(_CoverageEligibilityResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5317,7 +5434,8 @@ class __$CoverageEligibilityResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   _$_CoverageEligibilityResponse(
-      {this.resourceType = 'CoverageEligibilityResponse',
+      {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
+          this.resourceType = R4ResourceType.CoverageEligibilityResponse,
       this.id,
       this.meta,
       this.implicitRules,
@@ -5374,9 +5492,9 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   factory _$_CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_CoverageEligibilityResponseFromJson(json);
 
-  @JsonKey(defaultValue: 'CoverageEligibilityResponse')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -5596,61 +5714,63 @@ abstract class _CoverageEligibilityResponse
     extends CoverageEligibilityResponse {
   _CoverageEligibilityResponse._() : super._();
   factory _CoverageEligibilityResponse(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules')
-              Element implicitRulesElement,
-          Code language,
-          @JsonKey(name: '_language')
-              Element languageElement,
-          Narrative text,
-          List<Resource> contained,
-          @JsonKey(name: 'extension')
-              List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          List<Identifier> identifier,
-          Code status,
-          @JsonKey(name: '_status')
-              Element statusElement,
-          List<CoverageEligibilityResponsePurpose> purpose,
-          @JsonKey(name: '_purpose')
-              List<Element> purposeElement,
-          @required
-              Reference patient,
-          Date servicedDate,
-          @JsonKey(name: '_servicedDate')
-              Element servicedDateElement,
-          Period servicedPeriod,
-          FhirDateTime created,
-          @JsonKey(name: '_created')
-              Element createdElement,
-          Reference requestor,
-          @required
-              Reference request,
-          @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-              CoverageEligibilityResponseOutcome outcome,
-          @JsonKey(name: '_outcome')
-              Element outcomeElement,
-          String disposition,
-          @JsonKey(name: '_disposition')
-              Element dispositionElement,
-          @required
-              Reference insurer,
-          List<CoverageEligibilityResponseInsurance> insurance,
-          String preAuthRef,
-          @JsonKey(name: '_preAuthRef')
-              Element preAuthRefElement,
-          CodeableConcept form,
-          List<CoverageEligibilityResponseError> error}) =
-      _$_CoverageEligibilityResponse;
+      {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
+          R4ResourceType resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
+      Code status,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      List<CoverageEligibilityResponsePurpose> purpose,
+      @JsonKey(name: '_purpose')
+          List<Element> purposeElement,
+      @required
+          Reference patient,
+      Date servicedDate,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
+      Period servicedPeriod,
+      FhirDateTime created,
+      @JsonKey(name: '_created')
+          Element createdElement,
+      Reference requestor,
+      @required
+          Reference request,
+      @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
+          CoverageEligibilityResponseOutcome outcome,
+      @JsonKey(name: '_outcome')
+          Element outcomeElement,
+      String disposition,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
+      @required
+          Reference insurer,
+      List<CoverageEligibilityResponseInsurance> insurance,
+      String preAuthRef,
+      @JsonKey(name: '_preAuthRef')
+          Element preAuthRefElement,
+      CodeableConcept form,
+      List<CoverageEligibilityResponseError>
+          error}) = _$_CoverageEligibilityResponse;
 
   factory _CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =
       _$_CoverageEligibilityResponse.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -7721,22 +7841,28 @@ class _$EnrollmentRequestTearOff {
 
 // ignore: unused_element
   _EnrollmentRequest call(
-      {String resourceType = 'EnrollmentRequest',
+      {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
+          R4ResourceType resourceType = R4ResourceType.EnrollmentRequest,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference insurer,
       Reference provider,
       Reference candidate,
@@ -7777,7 +7903,8 @@ const $EnrollmentRequest = _$EnrollmentRequestTearOff();
 
 /// @nodoc
 mixin _$EnrollmentRequest {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -7813,22 +7940,28 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
           EnrollmentRequest value, $Res Function(EnrollmentRequest) then) =
       _$EnrollmentRequestCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference insurer,
       Reference provider,
       Reference candidate,
@@ -7881,7 +8014,7 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -8031,22 +8164,28 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
       __$EnrollmentRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference insurer,
       Reference provider,
       Reference candidate,
@@ -8111,7 +8250,7 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
     return _then(_EnrollmentRequest(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -8158,22 +8297,28 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_EnrollmentRequest extends _EnrollmentRequest {
   _$_EnrollmentRequest(
-      {this.resourceType = 'EnrollmentRequest',
+      {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
+          this.resourceType = R4ResourceType.EnrollmentRequest,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.insurer,
       this.provider,
       this.candidate,
@@ -8184,9 +8329,9 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_EnrollmentRequestFromJson(json);
 
-  @JsonKey(defaultValue: 'EnrollmentRequest')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -8335,22 +8480,28 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 abstract class _EnrollmentRequest extends EnrollmentRequest {
   _EnrollmentRequest._() : super._();
   factory _EnrollmentRequest(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference insurer,
       Reference provider,
       Reference candidate,
@@ -8360,7 +8511,8 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       _$_EnrollmentRequest.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -8418,7 +8570,8 @@ class _$EnrollmentResponseTearOff {
 
 // ignore: unused_element
   _EnrollmentResponse call(
-      {String resourceType = 'EnrollmentResponse',
+      {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
+          R4ResourceType resourceType = R4ResourceType.EnrollmentResponse,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8488,7 +8641,8 @@ const $EnrollmentResponse = _$EnrollmentResponseTearOff();
 
 /// @nodoc
 mixin _$EnrollmentResponse {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -8530,7 +8684,8 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
           EnrollmentResponse value, $Res Function(EnrollmentResponse) then) =
       _$EnrollmentResponseCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8613,7 +8768,7 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -8786,7 +8941,8 @@ abstract class _$EnrollmentResponseCopyWith<$Res>
       __$EnrollmentResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8882,7 +9038,7 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
     return _then(_EnrollmentResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -8942,7 +9098,8 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_EnrollmentResponse extends _EnrollmentResponse {
   _$_EnrollmentResponse(
-      {this.resourceType = 'EnrollmentResponse',
+      {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
+          this.resourceType = R4ResourceType.EnrollmentResponse,
       this.id,
       this.meta,
       this.implicitRules,
@@ -8979,9 +9136,9 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_EnrollmentResponseFromJson(json);
 
-  @JsonKey(defaultValue: 'EnrollmentResponse')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -9151,7 +9308,8 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 abstract class _EnrollmentResponse extends EnrollmentResponse {
   _EnrollmentResponse._() : super._();
   factory _EnrollmentResponse(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9187,7 +9345,8 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       _$_EnrollmentResponse.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override

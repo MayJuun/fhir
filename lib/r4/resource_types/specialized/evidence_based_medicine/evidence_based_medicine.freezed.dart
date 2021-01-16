@@ -19,7 +19,8 @@ class _$EffectEvidenceSynthesisTearOff {
 
 // ignore: unused_element
   _EffectEvidenceSynthesis call(
-      {String resourceType = 'EffectEvidenceSynthesis',
+      {@JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
+          R4ResourceType resourceType = R4ResourceType.EffectEvidenceSynthesis,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -164,7 +165,8 @@ const $EffectEvidenceSynthesis = _$EffectEvidenceSynthesisTearOff();
 
 /// @nodoc
 mixin _$EffectEvidenceSynthesis {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -245,7 +247,8 @@ abstract class $EffectEvidenceSynthesisCopyWith<$Res> {
           $Res Function(EffectEvidenceSynthesis) then) =
       _$EffectEvidenceSynthesisCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -411,7 +414,7 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -776,7 +779,8 @@ abstract class _$EffectEvidenceSynthesisCopyWith<$Res>
       __$EffectEvidenceSynthesisCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -968,7 +972,7 @@ class __$EffectEvidenceSynthesisCopyWithImpl<$Res>
     return _then(_EffectEvidenceSynthesis(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1099,7 +1103,8 @@ class __$EffectEvidenceSynthesisCopyWithImpl<$Res>
 /// @nodoc
 class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   _$_EffectEvidenceSynthesis(
-      {this.resourceType = 'EffectEvidenceSynthesis',
+      {@JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
+          this.resourceType = R4ResourceType.EffectEvidenceSynthesis,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1183,9 +1188,9 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   factory _$_EffectEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$_$_EffectEvidenceSynthesisFromJson(json);
 
-  @JsonKey(defaultValue: 'EffectEvidenceSynthesis')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -1492,7 +1497,8 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
 abstract class _EffectEvidenceSynthesis extends EffectEvidenceSynthesis {
   _EffectEvidenceSynthesis._() : super._();
   factory _EffectEvidenceSynthesis(
-          {String resourceType,
+          {@JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
+              R4ResourceType resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -1572,7 +1578,8 @@ abstract class _EffectEvidenceSynthesis extends EffectEvidenceSynthesis {
       _$_EffectEvidenceSynthesis.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -4029,48 +4036,66 @@ class _$EvidenceTearOff {
 
 // ignore: unused_element
   _Evidence call(
-      {String resourceType = 'Evidence',
+      {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+          R4ResourceType resourceType = R4ResourceType.Evidence,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Identifier> identifier,
       String version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
       String shortTitle,
-      @JsonKey(name: '_shortTitle') Element shortTitleElement,
+      @JsonKey(name: '_shortTitle')
+          Element shortTitleElement,
       String subtitle,
-      @JsonKey(name: '_subtitle') Element subtitleElement,
-      @JsonKey(unknownEnumValue: EvidenceStatus.unknown) EvidenceStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
+          EvidenceStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       FhirDateTime date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<Annotation> note,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       Date approvalDate,
-      @JsonKey(name: '_approvalDate') Element approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
       Date lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
       Period effectivePeriod,
       List<CodeableConcept> topic,
       List<ContactDetail> author,
@@ -4078,7 +4103,8 @@ class _$EvidenceTearOff {
       List<ContactDetail> reviewer,
       List<ContactDetail> endorser,
       List<RelatedArtifact> relatedArtifact,
-      @required Reference exposureBackground,
+      @required
+          Reference exposureBackground,
       List<Reference> exposureVariant,
       List<Reference> outcome}) {
     return _Evidence(
@@ -4149,7 +4175,8 @@ const $Evidence = _$EvidenceTearOff();
 
 /// @nodoc
 mixin _$Evidence {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -4228,48 +4255,66 @@ abstract class $EvidenceCopyWith<$Res> {
   factory $EvidenceCopyWith(Evidence value, $Res Function(Evidence) then) =
       _$EvidenceCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Identifier> identifier,
       String version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
       String shortTitle,
-      @JsonKey(name: '_shortTitle') Element shortTitleElement,
+      @JsonKey(name: '_shortTitle')
+          Element shortTitleElement,
       String subtitle,
-      @JsonKey(name: '_subtitle') Element subtitleElement,
-      @JsonKey(unknownEnumValue: EvidenceStatus.unknown) EvidenceStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
+          EvidenceStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       FhirDateTime date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<Annotation> note,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       Date approvalDate,
-      @JsonKey(name: '_approvalDate') Element approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
       Date lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
       Period effectivePeriod,
       List<CodeableConcept> topic,
       List<ContactDetail> author,
@@ -4368,7 +4413,7 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4679,48 +4724,66 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       __$EvidenceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Identifier> identifier,
       String version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
       String shortTitle,
-      @JsonKey(name: '_shortTitle') Element shortTitleElement,
+      @JsonKey(name: '_shortTitle')
+          Element shortTitleElement,
       String subtitle,
-      @JsonKey(name: '_subtitle') Element subtitleElement,
-      @JsonKey(unknownEnumValue: EvidenceStatus.unknown) EvidenceStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
+          EvidenceStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       FhirDateTime date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<Annotation> note,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       Date approvalDate,
-      @JsonKey(name: '_approvalDate') Element approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
       Date lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
       Period effectivePeriod,
       List<CodeableConcept> topic,
       List<ContactDetail> author,
@@ -4839,7 +4902,7 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
     return _then(_Evidence(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4959,48 +5022,66 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
 /// @nodoc
 class _$_Evidence extends _Evidence {
   _$_Evidence(
-      {this.resourceType = 'Evidence',
+      {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+          this.resourceType = R4ResourceType.Evidence,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
       this.shortTitle,
-      @JsonKey(name: '_shortTitle') this.shortTitleElement,
+      @JsonKey(name: '_shortTitle')
+          this.shortTitleElement,
       this.subtitle,
-      @JsonKey(name: '_subtitle') this.subtitleElement,
-      @JsonKey(unknownEnumValue: EvidenceStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_subtitle')
+          this.subtitleElement,
+      @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       this.contact,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.note,
       this.useContext,
       this.jurisdiction,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
       this.approvalDate,
-      @JsonKey(name: '_approvalDate') this.approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
       this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
       this.effectivePeriod,
       this.topic,
       this.author,
@@ -5008,7 +5089,8 @@ class _$_Evidence extends _Evidence {
       this.reviewer,
       this.endorser,
       this.relatedArtifact,
-      @required this.exposureBackground,
+      @required
+          this.exposureBackground,
       this.exposureVariant,
       this.outcome})
       : assert(resourceType != null),
@@ -5018,9 +5100,9 @@ class _$_Evidence extends _Evidence {
   factory _$_Evidence.fromJson(Map<String, dynamic> json) =>
       _$_$_EvidenceFromJson(json);
 
-  @JsonKey(defaultValue: 'Evidence')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -5316,48 +5398,66 @@ class _$_Evidence extends _Evidence {
 abstract class _Evidence extends Evidence {
   _Evidence._() : super._();
   factory _Evidence(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Identifier> identifier,
       String version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
       String shortTitle,
-      @JsonKey(name: '_shortTitle') Element shortTitleElement,
+      @JsonKey(name: '_shortTitle')
+          Element shortTitleElement,
       String subtitle,
-      @JsonKey(name: '_subtitle') Element subtitleElement,
-      @JsonKey(unknownEnumValue: EvidenceStatus.unknown) EvidenceStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_subtitle')
+          Element subtitleElement,
+      @JsonKey(unknownEnumValue: EvidenceStatus.unknown)
+          EvidenceStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       FhirDateTime date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<Annotation> note,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Markdown copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       Date approvalDate,
-      @JsonKey(name: '_approvalDate') Element approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element approvalDateElement,
       Date lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element lastReviewDateElement,
       Period effectivePeriod,
       List<CodeableConcept> topic,
       List<ContactDetail> author,
@@ -5365,14 +5465,16 @@ abstract class _Evidence extends Evidence {
       List<ContactDetail> reviewer,
       List<ContactDetail> endorser,
       List<RelatedArtifact> relatedArtifact,
-      @required Reference exposureBackground,
+      @required
+          Reference exposureBackground,
       List<Reference> exposureVariant,
       List<Reference> outcome}) = _$_Evidence;
 
   factory _Evidence.fromJson(Map<String, dynamic> json) = _$_Evidence.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -5506,7 +5608,8 @@ class _$EvidenceVariableTearOff {
 
 // ignore: unused_element
   _EvidenceVariable call(
-      {String resourceType = 'EvidenceVariable',
+      {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+          R4ResourceType resourceType = R4ResourceType.EvidenceVariable,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5646,7 +5749,8 @@ const $EvidenceVariable = _$EvidenceVariableTearOff();
 
 /// @nodoc
 mixin _$EvidenceVariable {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -5728,7 +5832,8 @@ abstract class $EvidenceVariableCopyWith<$Res> {
           EvidenceVariable value, $Res Function(EvidenceVariable) then) =
       _$EvidenceVariableCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5888,7 +5993,7 @@ class _$EvidenceVariableCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6201,7 +6306,8 @@ abstract class _$EvidenceVariableCopyWith<$Res>
       __$EvidenceVariableCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6382,7 +6488,7 @@ class __$EvidenceVariableCopyWithImpl<$Res>
     return _then(_EvidenceVariable(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6502,48 +6608,66 @@ class __$EvidenceVariableCopyWithImpl<$Res>
 /// @nodoc
 class _$_EvidenceVariable extends _EvidenceVariable {
   _$_EvidenceVariable(
-      {this.resourceType = 'EvidenceVariable',
+      {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+          this.resourceType = R4ResourceType.EvidenceVariable,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
       this.shortTitle,
-      @JsonKey(name: '_shortTitle') this.shortTitleElement,
+      @JsonKey(name: '_shortTitle')
+          this.shortTitleElement,
       this.subtitle,
-      @JsonKey(name: '_subtitle') this.subtitleElement,
-      @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_subtitle')
+          this.subtitleElement,
+      @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       this.contact,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.note,
       this.useContext,
       this.jurisdiction,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
       this.approvalDate,
-      @JsonKey(name: '_approvalDate') this.approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
       this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
       this.effectivePeriod,
       this.topic,
       this.author,
@@ -6551,9 +6675,12 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       this.reviewer,
       this.endorser,
       this.relatedArtifact,
-      @JsonKey(unknownEnumValue: EvidenceVariableType.unknown) this.type,
-      @JsonKey(name: '_type') this.typeElement,
-      @required this.characteristic})
+      @JsonKey(unknownEnumValue: EvidenceVariableType.unknown)
+          this.type,
+      @JsonKey(name: '_type')
+          this.typeElement,
+      @required
+          this.characteristic})
       : assert(resourceType != null),
         assert(characteristic != null),
         super._();
@@ -6561,9 +6688,9 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   factory _$_EvidenceVariable.fromJson(Map<String, dynamic> json) =>
       _$_$_EvidenceVariableFromJson(json);
 
-  @JsonKey(defaultValue: 'EvidenceVariable')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -6861,7 +6988,8 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 abstract class _EvidenceVariable extends EvidenceVariable {
   _EvidenceVariable._() : super._();
   factory _EvidenceVariable(
-          {String resourceType,
+          {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+              R4ResourceType resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -6939,7 +7067,8 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       _$_EvidenceVariable.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -7980,7 +8109,8 @@ class _$ResearchDefinitionTearOff {
 
 // ignore: unused_element
   _ResearchDefinition call(
-      {String resourceType = 'ResearchDefinition',
+      {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+          R4ResourceType resourceType = R4ResourceType.ResearchDefinition,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8145,7 +8275,8 @@ const $ResearchDefinition = _$ResearchDefinitionTearOff();
 
 /// @nodoc
 mixin _$ResearchDefinition {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -8241,7 +8372,8 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
           ResearchDefinition value, $Res Function(ResearchDefinition) then) =
       _$ResearchDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8434,7 +8566,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -8855,7 +8987,8 @@ abstract class _$ResearchDefinitionCopyWith<$Res>
       __$ResearchDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9077,7 +9210,7 @@ class __$ResearchDefinitionCopyWithImpl<$Res>
     return _then(_ResearchDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -9224,57 +9357,79 @@ class __$ResearchDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_ResearchDefinition extends _ResearchDefinition {
   _$_ResearchDefinition(
-      {this.resourceType = 'ResearchDefinition',
+      {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+          this.resourceType = R4ResourceType.ResearchDefinition,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
       this.shortTitle,
-      @JsonKey(name: '_shortTitle') this.shortTitleElement,
+      @JsonKey(name: '_shortTitle')
+          this.shortTitleElement,
       this.subtitle,
-      @JsonKey(name: '_subtitle') this.subtitleElement,
-      @JsonKey(unknownEnumValue: ResearchDefinitionStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_subtitle')
+          this.subtitleElement,
+      @JsonKey(unknownEnumValue: ResearchDefinitionStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental') this.experimentalElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
       this.subjectCodeableConcept,
       this.subjectReference,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       this.contact,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.comment,
-      @JsonKey(name: '_comment') this.commentElement,
+      @JsonKey(name: '_comment')
+          this.commentElement,
       this.useContext,
       this.jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose') this.purposeElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
       this.usage,
-      @JsonKey(name: '_usage') this.usageElement,
+      @JsonKey(name: '_usage')
+          this.usageElement,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
       this.approvalDate,
-      @JsonKey(name: '_approvalDate') this.approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
       this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
       this.effectivePeriod,
       this.topic,
       this.author,
@@ -9282,8 +9437,10 @@ class _$_ResearchDefinition extends _ResearchDefinition {
       this.reviewer,
       this.endorser,
       this.relatedArtifact,
-      @JsonKey(name: 'library') this.library_,
-      @required this.population,
+      @JsonKey(name: 'library')
+          this.library_,
+      @required
+          this.population,
       this.exposure,
       this.exposureAlternative,
       this.outcome})
@@ -9294,9 +9451,9 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   factory _$_ResearchDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchDefinitionFromJson(json);
 
-  @JsonKey(defaultValue: 'ResearchDefinition')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -9641,7 +9798,8 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 abstract class _ResearchDefinition extends ResearchDefinition {
   _ResearchDefinition._() : super._();
   factory _ResearchDefinition(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9732,7 +9890,8 @@ abstract class _ResearchDefinition extends ResearchDefinition {
       _$_ResearchDefinition.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -9894,7 +10053,9 @@ class _$ResearchElementDefinitionTearOff {
 
 // ignore: unused_element
   _ResearchElementDefinition call(
-      {String resourceType = 'ResearchElementDefinition',
+      {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+          R4ResourceType
+              resourceType = R4ResourceType.ResearchElementDefinition,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10065,7 +10226,8 @@ const $ResearchElementDefinition = _$ResearchElementDefinitionTearOff();
 
 /// @nodoc
 mixin _$ResearchElementDefinition {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -10166,7 +10328,8 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
           $Res Function(ResearchElementDefinition) then) =
       _$ResearchElementDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10363,7 +10526,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -10770,7 +10933,8 @@ abstract class _$ResearchElementDefinitionCopyWith<$Res>
       __$ResearchElementDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10995,7 +11159,7 @@ class __$ResearchElementDefinitionCopyWithImpl<$Res>
     return _then(_ResearchElementDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -11148,7 +11312,8 @@ class __$ResearchElementDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   _$_ResearchElementDefinition(
-      {this.resourceType = 'ResearchElementDefinition',
+      {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+          this.resourceType = R4ResourceType.ResearchElementDefinition,
       this.id,
       this.meta,
       this.implicitRules,
@@ -11246,9 +11411,9 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   factory _$_ResearchElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$_$_ResearchElementDefinitionFromJson(json);
 
-  @JsonKey(defaultValue: 'ResearchElementDefinition')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -11603,7 +11768,8 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   _ResearchElementDefinition._() : super._();
   factory _ResearchElementDefinition(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11700,7 +11866,8 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
       _$_ResearchElementDefinition.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -13159,7 +13326,8 @@ class _$RiskEvidenceSynthesisTearOff {
 
 // ignore: unused_element
   _RiskEvidenceSynthesis call(
-      {String resourceType = 'RiskEvidenceSynthesis',
+      {@JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
+          R4ResourceType resourceType = R4ResourceType.RiskEvidenceSynthesis,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -13298,7 +13466,8 @@ const $RiskEvidenceSynthesis = _$RiskEvidenceSynthesisTearOff();
 
 /// @nodoc
 mixin _$RiskEvidenceSynthesis {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -13377,7 +13546,8 @@ abstract class $RiskEvidenceSynthesisCopyWith<$Res> {
           $Res Function(RiskEvidenceSynthesis) then) =
       _$RiskEvidenceSynthesisCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -13539,7 +13709,7 @@ class _$RiskEvidenceSynthesisCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -13899,7 +14069,8 @@ abstract class _$RiskEvidenceSynthesisCopyWith<$Res>
       __$RiskEvidenceSynthesisCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -14086,7 +14257,7 @@ class __$RiskEvidenceSynthesisCopyWithImpl<$Res>
     return _then(_RiskEvidenceSynthesis(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -14211,7 +14382,8 @@ class __$RiskEvidenceSynthesisCopyWithImpl<$Res>
 /// @nodoc
 class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
   _$_RiskEvidenceSynthesis(
-      {this.resourceType = 'RiskEvidenceSynthesis',
+      {@JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
+          this.resourceType = R4ResourceType.RiskEvidenceSynthesis,
       this.id,
       this.meta,
       this.implicitRules,
@@ -14289,9 +14461,9 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
   factory _$_RiskEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$_$_RiskEvidenceSynthesisFromJson(json);
 
-  @JsonKey(defaultValue: 'RiskEvidenceSynthesis')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -14590,7 +14762,8 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
 abstract class _RiskEvidenceSynthesis extends RiskEvidenceSynthesis {
   _RiskEvidenceSynthesis._() : super._();
   factory _RiskEvidenceSynthesis(
-          {String resourceType,
+          {@JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
+              R4ResourceType resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -14666,7 +14839,8 @@ abstract class _RiskEvidenceSynthesis extends RiskEvidenceSynthesis {
       _$_RiskEvidenceSynthesis.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override

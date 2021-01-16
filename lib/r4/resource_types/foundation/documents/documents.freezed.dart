@@ -18,7 +18,8 @@ class _$CatalogEntryTearOff {
 
 // ignore: unused_element
   _CatalogEntry call(
-      {String resourceType = 'CatalogEntry',
+      {@JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
+          R4ResourceType resourceType = R4ResourceType.CatalogEntry,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -99,7 +100,8 @@ const $CatalogEntry = _$CatalogEntryTearOff();
 
 /// @nodoc
 mixin _$CatalogEntry {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -146,7 +148,8 @@ abstract class $CatalogEntryCopyWith<$Res> {
           CatalogEntry value, $Res Function(CatalogEntry) then) =
       _$CatalogEntryCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -238,7 +241,7 @@ class _$CatalogEntryCopyWithImpl<$Res> implements $CatalogEntryCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -425,7 +428,8 @@ abstract class _$CatalogEntryCopyWith<$Res>
       __$CatalogEntryCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -530,7 +534,7 @@ class __$CatalogEntryCopyWithImpl<$Res> extends _$CatalogEntryCopyWithImpl<$Res>
     return _then(_CatalogEntry(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -604,31 +608,41 @@ class __$CatalogEntryCopyWithImpl<$Res> extends _$CatalogEntryCopyWithImpl<$Res>
 /// @nodoc
 class _$_CatalogEntry extends _CatalogEntry {
   _$_CatalogEntry(
-      {this.resourceType = 'CatalogEntry',
+      {@JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
+          this.resourceType = R4ResourceType.CatalogEntry,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.type,
       this.orderable,
-      @JsonKey(name: '_orderable') this.orderableElement,
-      @required this.referencedItem,
+      @JsonKey(name: '_orderable')
+          this.orderableElement,
+      @required
+          this.referencedItem,
       this.additionalIdentifier,
       this.classification,
-      @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.validityPeriod,
       this.validTo,
-      @JsonKey(name: '_validTo') this.validToElement,
+      @JsonKey(name: '_validTo')
+          this.validToElement,
       this.lastUpdated,
-      @JsonKey(name: '_lastUpdated') this.lastUpdatedElement,
+      @JsonKey(name: '_lastUpdated')
+          this.lastUpdatedElement,
       this.additionalCharacteristic,
       this.additionalClassification,
       this.relatedEntry})
@@ -639,9 +653,9 @@ class _$_CatalogEntry extends _CatalogEntry {
   factory _$_CatalogEntry.fromJson(Map<String, dynamic> json) =>
       _$_$_CatalogEntryFromJson(json);
 
-  @JsonKey(defaultValue: 'CatalogEntry')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -831,7 +845,8 @@ class _$_CatalogEntry extends _CatalogEntry {
 abstract class _CatalogEntry extends CatalogEntry {
   _CatalogEntry._() : super._();
   factory _CatalogEntry(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -873,7 +888,8 @@ abstract class _CatalogEntry extends CatalogEntry {
       _$_CatalogEntry.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -1269,7 +1285,8 @@ class _$CompositionTearOff {
 
 // ignore: unused_element
   _Composition call(
-      {String resourceType = 'Composition',
+      {@JsonKey(unknownEnumValue: R4ResourceType.Composition)
+          R4ResourceType resourceType = R4ResourceType.Composition,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1355,7 +1372,8 @@ const $Composition = _$CompositionTearOff();
 
 /// @nodoc
 mixin _$Composition {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Composition)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1404,7 +1422,8 @@ abstract class $CompositionCopyWith<$Res> {
           Composition value, $Res Function(Composition) then) =
       _$CompositionCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Composition)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1502,7 +1521,7 @@ class _$CompositionCopyWithImpl<$Res> implements $CompositionCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1705,7 +1724,8 @@ abstract class _$CompositionCopyWith<$Res>
       __$CompositionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Composition)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1818,7 +1838,7 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
     return _then(_Composition(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1888,31 +1908,42 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
 /// @nodoc
 class _$_Composition extends _Composition {
   _$_Composition(
-      {this.resourceType = 'Composition',
+      {@JsonKey(unknownEnumValue: R4ResourceType.Composition)
+          this.resourceType = R4ResourceType.Composition,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: CompositionStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
-      @required this.type,
+      @JsonKey(unknownEnumValue: CompositionStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @required
+          this.type,
       this.category,
       this.subject,
       this.encounter,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
-      @required this.author,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @required
+          this.author,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
       this.confidentiality,
-      @JsonKey(name: '_confidentiality') this.confidentialityElement,
+      @JsonKey(name: '_confidentiality')
+          this.confidentialityElement,
       this.attester,
       this.custodian,
       this.relatesTo,
@@ -1926,9 +1957,9 @@ class _$_Composition extends _Composition {
   factory _$_Composition.fromJson(Map<String, dynamic> json) =>
       _$_$_CompositionFromJson(json);
 
-  @JsonKey(defaultValue: 'Composition')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Composition)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -2126,7 +2157,8 @@ class _$_Composition extends _Composition {
 abstract class _Composition extends Composition {
   _Composition._() : super._();
   factory _Composition(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.Composition)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2171,7 +2203,8 @@ abstract class _Composition extends Composition {
       _$_Composition.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.Composition)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -3747,7 +3780,8 @@ class _$DocumentManifestTearOff {
 
 // ignore: unused_element
   _DocumentManifest call(
-      {String resourceType = 'DocumentManifest',
+      {@JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
+          R4ResourceType resourceType = R4ResourceType.DocumentManifest,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3826,7 +3860,8 @@ const $DocumentManifest = _$DocumentManifestTearOff();
 
 /// @nodoc
 mixin _$DocumentManifest {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -3872,7 +3907,8 @@ abstract class $DocumentManifestCopyWith<$Res> {
           DocumentManifest value, $Res Function(DocumentManifest) then) =
       _$DocumentManifestCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -3963,7 +3999,7 @@ class _$DocumentManifestCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4141,7 +4177,8 @@ abstract class _$DocumentManifestCopyWith<$Res>
       __$DocumentManifestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4245,7 +4282,7 @@ class __$DocumentManifestCopyWithImpl<$Res>
     return _then(_DocumentManifest(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4310,32 +4347,42 @@ class __$DocumentManifestCopyWithImpl<$Res>
 /// @nodoc
 class _$_DocumentManifest extends _DocumentManifest {
   _$_DocumentManifest(
-      {this.resourceType = 'DocumentManifest',
+      {@JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
+          this.resourceType = R4ResourceType.DocumentManifest,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.masterIdentifier,
       this.identifier,
-      @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.type,
       this.subject,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.author,
       this.recipient,
       this.source,
-      @JsonKey(name: '_source') this.sourceElement,
+      @JsonKey(name: '_source')
+          this.sourceElement,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
-      @required this.content,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @required
+          this.content,
       this.related})
       : assert(resourceType != null),
         assert(content != null),
@@ -4344,9 +4391,9 @@ class _$_DocumentManifest extends _DocumentManifest {
   factory _$_DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentManifestFromJson(json);
 
-  @JsonKey(defaultValue: 'DocumentManifest')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -4533,7 +4580,8 @@ class _$_DocumentManifest extends _DocumentManifest {
 abstract class _DocumentManifest extends DocumentManifest {
   _DocumentManifest._() : super._();
   factory _DocumentManifest(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4574,7 +4622,8 @@ abstract class _DocumentManifest extends DocumentManifest {
       _$_DocumentManifest.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -4918,7 +4967,8 @@ class _$DocumentReferenceTearOff {
 
 // ignore: unused_element
   _DocumentReference call(
-      {String resourceType = 'DocumentReference',
+      {@JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
+          R4ResourceType resourceType = R4ResourceType.DocumentReference,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5005,7 +5055,8 @@ const $DocumentReference = _$DocumentReferenceTearOff();
 
 /// @nodoc
 mixin _$DocumentReference {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -5055,7 +5106,8 @@ abstract class $DocumentReferenceCopyWith<$Res> {
           DocumentReference value, $Res Function(DocumentReference) then) =
       _$DocumentReferenceCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5157,7 +5209,7 @@ class _$DocumentReferenceCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5377,7 +5429,8 @@ abstract class _$DocumentReferenceCopyWith<$Res>
       __$DocumentReferenceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5495,7 +5548,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
     return _then(_DocumentReference(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5572,36 +5625,46 @@ class __$DocumentReferenceCopyWithImpl<$Res>
 /// @nodoc
 class _$_DocumentReference extends _DocumentReference {
   _$_DocumentReference(
-      {this.resourceType = 'DocumentReference',
+      {@JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
+          this.resourceType = R4ResourceType.DocumentReference,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.masterIdentifier,
       this.identifier,
-      @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.docStatus,
-      @JsonKey(name: '_docStatus') this.docStatusElement,
+      @JsonKey(name: '_docStatus')
+          this.docStatusElement,
       this.type,
       this.category,
       this.subject,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.author,
       this.authenticator,
       this.custodian,
       this.relatesTo,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.securityLabel,
-      @required this.content,
+      @required
+          this.content,
       this.context})
       : assert(resourceType != null),
         assert(content != null),
@@ -5610,9 +5673,9 @@ class _$_DocumentReference extends _DocumentReference {
   factory _$_DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentReferenceFromJson(json);
 
-  @JsonKey(defaultValue: 'DocumentReference')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -5815,7 +5878,8 @@ class _$_DocumentReference extends _DocumentReference {
 abstract class _DocumentReference extends DocumentReference {
   _DocumentReference._() : super._();
   factory _DocumentReference(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5860,7 +5924,8 @@ abstract class _DocumentReference extends DocumentReference {
       _$_DocumentReference.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override

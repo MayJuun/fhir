@@ -242,7 +242,7 @@ const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.Immunization: 'Immunization',
   Dstu2ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   Dstu2ResourceType.ImplementationGuide: 'ImplementationGuide',
-  Dstu2ResourceType.List: 'List',
+  Dstu2ResourceType.List_: 'List',
   Dstu2ResourceType.Location: 'Location',
   Dstu2ResourceType.Media: 'Media',
   Dstu2ResourceType.Medication: 'Medication',
@@ -1114,7 +1114,7 @@ _$_List_ _$_$_List_FromJson(Map<String, dynamic> json) {
   return _$_List_(
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Dstu2ResourceType.List),
+        unknownValue: Dstu2ResourceType.List_),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null

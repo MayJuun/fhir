@@ -88,7 +88,9 @@ abstract class Basic with Resource implements _$Basic {
   /// [author]: Indicates who was responsible for creating the resource
   ///  instance.
   factory Basic({
-    @Default('Basic') String resourceType,
+    @Default(R4ResourceType.Basic)
+    @JsonKey(unknownEnumValue: R4ResourceType.Basic)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -170,7 +172,9 @@ abstract class Binary with Resource implements _$Binary {
   ///
   /// [_data]: Extensions for data
   factory Binary({
-    @Default('Binary') String resourceType,
+    @Default(R4ResourceType.Binary)
+    @JsonKey(unknownEnumValue: R4ResourceType.Binary)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -251,7 +255,9 @@ abstract class Bundle with Resource implements _$Bundle {
   ///
   /// [signature]: Digital Signature - base64 encoded. XML-DSig or a JWT.
   factory Bundle({
-    @Default('Bundle') String resourceType,
+    @Default(R4ResourceType.Bundle)
+    @JsonKey(unknownEnumValue: R4ResourceType.Bundle)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -752,7 +758,9 @@ abstract class Linkage with Resource implements _$Linkage {
   /// real-world occurrence as well as how the items should be evaluated within
   ///  the collection of linked items.
   factory Linkage({
-    @Default('Linkage') String resourceType,
+    @Default(R4ResourceType.Linkage)
+    @JsonKey(unknownEnumValue: R4ResourceType.Linkage)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -954,7 +962,9 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
   ///
   /// [definition]: Permanent link to the MessageDefinition for this message.
   factory MessageHeader({
-    @Default('MessageHeader') String resourceType,
+    @Default(R4ResourceType.MessageHeader)
+    @JsonKey(unknownEnumValue: R4ResourceType.MessageHeader)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1290,7 +1300,9 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
   /// [issue]: An error, warning, or information message that results from a
   ///  system action.
   factory OperationOutcome({
-    @Default('OperationOutcome') String resourceType,
+    @Default(R4ResourceType.OperationOutcome)
+    @JsonKey(unknownEnumValue: R4ResourceType.OperationOutcome)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1449,7 +1461,9 @@ abstract class Parameters with Resource implements _$Parameters {
   ///
   /// [parameter]: A parameter passed to or received from the operation.
   factory Parameters({
-    @Default('Parameters') String resourceType,
+    @Default(R4ResourceType.Parameters)
+    @JsonKey(unknownEnumValue: R4ResourceType.Parameters)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1838,7 +1852,9 @@ abstract class Subscription with Resource implements _$Subscription {
   /// [channel]: Details where to send notifications when resources are received
   ///  that meet the criteria.
   factory Subscription({
-    @Default('Subscription') String resourceType,
+    @Default(R4ResourceType.Subscription)
+    @JsonKey(unknownEnumValue: R4ResourceType.Subscription)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

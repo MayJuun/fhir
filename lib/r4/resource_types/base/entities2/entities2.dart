@@ -112,7 +112,9 @@ abstract class BiologicallyDerivedProduct
   ///
   /// [storage]: Product storage.
   factory BiologicallyDerivedProduct({
-    @Default('BiologicallyDerivedProduct') String resourceType,
+    @Default(R4ResourceType.BiologicallyDerivedProduct)
+    @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -609,7 +611,9 @@ abstract class Device with Resource implements _$Device {
   ///
   /// [parent]: The parent device.
   factory Device({
-    @Default('Device') String resourceType,
+    @Default(R4ResourceType.Device)
+    @JsonKey(unknownEnumValue: R4ResourceType.Device)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1149,7 +1153,9 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
   /// [calibration]: Describes the calibrations that have been performed or that
   ///  are required to be performed.
   factory DeviceMetric({
-    @Default('DeviceMetric') String resourceType,
+    @Default(R4ResourceType.DeviceMetric)
+    @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1344,7 +1350,9 @@ abstract class Substance with Resource implements _$Substance {
   ///
   /// [ingredient]: A substance can be composed of other substances.
   factory Substance({
-    @Default('Substance') String resourceType,
+    @Default(R4ResourceType.Substance)
+    @JsonKey(unknownEnumValue: R4ResourceType.Substance)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

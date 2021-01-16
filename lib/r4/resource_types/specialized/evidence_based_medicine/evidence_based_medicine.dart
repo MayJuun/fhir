@@ -214,7 +214,9 @@ abstract class EffectEvidenceSynthesis
   ///
   /// [certainty]: A description of the certainty of the effect estimate.
   factory EffectEvidenceSynthesis({
-    @Default('EffectEvidenceSynthesis') String resourceType,
+    @Default(R4ResourceType.EffectEvidenceSynthesis)
+    @JsonKey(unknownEnumValue: R4ResourceType.EffectEvidenceSynthesis)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -936,7 +938,9 @@ abstract class Evidence with Resource implements _$Evidence {
   /// [outcome]: A reference to a EvidenceVariable resomece that defines the
   ///  outcome for the research.
   factory Evidence({
-    @Default('Evidence') String resourceType,
+    @Default(R4ResourceType.Evidence)
+    @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1202,7 +1206,9 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
   /// evidence element. Multiple characteristics are applied with "and"
   ///  semantics.
   factory EvidenceVariable({
-    @Default('EvidenceVariable') String resourceType,
+    @Default(R4ResourceType.EvidenceVariable)
+    @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1651,7 +1657,9 @@ abstract class ResearchDefinition
   /// [outcome]: A reference to a ResearchElementDefinition resomece that
   ///  defines the outcome for the research.
   factory ResearchDefinition({
-    @Default('ResearchDefinition') String resourceType,
+    @Default(R4ResourceType.ResearchDefinition)
+    @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1972,7 +1980,9 @@ abstract class ResearchElementDefinition
   /// research element. Multiple characteristics are applied with "and"
   ///  semantics.
   factory ResearchElementDefinition({
-    @Default('ResearchElementDefinition') String resourceType,
+    @Default(R4ResourceType.ResearchElementDefinition)
+    @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2441,7 +2451,9 @@ abstract class RiskEvidenceSynthesis
   ///
   /// [certainty]: A description of the certainty of the risk estimate.
   factory RiskEvidenceSynthesis({
-    @Default('RiskEvidenceSynthesis') String resourceType,
+    @Default(R4ResourceType.RiskEvidenceSynthesis)
+    @JsonKey(unknownEnumValue: R4ResourceType.RiskEvidenceSynthesis)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

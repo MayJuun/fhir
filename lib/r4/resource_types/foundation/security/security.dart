@@ -107,7 +107,9 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
   ///
   /// [entity]: Specific instances of data or objects that have been accessed.
   factory AuditEvent({
-    @Default('AuditEvent') String resourceType,
+    @Default(R4ResourceType.AuditEvent)
+    @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -670,7 +672,9 @@ abstract class Consent with Resource implements _$Consent {
   /// [provision]: An exception to the base policy of this consent. An exception
   ///  can be an addition or removal of access permissions.
   factory Consent({
-    @Default('Consent') String resourceType,
+    @Default(R4ResourceType.Consent)
+    @JsonKey(unknownEnumValue: R4ResourceType.Consent)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1182,7 +1186,9 @@ abstract class Provenance with Resource implements _$Provenance {
   /// should match a Provenance.agent. The purpose of the signature is
   ///  indicated.
   factory Provenance({
-    @Default('Provenance') String resourceType,
+    @Default(R4ResourceType.Provenance)
+    @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

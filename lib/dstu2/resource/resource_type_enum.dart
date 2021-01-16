@@ -102,7 +102,7 @@ enum Dstu2ResourceType {
   @JsonValue('ImplementationGuide')
   ImplementationGuide,
   @JsonValue('List')
-  List,
+  List_,
   @JsonValue('Location')
   Location,
   @JsonValue('Media')

@@ -154,7 +154,9 @@ abstract class Communication with Resource implements _$Communication {
   /// [note]: Additional notes or commentary about the communication by the
   ///  sender, receiver or other interested parties.
   factory Communication({
-    @Default('Communication') String resourceType,
+    @Default(R4ResourceType.Communication)
+    @JsonKey(unknownEnumValue: R4ResourceType.Communication)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -420,7 +422,9 @@ abstract class CommunicationRequest
   /// [note]: Comments made about the request by the requester, sender,
   ///  recipient, subject or other participants.
   factory CommunicationRequest({
-    @Default('CommunicationRequest') String resourceType,
+    @Default(R4ResourceType.CommunicationRequest)
+    @JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -701,7 +705,9 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
   ///
   /// [relevantHistory]: Key events in the history of the request.
   factory DeviceRequest({
-    @Default('DeviceRequest') String resourceType,
+    @Default(R4ResourceType.DeviceRequest)
+    @JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -941,7 +947,9 @@ abstract class DeviceUseStatement
   /// may include for example a comment, an instruction, or a note associated
   ///  with the statement.
   factory DeviceUseStatement({
-    @Default('DeviceUseStatement') String resourceType,
+    @Default(R4ResourceType.DeviceUseStatement)
+    @JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1126,7 +1134,9 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
   /// order to proceed with the evaluation. A subsequent request to the service
   ///  should include this data.
   factory GuidanceResponse({
-    @Default('GuidanceResponse') String resourceType,
+    @Default(R4ResourceType.GuidanceResponse)
+    @JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1273,7 +1283,9 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
   ///
   /// [receiver]: Identifies the person who picked up the Supply.
   factory SupplyDelivery({
-    @Default('SupplyDelivery') String resourceType,
+    @Default(R4ResourceType.SupplyDelivery)
+    @JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1496,7 +1508,9 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
   ///
   /// [deliverTo]: Where the supply is destined to go.
   factory SupplyRequest({
-    @Default('SupplyRequest') String resourceType,
+    @Default(R4ResourceType.SupplyRequest)
+    @JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

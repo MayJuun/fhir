@@ -206,7 +206,9 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
   /// are inherently hierarchical, but the definitions must be consulted to
   ///  determine what the meanings of the hierarchical relationships are.
   factory CodeSystem({
-    @Default('CodeSystem') String resourceType,
+    @Default(R4ResourceType.CodeSystem)
+    @JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -866,7 +868,9 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
   /// [group]: A group of mappings that all have the same source and target
   ///  system.
   factory ConceptMap({
-    @Default('ConceptMap') String resourceType,
+    @Default(R4ResourceType.ConceptMap)
+    @JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1469,7 +1473,9 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
   /// [uniqueId]: Indicates how the system may be identified when referenced in
   ///  electronic exchange.
   factory NamingSystem({
-    @Default('NamingSystem') String resourceType,
+    @Default(R4ResourceType.NamingSystem)
+    @JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1788,7 +1794,9 @@ abstract class TerminologyCapabilities
   ///
   /// [validateCode]: Information about the
   factory TerminologyCapabilities({
-    @Default('TerminologyCapabilities') String resourceType,
+    @Default(R4ResourceType.TerminologyCapabilities)
+    @JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2733,7 +2741,9 @@ abstract class ValueSet with Resource implements _$ValueSet {
   /// turned into a simple collection of enumerated codes. This element holds
   ///  the expansion, if it has been performed.
   factory ValueSet({
-    @Default('ValueSet') String resourceType,
+    @Default(R4ResourceType.ValueSet)
+    @JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

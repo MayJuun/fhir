@@ -20,7 +20,7 @@ part 'resource_types_enum.dart';
 @JsonSerializable()
 class Resource {
   Id id;
-  String resourceType;
+  R4ResourceType resourceType;
   Meta meta;
   FhirUri implicitRules;
   Code language;

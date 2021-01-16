@@ -439,8 +439,8 @@ abstract class DocumentReferenceContextRelated
 abstract class List_ with Resource implements _$List_ {
   List_._();
   factory List_({
-    @Default(Dstu2ResourceType.List)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+    @Default(Dstu2ResourceType.List_)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
         Dstu2ResourceType resourceType,
     Id id,
     Meta meta,

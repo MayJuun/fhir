@@ -143,7 +143,9 @@ abstract class AdverseEvent with Resource implements _$AdverseEvent {
   ///
   /// [study]: AdverseEvent.study.
   factory AdverseEvent({
-    @Default('AdverseEvent') String resourceType,
+    @Default(R4ResourceType.AdverseEvent)
+    @JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -480,7 +482,9 @@ abstract class AllergyIntolerance
   /// [reaction]: Details about each adverse reaction event linked to exposure
   ///  to the identified substance.
   factory AllergyIntolerance({
-    @Default('AllergyIntolerance') String resourceType,
+    @Default(R4ResourceType.AllergyIntolerance)
+    @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -779,7 +783,9 @@ abstract class ClinicalImpression
   /// impression itself was made, though supplemental notes by the original
   ///  author could also appear.
   factory ClinicalImpression({
-    @Default('ClinicalImpression') String resourceType,
+    @Default(R4ResourceType.ClinicalImpression)
+    @JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1131,7 +1137,9 @@ abstract class Condition with Resource implements _$Condition {
   /// notes/comments entry  for description of the Condition, its diagnosis and
   ///  prognosis.
   factory Condition({
-    @Default('Condition') String resourceType,
+    @Default(R4ResourceType.Condition)
+    @JsonKey(unknownEnumValue: R4ResourceType.Condition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1424,7 +1432,9 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
   /// issue from manifesting.  Can also reflect an observation of known
   ///  mitigating factors that may reduce/eliminate the need for any action.
   factory DetectedIssue({
-    @Default('DetectedIssue') String resourceType,
+    @Default(R4ResourceType.DetectedIssue)
+    @JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1762,7 +1772,9 @@ abstract class FamilyMemberHistory
   /// more than one condition per resource, though there is nothing stopping
   ///  multiple resources - one per condition.
   factory FamilyMemberHistory({
-    @Default('FamilyMemberHistory') String resourceType,
+    @Default(R4ResourceType.FamilyMemberHistory)
+    @JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2108,7 +2120,9 @@ abstract class Procedure with Resource implements _$Procedure {
   /// [usedCode]: Identifies coded items that were used as part of the
   ///  procedure.
   factory Procedure({
-    @Default('Procedure') String resourceType,
+    @Default(R4ResourceType.Procedure)
+    @JsonKey(unknownEnumValue: R4ResourceType.Procedure)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

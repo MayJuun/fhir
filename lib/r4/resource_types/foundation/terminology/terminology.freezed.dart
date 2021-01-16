@@ -18,7 +18,8 @@ class _$CodeSystemTearOff {
 
 // ignore: unused_element
   _CodeSystem call(
-      {String resourceType = 'CodeSystem',
+      {@JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
+          R4ResourceType resourceType = R4ResourceType.CodeSystem,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -165,7 +166,8 @@ const $CodeSystem = _$CodeSystemTearOff();
 
 /// @nodoc
 mixin _$CodeSystem {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -253,7 +255,8 @@ abstract class $CodeSystemCopyWith<$Res> {
           CodeSystem value, $Res Function(CodeSystem) then) =
       _$CodeSystemCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -422,7 +425,7 @@ class _$CodeSystemCopyWithImpl<$Res> implements $CodeSystemCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -766,7 +769,8 @@ abstract class _$CodeSystemCopyWith<$Res> implements $CodeSystemCopyWith<$Res> {
       __$CodeSystemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -958,7 +962,7 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
     return _then(_CodeSystem(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1090,7 +1094,8 @@ class __$CodeSystemCopyWithImpl<$Res> extends _$CodeSystemCopyWithImpl<$Res>
 /// @nodoc
 class _$_CodeSystem extends _CodeSystem {
   _$_CodeSystem(
-      {this.resourceType = 'CodeSystem',
+      {@JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
+          this.resourceType = R4ResourceType.CodeSystem,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1173,9 +1178,9 @@ class _$_CodeSystem extends _CodeSystem {
   factory _$_CodeSystem.fromJson(Map<String, dynamic> json) =>
       _$_$_CodeSystemFromJson(json);
 
-  @JsonKey(defaultValue: 'CodeSystem')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -1485,7 +1490,8 @@ class _$_CodeSystem extends _CodeSystem {
 abstract class _CodeSystem extends CodeSystem {
   _CodeSystem._() : super._();
   factory _CodeSystem(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1567,7 +1573,8 @@ abstract class _CodeSystem extends CodeSystem {
       _$_CodeSystem.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -4037,7 +4044,8 @@ class _$ConceptMapTearOff {
 
 // ignore: unused_element
   _ConceptMap call(
-      {String resourceType = 'ConceptMap',
+      {@JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
+          R4ResourceType resourceType = R4ResourceType.ConceptMap,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4164,7 +4172,8 @@ const $ConceptMap = _$ConceptMapTearOff();
 
 /// @nodoc
 mixin _$ConceptMap {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -4240,7 +4249,8 @@ abstract class $ConceptMapCopyWith<$Res> {
           ConceptMap value, $Res Function(ConceptMap) then) =
       _$ConceptMapCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4388,7 +4398,7 @@ class _$ConceptMapCopyWithImpl<$Res> implements $ConceptMapCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4697,7 +4707,8 @@ abstract class _$ConceptMapCopyWith<$Res> implements $ConceptMapCopyWith<$Res> {
       __$ConceptMapCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4867,7 +4878,7 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
     return _then(_ConceptMap(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4974,51 +4985,71 @@ class __$ConceptMapCopyWithImpl<$Res> extends _$ConceptMapCopyWithImpl<$Res>
 /// @nodoc
 class _$_ConceptMap extends _ConceptMap {
   _$_ConceptMap(
-      {this.resourceType = 'ConceptMap',
+      {@JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
+          this.resourceType = R4ResourceType.ConceptMap,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
-      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental') this.experimentalElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       this.contact,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose') this.purposeElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
       this.sourceUri,
-      @JsonKey(name: '_sourceUri') this.sourceUriElement,
+      @JsonKey(name: '_sourceUri')
+          this.sourceUriElement,
       this.sourceCanonical,
-      @JsonKey(name: '_sourceCanonical') this.sourceCanonicalElement,
+      @JsonKey(name: '_sourceCanonical')
+          this.sourceCanonicalElement,
       this.targetUri,
-      @JsonKey(name: '_targetUri') this.targetUriElement,
+      @JsonKey(name: '_targetUri')
+          this.targetUriElement,
       this.targetCanonical,
-      @JsonKey(name: '_targetCanonical') this.targetCanonicalElement,
+      @JsonKey(name: '_targetCanonical')
+          this.targetCanonicalElement,
       this.group})
       : assert(resourceType != null),
         super._();
@@ -5026,9 +5057,9 @@ class _$_ConceptMap extends _ConceptMap {
   factory _$_ConceptMap.fromJson(Map<String, dynamic> json) =>
       _$_$_ConceptMapFromJson(json);
 
-  @JsonKey(defaultValue: 'ConceptMap')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -5302,7 +5333,8 @@ class _$_ConceptMap extends _ConceptMap {
 abstract class _ConceptMap extends ConceptMap {
   _ConceptMap._() : super._();
   factory _ConceptMap(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5372,7 +5404,8 @@ abstract class _ConceptMap extends ConceptMap {
       _$_ConceptMap.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -7645,7 +7678,8 @@ class _$NamingSystemTearOff {
 
 // ignore: unused_element
   _NamingSystem call(
-      {String resourceType = 'NamingSystem',
+      {@JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
+          R4ResourceType resourceType = R4ResourceType.NamingSystem,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7739,7 +7773,8 @@ const $NamingSystem = _$NamingSystemTearOff();
 
 /// @nodoc
 mixin _$NamingSystem {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -7795,7 +7830,8 @@ abstract class $NamingSystemCopyWith<$Res> {
           NamingSystem value, $Res Function(NamingSystem) then) =
       _$NamingSystemCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7902,7 +7938,7 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -8109,7 +8145,8 @@ abstract class _$NamingSystemCopyWith<$Res>
       __$NamingSystemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8231,7 +8268,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
     return _then(_NamingSystem(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -8305,38 +8342,53 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
 /// @nodoc
 class _$_NamingSystem extends _NamingSystem {
   _$_NamingSystem(
-      {this.resourceType = 'NamingSystem',
+      {@JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
+          this.resourceType = R4ResourceType.NamingSystem,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
-      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
-      @JsonKey(unknownEnumValue: NamingSystemKind.unknown) this.kind,
-      @JsonKey(name: '_kind') this.kindElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
+          this.kind,
+      @JsonKey(name: '_kind')
+          this.kindElement,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       this.contact,
       this.responsible,
-      @JsonKey(name: '_responsible') this.responsibleElement,
+      @JsonKey(name: '_responsible')
+          this.responsibleElement,
       this.type,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.usage,
-      @JsonKey(name: '_usage') this.usageElement,
-      @required this.uniqueId})
+      @JsonKey(name: '_usage')
+          this.usageElement,
+      @required
+          this.uniqueId})
       : assert(resourceType != null),
         assert(uniqueId != null),
         super._();
@@ -8344,9 +8396,9 @@ class _$_NamingSystem extends _NamingSystem {
   factory _$_NamingSystem.fromJson(Map<String, dynamic> json) =>
       _$_$_NamingSystemFromJson(json);
 
-  @JsonKey(defaultValue: 'NamingSystem')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -8558,7 +8610,8 @@ class _$_NamingSystem extends _NamingSystem {
 abstract class _NamingSystem extends NamingSystem {
   _NamingSystem._() : super._();
   factory _NamingSystem(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -8609,7 +8662,8 @@ abstract class _NamingSystem extends NamingSystem {
       _$_NamingSystem.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -9188,7 +9242,8 @@ class _$TerminologyCapabilitiesTearOff {
 
 // ignore: unused_element
   _TerminologyCapabilities call(
-      {String resourceType = 'TerminologyCapabilities',
+      {@JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
+          R4ResourceType resourceType = R4ResourceType.TerminologyCapabilities,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9321,7 +9376,8 @@ const $TerminologyCapabilities = _$TerminologyCapabilitiesTearOff();
 
 /// @nodoc
 mixin _$TerminologyCapabilities {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -9400,7 +9456,8 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
           $Res Function(TerminologyCapabilities) then) =
       _$TerminologyCapabilitiesCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -9559,7 +9616,7 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -9929,7 +9986,8 @@ abstract class _$TerminologyCapabilitiesCopyWith<$Res>
       __$TerminologyCapabilitiesCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10115,7 +10173,7 @@ class __$TerminologyCapabilitiesCopyWithImpl<$Res>
     return _then(_TerminologyCapabilities(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -10236,7 +10294,8 @@ class __$TerminologyCapabilitiesCopyWithImpl<$Res>
 /// @nodoc
 class _$_TerminologyCapabilities extends _TerminologyCapabilities {
   _$_TerminologyCapabilities(
-      {this.resourceType = 'TerminologyCapabilities',
+      {@JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
+          this.resourceType = R4ResourceType.TerminologyCapabilities,
       this.id,
       this.meta,
       this.implicitRules,
@@ -10310,9 +10369,9 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
   factory _$_TerminologyCapabilities.fromJson(Map<String, dynamic> json) =>
       _$_$_TerminologyCapabilitiesFromJson(json);
 
-  @JsonKey(defaultValue: 'TerminologyCapabilities')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -10599,7 +10658,8 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
 abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   _TerminologyCapabilities._() : super._();
   factory _TerminologyCapabilities(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10672,7 +10732,8 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
       _$_TerminologyCapabilities.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -14221,45 +14282,62 @@ class _$ValueSetTearOff {
 
 // ignore: unused_element
   _ValueSet call(
-      {String resourceType = 'ValueSet',
+      {@JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
+          R4ResourceType resourceType = R4ResourceType.ValueSet,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Identifier> identifier,
       String version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown) ValueSetStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
+          ValueSetStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
-      @JsonKey(name: '_experimental') Element experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Boolean immutable,
-      @JsonKey(name: '_immutable') Element immutableElement,
+      @JsonKey(name: '_immutable')
+          Element immutableElement,
       Markdown purpose,
-      @JsonKey(name: '_purpose') Element purposeElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       Markdown copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       ValueSetCompose compose,
       ValueSetExpansion expansion}) {
     return _ValueSet(
@@ -14319,7 +14397,8 @@ const $ValueSet = _$ValueSetTearOff();
 
 /// @nodoc
 mixin _$ValueSet {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
+  R4ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -14386,45 +14465,62 @@ abstract class $ValueSetCopyWith<$Res> {
   factory $ValueSetCopyWith(ValueSet value, $Res Function(ValueSet) then) =
       _$ValueSetCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Identifier> identifier,
       String version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown) ValueSetStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
+          ValueSetStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
-      @JsonKey(name: '_experimental') Element experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Boolean immutable,
-      @JsonKey(name: '_immutable') Element immutableElement,
+      @JsonKey(name: '_immutable')
+          Element immutableElement,
       Markdown purpose,
-      @JsonKey(name: '_purpose') Element purposeElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       Markdown copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       ValueSetCompose compose,
       ValueSetExpansion expansion});
 
@@ -14503,7 +14599,7 @@ class _$ValueSetCopyWithImpl<$Res> implements $ValueSetCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -14779,45 +14875,62 @@ abstract class _$ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
       __$ValueSetCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Identifier> identifier,
       String version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown) ValueSetStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
+          ValueSetStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
-      @JsonKey(name: '_experimental') Element experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Boolean immutable,
-      @JsonKey(name: '_immutable') Element immutableElement,
+      @JsonKey(name: '_immutable')
+          Element immutableElement,
       Markdown purpose,
-      @JsonKey(name: '_purpose') Element purposeElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       Markdown copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       ValueSetCompose compose,
       ValueSetExpansion expansion});
 
@@ -14915,7 +15028,7 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
     return _then(_ValueSet(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R4ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -15010,45 +15123,62 @@ class __$ValueSetCopyWithImpl<$Res> extends _$ValueSetCopyWithImpl<$Res>
 /// @nodoc
 class _$_ValueSet extends _ValueSet {
   _$_ValueSet(
-      {this.resourceType = 'ValueSet',
+      {@JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
+          this.resourceType = R4ResourceType.ValueSet,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental') this.experimentalElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       this.contact,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.immutable,
-      @JsonKey(name: '_immutable') this.immutableElement,
+      @JsonKey(name: '_immutable')
+          this.immutableElement,
       this.purpose,
-      @JsonKey(name: '_purpose') this.purposeElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
       this.compose,
       this.expansion})
       : assert(resourceType != null),
@@ -15057,9 +15187,9 @@ class _$_ValueSet extends _ValueSet {
   factory _$_ValueSet.fromJson(Map<String, dynamic> json) =>
       _$_$_ValueSetFromJson(json);
 
-  @JsonKey(defaultValue: 'ValueSet')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
+  final R4ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -15310,52 +15440,70 @@ class _$_ValueSet extends _ValueSet {
 abstract class _ValueSet extends ValueSet {
   _ValueSet._() : super._();
   factory _ValueSet(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
+          R4ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       List<Identifier> identifier,
       String version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
-      @JsonKey(unknownEnumValue: ValueSetStatus.unknown) ValueSetStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
+      @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
+          ValueSetStatus status,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
-      @JsonKey(name: '_experimental') Element experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       FhirDateTime date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       Markdown description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       Boolean immutable,
-      @JsonKey(name: '_immutable') Element immutableElement,
+      @JsonKey(name: '_immutable')
+          Element immutableElement,
       Markdown purpose,
-      @JsonKey(name: '_purpose') Element purposeElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       Markdown copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       ValueSetCompose compose,
       ValueSetExpansion expansion}) = _$_ValueSet;
 
   factory _ValueSet.fromJson(Map<String, dynamic> json) = _$_ValueSet.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
+  R4ResourceType get resourceType;
   @override
   Id get id;
   @override

@@ -212,7 +212,9 @@ abstract class CapabilityStatement
   ///
   /// [document]: A document definition.
   factory CapabilityStatement({
-    @Default('CapabilityStatement') String resourceType,
+    @Default(R4ResourceType.CapabilityStatement)
+    @JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1524,7 +1526,9 @@ abstract class CompartmentDefinition
   /// [resource]: Information about how a resource is related to the
   ///  compartment.
   factory CompartmentDefinition({
-    @Default('CompartmentDefinition') String resourceType,
+    @Default(R4ResourceType.CompartmentDefinition)
+    @JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1799,7 +1803,9 @@ abstract class ExampleScenario with Resource implements _$ExampleScenario {
   ///
   /// [workflow]: Another nested workflow.
   factory ExampleScenario({
-    @Default('ExampleScenario') String resourceType,
+    @Default(R4ResourceType.ExampleScenario)
+    @JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2598,7 +2604,9 @@ abstract class GraphDefinition with Resource implements _$GraphDefinition {
   ///
   /// [link]: Links this graph makes rules about.
   factory GraphDefinition({
-    @Default('GraphDefinition') String resourceType,
+    @Default(R4ResourceType.GraphDefinition)
+    @JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -3078,7 +3086,9 @@ abstract class ImplementationGuide
   /// [manifest]: Information about an assembled implementation guide, created
   ///  by the publication tooling.
   factory ImplementationGuide({
-    @Default('ImplementationGuide') String resourceType,
+    @Default(R4ResourceType.ImplementationGuide)
+    @JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -4176,7 +4186,9 @@ abstract class MessageDefinition with Resource implements _$MessageDefinition {
   /// The GraphDefinition can also specify profiles that apply to the various
   ///  resources.
   factory MessageDefinition({
-    @Default('MessageDefinition') String resourceType,
+    @Default(R4ResourceType.MessageDefinition)
+    @JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -4587,7 +4599,9 @@ abstract class OperationDefinition
   /// invoking this operation, to help code generators when generating
   ///  overloaded parameter sets for this operation.
   factory OperationDefinition({
-    @Default('OperationDefinition') String resourceType,
+    @Default(R4ResourceType.OperationDefinition)
+    @JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -5189,7 +5203,9 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
   ///
   /// [component]: Used to define the parts of a composite search parameter.
   factory SearchParameter({
-    @Default('SearchParameter') String resourceType,
+    @Default(R4ResourceType.SearchParameter)
+    @JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -5539,7 +5555,9 @@ abstract class StructureDefinition
   /// [differential]: A differential view is expressed relative to the base
   ///  StructureDefinition - a statement of differences that it applies.
   factory StructureDefinition({
-    @Default('StructureDefinition') String resourceType,
+    @Default(R4ResourceType.StructureDefinition)
+    @JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -6040,7 +6058,9 @@ abstract class StructureMap with Resource implements _$StructureMap {
   /// [group]: Organizes the mapping into manageable chunks for human
   ///  review/ease of maintenance.
   factory StructureMap({
-    @Default('StructureMap') String resourceType,
+    @Default(R4ResourceType.StructureMap)
+    @JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

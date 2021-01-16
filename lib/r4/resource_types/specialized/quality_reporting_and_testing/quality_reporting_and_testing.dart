@@ -278,7 +278,9 @@ abstract class Measure with Resource implements _$Measure {
   /// specified as either the name of a valid CQL expression within a referenced
   ///  library, or a valid FHIR Resource Path.
   factory Measure({
-    @Default('Measure') String resourceType,
+    @Default(R4ResourceType.Measure)
+    @JsonKey(unknownEnumValue: R4ResourceType.Measure)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -829,7 +831,9 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
   /// [evaluatedResource]: A reference to a Bundle containing the Resources that
   ///  were used in the calculation of this measure.
   factory MeasureReport({
-    @Default('MeasureReport') String resourceType,
+    @Default(R4ResourceType.MeasureReport)
+    @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1368,7 +1372,9 @@ abstract class TestReport with Resource implements _$TestReport {
   /// [teardown]: The results of the series of operations required to clean up
   ///  after all the tests were executed (successfully or otherwise).
   factory TestReport({
-    @Default('TestReport') String resourceType,
+    @Default(R4ResourceType.TestReport)
+    @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2141,7 +2147,9 @@ abstract class TestScript with Resource implements _$TestScript {
   /// [teardown]: A series of operations required to clean up after all the
   ///  tests are executed (successfully or otherwise).
   factory TestScript({
-    @Default('TestScript') String resourceType,
+    @Default(R4ResourceType.TestScript)
+    @JsonKey(unknownEnumValue: R4ResourceType.TestScript)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

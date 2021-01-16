@@ -156,7 +156,9 @@ abstract class CarePlan with Resource implements _$CarePlan {
   ///
   /// [note]: General notes about the care plan not covered elsewhere.
   factory CarePlan({
-    @Default('CarePlan') String resourceType,
+    @Default(R4ResourceType.CarePlan)
+    @JsonKey(unknownEnumValue: R4ResourceType.CarePlan)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -554,7 +556,9 @@ abstract class CareTeam with Resource implements _$CareTeam {
   ///
   /// [note]: Comments made about the CareTeam.
   factory CareTeam({
-    @Default('CareTeam') String resourceType,
+    @Default(R4ResourceType.CareTeam)
+    @JsonKey(unknownEnumValue: R4ResourceType.CareTeam)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -782,7 +786,9 @@ abstract class Goal with Resource implements _$Goal {
   ///
   /// [outcomeReference]: Details of what's changed (or not changed).
   factory Goal({
-    @Default('Goal') String resourceType,
+    @Default(R4ResourceType.Goal)
+    @JsonKey(unknownEnumValue: R4ResourceType.Goal)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1100,7 +1106,9 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
   /// [note]: Comments made about the {{title}} by the requester, performer,
   ///  subject or other participants.
   factory NutritionOrder({
-    @Default('NutritionOrder') String resourceType,
+    @Default(R4ResourceType.NutritionOrder)
+    @JsonKey(unknownEnumValue: R4ResourceType.NutritionOrder)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1727,7 +1735,9 @@ abstract class RequestGroup with Resource implements _$RequestGroup {
   ///
   /// [action]: The actions, if any, produced by the evaluation of the artifact.
   factory RequestGroup({
-    @Default('RequestGroup') String resourceType,
+    @Default(R4ResourceType.RequestGroup)
+    @JsonKey(unknownEnumValue: R4ResourceType.RequestGroup)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2209,7 +2219,9 @@ abstract class RiskAssessment with Resource implements _$RiskAssessment {
   ///
   /// [note]: Additional comments about the risk assessment.
   factory RiskAssessment({
-    @Default('RiskAssessment') String resourceType,
+    @Default(R4ResourceType.RiskAssessment)
+    @JsonKey(unknownEnumValue: R4ResourceType.RiskAssessment)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2565,7 +2577,9 @@ abstract class ServiceRequest with Resource implements _$ServiceRequest {
   ///
   /// [relevantHistory]: Key events in the history of the request.
   factory ServiceRequest({
-    @Default('ServiceRequest') String resourceType,
+    @Default(R4ResourceType.ServiceRequest)
+    @JsonKey(unknownEnumValue: R4ResourceType.ServiceRequest)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2731,7 +2745,9 @@ abstract class VisionPrescription
   /// specifications and serves as the authorization for the fullfillment by
   ///  certified professionals.
   factory VisionPrescription({
-    @Default('VisionPrescription') String resourceType,
+    @Default(R4ResourceType.VisionPrescription)
+    @JsonKey(unknownEnumValue: R4ResourceType.VisionPrescription)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

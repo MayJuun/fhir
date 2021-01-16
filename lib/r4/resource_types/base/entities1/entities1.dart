@@ -117,7 +117,9 @@ abstract class Endpoint with Resource implements _$Endpoint {
   ///
   /// [_header]: Extensions for header
   factory Endpoint({
-    @Default('Endpoint') String resourceType,
+    @Default(R4ResourceType.Endpoint)
+    @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -306,7 +308,9 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
   /// [endpoint]: Technical endpoints providing access to services operated for
   ///  the specific healthcare services defined at this resource.
   factory HealthcareService({
-    @Default('HealthcareService') String resourceType,
+    @Default(R4ResourceType.HealthcareService)
+    @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -701,7 +705,9 @@ abstract class Location with Resource implements _$Location {
   /// [endpoint]: Technical endpoints providing access to services operated for
   ///  the location.
   factory Location({
-    @Default('Location') String resourceType,
+    @Default(R4ResourceType.Location)
+    @JsonKey(unknownEnumValue: R4ResourceType.Location)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -995,7 +1001,9 @@ abstract class Organization with Resource implements _$Organization {
   /// [endpoint]: Technical endpoints providing access to services operated for
   ///  the organization.
   factory Organization({
-    @Default('Organization') String resourceType,
+    @Default(R4ResourceType.Organization)
+    @JsonKey(unknownEnumValue: R4ResourceType.Organization)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1202,7 +1210,9 @@ abstract class OrganizationAffiliation
   /// [endpoint]: Technical endpoints providing access to services operated for
   ///  this role.
   factory OrganizationAffiliation({
-    @Default('OrganizationAffiliation') String resourceType,
+    @Default(R4ResourceType.OrganizationAffiliation)
+    @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

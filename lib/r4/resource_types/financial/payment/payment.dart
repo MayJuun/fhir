@@ -106,7 +106,9 @@ abstract class PaymentNotice with Resource implements _$PaymentNotice {
   /// [paymentStatus]: A code indicating whether payment has been sent or
   ///  cleared.
   factory PaymentNotice({
-    @Default('PaymentNotice') String resourceType,
+    @Default(R4ResourceType.PaymentNotice)
+    @JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -259,7 +261,9 @@ abstract class PaymentReconciliation
   /// [processNote]: A note that describes or explains the processing in a human
   ///  readable form.
   factory PaymentReconciliation({
-    @Default('PaymentReconciliation') String resourceType,
+    @Default(R4ResourceType.PaymentReconciliation)
+    @JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

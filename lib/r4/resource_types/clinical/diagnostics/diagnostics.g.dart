@@ -8,7 +8,9 @@ part of 'diagnostics.dart';
 
 _$_BodyStructure _$_$_BodyStructureFromJson(Map<String, dynamic> json) {
   return _$_BodyStructure(
-    resourceType: json['resourceType'] as String ?? 'BodyStructure',
+    resourceType: _$enumDecodeNullable(
+        _$R4ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R4ResourceType.BodyStructure),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -84,7 +86,7 @@ Map<String, dynamic> _$_$_BodyStructureToJson(_$_BodyStructure instance) {
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -113,9 +115,195 @@ Map<String, dynamic> _$_$_BodyStructureToJson(_$_BodyStructure instance) {
   return val;
 }
 
+T _$enumDecode<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    throw ArgumentError('A value must be provided. Supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+
+  final value = enumValues.entries
+      .singleWhere((e) => e.value == source, orElse: () => null)
+      ?.key;
+
+  if (value == null && unknownValue == null) {
+    throw ArgumentError('`$source` is not one of the supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+  return value ?? unknownValue;
+}
+
+T _$enumDecodeNullable<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
+}
+
+const _$R4ResourceTypeEnumMap = {
+  R4ResourceType.Account: 'Account',
+  R4ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R4ResourceType.AdverseEvent: 'AdverseEvent',
+  R4ResourceType.AllergyIntolerance: 'AllergyIntolerance',
+  R4ResourceType.Appointment: 'Appointment',
+  R4ResourceType.AppointmentResponse: 'AppointmentResponse',
+  R4ResourceType.AuditEvent: 'AuditEvent',
+  R4ResourceType.Basic: 'Basic',
+  R4ResourceType.Binary: 'Binary',
+  R4ResourceType.BiologicallyDerivedProduct: 'BiologicallyDerivedProduct',
+  R4ResourceType.BodyStructure: 'BodyStructure',
+  R4ResourceType.Bundle: 'Bundle',
+  R4ResourceType.CapabilityStatement: 'CapabilityStatement',
+  R4ResourceType.CarePlan: 'CarePlan',
+  R4ResourceType.CareTeam: 'CareTeam',
+  R4ResourceType.CatalogEntry: 'CatalogEntry',
+  R4ResourceType.ChargeItem: 'ChargeItem',
+  R4ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
+  R4ResourceType.Claim: 'Claim',
+  R4ResourceType.ClaimResponse: 'ClaimResponse',
+  R4ResourceType.ClinicalImpression: 'ClinicalImpression',
+  R4ResourceType.CodeSystem: 'CodeSystem',
+  R4ResourceType.Communication: 'Communication',
+  R4ResourceType.CommunicationRequest: 'CommunicationRequest',
+  R4ResourceType.CompartmentDefinition: 'CompartmentDefinition',
+  R4ResourceType.Composition: 'Composition',
+  R4ResourceType.ConceptMap: 'ConceptMap',
+  R4ResourceType.Condition: 'Condition',
+  R4ResourceType.Consent: 'Consent',
+  R4ResourceType.Contract: 'Contract',
+  R4ResourceType.Coverage: 'Coverage',
+  R4ResourceType.CoverageEligibilityRequest: 'CoverageEligibilityRequest',
+  R4ResourceType.CoverageEligibilityResponse: 'CoverageEligibilityResponse',
+  R4ResourceType.DetectedIssue: 'DetectedIssue',
+  R4ResourceType.Device: 'Device',
+  R4ResourceType.DeviceDefinition: 'DeviceDefinition',
+  R4ResourceType.DeviceMetric: 'DeviceMetric',
+  R4ResourceType.DeviceRequest: 'DeviceRequest',
+  R4ResourceType.DeviceUseStatement: 'DeviceUseStatement',
+  R4ResourceType.DiagnosticReport: 'DiagnosticReport',
+  R4ResourceType.DocumentManifest: 'DocumentManifest',
+  R4ResourceType.DocumentReference: 'DocumentReference',
+  R4ResourceType.EffectEvidenceSynthesis: 'EffectEvidenceSynthesis',
+  R4ResourceType.Encounter: 'Encounter',
+  R4ResourceType.Endpoint: 'Endpoint',
+  R4ResourceType.EnrollmentRequest: 'EnrollmentRequest',
+  R4ResourceType.EnrollmentResponse: 'EnrollmentResponse',
+  R4ResourceType.EpisodeOfCare: 'EpisodeOfCare',
+  R4ResourceType.EventDefinition: 'EventDefinition',
+  R4ResourceType.Evidence: 'Evidence',
+  R4ResourceType.EvidenceVariable: 'EvidenceVariable',
+  R4ResourceType.ExampleScenario: 'ExampleScenario',
+  R4ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
+  R4ResourceType.FamilyMemberHistory: 'FamilyMemberHistory',
+  R4ResourceType.Flag: 'Flag',
+  R4ResourceType.Goal: 'Goal',
+  R4ResourceType.GraphDefinition: 'GraphDefinition',
+  R4ResourceType.Group: 'Group',
+  R4ResourceType.GuidanceResponse: 'GuidanceResponse',
+  R4ResourceType.HealthcareService: 'HealthcareService',
+  R4ResourceType.ImagingStudy: 'ImagingStudy',
+  R4ResourceType.Immunization: 'Immunization',
+  R4ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
+  R4ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
+  R4ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R4ResourceType.InsurancePlan: 'InsurancePlan',
+  R4ResourceType.Invoice: 'Invoice',
+  R4ResourceType.Library: 'Library',
+  R4ResourceType.Linkage: 'Linkage',
+  R4ResourceType.List_: 'List',
+  R4ResourceType.Location: 'Location',
+  R4ResourceType.Measure: 'Measure',
+  R4ResourceType.MeasureReport: 'MeasureReport',
+  R4ResourceType.Media: 'Media',
+  R4ResourceType.Medication: 'Medication',
+  R4ResourceType.MedicationAdministration: 'MedicationAdministration',
+  R4ResourceType.MedicationDispense: 'MedicationDispense',
+  R4ResourceType.MedicationKnowledge: 'MedicationKnowledge',
+  R4ResourceType.MedicationRequest: 'MedicationRequest',
+  R4ResourceType.MedicationStatement: 'MedicationStatement',
+  R4ResourceType.MedicinalProduct: 'MedicinalProduct',
+  R4ResourceType.MedicinalProductAuthorization: 'MedicinalProductAuthorization',
+  R4ResourceType.MedicinalProductContraindication:
+      'MedicinalProductContraindication',
+  R4ResourceType.MedicinalProductIndication: 'MedicinalProductIndication',
+  R4ResourceType.MedicinalProductIngredient: 'MedicinalProductIngredient',
+  R4ResourceType.MedicinalProductInteraction: 'MedicinalProductInteraction',
+  R4ResourceType.MedicinalProductManufactured: 'MedicinalProductManufactured',
+  R4ResourceType.MedicinalProductPackaged: 'MedicinalProductPackaged',
+  R4ResourceType.MedicinalProductPharmaceutical:
+      'MedicinalProductPharmaceutical',
+  R4ResourceType.MedicinalProductUndesirableEffect:
+      'MedicinalProductUndesirableEffect',
+  R4ResourceType.MessageDefinition: 'MessageDefinition',
+  R4ResourceType.MessageHeader: 'MessageHeader',
+  R4ResourceType.MolecularSequence: 'MolecularSequence',
+  R4ResourceType.NamingSystem: 'NamingSystem',
+  R4ResourceType.NutritionOrder: 'NutritionOrder',
+  R4ResourceType.Observation: 'Observation',
+  R4ResourceType.ObservationDefinition: 'ObservationDefinition',
+  R4ResourceType.OperationDefinition: 'OperationDefinition',
+  R4ResourceType.OperationOutcome: 'OperationOutcome',
+  R4ResourceType.Organization: 'Organization',
+  R4ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R4ResourceType.Parameters: 'Parameters',
+  R4ResourceType.Patient: 'Patient',
+  R4ResourceType.PaymentNotice: 'PaymentNotice',
+  R4ResourceType.PaymentReconciliation: 'PaymentReconciliation',
+  R4ResourceType.Person: 'Person',
+  R4ResourceType.PlanDefinition: 'PlanDefinition',
+  R4ResourceType.Practitioner: 'Practitioner',
+  R4ResourceType.PractitionerRole: 'PractitionerRole',
+  R4ResourceType.Procedure: 'Procedure',
+  R4ResourceType.Provenance: 'Provenance',
+  R4ResourceType.Questionnaire: 'Questionnaire',
+  R4ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R4ResourceType.RelatedPerson: 'RelatedPerson',
+  R4ResourceType.RequestGroup: 'RequestGroup',
+  R4ResourceType.ResearchDefinition: 'ResearchDefinition',
+  R4ResourceType.ResearchElementDefinition: 'ResearchElementDefinition',
+  R4ResourceType.ResearchStudy: 'ResearchStudy',
+  R4ResourceType.ResearchSubject: 'ResearchSubject',
+  R4ResourceType.RiskAssessment: 'RiskAssessment',
+  R4ResourceType.RiskEvidenceSynthesis: 'RiskEvidenceSynthesis',
+  R4ResourceType.Schedule: 'Schedule',
+  R4ResourceType.SearchParameter: 'SearchParameter',
+  R4ResourceType.ServiceRequest: 'ServiceRequest',
+  R4ResourceType.Slot: 'Slot',
+  R4ResourceType.Specimen: 'Specimen',
+  R4ResourceType.SpecimenDefinition: 'SpecimenDefinition',
+  R4ResourceType.StructureDefinition: 'StructureDefinition',
+  R4ResourceType.StructureMap: 'StructureMap',
+  R4ResourceType.Subscription: 'Subscription',
+  R4ResourceType.Substance: 'Substance',
+  R4ResourceType.SubstanceNucleicAcid: 'SubstanceNucleicAcid',
+  R4ResourceType.SubstancePolymer: 'SubstancePolymer',
+  R4ResourceType.SubstanceProtein: 'SubstanceProtein',
+  R4ResourceType.SubstanceReferenceInformation: 'SubstanceReferenceInformation',
+  R4ResourceType.SubstanceSourceMaterial: 'SubstanceSourceMaterial',
+  R4ResourceType.SubstanceSpecification: 'SubstanceSpecification',
+  R4ResourceType.SupplyDelivery: 'SupplyDelivery',
+  R4ResourceType.SupplyRequest: 'SupplyRequest',
+  R4ResourceType.Task: 'Task',
+  R4ResourceType.TerminologyCapabilities: 'TerminologyCapabilities',
+  R4ResourceType.TestReport: 'TestReport',
+  R4ResourceType.TestScript: 'TestScript',
+  R4ResourceType.ValueSet: 'ValueSet',
+  R4ResourceType.VerificationResult: 'VerificationResult',
+  R4ResourceType.VisionPrescription: 'VisionPrescription',
+};
+
 _$_DiagnosticReport _$_$_DiagnosticReportFromJson(Map<String, dynamic> json) {
   return _$_DiagnosticReport(
-    resourceType: json['resourceType'] as String ?? 'DiagnosticReport',
+    resourceType: _$enumDecodeNullable(
+        _$R4ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R4ResourceType.DiagnosticReport),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -242,7 +430,7 @@ Map<String, dynamic> _$_$_DiagnosticReportToJson(_$_DiagnosticReport instance) {
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -289,38 +477,6 @@ Map<String, dynamic> _$_$_DiagnosticReportToJson(_$_DiagnosticReport instance) {
   writeNotNull('presentedForm',
       instance.presentedForm?.map((e) => e?.toJson())?.toList());
   return val;
-}
-
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$DiagnosticReportStatusEnumMap = {
@@ -383,7 +539,9 @@ Map<String, dynamic> _$_$_DiagnosticReportMediaToJson(
 
 _$_ImagingStudy _$_$_ImagingStudyFromJson(Map<String, dynamic> json) {
   return _$_ImagingStudy(
-    resourceType: json['resourceType'] as String ?? 'ImagingStudy',
+    resourceType: _$enumDecodeNullable(
+        _$R4ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R4ResourceType.ImagingStudy),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -515,7 +673,7 @@ Map<String, dynamic> _$_$_ImagingStudyToJson(_$_ImagingStudy instance) {
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -785,7 +943,9 @@ Map<String, dynamic> _$_$_ImagingStudyInstanceToJson(
 
 _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
   return _$_Media(
-    resourceType: json['resourceType'] as String ?? 'Media',
+    resourceType: _$enumDecodeNullable(
+        _$R4ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R4ResourceType.Media),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -922,7 +1082,7 @@ Map<String, dynamic> _$_$_MediaToJson(_$_Media instance) {
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -974,7 +1134,9 @@ Map<String, dynamic> _$_$_MediaToJson(_$_Media instance) {
 
 _$_MolecularSequence _$_$_MolecularSequenceFromJson(Map<String, dynamic> json) {
   return _$_MolecularSequence(
-    resourceType: json['resourceType'] as String ?? 'MolecularSequence',
+    resourceType: _$enumDecodeNullable(
+        _$R4ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R4ResourceType.MolecularSequence),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1090,7 +1252,7 @@ Map<String, dynamic> _$_$_MolecularSequenceToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1787,7 +1949,9 @@ Map<String, dynamic> _$_$_MolecularSequenceInnerToJson(
 
 _$_Observation _$_$_ObservationFromJson(Map<String, dynamic> json) {
   return _$_Observation(
-    resourceType: json['resourceType'] as String ?? 'Observation',
+    resourceType: _$enumDecodeNullable(
+        _$R4ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R4ResourceType.Observation),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1987,7 +2151,7 @@ Map<String, dynamic> _$_$_ObservationToJson(_$_Observation instance) {
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -2259,7 +2423,9 @@ Map<String, dynamic> _$_$_ObservationComponentToJson(
 _$_QuestionnaireResponse _$_$_QuestionnaireResponseFromJson(
     Map<String, dynamic> json) {
   return _$_QuestionnaireResponse(
-    resourceType: json['resourceType'] as String ?? 'QuestionnaireResponse',
+    resourceType: _$enumDecodeNullable(
+        _$R4ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R4ResourceType.QuestionnaireResponse),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2349,7 +2515,7 @@ Map<String, dynamic> _$_$_QuestionnaireResponseToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -2576,7 +2742,9 @@ Map<String, dynamic> _$_$_QuestionnaireResponseAnswerToJson(
 
 _$_Specimen _$_$_SpecimenFromJson(Map<String, dynamic> json) {
   return _$_Specimen(
-    resourceType: json['resourceType'] as String ?? 'Specimen',
+    resourceType: _$enumDecodeNullable(
+        _$R4ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R4ResourceType.Specimen),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2678,7 +2846,7 @@ Map<String, dynamic> _$_$_SpecimenToJson(_$_Specimen instance) {
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

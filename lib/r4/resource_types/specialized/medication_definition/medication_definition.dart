@@ -125,7 +125,9 @@ abstract class MedicinalProduct with Resource implements _$MedicinalProduct {
   /// [specialDesignation]: Indicates if the medicinal product has an orphan
   ///  designation for the treatment of a rare disease.
   factory MedicinalProduct({
-    @Default('MedicinalProduct') String resourceType,
+    @Default(R4ResourceType.MedicinalProduct)
+    @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProduct)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -642,7 +644,9 @@ abstract class MedicinalProductAuthorization
   /// [procedure]: The regulatory procedure for granting or amending a marketing
   ///  authorization.
   factory MedicinalProductAuthorization({
-    @Default('MedicinalProductAuthorization') String resourceType,
+    @Default(R4ResourceType.MedicinalProductAuthorization)
+    @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductAuthorization)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -919,7 +923,9 @@ abstract class MedicinalProductContraindication
   ///
   /// [population]: The population group to which this applies.
   factory MedicinalProductContraindication({
-    @Default('MedicinalProductContraindication') String resourceType,
+    @Default(R4ResourceType.MedicinalProductContraindication)
+    @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductContraindication)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1112,7 +1118,9 @@ abstract class MedicinalProductIndication
   ///
   /// [population]: The population group to which this applies.
   factory MedicinalProductIndication({
-    @Default('MedicinalProductIndication') String resourceType,
+    @Default(R4ResourceType.MedicinalProductIndication)
+    @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIndication)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1298,7 +1306,9 @@ abstract class MedicinalProductIngredient
   ///
   /// [substance]: The ingredient substance.
   factory MedicinalProductIngredient({
-    @Default('MedicinalProductIngredient') String resourceType,
+    @Default(R4ResourceType.MedicinalProductIngredient)
+    @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductIngredient)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1707,7 +1717,9 @@ abstract class MedicinalProductInteraction
   ///
   /// [management]: Actions for managing the interaction.
   factory MedicinalProductInteraction({
-    @Default('MedicinalProductInteraction') String resourceType,
+    @Default(R4ResourceType.MedicinalProductInteraction)
+    @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductInteraction)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1887,7 +1899,9 @@ abstract class MedicinalProductManufactured
   ///
   /// [otherCharacteristics]: Other codeable characteristics.
   factory MedicinalProductManufactured({
-    @Default('MedicinalProductManufactured') String resourceType,
+    @Default(R4ResourceType.MedicinalProductManufactured)
+    @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductManufactured)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2006,7 +2020,9 @@ abstract class MedicinalProductPackaged
   /// [packageItem]: A packaging item, as a contained for medicine, possibly
   ///  with other packaging items within.
   factory MedicinalProductPackaged({
-    @Default('MedicinalProductPackaged') String resourceType,
+    @Default(R4ResourceType.MedicinalProductPackaged)
+    @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPackaged)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2279,7 +2295,9 @@ abstract class MedicinalProductPharmaceutical
   /// [routeOfAdministration]: The path by which the pharmaceutical product is
   ///  taken into or makes contact with the body.
   factory MedicinalProductPharmaceutical({
-    @Default('MedicinalProductPharmaceutical') String resourceType,
+    @Default(R4ResourceType.MedicinalProductPharmaceutical)
+    @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductPharmaceutical)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2672,7 +2690,9 @@ abstract class MedicinalProductUndesirableEffect
   ///
   /// [population]: The population group to which this applies.
   factory MedicinalProductUndesirableEffect({
-    @Default('MedicinalProductUndesirableEffect') String resourceType,
+    @Default(R4ResourceType.MedicinalProductUndesirableEffect)
+    @JsonKey(unknownEnumValue: R4ResourceType.MedicinalProductUndesirableEffect)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2797,7 +2817,9 @@ abstract class SubstanceNucleicAcid
   /// the same length will be ordered by molecular weight; subunits that have
   ///  identical sequences will be repeated multiple times.
   factory SubstanceNucleicAcid({
-    @Default('SubstanceNucleicAcid') String resourceType,
+    @Default(R4ResourceType.SubstanceNucleicAcid)
+    @JsonKey(unknownEnumValue: R4ResourceType.SubstanceNucleicAcid)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -3161,7 +3183,9 @@ abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
   ///
   /// [repeat]: Todo.
   factory SubstancePolymer({
-    @Default('SubstancePolymer') String resourceType,
+    @Default(R4ResourceType.SubstancePolymer)
+    @JsonKey(unknownEnumValue: R4ResourceType.SubstancePolymer)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -3684,7 +3708,9 @@ abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
   /// the same length will be ordered by decreasing molecular weight; subunits
   ///  that have identical sequences will be repeated multiple times.
   factory SubstanceProtein({
-    @Default('SubstanceProtein') String resourceType,
+    @Default(R4ResourceType.SubstanceProtein)
+    @JsonKey(unknownEnumValue: R4ResourceType.SubstanceProtein)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -3912,7 +3938,9 @@ abstract class SubstanceReferenceInformation
   ///
   /// [target]: Todo.
   factory SubstanceReferenceInformation({
-    @Default('SubstanceReferenceInformation') String resourceType,
+    @Default(R4ResourceType.SubstanceReferenceInformation)
+    @JsonKey(unknownEnumValue: R4ResourceType.SubstanceReferenceInformation)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -4358,7 +4386,9 @@ abstract class SubstanceSourceMaterial
   ///
   /// [partDescription]: To do.
   factory SubstanceSourceMaterial({
-    @Default('SubstanceSourceMaterial') String resourceType,
+    @Default(R4ResourceType.SubstanceSourceMaterial)
+    @JsonKey(unknownEnumValue: R4ResourceType.SubstanceSourceMaterial)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -5035,7 +5065,9 @@ abstract class SubstanceSpecification
   /// [sourceMaterial]: Material or taxonomic/anatomical source for the
   ///  substance.
   factory SubstanceSpecification({
-    @Default('SubstanceSpecification') String resourceType,
+    @Default(R4ResourceType.SubstanceSpecification)
+    @JsonKey(unknownEnumValue: R4ResourceType.SubstanceSpecification)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

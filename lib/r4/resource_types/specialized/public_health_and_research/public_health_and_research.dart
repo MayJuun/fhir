@@ -157,7 +157,9 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
   /// scientific question to be answered by the analysis of data collected
   ///  during the study.
   factory ResearchStudy({
-    @Default('ResearchStudy') String resourceType,
+    @Default(R4ResourceType.ResearchStudy)
+    @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -438,7 +440,9 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
   /// [consent]: A record of the patient's informed agreement to participate in
   ///  the study.
   factory ResearchSubject({
-    @Default('ResearchSubject') String resourceType,
+    @Default(R4ResourceType.ResearchSubject)
+    @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
+        R4ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

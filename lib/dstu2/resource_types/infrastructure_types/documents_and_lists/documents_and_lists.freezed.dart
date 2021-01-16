@@ -6048,8 +6048,8 @@ class _$List_TearOff {
 
 // ignore: unused_element
   _List_ call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List)
-          Dstu2ResourceType resourceType = Dstu2ResourceType.List,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
+          Dstu2ResourceType resourceType = Dstu2ResourceType.List_,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6132,7 +6132,7 @@ const $List_ = _$List_TearOff();
 
 /// @nodoc
 mixin _$List_ {
-  @JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
   Dstu2ResourceType get resourceType;
   Id get id;
   Meta get meta;
@@ -6180,7 +6180,7 @@ abstract class $List_CopyWith<$Res> {
   factory $List_CopyWith(List_ value, $Res Function(List_) then) =
       _$List_CopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
           Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
@@ -6479,7 +6479,7 @@ abstract class _$List_CopyWith<$Res> implements $List_CopyWith<$Res> {
       __$List_CopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
           Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
@@ -6652,8 +6652,8 @@ class __$List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
 /// @nodoc
 class _$_List_ extends _List_ {
   _$_List_(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List)
-          this.resourceType = Dstu2ResourceType.List,
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
+          this.resourceType = Dstu2ResourceType.List_,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6701,7 +6701,7 @@ class _$_List_ extends _List_ {
       _$_$_List_FromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
   final Dstu2ResourceType resourceType;
   @override
   final Id id;
@@ -6894,7 +6894,7 @@ class _$_List_ extends _List_ {
 abstract class _List_ extends List_ {
   _List_._() : super._();
   factory _List_(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
           Dstu2ResourceType resourceType,
       Id id,
       Meta meta,
@@ -6938,7 +6938,7 @@ abstract class _List_ extends List_ {
   factory _List_.fromJson(Map<String, dynamic> json) = _$_List_.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: Dstu2ResourceType.List)
+  @JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
   Dstu2ResourceType get resourceType;
   @override
   Id get id;
