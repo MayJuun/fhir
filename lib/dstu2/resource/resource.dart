@@ -30,6 +30,10 @@ class Resource {
   List<FhirExtension> extension_;
   List<FhirExtension> modifierExtension;
 
+  /// produce a string of the [resourceType]
+  String resourceTypeString() =>
+      ResourceUtils.resourceTypeToStringMap[resourceType];
+
   /// Convenience method to return a [Reference] referring to that [Resource]
   Reference thisReference() => Reference(reference: '$resourceType/$id');
 

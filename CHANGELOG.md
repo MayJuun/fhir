@@ -1,3 +1,6 @@
+## [0.1.3]
+* added a resourceTypeString() method to easily get string from enum (needed for Db)
+
 ## [0.1.2]
 * replaced resourceType in each resource with enum instead of String
 
