@@ -17,7 +17,9 @@ abstract class ActivityDefinition
     implements _$ActivityDefinition {
   ActivityDefinition._();
   factory ActivityDefinition({
-    @Default('ActivityDefinition') String resourceType,
+    @Default(Stu3ResourceType.ActivityDefinition)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -162,7 +164,9 @@ abstract class ActivityDefinitionDynamicValue
 abstract class PlanDefinition with Resource implements _$PlanDefinition {
   PlanDefinition._();
   factory PlanDefinition({
-    @Default('PlanDefinition') String resourceType,
+    @Default(Stu3ResourceType.PlanDefinition)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -464,7 +468,9 @@ abstract class PlanDefinitionDynamicValue
 abstract class Questionnaire with Resource implements _$Questionnaire {
   Questionnaire._();
   factory Questionnaire({
-    @Default('Questionnaire') String resourceType,
+    @Default(Stu3ResourceType.Questionnaire)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -671,7 +677,9 @@ abstract class QuestionnaireOption implements _$QuestionnaireOption {
 abstract class ServiceDefinition with Resource implements _$ServiceDefinition {
   ServiceDefinition._();
   factory ServiceDefinition({
-    @Default('ServiceDefinition') String resourceType,
+    @Default(Stu3ResourceType.ServiceDefinition)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

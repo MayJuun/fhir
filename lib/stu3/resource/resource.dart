@@ -9,6 +9,7 @@ import '../../stu3.dart';
 
 part 'resource_from_json.dart';
 part 'resource_new_version.dart';
+part 'resource_types_enum.dart';
 
 /// This class ends up functioning mostly like an abstract superclass. Some of
 /// the fields in other classes contain a generic resource, so in order for
@@ -19,7 +20,7 @@ part 'resource_new_version.dart';
 @JsonSerializable()
 class Resource {
   Id id;
-  String resourceType;
+  Stu3ResourceType resourceType;
   Meta meta;
   FhirUri implicitRules;
   Code language;

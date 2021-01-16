@@ -15,7 +15,9 @@ part 'workflow.g.dart';
 abstract class Appointment with Resource implements _$Appointment {
   Appointment._();
   factory Appointment({
-    @Default('Appointment') String resourceType,
+    @Default(R5ResourceType.Appointment)
+    @JsonKey(unknownEnumValue: R5ResourceType.Appointment)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -113,7 +115,9 @@ abstract class AppointmentResponse
     implements _$AppointmentResponse {
   AppointmentResponse._();
   factory AppointmentResponse({
-    @Default('AppointmentResponse') String resourceType,
+    @Default(R5ResourceType.AppointmentResponse)
+    @JsonKey(unknownEnumValue: R5ResourceType.AppointmentResponse)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -157,7 +161,9 @@ abstract class AppointmentResponse
 abstract class Schedule with Resource implements _$Schedule {
   Schedule._();
   factory Schedule({
-    @Default('Schedule') String resourceType,
+    @Default(R5ResourceType.Schedule)
+    @JsonKey(unknownEnumValue: R5ResourceType.Schedule)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -199,7 +205,9 @@ abstract class Schedule with Resource implements _$Schedule {
 abstract class Slot with Resource implements _$Slot {
   Slot._();
   factory Slot({
-    @Default('Slot') String resourceType,
+    @Default(R5ResourceType.Slot)
+    @JsonKey(unknownEnumValue: R5ResourceType.Slot)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -246,7 +254,9 @@ abstract class Slot with Resource implements _$Slot {
 abstract class Task with Resource implements _$Task {
   Task._();
   factory Task({
-    @Default('Task') String resourceType,
+    @Default(R5ResourceType.Task)
+    @JsonKey(unknownEnumValue: R5ResourceType.Task)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -537,7 +547,9 @@ abstract class VerificationResult
     implements _$VerificationResult {
   VerificationResult._();
   factory VerificationResult({
-    @Default('VerificationResult') String resourceType,
+    @Default(R5ResourceType.VerificationResult)
+    @JsonKey(unknownEnumValue: R5ResourceType.VerificationResult)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

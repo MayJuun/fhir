@@ -15,7 +15,9 @@ part 'request_and_response.g.dart';
 abstract class Communication with Resource implements _$Communication {
   Communication._();
   factory Communication({
-    @Default('Communication') String resourceType,
+    @Default(Stu3ResourceType.Communication)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -98,7 +100,9 @@ abstract class CommunicationRequest
     implements _$CommunicationRequest {
   CommunicationRequest._();
   factory CommunicationRequest({
-    @Default('CommunicationRequest') String resourceType,
+    @Default(Stu3ResourceType.CommunicationRequest)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -207,7 +211,9 @@ abstract class CommunicationRequestRequester
 abstract class DeviceRequest with Resource implements _$DeviceRequest {
   DeviceRequest._();
   factory DeviceRequest({
-    @Default('DeviceRequest') String resourceType,
+    @Default(Stu3ResourceType.DeviceRequest)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -292,7 +298,9 @@ abstract class DeviceUseStatement
     implements _$DeviceUseStatement {
   DeviceUseStatement._();
   factory DeviceUseStatement({
-    @Default('DeviceUseStatement') String resourceType,
+    @Default(Stu3ResourceType.DeviceUseStatement)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -340,7 +348,9 @@ abstract class DeviceUseStatement
 abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
   SupplyDelivery._();
   factory SupplyDelivery({
-    @Default('SupplyDelivery') String resourceType,
+    @Default(Stu3ResourceType.SupplyDelivery)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -413,7 +423,9 @@ abstract class SupplyDeliverySuppliedItem
 abstract class SupplyRequest with Resource implements _$SupplyRequest {
   SupplyRequest._();
   factory SupplyRequest({
-    @Default('SupplyRequest') String resourceType,
+    @Default(Stu3ResourceType.SupplyRequest)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

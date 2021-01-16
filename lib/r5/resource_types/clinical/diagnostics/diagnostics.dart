@@ -15,7 +15,9 @@ part 'diagnostics.g.dart';
 abstract class BodyStructure with Resource implements _$BodyStructure {
   BodyStructure._();
   factory BodyStructure({
-    @Default('BodyStructure') String resourceType,
+    @Default(R5ResourceType.BodyStructure)
+    @JsonKey(unknownEnumValue: R5ResourceType.BodyStructure)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -57,7 +59,9 @@ abstract class BodyStructure with Resource implements _$BodyStructure {
 abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
   DiagnosticReport._();
   factory DiagnosticReport({
-    @Default('DiagnosticReport') String resourceType,
+    @Default(R5ResourceType.DiagnosticReport)
+    @JsonKey(unknownEnumValue: R5ResourceType.DiagnosticReport)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -140,7 +144,9 @@ abstract class DiagnosticReportMedia implements _$DiagnosticReportMedia {
 abstract class ImagingStudy with Resource implements _$ImagingStudy {
   ImagingStudy._();
   factory ImagingStudy({
-    @Default('ImagingStudy') String resourceType,
+    @Default(R5ResourceType.ImagingStudy)
+    @JsonKey(unknownEnumValue: R5ResourceType.ImagingStudy)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -320,7 +326,9 @@ abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
 abstract class MolecularSequence with Resource implements _$MolecularSequence {
   MolecularSequence._();
   factory MolecularSequence({
-    @Default('MolecularSequence') String resourceType,
+    @Default(R5ResourceType.MolecularSequence)
+    @JsonKey(unknownEnumValue: R5ResourceType.MolecularSequence)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -672,7 +680,9 @@ abstract class MolecularSequenceInner implements _$MolecularSequenceInner {
 abstract class Observation with Resource implements _$Observation {
   Observation._();
   factory Observation({
-    @Default('Observation') String resourceType,
+    @Default(R5ResourceType.Observation)
+    @JsonKey(unknownEnumValue: R5ResourceType.Observation)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -832,7 +842,9 @@ abstract class QuestionnaireResponse
     implements _$QuestionnaireResponse {
   QuestionnaireResponse._();
   factory QuestionnaireResponse({
-    @Default('QuestionnaireResponse') String resourceType,
+    @Default(R5ResourceType.QuestionnaireResponse)
+    @JsonKey(unknownEnumValue: R5ResourceType.QuestionnaireResponse)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -959,7 +971,9 @@ abstract class QuestionnaireResponseAnswer
 abstract class Specimen with Resource implements _$Specimen {
   Specimen._();
   factory Specimen({
-    @Default('Specimen') String resourceType,
+    @Default(R5ResourceType.Specimen)
+    @JsonKey(unknownEnumValue: R5ResourceType.Specimen)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

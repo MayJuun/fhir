@@ -15,7 +15,9 @@ part 'support.g.dart';
 abstract class Coverage with Resource implements _$Coverage {
   Coverage._();
   factory Coverage({
-    @Default('Coverage') String resourceType,
+    @Default(R5ResourceType.Coverage)
+    @JsonKey(unknownEnumValue: R5ResourceType.Coverage)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -156,7 +158,9 @@ abstract class CoverageEligibilityRequest
     implements _$CoverageEligibilityRequest {
   CoverageEligibilityRequest._();
   factory CoverageEligibilityRequest({
-    @Default('CoverageEligibilityRequest') String resourceType,
+    @Default(R5ResourceType.CoverageEligibilityRequest)
+    @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -346,7 +350,9 @@ abstract class CoverageEligibilityResponse
     implements _$CoverageEligibilityResponse {
   CoverageEligibilityResponse._();
   factory CoverageEligibilityResponse({
-    @Default('CoverageEligibilityResponse') String resourceType,
+    @Default(R5ResourceType.CoverageEligibilityResponse)
+    @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -552,7 +558,9 @@ abstract class CoverageEligibilityResponseError
 abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
   EnrollmentRequest._();
   factory EnrollmentRequest({
-    @Default('EnrollmentRequest') String resourceType,
+    @Default(R5ResourceType.EnrollmentRequest)
+    @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -595,7 +603,9 @@ abstract class EnrollmentResponse
     implements _$EnrollmentResponse {
   EnrollmentResponse._();
   factory EnrollmentResponse({
-    @Default('EnrollmentResponse') String resourceType,
+    @Default(R5ResourceType.EnrollmentResponse)
+    @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

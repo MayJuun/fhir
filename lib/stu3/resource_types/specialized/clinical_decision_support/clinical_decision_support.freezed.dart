@@ -18,27 +18,35 @@ class _$GuidanceResponseTearOff {
 
 // ignore: unused_element
   _GuidanceResponse call(
-      {String resourceType = 'GuidanceResponse',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
+          Stu3ResourceType resourceType = Stu3ResourceType.GuidanceResponse,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Id requestId,
-      @JsonKey(name: '_requestId') Element requestIdElement,
+      @JsonKey(name: '_requestId')
+          Element requestIdElement,
       Identifier identifier,
-      @required Reference module,
+      @required
+          Reference module,
       GuidanceResponseStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference subject,
       Reference context,
       FhirDateTime occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element occurrenceDateTimeElement,
       Reference performer,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -92,7 +100,8 @@ const $GuidanceResponse = _$GuidanceResponseTearOff();
 
 /// @nodoc
 mixin _$GuidanceResponse {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -138,27 +147,34 @@ abstract class $GuidanceResponseCopyWith<$Res> {
           GuidanceResponse value, $Res Function(GuidanceResponse) then) =
       _$GuidanceResponseCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Id requestId,
-      @JsonKey(name: '_requestId') Element requestIdElement,
+      @JsonKey(name: '_requestId')
+          Element requestIdElement,
       Identifier identifier,
       Reference module,
       GuidanceResponseStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference subject,
       Reference context,
       FhirDateTime occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element occurrenceDateTimeElement,
       Reference performer,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -230,7 +246,7 @@ class _$GuidanceResponseCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -464,27 +480,34 @@ abstract class _$GuidanceResponseCopyWith<$Res>
       __$GuidanceResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Id requestId,
-      @JsonKey(name: '_requestId') Element requestIdElement,
+      @JsonKey(name: '_requestId')
+          Element requestIdElement,
       Identifier identifier,
       Reference module,
       GuidanceResponseStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference subject,
       Reference context,
       FhirDateTime occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element occurrenceDateTimeElement,
       Reference performer,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -574,7 +597,7 @@ class __$GuidanceResponseCopyWithImpl<$Res>
     return _then(_GuidanceResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -644,27 +667,35 @@ class __$GuidanceResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_GuidanceResponse extends _GuidanceResponse {
   _$_GuidanceResponse(
-      {this.resourceType = 'GuidanceResponse',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
+          this.resourceType = Stu3ResourceType.GuidanceResponse,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.requestId,
-      @JsonKey(name: '_requestId') this.requestIdElement,
+      @JsonKey(name: '_requestId')
+          this.requestIdElement,
       this.identifier,
-      @required this.module,
+      @required
+          this.module,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.subject,
       this.context,
       this.occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          this.occurrenceDateTimeElement,
       this.performer,
       this.reasonCodeableConcept,
       this.reasonReference,
@@ -680,9 +711,9 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   factory _$_GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_GuidanceResponseFromJson(json);
 
-  @JsonKey(defaultValue: 'GuidanceResponse')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -874,27 +905,35 @@ class _$_GuidanceResponse extends _GuidanceResponse {
 abstract class _GuidanceResponse extends GuidanceResponse {
   _GuidanceResponse._() : super._();
   factory _GuidanceResponse(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Id requestId,
-      @JsonKey(name: '_requestId') Element requestIdElement,
+      @JsonKey(name: '_requestId')
+          Element requestIdElement,
       Identifier identifier,
-      @required Reference module,
+      @required
+          Reference module,
       GuidanceResponseStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference subject,
       Reference context,
       FhirDateTime occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element occurrenceDateTimeElement,
       Reference performer,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -908,7 +947,8 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       _$_GuidanceResponse.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override

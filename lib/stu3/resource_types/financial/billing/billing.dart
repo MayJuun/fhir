@@ -15,7 +15,9 @@ part 'billing.g.dart';
 abstract class Claim with Resource implements _$Claim {
   Claim._();
   factory Claim({
-    @Default('Claim') String resourceType,
+    @Default(Stu3ResourceType.Claim)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -420,7 +422,9 @@ abstract class ClaimSubDetail implements _$ClaimSubDetail {
 abstract class ClaimResponse with Resource implements _$ClaimResponse {
   ClaimResponse._();
   factory ClaimResponse({
-    @Default('ClaimResponse') String resourceType,
+    @Default(Stu3ResourceType.ClaimResponse)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

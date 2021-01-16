@@ -18,31 +18,43 @@ class _$CompositionTearOff {
 
 // ignore: unused_element
   _Composition call(
-      {String resourceType = 'Composition',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
+          Stu3ResourceType resourceType = Stu3ResourceType.Composition,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       CompositionStatus status,
-      @JsonKey(name: '_status') Element statusElement,
-      @required CodeableConcept type,
-      @JsonKey(name: 'class') CodeableConcept class_,
-      @required Reference subject,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @required
+          CodeableConcept type,
+      @JsonKey(name: 'class')
+          CodeableConcept class_,
+      @required
+          Reference subject,
       Reference encounter,
       Date date,
-      @JsonKey(name: '_date') Element dateElement,
-      @required List<Reference> author,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @required
+          List<Reference> author,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
       Id confidentiality,
-      @JsonKey(name: '_confidentiality') Element confidentialityElement,
+      @JsonKey(name: '_confidentiality')
+          Element confidentialityElement,
       List<CompositionAttester> attester,
       Reference custodian,
       List<CompositionRelatesTo> relatesTo,
@@ -94,7 +106,8 @@ const $Composition = _$CompositionTearOff();
 
 /// @nodoc
 mixin _$Composition {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -143,31 +156,40 @@ abstract class $CompositionCopyWith<$Res> {
           Composition value, $Res Function(Composition) then) =
       _$CompositionCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       CompositionStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
-      @JsonKey(name: 'class') CodeableConcept class_,
+      @JsonKey(name: 'class')
+          CodeableConcept class_,
       Reference subject,
       Reference encounter,
       Date date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       List<Reference> author,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
       Id confidentiality,
-      @JsonKey(name: '_confidentiality') Element confidentialityElement,
+      @JsonKey(name: '_confidentiality')
+          Element confidentialityElement,
       List<CompositionAttester> attester,
       Reference custodian,
       List<CompositionRelatesTo> relatesTo,
@@ -234,7 +256,7 @@ class _$CompositionCopyWithImpl<$Res> implements $CompositionCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -445,31 +467,40 @@ abstract class _$CompositionCopyWith<$Res>
       __$CompositionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       CompositionStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
-      @JsonKey(name: 'class') CodeableConcept class_,
+      @JsonKey(name: 'class')
+          CodeableConcept class_,
       Reference subject,
       Reference encounter,
       Date date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       List<Reference> author,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
       Id confidentiality,
-      @JsonKey(name: '_confidentiality') Element confidentialityElement,
+      @JsonKey(name: '_confidentiality')
+          Element confidentialityElement,
       List<CompositionAttester> attester,
       Reference custodian,
       List<CompositionRelatesTo> relatesTo,
@@ -552,7 +583,7 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
     return _then(_Composition(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -620,31 +651,43 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
 /// @nodoc
 class _$_Composition extends _Composition {
   _$_Composition(
-      {this.resourceType = 'Composition',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
+          this.resourceType = Stu3ResourceType.Composition,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
-      @required this.type,
-      @JsonKey(name: 'class') this.class_,
-      @required this.subject,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @required
+          this.type,
+      @JsonKey(name: 'class')
+          this.class_,
+      @required
+          this.subject,
       this.encounter,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
-      @required this.author,
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @required
+          this.author,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
       this.confidentiality,
-      @JsonKey(name: '_confidentiality') this.confidentialityElement,
+      @JsonKey(name: '_confidentiality')
+          this.confidentialityElement,
       this.attester,
       this.custodian,
       this.relatesTo,
@@ -659,9 +702,9 @@ class _$_Composition extends _Composition {
   factory _$_Composition.fromJson(Map<String, dynamic> json) =>
       _$_$_CompositionFromJson(json);
 
-  @JsonKey(defaultValue: 'Composition')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -859,31 +902,43 @@ class _$_Composition extends _Composition {
 abstract class _Composition extends Composition {
   _Composition._() : super._();
   factory _Composition(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       CompositionStatus status,
-      @JsonKey(name: '_status') Element statusElement,
-      @required CodeableConcept type,
-      @JsonKey(name: 'class') CodeableConcept class_,
-      @required Reference subject,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @required
+          CodeableConcept type,
+      @JsonKey(name: 'class')
+          CodeableConcept class_,
+      @required
+          Reference subject,
       Reference encounter,
       Date date,
-      @JsonKey(name: '_date') Element dateElement,
-      @required List<Reference> author,
+      @JsonKey(name: '_date')
+          Element dateElement,
+      @required
+          List<Reference> author,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
       Id confidentiality,
-      @JsonKey(name: '_confidentiality') Element confidentialityElement,
+      @JsonKey(name: '_confidentiality')
+          Element confidentialityElement,
       List<CompositionAttester> attester,
       Reference custodian,
       List<CompositionRelatesTo> relatesTo,
@@ -894,7 +949,8 @@ abstract class _Composition extends Composition {
       _$_Composition.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -2115,32 +2171,41 @@ class _$DocumentManifestTearOff {
 
 // ignore: unused_element
   _DocumentManifest call(
-      {String resourceType = 'DocumentManifest',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
+          Stu3ResourceType resourceType = Stu3ResourceType.DocumentManifest,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier masterIdentifier,
       List<Identifier> identifier,
       DocumentManifestStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       Reference subject,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       List<Reference> author,
       List<Reference> recipient,
       String source,
-      @JsonKey(name: '_source') Element sourceElement,
+      @JsonKey(name: '_source')
+          Element sourceElement,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
-      @required List<DocumentManifestContent> content,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @required
+          List<DocumentManifestContent> content,
       List<DocumentManifestRelated> related}) {
     return _DocumentManifest(
       resourceType: resourceType,
@@ -2185,7 +2250,8 @@ const $DocumentManifest = _$DocumentManifestTearOff();
 
 /// @nodoc
 mixin _$DocumentManifest {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2230,31 +2296,39 @@ abstract class $DocumentManifestCopyWith<$Res> {
           DocumentManifest value, $Res Function(DocumentManifest) then) =
       _$DocumentManifestCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier masterIdentifier,
       List<Identifier> identifier,
       DocumentManifestStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       Reference subject,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       List<Reference> author,
       List<Reference> recipient,
       String source,
-      @JsonKey(name: '_source') Element sourceElement,
+      @JsonKey(name: '_source')
+          Element sourceElement,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<DocumentManifestContent> content,
       List<DocumentManifestRelated> related});
 
@@ -2313,7 +2387,7 @@ class _$DocumentManifestCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2493,31 +2567,39 @@ abstract class _$DocumentManifestCopyWith<$Res>
       __$DocumentManifestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier masterIdentifier,
       List<Identifier> identifier,
       DocumentManifestStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       Reference subject,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       List<Reference> author,
       List<Reference> recipient,
       String source,
-      @JsonKey(name: '_source') Element sourceElement,
+      @JsonKey(name: '_source')
+          Element sourceElement,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<DocumentManifestContent> content,
       List<DocumentManifestRelated> related});
 
@@ -2589,7 +2671,7 @@ class __$DocumentManifestCopyWithImpl<$Res>
     return _then(_DocumentManifest(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2656,32 +2738,41 @@ class __$DocumentManifestCopyWithImpl<$Res>
 /// @nodoc
 class _$_DocumentManifest extends _DocumentManifest {
   _$_DocumentManifest(
-      {this.resourceType = 'DocumentManifest',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
+          this.resourceType = Stu3ResourceType.DocumentManifest,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.masterIdentifier,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.type,
       this.subject,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.author,
       this.recipient,
       this.source,
-      @JsonKey(name: '_source') this.sourceElement,
+      @JsonKey(name: '_source')
+          this.sourceElement,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
-      @required this.content,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @required
+          this.content,
       this.related})
       : assert(resourceType != null),
         assert(content != null),
@@ -2690,9 +2781,9 @@ class _$_DocumentManifest extends _DocumentManifest {
   factory _$_DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentManifestFromJson(json);
 
-  @JsonKey(defaultValue: 'DocumentManifest')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -2878,39 +2969,49 @@ class _$_DocumentManifest extends _DocumentManifest {
 abstract class _DocumentManifest extends DocumentManifest {
   _DocumentManifest._() : super._();
   factory _DocumentManifest(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier masterIdentifier,
       List<Identifier> identifier,
       DocumentManifestStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       Reference subject,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       List<Reference> author,
       List<Reference> recipient,
       String source,
-      @JsonKey(name: '_source') Element sourceElement,
+      @JsonKey(name: '_source')
+          Element sourceElement,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
-      @required List<DocumentManifestContent> content,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
+      @required
+          List<DocumentManifestContent> content,
       List<DocumentManifestRelated> related}) = _$_DocumentManifest;
 
   factory _DocumentManifest.fromJson(Map<String, dynamic> json) =
       _$_DocumentManifest.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -3375,38 +3476,50 @@ class _$DocumentReferenceTearOff {
 
 // ignore: unused_element
   _DocumentReference call(
-      {String resourceType = 'DocumentReference',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
+          Stu3ResourceType resourceType = Stu3ResourceType.DocumentReference,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier masterIdentifier,
       List<Identifier> identifier,
       DocumentReferenceStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String docStatus,
-      @JsonKey(name: '_docStatus') Element docStatusElement,
-      @required CodeableConcept type,
-      @JsonKey(name: 'class') CodeableConcept class_,
+      @JsonKey(name: '_docStatus')
+          Element docStatusElement,
+      @required
+          CodeableConcept type,
+      @JsonKey(name: 'class')
+          CodeableConcept class_,
       Reference subject,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       String indexed,
-      @JsonKey(name: '_indexed') Element indexedElement,
+      @JsonKey(name: '_indexed')
+          Element indexedElement,
       List<Reference> author,
       Reference authenticator,
       Reference custodian,
       List<DocumentReferenceRelatesTo> relatesTo,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<CodeableConcept> securityLabel,
-      @required List<DocumentReferenceContent> content,
+      @required
+          List<DocumentReferenceContent> content,
       DocumentReferenceContext context}) {
     return _DocumentReference(
       resourceType: resourceType,
@@ -3457,7 +3570,8 @@ const $DocumentReference = _$DocumentReferenceTearOff();
 
 /// @nodoc
 mixin _$DocumentReference {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -3510,36 +3624,46 @@ abstract class $DocumentReferenceCopyWith<$Res> {
           DocumentReference value, $Res Function(DocumentReference) then) =
       _$DocumentReferenceCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier masterIdentifier,
       List<Identifier> identifier,
       DocumentReferenceStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String docStatus,
-      @JsonKey(name: '_docStatus') Element docStatusElement,
+      @JsonKey(name: '_docStatus')
+          Element docStatusElement,
       CodeableConcept type,
-      @JsonKey(name: 'class') CodeableConcept class_,
+      @JsonKey(name: 'class')
+          CodeableConcept class_,
       Reference subject,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       String indexed,
-      @JsonKey(name: '_indexed') Element indexedElement,
+      @JsonKey(name: '_indexed')
+          Element indexedElement,
       List<Reference> author,
       Reference authenticator,
       Reference custodian,
       List<DocumentReferenceRelatesTo> relatesTo,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<CodeableConcept> securityLabel,
       List<DocumentReferenceContent> content,
       DocumentReferenceContext context});
@@ -3610,7 +3734,7 @@ class _$DocumentReferenceCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3853,36 +3977,46 @@ abstract class _$DocumentReferenceCopyWith<$Res>
       __$DocumentReferenceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier masterIdentifier,
       List<Identifier> identifier,
       DocumentReferenceStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String docStatus,
-      @JsonKey(name: '_docStatus') Element docStatusElement,
+      @JsonKey(name: '_docStatus')
+          Element docStatusElement,
       CodeableConcept type,
-      @JsonKey(name: 'class') CodeableConcept class_,
+      @JsonKey(name: 'class')
+          CodeableConcept class_,
       Reference subject,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       String indexed,
-      @JsonKey(name: '_indexed') Element indexedElement,
+      @JsonKey(name: '_indexed')
+          Element indexedElement,
       List<Reference> author,
       Reference authenticator,
       Reference custodian,
       List<DocumentReferenceRelatesTo> relatesTo,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<CodeableConcept> securityLabel,
       List<DocumentReferenceContent> content,
       DocumentReferenceContext context});
@@ -3971,7 +4105,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
     return _then(_DocumentReference(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4051,38 +4185,50 @@ class __$DocumentReferenceCopyWithImpl<$Res>
 /// @nodoc
 class _$_DocumentReference extends _DocumentReference {
   _$_DocumentReference(
-      {this.resourceType = 'DocumentReference',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
+          this.resourceType = Stu3ResourceType.DocumentReference,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.masterIdentifier,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.docStatus,
-      @JsonKey(name: '_docStatus') this.docStatusElement,
-      @required this.type,
-      @JsonKey(name: 'class') this.class_,
+      @JsonKey(name: '_docStatus')
+          this.docStatusElement,
+      @required
+          this.type,
+      @JsonKey(name: 'class')
+          this.class_,
       this.subject,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.indexed,
-      @JsonKey(name: '_indexed') this.indexedElement,
+      @JsonKey(name: '_indexed')
+          this.indexedElement,
       this.author,
       this.authenticator,
       this.custodian,
       this.relatesTo,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.securityLabel,
-      @required this.content,
+      @required
+          this.content,
       this.context})
       : assert(resourceType != null),
         assert(type != null),
@@ -4092,9 +4238,9 @@ class _$_DocumentReference extends _DocumentReference {
   factory _$_DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentReferenceFromJson(json);
 
-  @JsonKey(defaultValue: 'DocumentReference')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -4306,45 +4452,58 @@ class _$_DocumentReference extends _DocumentReference {
 abstract class _DocumentReference extends DocumentReference {
   _DocumentReference._() : super._();
   factory _DocumentReference(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier masterIdentifier,
       List<Identifier> identifier,
       DocumentReferenceStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String docStatus,
-      @JsonKey(name: '_docStatus') Element docStatusElement,
-      @required CodeableConcept type,
-      @JsonKey(name: 'class') CodeableConcept class_,
+      @JsonKey(name: '_docStatus')
+          Element docStatusElement,
+      @required
+          CodeableConcept type,
+      @JsonKey(name: 'class')
+          CodeableConcept class_,
       Reference subject,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       String indexed,
-      @JsonKey(name: '_indexed') Element indexedElement,
+      @JsonKey(name: '_indexed')
+          Element indexedElement,
       List<Reference> author,
       Reference authenticator,
       Reference custodian,
       List<DocumentReferenceRelatesTo> relatesTo,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<CodeableConcept> securityLabel,
-      @required List<DocumentReferenceContent> content,
+      @required
+          List<DocumentReferenceContent> content,
       DocumentReferenceContext context}) = _$_DocumentReference;
 
   factory _DocumentReference.fromJson(Map<String, dynamic> json) =
       _$_DocumentReference.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override

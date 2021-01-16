@@ -15,7 +15,9 @@ part 'quality_reporting.g.dart';
 abstract class Measure with Resource implements _$Measure {
   Measure._();
   factory Measure({
-    @Default('Measure') String resourceType,
+    @Default(Stu3ResourceType.Measure)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -218,7 +220,9 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
 abstract class MeasureReport with Resource implements _$MeasureReport {
   MeasureReport._();
   factory MeasureReport({
-    @Default('MeasureReport') String resourceType,
+    @Default(Stu3ResourceType.MeasureReport)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

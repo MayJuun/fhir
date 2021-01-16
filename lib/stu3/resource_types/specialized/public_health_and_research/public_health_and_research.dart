@@ -15,7 +15,9 @@ part 'public_health_and_research.g.dart';
 abstract class ResearchStudy with Resource implements _$ResearchStudy {
   ResearchStudy._();
   factory ResearchStudy({
-    @Default('ResearchStudy') String resourceType,
+    @Default(Stu3ResourceType.ResearchStudy)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -96,7 +98,9 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
 abstract class ResearchSubject with Resource implements _$ResearchSubject {
   ResearchSubject._();
   factory ResearchSubject({
-    @Default('ResearchSubject') String resourceType,
+    @Default(Stu3ResourceType.ResearchSubject)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchSubject)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

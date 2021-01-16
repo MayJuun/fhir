@@ -15,7 +15,9 @@ part 'medications.g.dart';
 abstract class Immunization with Resource implements _$Immunization {
   Immunization._();
   factory Immunization({
-    @Default('Immunization') String resourceType,
+    @Default(Stu3ResourceType.Immunization)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Immunization)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -186,7 +188,9 @@ abstract class ImmunizationRecommendation
     implements _$ImmunizationRecommendation {
   ImmunizationRecommendation._();
   factory ImmunizationRecommendation({
-    @Default('ImmunizationRecommendation') String resourceType,
+    @Default(Stu3ResourceType.ImmunizationRecommendation)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ImmunizationRecommendation)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -318,7 +322,9 @@ abstract class ImmunizationRecommendationProtocol
 abstract class Medication with Resource implements _$Medication {
   Medication._();
   factory Medication({
-    @Default('Medication') String resourceType,
+    @Default(Stu3ResourceType.Medication)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Medication)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -463,7 +469,9 @@ abstract class MedicationAdministration
     implements _$MedicationAdministration {
   MedicationAdministration._();
   factory MedicationAdministration({
-    @Default('MedicationAdministration') String resourceType,
+    @Default(Stu3ResourceType.MedicationAdministration)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationAdministration)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -583,7 +591,9 @@ abstract class MedicationDispense
     implements _$MedicationDispense {
   MedicationDispense._();
   factory MedicationDispense({
-    @Default('MedicationDispense') String resourceType,
+    @Default(Stu3ResourceType.MedicationDispense)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationDispense)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -700,7 +710,9 @@ abstract class MedicationDispenseSubstitution
 abstract class MedicationRequest with Resource implements _$MedicationRequest {
   MedicationRequest._();
   factory MedicationRequest({
-    @Default('MedicationRequest') String resourceType,
+    @Default(Stu3ResourceType.MedicationRequest)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationRequest)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -846,7 +858,9 @@ abstract class MedicationStatement
     implements _$MedicationStatement {
   MedicationStatement._();
   factory MedicationStatement({
-    @Default('MedicationStatement') String resourceType,
+    @Default(Stu3ResourceType.MedicationStatement)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationStatement)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

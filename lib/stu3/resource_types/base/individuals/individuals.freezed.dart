@@ -18,29 +18,38 @@ class _$GroupTearOff {
 
 // ignore: unused_element
   _Group call(
-      {String resourceType = 'Group',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Group)
+          Stu3ResourceType resourceType = Stu3ResourceType.Group,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       GroupType type,
-      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
       Boolean actual,
-      @JsonKey(name: '_actual') Element actualElement,
+      @JsonKey(name: '_actual')
+          Element actualElement,
       CodeableConcept code,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       Decimal quantity,
-      @JsonKey(name: '_quantity') Element quantityElement,
+      @JsonKey(name: '_quantity')
+          Element quantityElement,
       List<GroupCharacteristic> characteristic,
       List<GroupMember> member}) {
     return _Group(
@@ -84,7 +93,8 @@ const $Group = _$GroupTearOff();
 
 /// @nodoc
 mixin _$Group {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Group)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -127,29 +137,38 @@ abstract class $GroupCopyWith<$Res> {
   factory $GroupCopyWith(Group value, $Res Function(Group) then) =
       _$GroupCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Group)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       GroupType type,
-      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
       Boolean actual,
-      @JsonKey(name: '_actual') Element actualElement,
+      @JsonKey(name: '_actual')
+          Element actualElement,
       CodeableConcept code,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       Decimal quantity,
-      @JsonKey(name: '_quantity') Element quantityElement,
+      @JsonKey(name: '_quantity')
+          Element quantityElement,
       List<GroupCharacteristic> characteristic,
       List<GroupMember> member});
 
@@ -204,7 +223,7 @@ class _$GroupCopyWithImpl<$Res> implements $GroupCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -362,29 +381,38 @@ abstract class _$GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
       __$GroupCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Group)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       GroupType type,
-      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
       Boolean actual,
-      @JsonKey(name: '_actual') Element actualElement,
+      @JsonKey(name: '_actual')
+          Element actualElement,
       CodeableConcept code,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       Decimal quantity,
-      @JsonKey(name: '_quantity') Element quantityElement,
+      @JsonKey(name: '_quantity')
+          Element quantityElement,
       List<GroupCharacteristic> characteristic,
       List<GroupMember> member});
 
@@ -450,7 +478,7 @@ class __$GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
     return _then(_Group(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -507,29 +535,38 @@ class __$GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
 /// @nodoc
 class _$_Group extends _Group {
   _$_Group(
-      {this.resourceType = 'Group',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Group)
+          this.resourceType = Stu3ResourceType.Group,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
-      @JsonKey(name: '_active') this.activeElement,
+      @JsonKey(name: '_active')
+          this.activeElement,
       this.type,
-      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: '_type')
+          this.typeElement,
       this.actual,
-      @JsonKey(name: '_actual') this.actualElement,
+      @JsonKey(name: '_actual')
+          this.actualElement,
       this.code,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.quantity,
-      @JsonKey(name: '_quantity') this.quantityElement,
+      @JsonKey(name: '_quantity')
+          this.quantityElement,
       this.characteristic,
       this.member})
       : assert(resourceType != null),
@@ -538,9 +575,9 @@ class _$_Group extends _Group {
   factory _$_Group.fromJson(Map<String, dynamic> json) =>
       _$_$_GroupFromJson(json);
 
-  @JsonKey(defaultValue: 'Group')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Group)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -717,36 +754,46 @@ class _$_Group extends _Group {
 abstract class _Group extends Group {
   _Group._() : super._();
   factory _Group(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Group)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       GroupType type,
-      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
       Boolean actual,
-      @JsonKey(name: '_actual') Element actualElement,
+      @JsonKey(name: '_actual')
+          Element actualElement,
       CodeableConcept code,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       Decimal quantity,
-      @JsonKey(name: '_quantity') Element quantityElement,
+      @JsonKey(name: '_quantity')
+          Element quantityElement,
       List<GroupCharacteristic> characteristic,
       List<GroupMember> member}) = _$_Group;
 
   factory _Group.fromJson(Map<String, dynamic> json) = _$_Group.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Group)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -1494,7 +1541,8 @@ class _$PatientTearOff {
 
 // ignore: unused_element
   _Patient call(
-      {String resourceType = 'Patient',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Patient)
+          Stu3ResourceType resourceType = Stu3ResourceType.Patient,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1594,7 +1642,8 @@ const $Patient = _$PatientTearOff();
 
 /// @nodoc
 mixin _$Patient {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Patient)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1651,7 +1700,8 @@ abstract class $PatientCopyWith<$Res> {
   factory $PatientCopyWith(Patient value, $Res Function(Patient) then) =
       _$PatientCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Patient)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1766,7 +1816,7 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1998,7 +2048,8 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
       __$PatientCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Patient)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2128,7 +2179,7 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
     return _then(_Patient(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2219,36 +2270,47 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
 /// @nodoc
 class _$_Patient extends _Patient {
   _$_Patient(
-      {this.resourceType = 'Patient',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Patient)
+          this.resourceType = Stu3ResourceType.Patient,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
-      @JsonKey(name: '_active') this.activeElement,
+      @JsonKey(name: '_active')
+          this.activeElement,
       this.name,
       this.telecom,
       this.gender,
-      @JsonKey(name: '_gender') this.genderElement,
+      @JsonKey(name: '_gender')
+          this.genderElement,
       this.birthDate,
-      @JsonKey(name: '_birthDate') this.birthDateElement,
+      @JsonKey(name: '_birthDate')
+          this.birthDateElement,
       this.deceasedBoolean,
-      @JsonKey(name: '_deceasedBoolean') this.deceasedBooleanElement,
+      @JsonKey(name: '_deceasedBoolean')
+          this.deceasedBooleanElement,
       this.deceasedDateTime,
-      @JsonKey(name: '_deceasedDateTime') this.deceasedDateTimeElement,
+      @JsonKey(name: '_deceasedDateTime')
+          this.deceasedDateTimeElement,
       this.address,
       this.maritalStatus,
       this.multipleBirthBoolean,
-      @JsonKey(name: '_multipleBirthBoolean') this.multipleBirthBooleanElement,
+      @JsonKey(name: '_multipleBirthBoolean')
+          this.multipleBirthBooleanElement,
       this.multipleBirthInteger,
-      @JsonKey(name: '_multipleBirthInteger') this.multipleBirthIntegerElement,
+      @JsonKey(name: '_multipleBirthInteger')
+          this.multipleBirthIntegerElement,
       this.photo,
       this.contact,
       this.animal,
@@ -2262,9 +2324,9 @@ class _$_Patient extends _Patient {
   factory _$_Patient.fromJson(Map<String, dynamic> json) =>
       _$_$_PatientFromJson(json);
 
-  @JsonKey(defaultValue: 'Patient')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Patient)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -2492,7 +2554,8 @@ class _$_Patient extends _Patient {
 abstract class _Patient extends Patient {
   _Patient._() : super._();
   factory _Patient(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Patient)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2543,7 +2606,8 @@ abstract class _Patient extends Patient {
   factory _Patient.fromJson(Map<String, dynamic> json) = _$_Patient.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Patient)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -3687,29 +3751,36 @@ class _$PersonTearOff {
 
 // ignore: unused_element
   _Person call(
-      {String resourceType = 'Person',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Person)
+          Stu3ResourceType resourceType = Stu3ResourceType.Person,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<HumanName> name,
       List<ContactPoint> telecom,
       PersonGender gender,
-      @JsonKey(name: '_gender') Element genderElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
       Date birthDate,
-      @JsonKey(name: '_birthDate') Element birthDateElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
       List<Address> address,
       Attachment photo,
       Reference managingOrganization,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       List<PersonLink> link}) {
     return _Person(
       resourceType: resourceType,
@@ -3751,7 +3822,8 @@ const $Person = _$PersonTearOff();
 
 /// @nodoc
 mixin _$Person {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Person)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -3791,29 +3863,36 @@ abstract class $PersonCopyWith<$Res> {
   factory $PersonCopyWith(Person value, $Res Function(Person) then) =
       _$PersonCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Person)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<HumanName> name,
       List<ContactPoint> telecom,
       PersonGender gender,
-      @JsonKey(name: '_gender') Element genderElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
       Date birthDate,
-      @JsonKey(name: '_birthDate') Element birthDateElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
       List<Address> address,
       Attachment photo,
       Reference managingOrganization,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       List<PersonLink> link});
 
   $MetaCopyWith<$Res> get meta;
@@ -3865,7 +3944,7 @@ class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4011,29 +4090,36 @@ abstract class _$PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
       __$PersonCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Person)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<HumanName> name,
       List<ContactPoint> telecom,
       PersonGender gender,
-      @JsonKey(name: '_gender') Element genderElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
       Date birthDate,
-      @JsonKey(name: '_birthDate') Element birthDateElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
       List<Address> address,
       Attachment photo,
       Reference managingOrganization,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       List<PersonLink> link});
 
   @override
@@ -4095,7 +4181,7 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
     return _then(_Person(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4150,29 +4236,36 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
 /// @nodoc
 class _$_Person extends _Person {
   _$_Person(
-      {this.resourceType = 'Person',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Person)
+          this.resourceType = Stu3ResourceType.Person,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.name,
       this.telecom,
       this.gender,
-      @JsonKey(name: '_gender') this.genderElement,
+      @JsonKey(name: '_gender')
+          this.genderElement,
       this.birthDate,
-      @JsonKey(name: '_birthDate') this.birthDateElement,
+      @JsonKey(name: '_birthDate')
+          this.birthDateElement,
       this.address,
       this.photo,
       this.managingOrganization,
       this.active,
-      @JsonKey(name: '_active') this.activeElement,
+      @JsonKey(name: '_active')
+          this.activeElement,
       this.link})
       : assert(resourceType != null),
         super._();
@@ -4180,9 +4273,9 @@ class _$_Person extends _Person {
   factory _$_Person.fromJson(Map<String, dynamic> json) =>
       _$_$_PersonFromJson(json);
 
-  @JsonKey(defaultValue: 'Person')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Person)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -4352,35 +4445,43 @@ class _$_Person extends _Person {
 abstract class _Person extends Person {
   _Person._() : super._();
   factory _Person(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Person)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<HumanName> name,
       List<ContactPoint> telecom,
       PersonGender gender,
-      @JsonKey(name: '_gender') Element genderElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
       Date birthDate,
-      @JsonKey(name: '_birthDate') Element birthDateElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
       List<Address> address,
       Attachment photo,
       Reference managingOrganization,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       List<PersonLink> link}) = _$_Person;
 
   factory _Person.fromJson(Map<String, dynamic> json) = _$_Person.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Person)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -4672,27 +4773,34 @@ class _$PractitionerTearOff {
 
 // ignore: unused_element
   _Practitioner call(
-      {String resourceType = 'Practitioner',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Practitioner)
+          Stu3ResourceType resourceType = Stu3ResourceType.Practitioner,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       List<HumanName> name,
       List<ContactPoint> telecom,
       List<Address> address,
       PractitionerGender gender,
-      @JsonKey(name: '_gender') Element genderElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
       Date birthDate,
-      @JsonKey(name: '_birthDate') Element birthDateElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
       List<Attachment> photo,
       List<PractitionerQualification> qualification,
       List<CodeableConcept> communication}) {
@@ -4736,7 +4844,8 @@ const $Practitioner = _$PractitionerTearOff();
 
 /// @nodoc
 mixin _$Practitioner {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Practitioner)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -4777,27 +4886,34 @@ abstract class $PractitionerCopyWith<$Res> {
           Practitioner value, $Res Function(Practitioner) then) =
       _$PractitionerCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Practitioner)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       List<HumanName> name,
       List<ContactPoint> telecom,
       List<Address> address,
       PractitionerGender gender,
-      @JsonKey(name: '_gender') Element genderElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
       Date birthDate,
-      @JsonKey(name: '_birthDate') Element birthDateElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
       List<Attachment> photo,
       List<PractitionerQualification> qualification,
       List<CodeableConcept> communication});
@@ -4849,7 +4965,7 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4979,27 +5095,34 @@ abstract class _$PractitionerCopyWith<$Res>
       __$PractitionerCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Practitioner)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       List<HumanName> name,
       List<ContactPoint> telecom,
       List<Address> address,
       PractitionerGender gender,
-      @JsonKey(name: '_gender') Element genderElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
       Date birthDate,
-      @JsonKey(name: '_birthDate') Element birthDateElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
       List<Attachment> photo,
       List<PractitionerQualification> qualification,
       List<CodeableConcept> communication});
@@ -5060,7 +5183,7 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
     return _then(_Practitioner(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5117,27 +5240,34 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
 /// @nodoc
 class _$_Practitioner extends _Practitioner {
   _$_Practitioner(
-      {this.resourceType = 'Practitioner',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Practitioner)
+          this.resourceType = Stu3ResourceType.Practitioner,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
-      @JsonKey(name: '_active') this.activeElement,
+      @JsonKey(name: '_active')
+          this.activeElement,
       this.name,
       this.telecom,
       this.address,
       this.gender,
-      @JsonKey(name: '_gender') this.genderElement,
+      @JsonKey(name: '_gender')
+          this.genderElement,
       this.birthDate,
-      @JsonKey(name: '_birthDate') this.birthDateElement,
+      @JsonKey(name: '_birthDate')
+          this.birthDateElement,
       this.photo,
       this.qualification,
       this.communication})
@@ -5147,9 +5277,9 @@ class _$_Practitioner extends _Practitioner {
   factory _$_Practitioner.fromJson(Map<String, dynamic> json) =>
       _$_$_PractitionerFromJson(json);
 
-  @JsonKey(defaultValue: 'Practitioner')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Practitioner)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -5320,27 +5450,34 @@ class _$_Practitioner extends _Practitioner {
 abstract class _Practitioner extends Practitioner {
   _Practitioner._() : super._();
   factory _Practitioner(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Practitioner)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       List<HumanName> name,
       List<ContactPoint> telecom,
       List<Address> address,
       PractitionerGender gender,
-      @JsonKey(name: '_gender') Element genderElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
       Date birthDate,
-      @JsonKey(name: '_birthDate') Element birthDateElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
       List<Attachment> photo,
       List<PractitionerQualification> qualification,
       List<CodeableConcept> communication}) = _$_Practitioner;
@@ -5349,7 +5486,8 @@ abstract class _Practitioner extends Practitioner {
       _$_Practitioner.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Practitioner)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -5668,7 +5806,8 @@ class _$PractitionerRoleTearOff {
 
 // ignore: unused_element
   _PractitionerRole call(
-      {String resourceType = 'PractitionerRole',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.PractitionerRole)
+          Stu3ResourceType resourceType = Stu3ResourceType.PractitionerRole,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5743,7 +5882,8 @@ const $PractitionerRole = _$PractitionerRoleTearOff();
 
 /// @nodoc
 mixin _$PractitionerRole {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.PractitionerRole)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -5786,7 +5926,8 @@ abstract class $PractitionerRoleCopyWith<$Res> {
           PractitionerRole value, $Res Function(PractitionerRole) then) =
       _$PractitionerRoleCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.PractitionerRole)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -5872,7 +6013,7 @@ class _$PractitionerRoleCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6036,7 +6177,8 @@ abstract class _$PractitionerRoleCopyWith<$Res>
       __$PractitionerRoleCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.PractitionerRole)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6133,7 +6275,7 @@ class __$PractitionerRoleCopyWithImpl<$Res>
     return _then(_PractitionerRole(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6203,7 +6345,8 @@ class __$PractitionerRoleCopyWithImpl<$Res>
 /// @nodoc
 class _$_PractitionerRole extends _PractitionerRole {
   _$_PractitionerRole(
-      {this.resourceType = 'PractitionerRole',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.PractitionerRole)
+          this.resourceType = Stu3ResourceType.PractitionerRole,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6241,9 +6384,9 @@ class _$_PractitionerRole extends _PractitionerRole {
   factory _$_PractitionerRole.fromJson(Map<String, dynamic> json) =>
       _$_$_PractitionerRoleFromJson(json);
 
-  @JsonKey(defaultValue: 'PractitionerRole')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.PractitionerRole)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -6427,7 +6570,8 @@ class _$_PractitionerRole extends _PractitionerRole {
 abstract class _PractitionerRole extends PractitionerRole {
   _PractitionerRole._() : super._();
   factory _PractitionerRole(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.PractitionerRole)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6464,7 +6608,8 @@ abstract class _PractitionerRole extends PractitionerRole {
       _$_PractitionerRole.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.PractitionerRole)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -7151,28 +7296,36 @@ class _$RelatedPersonTearOff {
 
 // ignore: unused_element
   _RelatedPerson call(
-      {String resourceType = 'RelatedPerson',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.RelatedPerson)
+          Stu3ResourceType resourceType = Stu3ResourceType.RelatedPerson,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
-      @required Reference patient,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @required
+          Reference patient,
       CodeableConcept relationship,
       List<HumanName> name,
       List<ContactPoint> telecom,
       RelatedPersonGender gender,
-      @JsonKey(name: '_gender') Element genderElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
       Date birthDate,
-      @JsonKey(name: '_birthDate') Element birthDateElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
       List<Address> address,
       List<Attachment> photo,
       Period period}) {
@@ -7217,7 +7370,8 @@ const $RelatedPerson = _$RelatedPersonTearOff();
 
 /// @nodoc
 mixin _$RelatedPerson {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.RelatedPerson)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -7259,28 +7413,35 @@ abstract class $RelatedPersonCopyWith<$Res> {
           RelatedPerson value, $Res Function(RelatedPerson) then) =
       _$RelatedPersonCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.RelatedPerson)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       Reference patient,
       CodeableConcept relationship,
       List<HumanName> name,
       List<ContactPoint> telecom,
       RelatedPersonGender gender,
-      @JsonKey(name: '_gender') Element genderElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
       Date birthDate,
-      @JsonKey(name: '_birthDate') Element birthDateElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
       List<Address> address,
       List<Attachment> photo,
       Period period});
@@ -7337,7 +7498,7 @@ class _$RelatedPersonCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7496,28 +7657,35 @@ abstract class _$RelatedPersonCopyWith<$Res>
       __$RelatedPersonCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.RelatedPerson)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       Reference patient,
       CodeableConcept relationship,
       List<HumanName> name,
       List<ContactPoint> telecom,
       RelatedPersonGender gender,
-      @JsonKey(name: '_gender') Element genderElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
       Date birthDate,
-      @JsonKey(name: '_birthDate') Element birthDateElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
       List<Address> address,
       List<Attachment> photo,
       Period period});
@@ -7586,7 +7754,7 @@ class __$RelatedPersonCopyWithImpl<$Res>
     return _then(_RelatedPerson(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7642,28 +7810,36 @@ class __$RelatedPersonCopyWithImpl<$Res>
 /// @nodoc
 class _$_RelatedPerson extends _RelatedPerson {
   _$_RelatedPerson(
-      {this.resourceType = 'RelatedPerson',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.RelatedPerson)
+          this.resourceType = Stu3ResourceType.RelatedPerson,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
-      @JsonKey(name: '_active') this.activeElement,
-      @required this.patient,
+      @JsonKey(name: '_active')
+          this.activeElement,
+      @required
+          this.patient,
       this.relationship,
       this.name,
       this.telecom,
       this.gender,
-      @JsonKey(name: '_gender') this.genderElement,
+      @JsonKey(name: '_gender')
+          this.genderElement,
       this.birthDate,
-      @JsonKey(name: '_birthDate') this.birthDateElement,
+      @JsonKey(name: '_birthDate')
+          this.birthDateElement,
       this.address,
       this.photo,
       this.period})
@@ -7674,9 +7850,9 @@ class _$_RelatedPerson extends _RelatedPerson {
   factory _$_RelatedPerson.fromJson(Map<String, dynamic> json) =>
       _$_$_RelatedPersonFromJson(json);
 
-  @JsonKey(defaultValue: 'RelatedPerson')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.RelatedPerson)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -7852,28 +8028,36 @@ class _$_RelatedPerson extends _RelatedPerson {
 abstract class _RelatedPerson extends RelatedPerson {
   _RelatedPerson._() : super._();
   factory _RelatedPerson(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.RelatedPerson)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
-      @required Reference patient,
+      @JsonKey(name: '_active')
+          Element activeElement,
+      @required
+          Reference patient,
       CodeableConcept relationship,
       List<HumanName> name,
       List<ContactPoint> telecom,
       RelatedPersonGender gender,
-      @JsonKey(name: '_gender') Element genderElement,
+      @JsonKey(name: '_gender')
+          Element genderElement,
       Date birthDate,
-      @JsonKey(name: '_birthDate') Element birthDateElement,
+      @JsonKey(name: '_birthDate')
+          Element birthDateElement,
       List<Address> address,
       List<Attachment> photo,
       Period period}) = _$_RelatedPerson;
@@ -7882,7 +8066,8 @@ abstract class _RelatedPerson extends RelatedPerson {
       _$_RelatedPerson.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.RelatedPerson)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override

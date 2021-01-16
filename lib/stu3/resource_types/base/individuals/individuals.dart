@@ -15,7 +15,9 @@ part 'individuals.g.dart';
 abstract class Group with Resource implements _$Group {
   Group._();
   factory Group({
-    @Default('Group') String resourceType,
+    @Default(Stu3ResourceType.Group)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Group)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -115,7 +117,9 @@ abstract class GroupMember implements _$GroupMember {
 abstract class Patient with Resource implements _$Patient {
   Patient._();
   factory Patient({
-    @Default('Patient') String resourceType,
+    @Default(Stu3ResourceType.Patient)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Patient)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -274,7 +278,9 @@ abstract class PatientLink implements _$PatientLink {
 abstract class Person with Resource implements _$Person {
   Person._();
   factory Person({
-    @Default('Person') String resourceType,
+    @Default(Stu3ResourceType.Person)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Person)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -342,7 +348,9 @@ abstract class PersonLink implements _$PersonLink {
 abstract class Practitioner with Resource implements _$Practitioner {
   Practitioner._();
   factory Practitioner({
-    @Default('Practitioner') String resourceType,
+    @Default(Stu3ResourceType.Practitioner)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Practitioner)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -414,7 +422,9 @@ abstract class PractitionerQualification
 abstract class PractitionerRole with Resource implements _$PractitionerRole {
   PractitionerRole._();
   factory PractitionerRole({
-    @Default('PractitionerRole') String resourceType,
+    @Default(Stu3ResourceType.PractitionerRole)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.PractitionerRole)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -520,7 +530,9 @@ abstract class PractitionerRoleNotAvailable
 abstract class RelatedPerson with Resource implements _$RelatedPerson {
   RelatedPerson._();
   factory RelatedPerson({
-    @Default('RelatedPerson') String resourceType,
+    @Default(Stu3ResourceType.RelatedPerson)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.RelatedPerson)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

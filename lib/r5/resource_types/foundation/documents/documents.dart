@@ -15,7 +15,9 @@ part 'documents.g.dart';
 abstract class CatalogEntry with Resource implements _$CatalogEntry {
   CatalogEntry._();
   factory CatalogEntry({
-    @Default('CatalogEntry') String resourceType,
+    @Default(R5ResourceType.CatalogEntry)
+    @JsonKey(unknownEnumValue: R5ResourceType.CatalogEntry)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -101,7 +103,9 @@ abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
 abstract class Composition with Resource implements _$Composition {
   Composition._();
   factory Composition({
-    @Default('Composition') String resourceType,
+    @Default(R5ResourceType.Composition)
+    @JsonKey(unknownEnumValue: R5ResourceType.Composition)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -274,7 +278,9 @@ abstract class CompositionSection implements _$CompositionSection {
 abstract class DocumentManifest with Resource implements _$DocumentManifest {
   DocumentManifest._();
   factory DocumentManifest({
-    @Default('DocumentManifest') String resourceType,
+    @Default(R5ResourceType.DocumentManifest)
+    @JsonKey(unknownEnumValue: R5ResourceType.DocumentManifest)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -349,7 +355,9 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
 abstract class DocumentReference with Resource implements _$DocumentReference {
   DocumentReference._();
   factory DocumentReference({
-    @Default('DocumentReference') String resourceType,
+    @Default(R5ResourceType.DocumentReference)
+    @JsonKey(unknownEnumValue: R5ResourceType.DocumentReference)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

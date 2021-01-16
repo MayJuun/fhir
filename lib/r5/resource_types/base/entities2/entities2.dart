@@ -17,7 +17,9 @@ abstract class BiologicallyDerivedProduct
     implements _$BiologicallyDerivedProduct {
   BiologicallyDerivedProduct._();
   factory BiologicallyDerivedProduct({
-    @Default('BiologicallyDerivedProduct') String resourceType,
+    @Default(R5ResourceType.BiologicallyDerivedProduct)
+    @JsonKey(unknownEnumValue: R5ResourceType.BiologicallyDerivedProduct)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -203,7 +205,9 @@ abstract class BiologicallyDerivedProductStorage
 abstract class Device with Resource implements _$Device {
   Device._();
   factory Device({
-    @Default('Device') String resourceType,
+    @Default(R5ResourceType.Device)
+    @JsonKey(unknownEnumValue: R5ResourceType.Device)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -474,7 +478,9 @@ abstract class DeviceAssociationStatus implements _$DeviceAssociationStatus {
 abstract class DeviceMetric with Resource implements _$DeviceMetric {
   DeviceMetric._();
   factory DeviceMetric({
-    @Default('DeviceMetric') String resourceType,
+    @Default(R5ResourceType.DeviceMetric)
+    @JsonKey(unknownEnumValue: R5ResourceType.DeviceMetric)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -554,7 +560,9 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
 abstract class NutritionProduct with Resource implements _$NutritionProduct {
   NutritionProduct._();
   factory NutritionProduct({
-    @Default('NutritionProduct') String resourceType,
+    @Default(R5ResourceType.NutritionProduct)
+    @JsonKey(unknownEnumValue: R5ResourceType.NutritionProduct)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -726,7 +734,9 @@ abstract class NutritionProductInstance implements _$NutritionProductInstance {
 abstract class Substance with Resource implements _$Substance {
   Substance._();
   factory Substance({
-    @Default('Substance') String resourceType,
+    @Default(R5ResourceType.Substance)
+    @JsonKey(unknownEnumValue: R5ResourceType.Substance)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

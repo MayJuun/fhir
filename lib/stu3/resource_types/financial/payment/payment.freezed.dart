@@ -18,26 +18,33 @@ class _$PaymentNoticeTearOff {
 
 // ignore: unused_element
   _PaymentNotice call(
-      {String resourceType = 'PaymentNotice',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
+          Stu3ResourceType resourceType = Stu3ResourceType.PaymentNotice,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference request,
       Reference response,
       Date statusDate,
-      @JsonKey(name: '_statusDate') Element statusDateElement,
+      @JsonKey(name: '_statusDate')
+          Element statusDateElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference target,
       Reference provider,
       Reference organization,
@@ -82,7 +89,8 @@ const $PaymentNotice = _$PaymentNoticeTearOff();
 
 /// @nodoc
 mixin _$PaymentNotice {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -123,26 +131,33 @@ abstract class $PaymentNoticeCopyWith<$Res> {
           PaymentNotice value, $Res Function(PaymentNotice) then) =
       _$PaymentNoticeCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference request,
       Reference response,
       Date statusDate,
-      @JsonKey(name: '_statusDate') Element statusDateElement,
+      @JsonKey(name: '_statusDate')
+          Element statusDateElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference target,
       Reference provider,
       Reference organization,
@@ -202,7 +217,7 @@ class _$PaymentNoticeCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -392,26 +407,33 @@ abstract class _$PaymentNoticeCopyWith<$Res>
       __$PaymentNoticeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference request,
       Reference response,
       Date statusDate,
-      @JsonKey(name: '_statusDate') Element statusDateElement,
+      @JsonKey(name: '_statusDate')
+          Element statusDateElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference target,
       Reference provider,
       Reference organization,
@@ -486,7 +508,7 @@ class __$PaymentNoticeCopyWithImpl<$Res>
     return _then(_PaymentNotice(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -543,26 +565,33 @@ class __$PaymentNoticeCopyWithImpl<$Res>
 /// @nodoc
 class _$_PaymentNotice extends _PaymentNotice {
   _$_PaymentNotice(
-      {this.resourceType = 'PaymentNotice',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
+          this.resourceType = Stu3ResourceType.PaymentNotice,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.request,
       this.response,
       this.statusDate,
-      @JsonKey(name: '_statusDate') this.statusDateElement,
+      @JsonKey(name: '_statusDate')
+          this.statusDateElement,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.target,
       this.provider,
       this.organization,
@@ -573,9 +602,9 @@ class _$_PaymentNotice extends _PaymentNotice {
   factory _$_PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentNoticeFromJson(json);
 
-  @JsonKey(defaultValue: 'PaymentNotice')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -748,26 +777,33 @@ class _$_PaymentNotice extends _PaymentNotice {
 abstract class _PaymentNotice extends PaymentNotice {
   _PaymentNotice._() : super._();
   factory _PaymentNotice(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference request,
       Reference response,
       Date statusDate,
-      @JsonKey(name: '_statusDate') Element statusDateElement,
+      @JsonKey(name: '_statusDate')
+          Element statusDateElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference target,
       Reference provider,
       Reference organization,
@@ -777,7 +813,8 @@ abstract class _PaymentNotice extends PaymentNotice {
       _$_PaymentNotice.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -845,28 +882,36 @@ class _$PaymentReconciliationTearOff {
 
 // ignore: unused_element
   _PaymentReconciliation call(
-      {String resourceType = 'PaymentReconciliation',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
+          Stu3ResourceType
+              resourceType = Stu3ResourceType.PaymentReconciliation,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Period period,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       Reference requestProvider,
       Reference requestOrganization,
       List<PaymentReconciliationDetail> detail,
@@ -917,7 +962,8 @@ const $PaymentReconciliation = _$PaymentReconciliationTearOff();
 
 /// @nodoc
 mixin _$PaymentReconciliation {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -962,28 +1008,35 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
           $Res Function(PaymentReconciliation) then) =
       _$PaymentReconciliationCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Period period,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       Reference requestProvider,
       Reference requestOrganization,
       List<PaymentReconciliationDetail> detail,
@@ -1051,7 +1104,7 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1271,28 +1324,35 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
       __$PaymentReconciliationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Period period,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       Reference requestProvider,
       Reference requestOrganization,
       List<PaymentReconciliationDetail> detail,
@@ -1377,7 +1437,7 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
     return _then(_PaymentReconciliation(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1444,28 +1504,35 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
 /// @nodoc
 class _$_PaymentReconciliation extends _PaymentReconciliation {
   _$_PaymentReconciliation(
-      {this.resourceType = 'PaymentReconciliation',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
+          this.resourceType = Stu3ResourceType.PaymentReconciliation,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.period,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.organization,
       this.request,
       this.outcome,
       this.disposition,
-      @JsonKey(name: '_disposition') this.dispositionElement,
+      @JsonKey(name: '_disposition')
+          this.dispositionElement,
       this.requestProvider,
       this.requestOrganization,
       this.detail,
@@ -1478,9 +1545,9 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentReconciliationFromJson(json);
 
-  @JsonKey(defaultValue: 'PaymentReconciliation')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -1670,28 +1737,35 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 abstract class _PaymentReconciliation extends PaymentReconciliation {
   _PaymentReconciliation._() : super._();
   factory _PaymentReconciliation(
-          {String resourceType,
+          {@JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
+              Stu3ResourceType resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+          @JsonKey(name: '_implicitRules')
+              Element implicitRulesElement,
           Code language,
-          @JsonKey(name: '_language') Element languageElement,
+          @JsonKey(name: '_language')
+              Element languageElement,
           Narrative text,
           List<Resource> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           List<Identifier> identifier,
           String status,
-          @JsonKey(name: '_status') Element statusElement,
+          @JsonKey(name: '_status')
+              Element statusElement,
           Period period,
           String created,
-          @JsonKey(name: '_created') Element createdElement,
+          @JsonKey(name: '_created')
+              Element createdElement,
           Reference organization,
           Reference request,
           CodeableConcept outcome,
           String disposition,
-          @JsonKey(name: '_disposition') Element dispositionElement,
+          @JsonKey(name: '_disposition')
+              Element dispositionElement,
           Reference requestProvider,
           Reference requestOrganization,
           List<PaymentReconciliationDetail> detail,
@@ -1704,7 +1778,8 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
       _$_PaymentReconciliation.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override

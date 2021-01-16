@@ -18,31 +18,41 @@ class _$PaymentNoticeTearOff {
 
 // ignore: unused_element
   _PaymentNotice call(
-      {String resourceType = 'PaymentNotice',
+      {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
+          R5ResourceType resourceType = R5ResourceType.PaymentNotice,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference request,
       Reference response,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference provider,
-      @required Reference payment,
+      @required
+          Reference payment,
       Date paymentDate,
-      @JsonKey(name: '_paymentDate') Element paymentDateElement,
+      @JsonKey(name: '_paymentDate')
+          Element paymentDateElement,
       Reference payee,
-      @required Reference recipient,
-      @required Money amount,
+      @required
+          Reference recipient,
+      @required
+          Money amount,
       CodeableConcept paymentStatus}) {
     return _PaymentNotice(
       resourceType: resourceType,
@@ -86,7 +96,8 @@ const $PaymentNotice = _$PaymentNoticeTearOff();
 
 /// @nodoc
 mixin _$PaymentNotice {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
+  R5ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -129,28 +140,35 @@ abstract class $PaymentNoticeCopyWith<$Res> {
           PaymentNotice value, $Res Function(PaymentNotice) then) =
       _$PaymentNoticeCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference request,
       Reference response,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference provider,
       Reference payment,
       Date paymentDate,
-      @JsonKey(name: '_paymentDate') Element paymentDateElement,
+      @JsonKey(name: '_paymentDate')
+          Element paymentDateElement,
       Reference payee,
       Reference recipient,
       Money amount,
@@ -214,7 +232,7 @@ class _$PaymentNoticeCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -425,28 +443,35 @@ abstract class _$PaymentNoticeCopyWith<$Res>
       __$PaymentNoticeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference request,
       Reference response,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference provider,
       Reference payment,
       Date paymentDate,
-      @JsonKey(name: '_paymentDate') Element paymentDateElement,
+      @JsonKey(name: '_paymentDate')
+          Element paymentDateElement,
       Reference payee,
       Reference recipient,
       Money amount,
@@ -527,7 +552,7 @@ class __$PaymentNoticeCopyWithImpl<$Res>
     return _then(_PaymentNotice(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -585,31 +610,41 @@ class __$PaymentNoticeCopyWithImpl<$Res>
 /// @nodoc
 class _$_PaymentNotice extends _PaymentNotice {
   _$_PaymentNotice(
-      {this.resourceType = 'PaymentNotice',
+      {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
+          this.resourceType = R5ResourceType.PaymentNotice,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.request,
       this.response,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.provider,
-      @required this.payment,
+      @required
+          this.payment,
       this.paymentDate,
-      @JsonKey(name: '_paymentDate') this.paymentDateElement,
+      @JsonKey(name: '_paymentDate')
+          this.paymentDateElement,
       this.payee,
-      @required this.recipient,
-      @required this.amount,
+      @required
+          this.recipient,
+      @required
+          this.amount,
       this.paymentStatus})
       : assert(resourceType != null),
         assert(payment != null),
@@ -620,9 +655,9 @@ class _$_PaymentNotice extends _PaymentNotice {
   factory _$_PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentNoticeFromJson(json);
 
-  @JsonKey(defaultValue: 'PaymentNotice')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
+  final R5ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -803,38 +838,49 @@ class _$_PaymentNotice extends _PaymentNotice {
 abstract class _PaymentNotice extends PaymentNotice {
   _PaymentNotice._() : super._();
   factory _PaymentNotice(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Code status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference request,
       Reference response,
       FhirDateTime created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference provider,
-      @required Reference payment,
+      @required
+          Reference payment,
       Date paymentDate,
-      @JsonKey(name: '_paymentDate') Element paymentDateElement,
+      @JsonKey(name: '_paymentDate')
+          Element paymentDateElement,
       Reference payee,
-      @required Reference recipient,
-      @required Money amount,
+      @required
+          Reference recipient,
+      @required
+          Money amount,
       CodeableConcept paymentStatus}) = _$_PaymentNotice;
 
   factory _PaymentNotice.fromJson(Map<String, dynamic> json) =
       _$_PaymentNotice.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
+  R5ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -906,7 +952,8 @@ class _$PaymentReconciliationTearOff {
 
 // ignore: unused_element
   _PaymentReconciliation call(
-      {String resourceType = 'PaymentReconciliation',
+      {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
+          R5ResourceType resourceType = R5ResourceType.PaymentReconciliation,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -994,7 +1041,8 @@ const $PaymentReconciliation = _$PaymentReconciliationTearOff();
 
 /// @nodoc
 mixin _$PaymentReconciliation {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
+  R5ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1045,7 +1093,8 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
           $Res Function(PaymentReconciliation) then) =
       _$PaymentReconciliationCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1150,7 +1199,7 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1392,7 +1441,8 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
       __$PaymentReconciliationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1515,7 +1565,7 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
     return _then(_PaymentReconciliation(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1594,7 +1644,8 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
 /// @nodoc
 class _$_PaymentReconciliation extends _PaymentReconciliation {
   _$_PaymentReconciliation(
-      {this.resourceType = 'PaymentReconciliation',
+      {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
+          this.resourceType = R5ResourceType.PaymentReconciliation,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1642,9 +1693,9 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentReconciliationFromJson(json);
 
-  @JsonKey(defaultValue: 'PaymentReconciliation')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
+  final R5ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -1849,7 +1900,8 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 abstract class _PaymentReconciliation extends PaymentReconciliation {
   _PaymentReconciliation._() : super._();
   factory _PaymentReconciliation(
-          {String resourceType,
+          {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
+              R5ResourceType resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
@@ -1896,7 +1948,8 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
       _$_PaymentReconciliation.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
+  R5ResourceType get resourceType;
   @override
   Id get id;
   @override

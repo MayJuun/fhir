@@ -18,7 +18,8 @@ class _$MeasureTearOff {
 
 // ignore: unused_element
   _Measure call(
-      {String resourceType = 'Measure',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
+          Stu3ResourceType resourceType = Stu3ResourceType.Measure,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -205,7 +206,8 @@ const $Measure = _$MeasureTearOff();
 
 /// @nodoc
 mixin _$Measure {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -314,7 +316,8 @@ abstract class $MeasureCopyWith<$Res> {
   factory $MeasureCopyWith(Measure value, $Res Function(Measure) then) =
       _$MeasureCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -530,7 +533,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -993,7 +996,8 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       __$MeasureCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1239,7 +1243,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
     return _then(_Measure(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1409,7 +1413,8 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
 /// @nodoc
 class _$_Measure extends _Measure {
   _$_Measure(
-      {this.resourceType = 'Measure',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
+          this.resourceType = Stu3ResourceType.Measure,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1514,9 +1519,9 @@ class _$_Measure extends _Measure {
   factory _$_Measure.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureFromJson(json);
 
-  @JsonKey(defaultValue: 'Measure')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -1900,7 +1905,8 @@ class _$_Measure extends _Measure {
 abstract class _Measure extends Measure {
   _Measure._() : super._();
   factory _Measure(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2003,7 +2009,8 @@ abstract class _Measure extends Measure {
   factory _Measure.fromJson(Map<String, dynamic> json) = _$_Measure.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -3471,28 +3478,37 @@ class _$MeasureReportTearOff {
 
 // ignore: unused_element
   _MeasureReport call(
-      {String resourceType = 'MeasureReport',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
+          Stu3ResourceType resourceType = Stu3ResourceType.MeasureReport,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       MeasureReportStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       MeasureReportType type,
-      @JsonKey(name: '_type') Element typeElement,
-      @required Reference measure,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @required
+          Reference measure,
       Reference patient,
       Date date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       Reference reportingOrganization,
-      @required Period period,
+      @required
+          Period period,
       List<MeasureReportGroup> group,
       Reference evaluatedResources}) {
     return _MeasureReport(
@@ -3535,7 +3551,8 @@ const $MeasureReport = _$MeasureReportTearOff();
 
 /// @nodoc
 mixin _$MeasureReport {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -3576,26 +3593,33 @@ abstract class $MeasureReportCopyWith<$Res> {
           MeasureReport value, $Res Function(MeasureReport) then) =
       _$MeasureReportCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       MeasureReportStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       MeasureReportType type,
-      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
       Reference measure,
       Reference patient,
       Date date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       Reference reportingOrganization,
       Period period,
       List<MeasureReportGroup> group,
@@ -3655,7 +3679,7 @@ class _$MeasureReportCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3842,26 +3866,33 @@ abstract class _$MeasureReportCopyWith<$Res>
       __$MeasureReportCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       MeasureReportStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       MeasureReportType type,
-      @JsonKey(name: '_type') Element typeElement,
+      @JsonKey(name: '_type')
+          Element typeElement,
       Reference measure,
       Reference patient,
       Date date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       Reference reportingOrganization,
       Period period,
       List<MeasureReportGroup> group,
@@ -3936,7 +3967,7 @@ class __$MeasureReportCopyWithImpl<$Res>
     return _then(_MeasureReport(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3990,28 +4021,37 @@ class __$MeasureReportCopyWithImpl<$Res>
 /// @nodoc
 class _$_MeasureReport extends _MeasureReport {
   _$_MeasureReport(
-      {this.resourceType = 'MeasureReport',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
+          this.resourceType = Stu3ResourceType.MeasureReport,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.type,
-      @JsonKey(name: '_type') this.typeElement,
-      @required this.measure,
+      @JsonKey(name: '_type')
+          this.typeElement,
+      @required
+          this.measure,
       this.patient,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.reportingOrganization,
-      @required this.period,
+      @required
+          this.period,
       this.group,
       this.evaluatedResources})
       : assert(resourceType != null),
@@ -4022,9 +4062,9 @@ class _$_MeasureReport extends _MeasureReport {
   factory _$_MeasureReport.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureReportFromJson(json);
 
-  @JsonKey(defaultValue: 'MeasureReport')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -4194,28 +4234,37 @@ class _$_MeasureReport extends _MeasureReport {
 abstract class _MeasureReport extends MeasureReport {
   _MeasureReport._() : super._();
   factory _MeasureReport(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       MeasureReportStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       MeasureReportType type,
-      @JsonKey(name: '_type') Element typeElement,
-      @required Reference measure,
+      @JsonKey(name: '_type')
+          Element typeElement,
+      @required
+          Reference measure,
       Reference patient,
       Date date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       Reference reportingOrganization,
-      @required Period period,
+      @required
+          Period period,
       List<MeasureReportGroup> group,
       Reference evaluatedResources}) = _$_MeasureReport;
 
@@ -4223,7 +4272,8 @@ abstract class _MeasureReport extends MeasureReport {
       _$_MeasureReport.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override

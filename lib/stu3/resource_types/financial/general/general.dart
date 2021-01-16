@@ -15,7 +15,9 @@ part 'general.g.dart';
 abstract class Account with Resource implements _$Account {
   Account._();
   factory Account({
-    @Default('Account') String resourceType,
+    @Default(Stu3ResourceType.Account)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -111,7 +113,9 @@ abstract class AccountGuarantor implements _$AccountGuarantor {
 abstract class ChargeItem with Resource implements _$ChargeItem {
   ChargeItem._();
   factory ChargeItem({
-    @Default('ChargeItem') String resourceType,
+    @Default(Stu3ResourceType.ChargeItem)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -197,7 +201,9 @@ abstract class ChargeItemParticipant implements _$ChargeItemParticipant {
 abstract class Contract with Resource implements _$Contract {
   Contract._();
   factory Contract({
-    @Default('Contract') String resourceType,
+    @Default(Stu3ResourceType.Contract)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -498,7 +504,9 @@ abstract class ExplanationOfBenefit
     implements _$ExplanationOfBenefit {
   ExplanationOfBenefit._();
   factory ExplanationOfBenefit({
-    @Default('ExplanationOfBenefit') String resourceType,
+    @Default(Stu3ResourceType.ExplanationOfBenefit)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

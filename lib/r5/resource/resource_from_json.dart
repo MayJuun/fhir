@@ -1,4 +1,4 @@
-part of '../resources/resource.dart';
+part of 'resource.dart';
 
 /// Acts like a constructor, returns a [Resource], accepts a
 /// [Map<String, Dyamic] as an argument
@@ -210,6 +210,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return PaymentNotice.fromJson(json);
     case 'PaymentReconciliation':
       return PaymentReconciliation.fromJson(json);
+    case 'Permission':
+      return Permission.fromJson(json);
     case 'Person':
       return Person.fromJson(json);
     case 'PlanDefinition':
@@ -254,6 +256,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return StructureMap.fromJson(json);
     case 'Subscription':
       return Subscription.fromJson(json);
+    case 'SubscriptionStatus':
+      return SubscriptionStatus.fromJson(json);
     case 'Substance':
       return Substance.fromJson(json);
     case 'SubstanceDefinition':

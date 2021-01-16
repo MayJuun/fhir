@@ -15,7 +15,9 @@ part 'documents.g.dart';
 abstract class Composition with Resource implements _$Composition {
   Composition._();
   factory Composition({
-    @Default('Composition') String resourceType,
+    @Default(Stu3ResourceType.Composition)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -172,7 +174,9 @@ abstract class CompositionSection implements _$CompositionSection {
 abstract class DocumentManifest with Resource implements _$DocumentManifest {
   DocumentManifest._();
   factory DocumentManifest({
-    @Default('DocumentManifest') String resourceType,
+    @Default(Stu3ResourceType.DocumentManifest)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -266,7 +270,9 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
 abstract class DocumentReference with Resource implements _$DocumentReference {
   DocumentReference._();
   factory DocumentReference({
-    @Default('DocumentReference') String resourceType,
+    @Default(Stu3ResourceType.DocumentReference)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -8,7 +8,9 @@ part of 'general.dart';
 
 _$_Account _$_$_AccountFromJson(Map<String, dynamic> json) {
   return _$_Account(
-    resourceType: json['resourceType'] as String ?? 'Account',
+    resourceType: _$enumDecodeNullable(
+        _$Stu3ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: Stu3ResourceType.Account),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -98,7 +100,8 @@ Map<String, dynamic> _$_$_AccountToJson(_$_Account instance) {
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -164,6 +167,126 @@ T _$enumDecodeNullable<T>(
   }
   return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
+
+const _$Stu3ResourceTypeEnumMap = {
+  Stu3ResourceType.Account: 'Account',
+  Stu3ResourceType.ActivityDefinition: 'ActivityDefinition',
+  Stu3ResourceType.AdverseEvent: 'AdverseEvent',
+  Stu3ResourceType.AllergyIntolerance: 'AllergyIntolerance',
+  Stu3ResourceType.Appointment: 'Appointment',
+  Stu3ResourceType.AppointmentResponse: 'AppointmentResponse',
+  Stu3ResourceType.AuditEvent: 'AuditEvent',
+  Stu3ResourceType.Basic: 'Basic',
+  Stu3ResourceType.Binary: 'Binary',
+  Stu3ResourceType.BodySite: 'BodySite',
+  Stu3ResourceType.Bundle: 'Bundle',
+  Stu3ResourceType.CapabilityStatement: 'CapabilityStatement',
+  Stu3ResourceType.CarePlan: 'CarePlan',
+  Stu3ResourceType.CareTeam: 'CareTeam',
+  Stu3ResourceType.ChargeItem: 'ChargeItem',
+  Stu3ResourceType.Claim: 'Claim',
+  Stu3ResourceType.ClaimResponse: 'ClaimResponse',
+  Stu3ResourceType.ClinicalImpression: 'ClinicalImpression',
+  Stu3ResourceType.CodeSystem: 'CodeSystem',
+  Stu3ResourceType.Communication: 'Communication',
+  Stu3ResourceType.CommunicationRequest: 'CommunicationRequest',
+  Stu3ResourceType.CompartmentDefinition: 'CompartmentDefinition',
+  Stu3ResourceType.Composition: 'Composition',
+  Stu3ResourceType.ConceptMap: 'ConceptMap',
+  Stu3ResourceType.Condition: 'Condition',
+  Stu3ResourceType.Consent: 'Consent',
+  Stu3ResourceType.Contract: 'Contract',
+  Stu3ResourceType.Coverage: 'Coverage',
+  Stu3ResourceType.DataElement: 'DataElement',
+  Stu3ResourceType.DetectedIssue: 'DetectedIssue',
+  Stu3ResourceType.Device: 'Device',
+  Stu3ResourceType.DeviceComponent: 'DeviceComponent',
+  Stu3ResourceType.DeviceMetric: 'DeviceMetric',
+  Stu3ResourceType.DeviceRequest: 'DeviceRequest',
+  Stu3ResourceType.DeviceUseStatement: 'DeviceUseStatement',
+  Stu3ResourceType.DiagnosticReport: 'DiagnosticReport',
+  Stu3ResourceType.DocumentManifest: 'DocumentManifest',
+  Stu3ResourceType.DocumentReference: 'DocumentReference',
+  Stu3ResourceType.EligibilityRequest: 'EligibilityRequest',
+  Stu3ResourceType.EligibilityResponse: 'EligibilityResponse',
+  Stu3ResourceType.Encounter: 'Encounter',
+  Stu3ResourceType.Endpoint: 'Endpoint',
+  Stu3ResourceType.EnrollmentRequest: 'EnrollmentRequest',
+  Stu3ResourceType.EnrollmentResponse: 'EnrollmentResponse',
+  Stu3ResourceType.EpisodeOfCare: 'EpisodeOfCare',
+  Stu3ResourceType.ExpansionProfile: 'ExpansionProfile',
+  Stu3ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
+  Stu3ResourceType.FamilyMemberHistory: 'FamilyMemberHistory',
+  Stu3ResourceType.Flag: 'Flag',
+  Stu3ResourceType.Goal: 'Goal',
+  Stu3ResourceType.GraphDefinition: 'GraphDefinition',
+  Stu3ResourceType.Group: 'Group',
+  Stu3ResourceType.GuidanceResponse: 'GuidanceResponse',
+  Stu3ResourceType.HealthcareService: 'HealthcareService',
+  Stu3ResourceType.ImagingManifest: 'ImagingManifest',
+  Stu3ResourceType.ImagingStudy: 'ImagingStudy',
+  Stu3ResourceType.Immunization: 'Immunization',
+  Stu3ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
+  Stu3ResourceType.ImplementationGuide: 'ImplementationGuide',
+  Stu3ResourceType.Library: 'Library',
+  Stu3ResourceType.Linkage: 'Linkage',
+  Stu3ResourceType.List_: 'List',
+  Stu3ResourceType.Location: 'Location',
+  Stu3ResourceType.Measure: 'Measure',
+  Stu3ResourceType.MeasureReport: 'MeasureReport',
+  Stu3ResourceType.Media: 'Media',
+  Stu3ResourceType.Medication: 'Medication',
+  Stu3ResourceType.MedicationAdministration: 'MedicationAdministration',
+  Stu3ResourceType.MedicationDispense: 'MedicationDispense',
+  Stu3ResourceType.MedicationRequest: 'MedicationRequest',
+  Stu3ResourceType.MedicationStatement: 'MedicationStatement',
+  Stu3ResourceType.MessageDefinition: 'MessageDefinition',
+  Stu3ResourceType.MessageHeader: 'MessageHeader',
+  Stu3ResourceType.NamingSystem: 'NamingSystem',
+  Stu3ResourceType.NutritionOrder: 'NutritionOrder',
+  Stu3ResourceType.Observation: 'Observation',
+  Stu3ResourceType.OperationDefinition: 'OperationDefinition',
+  Stu3ResourceType.OperationOutcome: 'OperationOutcome',
+  Stu3ResourceType.Organization: 'Organization',
+  Stu3ResourceType.Parameters: 'Parameters',
+  Stu3ResourceType.Patient: 'Patient',
+  Stu3ResourceType.PaymentNotice: 'PaymentNotice',
+  Stu3ResourceType.PaymentReconciliation: 'PaymentReconciliation',
+  Stu3ResourceType.Person: 'Person',
+  Stu3ResourceType.PlanDefinition: 'PlanDefinition',
+  Stu3ResourceType.Practitioner: 'Practitioner',
+  Stu3ResourceType.PractitionerRole: 'PractitionerRole',
+  Stu3ResourceType.Procedure: 'Procedure',
+  Stu3ResourceType.ProcedureRequest: 'ProcedureRequest',
+  Stu3ResourceType.ProcessRequest: 'ProcessRequest',
+  Stu3ResourceType.ProcessResponse: 'ProcessResponse',
+  Stu3ResourceType.Provenance: 'Provenance',
+  Stu3ResourceType.Questionnaire: 'Questionnaire',
+  Stu3ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  Stu3ResourceType.ReferralRequest: 'ReferralRequest',
+  Stu3ResourceType.RelatedPerson: 'RelatedPerson',
+  Stu3ResourceType.RequestGroup: 'RequestGroup',
+  Stu3ResourceType.ResearchStudy: 'ResearchStudy',
+  Stu3ResourceType.ResearchSubject: 'ResearchSubject',
+  Stu3ResourceType.RiskAssessment: 'RiskAssessment',
+  Stu3ResourceType.Schedule: 'Schedule',
+  Stu3ResourceType.SearchParameter: 'SearchParameter',
+  Stu3ResourceType.Sequence: 'Sequence',
+  Stu3ResourceType.ServiceDefinition: 'ServiceDefinition',
+  Stu3ResourceType.Slot: 'Slot',
+  Stu3ResourceType.Specimen: 'Specimen',
+  Stu3ResourceType.StructureDefinition: 'StructureDefinition',
+  Stu3ResourceType.StructureMap: 'StructureMap',
+  Stu3ResourceType.Subscription: 'Subscription',
+  Stu3ResourceType.Substance: 'Substance',
+  Stu3ResourceType.SupplyDelivery: 'SupplyDelivery',
+  Stu3ResourceType.SupplyRequest: 'SupplyRequest',
+  Stu3ResourceType.Task: 'Task',
+  Stu3ResourceType.TestReport: 'TestReport',
+  Stu3ResourceType.TestScript: 'TestScript',
+  Stu3ResourceType.ValueSet: 'ValueSet',
+  Stu3ResourceType.VisionPrescription: 'VisionPrescription',
+};
 
 const _$AccountStatusEnumMap = {
   AccountStatus.active: 'active',
@@ -233,7 +356,9 @@ Map<String, dynamic> _$_$_AccountGuarantorToJson(_$_AccountGuarantor instance) {
 
 _$_ChargeItem _$_$_ChargeItemFromJson(Map<String, dynamic> json) {
   return _$_ChargeItem(
-    resourceType: json['resourceType'] as String ?? 'ChargeItem',
+    resourceType: _$enumDecodeNullable(
+        _$Stu3ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: Stu3ResourceType.ChargeItem),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -380,7 +505,8 @@ Map<String, dynamic> _$_$_ChargeItemToJson(_$_ChargeItem instance) {
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -474,7 +600,9 @@ Map<String, dynamic> _$_$_ChargeItemParticipantToJson(
 
 _$_Contract _$_$_ContractFromJson(Map<String, dynamic> json) {
   return _$_Contract(
-    resourceType: json['resourceType'] as String ?? 'Contract',
+    resourceType: _$enumDecodeNullable(
+        _$Stu3ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: Stu3ResourceType.Contract),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -620,7 +748,8 @@ Map<String, dynamic> _$_$_ContractToJson(_$_Contract instance) {
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1051,7 +1180,9 @@ Map<String, dynamic> _$_$_ContractRuleToJson(_$_ContractRule instance) {
 _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
     Map<String, dynamic> json) {
   return _$_ExplanationOfBenefit(
-    resourceType: json['resourceType'] as String ?? 'ExplanationOfBenefit',
+    resourceType: _$enumDecodeNullable(
+        _$Stu3ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: Stu3ResourceType.ExplanationOfBenefit),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1251,7 +1382,8 @@ Map<String, dynamic> _$_$_ExplanationOfBenefitToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

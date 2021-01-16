@@ -15,7 +15,9 @@ part 'other.g.dart';
 abstract class Basic with Resource implements _$Basic {
   Basic._();
   factory Basic({
-    @Default('Basic') String resourceType,
+    @Default(Stu3ResourceType.Basic)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Basic)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -52,7 +54,9 @@ abstract class Basic with Resource implements _$Basic {
 abstract class Binary with Resource implements _$Binary {
   Binary._();
   factory Binary({
-    @Default('Binary') String resourceType,
+    @Default(Stu3ResourceType.Binary)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Binary)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -88,7 +92,9 @@ abstract class Binary with Resource implements _$Binary {
 abstract class Bundle with Resource implements _$Bundle {
   Bundle._();
   factory Bundle({
-    @Default('Bundle') String resourceType,
+    @Default(Stu3ResourceType.Bundle)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Bundle)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -268,7 +274,9 @@ abstract class BundleResponse implements _$BundleResponse {
 abstract class Linkage with Resource implements _$Linkage {
   Linkage._();
   factory Linkage({
-    @Default('Linkage') String resourceType,
+    @Default(Stu3ResourceType.Linkage)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Linkage)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -328,7 +336,9 @@ abstract class LinkageItem implements _$LinkageItem {
 abstract class Media with Resource implements _$Media {
   Media._();
   factory Media({
-    @Default('Media') String resourceType,
+    @Default(Stu3ResourceType.Media)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Media)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -384,7 +394,9 @@ abstract class Media with Resource implements _$Media {
 abstract class MessageHeader with Resource implements _$MessageHeader {
   MessageHeader._();
   factory MessageHeader({
-    @Default('MessageHeader') String resourceType,
+    @Default(Stu3ResourceType.MessageHeader)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.MessageHeader)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -512,7 +524,9 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
 abstract class OperationOutcome with Resource implements _$OperationOutcome {
   OperationOutcome._();
   factory OperationOutcome({
-    @Default('OperationOutcome') String resourceType,
+    @Default(Stu3ResourceType.OperationOutcome)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.OperationOutcome)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -577,7 +591,9 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
 abstract class Parameters with Resource implements _$Parameters {
   Parameters._();
   factory Parameters({
-    @Default('Parameters') String resourceType,
+    @Default(Stu3ResourceType.Parameters)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Parameters)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -705,7 +721,9 @@ abstract class ParametersParameter implements _$ParametersParameter {
 abstract class Subscription with Resource implements _$Subscription {
   Subscription._();
   factory Subscription({
-    @Default('Subscription') String resourceType,
+    @Default(Stu3ResourceType.Subscription)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Subscription)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

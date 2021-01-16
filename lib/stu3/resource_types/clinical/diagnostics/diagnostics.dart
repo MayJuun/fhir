@@ -15,7 +15,9 @@ part 'diagnostics.g.dart';
 abstract class BodySite with Resource implements _$BodySite {
   BodySite._();
   factory BodySite({
-    @Default('BodySite') String resourceType,
+    @Default(Stu3ResourceType.BodySite)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -56,7 +58,9 @@ abstract class BodySite with Resource implements _$BodySite {
 abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
   DiagnosticReport._();
   factory DiagnosticReport({
-    @Default('DiagnosticReport') String resourceType,
+    @Default(Stu3ResourceType.DiagnosticReport)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.DiagnosticReport)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -159,7 +163,9 @@ abstract class DiagnosticReportImage implements _$DiagnosticReportImage {
 abstract class ImagingManifest with Resource implements _$ImagingManifest {
   ImagingManifest._();
   factory ImagingManifest({
-    @Default('ImagingManifest') String resourceType,
+    @Default(Stu3ResourceType.ImagingManifest)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingManifest)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -275,7 +281,9 @@ abstract class ImagingManifestInstance implements _$ImagingManifestInstance {
 abstract class ImagingStudy with Resource implements _$ImagingStudy {
   ImagingStudy._();
   factory ImagingStudy({
-    @Default('ImagingStudy') String resourceType,
+    @Default(Stu3ResourceType.ImagingStudy)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingStudy)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -400,7 +408,9 @@ abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
 abstract class Observation with Resource implements _$Observation {
   Observation._();
   factory Observation({
-    @Default('Observation') String resourceType,
+    @Default(Stu3ResourceType.Observation)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Observation)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -566,7 +576,9 @@ abstract class QuestionnaireResponse
     implements _$QuestionnaireResponse {
   QuestionnaireResponse._();
   factory QuestionnaireResponse({
-    @Default('QuestionnaireResponse') String resourceType,
+    @Default(Stu3ResourceType.QuestionnaireResponse)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.QuestionnaireResponse)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -687,7 +699,9 @@ abstract class QuestionnaireResponseAnswer
 abstract class Sequence with Resource implements _$Sequence {
   Sequence._();
   factory Sequence({
-    @Default('Sequence') String resourceType,
+    @Default(Stu3ResourceType.Sequence)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Sequence)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -883,7 +897,9 @@ abstract class SequenceRepository implements _$SequenceRepository {
 abstract class Specimen with Resource implements _$Specimen {
   Specimen._();
   factory Specimen({
-    @Default('Specimen') String resourceType,
+    @Default(Stu3ResourceType.Specimen)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Specimen)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

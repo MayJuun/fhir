@@ -15,7 +15,9 @@ part 'terminology.g.dart';
 abstract class CodeSystem with Resource implements _$CodeSystem {
   CodeSystem._();
   factory CodeSystem({
-    @Default('CodeSystem') String resourceType,
+    @Default(Stu3ResourceType.CodeSystem)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.CodeSystem)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -239,7 +241,9 @@ abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
 abstract class ConceptMap with Resource implements _$ConceptMap {
   ConceptMap._();
   factory ConceptMap({
-    @Default('ConceptMap') String resourceType,
+    @Default(Stu3ResourceType.ConceptMap)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ConceptMap)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -450,7 +454,9 @@ abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
 abstract class ExpansionProfile with Resource implements _$ExpansionProfile {
   ExpansionProfile._();
   factory ExpansionProfile({
-    @Default('ExpansionProfile') String resourceType,
+    @Default(Stu3ResourceType.ExpansionProfile)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ExpansionProfile)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -701,7 +707,9 @@ abstract class ExpansionProfileDesignation2
 abstract class NamingSystem with Resource implements _$NamingSystem {
   NamingSystem._();
   factory NamingSystem({
-    @Default('NamingSystem') String resourceType,
+    @Default(Stu3ResourceType.NamingSystem)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.NamingSystem)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -785,7 +793,9 @@ abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
 abstract class ValueSet with Resource implements _$ValueSet {
   ValueSet._();
   factory ValueSet({
-    @Default('ValueSet') String resourceType,
+    @Default(Stu3ResourceType.ValueSet)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ValueSet)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

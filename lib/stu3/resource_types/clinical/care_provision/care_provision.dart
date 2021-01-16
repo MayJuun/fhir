@@ -65,7 +65,9 @@ abstract class VisionPrescriptionDispense
 abstract class CarePlan with Resource implements _$CarePlan {
   CarePlan._();
   factory CarePlan({
-    @Default('CarePlan') String resourceType,
+    @Default(Stu3ResourceType.CarePlan)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.CarePlan)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -192,7 +194,9 @@ abstract class CarePlanDetail implements _$CarePlanDetail {
 abstract class CareTeam with Resource implements _$CareTeam {
   CareTeam._();
   factory CareTeam({
-    @Default('CareTeam') String resourceType,
+    @Default(Stu3ResourceType.CareTeam)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.CareTeam)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -263,7 +267,9 @@ abstract class CareTeamParticipant implements _$CareTeamParticipant {
 abstract class Goal with Resource implements _$Goal {
   Goal._();
   factory Goal({
-    @Default('Goal') String resourceType,
+    @Default(Stu3ResourceType.Goal)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Goal)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -342,7 +348,9 @@ abstract class GoalTarget implements _$GoalTarget {
 abstract class NutritionOrder with Resource implements _$NutritionOrder {
   NutritionOrder._();
   factory NutritionOrder({
-    @Default('NutritionOrder') String resourceType,
+    @Default(Stu3ResourceType.NutritionOrder)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.NutritionOrder)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -555,7 +563,9 @@ abstract class NutritionOrderAdministration
 abstract class ProcedureRequest with Resource implements _$ProcedureRequest {
   ProcedureRequest._();
   factory ProcedureRequest({
-    @Default('ProcedureRequest') String resourceType,
+    @Default(Stu3ResourceType.ProcedureRequest)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ProcedureRequest)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -648,7 +658,9 @@ abstract class ProcedureRequestRequester
 abstract class ReferralRequest with Resource implements _$ReferralRequest {
   ReferralRequest._();
   factory ReferralRequest({
-    @Default('ReferralRequest') String resourceType,
+    @Default(Stu3ResourceType.ReferralRequest)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ReferralRequest)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -734,7 +746,9 @@ abstract class ReferralRequestRequester implements _$ReferralRequestRequester {
 abstract class RiskAssessment with Resource implements _$RiskAssessment {
   RiskAssessment._();
   factory RiskAssessment({
-    @Default('RiskAssessment') String resourceType,
+    @Default(Stu3ResourceType.RiskAssessment)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.RiskAssessment)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -823,7 +837,9 @@ abstract class VisionPrescription
     implements _$VisionPrescription {
   VisionPrescription._();
   factory VisionPrescription({
-    @Default('VisionPrescription') String resourceType,
+    @Default(Stu3ResourceType.VisionPrescription)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.VisionPrescription)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

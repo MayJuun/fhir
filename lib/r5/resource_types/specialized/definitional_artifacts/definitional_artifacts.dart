@@ -17,7 +17,9 @@ abstract class ActivityDefinition
     implements _$ActivityDefinition {
   ActivityDefinition._();
   factory ActivityDefinition({
-    @Default('ActivityDefinition') String resourceType,
+    @Default(R5ResourceType.ActivityDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.ActivityDefinition)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -185,7 +187,9 @@ abstract class ConditionDefinition
     implements _$ConditionDefinition {
   ConditionDefinition._();
   factory ConditionDefinition({
-    @Default('ConditionDefinition') String resourceType,
+    @Default(R5ResourceType.ConditionDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.ConditionDefinition)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -419,7 +423,9 @@ abstract class ConditionDefinitionPlan implements _$ConditionDefinitionPlan {
 abstract class DeviceDefinition with Resource implements _$DeviceDefinition {
   DeviceDefinition._();
   factory DeviceDefinition({
-    @Default('DeviceDefinition') String resourceType,
+    @Default(R5ResourceType.DeviceDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.DeviceDefinition)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -660,7 +666,9 @@ abstract class DeviceDefinitionMaterial implements _$DeviceDefinitionMaterial {
 abstract class EventDefinition with Resource implements _$EventDefinition {
   EventDefinition._();
   factory EventDefinition({
-    @Default('EventDefinition') String resourceType,
+    @Default(R5ResourceType.EventDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.EventDefinition)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -739,7 +747,9 @@ abstract class ObservationDefinition
     implements _$ObservationDefinition {
   ObservationDefinition._();
   factory ObservationDefinition({
-    @Default('ObservationDefinition') String resourceType,
+    @Default(R5ResourceType.ObservationDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.ObservationDefinition)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -936,7 +946,9 @@ abstract class ObservationDefinitionComponent
 abstract class PlanDefinition with Resource implements _$PlanDefinition {
   PlanDefinition._();
   factory PlanDefinition({
-    @Default('PlanDefinition') String resourceType,
+    @Default(R5ResourceType.PlanDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.PlanDefinition)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1273,7 +1285,9 @@ abstract class PlanDefinitionDynamicValue
 abstract class Questionnaire with Resource implements _$Questionnaire {
   Questionnaire._();
   factory Questionnaire({
-    @Default('Questionnaire') String resourceType,
+    @Default(R5ResourceType.Questionnaire)
+    @JsonKey(unknownEnumValue: R5ResourceType.Questionnaire)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1524,7 +1538,9 @@ abstract class SpecimenDefinition
     implements _$SpecimenDefinition {
   SpecimenDefinition._();
   factory SpecimenDefinition({
-    @Default('SpecimenDefinition') String resourceType,
+    @Default(R5ResourceType.SpecimenDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.SpecimenDefinition)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

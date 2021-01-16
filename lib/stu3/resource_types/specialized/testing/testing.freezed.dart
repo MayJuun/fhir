@@ -18,31 +18,42 @@ class _$TestReportTearOff {
 
 // ignore: unused_element
   _TestReport call(
-      {String resourceType = 'TestReport',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
+          Stu3ResourceType resourceType = Stu3ResourceType.TestReport,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       TestReportStatus status,
-      @JsonKey(name: '_status') Element statusElement,
-      @required Reference testScript,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @required
+          Reference testScript,
       TestReportResult result,
-      @JsonKey(name: '_result') Element resultElement,
+      @JsonKey(name: '_result')
+          Element resultElement,
       Decimal score,
-      @JsonKey(name: '_score') Element scoreElement,
+      @JsonKey(name: '_score')
+          Element scoreElement,
       String tester,
-      @JsonKey(name: '_tester') Element testerElement,
+      @JsonKey(name: '_tester')
+          Element testerElement,
       String issued,
-      @JsonKey(name: '_issued') Element issuedElement,
+      @JsonKey(name: '_issued')
+          Element issuedElement,
       List<TestReportParticipant> participant,
       TestReportSetup setup,
       List<TestReportTest> test,
@@ -92,7 +103,8 @@ const $TestReport = _$TestReportTearOff();
 
 /// @nodoc
 mixin _$TestReport {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -141,31 +153,41 @@ abstract class $TestReportCopyWith<$Res> {
           TestReport value, $Res Function(TestReport) then) =
       _$TestReportCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       TestReportStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference testScript,
       TestReportResult result,
-      @JsonKey(name: '_result') Element resultElement,
+      @JsonKey(name: '_result')
+          Element resultElement,
       Decimal score,
-      @JsonKey(name: '_score') Element scoreElement,
+      @JsonKey(name: '_score')
+          Element scoreElement,
       String tester,
-      @JsonKey(name: '_tester') Element testerElement,
+      @JsonKey(name: '_tester')
+          Element testerElement,
       String issued,
-      @JsonKey(name: '_issued') Element issuedElement,
+      @JsonKey(name: '_issued')
+          Element issuedElement,
       List<TestReportParticipant> participant,
       TestReportSetup setup,
       List<TestReportTest> test,
@@ -230,7 +252,7 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -438,31 +460,41 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
       __$TestReportCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       TestReportStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference testScript,
       TestReportResult result,
-      @JsonKey(name: '_result') Element resultElement,
+      @JsonKey(name: '_result')
+          Element resultElement,
       Decimal score,
-      @JsonKey(name: '_score') Element scoreElement,
+      @JsonKey(name: '_score')
+          Element scoreElement,
       String tester,
-      @JsonKey(name: '_tester') Element testerElement,
+      @JsonKey(name: '_tester')
+          Element testerElement,
       String issued,
-      @JsonKey(name: '_issued') Element issuedElement,
+      @JsonKey(name: '_issued')
+          Element issuedElement,
       List<TestReportParticipant> participant,
       TestReportSetup setup,
       List<TestReportTest> test,
@@ -543,7 +575,7 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
     return _then(_TestReport(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -609,31 +641,42 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
 /// @nodoc
 class _$_TestReport extends _TestReport {
   _$_TestReport(
-      {this.resourceType = 'TestReport',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
+          this.resourceType = Stu3ResourceType.TestReport,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
-      @required this.testScript,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @required
+          this.testScript,
       this.result,
-      @JsonKey(name: '_result') this.resultElement,
+      @JsonKey(name: '_result')
+          this.resultElement,
       this.score,
-      @JsonKey(name: '_score') this.scoreElement,
+      @JsonKey(name: '_score')
+          this.scoreElement,
       this.tester,
-      @JsonKey(name: '_tester') this.testerElement,
+      @JsonKey(name: '_tester')
+          this.testerElement,
       this.issued,
-      @JsonKey(name: '_issued') this.issuedElement,
+      @JsonKey(name: '_issued')
+          this.issuedElement,
       this.participant,
       this.setup,
       this.test,
@@ -645,9 +688,9 @@ class _$_TestReport extends _TestReport {
   factory _$_TestReport.fromJson(Map<String, dynamic> json) =>
       _$_$_TestReportFromJson(json);
 
-  @JsonKey(defaultValue: 'TestReport')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -843,31 +886,42 @@ class _$_TestReport extends _TestReport {
 abstract class _TestReport extends TestReport {
   _TestReport._() : super._();
   factory _TestReport(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       TestReportStatus status,
-      @JsonKey(name: '_status') Element statusElement,
-      @required Reference testScript,
+      @JsonKey(name: '_status')
+          Element statusElement,
+      @required
+          Reference testScript,
       TestReportResult result,
-      @JsonKey(name: '_result') Element resultElement,
+      @JsonKey(name: '_result')
+          Element resultElement,
       Decimal score,
-      @JsonKey(name: '_score') Element scoreElement,
+      @JsonKey(name: '_score')
+          Element scoreElement,
       String tester,
-      @JsonKey(name: '_tester') Element testerElement,
+      @JsonKey(name: '_tester')
+          Element testerElement,
       String issued,
-      @JsonKey(name: '_issued') Element issuedElement,
+      @JsonKey(name: '_issued')
+          Element issuedElement,
       List<TestReportParticipant> participant,
       TestReportSetup setup,
       List<TestReportTest> test,
@@ -877,7 +931,8 @@ abstract class _TestReport extends TestReport {
       _$_TestReport.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -3023,43 +3078,58 @@ class _$TestScriptTearOff {
 
 // ignore: unused_element
   _TestScript call(
-      {String resourceType = 'TestScript',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
+          Stu3ResourceType resourceType = Stu3ResourceType.TestScript,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       Identifier identifier,
       String version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
       TestScriptStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
-      @JsonKey(name: '_experimental') Element experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       Date date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       String purpose,
-      @JsonKey(name: '_purpose') Element purposeElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       String copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       List<TestScriptOrigin> origin,
       List<TestScriptDestination> destination,
       TestScriptMetadata metadata,
@@ -3135,7 +3205,8 @@ const $TestScript = _$TestScriptTearOff();
 
 /// @nodoc
 mixin _$TestScript {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -3208,43 +3279,58 @@ abstract class $TestScriptCopyWith<$Res> {
           TestScript value, $Res Function(TestScript) then) =
       _$TestScriptCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       Identifier identifier,
       String version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
       TestScriptStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
-      @JsonKey(name: '_experimental') Element experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       Date date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       String purpose,
-      @JsonKey(name: '_purpose') Element purposeElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       String copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       List<TestScriptOrigin> origin,
       List<TestScriptDestination> destination,
       TestScriptMetadata metadata,
@@ -3340,7 +3426,7 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3641,43 +3727,58 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       __$TestScriptCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       Identifier identifier,
       String version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
       TestScriptStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
-      @JsonKey(name: '_experimental') Element experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       Date date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       String purpose,
-      @JsonKey(name: '_purpose') Element purposeElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       String copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       List<TestScriptOrigin> origin,
       List<TestScriptDestination> destination,
       TestScriptMetadata metadata,
@@ -3794,7 +3895,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
     return _then(_TestScript(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3903,43 +4004,58 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
 /// @nodoc
 class _$_TestScript extends _TestScript {
   _$_TestScript(
-      {this.resourceType = 'TestScript',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
+          this.resourceType = Stu3ResourceType.TestScript,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental') this.experimentalElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       this.contact,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose') this.purposeElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
       this.origin,
       this.destination,
       this.metadata,
@@ -3957,9 +4073,9 @@ class _$_TestScript extends _TestScript {
   factory _$_TestScript.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptFromJson(json);
 
-  @JsonKey(defaultValue: 'TestScript')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -4236,43 +4352,58 @@ class _$_TestScript extends _TestScript {
 abstract class _TestScript extends TestScript {
   _TestScript._() : super._();
   factory _TestScript(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       String url,
-      @JsonKey(name: '_url') Element urlElement,
+      @JsonKey(name: '_url')
+          Element urlElement,
       Identifier identifier,
       String version,
-      @JsonKey(name: '_version') Element versionElement,
+      @JsonKey(name: '_version')
+          Element versionElement,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       String title,
-      @JsonKey(name: '_title') Element titleElement,
+      @JsonKey(name: '_title')
+          Element titleElement,
       TestScriptStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Boolean experimental,
-      @JsonKey(name: '_experimental') Element experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element experimentalElement,
       Date date,
-      @JsonKey(name: '_date') Element dateElement,
+      @JsonKey(name: '_date')
+          Element dateElement,
       String publisher,
-      @JsonKey(name: '_publisher') Element publisherElement,
+      @JsonKey(name: '_publisher')
+          Element publisherElement,
       List<ContactDetail> contact,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<UsageContext> useContext,
       List<CodeableConcept> jurisdiction,
       String purpose,
-      @JsonKey(name: '_purpose') Element purposeElement,
+      @JsonKey(name: '_purpose')
+          Element purposeElement,
       String copyright,
-      @JsonKey(name: '_copyright') Element copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element copyrightElement,
       List<TestScriptOrigin> origin,
       List<TestScriptDestination> destination,
       TestScriptMetadata metadata,
@@ -4289,7 +4420,8 @@ abstract class _TestScript extends TestScript {
       _$_TestScript.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override

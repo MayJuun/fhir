@@ -18,23 +18,29 @@ class _$AccountTearOff {
 
 // ignore: unused_element
   _Account call(
-      {String resourceType = 'Account',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
+          Stu3ResourceType resourceType = Stu3ResourceType.Account,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       AccountStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       Reference subject,
       Period period,
       Period active,
@@ -42,7 +48,8 @@ class _$AccountTearOff {
       List<AccountCoverage> coverage,
       Reference owner,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<AccountGuarantor> guarantor}) {
     return _Account(
       resourceType: resourceType,
@@ -86,7 +93,8 @@ const $Account = _$AccountTearOff();
 
 /// @nodoc
 mixin _$Account {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -128,23 +136,29 @@ abstract class $AccountCopyWith<$Res> {
   factory $AccountCopyWith(Account value, $Res Function(Account) then) =
       _$AccountCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       AccountStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       Reference subject,
       Period period,
       Period active,
@@ -152,7 +166,8 @@ abstract class $AccountCopyWith<$Res> {
       List<AccountCoverage> coverage,
       Reference owner,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<AccountGuarantor> guarantor});
 
   $MetaCopyWith<$Res> get meta;
@@ -210,7 +225,7 @@ class _$AccountCopyWithImpl<$Res> implements $AccountCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -399,23 +414,29 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       __$AccountCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       AccountStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       Reference subject,
       Period period,
       Period active,
@@ -423,7 +444,8 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       List<AccountCoverage> coverage,
       Reference owner,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<AccountGuarantor> guarantor});
 
   @override
@@ -495,7 +517,7 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
     return _then(_Account(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -553,23 +575,29 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
 /// @nodoc
 class _$_Account extends _Account {
   _$_Account(
-      {this.resourceType = 'Account',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
+          this.resourceType = Stu3ResourceType.Account,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.type,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.subject,
       this.period,
       this.active,
@@ -577,7 +605,8 @@ class _$_Account extends _Account {
       this.coverage,
       this.owner,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.guarantor})
       : assert(resourceType != null),
         super._();
@@ -585,9 +614,9 @@ class _$_Account extends _Account {
   factory _$_Account.fromJson(Map<String, dynamic> json) =>
       _$_$_AccountFromJson(json);
 
-  @JsonKey(defaultValue: 'Account')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -768,23 +797,29 @@ class _$_Account extends _Account {
 abstract class _Account extends Account {
   _Account._() : super._();
   factory _Account(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       AccountStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       String name,
-      @JsonKey(name: '_name') Element nameElement,
+      @JsonKey(name: '_name')
+          Element nameElement,
       Reference subject,
       Period period,
       Period active,
@@ -792,13 +827,15 @@ abstract class _Account extends Account {
       List<AccountCoverage> coverage,
       Reference owner,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<AccountGuarantor> guarantor}) = _$_Account;
 
   factory _Account.fromJson(Map<String, dynamic> json) = _$_Account.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -1349,28 +1386,37 @@ class _$ChargeItemTearOff {
 
 // ignore: unused_element
   _ChargeItem call(
-      {String resourceType = 'ChargeItem',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
+          Stu3ResourceType resourceType = Stu3ResourceType.ChargeItem,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       List<String> definition,
-      @JsonKey(name: '_definition') List<Element> definitionElement,
+      @JsonKey(name: '_definition')
+          List<Element> definitionElement,
       ChargeItemStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       List<Reference> partOf,
-      @required CodeableConcept code,
-      @required Reference subject,
+      @required
+          CodeableConcept code,
+      @required
+          Reference subject,
       Reference context,
       FhirDateTime occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       List<ChargeItemParticipant> participant,
@@ -1379,13 +1425,16 @@ class _$ChargeItemTearOff {
       Quantity quantity,
       List<CodeableConcept> bodysite,
       Id factorOverride,
-      @JsonKey(name: '_factorOverride') Element factorOverrideElement,
+      @JsonKey(name: '_factorOverride')
+          Element factorOverrideElement,
       Money priceOverride,
       String overrideReason,
-      @JsonKey(name: '_overrideReason') Element overrideReasonElement,
+      @JsonKey(name: '_overrideReason')
+          Element overrideReasonElement,
       Reference enterer,
       Date enteredDate,
-      @JsonKey(name: '_enteredDate') Element enteredDateElement,
+      @JsonKey(name: '_enteredDate')
+          Element enteredDateElement,
       List<CodeableConcept> reason,
       List<Reference> service,
       List<Reference> account,
@@ -1449,7 +1498,8 @@ const $ChargeItem = _$ChargeItemTearOff();
 
 /// @nodoc
 mixin _$ChargeItem {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1511,28 +1561,35 @@ abstract class $ChargeItemCopyWith<$Res> {
           ChargeItem value, $Res Function(ChargeItem) then) =
       _$ChargeItemCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       List<String> definition,
-      @JsonKey(name: '_definition') List<Element> definitionElement,
+      @JsonKey(name: '_definition')
+          List<Element> definitionElement,
       ChargeItemStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       List<Reference> partOf,
       CodeableConcept code,
       Reference subject,
       Reference context,
       FhirDateTime occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       List<ChargeItemParticipant> participant,
@@ -1541,13 +1598,16 @@ abstract class $ChargeItemCopyWith<$Res> {
       Quantity quantity,
       List<CodeableConcept> bodysite,
       Id factorOverride,
-      @JsonKey(name: '_factorOverride') Element factorOverrideElement,
+      @JsonKey(name: '_factorOverride')
+          Element factorOverrideElement,
       Money priceOverride,
       String overrideReason,
-      @JsonKey(name: '_overrideReason') Element overrideReasonElement,
+      @JsonKey(name: '_overrideReason')
+          Element overrideReasonElement,
       Reference enterer,
       Date enteredDate,
-      @JsonKey(name: '_enteredDate') Element enteredDateElement,
+      @JsonKey(name: '_enteredDate')
+          Element enteredDateElement,
       List<CodeableConcept> reason,
       List<Reference> service,
       List<Reference> account,
@@ -1632,7 +1692,7 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1935,28 +1995,35 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
       __$ChargeItemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       List<String> definition,
-      @JsonKey(name: '_definition') List<Element> definitionElement,
+      @JsonKey(name: '_definition')
+          List<Element> definitionElement,
       ChargeItemStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       List<Reference> partOf,
       CodeableConcept code,
       Reference subject,
       Reference context,
       FhirDateTime occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       List<ChargeItemParticipant> participant,
@@ -1965,13 +2032,16 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
       Quantity quantity,
       List<CodeableConcept> bodysite,
       Id factorOverride,
-      @JsonKey(name: '_factorOverride') Element factorOverrideElement,
+      @JsonKey(name: '_factorOverride')
+          Element factorOverrideElement,
       Money priceOverride,
       String overrideReason,
-      @JsonKey(name: '_overrideReason') Element overrideReasonElement,
+      @JsonKey(name: '_overrideReason')
+          Element overrideReasonElement,
       Reference enterer,
       Date enteredDate,
-      @JsonKey(name: '_enteredDate') Element enteredDateElement,
+      @JsonKey(name: '_enteredDate')
+          Element enteredDateElement,
       List<CodeableConcept> reason,
       List<Reference> service,
       List<Reference> account,
@@ -2078,7 +2148,7 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
     return _then(_ChargeItem(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2179,28 +2249,37 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
 /// @nodoc
 class _$_ChargeItem extends _ChargeItem {
   _$_ChargeItem(
-      {this.resourceType = 'ChargeItem',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
+          this.resourceType = Stu3ResourceType.ChargeItem,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.definition,
-      @JsonKey(name: '_definition') this.definitionElement,
+      @JsonKey(name: '_definition')
+          this.definitionElement,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.partOf,
-      @required this.code,
-      @required this.subject,
+      @required
+          this.code,
+      @required
+          this.subject,
       this.context,
       this.occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          this.occurrenceDateTimeElement,
       this.occurrencePeriod,
       this.occurrenceTiming,
       this.participant,
@@ -2209,13 +2288,16 @@ class _$_ChargeItem extends _ChargeItem {
       this.quantity,
       this.bodysite,
       this.factorOverride,
-      @JsonKey(name: '_factorOverride') this.factorOverrideElement,
+      @JsonKey(name: '_factorOverride')
+          this.factorOverrideElement,
       this.priceOverride,
       this.overrideReason,
-      @JsonKey(name: '_overrideReason') this.overrideReasonElement,
+      @JsonKey(name: '_overrideReason')
+          this.overrideReasonElement,
       this.enterer,
       this.enteredDate,
-      @JsonKey(name: '_enteredDate') this.enteredDateElement,
+      @JsonKey(name: '_enteredDate')
+          this.enteredDateElement,
       this.reason,
       this.service,
       this.account,
@@ -2229,9 +2311,9 @@ class _$_ChargeItem extends _ChargeItem {
   factory _$_ChargeItem.fromJson(Map<String, dynamic> json) =>
       _$_$_ChargeItemFromJson(json);
 
-  @JsonKey(defaultValue: 'ChargeItem')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -2478,28 +2560,37 @@ class _$_ChargeItem extends _ChargeItem {
 abstract class _ChargeItem extends ChargeItem {
   _ChargeItem._() : super._();
   factory _ChargeItem(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       List<String> definition,
-      @JsonKey(name: '_definition') List<Element> definitionElement,
+      @JsonKey(name: '_definition')
+          List<Element> definitionElement,
       ChargeItemStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       List<Reference> partOf,
-      @required CodeableConcept code,
-      @required Reference subject,
+      @required
+          CodeableConcept code,
+      @required
+          Reference subject,
       Reference context,
       FhirDateTime occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime')
+          Element occurrenceDateTimeElement,
       Period occurrencePeriod,
       Timing occurrenceTiming,
       List<ChargeItemParticipant> participant,
@@ -2508,13 +2599,16 @@ abstract class _ChargeItem extends ChargeItem {
       Quantity quantity,
       List<CodeableConcept> bodysite,
       Id factorOverride,
-      @JsonKey(name: '_factorOverride') Element factorOverrideElement,
+      @JsonKey(name: '_factorOverride')
+          Element factorOverrideElement,
       Money priceOverride,
       String overrideReason,
-      @JsonKey(name: '_overrideReason') Element overrideReasonElement,
+      @JsonKey(name: '_overrideReason')
+          Element overrideReasonElement,
       Reference enterer,
       Date enteredDate,
-      @JsonKey(name: '_enteredDate') Element enteredDateElement,
+      @JsonKey(name: '_enteredDate')
+          Element enteredDateElement,
       List<CodeableConcept> reason,
       List<Reference> service,
       List<Reference> account,
@@ -2525,7 +2619,8 @@ abstract class _ChargeItem extends ChargeItem {
       _$_ChargeItem.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -2823,22 +2918,28 @@ class _$ContractTearOff {
 
 // ignore: unused_element
   _Contract call(
-      {String resourceType = 'Contract',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
+          Stu3ResourceType resourceType = Stu3ResourceType.Contract,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String issued,
-      @JsonKey(name: '_issued') Element issuedElement,
+      @JsonKey(name: '_issued')
+          Element issuedElement,
       Period applies,
       List<Reference> subject,
       List<Reference> topic,
@@ -2913,7 +3014,8 @@ const $Contract = _$ContractTearOff();
 
 /// @nodoc
 mixin _$Contract {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2965,22 +3067,28 @@ abstract class $ContractCopyWith<$Res> {
   factory $ContractCopyWith(Contract value, $Res Function(Contract) then) =
       _$ContractCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String issued,
-      @JsonKey(name: '_issued') Element issuedElement,
+      @JsonKey(name: '_issued')
+          Element issuedElement,
       Period applies,
       List<Reference> subject,
       List<Reference> topic,
@@ -3069,7 +3177,7 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3284,22 +3392,28 @@ abstract class _$ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
       __$ContractCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String issued,
-      @JsonKey(name: '_issued') Element issuedElement,
+      @JsonKey(name: '_issued')
+          Element issuedElement,
       Period applies,
       List<Reference> subject,
       List<Reference> topic,
@@ -3402,7 +3516,7 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
     return _then(_Contract(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3486,22 +3600,28 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
 /// @nodoc
 class _$_Contract extends _Contract {
   _$_Contract(
-      {this.resourceType = 'Contract',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
+          this.resourceType = Stu3ResourceType.Contract,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.issued,
-      @JsonKey(name: '_issued') this.issuedElement,
+      @JsonKey(name: '_issued')
+          this.issuedElement,
       this.applies,
       this.subject,
       this.topic,
@@ -3529,9 +3649,9 @@ class _$_Contract extends _Contract {
   factory _$_Contract.fromJson(Map<String, dynamic> json) =>
       _$_$_ContractFromJson(json);
 
-  @JsonKey(defaultValue: 'Contract')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -3755,22 +3875,28 @@ class _$_Contract extends _Contract {
 abstract class _Contract extends Contract {
   _Contract._() : super._();
   factory _Contract(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       Identifier identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String issued,
-      @JsonKey(name: '_issued') Element issuedElement,
+      @JsonKey(name: '_issued')
+          Element issuedElement,
       Period applies,
       List<Reference> subject,
       List<Reference> topic,
@@ -3796,7 +3922,8 @@ abstract class _Contract extends Contract {
   factory _Contract.fromJson(Map<String, dynamic> json) = _$_Contract.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -6589,26 +6716,32 @@ class _$ExplanationOfBenefitTearOff {
 
 // ignore: unused_element
   _ExplanationOfBenefit call(
-      {String resourceType = 'ExplanationOfBenefit',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
+          Stu3ResourceType resourceType = Stu3ResourceType.ExplanationOfBenefit,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       ExplanationOfBenefitStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       List<CodeableConcept> subType,
       Reference patient,
       Period billablePeriod,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference insurer,
       Reference provider,
@@ -6619,7 +6752,8 @@ class _$ExplanationOfBenefitTearOff {
       Reference claimResponse,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       List<ExplanationOfBenefitRelated> related,
       Reference prescription,
       Reference originalPrescription,
@@ -6629,7 +6763,8 @@ class _$ExplanationOfBenefitTearOff {
       List<ExplanationOfBenefitDiagnosis> diagnosis,
       List<ExplanationOfBenefitProcedure> procedure,
       Decimal precedence,
-      @JsonKey(name: '_precedence') Element precedenceElement,
+      @JsonKey(name: '_precedence')
+          Element precedenceElement,
       ExplanationOfBenefitInsurance insurance,
       ExplanationOfBenefitAccident accident,
       Period employmentImpacted,
@@ -6713,7 +6848,8 @@ const $ExplanationOfBenefit = _$ExplanationOfBenefitTearOff();
 
 /// @nodoc
 mixin _$ExplanationOfBenefit {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -6785,26 +6921,32 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
           $Res Function(ExplanationOfBenefit) then) =
       _$ExplanationOfBenefitCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       ExplanationOfBenefitStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       List<CodeableConcept> subType,
       Reference patient,
       Period billablePeriod,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference insurer,
       Reference provider,
@@ -6815,7 +6957,8 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
       Reference claimResponse,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       List<ExplanationOfBenefitRelated> related,
       Reference prescription,
       Reference originalPrescription,
@@ -6825,7 +6968,8 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
       List<ExplanationOfBenefitDiagnosis> diagnosis,
       List<ExplanationOfBenefitProcedure> procedure,
       Decimal precedence,
-      @JsonKey(name: '_precedence') Element precedenceElement,
+      @JsonKey(name: '_precedence')
+          Element precedenceElement,
       ExplanationOfBenefitInsurance insurance,
       ExplanationOfBenefitAccident accident,
       Period employmentImpacted,
@@ -6943,7 +7087,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7400,26 +7544,32 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
       __$ExplanationOfBenefitCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       ExplanationOfBenefitStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       List<CodeableConcept> subType,
       Reference patient,
       Period billablePeriod,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference insurer,
       Reference provider,
@@ -7430,7 +7580,8 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
       Reference claimResponse,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       List<ExplanationOfBenefitRelated> related,
       Reference prescription,
       Reference originalPrescription,
@@ -7440,7 +7591,8 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
       List<ExplanationOfBenefitDiagnosis> diagnosis,
       List<ExplanationOfBenefitProcedure> procedure,
       Decimal precedence,
-      @JsonKey(name: '_precedence') Element precedenceElement,
+      @JsonKey(name: '_precedence')
+          Element precedenceElement,
       ExplanationOfBenefitInsurance insurance,
       ExplanationOfBenefitAccident accident,
       Period employmentImpacted,
@@ -7592,7 +7744,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
     return _then(_ExplanationOfBenefit(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7724,26 +7876,32 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
 /// @nodoc
 class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   _$_ExplanationOfBenefit(
-      {this.resourceType = 'ExplanationOfBenefit',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
+          this.resourceType = Stu3ResourceType.ExplanationOfBenefit,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.type,
       this.subType,
       this.patient,
       this.billablePeriod,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.enterer,
       this.insurer,
       this.provider,
@@ -7754,7 +7912,8 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
       this.claimResponse,
       this.outcome,
       this.disposition,
-      @JsonKey(name: '_disposition') this.dispositionElement,
+      @JsonKey(name: '_disposition')
+          this.dispositionElement,
       this.related,
       this.prescription,
       this.originalPrescription,
@@ -7764,7 +7923,8 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
       this.diagnosis,
       this.procedure,
       this.precedence,
-      @JsonKey(name: '_precedence') this.precedenceElement,
+      @JsonKey(name: '_precedence')
+          this.precedenceElement,
       this.insurance,
       this.accident,
       this.employmentImpacted,
@@ -7784,9 +7944,9 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   factory _$_ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$_$_ExplanationOfBenefitFromJson(json);
 
-  @JsonKey(defaultValue: 'ExplanationOfBenefit')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -8081,26 +8241,32 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   _ExplanationOfBenefit._() : super._();
   factory _ExplanationOfBenefit(
-          {String resourceType,
+          {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
+              Stu3ResourceType resourceType,
           Id id,
           Meta meta,
           FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+          @JsonKey(name: '_implicitRules')
+              Element implicitRulesElement,
           Code language,
-          @JsonKey(name: '_language') Element languageElement,
+          @JsonKey(name: '_language')
+              Element languageElement,
           Narrative text,
           List<Resource> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
+          @JsonKey(name: 'extension')
+              List<FhirExtension> extension_,
           List<FhirExtension> modifierExtension,
           List<Identifier> identifier,
           ExplanationOfBenefitStatus status,
-          @JsonKey(name: '_status') Element statusElement,
+          @JsonKey(name: '_status')
+              Element statusElement,
           CodeableConcept type,
           List<CodeableConcept> subType,
           Reference patient,
           Period billablePeriod,
           String created,
-          @JsonKey(name: '_created') Element createdElement,
+          @JsonKey(name: '_created')
+              Element createdElement,
           Reference enterer,
           Reference insurer,
           Reference provider,
@@ -8111,7 +8277,8 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
           Reference claimResponse,
           CodeableConcept outcome,
           String disposition,
-          @JsonKey(name: '_disposition') Element dispositionElement,
+          @JsonKey(name: '_disposition')
+              Element dispositionElement,
           List<ExplanationOfBenefitRelated> related,
           Reference prescription,
           Reference originalPrescription,
@@ -8121,7 +8288,8 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
           List<ExplanationOfBenefitDiagnosis> diagnosis,
           List<ExplanationOfBenefitProcedure> procedure,
           Decimal precedence,
-          @JsonKey(name: '_precedence') Element precedenceElement,
+          @JsonKey(name: '_precedence')
+              Element precedenceElement,
           ExplanationOfBenefitInsurance insurance,
           ExplanationOfBenefitAccident accident,
           Period employmentImpacted,
@@ -8141,7 +8309,8 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
       _$_ExplanationOfBenefit.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override

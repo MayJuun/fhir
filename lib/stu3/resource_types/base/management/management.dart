@@ -15,7 +15,9 @@ part 'management.g.dart';
 abstract class Encounter with Resource implements _$Encounter {
   Encounter._();
   factory Encounter({
-    @Default('Encounter') String resourceType,
+    @Default(Stu3ResourceType.Encounter)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Encounter)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -221,7 +223,9 @@ abstract class EncounterLocation implements _$EncounterLocation {
 abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
   EpisodeOfCare._();
   factory EpisodeOfCare({
-    @Default('EpisodeOfCare') String resourceType,
+    @Default(Stu3ResourceType.EpisodeOfCare)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.EpisodeOfCare)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -317,7 +321,9 @@ abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
 abstract class Flag with Resource implements _$Flag {
   Flag._();
   factory Flag({
-    @Default('Flag') String resourceType,
+    @Default(Stu3ResourceType.Flag)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Flag)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -357,7 +363,9 @@ abstract class Flag with Resource implements _$Flag {
 abstract class Library with Resource implements _$Library {
   Library._();
   factory Library({
-    @Default('Library') String resourceType,
+    @Default(Stu3ResourceType.Library)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Library)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -429,7 +437,9 @@ abstract class Library with Resource implements _$Library {
 abstract class List_ with Resource implements _$List_ {
   List_._();
   factory List_({
-    @Default('List') String resourceType,
+    @Default(Stu3ResourceType.List_)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.List_)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

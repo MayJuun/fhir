@@ -9,8 +9,9 @@ part of 'medication_definition.dart';
 _$_AdministrableProductDefinition _$_$_AdministrableProductDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_AdministrableProductDefinition(
-    resourceType:
-        json['resourceType'] as String ?? 'AdministrableProductDefinition',
+    resourceType: _$enumDecodeNullable(
+        _$R5ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R5ResourceType.AdministrableProductDefinition),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -97,7 +98,7 @@ Map<String, dynamic> _$_$_AdministrableProductDefinitionToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -128,6 +129,187 @@ Map<String, dynamic> _$_$_AdministrableProductDefinitionToJson(
       instance.routeOfAdministration?.map((e) => e?.toJson())?.toList());
   return val;
 }
+
+T _$enumDecode<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    throw ArgumentError('A value must be provided. Supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+
+  final value = enumValues.entries
+      .singleWhere((e) => e.value == source, orElse: () => null)
+      ?.key;
+
+  if (value == null && unknownValue == null) {
+    throw ArgumentError('`$source` is not one of the supported values: '
+        '${enumValues.values.join(', ')}');
+  }
+  return value ?? unknownValue;
+}
+
+T _$enumDecodeNullable<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
+}
+
+const _$R5ResourceTypeEnumMap = {
+  R5ResourceType.Account: 'Account',
+  R5ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R5ResourceType.AdverseEvent: 'AdverseEvent',
+  R5ResourceType.AllergyIntolerance: 'AllergyIntolerance',
+  R5ResourceType.Appointment: 'Appointment',
+  R5ResourceType.AppointmentResponse: 'AppointmentResponse',
+  R5ResourceType.AuditEvent: 'AuditEvent',
+  R5ResourceType.Basic: 'Basic',
+  R5ResourceType.Binary: 'Binary',
+  R5ResourceType.BiologicallyDerivedProduct: 'BiologicallyDerivedProduct',
+  R5ResourceType.BodyStructure: 'BodyStructure',
+  R5ResourceType.Bundle: 'Bundle',
+  R5ResourceType.CapabilityStatement: 'CapabilityStatement',
+  R5ResourceType.CapabilityStatement2: 'CapabilityStatement2',
+  R5ResourceType.CarePlan: 'CarePlan',
+  R5ResourceType.CareTeam: 'CareTeam',
+  R5ResourceType.CatalogEntry: 'CatalogEntry',
+  R5ResourceType.ChargeItem: 'ChargeItem',
+  R5ResourceType.ChargeItemDefinition: 'ChargeItemDefinition',
+  R5ResourceType.Claim: 'Claim',
+  R5ResourceType.ClaimResponse: 'ClaimResponse',
+  R5ResourceType.ClinicalImpression: 'ClinicalImpression',
+  R5ResourceType.ClinicalUseIssue: 'ClinicalUseIssue',
+  R5ResourceType.CodeSystem: 'CodeSystem',
+  R5ResourceType.Communication: 'Communication',
+  R5ResourceType.CommunicationRequest: 'CommunicationRequest',
+  R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
+  R5ResourceType.Composition: 'Composition',
+  R5ResourceType.ConceptMap: 'ConceptMap',
+  R5ResourceType.Condition: 'Condition',
+  R5ResourceType.ConditionDefinition: 'ConditionDefinition',
+  R5ResourceType.Consent: 'Consent',
+  R5ResourceType.Contract: 'Contract',
+  R5ResourceType.Coverage: 'Coverage',
+  R5ResourceType.CoverageEligibilityRequest: 'CoverageEligibilityRequest',
+  R5ResourceType.CoverageEligibilityResponse: 'CoverageEligibilityResponse',
+  R5ResourceType.DetectedIssue: 'DetectedIssue',
+  R5ResourceType.Device: 'Device',
+  R5ResourceType.DeviceDefinition: 'DeviceDefinition',
+  R5ResourceType.DeviceMetric: 'DeviceMetric',
+  R5ResourceType.DeviceRequest: 'DeviceRequest',
+  R5ResourceType.DeviceUseStatement: 'DeviceUseStatement',
+  R5ResourceType.DiagnosticReport: 'DiagnosticReport',
+  R5ResourceType.DocumentManifest: 'DocumentManifest',
+  R5ResourceType.DocumentReference: 'DocumentReference',
+  R5ResourceType.Encounter: 'Encounter',
+  R5ResourceType.Endpoint: 'Endpoint',
+  R5ResourceType.EnrollmentRequest: 'EnrollmentRequest',
+  R5ResourceType.EnrollmentResponse: 'EnrollmentResponse',
+  R5ResourceType.EpisodeOfCare: 'EpisodeOfCare',
+  R5ResourceType.EventDefinition: 'EventDefinition',
+  R5ResourceType.Evidence: 'Evidence',
+  R5ResourceType.EvidenceVariable: 'EvidenceVariable',
+  R5ResourceType.ExampleScenario: 'ExampleScenario',
+  R5ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
+  R5ResourceType.FamilyMemberHistory: 'FamilyMemberHistory',
+  R5ResourceType.Flag: 'Flag',
+  R5ResourceType.Goal: 'Goal',
+  R5ResourceType.GraphDefinition: 'GraphDefinition',
+  R5ResourceType.Group: 'Group',
+  R5ResourceType.GuidanceResponse: 'GuidanceResponse',
+  R5ResourceType.HealthcareService: 'HealthcareService',
+  R5ResourceType.ImagingStudy: 'ImagingStudy',
+  R5ResourceType.Immunization: 'Immunization',
+  R5ResourceType.ImmunizationEvaluation: 'ImmunizationEvaluation',
+  R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
+  R5ResourceType.ImplementationGuide: 'ImplementationGuide',
+  R5ResourceType.InsurancePlan: 'InsurancePlan',
+  R5ResourceType.Invoice: 'Invoice',
+  R5ResourceType.Library: 'Library',
+  R5ResourceType.Linkage: 'Linkage',
+  R5ResourceType.List_: 'List',
+  R5ResourceType.Location: 'Location',
+  R5ResourceType.Measure: 'Measure',
+  R5ResourceType.MeasureReport: 'MeasureReport',
+  R5ResourceType.Medication: 'Medication',
+  R5ResourceType.MedicationAdministration: 'MedicationAdministration',
+  R5ResourceType.MedicationDispense: 'MedicationDispense',
+  R5ResourceType.MedicationKnowledge: 'MedicationKnowledge',
+  R5ResourceType.MedicationRequest: 'MedicationRequest',
+  R5ResourceType.MedicationUsage: 'MedicationUsage',
+  R5ResourceType.MedicinalProductDefinition: 'MedicinalProductDefinition',
+  R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
+  R5ResourceType.Ingredient: 'Ingredient',
+  R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
+  R5ResourceType.PackagedProductDefinition: 'PackagedProductDefinition',
+  R5ResourceType.AdministrableProductDefinition:
+      'AdministrableProductDefinition',
+  R5ResourceType.MessageDefinition: 'MessageDefinition',
+  R5ResourceType.MessageHeader: 'MessageHeader',
+  R5ResourceType.MolecularSequence: 'MolecularSequence',
+  R5ResourceType.NamingSystem: 'NamingSystem',
+  R5ResourceType.NutritionIntake: 'NutritionIntake',
+  R5ResourceType.NutritionOrder: 'NutritionOrder',
+  R5ResourceType.NutritionProduct: 'NutritionProduct',
+  R5ResourceType.Observation: 'Observation',
+  R5ResourceType.ObservationDefinition: 'ObservationDefinition',
+  R5ResourceType.OperationDefinition: 'OperationDefinition',
+  R5ResourceType.OperationOutcome: 'OperationOutcome',
+  R5ResourceType.Organization: 'Organization',
+  R5ResourceType.OrganizationAffiliation: 'OrganizationAffiliation',
+  R5ResourceType.Parameters: 'Parameters',
+  R5ResourceType.Patient: 'Patient',
+  R5ResourceType.PaymentNotice: 'PaymentNotice',
+  R5ResourceType.PaymentReconciliation: 'PaymentReconciliation',
+  R5ResourceType.Permission: 'Permission',
+  R5ResourceType.Person: 'Person',
+  R5ResourceType.PlanDefinition: 'PlanDefinition',
+  R5ResourceType.Practitioner: 'Practitioner',
+  R5ResourceType.PractitionerRole: 'PractitionerRole',
+  R5ResourceType.Procedure: 'Procedure',
+  R5ResourceType.Provenance: 'Provenance',
+  R5ResourceType.Questionnaire: 'Questionnaire',
+  R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
+  R5ResourceType.RelatedPerson: 'RelatedPerson',
+  R5ResourceType.RequestGroup: 'RequestGroup',
+  R5ResourceType.ResearchStudy: 'ResearchStudy',
+  R5ResourceType.ResearchSubject: 'ResearchSubject',
+  R5ResourceType.RiskAssessment: 'RiskAssessment',
+  R5ResourceType.Schedule: 'Schedule',
+  R5ResourceType.SearchParameter: 'SearchParameter',
+  R5ResourceType.ServiceRequest: 'ServiceRequest',
+  R5ResourceType.Slot: 'Slot',
+  R5ResourceType.Specimen: 'Specimen',
+  R5ResourceType.SpecimenDefinition: 'SpecimenDefinition',
+  R5ResourceType.StructureDefinition: 'StructureDefinition',
+  R5ResourceType.StructureMap: 'StructureMap',
+  R5ResourceType.Subscription: 'Subscription',
+  R5ResourceType.SubscriptionStatus: 'SubscriptionStatus',
+  R5ResourceType.SubscriptionTopic: 'SubscriptionTopic',
+  R5ResourceType.Substance: 'Substance',
+  R5ResourceType.SubstanceDefinition: 'SubstanceDefinition',
+  R5ResourceType.SubstanceNucleicAcid: 'SubstanceNucleicAcid',
+  R5ResourceType.SubstancePolymer: 'SubstancePolymer',
+  R5ResourceType.SubstanceProtein: 'SubstanceProtein',
+  R5ResourceType.SubstanceReferenceInformation: 'SubstanceReferenceInformation',
+  R5ResourceType.SubstanceSourceMaterial: 'SubstanceSourceMaterial',
+  R5ResourceType.SupplyDelivery: 'SupplyDelivery',
+  R5ResourceType.SupplyRequest: 'SupplyRequest',
+  R5ResourceType.Task: 'Task',
+  R5ResourceType.TerminologyCapabilities: 'TerminologyCapabilities',
+  R5ResourceType.TestReport: 'TestReport',
+  R5ResourceType.TestScript: 'TestScript',
+  R5ResourceType.ValueSet: 'ValueSet',
+  R5ResourceType.VerificationResult: 'VerificationResult',
+  R5ResourceType.VisionPrescription: 'VisionPrescription',
+};
 
 _$_AdministrableProductDefinitionProperty
     _$_$_AdministrableProductDefinitionPropertyFromJson(
@@ -376,7 +558,9 @@ Map<String, dynamic> _$_$_AdministrableProductDefinitionWithdrawalPeriodToJson(
 
 _$_ClinicalUseIssue _$_$_ClinicalUseIssueFromJson(Map<String, dynamic> json) {
   return _$_ClinicalUseIssue(
-    resourceType: json['resourceType'] as String ?? 'ClinicalUseIssue',
+    resourceType: _$enumDecodeNullable(
+        _$R5ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R5ResourceType.ClinicalUseIssue),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -467,7 +651,7 @@ Map<String, dynamic> _$_$_ClinicalUseIssueToJson(_$_ClinicalUseIssue instance) {
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -497,38 +681,6 @@ Map<String, dynamic> _$_$_ClinicalUseIssueToJson(_$_ClinicalUseIssue instance) {
       'population', instance.population?.map((e) => e?.toJson())?.toList());
   writeNotNull('undesirableEffect', instance.undesirableEffect?.toJson());
   return val;
-}
-
-T _$enumDecode<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError('A value must be provided. Supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-
-  final value = enumValues.entries
-      .singleWhere((e) => e.value == source, orElse: () => null)
-      ?.key;
-
-  if (value == null && unknownValue == null) {
-    throw ArgumentError('`$source` is not one of the supported values: '
-        '${enumValues.values.join(', ')}');
-  }
-  return value ?? unknownValue;
-}
-
-T _$enumDecodeNullable<T>(
-  Map<T, dynamic> enumValues,
-  dynamic source, {
-  T unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$ClinicalUseIssueTypeEnumMap = {
@@ -889,7 +1041,9 @@ Map<String, dynamic> _$_$_ClinicalUseIssueUndesirableEffectToJson(
 
 _$_Ingredient _$_$_IngredientFromJson(Map<String, dynamic> json) {
   return _$_Ingredient(
-    resourceType: json['resourceType'] as String ?? 'Ingredient',
+    resourceType: _$enumDecodeNullable(
+        _$R5ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R5ResourceType.Ingredient),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -972,7 +1126,7 @@ Map<String, dynamic> _$_$_IngredientToJson(_$_Ingredient instance) {
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1269,8 +1423,9 @@ Map<String, dynamic> _$_$_IngredientSpecifiedSubstanceToJson(
 _$_ManufacturedItemDefinition _$_$_ManufacturedItemDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_ManufacturedItemDefinition(
-    resourceType:
-        json['resourceType'] as String ?? 'ManufacturedItemDefinition',
+    resourceType: _$enumDecodeNullable(
+        _$R5ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R5ResourceType.ManufacturedItemDefinition),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1343,7 +1498,7 @@ Map<String, dynamic> _$_$_ManufacturedItemDefinitionToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1441,8 +1596,9 @@ Map<String, dynamic> _$_$_ManufacturedItemDefinitionPropertyToJson(
 _$_MedicinalProductDefinition _$_$_MedicinalProductDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_MedicinalProductDefinition(
-    resourceType:
-        json['resourceType'] as String ?? 'MedicinalProductDefinition',
+    resourceType: _$enumDecodeNullable(
+        _$R5ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R5ResourceType.MedicinalProductDefinition),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -1614,7 +1770,7 @@ Map<String, dynamic> _$_$_MedicinalProductDefinitionToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1999,7 +2155,9 @@ Map<String, dynamic>
 _$_PackagedProductDefinition _$_$_PackagedProductDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_PackagedProductDefinition(
-    resourceType: json['resourceType'] as String ?? 'PackagedProductDefinition',
+    resourceType: _$enumDecodeNullable(
+        _$R5ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R5ResourceType.PackagedProductDefinition),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2117,7 +2275,7 @@ Map<String, dynamic> _$_$_PackagedProductDefinitionToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -2431,7 +2589,9 @@ Map<String, dynamic> _$_$_PackagedProductDefinitionContainedItemToJson(
 _$_RegulatedAuthorization _$_$_RegulatedAuthorizationFromJson(
     Map<String, dynamic> json) {
   return _$_RegulatedAuthorization(
-    resourceType: json['resourceType'] as String ?? 'RegulatedAuthorization',
+    resourceType: _$enumDecodeNullable(
+        _$R5ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R5ResourceType.RegulatedAuthorization),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2547,7 +2707,7 @@ Map<String, dynamic> _$_$_RegulatedAuthorizationToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -2707,7 +2867,9 @@ Map<String, dynamic> _$_$_RegulatedAuthorizationCaseToJson(
 _$_SubstanceDefinition _$_$_SubstanceDefinitionFromJson(
     Map<String, dynamic> json) {
   return _$_SubstanceDefinition(
-    resourceType: json['resourceType'] as String ?? 'SubstanceDefinition',
+    resourceType: _$enumDecodeNullable(
+        _$R5ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R5ResourceType.SubstanceDefinition),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -2849,7 +3011,7 @@ Map<String, dynamic> _$_$_SubstanceDefinitionToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -3613,7 +3775,9 @@ Map<String, dynamic> _$_$_SubstanceDefinitionRelationshipToJson(
 _$_SubstanceNucleicAcid _$_$_SubstanceNucleicAcidFromJson(
     Map<String, dynamic> json) {
   return _$_SubstanceNucleicAcid(
-    resourceType: json['resourceType'] as String ?? 'SubstanceNucleicAcid',
+    resourceType: _$enumDecodeNullable(
+        _$R5ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R5ResourceType.SubstanceNucleicAcid),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -3684,7 +3848,7 @@ Map<String, dynamic> _$_$_SubstanceNucleicAcidToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -3897,7 +4061,9 @@ Map<String, dynamic> _$_$_SubstanceNucleicAcidSugarToJson(
 
 _$_SubstancePolymer _$_$_SubstancePolymerFromJson(Map<String, dynamic> json) {
   return _$_SubstancePolymer(
-    resourceType: json['resourceType'] as String ?? 'SubstancePolymer',
+    resourceType: _$enumDecodeNullable(
+        _$R5ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R5ResourceType.SubstancePolymer),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -3971,7 +4137,7 @@ Map<String, dynamic> _$_$_SubstancePolymerToJson(_$_SubstancePolymer instance) {
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -4336,7 +4502,9 @@ Map<String, dynamic> _$_$_SubstancePolymerStructuralRepresentationToJson(
 
 _$_SubstanceProtein _$_$_SubstanceProteinFromJson(Map<String, dynamic> json) {
   return _$_SubstanceProtein(
-    resourceType: json['resourceType'] as String ?? 'SubstanceProtein',
+    resourceType: _$enumDecodeNullable(
+        _$R5ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R5ResourceType.SubstanceProtein),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -4403,7 +4571,7 @@ Map<String, dynamic> _$_$_SubstanceProteinToJson(_$_SubstanceProtein instance) {
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -4516,8 +4684,9 @@ Map<String, dynamic> _$_$_SubstanceProteinSubunitToJson(
 _$_SubstanceReferenceInformation _$_$_SubstanceReferenceInformationFromJson(
     Map<String, dynamic> json) {
   return _$_SubstanceReferenceInformation(
-    resourceType:
-        json['resourceType'] as String ?? 'SubstanceReferenceInformation',
+    resourceType: _$enumDecodeNullable(
+        _$R5ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R5ResourceType.SubstanceReferenceInformation),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -4586,7 +4755,7 @@ Map<String, dynamic> _$_$_SubstanceReferenceInformationToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -4790,7 +4959,9 @@ Map<String, dynamic> _$_$_SubstanceReferenceInformationTargetToJson(
 _$_SubstanceSourceMaterial _$_$_SubstanceSourceMaterialFromJson(
     Map<String, dynamic> json) {
   return _$_SubstanceSourceMaterial(
-    resourceType: json['resourceType'] as String ?? 'SubstanceSourceMaterial',
+    resourceType: _$enumDecodeNullable(
+        _$R5ResourceTypeEnumMap, json['resourceType'],
+        unknownValue: R5ResourceType.SubstanceSourceMaterial),
     id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
     meta: json['meta'] == null
         ? null
@@ -4899,7 +5070,7 @@ Map<String, dynamic> _$_$_SubstanceSourceMaterialToJson(
     }
   }
 
-  writeNotNull('resourceType', instance.resourceType);
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

@@ -17,7 +17,9 @@ abstract class CapabilityStatement
     implements _$CapabilityStatement {
   CapabilityStatement._();
   factory CapabilityStatement({
-    @Default('CapabilityStatement') String resourceType,
+    @Default(Stu3ResourceType.CapabilityStatement)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -558,7 +560,9 @@ abstract class CompartmentDefinition
     implements _$CompartmentDefinition {
   CompartmentDefinition._();
   factory CompartmentDefinition({
-    @Default('CompartmentDefinition') String resourceType,
+    @Default(Stu3ResourceType.CompartmentDefinition)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -645,7 +649,9 @@ abstract class CompartmentDefinitionResource
 abstract class DataElement with Resource implements _$DataElement {
   DataElement._();
   factory DataElement({
-    @Default('DataElement') String resourceType,
+    @Default(Stu3ResourceType.DataElement)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -732,7 +738,9 @@ abstract class DataElementMapping implements _$DataElementMapping {
 abstract class GraphDefinition with Resource implements _$GraphDefinition {
   GraphDefinition._();
   factory GraphDefinition({
-    @Default('GraphDefinition') String resourceType,
+    @Default(Stu3ResourceType.GraphDefinition)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -882,7 +890,9 @@ abstract class ImplementationGuide
     implements _$ImplementationGuide {
   ImplementationGuide._();
   factory ImplementationGuide({
-    @Default('ImplementationGuide') String resourceType,
+    @Default(Stu3ResourceType.ImplementationGuide)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1093,7 +1103,9 @@ abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
 abstract class MessageDefinition with Resource implements _$MessageDefinition {
   MessageDefinition._();
   factory MessageDefinition({
-    @Default('MessageDefinition') String resourceType,
+    @Default(Stu3ResourceType.MessageDefinition)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1219,7 +1231,9 @@ abstract class OperationDefinition
     implements _$OperationDefinition {
   OperationDefinition._();
   factory OperationDefinition({
-    @Default('OperationDefinition') String resourceType,
+    @Default(Stu3ResourceType.OperationDefinition)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1387,7 +1401,9 @@ abstract class OperationDefinitionOverload
 abstract class SearchParameter with Resource implements _$SearchParameter {
   SearchParameter._();
   factory SearchParameter({
-    @Default('SearchParameter') String resourceType,
+    @Default(Stu3ResourceType.SearchParameter)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1490,7 +1506,9 @@ abstract class StructureDefinition
     implements _$StructureDefinition {
   StructureDefinition._();
   factory StructureDefinition({
-    @Default('StructureDefinition') String resourceType,
+    @Default(Stu3ResourceType.StructureDefinition)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1651,7 +1669,9 @@ abstract class StructureDefinitionDifferential
 abstract class StructureMap with Resource implements _$StructureMap {
   StructureMap._();
   factory StructureMap({
-    @Default('StructureMap') String resourceType,
+    @Default(Stu3ResourceType.StructureMap)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

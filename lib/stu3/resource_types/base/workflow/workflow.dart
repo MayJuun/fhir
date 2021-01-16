@@ -15,7 +15,9 @@ part 'workflow.g.dart';
 abstract class Appointment with Resource implements _$Appointment {
   Appointment._();
   factory Appointment({
-    @Default('Appointment') String resourceType,
+    @Default(Stu3ResourceType.Appointment)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -104,7 +106,9 @@ abstract class AppointmentResponse
     implements _$AppointmentResponse {
   AppointmentResponse._();
   factory AppointmentResponse({
-    @Default('AppointmentResponse') String resourceType,
+    @Default(Stu3ResourceType.AppointmentResponse)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -148,7 +152,9 @@ abstract class AppointmentResponse
 abstract class ProcessRequest with Resource implements _$ProcessRequest {
   ProcessRequest._();
   factory ProcessRequest({
-    @Default('ProcessRequest') String resourceType,
+    @Default(Stu3ResourceType.ProcessRequest)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -225,7 +231,9 @@ abstract class ProcessRequestItem implements _$ProcessRequestItem {
 abstract class ProcessResponse with Resource implements _$ProcessResponse {
   ProcessResponse._();
   factory ProcessResponse({
-    @Default('ProcessResponse') String resourceType,
+    @Default(Stu3ResourceType.ProcessResponse)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -299,7 +307,9 @@ abstract class ProcessResponseProcessNote
 abstract class RequestGroup with Resource implements _$RequestGroup {
   RequestGroup._();
   factory RequestGroup({
-    @Default('RequestGroup') String resourceType,
+    @Default(Stu3ResourceType.RequestGroup)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -462,7 +472,9 @@ abstract class RequestGroupRelatedAction
 abstract class Schedule with Resource implements _$Schedule {
   Schedule._();
   factory Schedule({
-    @Default('Schedule') String resourceType,
+    @Default(Stu3ResourceType.Schedule)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -504,7 +516,9 @@ abstract class Schedule with Resource implements _$Schedule {
 abstract class Slot with Resource implements _$Slot {
   Slot._();
   factory Slot({
-    @Default('Slot') String resourceType,
+    @Default(Stu3ResourceType.Slot)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -551,7 +565,9 @@ abstract class Slot with Resource implements _$Slot {
 abstract class Task with Resource implements _$Task {
   Task._();
   factory Task({
-    @Default('Task') String resourceType,
+    @Default(Stu3ResourceType.Task)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Task)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

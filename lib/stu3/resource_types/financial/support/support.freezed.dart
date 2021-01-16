@@ -18,38 +18,48 @@ class _$CoverageTearOff {
 
 // ignore: unused_element
   _Coverage call(
-      {String resourceType = 'Coverage',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
+          Stu3ResourceType resourceType = Stu3ResourceType.Coverage,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       Reference policyHolder,
       Reference subscriber,
       String subscriberId,
-      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
+      @JsonKey(name: '_subscriberId')
+          Element subscriberIdElement,
       Reference beneficiary,
       CodeableConcept relationship,
       Period period,
       List<Reference> payor,
       CoverageGrouping grouping,
       String dependent,
-      @JsonKey(name: '_dependent') Element dependentElement,
+      @JsonKey(name: '_dependent')
+          Element dependentElement,
       String sequence,
-      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_sequence')
+          Element sequenceElement,
       Decimal order,
-      @JsonKey(name: '_order') Element orderElement,
+      @JsonKey(name: '_order')
+          Element orderElement,
       String network,
-      @JsonKey(name: '_network') Element networkElement,
+      @JsonKey(name: '_network')
+          Element networkElement,
       List<Reference> contract}) {
     return _Coverage(
       resourceType: resourceType,
@@ -100,7 +110,8 @@ const $Coverage = _$CoverageTearOff();
 
 /// @nodoc
 mixin _$Coverage {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -152,38 +163,48 @@ abstract class $CoverageCopyWith<$Res> {
   factory $CoverageCopyWith(Coverage value, $Res Function(Coverage) then) =
       _$CoverageCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       Reference policyHolder,
       Reference subscriber,
       String subscriberId,
-      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
+      @JsonKey(name: '_subscriberId')
+          Element subscriberIdElement,
       Reference beneficiary,
       CodeableConcept relationship,
       Period period,
       List<Reference> payor,
       CoverageGrouping grouping,
       String dependent,
-      @JsonKey(name: '_dependent') Element dependentElement,
+      @JsonKey(name: '_dependent')
+          Element dependentElement,
       String sequence,
-      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_sequence')
+          Element sequenceElement,
       Decimal order,
-      @JsonKey(name: '_order') Element orderElement,
+      @JsonKey(name: '_order')
+          Element orderElement,
       String network,
-      @JsonKey(name: '_network') Element networkElement,
+      @JsonKey(name: '_network')
+          Element networkElement,
       List<Reference> contract});
 
   $MetaCopyWith<$Res> get meta;
@@ -252,7 +273,7 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -501,38 +522,48 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       __$CoverageCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       Reference policyHolder,
       Reference subscriber,
       String subscriberId,
-      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
+      @JsonKey(name: '_subscriberId')
+          Element subscriberIdElement,
       Reference beneficiary,
       CodeableConcept relationship,
       Period period,
       List<Reference> payor,
       CoverageGrouping grouping,
       String dependent,
-      @JsonKey(name: '_dependent') Element dependentElement,
+      @JsonKey(name: '_dependent')
+          Element dependentElement,
       String sequence,
-      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_sequence')
+          Element sequenceElement,
       Decimal order,
-      @JsonKey(name: '_order') Element orderElement,
+      @JsonKey(name: '_order')
+          Element orderElement,
       String network,
-      @JsonKey(name: '_network') Element networkElement,
+      @JsonKey(name: '_network')
+          Element networkElement,
       List<Reference> contract});
 
   @override
@@ -619,7 +650,7 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
     return _then(_Coverage(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -697,38 +728,48 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
 /// @nodoc
 class _$_Coverage extends _Coverage {
   _$_Coverage(
-      {this.resourceType = 'Coverage',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
+          this.resourceType = Stu3ResourceType.Coverage,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.type,
       this.policyHolder,
       this.subscriber,
       this.subscriberId,
-      @JsonKey(name: '_subscriberId') this.subscriberIdElement,
+      @JsonKey(name: '_subscriberId')
+          this.subscriberIdElement,
       this.beneficiary,
       this.relationship,
       this.period,
       this.payor,
       this.grouping,
       this.dependent,
-      @JsonKey(name: '_dependent') this.dependentElement,
+      @JsonKey(name: '_dependent')
+          this.dependentElement,
       this.sequence,
-      @JsonKey(name: '_sequence') this.sequenceElement,
+      @JsonKey(name: '_sequence')
+          this.sequenceElement,
       this.order,
-      @JsonKey(name: '_order') this.orderElement,
+      @JsonKey(name: '_order')
+          this.orderElement,
       this.network,
-      @JsonKey(name: '_network') this.networkElement,
+      @JsonKey(name: '_network')
+          this.networkElement,
       this.contract})
       : assert(resourceType != null),
         super._();
@@ -736,9 +777,9 @@ class _$_Coverage extends _Coverage {
   factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
       _$_$_CoverageFromJson(json);
 
-  @JsonKey(defaultValue: 'Coverage')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -950,44 +991,55 @@ class _$_Coverage extends _Coverage {
 abstract class _Coverage extends Coverage {
   _Coverage._() : super._();
   factory _Coverage(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       Reference policyHolder,
       Reference subscriber,
       String subscriberId,
-      @JsonKey(name: '_subscriberId') Element subscriberIdElement,
+      @JsonKey(name: '_subscriberId')
+          Element subscriberIdElement,
       Reference beneficiary,
       CodeableConcept relationship,
       Period period,
       List<Reference> payor,
       CoverageGrouping grouping,
       String dependent,
-      @JsonKey(name: '_dependent') Element dependentElement,
+      @JsonKey(name: '_dependent')
+          Element dependentElement,
       String sequence,
-      @JsonKey(name: '_sequence') Element sequenceElement,
+      @JsonKey(name: '_sequence')
+          Element sequenceElement,
       Decimal order,
-      @JsonKey(name: '_order') Element orderElement,
+      @JsonKey(name: '_order')
+          Element orderElement,
       String network,
-      @JsonKey(name: '_network') Element networkElement,
+      @JsonKey(name: '_network')
+          Element networkElement,
       List<Reference> contract}) = _$_Coverage;
 
   factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -1923,27 +1975,34 @@ class _$EligibilityRequestTearOff {
 
 // ignore: unused_element
   _EligibilityRequest call(
-      {String resourceType = 'EligibilityRequest',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
+          Stu3ResourceType resourceType = Stu3ResourceType.EligibilityRequest,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept priority,
       Reference patient,
       Date servicedDate,
-      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference provider,
       Reference organization,
@@ -1951,7 +2010,8 @@ class _$EligibilityRequestTearOff {
       Reference facility,
       Reference coverage,
       String businessArrangement,
-      @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
+      @JsonKey(name: '_businessArrangement')
+          Element businessArrangementElement,
       CodeableConcept benefitCategory,
       CodeableConcept benefitSubCategory}) {
     return _EligibilityRequest(
@@ -2001,7 +2061,8 @@ const $EligibilityRequest = _$EligibilityRequestTearOff();
 
 /// @nodoc
 mixin _$EligibilityRequest {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2050,27 +2111,34 @@ abstract class $EligibilityRequestCopyWith<$Res> {
           EligibilityRequest value, $Res Function(EligibilityRequest) then) =
       _$EligibilityRequestCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept priority,
       Reference patient,
       Date servicedDate,
-      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference provider,
       Reference organization,
@@ -2078,7 +2146,8 @@ abstract class $EligibilityRequestCopyWith<$Res> {
       Reference facility,
       Reference coverage,
       String businessArrangement,
-      @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
+      @JsonKey(name: '_businessArrangement')
+          Element businessArrangementElement,
       CodeableConcept benefitCategory,
       CodeableConcept benefitSubCategory});
 
@@ -2149,7 +2218,7 @@ class _$EligibilityRequestCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2415,27 +2484,34 @@ abstract class _$EligibilityRequestCopyWith<$Res>
       __$EligibilityRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept priority,
       Reference patient,
       Date servicedDate,
-      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference provider,
       Reference organization,
@@ -2443,7 +2519,8 @@ abstract class _$EligibilityRequestCopyWith<$Res>
       Reference facility,
       Reference coverage,
       String businessArrangement,
-      @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
+      @JsonKey(name: '_businessArrangement')
+          Element businessArrangementElement,
       CodeableConcept benefitCategory,
       CodeableConcept benefitSubCategory});
 
@@ -2535,7 +2612,7 @@ class __$EligibilityRequestCopyWithImpl<$Res>
     return _then(_EligibilityRequest(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2608,27 +2685,34 @@ class __$EligibilityRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_EligibilityRequest extends _EligibilityRequest {
   _$_EligibilityRequest(
-      {this.resourceType = 'EligibilityRequest',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
+          this.resourceType = Stu3ResourceType.EligibilityRequest,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.priority,
       this.patient,
       this.servicedDate,
-      @JsonKey(name: '_servicedDate') this.servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          this.servicedDateElement,
       this.servicedPeriod,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.enterer,
       this.provider,
       this.organization,
@@ -2636,7 +2720,8 @@ class _$_EligibilityRequest extends _EligibilityRequest {
       this.facility,
       this.coverage,
       this.businessArrangement,
-      @JsonKey(name: '_businessArrangement') this.businessArrangementElement,
+      @JsonKey(name: '_businessArrangement')
+          this.businessArrangementElement,
       this.benefitCategory,
       this.benefitSubCategory})
       : assert(resourceType != null),
@@ -2645,9 +2730,9 @@ class _$_EligibilityRequest extends _EligibilityRequest {
   factory _$_EligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityRequestFromJson(json);
 
-  @JsonKey(defaultValue: 'EligibilityRequest')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -2849,27 +2934,34 @@ class _$_EligibilityRequest extends _EligibilityRequest {
 abstract class _EligibilityRequest extends EligibilityRequest {
   _EligibilityRequest._() : super._();
   factory _EligibilityRequest(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept priority,
       Reference patient,
       Date servicedDate,
-      @JsonKey(name: '_servicedDate') Element servicedDateElement,
+      @JsonKey(name: '_servicedDate')
+          Element servicedDateElement,
       Period servicedPeriod,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference provider,
       Reference organization,
@@ -2877,7 +2969,8 @@ abstract class _EligibilityRequest extends EligibilityRequest {
       Reference facility,
       Reference coverage,
       String businessArrangement,
-      @JsonKey(name: '_businessArrangement') Element businessArrangementElement,
+      @JsonKey(name: '_businessArrangement')
+          Element businessArrangementElement,
       CodeableConcept benefitCategory,
       CodeableConcept benefitSubCategory}) = _$_EligibilityRequest;
 
@@ -2885,7 +2978,8 @@ abstract class _EligibilityRequest extends EligibilityRequest {
       _$_EligibilityRequest.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -2967,31 +3061,39 @@ class _$EligibilityResponseTearOff {
 
 // ignore: unused_element
   _EligibilityResponse call(
-      {String resourceType = 'EligibilityResponse',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
+          Stu3ResourceType resourceType = Stu3ResourceType.EligibilityResponse,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       Reference insurer,
       Boolean inforce,
-      @JsonKey(name: '_inforce') Element inforceElement,
+      @JsonKey(name: '_inforce')
+          Element inforceElement,
       List<EligibilityResponseInsurance> insurance,
       CodeableConcept form,
       List<EligibilityResponseError> error}) {
@@ -3039,7 +3141,8 @@ const $EligibilityResponse = _$EligibilityResponseTearOff();
 
 /// @nodoc
 mixin _$EligibilityResponse {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -3085,31 +3188,39 @@ abstract class $EligibilityResponseCopyWith<$Res> {
           EligibilityResponse value, $Res Function(EligibilityResponse) then) =
       _$EligibilityResponseCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       Reference insurer,
       Boolean inforce,
-      @JsonKey(name: '_inforce') Element inforceElement,
+      @JsonKey(name: '_inforce')
+          Element inforceElement,
       List<EligibilityResponseInsurance> insurance,
       CodeableConcept form,
       List<EligibilityResponseError> error});
@@ -3173,7 +3284,7 @@ class _$EligibilityResponseCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3383,31 +3494,39 @@ abstract class _$EligibilityResponseCopyWith<$Res>
       __$EligibilityResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       Reference insurer,
       Boolean inforce,
-      @JsonKey(name: '_inforce') Element inforceElement,
+      @JsonKey(name: '_inforce')
+          Element inforceElement,
       List<EligibilityResponseInsurance> insurance,
       CodeableConcept form,
       List<EligibilityResponseError> error});
@@ -3487,7 +3606,7 @@ class __$EligibilityResponseCopyWithImpl<$Res>
     return _then(_EligibilityResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3554,31 +3673,39 @@ class __$EligibilityResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_EligibilityResponse extends _EligibilityResponse {
   _$_EligibilityResponse(
-      {this.resourceType = 'EligibilityResponse',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
+          this.resourceType = Stu3ResourceType.EligibilityResponse,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.requestProvider,
       this.requestOrganization,
       this.request,
       this.outcome,
       this.disposition,
-      @JsonKey(name: '_disposition') this.dispositionElement,
+      @JsonKey(name: '_disposition')
+          this.dispositionElement,
       this.insurer,
       this.inforce,
-      @JsonKey(name: '_inforce') this.inforceElement,
+      @JsonKey(name: '_inforce')
+          this.inforceElement,
       this.insurance,
       this.form,
       this.error})
@@ -3588,9 +3715,9 @@ class _$_EligibilityResponse extends _EligibilityResponse {
   factory _$_EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_EligibilityResponseFromJson(json);
 
-  @JsonKey(defaultValue: 'EligibilityResponse')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -3781,31 +3908,39 @@ class _$_EligibilityResponse extends _EligibilityResponse {
 abstract class _EligibilityResponse extends EligibilityResponse {
   _EligibilityResponse._() : super._();
   factory _EligibilityResponse(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       Reference insurer,
       Boolean inforce,
-      @JsonKey(name: '_inforce') Element inforceElement,
+      @JsonKey(name: '_inforce')
+          Element inforceElement,
       List<EligibilityResponseInsurance> insurance,
       CodeableConcept form,
       List<EligibilityResponseError> error}) = _$_EligibilityResponse;
@@ -3814,7 +3949,8 @@ abstract class _EligibilityResponse extends EligibilityResponse {
       _$_EligibilityResponse.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -5222,22 +5358,28 @@ class _$EnrollmentRequestTearOff {
 
 // ignore: unused_element
   _EnrollmentRequest call(
-      {String resourceType = 'EnrollmentRequest',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
+          Stu3ResourceType resourceType = Stu3ResourceType.EnrollmentRequest,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference insurer,
       Reference provider,
       Reference organization,
@@ -5280,7 +5422,8 @@ const $EnrollmentRequest = _$EnrollmentRequestTearOff();
 
 /// @nodoc
 mixin _$EnrollmentRequest {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -5317,22 +5460,28 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
           EnrollmentRequest value, $Res Function(EnrollmentRequest) then) =
       _$EnrollmentRequestCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference insurer,
       Reference provider,
       Reference organization,
@@ -5388,7 +5537,7 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5550,22 +5699,28 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
       __$EnrollmentRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference insurer,
       Reference provider,
       Reference organization,
@@ -5634,7 +5789,7 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
     return _then(_EnrollmentRequest(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5683,22 +5838,28 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_EnrollmentRequest extends _EnrollmentRequest {
   _$_EnrollmentRequest(
-      {this.resourceType = 'EnrollmentRequest',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
+          this.resourceType = Stu3ResourceType.EnrollmentRequest,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.insurer,
       this.provider,
       this.organization,
@@ -5710,9 +5871,9 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_EnrollmentRequestFromJson(json);
 
-  @JsonKey(defaultValue: 'EnrollmentRequest')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -5867,22 +6028,28 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 abstract class _EnrollmentRequest extends EnrollmentRequest {
   _EnrollmentRequest._() : super._();
   factory _EnrollmentRequest(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference insurer,
       Reference provider,
       Reference organization,
@@ -5893,7 +6060,8 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       _$_EnrollmentRequest.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -5953,26 +6121,33 @@ class _$EnrollmentResponseTearOff {
 
 // ignore: unused_element
   _EnrollmentResponse call(
-      {String resourceType = 'EnrollmentResponse',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
+          Stu3ResourceType resourceType = Stu3ResourceType.EnrollmentResponse,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference organization,
       Reference requestProvider,
       Reference requestOrganization}) {
@@ -6015,7 +6190,8 @@ const $EnrollmentResponse = _$EnrollmentResponseTearOff();
 
 /// @nodoc
 mixin _$EnrollmentResponse {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -6055,26 +6231,33 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
           EnrollmentResponse value, $Res Function(EnrollmentResponse) then) =
       _$EnrollmentResponseCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference organization,
       Reference requestProvider,
       Reference requestOrganization});
@@ -6131,7 +6314,7 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6312,26 +6495,33 @@ abstract class _$EnrollmentResponseCopyWith<$Res>
       __$EnrollmentResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference organization,
       Reference requestProvider,
       Reference requestOrganization});
@@ -6402,7 +6592,7 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
     return _then(_EnrollmentResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6460,26 +6650,33 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_EnrollmentResponse extends _EnrollmentResponse {
   _$_EnrollmentResponse(
-      {this.resourceType = 'EnrollmentResponse',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
+          this.resourceType = Stu3ResourceType.EnrollmentResponse,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.request,
       this.outcome,
       this.disposition,
-      @JsonKey(name: '_disposition') this.dispositionElement,
+      @JsonKey(name: '_disposition')
+          this.dispositionElement,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.organization,
       this.requestProvider,
       this.requestOrganization})
@@ -6489,9 +6686,9 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_EnrollmentResponseFromJson(json);
 
-  @JsonKey(defaultValue: 'EnrollmentResponse')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -6659,26 +6856,33 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 abstract class _EnrollmentResponse extends EnrollmentResponse {
   _EnrollmentResponse._() : super._();
   factory _EnrollmentResponse(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference organization,
       Reference requestProvider,
       Reference requestOrganization}) = _$_EnrollmentResponse;
@@ -6687,7 +6891,8 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       _$_EnrollmentResponse.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override

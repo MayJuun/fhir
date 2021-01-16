@@ -17,7 +17,9 @@ abstract class AdministrableProductDefinition
     implements _$AdministrableProductDefinition {
   AdministrableProductDefinition._();
   factory AdministrableProductDefinition({
-    @Default('AdministrableProductDefinition') String resourceType,
+    @Default(R5ResourceType.AdministrableProductDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -200,7 +202,9 @@ abstract class AdministrableProductDefinitionWithdrawalPeriod
 abstract class ClinicalUseIssue with Resource implements _$ClinicalUseIssue {
   ClinicalUseIssue._();
   factory ClinicalUseIssue({
-    @Default('ClinicalUseIssue') String resourceType,
+    @Default(R5ResourceType.ClinicalUseIssue)
+    @JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseIssue)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -431,7 +435,9 @@ abstract class ClinicalUseIssueUndesirableEffect
 abstract class Ingredient with Resource implements _$Ingredient {
   Ingredient._();
   factory Ingredient({
-    @Default('Ingredient') String resourceType,
+    @Default(R5ResourceType.Ingredient)
+    @JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -602,7 +608,9 @@ abstract class ManufacturedItemDefinition
     implements _$ManufacturedItemDefinition {
   ManufacturedItemDefinition._();
   factory ManufacturedItemDefinition({
-    @Default('ManufacturedItemDefinition') String resourceType,
+    @Default(R5ResourceType.ManufacturedItemDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -679,7 +687,9 @@ abstract class MedicinalProductDefinition
     implements _$MedicinalProductDefinition {
   MedicinalProductDefinition._();
   factory MedicinalProductDefinition({
-    @Default('MedicinalProductDefinition') String resourceType,
+    @Default(R5ResourceType.MedicinalProductDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -937,7 +947,9 @@ abstract class PackagedProductDefinition
     implements _$PackagedProductDefinition {
   PackagedProductDefinition._();
   factory PackagedProductDefinition({
-    @Default('PackagedProductDefinition') String resourceType,
+    @Default(R5ResourceType.PackagedProductDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1128,7 +1140,9 @@ abstract class RegulatedAuthorization
     implements _$RegulatedAuthorization {
   RegulatedAuthorization._();
   factory RegulatedAuthorization({
-    @Default('RegulatedAuthorization') String resourceType,
+    @Default(R5ResourceType.RegulatedAuthorization)
+    @JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1246,7 +1260,9 @@ abstract class SubstanceDefinition
     implements _$SubstanceDefinition {
   SubstanceDefinition._();
   factory SubstanceDefinition({
-    @Default('SubstanceDefinition') String resourceType,
+    @Default(R5ResourceType.SubstanceDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1651,7 +1667,9 @@ abstract class SubstanceNucleicAcid
     implements _$SubstanceNucleicAcid {
   SubstanceNucleicAcid._();
   factory SubstanceNucleicAcid({
-    @Default('SubstanceNucleicAcid') String resourceType,
+    @Default(R5ResourceType.SubstanceNucleicAcid)
+    @JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1791,7 +1809,9 @@ abstract class SubstanceNucleicAcidSugar
 abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
   SubstancePolymer._();
   factory SubstancePolymer({
-    @Default('SubstancePolymer') String resourceType,
+    @Default(R5ResourceType.SubstancePolymer)
+    @JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2022,7 +2042,9 @@ abstract class SubstancePolymerStructuralRepresentation
 abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
   SubstanceProtein._();
   factory SubstanceProtein({
-    @Default('SubstanceProtein') String resourceType,
+    @Default(R5ResourceType.SubstanceProtein)
+    @JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2101,7 +2123,9 @@ abstract class SubstanceReferenceInformation
     implements _$SubstanceReferenceInformation {
   SubstanceReferenceInformation._();
   factory SubstanceReferenceInformation({
-    @Default('SubstanceReferenceInformation') String resourceType,
+    @Default(R5ResourceType.SubstanceReferenceInformation)
+    @JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -2242,7 +2266,9 @@ abstract class SubstanceSourceMaterial
     implements _$SubstanceSourceMaterial {
   SubstanceSourceMaterial._();
   factory SubstanceSourceMaterial({
-    @Default('SubstanceSourceMaterial') String resourceType,
+    @Default(R5ResourceType.SubstanceSourceMaterial)
+    @JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

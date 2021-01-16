@@ -15,7 +15,9 @@ part 'request_and_response.g.dart';
 abstract class Communication with Resource implements _$Communication {
   Communication._();
   factory Communication({
-    @Default('Communication') String resourceType,
+    @Default(R5ResourceType.Communication)
+    @JsonKey(unknownEnumValue: R5ResourceType.Communication)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -103,7 +105,9 @@ abstract class CommunicationRequest
     implements _$CommunicationRequest {
   CommunicationRequest._();
   factory CommunicationRequest({
-    @Default('CommunicationRequest') String resourceType,
+    @Default(R5ResourceType.CommunicationRequest)
+    @JsonKey(unknownEnumValue: R5ResourceType.CommunicationRequest)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -191,7 +195,9 @@ abstract class CommunicationRequestPayload
 abstract class DeviceRequest with Resource implements _$DeviceRequest {
   DeviceRequest._();
   factory DeviceRequest({
-    @Default('DeviceRequest') String resourceType,
+    @Default(R5ResourceType.DeviceRequest)
+    @JsonKey(unknownEnumValue: R5ResourceType.DeviceRequest)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -287,7 +293,9 @@ abstract class DeviceUseStatement
     implements _$DeviceUseStatement {
   DeviceUseStatement._();
   factory DeviceUseStatement({
-    @Default('DeviceUseStatement') String resourceType,
+    @Default(R5ResourceType.DeviceUseStatement)
+    @JsonKey(unknownEnumValue: R5ResourceType.DeviceUseStatement)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -343,7 +351,9 @@ abstract class DeviceUseStatement
 abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
   GuidanceResponse._();
   factory GuidanceResponse({
-    @Default('GuidanceResponse') String resourceType,
+    @Default(R5ResourceType.GuidanceResponse)
+    @JsonKey(unknownEnumValue: R5ResourceType.GuidanceResponse)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -396,7 +406,9 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
 abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
   SupplyDelivery._();
   factory SupplyDelivery({
-    @Default('SupplyDelivery') String resourceType,
+    @Default(R5ResourceType.SupplyDelivery)
+    @JsonKey(unknownEnumValue: R5ResourceType.SupplyDelivery)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -473,7 +485,9 @@ abstract class SupplyDeliverySuppliedItem
 abstract class SupplyRequest with Resource implements _$SupplyRequest {
   SupplyRequest._();
   factory SupplyRequest({
-    @Default('SupplyRequest') String resourceType,
+    @Default(R5ResourceType.SupplyRequest)
+    @JsonKey(unknownEnumValue: R5ResourceType.SupplyRequest)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -15,7 +15,9 @@ part 'security.g.dart';
 abstract class AuditEvent with Resource implements _$AuditEvent {
   AuditEvent._();
   factory AuditEvent({
-    @Default('AuditEvent') String resourceType,
+    @Default(Stu3ResourceType.AuditEvent)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -206,7 +208,9 @@ abstract class AuditEventDetail implements _$AuditEventDetail {
 abstract class Consent with Resource implements _$Consent {
   Consent._();
   factory Consent({
-    @Default('Consent') String resourceType,
+    @Default(Stu3ResourceType.Consent)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -412,7 +416,9 @@ abstract class ConsentData1 implements _$ConsentData1 {
 abstract class Provenance with Resource implements _$Provenance {
   Provenance._();
   factory Provenance({
-    @Default('Provenance') String resourceType,
+    @Default(Stu3ResourceType.Provenance)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

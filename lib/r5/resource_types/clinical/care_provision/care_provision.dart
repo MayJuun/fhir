@@ -15,7 +15,9 @@ part 'care_provision.g.dart';
 abstract class CarePlan with Resource implements _$CarePlan {
   CarePlan._();
   factory CarePlan({
-    @Default('CarePlan') String resourceType,
+    @Default(R5ResourceType.CarePlan)
+    @JsonKey(unknownEnumValue: R5ResourceType.CarePlan)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -158,7 +160,9 @@ abstract class CarePlanDetail implements _$CarePlanDetail {
 abstract class CareTeam with Resource implements _$CareTeam {
   CareTeam._();
   factory CareTeam({
-    @Default('CareTeam') String resourceType,
+    @Default(R5ResourceType.CareTeam)
+    @JsonKey(unknownEnumValue: R5ResourceType.CareTeam)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -232,7 +236,9 @@ abstract class CareTeamParticipant implements _$CareTeamParticipant {
 abstract class Goal with Resource implements _$Goal {
   Goal._();
   factory Goal({
-    @Default('Goal') String resourceType,
+    @Default(R5ResourceType.Goal)
+    @JsonKey(unknownEnumValue: R5ResourceType.Goal)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -324,7 +330,9 @@ abstract class GoalTarget implements _$GoalTarget {
 abstract class NutritionIntake with Resource implements _$NutritionIntake {
   NutritionIntake._();
   factory NutritionIntake({
-    @Default('NutritionIntake') String resourceType,
+    @Default(R5ResourceType.NutritionIntake)
+    @JsonKey(unknownEnumValue: R5ResourceType.NutritionIntake)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -476,7 +484,9 @@ abstract class NutritionIntakePerformer implements _$NutritionIntakePerformer {
 abstract class NutritionOrder with Resource implements _$NutritionOrder {
   NutritionOrder._();
   factory NutritionOrder({
-    @Default('NutritionOrder') String resourceType,
+    @Default(R5ResourceType.NutritionOrder)
+    @JsonKey(unknownEnumValue: R5ResourceType.NutritionOrder)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -715,7 +725,9 @@ abstract class NutritionOrderAdministration
 abstract class RequestGroup with Resource implements _$RequestGroup {
   RequestGroup._();
   factory RequestGroup({
-    @Default('RequestGroup') String resourceType,
+    @Default(R5ResourceType.RequestGroup)
+    @JsonKey(unknownEnumValue: R5ResourceType.RequestGroup)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -889,7 +901,9 @@ abstract class RequestGroupRelatedAction
 abstract class RiskAssessment with Resource implements _$RiskAssessment {
   RiskAssessment._();
   factory RiskAssessment({
-    @Default('RiskAssessment') String resourceType,
+    @Default(R5ResourceType.RiskAssessment)
+    @JsonKey(unknownEnumValue: R5ResourceType.RiskAssessment)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -977,7 +991,9 @@ abstract class RiskAssessmentPrediction implements _$RiskAssessmentPrediction {
 abstract class ServiceRequest with Resource implements _$ServiceRequest {
   ServiceRequest._();
   factory ServiceRequest({
-    @Default('ServiceRequest') String resourceType,
+    @Default(R5ResourceType.ServiceRequest)
+    @JsonKey(unknownEnumValue: R5ResourceType.ServiceRequest)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -1056,7 +1072,9 @@ abstract class VisionPrescription
     implements _$VisionPrescription {
   VisionPrescription._();
   factory VisionPrescription({
-    @Default('VisionPrescription') String resourceType,
+    @Default(R5ResourceType.VisionPrescription)
+    @JsonKey(unknownEnumValue: R5ResourceType.VisionPrescription)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

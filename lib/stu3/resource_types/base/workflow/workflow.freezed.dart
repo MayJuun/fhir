@@ -18,20 +18,25 @@ class _$AppointmentTearOff {
 
 // ignore: unused_element
   _Appointment call(
-      {String resourceType = 'Appointment',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
+          Stu3ResourceType resourceType = Stu3ResourceType.Appointment,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       AppointmentStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept serviceCategory,
       List<CodeableConcept> serviceType,
       List<CodeableConcept> specialty,
@@ -39,23 +44,31 @@ class _$AppointmentTearOff {
       List<CodeableConcept> reason,
       List<Reference> indication,
       Decimal priority,
-      @JsonKey(name: '_priority') Element priorityElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<Reference> supportingInformation,
       String start,
-      @JsonKey(name: '_start') Element startElement,
+      @JsonKey(name: '_start')
+          Element startElement,
       String end,
-      @JsonKey(name: '_end') Element endElement,
+      @JsonKey(name: '_end')
+          Element endElement,
       Decimal minutesDuration,
-      @JsonKey(name: '_minutesDuration') Element minutesDurationElement,
+      @JsonKey(name: '_minutesDuration')
+          Element minutesDurationElement,
       List<Reference> slot,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
       List<Reference> incomingReferral,
-      @required List<AppointmentParticipant> participant,
+      @required
+          List<AppointmentParticipant> participant,
       List<Period> requestedPeriod}) {
     return _Appointment(
       resourceType: resourceType,
@@ -112,7 +125,8 @@ const $Appointment = _$AppointmentTearOff();
 
 /// @nodoc
 mixin _$Appointment {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -173,20 +187,25 @@ abstract class $AppointmentCopyWith<$Res> {
           Appointment value, $Res Function(Appointment) then) =
       _$AppointmentCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       AppointmentStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept serviceCategory,
       List<CodeableConcept> serviceType,
       List<CodeableConcept> specialty,
@@ -194,21 +213,28 @@ abstract class $AppointmentCopyWith<$Res> {
       List<CodeableConcept> reason,
       List<Reference> indication,
       Decimal priority,
-      @JsonKey(name: '_priority') Element priorityElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<Reference> supportingInformation,
       String start,
-      @JsonKey(name: '_start') Element startElement,
+      @JsonKey(name: '_start')
+          Element startElement,
       String end,
-      @JsonKey(name: '_end') Element endElement,
+      @JsonKey(name: '_end')
+          Element endElement,
       Decimal minutesDuration,
-      @JsonKey(name: '_minutesDuration') Element minutesDurationElement,
+      @JsonKey(name: '_minutesDuration')
+          Element minutesDurationElement,
       List<Reference> slot,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
       List<Reference> incomingReferral,
       List<AppointmentParticipant> participant,
       List<Period> requestedPeriod});
@@ -282,7 +308,7 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -523,20 +549,25 @@ abstract class _$AppointmentCopyWith<$Res>
       __$AppointmentCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       AppointmentStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept serviceCategory,
       List<CodeableConcept> serviceType,
       List<CodeableConcept> specialty,
@@ -544,21 +575,28 @@ abstract class _$AppointmentCopyWith<$Res>
       List<CodeableConcept> reason,
       List<Reference> indication,
       Decimal priority,
-      @JsonKey(name: '_priority') Element priorityElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<Reference> supportingInformation,
       String start,
-      @JsonKey(name: '_start') Element startElement,
+      @JsonKey(name: '_start')
+          Element startElement,
       String end,
-      @JsonKey(name: '_end') Element endElement,
+      @JsonKey(name: '_end')
+          Element endElement,
       Decimal minutesDuration,
-      @JsonKey(name: '_minutesDuration') Element minutesDurationElement,
+      @JsonKey(name: '_minutesDuration')
+          Element minutesDurationElement,
       List<Reference> slot,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
       List<Reference> incomingReferral,
       List<AppointmentParticipant> participant,
       List<Period> requestedPeriod});
@@ -648,7 +686,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
     return _then(_Appointment(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -746,20 +784,25 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
 /// @nodoc
 class _$_Appointment extends _Appointment {
   _$_Appointment(
-      {this.resourceType = 'Appointment',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
+          this.resourceType = Stu3ResourceType.Appointment,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.serviceCategory,
       this.serviceType,
       this.specialty,
@@ -767,23 +810,31 @@ class _$_Appointment extends _Appointment {
       this.reason,
       this.indication,
       this.priority,
-      @JsonKey(name: '_priority') this.priorityElement,
+      @JsonKey(name: '_priority')
+          this.priorityElement,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.supportingInformation,
       this.start,
-      @JsonKey(name: '_start') this.startElement,
+      @JsonKey(name: '_start')
+          this.startElement,
       this.end,
-      @JsonKey(name: '_end') this.endElement,
+      @JsonKey(name: '_end')
+          this.endElement,
       this.minutesDuration,
-      @JsonKey(name: '_minutesDuration') this.minutesDurationElement,
+      @JsonKey(name: '_minutesDuration')
+          this.minutesDurationElement,
       this.slot,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.comment,
-      @JsonKey(name: '_comment') this.commentElement,
+      @JsonKey(name: '_comment')
+          this.commentElement,
       this.incomingReferral,
-      @required this.participant,
+      @required
+          this.participant,
       this.requestedPeriod})
       : assert(resourceType != null),
         assert(participant != null),
@@ -792,9 +843,9 @@ class _$_Appointment extends _Appointment {
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentFromJson(json);
 
-  @JsonKey(defaultValue: 'Appointment')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -1032,20 +1083,25 @@ class _$_Appointment extends _Appointment {
 abstract class _Appointment extends Appointment {
   _Appointment._() : super._();
   factory _Appointment(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       AppointmentStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept serviceCategory,
       List<CodeableConcept> serviceType,
       List<CodeableConcept> specialty,
@@ -1053,30 +1109,39 @@ abstract class _Appointment extends Appointment {
       List<CodeableConcept> reason,
       List<Reference> indication,
       Decimal priority,
-      @JsonKey(name: '_priority') Element priorityElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       List<Reference> supportingInformation,
       String start,
-      @JsonKey(name: '_start') Element startElement,
+      @JsonKey(name: '_start')
+          Element startElement,
       String end,
-      @JsonKey(name: '_end') Element endElement,
+      @JsonKey(name: '_end')
+          Element endElement,
       Decimal minutesDuration,
-      @JsonKey(name: '_minutesDuration') Element minutesDurationElement,
+      @JsonKey(name: '_minutesDuration')
+          Element minutesDurationElement,
       List<Reference> slot,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement,
+      @JsonKey(name: '_comment')
+          Element commentElement,
       List<Reference> incomingReferral,
-      @required List<AppointmentParticipant> participant,
+      @required
+          List<AppointmentParticipant> participant,
       List<Period> requestedPeriod}) = _$_Appointment;
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
       _$_Appointment.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -1490,29 +1555,38 @@ class _$AppointmentResponseTearOff {
 
 // ignore: unused_element
   _AppointmentResponse call(
-      {String resourceType = 'AppointmentResponse',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
+          Stu3ResourceType resourceType = Stu3ResourceType.AppointmentResponse,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
-      @required Reference appointment,
+      @required
+          Reference appointment,
       String start,
-      @JsonKey(name: '_start') Element startElement,
+      @JsonKey(name: '_start')
+          Element startElement,
       String end,
-      @JsonKey(name: '_end') Element endElement,
+      @JsonKey(name: '_end')
+          Element endElement,
       List<CodeableConcept> participantType,
       Reference actor,
       String participantStatus,
-      @JsonKey(name: '_participantStatus') Element participantStatusElement,
+      @JsonKey(name: '_participantStatus')
+          Element participantStatusElement,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement}) {
+      @JsonKey(name: '_comment')
+          Element commentElement}) {
     return _AppointmentResponse(
       resourceType: resourceType,
       id: id,
@@ -1552,7 +1626,8 @@ const $AppointmentResponse = _$AppointmentResponseTearOff();
 
 /// @nodoc
 mixin _$AppointmentResponse {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -1593,29 +1668,37 @@ abstract class $AppointmentResponseCopyWith<$Res> {
           AppointmentResponse value, $Res Function(AppointmentResponse) then) =
       _$AppointmentResponseCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Reference appointment,
       String start,
-      @JsonKey(name: '_start') Element startElement,
+      @JsonKey(name: '_start')
+          Element startElement,
       String end,
-      @JsonKey(name: '_end') Element endElement,
+      @JsonKey(name: '_end')
+          Element endElement,
       List<CodeableConcept> participantType,
       Reference actor,
       String participantStatus,
-      @JsonKey(name: '_participantStatus') Element participantStatusElement,
+      @JsonKey(name: '_participantStatus')
+          Element participantStatusElement,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement});
+      @JsonKey(name: '_comment')
+          Element commentElement});
 
   $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
@@ -1667,7 +1750,7 @@ class _$AppointmentResponseCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1828,29 +1911,37 @@ abstract class _$AppointmentResponseCopyWith<$Res>
       __$AppointmentResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Reference appointment,
       String start,
-      @JsonKey(name: '_start') Element startElement,
+      @JsonKey(name: '_start')
+          Element startElement,
       String end,
-      @JsonKey(name: '_end') Element endElement,
+      @JsonKey(name: '_end')
+          Element endElement,
       List<CodeableConcept> participantType,
       Reference actor,
       String participantStatus,
-      @JsonKey(name: '_participantStatus') Element participantStatusElement,
+      @JsonKey(name: '_participantStatus')
+          Element participantStatusElement,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement});
+      @JsonKey(name: '_comment')
+          Element commentElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -1914,7 +2005,7 @@ class __$AppointmentResponseCopyWithImpl<$Res>
     return _then(_AppointmentResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1972,29 +2063,38 @@ class __$AppointmentResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_AppointmentResponse extends _AppointmentResponse {
   _$_AppointmentResponse(
-      {this.resourceType = 'AppointmentResponse',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
+          this.resourceType = Stu3ResourceType.AppointmentResponse,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
-      @required this.appointment,
+      @required
+          this.appointment,
       this.start,
-      @JsonKey(name: '_start') this.startElement,
+      @JsonKey(name: '_start')
+          this.startElement,
       this.end,
-      @JsonKey(name: '_end') this.endElement,
+      @JsonKey(name: '_end')
+          this.endElement,
       this.participantType,
       this.actor,
       this.participantStatus,
-      @JsonKey(name: '_participantStatus') this.participantStatusElement,
+      @JsonKey(name: '_participantStatus')
+          this.participantStatusElement,
       this.comment,
-      @JsonKey(name: '_comment') this.commentElement})
+      @JsonKey(name: '_comment')
+          this.commentElement})
       : assert(resourceType != null),
         assert(appointment != null),
         super._();
@@ -2002,9 +2102,9 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_AppointmentResponseFromJson(json);
 
-  @JsonKey(defaultValue: 'AppointmentResponse')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -2174,36 +2274,45 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 abstract class _AppointmentResponse extends AppointmentResponse {
   _AppointmentResponse._() : super._();
   factory _AppointmentResponse(
-          {String resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
-          @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-          Code language,
-          @JsonKey(name: '_language') Element languageElement,
-          Narrative text,
-          List<Resource> contained,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          List<Identifier> identifier,
-          @required Reference appointment,
-          String start,
-          @JsonKey(name: '_start') Element startElement,
-          String end,
-          @JsonKey(name: '_end') Element endElement,
-          List<CodeableConcept> participantType,
-          Reference actor,
-          String participantStatus,
-          @JsonKey(name: '_participantStatus') Element participantStatusElement,
-          String comment,
-          @JsonKey(name: '_comment') Element commentElement}) =
-      _$_AppointmentResponse;
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
+          Stu3ResourceType resourceType,
+      Id id,
+      Meta meta,
+      FhirUri implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
+      Code language,
+      @JsonKey(name: '_language')
+          Element languageElement,
+      Narrative text,
+      List<Resource> contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
+      List<FhirExtension> modifierExtension,
+      List<Identifier> identifier,
+      @required
+          Reference appointment,
+      String start,
+      @JsonKey(name: '_start')
+          Element startElement,
+      String end,
+      @JsonKey(name: '_end')
+          Element endElement,
+      List<CodeableConcept> participantType,
+      Reference actor,
+      String participantStatus,
+      @JsonKey(name: '_participantStatus')
+          Element participantStatusElement,
+      String comment,
+      @JsonKey(name: '_comment')
+          Element commentElement}) = _$_AppointmentResponse;
 
   factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
       _$_AppointmentResponse.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -2269,38 +2378,49 @@ class _$ProcessRequestTearOff {
 
 // ignore: unused_element
   _ProcessRequest call(
-      {String resourceType = 'ProcessRequest',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
+          Stu3ResourceType resourceType = Stu3ResourceType.ProcessRequest,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       ProcessRequestAction action,
-      @JsonKey(name: '_action') Element actionElement,
+      @JsonKey(name: '_action')
+          Element actionElement,
       Reference target,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference provider,
       Reference organization,
       Reference request,
       Reference response,
       Boolean nullify,
-      @JsonKey(name: '_nullify') Element nullifyElement,
+      @JsonKey(name: '_nullify')
+          Element nullifyElement,
       String reference,
-      @JsonKey(name: '_reference') Element referenceElement,
+      @JsonKey(name: '_reference')
+          Element referenceElement,
       List<ProcessRequestItem> item,
       List<String> include,
-      @JsonKey(name: '_include') List<Element> includeElement,
+      @JsonKey(name: '_include')
+          List<Element> includeElement,
       List<String> exclude,
-      @JsonKey(name: '_exclude') List<Element> excludeElement,
+      @JsonKey(name: '_exclude')
+          List<Element> excludeElement,
       Period period}) {
     return _ProcessRequest(
       resourceType: resourceType,
@@ -2351,7 +2471,8 @@ const $ProcessRequest = _$ProcessRequestTearOff();
 
 /// @nodoc
 mixin _$ProcessRequest {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -2405,38 +2526,49 @@ abstract class $ProcessRequestCopyWith<$Res> {
           ProcessRequest value, $Res Function(ProcessRequest) then) =
       _$ProcessRequestCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       ProcessRequestAction action,
-      @JsonKey(name: '_action') Element actionElement,
+      @JsonKey(name: '_action')
+          Element actionElement,
       Reference target,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference provider,
       Reference organization,
       Reference request,
       Reference response,
       Boolean nullify,
-      @JsonKey(name: '_nullify') Element nullifyElement,
+      @JsonKey(name: '_nullify')
+          Element nullifyElement,
       String reference,
-      @JsonKey(name: '_reference') Element referenceElement,
+      @JsonKey(name: '_reference')
+          Element referenceElement,
       List<ProcessRequestItem> item,
       List<String> include,
-      @JsonKey(name: '_include') List<Element> includeElement,
+      @JsonKey(name: '_include')
+          List<Element> includeElement,
       List<String> exclude,
-      @JsonKey(name: '_exclude') List<Element> excludeElement,
+      @JsonKey(name: '_exclude')
+          List<Element> excludeElement,
       Period period});
 
   $MetaCopyWith<$Res> get meta;
@@ -2504,7 +2636,7 @@ class _$ProcessRequestCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2729,38 +2861,49 @@ abstract class _$ProcessRequestCopyWith<$Res>
       __$ProcessRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       ProcessRequestAction action,
-      @JsonKey(name: '_action') Element actionElement,
+      @JsonKey(name: '_action')
+          Element actionElement,
       Reference target,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference provider,
       Reference organization,
       Reference request,
       Reference response,
       Boolean nullify,
-      @JsonKey(name: '_nullify') Element nullifyElement,
+      @JsonKey(name: '_nullify')
+          Element nullifyElement,
       String reference,
-      @JsonKey(name: '_reference') Element referenceElement,
+      @JsonKey(name: '_reference')
+          Element referenceElement,
       List<ProcessRequestItem> item,
       List<String> include,
-      @JsonKey(name: '_include') List<Element> includeElement,
+      @JsonKey(name: '_include')
+          List<Element> includeElement,
       List<String> exclude,
-      @JsonKey(name: '_exclude') List<Element> excludeElement,
+      @JsonKey(name: '_exclude')
+          List<Element> excludeElement,
       Period period});
 
   @override
@@ -2845,7 +2988,7 @@ class __$ProcessRequestCopyWithImpl<$Res>
     return _then(_ProcessRequest(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -2917,38 +3060,49 @@ class __$ProcessRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_ProcessRequest extends _ProcessRequest {
   _$_ProcessRequest(
-      {this.resourceType = 'ProcessRequest',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
+          this.resourceType = Stu3ResourceType.ProcessRequest,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.action,
-      @JsonKey(name: '_action') this.actionElement,
+      @JsonKey(name: '_action')
+          this.actionElement,
       this.target,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.provider,
       this.organization,
       this.request,
       this.response,
       this.nullify,
-      @JsonKey(name: '_nullify') this.nullifyElement,
+      @JsonKey(name: '_nullify')
+          this.nullifyElement,
       this.reference,
-      @JsonKey(name: '_reference') this.referenceElement,
+      @JsonKey(name: '_reference')
+          this.referenceElement,
       this.item,
       this.include,
-      @JsonKey(name: '_include') this.includeElement,
+      @JsonKey(name: '_include')
+          this.includeElement,
       this.exclude,
-      @JsonKey(name: '_exclude') this.excludeElement,
+      @JsonKey(name: '_exclude')
+          this.excludeElement,
       this.period})
       : assert(resourceType != null),
         super._();
@@ -2956,9 +3110,9 @@ class _$_ProcessRequest extends _ProcessRequest {
   factory _$_ProcessRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessRequestFromJson(json);
 
-  @JsonKey(defaultValue: 'ProcessRequest')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -3171,45 +3325,57 @@ class _$_ProcessRequest extends _ProcessRequest {
 abstract class _ProcessRequest extends ProcessRequest {
   _ProcessRequest._() : super._();
   factory _ProcessRequest(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       ProcessRequestAction action,
-      @JsonKey(name: '_action') Element actionElement,
+      @JsonKey(name: '_action')
+          Element actionElement,
       Reference target,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference provider,
       Reference organization,
       Reference request,
       Reference response,
       Boolean nullify,
-      @JsonKey(name: '_nullify') Element nullifyElement,
+      @JsonKey(name: '_nullify')
+          Element nullifyElement,
       String reference,
-      @JsonKey(name: '_reference') Element referenceElement,
+      @JsonKey(name: '_reference')
+          Element referenceElement,
       List<ProcessRequestItem> item,
       List<String> include,
-      @JsonKey(name: '_include') List<Element> includeElement,
+      @JsonKey(name: '_include')
+          List<Element> includeElement,
       List<String> exclude,
-      @JsonKey(name: '_exclude') List<Element> excludeElement,
+      @JsonKey(name: '_exclude')
+          List<Element> excludeElement,
       Period period}) = _$_ProcessRequest;
 
   factory _ProcessRequest.fromJson(Map<String, dynamic> json) =
       _$_ProcessRequest.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -3495,27 +3661,34 @@ class _$ProcessResponseTearOff {
 
 // ignore: unused_element
   _ProcessResponse call(
-      {String resourceType = 'ProcessResponse',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
+          Stu3ResourceType resourceType = Stu3ResourceType.ProcessResponse,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       Reference requestProvider,
       Reference requestOrganization,
       CodeableConcept form,
@@ -3565,7 +3738,8 @@ const $ProcessResponse = _$ProcessResponseTearOff();
 
 /// @nodoc
 mixin _$ProcessResponse {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -3609,27 +3783,34 @@ abstract class $ProcessResponseCopyWith<$Res> {
           ProcessResponse value, $Res Function(ProcessResponse) then) =
       _$ProcessResponseCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       Reference requestProvider,
       Reference requestOrganization,
       CodeableConcept form,
@@ -3694,7 +3875,7 @@ class _$ProcessResponseCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -3893,27 +4074,34 @@ abstract class _$ProcessResponseCopyWith<$Res>
       __$ProcessResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       Reference requestProvider,
       Reference requestOrganization,
       CodeableConcept form,
@@ -3993,7 +4181,7 @@ class __$ProcessResponseCopyWithImpl<$Res>
     return _then(_ProcessResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4059,27 +4247,34 @@ class __$ProcessResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_ProcessResponse extends _ProcessResponse {
   _$_ProcessResponse(
-      {this.resourceType = 'ProcessResponse',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
+          this.resourceType = Stu3ResourceType.ProcessResponse,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.organization,
       this.request,
       this.outcome,
       this.disposition,
-      @JsonKey(name: '_disposition') this.dispositionElement,
+      @JsonKey(name: '_disposition')
+          this.dispositionElement,
       this.requestProvider,
       this.requestOrganization,
       this.form,
@@ -4092,9 +4287,9 @@ class _$_ProcessResponse extends _ProcessResponse {
   factory _$_ProcessResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_ProcessResponseFromJson(json);
 
-  @JsonKey(defaultValue: 'ProcessResponse')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -4279,27 +4474,34 @@ class _$_ProcessResponse extends _ProcessResponse {
 abstract class _ProcessResponse extends ProcessResponse {
   _ProcessResponse._() : super._();
   factory _ProcessResponse(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference organization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       Reference requestProvider,
       Reference requestOrganization,
       CodeableConcept form,
@@ -4311,7 +4513,8 @@ abstract class _ProcessResponse extends ProcessResponse {
       _$_ProcessResponse.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -4608,16 +4811,20 @@ class _$RequestGroupTearOff {
 
 // ignore: unused_element
   _RequestGroup call(
-      {String resourceType = 'RequestGroup',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
+          Stu3ResourceType resourceType = Stu3ResourceType.RequestGroup,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
@@ -4625,15 +4832,19 @@ class _$RequestGroupTearOff {
       List<Reference> replaces,
       Identifier groupIdentifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String intent,
-      @JsonKey(name: '_intent') Element intentElement,
+      @JsonKey(name: '_intent')
+          Element intentElement,
       String priority,
-      @JsonKey(name: '_priority') Element priorityElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
       Reference subject,
       Reference context,
       String authoredOn,
-      @JsonKey(name: '_authoredOn') Element authoredOnElement,
+      @JsonKey(name: '_authoredOn')
+          Element authoredOnElement,
       Reference author,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -4686,7 +4897,8 @@ const $RequestGroup = _$RequestGroupTearOff();
 
 /// @nodoc
 mixin _$RequestGroup {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -4735,16 +4947,20 @@ abstract class $RequestGroupCopyWith<$Res> {
           RequestGroup value, $Res Function(RequestGroup) then) =
       _$RequestGroupCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
@@ -4752,15 +4968,19 @@ abstract class $RequestGroupCopyWith<$Res> {
       List<Reference> replaces,
       Identifier groupIdentifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String intent,
-      @JsonKey(name: '_intent') Element intentElement,
+      @JsonKey(name: '_intent')
+          Element intentElement,
       String priority,
-      @JsonKey(name: '_priority') Element priorityElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
       Reference subject,
       Reference context,
       String authoredOn,
-      @JsonKey(name: '_authoredOn') Element authoredOnElement,
+      @JsonKey(name: '_authoredOn')
+          Element authoredOnElement,
       Reference author,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -4828,7 +5048,7 @@ class _$RequestGroupCopyWithImpl<$Res> implements $RequestGroupCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5045,16 +5265,20 @@ abstract class _$RequestGroupCopyWith<$Res>
       __$RequestGroupCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
@@ -5062,15 +5286,19 @@ abstract class _$RequestGroupCopyWith<$Res>
       List<Reference> replaces,
       Identifier groupIdentifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String intent,
-      @JsonKey(name: '_intent') Element intentElement,
+      @JsonKey(name: '_intent')
+          Element intentElement,
       String priority,
-      @JsonKey(name: '_priority') Element priorityElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
       Reference subject,
       Reference context,
       String authoredOn,
-      @JsonKey(name: '_authoredOn') Element authoredOnElement,
+      @JsonKey(name: '_authoredOn')
+          Element authoredOnElement,
       Reference author,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -5154,7 +5382,7 @@ class __$RequestGroupCopyWithImpl<$Res> extends _$RequestGroupCopyWithImpl<$Res>
     return _then(_RequestGroup(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -5227,16 +5455,20 @@ class __$RequestGroupCopyWithImpl<$Res> extends _$RequestGroupCopyWithImpl<$Res>
 /// @nodoc
 class _$_RequestGroup extends _RequestGroup {
   _$_RequestGroup(
-      {this.resourceType = 'RequestGroup',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
+          this.resourceType = Stu3ResourceType.RequestGroup,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.definition,
@@ -5244,15 +5476,19 @@ class _$_RequestGroup extends _RequestGroup {
       this.replaces,
       this.groupIdentifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.intent,
-      @JsonKey(name: '_intent') this.intentElement,
+      @JsonKey(name: '_intent')
+          this.intentElement,
       this.priority,
-      @JsonKey(name: '_priority') this.priorityElement,
+      @JsonKey(name: '_priority')
+          this.priorityElement,
       this.subject,
       this.context,
       this.authoredOn,
-      @JsonKey(name: '_authoredOn') this.authoredOnElement,
+      @JsonKey(name: '_authoredOn')
+          this.authoredOnElement,
       this.author,
       this.reasonCodeableConcept,
       this.reasonReference,
@@ -5264,9 +5500,9 @@ class _$_RequestGroup extends _RequestGroup {
   factory _$_RequestGroup.fromJson(Map<String, dynamic> json) =>
       _$_$_RequestGroupFromJson(json);
 
-  @JsonKey(defaultValue: 'RequestGroup')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -5468,16 +5704,20 @@ class _$_RequestGroup extends _RequestGroup {
 abstract class _RequestGroup extends RequestGroup {
   _RequestGroup._() : super._();
   factory _RequestGroup(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       List<Reference> definition,
@@ -5485,15 +5725,19 @@ abstract class _RequestGroup extends RequestGroup {
       List<Reference> replaces,
       Identifier groupIdentifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String intent,
-      @JsonKey(name: '_intent') Element intentElement,
+      @JsonKey(name: '_intent')
+          Element intentElement,
       String priority,
-      @JsonKey(name: '_priority') Element priorityElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
       Reference subject,
       Reference context,
       String authoredOn,
-      @JsonKey(name: '_authoredOn') Element authoredOnElement,
+      @JsonKey(name: '_authoredOn')
+          Element authoredOnElement,
       Reference author,
       CodeableConcept reasonCodeableConcept,
       Reference reasonReference,
@@ -5504,7 +5748,8 @@ abstract class _RequestGroup extends RequestGroup {
       _$_RequestGroup.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -7346,27 +7591,34 @@ class _$ScheduleTearOff {
 
 // ignore: unused_element
   _Schedule call(
-      {String resourceType = 'Schedule',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
+          Stu3ResourceType resourceType = Stu3ResourceType.Schedule,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       CodeableConcept serviceCategory,
       List<CodeableConcept> serviceType,
       List<CodeableConcept> specialty,
-      @required List<Reference> actor,
+      @required
+          List<Reference> actor,
       Period planningHorizon,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement}) {
+      @JsonKey(name: '_comment')
+          Element commentElement}) {
     return _Schedule(
       resourceType: resourceType,
       id: id,
@@ -7404,7 +7656,8 @@ const $Schedule = _$ScheduleTearOff();
 
 /// @nodoc
 mixin _$Schedule {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -7440,27 +7693,33 @@ abstract class $ScheduleCopyWith<$Res> {
   factory $ScheduleCopyWith(Schedule value, $Res Function(Schedule) then) =
       _$ScheduleCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       CodeableConcept serviceCategory,
       List<CodeableConcept> serviceType,
       List<CodeableConcept> specialty,
       List<Reference> actor,
       Period planningHorizon,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement});
+      @JsonKey(name: '_comment')
+          Element commentElement});
 
   $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
@@ -7507,7 +7766,7 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7643,27 +7902,33 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
       __$ScheduleCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       CodeableConcept serviceCategory,
       List<CodeableConcept> serviceType,
       List<CodeableConcept> specialty,
       List<Reference> actor,
       Period planningHorizon,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement});
+      @JsonKey(name: '_comment')
+          Element commentElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -7719,7 +7984,7 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
     return _then(_Schedule(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7774,27 +8039,34 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
 /// @nodoc
 class _$_Schedule extends _Schedule {
   _$_Schedule(
-      {this.resourceType = 'Schedule',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
+          this.resourceType = Stu3ResourceType.Schedule,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
-      @JsonKey(name: '_active') this.activeElement,
+      @JsonKey(name: '_active')
+          this.activeElement,
       this.serviceCategory,
       this.serviceType,
       this.specialty,
-      @required this.actor,
+      @required
+          this.actor,
       this.planningHorizon,
       this.comment,
-      @JsonKey(name: '_comment') this.commentElement})
+      @JsonKey(name: '_comment')
+          this.commentElement})
       : assert(resourceType != null),
         assert(actor != null),
         super._();
@@ -7802,9 +8074,9 @@ class _$_Schedule extends _Schedule {
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
       _$_$_ScheduleFromJson(json);
 
-  @JsonKey(defaultValue: 'Schedule')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -7958,32 +8230,40 @@ class _$_Schedule extends _Schedule {
 abstract class _Schedule extends Schedule {
   _Schedule._() : super._();
   factory _Schedule(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       Boolean active,
-      @JsonKey(name: '_active') Element activeElement,
+      @JsonKey(name: '_active')
+          Element activeElement,
       CodeableConcept serviceCategory,
       List<CodeableConcept> serviceType,
       List<CodeableConcept> specialty,
-      @required List<Reference> actor,
+      @required
+          List<Reference> actor,
       Period planningHorizon,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement}) = _$_Schedule;
+      @JsonKey(name: '_comment')
+          Element commentElement}) = _$_Schedule;
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -8043,33 +8323,43 @@ class _$SlotTearOff {
 
 // ignore: unused_element
   _Slot call(
-      {String resourceType = 'Slot',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
+          Stu3ResourceType resourceType = Stu3ResourceType.Slot,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept serviceCategory,
       List<CodeableConcept> serviceType,
       List<CodeableConcept> specialty,
       CodeableConcept appointmentType,
-      @required Reference schedule,
+      @required
+          Reference schedule,
       SlotStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String start,
-      @JsonKey(name: '_start') Element startElement,
+      @JsonKey(name: '_start')
+          Element startElement,
       String end,
-      @JsonKey(name: '_end') Element endElement,
+      @JsonKey(name: '_end')
+          Element endElement,
       Boolean overbooked,
-      @JsonKey(name: '_overbooked') Element overbookedElement,
+      @JsonKey(name: '_overbooked')
+          Element overbookedElement,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement}) {
+      @JsonKey(name: '_comment')
+          Element commentElement}) {
     return _Slot(
       resourceType: resourceType,
       id: id,
@@ -8113,7 +8403,8 @@ const $Slot = _$SlotTearOff();
 
 /// @nodoc
 mixin _$Slot {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -8158,16 +8449,20 @@ abstract class $SlotCopyWith<$Res> {
   factory $SlotCopyWith(Slot value, $Res Function(Slot) then) =
       _$SlotCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept serviceCategory,
@@ -8176,15 +8471,20 @@ abstract class $SlotCopyWith<$Res> {
       CodeableConcept appointmentType,
       Reference schedule,
       SlotStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String start,
-      @JsonKey(name: '_start') Element startElement,
+      @JsonKey(name: '_start')
+          Element startElement,
       String end,
-      @JsonKey(name: '_end') Element endElement,
+      @JsonKey(name: '_end')
+          Element endElement,
       Boolean overbooked,
-      @JsonKey(name: '_overbooked') Element overbookedElement,
+      @JsonKey(name: '_overbooked')
+          Element overbookedElement,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement});
+      @JsonKey(name: '_comment')
+          Element commentElement});
 
   $MetaCopyWith<$Res> get meta;
   $ElementCopyWith<$Res> get implicitRulesElement;
@@ -8241,7 +8541,7 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -8429,16 +8729,20 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       __$SlotCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept serviceCategory,
@@ -8447,15 +8751,20 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       CodeableConcept appointmentType,
       Reference schedule,
       SlotStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String start,
-      @JsonKey(name: '_start') Element startElement,
+      @JsonKey(name: '_start')
+          Element startElement,
       String end,
-      @JsonKey(name: '_end') Element endElement,
+      @JsonKey(name: '_end')
+          Element endElement,
       Boolean overbooked,
-      @JsonKey(name: '_overbooked') Element overbookedElement,
+      @JsonKey(name: '_overbooked')
+          Element overbookedElement,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement});
+      @JsonKey(name: '_comment')
+          Element commentElement});
 
   @override
   $MetaCopyWith<$Res> get meta;
@@ -8525,7 +8834,7 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
     return _then(_Slot(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -8592,33 +8901,43 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
 /// @nodoc
 class _$_Slot extends _Slot {
   _$_Slot(
-      {this.resourceType = 'Slot',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
+          this.resourceType = Stu3ResourceType.Slot,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.serviceCategory,
       this.serviceType,
       this.specialty,
       this.appointmentType,
-      @required this.schedule,
+      @required
+          this.schedule,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.start,
-      @JsonKey(name: '_start') this.startElement,
+      @JsonKey(name: '_start')
+          this.startElement,
       this.end,
-      @JsonKey(name: '_end') this.endElement,
+      @JsonKey(name: '_end')
+          this.endElement,
       this.overbooked,
-      @JsonKey(name: '_overbooked') this.overbookedElement,
+      @JsonKey(name: '_overbooked')
+          this.overbookedElement,
       this.comment,
-      @JsonKey(name: '_comment') this.commentElement})
+      @JsonKey(name: '_comment')
+          this.commentElement})
       : assert(resourceType != null),
         assert(schedule != null),
         super._();
@@ -8626,9 +8945,9 @@ class _$_Slot extends _Slot {
   factory _$_Slot.fromJson(Map<String, dynamic> json) =>
       _$_$_SlotFromJson(json);
 
-  @JsonKey(defaultValue: 'Slot')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -8815,38 +9134,49 @@ class _$_Slot extends _Slot {
 abstract class _Slot extends Slot {
   _Slot._() : super._();
   factory _Slot(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       CodeableConcept serviceCategory,
       List<CodeableConcept> serviceType,
       List<CodeableConcept> specialty,
       CodeableConcept appointmentType,
-      @required Reference schedule,
+      @required
+          Reference schedule,
       SlotStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       String start,
-      @JsonKey(name: '_start') Element startElement,
+      @JsonKey(name: '_start')
+          Element startElement,
       String end,
-      @JsonKey(name: '_end') Element endElement,
+      @JsonKey(name: '_end')
+          Element endElement,
       Boolean overbooked,
-      @JsonKey(name: '_overbooked') Element overbookedElement,
+      @JsonKey(name: '_overbooked')
+          Element overbookedElement,
       String comment,
-      @JsonKey(name: '_comment') Element commentElement}) = _$_Slot;
+      @JsonKey(name: '_comment')
+          Element commentElement}) = _$_Slot;
 
   factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -8921,43 +9251,55 @@ class _$TaskTearOff {
 
 // ignore: unused_element
   _Task call(
-      {String resourceType = 'Task',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Task)
+          Stu3ResourceType resourceType = Stu3ResourceType.Task,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String definitionUri,
-      @JsonKey(name: '_definitionUri') Element definitionUriElement,
+      @JsonKey(name: '_definitionUri')
+          Element definitionUriElement,
       Reference definitionReference,
       List<Reference> basedOn,
       Identifier groupIdentifier,
       List<Reference> partOf,
       TaskStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept statusReason,
       CodeableConcept businessStatus,
       String intent,
-      @JsonKey(name: '_intent') Element intentElement,
+      @JsonKey(name: '_intent')
+          Element intentElement,
       String priority,
-      @JsonKey(name: '_priority') Element priorityElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
       CodeableConcept code,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       Reference focus,
-      @JsonKey(name: 'for') Reference for_,
+      @JsonKey(name: 'for')
+          Reference for_,
       Reference context,
       Period executionPeriod,
       String authoredOn,
-      @JsonKey(name: '_authoredOn') Element authoredOnElement,
+      @JsonKey(name: '_authoredOn')
+          Element authoredOnElement,
       String lastModified,
-      @JsonKey(name: '_lastModified') Element lastModifiedElement,
+      @JsonKey(name: '_lastModified')
+          Element lastModifiedElement,
       TaskRequester requester,
       List<CodeableConcept> performerType,
       Reference owner,
@@ -9029,7 +9371,8 @@ const $Task = _$TaskTearOff();
 
 /// @nodoc
 mixin _$Task {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Task)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -9096,43 +9439,55 @@ abstract class $TaskCopyWith<$Res> {
   factory $TaskCopyWith(Task value, $Res Function(Task) then) =
       _$TaskCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Task)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String definitionUri,
-      @JsonKey(name: '_definitionUri') Element definitionUriElement,
+      @JsonKey(name: '_definitionUri')
+          Element definitionUriElement,
       Reference definitionReference,
       List<Reference> basedOn,
       Identifier groupIdentifier,
       List<Reference> partOf,
       TaskStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept statusReason,
       CodeableConcept businessStatus,
       String intent,
-      @JsonKey(name: '_intent') Element intentElement,
+      @JsonKey(name: '_intent')
+          Element intentElement,
       String priority,
-      @JsonKey(name: '_priority') Element priorityElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
       CodeableConcept code,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       Reference focus,
-      @JsonKey(name: 'for') Reference for_,
+      @JsonKey(name: 'for')
+          Reference for_,
       Reference context,
       Period executionPeriod,
       String authoredOn,
-      @JsonKey(name: '_authoredOn') Element authoredOnElement,
+      @JsonKey(name: '_authoredOn')
+          Element authoredOnElement,
       String lastModified,
-      @JsonKey(name: '_lastModified') Element lastModifiedElement,
+      @JsonKey(name: '_lastModified')
+          Element lastModifiedElement,
       TaskRequester requester,
       List<CodeableConcept> performerType,
       Reference owner,
@@ -9229,7 +9584,7 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -9575,43 +9930,55 @@ abstract class _$TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
       __$TaskCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Task)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String definitionUri,
-      @JsonKey(name: '_definitionUri') Element definitionUriElement,
+      @JsonKey(name: '_definitionUri')
+          Element definitionUriElement,
       Reference definitionReference,
       List<Reference> basedOn,
       Identifier groupIdentifier,
       List<Reference> partOf,
       TaskStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept statusReason,
       CodeableConcept businessStatus,
       String intent,
-      @JsonKey(name: '_intent') Element intentElement,
+      @JsonKey(name: '_intent')
+          Element intentElement,
       String priority,
-      @JsonKey(name: '_priority') Element priorityElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
       CodeableConcept code,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       Reference focus,
-      @JsonKey(name: 'for') Reference for_,
+      @JsonKey(name: 'for')
+          Reference for_,
       Reference context,
       Period executionPeriod,
       String authoredOn,
-      @JsonKey(name: '_authoredOn') Element authoredOnElement,
+      @JsonKey(name: '_authoredOn')
+          Element authoredOnElement,
       String lastModified,
-      @JsonKey(name: '_lastModified') Element lastModifiedElement,
+      @JsonKey(name: '_lastModified')
+          Element lastModifiedElement,
       TaskRequester requester,
       List<CodeableConcept> performerType,
       Reference owner,
@@ -9733,7 +10100,7 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
     return _then(_Task(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -9838,43 +10205,55 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
 /// @nodoc
 class _$_Task extends _Task {
   _$_Task(
-      {this.resourceType = 'Task',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Task)
+          this.resourceType = Stu3ResourceType.Task,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.definitionUri,
-      @JsonKey(name: '_definitionUri') this.definitionUriElement,
+      @JsonKey(name: '_definitionUri')
+          this.definitionUriElement,
       this.definitionReference,
       this.basedOn,
       this.groupIdentifier,
       this.partOf,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.statusReason,
       this.businessStatus,
       this.intent,
-      @JsonKey(name: '_intent') this.intentElement,
+      @JsonKey(name: '_intent')
+          this.intentElement,
       this.priority,
-      @JsonKey(name: '_priority') this.priorityElement,
+      @JsonKey(name: '_priority')
+          this.priorityElement,
       this.code,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.focus,
-      @JsonKey(name: 'for') this.for_,
+      @JsonKey(name: 'for')
+          this.for_,
       this.context,
       this.executionPeriod,
       this.authoredOn,
-      @JsonKey(name: '_authoredOn') this.authoredOnElement,
+      @JsonKey(name: '_authoredOn')
+          this.authoredOnElement,
       this.lastModified,
-      @JsonKey(name: '_lastModified') this.lastModifiedElement,
+      @JsonKey(name: '_lastModified')
+          this.lastModifiedElement,
       this.requester,
       this.performerType,
       this.owner,
@@ -9890,9 +10269,9 @@ class _$_Task extends _Task {
   factory _$_Task.fromJson(Map<String, dynamic> json) =>
       _$_$_TaskFromJson(json);
 
-  @JsonKey(defaultValue: 'Task')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Task)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -10157,43 +10536,55 @@ class _$_Task extends _Task {
 abstract class _Task extends Task {
   _Task._() : super._();
   factory _Task(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Task)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String definitionUri,
-      @JsonKey(name: '_definitionUri') Element definitionUriElement,
+      @JsonKey(name: '_definitionUri')
+          Element definitionUriElement,
       Reference definitionReference,
       List<Reference> basedOn,
       Identifier groupIdentifier,
       List<Reference> partOf,
       TaskStatus status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept statusReason,
       CodeableConcept businessStatus,
       String intent,
-      @JsonKey(name: '_intent') Element intentElement,
+      @JsonKey(name: '_intent')
+          Element intentElement,
       String priority,
-      @JsonKey(name: '_priority') Element priorityElement,
+      @JsonKey(name: '_priority')
+          Element priorityElement,
       CodeableConcept code,
       String description,
-      @JsonKey(name: '_description') Element descriptionElement,
+      @JsonKey(name: '_description')
+          Element descriptionElement,
       Reference focus,
-      @JsonKey(name: 'for') Reference for_,
+      @JsonKey(name: 'for')
+          Reference for_,
       Reference context,
       Period executionPeriod,
       String authoredOn,
-      @JsonKey(name: '_authoredOn') Element authoredOnElement,
+      @JsonKey(name: '_authoredOn')
+          Element authoredOnElement,
       String lastModified,
-      @JsonKey(name: '_lastModified') Element lastModifiedElement,
+      @JsonKey(name: '_lastModified')
+          Element lastModifiedElement,
       TaskRequester requester,
       List<CodeableConcept> performerType,
       Reference owner,
@@ -10207,7 +10598,8 @@ abstract class _Task extends Task {
   factory _Task.fromJson(Map<String, dynamic> json) = _$_Task.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Task)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override

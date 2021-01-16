@@ -15,7 +15,9 @@ part 'entities.g.dart';
 abstract class Device with Resource implements _$Device {
   Device._();
   factory Device({
-    @Default('Device') String resourceType,
+    @Default(Stu3ResourceType.Device)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Device)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -106,7 +108,9 @@ abstract class DeviceUdi implements _$DeviceUdi {
 abstract class DeviceComponent with Resource implements _$DeviceComponent {
   DeviceComponent._();
   factory DeviceComponent({
-    @Default('DeviceComponent') String resourceType,
+    @Default(Stu3ResourceType.DeviceComponent)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceComponent)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -179,7 +183,9 @@ abstract class DeviceComponentProductionSpecification
 abstract class DeviceMetric with Resource implements _$DeviceMetric {
   DeviceMetric._();
   factory DeviceMetric({
-    @Default('DeviceMetric') String resourceType,
+    @Default(Stu3ResourceType.DeviceMetric)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceMetric)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -251,7 +257,9 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
 abstract class Endpoint with Resource implements _$Endpoint {
   Endpoint._();
   factory Endpoint({
-    @Default('Endpoint') String resourceType,
+    @Default(Stu3ResourceType.Endpoint)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -299,7 +307,9 @@ abstract class Endpoint with Resource implements _$Endpoint {
 abstract class HealthcareService with Resource implements _$HealthcareService {
   HealthcareService._();
   factory HealthcareService({
-    @Default('HealthcareService') String resourceType,
+    @Default(Stu3ResourceType.HealthcareService)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.HealthcareService)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -423,7 +433,9 @@ abstract class HealthcareServiceNotAvailable
 abstract class Location with Resource implements _$Location {
   Location._();
   factory Location({
-    @Default('Location') String resourceType,
+    @Default(Stu3ResourceType.Location)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Location)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -502,7 +514,9 @@ abstract class LocationPosition implements _$LocationPosition {
 abstract class Organization with Resource implements _$Organization {
   Organization._();
   factory Organization({
-    @Default('Organization') String resourceType,
+    @Default(Stu3ResourceType.Organization)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Organization)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -572,7 +586,9 @@ abstract class OrganizationContact implements _$OrganizationContact {
 abstract class Substance with Resource implements _$Substance {
   Substance._();
   factory Substance({
-    @Default('Substance') String resourceType,
+    @Default(Stu3ResourceType.Substance)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Substance)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

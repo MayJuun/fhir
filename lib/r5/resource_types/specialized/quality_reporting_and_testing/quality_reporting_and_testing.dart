@@ -15,7 +15,9 @@ part 'quality_reporting_and_testing.g.dart';
 abstract class Measure with Resource implements _$Measure {
   Measure._();
   factory Measure({
-    @Default('Measure') String resourceType,
+    @Default(R5ResourceType.Measure)
+    @JsonKey(unknownEnumValue: R5ResourceType.Measure)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -255,7 +257,9 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
 abstract class MeasureReport with Resource implements _$MeasureReport {
   MeasureReport._();
   factory MeasureReport({
-    @Default('MeasureReport') String resourceType,
+    @Default(R5ResourceType.MeasureReport)
+    @JsonKey(unknownEnumValue: R5ResourceType.MeasureReport)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -468,7 +472,9 @@ abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
 abstract class TestReport with Resource implements _$TestReport {
   TestReport._();
   factory TestReport({
-    @Default('TestReport') String resourceType,
+    @Default(R5ResourceType.TestReport)
+    @JsonKey(unknownEnumValue: R5ResourceType.TestReport)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -769,7 +775,9 @@ abstract class TestReportAction2 implements _$TestReportAction2 {
 abstract class TestScript with Resource implements _$TestScript {
   TestScript._();
   factory TestScript({
-    @Default('TestScript') String resourceType,
+    @Default(R5ResourceType.TestScript)
+    @JsonKey(unknownEnumValue: R5ResourceType.TestScript)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

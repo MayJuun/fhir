@@ -9,11 +9,12 @@ import '../../r5.dart';
 
 part 'resource_from_json.dart';
 part 'resource_new_version.dart';
+part 'resource_types_enum.dart';
 
 @JsonSerializable()
 class Resource {
   Id id;
-  String resourceType;
+  R5ResourceType resourceType;
   Meta meta;
   FhirUri implicitRules;
   Code language;

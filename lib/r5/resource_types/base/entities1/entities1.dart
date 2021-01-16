@@ -15,7 +15,9 @@ part 'entities1.g.dart';
 abstract class Endpoint with Resource implements _$Endpoint {
   Endpoint._();
   factory Endpoint({
-    @Default('Endpoint') String resourceType,
+    @Default(R5ResourceType.Endpoint)
+    @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -63,7 +65,9 @@ abstract class Endpoint with Resource implements _$Endpoint {
 abstract class HealthcareService with Resource implements _$HealthcareService {
   HealthcareService._();
   factory HealthcareService({
-    @Default('HealthcareService') String resourceType,
+    @Default(R5ResourceType.HealthcareService)
+    @JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -220,7 +224,9 @@ abstract class HealthcareServiceNotAvailable
 abstract class Location with Resource implements _$Location {
   Location._();
   factory Location({
-    @Default('Location') String resourceType,
+    @Default(R5ResourceType.Location)
+    @JsonKey(unknownEnumValue: R5ResourceType.Location)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -339,7 +345,9 @@ abstract class LocationHoursOfOperation implements _$LocationHoursOfOperation {
 abstract class Organization with Resource implements _$Organization {
   Organization._();
   factory Organization({
-    @Default('Organization') String resourceType,
+    @Default(R5ResourceType.Organization)
+    @JsonKey(unknownEnumValue: R5ResourceType.Organization)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -414,7 +422,9 @@ abstract class OrganizationAffiliation
     implements _$OrganizationAffiliation {
   OrganizationAffiliation._();
   factory OrganizationAffiliation({
-    @Default('OrganizationAffiliation') String resourceType,
+    @Default(R5ResourceType.OrganizationAffiliation)
+    @JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

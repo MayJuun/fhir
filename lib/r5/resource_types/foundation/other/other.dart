@@ -15,7 +15,9 @@ part 'other.g.dart';
 abstract class Basic with Resource implements _$Basic {
   Basic._();
   factory Basic({
-    @Default('Basic') String resourceType,
+    @Default(R5ResourceType.Basic)
+    @JsonKey(unknownEnumValue: R5ResourceType.Basic)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -52,7 +54,9 @@ abstract class Basic with Resource implements _$Basic {
 abstract class Binary with Resource implements _$Binary {
   Binary._();
   factory Binary({
-    @Default('Binary') String resourceType,
+    @Default(R5ResourceType.Binary)
+    @JsonKey(unknownEnumValue: R5ResourceType.Binary)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -84,7 +88,9 @@ abstract class Binary with Resource implements _$Binary {
 abstract class Bundle with Resource implements _$Bundle {
   Bundle._();
   factory Bundle({
-    @Default('Bundle') String resourceType,
+    @Default(R5ResourceType.Bundle)
+    @JsonKey(unknownEnumValue: R5ResourceType.Bundle)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -278,7 +284,9 @@ abstract class BundleResponse implements _$BundleResponse {
 abstract class Linkage with Resource implements _$Linkage {
   Linkage._();
   factory Linkage({
-    @Default('Linkage') String resourceType,
+    @Default(R5ResourceType.Linkage)
+    @JsonKey(unknownEnumValue: R5ResourceType.Linkage)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -341,7 +349,9 @@ abstract class LinkageItem implements _$LinkageItem {
 abstract class MessageHeader with Resource implements _$MessageHeader {
   MessageHeader._();
   factory MessageHeader({
-    @Default('MessageHeader') String resourceType,
+    @Default(R5ResourceType.MessageHeader)
+    @JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -480,7 +490,9 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
 abstract class OperationOutcome with Resource implements _$OperationOutcome {
   OperationOutcome._();
   factory OperationOutcome({
-    @Default('OperationOutcome') String resourceType,
+    @Default(R5ResourceType.OperationOutcome)
+    @JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -550,7 +562,9 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
 abstract class Parameters with Resource implements _$Parameters {
   Parameters._();
   factory Parameters({
-    @Default('Parameters') String resourceType,
+    @Default(R5ResourceType.Parameters)
+    @JsonKey(unknownEnumValue: R5ResourceType.Parameters)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -678,7 +692,9 @@ abstract class ParametersParameter implements _$ParametersParameter {
 abstract class Subscription with Resource implements _$Subscription {
   Subscription._();
   factory Subscription({
-    @Default('Subscription') String resourceType,
+    @Default(R5ResourceType.Subscription)
+    @JsonKey(unknownEnumValue: R5ResourceType.Subscription)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -768,7 +784,9 @@ abstract class SubscriptionStatus
     implements _$SubscriptionStatus {
   SubscriptionStatus._();
   factory SubscriptionStatus({
-    @Default('SubscriptionStatus') String resourceType,
+    @Default(R5ResourceType.SubscriptionStatus)
+    @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -813,7 +831,9 @@ abstract class SubscriptionStatus
 abstract class SubscriptionTopic with Resource implements _$SubscriptionTopic {
   SubscriptionTopic._();
   factory SubscriptionTopic({
-    @Default('SubscriptionTopic') String resourceType,
+    @Default(R5ResourceType.SubscriptionTopic)
+    @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

@@ -15,7 +15,9 @@ part 'terminology.g.dart';
 abstract class CodeSystem with Resource implements _$CodeSystem {
   CodeSystem._();
   factory CodeSystem({
-    @Default('CodeSystem') String resourceType,
+    @Default(R5ResourceType.CodeSystem)
+    @JsonKey(unknownEnumValue: R5ResourceType.CodeSystem)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -259,7 +261,9 @@ abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
 abstract class ConceptMap with Resource implements _$ConceptMap {
   ConceptMap._();
   factory ConceptMap({
-    @Default('ConceptMap') String resourceType,
+    @Default(R5ResourceType.ConceptMap)
+    @JsonKey(unknownEnumValue: R5ResourceType.ConceptMap)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -490,7 +494,9 @@ abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
 abstract class NamingSystem with Resource implements _$NamingSystem {
   NamingSystem._();
   factory NamingSystem({
-    @Default('NamingSystem') String resourceType,
+    @Default(R5ResourceType.NamingSystem)
+    @JsonKey(unknownEnumValue: R5ResourceType.NamingSystem)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -593,7 +599,9 @@ abstract class TerminologyCapabilities
     implements _$TerminologyCapabilities {
   TerminologyCapabilities._();
   factory TerminologyCapabilities({
-    @Default('TerminologyCapabilities') String resourceType,
+    @Default(R5ResourceType.TerminologyCapabilities)
+    @JsonKey(unknownEnumValue: R5ResourceType.TerminologyCapabilities)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -990,7 +998,9 @@ abstract class TerminologyCapabilitiesClosure
 abstract class ValueSet with Resource implements _$ValueSet {
   ValueSet._();
   factory ValueSet({
-    @Default('ValueSet') String resourceType,
+    @Default(R5ResourceType.ValueSet)
+    @JsonKey(unknownEnumValue: R5ResourceType.ValueSet)
+        R5ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

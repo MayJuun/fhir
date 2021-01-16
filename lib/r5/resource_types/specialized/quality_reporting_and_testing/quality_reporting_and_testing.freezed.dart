@@ -18,7 +18,8 @@ class _$MeasureTearOff {
 
 // ignore: unused_element
   _Measure call(
-      {String resourceType = 'Measure',
+      {@JsonKey(unknownEnumValue: R5ResourceType.Measure)
+          R5ResourceType resourceType = R5ResourceType.Measure,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -212,7 +213,8 @@ const $Measure = _$MeasureTearOff();
 
 /// @nodoc
 mixin _$Measure {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Measure)
+  R5ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -324,7 +326,8 @@ abstract class $MeasureCopyWith<$Res> {
   factory $MeasureCopyWith(Measure value, $Res Function(Measure) then) =
       _$MeasureCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Measure)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -549,7 +552,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1044,7 +1047,8 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       __$MeasureCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Measure)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -1301,7 +1305,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
     return _then(_Measure(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -1482,7 +1486,8 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
 /// @nodoc
 class _$_Measure extends _Measure {
   _$_Measure(
-      {this.resourceType = 'Measure',
+      {@JsonKey(unknownEnumValue: R5ResourceType.Measure)
+          this.resourceType = R5ResourceType.Measure,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1590,9 +1595,9 @@ class _$_Measure extends _Measure {
   factory _$_Measure.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureFromJson(json);
 
-  @JsonKey(defaultValue: 'Measure')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Measure)
+  final R5ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -1991,7 +1996,8 @@ class _$_Measure extends _Measure {
 abstract class _Measure extends Measure {
   _Measure._() : super._();
   factory _Measure(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Measure)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -2097,7 +2103,8 @@ abstract class _Measure extends Measure {
   factory _Measure.fromJson(Map<String, dynamic> json) = _$_Measure.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Measure)
+  R5ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -3966,7 +3973,8 @@ class _$MeasureReportTearOff {
 
 // ignore: unused_element
   _MeasureReport call(
-      {String resourceType = 'MeasureReport',
+      {@JsonKey(unknownEnumValue: R5ResourceType.MeasureReport)
+          R5ResourceType resourceType = R5ResourceType.MeasureReport,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4042,7 +4050,8 @@ const $MeasureReport = _$MeasureReportTearOff();
 
 /// @nodoc
 mixin _$MeasureReport {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.MeasureReport)
+  R5ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -4086,7 +4095,8 @@ abstract class $MeasureReportCopyWith<$Res> {
           MeasureReport value, $Res Function(MeasureReport) then) =
       _$MeasureReportCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MeasureReport)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4173,7 +4183,7 @@ class _$MeasureReportCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4342,7 +4352,8 @@ abstract class _$MeasureReportCopyWith<$Res>
       __$MeasureReportCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MeasureReport)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4442,7 +4453,7 @@ class __$MeasureReportCopyWithImpl<$Res>
     return _then(_MeasureReport(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -4498,28 +4509,39 @@ class __$MeasureReportCopyWithImpl<$Res>
 /// @nodoc
 class _$_MeasureReport extends _MeasureReport {
   _$_MeasureReport(
-      {this.resourceType = 'MeasureReport',
+      {@JsonKey(unknownEnumValue: R5ResourceType.MeasureReport)
+          this.resourceType = R5ResourceType.MeasureReport,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: MeasureReportStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
-      @JsonKey(unknownEnumValue: MeasureReportType.unknown) this.type,
-      @JsonKey(name: '_type') this.typeElement,
-      @required this.measure,
+      @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(unknownEnumValue: MeasureReportType.unknown)
+          this.type,
+      @JsonKey(name: '_type')
+          this.typeElement,
+      @required
+          this.measure,
       this.subject,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.reporter,
-      @required this.period,
+      @required
+          this.period,
       this.improvementNotation,
       this.group,
       this.evaluatedResource})
@@ -4531,9 +4553,9 @@ class _$_MeasureReport extends _MeasureReport {
   factory _$_MeasureReport.fromJson(Map<String, dynamic> json) =>
       _$_$_MeasureReportFromJson(json);
 
-  @JsonKey(defaultValue: 'MeasureReport')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.MeasureReport)
+  final R5ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -4711,7 +4733,8 @@ class _$_MeasureReport extends _MeasureReport {
 abstract class _MeasureReport extends MeasureReport {
   _MeasureReport._() : super._();
   factory _MeasureReport(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.MeasureReport)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -4751,7 +4774,8 @@ abstract class _MeasureReport extends MeasureReport {
       _$_MeasureReport.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.MeasureReport)
+  R5ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -6616,7 +6640,8 @@ class _$TestReportTearOff {
 
 // ignore: unused_element
   _TestReport call(
-      {String resourceType = 'TestReport',
+      {@JsonKey(unknownEnumValue: R5ResourceType.TestReport)
+          R5ResourceType resourceType = R5ResourceType.TestReport,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6702,7 +6727,8 @@ const $TestReport = _$TestReportTearOff();
 
 /// @nodoc
 mixin _$TestReport {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.TestReport)
+  R5ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -6753,7 +6779,8 @@ abstract class $TestReportCopyWith<$Res> {
           TestReport value, $Res Function(TestReport) then) =
       _$TestReportCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.TestReport)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -6853,7 +6880,7 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7061,7 +7088,8 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
       __$TestReportCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.TestReport)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7177,7 +7205,7 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
     return _then(_TestReport(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -7243,31 +7271,44 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
 /// @nodoc
 class _$_TestReport extends _TestReport {
   _$_TestReport(
-      {this.resourceType = 'TestReport',
+      {@JsonKey(unknownEnumValue: R5ResourceType.TestReport)
+          this.resourceType = R5ResourceType.TestReport,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
-      @JsonKey(unknownEnumValue: TestReportStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
-      @required this.testScript,
-      @JsonKey(unknownEnumValue: TestReportResult.unknown) this.result,
-      @JsonKey(name: '_result') this.resultElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(unknownEnumValue: TestReportStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @required
+          this.testScript,
+      @JsonKey(unknownEnumValue: TestReportResult.unknown)
+          this.result,
+      @JsonKey(name: '_result')
+          this.resultElement,
       this.score,
-      @JsonKey(name: '_score') this.scoreElement,
+      @JsonKey(name: '_score')
+          this.scoreElement,
       this.tester,
-      @JsonKey(name: '_tester') this.testerElement,
+      @JsonKey(name: '_tester')
+          this.testerElement,
       this.issued,
-      @JsonKey(name: '_issued') this.issuedElement,
+      @JsonKey(name: '_issued')
+          this.issuedElement,
       this.participant,
       this.setup,
       this.test,
@@ -7279,9 +7320,9 @@ class _$_TestReport extends _TestReport {
   factory _$_TestReport.fromJson(Map<String, dynamic> json) =>
       _$_$_TestReportFromJson(json);
 
-  @JsonKey(defaultValue: 'TestReport')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.TestReport)
+  final R5ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -7479,7 +7520,8 @@ class _$_TestReport extends _TestReport {
 abstract class _TestReport extends TestReport {
   _TestReport._() : super._();
   factory _TestReport(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.TestReport)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -7525,7 +7567,8 @@ abstract class _TestReport extends TestReport {
       _$_TestReport.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.TestReport)
+  R5ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -10362,7 +10405,8 @@ class _$TestScriptTearOff {
 
 // ignore: unused_element
   _TestScript call(
-      {String resourceType = 'TestScript',
+      {@JsonKey(unknownEnumValue: R5ResourceType.TestScript)
+          R5ResourceType resourceType = R5ResourceType.TestScript,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10485,7 +10529,8 @@ const $TestScript = _$TestScriptTearOff();
 
 /// @nodoc
 mixin _$TestScript {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.TestScript)
+  R5ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -10557,7 +10602,8 @@ abstract class $TestScriptCopyWith<$Res> {
           TestScript value, $Res Function(TestScript) then) =
       _$TestScriptCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.TestScript)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -10700,7 +10746,7 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -10998,7 +11044,8 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       __$TestScriptCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.TestScript)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11162,7 +11209,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
     return _then(_TestScript(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -11268,43 +11315,59 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
 /// @nodoc
 class _$_TestScript extends _TestScript {
   _$_TestScript(
-      {this.resourceType = 'TestScript',
+      {@JsonKey(unknownEnumValue: R5ResourceType.TestScript)
+          this.resourceType = R5ResourceType.TestScript,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
-      @JsonKey(unknownEnumValue: TestScriptStatus.unknown) this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental') this.experimentalElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       this.contact,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose') this.purposeElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
       this.origin,
       this.destination,
       this.metadata,
@@ -11320,9 +11383,9 @@ class _$_TestScript extends _TestScript {
   factory _$_TestScript.fromJson(Map<String, dynamic> json) =>
       _$_$_TestScriptFromJson(json);
 
-  @JsonKey(defaultValue: 'TestScript')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.TestScript)
+  final R5ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -11592,7 +11655,8 @@ class _$_TestScript extends _TestScript {
 abstract class _TestScript extends TestScript {
   _TestScript._() : super._();
   factory _TestScript(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.TestScript)
+          R5ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
@@ -11658,7 +11722,8 @@ abstract class _TestScript extends TestScript {
       _$_TestScript.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.TestScript)
+  R5ResourceType get resourceType;
   @override
   Id get id;
   @override

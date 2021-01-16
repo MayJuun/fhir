@@ -15,7 +15,9 @@ part 'summary.g.dart';
 abstract class AdverseEvent with Resource implements _$AdverseEvent {
   AdverseEvent._();
   factory AdverseEvent({
-    @Default('AdverseEvent') String resourceType,
+    @Default(Stu3ResourceType.AdverseEvent)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.AdverseEvent)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -101,7 +103,9 @@ abstract class AllergyIntolerance
     implements _$AllergyIntolerance {
   AllergyIntolerance._();
   factory AllergyIntolerance({
-    @Default('AllergyIntolerance') String resourceType,
+    @Default(Stu3ResourceType.AllergyIntolerance)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.AllergyIntolerance)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -196,7 +200,9 @@ abstract class ClinicalImpression
     implements _$ClinicalImpression {
   ClinicalImpression._();
   factory ClinicalImpression({
-    @Default('ClinicalImpression') String resourceType,
+    @Default(Stu3ResourceType.ClinicalImpression)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.ClinicalImpression)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -308,7 +314,9 @@ abstract class ClinicalImpressionFinding
 abstract class Condition with Resource implements _$Condition {
   Condition._();
   factory Condition({
-    @Default('Condition') String resourceType,
+    @Default(Stu3ResourceType.Condition)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Condition)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -419,7 +427,9 @@ abstract class ConditionEvidence implements _$ConditionEvidence {
 abstract class DetectedIssue with Resource implements _$DetectedIssue {
   DetectedIssue._();
   factory DetectedIssue({
-    @Default('DetectedIssue') String resourceType,
+    @Default(Stu3ResourceType.DetectedIssue)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.DetectedIssue)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -494,7 +504,9 @@ abstract class FamilyMemberHistory
     implements _$FamilyMemberHistory {
   FamilyMemberHistory._();
   factory FamilyMemberHistory({
-    @Default('FamilyMemberHistory') String resourceType,
+    @Default(Stu3ResourceType.FamilyMemberHistory)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.FamilyMemberHistory)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -595,7 +607,9 @@ abstract class FamilyMemberHistoryCondition
 abstract class Procedure with Resource implements _$Procedure {
   Procedure._();
   factory Procedure({
-    @Default('Procedure') String resourceType,
+    @Default(Stu3ResourceType.Procedure)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Procedure)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

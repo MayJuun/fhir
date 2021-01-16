@@ -15,7 +15,9 @@ part 'support.g.dart';
 abstract class Coverage with Resource implements _$Coverage {
   Coverage._();
   factory Coverage({
-    @Default('Coverage') String resourceType,
+    @Default(Stu3ResourceType.Coverage)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -116,7 +118,9 @@ abstract class EligibilityRequest
     implements _$EligibilityRequest {
   EligibilityRequest._();
   factory EligibilityRequest({
-    @Default('EligibilityRequest') String resourceType,
+    @Default(Stu3ResourceType.EligibilityRequest)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -170,7 +174,9 @@ abstract class EligibilityResponse
     implements _$EligibilityResponse {
   EligibilityResponse._();
   factory EligibilityResponse({
-    @Default('EligibilityResponse') String resourceType,
+    @Default(Stu3ResourceType.EligibilityResponse)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -337,7 +343,9 @@ abstract class EligibilityResponseError implements _$EligibilityResponseError {
 abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
   EnrollmentRequest._();
   factory EnrollmentRequest({
-    @Default('EnrollmentRequest') String resourceType,
+    @Default(Stu3ResourceType.EnrollmentRequest)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,
@@ -381,7 +389,9 @@ abstract class EnrollmentResponse
     implements _$EnrollmentResponse {
   EnrollmentResponse._();
   factory EnrollmentResponse({
-    @Default('EnrollmentResponse') String resourceType,
+    @Default(Stu3ResourceType.EnrollmentResponse)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
+        Stu3ResourceType resourceType,
     Id id,
     Meta meta,
     FhirUri implicitRules,

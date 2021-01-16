@@ -18,28 +18,35 @@ class _$ClaimTearOff {
 
 // ignore: unused_element
   _Claim call(
-      {String resourceType = 'Claim',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
+          Stu3ResourceType resourceType = Stu3ResourceType.Claim,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       List<CodeableConcept> subType,
       ClaimUse use,
-      @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: '_use')
+          Element useElement,
       Reference patient,
       Period billablePeriod,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference insurer,
       Reference provider,
@@ -122,7 +129,8 @@ const $Claim = _$ClaimTearOff();
 
 /// @nodoc
 mixin _$Claim {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -182,28 +190,35 @@ abstract class $ClaimCopyWith<$Res> {
   factory $ClaimCopyWith(Claim value, $Res Function(Claim) then) =
       _$ClaimCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       List<CodeableConcept> subType,
       ClaimUse use,
-      @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: '_use')
+          Element useElement,
       Reference patient,
       Period billablePeriod,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference insurer,
       Reference provider,
@@ -312,7 +327,7 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -663,28 +678,35 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       __$ClaimCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       List<CodeableConcept> subType,
       ClaimUse use,
-      @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: '_use')
+          Element useElement,
       Reference patient,
       Period billablePeriod,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference insurer,
       Reference provider,
@@ -819,7 +841,7 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
     return _then(_Claim(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -919,28 +941,35 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
 /// @nodoc
 class _$_Claim extends _Claim {
   _$_Claim(
-      {this.resourceType = 'Claim',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
+          this.resourceType = Stu3ResourceType.Claim,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.type,
       this.subType,
       this.use,
-      @JsonKey(name: '_use') this.useElement,
+      @JsonKey(name: '_use')
+          this.useElement,
       this.patient,
       this.billablePeriod,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.enterer,
       this.insurer,
       this.provider,
@@ -969,9 +998,9 @@ class _$_Claim extends _Claim {
   factory _$_Claim.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimFromJson(json);
 
-  @JsonKey(defaultValue: 'Claim')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -1224,28 +1253,35 @@ class _$_Claim extends _Claim {
 abstract class _Claim extends Claim {
   _Claim._() : super._();
   factory _Claim(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       CodeableConcept type,
       List<CodeableConcept> subType,
       ClaimUse use,
-      @JsonKey(name: '_use') Element useElement,
+      @JsonKey(name: '_use')
+          Element useElement,
       Reference patient,
       Period billablePeriod,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference enterer,
       Reference insurer,
       Reference provider,
@@ -1272,7 +1308,8 @@ abstract class _Claim extends Claim {
   factory _Claim.fromJson(Map<String, dynamic> json) = _$_Claim.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
@@ -6099,30 +6136,37 @@ class _$ClaimResponseTearOff {
 
 // ignore: unused_element
   _ClaimResponse call(
-      {String resourceType = 'ClaimResponse',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
+          Stu3ResourceType resourceType = Stu3ResourceType.ClaimResponse,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference patient,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference insurer,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       CodeableConcept payeeType,
       List<ClaimResponseItem> item,
       List<ClaimResponseAddItem> addItem,
@@ -6189,7 +6233,8 @@ const $ClaimResponse = _$ClaimResponseTearOff();
 
 /// @nodoc
 mixin _$ClaimResponse {
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
+  Stu3ResourceType get resourceType;
   Id get id;
   Meta get meta;
   FhirUri get implicitRules;
@@ -6243,30 +6288,37 @@ abstract class $ClaimResponseCopyWith<$Res> {
           ClaimResponse value, $Res Function(ClaimResponse) then) =
       _$ClaimResponseCopyWithImpl<$Res>;
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference patient,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference insurer,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       CodeableConcept payeeType,
       List<ClaimResponseItem> item,
       List<ClaimResponseAddItem> addItem,
@@ -6355,7 +6407,7 @@ class _$ClaimResponseCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6643,30 +6695,37 @@ abstract class _$ClaimResponseCopyWith<$Res>
       __$ClaimResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference patient,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference insurer,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       CodeableConcept payeeType,
       List<ClaimResponseItem> item,
       List<ClaimResponseAddItem> addItem,
@@ -6777,7 +6836,7 @@ class __$ClaimResponseCopyWithImpl<$Res>
     return _then(_ClaimResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as String,
+          : resourceType as Stu3ResourceType,
       id: id == freezed ? _value.id : id as Id,
       meta: meta == freezed ? _value.meta : meta as Meta,
       implicitRules: implicitRules == freezed
@@ -6862,30 +6921,37 @@ class __$ClaimResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_ClaimResponse extends _ClaimResponse {
   _$_ClaimResponse(
-      {this.resourceType = 'ClaimResponse',
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
+          this.resourceType = Stu3ResourceType.ClaimResponse,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.patient,
       this.created,
-      @JsonKey(name: '_created') this.createdElement,
+      @JsonKey(name: '_created')
+          this.createdElement,
       this.insurer,
       this.requestProvider,
       this.requestOrganization,
       this.request,
       this.outcome,
       this.disposition,
-      @JsonKey(name: '_disposition') this.dispositionElement,
+      @JsonKey(name: '_disposition')
+          this.dispositionElement,
       this.payeeType,
       this.item,
       this.addItem,
@@ -6905,9 +6971,9 @@ class _$_ClaimResponse extends _ClaimResponse {
   factory _$_ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$_$_ClaimResponseFromJson(json);
 
-  @JsonKey(defaultValue: 'ClaimResponse')
   @override
-  final String resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
+  final Stu3ResourceType resourceType;
   @override
   final Id id;
   @override
@@ -7132,30 +7198,37 @@ class _$_ClaimResponse extends _ClaimResponse {
 abstract class _ClaimResponse extends ClaimResponse {
   _ClaimResponse._() : super._();
   factory _ClaimResponse(
-      {String resourceType,
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
+          Stu3ResourceType resourceType,
       Id id,
       Meta meta,
       FhirUri implicitRules,
-      @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element implicitRulesElement,
       Code language,
-      @JsonKey(name: '_language') Element languageElement,
+      @JsonKey(name: '_language')
+          Element languageElement,
       Narrative text,
       List<Resource> contained,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
       List<Identifier> identifier,
       String status,
-      @JsonKey(name: '_status') Element statusElement,
+      @JsonKey(name: '_status')
+          Element statusElement,
       Reference patient,
       String created,
-      @JsonKey(name: '_created') Element createdElement,
+      @JsonKey(name: '_created')
+          Element createdElement,
       Reference insurer,
       Reference requestProvider,
       Reference requestOrganization,
       Reference request,
       CodeableConcept outcome,
       String disposition,
-      @JsonKey(name: '_disposition') Element dispositionElement,
+      @JsonKey(name: '_disposition')
+          Element dispositionElement,
       CodeableConcept payeeType,
       List<ClaimResponseItem> item,
       List<ClaimResponseAddItem> addItem,
@@ -7174,7 +7247,8 @@ abstract class _ClaimResponse extends ClaimResponse {
       _$_ClaimResponse.fromJson;
 
   @override
-  String get resourceType;
+  @JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
+  Stu3ResourceType get resourceType;
   @override
   Id get id;
   @override
