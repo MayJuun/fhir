@@ -9,7 +9,6 @@ import '../../dstu2.dart';
 
 part 'resource_from_json.dart';
 part 'resource_new_version.dart';
-part 'resource_type_enum.dart';
 
 /// This class ends up functioning mostly like an abstract superclass. Some of
 /// the fields in other classes contain a generic resource, so in order for
@@ -20,7 +19,7 @@ part 'resource_type_enum.dart';
 @JsonSerializable()
 class Resource {
   Id id;
-  Dstu2ResourceType resourceType;
+  ResourceType resourceType;
   Meta meta;
   FhirUri implicitRules;
   Code language;
@@ -29,10 +28,6 @@ class Resource {
   @JsonKey(name: 'extension')
   List<FhirExtension> extension_;
   List<FhirExtension> modifierExtension;
-
-  /// produce a string of the [resourceType]
-  String resourceTypeString() =>
-      ResourceUtils.resourceTypeToStringMap[resourceType];
 
   /// Convenience method to return a [Reference] referring to that [Resource]
   Reference thisReference() => Reference(reference: '$resourceType/$id');
