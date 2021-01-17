@@ -1,3 +1,7 @@
+## [0.1.5]
+* Keep trying to make it easier to use
+* but once I upload a version, I can't upload the same fucking version again
+
 ## [0.1.4]
 * just little tweaks
 * newVersion method will update resource meta, or allows a separate meta to update and include with resource
