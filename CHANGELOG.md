@@ -1,3 +1,6 @@
+## [0.1.6]
+* Added FHIR® to Readme, with official permission from HL7 and Graham Grieve!
+
 ## [0.1.5]
 * Keep trying to make it easier to use
 * but once I upload a version, I can't upload the same fucking version again
