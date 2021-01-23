@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'package:dartz/dartz.dart';
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
+import '../utils/fhir_yaml.dart';
 import 'dates.dart';
 import 'primitive_failures.dart';
 

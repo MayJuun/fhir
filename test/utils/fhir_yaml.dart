@@ -2,9 +2,10 @@
 /// https://github.com/alexei-sintotski/json2yaml/blob/master/test/json2yaml_test.dart
 import 'dart:convert';
 
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:test/test.dart';
 import 'package:yaml/yaml.dart';
+
+import '../fhir/validation/json2yaml.dart';
 
 void main() {
   group('$json2yaml', () {

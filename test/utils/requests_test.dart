@@ -1,5 +1,4 @@
 import 'package:fhir/r4.dart';
-import 'package:fhir/utils/fhir_at_rest.dart';
 import 'package:test/test.dart';
 
 import 'package:fhir/utils/globals.dart' as globals;
