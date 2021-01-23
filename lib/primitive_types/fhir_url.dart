@@ -20,6 +20,9 @@ class FhirUrl extends PrimitiveObject<Uri> {
 
   const FhirUrl._(this.value);
 
+  /// because occasionally you need a Uri
+  Uri toUri() => Uri.parse(toString());
+
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 

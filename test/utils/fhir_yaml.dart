@@ -126,7 +126,7 @@ const structuredDataJson = {
 };
 const structuredDataYaml = '''
 martin:
-  name: Martin D'vloper
+  name: "Martin D'vloper"
   job: Developer
   skill: Elite''';
 
@@ -139,7 +139,7 @@ const dataWithListJson = {
 };
 const dataWithListYaml = '''
 martin:
-  name: Martin D'vloper
+  name: "Martin D'vloper"
   job: Developer
   skills:
     - python
@@ -151,11 +151,7 @@ const boolYaml = 'dart_is_cool: true';
 
 const multilineStringJson = {'fold_newlines': 'a b\nc d\n  e\nf'};
 const multilineStringYaml = '''
-fold_newlines: |
-  a b
-  c d
-    e
-  f''';
+fold_newlines: "a b\\nc d\\n  e\\nf"''';
 
 const complexExampleJson = {
   'name': "Martin D'vloper",
@@ -171,7 +167,7 @@ const complexExampleJson = {
   'education': '4 GCSEs\n3 A-Levels\nBSc in the Internet of Things'
 };
 const complexExampleYaml = '''
-name: Martin D'vloper
+name: "Martin D'vloper"
 job: Developer
 skill: Elite
 employed: true
@@ -184,10 +180,7 @@ languages:
   perl: Elite
   python: Elite
   pascal: Lame
-education: |
-  4 GCSEs
-  3 A-Levels
-  BSc in the Internet of Things''';
+education: "4 GCSEs\\n3 A-Levels\\nBSc in the Internet of Things"''';
 
 const stringWithDotJson = {'dot': '1.5.0'};
 const stringWithDotWithQuotesYaml = 'dot: "1.5.0"';
@@ -197,4 +190,4 @@ const stringWithSpecialCharactersJson = {'url': 'https://pub.dartlang.org'};
 const stringWithSpecialCharactersYaml = 'url: "https://pub.dartlang.org"';
 
 const jsonWithNullValue = {'entry': null};
-const yamlWithNullValue = 'entry:';
+const yamlWithNullValue = 'entry: null';

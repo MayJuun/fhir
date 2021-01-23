@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:test/test.dart';
 
 import 'expected_json.dart';
@@ -22,24 +24,16 @@ Future main() async {
 
           final compareList = expectedJson.toList();
 
-          compareList.forEach((file) {
-            testList.remove(file);
-            expectList.remove(file);
-          });
-
-          expect(testList, expectList);
-        },
-        timeout: Timeout(Duration(minutes: 10)),
-      );
-
-      test(
-        '\n\n****Validating Yaml****',
-        () async {
-          var testList = await yamlValidation();
-
-          var expectList = expectedYaml.toList();
-
-          final compareList = expectedYaml.toList();
+          var string = '';
+          for (final s in expectList) {
+            string += '\n$s';
+          }
+          await File('./test/fhir/temp1.txt').writeAsString(string);
+          string = '';
+          for (final s in compareList) {
+            string += '\n$s';
+          }
+          await File('./test/fhir/temp2.txt').writeAsString(string);
 
           compareList.forEach((file) {
             testList.remove(file);
@@ -50,6 +44,25 @@ Future main() async {
         },
         timeout: Timeout(Duration(minutes: 10)),
       );
+
+      // test(
+      //   '\n\n****Validating Yaml****',
+      //   () async {
+      //     var testList = await yamlValidation();
+
+      //     var expectList = expectedYaml.toList();
+
+      //     final compareList = expectedYaml.toList();
+
+      //     compareList.forEach((file) {
+      //       testList.remove(file);
+      //       expectList.remove(file);
+      //     });
+
+      //     expect(testList, expectList);
+      //   },
+      //   timeout: Timeout(Duration(minutes: 10)),
+      // );
     },
   );
 }

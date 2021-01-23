@@ -1,7 +1,7 @@
 part of 'validation.dart';
 
 Future<List<String>> r4Validation() async {
-  var dir = Directory('./test/r4_examples');
+  var dir = Directory('./test/fhir/r4_examples');
   var string = <String>[];
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
