@@ -160,6 +160,7 @@ mixin _$Device {
   Element get urlElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceCopyWith<Device> get copyWith;
 }
 
@@ -937,6 +938,7 @@ class _$_Device extends _Device {
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(urlElement);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceCopyWith<_Device> get copyWith =>
       __$DeviceCopyWithImpl<_Device>(this, _$identity);
@@ -1078,6 +1080,7 @@ abstract class _Device extends Device {
   @JsonKey(name: '_url')
   Element get urlElement;
   @override
+  @JsonKey(ignore: true)
   _$DeviceCopyWith<_Device> get copyWith;
 }
 
@@ -1186,6 +1189,7 @@ mixin _$DeviceComponent {
   CodeableConcept get languageCode;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceComponentCopyWith<DeviceComponent> get copyWith;
 }
 
@@ -1724,6 +1728,7 @@ class _$_DeviceComponent extends _DeviceComponent {
       const DeepCollectionEquality().hash(productionSpecification) ^
       const DeepCollectionEquality().hash(languageCode);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceComponentCopyWith<_DeviceComponent> get copyWith =>
       __$DeviceComponentCopyWithImpl<_DeviceComponent>(this, _$identity);
@@ -1819,6 +1824,7 @@ abstract class _DeviceComponent extends DeviceComponent {
   @override
   CodeableConcept get languageCode;
   @override
+  @JsonKey(ignore: true)
   _$DeviceComponentCopyWith<_DeviceComponent> get copyWith;
 }
 
@@ -1872,6 +1878,7 @@ mixin _$DeviceComponentProductionSpecification {
   String get productionSpec;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceComponentProductionSpecificationCopyWith<
       DeviceComponentProductionSpecification> get copyWith;
 }
@@ -2087,6 +2094,7 @@ class _$_DeviceComponentProductionSpecification
       const DeepCollectionEquality().hash(componentId) ^
       const DeepCollectionEquality().hash(productionSpec);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceComponentProductionSpecificationCopyWith<
           _DeviceComponentProductionSpecification>
@@ -2128,6 +2136,7 @@ abstract class _DeviceComponentProductionSpecification
   @override
   String get productionSpec;
   @override
+  @JsonKey(ignore: true)
   _$DeviceComponentProductionSpecificationCopyWith<
       _DeviceComponentProductionSpecification> get copyWith;
 }
@@ -2259,6 +2268,7 @@ mixin _$DeviceMetric {
   List<DeviceMetricCalibration> get calibration;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceMetricCopyWith<DeviceMetric> get copyWith;
 }
 
@@ -2927,6 +2937,7 @@ class _$_DeviceMetric extends _DeviceMetric {
       const DeepCollectionEquality().hash(measurementPeriod) ^
       const DeepCollectionEquality().hash(calibration);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceMetricCopyWith<_DeviceMetric> get copyWith =>
       __$DeviceMetricCopyWithImpl<_DeviceMetric>(this, _$identity);
@@ -3044,6 +3055,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   @override
   List<DeviceMetricCalibration> get calibration;
   @override
+  @JsonKey(ignore: true)
   _$DeviceMetricCopyWith<_DeviceMetric> get copyWith;
 }
 
@@ -3115,6 +3127,7 @@ mixin _$DeviceMetricCalibration {
   Element get timeElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceMetricCalibrationCopyWith<DeviceMetricCalibration> get copyWith;
 }
 
@@ -3387,6 +3400,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
       const DeepCollectionEquality().hash(time) ^
       const DeepCollectionEquality().hash(timeElement);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceMetricCalibrationCopyWith<_DeviceMetricCalibration> get copyWith =>
       __$DeviceMetricCalibrationCopyWithImpl<_DeviceMetricCalibration>(
@@ -3445,5 +3459,6 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   @JsonKey(name: '_time')
   Element get timeElement;
   @override
+  @JsonKey(ignore: true)
   _$DeviceMetricCalibrationCopyWith<_DeviceMetricCalibration> get copyWith;
 }

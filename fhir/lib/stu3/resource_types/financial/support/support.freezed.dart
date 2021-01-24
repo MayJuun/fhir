@@ -155,6 +155,7 @@ mixin _$Coverage {
   List<Reference> get contract;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CoverageCopyWith<Coverage> get copyWith;
 }
 
@@ -978,6 +979,7 @@ class _$_Coverage extends _Coverage {
       const DeepCollectionEquality().hash(networkElement) ^
       const DeepCollectionEquality().hash(contract);
 
+  @JsonKey(ignore: true)
   @override
   _$CoverageCopyWith<_Coverage> get copyWith =>
       __$CoverageCopyWithImpl<_Coverage>(this, _$identity);
@@ -1114,6 +1116,7 @@ abstract class _Coverage extends Coverage {
   @override
   List<Reference> get contract;
   @override
+  @JsonKey(ignore: true)
   _$CoverageCopyWith<_Coverage> get copyWith;
 }
 
@@ -1230,6 +1233,7 @@ mixin _$CoverageGrouping {
   Element get subClassDisplayElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CoverageGroupingCopyWith<CoverageGrouping> get copyWith;
 }
 
@@ -1858,6 +1862,7 @@ class _$_CoverageGrouping extends _CoverageGrouping {
       const DeepCollectionEquality().hash(subClassDisplay) ^
       const DeepCollectionEquality().hash(subClassDisplayElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CoverageGroupingCopyWith<_CoverageGrouping> get copyWith =>
       __$CoverageGroupingCopyWithImpl<_CoverageGrouping>(this, _$identity);
@@ -1962,6 +1967,7 @@ abstract class _CoverageGrouping extends CoverageGrouping {
   @JsonKey(name: '_subClassDisplay')
   Element get subClassDisplayElement;
   @override
+  @JsonKey(ignore: true)
   _$CoverageGroupingCopyWith<_CoverageGrouping> get copyWith;
 }
 
@@ -2102,6 +2108,7 @@ mixin _$EligibilityRequest {
   CodeableConcept get benefitSubCategory;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EligibilityRequestCopyWith<EligibilityRequest> get copyWith;
 }
 
@@ -2921,6 +2928,7 @@ class _$_EligibilityRequest extends _EligibilityRequest {
       const DeepCollectionEquality().hash(benefitCategory) ^
       const DeepCollectionEquality().hash(benefitSubCategory);
 
+  @JsonKey(ignore: true)
   @override
   _$EligibilityRequestCopyWith<_EligibilityRequest> get copyWith =>
       __$EligibilityRequestCopyWithImpl<_EligibilityRequest>(this, _$identity);
@@ -3048,6 +3056,7 @@ abstract class _EligibilityRequest extends EligibilityRequest {
   @override
   CodeableConcept get benefitSubCategory;
   @override
+  @JsonKey(ignore: true)
   _$EligibilityRequestCopyWith<_EligibilityRequest> get copyWith;
 }
 
@@ -3179,6 +3188,7 @@ mixin _$EligibilityResponse {
   List<EligibilityResponseError> get error;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EligibilityResponseCopyWith<EligibilityResponse> get copyWith;
 }
 
@@ -3894,6 +3904,7 @@ class _$_EligibilityResponse extends _EligibilityResponse {
       const DeepCollectionEquality().hash(form) ^
       const DeepCollectionEquality().hash(error);
 
+  @JsonKey(ignore: true)
   @override
   _$EligibilityResponseCopyWith<_EligibilityResponse> get copyWith =>
       __$EligibilityResponseCopyWithImpl<_EligibilityResponse>(
@@ -4013,6 +4024,7 @@ abstract class _EligibilityResponse extends EligibilityResponse {
   @override
   List<EligibilityResponseError> get error;
   @override
+  @JsonKey(ignore: true)
   _$EligibilityResponseCopyWith<_EligibilityResponse> get copyWith;
 }
 
@@ -4054,6 +4066,7 @@ mixin _$EligibilityResponseInsurance {
   List<EligibilityResponseBenefitBalance> get benefitBalance;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EligibilityResponseInsuranceCopyWith<EligibilityResponseInsurance>
       get copyWith;
 }
@@ -4211,6 +4224,7 @@ class _$_EligibilityResponseInsurance extends _EligibilityResponseInsurance {
       const DeepCollectionEquality().hash(contract) ^
       const DeepCollectionEquality().hash(benefitBalance);
 
+  @JsonKey(ignore: true)
   @override
   _$EligibilityResponseInsuranceCopyWith<_EligibilityResponseInsurance>
       get copyWith => __$EligibilityResponseInsuranceCopyWithImpl<
@@ -4241,6 +4255,7 @@ abstract class _EligibilityResponseInsurance
   @override
   List<EligibilityResponseBenefitBalance> get benefitBalance;
   @override
+  @JsonKey(ignore: true)
   _$EligibilityResponseInsuranceCopyWith<_EligibilityResponseInsurance>
       get copyWith;
 }
@@ -4314,6 +4329,7 @@ mixin _$EligibilityResponseBenefitBalance {
   List<EligibilityResponseFinancial> get financial;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EligibilityResponseBenefitBalanceCopyWith<EligibilityResponseBenefitBalance>
       get copyWith;
 }
@@ -4689,6 +4705,7 @@ class _$_EligibilityResponseBenefitBalance
       const DeepCollectionEquality().hash(term) ^
       const DeepCollectionEquality().hash(financial);
 
+  @JsonKey(ignore: true)
   @override
   _$EligibilityResponseBenefitBalanceCopyWith<
           _EligibilityResponseBenefitBalance>
@@ -4751,6 +4768,7 @@ abstract class _EligibilityResponseBenefitBalance
   @override
   List<EligibilityResponseFinancial> get financial;
   @override
+  @JsonKey(ignore: true)
   _$EligibilityResponseBenefitBalanceCopyWith<
       _EligibilityResponseBenefitBalance> get copyWith;
 }
@@ -4814,6 +4832,7 @@ mixin _$EligibilityResponseFinancial {
   Money get usedMoney;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EligibilityResponseFinancialCopyWith<EligibilityResponseFinancial>
       get copyWith;
 }
@@ -5130,6 +5149,7 @@ class _$_EligibilityResponseFinancial extends _EligibilityResponseFinancial {
       const DeepCollectionEquality().hash(usedUnsignedIntElement) ^
       const DeepCollectionEquality().hash(usedMoney);
 
+  @JsonKey(ignore: true)
   @override
   _$EligibilityResponseFinancialCopyWith<_EligibilityResponseFinancial>
       get copyWith => __$EligibilityResponseFinancialCopyWithImpl<
@@ -5180,6 +5200,7 @@ abstract class _EligibilityResponseFinancial
   @override
   Money get usedMoney;
   @override
+  @JsonKey(ignore: true)
   _$EligibilityResponseFinancialCopyWith<_EligibilityResponseFinancial>
       get copyWith;
 }
@@ -5215,6 +5236,7 @@ mixin _$EligibilityResponseError {
   CodeableConcept get code;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EligibilityResponseErrorCopyWith<EligibilityResponseError> get copyWith;
 }
 
@@ -5323,6 +5345,7 @@ class _$_EligibilityResponseError extends _EligibilityResponseError {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(code);
 
+  @JsonKey(ignore: true)
   @override
   _$EligibilityResponseErrorCopyWith<_EligibilityResponseError> get copyWith =>
       __$EligibilityResponseErrorCopyWithImpl<_EligibilityResponseError>(
@@ -5345,6 +5368,7 @@ abstract class _EligibilityResponseError extends EligibilityResponseError {
   @override
   CodeableConcept get code;
   @override
+  @JsonKey(ignore: true)
   _$EligibilityResponseErrorCopyWith<_EligibilityResponseError> get copyWith;
 }
 
@@ -5451,6 +5475,7 @@ mixin _$EnrollmentRequest {
   Reference get coverage;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EnrollmentRequestCopyWith<EnrollmentRequest> get copyWith;
 }
 
@@ -6015,6 +6040,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(coverage);
 
+  @JsonKey(ignore: true)
   @override
   _$EnrollmentRequestCopyWith<_EnrollmentRequest> get copyWith =>
       __$EnrollmentRequestCopyWithImpl<_EnrollmentRequest>(this, _$identity);
@@ -6108,6 +6134,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   @override
   Reference get coverage;
   @override
+  @JsonKey(ignore: true)
   _$EnrollmentRequestCopyWith<_EnrollmentRequest> get copyWith;
 }
 
@@ -6222,6 +6249,7 @@ mixin _$EnrollmentResponse {
   Reference get requestOrganization;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EnrollmentResponseCopyWith<EnrollmentResponse> get copyWith;
 }
 
@@ -6843,6 +6871,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
       const DeepCollectionEquality().hash(requestProvider) ^
       const DeepCollectionEquality().hash(requestOrganization);
 
+  @JsonKey(ignore: true)
   @override
   _$EnrollmentResponseCopyWith<_EnrollmentResponse> get copyWith =>
       __$EnrollmentResponseCopyWithImpl<_EnrollmentResponse>(this, _$identity);
@@ -6944,5 +6973,6 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   @override
   Reference get requestOrganization;
   @override
+  @JsonKey(ignore: true)
   _$EnrollmentResponseCopyWith<_EnrollmentResponse> get copyWith;
 }

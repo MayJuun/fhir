@@ -61,6 +61,7 @@ mixin _$Population {
   CodeableConcept get physiologicalCondition;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PopulationCopyWith<Population> get copyWith;
 }
 
@@ -327,6 +328,7 @@ class _$_Population extends _Population {
       const DeepCollectionEquality().hash(race) ^
       const DeepCollectionEquality().hash(physiologicalCondition);
 
+  @JsonKey(ignore: true)
   @override
   _$PopulationCopyWith<_Population> get copyWith =>
       __$PopulationCopyWithImpl<_Population>(this, _$identity);
@@ -370,6 +372,7 @@ abstract class _Population extends Population {
   @override
   CodeableConcept get physiologicalCondition;
   @override
+  @JsonKey(ignore: true)
   _$PopulationCopyWith<_Population> get copyWith;
 }
 
@@ -427,6 +430,7 @@ mixin _$ProductShelfLife {
   List<CodeableConcept> get specialPrecautionsForStorage;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProductShelfLifeCopyWith<ProductShelfLife> get copyWith;
 }
 
@@ -681,6 +685,7 @@ class _$_ProductShelfLife extends _ProductShelfLife {
       const DeepCollectionEquality().hash(periodStringElement) ^
       const DeepCollectionEquality().hash(specialPrecautionsForStorage);
 
+  @JsonKey(ignore: true)
   @override
   _$ProductShelfLifeCopyWith<_ProductShelfLife> get copyWith =>
       __$ProductShelfLifeCopyWithImpl<_ProductShelfLife>(this, _$identity);
@@ -726,6 +731,7 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   @override
   List<CodeableConcept> get specialPrecautionsForStorage;
   @override
+  @JsonKey(ignore: true)
   _$ProductShelfLifeCopyWith<_ProductShelfLife> get copyWith;
 }
 
@@ -812,6 +818,7 @@ mixin _$ProdCharacteristic {
   CodeableConcept get scoring;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProdCharacteristicCopyWith<ProdCharacteristic> get copyWith;
 }
 
@@ -1245,6 +1252,7 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
       const DeepCollectionEquality().hash(image) ^
       const DeepCollectionEquality().hash(scoring);
 
+  @JsonKey(ignore: true)
   @override
   _$ProdCharacteristicCopyWith<_ProdCharacteristic> get copyWith =>
       __$ProdCharacteristicCopyWithImpl<_ProdCharacteristic>(this, _$identity);
@@ -1318,6 +1326,7 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   @override
   CodeableConcept get scoring;
   @override
+  @JsonKey(ignore: true)
   _$ProdCharacteristicCopyWith<_ProdCharacteristic> get copyWith;
 }
 
@@ -1378,6 +1387,7 @@ mixin _$MarketingStatus {
   Element get restoreDateElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MarketingStatusCopyWith<MarketingStatus> get copyWith;
 }
 
@@ -1666,6 +1676,7 @@ class _$_MarketingStatus extends _MarketingStatus {
       const DeepCollectionEquality().hash(restoreDate) ^
       const DeepCollectionEquality().hash(restoreDateElement);
 
+  @JsonKey(ignore: true)
   @override
   _$MarketingStatusCopyWith<_MarketingStatus> get copyWith =>
       __$MarketingStatusCopyWithImpl<_MarketingStatus>(this, _$identity);
@@ -1714,6 +1725,7 @@ abstract class _MarketingStatus extends MarketingStatus {
   @JsonKey(name: '_restoreDate')
   Element get restoreDateElement;
   @override
+  @JsonKey(ignore: true)
   _$MarketingStatusCopyWith<_MarketingStatus> get copyWith;
 }
 
@@ -1971,6 +1983,7 @@ mixin _$Citation {
   CitationMedlinePubMed get medlinePubMed;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationCopyWith<Citation> get copyWith;
 }
 
@@ -3454,6 +3467,7 @@ class _$_Citation extends _Citation {
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(medlinePubMed);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationCopyWith<_Citation> get copyWith =>
       __$CitationCopyWithImpl<_Citation>(this, _$identity);
@@ -3697,6 +3711,7 @@ abstract class _Citation extends Citation {
   @override
   CitationMedlinePubMed get medlinePubMed;
   @override
+  @JsonKey(ignore: true)
   _$CitationCopyWith<_Citation> get copyWith;
 }
 
@@ -3748,6 +3763,7 @@ mixin _$CitationSummary {
   Element get textElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationSummaryCopyWith<CitationSummary> get copyWith;
 }
 
@@ -3946,6 +3962,7 @@ class _$_CitationSummary extends _CitationSummary {
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(textElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationSummaryCopyWith<_CitationSummary> get copyWith =>
       __$CitationSummaryCopyWithImpl<_CitationSummary>(this, _$identity);
@@ -3984,6 +4001,7 @@ abstract class _CitationSummary extends CitationSummary {
   @JsonKey(name: '_text')
   Element get textElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationSummaryCopyWith<_CitationSummary> get copyWith;
 }
 
@@ -4039,6 +4057,7 @@ mixin _$CitationVariantCitation {
   Reference get baseCitation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationVariantCitationCopyWith<CitationVariantCitation> get copyWith;
 }
 
@@ -4270,6 +4289,7 @@ class _$_CitationVariantCitation extends _CitationVariantCitation {
       const DeepCollectionEquality().hash(valueElement) ^
       const DeepCollectionEquality().hash(baseCitation);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationVariantCitationCopyWith<_CitationVariantCitation> get copyWith =>
       __$CitationVariantCitationCopyWithImpl<_CitationVariantCitation>(
@@ -4312,6 +4332,7 @@ abstract class _CitationVariantCitation extends CitationVariantCitation {
   @override
   Reference get baseCitation;
   @override
+  @JsonKey(ignore: true)
   _$CitationVariantCitationCopyWith<_CitationVariantCitation> get copyWith;
 }
 
@@ -4373,6 +4394,7 @@ mixin _$CitationJournal {
   Element get titleElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationJournalCopyWith<CitationJournal> get copyWith;
 }
 
@@ -4639,6 +4661,7 @@ class _$_CitationJournal extends _CitationJournal {
       const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(titleElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationJournalCopyWith<_CitationJournal> get copyWith =>
       __$CitationJournalCopyWithImpl<_CitationJournal>(this, _$identity);
@@ -4687,6 +4710,7 @@ abstract class _CitationJournal extends CitationJournal {
   @JsonKey(name: '_title')
   Element get titleElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationJournalCopyWith<_CitationJournal> get copyWith;
 }
 
@@ -4748,6 +4772,7 @@ mixin _$CitationJournalIssue {
   CitationPublicationDate get publicationDate;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationJournalIssueCopyWith<CitationJournalIssue> get copyWith;
 }
 
@@ -5027,6 +5052,7 @@ class _$_CitationJournalIssue extends _CitationJournalIssue {
       const DeepCollectionEquality().hash(issueElement) ^
       const DeepCollectionEquality().hash(publicationDate);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationJournalIssueCopyWith<_CitationJournalIssue> get copyWith =>
       __$CitationJournalIssueCopyWithImpl<_CitationJournalIssue>(
@@ -5076,6 +5102,7 @@ abstract class _CitationJournalIssue extends CitationJournalIssue {
   @override
   CitationPublicationDate get publicationDate;
   @override
+  @JsonKey(ignore: true)
   _$CitationJournalIssueCopyWith<_CitationJournalIssue> get copyWith;
 }
 
@@ -5160,6 +5187,7 @@ mixin _$CitationPublicationDate {
   Element get textElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationPublicationDateCopyWith<CitationPublicationDate> get copyWith;
 }
 
@@ -5543,6 +5571,7 @@ class _$_CitationPublicationDate extends _CitationPublicationDate {
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(textElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationPublicationDateCopyWith<_CitationPublicationDate> get copyWith =>
       __$CitationPublicationDateCopyWithImpl<_CitationPublicationDate>(
@@ -5615,6 +5644,7 @@ abstract class _CitationPublicationDate extends CitationPublicationDate {
   @JsonKey(name: '_text')
   Element get textElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationPublicationDateCopyWith<_CitationPublicationDate> get copyWith;
 }
 
@@ -5681,6 +5711,7 @@ mixin _$CitationPublicationInfo {
   Element get pageCountElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationPublicationInfoCopyWith<CitationPublicationInfo> get copyWith;
 }
 
@@ -5982,6 +6013,7 @@ class _$_CitationPublicationInfo extends _CitationPublicationInfo {
       const DeepCollectionEquality().hash(pageCount) ^
       const DeepCollectionEquality().hash(pageCountElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationPublicationInfoCopyWith<_CitationPublicationInfo> get copyWith =>
       __$CitationPublicationInfoCopyWithImpl<_CitationPublicationInfo>(
@@ -6036,6 +6068,7 @@ abstract class _CitationPublicationInfo extends CitationPublicationInfo {
   @JsonKey(name: '_pageCount')
   Element get pageCountElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationPublicationInfoCopyWith<_CitationPublicationInfo> get copyWith;
 }
 
@@ -6107,6 +6140,7 @@ mixin _$CitationPublishedIn {
   Element get startDateElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationPublishedInCopyWith<CitationPublishedIn> get copyWith;
 }
 
@@ -6444,6 +6478,7 @@ class _$_CitationPublishedIn extends _CitationPublishedIn {
       const DeepCollectionEquality().hash(startDate) ^
       const DeepCollectionEquality().hash(startDateElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationPublishedInCopyWith<_CitationPublishedIn> get copyWith =>
       __$CitationPublishedInCopyWithImpl<_CitationPublishedIn>(
@@ -6504,6 +6539,7 @@ abstract class _CitationPublishedIn extends CitationPublishedIn {
   @JsonKey(name: '_startDate')
   Element get startDateElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationPublishedInCopyWith<_CitationPublishedIn> get copyWith;
 }
 
@@ -6559,6 +6595,7 @@ mixin _$CitationAlternativeTitle {
   Element get titleElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationAlternativeTitleCopyWith<CitationAlternativeTitle> get copyWith;
 }
 
@@ -6788,6 +6825,7 @@ class _$_CitationAlternativeTitle extends _CitationAlternativeTitle {
       const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(titleElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationAlternativeTitleCopyWith<_CitationAlternativeTitle> get copyWith =>
       __$CitationAlternativeTitleCopyWithImpl<_CitationAlternativeTitle>(
@@ -6831,6 +6869,7 @@ abstract class _CitationAlternativeTitle extends CitationAlternativeTitle {
   @JsonKey(name: '_title')
   Element get titleElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationAlternativeTitleCopyWith<_CitationAlternativeTitle> get copyWith;
 }
 
@@ -6893,6 +6932,7 @@ mixin _$CitationPagination {
   Element get lastPageElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationPaginationCopyWith<CitationPagination> get copyWith;
 }
 
@@ -7159,6 +7199,7 @@ class _$_CitationPagination extends _CitationPagination {
       const DeepCollectionEquality().hash(lastPage) ^
       const DeepCollectionEquality().hash(lastPageElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationPaginationCopyWith<_CitationPagination> get copyWith =>
       __$CitationPaginationCopyWithImpl<_CitationPagination>(this, _$identity);
@@ -7209,6 +7250,7 @@ abstract class _CitationPagination extends CitationPagination {
   @JsonKey(name: '_lastPage')
   Element get lastPageElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationPaginationCopyWith<_CitationPagination> get copyWith;
 }
 
@@ -7260,6 +7302,7 @@ mixin _$CitationArticleUrl {
   Element get urlElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationArticleUrlCopyWith<CitationArticleUrl> get copyWith;
 }
 
@@ -7458,6 +7501,7 @@ class _$_CitationArticleUrl extends _CitationArticleUrl {
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(urlElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationArticleUrlCopyWith<_CitationArticleUrl> get copyWith =>
       __$CitationArticleUrlCopyWithImpl<_CitationArticleUrl>(this, _$identity);
@@ -7496,6 +7540,7 @@ abstract class _CitationArticleUrl extends CitationArticleUrl {
   @JsonKey(name: '_url')
   Element get urlElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationArticleUrlCopyWith<_CitationArticleUrl> get copyWith;
 }
 
@@ -7559,6 +7604,7 @@ mixin _$CitationAlternativeAbstract {
   Element get abstractCopyrightElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationAlternativeAbstractCopyWith<CitationAlternativeAbstract>
       get copyWith;
 }
@@ -7845,6 +7891,7 @@ class _$_CitationAlternativeAbstract extends _CitationAlternativeAbstract {
       const DeepCollectionEquality().hash(abstractCopyright) ^
       const DeepCollectionEquality().hash(abstractCopyrightElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationAlternativeAbstractCopyWith<_CitationAlternativeAbstract>
       get copyWith => __$CitationAlternativeAbstractCopyWithImpl<
@@ -7900,6 +7947,7 @@ abstract class _CitationAlternativeAbstract
   @JsonKey(name: '_abstractCopyright')
   Element get abstractCopyrightElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationAlternativeAbstractCopyWith<_CitationAlternativeAbstract>
       get copyWith;
 }
@@ -7956,6 +8004,7 @@ mixin _$CitationContributorship {
   List<CitationSummary1> get summary;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationContributorshipCopyWith<CitationContributorship> get copyWith;
 }
 
@@ -8161,6 +8210,7 @@ class _$_CitationContributorship extends _CitationContributorship {
       const DeepCollectionEquality().hash(entry) ^
       const DeepCollectionEquality().hash(summary);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationContributorshipCopyWith<_CitationContributorship> get copyWith =>
       __$CitationContributorshipCopyWithImpl<_CitationContributorship>(
@@ -8203,6 +8253,7 @@ abstract class _CitationContributorship extends CitationContributorship {
   @override
   List<CitationSummary1> get summary;
   @override
+  @JsonKey(ignore: true)
   _$CitationContributorshipCopyWith<_CitationContributorship> get copyWith;
 }
 
@@ -8297,6 +8348,7 @@ mixin _$CitationEntry {
   Element get listOrderElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationEntryCopyWith<CitationEntry> get copyWith;
 }
 
@@ -8767,6 +8819,7 @@ class _$_CitationEntry extends _CitationEntry {
       const DeepCollectionEquality().hash(listOrder) ^
       const DeepCollectionEquality().hash(listOrderElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationEntryCopyWith<_CitationEntry> get copyWith =>
       __$CitationEntryCopyWithImpl<_CitationEntry>(this, _$identity);
@@ -8854,6 +8907,7 @@ abstract class _CitationEntry extends CitationEntry {
   @JsonKey(name: '_listOrder')
   Element get listOrderElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationEntryCopyWith<_CitationEntry> get copyWith;
 }
 
@@ -8913,6 +8967,7 @@ mixin _$CitationAffiliationInfo {
   List<Identifier> get identifier;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationAffiliationInfoCopyWith<CitationAffiliationInfo> get copyWith;
 }
 
@@ -9150,6 +9205,7 @@ class _$_CitationAffiliationInfo extends _CitationAffiliationInfo {
       const DeepCollectionEquality().hash(roleElement) ^
       const DeepCollectionEquality().hash(identifier);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationAffiliationInfoCopyWith<_CitationAffiliationInfo> get copyWith =>
       __$CitationAffiliationInfoCopyWithImpl<_CitationAffiliationInfo>(
@@ -9196,6 +9252,7 @@ abstract class _CitationAffiliationInfo extends CitationAffiliationInfo {
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(ignore: true)
   _$CitationAffiliationInfoCopyWith<_CitationAffiliationInfo> get copyWith;
 }
 
@@ -9253,6 +9310,7 @@ mixin _$CitationSummary1 {
   Element get valueElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationSummary1CopyWith<CitationSummary1> get copyWith;
 }
 
@@ -9503,6 +9561,7 @@ class _$_CitationSummary1 extends _CitationSummary1 {
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationSummary1CopyWith<_CitationSummary1> get copyWith =>
       __$CitationSummary1CopyWithImpl<_CitationSummary1>(this, _$identity);
@@ -9547,6 +9606,7 @@ abstract class _CitationSummary1 extends CitationSummary1 {
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationSummary1CopyWith<_CitationSummary1> get copyWith;
 }
 
@@ -9604,6 +9664,7 @@ mixin _$CitationAlternativeForm {
   CitationPublicationInfo1 get publicationInfo;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationAlternativeFormCopyWith<CitationAlternativeForm> get copyWith;
 }
 
@@ -9886,6 +9947,7 @@ class _$_CitationAlternativeForm extends _CitationAlternativeForm {
       const DeepCollectionEquality().hash(pagination) ^
       const DeepCollectionEquality().hash(publicationInfo);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationAlternativeFormCopyWith<_CitationAlternativeForm> get copyWith =>
       __$CitationAlternativeFormCopyWithImpl<_CitationAlternativeForm>(
@@ -9930,6 +9992,7 @@ abstract class _CitationAlternativeForm extends CitationAlternativeForm {
   @override
   CitationPublicationInfo1 get publicationInfo;
   @override
+  @JsonKey(ignore: true)
   _$CitationAlternativeFormCopyWith<_CitationAlternativeForm> get copyWith;
 }
 
@@ -9992,6 +10055,7 @@ mixin _$CitationJournalIssue1 {
   CitationPublicationDate1 get publicationDate;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationJournalIssue1CopyWith<CitationJournalIssue1> get copyWith;
 }
 
@@ -10271,6 +10335,7 @@ class _$_CitationJournalIssue1 extends _CitationJournalIssue1 {
       const DeepCollectionEquality().hash(issueElement) ^
       const DeepCollectionEquality().hash(publicationDate);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationJournalIssue1CopyWith<_CitationJournalIssue1> get copyWith =>
       __$CitationJournalIssue1CopyWithImpl<_CitationJournalIssue1>(
@@ -10320,6 +10385,7 @@ abstract class _CitationJournalIssue1 extends CitationJournalIssue1 {
   @override
   CitationPublicationDate1 get publicationDate;
   @override
+  @JsonKey(ignore: true)
   _$CitationJournalIssue1CopyWith<_CitationJournalIssue1> get copyWith;
 }
 
@@ -10404,6 +10470,7 @@ mixin _$CitationPublicationDate1 {
   Element get textElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationPublicationDate1CopyWith<CitationPublicationDate1> get copyWith;
 }
 
@@ -10787,6 +10854,7 @@ class _$_CitationPublicationDate1 extends _CitationPublicationDate1 {
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(textElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationPublicationDate1CopyWith<_CitationPublicationDate1> get copyWith =>
       __$CitationPublicationDate1CopyWithImpl<_CitationPublicationDate1>(
@@ -10859,6 +10927,7 @@ abstract class _CitationPublicationDate1 extends CitationPublicationDate1 {
   @JsonKey(name: '_text')
   Element get textElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationPublicationDate1CopyWith<_CitationPublicationDate1> get copyWith;
 }
 
@@ -10921,6 +10990,7 @@ mixin _$CitationPagination1 {
   Element get lastPageElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationPagination1CopyWith<CitationPagination1> get copyWith;
 }
 
@@ -11187,6 +11257,7 @@ class _$_CitationPagination1 extends _CitationPagination1 {
       const DeepCollectionEquality().hash(lastPage) ^
       const DeepCollectionEquality().hash(lastPageElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationPagination1CopyWith<_CitationPagination1> get copyWith =>
       __$CitationPagination1CopyWithImpl<_CitationPagination1>(
@@ -11238,6 +11309,7 @@ abstract class _CitationPagination1 extends CitationPagination1 {
   @JsonKey(name: '_lastPage')
   Element get lastPageElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationPagination1CopyWith<_CitationPagination1> get copyWith;
 }
 
@@ -11304,6 +11376,7 @@ mixin _$CitationPublicationInfo1 {
   Element get pageCountElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationPublicationInfo1CopyWith<CitationPublicationInfo1> get copyWith;
 }
 
@@ -11605,6 +11678,7 @@ class _$_CitationPublicationInfo1 extends _CitationPublicationInfo1 {
       const DeepCollectionEquality().hash(pageCount) ^
       const DeepCollectionEquality().hash(pageCountElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationPublicationInfo1CopyWith<_CitationPublicationInfo1> get copyWith =>
       __$CitationPublicationInfo1CopyWithImpl<_CitationPublicationInfo1>(
@@ -11659,6 +11733,7 @@ abstract class _CitationPublicationInfo1 extends CitationPublicationInfo1 {
   @JsonKey(name: '_pageCount')
   Element get pageCountElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationPublicationInfo1CopyWith<_CitationPublicationInfo1> get copyWith;
 }
 
@@ -11727,6 +11802,7 @@ mixin _$CitationPublishedIn1 {
   Element get startDateElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationPublishedIn1CopyWith<CitationPublishedIn1> get copyWith;
 }
 
@@ -12047,6 +12123,7 @@ class _$_CitationPublishedIn1 extends _CitationPublishedIn1 {
       const DeepCollectionEquality().hash(startDate) ^
       const DeepCollectionEquality().hash(startDateElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationPublishedIn1CopyWith<_CitationPublishedIn1> get copyWith =>
       __$CitationPublishedIn1CopyWithImpl<_CitationPublishedIn1>(
@@ -12104,6 +12181,7 @@ abstract class _CitationPublishedIn1 extends CitationPublishedIn1 {
   @JsonKey(name: '_startDate')
   Element get startDateElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationPublishedIn1CopyWith<_CitationPublishedIn1> get copyWith;
 }
 
@@ -12155,6 +12233,7 @@ mixin _$CitationKeywordList {
   List<CitationKeyword> get keyword;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationKeywordListCopyWith<CitationKeywordList> get copyWith;
 }
 
@@ -12347,6 +12426,7 @@ class _$_CitationKeywordList extends _CitationKeywordList {
       const DeepCollectionEquality().hash(ownerElement) ^
       const DeepCollectionEquality().hash(keyword);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationKeywordListCopyWith<_CitationKeywordList> get copyWith =>
       __$CitationKeywordListCopyWithImpl<_CitationKeywordList>(
@@ -12386,6 +12466,7 @@ abstract class _CitationKeywordList extends CitationKeywordList {
   @override
   List<CitationKeyword> get keyword;
   @override
+  @JsonKey(ignore: true)
   _$CitationKeywordListCopyWith<_CitationKeywordList> get copyWith;
 }
 
@@ -12441,6 +12522,7 @@ mixin _$CitationKeyword {
   Element get valueElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationKeywordCopyWith<CitationKeyword> get copyWith;
 }
 
@@ -12662,6 +12744,7 @@ class _$_CitationKeyword extends _CitationKeyword {
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationKeywordCopyWith<_CitationKeyword> get copyWith =>
       __$CitationKeywordCopyWithImpl<_CitationKeyword>(this, _$identity);
@@ -12704,6 +12787,7 @@ abstract class _CitationKeyword extends CitationKeyword {
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationKeywordCopyWith<_CitationKeyword> get copyWith;
 }
 
@@ -12796,6 +12880,7 @@ mixin _$CitationMedlinePubMed {
   List<CitationRelatedArticle> get relatedArticle;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationMedlinePubMedCopyWith<CitationMedlinePubMed> get copyWith;
 }
 
@@ -13276,6 +13361,7 @@ class _$_CitationMedlinePubMed extends _CitationMedlinePubMed {
       const DeepCollectionEquality().hash(publicationState) ^
       const DeepCollectionEquality().hash(relatedArticle);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationMedlinePubMedCopyWith<_CitationMedlinePubMed> get copyWith =>
       __$CitationMedlinePubMedCopyWithImpl<_CitationMedlinePubMed>(
@@ -13355,6 +13441,7 @@ abstract class _CitationMedlinePubMed extends CitationMedlinePubMed {
   @override
   List<CitationRelatedArticle> get relatedArticle;
   @override
+  @JsonKey(ignore: true)
   _$CitationMedlinePubMedCopyWith<_CitationMedlinePubMed> get copyWith;
 }
 
@@ -13407,6 +13494,7 @@ mixin _$CitationPubMedPubDate {
   Element get dateElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationPubMedPubDateCopyWith<CitationPubMedPubDate> get copyWith;
 }
 
@@ -13610,6 +13698,7 @@ class _$_CitationPubMedPubDate extends _CitationPubMedPubDate {
       const DeepCollectionEquality().hash(date) ^
       const DeepCollectionEquality().hash(dateElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationPubMedPubDateCopyWith<_CitationPubMedPubDate> get copyWith =>
       __$CitationPubMedPubDateCopyWithImpl<_CitationPubMedPubDate>(
@@ -13649,6 +13738,7 @@ abstract class _CitationPubMedPubDate extends CitationPubMedPubDate {
   @JsonKey(name: '_date')
   Element get dateElement;
   @override
+  @JsonKey(ignore: true)
   _$CitationPubMedPubDateCopyWith<_CitationPubMedPubDate> get copyWith;
 }
 
@@ -13704,6 +13794,7 @@ mixin _$CitationRelatedArticle {
   List<Identifier> get identifier;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CitationRelatedArticleCopyWith<CitationRelatedArticle> get copyWith;
 }
 
@@ -13932,6 +14023,7 @@ class _$_CitationRelatedArticle extends _CitationRelatedArticle {
       const DeepCollectionEquality().hash(citationMarkdownElement) ^
       const DeepCollectionEquality().hash(identifier);
 
+  @JsonKey(ignore: true)
   @override
   _$CitationRelatedArticleCopyWith<_CitationRelatedArticle> get copyWith =>
       __$CitationRelatedArticleCopyWithImpl<_CitationRelatedArticle>(
@@ -13974,6 +14066,7 @@ abstract class _CitationRelatedArticle extends CitationRelatedArticle {
   @override
   List<Identifier> get identifier;
   @override
+  @JsonKey(ignore: true)
   _$CitationRelatedArticleCopyWith<_CitationRelatedArticle> get copyWith;
 }
 
@@ -14202,6 +14295,7 @@ mixin _$EvidenceReport {
   List<EvidenceReportSection> get section;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceReportCopyWith<EvidenceReport> get copyWith;
 }
 
@@ -15385,6 +15479,7 @@ class _$_EvidenceReport extends _EvidenceReport {
       const DeepCollectionEquality().hash(relatesTo) ^
       const DeepCollectionEquality().hash(section);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceReportCopyWith<_EvidenceReport> get copyWith =>
       __$EvidenceReportCopyWithImpl<_EvidenceReport>(this, _$identity);
@@ -15600,6 +15695,7 @@ abstract class _EvidenceReport extends EvidenceReport {
   @override
   List<EvidenceReportSection> get section;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceReportCopyWith<_EvidenceReport> get copyWith;
 }
 
@@ -15648,6 +15744,7 @@ mixin _$EvidenceReportSubject {
   List<Annotation> get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceReportSubjectCopyWith<EvidenceReportSubject> get copyWith;
 }
 
@@ -15807,6 +15904,7 @@ class _$_EvidenceReportSubject extends _EvidenceReportSubject {
       const DeepCollectionEquality().hash(characteristic) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceReportSubjectCopyWith<_EvidenceReportSubject> get copyWith =>
       __$EvidenceReportSubjectCopyWithImpl<_EvidenceReportSubject>(
@@ -15842,6 +15940,7 @@ abstract class _EvidenceReportSubject extends EvidenceReportSubject {
   @override
   List<Annotation> get note;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceReportSubjectCopyWith<_EvidenceReportSubject> get copyWith;
 }
 
@@ -15916,6 +16015,7 @@ mixin _$EvidenceReportCharacteristic {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceReportCharacteristicCopyWith<EvidenceReportCharacteristic>
       get copyWith;
 }
@@ -16314,6 +16414,7 @@ class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
       const DeepCollectionEquality().hash(excludeElement) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceReportCharacteristicCopyWith<_EvidenceReportCharacteristic>
       get copyWith => __$EvidenceReportCharacteristicCopyWithImpl<
@@ -16376,6 +16477,7 @@ abstract class _EvidenceReportCharacteristic
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceReportCharacteristicCopyWith<_EvidenceReportCharacteristic>
       get copyWith;
 }
@@ -16436,6 +16538,7 @@ mixin _$EvidenceReportRelatesTo {
   Reference get targetReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceReportRelatesToCopyWith<EvidenceReportRelatesTo> get copyWith;
 }
 
@@ -16677,6 +16780,7 @@ class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
       const DeepCollectionEquality().hash(targetIdentifier) ^
       const DeepCollectionEquality().hash(targetReference);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceReportRelatesToCopyWith<_EvidenceReportRelatesTo> get copyWith =>
       __$EvidenceReportRelatesToCopyWithImpl<_EvidenceReportRelatesTo>(
@@ -16723,6 +16827,7 @@ abstract class _EvidenceReportRelatesTo extends EvidenceReportRelatesTo {
   @override
   Reference get targetReference;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceReportRelatesToCopyWith<_EvidenceReportRelatesTo> get copyWith;
 }
 
@@ -16806,6 +16911,7 @@ mixin _$EvidenceReportSection {
   List<EvidenceReportSection> get section;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceReportSectionCopyWith<EvidenceReportSection> get copyWith;
 }
 
@@ -17224,6 +17330,7 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
       const DeepCollectionEquality().hash(emptyReason) ^
       const DeepCollectionEquality().hash(section);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceReportSectionCopyWith<_EvidenceReportSection> get copyWith =>
       __$EvidenceReportSectionCopyWithImpl<_EvidenceReportSection>(
@@ -17294,5 +17401,6 @@ abstract class _EvidenceReportSection extends EvidenceReportSection {
   @override
   List<EvidenceReportSection> get section;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceReportSectionCopyWith<_EvidenceReportSection> get copyWith;
 }

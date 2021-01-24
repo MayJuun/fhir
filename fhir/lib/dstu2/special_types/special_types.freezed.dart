@@ -70,6 +70,7 @@ mixin _$Meta {
   List<Coding> get tag;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MetaCopyWith<Meta> get copyWith;
 }
 
@@ -327,6 +328,7 @@ class _$_Meta extends _Meta {
       const DeepCollectionEquality().hash(security) ^
       const DeepCollectionEquality().hash(tag);
 
+  @JsonKey(ignore: true)
   @override
   _$MetaCopyWith<_Meta> get copyWith =>
       __$MetaCopyWithImpl<_Meta>(this, _$identity);
@@ -378,6 +380,7 @@ abstract class _Meta extends Meta {
   @override
   List<Coding> get tag;
   @override
+  @JsonKey(ignore: true)
   _$MetaCopyWith<_Meta> get copyWith;
 }
 
@@ -434,6 +437,7 @@ mixin _$Reference {
   Element get displayElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ReferenceCopyWith<Reference> get copyWith;
 }
 
@@ -650,6 +654,7 @@ class _$_Reference extends _Reference {
       const DeepCollectionEquality().hash(display) ^
       const DeepCollectionEquality().hash(displayElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ReferenceCopyWith<_Reference> get copyWith =>
       __$ReferenceCopyWithImpl<_Reference>(this, _$identity);
@@ -693,6 +698,7 @@ abstract class _Reference extends Reference {
   @JsonKey(name: '_display')
   Element get displayElement;
   @override
+  @JsonKey(ignore: true)
   _$ReferenceCopyWith<_Reference> get copyWith;
 }
 
@@ -1951,6 +1957,7 @@ mixin _$ElementDefinition {
   List<ElementDefinitionMapping> get mapping;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ElementDefinitionCopyWith<ElementDefinition> get copyWith;
 }
 
@@ -10165,6 +10172,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       const DeepCollectionEquality().hash(binding) ^
       const DeepCollectionEquality().hash(mapping);
 
+  @JsonKey(ignore: true)
   @override
   _$ElementDefinitionCopyWith<_ElementDefinition> get copyWith =>
       __$ElementDefinitionCopyWithImpl<_ElementDefinition>(this, _$identity);
@@ -11410,6 +11418,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   List<ElementDefinitionMapping> get mapping;
   @override
+  @JsonKey(ignore: true)
   _$ElementDefinitionCopyWith<_ElementDefinition> get copyWith;
 }
 
@@ -11471,6 +11480,7 @@ mixin _$Narrative {
   String get div;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NarrativeCopyWith<Narrative> get copyWith;
 }
 
@@ -11675,6 +11685,7 @@ class _$_Narrative extends _Narrative {
       const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(div);
 
+  @JsonKey(ignore: true)
   @override
   _$NarrativeCopyWith<_Narrative> get copyWith =>
       __$NarrativeCopyWithImpl<_Narrative>(this, _$identity);
@@ -11723,6 +11734,7 @@ abstract class _Narrative extends Narrative {
   @JsonKey(required: true)
   String get div;
   @override
+  @JsonKey(ignore: true)
   _$NarrativeCopyWith<_Narrative> get copyWith;
 }
 
@@ -11793,6 +11805,7 @@ mixin _$ElementDefinitionSlicing {
   Element get rulesElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ElementDefinitionSlicingCopyWith<ElementDefinitionSlicing> get copyWith;
 }
 
@@ -12077,6 +12090,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
       const DeepCollectionEquality().hash(rules) ^
       const DeepCollectionEquality().hash(rulesElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ElementDefinitionSlicingCopyWith<_ElementDefinitionSlicing> get copyWith =>
       __$ElementDefinitionSlicingCopyWithImpl<_ElementDefinitionSlicing>(
@@ -12134,6 +12148,7 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
   @JsonKey(name: '_rules')
   Element get rulesElement;
   @override
+  @JsonKey(ignore: true)
   _$ElementDefinitionSlicingCopyWith<_ElementDefinitionSlicing> get copyWith;
 }
 
@@ -12197,6 +12212,7 @@ mixin _$ElementDefinitionBase {
   Element get maxElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ElementDefinitionBaseCopyWith<ElementDefinitionBase> get copyWith;
 }
 
@@ -12441,6 +12457,7 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
       const DeepCollectionEquality().hash(max) ^
       const DeepCollectionEquality().hash(maxElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ElementDefinitionBaseCopyWith<_ElementDefinitionBase> get copyWith =>
       __$ElementDefinitionBaseCopyWithImpl<_ElementDefinitionBase>(
@@ -12491,6 +12508,7 @@ abstract class _ElementDefinitionBase extends ElementDefinitionBase {
   @JsonKey(name: '_max')
   Element get maxElement;
   @override
+  @JsonKey(ignore: true)
   _$ElementDefinitionBaseCopyWith<_ElementDefinitionBase> get copyWith;
 }
 
@@ -12551,6 +12569,7 @@ mixin _$ElementDefinitionType {
   List<String> get fhirElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ElementDefinitionTypeCopyWith<ElementDefinitionType> get copyWith;
 }
 
@@ -12788,6 +12807,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
       const DeepCollectionEquality().hash(aggregationElement) ^
       const DeepCollectionEquality().hash(fhirElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ElementDefinitionTypeCopyWith<_ElementDefinitionType> get copyWith =>
       __$ElementDefinitionTypeCopyWithImpl<_ElementDefinitionType>(
@@ -12836,6 +12856,7 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
   @JsonKey(name: 'fhir_comments')
   List<String> get fhirElement;
   @override
+  @JsonKey(ignore: true)
   _$ElementDefinitionTypeCopyWith<_ElementDefinitionType> get copyWith;
 }
 
@@ -12871,6 +12892,7 @@ mixin _$TypeCodeExtension {
   List<FhirExtension> get extension_;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TypeCodeExtensionCopyWith<TypeCodeExtension> get copyWith;
 }
 
@@ -12968,6 +12990,7 @@ class _$_TypeCodeExtension extends _TypeCodeExtension {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(extension_);
 
+  @JsonKey(ignore: true)
   @override
   _$TypeCodeExtensionCopyWith<_TypeCodeExtension> get copyWith =>
       __$TypeCodeExtensionCopyWithImpl<_TypeCodeExtension>(this, _$identity);
@@ -12991,6 +13014,7 @@ abstract class _TypeCodeExtension extends TypeCodeExtension {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(ignore: true)
   _$TypeCodeExtensionCopyWith<_TypeCodeExtension> get copyWith;
 }
 
@@ -13083,6 +13107,7 @@ mixin _$ElementDefinitionConstraint {
   Element get xpathElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ElementDefinitionConstraintCopyWith<ElementDefinitionConstraint>
       get copyWith;
 }
@@ -13468,6 +13493,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
       const DeepCollectionEquality().hash(xpath) ^
       const DeepCollectionEquality().hash(xpathElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ElementDefinitionConstraintCopyWith<_ElementDefinitionConstraint>
       get copyWith => __$ElementDefinitionConstraintCopyWithImpl<
@@ -13548,6 +13574,7 @@ abstract class _ElementDefinitionConstraint
   @JsonKey(name: '_xpath')
   Element get xpathElement;
   @override
+  @JsonKey(ignore: true)
   _$ElementDefinitionConstraintCopyWith<_ElementDefinitionConstraint>
       get copyWith;
 }
@@ -13616,6 +13643,7 @@ mixin _$ElementDefinitionBinding {
   Reference get valueSetReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ElementDefinitionBindingCopyWith<ElementDefinitionBinding> get copyWith;
 }
 
@@ -13888,6 +13916,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
       const DeepCollectionEquality().hash(valueSetUri) ^
       const DeepCollectionEquality().hash(valueSetReference);
 
+  @JsonKey(ignore: true)
   @override
   _$ElementDefinitionBindingCopyWith<_ElementDefinitionBinding> get copyWith =>
       __$ElementDefinitionBindingCopyWithImpl<_ElementDefinitionBinding>(
@@ -13942,6 +13971,7 @@ abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
   @override
   Reference get valueSetReference;
   @override
+  @JsonKey(ignore: true)
   _$ElementDefinitionBindingCopyWith<_ElementDefinitionBinding> get copyWith;
 }
 
@@ -14008,6 +14038,7 @@ mixin _$ElementDefinitionMapping {
   Element get mapElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ElementDefinitionMappingCopyWith<ElementDefinitionMapping> get copyWith;
 }
 
@@ -14275,6 +14306,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
       const DeepCollectionEquality().hash(map) ^
       const DeepCollectionEquality().hash(mapElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ElementDefinitionMappingCopyWith<_ElementDefinitionMapping> get copyWith =>
       __$ElementDefinitionMappingCopyWithImpl<_ElementDefinitionMapping>(
@@ -14328,5 +14360,6 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
   @JsonKey(name: '_map')
   Element get mapElement;
   @override
+  @JsonKey(ignore: true)
   _$ElementDefinitionMappingCopyWith<_ElementDefinitionMapping> get copyWith;
 }

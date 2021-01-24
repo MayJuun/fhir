@@ -127,6 +127,7 @@ mixin _$Account {
   Element get descriptionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AccountCopyWith<Account> get copyWith;
 }
 
@@ -789,6 +790,7 @@ class _$_Account extends _Account {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$AccountCopyWith<_Account> get copyWith =>
       __$AccountCopyWithImpl<_Account>(this, _$identity);
@@ -897,6 +899,7 @@ abstract class _Account extends Account {
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
+  @JsonKey(ignore: true)
   _$AccountCopyWith<_Account> get copyWith;
 }
 
@@ -1074,6 +1077,7 @@ mixin _$Claim {
   List<ClaimMissingTeeth> get missingTeeth;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimCopyWith<Claim> get copyWith;
 }
 
@@ -2056,6 +2060,7 @@ class _$_Claim extends _Claim {
       const DeepCollectionEquality().hash(additionalMaterials) ^
       const DeepCollectionEquality().hash(missingTeeth);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimCopyWith<_Claim> get copyWith =>
       __$ClaimCopyWithImpl<_Claim>(this, _$identity);
@@ -2219,6 +2224,7 @@ abstract class _Claim extends Claim {
   @override
   List<ClaimMissingTeeth> get missingTeeth;
   @override
+  @JsonKey(ignore: true)
   _$ClaimCopyWith<_Claim> get copyWith;
 }
 
@@ -2272,6 +2278,7 @@ mixin _$ClaimPayee {
   Reference get person;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimPayeeCopyWith<ClaimPayee> get copyWith;
 }
 
@@ -2507,6 +2514,7 @@ class _$_ClaimPayee extends _ClaimPayee {
       const DeepCollectionEquality().hash(organization) ^
       const DeepCollectionEquality().hash(person);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimPayeeCopyWith<_ClaimPayee> get copyWith =>
       __$ClaimPayeeCopyWithImpl<_ClaimPayee>(this, _$identity);
@@ -2547,6 +2555,7 @@ abstract class _ClaimPayee extends ClaimPayee {
   @override
   Reference get person;
   @override
+  @JsonKey(ignore: true)
   _$ClaimPayeeCopyWith<_ClaimPayee> get copyWith;
 }
 
@@ -2600,6 +2609,7 @@ mixin _$ClaimDiagnosis {
   Coding get diagnosis;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimDiagnosisCopyWith<ClaimDiagnosis> get copyWith;
 }
 
@@ -2806,6 +2816,7 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
       const DeepCollectionEquality().hash(sequenceElement) ^
       const DeepCollectionEquality().hash(diagnosis);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimDiagnosisCopyWith<_ClaimDiagnosis> get copyWith =>
       __$ClaimDiagnosisCopyWithImpl<_ClaimDiagnosis>(this, _$identity);
@@ -2846,6 +2857,7 @@ abstract class _ClaimDiagnosis extends ClaimDiagnosis {
   @JsonKey(required: true)
   Coding get diagnosis;
   @override
+  @JsonKey(ignore: true)
   _$ClaimDiagnosisCopyWith<_ClaimDiagnosis> get copyWith;
 }
 
@@ -2915,6 +2927,7 @@ mixin _$ClaimCoverage {
   Coding get originalRuleset;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimCoverageCopyWith<ClaimCoverage> get copyWith;
 }
 
@@ -3230,6 +3243,7 @@ class _$_ClaimCoverage extends _ClaimCoverage {
       const DeepCollectionEquality().hash(claimResponse) ^
       const DeepCollectionEquality().hash(originalRuleset);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimCoverageCopyWith<_ClaimCoverage> get copyWith =>
       __$ClaimCoverageCopyWithImpl<_ClaimCoverage>(this, _$identity);
@@ -3286,6 +3300,7 @@ abstract class _ClaimCoverage extends ClaimCoverage {
   @override
   Coding get originalRuleset;
   @override
+  @JsonKey(ignore: true)
   _$ClaimCoverageCopyWith<_ClaimCoverage> get copyWith;
 }
 
@@ -3393,6 +3408,7 @@ mixin _$ClaimItem {
   ClaimItemProsthesis get prosthesis;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimItemCopyWith<ClaimItem> get copyWith;
 }
 
@@ -3967,6 +3983,7 @@ class _$_ClaimItem extends _ClaimItem {
       const DeepCollectionEquality().hash(detail) ^
       const DeepCollectionEquality().hash(prosthesis);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimItemCopyWith<_ClaimItem> get copyWith =>
       __$ClaimItemCopyWithImpl<_ClaimItem>(this, _$identity);
@@ -4061,6 +4078,7 @@ abstract class _ClaimItem extends ClaimItem {
   @override
   ClaimItemProsthesis get prosthesis;
   @override
+  @JsonKey(ignore: true)
   _$ClaimItemCopyWith<_ClaimItem> get copyWith;
 }
 
@@ -4143,6 +4161,7 @@ mixin _$ClaimItemDetail {
   List<ClaimDetailSubDetail> get subDetail;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimItemDetailCopyWith<ClaimItemDetail> get copyWith;
 }
 
@@ -4552,6 +4571,7 @@ class _$_ClaimItemDetail extends _ClaimItemDetail {
       const DeepCollectionEquality().hash(udi) ^
       const DeepCollectionEquality().hash(subDetail);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimItemDetailCopyWith<_ClaimItemDetail> get copyWith =>
       __$ClaimItemDetailCopyWithImpl<_ClaimItemDetail>(this, _$identity);
@@ -4621,6 +4641,7 @@ abstract class _ClaimItemDetail extends ClaimItemDetail {
   @override
   List<ClaimDetailSubDetail> get subDetail;
   @override
+  @JsonKey(ignore: true)
   _$ClaimItemDetailCopyWith<_ClaimItemDetail> get copyWith;
 }
 
@@ -4700,6 +4721,7 @@ mixin _$ClaimDetailSubDetail {
   Coding get udi;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimDetailSubDetailCopyWith<ClaimDetailSubDetail> get copyWith;
 }
 
@@ -5092,6 +5114,7 @@ class _$_ClaimDetailSubDetail extends _ClaimDetailSubDetail {
       const DeepCollectionEquality().hash(net) ^
       const DeepCollectionEquality().hash(udi);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimDetailSubDetailCopyWith<_ClaimDetailSubDetail> get copyWith =>
       __$ClaimDetailSubDetailCopyWithImpl<_ClaimDetailSubDetail>(
@@ -5159,6 +5182,7 @@ abstract class _ClaimDetailSubDetail extends ClaimDetailSubDetail {
   @override
   Coding get udi;
   @override
+  @JsonKey(ignore: true)
   _$ClaimDetailSubDetailCopyWith<_ClaimDetailSubDetail> get copyWith;
 }
 
@@ -5209,6 +5233,7 @@ mixin _$ClaimItemProsthesis {
   Coding get priorMaterial;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimItemProsthesisCopyWith<ClaimItemProsthesis> get copyWith;
 }
 
@@ -5397,6 +5422,7 @@ class _$_ClaimItemProsthesis extends _ClaimItemProsthesis {
       const DeepCollectionEquality().hash(priorDate) ^
       const DeepCollectionEquality().hash(priorMaterial);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimItemProsthesisCopyWith<_ClaimItemProsthesis> get copyWith =>
       __$ClaimItemProsthesisCopyWithImpl<_ClaimItemProsthesis>(
@@ -5435,6 +5461,7 @@ abstract class _ClaimItemProsthesis extends ClaimItemProsthesis {
   @override
   Coding get priorMaterial;
   @override
+  @JsonKey(ignore: true)
   _$ClaimItemProsthesisCopyWith<_ClaimItemProsthesis> get copyWith;
 }
 
@@ -5486,6 +5513,7 @@ mixin _$ClaimMissingTeeth {
   Date get extractionDate;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimMissingTeethCopyWith<ClaimMissingTeeth> get copyWith;
 }
 
@@ -5687,6 +5715,7 @@ class _$_ClaimMissingTeeth extends _ClaimMissingTeeth {
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(extractionDate);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimMissingTeethCopyWith<_ClaimMissingTeeth> get copyWith =>
       __$ClaimMissingTeethCopyWithImpl<_ClaimMissingTeeth>(this, _$identity);
@@ -5725,6 +5754,7 @@ abstract class _ClaimMissingTeeth extends ClaimMissingTeeth {
   @override
   Date get extractionDate;
   @override
+  @JsonKey(ignore: true)
   _$ClaimMissingTeethCopyWith<_ClaimMissingTeeth> get copyWith;
 }
 
@@ -5897,6 +5927,7 @@ mixin _$ClaimResponse {
   List<ClaimResponseCoverage> get coverage;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimResponseCopyWith<ClaimResponse> get copyWith;
 }
 
@@ -6927,6 +6958,7 @@ class _$_ClaimResponse extends _ClaimResponse {
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(coverage);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimResponseCopyWith<_ClaimResponse> get copyWith =>
       __$ClaimResponseCopyWithImpl<_ClaimResponse>(this, _$identity);
@@ -7086,6 +7118,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   @override
   List<ClaimResponseCoverage> get coverage;
   @override
+  @JsonKey(ignore: true)
   _$ClaimResponseCopyWith<_ClaimResponse> get copyWith;
 }
 
@@ -7148,6 +7181,7 @@ mixin _$ClaimResponseItem {
   List<ClaimResponseItemDetail> get detail;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimResponseItemCopyWith<ClaimResponseItem> get copyWith;
 }
 
@@ -7383,6 +7417,7 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
       const DeepCollectionEquality().hash(adjudication) ^
       const DeepCollectionEquality().hash(detail);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimResponseItemCopyWith<_ClaimResponseItem> get copyWith =>
       __$ClaimResponseItemCopyWithImpl<_ClaimResponseItem>(this, _$identity);
@@ -7432,6 +7467,7 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
   @override
   List<ClaimResponseItemDetail> get detail;
   @override
+  @JsonKey(ignore: true)
   _$ClaimResponseItemCopyWith<_ClaimResponseItem> get copyWith;
 }
 
@@ -7488,6 +7524,7 @@ mixin _$ClaimResponseItemAdjudication {
   Element get valueElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimResponseItemAdjudicationCopyWith<ClaimResponseItemAdjudication>
       get copyWith;
 }
@@ -7721,6 +7758,7 @@ class _$_ClaimResponseItemAdjudication extends _ClaimResponseItemAdjudication {
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimResponseItemAdjudicationCopyWith<_ClaimResponseItemAdjudication>
       get copyWith => __$ClaimResponseItemAdjudicationCopyWithImpl<
@@ -7766,6 +7804,7 @@ abstract class _ClaimResponseItemAdjudication
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(ignore: true)
   _$ClaimResponseItemAdjudicationCopyWith<_ClaimResponseItemAdjudication>
       get copyWith;
 }
@@ -7819,6 +7858,7 @@ mixin _$ClaimResponseItemDetail {
   List<ClaimResponseDetailSubDetail> get subDetail;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimResponseItemDetailCopyWith<ClaimResponseItemDetail> get copyWith;
 }
 
@@ -8003,6 +8043,7 @@ class _$_ClaimResponseItemDetail extends _ClaimResponseItemDetail {
       const DeepCollectionEquality().hash(adjudication) ^
       const DeepCollectionEquality().hash(subDetail);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimResponseItemDetailCopyWith<_ClaimResponseItemDetail> get copyWith =>
       __$ClaimResponseItemDetailCopyWithImpl<_ClaimResponseItemDetail>(
@@ -8043,6 +8084,7 @@ abstract class _ClaimResponseItemDetail extends ClaimResponseItemDetail {
   @override
   List<ClaimResponseDetailSubDetail> get subDetail;
   @override
+  @JsonKey(ignore: true)
   _$ClaimResponseItemDetailCopyWith<_ClaimResponseItemDetail> get copyWith;
 }
 
@@ -8092,6 +8134,7 @@ mixin _$ClaimResponseDetailSubDetail {
   List<ClaimResponseItemAdjudication> get adjudication;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimResponseDetailSubDetailCopyWith<ClaimResponseDetailSubDetail>
       get copyWith;
 }
@@ -8263,6 +8306,7 @@ class _$_ClaimResponseDetailSubDetail extends _ClaimResponseDetailSubDetail {
       const DeepCollectionEquality().hash(sequenceLinkId) ^
       const DeepCollectionEquality().hash(adjudication);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimResponseDetailSubDetailCopyWith<_ClaimResponseDetailSubDetail>
       get copyWith => __$ClaimResponseDetailSubDetailCopyWithImpl<
@@ -8301,6 +8345,7 @@ abstract class _ClaimResponseDetailSubDetail
   @override
   List<ClaimResponseItemAdjudication> get adjudication;
   @override
+  @JsonKey(ignore: true)
   _$ClaimResponseDetailSubDetailCopyWith<_ClaimResponseDetailSubDetail>
       get copyWith;
 }
@@ -8362,6 +8407,7 @@ mixin _$ClaimResponseAddItem {
   ClaimResponseAddItemDetail get detail;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimResponseAddItemCopyWith<ClaimResponseAddItem> get copyWith;
 }
 
@@ -8627,6 +8673,7 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
       const DeepCollectionEquality().hash(adjudication) ^
       const DeepCollectionEquality().hash(detail);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimResponseAddItemCopyWith<_ClaimResponseAddItem> get copyWith =>
       __$ClaimResponseAddItemCopyWithImpl<_ClaimResponseAddItem>(
@@ -8675,6 +8722,7 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
   @override
   ClaimResponseAddItemDetail get detail;
   @override
+  @JsonKey(ignore: true)
   _$ClaimResponseAddItemCopyWith<_ClaimResponseAddItem> get copyWith;
 }
 
@@ -8727,6 +8775,7 @@ mixin _$ClaimResponseAddItemDetail {
   List<ClaimResponseItemAdjudication> get adjudication;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimResponseAddItemDetailCopyWith<ClaimResponseAddItemDetail> get copyWith;
 }
 
@@ -8931,6 +8980,7 @@ class _$_ClaimResponseAddItemDetail extends _ClaimResponseAddItemDetail {
       const DeepCollectionEquality().hash(fee) ^
       const DeepCollectionEquality().hash(adjudication);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimResponseAddItemDetailCopyWith<_ClaimResponseAddItemDetail>
       get copyWith => __$ClaimResponseAddItemDetailCopyWithImpl<
@@ -8971,6 +9021,7 @@ abstract class _ClaimResponseAddItemDetail extends ClaimResponseAddItemDetail {
   @override
   List<ClaimResponseItemAdjudication> get adjudication;
   @override
+  @JsonKey(ignore: true)
   _$ClaimResponseAddItemDetailCopyWith<_ClaimResponseAddItemDetail>
       get copyWith;
 }
@@ -9026,6 +9077,7 @@ mixin _$ClaimResponseError {
   Coding get code;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimResponseErrorCopyWith<ClaimResponseError> get copyWith;
 }
 
@@ -9237,6 +9289,7 @@ class _$_ClaimResponseError extends _ClaimResponseError {
       const DeepCollectionEquality().hash(subdetailSequenceLinkId) ^
       const DeepCollectionEquality().hash(code);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimResponseErrorCopyWith<_ClaimResponseError> get copyWith =>
       __$ClaimResponseErrorCopyWithImpl<_ClaimResponseError>(this, _$identity);
@@ -9278,6 +9331,7 @@ abstract class _ClaimResponseError extends ClaimResponseError {
   @JsonKey(required: true)
   Coding get code;
   @override
+  @JsonKey(ignore: true)
   _$ClaimResponseErrorCopyWith<_ClaimResponseError> get copyWith;
 }
 
@@ -9340,6 +9394,7 @@ mixin _$ClaimResponseNote {
   Element get textElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimResponseNoteCopyWith<ClaimResponseNote> get copyWith;
 }
 
@@ -9610,6 +9665,7 @@ class _$_ClaimResponseNote extends _ClaimResponseNote {
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(textElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimResponseNoteCopyWith<_ClaimResponseNote> get copyWith =>
       __$ClaimResponseNoteCopyWithImpl<_ClaimResponseNote>(this, _$identity);
@@ -9659,6 +9715,7 @@ abstract class _ClaimResponseNote extends ClaimResponseNote {
   @JsonKey(name: '_text')
   Element get textElement;
   @override
+  @JsonKey(ignore: true)
   _$ClaimResponseNoteCopyWith<_ClaimResponseNote> get copyWith;
 }
 
@@ -9729,6 +9786,7 @@ mixin _$ClaimResponseCoverage {
   Coding get originalRuleset;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClaimResponseCoverageCopyWith<ClaimResponseCoverage> get copyWith;
 }
 
@@ -10044,6 +10102,7 @@ class _$_ClaimResponseCoverage extends _ClaimResponseCoverage {
       const DeepCollectionEquality().hash(claimResponse) ^
       const DeepCollectionEquality().hash(originalRuleset);
 
+  @JsonKey(ignore: true)
   @override
   _$ClaimResponseCoverageCopyWith<_ClaimResponseCoverage> get copyWith =>
       __$ClaimResponseCoverageCopyWithImpl<_ClaimResponseCoverage>(
@@ -10101,5 +10160,6 @@ abstract class _ClaimResponseCoverage extends ClaimResponseCoverage {
   @override
   Coding get originalRuleset;
   @override
+  @JsonKey(ignore: true)
   _$ClaimResponseCoverageCopyWith<_ClaimResponseCoverage> get copyWith;
 }

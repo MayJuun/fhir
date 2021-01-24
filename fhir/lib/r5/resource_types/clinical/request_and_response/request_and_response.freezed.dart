@@ -168,6 +168,7 @@ mixin _$Communication {
   List<Annotation> get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CommunicationCopyWith<Communication> get copyWith;
 }
 
@@ -1003,6 +1004,7 @@ class _$_Communication extends _Communication {
       const DeepCollectionEquality().hash(payload) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$CommunicationCopyWith<_Communication> get copyWith =>
       __$CommunicationCopyWithImpl<_Communication>(this, _$identity);
@@ -1153,6 +1155,7 @@ abstract class _Communication extends Communication {
   @override
   List<Annotation> get note;
   @override
+  @JsonKey(ignore: true)
   _$CommunicationCopyWith<_Communication> get copyWith;
 }
 
@@ -1203,6 +1206,7 @@ mixin _$CommunicationPayload {
   CodeableConcept get contentCodeableConcept;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CommunicationPayloadCopyWith<CommunicationPayload> get copyWith;
 }
 
@@ -1426,6 +1430,7 @@ class _$_CommunicationPayload extends _CommunicationPayload {
       const DeepCollectionEquality().hash(contentReference) ^
       const DeepCollectionEquality().hash(contentCodeableConcept);
 
+  @JsonKey(ignore: true)
   @override
   _$CommunicationPayloadCopyWith<_CommunicationPayload> get copyWith =>
       __$CommunicationPayloadCopyWithImpl<_CommunicationPayload>(
@@ -1464,6 +1469,7 @@ abstract class _CommunicationPayload extends CommunicationPayload {
   @override
   CodeableConcept get contentCodeableConcept;
   @override
+  @JsonKey(ignore: true)
   _$CommunicationPayloadCopyWith<_CommunicationPayload> get copyWith;
 }
 
@@ -1627,6 +1633,7 @@ mixin _$CommunicationRequest {
   List<Annotation> get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CommunicationRequestCopyWith<CommunicationRequest> get copyWith;
 }
 
@@ -2505,6 +2512,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$CommunicationRequestCopyWith<_CommunicationRequest> get copyWith =>
       __$CommunicationRequestCopyWithImpl<_CommunicationRequest>(
@@ -2656,6 +2664,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   @override
   List<Annotation> get note;
   @override
+  @JsonKey(ignore: true)
   _$CommunicationRequestCopyWith<_CommunicationRequest> get copyWith;
 }
 
@@ -2707,6 +2716,7 @@ mixin _$CommunicationRequestPayload {
   CodeableConcept get contentCodeableConcept;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CommunicationRequestPayloadCopyWith<CommunicationRequestPayload>
       get copyWith;
 }
@@ -2935,6 +2945,7 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
       const DeepCollectionEquality().hash(contentReference) ^
       const DeepCollectionEquality().hash(contentCodeableConcept);
 
+  @JsonKey(ignore: true)
   @override
   _$CommunicationRequestPayloadCopyWith<_CommunicationRequestPayload>
       get copyWith => __$CommunicationRequestPayloadCopyWithImpl<
@@ -2974,6 +2985,7 @@ abstract class _CommunicationRequestPayload
   @override
   CodeableConcept get contentCodeableConcept;
   @override
+  @JsonKey(ignore: true)
   _$CommunicationRequestPayloadCopyWith<_CommunicationRequestPayload>
       get copyWith;
 }
@@ -3156,6 +3168,7 @@ mixin _$DeviceRequest {
   List<Reference> get relevantHistory;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceRequestCopyWith<DeviceRequest> get copyWith;
 }
 
@@ -4168,6 +4181,7 @@ class _$_DeviceRequest extends _DeviceRequest {
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(relevantHistory);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceRequestCopyWith<_DeviceRequest> get copyWith =>
       __$DeviceRequestCopyWithImpl<_DeviceRequest>(this, _$identity);
@@ -4336,6 +4350,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   @override
   List<Reference> get relevantHistory;
   @override
+  @JsonKey(ignore: true)
   _$DeviceRequestCopyWith<_DeviceRequest> get copyWith;
 }
 
@@ -4397,6 +4412,7 @@ mixin _$DeviceRequestParameter {
   Element get valueBooleanElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceRequestParameterCopyWith<DeviceRequestParameter> get copyWith;
 }
 
@@ -4690,6 +4706,7 @@ class _$_DeviceRequestParameter extends _DeviceRequestParameter {
       const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceRequestParameterCopyWith<_DeviceRequestParameter> get copyWith =>
       __$DeviceRequestParameterCopyWithImpl<_DeviceRequestParameter>(
@@ -4739,6 +4756,7 @@ abstract class _DeviceRequestParameter extends DeviceRequestParameter {
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
   @override
+  @JsonKey(ignore: true)
   _$DeviceRequestParameterCopyWith<_DeviceRequestParameter> get copyWith;
 }
 
@@ -4889,6 +4907,7 @@ mixin _$DeviceUseStatement {
   List<Annotation> get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceUseStatementCopyWith<DeviceUseStatement> get copyWith;
 }
 
@@ -5748,6 +5767,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
       const DeepCollectionEquality().hash(bodySiteReference) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceUseStatementCopyWith<_DeviceUseStatement> get copyWith =>
       __$DeviceUseStatementCopyWithImpl<_DeviceUseStatement>(this, _$identity);
@@ -5885,6 +5905,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   @override
   List<Annotation> get note;
   @override
+  @JsonKey(ignore: true)
   _$DeviceUseStatementCopyWith<_DeviceUseStatement> get copyWith;
 }
 
@@ -6027,6 +6048,7 @@ mixin _$GuidanceResponse {
   List<DataRequirement> get dataRequirement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $GuidanceResponseCopyWith<GuidanceResponse> get copyWith;
 }
 
@@ -6810,6 +6832,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
       const DeepCollectionEquality().hash(result) ^
       const DeepCollectionEquality().hash(dataRequirement);
 
+  @JsonKey(ignore: true)
   @override
   _$GuidanceResponseCopyWith<_GuidanceResponse> get copyWith =>
       __$GuidanceResponseCopyWithImpl<_GuidanceResponse>(this, _$identity);
@@ -6939,6 +6962,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @override
   List<DataRequirement> get dataRequirement;
   @override
+  @JsonKey(ignore: true)
   _$GuidanceResponseCopyWith<_GuidanceResponse> get copyWith;
 }
 
@@ -7062,6 +7086,7 @@ mixin _$SupplyDelivery {
   List<Reference> get receiver;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SupplyDeliveryCopyWith<SupplyDelivery> get copyWith;
 }
 
@@ -7736,6 +7761,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
       const DeepCollectionEquality().hash(destination) ^
       const DeepCollectionEquality().hash(receiver);
 
+  @JsonKey(ignore: true)
   @override
   _$SupplyDeliveryCopyWith<_SupplyDelivery> get copyWith =>
       __$SupplyDeliveryCopyWithImpl<_SupplyDelivery>(this, _$identity);
@@ -7846,6 +7872,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   @override
   List<Reference> get receiver;
   @override
+  @JsonKey(ignore: true)
   _$SupplyDeliveryCopyWith<_SupplyDelivery> get copyWith;
 }
 
@@ -7897,6 +7924,7 @@ mixin _$SupplyDeliverySuppliedItem {
   Reference get itemReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SupplyDeliverySuppliedItemCopyWith<SupplyDeliverySuppliedItem> get copyWith;
 }
 
@@ -8117,6 +8145,7 @@ class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
       const DeepCollectionEquality().hash(itemCodeableConcept) ^
       const DeepCollectionEquality().hash(itemReference);
 
+  @JsonKey(ignore: true)
   @override
   _$SupplyDeliverySuppliedItemCopyWith<_SupplyDeliverySuppliedItem>
       get copyWith => __$SupplyDeliverySuppliedItemCopyWithImpl<
@@ -8155,6 +8184,7 @@ abstract class _SupplyDeliverySuppliedItem extends SupplyDeliverySuppliedItem {
   @override
   Reference get itemReference;
   @override
+  @JsonKey(ignore: true)
   _$SupplyDeliverySuppliedItemCopyWith<_SupplyDeliverySuppliedItem>
       get copyWith;
 }
@@ -8302,6 +8332,7 @@ mixin _$SupplyRequest {
   Reference get deliverTo;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SupplyRequestCopyWith<SupplyRequest> get copyWith;
 }
 
@@ -9129,6 +9160,7 @@ class _$_SupplyRequest extends _SupplyRequest {
       const DeepCollectionEquality().hash(deliverFrom) ^
       const DeepCollectionEquality().hash(deliverTo);
 
+  @JsonKey(ignore: true)
   @override
   _$SupplyRequestCopyWith<_SupplyRequest> get copyWith =>
       __$SupplyRequestCopyWithImpl<_SupplyRequest>(this, _$identity);
@@ -9262,6 +9294,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   @override
   Reference get deliverTo;
   @override
+  @JsonKey(ignore: true)
   _$SupplyRequestCopyWith<_SupplyRequest> get copyWith;
 }
 
@@ -9323,6 +9356,7 @@ mixin _$SupplyRequestParameter {
   Element get valueBooleanElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SupplyRequestParameterCopyWith<SupplyRequestParameter> get copyWith;
 }
 
@@ -9616,6 +9650,7 @@ class _$_SupplyRequestParameter extends _SupplyRequestParameter {
       const DeepCollectionEquality().hash(valueBoolean) ^
       const DeepCollectionEquality().hash(valueBooleanElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SupplyRequestParameterCopyWith<_SupplyRequestParameter> get copyWith =>
       __$SupplyRequestParameterCopyWithImpl<_SupplyRequestParameter>(
@@ -9665,5 +9700,6 @@ abstract class _SupplyRequestParameter extends SupplyRequestParameter {
   @JsonKey(name: '_valueBoolean')
   Element get valueBooleanElement;
   @override
+  @JsonKey(ignore: true)
   _$SupplyRequestParameterCopyWith<_SupplyRequestParameter> get copyWith;
 }

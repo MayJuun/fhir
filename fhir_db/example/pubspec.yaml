@@ -1,0 +1,11 @@
+name: fhir_db_test
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fhir_db:
+    path: ../../fhir_db
+  fhir: ^0.1.5

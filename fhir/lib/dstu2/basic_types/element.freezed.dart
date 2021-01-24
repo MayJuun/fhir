@@ -47,6 +47,7 @@ mixin _$Element {
   List<String> get fhirComments;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ElementCopyWith<Element> get copyWith;
 }
 
@@ -172,6 +173,7 @@ class _$_Element extends _Element {
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(fhirComments);
 
+  @JsonKey(ignore: true)
   @override
   _$ElementCopyWith<_Element> get copyWith =>
       __$ElementCopyWithImpl<_Element>(this, _$identity);
@@ -200,5 +202,6 @@ abstract class _Element extends Element {
   @JsonKey(name: 'fhir_comments')
   List<String> get fhirComments;
   @override
+  @JsonKey(ignore: true)
   _$ElementCopyWith<_Element> get copyWith;
 }

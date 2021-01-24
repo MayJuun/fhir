@@ -128,6 +128,7 @@ mixin _$Account {
   List<AccountGuarantor> get guarantor;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AccountCopyWith<Account> get copyWith;
 }
 
@@ -784,6 +785,7 @@ class _$_Account extends _Account {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(guarantor);
 
+  @JsonKey(ignore: true)
   @override
   _$AccountCopyWith<_Account> get copyWith =>
       __$AccountCopyWithImpl<_Account>(this, _$identity);
@@ -893,6 +895,7 @@ abstract class _Account extends Account {
   @override
   List<AccountGuarantor> get guarantor;
   @override
+  @JsonKey(ignore: true)
   _$AccountCopyWith<_Account> get copyWith;
 }
 
@@ -934,6 +937,7 @@ mixin _$AccountCoverage {
   Element get priorityElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AccountCoverageCopyWith<AccountCoverage> get copyWith;
 }
 
@@ -1090,6 +1094,7 @@ class _$_AccountCoverage extends _AccountCoverage {
       const DeepCollectionEquality().hash(priority) ^
       const DeepCollectionEquality().hash(priorityElement);
 
+  @JsonKey(ignore: true)
   @override
   _$AccountCoverageCopyWith<_AccountCoverage> get copyWith =>
       __$AccountCoverageCopyWithImpl<_AccountCoverage>(this, _$identity);
@@ -1119,6 +1124,7 @@ abstract class _AccountCoverage extends AccountCoverage {
   @JsonKey(name: '_priority')
   Element get priorityElement;
   @override
+  @JsonKey(ignore: true)
   _$AccountCoverageCopyWith<_AccountCoverage> get copyWith;
 }
 
@@ -1163,6 +1169,7 @@ mixin _$AccountGuarantor {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AccountGuarantorCopyWith<AccountGuarantor> get copyWith;
 }
 
@@ -1342,6 +1349,7 @@ class _$_AccountGuarantor extends _AccountGuarantor {
       const DeepCollectionEquality().hash(onHoldElement) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$AccountGuarantorCopyWith<_AccountGuarantor> get copyWith =>
       __$AccountGuarantorCopyWithImpl<_AccountGuarantor>(this, _$identity);
@@ -1373,6 +1381,7 @@ abstract class _AccountGuarantor extends AccountGuarantor {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$AccountGuarantorCopyWith<_AccountGuarantor> get copyWith;
 }
 
@@ -1552,6 +1561,7 @@ mixin _$ChargeItem {
   List<Reference> get supportingInformation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ChargeItemCopyWith<ChargeItem> get copyWith;
 }
 
@@ -2547,6 +2557,7 @@ class _$_ChargeItem extends _ChargeItem {
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(supportingInformation);
 
+  @JsonKey(ignore: true)
   @override
   _$ChargeItemCopyWith<_ChargeItem> get copyWith =>
       __$ChargeItemCopyWithImpl<_ChargeItem>(this, _$identity);
@@ -2713,6 +2724,7 @@ abstract class _ChargeItem extends ChargeItem {
   @override
   List<Reference> get supportingInformation;
   @override
+  @JsonKey(ignore: true)
   _$ChargeItemCopyWith<_ChargeItem> get copyWith;
 }
 
@@ -2750,6 +2762,7 @@ mixin _$ChargeItemParticipant {
   Reference get actor;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ChargeItemParticipantCopyWith<ChargeItemParticipant> get copyWith;
 }
 
@@ -2880,6 +2893,7 @@ class _$_ChargeItemParticipant extends _ChargeItemParticipant {
       const DeepCollectionEquality().hash(role) ^
       const DeepCollectionEquality().hash(actor);
 
+  @JsonKey(ignore: true)
   @override
   _$ChargeItemParticipantCopyWith<_ChargeItemParticipant> get copyWith =>
       __$ChargeItemParticipantCopyWithImpl<_ChargeItemParticipant>(
@@ -2905,6 +2919,7 @@ abstract class _ChargeItemParticipant extends ChargeItemParticipant {
   @override
   Reference get actor;
   @override
+  @JsonKey(ignore: true)
   _$ChargeItemParticipantCopyWith<_ChargeItemParticipant> get copyWith;
 }
 
@@ -3059,6 +3074,7 @@ mixin _$Contract {
   List<ContractRule> get rule;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ContractCopyWith<Contract> get copyWith;
 }
 
@@ -3862,6 +3878,7 @@ class _$_Contract extends _Contract {
       const DeepCollectionEquality().hash(legal) ^
       const DeepCollectionEquality().hash(rule);
 
+  @JsonKey(ignore: true)
   @override
   _$ContractCopyWith<_Contract> get copyWith =>
       __$ContractCopyWithImpl<_Contract>(this, _$identity);
@@ -4002,6 +4019,7 @@ abstract class _Contract extends Contract {
   @override
   List<ContractRule> get rule;
   @override
+  @JsonKey(ignore: true)
   _$ContractCopyWith<_Contract> get copyWith;
 }
 
@@ -4037,6 +4055,7 @@ mixin _$ContractAgent {
   List<CodeableConcept> get role;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ContractAgentCopyWith<ContractAgent> get copyWith;
 }
 
@@ -4154,6 +4173,7 @@ class _$_ContractAgent extends _ContractAgent {
       const DeepCollectionEquality().hash(actor) ^
       const DeepCollectionEquality().hash(role);
 
+  @JsonKey(ignore: true)
   @override
   _$ContractAgentCopyWith<_ContractAgent> get copyWith =>
       __$ContractAgentCopyWithImpl<_ContractAgent>(this, _$identity);
@@ -4178,6 +4198,7 @@ abstract class _ContractAgent extends ContractAgent {
   @override
   List<CodeableConcept> get role;
   @override
+  @JsonKey(ignore: true)
   _$ContractAgentCopyWith<_ContractAgent> get copyWith;
 }
 
@@ -4218,6 +4239,7 @@ mixin _$ContractSigner {
   List<Signature> get signature;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ContractSignerCopyWith<ContractSigner> get copyWith;
 }
 
@@ -4365,6 +4387,7 @@ class _$_ContractSigner extends _ContractSigner {
       const DeepCollectionEquality().hash(party) ^
       const DeepCollectionEquality().hash(signature);
 
+  @JsonKey(ignore: true)
   @override
   _$ContractSignerCopyWith<_ContractSigner> get copyWith =>
       __$ContractSignerCopyWithImpl<_ContractSigner>(this, _$identity);
@@ -4392,6 +4415,7 @@ abstract class _ContractSigner extends ContractSigner {
   @override
   List<Signature> get signature;
   @override
+  @JsonKey(ignore: true)
   _$ContractSignerCopyWith<_ContractSigner> get copyWith;
 }
 
@@ -4462,6 +4486,7 @@ mixin _$ContractValuedItem {
   Money get net;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ContractValuedItemCopyWith<ContractValuedItem> get copyWith;
 }
 
@@ -4847,6 +4872,7 @@ class _$_ContractValuedItem extends _ContractValuedItem {
       const DeepCollectionEquality().hash(pointsElement) ^
       const DeepCollectionEquality().hash(net);
 
+  @JsonKey(ignore: true)
   @override
   _$ContractValuedItemCopyWith<_ContractValuedItem> get copyWith =>
       __$ContractValuedItemCopyWithImpl<_ContractValuedItem>(this, _$identity);
@@ -4904,6 +4930,7 @@ abstract class _ContractValuedItem extends ContractValuedItem {
   @override
   Money get net;
   @override
+  @JsonKey(ignore: true)
   _$ContractValuedItemCopyWith<_ContractValuedItem> get copyWith;
 }
 
@@ -4982,6 +5009,7 @@ mixin _$ContractTerm {
   List<ContractTerm> get group;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ContractTermCopyWith<ContractTerm> get copyWith;
 }
 
@@ -5355,6 +5383,7 @@ class _$_ContractTerm extends _ContractTerm {
       const DeepCollectionEquality().hash(valuedItem) ^
       const DeepCollectionEquality().hash(group);
 
+  @JsonKey(ignore: true)
   @override
   _$ContractTermCopyWith<_ContractTerm> get copyWith =>
       __$ContractTermCopyWithImpl<_ContractTerm>(this, _$identity);
@@ -5420,6 +5449,7 @@ abstract class _ContractTerm extends ContractTerm {
   @override
   List<ContractTerm> get group;
   @override
+  @JsonKey(ignore: true)
   _$ContractTermCopyWith<_ContractTerm> get copyWith;
 }
 
@@ -5456,6 +5486,7 @@ mixin _$ContractAgent1 {
   List<CodeableConcept> get role;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ContractAgent1CopyWith<ContractAgent1> get copyWith;
 }
 
@@ -5573,6 +5604,7 @@ class _$_ContractAgent1 extends _ContractAgent1 {
       const DeepCollectionEquality().hash(actor) ^
       const DeepCollectionEquality().hash(role);
 
+  @JsonKey(ignore: true)
   @override
   _$ContractAgent1CopyWith<_ContractAgent1> get copyWith =>
       __$ContractAgent1CopyWithImpl<_ContractAgent1>(this, _$identity);
@@ -5597,6 +5629,7 @@ abstract class _ContractAgent1 extends ContractAgent1 {
   @override
   List<CodeableConcept> get role;
   @override
+  @JsonKey(ignore: true)
   _$ContractAgent1CopyWith<_ContractAgent1> get copyWith;
 }
 
@@ -5667,6 +5700,7 @@ mixin _$ContractValuedItem1 {
   Money get net;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ContractValuedItem1CopyWith<ContractValuedItem1> get copyWith;
 }
 
@@ -6052,6 +6086,7 @@ class _$_ContractValuedItem1 extends _ContractValuedItem1 {
       const DeepCollectionEquality().hash(pointsElement) ^
       const DeepCollectionEquality().hash(net);
 
+  @JsonKey(ignore: true)
   @override
   _$ContractValuedItem1CopyWith<_ContractValuedItem1> get copyWith =>
       __$ContractValuedItem1CopyWithImpl<_ContractValuedItem1>(
@@ -6110,6 +6145,7 @@ abstract class _ContractValuedItem1 extends ContractValuedItem1 {
   @override
   Money get net;
   @override
+  @JsonKey(ignore: true)
   _$ContractValuedItem1CopyWith<_ContractValuedItem1> get copyWith;
 }
 
@@ -6146,6 +6182,7 @@ mixin _$ContractFriendly {
   Reference get contentReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ContractFriendlyCopyWith<ContractFriendly> get copyWith;
 }
 
@@ -6285,6 +6322,7 @@ class _$_ContractFriendly extends _ContractFriendly {
       const DeepCollectionEquality().hash(contentAttachment) ^
       const DeepCollectionEquality().hash(contentReference);
 
+  @JsonKey(ignore: true)
   @override
   _$ContractFriendlyCopyWith<_ContractFriendly> get copyWith =>
       __$ContractFriendlyCopyWithImpl<_ContractFriendly>(this, _$identity);
@@ -6309,6 +6347,7 @@ abstract class _ContractFriendly extends ContractFriendly {
   @override
   Reference get contentReference;
   @override
+  @JsonKey(ignore: true)
   _$ContractFriendlyCopyWith<_ContractFriendly> get copyWith;
 }
 
@@ -6345,6 +6384,7 @@ mixin _$ContractLegal {
   Reference get contentReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ContractLegalCopyWith<ContractLegal> get copyWith;
 }
 
@@ -6483,6 +6523,7 @@ class _$_ContractLegal extends _ContractLegal {
       const DeepCollectionEquality().hash(contentAttachment) ^
       const DeepCollectionEquality().hash(contentReference);
 
+  @JsonKey(ignore: true)
   @override
   _$ContractLegalCopyWith<_ContractLegal> get copyWith =>
       __$ContractLegalCopyWithImpl<_ContractLegal>(this, _$identity);
@@ -6507,6 +6548,7 @@ abstract class _ContractLegal extends ContractLegal {
   @override
   Reference get contentReference;
   @override
+  @JsonKey(ignore: true)
   _$ContractLegalCopyWith<_ContractLegal> get copyWith;
 }
 
@@ -6543,6 +6585,7 @@ mixin _$ContractRule {
   Reference get contentReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ContractRuleCopyWith<ContractRule> get copyWith;
 }
 
@@ -6679,6 +6722,7 @@ class _$_ContractRule extends _ContractRule {
       const DeepCollectionEquality().hash(contentAttachment) ^
       const DeepCollectionEquality().hash(contentReference);
 
+  @JsonKey(ignore: true)
   @override
   _$ContractRuleCopyWith<_ContractRule> get copyWith =>
       __$ContractRuleCopyWithImpl<_ContractRule>(this, _$identity);
@@ -6703,6 +6747,7 @@ abstract class _ContractRule extends ContractRule {
   @override
   Reference get contentReference;
   @override
+  @JsonKey(ignore: true)
   _$ContractRuleCopyWith<_ContractRule> get copyWith;
 }
 
@@ -6912,6 +6957,7 @@ mixin _$ExplanationOfBenefit {
   List<ExplanationOfBenefitBenefitBalance> get benefitBalance;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitCopyWith<ExplanationOfBenefit> get copyWith;
 }
 
@@ -8227,6 +8273,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
       const DeepCollectionEquality().hash(processNote) ^
       const DeepCollectionEquality().hash(benefitBalance);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitCopyWith<_ExplanationOfBenefit> get copyWith =>
       __$ExplanationOfBenefitCopyWithImpl<_ExplanationOfBenefit>(
@@ -8425,6 +8472,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @override
   List<ExplanationOfBenefitBenefitBalance> get benefitBalance;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitCopyWith<_ExplanationOfBenefit> get copyWith;
 }
 
@@ -8464,6 +8512,7 @@ mixin _$ExplanationOfBenefitRelated {
   Identifier get reference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitRelatedCopyWith<ExplanationOfBenefitRelated>
       get copyWith;
 }
@@ -8631,6 +8680,7 @@ class _$_ExplanationOfBenefitRelated extends _ExplanationOfBenefitRelated {
       const DeepCollectionEquality().hash(relationship) ^
       const DeepCollectionEquality().hash(reference);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitRelatedCopyWith<_ExplanationOfBenefitRelated>
       get copyWith => __$ExplanationOfBenefitRelatedCopyWithImpl<
@@ -8660,6 +8710,7 @@ abstract class _ExplanationOfBenefitRelated
   @override
   Identifier get reference;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitRelatedCopyWith<_ExplanationOfBenefitRelated>
       get copyWith;
 }
@@ -8697,6 +8748,7 @@ mixin _$ExplanationOfBenefitPayee {
   Reference get party;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitPayeeCopyWith<ExplanationOfBenefitPayee> get copyWith;
 }
 
@@ -8826,6 +8878,7 @@ class _$_ExplanationOfBenefitPayee extends _ExplanationOfBenefitPayee {
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(party);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitPayeeCopyWith<_ExplanationOfBenefitPayee>
       get copyWith =>
@@ -8851,6 +8904,7 @@ abstract class _ExplanationOfBenefitPayee extends ExplanationOfBenefitPayee {
   @override
   Reference get party;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitPayeeCopyWith<_ExplanationOfBenefitPayee> get copyWith;
 }
 
@@ -8926,6 +8980,7 @@ mixin _$ExplanationOfBenefitInformation {
   Coding get reason;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitInformationCopyWith<ExplanationOfBenefitInformation>
       get copyWith;
 }
@@ -9353,6 +9408,7 @@ class _$_ExplanationOfBenefitInformation
       const DeepCollectionEquality().hash(valueReference) ^
       const DeepCollectionEquality().hash(reason);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitInformationCopyWith<_ExplanationOfBenefitInformation>
       get copyWith => __$ExplanationOfBenefitInformationCopyWithImpl<
@@ -9415,6 +9471,7 @@ abstract class _ExplanationOfBenefitInformation
   @override
   Coding get reason;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitInformationCopyWith<_ExplanationOfBenefitInformation>
       get copyWith;
 }
@@ -9471,6 +9528,7 @@ mixin _$ExplanationOfBenefitCareTeam {
   CodeableConcept get qualification;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitCareTeamCopyWith<ExplanationOfBenefitCareTeam>
       get copyWith;
 }
@@ -9733,6 +9791,7 @@ class _$_ExplanationOfBenefitCareTeam extends _ExplanationOfBenefitCareTeam {
       const DeepCollectionEquality().hash(role) ^
       const DeepCollectionEquality().hash(qualification);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitCareTeamCopyWith<_ExplanationOfBenefitCareTeam>
       get copyWith => __$ExplanationOfBenefitCareTeamCopyWithImpl<
@@ -9776,6 +9835,7 @@ abstract class _ExplanationOfBenefitCareTeam
   @override
   CodeableConcept get qualification;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitCareTeamCopyWith<_ExplanationOfBenefitCareTeam>
       get copyWith;
 }
@@ -9828,6 +9888,7 @@ mixin _$ExplanationOfBenefitDiagnosis {
   CodeableConcept get packageCode;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitDiagnosisCopyWith<ExplanationOfBenefitDiagnosis>
       get copyWith;
 }
@@ -10068,6 +10129,7 @@ class _$_ExplanationOfBenefitDiagnosis extends _ExplanationOfBenefitDiagnosis {
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(packageCode);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitDiagnosisCopyWith<_ExplanationOfBenefitDiagnosis>
       get copyWith => __$ExplanationOfBenefitDiagnosisCopyWithImpl<
@@ -10107,6 +10169,7 @@ abstract class _ExplanationOfBenefitDiagnosis
   @override
   CodeableConcept get packageCode;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitDiagnosisCopyWith<_ExplanationOfBenefitDiagnosis>
       get copyWith;
 }
@@ -10160,6 +10223,7 @@ mixin _$ExplanationOfBenefitProcedure {
   Reference get procedureReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitProcedureCopyWith<ExplanationOfBenefitProcedure>
       get copyWith;
 }
@@ -10399,6 +10463,7 @@ class _$_ExplanationOfBenefitProcedure extends _ExplanationOfBenefitProcedure {
       const DeepCollectionEquality().hash(procedureCodeableConcept) ^
       const DeepCollectionEquality().hash(procedureReference);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitProcedureCopyWith<_ExplanationOfBenefitProcedure>
       get copyWith => __$ExplanationOfBenefitProcedureCopyWithImpl<
@@ -10439,6 +10504,7 @@ abstract class _ExplanationOfBenefitProcedure
   @override
   Reference get procedureReference;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitProcedureCopyWith<_ExplanationOfBenefitProcedure>
       get copyWith;
 }
@@ -10482,6 +10548,7 @@ mixin _$ExplanationOfBenefitInsurance {
   List<Element> get preAuthRefElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitInsuranceCopyWith<ExplanationOfBenefitInsurance>
       get copyWith;
 }
@@ -10634,6 +10701,7 @@ class _$_ExplanationOfBenefitInsurance extends _ExplanationOfBenefitInsurance {
       const DeepCollectionEquality().hash(preAuthRef) ^
       const DeepCollectionEquality().hash(preAuthRefElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitInsuranceCopyWith<_ExplanationOfBenefitInsurance>
       get copyWith => __$ExplanationOfBenefitInsuranceCopyWithImpl<
@@ -10665,6 +10733,7 @@ abstract class _ExplanationOfBenefitInsurance
   @JsonKey(name: '_preAuthRef')
   List<Element> get preAuthRefElement;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitInsuranceCopyWith<_ExplanationOfBenefitInsurance>
       get copyWith;
 }
@@ -10714,6 +10783,7 @@ mixin _$ExplanationOfBenefitAccident {
   Reference get locationReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitAccidentCopyWith<ExplanationOfBenefitAccident>
       get copyWith;
 }
@@ -10930,6 +11000,7 @@ class _$_ExplanationOfBenefitAccident extends _ExplanationOfBenefitAccident {
       const DeepCollectionEquality().hash(locationAddress) ^
       const DeepCollectionEquality().hash(locationReference);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitAccidentCopyWith<_ExplanationOfBenefitAccident>
       get copyWith => __$ExplanationOfBenefitAccidentCopyWithImpl<
@@ -10966,6 +11037,7 @@ abstract class _ExplanationOfBenefitAccident
   @override
   Reference get locationReference;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitAccidentCopyWith<_ExplanationOfBenefitAccident>
       get copyWith;
 }
@@ -11117,6 +11189,7 @@ mixin _$ExplanationOfBenefitItem {
   List<ExplanationOfBenefitDetail> get detail;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitItemCopyWith<ExplanationOfBenefitItem> get copyWith;
 }
 
@@ -11920,6 +11993,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
       const DeepCollectionEquality().hash(adjudication) ^
       const DeepCollectionEquality().hash(detail);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitItemCopyWith<_ExplanationOfBenefitItem> get copyWith =>
       __$ExplanationOfBenefitItemCopyWithImpl<_ExplanationOfBenefitItem>(
@@ -12057,6 +12131,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   @override
   List<ExplanationOfBenefitDetail> get detail;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitItemCopyWith<_ExplanationOfBenefitItem> get copyWith;
 }
 
@@ -12106,6 +12181,7 @@ mixin _$ExplanationOfBenefitAdjudication {
   Element get valueElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitAdjudicationCopyWith<ExplanationOfBenefitAdjudication>
       get copyWith;
 }
@@ -12320,6 +12396,7 @@ class _$_ExplanationOfBenefitAdjudication
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitAdjudicationCopyWith<_ExplanationOfBenefitAdjudication>
       get copyWith => __$ExplanationOfBenefitAdjudicationCopyWithImpl<
@@ -12357,6 +12434,7 @@ abstract class _ExplanationOfBenefitAdjudication
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitAdjudicationCopyWith<_ExplanationOfBenefitAdjudication>
       get copyWith;
 }
@@ -12447,6 +12525,7 @@ mixin _$ExplanationOfBenefitDetail {
   List<ExplanationOfBenefitSubDetail> get subDetail;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitDetailCopyWith<ExplanationOfBenefitDetail> get copyWith;
 }
 
@@ -12919,6 +12998,7 @@ class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
       const DeepCollectionEquality().hash(adjudication) ^
       const DeepCollectionEquality().hash(subDetail);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitDetailCopyWith<_ExplanationOfBenefitDetail>
       get copyWith => __$ExplanationOfBenefitDetailCopyWithImpl<
@@ -12996,6 +13076,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
   @override
   List<ExplanationOfBenefitSubDetail> get subDetail;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitDetailCopyWith<_ExplanationOfBenefitDetail>
       get copyWith;
 }
@@ -13083,6 +13164,7 @@ mixin _$ExplanationOfBenefitSubDetail {
   List<ExplanationOfBenefitAdjudication> get adjudication;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitSubDetailCopyWith<ExplanationOfBenefitSubDetail>
       get copyWith;
 }
@@ -13542,6 +13624,7 @@ class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
       const DeepCollectionEquality().hash(noteNumberElement) ^
       const DeepCollectionEquality().hash(adjudication);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitSubDetailCopyWith<_ExplanationOfBenefitSubDetail>
       get copyWith => __$ExplanationOfBenefitSubDetailCopyWithImpl<
@@ -13617,6 +13700,7 @@ abstract class _ExplanationOfBenefitSubDetail
   @override
   List<ExplanationOfBenefitAdjudication> get adjudication;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitSubDetailCopyWith<_ExplanationOfBenefitSubDetail>
       get copyWith;
 }
@@ -13685,6 +13769,7 @@ mixin _$ExplanationOfBenefitAddItem {
   List<ExplanationOfBenefitDetail1> get detail;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitAddItemCopyWith<ExplanationOfBenefitAddItem>
       get copyWith;
 }
@@ -14000,6 +14085,7 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
       const DeepCollectionEquality().hash(adjudication) ^
       const DeepCollectionEquality().hash(detail);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitAddItemCopyWith<_ExplanationOfBenefitAddItem>
       get copyWith => __$ExplanationOfBenefitAddItemCopyWithImpl<
@@ -14056,6 +14142,7 @@ abstract class _ExplanationOfBenefitAddItem
   @override
   List<ExplanationOfBenefitDetail1> get detail;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitAddItemCopyWith<_ExplanationOfBenefitAddItem>
       get copyWith;
 }
@@ -14114,6 +14201,7 @@ mixin _$ExplanationOfBenefitDetail1 {
   List<ExplanationOfBenefitAdjudication> get adjudication;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitDetail1CopyWith<ExplanationOfBenefitDetail1>
       get copyWith;
 }
@@ -14378,6 +14466,7 @@ class _$_ExplanationOfBenefitDetail1 extends _ExplanationOfBenefitDetail1 {
       const DeepCollectionEquality().hash(noteNumberElement) ^
       const DeepCollectionEquality().hash(adjudication);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitDetail1CopyWith<_ExplanationOfBenefitDetail1>
       get copyWith => __$ExplanationOfBenefitDetail1CopyWithImpl<
@@ -14424,6 +14513,7 @@ abstract class _ExplanationOfBenefitDetail1
   @override
   List<ExplanationOfBenefitAdjudication> get adjudication;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitDetail1CopyWith<_ExplanationOfBenefitDetail1>
       get copyWith;
 }
@@ -14479,6 +14569,7 @@ mixin _$ExplanationOfBenefitPayment {
   Identifier get identifier;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitPaymentCopyWith<ExplanationOfBenefitPayment>
       get copyWith;
 }
@@ -14746,6 +14837,7 @@ class _$_ExplanationOfBenefitPayment extends _ExplanationOfBenefitPayment {
       const DeepCollectionEquality().hash(amount) ^
       const DeepCollectionEquality().hash(identifier);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitPaymentCopyWith<_ExplanationOfBenefitPayment>
       get copyWith => __$ExplanationOfBenefitPaymentCopyWithImpl<
@@ -14788,6 +14880,7 @@ abstract class _ExplanationOfBenefitPayment
   @override
   Identifier get identifier;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitPaymentCopyWith<_ExplanationOfBenefitPayment>
       get copyWith;
 }
@@ -14842,6 +14935,7 @@ mixin _$ExplanationOfBenefitProcessNote {
   CodeableConcept get language;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitProcessNoteCopyWith<ExplanationOfBenefitProcessNote>
       get copyWith;
 }
@@ -15071,6 +15165,7 @@ class _$_ExplanationOfBenefitProcessNote
       const DeepCollectionEquality().hash(textElement) ^
       const DeepCollectionEquality().hash(language);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitProcessNoteCopyWith<_ExplanationOfBenefitProcessNote>
       get copyWith => __$ExplanationOfBenefitProcessNoteCopyWithImpl<
@@ -15111,6 +15206,7 @@ abstract class _ExplanationOfBenefitProcessNote
   @override
   CodeableConcept get language;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitProcessNoteCopyWith<_ExplanationOfBenefitProcessNote>
       get copyWith;
 }
@@ -15184,6 +15280,7 @@ mixin _$ExplanationOfBenefitBenefitBalance {
   List<ExplanationOfBenefitFinancial> get financial;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitBenefitBalanceCopyWith<
       ExplanationOfBenefitBenefitBalance> get copyWith;
 }
@@ -15559,6 +15656,7 @@ class _$_ExplanationOfBenefitBenefitBalance
       const DeepCollectionEquality().hash(term) ^
       const DeepCollectionEquality().hash(financial);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitBenefitBalanceCopyWith<
           _ExplanationOfBenefitBenefitBalance>
@@ -15621,6 +15719,7 @@ abstract class _ExplanationOfBenefitBenefitBalance
   @override
   List<ExplanationOfBenefitFinancial> get financial;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitBenefitBalanceCopyWith<
       _ExplanationOfBenefitBenefitBalance> get copyWith;
 }
@@ -15684,6 +15783,7 @@ mixin _$ExplanationOfBenefitFinancial {
   Money get usedMoney;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitFinancialCopyWith<ExplanationOfBenefitFinancial>
       get copyWith;
 }
@@ -16001,6 +16101,7 @@ class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
       const DeepCollectionEquality().hash(usedUnsignedIntElement) ^
       const DeepCollectionEquality().hash(usedMoney);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitFinancialCopyWith<_ExplanationOfBenefitFinancial>
       get copyWith => __$ExplanationOfBenefitFinancialCopyWithImpl<
@@ -16051,6 +16152,7 @@ abstract class _ExplanationOfBenefitFinancial
   @override
   Money get usedMoney;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitFinancialCopyWith<_ExplanationOfBenefitFinancial>
       get copyWith;
 }

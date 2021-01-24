@@ -98,6 +98,7 @@ mixin _$Basic {
   Reference get author;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BasicCopyWith<Basic> get copyWith;
 }
 
@@ -554,6 +555,7 @@ class _$_Basic extends _Basic {
       const DeepCollectionEquality().hash(createdElement) ^
       const DeepCollectionEquality().hash(author);
 
+  @JsonKey(ignore: true)
   @override
   _$BasicCopyWith<_Basic> get copyWith =>
       __$BasicCopyWithImpl<_Basic>(this, _$identity);
@@ -633,6 +635,7 @@ abstract class _Basic extends Basic {
   @override
   Reference get author;
   @override
+  @JsonKey(ignore: true)
   _$BasicCopyWith<_Basic> get copyWith;
 }
 
@@ -710,6 +713,7 @@ mixin _$Binary {
   Element get dataElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BinaryCopyWith<Binary> get copyWith;
 }
 
@@ -1069,6 +1073,7 @@ class _$_Binary extends _Binary {
       const DeepCollectionEquality().hash(data) ^
       const DeepCollectionEquality().hash(dataElement);
 
+  @JsonKey(ignore: true)
   @override
   _$BinaryCopyWith<_Binary> get copyWith =>
       __$BinaryCopyWithImpl<_Binary>(this, _$identity);
@@ -1132,6 +1137,7 @@ abstract class _Binary extends Binary {
   @JsonKey(name: '_data')
   Element get dataElement;
   @override
+  @JsonKey(ignore: true)
   _$BinaryCopyWith<_Binary> get copyWith;
 }
 
@@ -1228,6 +1234,7 @@ mixin _$Bundle {
   Signature get signature;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BundleCopyWith<Bundle> get copyWith;
 }
 
@@ -1685,6 +1692,7 @@ class _$_Bundle extends _Bundle {
       const DeepCollectionEquality().hash(entry) ^
       const DeepCollectionEquality().hash(signature);
 
+  @JsonKey(ignore: true)
   @override
   _$BundleCopyWith<_Bundle> get copyWith =>
       __$BundleCopyWithImpl<_Bundle>(this, _$identity);
@@ -1767,6 +1775,7 @@ abstract class _Bundle extends Bundle {
   @override
   Signature get signature;
   @override
+  @JsonKey(ignore: true)
   _$BundleCopyWith<_Bundle> get copyWith;
 }
 
@@ -1822,6 +1831,7 @@ mixin _$BundleLink {
   Element get urlElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BundleLinkCopyWith<BundleLink> get copyWith;
 }
 
@@ -2036,6 +2046,7 @@ class _$_BundleLink extends _BundleLink {
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(urlElement);
 
+  @JsonKey(ignore: true)
   @override
   _$BundleLinkCopyWith<_BundleLink> get copyWith =>
       __$BundleLinkCopyWithImpl<_BundleLink>(this, _$identity);
@@ -2078,6 +2089,7 @@ abstract class _BundleLink extends BundleLink {
   @JsonKey(name: '_url')
   Element get urlElement;
   @override
+  @JsonKey(ignore: true)
   _$BundleLinkCopyWith<_BundleLink> get copyWith;
 }
 
@@ -2141,6 +2153,7 @@ mixin _$BundleEntry {
   BundleResponse get response;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BundleEntryCopyWith<BundleEntry> get copyWith;
 }
 
@@ -2419,6 +2432,7 @@ class _$_BundleEntry extends _BundleEntry {
       const DeepCollectionEquality().hash(request) ^
       const DeepCollectionEquality().hash(response);
 
+  @JsonKey(ignore: true)
   @override
   _$BundleEntryCopyWith<_BundleEntry> get copyWith =>
       __$BundleEntryCopyWithImpl<_BundleEntry>(this, _$identity);
@@ -2469,6 +2483,7 @@ abstract class _BundleEntry extends BundleEntry {
   @override
   BundleResponse get response;
   @override
+  @JsonKey(ignore: true)
   _$BundleEntryCopyWith<_BundleEntry> get copyWith;
 }
 
@@ -2529,6 +2544,7 @@ mixin _$BundleSearch {
   Element get scoreElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BundleSearchCopyWith<BundleSearch> get copyWith;
 }
 
@@ -2752,6 +2768,7 @@ class _$_BundleSearch extends _BundleSearch {
       const DeepCollectionEquality().hash(score) ^
       const DeepCollectionEquality().hash(scoreElement);
 
+  @JsonKey(ignore: true)
   @override
   _$BundleSearchCopyWith<_BundleSearch> get copyWith =>
       __$BundleSearchCopyWithImpl<_BundleSearch>(this, _$identity);
@@ -2799,6 +2816,7 @@ abstract class _BundleSearch extends BundleSearch {
   @JsonKey(name: '_score')
   Element get scoreElement;
   @override
+  @JsonKey(ignore: true)
   _$BundleSearchCopyWith<_BundleSearch> get copyWith;
 }
 
@@ -2891,6 +2909,7 @@ mixin _$BundleRequest {
   Element get ifNoneExistElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BundleRequestCopyWith<BundleRequest> get copyWith;
 }
 
@@ -3308,6 +3327,7 @@ class _$_BundleRequest extends _BundleRequest {
       const DeepCollectionEquality().hash(ifNoneExist) ^
       const DeepCollectionEquality().hash(ifNoneExistElement);
 
+  @JsonKey(ignore: true)
   @override
   _$BundleRequestCopyWith<_BundleRequest> get copyWith =>
       __$BundleRequestCopyWithImpl<_BundleRequest>(this, _$identity);
@@ -3387,6 +3407,7 @@ abstract class _BundleRequest extends BundleRequest {
   @JsonKey(name: '_ifNoneExist')
   Element get ifNoneExistElement;
   @override
+  @JsonKey(ignore: true)
   _$BundleRequestCopyWith<_BundleRequest> get copyWith;
 }
 
@@ -3459,6 +3480,7 @@ mixin _$BundleResponse {
   Resource get outcome;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BundleResponseCopyWith<BundleResponse> get copyWith;
 }
 
@@ -3779,6 +3801,7 @@ class _$_BundleResponse extends _BundleResponse {
       const DeepCollectionEquality().hash(lastModifiedElement) ^
       const DeepCollectionEquality().hash(outcome);
 
+  @JsonKey(ignore: true)
   @override
   _$BundleResponseCopyWith<_BundleResponse> get copyWith =>
       __$BundleResponseCopyWithImpl<_BundleResponse>(this, _$identity);
@@ -3838,6 +3861,7 @@ abstract class _BundleResponse extends BundleResponse {
   @override
   Resource get outcome;
   @override
+  @JsonKey(ignore: true)
   _$BundleResponseCopyWith<_BundleResponse> get copyWith;
 }
 
@@ -3925,6 +3949,7 @@ mixin _$Linkage {
   List<LinkageItem> get item;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $LinkageCopyWith<Linkage> get copyWith;
 }
 
@@ -4324,6 +4349,7 @@ class _$_Linkage extends _Linkage {
       const DeepCollectionEquality().hash(author) ^
       const DeepCollectionEquality().hash(item);
 
+  @JsonKey(ignore: true)
   @override
   _$LinkageCopyWith<_Linkage> get copyWith =>
       __$LinkageCopyWithImpl<_Linkage>(this, _$identity);
@@ -4397,6 +4423,7 @@ abstract class _Linkage extends Linkage {
   @override
   List<LinkageItem> get item;
   @override
+  @JsonKey(ignore: true)
   _$LinkageCopyWith<_Linkage> get copyWith;
 }
 
@@ -4449,6 +4476,7 @@ mixin _$LinkageItem {
   Reference get resource;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $LinkageItemCopyWith<LinkageItem> get copyWith;
 }
 
@@ -4648,6 +4676,7 @@ class _$_LinkageItem extends _LinkageItem {
       const DeepCollectionEquality().hash(typeElement) ^
       const DeepCollectionEquality().hash(resource);
 
+  @JsonKey(ignore: true)
   @override
   _$LinkageItemCopyWith<_LinkageItem> get copyWith =>
       __$LinkageItemCopyWithImpl<_LinkageItem>(this, _$identity);
@@ -4687,6 +4716,7 @@ abstract class _LinkageItem extends LinkageItem {
   @override
   Reference get resource;
   @override
+  @JsonKey(ignore: true)
   _$LinkageItemCopyWith<_LinkageItem> get copyWith;
 }
 
@@ -4801,6 +4831,7 @@ mixin _$MessageHeader {
   Canonical get definition;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MessageHeaderCopyWith<MessageHeader> get copyWith;
 }
 
@@ -5428,6 +5459,7 @@ class _$_MessageHeader extends _MessageHeader {
       const DeepCollectionEquality().hash(focus) ^
       const DeepCollectionEquality().hash(definition);
 
+  @JsonKey(ignore: true)
   @override
   _$MessageHeaderCopyWith<_MessageHeader> get copyWith =>
       __$MessageHeaderCopyWithImpl<_MessageHeader>(this, _$identity);
@@ -5529,6 +5561,7 @@ abstract class _MessageHeader extends MessageHeader {
   @override
   Canonical get definition;
   @override
+  @JsonKey(ignore: true)
   _$MessageHeaderCopyWith<_MessageHeader> get copyWith;
 }
 
@@ -5591,6 +5624,7 @@ mixin _$MessageHeaderDestination {
   Reference get receiver;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MessageHeaderDestinationCopyWith<MessageHeaderDestination> get copyWith;
 }
 
@@ -5860,6 +5894,7 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
       const DeepCollectionEquality().hash(endpointElement) ^
       const DeepCollectionEquality().hash(receiver);
 
+  @JsonKey(ignore: true)
   @override
   _$MessageHeaderDestinationCopyWith<_MessageHeaderDestination> get copyWith =>
       __$MessageHeaderDestinationCopyWithImpl<_MessageHeaderDestination>(
@@ -5909,6 +5944,7 @@ abstract class _MessageHeaderDestination extends MessageHeaderDestination {
   @override
   Reference get receiver;
   @override
+  @JsonKey(ignore: true)
   _$MessageHeaderDestinationCopyWith<_MessageHeaderDestination> get copyWith;
 }
 
@@ -5981,6 +6017,7 @@ mixin _$MessageHeaderSource {
   Element get endpointElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MessageHeaderSourceCopyWith<MessageHeaderSource> get copyWith;
 }
 
@@ -6312,6 +6349,7 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
       const DeepCollectionEquality().hash(endpoint) ^
       const DeepCollectionEquality().hash(endpointElement);
 
+  @JsonKey(ignore: true)
   @override
   _$MessageHeaderSourceCopyWith<_MessageHeaderSource> get copyWith =>
       __$MessageHeaderSourceCopyWithImpl<_MessageHeaderSource>(
@@ -6373,6 +6411,7 @@ abstract class _MessageHeaderSource extends MessageHeaderSource {
   @JsonKey(name: '_endpoint')
   Element get endpointElement;
   @override
+  @JsonKey(ignore: true)
   _$MessageHeaderSourceCopyWith<_MessageHeaderSource> get copyWith;
 }
 
@@ -6437,6 +6476,7 @@ mixin _$MessageHeaderResponse {
   Reference get details;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MessageHeaderResponseCopyWith<MessageHeaderResponse> get copyWith;
 }
 
@@ -6688,6 +6728,7 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
       const DeepCollectionEquality().hash(codeElement) ^
       const DeepCollectionEquality().hash(details);
 
+  @JsonKey(ignore: true)
   @override
   _$MessageHeaderResponseCopyWith<_MessageHeaderResponse> get copyWith =>
       __$MessageHeaderResponseCopyWithImpl<_MessageHeaderResponse>(
@@ -6739,6 +6780,7 @@ abstract class _MessageHeaderResponse extends MessageHeaderResponse {
   @override
   Reference get details;
   @override
+  @JsonKey(ignore: true)
   _$MessageHeaderResponseCopyWith<_MessageHeaderResponse> get copyWith;
 }
 
@@ -6815,6 +6857,7 @@ mixin _$OperationOutcome {
   List<OperationOutcomeIssue> get issue;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OperationOutcomeCopyWith<OperationOutcome> get copyWith;
 }
 
@@ -7153,6 +7196,7 @@ class _$_OperationOutcome extends _OperationOutcome {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(issue);
 
+  @JsonKey(ignore: true)
   @override
   _$OperationOutcomeCopyWith<_OperationOutcome> get copyWith =>
       __$OperationOutcomeCopyWithImpl<_OperationOutcome>(this, _$identity);
@@ -7216,6 +7260,7 @@ abstract class _OperationOutcome extends OperationOutcome {
   @override
   List<OperationOutcomeIssue> get issue;
   @override
+  @JsonKey(ignore: true)
   _$OperationOutcomeCopyWith<_OperationOutcome> get copyWith;
 }
 
@@ -7306,6 +7351,7 @@ mixin _$OperationOutcomeIssue {
   List<Element> get expressionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OperationOutcomeIssueCopyWith<OperationOutcomeIssue> get copyWith;
 }
 
@@ -7693,6 +7739,7 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
       const DeepCollectionEquality().hash(expression) ^
       const DeepCollectionEquality().hash(expressionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith =>
       __$OperationOutcomeIssueCopyWithImpl<_OperationOutcomeIssue>(
@@ -7770,6 +7817,7 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
   @JsonKey(name: '_expression')
   List<Element> get expressionElement;
   @override
+  @JsonKey(ignore: true)
   _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith;
 }
 
@@ -7831,6 +7879,7 @@ mixin _$Parameters {
   List<ParametersParameter> get parameter;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ParametersCopyWith<Parameters> get copyWith;
 }
 
@@ -8087,6 +8136,7 @@ class _$_Parameters extends _Parameters {
       const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(parameter);
 
+  @JsonKey(ignore: true)
   @override
   _$ParametersCopyWith<_Parameters> get copyWith =>
       __$ParametersCopyWithImpl<_Parameters>(this, _$identity);
@@ -8135,6 +8185,7 @@ abstract class _Parameters extends Parameters {
   @override
   List<ParametersParameter> get parameter;
   @override
+  @JsonKey(ignore: true)
   _$ParametersCopyWith<_Parameters> get copyWith;
 }
 
@@ -8423,6 +8474,7 @@ mixin _$ParametersParameter {
   List<ParametersParameter> get part_;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ParametersParameterCopyWith<ParametersParameter> get copyWith;
 }
 
@@ -10339,6 +10391,7 @@ class _$_ParametersParameter extends _ParametersParameter {
       const DeepCollectionEquality().hash(resource) ^
       const DeepCollectionEquality().hash(part_);
 
+  @JsonKey(ignore: true)
   @override
   _$ParametersParameterCopyWith<_ParametersParameter> get copyWith =>
       __$ParametersParameterCopyWithImpl<_ParametersParameter>(
@@ -10616,6 +10669,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @JsonKey(name: 'part')
   List<ParametersParameter> get part_;
   @override
+  @JsonKey(ignore: true)
   _$ParametersParameterCopyWith<_ParametersParameter> get copyWith;
 }
 
@@ -10787,6 +10841,7 @@ mixin _$Subscription {
   Element get contentElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubscriptionCopyWith<Subscription> get copyWith;
 }
 
@@ -11651,6 +11706,7 @@ class _$_Subscription extends _Subscription {
       const DeepCollectionEquality().hash(content) ^
       const DeepCollectionEquality().hash(contentElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SubscriptionCopyWith<_Subscription> get copyWith =>
       __$SubscriptionCopyWithImpl<_Subscription>(this, _$identity);
@@ -11809,6 +11865,7 @@ abstract class _Subscription extends Subscription {
   @JsonKey(name: '_content')
   Element get contentElement;
   @override
+  @JsonKey(ignore: true)
   _$SubscriptionCopyWith<_Subscription> get copyWith;
 }
 
@@ -11871,6 +11928,7 @@ mixin _$SubscriptionFilterBy {
   Element get valueElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubscriptionFilterByCopyWith<SubscriptionFilterBy> get copyWith;
 }
 
@@ -12142,6 +12200,7 @@ class _$_SubscriptionFilterBy extends _SubscriptionFilterBy {
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SubscriptionFilterByCopyWith<_SubscriptionFilterBy> get copyWith =>
       __$SubscriptionFilterByCopyWithImpl<_SubscriptionFilterBy>(
@@ -12192,6 +12251,7 @@ abstract class _SubscriptionFilterBy extends SubscriptionFilterBy {
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(ignore: true)
   _$SubscriptionFilterByCopyWith<_SubscriptionFilterBy> get copyWith;
 }
 
@@ -12309,6 +12369,7 @@ mixin _$SubscriptionStatus {
   List<CodeableConcept> get error;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubscriptionStatusCopyWith<SubscriptionStatus> get copyWith;
 }
 
@@ -12886,6 +12947,7 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
       const DeepCollectionEquality().hash(topic) ^
       const DeepCollectionEquality().hash(error);
 
+  @JsonKey(ignore: true)
   @override
   _$SubscriptionStatusCopyWith<_SubscriptionStatus> get copyWith =>
       __$SubscriptionStatusCopyWithImpl<_SubscriptionStatus>(this, _$identity);
@@ -12990,6 +13052,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
   @override
   List<CodeableConcept> get error;
   @override
+  @JsonKey(ignore: true)
   _$SubscriptionStatusCopyWith<_SubscriptionStatus> get copyWith;
 }
 
@@ -13179,6 +13242,7 @@ mixin _$SubscriptionTopic {
   List<SubscriptionTopicCanFilterBy> get canFilterBy;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubscriptionTopicCopyWith<SubscriptionTopic> get copyWith;
 }
 
@@ -14183,6 +14247,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
       const DeepCollectionEquality().hash(resourceTrigger) ^
       const DeepCollectionEquality().hash(canFilterBy);
 
+  @JsonKey(ignore: true)
   @override
   _$SubscriptionTopicCopyWith<_SubscriptionTopic> get copyWith =>
       __$SubscriptionTopicCopyWithImpl<_SubscriptionTopic>(this, _$identity);
@@ -14359,6 +14424,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   @override
   List<SubscriptionTopicCanFilterBy> get canFilterBy;
   @override
+  @JsonKey(ignore: true)
   _$SubscriptionTopicCopyWith<_SubscriptionTopic> get copyWith;
 }
 
@@ -14438,6 +14504,7 @@ mixin _$SubscriptionTopicResourceTrigger {
   List<Element> get fhirPathCriteriaElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubscriptionTopicResourceTriggerCopyWith<SubscriptionTopicResourceTrigger>
       get copyWith;
 }
@@ -14770,6 +14837,7 @@ class _$_SubscriptionTopicResourceTrigger
       const DeepCollectionEquality().hash(fhirPathCriteria) ^
       const DeepCollectionEquality().hash(fhirPathCriteriaElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SubscriptionTopicResourceTriggerCopyWith<_SubscriptionTopicResourceTrigger>
       get copyWith => __$SubscriptionTopicResourceTriggerCopyWithImpl<
@@ -14837,6 +14905,7 @@ abstract class _SubscriptionTopicResourceTrigger
   @JsonKey(name: '_fhirPathCriteria')
   List<Element> get fhirPathCriteriaElement;
   @override
+  @JsonKey(ignore: true)
   _$SubscriptionTopicResourceTriggerCopyWith<_SubscriptionTopicResourceTrigger>
       get copyWith;
 }
@@ -14902,6 +14971,7 @@ mixin _$SubscriptionTopicQueryCriteria {
   Element get requireBothElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubscriptionTopicQueryCriteriaCopyWith<SubscriptionTopicQueryCriteria>
       get copyWith;
 }
@@ -15175,6 +15245,7 @@ class _$_SubscriptionTopicQueryCriteria
       const DeepCollectionEquality().hash(requireBoth) ^
       const DeepCollectionEquality().hash(requireBothElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SubscriptionTopicQueryCriteriaCopyWith<_SubscriptionTopicQueryCriteria>
       get copyWith => __$SubscriptionTopicQueryCriteriaCopyWithImpl<
@@ -15227,6 +15298,7 @@ abstract class _SubscriptionTopicQueryCriteria
   @JsonKey(name: '_requireBoth')
   Element get requireBothElement;
   @override
+  @JsonKey(ignore: true)
   _$SubscriptionTopicQueryCriteriaCopyWith<_SubscriptionTopicQueryCriteria>
       get copyWith;
 }
@@ -15291,6 +15363,7 @@ mixin _$SubscriptionTopicCanFilterBy {
   Element get documentationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubscriptionTopicCanFilterByCopyWith<SubscriptionTopicCanFilterBy>
       get copyWith;
 }
@@ -15559,6 +15632,7 @@ class _$_SubscriptionTopicCanFilterBy extends _SubscriptionTopicCanFilterBy {
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(documentationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SubscriptionTopicCanFilterByCopyWith<_SubscriptionTopicCanFilterBy>
       get copyWith => __$SubscriptionTopicCanFilterByCopyWithImpl<
@@ -15611,6 +15685,7 @@ abstract class _SubscriptionTopicCanFilterBy
   @JsonKey(name: '_documentation')
   Element get documentationElement;
   @override
+  @JsonKey(ignore: true)
   _$SubscriptionTopicCanFilterByCopyWith<_SubscriptionTopicCanFilterBy>
       get copyWith;
 }

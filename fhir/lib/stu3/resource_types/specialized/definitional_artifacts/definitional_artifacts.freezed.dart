@@ -273,6 +273,7 @@ mixin _$ActivityDefinition {
   List<ActivityDefinitionDynamicValue> get dynamicValue;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ActivityDefinitionCopyWith<ActivityDefinition> get copyWith;
 }
 
@@ -1754,6 +1755,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       const DeepCollectionEquality().hash(transform) ^
       const DeepCollectionEquality().hash(dynamicValue);
 
+  @JsonKey(ignore: true)
   @override
   _$ActivityDefinitionCopyWith<_ActivityDefinition> get copyWith =>
       __$ActivityDefinitionCopyWithImpl<_ActivityDefinition>(this, _$identity);
@@ -2010,6 +2012,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
   List<ActivityDefinitionDynamicValue> get dynamicValue;
   @override
+  @JsonKey(ignore: true)
   _$ActivityDefinitionCopyWith<_ActivityDefinition> get copyWith;
 }
 
@@ -2052,6 +2055,7 @@ mixin _$ActivityDefinitionParticipant {
   CodeableConcept get role;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ActivityDefinitionParticipantCopyWith<ActivityDefinitionParticipant>
       get copyWith;
 }
@@ -2207,6 +2211,7 @@ class _$_ActivityDefinitionParticipant extends _ActivityDefinitionParticipant {
       const DeepCollectionEquality().hash(typeElement) ^
       const DeepCollectionEquality().hash(role);
 
+  @JsonKey(ignore: true)
   @override
   _$ActivityDefinitionParticipantCopyWith<_ActivityDefinitionParticipant>
       get copyWith => __$ActivityDefinitionParticipantCopyWithImpl<
@@ -2237,6 +2242,7 @@ abstract class _ActivityDefinitionParticipant
   @override
   CodeableConcept get role;
   @override
+  @JsonKey(ignore: true)
   _$ActivityDefinitionParticipantCopyWith<_ActivityDefinitionParticipant>
       get copyWith;
 }
@@ -2299,6 +2305,7 @@ mixin _$ActivityDefinitionDynamicValue {
   Element get expressionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ActivityDefinitionDynamicValueCopyWith<ActivityDefinitionDynamicValue>
       get copyWith;
 }
@@ -2568,6 +2575,7 @@ class _$_ActivityDefinitionDynamicValue
       const DeepCollectionEquality().hash(expression) ^
       const DeepCollectionEquality().hash(expressionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ActivityDefinitionDynamicValueCopyWith<_ActivityDefinitionDynamicValue>
       get copyWith => __$ActivityDefinitionDynamicValueCopyWithImpl<
@@ -2617,6 +2625,7 @@ abstract class _ActivityDefinitionDynamicValue
   @JsonKey(name: '_expression')
   Element get expressionElement;
   @override
+  @JsonKey(ignore: true)
   _$ActivityDefinitionDynamicValueCopyWith<_ActivityDefinitionDynamicValue>
       get copyWith;
 }
@@ -2840,6 +2849,7 @@ mixin _$PlanDefinition {
   List<PlanDefinitionAction> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PlanDefinitionCopyWith<PlanDefinition> get copyWith;
 }
 
@@ -3988,6 +3998,7 @@ class _$_PlanDefinition extends _PlanDefinition {
       const DeepCollectionEquality().hash(goal) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$PlanDefinitionCopyWith<_PlanDefinition> get copyWith =>
       __$PlanDefinitionCopyWithImpl<_PlanDefinition>(this, _$identity);
@@ -4197,6 +4208,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   @override
   List<PlanDefinitionAction> get action;
   @override
+  @JsonKey(ignore: true)
   _$PlanDefinitionCopyWith<_PlanDefinition> get copyWith;
 }
 
@@ -4249,6 +4261,7 @@ mixin _$PlanDefinitionGoal {
   List<PlanDefinitionTarget> get target;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PlanDefinitionGoalCopyWith<PlanDefinitionGoal> get copyWith;
 }
 
@@ -4496,6 +4509,7 @@ class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(target);
 
+  @JsonKey(ignore: true)
   @override
   _$PlanDefinitionGoalCopyWith<_PlanDefinitionGoal> get copyWith =>
       __$PlanDefinitionGoalCopyWithImpl<_PlanDefinitionGoal>(this, _$identity);
@@ -4535,6 +4549,7 @@ abstract class _PlanDefinitionGoal extends PlanDefinitionGoal {
   @override
   List<PlanDefinitionTarget> get target;
   @override
+  @JsonKey(ignore: true)
   _$PlanDefinitionGoalCopyWith<_PlanDefinitionGoal> get copyWith;
 }
 
@@ -4581,6 +4596,7 @@ mixin _$PlanDefinitionTarget {
   FhirDuration get due;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PlanDefinitionTargetCopyWith<PlanDefinitionTarget> get copyWith;
 }
 
@@ -4806,6 +4822,7 @@ class _$_PlanDefinitionTarget extends _PlanDefinitionTarget {
       const DeepCollectionEquality().hash(detailCodeableConcept) ^
       const DeepCollectionEquality().hash(due);
 
+  @JsonKey(ignore: true)
   @override
   _$PlanDefinitionTargetCopyWith<_PlanDefinitionTarget> get copyWith =>
       __$PlanDefinitionTargetCopyWithImpl<_PlanDefinitionTarget>(
@@ -4840,6 +4857,7 @@ abstract class _PlanDefinitionTarget extends PlanDefinitionTarget {
   @override
   FhirDuration get due;
   @override
+  @JsonKey(ignore: true)
   _$PlanDefinitionTargetCopyWith<_PlanDefinitionTarget> get copyWith;
 }
 
@@ -5002,6 +5020,7 @@ mixin _$PlanDefinitionAction {
   List<PlanDefinitionAction> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PlanDefinitionActionCopyWith<PlanDefinitionAction> get copyWith;
 }
 
@@ -5925,6 +5944,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       const DeepCollectionEquality().hash(dynamicValue) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$PlanDefinitionActionCopyWith<_PlanDefinitionAction> get copyWith =>
       __$PlanDefinitionActionCopyWithImpl<_PlanDefinitionAction>(
@@ -6075,6 +6095,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @override
   List<PlanDefinitionAction> get action;
   @override
+  @JsonKey(ignore: true)
   _$PlanDefinitionActionCopyWith<_PlanDefinitionAction> get copyWith;
 }
 
@@ -6135,6 +6156,7 @@ mixin _$PlanDefinitionCondition {
   Element get expressionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PlanDefinitionConditionCopyWith<PlanDefinitionCondition> get copyWith;
 }
 
@@ -6398,6 +6420,7 @@ class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
       const DeepCollectionEquality().hash(expression) ^
       const DeepCollectionEquality().hash(expressionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$PlanDefinitionConditionCopyWith<_PlanDefinitionCondition> get copyWith =>
       __$PlanDefinitionConditionCopyWithImpl<_PlanDefinitionCondition>(
@@ -6446,6 +6469,7 @@ abstract class _PlanDefinitionCondition extends PlanDefinitionCondition {
   @JsonKey(name: '_expression')
   Element get expressionElement;
   @override
+  @JsonKey(ignore: true)
   _$PlanDefinitionConditionCopyWith<_PlanDefinitionCondition> get copyWith;
 }
 
@@ -6498,6 +6522,7 @@ mixin _$PlanDefinitionRelatedAction {
   Range get offsetRange;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PlanDefinitionRelatedActionCopyWith<PlanDefinitionRelatedAction>
       get copyWith;
 }
@@ -6738,6 +6763,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
       const DeepCollectionEquality().hash(offsetDuration) ^
       const DeepCollectionEquality().hash(offsetRange);
 
+  @JsonKey(ignore: true)
   @override
   _$PlanDefinitionRelatedActionCopyWith<_PlanDefinitionRelatedAction>
       get copyWith => __$PlanDefinitionRelatedActionCopyWithImpl<
@@ -6778,6 +6804,7 @@ abstract class _PlanDefinitionRelatedAction
   @override
   Range get offsetRange;
   @override
+  @JsonKey(ignore: true)
   _$PlanDefinitionRelatedActionCopyWith<_PlanDefinitionRelatedAction>
       get copyWith;
 }
@@ -6821,6 +6848,7 @@ mixin _$PlanDefinitionParticipant {
   CodeableConcept get role;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PlanDefinitionParticipantCopyWith<PlanDefinitionParticipant> get copyWith;
 }
 
@@ -6973,6 +7001,7 @@ class _$_PlanDefinitionParticipant extends _PlanDefinitionParticipant {
       const DeepCollectionEquality().hash(typeElement) ^
       const DeepCollectionEquality().hash(role);
 
+  @JsonKey(ignore: true)
   @override
   _$PlanDefinitionParticipantCopyWith<_PlanDefinitionParticipant>
       get copyWith =>
@@ -7003,6 +7032,7 @@ abstract class _PlanDefinitionParticipant extends PlanDefinitionParticipant {
   @override
   CodeableConcept get role;
   @override
+  @JsonKey(ignore: true)
   _$PlanDefinitionParticipantCopyWith<_PlanDefinitionParticipant> get copyWith;
 }
 
@@ -7063,6 +7093,7 @@ mixin _$PlanDefinitionDynamicValue {
   Element get expressionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PlanDefinitionDynamicValueCopyWith<PlanDefinitionDynamicValue> get copyWith;
 }
 
@@ -7327,6 +7358,7 @@ class _$_PlanDefinitionDynamicValue extends _PlanDefinitionDynamicValue {
       const DeepCollectionEquality().hash(expression) ^
       const DeepCollectionEquality().hash(expressionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$PlanDefinitionDynamicValueCopyWith<_PlanDefinitionDynamicValue>
       get copyWith => __$PlanDefinitionDynamicValueCopyWithImpl<
@@ -7375,6 +7407,7 @@ abstract class _PlanDefinitionDynamicValue extends PlanDefinitionDynamicValue {
   @JsonKey(name: '_expression')
   Element get expressionElement;
   @override
+  @JsonKey(ignore: true)
   _$PlanDefinitionDynamicValueCopyWith<_PlanDefinitionDynamicValue>
       get copyWith;
 }
@@ -7581,6 +7614,7 @@ mixin _$Questionnaire {
   List<QuestionnaireItem> get item;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $QuestionnaireCopyWith<Questionnaire> get copyWith;
 }
 
@@ -8632,6 +8666,7 @@ class _$_Questionnaire extends _Questionnaire {
       const DeepCollectionEquality().hash(subjectTypeElement) ^
       const DeepCollectionEquality().hash(item);
 
+  @JsonKey(ignore: true)
   @override
   _$QuestionnaireCopyWith<_Questionnaire> get copyWith =>
       __$QuestionnaireCopyWithImpl<_Questionnaire>(this, _$identity);
@@ -8824,6 +8859,7 @@ abstract class _Questionnaire extends Questionnaire {
   @override
   List<QuestionnaireItem> get item;
   @override
+  @JsonKey(ignore: true)
   _$QuestionnaireCopyWith<_Questionnaire> get copyWith;
 }
 
@@ -9006,6 +9042,7 @@ mixin _$QuestionnaireItem {
   List<QuestionnaireItem> get item;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $QuestionnaireItemCopyWith<QuestionnaireItem> get copyWith;
 }
 
@@ -10043,6 +10080,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
       const DeepCollectionEquality().hash(initialReference) ^
       const DeepCollectionEquality().hash(item);
 
+  @JsonKey(ignore: true)
   @override
   _$QuestionnaireItemCopyWith<_QuestionnaireItem> get copyWith =>
       __$QuestionnaireItemCopyWithImpl<_QuestionnaireItem>(this, _$identity);
@@ -10212,6 +10250,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   @override
   List<QuestionnaireItem> get item;
   @override
+  @JsonKey(ignore: true)
   _$QuestionnaireItemCopyWith<_QuestionnaireItem> get copyWith;
 }
 
@@ -10326,6 +10365,7 @@ mixin _$QuestionnaireEnableWhen {
   Reference get answerReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $QuestionnaireEnableWhenCopyWith<QuestionnaireEnableWhen> get copyWith;
 }
 
@@ -10990,6 +11030,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
       const DeepCollectionEquality().hash(answerQuantity) ^
       const DeepCollectionEquality().hash(answerReference);
 
+  @JsonKey(ignore: true)
   @override
   _$QuestionnaireEnableWhenCopyWith<_QuestionnaireEnableWhen> get copyWith =>
       __$QuestionnaireEnableWhenCopyWithImpl<_QuestionnaireEnableWhen>(
@@ -11091,6 +11132,7 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
   @override
   Reference get answerReference;
   @override
+  @JsonKey(ignore: true)
   _$QuestionnaireEnableWhenCopyWith<_QuestionnaireEnableWhen> get copyWith;
 }
 
@@ -11153,6 +11195,7 @@ mixin _$QuestionnaireOption {
   Coding get valueCoding;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $QuestionnaireOptionCopyWith<QuestionnaireOption> get copyWith;
 }
 
@@ -11448,6 +11491,7 @@ class _$_QuestionnaireOption extends _QuestionnaireOption {
       const DeepCollectionEquality().hash(valueStringElement) ^
       const DeepCollectionEquality().hash(valueCoding);
 
+  @JsonKey(ignore: true)
   @override
   _$QuestionnaireOptionCopyWith<_QuestionnaireOption> get copyWith =>
       __$QuestionnaireOptionCopyWithImpl<_QuestionnaireOption>(
@@ -11498,6 +11542,7 @@ abstract class _QuestionnaireOption extends QuestionnaireOption {
   @override
   Coding get valueCoding;
   @override
+  @JsonKey(ignore: true)
   _$QuestionnaireOptionCopyWith<_QuestionnaireOption> get copyWith;
 }
 
@@ -11715,6 +11760,7 @@ mixin _$ServiceDefinition {
   Reference get operationDefinition;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ServiceDefinitionCopyWith<ServiceDefinition> get copyWith;
 }
 
@@ -12854,6 +12900,7 @@ class _$_ServiceDefinition extends _ServiceDefinition {
       const DeepCollectionEquality().hash(dataRequirement) ^
       const DeepCollectionEquality().hash(operationDefinition);
 
+  @JsonKey(ignore: true)
   @override
   _$ServiceDefinitionCopyWith<_ServiceDefinition> get copyWith =>
       __$ServiceDefinitionCopyWithImpl<_ServiceDefinition>(this, _$identity);
@@ -13058,5 +13105,6 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   @override
   Reference get operationDefinition;
   @override
+  @JsonKey(ignore: true)
   _$ServiceDefinitionCopyWith<_ServiceDefinition> get copyWith;
 }

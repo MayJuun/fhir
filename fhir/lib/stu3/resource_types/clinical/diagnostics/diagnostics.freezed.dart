@@ -109,6 +109,7 @@ mixin _$BodySite {
   Reference get patient;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BodySiteCopyWith<BodySite> get copyWith;
 }
 
@@ -616,6 +617,7 @@ class _$_BodySite extends _BodySite {
       const DeepCollectionEquality().hash(image) ^
       const DeepCollectionEquality().hash(patient);
 
+  @JsonKey(ignore: true)
   @override
   _$BodySiteCopyWith<_BodySite> get copyWith =>
       __$BodySiteCopyWithImpl<_BodySite>(this, _$identity);
@@ -706,6 +708,7 @@ abstract class _BodySite extends BodySite {
   @override
   Reference get patient;
   @override
+  @JsonKey(ignore: true)
   _$BodySiteCopyWith<_BodySite> get copyWith;
 }
 
@@ -853,6 +856,7 @@ mixin _$DiagnosticReport {
   List<Attachment> get presentedForm;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DiagnosticReportCopyWith<DiagnosticReport> get copyWith;
 }
 
@@ -1629,6 +1633,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
       const DeepCollectionEquality().hash(codedDiagnosis) ^
       const DeepCollectionEquality().hash(presentedForm);
 
+  @JsonKey(ignore: true)
   @override
   _$DiagnosticReportCopyWith<_DiagnosticReport> get copyWith =>
       __$DiagnosticReportCopyWithImpl<_DiagnosticReport>(this, _$identity);
@@ -1763,6 +1768,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   @override
   List<Attachment> get presentedForm;
   @override
+  @JsonKey(ignore: true)
   _$DiagnosticReportCopyWith<_DiagnosticReport> get copyWith;
 }
 
@@ -1800,6 +1806,7 @@ mixin _$DiagnosticReportPerformer {
   Reference get actor;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DiagnosticReportPerformerCopyWith<DiagnosticReportPerformer> get copyWith;
 }
 
@@ -1931,6 +1938,7 @@ class _$_DiagnosticReportPerformer extends _DiagnosticReportPerformer {
       const DeepCollectionEquality().hash(role) ^
       const DeepCollectionEquality().hash(actor);
 
+  @JsonKey(ignore: true)
   @override
   _$DiagnosticReportPerformerCopyWith<_DiagnosticReportPerformer>
       get copyWith =>
@@ -1957,6 +1965,7 @@ abstract class _DiagnosticReportPerformer extends DiagnosticReportPerformer {
   @override
   Reference get actor;
   @override
+  @JsonKey(ignore: true)
   _$DiagnosticReportPerformerCopyWith<_DiagnosticReportPerformer> get copyWith;
 }
 
@@ -1999,6 +2008,7 @@ mixin _$DiagnosticReportImage {
   Reference get link;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DiagnosticReportImageCopyWith<DiagnosticReportImage> get copyWith;
 }
 
@@ -2154,6 +2164,7 @@ class _$_DiagnosticReportImage extends _DiagnosticReportImage {
       const DeepCollectionEquality().hash(commentElement) ^
       const DeepCollectionEquality().hash(link);
 
+  @JsonKey(ignore: true)
   @override
   _$DiagnosticReportImageCopyWith<_DiagnosticReportImage> get copyWith =>
       __$DiagnosticReportImageCopyWithImpl<_DiagnosticReportImage>(
@@ -2183,6 +2194,7 @@ abstract class _DiagnosticReportImage extends DiagnosticReportImage {
   @override
   Reference get link;
   @override
+  @JsonKey(ignore: true)
   _$DiagnosticReportImageCopyWith<_DiagnosticReportImage> get copyWith;
 }
 
@@ -2285,6 +2297,7 @@ mixin _$ImagingManifest {
   List<ImagingManifestStudy> get study;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImagingManifestCopyWith<ImagingManifest> get copyWith;
 }
 
@@ -2802,6 +2815,7 @@ class _$_ImagingManifest extends _ImagingManifest {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(study);
 
+  @JsonKey(ignore: true)
   @override
   _$ImagingManifestCopyWith<_ImagingManifest> get copyWith =>
       __$ImagingManifestCopyWithImpl<_ImagingManifest>(this, _$identity);
@@ -2891,6 +2905,7 @@ abstract class _ImagingManifest extends ImagingManifest {
   @override
   List<ImagingManifestStudy> get study;
   @override
+  @JsonKey(ignore: true)
   _$ImagingManifestCopyWith<_ImagingManifest> get copyWith;
 }
 
@@ -2938,6 +2953,7 @@ mixin _$ImagingManifestStudy {
   List<ImagingManifestSeries> get series;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImagingManifestStudyCopyWith<ImagingManifestStudy> get copyWith;
 }
 
@@ -3126,6 +3142,7 @@ class _$_ImagingManifestStudy extends _ImagingManifestStudy {
       const DeepCollectionEquality().hash(endpoint) ^
       const DeepCollectionEquality().hash(series);
 
+  @JsonKey(ignore: true)
   @override
   _$ImagingManifestStudyCopyWith<_ImagingManifestStudy> get copyWith =>
       __$ImagingManifestStudyCopyWithImpl<_ImagingManifestStudy>(
@@ -3161,6 +3178,7 @@ abstract class _ImagingManifestStudy extends ImagingManifestStudy {
   @override
   List<ImagingManifestSeries> get series;
   @override
+  @JsonKey(ignore: true)
   _$ImagingManifestStudyCopyWith<_ImagingManifestStudy> get copyWith;
 }
 
@@ -3206,6 +3224,7 @@ mixin _$ImagingManifestSeries {
   List<ImagingManifestInstance> get instance;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImagingManifestSeriesCopyWith<ImagingManifestSeries> get copyWith;
 }
 
@@ -3365,6 +3384,7 @@ class _$_ImagingManifestSeries extends _ImagingManifestSeries {
       const DeepCollectionEquality().hash(endpoint) ^
       const DeepCollectionEquality().hash(instance);
 
+  @JsonKey(ignore: true)
   @override
   _$ImagingManifestSeriesCopyWith<_ImagingManifestSeries> get copyWith =>
       __$ImagingManifestSeriesCopyWithImpl<_ImagingManifestSeries>(
@@ -3398,6 +3418,7 @@ abstract class _ImagingManifestSeries extends ImagingManifestSeries {
   @override
   List<ImagingManifestInstance> get instance;
   @override
+  @JsonKey(ignore: true)
   _$ImagingManifestSeriesCopyWith<_ImagingManifestSeries> get copyWith;
 }
 
@@ -3444,6 +3465,7 @@ mixin _$ImagingManifestInstance {
   Element get uidElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImagingManifestInstanceCopyWith<ImagingManifestInstance> get copyWith;
 }
 
@@ -3615,6 +3637,7 @@ class _$_ImagingManifestInstance extends _ImagingManifestInstance {
       const DeepCollectionEquality().hash(uid) ^
       const DeepCollectionEquality().hash(uidElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ImagingManifestInstanceCopyWith<_ImagingManifestInstance> get copyWith =>
       __$ImagingManifestInstanceCopyWithImpl<_ImagingManifestInstance>(
@@ -3648,6 +3671,7 @@ abstract class _ImagingManifestInstance extends ImagingManifestInstance {
   @JsonKey(name: '_uid')
   Element get uidElement;
   @override
+  @JsonKey(ignore: true)
   _$ImagingManifestInstanceCopyWith<_ImagingManifestInstance> get copyWith;
 }
 
@@ -3808,6 +3832,7 @@ mixin _$ImagingStudy {
   List<ImagingStudySeries> get series;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImagingStudyCopyWith<ImagingStudy> get copyWith;
 }
 
@@ -4658,6 +4683,7 @@ class _$_ImagingStudy extends _ImagingStudy {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(series);
 
+  @JsonKey(ignore: true)
   @override
   _$ImagingStudyCopyWith<_ImagingStudy> get copyWith =>
       __$ImagingStudyCopyWithImpl<_ImagingStudy>(this, _$identity);
@@ -4805,6 +4831,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   @override
   List<ImagingStudySeries> get series;
   @override
+  @JsonKey(ignore: true)
   _$ImagingStudyCopyWith<_ImagingStudy> get copyWith;
 }
 
@@ -4896,6 +4923,7 @@ mixin _$ImagingStudySeries {
   List<ImagingStudyInstance> get instance;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImagingStudySeriesCopyWith<ImagingStudySeries> get copyWith;
 }
 
@@ -5383,6 +5411,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
       const DeepCollectionEquality().hash(performer) ^
       const DeepCollectionEquality().hash(instance);
 
+  @JsonKey(ignore: true)
   @override
   _$ImagingStudySeriesCopyWith<_ImagingStudySeries> get copyWith =>
       __$ImagingStudySeriesCopyWithImpl<_ImagingStudySeries>(this, _$identity);
@@ -5461,6 +5490,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
   @override
   List<ImagingStudyInstance> get instance;
   @override
+  @JsonKey(ignore: true)
   _$ImagingStudySeriesCopyWith<_ImagingStudySeries> get copyWith;
 }
 
@@ -5520,6 +5550,7 @@ mixin _$ImagingStudyInstance {
   Element get titleElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImagingStudyInstanceCopyWith<ImagingStudyInstance> get copyWith;
 }
 
@@ -5776,6 +5807,7 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
       const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(titleElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ImagingStudyInstanceCopyWith<_ImagingStudyInstance> get copyWith =>
       __$ImagingStudyInstanceCopyWithImpl<_ImagingStudyInstance>(
@@ -5823,6 +5855,7 @@ abstract class _ImagingStudyInstance extends ImagingStudyInstance {
   @JsonKey(name: '_title')
   Element get titleElement;
   @override
+  @JsonKey(ignore: true)
   _$ImagingStudyInstanceCopyWith<_ImagingStudyInstance> get copyWith;
 }
 
@@ -6032,6 +6065,7 @@ mixin _$Observation {
   List<ObservationComponent> get component;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ObservationCopyWith<Observation> get copyWith;
 }
 
@@ -7278,6 +7312,7 @@ class _$_Observation extends _Observation {
       const DeepCollectionEquality().hash(related) ^
       const DeepCollectionEquality().hash(component);
 
+  @JsonKey(ignore: true)
   @override
   _$ObservationCopyWith<_Observation> get copyWith =>
       __$ObservationCopyWithImpl<_Observation>(this, _$identity);
@@ -7474,6 +7509,7 @@ abstract class _Observation extends Observation {
   @override
   List<ObservationComponent> get component;
   @override
+  @JsonKey(ignore: true)
   _$ObservationCopyWith<_Observation> get copyWith;
 }
 
@@ -7528,6 +7564,7 @@ mixin _$ObservationReferenceRange {
   Element get textElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ObservationReferenceRangeCopyWith<ObservationReferenceRange> get copyWith;
 }
 
@@ -7772,6 +7809,7 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(textElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ObservationReferenceRangeCopyWith<_ObservationReferenceRange>
       get copyWith =>
@@ -7815,6 +7853,7 @@ abstract class _ObservationReferenceRange extends ObservationReferenceRange {
   @JsonKey(name: '_text')
   Element get textElement;
   @override
+  @JsonKey(ignore: true)
   _$ObservationReferenceRangeCopyWith<_ObservationReferenceRange> get copyWith;
 }
 
@@ -7856,6 +7895,7 @@ mixin _$ObservationRelated {
   Reference get target;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ObservationRelatedCopyWith<ObservationRelated> get copyWith;
 }
 
@@ -8008,6 +8048,7 @@ class _$_ObservationRelated extends _ObservationRelated {
       const DeepCollectionEquality().hash(typeElement) ^
       const DeepCollectionEquality().hash(target);
 
+  @JsonKey(ignore: true)
   @override
   _$ObservationRelatedCopyWith<_ObservationRelated> get copyWith =>
       __$ObservationRelatedCopyWithImpl<_ObservationRelated>(this, _$identity);
@@ -8036,6 +8077,7 @@ abstract class _ObservationRelated extends ObservationRelated {
   @override
   Reference get target;
   @override
+  @JsonKey(ignore: true)
   _$ObservationRelatedCopyWith<_ObservationRelated> get copyWith;
 }
 
@@ -8121,6 +8163,7 @@ mixin _$ObservationComponent {
   List<ObservationReferenceRange> get referenceRange;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ObservationComponentCopyWith<ObservationComponent> get copyWith;
 }
 
@@ -8651,6 +8694,7 @@ class _$_ObservationComponent extends _ObservationComponent {
       const DeepCollectionEquality().hash(interpretation) ^
       const DeepCollectionEquality().hash(referenceRange);
 
+  @JsonKey(ignore: true)
   @override
   _$ObservationComponentCopyWith<_ObservationComponent> get copyWith =>
       __$ObservationComponentCopyWithImpl<_ObservationComponent>(
@@ -8725,6 +8769,7 @@ abstract class _ObservationComponent extends ObservationComponent {
   @override
   List<ObservationReferenceRange> get referenceRange;
   @override
+  @JsonKey(ignore: true)
   _$ObservationComponentCopyWith<_ObservationComponent> get copyWith;
 }
 
@@ -8842,6 +8887,7 @@ mixin _$QuestionnaireResponse {
   List<QuestionnaireResponseItem> get item;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $QuestionnaireResponseCopyWith<QuestionnaireResponse> get copyWith;
 }
 
@@ -9460,6 +9506,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
       const DeepCollectionEquality().hash(source) ^
       const DeepCollectionEquality().hash(item);
 
+  @JsonKey(ignore: true)
   @override
   _$QuestionnaireResponseCopyWith<_QuestionnaireResponse> get copyWith =>
       __$QuestionnaireResponseCopyWithImpl<_QuestionnaireResponse>(
@@ -9563,6 +9610,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   @override
   List<QuestionnaireResponseItem> get item;
   @override
+  @JsonKey(ignore: true)
   _$QuestionnaireResponseCopyWith<_QuestionnaireResponse> get copyWith;
 }
 
@@ -9625,6 +9673,7 @@ mixin _$QuestionnaireResponseItem {
   List<QuestionnaireResponseItem> get item;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $QuestionnaireResponseItemCopyWith<QuestionnaireResponseItem> get copyWith;
 }
 
@@ -9899,6 +9948,7 @@ class _$_QuestionnaireResponseItem extends _QuestionnaireResponseItem {
       const DeepCollectionEquality().hash(answer) ^
       const DeepCollectionEquality().hash(item);
 
+  @JsonKey(ignore: true)
   @override
   _$QuestionnaireResponseItemCopyWith<_QuestionnaireResponseItem>
       get copyWith =>
@@ -9949,6 +9999,7 @@ abstract class _QuestionnaireResponseItem extends QuestionnaireResponseItem {
   @override
   List<QuestionnaireResponseItem> get item;
   @override
+  @JsonKey(ignore: true)
   _$QuestionnaireResponseItemCopyWith<_QuestionnaireResponseItem> get copyWith;
 }
 
@@ -10052,6 +10103,7 @@ mixin _$QuestionnaireResponseAnswer {
   List<QuestionnaireResponseItem> get item;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $QuestionnaireResponseAnswerCopyWith<QuestionnaireResponseAnswer>
       get copyWith;
 }
@@ -10646,6 +10698,7 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
       const DeepCollectionEquality().hash(valueReference) ^
       const DeepCollectionEquality().hash(item);
 
+  @JsonKey(ignore: true)
   @override
   _$QuestionnaireResponseAnswerCopyWith<_QuestionnaireResponseAnswer>
       get copyWith => __$QuestionnaireResponseAnswerCopyWithImpl<
@@ -10737,6 +10790,7 @@ abstract class _QuestionnaireResponseAnswer
   @override
   List<QuestionnaireResponseItem> get item;
   @override
+  @JsonKey(ignore: true)
   _$QuestionnaireResponseAnswerCopyWith<_QuestionnaireResponseAnswer>
       get copyWith;
 }
@@ -10875,6 +10929,7 @@ mixin _$Sequence {
   List<Reference> get pointer;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SequenceCopyWith<Sequence> get copyWith;
 }
 
@@ -11611,6 +11666,7 @@ class _$_Sequence extends _Sequence {
       const DeepCollectionEquality().hash(repository) ^
       const DeepCollectionEquality().hash(pointer);
 
+  @JsonKey(ignore: true)
   @override
   _$SequenceCopyWith<_Sequence> get copyWith =>
       __$SequenceCopyWithImpl<_Sequence>(this, _$identity);
@@ -11734,6 +11790,7 @@ abstract class _Sequence extends Sequence {
   @override
   List<Reference> get pointer;
   @override
+  @JsonKey(ignore: true)
   _$SequenceCopyWith<_Sequence> get copyWith;
 }
 
@@ -11809,6 +11866,7 @@ mixin _$SequenceReferenceSeq {
   Element get windowEndElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SequenceReferenceSeqCopyWith<SequenceReferenceSeq> get copyWith;
 }
 
@@ -12213,6 +12271,7 @@ class _$_SequenceReferenceSeq extends _SequenceReferenceSeq {
       const DeepCollectionEquality().hash(windowEnd) ^
       const DeepCollectionEquality().hash(windowEndElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SequenceReferenceSeqCopyWith<_SequenceReferenceSeq> get copyWith =>
       __$SequenceReferenceSeqCopyWithImpl<_SequenceReferenceSeq>(
@@ -12281,6 +12340,7 @@ abstract class _SequenceReferenceSeq extends SequenceReferenceSeq {
   @JsonKey(name: '_windowEnd')
   Element get windowEndElement;
   @override
+  @JsonKey(ignore: true)
   _$SequenceReferenceSeqCopyWith<_SequenceReferenceSeq> get copyWith;
 }
 
@@ -12350,6 +12410,7 @@ mixin _$SequenceVariant {
   Reference get variantPointer;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SequenceVariantCopyWith<SequenceVariant> get copyWith;
 }
 
@@ -12688,6 +12749,7 @@ class _$_SequenceVariant extends _SequenceVariant {
       const DeepCollectionEquality().hash(cigarElement) ^
       const DeepCollectionEquality().hash(variantPointer);
 
+  @JsonKey(ignore: true)
   @override
   _$SequenceVariantCopyWith<_SequenceVariant> get copyWith =>
       __$SequenceVariantCopyWithImpl<_SequenceVariant>(this, _$identity);
@@ -12744,6 +12806,7 @@ abstract class _SequenceVariant extends SequenceVariant {
   @override
   Reference get variantPointer;
   @override
+  @JsonKey(ignore: true)
   _$SequenceVariantCopyWith<_SequenceVariant> get copyWith;
 }
 
@@ -12861,6 +12924,7 @@ mixin _$SequenceQuality {
   Element get fScoreElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SequenceQualityCopyWith<SequenceQuality> get copyWith;
 }
 
@@ -13498,6 +13562,7 @@ class _$_SequenceQuality extends _SequenceQuality {
       const DeepCollectionEquality().hash(fScore) ^
       const DeepCollectionEquality().hash(fScoreElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SequenceQualityCopyWith<_SequenceQuality> get copyWith =>
       __$SequenceQualityCopyWithImpl<_SequenceQuality>(this, _$identity);
@@ -13602,6 +13667,7 @@ abstract class _SequenceQuality extends SequenceQuality {
   @JsonKey(name: '_fScore')
   Element get fScoreElement;
   @override
+  @JsonKey(ignore: true)
   _$SequenceQualityCopyWith<_SequenceQuality> get copyWith;
 }
 
@@ -13675,6 +13741,7 @@ mixin _$SequenceRepository {
   Element get readsetIdElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SequenceRepositoryCopyWith<SequenceRepository> get copyWith;
 }
 
@@ -14019,6 +14086,7 @@ class _$_SequenceRepository extends _SequenceRepository {
       const DeepCollectionEquality().hash(readsetId) ^
       const DeepCollectionEquality().hash(readsetIdElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SequenceRepositoryCopyWith<_SequenceRepository> get copyWith =>
       __$SequenceRepositoryCopyWithImpl<_SequenceRepository>(this, _$identity);
@@ -14080,6 +14148,7 @@ abstract class _SequenceRepository extends SequenceRepository {
   @JsonKey(name: '_readsetId')
   Element get readsetIdElement;
   @override
+  @JsonKey(ignore: true)
   _$SequenceRepositoryCopyWith<_SequenceRepository> get copyWith;
 }
 
@@ -14199,6 +14268,7 @@ mixin _$Specimen {
   List<Annotation> get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SpecimenCopyWith<Specimen> get copyWith;
 }
 
@@ -14809,6 +14879,7 @@ class _$_Specimen extends _Specimen {
       const DeepCollectionEquality().hash(container) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$SpecimenCopyWith<_Specimen> get copyWith =>
       __$SpecimenCopyWithImpl<_Specimen>(this, _$identity);
@@ -14914,6 +14985,7 @@ abstract class _Specimen extends Specimen {
   @override
   List<Annotation> get note;
   @override
+  @JsonKey(ignore: true)
   _$SpecimenCopyWith<_Specimen> get copyWith;
 }
 
@@ -14967,6 +15039,7 @@ mixin _$SpecimenCollection {
   CodeableConcept get bodySite;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SpecimenCollectionCopyWith<SpecimenCollection> get copyWith;
 }
 
@@ -15239,6 +15312,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
       const DeepCollectionEquality().hash(method) ^
       const DeepCollectionEquality().hash(bodySite);
 
+  @JsonKey(ignore: true)
   @override
   _$SpecimenCollectionCopyWith<_SpecimenCollection> get copyWith =>
       __$SpecimenCollectionCopyWithImpl<_SpecimenCollection>(this, _$identity);
@@ -15279,6 +15353,7 @@ abstract class _SpecimenCollection extends SpecimenCollection {
   @override
   CodeableConcept get bodySite;
   @override
+  @JsonKey(ignore: true)
   _$SpecimenCollectionCopyWith<_SpecimenCollection> get copyWith;
 }
 
@@ -15333,6 +15408,7 @@ mixin _$SpecimenProcessing {
   Period get timePeriod;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SpecimenProcessingCopyWith<SpecimenProcessing> get copyWith;
 }
 
@@ -15585,6 +15661,7 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
       const DeepCollectionEquality().hash(timeDateTimeElement) ^
       const DeepCollectionEquality().hash(timePeriod);
 
+  @JsonKey(ignore: true)
   @override
   _$SpecimenProcessingCopyWith<_SpecimenProcessing> get copyWith =>
       __$SpecimenProcessingCopyWithImpl<_SpecimenProcessing>(this, _$identity);
@@ -15626,6 +15703,7 @@ abstract class _SpecimenProcessing extends SpecimenProcessing {
   @override
   Period get timePeriod;
   @override
+  @JsonKey(ignore: true)
   _$SpecimenProcessingCopyWith<_SpecimenProcessing> get copyWith;
 }
 
@@ -15682,6 +15760,7 @@ mixin _$SpecimenContainer {
   Reference get additiveReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SpecimenContainerCopyWith<SpecimenContainer> get copyWith;
 }
 
@@ -15973,6 +16052,7 @@ class _$_SpecimenContainer extends _SpecimenContainer {
       const DeepCollectionEquality().hash(additiveCodeableConcept) ^
       const DeepCollectionEquality().hash(additiveReference);
 
+  @JsonKey(ignore: true)
   @override
   _$SpecimenContainerCopyWith<_SpecimenContainer> get copyWith =>
       __$SpecimenContainerCopyWithImpl<_SpecimenContainer>(this, _$identity);
@@ -16016,5 +16096,6 @@ abstract class _SpecimenContainer extends SpecimenContainer {
   @override
   Reference get additiveReference;
   @override
+  @JsonKey(ignore: true)
   _$SpecimenContainerCopyWith<_SpecimenContainer> get copyWith;
 }

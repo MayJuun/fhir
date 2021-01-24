@@ -118,6 +118,7 @@ mixin _$ProcessRequest {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProcessRequestCopyWith<ProcessRequest> get copyWith;
 }
 
@@ -698,6 +699,7 @@ class _$_ProcessRequest extends _ProcessRequest {
       const DeepCollectionEquality().hash(exclude) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$ProcessRequestCopyWith<_ProcessRequest> get copyWith =>
       __$ProcessRequestCopyWithImpl<_ProcessRequest>(this, _$identity);
@@ -798,6 +800,7 @@ abstract class _ProcessRequest extends ProcessRequest {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$ProcessRequestCopyWith<_ProcessRequest> get copyWith;
 }
 
@@ -843,6 +846,7 @@ mixin _$ProcessRequestItem {
   Integer get sequenceLinkId;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProcessRequestItemCopyWith<ProcessRequestItem> get copyWith;
 }
 
@@ -992,6 +996,7 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(sequenceLinkId);
 
+  @JsonKey(ignore: true)
   @override
   _$ProcessRequestItemCopyWith<_ProcessRequestItem> get copyWith =>
       __$ProcessRequestItemCopyWithImpl<_ProcessRequestItem>(this, _$identity);
@@ -1025,6 +1030,7 @@ abstract class _ProcessRequestItem extends ProcessRequestItem {
   @JsonKey(required: true)
   Integer get sequenceLinkId;
   @override
+  @JsonKey(ignore: true)
   _$ProcessRequestItemCopyWith<_ProcessRequestItem> get copyWith;
 }
 
@@ -1126,6 +1132,7 @@ mixin _$ProcessResponse {
   List<Coding> get error;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProcessResponseCopyWith<ProcessResponse> get copyWith;
 }
 
@@ -1672,6 +1679,7 @@ class _$_ProcessResponse extends _ProcessResponse {
       const DeepCollectionEquality().hash(notes) ^
       const DeepCollectionEquality().hash(error);
 
+  @JsonKey(ignore: true)
   @override
   _$ProcessResponseCopyWith<_ProcessResponse> get copyWith =>
       __$ProcessResponseCopyWithImpl<_ProcessResponse>(this, _$identity);
@@ -1760,6 +1768,7 @@ abstract class _ProcessResponse extends ProcessResponse {
   @override
   List<Coding> get error;
   @override
+  @JsonKey(ignore: true)
   _$ProcessResponseCopyWith<_ProcessResponse> get copyWith;
 }
 
@@ -1807,6 +1816,7 @@ mixin _$ProcessResponseNotes {
   String get text;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProcessResponseNotesCopyWith<ProcessResponseNotes> get copyWith;
 }
 
@@ -1976,6 +1986,7 @@ class _$_ProcessResponseNotes extends _ProcessResponseNotes {
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(text);
 
+  @JsonKey(ignore: true)
   @override
   _$ProcessResponseNotesCopyWith<_ProcessResponseNotes> get copyWith =>
       __$ProcessResponseNotesCopyWithImpl<_ProcessResponseNotes>(
@@ -2011,6 +2022,7 @@ abstract class _ProcessResponseNotes extends ProcessResponseNotes {
   @override
   String get text;
   @override
+  @JsonKey(ignore: true)
   _$ProcessResponseNotesCopyWith<_ProcessResponseNotes> get copyWith;
 }
 
@@ -2123,6 +2135,7 @@ mixin _$SupplyRequest {
   SupplyRequestWhen get when;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SupplyRequestCopyWith<SupplyRequest> get copyWith;
 }
 
@@ -2740,6 +2753,7 @@ class _$_SupplyRequest extends _SupplyRequest {
       const DeepCollectionEquality().hash(reasonReference) ^
       const DeepCollectionEquality().hash(when);
 
+  @JsonKey(ignore: true)
   @override
   _$SupplyRequestCopyWith<_SupplyRequest> get copyWith =>
       __$SupplyRequestCopyWithImpl<_SupplyRequest>(this, _$identity);
@@ -2839,6 +2853,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   @override
   SupplyRequestWhen get when;
   @override
+  @JsonKey(ignore: true)
   _$SupplyRequestCopyWith<_SupplyRequest> get copyWith;
 }
 
@@ -2886,6 +2901,7 @@ mixin _$SupplyRequestWhen {
   Timing get schedule;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SupplyRequestWhenCopyWith<SupplyRequestWhen> get copyWith;
 }
 
@@ -3069,6 +3085,7 @@ class _$_SupplyRequestWhen extends _SupplyRequestWhen {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(schedule);
 
+  @JsonKey(ignore: true)
   @override
   _$SupplyRequestWhenCopyWith<_SupplyRequestWhen> get copyWith =>
       __$SupplyRequestWhenCopyWithImpl<_SupplyRequestWhen>(this, _$identity);
@@ -3103,6 +3120,7 @@ abstract class _SupplyRequestWhen extends SupplyRequestWhen {
   @override
   Timing get schedule;
   @override
+  @JsonKey(ignore: true)
   _$SupplyRequestWhenCopyWith<_SupplyRequestWhen> get copyWith;
 }
 
@@ -3215,6 +3233,7 @@ mixin _$SupplyDelivery {
   List<Reference> get receiver;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SupplyDeliveryCopyWith<SupplyDelivery> get copyWith;
 }
 
@@ -3835,6 +3854,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
       const DeepCollectionEquality().hash(destination) ^
       const DeepCollectionEquality().hash(receiver);
 
+  @JsonKey(ignore: true)
   @override
   _$SupplyDeliveryCopyWith<_SupplyDelivery> get copyWith =>
       __$SupplyDeliveryCopyWithImpl<_SupplyDelivery>(this, _$identity);
@@ -3934,5 +3954,6 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   @override
   List<Reference> get receiver;
   @override
+  @JsonKey(ignore: true)
   _$SupplyDeliveryCopyWith<_SupplyDelivery> get copyWith;
 }

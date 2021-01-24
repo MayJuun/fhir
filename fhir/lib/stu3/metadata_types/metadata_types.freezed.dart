@@ -46,6 +46,7 @@ mixin _$ContactDetail {
   List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ContactDetailCopyWith<ContactDetail> get copyWith;
 }
 
@@ -184,6 +185,7 @@ class _$_ContactDetail extends _ContactDetail {
       const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(telecom);
 
+  @JsonKey(ignore: true)
   @override
   _$ContactDetailCopyWith<_ContactDetail> get copyWith =>
       __$ContactDetailCopyWithImpl<_ContactDetail>(this, _$identity);
@@ -212,6 +214,7 @@ abstract class _ContactDetail extends ContactDetail {
   @override
   List<ContactPoint> get telecom;
   @override
+  @JsonKey(ignore: true)
   _$ContactDetailCopyWith<_ContactDetail> get copyWith;
 }
 
@@ -260,6 +263,7 @@ mixin _$Contributor {
   List<ContactDetail> get contact;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ContributorCopyWith<Contributor> get copyWith;
 }
 
@@ -439,6 +443,7 @@ class _$_Contributor extends _Contributor {
       const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(contact);
 
+  @JsonKey(ignore: true)
   @override
   _$ContributorCopyWith<_Contributor> get copyWith =>
       __$ContributorCopyWithImpl<_Contributor>(this, _$identity);
@@ -474,6 +479,7 @@ abstract class _Contributor extends Contributor {
   @override
   List<ContactDetail> get contact;
   @override
+  @JsonKey(ignore: true)
   _$ContributorCopyWith<_Contributor> get copyWith;
 }
 
@@ -539,6 +545,7 @@ mixin _$RelatedArtifact {
   Reference get resource;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RelatedArtifactCopyWith<RelatedArtifact> get copyWith;
 }
 
@@ -846,6 +853,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
       const DeepCollectionEquality().hash(document) ^
       const DeepCollectionEquality().hash(resource);
 
+  @JsonKey(ignore: true)
   @override
   _$RelatedArtifactCopyWith<_RelatedArtifact> get copyWith =>
       __$RelatedArtifactCopyWithImpl<_RelatedArtifact>(this, _$identity);
@@ -898,6 +906,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
   @override
   Reference get resource;
   @override
+  @JsonKey(ignore: true)
   _$RelatedArtifactCopyWith<_RelatedArtifact> get copyWith;
 }
 
@@ -941,6 +950,7 @@ mixin _$UsageContext {
   Range get valueRange;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $UsageContextCopyWith<UsageContext> get copyWith;
 }
 
@@ -1138,6 +1148,7 @@ class _$_UsageContext extends _UsageContext {
       const DeepCollectionEquality().hash(valueQuantity) ^
       const DeepCollectionEquality().hash(valueRange);
 
+  @JsonKey(ignore: true)
   @override
   _$UsageContextCopyWith<_UsageContext> get copyWith =>
       __$UsageContextCopyWithImpl<_UsageContext>(this, _$identity);
@@ -1168,6 +1179,7 @@ abstract class _UsageContext extends UsageContext {
   @override
   Range get valueRange;
   @override
+  @JsonKey(ignore: true)
   _$UsageContextCopyWith<_UsageContext> get copyWith;
 }
 
@@ -1226,6 +1238,7 @@ mixin _$DataRequirement {
   List<DataRequirementDateFilter> get dateFilter;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DataRequirementCopyWith<DataRequirement> get copyWith;
 }
 
@@ -1452,6 +1465,7 @@ class _$_DataRequirement extends _DataRequirement {
       const DeepCollectionEquality().hash(codeFilter) ^
       const DeepCollectionEquality().hash(dateFilter);
 
+  @JsonKey(ignore: true)
   @override
   _$DataRequirementCopyWith<_DataRequirement> get copyWith =>
       __$DataRequirementCopyWithImpl<_DataRequirement>(this, _$identity);
@@ -1497,6 +1511,7 @@ abstract class _DataRequirement extends DataRequirement {
   @override
   List<DataRequirementDateFilter> get dateFilter;
   @override
+  @JsonKey(ignore: true)
   _$DataRequirementCopyWith<_DataRequirement> get copyWith;
 }
 
@@ -1559,6 +1574,7 @@ mixin _$DataRequirementCodeFilter {
   List<CodeableConcept> get valueCodeableConcept;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DataRequirementCodeFilterCopyWith<DataRequirementCodeFilter> get copyWith;
 }
 
@@ -1831,6 +1847,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
       const DeepCollectionEquality().hash(valueCoding) ^
       const DeepCollectionEquality().hash(valueCodeableConcept);
 
+  @JsonKey(ignore: true)
   @override
   _$DataRequirementCodeFilterCopyWith<_DataRequirementCodeFilter>
       get copyWith =>
@@ -1882,6 +1899,7 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   @override
   List<CodeableConcept> get valueCodeableConcept;
   @override
+  @JsonKey(ignore: true)
   _$DataRequirementCodeFilterCopyWith<_DataRequirementCodeFilter> get copyWith;
 }
 
@@ -1934,6 +1952,7 @@ mixin _$DataRequirementDateFilter {
   FhirDuration get valueDuration;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DataRequirementDateFilterCopyWith<DataRequirementDateFilter> get copyWith;
 }
 
@@ -2167,6 +2186,7 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
       const DeepCollectionEquality().hash(valuePeriod) ^
       const DeepCollectionEquality().hash(valueDuration);
 
+  @JsonKey(ignore: true)
   @override
   _$DataRequirementDateFilterCopyWith<_DataRequirementDateFilter>
       get copyWith =>
@@ -2207,6 +2227,7 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   @override
   FhirDuration get valueDuration;
   @override
+  @JsonKey(ignore: true)
   _$DataRequirementDateFilterCopyWith<_DataRequirementDateFilter> get copyWith;
 }
 
@@ -2283,6 +2304,7 @@ mixin _$ParameterDefinition {
   Reference get profile;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ParameterDefinitionCopyWith<ParameterDefinition> get copyWith;
 }
 
@@ -2646,6 +2668,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
       const DeepCollectionEquality().hash(typeElement) ^
       const DeepCollectionEquality().hash(profile);
 
+  @JsonKey(ignore: true)
   @override
   _$ParameterDefinitionCopyWith<_ParameterDefinition> get copyWith =>
       __$ParameterDefinitionCopyWithImpl<_ParameterDefinition>(
@@ -2710,6 +2733,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   @override
   Reference get profile;
   @override
+  @JsonKey(ignore: true)
   _$ParameterDefinitionCopyWith<_ParameterDefinition> get copyWith;
 }
 
@@ -2778,6 +2802,7 @@ mixin _$TriggerDefinition {
   DataRequirement get eventData;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TriggerDefinitionCopyWith<TriggerDefinition> get copyWith;
 }
 
@@ -3136,6 +3161,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
       const DeepCollectionEquality().hash(eventTimingDateTimeElement) ^
       const DeepCollectionEquality().hash(eventData);
 
+  @JsonKey(ignore: true)
   @override
   _$TriggerDefinitionCopyWith<_TriggerDefinition> get copyWith =>
       __$TriggerDefinitionCopyWithImpl<_TriggerDefinition>(this, _$identity);
@@ -3191,5 +3217,6 @@ abstract class _TriggerDefinition extends TriggerDefinition {
   @override
   DataRequirement get eventData;
   @override
+  @JsonKey(ignore: true)
   _$TriggerDefinitionCopyWith<_TriggerDefinition> get copyWith;
 }

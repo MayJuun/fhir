@@ -163,6 +163,7 @@ mixin _$AllergyIntolerance {
   List<AllergyIntoleranceReaction> get reaction;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AllergyIntoleranceCopyWith<AllergyIntolerance> get copyWith;
 }
 
@@ -976,6 +977,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(reaction);
 
+  @JsonKey(ignore: true)
   @override
   _$AllergyIntoleranceCopyWith<_AllergyIntolerance> get copyWith =>
       __$AllergyIntoleranceCopyWithImpl<_AllergyIntolerance>(this, _$identity);
@@ -1121,6 +1123,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   @override
   List<AllergyIntoleranceReaction> get reaction;
   @override
+  @JsonKey(ignore: true)
   _$AllergyIntoleranceCopyWith<_AllergyIntolerance> get copyWith;
 }
 
@@ -1220,6 +1223,7 @@ mixin _$AllergyIntoleranceReaction {
   Annotation get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AllergyIntoleranceReactionCopyWith<AllergyIntoleranceReaction> get copyWith;
 }
 
@@ -1679,6 +1683,7 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
       const DeepCollectionEquality().hash(exposureRoute) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$AllergyIntoleranceReactionCopyWith<_AllergyIntoleranceReaction>
       get copyWith => __$AllergyIntoleranceReactionCopyWithImpl<
@@ -1765,6 +1770,7 @@ abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
   @override
   Annotation get note;
   @override
+  @JsonKey(ignore: true)
   _$AllergyIntoleranceReactionCopyWith<_AllergyIntoleranceReaction>
       get copyWith;
 }
@@ -1950,6 +1956,7 @@ mixin _$Condition {
   String get notes;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConditionCopyWith<Condition> get copyWith;
 }
 
@@ -2982,6 +2989,7 @@ class _$_Condition extends _Condition {
       const DeepCollectionEquality().hash(bodySite) ^
       const DeepCollectionEquality().hash(notes);
 
+  @JsonKey(ignore: true)
   @override
   _$ConditionCopyWith<_Condition> get copyWith =>
       __$ConditionCopyWithImpl<_Condition>(this, _$identity);
@@ -3153,6 +3161,7 @@ abstract class _Condition extends Condition {
   @override
   String get notes;
   @override
+  @JsonKey(ignore: true)
   _$ConditionCopyWith<_Condition> get copyWith;
 }
 
@@ -3204,6 +3213,7 @@ mixin _$ConditionStage {
   List<Reference> get assessment;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConditionStageCopyWith<ConditionStage> get copyWith;
 }
 
@@ -3397,6 +3407,7 @@ class _$_ConditionStage extends _ConditionStage {
       const DeepCollectionEquality().hash(summary) ^
       const DeepCollectionEquality().hash(assessment);
 
+  @JsonKey(ignore: true)
   @override
   _$ConditionStageCopyWith<_ConditionStage> get copyWith =>
       __$ConditionStageCopyWithImpl<_ConditionStage>(this, _$identity);
@@ -3435,6 +3446,7 @@ abstract class _ConditionStage extends ConditionStage {
   @override
   List<Reference> get assessment;
   @override
+  @JsonKey(ignore: true)
   _$ConditionStageCopyWith<_ConditionStage> get copyWith;
 }
 
@@ -3486,6 +3498,7 @@ mixin _$ConditionEvidence {
   List<Reference> get detail;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConditionEvidenceCopyWith<ConditionEvidence> get copyWith;
 }
 
@@ -3673,6 +3686,7 @@ class _$_ConditionEvidence extends _ConditionEvidence {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(detail);
 
+  @JsonKey(ignore: true)
   @override
   _$ConditionEvidenceCopyWith<_ConditionEvidence> get copyWith =>
       __$ConditionEvidenceCopyWithImpl<_ConditionEvidence>(this, _$identity);
@@ -3711,6 +3725,7 @@ abstract class _ConditionEvidence extends ConditionEvidence {
   @override
   List<Reference> get detail;
   @override
+  @JsonKey(ignore: true)
   _$ConditionEvidenceCopyWith<_ConditionEvidence> get copyWith;
 }
 
@@ -3871,6 +3886,7 @@ mixin _$Procedure {
   List<Reference> get used;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProcedureCopyWith<Procedure> get copyWith;
 }
 
@@ -4727,6 +4743,7 @@ class _$_Procedure extends _Procedure {
       const DeepCollectionEquality().hash(focalDevice) ^
       const DeepCollectionEquality().hash(used);
 
+  @JsonKey(ignore: true)
   @override
   _$ProcedureCopyWith<_Procedure> get copyWith =>
       __$ProcedureCopyWithImpl<_Procedure>(this, _$identity);
@@ -4874,6 +4891,7 @@ abstract class _Procedure extends Procedure {
   @override
   List<Reference> get used;
   @override
+  @JsonKey(ignore: true)
   _$ProcedureCopyWith<_Procedure> get copyWith;
 }
 
@@ -4925,6 +4943,7 @@ mixin _$ProcedurePerformer {
   CodeableConcept get role;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProcedurePerformerCopyWith<ProcedurePerformer> get copyWith;
 }
 
@@ -5125,6 +5144,7 @@ class _$_ProcedurePerformer extends _ProcedurePerformer {
       const DeepCollectionEquality().hash(actor) ^
       const DeepCollectionEquality().hash(role);
 
+  @JsonKey(ignore: true)
   @override
   _$ProcedurePerformerCopyWith<_ProcedurePerformer> get copyWith =>
       __$ProcedurePerformerCopyWithImpl<_ProcedurePerformer>(this, _$identity);
@@ -5163,6 +5183,7 @@ abstract class _ProcedurePerformer extends ProcedurePerformer {
   @override
   CodeableConcept get role;
   @override
+  @JsonKey(ignore: true)
   _$ProcedurePerformerCopyWith<_ProcedurePerformer> get copyWith;
 }
 
@@ -5211,6 +5232,7 @@ mixin _$ProcedureFocalDevice {
   Reference get manipulated;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProcedureFocalDeviceCopyWith<ProcedureFocalDevice> get copyWith;
 }
 
@@ -5400,6 +5422,7 @@ class _$_ProcedureFocalDevice extends _ProcedureFocalDevice {
       const DeepCollectionEquality().hash(action) ^
       const DeepCollectionEquality().hash(manipulated);
 
+  @JsonKey(ignore: true)
   @override
   _$ProcedureFocalDeviceCopyWith<_ProcedureFocalDevice> get copyWith =>
       __$ProcedureFocalDeviceCopyWithImpl<_ProcedureFocalDevice>(
@@ -5437,6 +5460,7 @@ abstract class _ProcedureFocalDevice extends ProcedureFocalDevice {
   @JsonKey(required: true)
   Reference get manipulated;
   @override
+  @JsonKey(ignore: true)
   _$ProcedureFocalDeviceCopyWith<_ProcedureFocalDevice> get copyWith;
 }
 
@@ -5594,6 +5618,7 @@ mixin _$ClinicalImpression {
   List<Reference> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClinicalImpressionCopyWith<ClinicalImpression> get copyWith;
 }
 
@@ -6388,6 +6413,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
       const DeepCollectionEquality().hash(plan) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$ClinicalImpressionCopyWith<_ClinicalImpression> get copyWith =>
       __$ClinicalImpressionCopyWithImpl<_ClinicalImpression>(this, _$identity);
@@ -6532,6 +6558,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   @override
   List<Reference> get action;
   @override
+  @JsonKey(ignore: true)
   _$ClinicalImpressionCopyWith<_ClinicalImpression> get copyWith;
 }
 
@@ -6582,6 +6609,7 @@ mixin _$ClinicalImpressionInvestigations {
   List<Reference> get item;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClinicalImpressionInvestigationsCopyWith<ClinicalImpressionInvestigations>
       get copyWith;
 }
@@ -6760,6 +6788,7 @@ class _$_ClinicalImpressionInvestigations
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(item);
 
+  @JsonKey(ignore: true)
   @override
   _$ClinicalImpressionInvestigationsCopyWith<_ClinicalImpressionInvestigations>
       get copyWith => __$ClinicalImpressionInvestigationsCopyWithImpl<
@@ -6797,6 +6826,7 @@ abstract class _ClinicalImpressionInvestigations
   @override
   List<Reference> get item;
   @override
+  @JsonKey(ignore: true)
   _$ClinicalImpressionInvestigationsCopyWith<_ClinicalImpressionInvestigations>
       get copyWith;
 }
@@ -6847,6 +6877,7 @@ mixin _$ClinicalImpressionFinding {
   String get cause;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClinicalImpressionFindingCopyWith<ClinicalImpressionFinding> get copyWith;
 }
 
@@ -7019,6 +7050,7 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
       const DeepCollectionEquality().hash(item) ^
       const DeepCollectionEquality().hash(cause);
 
+  @JsonKey(ignore: true)
   @override
   _$ClinicalImpressionFindingCopyWith<_ClinicalImpressionFinding>
       get copyWith =>
@@ -7056,6 +7088,7 @@ abstract class _ClinicalImpressionFinding extends ClinicalImpressionFinding {
   @override
   String get cause;
   @override
+  @JsonKey(ignore: true)
   _$ClinicalImpressionFindingCopyWith<_ClinicalImpressionFinding> get copyWith;
 }
 
@@ -7105,6 +7138,7 @@ mixin _$ClinicalImpressionRuledOut {
   String get reason;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ClinicalImpressionRuledOutCopyWith<ClinicalImpressionRuledOut> get copyWith;
 }
 
@@ -7278,6 +7312,7 @@ class _$_ClinicalImpressionRuledOut extends _ClinicalImpressionRuledOut {
       const DeepCollectionEquality().hash(item) ^
       const DeepCollectionEquality().hash(reason);
 
+  @JsonKey(ignore: true)
   @override
   _$ClinicalImpressionRuledOutCopyWith<_ClinicalImpressionRuledOut>
       get copyWith => __$ClinicalImpressionRuledOutCopyWithImpl<
@@ -7314,6 +7349,7 @@ abstract class _ClinicalImpressionRuledOut extends ClinicalImpressionRuledOut {
   @override
   String get reason;
   @override
+  @JsonKey(ignore: true)
   _$ClinicalImpressionRuledOutCopyWith<_ClinicalImpressionRuledOut>
       get copyWith;
 }
@@ -7504,6 +7540,7 @@ mixin _$FamilyMemberHistory {
   List<FamilyMemberHistoryCondition> get condition;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $FamilyMemberHistoryCopyWith<FamilyMemberHistory> get copyWith;
 }
 
@@ -8522,6 +8559,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(condition);
 
+  @JsonKey(ignore: true)
   @override
   _$FamilyMemberHistoryCopyWith<_FamilyMemberHistory> get copyWith =>
       __$FamilyMemberHistoryCopyWithImpl<_FamilyMemberHistory>(
@@ -8698,6 +8736,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   @override
   List<FamilyMemberHistoryCondition> get condition;
   @override
+  @JsonKey(ignore: true)
   _$FamilyMemberHistoryCopyWith<_FamilyMemberHistory> get copyWith;
 }
 
@@ -8766,6 +8805,7 @@ mixin _$FamilyMemberHistoryCondition {
   Annotation get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $FamilyMemberHistoryConditionCopyWith<FamilyMemberHistoryCondition>
       get copyWith;
 }
@@ -9113,6 +9153,7 @@ class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
       const DeepCollectionEquality().hash(onsetStringElement) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$FamilyMemberHistoryConditionCopyWith<_FamilyMemberHistoryCondition>
       get copyWith => __$FamilyMemberHistoryConditionCopyWithImpl<
@@ -9169,6 +9210,7 @@ abstract class _FamilyMemberHistoryCondition
   @override
   Annotation get note;
   @override
+  @JsonKey(ignore: true)
   _$FamilyMemberHistoryConditionCopyWith<_FamilyMemberHistoryCondition>
       get copyWith;
 }
@@ -9277,6 +9319,7 @@ mixin _$RiskAssessment {
   Element get mitigationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RiskAssessmentCopyWith<RiskAssessment> get copyWith;
 }
 
@@ -9850,6 +9893,7 @@ class _$_RiskAssessment extends _RiskAssessment {
       const DeepCollectionEquality().hash(mitigation) ^
       const DeepCollectionEquality().hash(mitigationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$RiskAssessmentCopyWith<_RiskAssessment> get copyWith =>
       __$RiskAssessmentCopyWithImpl<_RiskAssessment>(this, _$identity);
@@ -9944,6 +9988,7 @@ abstract class _RiskAssessment extends RiskAssessment {
   @JsonKey(name: '_mitigation')
   Element get mitigationElement;
   @override
+  @JsonKey(ignore: true)
   _$RiskAssessmentCopyWith<_RiskAssessment> get copyWith;
 }
 
@@ -10023,6 +10068,7 @@ mixin _$RiskAssessmentPrediction {
   Element get rationaleElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RiskAssessmentPredictionCopyWith<RiskAssessmentPrediction> get copyWith;
 }
 
@@ -10442,6 +10488,7 @@ class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
       const DeepCollectionEquality().hash(rationale) ^
       const DeepCollectionEquality().hash(rationaleElement);
 
+  @JsonKey(ignore: true)
   @override
   _$RiskAssessmentPredictionCopyWith<_RiskAssessmentPrediction> get copyWith =>
       __$RiskAssessmentPredictionCopyWithImpl<_RiskAssessmentPrediction>(
@@ -10514,6 +10561,7 @@ abstract class _RiskAssessmentPrediction extends RiskAssessmentPrediction {
   @JsonKey(name: '_rationale')
   Element get rationaleElement;
   @override
+  @JsonKey(ignore: true)
   _$RiskAssessmentPredictionCopyWith<_RiskAssessmentPrediction> get copyWith;
 }
 
@@ -10633,6 +10681,7 @@ mixin _$DetectedIssue {
   List<DetectedIssueMitigation> get mitigation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DetectedIssueCopyWith<DetectedIssue> get copyWith;
 }
 
@@ -11254,6 +11303,7 @@ class _$_DetectedIssue extends _DetectedIssue {
       const DeepCollectionEquality().hash(referenceElement) ^
       const DeepCollectionEquality().hash(mitigation);
 
+  @JsonKey(ignore: true)
   @override
   _$DetectedIssueCopyWith<_DetectedIssue> get copyWith =>
       __$DetectedIssueCopyWithImpl<_DetectedIssue>(this, _$identity);
@@ -11360,6 +11410,7 @@ abstract class _DetectedIssue extends DetectedIssue {
   @override
   List<DetectedIssueMitigation> get mitigation;
   @override
+  @JsonKey(ignore: true)
   _$DetectedIssueCopyWith<_DetectedIssue> get copyWith;
 }
 
@@ -11412,6 +11463,7 @@ mixin _$DetectedIssueMitigation {
   Reference get author;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DetectedIssueMitigationCopyWith<DetectedIssueMitigation> get copyWith;
 }
 
@@ -11609,6 +11661,7 @@ class _$_DetectedIssueMitigation extends _DetectedIssueMitigation {
       const DeepCollectionEquality().hash(date) ^
       const DeepCollectionEquality().hash(author);
 
+  @JsonKey(ignore: true)
   @override
   _$DetectedIssueMitigationCopyWith<_DetectedIssueMitigation> get copyWith =>
       __$DetectedIssueMitigationCopyWithImpl<_DetectedIssueMitigation>(
@@ -11648,5 +11701,6 @@ abstract class _DetectedIssueMitigation extends DetectedIssueMitigation {
   @override
   Reference get author;
   @override
+  @JsonKey(ignore: true)
   _$DetectedIssueMitigationCopyWith<_DetectedIssueMitigation> get copyWith;
 }

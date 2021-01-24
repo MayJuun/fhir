@@ -178,6 +178,7 @@ mixin _$Appointment {
   List<Period> get requestedPeriod;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AppointmentCopyWith<Appointment> get copyWith;
 }
 
@@ -1070,6 +1071,7 @@ class _$_Appointment extends _Appointment {
       const DeepCollectionEquality().hash(participant) ^
       const DeepCollectionEquality().hash(requestedPeriod);
 
+  @JsonKey(ignore: true)
   @override
   _$AppointmentCopyWith<_Appointment> get copyWith =>
       __$AppointmentCopyWithImpl<_Appointment>(this, _$identity);
@@ -1230,6 +1232,7 @@ abstract class _Appointment extends Appointment {
   @override
   List<Period> get requestedPeriod;
   @override
+  @JsonKey(ignore: true)
   _$AppointmentCopyWith<_Appointment> get copyWith;
 }
 
@@ -1283,6 +1286,7 @@ mixin _$AppointmentParticipant {
   Element get statusElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AppointmentParticipantCopyWith<AppointmentParticipant> get copyWith;
 }
 
@@ -1501,6 +1505,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(statusElement);
 
+  @JsonKey(ignore: true)
   @override
   _$AppointmentParticipantCopyWith<_AppointmentParticipant> get copyWith =>
       __$AppointmentParticipantCopyWithImpl<_AppointmentParticipant>(
@@ -1542,6 +1547,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
   @JsonKey(name: '_status')
   Element get statusElement;
   @override
+  @JsonKey(ignore: true)
   _$AppointmentParticipantCopyWith<_AppointmentParticipant> get copyWith;
 }
 
@@ -1659,6 +1665,7 @@ mixin _$AppointmentResponse {
   Element get commentElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AppointmentResponseCopyWith<AppointmentResponse> get copyWith;
 }
 
@@ -2260,6 +2267,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
       const DeepCollectionEquality().hash(comment) ^
       const DeepCollectionEquality().hash(commentElement);
 
+  @JsonKey(ignore: true)
   @override
   _$AppointmentResponseCopyWith<_AppointmentResponse> get copyWith =>
       __$AppointmentResponseCopyWithImpl<_AppointmentResponse>(
@@ -2365,6 +2373,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @JsonKey(name: '_comment')
   Element get commentElement;
   @override
+  @JsonKey(ignore: true)
   _$AppointmentResponseCopyWith<_AppointmentResponse> get copyWith;
 }
 
@@ -2517,6 +2526,7 @@ mixin _$ProcessRequest {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProcessRequestCopyWith<ProcessRequest> get copyWith;
 }
 
@@ -3312,6 +3322,7 @@ class _$_ProcessRequest extends _ProcessRequest {
       const DeepCollectionEquality().hash(excludeElement) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$ProcessRequestCopyWith<_ProcessRequest> get copyWith =>
       __$ProcessRequestCopyWithImpl<_ProcessRequest>(this, _$identity);
@@ -3451,6 +3462,7 @@ abstract class _ProcessRequest extends ProcessRequest {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$ProcessRequestCopyWith<_ProcessRequest> get copyWith;
 }
 
@@ -3489,6 +3501,7 @@ mixin _$ProcessRequestItem {
   Element get sequenceLinkIdElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProcessRequestItemCopyWith<ProcessRequestItem> get copyWith;
 }
 
@@ -3622,6 +3635,7 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
       const DeepCollectionEquality().hash(sequenceLinkId) ^
       const DeepCollectionEquality().hash(sequenceLinkIdElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ProcessRequestItemCopyWith<_ProcessRequestItem> get copyWith =>
       __$ProcessRequestItemCopyWithImpl<_ProcessRequestItem>(this, _$identity);
@@ -3648,6 +3662,7 @@ abstract class _ProcessRequestItem extends ProcessRequestItem {
   @JsonKey(name: '_sequenceLinkId')
   Element get sequenceLinkIdElement;
   @override
+  @JsonKey(ignore: true)
   _$ProcessRequestItemCopyWith<_ProcessRequestItem> get copyWith;
 }
 
@@ -3774,6 +3789,7 @@ mixin _$ProcessResponse {
   List<Reference> get communicationRequest;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProcessResponseCopyWith<ProcessResponse> get copyWith;
 }
 
@@ -4461,6 +4477,7 @@ class _$_ProcessResponse extends _ProcessResponse {
       const DeepCollectionEquality().hash(error) ^
       const DeepCollectionEquality().hash(communicationRequest);
 
+  @JsonKey(ignore: true)
   @override
   _$ProcessResponseCopyWith<_ProcessResponse> get copyWith =>
       __$ProcessResponseCopyWithImpl<_ProcessResponse>(this, _$identity);
@@ -4574,6 +4591,7 @@ abstract class _ProcessResponse extends ProcessResponse {
   @override
   List<Reference> get communicationRequest;
   @override
+  @JsonKey(ignore: true)
   _$ProcessResponseCopyWith<_ProcessResponse> get copyWith;
 }
 
@@ -4616,6 +4634,7 @@ mixin _$ProcessResponseProcessNote {
   Element get textElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProcessResponseProcessNoteCopyWith<ProcessResponseProcessNote> get copyWith;
 }
 
@@ -4767,6 +4786,7 @@ class _$_ProcessResponseProcessNote extends _ProcessResponseProcessNote {
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(textElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ProcessResponseProcessNoteCopyWith<_ProcessResponseProcessNote>
       get copyWith => __$ProcessResponseProcessNoteCopyWithImpl<
@@ -4797,6 +4817,7 @@ abstract class _ProcessResponseProcessNote extends ProcessResponseProcessNote {
   @JsonKey(name: '_text')
   Element get textElement;
   @override
+  @JsonKey(ignore: true)
   _$ProcessResponseProcessNoteCopyWith<_ProcessResponseProcessNote>
       get copyWith;
 }
@@ -4938,6 +4959,7 @@ mixin _$RequestGroup {
   List<RequestGroupAction> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RequestGroupCopyWith<RequestGroup> get copyWith;
 }
 
@@ -5691,6 +5713,7 @@ class _$_RequestGroup extends _RequestGroup {
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$RequestGroupCopyWith<_RequestGroup> get copyWith =>
       __$RequestGroupCopyWithImpl<_RequestGroup>(this, _$identity);
@@ -5818,6 +5841,7 @@ abstract class _RequestGroup extends RequestGroup {
   @override
   List<RequestGroupAction> get action;
   @override
+  @JsonKey(ignore: true)
   _$RequestGroupCopyWith<_RequestGroup> get copyWith;
 }
 
@@ -5955,6 +5979,7 @@ mixin _$RequestGroupAction {
   List<RequestGroupAction> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RequestGroupActionCopyWith<RequestGroupAction> get copyWith;
 }
 
@@ -6756,6 +6781,7 @@ class _$_RequestGroupAction extends _RequestGroupAction {
       const DeepCollectionEquality().hash(resource) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$RequestGroupActionCopyWith<_RequestGroupAction> get copyWith =>
       __$RequestGroupActionCopyWithImpl<_RequestGroupAction>(this, _$identity);
@@ -6880,6 +6906,7 @@ abstract class _RequestGroupAction extends RequestGroupAction {
   @override
   List<RequestGroupAction> get action;
   @override
+  @JsonKey(ignore: true)
   _$RequestGroupActionCopyWith<_RequestGroupAction> get copyWith;
 }
 
@@ -6940,6 +6967,7 @@ mixin _$RequestGroupCondition {
   Element get expressionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RequestGroupConditionCopyWith<RequestGroupCondition> get copyWith;
 }
 
@@ -7202,6 +7230,7 @@ class _$_RequestGroupCondition extends _RequestGroupCondition {
       const DeepCollectionEquality().hash(expression) ^
       const DeepCollectionEquality().hash(expressionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$RequestGroupConditionCopyWith<_RequestGroupCondition> get copyWith =>
       __$RequestGroupConditionCopyWithImpl<_RequestGroupCondition>(
@@ -7250,6 +7279,7 @@ abstract class _RequestGroupCondition extends RequestGroupCondition {
   @JsonKey(name: '_expression')
   Element get expressionElement;
   @override
+  @JsonKey(ignore: true)
   _$RequestGroupConditionCopyWith<_RequestGroupCondition> get copyWith;
 }
 
@@ -7302,6 +7332,7 @@ mixin _$RequestGroupRelatedAction {
   Range get offsetRange;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RequestGroupRelatedActionCopyWith<RequestGroupRelatedAction> get copyWith;
 }
 
@@ -7538,6 +7569,7 @@ class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
       const DeepCollectionEquality().hash(offsetDuration) ^
       const DeepCollectionEquality().hash(offsetRange);
 
+  @JsonKey(ignore: true)
   @override
   _$RequestGroupRelatedActionCopyWith<_RequestGroupRelatedAction>
       get copyWith =>
@@ -7578,6 +7610,7 @@ abstract class _RequestGroupRelatedAction extends RequestGroupRelatedAction {
   @override
   Range get offsetRange;
   @override
+  @JsonKey(ignore: true)
   _$RequestGroupRelatedActionCopyWith<_RequestGroupRelatedAction> get copyWith;
 }
 
@@ -7685,6 +7718,7 @@ mixin _$Schedule {
   Element get commentElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ScheduleCopyWith<Schedule> get copyWith;
 }
 
@@ -8217,6 +8251,7 @@ class _$_Schedule extends _Schedule {
       const DeepCollectionEquality().hash(comment) ^
       const DeepCollectionEquality().hash(commentElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ScheduleCopyWith<_Schedule> get copyWith =>
       __$ScheduleCopyWithImpl<_Schedule>(this, _$identity);
@@ -8310,6 +8345,7 @@ abstract class _Schedule extends Schedule {
   @JsonKey(name: '_comment')
   Element get commentElement;
   @override
+  @JsonKey(ignore: true)
   _$ScheduleCopyWith<_Schedule> get copyWith;
 }
 
@@ -8441,6 +8477,7 @@ mixin _$Slot {
   Element get commentElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SlotCopyWith<Slot> get copyWith;
 }
 
@@ -9121,6 +9158,7 @@ class _$_Slot extends _Slot {
       const DeepCollectionEquality().hash(comment) ^
       const DeepCollectionEquality().hash(commentElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SlotCopyWith<_Slot> get copyWith =>
       __$SlotCopyWithImpl<_Slot>(this, _$identity);
@@ -9238,6 +9276,7 @@ abstract class _Slot extends Slot {
   @JsonKey(name: '_comment')
   Element get commentElement;
   @override
+  @JsonKey(ignore: true)
   _$SlotCopyWith<_Slot> get copyWith;
 }
 
@@ -9431,6 +9470,7 @@ mixin _$Task {
   List<TaskOutput> get output;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TaskCopyWith<Task> get copyWith;
 }
 
@@ -10523,6 +10563,7 @@ class _$_Task extends _Task {
       const DeepCollectionEquality().hash(input) ^
       const DeepCollectionEquality().hash(output);
 
+  @JsonKey(ignore: true)
   @override
   _$TaskCopyWith<_Task> get copyWith =>
       __$TaskCopyWithImpl<_Task>(this, _$identity);
@@ -10702,6 +10743,7 @@ abstract class _Task extends Task {
   @override
   List<TaskOutput> get output;
   @override
+  @JsonKey(ignore: true)
   _$TaskCopyWith<_Task> get copyWith;
 }
 
@@ -10737,6 +10779,7 @@ mixin _$TaskRequester {
   Reference get onBehalfOf;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TaskRequesterCopyWith<TaskRequester> get copyWith;
 }
 
@@ -10870,6 +10913,7 @@ class _$_TaskRequester extends _TaskRequester {
       const DeepCollectionEquality().hash(agent) ^
       const DeepCollectionEquality().hash(onBehalfOf);
 
+  @JsonKey(ignore: true)
   @override
   _$TaskRequesterCopyWith<_TaskRequester> get copyWith =>
       __$TaskRequesterCopyWithImpl<_TaskRequester>(this, _$identity);
@@ -10893,6 +10937,7 @@ abstract class _TaskRequester extends TaskRequester {
   @override
   Reference get onBehalfOf;
   @override
+  @JsonKey(ignore: true)
   _$TaskRequesterCopyWith<_TaskRequester> get copyWith;
 }
 
@@ -10937,6 +10982,7 @@ mixin _$TaskRestriction {
   List<Reference> get recipient;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TaskRestrictionCopyWith<TaskRestriction> get copyWith;
 }
 
@@ -11110,6 +11156,7 @@ class _$_TaskRestriction extends _TaskRestriction {
       const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(recipient);
 
+  @JsonKey(ignore: true)
   @override
   _$TaskRestrictionCopyWith<_TaskRestriction> get copyWith =>
       __$TaskRestrictionCopyWithImpl<_TaskRestriction>(this, _$identity);
@@ -11141,6 +11188,7 @@ abstract class _TaskRestriction extends TaskRestriction {
   @override
   List<Reference> get recipient;
   @override
+  @JsonKey(ignore: true)
   _$TaskRestrictionCopyWith<_TaskRestriction> get copyWith;
 }
 
@@ -11402,6 +11450,7 @@ mixin _$TaskInput {
   TriggerDefinition get valueTriggerDefinition;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TaskInputCopyWith<TaskInput> get copyWith;
 }
 
@@ -13249,6 +13298,7 @@ class _$_TaskInput extends _TaskInput {
       const DeepCollectionEquality().hash(valueParameterDefinition) ^
       const DeepCollectionEquality().hash(valueTriggerDefinition);
 
+  @JsonKey(ignore: true)
   @override
   _$TaskInputCopyWith<_TaskInput> get copyWith =>
       __$TaskInputCopyWithImpl<_TaskInput>(this, _$identity);
@@ -13497,6 +13547,7 @@ abstract class _TaskInput extends TaskInput {
   @override
   TriggerDefinition get valueTriggerDefinition;
   @override
+  @JsonKey(ignore: true)
   _$TaskInputCopyWith<_TaskInput> get copyWith;
 }
 
@@ -13758,6 +13809,7 @@ mixin _$TaskOutput {
   TriggerDefinition get valueTriggerDefinition;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TaskOutputCopyWith<TaskOutput> get copyWith;
 }
 
@@ -15607,6 +15659,7 @@ class _$_TaskOutput extends _TaskOutput {
       const DeepCollectionEquality().hash(valueParameterDefinition) ^
       const DeepCollectionEquality().hash(valueTriggerDefinition);
 
+  @JsonKey(ignore: true)
   @override
   _$TaskOutputCopyWith<_TaskOutput> get copyWith =>
       __$TaskOutputCopyWithImpl<_TaskOutput>(this, _$identity);
@@ -15855,5 +15908,6 @@ abstract class _TaskOutput extends TaskOutput {
   @override
   TriggerDefinition get valueTriggerDefinition;
   @override
+  @JsonKey(ignore: true)
   _$TaskOutputCopyWith<_TaskOutput> get copyWith;
 }

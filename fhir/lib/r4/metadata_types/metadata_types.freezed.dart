@@ -53,6 +53,7 @@ mixin _$ContactDetail {
   List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ContactDetailCopyWith<ContactDetail> get copyWith;
 }
 
@@ -223,6 +224,7 @@ class _$_ContactDetail extends _ContactDetail {
       const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(telecom);
 
+  @JsonKey(ignore: true)
   @override
   _$ContactDetailCopyWith<_ContactDetail> get copyWith =>
       __$ContactDetailCopyWithImpl<_ContactDetail>(this, _$identity);
@@ -258,6 +260,7 @@ abstract class _ContactDetail extends ContactDetail {
   @override
   List<ContactPoint> get telecom;
   @override
+  @JsonKey(ignore: true)
   _$ContactDetailCopyWith<_ContactDetail> get copyWith;
 }
 
@@ -314,6 +317,7 @@ mixin _$Contributor {
   List<ContactDetail> get contact;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ContributorCopyWith<Contributor> get copyWith;
 }
 
@@ -524,6 +528,7 @@ class _$_Contributor extends _Contributor {
       const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(contact);
 
+  @JsonKey(ignore: true)
   @override
   _$ContributorCopyWith<_Contributor> get copyWith =>
       __$ContributorCopyWithImpl<_Contributor>(this, _$identity);
@@ -567,6 +572,7 @@ abstract class _Contributor extends Contributor {
   @override
   List<ContactDetail> get contact;
   @override
+  @JsonKey(ignore: true)
   _$ContributorCopyWith<_Contributor> get copyWith;
 }
 
@@ -644,6 +650,7 @@ mixin _$DataRequirement {
   List<DataRequirementSort> get sort;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DataRequirementCopyWith<DataRequirement> get copyWith;
 }
 
@@ -998,6 +1005,7 @@ class _$_DataRequirement extends _DataRequirement {
       const DeepCollectionEquality().hash(limitElement) ^
       const DeepCollectionEquality().hash(sort);
 
+  @JsonKey(ignore: true)
   @override
   _$DataRequirementCopyWith<_DataRequirement> get copyWith =>
       __$DataRequirementCopyWithImpl<_DataRequirement>(this, _$identity);
@@ -1062,6 +1070,7 @@ abstract class _DataRequirement extends DataRequirement {
   @override
   List<DataRequirementSort> get sort;
   @override
+  @JsonKey(ignore: true)
   _$DataRequirementCopyWith<_DataRequirement> get copyWith;
 }
 
@@ -1124,6 +1133,7 @@ mixin _$DataRequirementCodeFilter {
   List<Coding> get code;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DataRequirementCodeFilterCopyWith<DataRequirementCodeFilter> get copyWith;
 }
 
@@ -1369,6 +1379,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
       const DeepCollectionEquality().hash(valueSet) ^
       const DeepCollectionEquality().hash(code);
 
+  @JsonKey(ignore: true)
   @override
   _$DataRequirementCodeFilterCopyWith<_DataRequirementCodeFilter>
       get copyWith =>
@@ -1419,6 +1430,7 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   @override
   List<Coding> get code;
   @override
+  @JsonKey(ignore: true)
   _$DataRequirementCodeFilterCopyWith<_DataRequirementCodeFilter> get copyWith;
 }
 
@@ -1488,6 +1500,7 @@ mixin _$DataRequirementDateFilter {
   FhirDuration get valueDuration;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DataRequirementDateFilterCopyWith<DataRequirementDateFilter> get copyWith;
 }
 
@@ -1814,6 +1827,7 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
       const DeepCollectionEquality().hash(valuePeriod) ^
       const DeepCollectionEquality().hash(valueDuration);
 
+  @JsonKey(ignore: true)
   @override
   _$DataRequirementDateFilterCopyWith<_DataRequirementDateFilter>
       get copyWith =>
@@ -1871,6 +1885,7 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   @override
   FhirDuration get valueDuration;
   @override
+  @JsonKey(ignore: true)
   _$DataRequirementDateFilterCopyWith<_DataRequirementDateFilter> get copyWith;
 }
 
@@ -1931,6 +1946,7 @@ mixin _$DataRequirementSort {
   Element get directionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DataRequirementSortCopyWith<DataRequirementSort> get copyWith;
 }
 
@@ -2165,6 +2181,7 @@ class _$_DataRequirementSort extends _DataRequirementSort {
       const DeepCollectionEquality().hash(direction) ^
       const DeepCollectionEquality().hash(directionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$DataRequirementSortCopyWith<_DataRequirementSort> get copyWith =>
       __$DataRequirementSortCopyWithImpl<_DataRequirementSort>(
@@ -2213,6 +2230,7 @@ abstract class _DataRequirementSort extends DataRequirementSort {
   @JsonKey(name: '_direction')
   Element get directionElement;
   @override
+  @JsonKey(ignore: true)
   _$DataRequirementSortCopyWith<_DataRequirementSort> get copyWith;
 }
 
@@ -2296,6 +2314,7 @@ mixin _$ParameterDefinition {
   Canonical get profile;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ParameterDefinitionCopyWith<ParameterDefinition> get copyWith;
 }
 
@@ -2676,6 +2695,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
       const DeepCollectionEquality().hash(typeElement) ^
       const DeepCollectionEquality().hash(profile);
 
+  @JsonKey(ignore: true)
   @override
   _$ParameterDefinitionCopyWith<_ParameterDefinition> get copyWith =>
       __$ParameterDefinitionCopyWithImpl<_ParameterDefinition>(
@@ -2747,6 +2767,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   @override
   Canonical get profile;
   @override
+  @JsonKey(ignore: true)
   _$ParameterDefinitionCopyWith<_ParameterDefinition> get copyWith;
 }
 
@@ -2834,6 +2855,7 @@ mixin _$RelatedArtifact {
   Canonical get resource;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RelatedArtifactCopyWith<RelatedArtifact> get copyWith;
 }
 
@@ -3216,6 +3238,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
       const DeepCollectionEquality().hash(document) ^
       const DeepCollectionEquality().hash(resource);
 
+  @JsonKey(ignore: true)
   @override
   _$RelatedArtifactCopyWith<_RelatedArtifact> get copyWith =>
       __$RelatedArtifactCopyWithImpl<_RelatedArtifact>(this, _$identity);
@@ -3290,6 +3313,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
   @override
   Canonical get resource;
   @override
+  @JsonKey(ignore: true)
   _$RelatedArtifactCopyWith<_RelatedArtifact> get copyWith;
 }
 
@@ -3375,6 +3399,7 @@ mixin _$TriggerDefinition {
   Expression get condition;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TriggerDefinitionCopyWith<TriggerDefinition> get copyWith;
 }
 
@@ -3779,6 +3804,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
       const DeepCollectionEquality().hash(data) ^
       const DeepCollectionEquality().hash(condition);
 
+  @JsonKey(ignore: true)
   @override
   _$TriggerDefinitionCopyWith<_TriggerDefinition> get copyWith =>
       __$TriggerDefinitionCopyWithImpl<_TriggerDefinition>(this, _$identity);
@@ -3851,6 +3877,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
   @override
   Expression get condition;
   @override
+  @JsonKey(ignore: true)
   _$TriggerDefinitionCopyWith<_TriggerDefinition> get copyWith;
 }
 
@@ -3904,6 +3931,7 @@ mixin _$UsageContext {
   Reference get valueReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $UsageContextCopyWith<UsageContext> get copyWith;
 }
 
@@ -4161,6 +4189,7 @@ class _$_UsageContext extends _UsageContext {
       const DeepCollectionEquality().hash(valueRange) ^
       const DeepCollectionEquality().hash(valueReference);
 
+  @JsonKey(ignore: true)
   @override
   _$UsageContextCopyWith<_UsageContext> get copyWith =>
       __$UsageContextCopyWithImpl<_UsageContext>(this, _$identity);
@@ -4201,6 +4230,7 @@ abstract class _UsageContext extends UsageContext {
   @override
   Reference get valueReference;
   @override
+  @JsonKey(ignore: true)
   _$UsageContextCopyWith<_UsageContext> get copyWith;
 }
 
@@ -4282,6 +4312,7 @@ mixin _$Expression {
   Element get referenceElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExpressionCopyWith<Expression> get copyWith;
 }
 
@@ -4634,6 +4665,7 @@ class _$_Expression extends _Expression {
       const DeepCollectionEquality().hash(reference) ^
       const DeepCollectionEquality().hash(referenceElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ExpressionCopyWith<_Expression> get copyWith =>
       __$ExpressionCopyWithImpl<_Expression>(this, _$identity);
@@ -4702,5 +4734,6 @@ abstract class _Expression extends Expression {
   @JsonKey(name: '_reference')
   Element get referenceElement;
   @override
+  @JsonKey(ignore: true)
   _$ExpressionCopyWith<_Expression> get copyWith;
 }

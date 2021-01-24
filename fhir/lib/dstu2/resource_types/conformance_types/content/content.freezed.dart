@@ -235,6 +235,7 @@ mixin _$StructureDefinition {
   StructureDefinitionDifferential get differential;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureDefinitionCopyWith<StructureDefinition> get copyWith;
 }
 
@@ -1371,6 +1372,7 @@ class _$_StructureDefinition extends _StructureDefinition {
       const DeepCollectionEquality().hash(snapshot) ^
       const DeepCollectionEquality().hash(differential);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureDefinitionCopyWith<_StructureDefinition> get copyWith =>
       __$StructureDefinitionCopyWithImpl<_StructureDefinition>(
@@ -1588,6 +1590,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   @override
   StructureDefinitionDifferential get differential;
   @override
+  @JsonKey(ignore: true)
   _$StructureDefinitionCopyWith<_StructureDefinition> get copyWith;
 }
 
@@ -1636,6 +1639,7 @@ mixin _$StructureDefinitionContact {
   List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureDefinitionContactCopyWith<StructureDefinitionContact> get copyWith;
 }
 
@@ -1794,6 +1798,7 @@ class _$_StructureDefinitionContact extends _StructureDefinitionContact {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(telecom);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureDefinitionContactCopyWith<_StructureDefinitionContact>
       get copyWith => __$StructureDefinitionContactCopyWithImpl<
@@ -1829,6 +1834,7 @@ abstract class _StructureDefinitionContact extends StructureDefinitionContact {
   @override
   List<ContactPoint> get telecom;
   @override
+  @JsonKey(ignore: true)
   _$StructureDefinitionContactCopyWith<_StructureDefinitionContact>
       get copyWith;
 }
@@ -1905,6 +1911,7 @@ mixin _$StructureDefinitionMapping {
   Element get commentElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureDefinitionMappingCopyWith<StructureDefinitionMapping> get copyWith;
 }
 
@@ -2229,6 +2236,7 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
       const DeepCollectionEquality().hash(comments) ^
       const DeepCollectionEquality().hash(commentElement);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureDefinitionMappingCopyWith<_StructureDefinitionMapping>
       get copyWith => __$StructureDefinitionMappingCopyWithImpl<
@@ -2292,6 +2300,7 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
   @JsonKey(name: '_comments')
   Element get commentElement;
   @override
+  @JsonKey(ignore: true)
   _$StructureDefinitionMappingCopyWith<_StructureDefinitionMapping>
       get copyWith;
 }
@@ -2339,6 +2348,7 @@ mixin _$StructureDefinitionSnapshot {
   List<ElementDefinition> get element;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureDefinitionSnapshotCopyWith<StructureDefinitionSnapshot>
       get copyWith;
 }
@@ -2492,6 +2502,7 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(element);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureDefinitionSnapshotCopyWith<_StructureDefinitionSnapshot>
       get copyWith => __$StructureDefinitionSnapshotCopyWithImpl<
@@ -2527,6 +2538,7 @@ abstract class _StructureDefinitionSnapshot
   @JsonKey(required: true)
   List<ElementDefinition> get element;
   @override
+  @JsonKey(ignore: true)
   _$StructureDefinitionSnapshotCopyWith<_StructureDefinitionSnapshot>
       get copyWith;
 }
@@ -2575,6 +2587,7 @@ mixin _$StructureDefinitionDifferential {
   List<ElementDefinition> get element;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureDefinitionDifferentialCopyWith<StructureDefinitionDifferential>
       get copyWith;
 }
@@ -2730,6 +2743,7 @@ class _$_StructureDefinitionDifferential
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(element);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureDefinitionDifferentialCopyWith<_StructureDefinitionDifferential>
       get copyWith => __$StructureDefinitionDifferentialCopyWithImpl<
@@ -2765,6 +2779,7 @@ abstract class _StructureDefinitionDifferential
   @JsonKey(required: true)
   List<ElementDefinition> get element;
   @override
+  @JsonKey(ignore: true)
   _$StructureDefinitionDifferentialCopyWith<_StructureDefinitionDifferential>
       get copyWith;
 }
@@ -2878,6 +2893,7 @@ mixin _$DataElement {
   List<ElementDefinition> get element;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DataElementCopyWith<DataElement> get copyWith;
 }
 
@@ -3349,6 +3365,7 @@ class _$_DataElement extends _DataElement {
       const DeepCollectionEquality().hash(mapping) ^
       const DeepCollectionEquality().hash(element);
 
+  @JsonKey(ignore: true)
   @override
   _$DataElementCopyWith<_DataElement> get copyWith =>
       __$DataElementCopyWithImpl<_DataElement>(this, _$identity);
@@ -3448,6 +3465,7 @@ abstract class _DataElement extends DataElement {
   @JsonKey(required: true)
   List<ElementDefinition> get element;
   @override
+  @JsonKey(ignore: true)
   _$DataElementCopyWith<_DataElement> get copyWith;
 }
 
@@ -3495,6 +3513,7 @@ mixin _$DataElementContact {
   List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DataElementContactCopyWith<DataElementContact> get copyWith;
 }
 
@@ -3651,6 +3670,7 @@ class _$_DataElementContact extends _DataElementContact {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(telecom);
 
+  @JsonKey(ignore: true)
   @override
   _$DataElementContactCopyWith<_DataElementContact> get copyWith =>
       __$DataElementContactCopyWithImpl<_DataElementContact>(this, _$identity);
@@ -3685,6 +3705,7 @@ abstract class _DataElementContact extends DataElementContact {
   @override
   List<ContactPoint> get telecom;
   @override
+  @JsonKey(ignore: true)
   _$DataElementContactCopyWith<_DataElementContact> get copyWith;
 }
 
@@ -3759,6 +3780,7 @@ mixin _$DataElementMapping {
   Element get commentElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DataElementMappingCopyWith<DataElementMapping> get copyWith;
 }
 
@@ -4081,6 +4103,7 @@ class _$_DataElementMapping extends _DataElementMapping {
       const DeepCollectionEquality().hash(comments) ^
       const DeepCollectionEquality().hash(commentElement);
 
+  @JsonKey(ignore: true)
   @override
   _$DataElementMappingCopyWith<_DataElementMapping> get copyWith =>
       __$DataElementMappingCopyWithImpl<_DataElementMapping>(this, _$identity);
@@ -4143,5 +4166,6 @@ abstract class _DataElementMapping extends DataElementMapping {
   @JsonKey(name: '_comment')
   Element get commentElement;
   @override
+  @JsonKey(ignore: true)
   _$DataElementMappingCopyWith<_DataElementMapping> get copyWith;
 }

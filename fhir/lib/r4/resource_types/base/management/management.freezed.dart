@@ -156,6 +156,7 @@ mixin _$Encounter {
   Reference get partOf;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EncounterCopyWith<Encounter> get copyWith;
 }
 
@@ -962,6 +963,7 @@ class _$_Encounter extends _Encounter {
       const DeepCollectionEquality().hash(serviceProvider) ^
       const DeepCollectionEquality().hash(partOf);
 
+  @JsonKey(ignore: true)
   @override
   _$EncounterCopyWith<_Encounter> get copyWith =>
       __$EncounterCopyWithImpl<_Encounter>(this, _$identity);
@@ -1100,6 +1102,7 @@ abstract class _Encounter extends Encounter {
   @override
   Reference get partOf;
   @override
+  @JsonKey(ignore: true)
   _$EncounterCopyWith<_Encounter> get copyWith;
 }
 
@@ -1157,6 +1160,7 @@ mixin _$EncounterStatusHistory {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EncounterStatusHistoryCopyWith<EncounterStatusHistory> get copyWith;
 }
 
@@ -1373,6 +1377,7 @@ class _$_EncounterStatusHistory extends _EncounterStatusHistory {
       const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$EncounterStatusHistoryCopyWith<_EncounterStatusHistory> get copyWith =>
       __$EncounterStatusHistoryCopyWithImpl<_EncounterStatusHistory>(
@@ -1417,6 +1422,7 @@ abstract class _EncounterStatusHistory extends EncounterStatusHistory {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$EncounterStatusHistoryCopyWith<_EncounterStatusHistory> get copyWith;
 }
 
@@ -1466,6 +1472,7 @@ mixin _$EncounterClassHistory {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EncounterClassHistoryCopyWith<EncounterClassHistory> get copyWith;
 }
 
@@ -1651,6 +1658,7 @@ class _$_EncounterClassHistory extends _EncounterClassHistory {
       const DeepCollectionEquality().hash(class_) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$EncounterClassHistoryCopyWith<_EncounterClassHistory> get copyWith =>
       __$EncounterClassHistoryCopyWithImpl<_EncounterClassHistory>(
@@ -1687,6 +1695,7 @@ abstract class _EncounterClassHistory extends EncounterClassHistory {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$EncounterClassHistoryCopyWith<_EncounterClassHistory> get copyWith;
 }
 
@@ -1737,6 +1746,7 @@ mixin _$EncounterParticipant {
   Reference get individual;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EncounterParticipantCopyWith<EncounterParticipant> get copyWith;
 }
 
@@ -1934,6 +1944,7 @@ class _$_EncounterParticipant extends _EncounterParticipant {
       const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(individual);
 
+  @JsonKey(ignore: true)
   @override
   _$EncounterParticipantCopyWith<_EncounterParticipant> get copyWith =>
       __$EncounterParticipantCopyWithImpl<_EncounterParticipant>(
@@ -1972,6 +1983,7 @@ abstract class _EncounterParticipant extends EncounterParticipant {
   @override
   Reference get individual;
   @override
+  @JsonKey(ignore: true)
   _$EncounterParticipantCopyWith<_EncounterParticipant> get copyWith;
 }
 
@@ -2026,6 +2038,7 @@ mixin _$EncounterDiagnosis {
   Element get rankElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EncounterDiagnosisCopyWith<EncounterDiagnosis> get copyWith;
 }
 
@@ -2253,6 +2266,7 @@ class _$_EncounterDiagnosis extends _EncounterDiagnosis {
       const DeepCollectionEquality().hash(rank) ^
       const DeepCollectionEquality().hash(rankElement);
 
+  @JsonKey(ignore: true)
   @override
   _$EncounterDiagnosisCopyWith<_EncounterDiagnosis> get copyWith =>
       __$EncounterDiagnosisCopyWithImpl<_EncounterDiagnosis>(this, _$identity);
@@ -2294,6 +2308,7 @@ abstract class _EncounterDiagnosis extends EncounterDiagnosis {
   @JsonKey(name: '_rank')
   Element get rankElement;
   @override
+  @JsonKey(ignore: true)
   _$EncounterDiagnosisCopyWith<_EncounterDiagnosis> get copyWith;
 }
 
@@ -2363,6 +2378,7 @@ mixin _$EncounterHospitalization {
   CodeableConcept get dischargeDisposition;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EncounterHospitalizationCopyWith<EncounterHospitalization> get copyWith;
 }
 
@@ -2722,6 +2738,7 @@ class _$_EncounterHospitalization extends _EncounterHospitalization {
       const DeepCollectionEquality().hash(destination) ^
       const DeepCollectionEquality().hash(dischargeDisposition);
 
+  @JsonKey(ignore: true)
   @override
   _$EncounterHospitalizationCopyWith<_EncounterHospitalization> get copyWith =>
       __$EncounterHospitalizationCopyWithImpl<_EncounterHospitalization>(
@@ -2778,6 +2795,7 @@ abstract class _EncounterHospitalization extends EncounterHospitalization {
   @override
   CodeableConcept get dischargeDisposition;
   @override
+  @JsonKey(ignore: true)
   _$EncounterHospitalizationCopyWith<_EncounterHospitalization> get copyWith;
 }
 
@@ -2840,6 +2858,7 @@ mixin _$EncounterLocation {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EncounterLocationCopyWith<EncounterLocation> get copyWith;
 }
 
@@ -3106,6 +3125,7 @@ class _$_EncounterLocation extends _EncounterLocation {
       const DeepCollectionEquality().hash(physicalType) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$EncounterLocationCopyWith<_EncounterLocation> get copyWith =>
       __$EncounterLocationCopyWithImpl<_EncounterLocation>(this, _$identity);
@@ -3155,6 +3175,7 @@ abstract class _EncounterLocation extends EncounterLocation {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$EncounterLocationCopyWith<_EncounterLocation> get copyWith;
 }
 
@@ -3271,6 +3292,7 @@ mixin _$EpisodeOfCare {
   List<Reference> get account;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EpisodeOfCareCopyWith<EpisodeOfCare> get copyWith;
 }
 
@@ -3858,6 +3880,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
       const DeepCollectionEquality().hash(team) ^
       const DeepCollectionEquality().hash(account);
 
+  @JsonKey(ignore: true)
   @override
   _$EpisodeOfCareCopyWith<_EpisodeOfCare> get copyWith =>
       __$EpisodeOfCareCopyWithImpl<_EpisodeOfCare>(this, _$identity);
@@ -3961,6 +3984,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   @override
   List<Reference> get account;
   @override
+  @JsonKey(ignore: true)
   _$EpisodeOfCareCopyWith<_EpisodeOfCare> get copyWith;
 }
 
@@ -4018,6 +4042,7 @@ mixin _$EpisodeOfCareStatusHistory {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EpisodeOfCareStatusHistoryCopyWith<EpisodeOfCareStatusHistory> get copyWith;
 }
 
@@ -4236,6 +4261,7 @@ class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
       const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$EpisodeOfCareStatusHistoryCopyWith<_EpisodeOfCareStatusHistory>
       get copyWith => __$EpisodeOfCareStatusHistoryCopyWithImpl<
@@ -4280,6 +4306,7 @@ abstract class _EpisodeOfCareStatusHistory extends EpisodeOfCareStatusHistory {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$EpisodeOfCareStatusHistoryCopyWith<_EpisodeOfCareStatusHistory>
       get copyWith;
 }
@@ -4336,6 +4363,7 @@ mixin _$EpisodeOfCareDiagnosis {
   Element get rankElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EpisodeOfCareDiagnosisCopyWith<EpisodeOfCareDiagnosis> get copyWith;
 }
 
@@ -4563,6 +4591,7 @@ class _$_EpisodeOfCareDiagnosis extends _EpisodeOfCareDiagnosis {
       const DeepCollectionEquality().hash(rank) ^
       const DeepCollectionEquality().hash(rankElement);
 
+  @JsonKey(ignore: true)
   @override
   _$EpisodeOfCareDiagnosisCopyWith<_EpisodeOfCareDiagnosis> get copyWith =>
       __$EpisodeOfCareDiagnosisCopyWithImpl<_EpisodeOfCareDiagnosis>(
@@ -4605,6 +4634,7 @@ abstract class _EpisodeOfCareDiagnosis extends EpisodeOfCareDiagnosis {
   @JsonKey(name: '_rank')
   Element get rankElement;
   @override
+  @JsonKey(ignore: true)
   _$EpisodeOfCareDiagnosisCopyWith<_EpisodeOfCareDiagnosis> get copyWith;
 }
 
@@ -4710,6 +4740,7 @@ mixin _$Flag {
   Reference get author;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $FlagCopyWith<Flag> get copyWith;
 }
 
@@ -5241,6 +5272,7 @@ class _$_Flag extends _Flag {
       const DeepCollectionEquality().hash(encounter) ^
       const DeepCollectionEquality().hash(author);
 
+  @JsonKey(ignore: true)
   @override
   _$FlagCopyWith<_Flag> get copyWith =>
       __$FlagCopyWithImpl<_Flag>(this, _$identity);
@@ -5332,6 +5364,7 @@ abstract class _Flag extends Flag {
   @override
   Reference get author;
   @override
+  @JsonKey(ignore: true)
   _$FlagCopyWith<_Flag> get copyWith;
 }
 
@@ -5578,6 +5611,7 @@ mixin _$Library {
   List<Attachment> get content;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $LibraryCopyWith<Library> get copyWith;
 }
 
@@ -6863,6 +6897,7 @@ class _$_Library extends _Library {
       const DeepCollectionEquality().hash(dataRequirement) ^
       const DeepCollectionEquality().hash(content);
 
+  @JsonKey(ignore: true)
   @override
   _$LibraryCopyWith<_Library> get copyWith =>
       __$LibraryCopyWithImpl<_Library>(this, _$identity);
@@ -7095,6 +7130,7 @@ abstract class _Library extends Library {
   @override
   List<Attachment> get content;
   @override
+  @JsonKey(ignore: true)
   _$LibraryCopyWith<_Library> get copyWith;
 }
 
@@ -7230,6 +7266,7 @@ mixin _$List_ {
   CodeableConcept get emptyReason;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $List_CopyWith<List_> get copyWith;
 }
 
@@ -7935,6 +7972,7 @@ class _$_List_ extends _List_ {
       const DeepCollectionEquality().hash(entry) ^
       const DeepCollectionEquality().hash(emptyReason);
 
+  @JsonKey(ignore: true)
   @override
   _$List_CopyWith<_List_> get copyWith =>
       __$List_CopyWithImpl<_List_>(this, _$identity);
@@ -8056,6 +8094,7 @@ abstract class _List_ extends List_ {
   @override
   CodeableConcept get emptyReason;
   @override
+  @JsonKey(ignore: true)
   _$List_CopyWith<_List_> get copyWith;
 }
 
@@ -8117,6 +8156,7 @@ mixin _$ListEntry {
   Reference get item;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ListEntryCopyWith<ListEntry> get copyWith;
 }
 
@@ -8380,6 +8420,7 @@ class _$_ListEntry extends _ListEntry {
       const DeepCollectionEquality().hash(dateElement) ^
       const DeepCollectionEquality().hash(item);
 
+  @JsonKey(ignore: true)
   @override
   _$ListEntryCopyWith<_ListEntry> get copyWith =>
       __$ListEntryCopyWithImpl<_ListEntry>(this, _$identity);
@@ -8428,5 +8469,6 @@ abstract class _ListEntry extends ListEntry {
   @override
   Reference get item;
   @override
+  @JsonKey(ignore: true)
   _$ListEntryCopyWith<_ListEntry> get copyWith;
 }

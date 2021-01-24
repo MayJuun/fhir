@@ -154,6 +154,7 @@ mixin _$Appointment {
   List<AppointmentParticipant> get participant;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AppointmentCopyWith<Appointment> get copyWith;
 }
 
@@ -902,6 +903,7 @@ class _$_Appointment extends _Appointment {
       const DeepCollectionEquality().hash(commentElement) ^
       const DeepCollectionEquality().hash(participant);
 
+  @JsonKey(ignore: true)
   @override
   _$AppointmentCopyWith<_Appointment> get copyWith =>
       __$AppointmentCopyWithImpl<_Appointment>(this, _$identity);
@@ -1038,6 +1040,7 @@ abstract class _Appointment extends Appointment {
   @JsonKey(required: true)
   List<AppointmentParticipant> get participant;
   @override
+  @JsonKey(ignore: true)
   _$AppointmentCopyWith<_Appointment> get copyWith;
 }
 
@@ -1108,6 +1111,7 @@ mixin _$AppointmentParticipant {
   Element get statusElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AppointmentParticipantCopyWith<AppointmentParticipant> get copyWith;
 }
 
@@ -1387,6 +1391,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(statusElement);
 
+  @JsonKey(ignore: true)
   @override
   _$AppointmentParticipantCopyWith<_AppointmentParticipant> get copyWith =>
       __$AppointmentParticipantCopyWithImpl<_AppointmentParticipant>(
@@ -1444,6 +1449,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
   @JsonKey(name: '_status')
   Element get statusElement;
   @override
+  @JsonKey(ignore: true)
   _$AppointmentParticipantCopyWith<_AppointmentParticipant> get copyWith;
 }
 
@@ -1569,6 +1575,7 @@ mixin _$AppointmentResponse {
   Element get commentElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AppointmentResponseCopyWith<AppointmentResponse> get copyWith;
 }
 
@@ -2182,6 +2189,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
       const DeepCollectionEquality().hash(comment) ^
       const DeepCollectionEquality().hash(commentElement);
 
+  @JsonKey(ignore: true)
   @override
   _$AppointmentResponseCopyWith<_AppointmentResponse> get copyWith =>
       __$AppointmentResponseCopyWithImpl<_AppointmentResponse>(
@@ -2294,6 +2302,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @JsonKey(name: '_comment')
   Element get commentElement;
   @override
+  @JsonKey(ignore: true)
   _$AppointmentResponseCopyWith<_AppointmentResponse> get copyWith;
 }
 
@@ -2389,6 +2398,7 @@ mixin _$Schedule {
   Element get commentElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ScheduleCopyWith<Schedule> get copyWith;
 }
 
@@ -2840,6 +2850,7 @@ class _$_Schedule extends _Schedule {
       const DeepCollectionEquality().hash(comment) ^
       const DeepCollectionEquality().hash(commentElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ScheduleCopyWith<_Schedule> get copyWith =>
       __$ScheduleCopyWithImpl<_Schedule>(this, _$identity);
@@ -2921,6 +2932,7 @@ abstract class _Schedule extends Schedule {
   @JsonKey(name: '_comment')
   Element get commentElement;
   @override
+  @JsonKey(ignore: true)
   _$ScheduleCopyWith<_Schedule> get copyWith;
 }
 
@@ -3049,6 +3061,7 @@ mixin _$Slot {
   Element get commentElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SlotCopyWith<Slot> get copyWith;
 }
 
@@ -3658,6 +3671,7 @@ class _$_Slot extends _Slot {
       const DeepCollectionEquality().hash(comment) ^
       const DeepCollectionEquality().hash(commentElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SlotCopyWith<_Slot> get copyWith =>
       __$SlotCopyWithImpl<_Slot>(this, _$identity);
@@ -3772,5 +3786,6 @@ abstract class _Slot extends Slot {
   @JsonKey(name: '_comment')
   Element get commentElement;
   @override
+  @JsonKey(ignore: true)
   _$SlotCopyWith<_Slot> get copyWith;
 }

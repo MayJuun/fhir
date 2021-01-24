@@ -215,6 +215,7 @@ mixin _$FhirExtension {
   Meta get valueMeta;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $FhirExtensionCopyWith<FhirExtension> get copyWith;
 }
 
@@ -1535,6 +1536,7 @@ class _$_FhirExtension extends _FhirExtension {
       const DeepCollectionEquality().hash(valueReference) ^
       const DeepCollectionEquality().hash(valueMeta);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirExtensionCopyWith<_FhirExtension> get copyWith =>
       __$FhirExtensionCopyWithImpl<_FhirExtension>(this, _$identity);
@@ -1732,5 +1734,6 @@ abstract class _FhirExtension extends FhirExtension {
   @override
   Meta get valueMeta;
   @override
+  @JsonKey(ignore: true)
   _$FhirExtensionCopyWith<_FhirExtension> get copyWith;
 }

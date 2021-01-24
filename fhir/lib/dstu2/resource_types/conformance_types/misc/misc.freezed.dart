@@ -194,6 +194,7 @@ mixin _$ImplementationGuide {
   ImplementationGuidePage get page;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuideCopyWith<ImplementationGuide> get copyWith;
 }
 
@@ -1101,6 +1102,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
       const DeepCollectionEquality().hash(binary) ^
       const DeepCollectionEquality().hash(page);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuideCopyWith<_ImplementationGuide> get copyWith =>
       __$ImplementationGuideCopyWithImpl<_ImplementationGuide>(
@@ -1277,6 +1279,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   @JsonKey(required: true)
   ImplementationGuidePage get page;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuideCopyWith<_ImplementationGuide> get copyWith;
 }
 
@@ -1325,6 +1328,7 @@ mixin _$ImplementationGuideContact {
   List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuideContactCopyWith<ImplementationGuideContact> get copyWith;
 }
 
@@ -1483,6 +1487,7 @@ class _$_ImplementationGuideContact extends _ImplementationGuideContact {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(telecom);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuideContactCopyWith<_ImplementationGuideContact>
       get copyWith => __$ImplementationGuideContactCopyWithImpl<
@@ -1518,6 +1523,7 @@ abstract class _ImplementationGuideContact extends ImplementationGuideContact {
   @override
   List<ContactPoint> get telecom;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuideContactCopyWith<_ImplementationGuideContact>
       get copyWith;
 }
@@ -1579,6 +1585,7 @@ mixin _$ImplementationGuideDependency {
   Element get uriElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuideDependencyCopyWith<ImplementationGuideDependency>
       get copyWith;
 }
@@ -1788,6 +1795,7 @@ class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
       const DeepCollectionEquality().hash(uri) ^
       const DeepCollectionEquality().hash(uriElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuideDependencyCopyWith<_ImplementationGuideDependency>
       get copyWith => __$ImplementationGuideDependencyCopyWithImpl<
@@ -1836,6 +1844,7 @@ abstract class _ImplementationGuideDependency
   @JsonKey(name: '_uri')
   Element get uriElement;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuideDependencyCopyWith<_ImplementationGuideDependency>
       get copyWith;
 }
@@ -1895,6 +1904,7 @@ mixin _$ImplementationGuidePackage {
   List<ImplementationGuidePackageResource> get resource;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuidePackageCopyWith<ImplementationGuidePackage> get copyWith;
 }
 
@@ -2081,6 +2091,7 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(resource);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuidePackageCopyWith<_ImplementationGuidePackage>
       get copyWith => __$ImplementationGuidePackageCopyWithImpl<
@@ -2127,6 +2138,7 @@ abstract class _ImplementationGuidePackage extends ImplementationGuidePackage {
   @JsonKey(required: true)
   List<ImplementationGuidePackageResource> get resource;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuidePackageCopyWith<_ImplementationGuidePackage>
       get copyWith;
 }
@@ -2182,6 +2194,7 @@ mixin _$ImplementationGuideGlobal {
   Reference get profile;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuideGlobalCopyWith<ImplementationGuideGlobal> get copyWith;
 }
 
@@ -2385,6 +2398,7 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
       const DeepCollectionEquality().hash(typeElement) ^
       const DeepCollectionEquality().hash(profile);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuideGlobalCopyWith<_ImplementationGuideGlobal>
       get copyWith =>
@@ -2428,6 +2442,7 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
   @JsonKey(required: true)
   Reference get profile;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuideGlobalCopyWith<_ImplementationGuideGlobal> get copyWith;
 }
 
@@ -2501,6 +2516,7 @@ mixin _$ImplementationGuidePage {
   List<ImplementationGuidePage> get page;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuidePageCopyWith<ImplementationGuidePage> get copyWith;
 }
 
@@ -2740,6 +2756,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
       const DeepCollectionEquality().hash(format) ^
       const DeepCollectionEquality().hash(page);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuidePageCopyWith<_ImplementationGuidePage> get copyWith =>
       __$ImplementationGuidePageCopyWithImpl<_ImplementationGuidePage>(
@@ -2800,6 +2817,7 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
   @override
   List<ImplementationGuidePage> get page;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuidePageCopyWith<_ImplementationGuidePage> get copyWith;
 }
 
@@ -2873,6 +2891,7 @@ mixin _$ImplementationGuidePackageResource {
   Reference get exampleFor;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuidePackageResourceCopyWith<
       ImplementationGuidePackageResource> get copyWith;
 }
@@ -3179,6 +3198,7 @@ class _$_ImplementationGuidePackageResource
       const DeepCollectionEquality().hash(sourceReference) ^
       const DeepCollectionEquality().hash(exampleFor);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuidePackageResourceCopyWith<
           _ImplementationGuidePackageResource>
@@ -3241,6 +3261,7 @@ abstract class _ImplementationGuidePackageResource
   @override
   Reference get exampleFor;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuidePackageResourceCopyWith<
       _ImplementationGuidePackageResource> get copyWith;
 }
@@ -3426,6 +3447,7 @@ mixin _$TestScript {
   TestScriptTeardown get teardown;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptCopyWith<TestScript> get copyWith;
 }
 
@@ -4356,6 +4378,7 @@ class _$_TestScript extends _TestScript {
       const DeepCollectionEquality().hash(test) ^
       const DeepCollectionEquality().hash(teardown);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptCopyWith<_TestScript> get copyWith =>
       __$TestScriptCopyWithImpl<_TestScript>(this, _$identity);
@@ -4527,6 +4550,7 @@ abstract class _TestScript extends TestScript {
   @override
   TestScriptTeardown get teardown;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptCopyWith<_TestScript> get copyWith;
 }
 
@@ -4574,6 +4598,7 @@ mixin _$TestScriptContact {
   List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptContactCopyWith<TestScriptContact> get copyWith;
 }
 
@@ -4730,6 +4755,7 @@ class _$_TestScriptContact extends _TestScriptContact {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(telecom);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptContactCopyWith<_TestScriptContact> get copyWith =>
       __$TestScriptContactCopyWithImpl<_TestScriptContact>(this, _$identity);
@@ -4764,6 +4790,7 @@ abstract class _TestScriptContact extends TestScriptContact {
   @override
   List<ContactPoint> get telecom;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptContactCopyWith<_TestScriptContact> get copyWith;
 }
 
@@ -4815,6 +4842,7 @@ mixin _$TestScriptMetadata {
   List<TestScriptMetadataCapability> get capability;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptMetadataCopyWith<TestScriptMetadata> get copyWith;
 }
 
@@ -4978,6 +5006,7 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
       const DeepCollectionEquality().hash(link) ^
       const DeepCollectionEquality().hash(capability);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptMetadataCopyWith<_TestScriptMetadata> get copyWith =>
       __$TestScriptMetadataCopyWithImpl<_TestScriptMetadata>(this, _$identity);
@@ -5017,6 +5046,7 @@ abstract class _TestScriptMetadata extends TestScriptMetadata {
   @JsonKey(required: true)
   List<TestScriptMetadataCapability> get capability;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptMetadataCopyWith<_TestScriptMetadata> get copyWith;
 }
 
@@ -5074,6 +5104,7 @@ mixin _$TestScriptMetadataLink {
   Element get descriptionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptMetadataLinkCopyWith<TestScriptMetadataLink> get copyWith;
 }
 
@@ -5295,6 +5326,7 @@ class _$_TestScriptMetadataLink extends _TestScriptMetadataLink {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptMetadataLinkCopyWith<_TestScriptMetadataLink> get copyWith =>
       __$TestScriptMetadataLinkCopyWithImpl<_TestScriptMetadataLink>(
@@ -5340,6 +5372,7 @@ abstract class _TestScriptMetadataLink extends TestScriptMetadataLink {
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptMetadataLinkCopyWith<_TestScriptMetadataLink> get copyWith;
 }
 
@@ -5422,6 +5455,7 @@ mixin _$TestScriptMetadataCapability {
   Reference get conformance;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptMetadataCapabilityCopyWith<TestScriptMetadataCapability>
       get copyWith;
 }
@@ -5802,6 +5836,7 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
       const DeepCollectionEquality().hash(linkElement) ^
       const DeepCollectionEquality().hash(conformance);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptMetadataCapabilityCopyWith<_TestScriptMetadataCapability>
       get copyWith => __$TestScriptMetadataCapabilityCopyWithImpl<
@@ -5873,6 +5908,7 @@ abstract class _TestScriptMetadataCapability
   @JsonKey(required: true)
   Reference get conformance;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptMetadataCapabilityCopyWith<_TestScriptMetadataCapability>
       get copyWith;
 }
@@ -5932,6 +5968,7 @@ mixin _$TestScriptFixture {
   Reference get resource;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptFixtureCopyWith<TestScriptFixture> get copyWith;
 }
 
@@ -6182,6 +6219,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
       const DeepCollectionEquality().hash(autodeleteElement) ^
       const DeepCollectionEquality().hash(resource);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptFixtureCopyWith<_TestScriptFixture> get copyWith =>
       __$TestScriptFixtureCopyWithImpl<_TestScriptFixture>(this, _$identity);
@@ -6227,6 +6265,7 @@ abstract class _TestScriptFixture extends TestScriptFixture {
   @override
   Reference get resource;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptFixtureCopyWith<_TestScriptFixture> get copyWith;
 }
 
@@ -6297,6 +6336,7 @@ mixin _$TestScriptVariable {
   Element get sourceIdElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptVariableCopyWith<TestScriptVariable> get copyWith;
 }
 
@@ -6603,6 +6643,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
       const DeepCollectionEquality().hash(sourceId) ^
       const DeepCollectionEquality().hash(sourceIdElement);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptVariableCopyWith<_TestScriptVariable> get copyWith =>
       __$TestScriptVariableCopyWithImpl<_TestScriptVariable>(this, _$identity);
@@ -6661,6 +6702,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
   @JsonKey(name: '_sourceId')
   Element get sourceIdElement;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptVariableCopyWith<_TestScriptVariable> get copyWith;
 }
 
@@ -6709,6 +6751,7 @@ mixin _$TestScriptSetup {
   List<TestScriptSetupAction> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptSetupCopyWith<TestScriptSetup> get copyWith;
 }
 
@@ -6889,6 +6932,7 @@ class _$_TestScriptSetup extends _TestScriptSetup {
       const DeepCollectionEquality().hash(metadata) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptSetupCopyWith<_TestScriptSetup> get copyWith =>
       __$TestScriptSetupCopyWithImpl<_TestScriptSetup>(this, _$identity);
@@ -6927,6 +6971,7 @@ abstract class _TestScriptSetup extends TestScriptSetup {
   @JsonKey(required: true)
   List<TestScriptSetupAction> get action;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptSetupCopyWith<_TestScriptSetup> get copyWith;
 }
 
@@ -6980,6 +7025,7 @@ mixin _$TestScriptSetupAction {
   TestScriptActionAssert get assert_;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptSetupActionCopyWith<TestScriptSetupAction> get copyWith;
 }
 
@@ -7190,6 +7236,7 @@ class _$_TestScriptSetupAction extends _TestScriptSetupAction {
       const DeepCollectionEquality().hash(operation) ^
       const DeepCollectionEquality().hash(assert_);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptSetupActionCopyWith<_TestScriptSetupAction> get copyWith =>
       __$TestScriptSetupActionCopyWithImpl<_TestScriptSetupAction>(
@@ -7231,6 +7278,7 @@ abstract class _TestScriptSetupAction extends TestScriptSetupAction {
   @JsonKey(name: 'assert')
   TestScriptActionAssert get assert_;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptSetupActionCopyWith<_TestScriptSetupAction> get copyWith;
 }
 
@@ -7385,6 +7433,7 @@ mixin _$TestScriptActionOperation {
   Element get urlElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptActionOperationCopyWith<TestScriptActionOperation> get copyWith;
 }
 
@@ -8134,6 +8183,7 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(urlElement);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptActionOperationCopyWith<_TestScriptActionOperation>
       get copyWith =>
@@ -8276,6 +8326,7 @@ abstract class _TestScriptActionOperation extends TestScriptActionOperation {
   @JsonKey(name: '_url')
   Element get urlElement;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptActionOperationCopyWith<_TestScriptActionOperation> get copyWith;
 }
 
@@ -8335,6 +8386,7 @@ mixin _$TestScriptOperationRequestHeader {
   Element get valueElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptOperationRequestHeaderCopyWith<TestScriptOperationRequestHeader>
       get copyWith;
 }
@@ -8577,6 +8629,7 @@ class _$_TestScriptOperationRequestHeader
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptOperationRequestHeaderCopyWith<_TestScriptOperationRequestHeader>
       get copyWith => __$TestScriptOperationRequestHeaderCopyWithImpl<
@@ -8624,6 +8677,7 @@ abstract class _TestScriptOperationRequestHeader
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptOperationRequestHeaderCopyWith<_TestScriptOperationRequestHeader>
       get copyWith;
 }
@@ -8815,6 +8869,7 @@ mixin _$TestScriptActionAssert {
   Element get warningOnlyElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptActionAssertCopyWith<TestScriptActionAssert> get copyWith;
 }
 
@@ -9775,6 +9830,7 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
       const DeepCollectionEquality().hash(warningOnly) ^
       const DeepCollectionEquality().hash(warningOnlyElement);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptActionAssertCopyWith<_TestScriptActionAssert> get copyWith =>
       __$TestScriptActionAssertCopyWithImpl<_TestScriptActionAssert>(
@@ -9952,6 +10008,7 @@ abstract class _TestScriptActionAssert extends TestScriptActionAssert {
   @JsonKey(name: '_warningOnly')
   Element get warningOnlyElement;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptActionAssertCopyWith<_TestScriptActionAssert> get copyWith;
 }
 
@@ -10014,6 +10071,7 @@ mixin _$TestScriptTest {
   List<TestScriptSetupAction> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptTestCopyWith<TestScriptTest> get copyWith;
 }
 
@@ -10281,6 +10339,7 @@ class _$_TestScriptTest extends _TestScriptTest {
       const DeepCollectionEquality().hash(metadata) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptTestCopyWith<_TestScriptTest> get copyWith =>
       __$TestScriptTestCopyWithImpl<_TestScriptTest>(this, _$identity);
@@ -10335,6 +10394,7 @@ abstract class _TestScriptTest extends TestScriptTest {
   @JsonKey(required: true)
   List<TestScriptSetupAction> get action;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptTestCopyWith<_TestScriptTest> get copyWith;
 }
 
@@ -10383,6 +10443,7 @@ mixin _$TestScriptTeardown {
   List<TestScriptTeardownAction> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptTeardownCopyWith<TestScriptTeardown> get copyWith;
 }
 
@@ -10531,6 +10592,7 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptTeardownCopyWith<_TestScriptTeardown> get copyWith =>
       __$TestScriptTeardownCopyWithImpl<_TestScriptTeardown>(this, _$identity);
@@ -10566,6 +10628,7 @@ abstract class _TestScriptTeardown extends TestScriptTeardown {
   @JsonKey(required: true)
   List<TestScriptTeardownAction> get action;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptTeardownCopyWith<_TestScriptTeardown> get copyWith;
 }
 
@@ -10615,6 +10678,7 @@ mixin _$TestScriptTeardownAction {
   TestScriptActionOperation get operation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptTeardownActionCopyWith<TestScriptTeardownAction> get copyWith;
 }
 
@@ -10796,6 +10860,7 @@ class _$_TestScriptTeardownAction extends _TestScriptTeardownAction {
       const DeepCollectionEquality().hash(fhirComments) ^
       const DeepCollectionEquality().hash(operation);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptTeardownActionCopyWith<_TestScriptTeardownAction> get copyWith =>
       __$TestScriptTeardownActionCopyWithImpl<_TestScriptTeardownAction>(
@@ -10832,5 +10897,6 @@ abstract class _TestScriptTeardownAction extends TestScriptTeardownAction {
   @override
   TestScriptActionOperation get operation;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptTeardownActionCopyWith<_TestScriptTeardownAction> get copyWith;
 }

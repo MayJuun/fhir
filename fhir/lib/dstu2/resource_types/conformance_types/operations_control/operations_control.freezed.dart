@@ -162,6 +162,7 @@ mixin _$Conformance {
   List<ConformanceDocument> get document;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceCopyWith<Conformance> get copyWith;
 }
 
@@ -864,6 +865,7 @@ class _$_Conformance extends _Conformance {
       const DeepCollectionEquality().hash(messaging) ^
       const DeepCollectionEquality().hash(document);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceCopyWith<_Conformance> get copyWith =>
       __$ConformanceCopyWithImpl<_Conformance>(this, _$identity);
@@ -1008,6 +1010,7 @@ abstract class _Conformance extends Conformance {
   @override
   List<ConformanceDocument> get document;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceCopyWith<_Conformance> get copyWith;
 }
 
@@ -1166,6 +1169,7 @@ mixin _$CapabilityStatement {
   List<ConformanceDocument> get document;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatementCopyWith<CapabilityStatement> get copyWith;
 }
 
@@ -1870,6 +1874,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
       const DeepCollectionEquality().hash(messaging) ^
       const DeepCollectionEquality().hash(document);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatementCopyWith<_CapabilityStatement> get copyWith =>
       __$CapabilityStatementCopyWithImpl<_CapabilityStatement>(
@@ -2015,6 +2020,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @override
   List<ConformanceDocument> get document;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatementCopyWith<_CapabilityStatement> get copyWith;
 }
 
@@ -2062,6 +2068,7 @@ mixin _$ConformanceContact {
   List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceContactCopyWith<ConformanceContact> get copyWith;
 }
 
@@ -2218,6 +2225,7 @@ class _$_ConformanceContact extends _ConformanceContact {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(telecom);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceContactCopyWith<_ConformanceContact> get copyWith =>
       __$ConformanceContactCopyWithImpl<_ConformanceContact>(this, _$identity);
@@ -2252,6 +2260,7 @@ abstract class _ConformanceContact extends ConformanceContact {
   @override
   List<ContactPoint> get telecom;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceContactCopyWith<_ConformanceContact> get copyWith;
 }
 
@@ -2303,6 +2312,7 @@ mixin _$ConformanceSoftware {
   FhirDateTime get releaseDate;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceSoftwareCopyWith<ConformanceSoftware> get copyWith;
 }
 
@@ -2477,6 +2487,7 @@ class _$_ConformanceSoftware extends _ConformanceSoftware {
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(releaseDate);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceSoftwareCopyWith<_ConformanceSoftware> get copyWith =>
       __$ConformanceSoftwareCopyWithImpl<_ConformanceSoftware>(
@@ -2516,6 +2527,7 @@ abstract class _ConformanceSoftware extends ConformanceSoftware {
   @override
   FhirDateTime get releaseDate;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceSoftwareCopyWith<_ConformanceSoftware> get copyWith;
 }
 
@@ -2565,6 +2577,7 @@ mixin _$ConformanceImplementation {
   FhirUri get url;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceImplementationCopyWith<ConformanceImplementation> get copyWith;
 }
 
@@ -2725,6 +2738,7 @@ class _$_ConformanceImplementation extends _ConformanceImplementation {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(url);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceImplementationCopyWith<_ConformanceImplementation>
       get copyWith =>
@@ -2762,6 +2776,7 @@ abstract class _ConformanceImplementation extends ConformanceImplementation {
   @override
   FhirUri get url;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceImplementationCopyWith<_ConformanceImplementation> get copyWith;
 }
 
@@ -2849,6 +2864,7 @@ mixin _$ConformanceRest {
   List<FhirUri> get compartment;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceRestCopyWith<ConformanceRest> get copyWith;
 }
 
@@ -3214,6 +3230,7 @@ class _$_ConformanceRest extends _ConformanceRest {
       const DeepCollectionEquality().hash(operation) ^
       const DeepCollectionEquality().hash(compartment);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceRestCopyWith<_ConformanceRest> get copyWith =>
       __$ConformanceRestCopyWithImpl<_ConformanceRest>(this, _$identity);
@@ -3288,6 +3305,7 @@ abstract class _ConformanceRest extends ConformanceRest {
   @override
   List<FhirUri> get compartment;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceRestCopyWith<_ConformanceRest> get copyWith;
 }
 
@@ -3350,6 +3368,7 @@ mixin _$ConformanceMessaging {
   List<ConformanceMessagingEvent> get event;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceMessagingCopyWith<ConformanceMessaging> get copyWith;
 }
 
@@ -3567,6 +3586,7 @@ class _$_ConformanceMessaging extends _ConformanceMessaging {
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(event);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceMessagingCopyWith<_ConformanceMessaging> get copyWith =>
       __$ConformanceMessagingCopyWithImpl<_ConformanceMessaging>(
@@ -3617,6 +3637,7 @@ abstract class _ConformanceMessaging extends ConformanceMessaging {
   @JsonKey(required: true)
   List<ConformanceMessagingEvent> get event;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceMessagingCopyWith<_ConformanceMessaging> get copyWith;
 }
 
@@ -3679,6 +3700,7 @@ mixin _$ConformanceDocument {
   Reference get profile;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceDocumentCopyWith<ConformanceDocument> get copyWith;
 }
 
@@ -3901,6 +3923,7 @@ class _$_ConformanceDocument extends _ConformanceDocument {
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(profile);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceDocumentCopyWith<_ConformanceDocument> get copyWith =>
       __$ConformanceDocumentCopyWithImpl<_ConformanceDocument>(
@@ -3951,6 +3974,7 @@ abstract class _ConformanceDocument extends ConformanceDocument {
   @JsonKey(required: true)
   Reference get profile;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceDocumentCopyWith<_ConformanceDocument> get copyWith;
 }
 
@@ -4009,6 +4033,7 @@ mixin _$ConformanceRestSecurity {
   List<ConformanceSecurityCertificate> get certificate;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceRestSecurityCopyWith<ConformanceRestSecurity> get copyWith;
 }
 
@@ -4232,6 +4257,7 @@ class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(certificate);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceRestSecurityCopyWith<_ConformanceRestSecurity> get copyWith =>
       __$ConformanceRestSecurityCopyWithImpl<_ConformanceRestSecurity>(
@@ -4278,6 +4304,7 @@ abstract class _ConformanceRestSecurity extends ConformanceRestSecurity {
   @override
   List<ConformanceSecurityCertificate> get certificate;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceRestSecurityCopyWith<_ConformanceRestSecurity> get copyWith;
 }
 
@@ -4392,6 +4419,7 @@ mixin _$ConformanceRestResource {
   List<ConformanceResourceSearchParam> get searchParam;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceRestResourceCopyWith<ConformanceRestResource> get copyWith;
 }
 
@@ -4911,6 +4939,7 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
       const DeepCollectionEquality().hash(searchRevInclude) ^
       const DeepCollectionEquality().hash(searchParam);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceRestResourceCopyWith<_ConformanceRestResource> get copyWith =>
       __$ConformanceRestResourceCopyWithImpl<_ConformanceRestResource>(
@@ -5013,6 +5042,7 @@ abstract class _ConformanceRestResource extends ConformanceRestResource {
   @override
   List<ConformanceResourceSearchParam> get searchParam;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceRestResourceCopyWith<_ConformanceRestResource> get copyWith;
 }
 
@@ -5066,6 +5096,7 @@ mixin _$ConformanceResourceInteraction {
   String get documentation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceResourceInteractionCopyWith<ConformanceResourceInteraction>
       get copyWith;
 }
@@ -5241,6 +5272,7 @@ class _$_ConformanceResourceInteraction
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(documentation);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceResourceInteractionCopyWith<_ConformanceResourceInteraction>
       get copyWith => __$ConformanceResourceInteractionCopyWithImpl<
@@ -5281,6 +5313,7 @@ abstract class _ConformanceResourceInteraction
   @override
   String get documentation;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceResourceInteractionCopyWith<_ConformanceResourceInteraction>
       get copyWith;
 }
@@ -5336,6 +5369,7 @@ mixin _$ConformanceRestOperation {
   Reference get definition;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceRestOperationCopyWith<ConformanceRestOperation> get copyWith;
 }
 
@@ -5531,6 +5565,7 @@ class _$_ConformanceRestOperation extends _ConformanceRestOperation {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(definition);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceRestOperationCopyWith<_ConformanceRestOperation> get copyWith =>
       __$ConformanceRestOperationCopyWithImpl<_ConformanceRestOperation>(
@@ -5573,6 +5608,7 @@ abstract class _ConformanceRestOperation extends ConformanceRestOperation {
   @JsonKey(required: true)
   Reference get definition;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceRestOperationCopyWith<_ConformanceRestOperation> get copyWith;
 }
 
@@ -5627,6 +5663,7 @@ mixin _$ConformanceMessagingEndpoint {
   Element get addressElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceMessagingEndpointCopyWith<ConformanceMessagingEndpoint>
       get copyWith;
 }
@@ -5838,6 +5875,7 @@ class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
       const DeepCollectionEquality().hash(address) ^
       const DeepCollectionEquality().hash(addressElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceMessagingEndpointCopyWith<_ConformanceMessagingEndpoint>
       get copyWith => __$ConformanceMessagingEndpointCopyWithImpl<
@@ -5881,6 +5919,7 @@ abstract class _ConformanceMessagingEndpoint
   @JsonKey(name: '_address')
   Element get addressElement;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceMessagingEndpointCopyWith<_ConformanceMessagingEndpoint>
       get copyWith;
 }
@@ -5968,6 +6007,7 @@ mixin _$ConformanceMessagingEvent {
   String get documentation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceMessagingEventCopyWith<ConformanceMessagingEvent> get copyWith;
 }
 
@@ -6303,6 +6343,7 @@ class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
       const DeepCollectionEquality().hash(response) ^
       const DeepCollectionEquality().hash(documentation);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceMessagingEventCopyWith<_ConformanceMessagingEvent>
       get copyWith =>
@@ -6377,6 +6418,7 @@ abstract class _ConformanceMessagingEvent extends ConformanceMessagingEvent {
   @override
   String get documentation;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceMessagingEventCopyWith<_ConformanceMessagingEvent> get copyWith;
 }
 
@@ -6430,6 +6472,7 @@ mixin _$ConformanceSecurityCertificate {
   Element get blobElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceSecurityCertificateCopyWith<ConformanceSecurityCertificate>
       get copyWith;
 }
@@ -6622,6 +6665,7 @@ class _$_ConformanceSecurityCertificate
       const DeepCollectionEquality().hash(blob) ^
       const DeepCollectionEquality().hash(blobElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceSecurityCertificateCopyWith<_ConformanceSecurityCertificate>
       get copyWith => __$ConformanceSecurityCertificateCopyWithImpl<
@@ -6663,6 +6707,7 @@ abstract class _ConformanceSecurityCertificate
   @JsonKey(name: '_blob')
   Element get blobElement;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceSecurityCertificateCopyWith<_ConformanceSecurityCertificate>
       get copyWith;
 }
@@ -6716,6 +6761,7 @@ mixin _$ConformanceRestInteraction {
   String get documentation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceRestInteractionCopyWith<ConformanceRestInteraction> get copyWith;
 }
 
@@ -6886,6 +6932,7 @@ class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(documentation);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceRestInteractionCopyWith<_ConformanceRestInteraction>
       get copyWith => __$ConformanceRestInteractionCopyWithImpl<
@@ -6925,6 +6972,7 @@ abstract class _ConformanceRestInteraction extends ConformanceRestInteraction {
   @override
   String get documentation;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceRestInteractionCopyWith<_ConformanceRestInteraction>
       get copyWith;
 }
@@ -7002,6 +7050,7 @@ mixin _$ConformanceResourceSearchParam {
   List<String> get chain;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConformanceResourceSearchParamCopyWith<ConformanceResourceSearchParam>
       get copyWith;
 }
@@ -7272,6 +7321,7 @@ class _$_ConformanceResourceSearchParam
       const DeepCollectionEquality().hash(modifier) ^
       const DeepCollectionEquality().hash(chain);
 
+  @JsonKey(ignore: true)
   @override
   _$ConformanceResourceSearchParamCopyWith<_ConformanceResourceSearchParam>
       get copyWith => __$ConformanceResourceSearchParamCopyWithImpl<
@@ -7335,6 +7385,7 @@ abstract class _ConformanceResourceSearchParam
   @override
   List<String> get chain;
   @override
+  @JsonKey(ignore: true)
   _$ConformanceResourceSearchParamCopyWith<_ConformanceResourceSearchParam>
       get copyWith;
 }
@@ -7474,6 +7525,7 @@ mixin _$OperationDefinition {
   List<OperationDefinitionParameter> get parameter;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OperationDefinitionCopyWith<OperationDefinition> get copyWith;
 }
 
@@ -8036,6 +8088,7 @@ class _$_OperationDefinition extends _OperationDefinition {
       const DeepCollectionEquality().hash(instance) ^
       const DeepCollectionEquality().hash(parameter);
 
+  @JsonKey(ignore: true)
   @override
   _$OperationDefinitionCopyWith<_OperationDefinition> get copyWith =>
       __$OperationDefinitionCopyWithImpl<_OperationDefinition>(
@@ -8161,6 +8214,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   @override
   List<OperationDefinitionParameter> get parameter;
   @override
+  @JsonKey(ignore: true)
   _$OperationDefinitionCopyWith<_OperationDefinition> get copyWith;
 }
 
@@ -8209,6 +8263,7 @@ mixin _$OperationDefinitionContact {
   List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OperationDefinitionContactCopyWith<OperationDefinitionContact> get copyWith;
 }
 
@@ -8367,6 +8422,7 @@ class _$_OperationDefinitionContact extends _OperationDefinitionContact {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(telecom);
 
+  @JsonKey(ignore: true)
   @override
   _$OperationDefinitionContactCopyWith<_OperationDefinitionContact>
       get copyWith => __$OperationDefinitionContactCopyWithImpl<
@@ -8402,6 +8458,7 @@ abstract class _OperationDefinitionContact extends OperationDefinitionContact {
   @override
   List<ContactPoint> get telecom;
   @override
+  @JsonKey(ignore: true)
   _$OperationDefinitionContactCopyWith<_OperationDefinitionContact>
       get copyWith;
 }
@@ -8492,6 +8549,7 @@ mixin _$OperationDefinitionParameter {
   List<OperationDefinitionParameter> get part_;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OperationDefinitionParameterCopyWith<OperationDefinitionParameter>
       get copyWith;
 }
@@ -8831,6 +8889,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
       const DeepCollectionEquality().hash(binding) ^
       const DeepCollectionEquality().hash(part_);
 
+  @JsonKey(ignore: true)
   @override
   _$OperationDefinitionParameterCopyWith<_OperationDefinitionParameter>
       get copyWith => __$OperationDefinitionParameterCopyWithImpl<
@@ -8909,6 +8968,7 @@ abstract class _OperationDefinitionParameter
   @JsonKey(name: 'part')
   List<OperationDefinitionParameter> get part_;
   @override
+  @JsonKey(ignore: true)
   _$OperationDefinitionParameterCopyWith<_OperationDefinitionParameter>
       get copyWith;
 }
@@ -8972,6 +9032,7 @@ mixin _$OperationDefinitionParameterBinding {
   Reference get valueSetReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OperationDefinitionParameterBindingCopyWith<
       OperationDefinitionParameterBinding> get copyWith;
 }
@@ -9194,6 +9255,7 @@ class _$_OperationDefinitionParameterBinding
       const DeepCollectionEquality().hash(valueSetUri) ^
       const DeepCollectionEquality().hash(valueSetReference);
 
+  @JsonKey(ignore: true)
   @override
   _$OperationDefinitionParameterBindingCopyWith<
           _OperationDefinitionParameterBinding>
@@ -9245,6 +9307,7 @@ abstract class _OperationDefinitionParameterBinding
   @override
   Reference get valueSetReference;
   @override
+  @JsonKey(ignore: true)
   _$OperationDefinitionParameterBindingCopyWith<
       _OperationDefinitionParameterBinding> get copyWith;
 }
@@ -9374,6 +9437,7 @@ mixin _$SearchParameter {
   List<Code> get target;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SearchParameterCopyWith<SearchParameter> get copyWith;
 }
 
@@ -9898,6 +9962,7 @@ class _$_SearchParameter extends _SearchParameter {
       const DeepCollectionEquality().hash(xpathUsage) ^
       const DeepCollectionEquality().hash(target);
 
+  @JsonKey(ignore: true)
   @override
   _$SearchParameterCopyWith<_SearchParameter> get copyWith =>
       __$SearchParameterCopyWithImpl<_SearchParameter>(this, _$identity);
@@ -10013,6 +10078,7 @@ abstract class _SearchParameter extends SearchParameter {
   @override
   List<Code> get target;
   @override
+  @JsonKey(ignore: true)
   _$SearchParameterCopyWith<_SearchParameter> get copyWith;
 }
 
@@ -10061,6 +10127,7 @@ mixin _$SearchParameterContact {
   List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SearchParameterContactCopyWith<SearchParameterContact> get copyWith;
 }
 
@@ -10217,6 +10284,7 @@ class _$_SearchParameterContact extends _SearchParameterContact {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(telecom);
 
+  @JsonKey(ignore: true)
   @override
   _$SearchParameterContactCopyWith<_SearchParameterContact> get copyWith =>
       __$SearchParameterContactCopyWithImpl<_SearchParameterContact>(
@@ -10252,5 +10320,6 @@ abstract class _SearchParameterContact extends SearchParameterContact {
   @override
   List<ContactPoint> get telecom;
   @override
+  @JsonKey(ignore: true)
   _$SearchParameterContactCopyWith<_SearchParameterContact> get copyWith;
 }

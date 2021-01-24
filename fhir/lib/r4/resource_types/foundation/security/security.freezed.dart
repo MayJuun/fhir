@@ -137,6 +137,7 @@ mixin _$AuditEvent {
   List<AuditEventEntity> get entity;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AuditEventCopyWith<AuditEvent> get copyWith;
 }
 
@@ -790,6 +791,7 @@ class _$_AuditEvent extends _AuditEvent {
       const DeepCollectionEquality().hash(source) ^
       const DeepCollectionEquality().hash(entity);
 
+  @JsonKey(ignore: true)
   @override
   _$AuditEventCopyWith<_AuditEvent> get copyWith =>
       __$AuditEventCopyWithImpl<_AuditEvent>(this, _$identity);
@@ -909,6 +911,7 @@ abstract class _AuditEvent extends AuditEvent {
   @override
   List<AuditEventEntity> get entity;
   @override
+  @JsonKey(ignore: true)
   _$AuditEventCopyWith<_AuditEvent> get copyWith;
 }
 
@@ -999,6 +1002,7 @@ mixin _$AuditEventAgent {
   List<CodeableConcept> get purposeOfUse;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AuditEventAgentCopyWith<AuditEventAgent> get copyWith;
 }
 
@@ -1447,6 +1451,7 @@ class _$_AuditEventAgent extends _AuditEventAgent {
       const DeepCollectionEquality().hash(network) ^
       const DeepCollectionEquality().hash(purposeOfUse);
 
+  @JsonKey(ignore: true)
   @override
   _$AuditEventAgentCopyWith<_AuditEventAgent> get copyWith =>
       __$AuditEventAgentCopyWithImpl<_AuditEventAgent>(this, _$identity);
@@ -1524,6 +1529,7 @@ abstract class _AuditEventAgent extends AuditEventAgent {
   @override
   List<CodeableConcept> get purposeOfUse;
   @override
+  @JsonKey(ignore: true)
   _$AuditEventAgentCopyWith<_AuditEventAgent> get copyWith;
 }
 
@@ -1584,6 +1590,7 @@ mixin _$AuditEventNetwork {
   Element get typeElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AuditEventNetworkCopyWith<AuditEventNetwork> get copyWith;
 }
 
@@ -1810,6 +1817,7 @@ class _$_AuditEventNetwork extends _AuditEventNetwork {
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(typeElement);
 
+  @JsonKey(ignore: true)
   @override
   _$AuditEventNetworkCopyWith<_AuditEventNetwork> get copyWith =>
       __$AuditEventNetworkCopyWithImpl<_AuditEventNetwork>(this, _$identity);
@@ -1857,6 +1865,7 @@ abstract class _AuditEventNetwork extends AuditEventNetwork {
   @JsonKey(name: '_type')
   Element get typeElement;
   @override
+  @JsonKey(ignore: true)
   _$AuditEventNetworkCopyWith<_AuditEventNetwork> get copyWith;
 }
 
@@ -1911,6 +1920,7 @@ mixin _$AuditEventSource {
   List<Coding> get type;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AuditEventSourceCopyWith<AuditEventSource> get copyWith;
 }
 
@@ -2123,6 +2133,7 @@ class _$_AuditEventSource extends _AuditEventSource {
       const DeepCollectionEquality().hash(observer) ^
       const DeepCollectionEquality().hash(type);
 
+  @JsonKey(ignore: true)
   @override
   _$AuditEventSourceCopyWith<_AuditEventSource> get copyWith =>
       __$AuditEventSourceCopyWithImpl<_AuditEventSource>(this, _$identity);
@@ -2164,6 +2175,7 @@ abstract class _AuditEventSource extends AuditEventSource {
   @override
   List<Coding> get type;
   @override
+  @JsonKey(ignore: true)
   _$AuditEventSourceCopyWith<_AuditEventSource> get copyWith;
 }
 
@@ -2244,6 +2256,7 @@ mixin _$AuditEventEntity {
   List<AuditEventDetail> get detail;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AuditEventEntityCopyWith<AuditEventEntity> get copyWith;
 }
 
@@ -2638,6 +2651,7 @@ class _$_AuditEventEntity extends _AuditEventEntity {
       const DeepCollectionEquality().hash(queryElement) ^
       const DeepCollectionEquality().hash(detail);
 
+  @JsonKey(ignore: true)
   @override
   _$AuditEventEntityCopyWith<_AuditEventEntity> get copyWith =>
       __$AuditEventEntityCopyWithImpl<_AuditEventEntity>(this, _$identity);
@@ -2705,6 +2719,7 @@ abstract class _AuditEventEntity extends AuditEventEntity {
   @override
   List<AuditEventDetail> get detail;
   @override
+  @JsonKey(ignore: true)
   _$AuditEventEntityCopyWith<_AuditEventEntity> get copyWith;
 }
 
@@ -2767,6 +2782,7 @@ mixin _$AuditEventDetail {
   Element get valueBase64BinaryElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AuditEventDetailCopyWith<AuditEventDetail> get copyWith;
 }
 
@@ -3035,6 +3051,7 @@ class _$_AuditEventDetail extends _AuditEventDetail {
       const DeepCollectionEquality().hash(valueBase64Binary) ^
       const DeepCollectionEquality().hash(valueBase64BinaryElement);
 
+  @JsonKey(ignore: true)
   @override
   _$AuditEventDetailCopyWith<_AuditEventDetail> get copyWith =>
       __$AuditEventDetailCopyWithImpl<_AuditEventDetail>(this, _$identity);
@@ -3088,6 +3105,7 @@ abstract class _AuditEventDetail extends AuditEventDetail {
   @JsonKey(name: '_valueBase64Binary')
   Element get valueBase64BinaryElement;
   @override
+  @JsonKey(ignore: true)
   _$AuditEventDetailCopyWith<_AuditEventDetail> get copyWith;
 }
 
@@ -3216,6 +3234,7 @@ mixin _$Consent {
   ConsentProvision get provision;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConsentCopyWith<Consent> get copyWith;
 }
 
@@ -3896,6 +3915,7 @@ class _$_Consent extends _Consent {
       const DeepCollectionEquality().hash(verification) ^
       const DeepCollectionEquality().hash(provision);
 
+  @JsonKey(ignore: true)
   @override
   _$ConsentCopyWith<_Consent> get copyWith =>
       __$ConsentCopyWithImpl<_Consent>(this, _$identity);
@@ -4010,6 +4030,7 @@ abstract class _Consent extends Consent {
   @override
   ConsentProvision get provision;
   @override
+  @JsonKey(ignore: true)
   _$ConsentCopyWith<_Consent> get copyWith;
 }
 
@@ -4065,6 +4086,7 @@ mixin _$ConsentPolicy {
   Element get uriElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConsentPolicyCopyWith<ConsentPolicy> get copyWith;
 }
 
@@ -4282,6 +4304,7 @@ class _$_ConsentPolicy extends _ConsentPolicy {
       const DeepCollectionEquality().hash(uri) ^
       const DeepCollectionEquality().hash(uriElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ConsentPolicyCopyWith<_ConsentPolicy> get copyWith =>
       __$ConsentPolicyCopyWithImpl<_ConsentPolicy>(this, _$identity);
@@ -4324,6 +4347,7 @@ abstract class _ConsentPolicy extends ConsentPolicy {
   @JsonKey(name: '_uri')
   Element get uriElement;
   @override
+  @JsonKey(ignore: true)
   _$ConsentPolicyCopyWith<_ConsentPolicy> get copyWith;
 }
 
@@ -4382,6 +4406,7 @@ mixin _$ConsentVerification {
   Element get verificationDateElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConsentVerificationCopyWith<ConsentVerification> get copyWith;
 }
 
@@ -4637,6 +4662,7 @@ class _$_ConsentVerification extends _ConsentVerification {
       const DeepCollectionEquality().hash(verificationDate) ^
       const DeepCollectionEquality().hash(verificationDateElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ConsentVerificationCopyWith<_ConsentVerification> get copyWith =>
       __$ConsentVerificationCopyWithImpl<_ConsentVerification>(
@@ -4686,6 +4712,7 @@ abstract class _ConsentVerification extends ConsentVerification {
   @JsonKey(name: '_verificationDate')
   Element get verificationDateElement;
   @override
+  @JsonKey(ignore: true)
   _$ConsentVerificationCopyWith<_ConsentVerification> get copyWith;
 }
 
@@ -4770,6 +4797,7 @@ mixin _$ConsentProvision {
   List<ConsentProvision> get provision;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConsentProvisionCopyWith<ConsentProvision> get copyWith;
 }
 
@@ -5115,6 +5143,7 @@ class _$_ConsentProvision extends _ConsentProvision {
       const DeepCollectionEquality().hash(data) ^
       const DeepCollectionEquality().hash(provision);
 
+  @JsonKey(ignore: true)
   @override
   _$ConsentProvisionCopyWith<_ConsentProvision> get copyWith =>
       __$ConsentProvisionCopyWithImpl<_ConsentProvision>(this, _$identity);
@@ -5186,6 +5215,7 @@ abstract class _ConsentProvision extends ConsentProvision {
   @override
   List<ConsentProvision> get provision;
   @override
+  @JsonKey(ignore: true)
   _$ConsentProvisionCopyWith<_ConsentProvision> get copyWith;
 }
 
@@ -5233,6 +5263,7 @@ mixin _$ConsentActor {
   Reference get reference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConsentActorCopyWith<ConsentActor> get copyWith;
 }
 
@@ -5418,6 +5449,7 @@ class _$_ConsentActor extends _ConsentActor {
       const DeepCollectionEquality().hash(role) ^
       const DeepCollectionEquality().hash(reference);
 
+  @JsonKey(ignore: true)
   @override
   _$ConsentActorCopyWith<_ConsentActor> get copyWith =>
       __$ConsentActorCopyWithImpl<_ConsentActor>(this, _$identity);
@@ -5452,6 +5484,7 @@ abstract class _ConsentActor extends ConsentActor {
   @override
   Reference get reference;
   @override
+  @JsonKey(ignore: true)
   _$ConsentActorCopyWith<_ConsentActor> get copyWith;
 }
 
@@ -5508,6 +5541,7 @@ mixin _$ConsentData {
   Reference get reference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConsentDataCopyWith<ConsentData> get copyWith;
 }
 
@@ -5720,6 +5754,7 @@ class _$_ConsentData extends _ConsentData {
       const DeepCollectionEquality().hash(meaningElement) ^
       const DeepCollectionEquality().hash(reference);
 
+  @JsonKey(ignore: true)
   @override
   _$ConsentDataCopyWith<_ConsentData> get copyWith =>
       __$ConsentDataCopyWithImpl<_ConsentData>(this, _$identity);
@@ -5763,6 +5798,7 @@ abstract class _ConsentData extends ConsentData {
   @override
   Reference get reference;
   @override
+  @JsonKey(ignore: true)
   _$ConsentDataCopyWith<_ConsentData> get copyWith;
 }
 
@@ -5885,6 +5921,7 @@ mixin _$Provenance {
   List<Signature> get signature;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProvenanceCopyWith<Provenance> get copyWith;
 }
 
@@ -6488,6 +6525,7 @@ class _$_Provenance extends _Provenance {
       const DeepCollectionEquality().hash(entity) ^
       const DeepCollectionEquality().hash(signature);
 
+  @JsonKey(ignore: true)
   @override
   _$ProvenanceCopyWith<_Provenance> get copyWith =>
       __$ProvenanceCopyWithImpl<_Provenance>(this, _$identity);
@@ -6597,6 +6635,7 @@ abstract class _Provenance extends Provenance {
   @override
   List<Signature> get signature;
   @override
+  @JsonKey(ignore: true)
   _$ProvenanceCopyWith<_Provenance> get copyWith;
 }
 
@@ -6650,6 +6689,7 @@ mixin _$ProvenanceAgent {
   Reference get onBehalfOf;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProvenanceAgentCopyWith<ProvenanceAgent> get copyWith;
 }
 
@@ -6873,6 +6913,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
       const DeepCollectionEquality().hash(who) ^
       const DeepCollectionEquality().hash(onBehalfOf);
 
+  @JsonKey(ignore: true)
   @override
   _$ProvenanceAgentCopyWith<_ProvenanceAgent> get copyWith =>
       __$ProvenanceAgentCopyWithImpl<_ProvenanceAgent>(this, _$identity);
@@ -6913,6 +6954,7 @@ abstract class _ProvenanceAgent extends ProvenanceAgent {
   @override
   Reference get onBehalfOf;
   @override
+  @JsonKey(ignore: true)
   _$ProvenanceAgentCopyWith<_ProvenanceAgent> get copyWith;
 }
 
@@ -6972,6 +7014,7 @@ mixin _$ProvenanceEntity {
   List<ProvenanceAgent> get agent;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProvenanceEntityCopyWith<ProvenanceEntity> get copyWith;
 }
 
@@ -7190,6 +7233,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
       const DeepCollectionEquality().hash(what) ^
       const DeepCollectionEquality().hash(agent);
 
+  @JsonKey(ignore: true)
   @override
   _$ProvenanceEntityCopyWith<_ProvenanceEntity> get copyWith =>
       __$ProvenanceEntityCopyWithImpl<_ProvenanceEntity>(this, _$identity);
@@ -7236,5 +7280,6 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
   @override
   List<ProvenanceAgent> get agent;
   @override
+  @JsonKey(ignore: true)
   _$ProvenanceEntityCopyWith<_ProvenanceEntity> get copyWith;
 }

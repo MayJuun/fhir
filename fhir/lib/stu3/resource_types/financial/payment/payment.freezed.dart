@@ -122,6 +122,7 @@ mixin _$PaymentNotice {
   CodeableConcept get paymentStatus;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PaymentNoticeCopyWith<PaymentNotice> get copyWith;
 }
 
@@ -764,6 +765,7 @@ class _$_PaymentNotice extends _PaymentNotice {
       const DeepCollectionEquality().hash(organization) ^
       const DeepCollectionEquality().hash(paymentStatus);
 
+  @JsonKey(ignore: true)
   @override
   _$PaymentNoticeCopyWith<_PaymentNotice> get copyWith =>
       __$PaymentNoticeCopyWithImpl<_PaymentNotice>(this, _$identity);
@@ -868,6 +870,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
   CodeableConcept get paymentStatus;
   @override
+  @JsonKey(ignore: true)
   _$PaymentNoticeCopyWith<_PaymentNotice> get copyWith;
 }
 
@@ -999,6 +1002,7 @@ mixin _$PaymentReconciliation {
   List<PaymentReconciliationProcessNote> get processNote;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PaymentReconciliationCopyWith<PaymentReconciliation> get copyWith;
 }
 
@@ -1723,6 +1727,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
       const DeepCollectionEquality().hash(total) ^
       const DeepCollectionEquality().hash(processNote);
 
+  @JsonKey(ignore: true)
   @override
   _$PaymentReconciliationCopyWith<_PaymentReconciliation> get copyWith =>
       __$PaymentReconciliationCopyWithImpl<_PaymentReconciliation>(
@@ -1841,6 +1846,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
   List<PaymentReconciliationProcessNote> get processNote;
   @override
+  @JsonKey(ignore: true)
   _$PaymentReconciliationCopyWith<_PaymentReconciliation> get copyWith;
 }
 
@@ -1898,6 +1904,7 @@ mixin _$PaymentReconciliationDetail {
   Money get amount;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PaymentReconciliationDetailCopyWith<PaymentReconciliationDetail>
       get copyWith;
 }
@@ -2185,6 +2192,7 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
       const DeepCollectionEquality().hash(dateElement) ^
       const DeepCollectionEquality().hash(amount);
 
+  @JsonKey(ignore: true)
   @override
   _$PaymentReconciliationDetailCopyWith<_PaymentReconciliationDetail>
       get copyWith => __$PaymentReconciliationDetailCopyWithImpl<
@@ -2230,6 +2238,7 @@ abstract class _PaymentReconciliationDetail
   @override
   Money get amount;
   @override
+  @JsonKey(ignore: true)
   _$PaymentReconciliationDetailCopyWith<_PaymentReconciliationDetail>
       get copyWith;
 }
@@ -2274,6 +2283,7 @@ mixin _$PaymentReconciliationProcessNote {
   Element get textElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PaymentReconciliationProcessNoteCopyWith<PaymentReconciliationProcessNote>
       get copyWith;
 }
@@ -2430,6 +2440,7 @@ class _$_PaymentReconciliationProcessNote
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(textElement);
 
+  @JsonKey(ignore: true)
   @override
   _$PaymentReconciliationProcessNoteCopyWith<_PaymentReconciliationProcessNote>
       get copyWith => __$PaymentReconciliationProcessNoteCopyWithImpl<
@@ -2461,6 +2472,7 @@ abstract class _PaymentReconciliationProcessNote
   @JsonKey(name: '_text')
   Element get textElement;
   @override
+  @JsonKey(ignore: true)
   _$PaymentReconciliationProcessNoteCopyWith<_PaymentReconciliationProcessNote>
       get copyWith;
 }

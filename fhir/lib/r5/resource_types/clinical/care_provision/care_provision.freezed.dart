@@ -177,6 +177,7 @@ mixin _$CarePlan {
   List<Annotation> get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CarePlanCopyWith<CarePlan> get copyWith;
 }
 
@@ -1040,6 +1041,7 @@ class _$_CarePlan extends _CarePlan {
       const DeepCollectionEquality().hash(activity) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$CarePlanCopyWith<_CarePlan> get copyWith =>
       __$CarePlanCopyWithImpl<_CarePlan>(this, _$identity);
@@ -1198,6 +1200,7 @@ abstract class _CarePlan extends CarePlan {
   @override
   List<Annotation> get note;
   @override
+  @JsonKey(ignore: true)
   _$CarePlanCopyWith<_CarePlan> get copyWith;
 }
 
@@ -1251,6 +1254,7 @@ mixin _$CarePlanActivity {
   CarePlanDetail get detail;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CarePlanActivityCopyWith<CarePlanActivity> get copyWith;
 }
 
@@ -1468,6 +1472,7 @@ class _$_CarePlanActivity extends _CarePlanActivity {
       const DeepCollectionEquality().hash(reference) ^
       const DeepCollectionEquality().hash(detail);
 
+  @JsonKey(ignore: true)
   @override
   _$CarePlanActivityCopyWith<_CarePlanActivity> get copyWith =>
       __$CarePlanActivityCopyWithImpl<_CarePlanActivity>(this, _$identity);
@@ -1508,6 +1513,7 @@ abstract class _CarePlanActivity extends CarePlanActivity {
   @override
   CarePlanDetail get detail;
   @override
+  @JsonKey(ignore: true)
   _$CarePlanActivityCopyWith<_CarePlanActivity> get copyWith;
 }
 
@@ -1653,6 +1659,7 @@ mixin _$CarePlanDetail {
   Element get descriptionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CarePlanDetailCopyWith<CarePlanDetail> get copyWith;
 }
 
@@ -2477,6 +2484,7 @@ class _$_CarePlanDetail extends _CarePlanDetail {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CarePlanDetailCopyWith<_CarePlanDetail> get copyWith =>
       __$CarePlanDetailCopyWithImpl<_CarePlanDetail>(this, _$identity);
@@ -2609,6 +2617,7 @@ abstract class _CarePlanDetail extends CarePlanDetail {
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
+  @JsonKey(ignore: true)
   _$CarePlanDetailCopyWith<_CarePlanDetail> get copyWith;
 }
 
@@ -2726,6 +2735,7 @@ mixin _$CareTeam {
   List<Annotation> get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CareTeamCopyWith<CareTeam> get copyWith;
 }
 
@@ -3294,6 +3304,7 @@ class _$_CareTeam extends _CareTeam {
       const DeepCollectionEquality().hash(telecom) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$CareTeamCopyWith<_CareTeam> get copyWith =>
       __$CareTeamCopyWithImpl<_CareTeam>(this, _$identity);
@@ -3397,6 +3408,7 @@ abstract class _CareTeam extends CareTeam {
   @override
   List<Annotation> get note;
   @override
+  @JsonKey(ignore: true)
   _$CareTeamCopyWith<_CareTeam> get copyWith;
 }
 
@@ -3453,6 +3465,7 @@ mixin _$CareTeamParticipant {
   Timing get coverageTiming;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CareTeamParticipantCopyWith<CareTeamParticipant> get copyWith;
 }
 
@@ -3723,6 +3736,7 @@ class _$_CareTeamParticipant extends _CareTeamParticipant {
       const DeepCollectionEquality().hash(coveragePeriod) ^
       const DeepCollectionEquality().hash(coverageTiming);
 
+  @JsonKey(ignore: true)
   @override
   _$CareTeamParticipantCopyWith<_CareTeamParticipant> get copyWith =>
       __$CareTeamParticipantCopyWithImpl<_CareTeamParticipant>(
@@ -3767,6 +3781,7 @@ abstract class _CareTeamParticipant extends CareTeamParticipant {
   @override
   Timing get coverageTiming;
   @override
+  @JsonKey(ignore: true)
   _$CareTeamParticipantCopyWith<_CareTeamParticipant> get copyWith;
 }
 
@@ -3919,6 +3934,7 @@ mixin _$Goal {
   List<CodeableReference> get outcome;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $GoalCopyWith<Goal> get copyWith;
 }
 
@@ -4735,6 +4751,7 @@ class _$_Goal extends _Goal {
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(outcome);
 
+  @JsonKey(ignore: true)
   @override
   _$GoalCopyWith<_Goal> get copyWith =>
       __$GoalCopyWithImpl<_Goal>(this, _$identity);
@@ -4873,6 +4890,7 @@ abstract class _Goal extends Goal {
   @override
   List<CodeableReference> get outcome;
   @override
+  @JsonKey(ignore: true)
   _$GoalCopyWith<_Goal> get copyWith;
 }
 
@@ -4960,6 +4978,7 @@ mixin _$GoalTarget {
   FhirDuration get dueDuration;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $GoalTargetCopyWith<GoalTarget> get copyWith;
 }
 
@@ -5450,6 +5469,7 @@ class _$_GoalTarget extends _GoalTarget {
       const DeepCollectionEquality().hash(dueDateElement) ^
       const DeepCollectionEquality().hash(dueDuration);
 
+  @JsonKey(ignore: true)
   @override
   _$GoalTargetCopyWith<_GoalTarget> get copyWith =>
       __$GoalTargetCopyWithImpl<_GoalTarget>(this, _$identity);
@@ -5524,6 +5544,7 @@ abstract class _GoalTarget extends GoalTarget {
   @override
   FhirDuration get dueDuration;
   @override
+  @JsonKey(ignore: true)
   _$GoalTargetCopyWith<_GoalTarget> get copyWith;
 }
 
@@ -5689,6 +5710,7 @@ mixin _$NutritionIntake {
   List<Annotation> get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NutritionIntakeCopyWith<NutritionIntake> get copyWith;
 }
 
@@ -6557,6 +6579,7 @@ class _$_NutritionIntake extends _NutritionIntake {
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$NutritionIntakeCopyWith<_NutritionIntake> get copyWith =>
       __$NutritionIntakeCopyWithImpl<_NutritionIntake>(this, _$identity);
@@ -6709,6 +6732,7 @@ abstract class _NutritionIntake extends NutritionIntake {
   @override
   List<Annotation> get note;
   @override
+  @JsonKey(ignore: true)
   _$NutritionIntakeCopyWith<_NutritionIntake> get copyWith;
 }
 
@@ -6779,6 +6803,7 @@ mixin _$NutritionIntakeConsumedItem {
   CodeableConcept get notConsumedReason;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NutritionIntakeConsumedItemCopyWith<NutritionIntakeConsumedItem>
       get copyWith;
 }
@@ -7161,6 +7186,7 @@ class _$_NutritionIntakeConsumedItem extends _NutritionIntakeConsumedItem {
       const DeepCollectionEquality().hash(notConsumedElement) ^
       const DeepCollectionEquality().hash(notConsumedReason);
 
+  @JsonKey(ignore: true)
   @override
   _$NutritionIntakeConsumedItemCopyWith<_NutritionIntakeConsumedItem>
       get copyWith => __$NutritionIntakeConsumedItemCopyWithImpl<
@@ -7219,6 +7245,7 @@ abstract class _NutritionIntakeConsumedItem
   @override
   CodeableConcept get notConsumedReason;
   @override
+  @JsonKey(ignore: true)
   _$NutritionIntakeConsumedItemCopyWith<_NutritionIntakeConsumedItem>
       get copyWith;
 }
@@ -7272,6 +7299,7 @@ mixin _$NutritionIntakeIngredientLabel {
   Quantity get amount;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NutritionIntakeIngredientLabelCopyWith<NutritionIntakeIngredientLabel>
       get copyWith;
 }
@@ -7499,6 +7527,7 @@ class _$_NutritionIntakeIngredientLabel
       const DeepCollectionEquality().hash(nutrientReference) ^
       const DeepCollectionEquality().hash(amount);
 
+  @JsonKey(ignore: true)
   @override
   _$NutritionIntakeIngredientLabelCopyWith<_NutritionIntakeIngredientLabel>
       get copyWith => __$NutritionIntakeIngredientLabelCopyWithImpl<
@@ -7538,6 +7567,7 @@ abstract class _NutritionIntakeIngredientLabel
   @override
   Quantity get amount;
   @override
+  @JsonKey(ignore: true)
   _$NutritionIntakeIngredientLabelCopyWith<_NutritionIntakeIngredientLabel>
       get copyWith;
 }
@@ -7587,6 +7617,7 @@ mixin _$NutritionIntakePerformer {
   Reference get actor;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NutritionIntakePerformerCopyWith<NutritionIntakePerformer> get copyWith;
 }
 
@@ -7774,6 +7805,7 @@ class _$_NutritionIntakePerformer extends _NutritionIntakePerformer {
       const DeepCollectionEquality().hash(function) ^
       const DeepCollectionEquality().hash(actor);
 
+  @JsonKey(ignore: true)
   @override
   _$NutritionIntakePerformerCopyWith<_NutritionIntakePerformer> get copyWith =>
       __$NutritionIntakePerformerCopyWithImpl<_NutritionIntakePerformer>(
@@ -7809,6 +7841,7 @@ abstract class _NutritionIntakePerformer extends NutritionIntakePerformer {
   @override
   Reference get actor;
   @override
+  @JsonKey(ignore: true)
   _$NutritionIntakePerformerCopyWith<_NutritionIntakePerformer> get copyWith;
 }
 
@@ -7958,6 +7991,7 @@ mixin _$NutritionOrder {
   List<Annotation> get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NutritionOrderCopyWith<NutritionOrder> get copyWith;
 }
 
@@ -8734,6 +8768,7 @@ class _$_NutritionOrder extends _NutritionOrder {
       const DeepCollectionEquality().hash(enteralFormula) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$NutritionOrderCopyWith<_NutritionOrder> get copyWith =>
       __$NutritionOrderCopyWithImpl<_NutritionOrder>(this, _$identity);
@@ -8870,6 +8905,7 @@ abstract class _NutritionOrder extends NutritionOrder {
   @override
   List<Annotation> get note;
   @override
+  @JsonKey(ignore: true)
   _$NutritionOrderCopyWith<_NutritionOrder> get copyWith;
 }
 
@@ -8934,6 +8970,7 @@ mixin _$NutritionOrderOralDiet {
   Element get instructionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NutritionOrderOralDietCopyWith<NutritionOrderOralDiet> get copyWith;
 }
 
@@ -9190,6 +9227,7 @@ class _$_NutritionOrderOralDiet extends _NutritionOrderOralDiet {
       const DeepCollectionEquality().hash(instruction) ^
       const DeepCollectionEquality().hash(instructionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$NutritionOrderOralDietCopyWith<_NutritionOrderOralDiet> get copyWith =>
       __$NutritionOrderOralDietCopyWithImpl<_NutritionOrderOralDiet>(
@@ -9242,6 +9280,7 @@ abstract class _NutritionOrderOralDiet extends NutritionOrderOralDiet {
   @JsonKey(name: '_instruction')
   Element get instructionElement;
   @override
+  @JsonKey(ignore: true)
   _$NutritionOrderOralDietCopyWith<_NutritionOrderOralDiet> get copyWith;
 }
 
@@ -9290,6 +9329,7 @@ mixin _$NutritionOrderNutrient {
   Quantity get amount;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NutritionOrderNutrientCopyWith<NutritionOrderNutrient> get copyWith;
 }
 
@@ -9475,6 +9515,7 @@ class _$_NutritionOrderNutrient extends _NutritionOrderNutrient {
       const DeepCollectionEquality().hash(modifier) ^
       const DeepCollectionEquality().hash(amount);
 
+  @JsonKey(ignore: true)
   @override
   _$NutritionOrderNutrientCopyWith<_NutritionOrderNutrient> get copyWith =>
       __$NutritionOrderNutrientCopyWithImpl<_NutritionOrderNutrient>(
@@ -9510,6 +9551,7 @@ abstract class _NutritionOrderNutrient extends NutritionOrderNutrient {
   @override
   Quantity get amount;
   @override
+  @JsonKey(ignore: true)
   _$NutritionOrderNutrientCopyWith<_NutritionOrderNutrient> get copyWith;
 }
 
@@ -9558,6 +9600,7 @@ mixin _$NutritionOrderTexture {
   CodeableConcept get foodType;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NutritionOrderTextureCopyWith<NutritionOrderTexture> get copyWith;
 }
 
@@ -9746,6 +9789,7 @@ class _$_NutritionOrderTexture extends _NutritionOrderTexture {
       const DeepCollectionEquality().hash(modifier) ^
       const DeepCollectionEquality().hash(foodType);
 
+  @JsonKey(ignore: true)
   @override
   _$NutritionOrderTextureCopyWith<_NutritionOrderTexture> get copyWith =>
       __$NutritionOrderTextureCopyWithImpl<_NutritionOrderTexture>(
@@ -9781,6 +9825,7 @@ abstract class _NutritionOrderTexture extends NutritionOrderTexture {
   @override
   CodeableConcept get foodType;
   @override
+  @JsonKey(ignore: true)
   _$NutritionOrderTextureCopyWith<_NutritionOrderTexture> get copyWith;
 }
 
@@ -9846,6 +9891,7 @@ mixin _$NutritionOrderSupplement {
   Element get instructionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NutritionOrderSupplementCopyWith<NutritionOrderSupplement> get copyWith;
 }
 
@@ -10137,6 +10183,7 @@ class _$_NutritionOrderSupplement extends _NutritionOrderSupplement {
       const DeepCollectionEquality().hash(instruction) ^
       const DeepCollectionEquality().hash(instructionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$NutritionOrderSupplementCopyWith<_NutritionOrderSupplement> get copyWith =>
       __$NutritionOrderSupplementCopyWithImpl<_NutritionOrderSupplement>(
@@ -10190,6 +10237,7 @@ abstract class _NutritionOrderSupplement extends NutritionOrderSupplement {
   @JsonKey(name: '_instruction')
   Element get instructionElement;
   @override
+  @JsonKey(ignore: true)
   _$NutritionOrderSupplementCopyWith<_NutritionOrderSupplement> get copyWith;
 }
 
@@ -10275,6 +10323,7 @@ mixin _$NutritionOrderEnteralFormula {
   Element get administrationInstructionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NutritionOrderEnteralFormulaCopyWith<NutritionOrderEnteralFormula>
       get copyWith;
 }
@@ -10743,6 +10792,7 @@ class _$_NutritionOrderEnteralFormula extends _NutritionOrderEnteralFormula {
       const DeepCollectionEquality().hash(administrationInstruction) ^
       const DeepCollectionEquality().hash(administrationInstructionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$NutritionOrderEnteralFormulaCopyWith<_NutritionOrderEnteralFormula>
       get copyWith => __$NutritionOrderEnteralFormulaCopyWithImpl<
@@ -10817,6 +10867,7 @@ abstract class _NutritionOrderEnteralFormula
   @JsonKey(name: '_administrationInstruction')
   Element get administrationInstructionElement;
   @override
+  @JsonKey(ignore: true)
   _$NutritionOrderEnteralFormulaCopyWith<_NutritionOrderEnteralFormula>
       get copyWith;
 }
@@ -10872,6 +10923,7 @@ mixin _$NutritionOrderAdministration {
   Ratio get rateRatio;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NutritionOrderAdministrationCopyWith<NutritionOrderAdministration>
       get copyWith;
 }
@@ -11117,6 +11169,7 @@ class _$_NutritionOrderAdministration extends _NutritionOrderAdministration {
       const DeepCollectionEquality().hash(rateQuantity) ^
       const DeepCollectionEquality().hash(rateRatio);
 
+  @JsonKey(ignore: true)
   @override
   _$NutritionOrderAdministrationCopyWith<_NutritionOrderAdministration>
       get copyWith => __$NutritionOrderAdministrationCopyWithImpl<
@@ -11159,6 +11212,7 @@ abstract class _NutritionOrderAdministration
   @override
   Ratio get rateRatio;
   @override
+  @JsonKey(ignore: true)
   _$NutritionOrderAdministrationCopyWith<_NutritionOrderAdministration>
       get copyWith;
 }
@@ -11313,6 +11367,7 @@ mixin _$RequestGroup {
   List<RequestGroupAction> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RequestGroupCopyWith<RequestGroup> get copyWith;
 }
 
@@ -12099,6 +12154,7 @@ class _$_RequestGroup extends _RequestGroup {
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$RequestGroupCopyWith<_RequestGroup> get copyWith =>
       __$RequestGroupCopyWithImpl<_RequestGroup>(this, _$identity);
@@ -12239,6 +12295,7 @@ abstract class _RequestGroup extends RequestGroup {
   @override
   List<RequestGroupAction> get action;
   @override
+  @JsonKey(ignore: true)
   _$RequestGroupCopyWith<_RequestGroup> get copyWith;
 }
 
@@ -12396,6 +12453,7 @@ mixin _$RequestGroupAction {
   List<RequestGroupAction> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RequestGroupActionCopyWith<RequestGroupAction> get copyWith;
 }
 
@@ -13303,6 +13361,7 @@ class _$_RequestGroupAction extends _RequestGroupAction {
       const DeepCollectionEquality().hash(resource) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$RequestGroupActionCopyWith<_RequestGroupAction> get copyWith =>
       __$RequestGroupActionCopyWithImpl<_RequestGroupAction>(this, _$identity);
@@ -13447,6 +13506,7 @@ abstract class _RequestGroupAction extends RequestGroupAction {
   @override
   List<RequestGroupAction> get action;
   @override
+  @JsonKey(ignore: true)
   _$RequestGroupActionCopyWith<_RequestGroupAction> get copyWith;
 }
 
@@ -13499,6 +13559,7 @@ mixin _$RequestGroupCondition {
   Expression get expression;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RequestGroupConditionCopyWith<RequestGroupCondition> get copyWith;
 }
 
@@ -13700,6 +13761,7 @@ class _$_RequestGroupCondition extends _RequestGroupCondition {
       const DeepCollectionEquality().hash(kindElement) ^
       const DeepCollectionEquality().hash(expression);
 
+  @JsonKey(ignore: true)
   @override
   _$RequestGroupConditionCopyWith<_RequestGroupCondition> get copyWith =>
       __$RequestGroupConditionCopyWithImpl<_RequestGroupCondition>(
@@ -13739,6 +13801,7 @@ abstract class _RequestGroupCondition extends RequestGroupCondition {
   @override
   Expression get expression;
   @override
+  @JsonKey(ignore: true)
   _$RequestGroupConditionCopyWith<_RequestGroupCondition> get copyWith;
 }
 
@@ -13801,6 +13864,7 @@ mixin _$RequestGroupRelatedAction {
   Range get offsetRange;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RequestGroupRelatedActionCopyWith<RequestGroupRelatedAction> get copyWith;
 }
 
@@ -14082,6 +14146,7 @@ class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
       const DeepCollectionEquality().hash(offsetDuration) ^
       const DeepCollectionEquality().hash(offsetRange);
 
+  @JsonKey(ignore: true)
   @override
   _$RequestGroupRelatedActionCopyWith<_RequestGroupRelatedAction>
       get copyWith =>
@@ -14132,6 +14197,7 @@ abstract class _RequestGroupRelatedAction extends RequestGroupRelatedAction {
   @override
   Range get offsetRange;
   @override
+  @JsonKey(ignore: true)
   _$RequestGroupRelatedActionCopyWith<_RequestGroupRelatedAction> get copyWith;
 }
 
@@ -14271,6 +14337,7 @@ mixin _$RiskAssessment {
   List<Annotation> get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RiskAssessmentCopyWith<RiskAssessment> get copyWith;
 }
 
@@ -15042,6 +15109,7 @@ class _$_RiskAssessment extends _RiskAssessment {
       const DeepCollectionEquality().hash(mitigationElement) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$RiskAssessmentCopyWith<_RiskAssessment> get copyWith =>
       __$RiskAssessmentCopyWithImpl<_RiskAssessment>(this, _$identity);
@@ -15168,6 +15236,7 @@ abstract class _RiskAssessment extends RiskAssessment {
   @override
   List<Annotation> get note;
   @override
+  @JsonKey(ignore: true)
   _$RiskAssessmentCopyWith<_RiskAssessment> get copyWith;
 }
 
@@ -15246,6 +15315,7 @@ mixin _$RiskAssessmentPrediction {
   Element get rationaleElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RiskAssessmentPredictionCopyWith<RiskAssessmentPrediction> get copyWith;
 }
 
@@ -15661,6 +15731,7 @@ class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
       const DeepCollectionEquality().hash(rationale) ^
       const DeepCollectionEquality().hash(rationaleElement);
 
+  @JsonKey(ignore: true)
   @override
   _$RiskAssessmentPredictionCopyWith<_RiskAssessmentPrediction> get copyWith =>
       __$RiskAssessmentPredictionCopyWithImpl<_RiskAssessmentPrediction>(
@@ -15730,6 +15801,7 @@ abstract class _RiskAssessmentPrediction extends RiskAssessmentPrediction {
   @JsonKey(name: '_rationale')
   Element get rationaleElement;
   @override
+  @JsonKey(ignore: true)
   _$RiskAssessmentPredictionCopyWith<_RiskAssessmentPrediction> get copyWith;
 }
 
@@ -15956,6 +16028,7 @@ mixin _$ServiceRequest {
   List<Reference> get relevantHistory;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ServiceRequestCopyWith<ServiceRequest> get copyWith;
 }
 
@@ -17235,6 +17308,7 @@ class _$_ServiceRequest extends _ServiceRequest {
       const DeepCollectionEquality().hash(patientInstructionElement) ^
       const DeepCollectionEquality().hash(relevantHistory);
 
+  @JsonKey(ignore: true)
   @override
   _$ServiceRequestCopyWith<_ServiceRequest> get copyWith =>
       __$ServiceRequestCopyWithImpl<_ServiceRequest>(this, _$identity);
@@ -17448,6 +17522,7 @@ abstract class _ServiceRequest extends ServiceRequest {
   @override
   List<Reference> get relevantHistory;
   @override
+  @JsonKey(ignore: true)
   _$ServiceRequestCopyWith<_ServiceRequest> get copyWith;
 }
 
@@ -17562,6 +17637,7 @@ mixin _$VisionPrescription {
   List<VisionPrescriptionLensSpecification> get lensSpecification;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $VisionPrescriptionCopyWith<VisionPrescription> get copyWith;
 }
 
@@ -18148,6 +18224,7 @@ class _$_VisionPrescription extends _VisionPrescription {
       const DeepCollectionEquality().hash(prescriber) ^
       const DeepCollectionEquality().hash(lensSpecification);
 
+  @JsonKey(ignore: true)
   @override
   _$VisionPrescriptionCopyWith<_VisionPrescription> get copyWith =>
       __$VisionPrescriptionCopyWithImpl<_VisionPrescription>(this, _$identity);
@@ -18250,6 +18327,7 @@ abstract class _VisionPrescription extends VisionPrescription {
   @override
   List<VisionPrescriptionLensSpecification> get lensSpecification;
   @override
+  @JsonKey(ignore: true)
   _$VisionPrescriptionCopyWith<_VisionPrescription> get copyWith;
 }
 
@@ -18389,6 +18467,7 @@ mixin _$VisionPrescriptionLensSpecification {
   List<Annotation> get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $VisionPrescriptionLensSpecificationCopyWith<
       VisionPrescriptionLensSpecification> get copyWith;
 }
@@ -19077,6 +19156,7 @@ class _$_VisionPrescriptionLensSpecification
       const DeepCollectionEquality().hash(brandElement) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$VisionPrescriptionLensSpecificationCopyWith<
           _VisionPrescriptionLensSpecification>
@@ -19205,6 +19285,7 @@ abstract class _VisionPrescriptionLensSpecification
   @override
   List<Annotation> get note;
   @override
+  @JsonKey(ignore: true)
   _$VisionPrescriptionLensSpecificationCopyWith<
       _VisionPrescriptionLensSpecification> get copyWith;
 }
@@ -19267,6 +19348,7 @@ mixin _$VisionPrescriptionPrism {
   Element get baseElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $VisionPrescriptionPrismCopyWith<VisionPrescriptionPrism> get copyWith;
 }
 
@@ -19493,6 +19575,7 @@ class _$_VisionPrescriptionPrism extends _VisionPrescriptionPrism {
       const DeepCollectionEquality().hash(base) ^
       const DeepCollectionEquality().hash(baseElement);
 
+  @JsonKey(ignore: true)
   @override
   _$VisionPrescriptionPrismCopyWith<_VisionPrescriptionPrism> get copyWith =>
       __$VisionPrescriptionPrismCopyWithImpl<_VisionPrescriptionPrism>(
@@ -19541,5 +19624,6 @@ abstract class _VisionPrescriptionPrism extends VisionPrescriptionPrism {
   @JsonKey(name: '_base')
   Element get baseElement;
   @override
+  @JsonKey(ignore: true)
   _$VisionPrescriptionPrismCopyWith<_VisionPrescriptionPrism> get copyWith;
 }

@@ -244,6 +244,7 @@ mixin _$Evidence {
   List<EvidenceCertainty> get certainty;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceCopyWith<Evidence> get copyWith;
 }
 
@@ -1494,6 +1495,7 @@ class _$_Evidence extends _Evidence {
       const DeepCollectionEquality().hash(distribution) ^
       const DeepCollectionEquality().hash(certainty);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceCopyWith<_Evidence> get copyWith =>
       __$EvidenceCopyWithImpl<_Evidence>(this, _$identity);
@@ -1719,6 +1721,7 @@ abstract class _Evidence extends Evidence {
   @override
   List<EvidenceCertainty> get certainty;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceCopyWith<_Evidence> get copyWith;
 }
 
@@ -1783,6 +1786,7 @@ mixin _$EvidenceVariableDefinition {
   CodeableConcept get directnessMatch;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceVariableDefinitionCopyWith<EvidenceVariableDefinition> get copyWith;
 }
 
@@ -2088,6 +2092,7 @@ class _$_EvidenceVariableDefinition extends _EvidenceVariableDefinition {
       const DeepCollectionEquality().hash(intended) ^
       const DeepCollectionEquality().hash(directnessMatch);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceVariableDefinitionCopyWith<_EvidenceVariableDefinition>
       get copyWith => __$EvidenceVariableDefinitionCopyWithImpl<
@@ -2139,6 +2144,7 @@ abstract class _EvidenceVariableDefinition extends EvidenceVariableDefinition {
   @override
   CodeableConcept get directnessMatch;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceVariableDefinitionCopyWith<_EvidenceVariableDefinition>
       get copyWith;
 }
@@ -2198,6 +2204,7 @@ mixin _$EvidenceCertainty {
   List<EvidenceCertaintySubcomponent> get certaintySubcomponent;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceCertaintyCopyWith<EvidenceCertainty> get copyWith;
 }
 
@@ -2433,6 +2440,7 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
       const DeepCollectionEquality().hash(rating) ^
       const DeepCollectionEquality().hash(certaintySubcomponent);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceCertaintyCopyWith<_EvidenceCertainty> get copyWith =>
       __$EvidenceCertaintyCopyWithImpl<_EvidenceCertainty>(this, _$identity);
@@ -2479,6 +2487,7 @@ abstract class _EvidenceCertainty extends EvidenceCertainty {
   @override
   List<EvidenceCertaintySubcomponent> get certaintySubcomponent;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceCertaintyCopyWith<_EvidenceCertainty> get copyWith;
 }
 
@@ -2538,6 +2547,7 @@ mixin _$EvidenceCertaintySubcomponent {
   List<CodeableConcept> get rating;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceCertaintySubcomponentCopyWith<EvidenceCertaintySubcomponent>
       get copyWith;
 }
@@ -2774,6 +2784,7 @@ class _$_EvidenceCertaintySubcomponent extends _EvidenceCertaintySubcomponent {
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(rating);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceCertaintySubcomponentCopyWith<_EvidenceCertaintySubcomponent>
       get copyWith => __$EvidenceCertaintySubcomponentCopyWithImpl<
@@ -2821,6 +2832,7 @@ abstract class _EvidenceCertaintySubcomponent
   @override
   List<CodeableConcept> get rating;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceCertaintySubcomponentCopyWith<_EvidenceCertaintySubcomponent>
       get copyWith;
 }
@@ -3087,6 +3099,7 @@ mixin _$EvidenceVariable {
   List<EvidenceVariableCategory> get category;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceVariableCopyWith<EvidenceVariable> get copyWith;
 }
 
@@ -4444,6 +4457,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       const DeepCollectionEquality().hash(handlingElement) ^
       const DeepCollectionEquality().hash(category);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceVariableCopyWith<_EvidenceVariable> get copyWith =>
       __$EvidenceVariableCopyWithImpl<_EvidenceVariable>(this, _$identity);
@@ -4692,6 +4706,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @override
   List<EvidenceVariableCategory> get category;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceVariableCopyWith<_EvidenceVariable> get copyWith;
 }
 
@@ -4791,6 +4806,7 @@ mixin _$EvidenceVariableCharacteristic {
   Element get groupMeasureElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceVariableCharacteristicCopyWith<EvidenceVariableCharacteristic>
       get copyWith;
 }
@@ -5315,6 +5331,7 @@ class _$_EvidenceVariableCharacteristic
       const DeepCollectionEquality().hash(groupMeasure) ^
       const DeepCollectionEquality().hash(groupMeasureElement);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceVariableCharacteristicCopyWith<_EvidenceVariableCharacteristic>
       get copyWith => __$EvidenceVariableCharacteristicCopyWithImpl<
@@ -5398,6 +5415,7 @@ abstract class _EvidenceVariableCharacteristic
   @JsonKey(name: '_groupMeasure')
   Element get groupMeasureElement;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceVariableCharacteristicCopyWith<_EvidenceVariableCharacteristic>
       get copyWith;
 }
@@ -5457,6 +5475,7 @@ mixin _$EvidenceVariableTimeFromStart {
   List<Annotation> get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceVariableTimeFromStartCopyWith<EvidenceVariableTimeFromStart>
       get copyWith;
 }
@@ -5704,6 +5723,7 @@ class _$_EvidenceVariableTimeFromStart extends _EvidenceVariableTimeFromStart {
       const DeepCollectionEquality().hash(range) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceVariableTimeFromStartCopyWith<_EvidenceVariableTimeFromStart>
       get copyWith => __$EvidenceVariableTimeFromStartCopyWithImpl<
@@ -5750,6 +5770,7 @@ abstract class _EvidenceVariableTimeFromStart
   @override
   List<Annotation> get note;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceVariableTimeFromStartCopyWith<_EvidenceVariableTimeFromStart>
       get copyWith;
 }
@@ -5809,6 +5830,7 @@ mixin _$EvidenceVariableCategory {
   Range get valueRange;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceVariableCategoryCopyWith<EvidenceVariableCategory> get copyWith;
 }
 
@@ -6071,6 +6093,7 @@ class _$_EvidenceVariableCategory extends _EvidenceVariableCategory {
       const DeepCollectionEquality().hash(valueQuantity) ^
       const DeepCollectionEquality().hash(valueRange);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceVariableCategoryCopyWith<_EvidenceVariableCategory> get copyWith =>
       __$EvidenceVariableCategoryCopyWithImpl<_EvidenceVariableCategory>(
@@ -6116,5 +6139,6 @@ abstract class _EvidenceVariableCategory extends EvidenceVariableCategory {
   @override
   Range get valueRange;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceVariableCategoryCopyWith<_EvidenceVariableCategory> get copyWith;
 }

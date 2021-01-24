@@ -146,6 +146,7 @@ mixin _$Media {
   Attachment get content;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MediaCopyWith<Media> get copyWith;
 }
 
@@ -865,6 +866,7 @@ class _$_Media extends _Media {
       const DeepCollectionEquality().hash(durationElement) ^
       const DeepCollectionEquality().hash(content);
 
+  @JsonKey(ignore: true)
   @override
   _$MediaCopyWith<_Media> get copyWith =>
       __$MediaCopyWithImpl<_Media>(this, _$identity);
@@ -992,6 +994,7 @@ abstract class _Media extends Media {
   @JsonKey(required: true)
   Attachment get content;
   @override
+  @JsonKey(ignore: true)
   _$MediaCopyWith<_Media> get copyWith;
 }
 
@@ -1061,6 +1064,7 @@ mixin _$Binary {
   Base64Binary get content;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BinaryCopyWith<Binary> get copyWith;
 }
 
@@ -1358,6 +1362,7 @@ class _$_Binary extends _Binary {
       const DeepCollectionEquality().hash(contentTypeElement) ^
       const DeepCollectionEquality().hash(content);
 
+  @JsonKey(ignore: true)
   @override
   _$BinaryCopyWith<_Binary> get copyWith =>
       __$BinaryCopyWithImpl<_Binary>(this, _$identity);
@@ -1413,6 +1418,7 @@ abstract class _Binary extends Binary {
   @override
   Base64Binary get content;
   @override
+  @JsonKey(ignore: true)
   _$BinaryCopyWith<_Binary> get copyWith;
 }
 
@@ -1499,6 +1505,7 @@ mixin _$Bundle {
   Signature get signature;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BundleCopyWith<Bundle> get copyWith;
 }
 
@@ -1883,6 +1890,7 @@ class _$_Bundle extends _Bundle {
       const DeepCollectionEquality().hash(entry) ^
       const DeepCollectionEquality().hash(signature);
 
+  @JsonKey(ignore: true)
   @override
   _$BundleCopyWith<_Bundle> get copyWith =>
       __$BundleCopyWithImpl<_Bundle>(this, _$identity);
@@ -1955,6 +1963,7 @@ abstract class _Bundle extends Bundle {
   @override
   Signature get signature;
   @override
+  @JsonKey(ignore: true)
   _$BundleCopyWith<_Bundle> get copyWith;
 }
 
@@ -2016,6 +2025,7 @@ mixin _$BundleLink {
   Element get urlElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BundleLinkCopyWith<BundleLink> get copyWith;
 }
 
@@ -2252,6 +2262,7 @@ class _$_BundleLink extends _BundleLink {
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(urlElement);
 
+  @JsonKey(ignore: true)
   @override
   _$BundleLinkCopyWith<_BundleLink> get copyWith =>
       __$BundleLinkCopyWithImpl<_BundleLink>(this, _$identity);
@@ -2300,6 +2311,7 @@ abstract class _BundleLink extends BundleLink {
   @JsonKey(name: '_url')
   Element get urlElement;
   @override
+  @JsonKey(ignore: true)
   _$BundleLinkCopyWith<_BundleLink> get copyWith;
 }
 
@@ -2367,6 +2379,7 @@ mixin _$BundleEntry {
   BundleEntryResponse get response;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BundleEntryCopyWith<BundleEntry> get copyWith;
 }
 
@@ -2667,6 +2680,7 @@ class _$_BundleEntry extends _BundleEntry {
       const DeepCollectionEquality().hash(request) ^
       const DeepCollectionEquality().hash(response);
 
+  @JsonKey(ignore: true)
   @override
   _$BundleEntryCopyWith<_BundleEntry> get copyWith =>
       __$BundleEntryCopyWithImpl<_BundleEntry>(this, _$identity);
@@ -2721,6 +2735,7 @@ abstract class _BundleEntry extends BundleEntry {
   @override
   BundleEntryResponse get response;
   @override
+  @JsonKey(ignore: true)
   _$BundleEntryCopyWith<_BundleEntry> get copyWith;
 }
 
@@ -2781,6 +2796,7 @@ mixin _$BundleEntrySearch {
   Element get scoreElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BundleEntrySearchCopyWith<BundleEntrySearch> get copyWith;
 }
 
@@ -3016,6 +3032,7 @@ class _$_BundleEntrySearch extends _BundleEntrySearch {
       const DeepCollectionEquality().hash(score) ^
       const DeepCollectionEquality().hash(scoreElement);
 
+  @JsonKey(ignore: true)
   @override
   _$BundleEntrySearchCopyWith<_BundleEntrySearch> get copyWith =>
       __$BundleEntrySearchCopyWithImpl<_BundleEntrySearch>(this, _$identity);
@@ -3063,6 +3080,7 @@ abstract class _BundleEntrySearch extends BundleEntrySearch {
   @JsonKey(name: '_score')
   Element get scoreElement;
   @override
+  @JsonKey(ignore: true)
   _$BundleEntrySearchCopyWith<_BundleEntrySearch> get copyWith;
 }
 
@@ -3164,6 +3182,7 @@ mixin _$BundleEntryRequest {
   Element get ifNoneExistElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BundleEntryRequestCopyWith<BundleEntryRequest> get copyWith;
 }
 
@@ -3618,6 +3637,7 @@ class _$_BundleEntryRequest extends _BundleEntryRequest {
       const DeepCollectionEquality().hash(ifNoneExist) ^
       const DeepCollectionEquality().hash(ifNoneExistElement);
 
+  @JsonKey(ignore: true)
   @override
   _$BundleEntryRequestCopyWith<_BundleEntryRequest> get copyWith =>
       __$BundleEntryRequestCopyWithImpl<_BundleEntryRequest>(this, _$identity);
@@ -3706,6 +3726,7 @@ abstract class _BundleEntryRequest extends BundleEntryRequest {
   @JsonKey(name: '_ifNoneExist')
   Element get ifNoneExistElement;
   @override
+  @JsonKey(ignore: true)
   _$BundleEntryRequestCopyWith<_BundleEntryRequest> get copyWith;
 }
 
@@ -3780,6 +3801,7 @@ mixin _$BundleEntryResponse {
   Element get lastModifiedElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BundleEntryResponseCopyWith<BundleEntryResponse> get copyWith;
 }
 
@@ -4108,6 +4130,7 @@ class _$_BundleEntryResponse extends _BundleEntryResponse {
       const DeepCollectionEquality().hash(lastModified) ^
       const DeepCollectionEquality().hash(lastModifiedElement);
 
+  @JsonKey(ignore: true)
   @override
   _$BundleEntryResponseCopyWith<_BundleEntryResponse> get copyWith =>
       __$BundleEntryResponseCopyWithImpl<_BundleEntryResponse>(
@@ -4171,6 +4194,7 @@ abstract class _BundleEntryResponse extends BundleEntryResponse {
   @JsonKey(name: '_lastModified')
   Element get lastModifiedElement;
   @override
+  @JsonKey(ignore: true)
   _$BundleEntryResponseCopyWith<_BundleEntryResponse> get copyWith;
 }
 
@@ -4266,6 +4290,7 @@ mixin _$Basic {
   Element get createdElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BasicCopyWith<Basic> get copyWith;
 }
 
@@ -4726,6 +4751,7 @@ class _$_Basic extends _Basic {
       const DeepCollectionEquality().hash(created) ^
       const DeepCollectionEquality().hash(createdElement);
 
+  @JsonKey(ignore: true)
   @override
   _$BasicCopyWith<_Basic> get copyWith =>
       __$BasicCopyWithImpl<_Basic>(this, _$identity);
@@ -4807,5 +4833,6 @@ abstract class _Basic extends Basic {
   @JsonKey(name: '_created')
   Element get createdElement;
   @override
+  @JsonKey(ignore: true)
   _$BasicCopyWith<_Basic> get copyWith;
 }

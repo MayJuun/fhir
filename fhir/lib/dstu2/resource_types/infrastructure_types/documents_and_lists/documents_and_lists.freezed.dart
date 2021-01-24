@@ -159,6 +159,7 @@ mixin _$Composition {
   List<CompositionSection> get section;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CompositionCopyWith<Composition> get copyWith;
 }
 
@@ -916,6 +917,7 @@ class _$_Composition extends _Composition {
       const DeepCollectionEquality().hash(encounter) ^
       const DeepCollectionEquality().hash(section);
 
+  @JsonKey(ignore: true)
   @override
   _$CompositionCopyWith<_Composition> get copyWith =>
       __$CompositionCopyWithImpl<_Composition>(this, _$identity);
@@ -1057,6 +1059,7 @@ abstract class _Composition extends Composition {
   @override
   List<CompositionSection> get section;
   @override
+  @JsonKey(ignore: true)
   _$CompositionCopyWith<_Composition> get copyWith;
 }
 
@@ -1116,6 +1119,7 @@ mixin _$CompositionAttester {
   Reference get party;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CompositionAttesterCopyWith<CompositionAttester> get copyWith;
 }
 
@@ -1357,6 +1361,7 @@ class _$_CompositionAttester extends _CompositionAttester {
       const DeepCollectionEquality().hash(timeElement) ^
       const DeepCollectionEquality().hash(party);
 
+  @JsonKey(ignore: true)
   @override
   _$CompositionAttesterCopyWith<_CompositionAttester> get copyWith =>
       __$CompositionAttesterCopyWithImpl<_CompositionAttester>(
@@ -1404,6 +1409,7 @@ abstract class _CompositionAttester extends CompositionAttester {
   @override
   Reference get party;
   @override
+  @JsonKey(ignore: true)
   _$CompositionAttesterCopyWith<_CompositionAttester> get copyWith;
 }
 
@@ -1454,6 +1460,7 @@ mixin _$CompositionEvent {
   List<Reference> get detail;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CompositionEventCopyWith<CompositionEvent> get copyWith;
 }
 
@@ -1635,6 +1642,7 @@ class _$_CompositionEvent extends _CompositionEvent {
       const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(detail);
 
+  @JsonKey(ignore: true)
   @override
   _$CompositionEventCopyWith<_CompositionEvent> get copyWith =>
       __$CompositionEventCopyWithImpl<_CompositionEvent>(this, _$identity);
@@ -1672,6 +1680,7 @@ abstract class _CompositionEvent extends CompositionEvent {
   @override
   List<Reference> get detail;
   @override
+  @JsonKey(ignore: true)
   _$CompositionEventCopyWith<_CompositionEvent> get copyWith;
 }
 
@@ -1750,6 +1759,7 @@ mixin _$CompositionSection {
   List<CompositionSection> get section;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CompositionSectionCopyWith<CompositionSection> get copyWith;
 }
 
@@ -2123,6 +2133,7 @@ class _$_CompositionSection extends _CompositionSection {
       const DeepCollectionEquality().hash(emptyReason) ^
       const DeepCollectionEquality().hash(section);
 
+  @JsonKey(ignore: true)
   @override
   _$CompositionSectionCopyWith<_CompositionSection> get copyWith =>
       __$CompositionSectionCopyWithImpl<_CompositionSection>(this, _$identity);
@@ -2188,6 +2199,7 @@ abstract class _CompositionSection extends CompositionSection {
   @override
   List<CompositionSection> get section;
   @override
+  @JsonKey(ignore: true)
   _$CompositionSectionCopyWith<_CompositionSection> get copyWith;
 }
 
@@ -2322,6 +2334,7 @@ mixin _$DocumentManifest {
   List<DocumentManifestRelated> get related;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DocumentManifestCopyWith<DocumentManifest> get copyWith;
 }
 
@@ -3001,6 +3014,7 @@ class _$_DocumentManifest extends _DocumentManifest {
       const DeepCollectionEquality().hash(content) ^
       const DeepCollectionEquality().hash(related);
 
+  @JsonKey(ignore: true)
   @override
   _$DocumentManifestCopyWith<_DocumentManifest> get copyWith =>
       __$DocumentManifestCopyWithImpl<_DocumentManifest>(this, _$identity);
@@ -3122,6 +3136,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   @override
   List<DocumentManifestRelated> get related;
   @override
+  @JsonKey(ignore: true)
   _$DocumentManifestCopyWith<_DocumentManifest> get copyWith;
 }
 
@@ -3170,6 +3185,7 @@ mixin _$DocumentManifestContent {
   Reference get pReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DocumentManifestContentCopyWith<DocumentManifestContent> get copyWith;
 }
 
@@ -3361,6 +3377,7 @@ class _$_DocumentManifestContent extends _DocumentManifestContent {
       const DeepCollectionEquality().hash(pAttachment) ^
       const DeepCollectionEquality().hash(pReference);
 
+  @JsonKey(ignore: true)
   @override
   _$DocumentManifestContentCopyWith<_DocumentManifestContent> get copyWith =>
       __$DocumentManifestContentCopyWithImpl<_DocumentManifestContent>(
@@ -3396,6 +3413,7 @@ abstract class _DocumentManifestContent extends DocumentManifestContent {
   @override
   Reference get pReference;
   @override
+  @JsonKey(ignore: true)
   _$DocumentManifestContentCopyWith<_DocumentManifestContent> get copyWith;
 }
 
@@ -3444,6 +3462,7 @@ mixin _$DocumentManifestRelated {
   Reference get ref;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DocumentManifestRelatedCopyWith<DocumentManifestRelated> get copyWith;
 }
 
@@ -3630,6 +3649,7 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(ref);
 
+  @JsonKey(ignore: true)
   @override
   _$DocumentManifestRelatedCopyWith<_DocumentManifestRelated> get copyWith =>
       __$DocumentManifestRelatedCopyWithImpl<_DocumentManifestRelated>(
@@ -3665,6 +3685,7 @@ abstract class _DocumentManifestRelated extends DocumentManifestRelated {
   @override
   Reference get ref;
   @override
+  @JsonKey(ignore: true)
   _$DocumentManifestRelatedCopyWith<_DocumentManifestRelated> get copyWith;
 }
 
@@ -3817,6 +3838,7 @@ mixin _$DocumentReference {
   DocumentReferenceContext get context;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DocumentReferenceCopyWith<DocumentReference> get copyWith;
 }
 
@@ -4614,6 +4636,7 @@ class _$_DocumentReference extends _DocumentReference {
       const DeepCollectionEquality().hash(content) ^
       const DeepCollectionEquality().hash(context);
 
+  @JsonKey(ignore: true)
   @override
   _$DocumentReferenceCopyWith<_DocumentReference> get copyWith =>
       __$DocumentReferenceCopyWithImpl<_DocumentReference>(this, _$identity);
@@ -4753,6 +4776,7 @@ abstract class _DocumentReference extends DocumentReference {
   @override
   DocumentReferenceContext get context;
   @override
+  @JsonKey(ignore: true)
   _$DocumentReferenceCopyWith<_DocumentReference> get copyWith;
 }
 
@@ -4813,6 +4837,7 @@ mixin _$DocumentReferenceRelatesTo {
   Reference get target;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DocumentReferenceRelatesToCopyWith<DocumentReferenceRelatesTo> get copyWith;
 }
 
@@ -5031,6 +5056,7 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
       const DeepCollectionEquality().hash(codeElement) ^
       const DeepCollectionEquality().hash(target);
 
+  @JsonKey(ignore: true)
   @override
   _$DocumentReferenceRelatesToCopyWith<_DocumentReferenceRelatesTo>
       get copyWith => __$DocumentReferenceRelatesToCopyWithImpl<
@@ -5078,6 +5104,7 @@ abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
   @JsonKey(required: true)
   Reference get target;
   @override
+  @JsonKey(ignore: true)
   _$DocumentReferenceRelatesToCopyWith<_DocumentReferenceRelatesTo>
       get copyWith;
 }
@@ -5128,6 +5155,7 @@ mixin _$DocumentReferenceContent {
   List<Coding> get format;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DocumentReferenceContentCopyWith<DocumentReferenceContent> get copyWith;
 }
 
@@ -5303,6 +5331,7 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
       const DeepCollectionEquality().hash(attachment) ^
       const DeepCollectionEquality().hash(format);
 
+  @JsonKey(ignore: true)
   @override
   _$DocumentReferenceContentCopyWith<_DocumentReferenceContent> get copyWith =>
       __$DocumentReferenceContentCopyWithImpl<_DocumentReferenceContent>(
@@ -5339,6 +5368,7 @@ abstract class _DocumentReferenceContent extends DocumentReferenceContent {
   @override
   List<Coding> get format;
   @override
+  @JsonKey(ignore: true)
   _$DocumentReferenceContentCopyWith<_DocumentReferenceContent> get copyWith;
 }
 
@@ -5402,6 +5432,7 @@ mixin _$DocumentReferenceContext {
   List<DocumentReferenceContextRelated> get related;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DocumentReferenceContextCopyWith<DocumentReferenceContext> get copyWith;
 }
 
@@ -5706,6 +5737,7 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
       const DeepCollectionEquality().hash(sourcePatientInfo) ^
       const DeepCollectionEquality().hash(related);
 
+  @JsonKey(ignore: true)
   @override
   _$DocumentReferenceContextCopyWith<_DocumentReferenceContext> get copyWith =>
       __$DocumentReferenceContextCopyWithImpl<_DocumentReferenceContext>(
@@ -5757,6 +5789,7 @@ abstract class _DocumentReferenceContext extends DocumentReferenceContext {
   @override
   List<DocumentReferenceContextRelated> get related;
   @override
+  @JsonKey(ignore: true)
   _$DocumentReferenceContextCopyWith<_DocumentReferenceContext> get copyWith;
 }
 
@@ -5806,6 +5839,7 @@ mixin _$DocumentReferenceContextRelated {
   Reference get ref;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DocumentReferenceContextRelatedCopyWith<DocumentReferenceContextRelated>
       get copyWith;
 }
@@ -5998,6 +6032,7 @@ class _$_DocumentReferenceContextRelated
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(ref);
 
+  @JsonKey(ignore: true)
   @override
   _$DocumentReferenceContextRelatedCopyWith<_DocumentReferenceContextRelated>
       get copyWith => __$DocumentReferenceContextRelatedCopyWithImpl<
@@ -6034,6 +6069,7 @@ abstract class _DocumentReferenceContextRelated
   @override
   Reference get ref;
   @override
+  @JsonKey(ignore: true)
   _$DocumentReferenceContextRelatedCopyWith<_DocumentReferenceContextRelated>
       get copyWith;
 }
@@ -6172,6 +6208,7 @@ mixin _$List_ {
   CodeableConcept get emptyReason;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $List_CopyWith<List_> get copyWith;
 }
 
@@ -6881,6 +6918,7 @@ class _$_List_ extends _List_ {
       const DeepCollectionEquality().hash(entry) ^
       const DeepCollectionEquality().hash(emptyReason);
 
+  @JsonKey(ignore: true)
   @override
   _$List_CopyWith<_List_> get copyWith =>
       __$List_CopyWithImpl<_List_>(this, _$identity);
@@ -7004,6 +7042,7 @@ abstract class _List_ extends List_ {
   @override
   CodeableConcept get emptyReason;
   @override
+  @JsonKey(ignore: true)
   _$List_CopyWith<_List_> get copyWith;
 }
 
@@ -7070,6 +7109,7 @@ mixin _$ListEntry {
   Reference get item;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ListEntryCopyWith<ListEntry> get copyWith;
 }
 
@@ -7352,6 +7392,7 @@ class _$_ListEntry extends _ListEntry {
       const DeepCollectionEquality().hash(dateElement) ^
       const DeepCollectionEquality().hash(item);
 
+  @JsonKey(ignore: true)
   @override
   _$ListEntryCopyWith<_ListEntry> get copyWith =>
       __$ListEntryCopyWithImpl<_ListEntry>(this, _$identity);
@@ -7405,5 +7446,6 @@ abstract class _ListEntry extends ListEntry {
   @JsonKey(required: true)
   Reference get item;
   @override
+  @JsonKey(ignore: true)
   _$ListEntryCopyWith<_ListEntry> get copyWith;
 }

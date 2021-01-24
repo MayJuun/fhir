@@ -134,6 +134,7 @@ mixin _$BiologicallyDerivedProduct {
   List<BiologicallyDerivedProductStorage> get storage;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BiologicallyDerivedProductCopyWith<BiologicallyDerivedProduct> get copyWith;
 }
 
@@ -783,6 +784,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
       const DeepCollectionEquality().hash(manipulation) ^
       const DeepCollectionEquality().hash(storage);
 
+  @JsonKey(ignore: true)
   @override
   _$BiologicallyDerivedProductCopyWith<_BiologicallyDerivedProduct>
       get copyWith => __$BiologicallyDerivedProductCopyWithImpl<
@@ -895,6 +897,7 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   @override
   List<BiologicallyDerivedProductStorage> get storage;
   @override
+  @JsonKey(ignore: true)
   _$BiologicallyDerivedProductCopyWith<_BiologicallyDerivedProduct>
       get copyWith;
 }
@@ -955,6 +958,7 @@ mixin _$BiologicallyDerivedProductCollection {
   Period get collectedPeriod;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BiologicallyDerivedProductCollectionCopyWith<
       BiologicallyDerivedProductCollection> get copyWith;
 }
@@ -1227,6 +1231,7 @@ class _$_BiologicallyDerivedProductCollection
       const DeepCollectionEquality().hash(collectedDateTimeElement) ^
       const DeepCollectionEquality().hash(collectedPeriod);
 
+  @JsonKey(ignore: true)
   @override
   _$BiologicallyDerivedProductCollectionCopyWith<
           _BiologicallyDerivedProductCollection>
@@ -1275,6 +1280,7 @@ abstract class _BiologicallyDerivedProductCollection
   @override
   Period get collectedPeriod;
   @override
+  @JsonKey(ignore: true)
   _$BiologicallyDerivedProductCollectionCopyWith<
       _BiologicallyDerivedProductCollection> get copyWith;
 }
@@ -1342,6 +1348,7 @@ mixin _$BiologicallyDerivedProductProcessing {
   Period get timePeriod;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BiologicallyDerivedProductProcessingCopyWith<
       BiologicallyDerivedProductProcessing> get copyWith;
 }
@@ -1659,6 +1666,7 @@ class _$_BiologicallyDerivedProductProcessing
       const DeepCollectionEquality().hash(timeDateTimeElement) ^
       const DeepCollectionEquality().hash(timePeriod);
 
+  @JsonKey(ignore: true)
   @override
   _$BiologicallyDerivedProductProcessingCopyWith<
           _BiologicallyDerivedProductProcessing>
@@ -1714,6 +1722,7 @@ abstract class _BiologicallyDerivedProductProcessing
   @override
   Period get timePeriod;
   @override
+  @JsonKey(ignore: true)
   _$BiologicallyDerivedProductProcessingCopyWith<
       _BiologicallyDerivedProductProcessing> get copyWith;
 }
@@ -1776,6 +1785,7 @@ mixin _$BiologicallyDerivedProductManipulation {
   Period get timePeriod;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BiologicallyDerivedProductManipulationCopyWith<
       BiologicallyDerivedProductManipulation> get copyWith;
 }
@@ -2038,6 +2048,7 @@ class _$_BiologicallyDerivedProductManipulation
       const DeepCollectionEquality().hash(timeDateTimeElement) ^
       const DeepCollectionEquality().hash(timePeriod);
 
+  @JsonKey(ignore: true)
   @override
   _$BiologicallyDerivedProductManipulationCopyWith<
           _BiologicallyDerivedProductManipulation>
@@ -2087,6 +2098,7 @@ abstract class _BiologicallyDerivedProductManipulation
   @override
   Period get timePeriod;
   @override
+  @JsonKey(ignore: true)
   _$BiologicallyDerivedProductManipulationCopyWith<
       _BiologicallyDerivedProductManipulation> get copyWith;
 }
@@ -2161,6 +2173,7 @@ mixin _$BiologicallyDerivedProductStorage {
   Period get duration;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $BiologicallyDerivedProductStorageCopyWith<BiologicallyDerivedProductStorage>
       get copyWith;
 }
@@ -2481,6 +2494,7 @@ class _$_BiologicallyDerivedProductStorage
       const DeepCollectionEquality().hash(scaleElement) ^
       const DeepCollectionEquality().hash(duration);
 
+  @JsonKey(ignore: true)
   @override
   _$BiologicallyDerivedProductStorageCopyWith<
           _BiologicallyDerivedProductStorage>
@@ -2543,6 +2557,7 @@ abstract class _BiologicallyDerivedProductStorage
   @override
   Period get duration;
   @override
+  @JsonKey(ignore: true)
   _$BiologicallyDerivedProductStorageCopyWith<
       _BiologicallyDerivedProductStorage> get copyWith;
 }
@@ -2746,6 +2761,7 @@ mixin _$Device {
   Reference get parent;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceCopyWith<Device> get copyWith;
 }
 
@@ -3825,6 +3841,7 @@ class _$_Device extends _Device {
       const DeepCollectionEquality().hash(safety) ^
       const DeepCollectionEquality().hash(parent);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceCopyWith<_Device> get copyWith =>
       __$DeviceCopyWithImpl<_Device>(this, _$identity);
@@ -4013,6 +4030,7 @@ abstract class _Device extends Device {
   @override
   Reference get parent;
   @override
+  @JsonKey(ignore: true)
   _$DeviceCopyWith<_Device> get copyWith;
 }
 
@@ -4105,6 +4123,7 @@ mixin _$DeviceUdiCarrier {
   Element get entryTypeElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceUdiCarrierCopyWith<DeviceUdiCarrier> get copyWith;
 }
 
@@ -4544,6 +4563,7 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
       const DeepCollectionEquality().hash(entryType) ^
       const DeepCollectionEquality().hash(entryTypeElement);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceUdiCarrierCopyWith<_DeviceUdiCarrier> get copyWith =>
       __$DeviceUdiCarrierCopyWithImpl<_DeviceUdiCarrier>(this, _$identity);
@@ -4623,6 +4643,7 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
   @JsonKey(name: '_entryType')
   Element get entryTypeElement;
   @override
+  @JsonKey(ignore: true)
   _$DeviceUdiCarrierCopyWith<_DeviceUdiCarrier> get copyWith;
 }
 
@@ -4683,6 +4704,7 @@ mixin _$DeviceDeviceName {
   Element get typeElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceDeviceNameCopyWith<DeviceDeviceName> get copyWith;
 }
 
@@ -4906,6 +4928,7 @@ class _$_DeviceDeviceName extends _DeviceDeviceName {
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(typeElement);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceDeviceNameCopyWith<_DeviceDeviceName> get copyWith =>
       __$DeviceDeviceNameCopyWithImpl<_DeviceDeviceName>(this, _$identity);
@@ -4953,6 +4976,7 @@ abstract class _DeviceDeviceName extends DeviceDeviceName {
   @JsonKey(name: '_type')
   Element get typeElement;
   @override
+  @JsonKey(ignore: true)
   _$DeviceDeviceNameCopyWith<_DeviceDeviceName> get copyWith;
 }
 
@@ -5004,6 +5028,7 @@ mixin _$DeviceSpecialization {
   Element get versionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceSpecializationCopyWith<DeviceSpecialization> get copyWith;
 }
 
@@ -5211,6 +5236,7 @@ class _$_DeviceSpecialization extends _DeviceSpecialization {
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(versionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceSpecializationCopyWith<_DeviceSpecialization> get copyWith =>
       __$DeviceSpecializationCopyWithImpl<_DeviceSpecialization>(
@@ -5251,6 +5277,7 @@ abstract class _DeviceSpecialization extends DeviceSpecialization {
   @JsonKey(name: '_version')
   Element get versionElement;
   @override
+  @JsonKey(ignore: true)
   _$DeviceSpecializationCopyWith<_DeviceSpecialization> get copyWith;
 }
 
@@ -5305,6 +5332,7 @@ mixin _$DeviceVersion {
   Element get valueElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceVersionCopyWith<DeviceVersion> get copyWith;
 }
 
@@ -5533,6 +5561,7 @@ class _$_DeviceVersion extends _DeviceVersion {
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceVersionCopyWith<_DeviceVersion> get copyWith =>
       __$DeviceVersionCopyWithImpl<_DeviceVersion>(this, _$identity);
@@ -5574,6 +5603,7 @@ abstract class _DeviceVersion extends DeviceVersion {
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(ignore: true)
   _$DeviceVersionCopyWith<_DeviceVersion> get copyWith;
 }
 
@@ -5624,6 +5654,7 @@ mixin _$DeviceProperty {
   List<CodeableConcept> get valueCode;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DevicePropertyCopyWith<DeviceProperty> get copyWith;
 }
 
@@ -5816,6 +5847,7 @@ class _$_DeviceProperty extends _DeviceProperty {
       const DeepCollectionEquality().hash(valueQuantity) ^
       const DeepCollectionEquality().hash(valueCode);
 
+  @JsonKey(ignore: true)
   @override
   _$DevicePropertyCopyWith<_DeviceProperty> get copyWith =>
       __$DevicePropertyCopyWithImpl<_DeviceProperty>(this, _$identity);
@@ -5853,6 +5885,7 @@ abstract class _DeviceProperty extends DeviceProperty {
   @override
   List<CodeableConcept> get valueCode;
   @override
+  @JsonKey(ignore: true)
   _$DevicePropertyCopyWith<_DeviceProperty> get copyWith;
 }
 
@@ -5977,6 +6010,7 @@ mixin _$DeviceMetric {
   List<DeviceMetricCalibration> get calibration;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceMetricCopyWith<DeviceMetric> get copyWith;
 }
 
@@ -6622,6 +6656,7 @@ class _$_DeviceMetric extends _DeviceMetric {
       const DeepCollectionEquality().hash(measurementPeriod) ^
       const DeepCollectionEquality().hash(calibration);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceMetricCopyWith<_DeviceMetric> get copyWith =>
       __$DeviceMetricCopyWithImpl<_DeviceMetric>(this, _$identity);
@@ -6733,6 +6768,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   @override
   List<DeviceMetricCalibration> get calibration;
   @override
+  @JsonKey(ignore: true)
   _$DeviceMetricCopyWith<_DeviceMetric> get copyWith;
 }
 
@@ -6804,6 +6840,7 @@ mixin _$DeviceMetricCalibration {
   Element get timeElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceMetricCalibrationCopyWith<DeviceMetricCalibration> get copyWith;
 }
 
@@ -7086,6 +7123,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
       const DeepCollectionEquality().hash(time) ^
       const DeepCollectionEquality().hash(timeElement);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceMetricCalibrationCopyWith<_DeviceMetricCalibration> get copyWith =>
       __$DeviceMetricCalibrationCopyWithImpl<_DeviceMetricCalibration>(
@@ -7144,6 +7182,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   @JsonKey(name: '_time')
   Element get timeElement;
   @override
+  @JsonKey(ignore: true)
   _$DeviceMetricCalibrationCopyWith<_DeviceMetricCalibration> get copyWith;
 }
 
@@ -7250,6 +7289,7 @@ mixin _$Substance {
   List<SubstanceIngredient> get ingredient;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceCopyWith<Substance> get copyWith;
 }
 
@@ -7759,6 +7799,7 @@ class _$_Substance extends _Substance {
       const DeepCollectionEquality().hash(instance) ^
       const DeepCollectionEquality().hash(ingredient);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceCopyWith<_Substance> get copyWith =>
       __$SubstanceCopyWithImpl<_Substance>(this, _$identity);
@@ -7852,6 +7893,7 @@ abstract class _Substance extends Substance {
   @override
   List<SubstanceIngredient> get ingredient;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceCopyWith<_Substance> get copyWith;
 }
 
@@ -7906,6 +7948,7 @@ mixin _$SubstanceInstance {
   Quantity get quantity;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceInstanceCopyWith<SubstanceInstance> get copyWith;
 }
 
@@ -8135,6 +8178,7 @@ class _$_SubstanceInstance extends _SubstanceInstance {
       const DeepCollectionEquality().hash(expiryElement) ^
       const DeepCollectionEquality().hash(quantity);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceInstanceCopyWith<_SubstanceInstance> get copyWith =>
       __$SubstanceInstanceCopyWithImpl<_SubstanceInstance>(this, _$identity);
@@ -8176,6 +8220,7 @@ abstract class _SubstanceInstance extends SubstanceInstance {
   @override
   Quantity get quantity;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceInstanceCopyWith<_SubstanceInstance> get copyWith;
 }
 
@@ -8226,6 +8271,7 @@ mixin _$SubstanceIngredient {
   Reference get substanceReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceIngredientCopyWith<SubstanceIngredient> get copyWith;
 }
 
@@ -8447,6 +8493,7 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
       const DeepCollectionEquality().hash(substanceCodeableConcept) ^
       const DeepCollectionEquality().hash(substanceReference);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceIngredientCopyWith<_SubstanceIngredient> get copyWith =>
       __$SubstanceIngredientCopyWithImpl<_SubstanceIngredient>(
@@ -8485,5 +8532,6 @@ abstract class _SubstanceIngredient extends SubstanceIngredient {
   @override
   Reference get substanceReference;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceIngredientCopyWith<_SubstanceIngredient> get copyWith;
 }

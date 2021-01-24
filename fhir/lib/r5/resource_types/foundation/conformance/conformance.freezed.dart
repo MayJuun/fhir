@@ -239,6 +239,7 @@ mixin _$CapabilityStatement {
   List<CapabilityStatementDocument> get document;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatementCopyWith<CapabilityStatement> get copyWith;
 }
 
@@ -1425,6 +1426,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
       const DeepCollectionEquality().hash(messaging) ^
       const DeepCollectionEquality().hash(document);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatementCopyWith<_CapabilityStatement> get copyWith =>
       __$CapabilityStatementCopyWithImpl<_CapabilityStatement>(
@@ -1647,6 +1649,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @override
   List<CapabilityStatementDocument> get document;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatementCopyWith<_CapabilityStatement> get copyWith;
 }
 
@@ -1710,6 +1713,7 @@ mixin _$CapabilityStatementSoftware {
   Element get releaseDateElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatementSoftwareCopyWith<CapabilityStatementSoftware>
       get copyWith;
 }
@@ -1980,6 +1984,7 @@ class _$_CapabilityStatementSoftware extends _CapabilityStatementSoftware {
       const DeepCollectionEquality().hash(releaseDate) ^
       const DeepCollectionEquality().hash(releaseDateElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatementSoftwareCopyWith<_CapabilityStatementSoftware>
       get copyWith => __$CapabilityStatementSoftwareCopyWithImpl<
@@ -2032,6 +2037,7 @@ abstract class _CapabilityStatementSoftware
   @JsonKey(name: '_releaseDate')
   Element get releaseDateElement;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatementSoftwareCopyWith<_CapabilityStatementSoftware>
       get copyWith;
 }
@@ -2093,6 +2099,7 @@ mixin _$CapabilityStatementImplementation {
   Reference get custodian;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatementImplementationCopyWith<CapabilityStatementImplementation>
       get copyWith;
 }
@@ -2347,6 +2354,7 @@ class _$_CapabilityStatementImplementation
       const DeepCollectionEquality().hash(urlElement) ^
       const DeepCollectionEquality().hash(custodian);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatementImplementationCopyWith<
           _CapabilityStatementImplementation>
@@ -2396,6 +2404,7 @@ abstract class _CapabilityStatementImplementation
   @override
   Reference get custodian;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatementImplementationCopyWith<
       _CapabilityStatementImplementation> get copyWith;
 }
@@ -2476,6 +2485,7 @@ mixin _$CapabilityStatementRest {
   List<Canonical> get compartment;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatementRestCopyWith<CapabilityStatementRest> get copyWith;
 }
 
@@ -2822,6 +2832,7 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
       const DeepCollectionEquality().hash(operation) ^
       const DeepCollectionEquality().hash(compartment);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatementRestCopyWith<_CapabilityStatementRest> get copyWith =>
       __$CapabilityStatementRestCopyWithImpl<_CapabilityStatementRest>(
@@ -2888,6 +2899,7 @@ abstract class _CapabilityStatementRest extends CapabilityStatementRest {
   @override
   List<Canonical> get compartment;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatementRestCopyWith<_CapabilityStatementRest> get copyWith;
 }
 
@@ -2947,6 +2959,7 @@ mixin _$CapabilityStatementSecurity {
   Element get descriptionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatementSecurityCopyWith<CapabilityStatementSecurity>
       get copyWith;
 }
@@ -3188,6 +3201,7 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatementSecurityCopyWith<_CapabilityStatementSecurity>
       get copyWith => __$CapabilityStatementSecurityCopyWithImpl<
@@ -3236,6 +3250,7 @@ abstract class _CapabilityStatementSecurity
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatementSecurityCopyWith<_CapabilityStatementSecurity>
       get copyWith;
 }
@@ -3398,6 +3413,7 @@ mixin _$CapabilityStatementResource {
   List<CapabilityStatementOperation> get operation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatementResourceCopyWith<CapabilityStatementResource>
       get copyWith;
 }
@@ -4175,6 +4191,7 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
       const DeepCollectionEquality().hash(searchParam) ^
       const DeepCollectionEquality().hash(operation);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatementResourceCopyWith<_CapabilityStatementResource>
       get copyWith => __$CapabilityStatementResourceCopyWithImpl<
@@ -4324,6 +4341,7 @@ abstract class _CapabilityStatementResource
   @override
   List<CapabilityStatementOperation> get operation;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatementResourceCopyWith<_CapabilityStatementResource>
       get copyWith;
 }
@@ -4387,6 +4405,7 @@ mixin _$CapabilityStatementInteraction {
   Element get documentationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatementInteractionCopyWith<CapabilityStatementInteraction>
       get copyWith;
 }
@@ -4632,6 +4651,7 @@ class _$_CapabilityStatementInteraction
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(documentationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatementInteractionCopyWith<_CapabilityStatementInteraction>
       get copyWith => __$CapabilityStatementInteractionCopyWithImpl<
@@ -4681,6 +4701,7 @@ abstract class _CapabilityStatementInteraction
   @JsonKey(name: '_documentation')
   Element get documentationElement;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatementInteractionCopyWith<_CapabilityStatementInteraction>
       get copyWith;
 }
@@ -4755,6 +4776,7 @@ mixin _$CapabilityStatementSearchParam {
   Element get documentationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatementSearchParamCopyWith<CapabilityStatementSearchParam>
       get copyWith;
 }
@@ -5059,6 +5081,7 @@ class _$_CapabilityStatementSearchParam
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(documentationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatementSearchParamCopyWith<_CapabilityStatementSearchParam>
       get copyWith => __$CapabilityStatementSearchParamCopyWithImpl<
@@ -5119,6 +5142,7 @@ abstract class _CapabilityStatementSearchParam
   @JsonKey(name: '_documentation')
   Element get documentationElement;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatementSearchParamCopyWith<_CapabilityStatementSearchParam>
       get copyWith;
 }
@@ -5179,6 +5203,7 @@ mixin _$CapabilityStatementOperation {
   Element get documentationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatementOperationCopyWith<CapabilityStatementOperation>
       get copyWith;
 }
@@ -5421,6 +5446,7 @@ class _$_CapabilityStatementOperation extends _CapabilityStatementOperation {
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(documentationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatementOperationCopyWith<_CapabilityStatementOperation>
       get copyWith => __$CapabilityStatementOperationCopyWithImpl<
@@ -5469,6 +5495,7 @@ abstract class _CapabilityStatementOperation
   @JsonKey(name: '_documentation')
   Element get documentationElement;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatementOperationCopyWith<_CapabilityStatementOperation>
       get copyWith;
 }
@@ -5532,6 +5559,7 @@ mixin _$CapabilityStatementInteraction1 {
   Element get documentationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatementInteraction1CopyWith<CapabilityStatementInteraction1>
       get copyWith;
 }
@@ -5777,6 +5805,7 @@ class _$_CapabilityStatementInteraction1
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(documentationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatementInteraction1CopyWith<_CapabilityStatementInteraction1>
       get copyWith => __$CapabilityStatementInteraction1CopyWithImpl<
@@ -5826,6 +5855,7 @@ abstract class _CapabilityStatementInteraction1
   @JsonKey(name: '_documentation')
   Element get documentationElement;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatementInteraction1CopyWith<_CapabilityStatementInteraction1>
       get copyWith;
 }
@@ -5889,6 +5919,7 @@ mixin _$CapabilityStatementMessaging {
   List<CapabilityStatementSupportedMessage> get supportedMessage;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatementMessagingCopyWith<CapabilityStatementMessaging>
       get copyWith;
 }
@@ -6156,6 +6187,7 @@ class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
       const DeepCollectionEquality().hash(documentationElement) ^
       const DeepCollectionEquality().hash(supportedMessage);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatementMessagingCopyWith<_CapabilityStatementMessaging>
       get copyWith => __$CapabilityStatementMessagingCopyWithImpl<
@@ -6207,6 +6239,7 @@ abstract class _CapabilityStatementMessaging
   @override
   List<CapabilityStatementSupportedMessage> get supportedMessage;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatementMessagingCopyWith<_CapabilityStatementMessaging>
       get copyWith;
 }
@@ -6260,6 +6293,7 @@ mixin _$CapabilityStatementEndpoint {
   Element get addressElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatementEndpointCopyWith<CapabilityStatementEndpoint>
       get copyWith;
 }
@@ -6468,6 +6502,7 @@ class _$_CapabilityStatementEndpoint extends _CapabilityStatementEndpoint {
       const DeepCollectionEquality().hash(address) ^
       const DeepCollectionEquality().hash(addressElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatementEndpointCopyWith<_CapabilityStatementEndpoint>
       get copyWith => __$CapabilityStatementEndpointCopyWithImpl<
@@ -6509,6 +6544,7 @@ abstract class _CapabilityStatementEndpoint
   @JsonKey(name: '_address')
   Element get addressElement;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatementEndpointCopyWith<_CapabilityStatementEndpoint>
       get copyWith;
 }
@@ -6568,6 +6604,7 @@ mixin _$CapabilityStatementSupportedMessage {
   Canonical get definition;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatementSupportedMessageCopyWith<
       CapabilityStatementSupportedMessage> get copyWith;
 }
@@ -6779,6 +6816,7 @@ class _$_CapabilityStatementSupportedMessage
       const DeepCollectionEquality().hash(modeElement) ^
       const DeepCollectionEquality().hash(definition);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatementSupportedMessageCopyWith<
           _CapabilityStatementSupportedMessage>
@@ -6826,6 +6864,7 @@ abstract class _CapabilityStatementSupportedMessage
   @override
   Canonical get definition;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatementSupportedMessageCopyWith<
       _CapabilityStatementSupportedMessage> get copyWith;
 }
@@ -6892,6 +6931,7 @@ mixin _$CapabilityStatementDocument {
   Canonical get profile;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatementDocumentCopyWith<CapabilityStatementDocument>
       get copyWith;
 }
@@ -7149,6 +7189,7 @@ class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
       const DeepCollectionEquality().hash(documentationElement) ^
       const DeepCollectionEquality().hash(profile);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatementDocumentCopyWith<_CapabilityStatementDocument>
       get copyWith => __$CapabilityStatementDocumentCopyWithImpl<
@@ -7202,6 +7243,7 @@ abstract class _CapabilityStatementDocument
   @override
   Canonical get profile;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatementDocumentCopyWith<_CapabilityStatementDocument>
       get copyWith;
 }
@@ -7429,6 +7471,7 @@ mixin _$CapabilityStatement2 {
   List<CapabilityStatement2Rest> get rest;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatement2CopyWith<CapabilityStatement2> get copyWith;
 }
 
@@ -8584,6 +8627,7 @@ class _$_CapabilityStatement2 extends _CapabilityStatement2 {
       const DeepCollectionEquality().hash(implementationGuide) ^
       const DeepCollectionEquality().hash(rest);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatement2CopyWith<_CapabilityStatement2> get copyWith =>
       __$CapabilityStatement2CopyWithImpl<_CapabilityStatement2>(
@@ -8798,6 +8842,7 @@ abstract class _CapabilityStatement2 extends CapabilityStatement2 {
   @override
   List<CapabilityStatement2Rest> get rest;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatement2CopyWith<_CapabilityStatement2> get copyWith;
 }
 
@@ -8861,6 +8906,7 @@ mixin _$CapabilityStatement2Software {
   Element get releaseDateElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatement2SoftwareCopyWith<CapabilityStatement2Software>
       get copyWith;
 }
@@ -9131,6 +9177,7 @@ class _$_CapabilityStatement2Software extends _CapabilityStatement2Software {
       const DeepCollectionEquality().hash(releaseDate) ^
       const DeepCollectionEquality().hash(releaseDateElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatement2SoftwareCopyWith<_CapabilityStatement2Software>
       get copyWith => __$CapabilityStatement2SoftwareCopyWithImpl<
@@ -9183,6 +9230,7 @@ abstract class _CapabilityStatement2Software
   @JsonKey(name: '_releaseDate')
   Element get releaseDateElement;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatement2SoftwareCopyWith<_CapabilityStatement2Software>
       get copyWith;
 }
@@ -9244,6 +9292,7 @@ mixin _$CapabilityStatement2Implementation {
   Reference get custodian;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatement2ImplementationCopyWith<
       CapabilityStatement2Implementation> get copyWith;
 }
@@ -9498,6 +9547,7 @@ class _$_CapabilityStatement2Implementation
       const DeepCollectionEquality().hash(urlElement) ^
       const DeepCollectionEquality().hash(custodian);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatement2ImplementationCopyWith<
           _CapabilityStatement2Implementation>
@@ -9547,6 +9597,7 @@ abstract class _CapabilityStatement2Implementation
   @override
   Reference get custodian;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatement2ImplementationCopyWith<
       _CapabilityStatement2Implementation> get copyWith;
 }
@@ -9619,6 +9670,7 @@ mixin _$CapabilityStatement2Rest {
   List<Canonical> get compartment;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatement2RestCopyWith<CapabilityStatement2Rest> get copyWith;
 }
 
@@ -9926,6 +9978,7 @@ class _$_CapabilityStatement2Rest extends _CapabilityStatement2Rest {
       const DeepCollectionEquality().hash(operation) ^
       const DeepCollectionEquality().hash(compartment);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatement2RestCopyWith<_CapabilityStatement2Rest> get copyWith =>
       __$CapabilityStatement2RestCopyWithImpl<_CapabilityStatement2Rest>(
@@ -9984,6 +10037,7 @@ abstract class _CapabilityStatement2Rest extends CapabilityStatement2Rest {
   @override
   List<Canonical> get compartment;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatement2RestCopyWith<_CapabilityStatement2Rest> get copyWith;
 }
 
@@ -10055,6 +10109,7 @@ mixin _$CapabilityStatement2Resource {
   List<CapabilityStatement2Operation> get operation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatement2ResourceCopyWith<CapabilityStatement2Resource>
       get copyWith;
 }
@@ -10362,6 +10417,7 @@ class _$_CapabilityStatement2Resource extends _CapabilityStatement2Resource {
       const DeepCollectionEquality().hash(searchParam) ^
       const DeepCollectionEquality().hash(operation);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatement2ResourceCopyWith<_CapabilityStatement2Resource>
       get copyWith => __$CapabilityStatement2ResourceCopyWithImpl<
@@ -10422,6 +10478,7 @@ abstract class _CapabilityStatement2Resource
   @override
   List<CapabilityStatement2Operation> get operation;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatement2ResourceCopyWith<_CapabilityStatement2Resource>
       get copyWith;
 }
@@ -10480,6 +10537,7 @@ mixin _$CapabilityStatement2Interaction {
   Element get documentationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatement2InteractionCopyWith<CapabilityStatement2Interaction>
       get copyWith;
 }
@@ -10708,6 +10766,7 @@ class _$_CapabilityStatement2Interaction
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(documentationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatement2InteractionCopyWith<_CapabilityStatement2Interaction>
       get copyWith => __$CapabilityStatement2InteractionCopyWithImpl<
@@ -10753,6 +10812,7 @@ abstract class _CapabilityStatement2Interaction
   @JsonKey(name: '_documentation')
   Element get documentationElement;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatement2InteractionCopyWith<_CapabilityStatement2Interaction>
       get copyWith;
 }
@@ -10827,6 +10887,7 @@ mixin _$CapabilityStatement2SearchParam {
   Element get documentationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatement2SearchParamCopyWith<CapabilityStatement2SearchParam>
       get copyWith;
 }
@@ -11131,6 +11192,7 @@ class _$_CapabilityStatement2SearchParam
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(documentationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatement2SearchParamCopyWith<_CapabilityStatement2SearchParam>
       get copyWith => __$CapabilityStatement2SearchParamCopyWithImpl<
@@ -11191,6 +11253,7 @@ abstract class _CapabilityStatement2SearchParam
   @JsonKey(name: '_documentation')
   Element get documentationElement;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatement2SearchParamCopyWith<_CapabilityStatement2SearchParam>
       get copyWith;
 }
@@ -11251,6 +11314,7 @@ mixin _$CapabilityStatement2Operation {
   Element get documentationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatement2OperationCopyWith<CapabilityStatement2Operation>
       get copyWith;
 }
@@ -11494,6 +11558,7 @@ class _$_CapabilityStatement2Operation extends _CapabilityStatement2Operation {
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(documentationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatement2OperationCopyWith<_CapabilityStatement2Operation>
       get copyWith => __$CapabilityStatement2OperationCopyWithImpl<
@@ -11542,6 +11607,7 @@ abstract class _CapabilityStatement2Operation
   @JsonKey(name: '_documentation')
   Element get documentationElement;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatement2OperationCopyWith<_CapabilityStatement2Operation>
       get copyWith;
 }
@@ -11600,6 +11666,7 @@ mixin _$CapabilityStatement2Interaction1 {
   Element get documentationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CapabilityStatement2Interaction1CopyWith<CapabilityStatement2Interaction1>
       get copyWith;
 }
@@ -11828,6 +11895,7 @@ class _$_CapabilityStatement2Interaction1
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(documentationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CapabilityStatement2Interaction1CopyWith<_CapabilityStatement2Interaction1>
       get copyWith => __$CapabilityStatement2Interaction1CopyWithImpl<
@@ -11873,6 +11941,7 @@ abstract class _CapabilityStatement2Interaction1
   @JsonKey(name: '_documentation')
   Element get documentationElement;
   @override
+  @JsonKey(ignore: true)
   _$CapabilityStatement2Interaction1CopyWith<_CapabilityStatement2Interaction1>
       get copyWith;
 }
@@ -12070,6 +12139,7 @@ mixin _$CompartmentDefinition {
   List<CompartmentDefinitionResource> get resource;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CompartmentDefinitionCopyWith<CompartmentDefinition> get copyWith;
 }
 
@@ -13058,6 +13128,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
       const DeepCollectionEquality().hash(searchElement) ^
       const DeepCollectionEquality().hash(resource);
 
+  @JsonKey(ignore: true)
   @override
   _$CompartmentDefinitionCopyWith<_CompartmentDefinition> get copyWith =>
       __$CompartmentDefinitionCopyWithImpl<_CompartmentDefinition>(
@@ -13241,6 +13312,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   @override
   List<CompartmentDefinitionResource> get resource;
   @override
+  @JsonKey(ignore: true)
   _$CompartmentDefinitionCopyWith<_CompartmentDefinition> get copyWith;
 }
 
@@ -13304,6 +13376,7 @@ mixin _$CompartmentDefinitionResource {
   Element get documentationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CompartmentDefinitionResourceCopyWith<CompartmentDefinitionResource>
       get copyWith;
 }
@@ -13561,6 +13634,7 @@ class _$_CompartmentDefinitionResource extends _CompartmentDefinitionResource {
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(documentationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CompartmentDefinitionResourceCopyWith<_CompartmentDefinitionResource>
       get copyWith => __$CompartmentDefinitionResourceCopyWithImpl<
@@ -13613,6 +13687,7 @@ abstract class _CompartmentDefinitionResource
   @JsonKey(name: '_documentation')
   Element get documentationElement;
   @override
+  @JsonKey(ignore: true)
   _$CompartmentDefinitionResourceCopyWith<_CompartmentDefinitionResource>
       get copyWith;
 }
@@ -13800,6 +13875,7 @@ mixin _$ExampleScenario {
   List<Canonical> get workflow;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExampleScenarioCopyWith<ExampleScenario> get copyWith;
 }
 
@@ -14739,6 +14815,7 @@ class _$_ExampleScenario extends _ExampleScenario {
       const DeepCollectionEquality().hash(process) ^
       const DeepCollectionEquality().hash(workflow);
 
+  @JsonKey(ignore: true)
   @override
   _$ExampleScenarioCopyWith<_ExampleScenario> get copyWith =>
       __$ExampleScenarioCopyWithImpl<_ExampleScenario>(this, _$identity);
@@ -14912,6 +14989,7 @@ abstract class _ExampleScenario extends ExampleScenario {
   @override
   List<Canonical> get workflow;
   @override
+  @JsonKey(ignore: true)
   _$ExampleScenarioCopyWith<_ExampleScenario> get copyWith;
 }
 
@@ -14988,6 +15066,7 @@ mixin _$ExampleScenarioActor {
   Element get descriptionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExampleScenarioActorCopyWith<ExampleScenarioActor> get copyWith;
 }
 
@@ -15305,6 +15384,7 @@ class _$_ExampleScenarioActor extends _ExampleScenarioActor {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ExampleScenarioActorCopyWith<_ExampleScenarioActor> get copyWith =>
       __$ExampleScenarioActorCopyWithImpl<_ExampleScenarioActor>(
@@ -15369,6 +15449,7 @@ abstract class _ExampleScenarioActor extends ExampleScenarioActor {
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
+  @JsonKey(ignore: true)
   _$ExampleScenarioActorCopyWith<_ExampleScenarioActor> get copyWith;
 }
 
@@ -15445,6 +15526,7 @@ mixin _$ExampleScenarioInstance {
   List<ExampleScenarioContainedInstance> get containedInstance;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExampleScenarioInstanceCopyWith<ExampleScenarioInstance> get copyWith;
 }
 
@@ -15791,6 +15873,7 @@ class _$_ExampleScenarioInstance extends _ExampleScenarioInstance {
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(containedInstance);
 
+  @JsonKey(ignore: true)
   @override
   _$ExampleScenarioInstanceCopyWith<_ExampleScenarioInstance> get copyWith =>
       __$ExampleScenarioInstanceCopyWithImpl<_ExampleScenarioInstance>(
@@ -15855,6 +15938,7 @@ abstract class _ExampleScenarioInstance extends ExampleScenarioInstance {
   @override
   List<ExampleScenarioContainedInstance> get containedInstance;
   @override
+  @JsonKey(ignore: true)
   _$ExampleScenarioInstanceCopyWith<_ExampleScenarioInstance> get copyWith;
 }
 
@@ -15911,6 +15995,7 @@ mixin _$ExampleScenarioVersion {
   Element get descriptionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExampleScenarioVersionCopyWith<ExampleScenarioVersion> get copyWith;
 }
 
@@ -16133,6 +16218,7 @@ class _$_ExampleScenarioVersion extends _ExampleScenarioVersion {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ExampleScenarioVersionCopyWith<_ExampleScenarioVersion> get copyWith =>
       __$ExampleScenarioVersionCopyWithImpl<_ExampleScenarioVersion>(
@@ -16177,6 +16263,7 @@ abstract class _ExampleScenarioVersion extends ExampleScenarioVersion {
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
+  @JsonKey(ignore: true)
   _$ExampleScenarioVersionCopyWith<_ExampleScenarioVersion> get copyWith;
 }
 
@@ -16234,6 +16321,7 @@ mixin _$ExampleScenarioContainedInstance {
   Element get versionIdElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExampleScenarioContainedInstanceCopyWith<ExampleScenarioContainedInstance>
       get copyWith;
 }
@@ -16463,6 +16551,7 @@ class _$_ExampleScenarioContainedInstance
       const DeepCollectionEquality().hash(versionId) ^
       const DeepCollectionEquality().hash(versionIdElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ExampleScenarioContainedInstanceCopyWith<_ExampleScenarioContainedInstance>
       get copyWith => __$ExampleScenarioContainedInstanceCopyWithImpl<
@@ -16508,6 +16597,7 @@ abstract class _ExampleScenarioContainedInstance
   @JsonKey(name: '_versionId')
   Element get versionIdElement;
   @override
+  @JsonKey(ignore: true)
   _$ExampleScenarioContainedInstanceCopyWith<_ExampleScenarioContainedInstance>
       get copyWith;
 }
@@ -16582,6 +16672,7 @@ mixin _$ExampleScenarioProcess {
   List<ExampleScenarioStep> get step;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExampleScenarioProcessCopyWith<ExampleScenarioProcess> get copyWith;
 }
 
@@ -16911,6 +17002,7 @@ class _$_ExampleScenarioProcess extends _ExampleScenarioProcess {
       const DeepCollectionEquality().hash(postConditionsElement) ^
       const DeepCollectionEquality().hash(step);
 
+  @JsonKey(ignore: true)
   @override
   _$ExampleScenarioProcessCopyWith<_ExampleScenarioProcess> get copyWith =>
       __$ExampleScenarioProcessCopyWithImpl<_ExampleScenarioProcess>(
@@ -16971,6 +17063,7 @@ abstract class _ExampleScenarioProcess extends ExampleScenarioProcess {
   @override
   List<ExampleScenarioStep> get step;
   @override
+  @JsonKey(ignore: true)
   _$ExampleScenarioProcessCopyWith<_ExampleScenarioProcess> get copyWith;
 }
 
@@ -17028,6 +17121,7 @@ mixin _$ExampleScenarioStep {
   List<ExampleScenarioAlternative> get alternative;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExampleScenarioStepCopyWith<ExampleScenarioStep> get copyWith;
 }
 
@@ -17267,6 +17361,7 @@ class _$_ExampleScenarioStep extends _ExampleScenarioStep {
       const DeepCollectionEquality().hash(operation) ^
       const DeepCollectionEquality().hash(alternative);
 
+  @JsonKey(ignore: true)
   @override
   _$ExampleScenarioStepCopyWith<_ExampleScenarioStep> get copyWith =>
       __$ExampleScenarioStepCopyWithImpl<_ExampleScenarioStep>(
@@ -17312,6 +17407,7 @@ abstract class _ExampleScenarioStep extends ExampleScenarioStep {
   @override
   List<ExampleScenarioAlternative> get alternative;
   @override
+  @JsonKey(ignore: true)
   _$ExampleScenarioStepCopyWith<_ExampleScenarioStep> get copyWith;
 }
 
@@ -17416,6 +17512,7 @@ mixin _$ExampleScenarioOperation {
   ExampleScenarioContainedInstance get response;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExampleScenarioOperationCopyWith<ExampleScenarioOperation> get copyWith;
 }
 
@@ -17966,6 +18063,7 @@ class _$_ExampleScenarioOperation extends _ExampleScenarioOperation {
       const DeepCollectionEquality().hash(request) ^
       const DeepCollectionEquality().hash(response);
 
+  @JsonKey(ignore: true)
   @override
   _$ExampleScenarioOperationCopyWith<_ExampleScenarioOperation> get copyWith =>
       __$ExampleScenarioOperationCopyWithImpl<_ExampleScenarioOperation>(
@@ -18057,6 +18155,7 @@ abstract class _ExampleScenarioOperation extends ExampleScenarioOperation {
   @override
   ExampleScenarioContainedInstance get response;
   @override
+  @JsonKey(ignore: true)
   _$ExampleScenarioOperationCopyWith<_ExampleScenarioOperation> get copyWith;
 }
 
@@ -18116,6 +18215,7 @@ mixin _$ExampleScenarioAlternative {
   List<ExampleScenarioStep> get step;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExampleScenarioAlternativeCopyWith<ExampleScenarioAlternative> get copyWith;
 }
 
@@ -18351,6 +18451,7 @@ class _$_ExampleScenarioAlternative extends _ExampleScenarioAlternative {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(step);
 
+  @JsonKey(ignore: true)
   @override
   _$ExampleScenarioAlternativeCopyWith<_ExampleScenarioAlternative>
       get copyWith => __$ExampleScenarioAlternativeCopyWithImpl<
@@ -18397,6 +18498,7 @@ abstract class _ExampleScenarioAlternative extends ExampleScenarioAlternative {
   @override
   List<ExampleScenarioStep> get step;
   @override
+  @JsonKey(ignore: true)
   _$ExampleScenarioAlternativeCopyWith<_ExampleScenarioAlternative>
       get copyWith;
 }
@@ -18586,6 +18688,7 @@ mixin _$GraphDefinition {
   List<GraphDefinitionLink> get link;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $GraphDefinitionCopyWith<GraphDefinition> get copyWith;
 }
 
@@ -19534,6 +19637,7 @@ class _$_GraphDefinition extends _GraphDefinition {
       const DeepCollectionEquality().hash(profile) ^
       const DeepCollectionEquality().hash(link);
 
+  @JsonKey(ignore: true)
   @override
   _$GraphDefinitionCopyWith<_GraphDefinition> get copyWith =>
       __$GraphDefinitionCopyWithImpl<_GraphDefinition>(this, _$identity);
@@ -19709,6 +19813,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   @override
   List<GraphDefinitionLink> get link;
   @override
+  @JsonKey(ignore: true)
   _$GraphDefinitionCopyWith<_GraphDefinition> get copyWith;
 }
 
@@ -19788,6 +19893,7 @@ mixin _$GraphDefinitionLink {
   List<GraphDefinitionTarget> get target;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $GraphDefinitionLinkCopyWith<GraphDefinitionLink> get copyWith;
 }
 
@@ -20149,6 +20255,7 @@ class _$_GraphDefinitionLink extends _GraphDefinitionLink {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(target);
 
+  @JsonKey(ignore: true)
   @override
   _$GraphDefinitionLinkCopyWith<_GraphDefinitionLink> get copyWith =>
       __$GraphDefinitionLinkCopyWithImpl<_GraphDefinitionLink>(
@@ -20216,6 +20323,7 @@ abstract class _GraphDefinitionLink extends GraphDefinitionLink {
   @override
   List<GraphDefinitionTarget> get target;
   @override
+  @JsonKey(ignore: true)
   _$GraphDefinitionLinkCopyWith<_GraphDefinitionLink> get copyWith;
 }
 
@@ -20281,6 +20389,7 @@ mixin _$GraphDefinitionTarget {
   List<GraphDefinitionLink> get link;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $GraphDefinitionTargetCopyWith<GraphDefinitionTarget> get copyWith;
 }
 
@@ -20539,6 +20648,7 @@ class _$_GraphDefinitionTarget extends _GraphDefinitionTarget {
       const DeepCollectionEquality().hash(compartment) ^
       const DeepCollectionEquality().hash(link);
 
+  @JsonKey(ignore: true)
   @override
   _$GraphDefinitionTargetCopyWith<_GraphDefinitionTarget> get copyWith =>
       __$GraphDefinitionTargetCopyWithImpl<_GraphDefinitionTarget>(
@@ -20591,6 +20701,7 @@ abstract class _GraphDefinitionTarget extends GraphDefinitionTarget {
   @override
   List<GraphDefinitionLink> get link;
   @override
+  @JsonKey(ignore: true)
   _$GraphDefinitionTargetCopyWith<_GraphDefinitionTarget> get copyWith;
 }
 
@@ -20678,6 +20789,7 @@ mixin _$GraphDefinitionCompartment {
   Element get descriptionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $GraphDefinitionCompartmentCopyWith<GraphDefinitionCompartment> get copyWith;
 }
 
@@ -21057,6 +21169,7 @@ class _$_GraphDefinitionCompartment extends _GraphDefinitionCompartment {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$GraphDefinitionCompartmentCopyWith<_GraphDefinitionCompartment>
       get copyWith => __$GraphDefinitionCompartmentCopyWithImpl<
@@ -21131,6 +21244,7 @@ abstract class _GraphDefinitionCompartment extends GraphDefinitionCompartment {
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
+  @JsonKey(ignore: true)
   _$GraphDefinitionCompartmentCopyWith<_GraphDefinitionCompartment>
       get copyWith;
 }
@@ -21344,6 +21458,7 @@ mixin _$ImplementationGuide {
   ImplementationGuideManifest get manifest;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuideCopyWith<ImplementationGuide> get copyWith;
 }
 
@@ -22444,6 +22559,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
       const DeepCollectionEquality().hash(definition) ^
       const DeepCollectionEquality().hash(manifest);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuideCopyWith<_ImplementationGuide> get copyWith =>
       __$ImplementationGuideCopyWithImpl<_ImplementationGuide>(
@@ -22644,6 +22760,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   @override
   ImplementationGuideManifest get manifest;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuideCopyWith<_ImplementationGuide> get copyWith;
 }
 
@@ -22703,6 +22820,7 @@ mixin _$ImplementationGuideDependsOn {
   Element get versionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuideDependsOnCopyWith<ImplementationGuideDependsOn>
       get copyWith;
 }
@@ -22941,6 +23059,7 @@ class _$_ImplementationGuideDependsOn extends _ImplementationGuideDependsOn {
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(versionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuideDependsOnCopyWith<_ImplementationGuideDependsOn>
       get copyWith => __$ImplementationGuideDependsOnCopyWithImpl<
@@ -22989,6 +23108,7 @@ abstract class _ImplementationGuideDependsOn
   @JsonKey(name: '_version')
   Element get versionElement;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuideDependsOnCopyWith<_ImplementationGuideDependsOn>
       get copyWith;
 }
@@ -23042,6 +23162,7 @@ mixin _$ImplementationGuideGlobal {
   Canonical get profile;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuideGlobalCopyWith<ImplementationGuideGlobal> get copyWith;
 }
 
@@ -23229,6 +23350,7 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
       const DeepCollectionEquality().hash(typeElement) ^
       const DeepCollectionEquality().hash(profile);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuideGlobalCopyWith<_ImplementationGuideGlobal>
       get copyWith =>
@@ -23269,6 +23391,7 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
   @override
   Canonical get profile;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuideGlobalCopyWith<_ImplementationGuideGlobal> get copyWith;
 }
 
@@ -23326,6 +23449,7 @@ mixin _$ImplementationGuideDefinition {
   List<ImplementationGuideTemplate> get template;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuideDefinitionCopyWith<ImplementationGuideDefinition>
       get copyWith;
 }
@@ -23558,6 +23682,7 @@ class _$_ImplementationGuideDefinition extends _ImplementationGuideDefinition {
       const DeepCollectionEquality().hash(parameter) ^
       const DeepCollectionEquality().hash(template);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuideDefinitionCopyWith<_ImplementationGuideDefinition>
       get copyWith => __$ImplementationGuideDefinitionCopyWithImpl<
@@ -23604,6 +23729,7 @@ abstract class _ImplementationGuideDefinition
   @override
   List<ImplementationGuideTemplate> get template;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuideDefinitionCopyWith<_ImplementationGuideDefinition>
       get copyWith;
 }
@@ -23661,6 +23787,7 @@ mixin _$ImplementationGuideGrouping {
   Element get descriptionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuideGroupingCopyWith<ImplementationGuideGrouping>
       get copyWith;
 }
@@ -23885,6 +24012,7 @@ class _$_ImplementationGuideGrouping extends _ImplementationGuideGrouping {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuideGroupingCopyWith<_ImplementationGuideGrouping>
       get copyWith => __$ImplementationGuideGroupingCopyWithImpl<
@@ -23930,6 +24058,7 @@ abstract class _ImplementationGuideGrouping
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuideGroupingCopyWith<_ImplementationGuideGrouping>
       get copyWith;
 }
@@ -24018,6 +24147,7 @@ mixin _$ImplementationGuideResource {
   Element get groupingIdElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuideResourceCopyWith<ImplementationGuideResource>
       get copyWith;
 }
@@ -24447,6 +24577,7 @@ class _$_ImplementationGuideResource extends _ImplementationGuideResource {
       const DeepCollectionEquality().hash(groupingId) ^
       const DeepCollectionEquality().hash(groupingIdElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuideResourceCopyWith<_ImplementationGuideResource>
       get copyWith => __$ImplementationGuideResourceCopyWithImpl<
@@ -24523,6 +24654,7 @@ abstract class _ImplementationGuideResource
   @JsonKey(name: '_groupingId')
   Element get groupingIdElement;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuideResourceCopyWith<_ImplementationGuideResource>
       get copyWith;
 }
@@ -24599,6 +24731,7 @@ mixin _$ImplementationGuidePage {
   List<ImplementationGuidePage> get page;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuidePageCopyWith<ImplementationGuidePage> get copyWith;
 }
 
@@ -24927,6 +25060,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
       const DeepCollectionEquality().hash(generationElement) ^
       const DeepCollectionEquality().hash(page);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuidePageCopyWith<_ImplementationGuidePage> get copyWith =>
       __$ImplementationGuidePageCopyWithImpl<_ImplementationGuidePage>(
@@ -24989,6 +25123,7 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
   @override
   List<ImplementationGuidePage> get page;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuidePageCopyWith<_ImplementationGuidePage> get copyWith;
 }
 
@@ -25045,6 +25180,7 @@ mixin _$ImplementationGuideParameter {
   Element get valueElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuideParameterCopyWith<ImplementationGuideParameter>
       get copyWith;
 }
@@ -25266,6 +25402,7 @@ class _$_ImplementationGuideParameter extends _ImplementationGuideParameter {
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuideParameterCopyWith<_ImplementationGuideParameter>
       get copyWith => __$ImplementationGuideParameterCopyWithImpl<
@@ -25311,6 +25448,7 @@ abstract class _ImplementationGuideParameter
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuideParameterCopyWith<_ImplementationGuideParameter>
       get copyWith;
 }
@@ -25375,6 +25513,7 @@ mixin _$ImplementationGuideTemplate {
   Element get scopeElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuideTemplateCopyWith<ImplementationGuideTemplate>
       get copyWith;
 }
@@ -25639,6 +25778,7 @@ class _$_ImplementationGuideTemplate extends _ImplementationGuideTemplate {
       const DeepCollectionEquality().hash(scope) ^
       const DeepCollectionEquality().hash(scopeElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuideTemplateCopyWith<_ImplementationGuideTemplate>
       get copyWith => __$ImplementationGuideTemplateCopyWithImpl<
@@ -25691,6 +25831,7 @@ abstract class _ImplementationGuideTemplate
   @JsonKey(name: '_scope')
   Element get scopeElement;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuideTemplateCopyWith<_ImplementationGuideTemplate>
       get copyWith;
 }
@@ -25761,6 +25902,7 @@ mixin _$ImplementationGuideManifest {
   List<Element> get otherElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuideManifestCopyWith<ImplementationGuideManifest>
       get copyWith;
 }
@@ -26037,6 +26179,7 @@ class _$_ImplementationGuideManifest extends _ImplementationGuideManifest {
       const DeepCollectionEquality().hash(other) ^
       const DeepCollectionEquality().hash(otherElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuideManifestCopyWith<_ImplementationGuideManifest>
       get copyWith => __$ImplementationGuideManifestCopyWithImpl<
@@ -26095,6 +26238,7 @@ abstract class _ImplementationGuideManifest
   @JsonKey(name: '_other')
   List<Element> get otherElement;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuideManifestCopyWith<_ImplementationGuideManifest>
       get copyWith;
 }
@@ -26162,6 +26306,7 @@ mixin _$ImplementationGuideResource1 {
   Element get relativePathElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuideResource1CopyWith<ImplementationGuideResource1>
       get copyWith;
 }
@@ -26473,6 +26618,7 @@ class _$_ImplementationGuideResource1 extends _ImplementationGuideResource1 {
       const DeepCollectionEquality().hash(relativePath) ^
       const DeepCollectionEquality().hash(relativePathElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuideResource1CopyWith<_ImplementationGuideResource1>
       get copyWith => __$ImplementationGuideResource1CopyWithImpl<
@@ -26528,6 +26674,7 @@ abstract class _ImplementationGuideResource1
   @JsonKey(name: '_relativePath')
   Element get relativePathElement;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuideResource1CopyWith<_ImplementationGuideResource1>
       get copyWith;
 }
@@ -26592,6 +26739,7 @@ mixin _$ImplementationGuidePage1 {
   List<Element> get anchorElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ImplementationGuidePage1CopyWith<ImplementationGuidePage1> get copyWith;
 }
 
@@ -26839,6 +26987,7 @@ class _$_ImplementationGuidePage1 extends _ImplementationGuidePage1 {
       const DeepCollectionEquality().hash(anchor) ^
       const DeepCollectionEquality().hash(anchorElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ImplementationGuidePage1CopyWith<_ImplementationGuidePage1> get copyWith =>
       __$ImplementationGuidePage1CopyWithImpl<_ImplementationGuidePage1>(
@@ -26890,6 +27039,7 @@ abstract class _ImplementationGuidePage1 extends ImplementationGuidePage1 {
   @JsonKey(name: '_anchor')
   List<Element> get anchorElement;
   @override
+  @JsonKey(ignore: true)
   _$ImplementationGuidePage1CopyWith<_ImplementationGuidePage1> get copyWith;
 }
 
@@ -27113,6 +27263,7 @@ mixin _$MessageDefinition {
   List<Canonical> get graph;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MessageDefinitionCopyWith<MessageDefinition> get copyWith;
 }
 
@@ -28243,6 +28394,7 @@ class _$_MessageDefinition extends _MessageDefinition {
       const DeepCollectionEquality().hash(allowedResponse) ^
       const DeepCollectionEquality().hash(graph);
 
+  @JsonKey(ignore: true)
   @override
   _$MessageDefinitionCopyWith<_MessageDefinition> get copyWith =>
       __$MessageDefinitionCopyWithImpl<_MessageDefinition>(this, _$identity);
@@ -28453,6 +28605,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   @override
   List<Canonical> get graph;
   @override
+  @JsonKey(ignore: true)
   _$MessageDefinitionCopyWith<_MessageDefinition> get copyWith;
 }
 
@@ -28519,6 +28672,7 @@ mixin _$MessageDefinitionFocus {
   Element get maxElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MessageDefinitionFocusCopyWith<MessageDefinitionFocus> get copyWith;
 }
 
@@ -28787,6 +28941,7 @@ class _$_MessageDefinitionFocus extends _MessageDefinitionFocus {
       const DeepCollectionEquality().hash(max) ^
       const DeepCollectionEquality().hash(maxElement);
 
+  @JsonKey(ignore: true)
   @override
   _$MessageDefinitionFocusCopyWith<_MessageDefinitionFocus> get copyWith =>
       __$MessageDefinitionFocusCopyWithImpl<_MessageDefinitionFocus>(
@@ -28840,6 +28995,7 @@ abstract class _MessageDefinitionFocus extends MessageDefinitionFocus {
   @JsonKey(name: '_max')
   Element get maxElement;
   @override
+  @JsonKey(ignore: true)
   _$MessageDefinitionFocusCopyWith<_MessageDefinitionFocus> get copyWith;
 }
 
@@ -28893,6 +29049,7 @@ mixin _$MessageDefinitionAllowedResponse {
   Element get situationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MessageDefinitionAllowedResponseCopyWith<MessageDefinitionAllowedResponse>
       get copyWith;
 }
@@ -29092,6 +29249,7 @@ class _$_MessageDefinitionAllowedResponse
       const DeepCollectionEquality().hash(situation) ^
       const DeepCollectionEquality().hash(situationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$MessageDefinitionAllowedResponseCopyWith<_MessageDefinitionAllowedResponse>
       get copyWith => __$MessageDefinitionAllowedResponseCopyWithImpl<
@@ -29133,6 +29291,7 @@ abstract class _MessageDefinitionAllowedResponse
   @JsonKey(name: '_situation')
   Element get situationElement;
   @override
+  @JsonKey(ignore: true)
   _$MessageDefinitionAllowedResponseCopyWith<_MessageDefinitionAllowedResponse>
       get copyWith;
 }
@@ -29389,6 +29548,7 @@ mixin _$OperationDefinition {
   List<OperationDefinitionOverload> get overload;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OperationDefinitionCopyWith<OperationDefinition> get copyWith;
 }
 
@@ -30678,6 +30838,7 @@ class _$_OperationDefinition extends _OperationDefinition {
       const DeepCollectionEquality().hash(parameter) ^
       const DeepCollectionEquality().hash(overload);
 
+  @JsonKey(ignore: true)
   @override
   _$OperationDefinitionCopyWith<_OperationDefinition> get copyWith =>
       __$OperationDefinitionCopyWithImpl<_OperationDefinition>(
@@ -30921,6 +31082,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   @override
   List<OperationDefinitionOverload> get overload;
   @override
+  @JsonKey(ignore: true)
   _$OperationDefinitionCopyWith<_OperationDefinition> get copyWith;
 }
 
@@ -31038,6 +31200,7 @@ mixin _$OperationDefinitionParameter {
   List<OperationDefinitionParameter> get part_;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OperationDefinitionParameterCopyWith<OperationDefinitionParameter>
       get copyWith;
 }
@@ -31592,6 +31755,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
       const DeepCollectionEquality().hash(referencedFrom) ^
       const DeepCollectionEquality().hash(part_);
 
+  @JsonKey(ignore: true)
   @override
   _$OperationDefinitionParameterCopyWith<_OperationDefinitionParameter>
       get copyWith => __$OperationDefinitionParameterCopyWithImpl<
@@ -31698,6 +31862,7 @@ abstract class _OperationDefinitionParameter
   @JsonKey(name: 'part')
   List<OperationDefinitionParameter> get part_;
   @override
+  @JsonKey(ignore: true)
   _$OperationDefinitionParameterCopyWith<_OperationDefinitionParameter>
       get copyWith;
 }
@@ -31756,6 +31921,7 @@ mixin _$OperationDefinitionBinding {
   Canonical get valueSet;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OperationDefinitionBindingCopyWith<OperationDefinitionBinding> get copyWith;
 }
 
@@ -31963,6 +32129,7 @@ class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
       const DeepCollectionEquality().hash(strengthElement) ^
       const DeepCollectionEquality().hash(valueSet);
 
+  @JsonKey(ignore: true)
   @override
   _$OperationDefinitionBindingCopyWith<_OperationDefinitionBinding>
       get copyWith => __$OperationDefinitionBindingCopyWithImpl<
@@ -32007,6 +32174,7 @@ abstract class _OperationDefinitionBinding extends OperationDefinitionBinding {
   @override
   Canonical get valueSet;
   @override
+  @JsonKey(ignore: true)
   _$OperationDefinitionBindingCopyWith<_OperationDefinitionBinding>
       get copyWith;
 }
@@ -32065,6 +32233,7 @@ mixin _$OperationDefinitionReferencedFrom {
   Element get sourceIdElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OperationDefinitionReferencedFromCopyWith<OperationDefinitionReferencedFrom>
       get copyWith;
 }
@@ -32291,6 +32460,7 @@ class _$_OperationDefinitionReferencedFrom
       const DeepCollectionEquality().hash(sourceId) ^
       const DeepCollectionEquality().hash(sourceIdElement);
 
+  @JsonKey(ignore: true)
   @override
   _$OperationDefinitionReferencedFromCopyWith<
           _OperationDefinitionReferencedFrom>
@@ -32338,6 +32508,7 @@ abstract class _OperationDefinitionReferencedFrom
   @JsonKey(name: '_sourceId')
   Element get sourceIdElement;
   @override
+  @JsonKey(ignore: true)
   _$OperationDefinitionReferencedFromCopyWith<
       _OperationDefinitionReferencedFrom> get copyWith;
 }
@@ -32395,6 +32566,7 @@ mixin _$OperationDefinitionOverload {
   Element get commentElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OperationDefinitionOverloadCopyWith<OperationDefinitionOverload>
       get copyWith;
 }
@@ -32611,6 +32783,7 @@ class _$_OperationDefinitionOverload extends _OperationDefinitionOverload {
       const DeepCollectionEquality().hash(comment) ^
       const DeepCollectionEquality().hash(commentElement);
 
+  @JsonKey(ignore: true)
   @override
   _$OperationDefinitionOverloadCopyWith<_OperationDefinitionOverload>
       get copyWith => __$OperationDefinitionOverloadCopyWithImpl<
@@ -32656,6 +32829,7 @@ abstract class _OperationDefinitionOverload
   @JsonKey(name: '_comment')
   Element get commentElement;
   @override
+  @JsonKey(ignore: true)
   _$OperationDefinitionOverloadCopyWith<_OperationDefinitionOverload>
       get copyWith;
 }
@@ -32937,6 +33111,7 @@ mixin _$SearchParameter {
   List<SearchParameterComponent> get component;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SearchParameterCopyWith<SearchParameter> get copyWith;
 }
 
@@ -34323,6 +34498,7 @@ class _$_SearchParameter extends _SearchParameter {
       const DeepCollectionEquality().hash(chainElement) ^
       const DeepCollectionEquality().hash(component);
 
+  @JsonKey(ignore: true)
   @override
   _$SearchParameterCopyWith<_SearchParameter> get copyWith =>
       __$SearchParameterCopyWithImpl<_SearchParameter>(this, _$identity);
@@ -34590,6 +34766,7 @@ abstract class _SearchParameter extends SearchParameter {
   @override
   List<SearchParameterComponent> get component;
   @override
+  @JsonKey(ignore: true)
   _$SearchParameterCopyWith<_SearchParameter> get copyWith;
 }
 
@@ -34642,6 +34819,7 @@ mixin _$SearchParameterComponent {
   Element get expressionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SearchParameterComponentCopyWith<SearchParameterComponent> get copyWith;
 }
 
@@ -34837,6 +35015,7 @@ class _$_SearchParameterComponent extends _SearchParameterComponent {
       const DeepCollectionEquality().hash(expression) ^
       const DeepCollectionEquality().hash(expressionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SearchParameterComponentCopyWith<_SearchParameterComponent> get copyWith =>
       __$SearchParameterComponentCopyWithImpl<_SearchParameterComponent>(
@@ -34877,6 +35056,7 @@ abstract class _SearchParameterComponent extends SearchParameterComponent {
   @JsonKey(name: '_expression')
   Element get expressionElement;
   @override
+  @JsonKey(ignore: true)
   _$SearchParameterComponentCopyWith<_SearchParameterComponent> get copyWith;
 }
 
@@ -35125,6 +35305,7 @@ mixin _$StructureDefinition {
   StructureDefinitionDifferential get differential;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureDefinitionCopyWith<StructureDefinition> get copyWith;
 }
 
@@ -36392,6 +36573,7 @@ class _$_StructureDefinition extends _StructureDefinition {
       const DeepCollectionEquality().hash(snapshot) ^
       const DeepCollectionEquality().hash(differential);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureDefinitionCopyWith<_StructureDefinition> get copyWith =>
       __$StructureDefinitionCopyWithImpl<_StructureDefinition>(
@@ -36628,6 +36810,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   @override
   StructureDefinitionDifferential get differential;
   @override
+  @JsonKey(ignore: true)
   _$StructureDefinitionCopyWith<_StructureDefinition> get copyWith;
 }
 
@@ -36698,6 +36881,7 @@ mixin _$StructureDefinitionMapping {
   Element get commentElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureDefinitionMappingCopyWith<StructureDefinitionMapping> get copyWith;
 }
 
@@ -37002,6 +37186,7 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
       const DeepCollectionEquality().hash(comment) ^
       const DeepCollectionEquality().hash(commentElement);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureDefinitionMappingCopyWith<_StructureDefinitionMapping>
       get copyWith => __$StructureDefinitionMappingCopyWithImpl<
@@ -37060,6 +37245,7 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
   @JsonKey(name: '_comment')
   Element get commentElement;
   @override
+  @JsonKey(ignore: true)
   _$StructureDefinitionMappingCopyWith<_StructureDefinitionMapping>
       get copyWith;
 }
@@ -37122,6 +37308,7 @@ mixin _$StructureDefinitionContext {
   Element get expressionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureDefinitionContextCopyWith<StructureDefinitionContext> get copyWith;
 }
 
@@ -37360,6 +37547,7 @@ class _$_StructureDefinitionContext extends _StructureDefinitionContext {
       const DeepCollectionEquality().hash(expression) ^
       const DeepCollectionEquality().hash(expressionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureDefinitionContextCopyWith<_StructureDefinitionContext>
       get copyWith => __$StructureDefinitionContextCopyWithImpl<
@@ -37408,6 +37596,7 @@ abstract class _StructureDefinitionContext extends StructureDefinitionContext {
   @JsonKey(name: '_expression')
   Element get expressionElement;
   @override
+  @JsonKey(ignore: true)
   _$StructureDefinitionContextCopyWith<_StructureDefinitionContext>
       get copyWith;
 }
@@ -37454,6 +37643,7 @@ mixin _$StructureDefinitionSnapshot {
   List<ElementDefinition> get element;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureDefinitionSnapshotCopyWith<StructureDefinitionSnapshot>
       get copyWith;
 }
@@ -37606,6 +37796,7 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(element);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureDefinitionSnapshotCopyWith<_StructureDefinitionSnapshot>
       get copyWith => __$StructureDefinitionSnapshotCopyWithImpl<
@@ -37640,6 +37831,7 @@ abstract class _StructureDefinitionSnapshot
   @override
   List<ElementDefinition> get element;
   @override
+  @JsonKey(ignore: true)
   _$StructureDefinitionSnapshotCopyWith<_StructureDefinitionSnapshot>
       get copyWith;
 }
@@ -37687,6 +37879,7 @@ mixin _$StructureDefinitionDifferential {
   List<ElementDefinition> get element;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureDefinitionDifferentialCopyWith<StructureDefinitionDifferential>
       get copyWith;
 }
@@ -37841,6 +38034,7 @@ class _$_StructureDefinitionDifferential
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(element);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureDefinitionDifferentialCopyWith<_StructureDefinitionDifferential>
       get copyWith => __$StructureDefinitionDifferentialCopyWithImpl<
@@ -37875,6 +38069,7 @@ abstract class _StructureDefinitionDifferential
   @override
   List<ElementDefinition> get element;
   @override
+  @JsonKey(ignore: true)
   _$StructureDefinitionDifferentialCopyWith<_StructureDefinitionDifferential>
       get copyWith;
 }
@@ -38062,6 +38257,7 @@ mixin _$StructureMap {
   List<StructureMapGroup> get group;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureMapCopyWith<StructureMap> get copyWith;
 }
 
@@ -38984,6 +39180,7 @@ class _$_StructureMap extends _StructureMap {
       const DeepCollectionEquality().hash(import_) ^
       const DeepCollectionEquality().hash(group);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureMapCopyWith<_StructureMap> get copyWith =>
       __$StructureMapCopyWithImpl<_StructureMap>(this, _$identity);
@@ -39157,6 +39354,7 @@ abstract class _StructureMap extends StructureMap {
   @override
   List<StructureMapGroup> get group;
   @override
+  @JsonKey(ignore: true)
   _$StructureMapCopyWith<_StructureMap> get copyWith;
 }
 
@@ -39230,6 +39428,7 @@ mixin _$StructureMapStructure {
   Element get documentationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureMapStructureCopyWith<StructureMapStructure> get copyWith;
 }
 
@@ -39518,6 +39717,7 @@ class _$_StructureMapStructure extends _StructureMapStructure {
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(documentationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureMapStructureCopyWith<_StructureMapStructure> get copyWith =>
       __$StructureMapStructureCopyWithImpl<_StructureMapStructure>(
@@ -39578,6 +39778,7 @@ abstract class _StructureMapStructure extends StructureMapStructure {
   @JsonKey(name: '_documentation')
   Element get documentationElement;
   @override
+  @JsonKey(ignore: true)
   _$StructureMapStructureCopyWith<_StructureMapStructure> get copyWith;
 }
 
@@ -39663,6 +39864,7 @@ mixin _$StructureMapGroup {
   List<StructureMapRule> get rule;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureMapGroupCopyWith<StructureMapGroup> get copyWith;
 }
 
@@ -40025,6 +40227,7 @@ class _$_StructureMapGroup extends _StructureMapGroup {
       const DeepCollectionEquality().hash(input) ^
       const DeepCollectionEquality().hash(rule);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureMapGroupCopyWith<_StructureMapGroup> get copyWith =>
       __$StructureMapGroupCopyWithImpl<_StructureMapGroup>(this, _$identity);
@@ -40097,6 +40300,7 @@ abstract class _StructureMapGroup extends StructureMapGroup {
   @override
   List<StructureMapRule> get rule;
   @override
+  @JsonKey(ignore: true)
   _$StructureMapGroupCopyWith<_StructureMapGroup> get copyWith;
 }
 
@@ -40173,6 +40377,7 @@ mixin _$StructureMapInput {
   Element get documentationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureMapInputCopyWith<StructureMapInput> get copyWith;
 }
 
@@ -40489,6 +40694,7 @@ class _$_StructureMapInput extends _StructureMapInput {
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(documentationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureMapInputCopyWith<_StructureMapInput> get copyWith =>
       __$StructureMapInputCopyWithImpl<_StructureMapInput>(this, _$identity);
@@ -40552,6 +40758,7 @@ abstract class _StructureMapInput extends StructureMapInput {
   @JsonKey(name: '_documentation')
   Element get documentationElement;
   @override
+  @JsonKey(ignore: true)
   _$StructureMapInputCopyWith<_StructureMapInput> get copyWith;
 }
 
@@ -40619,6 +40826,7 @@ mixin _$StructureMapRule {
   Element get documentationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureMapRuleCopyWith<StructureMapRule> get copyWith;
 }
 
@@ -40902,6 +41110,7 @@ class _$_StructureMapRule extends _StructureMapRule {
       const DeepCollectionEquality().hash(documentation) ^
       const DeepCollectionEquality().hash(documentationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureMapRuleCopyWith<_StructureMapRule> get copyWith =>
       __$StructureMapRuleCopyWithImpl<_StructureMapRule>(this, _$identity);
@@ -40957,6 +41166,7 @@ abstract class _StructureMapRule extends StructureMapRule {
   @JsonKey(name: '_documentation')
   Element get documentationElement;
   @override
+  @JsonKey(ignore: true)
   _$StructureMapRuleCopyWith<_StructureMapRule> get copyWith;
 }
 
@@ -41334,6 +41544,7 @@ mixin _$StructureMapSource {
   Element get logMessageElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureMapSourceCopyWith<StructureMapSource> get copyWith;
 }
 
@@ -43756,6 +43967,7 @@ class _$_StructureMapSource extends _StructureMapSource {
       const DeepCollectionEquality().hash(logMessage) ^
       const DeepCollectionEquality().hash(logMessageElement);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureMapSourceCopyWith<_StructureMapSource> get copyWith =>
       __$StructureMapSourceCopyWithImpl<_StructureMapSource>(this, _$identity);
@@ -44120,6 +44332,7 @@ abstract class _StructureMapSource extends StructureMapSource {
   @JsonKey(name: '_logMessage')
   Element get logMessageElement;
   @override
+  @JsonKey(ignore: true)
   _$StructureMapSourceCopyWith<_StructureMapSource> get copyWith;
 }
 
@@ -44225,6 +44438,7 @@ mixin _$StructureMapTarget {
   List<StructureMapParameter> get parameter;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureMapTargetCopyWith<StructureMapTarget> get copyWith;
 }
 
@@ -44713,6 +44927,7 @@ class _$_StructureMapTarget extends _StructureMapTarget {
       const DeepCollectionEquality().hash(transformElement) ^
       const DeepCollectionEquality().hash(parameter);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureMapTargetCopyWith<_StructureMapTarget> get copyWith =>
       __$StructureMapTargetCopyWithImpl<_StructureMapTarget>(this, _$identity);
@@ -44805,6 +45020,7 @@ abstract class _StructureMapTarget extends StructureMapTarget {
   @override
   List<StructureMapParameter> get parameter;
   @override
+  @JsonKey(ignore: true)
   _$StructureMapTargetCopyWith<_StructureMapTarget> get copyWith;
 }
 
@@ -44882,6 +45098,7 @@ mixin _$StructureMapParameter {
   Element get valueDecimalElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureMapParameterCopyWith<StructureMapParameter> get copyWith;
 }
 
@@ -45248,6 +45465,7 @@ class _$_StructureMapParameter extends _StructureMapParameter {
       const DeepCollectionEquality().hash(valueDecimal) ^
       const DeepCollectionEquality().hash(valueDecimalElement);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureMapParameterCopyWith<_StructureMapParameter> get copyWith =>
       __$StructureMapParameterCopyWithImpl<_StructureMapParameter>(
@@ -45313,6 +45531,7 @@ abstract class _StructureMapParameter extends StructureMapParameter {
   @JsonKey(name: '_valueDecimal')
   Element get valueDecimalElement;
   @override
+  @JsonKey(ignore: true)
   _$StructureMapParameterCopyWith<_StructureMapParameter> get copyWith;
 }
 
@@ -45369,6 +45588,7 @@ mixin _$StructureMapDependent {
   List<Element> get variableElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $StructureMapDependentCopyWith<StructureMapDependent> get copyWith;
 }
 
@@ -45575,6 +45795,7 @@ class _$_StructureMapDependent extends _StructureMapDependent {
       const DeepCollectionEquality().hash(variable) ^
       const DeepCollectionEquality().hash(variableElement);
 
+  @JsonKey(ignore: true)
   @override
   _$StructureMapDependentCopyWith<_StructureMapDependent> get copyWith =>
       __$StructureMapDependentCopyWithImpl<_StructureMapDependent>(
@@ -45619,5 +45840,6 @@ abstract class _StructureMapDependent extends StructureMapDependent {
   @JsonKey(name: '_variable')
   List<Element> get variableElement;
   @override
+  @JsonKey(ignore: true)
   _$StructureMapDependentCopyWith<_StructureMapDependent> get copyWith;
 }

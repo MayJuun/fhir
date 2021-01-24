@@ -67,6 +67,7 @@ mixin _$Annotation {
   Element get textElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AnnotationCopyWith<Annotation> get copyWith;
 }
 
@@ -339,6 +340,7 @@ class _$_Annotation extends _Annotation {
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(textElement);
 
+  @JsonKey(ignore: true)
   @override
   _$AnnotationCopyWith<_Annotation> get copyWith =>
       __$AnnotationCopyWithImpl<_Annotation>(this, _$identity);
@@ -388,6 +390,7 @@ abstract class _Annotation extends Annotation {
   @JsonKey(name: '_text')
   Element get textElement;
   @override
+  @JsonKey(ignore: true)
   _$AnnotationCopyWith<_Annotation> get copyWith;
 }
 
@@ -482,6 +485,7 @@ mixin _$Attachment {
   Element get creationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AttachmentCopyWith<Attachment> get copyWith;
 }
 
@@ -937,6 +941,7 @@ class _$_Attachment extends _Attachment {
       const DeepCollectionEquality().hash(creation) ^
       const DeepCollectionEquality().hash(creationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$AttachmentCopyWith<_Attachment> get copyWith =>
       __$AttachmentCopyWithImpl<_Attachment>(this, _$identity);
@@ -1018,6 +1023,7 @@ abstract class _Attachment extends Attachment {
   @JsonKey(name: '_creation')
   Element get creationElement;
   @override
+  @JsonKey(ignore: true)
   _$AttachmentCopyWith<_Attachment> get copyWith;
 }
 
@@ -1087,6 +1093,7 @@ mixin _$Identifier {
   Reference get assigner;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $IdentifierCopyWith<Identifier> get copyWith;
 }
 
@@ -1403,6 +1410,7 @@ class _$_Identifier extends _Identifier {
       const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(assigner);
 
+  @JsonKey(ignore: true)
   @override
   _$IdentifierCopyWith<_Identifier> get copyWith =>
       __$IdentifierCopyWithImpl<_Identifier>(this, _$identity);
@@ -1459,6 +1467,7 @@ abstract class _Identifier extends Identifier {
   @override
   Reference get assigner;
   @override
+  @JsonKey(ignore: true)
   _$IdentifierCopyWith<_Identifier> get copyWith;
 }
 
@@ -1507,6 +1516,7 @@ mixin _$CodeableConcept {
   Element get textElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CodeableConceptCopyWith<CodeableConcept> get copyWith;
 }
 
@@ -1675,6 +1685,7 @@ class _$_CodeableConcept extends _CodeableConcept {
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(textElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CodeableConceptCopyWith<_CodeableConcept> get copyWith =>
       __$CodeableConceptCopyWithImpl<_CodeableConcept>(this, _$identity);
@@ -1710,6 +1721,7 @@ abstract class _CodeableConcept extends CodeableConcept {
   @JsonKey(name: '_text')
   Element get textElement;
   @override
+  @JsonKey(ignore: true)
   _$CodeableConceptCopyWith<_CodeableConcept> get copyWith;
 }
 
@@ -1783,6 +1795,7 @@ mixin _$Coding {
   Element get userSelectedElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CodingCopyWith<Coding> get copyWith;
 }
 
@@ -2112,6 +2125,7 @@ class _$_Coding extends _Coding {
       const DeepCollectionEquality().hash(userSelected) ^
       const DeepCollectionEquality().hash(userSelectedElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CodingCopyWith<_Coding> get copyWith =>
       __$CodingCopyWithImpl<_Coding>(this, _$identity);
@@ -2171,6 +2185,7 @@ abstract class _Coding extends Coding {
   @JsonKey(name: '_userSelected')
   Element get userSelectedElement;
   @override
+  @JsonKey(ignore: true)
   _$CodingCopyWith<_Coding> get copyWith;
 }
 
@@ -2252,6 +2267,7 @@ mixin _$Quantity {
   Element get codeElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $QuantityCopyWith<Quantity> get copyWith;
 }
 
@@ -2592,6 +2608,7 @@ class _$_Quantity extends _Quantity {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement);
 
+  @JsonKey(ignore: true)
   @override
   _$QuantityCopyWith<_Quantity> get copyWith =>
       __$QuantityCopyWithImpl<_Quantity>(this, _$identity);
@@ -2659,6 +2676,7 @@ abstract class _Quantity extends Quantity {
   @JsonKey(name: '_code')
   Element get codeElement;
   @override
+  @JsonKey(ignore: true)
   _$QuantityCopyWith<_Quantity> get copyWith;
 }
 
@@ -2740,6 +2758,7 @@ mixin _$FhirDuration {
   Element get codeElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $FhirDurationCopyWith<FhirDuration> get copyWith;
 }
 
@@ -3084,6 +3103,7 @@ class _$_FhirDuration extends _FhirDuration {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirDurationCopyWith<_FhirDuration> get copyWith =>
       __$FhirDurationCopyWithImpl<_FhirDuration>(this, _$identity);
@@ -3152,6 +3172,7 @@ abstract class _FhirDuration extends FhirDuration {
   @JsonKey(name: '_code')
   Element get codeElement;
   @override
+  @JsonKey(ignore: true)
   _$FhirDurationCopyWith<_FhirDuration> get copyWith;
 }
 
@@ -3233,6 +3254,7 @@ mixin _$Distance {
   Element get codeElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DistanceCopyWith<Distance> get copyWith;
 }
 
@@ -3573,6 +3595,7 @@ class _$_Distance extends _Distance {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement);
 
+  @JsonKey(ignore: true)
   @override
   _$DistanceCopyWith<_Distance> get copyWith =>
       __$DistanceCopyWithImpl<_Distance>(this, _$identity);
@@ -3640,6 +3663,7 @@ abstract class _Distance extends Distance {
   @JsonKey(name: '_code')
   Element get codeElement;
   @override
+  @JsonKey(ignore: true)
   _$DistanceCopyWith<_Distance> get copyWith;
 }
 
@@ -3721,6 +3745,7 @@ mixin _$Count {
   Element get codeElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CountCopyWith<Count> get copyWith;
 }
 
@@ -4061,6 +4086,7 @@ class _$_Count extends _Count {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CountCopyWith<_Count> get copyWith =>
       __$CountCopyWithImpl<_Count>(this, _$identity);
@@ -4128,6 +4154,7 @@ abstract class _Count extends Count {
   @JsonKey(name: '_code')
   Element get codeElement;
   @override
+  @JsonKey(ignore: true)
   _$CountCopyWith<_Count> get copyWith;
 }
 
@@ -4180,6 +4207,7 @@ mixin _$Money {
   Element get currencyElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MoneyCopyWith<Money> get copyWith;
 }
 
@@ -4376,6 +4404,7 @@ class _$_Money extends _Money {
       const DeepCollectionEquality().hash(currency) ^
       const DeepCollectionEquality().hash(currencyElement);
 
+  @JsonKey(ignore: true)
   @override
   _$MoneyCopyWith<_Money> get copyWith =>
       __$MoneyCopyWithImpl<_Money>(this, _$identity);
@@ -4414,6 +4443,7 @@ abstract class _Money extends Money {
   @JsonKey(name: '_currency')
   Element get currencyElement;
   @override
+  @JsonKey(ignore: true)
   _$MoneyCopyWith<_Money> get copyWith;
 }
 
@@ -4495,6 +4525,7 @@ mixin _$Age {
   Element get codeElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AgeCopyWith<Age> get copyWith;
 }
 
@@ -4834,6 +4865,7 @@ class _$_Age extends _Age {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement);
 
+  @JsonKey(ignore: true)
   @override
   _$AgeCopyWith<_Age> get copyWith =>
       __$AgeCopyWithImpl<_Age>(this, _$identity);
@@ -4901,6 +4933,7 @@ abstract class _Age extends Age {
   @JsonKey(name: '_code')
   Element get codeElement;
   @override
+  @JsonKey(ignore: true)
   _$AgeCopyWith<_Age> get copyWith;
 }
 
@@ -4945,6 +4978,7 @@ mixin _$Range {
   Quantity get high;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RangeCopyWith<Range> get copyWith;
 }
 
@@ -5104,6 +5138,7 @@ class _$_Range extends _Range {
       const DeepCollectionEquality().hash(low) ^
       const DeepCollectionEquality().hash(high);
 
+  @JsonKey(ignore: true)
   @override
   _$RangeCopyWith<_Range> get copyWith =>
       __$RangeCopyWithImpl<_Range>(this, _$identity);
@@ -5134,6 +5169,7 @@ abstract class _Range extends Range {
   @override
   Quantity get high;
   @override
+  @JsonKey(ignore: true)
   _$RangeCopyWith<_Range> get copyWith;
 }
 
@@ -5186,6 +5222,7 @@ mixin _$Period {
   Element get endElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PeriodCopyWith<Period> get copyWith;
 }
 
@@ -5379,6 +5416,7 @@ class _$_Period extends _Period {
       const DeepCollectionEquality().hash(end) ^
       const DeepCollectionEquality().hash(endElement);
 
+  @JsonKey(ignore: true)
   @override
   _$PeriodCopyWith<_Period> get copyWith =>
       __$PeriodCopyWithImpl<_Period>(this, _$identity);
@@ -5417,6 +5455,7 @@ abstract class _Period extends Period {
   @JsonKey(name: '_end')
   Element get endElement;
   @override
+  @JsonKey(ignore: true)
   _$PeriodCopyWith<_Period> get copyWith;
 }
 
@@ -5461,6 +5500,7 @@ mixin _$Ratio {
   Quantity get denominator;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RatioCopyWith<Ratio> get copyWith;
 }
 
@@ -5626,6 +5666,7 @@ class _$_Ratio extends _Ratio {
       const DeepCollectionEquality().hash(numerator) ^
       const DeepCollectionEquality().hash(denominator);
 
+  @JsonKey(ignore: true)
   @override
   _$RatioCopyWith<_Ratio> get copyWith =>
       __$RatioCopyWithImpl<_Ratio>(this, _$identity);
@@ -5656,6 +5697,7 @@ abstract class _Ratio extends Ratio {
   @override
   Quantity get denominator;
   @override
+  @JsonKey(ignore: true)
   _$RatioCopyWith<_Ratio> get copyWith;
 }
 
@@ -5739,6 +5781,7 @@ mixin _$SampledData {
   Element get dataElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SampledDataCopyWith<SampledData> get copyWith;
 }
 
@@ -6143,6 +6186,7 @@ class _$_SampledData extends _SampledData {
       const DeepCollectionEquality().hash(data) ^
       const DeepCollectionEquality().hash(dataElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SampledDataCopyWith<_SampledData> get copyWith =>
       __$SampledDataCopyWithImpl<_SampledData>(this, _$identity);
@@ -6213,6 +6257,7 @@ abstract class _SampledData extends SampledData {
   @JsonKey(name: '_data')
   Element get dataElement;
   @override
+  @JsonKey(ignore: true)
   _$SampledDataCopyWith<_SampledData> get copyWith;
 }
 
@@ -6288,6 +6333,7 @@ mixin _$Signature {
   Element get dataElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SignatureCopyWith<Signature> get copyWith;
 }
 
@@ -6637,6 +6683,7 @@ class _$_Signature extends _Signature {
       const DeepCollectionEquality().hash(data) ^
       const DeepCollectionEquality().hash(dataElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SignatureCopyWith<_Signature> get copyWith =>
       __$SignatureCopyWithImpl<_Signature>(this, _$identity);
@@ -6699,6 +6746,7 @@ abstract class _Signature extends Signature {
   @JsonKey(name: '_data')
   Element get dataElement;
   @override
+  @JsonKey(ignore: true)
   _$SignatureCopyWith<_Signature> get copyWith;
 }
 
@@ -6783,6 +6831,7 @@ mixin _$HumanName {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $HumanNameCopyWith<HumanName> get copyWith;
 }
 
@@ -7134,6 +7183,7 @@ class _$_HumanName extends _HumanName {
       const DeepCollectionEquality().hash(suffixElement) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$HumanNameCopyWith<_HumanName> get copyWith =>
       __$HumanNameCopyWithImpl<_HumanName>(this, _$identity);
@@ -7205,6 +7255,7 @@ abstract class _HumanName extends HumanName {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$HumanNameCopyWith<_HumanName> get copyWith;
 }
 
@@ -7311,6 +7362,7 @@ mixin _$Address {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AddressCopyWith<Address> get copyWith;
 }
 
@@ -7818,6 +7870,7 @@ class _$_Address extends _Address {
       const DeepCollectionEquality().hash(countryElement) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$AddressCopyWith<_Address> get copyWith =>
       __$AddressCopyWithImpl<_Address>(this, _$identity);
@@ -7910,6 +7963,7 @@ abstract class _Address extends Address {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$AddressCopyWith<_Address> get copyWith;
 }
 
@@ -7988,6 +8042,7 @@ mixin _$ContactPoint {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ContactPointCopyWith<ContactPoint> get copyWith;
 }
 
@@ -8310,6 +8365,7 @@ class _$_ContactPoint extends _ContactPoint {
       const DeepCollectionEquality().hash(rankElement) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$ContactPointCopyWith<_ContactPoint> get copyWith =>
       __$ContactPointCopyWithImpl<_ContactPoint>(this, _$identity);
@@ -8375,6 +8431,7 @@ abstract class _ContactPoint extends ContactPoint {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$ContactPointCopyWith<_ContactPoint> get copyWith;
 }
 
@@ -8429,6 +8486,7 @@ mixin _$Timing {
   CodeableConcept get code;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TimingCopyWith<Timing> get copyWith;
 }
 
@@ -8635,6 +8693,7 @@ class _$_Timing extends _Timing {
       const DeepCollectionEquality().hash(repeat) ^
       const DeepCollectionEquality().hash(code);
 
+  @JsonKey(ignore: true)
   @override
   _$TimingCopyWith<_Timing> get copyWith =>
       __$TimingCopyWithImpl<_Timing>(this, _$identity);
@@ -8675,6 +8734,7 @@ abstract class _Timing extends Timing {
   @override
   CodeableConcept get code;
   @override
+  @JsonKey(ignore: true)
   _$TimingCopyWith<_Timing> get copyWith;
 }
 
@@ -8842,6 +8902,7 @@ mixin _$TimingRepeat {
   Element get offsetElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TimingRepeatCopyWith<TimingRepeat> get copyWith;
 }
 
@@ -9686,6 +9747,7 @@ class _$_TimingRepeat extends _TimingRepeat {
       const DeepCollectionEquality().hash(offset) ^
       const DeepCollectionEquality().hash(offsetElement);
 
+  @JsonKey(ignore: true)
   @override
   _$TimingRepeatCopyWith<_TimingRepeat> get copyWith =>
       __$TimingRepeatCopyWithImpl<_TimingRepeat>(this, _$identity);
@@ -9840,5 +9902,6 @@ abstract class _TimingRepeat extends TimingRepeat {
   @JsonKey(name: '_offset')
   Element get offsetElement;
   @override
+  @JsonKey(ignore: true)
   _$TimingRepeatCopyWith<_TimingRepeat> get copyWith;
 }

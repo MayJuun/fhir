@@ -111,6 +111,7 @@ mixin _$Organization {
   List<OrganizationContact> get contact;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OrganizationCopyWith<Organization> get copyWith;
 }
 
@@ -630,6 +631,7 @@ class _$_Organization extends _Organization {
       const DeepCollectionEquality().hash(partOf) ^
       const DeepCollectionEquality().hash(contact);
 
+  @JsonKey(ignore: true)
   @override
   _$OrganizationCopyWith<_Organization> get copyWith =>
       __$OrganizationCopyWithImpl<_Organization>(this, _$identity);
@@ -723,6 +725,7 @@ abstract class _Organization extends Organization {
   @override
   List<OrganizationContact> get contact;
   @override
+  @JsonKey(ignore: true)
   _$OrganizationCopyWith<_Organization> get copyWith;
 }
 
@@ -780,6 +783,7 @@ mixin _$OrganizationContact {
   Address get address;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OrganizationContactCopyWith<OrganizationContact> get copyWith;
 }
 
@@ -1021,6 +1025,7 @@ class _$_OrganizationContact extends _OrganizationContact {
       const DeepCollectionEquality().hash(telecom) ^
       const DeepCollectionEquality().hash(address);
 
+  @JsonKey(ignore: true)
   @override
   _$OrganizationContactCopyWith<_OrganizationContact> get copyWith =>
       __$OrganizationContactCopyWithImpl<_OrganizationContact>(
@@ -1066,6 +1071,7 @@ abstract class _OrganizationContact extends OrganizationContact {
   @override
   Address get address;
   @override
+  @JsonKey(ignore: true)
   _$OrganizationContactCopyWith<_OrganizationContact> get copyWith;
 }
 
@@ -1227,6 +1233,7 @@ mixin _$HealthcareService {
   Element get availabilityExceptionsElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $HealthcareServiceCopyWith<HealthcareService> get copyWith;
 }
 
@@ -2079,6 +2086,7 @@ class _$_HealthcareService extends _HealthcareService {
       const DeepCollectionEquality().hash(availabilityExceptions) ^
       const DeepCollectionEquality().hash(availabilityExceptionsElement);
 
+  @JsonKey(ignore: true)
   @override
   _$HealthcareServiceCopyWith<_HealthcareService> get copyWith =>
       __$HealthcareServiceCopyWithImpl<_HealthcareService>(this, _$identity);
@@ -2227,6 +2235,7 @@ abstract class _HealthcareService extends HealthcareService {
   @JsonKey(name: '_availabilityExceptions')
   Element get availabilityExceptionsElement;
   @override
+  @JsonKey(ignore: true)
   _$HealthcareServiceCopyWith<_HealthcareService> get copyWith;
 }
 
@@ -2276,6 +2285,7 @@ mixin _$HealthcareServiceServiceType {
   List<CodeableConcept> get specialty;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $HealthcareServiceServiceTypeCopyWith<HealthcareServiceServiceType>
       get copyWith;
 }
@@ -2457,6 +2467,7 @@ class _$_HealthcareServiceServiceType extends _HealthcareServiceServiceType {
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(specialty);
 
+  @JsonKey(ignore: true)
   @override
   _$HealthcareServiceServiceTypeCopyWith<_HealthcareServiceServiceType>
       get copyWith => __$HealthcareServiceServiceTypeCopyWithImpl<
@@ -2494,6 +2505,7 @@ abstract class _HealthcareServiceServiceType
   @override
   List<CodeableConcept> get specialty;
   @override
+  @JsonKey(ignore: true)
   _$HealthcareServiceServiceTypeCopyWith<_HealthcareServiceServiceType>
       get copyWith;
 }
@@ -2566,6 +2578,7 @@ mixin _$HealthcareServiceAvailableTime {
   Element get availableEndTimeElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $HealthcareServiceAvailableTimeCopyWith<HealthcareServiceAvailableTime>
       get copyWith;
 }
@@ -2895,6 +2908,7 @@ class _$_HealthcareServiceAvailableTime
       const DeepCollectionEquality().hash(availableEndTime) ^
       const DeepCollectionEquality().hash(availableEndTimeElement);
 
+  @JsonKey(ignore: true)
   @override
   _$HealthcareServiceAvailableTimeCopyWith<_HealthcareServiceAvailableTime>
       get copyWith => __$HealthcareServiceAvailableTimeCopyWithImpl<
@@ -2958,6 +2972,7 @@ abstract class _HealthcareServiceAvailableTime
   @JsonKey(name: '_availableEndTime')
   Element get availableEndTimeElement;
   @override
+  @JsonKey(ignore: true)
   _$HealthcareServiceAvailableTimeCopyWith<_HealthcareServiceAvailableTime>
       get copyWith;
 }
@@ -3012,6 +3027,7 @@ mixin _$HealthcareServiceNotAvailable {
   Period get during;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $HealthcareServiceNotAvailableCopyWith<HealthcareServiceNotAvailable>
       get copyWith;
 }
@@ -3223,6 +3239,7 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(during);
 
+  @JsonKey(ignore: true)
   @override
   _$HealthcareServiceNotAvailableCopyWith<_HealthcareServiceNotAvailable>
       get copyWith => __$HealthcareServiceNotAvailableCopyWithImpl<
@@ -3264,6 +3281,7 @@ abstract class _HealthcareServiceNotAvailable
   @override
   Period get during;
   @override
+  @JsonKey(ignore: true)
   _$HealthcareServiceNotAvailableCopyWith<_HealthcareServiceNotAvailable>
       get copyWith;
 }
@@ -3387,6 +3405,7 @@ mixin _$Group {
   List<GroupMember> get member;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $GroupCopyWith<Group> get copyWith;
 }
 
@@ -3965,6 +3984,7 @@ class _$_Group extends _Group {
       const DeepCollectionEquality().hash(characteristic) ^
       const DeepCollectionEquality().hash(member);
 
+  @JsonKey(ignore: true)
   @override
   _$GroupCopyWith<_Group> get copyWith =>
       __$GroupCopyWithImpl<_Group>(this, _$identity);
@@ -4073,6 +4093,7 @@ abstract class _Group extends Group {
   @override
   List<GroupMember> get member;
   @override
+  @JsonKey(ignore: true)
   _$GroupCopyWith<_Group> get copyWith;
 }
 
@@ -4141,6 +4162,7 @@ mixin _$GroupCharacteristic {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $GroupCharacteristicCopyWith<GroupCharacteristic> get copyWith;
 }
 
@@ -4476,6 +4498,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
       const DeepCollectionEquality().hash(exclude) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$GroupCharacteristicCopyWith<_GroupCharacteristic> get copyWith =>
       __$GroupCharacteristicCopyWithImpl<_GroupCharacteristic>(
@@ -4532,6 +4555,7 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$GroupCharacteristicCopyWith<_GroupCharacteristic> get copyWith;
 }
 
@@ -4587,6 +4611,7 @@ mixin _$GroupMember {
   Element get inactiveElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $GroupMemberCopyWith<GroupMember> get copyWith;
 }
 
@@ -4813,6 +4838,7 @@ class _$_GroupMember extends _GroupMember {
       const DeepCollectionEquality().hash(inactive) ^
       const DeepCollectionEquality().hash(inactiveElement);
 
+  @JsonKey(ignore: true)
   @override
   _$GroupMemberCopyWith<_GroupMember> get copyWith =>
       __$GroupMemberCopyWithImpl<_GroupMember>(this, _$identity);
@@ -4855,5 +4881,6 @@ abstract class _GroupMember extends GroupMember {
   @JsonKey(name: '_inactive')
   Element get inactiveElement;
   @override
+  @JsonKey(ignore: true)
   _$GroupMemberCopyWith<_GroupMember> get copyWith;
 }

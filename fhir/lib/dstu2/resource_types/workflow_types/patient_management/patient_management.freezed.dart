@@ -149,6 +149,7 @@ mixin _$Encounter {
   Reference get partOf;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EncounterCopyWith<Encounter> get copyWith;
 }
 
@@ -920,6 +921,7 @@ class _$_Encounter extends _Encounter {
       const DeepCollectionEquality().hash(serviceProvider) ^
       const DeepCollectionEquality().hash(partOf);
 
+  @JsonKey(ignore: true)
   @override
   _$EncounterCopyWith<_Encounter> get copyWith =>
       __$EncounterCopyWithImpl<_Encounter>(this, _$identity);
@@ -1051,6 +1053,7 @@ abstract class _Encounter extends Encounter {
   @override
   Reference get partOf;
   @override
+  @JsonKey(ignore: true)
   _$EncounterCopyWith<_Encounter> get copyWith;
 }
 
@@ -1111,6 +1114,7 @@ mixin _$EncounterStatusHistory {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EncounterStatusHistoryCopyWith<EncounterStatusHistory> get copyWith;
 }
 
@@ -1331,6 +1335,7 @@ class _$_EncounterStatusHistory extends _EncounterStatusHistory {
       const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$EncounterStatusHistoryCopyWith<_EncounterStatusHistory> get copyWith =>
       __$EncounterStatusHistoryCopyWithImpl<_EncounterStatusHistory>(
@@ -1378,6 +1383,7 @@ abstract class _EncounterStatusHistory extends EncounterStatusHistory {
   @JsonKey(required: true)
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$EncounterStatusHistoryCopyWith<_EncounterStatusHistory> get copyWith;
 }
 
@@ -1428,6 +1434,7 @@ mixin _$EncounterParticipant {
   Reference get individual;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EncounterParticipantCopyWith<EncounterParticipant> get copyWith;
 }
 
@@ -1625,6 +1632,7 @@ class _$_EncounterParticipant extends _EncounterParticipant {
       const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(individual);
 
+  @JsonKey(ignore: true)
   @override
   _$EncounterParticipantCopyWith<_EncounterParticipant> get copyWith =>
       __$EncounterParticipantCopyWithImpl<_EncounterParticipant>(
@@ -1663,6 +1671,7 @@ abstract class _EncounterParticipant extends EncounterParticipant {
   @override
   Reference get individual;
   @override
+  @JsonKey(ignore: true)
   _$EncounterParticipantCopyWith<_EncounterParticipant> get copyWith;
 }
 
@@ -1742,6 +1751,7 @@ mixin _$EncounterHospitalization {
   List<Reference> get dischargeDiagnosis;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EncounterHospitalizationCopyWith<EncounterHospitalization> get copyWith;
 }
 
@@ -2153,6 +2163,7 @@ class _$_EncounterHospitalization extends _EncounterHospitalization {
       const DeepCollectionEquality().hash(dischargeDisposition) ^
       const DeepCollectionEquality().hash(dischargeDiagnosis);
 
+  @JsonKey(ignore: true)
   @override
   _$EncounterHospitalizationCopyWith<_EncounterHospitalization> get copyWith =>
       __$EncounterHospitalizationCopyWithImpl<_EncounterHospitalization>(
@@ -2219,6 +2230,7 @@ abstract class _EncounterHospitalization extends EncounterHospitalization {
   @override
   List<Reference> get dischargeDiagnosis;
   @override
+  @JsonKey(ignore: true)
   _$EncounterHospitalizationCopyWith<_EncounterHospitalization> get copyWith;
 }
 
@@ -2280,6 +2292,7 @@ mixin _$EncounterLocation {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EncounterLocationCopyWith<EncounterLocation> get copyWith;
 }
 
@@ -2519,6 +2532,7 @@ class _$_EncounterLocation extends _EncounterLocation {
       const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$EncounterLocationCopyWith<_EncounterLocation> get copyWith =>
       __$EncounterLocationCopyWithImpl<_EncounterLocation>(this, _$identity);
@@ -2567,6 +2581,7 @@ abstract class _EncounterLocation extends EncounterLocation {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$EncounterLocationCopyWith<_EncounterLocation> get copyWith;
 }
 
@@ -2683,6 +2698,7 @@ mixin _$EpisodeOfCare {
   List<EpisodeOfCareCareTeam> get careTeam;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EpisodeOfCareCopyWith<EpisodeOfCare> get copyWith;
 }
 
@@ -3269,6 +3285,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
       const DeepCollectionEquality().hash(careManager) ^
       const DeepCollectionEquality().hash(careTeam);
 
+  @JsonKey(ignore: true)
   @override
   _$EpisodeOfCareCopyWith<_EpisodeOfCare> get copyWith =>
       __$EpisodeOfCareCopyWithImpl<_EpisodeOfCare>(this, _$identity);
@@ -3372,6 +3389,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   @override
   List<EpisodeOfCareCareTeam> get careTeam;
   @override
+  @JsonKey(ignore: true)
   _$EpisodeOfCareCopyWith<_EpisodeOfCare> get copyWith;
 }
 
@@ -3432,6 +3450,7 @@ mixin _$EpisodeOfCareStatusHistory {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EpisodeOfCareStatusHistoryCopyWith<EpisodeOfCareStatusHistory> get copyWith;
 }
 
@@ -3656,6 +3675,7 @@ class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
       const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$EpisodeOfCareStatusHistoryCopyWith<_EpisodeOfCareStatusHistory>
       get copyWith => __$EpisodeOfCareStatusHistoryCopyWithImpl<
@@ -3703,6 +3723,7 @@ abstract class _EpisodeOfCareStatusHistory extends EpisodeOfCareStatusHistory {
   @JsonKey(required: true)
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$EpisodeOfCareStatusHistoryCopyWith<_EpisodeOfCareStatusHistory>
       get copyWith;
 }
@@ -3755,6 +3776,7 @@ mixin _$EpisodeOfCareCareTeam {
   Reference get member;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EpisodeOfCareCareTeamCopyWith<EpisodeOfCareCareTeam> get copyWith;
 }
 
@@ -3949,6 +3971,7 @@ class _$_EpisodeOfCareCareTeam extends _EpisodeOfCareCareTeam {
       const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(member);
 
+  @JsonKey(ignore: true)
   @override
   _$EpisodeOfCareCareTeamCopyWith<_EpisodeOfCareCareTeam> get copyWith =>
       __$EpisodeOfCareCareTeamCopyWithImpl<_EpisodeOfCareCareTeam>(
@@ -3987,6 +4010,7 @@ abstract class _EpisodeOfCareCareTeam extends EpisodeOfCareCareTeam {
   @override
   Reference get member;
   @override
+  @JsonKey(ignore: true)
   _$EpisodeOfCareCareTeamCopyWith<_EpisodeOfCareCareTeam> get copyWith;
 }
 
@@ -4115,6 +4139,7 @@ mixin _$Communication {
   Reference get requestDetail;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CommunicationCopyWith<Communication> get copyWith;
 }
 
@@ -4791,6 +4816,7 @@ class _$_Communication extends _Communication {
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(requestDetail);
 
+  @JsonKey(ignore: true)
   @override
   _$CommunicationCopyWith<_Communication> get copyWith =>
       __$CommunicationCopyWithImpl<_Communication>(this, _$identity);
@@ -4906,6 +4932,7 @@ abstract class _Communication extends Communication {
   @override
   Reference get requestDetail;
   @override
+  @JsonKey(ignore: true)
   _$CommunicationCopyWith<_Communication> get copyWith;
 }
 
@@ -4960,6 +4987,7 @@ mixin _$CommunicationPayload {
   Reference get contentReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CommunicationPayloadCopyWith<CommunicationPayload> get copyWith;
 }
 
@@ -5200,6 +5228,7 @@ class _$_CommunicationPayload extends _CommunicationPayload {
       const DeepCollectionEquality().hash(contentAttachment) ^
       const DeepCollectionEquality().hash(contentReference);
 
+  @JsonKey(ignore: true)
   @override
   _$CommunicationPayloadCopyWith<_CommunicationPayload> get copyWith =>
       __$CommunicationPayloadCopyWithImpl<_CommunicationPayload>(
@@ -5242,6 +5271,7 @@ abstract class _CommunicationPayload extends CommunicationPayload {
   @override
   Reference get contentReference;
   @override
+  @JsonKey(ignore: true)
   _$CommunicationPayloadCopyWith<_CommunicationPayload> get copyWith;
 }
 
@@ -5352,6 +5382,7 @@ mixin _$Flag {
   CodeableConcept get code;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $FlagCopyWith<Flag> get copyWith;
 }
 
@@ -5904,6 +5935,7 @@ class _$_Flag extends _Flag {
       const DeepCollectionEquality().hash(author) ^
       const DeepCollectionEquality().hash(code);
 
+  @JsonKey(ignore: true)
   @override
   _$FlagCopyWith<_Flag> get copyWith =>
       __$FlagCopyWithImpl<_Flag>(this, _$identity);
@@ -6000,5 +6032,6 @@ abstract class _Flag extends Flag {
   @JsonKey(required: true)
   CodeableConcept get code;
   @override
+  @JsonKey(ignore: true)
   _$FlagCopyWith<_Flag> get copyWith;
 }

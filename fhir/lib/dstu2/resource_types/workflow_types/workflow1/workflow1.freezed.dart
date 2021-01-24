@@ -97,6 +97,7 @@ mixin _$Order {
   List<Reference> get detail;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OrderCopyWith<Order> get copyWith;
 }
 
@@ -552,6 +553,7 @@ class _$_Order extends _Order {
       const DeepCollectionEquality().hash(when) ^
       const DeepCollectionEquality().hash(detail);
 
+  @JsonKey(ignore: true)
   @override
   _$OrderCopyWith<_Order> get copyWith =>
       __$OrderCopyWithImpl<_Order>(this, _$identity);
@@ -630,6 +632,7 @@ abstract class _Order extends Order {
   @JsonKey(required: true)
   List<Reference> get detail;
   @override
+  @JsonKey(ignore: true)
   _$OrderCopyWith<_Order> get copyWith;
 }
 
@@ -681,6 +684,7 @@ mixin _$OrderWhen {
   Timing get schedule;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OrderWhenCopyWith<OrderWhen> get copyWith;
 }
 
@@ -877,6 +881,7 @@ class _$_OrderWhen extends _OrderWhen {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(schedule);
 
+  @JsonKey(ignore: true)
   @override
   _$OrderWhenCopyWith<_OrderWhen> get copyWith =>
       __$OrderWhenCopyWithImpl<_OrderWhen>(this, _$identity);
@@ -915,6 +920,7 @@ abstract class _OrderWhen extends OrderWhen {
   @override
   Timing get schedule;
   @override
+  @JsonKey(ignore: true)
   _$OrderWhenCopyWith<_OrderWhen> get copyWith;
 }
 
@@ -1009,6 +1015,7 @@ mixin _$OrderResponse {
   List<Reference> get fulfillment;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OrderResponseCopyWith<OrderResponse> get copyWith;
 }
 
@@ -1436,6 +1443,7 @@ class _$_OrderResponse extends _OrderResponse {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(fulfillment);
 
+  @JsonKey(ignore: true)
   @override
   _$OrderResponseCopyWith<_OrderResponse> get copyWith =>
       __$OrderResponseCopyWithImpl<_OrderResponse>(this, _$identity);
@@ -1517,6 +1525,7 @@ abstract class _OrderResponse extends OrderResponse {
   @override
   List<Reference> get fulfillment;
   @override
+  @JsonKey(ignore: true)
   _$OrderResponseCopyWith<_OrderResponse> get copyWith;
 }
 
@@ -1647,6 +1656,7 @@ mixin _$CommunicationRequest {
   Element get priorityElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CommunicationRequestCopyWith<CommunicationRequest> get copyWith;
 }
 
@@ -2368,6 +2378,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
       const DeepCollectionEquality().hash(priority) ^
       const DeepCollectionEquality().hash(priorityElement);
 
+  @JsonKey(ignore: true)
   @override
   _$CommunicationRequestCopyWith<_CommunicationRequest> get copyWith =>
       __$CommunicationRequestCopyWithImpl<_CommunicationRequest>(
@@ -2485,6 +2496,7 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   @JsonKey(name: '_priority')
   Element get priorityElement;
   @override
+  @JsonKey(ignore: true)
   _$CommunicationRequestCopyWith<_CommunicationRequest> get copyWith;
 }
 
@@ -2540,6 +2552,7 @@ mixin _$CommunicationRequestPayload {
   Reference get contentReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $CommunicationRequestPayloadCopyWith<CommunicationRequestPayload>
       get copyWith;
 }
@@ -2785,6 +2798,7 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
       const DeepCollectionEquality().hash(contentAttachment) ^
       const DeepCollectionEquality().hash(contentReference);
 
+  @JsonKey(ignore: true)
   @override
   _$CommunicationRequestPayloadCopyWith<_CommunicationRequestPayload>
       get copyWith => __$CommunicationRequestPayloadCopyWithImpl<
@@ -2828,6 +2842,7 @@ abstract class _CommunicationRequestPayload
   @override
   Reference get contentReference;
   @override
+  @JsonKey(ignore: true)
   _$CommunicationRequestPayloadCopyWith<_CommunicationRequestPayload>
       get copyWith;
 }
@@ -2969,6 +2984,7 @@ mixin _$DeviceUseRequest {
   Element get priorityElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceUseRequestCopyWith<DeviceUseRequest> get copyWith;
 }
 
@@ -3706,6 +3722,7 @@ class _$_DeviceUseRequest extends _DeviceUseRequest {
       const DeepCollectionEquality().hash(priority) ^
       const DeepCollectionEquality().hash(priorityElement);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceUseRequestCopyWith<_DeviceUseRequest> get copyWith =>
       __$DeviceUseRequestCopyWithImpl<_DeviceUseRequest>(this, _$identity);
@@ -3833,6 +3850,7 @@ abstract class _DeviceUseRequest extends DeviceUseRequest {
   @JsonKey(name: '_priority')
   Element get priorityElement;
   @override
+  @JsonKey(ignore: true)
   _$DeviceUseRequestCopyWith<_DeviceUseRequest> get copyWith;
 }
 
@@ -3957,6 +3975,7 @@ mixin _$DeviceUseStatement {
   Element get timingDateTimeElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $DeviceUseStatementCopyWith<DeviceUseStatement> get copyWith;
 }
 
@@ -4628,6 +4647,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
       const DeepCollectionEquality().hash(timingDateTime) ^
       const DeepCollectionEquality().hash(timingDateTimeElement);
 
+  @JsonKey(ignore: true)
   @override
   _$DeviceUseStatementCopyWith<_DeviceUseStatement> get copyWith =>
       __$DeviceUseStatementCopyWithImpl<_DeviceUseStatement>(this, _$identity);
@@ -4739,5 +4759,6 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   @JsonKey(name: '_timingDateTime')
   Element get timingDateTimeElement;
   @override
+  @JsonKey(ignore: true)
   _$DeviceUseStatementCopyWith<_DeviceUseStatement> get copyWith;
 }

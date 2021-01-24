@@ -277,6 +277,7 @@ mixin _$FhirExtension {
   TriggerDefinition get valueTriggerDefinition;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $FhirExtensionCopyWith<FhirExtension> get copyWith;
 }
 
@@ -2171,6 +2172,7 @@ class _$_FhirExtension extends _FhirExtension {
       const DeepCollectionEquality().hash(valueParameterDefinition) ^
       const DeepCollectionEquality().hash(valueTriggerDefinition);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirExtensionCopyWith<_FhirExtension> get copyWith =>
       __$FhirExtensionCopyWithImpl<_FhirExtension>(this, _$identity);
@@ -2430,5 +2432,6 @@ abstract class _FhirExtension extends FhirExtension {
   @override
   TriggerDefinition get valueTriggerDefinition;
   @override
+  @JsonKey(ignore: true)
   _$FhirExtensionCopyWith<_FhirExtension> get copyWith;
 }

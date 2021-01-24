@@ -119,6 +119,7 @@ mixin _$MessageHeader {
   List<Reference> get data;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MessageHeaderCopyWith<MessageHeader> get copyWith;
 }
 
@@ -711,6 +712,7 @@ class _$_MessageHeader extends _MessageHeader {
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(data);
 
+  @JsonKey(ignore: true)
   @override
   _$MessageHeaderCopyWith<_MessageHeader> get copyWith =>
       __$MessageHeaderCopyWithImpl<_MessageHeader>(this, _$identity);
@@ -812,6 +814,7 @@ abstract class _MessageHeader extends MessageHeader {
   @override
   List<Reference> get data;
   @override
+  @JsonKey(ignore: true)
   _$MessageHeaderCopyWith<_MessageHeader> get copyWith;
 }
 
@@ -880,6 +883,7 @@ mixin _$MessageHeaderResponse {
   Reference get details;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MessageHeaderResponseCopyWith<MessageHeaderResponse> get copyWith;
 }
 
@@ -1143,6 +1147,7 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
       const DeepCollectionEquality().hash(codeElement) ^
       const DeepCollectionEquality().hash(details);
 
+  @JsonKey(ignore: true)
   @override
   _$MessageHeaderResponseCopyWith<_MessageHeaderResponse> get copyWith =>
       __$MessageHeaderResponseCopyWithImpl<_MessageHeaderResponse>(
@@ -1198,6 +1203,7 @@ abstract class _MessageHeaderResponse extends MessageHeaderResponse {
   @override
   Reference get details;
   @override
+  @JsonKey(ignore: true)
   _$MessageHeaderResponseCopyWith<_MessageHeaderResponse> get copyWith;
 }
 
@@ -1271,6 +1277,7 @@ mixin _$MessageHeaderSource {
   Element get endpointElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MessageHeaderSourceCopyWith<MessageHeaderSource> get copyWith;
 }
 
@@ -1604,6 +1611,7 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
       const DeepCollectionEquality().hash(endpoint) ^
       const DeepCollectionEquality().hash(endpointElement);
 
+  @JsonKey(ignore: true)
   @override
   _$MessageHeaderSourceCopyWith<_MessageHeaderSource> get copyWith =>
       __$MessageHeaderSourceCopyWithImpl<_MessageHeaderSource>(
@@ -1666,6 +1674,7 @@ abstract class _MessageHeaderSource extends MessageHeaderSource {
   @JsonKey(name: '_endpoint')
   Element get endpointElement;
   @override
+  @JsonKey(ignore: true)
   _$MessageHeaderSourceCopyWith<_MessageHeaderSource> get copyWith;
 }
 
@@ -1726,6 +1735,7 @@ mixin _$MessageHeaderDestination {
   Element get endpointElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MessageHeaderDestinationCopyWith<MessageHeaderDestination> get copyWith;
 }
 
@@ -1971,6 +1981,7 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
       const DeepCollectionEquality().hash(endpoint) ^
       const DeepCollectionEquality().hash(endpointElement);
 
+  @JsonKey(ignore: true)
   @override
   _$MessageHeaderDestinationCopyWith<_MessageHeaderDestination> get copyWith =>
       __$MessageHeaderDestinationCopyWithImpl<_MessageHeaderDestination>(
@@ -2019,6 +2030,7 @@ abstract class _MessageHeaderDestination extends MessageHeaderDestination {
   @JsonKey(name: '_endpoint')
   Element get endpointElement;
   @override
+  @JsonKey(ignore: true)
   _$MessageHeaderDestinationCopyWith<_MessageHeaderDestination> get copyWith;
 }
 
@@ -2102,6 +2114,7 @@ mixin _$OperationOutcome {
   List<OperationOutcomeIssue> get issue;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OperationOutcomeCopyWith<OperationOutcome> get copyWith;
 }
 
@@ -2474,6 +2487,7 @@ class _$_OperationOutcome extends _OperationOutcome {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(issue);
 
+  @JsonKey(ignore: true)
   @override
   _$OperationOutcomeCopyWith<_OperationOutcome> get copyWith =>
       __$OperationOutcomeCopyWithImpl<_OperationOutcome>(this, _$identity);
@@ -2544,6 +2558,7 @@ abstract class _OperationOutcome extends OperationOutcome {
   @JsonKey(required: true)
   List<OperationOutcomeIssue> get issue;
   @override
+  @JsonKey(ignore: true)
   _$OperationOutcomeCopyWith<_OperationOutcome> get copyWith;
 }
 
@@ -2608,6 +2623,7 @@ mixin _$OperationOutcomeIssue {
   List<String> get location;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $OperationOutcomeIssueCopyWith<OperationOutcomeIssue> get copyWith;
 }
 
@@ -2838,6 +2854,7 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
       const DeepCollectionEquality().hash(diagnostics) ^
       const DeepCollectionEquality().hash(location);
 
+  @JsonKey(ignore: true)
   @override
   _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith =>
       __$OperationOutcomeIssueCopyWithImpl<_OperationOutcomeIssue>(
@@ -2889,6 +2906,7 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
   @override
   List<String> get location;
   @override
+  @JsonKey(ignore: true)
   _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith;
 }
 
@@ -2950,6 +2968,7 @@ mixin _$Parameters {
   List<ParametersParameter> get parameter;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ParametersCopyWith<Parameters> get copyWith;
 }
 
@@ -3206,6 +3225,7 @@ class _$_Parameters extends _Parameters {
       const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(parameter);
 
+  @JsonKey(ignore: true)
   @override
   _$ParametersCopyWith<_Parameters> get copyWith =>
       __$ParametersCopyWithImpl<_Parameters>(this, _$identity);
@@ -3254,6 +3274,7 @@ abstract class _Parameters extends Parameters {
   @override
   List<ParametersParameter> get parameter;
   @override
+  @JsonKey(ignore: true)
   _$ParametersCopyWith<_Parameters> get copyWith;
 }
 
@@ -3419,6 +3440,7 @@ mixin _$ParametersParameter {
   List<ParametersParameter> get part_;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ParametersParameterCopyWith<ParametersParameter> get copyWith;
 }
 
@@ -4436,6 +4458,7 @@ class _$_ParametersParameter extends _ParametersParameter {
       const DeepCollectionEquality().hash(resource) ^
       const DeepCollectionEquality().hash(part_);
 
+  @JsonKey(ignore: true)
   @override
   _$ParametersParameterCopyWith<_ParametersParameter> get copyWith =>
       __$ParametersParameterCopyWithImpl<_ParametersParameter>(
@@ -4590,6 +4613,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @JsonKey(name: 'part')
   List<ParametersParameter> get part_;
   @override
+  @JsonKey(ignore: true)
   _$ParametersParameterCopyWith<_ParametersParameter> get copyWith;
 }
 
@@ -4723,6 +4747,7 @@ mixin _$Subscription {
   List<Coding> get tag;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubscriptionCopyWith<Subscription> get copyWith;
 }
 
@@ -5349,6 +5374,7 @@ class _$_Subscription extends _Subscription {
       const DeepCollectionEquality().hash(endElement) ^
       const DeepCollectionEquality().hash(tag);
 
+  @JsonKey(ignore: true)
   @override
   _$SubscriptionCopyWith<_Subscription> get copyWith =>
       __$SubscriptionCopyWithImpl<_Subscription>(this, _$identity);
@@ -5469,6 +5495,7 @@ abstract class _Subscription extends Subscription {
   @override
   List<Coding> get tag;
   @override
+  @JsonKey(ignore: true)
   _$SubscriptionCopyWith<_Subscription> get copyWith;
 }
 
@@ -5549,6 +5576,7 @@ mixin _$SubscriptionChannel {
   List<Element> get headerElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubscriptionChannelCopyWith<SubscriptionChannel> get copyWith;
 }
 
@@ -5867,6 +5895,7 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
       const DeepCollectionEquality().hash(header) ^
       const DeepCollectionEquality().hash(headerElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SubscriptionChannelCopyWith<_SubscriptionChannel> get copyWith =>
       __$SubscriptionChannelCopyWithImpl<_SubscriptionChannel>(
@@ -5935,5 +5964,6 @@ abstract class _SubscriptionChannel extends SubscriptionChannel {
   @JsonKey(name: '_header')
   List<Element> get headerElement;
   @override
+  @JsonKey(ignore: true)
   _$SubscriptionChannelCopyWith<_SubscriptionChannel> get copyWith;
 }

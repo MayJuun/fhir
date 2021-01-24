@@ -238,6 +238,7 @@ mixin _$EffectEvidenceSynthesis {
   List<EffectEvidenceSynthesisCertainty> get certainty;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EffectEvidenceSynthesisCopyWith<EffectEvidenceSynthesis> get copyWith;
 }
 
@@ -1483,6 +1484,7 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
       const DeepCollectionEquality().hash(effectEstimate) ^
       const DeepCollectionEquality().hash(certainty);
 
+  @JsonKey(ignore: true)
   @override
   _$EffectEvidenceSynthesisCopyWith<_EffectEvidenceSynthesis> get copyWith =>
       __$EffectEvidenceSynthesisCopyWithImpl<_EffectEvidenceSynthesis>(
@@ -1704,6 +1706,7 @@ abstract class _EffectEvidenceSynthesis extends EffectEvidenceSynthesis {
   @override
   List<EffectEvidenceSynthesisCertainty> get certainty;
   @override
+  @JsonKey(ignore: true)
   _$EffectEvidenceSynthesisCopyWith<_EffectEvidenceSynthesis> get copyWith;
 }
 
@@ -1772,6 +1775,7 @@ mixin _$EffectEvidenceSynthesisSampleSize {
   Element get numberOfParticipantsElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EffectEvidenceSynthesisSampleSizeCopyWith<EffectEvidenceSynthesisSampleSize>
       get copyWith;
 }
@@ -2063,6 +2067,7 @@ class _$_EffectEvidenceSynthesisSampleSize
       const DeepCollectionEquality().hash(numberOfParticipants) ^
       const DeepCollectionEquality().hash(numberOfParticipantsElement);
 
+  @JsonKey(ignore: true)
   @override
   _$EffectEvidenceSynthesisSampleSizeCopyWith<
           _EffectEvidenceSynthesisSampleSize>
@@ -2121,6 +2126,7 @@ abstract class _EffectEvidenceSynthesisSampleSize
   @JsonKey(name: '_numberOfParticipants')
   Element get numberOfParticipantsElement;
   @override
+  @JsonKey(ignore: true)
   _$EffectEvidenceSynthesisSampleSizeCopyWith<
       _EffectEvidenceSynthesisSampleSize> get copyWith;
 }
@@ -2196,6 +2202,7 @@ mixin _$EffectEvidenceSynthesisResultsByExposure {
   Reference get riskEvidenceSynthesis;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EffectEvidenceSynthesisResultsByExposureCopyWith<
       EffectEvidenceSynthesisResultsByExposure> get copyWith;
 }
@@ -2516,6 +2523,7 @@ class _$_EffectEvidenceSynthesisResultsByExposure
       const DeepCollectionEquality().hash(variantState) ^
       const DeepCollectionEquality().hash(riskEvidenceSynthesis);
 
+  @JsonKey(ignore: true)
   @override
   _$EffectEvidenceSynthesisResultsByExposureCopyWith<
           _EffectEvidenceSynthesisResultsByExposure>
@@ -2579,6 +2587,7 @@ abstract class _EffectEvidenceSynthesisResultsByExposure
   @override
   Reference get riskEvidenceSynthesis;
   @override
+  @JsonKey(ignore: true)
   _$EffectEvidenceSynthesisResultsByExposureCopyWith<
       _EffectEvidenceSynthesisResultsByExposure> get copyWith;
 }
@@ -2649,6 +2658,7 @@ mixin _$EffectEvidenceSynthesisEffectEstimate {
   List<EffectEvidenceSynthesisPrecisionEstimate> get precisionEstimate;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EffectEvidenceSynthesisEffectEstimateCopyWith<
       EffectEvidenceSynthesisEffectEstimate> get copyWith;
 }
@@ -2980,6 +2990,7 @@ class _$_EffectEvidenceSynthesisEffectEstimate
       const DeepCollectionEquality().hash(unitOfMeasure) ^
       const DeepCollectionEquality().hash(precisionEstimate);
 
+  @JsonKey(ignore: true)
   @override
   _$EffectEvidenceSynthesisEffectEstimateCopyWith<
           _EffectEvidenceSynthesisEffectEstimate>
@@ -3039,6 +3050,7 @@ abstract class _EffectEvidenceSynthesisEffectEstimate
   @override
   List<EffectEvidenceSynthesisPrecisionEstimate> get precisionEstimate;
   @override
+  @JsonKey(ignore: true)
   _$EffectEvidenceSynthesisEffectEstimateCopyWith<
       _EffectEvidenceSynthesisEffectEstimate> get copyWith;
 }
@@ -3108,6 +3120,7 @@ mixin _$EffectEvidenceSynthesisPrecisionEstimate {
   Element get toElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EffectEvidenceSynthesisPrecisionEstimateCopyWith<
       EffectEvidenceSynthesisPrecisionEstimate> get copyWith;
 }
@@ -3397,6 +3410,7 @@ class _$_EffectEvidenceSynthesisPrecisionEstimate
       const DeepCollectionEquality().hash(to) ^
       const DeepCollectionEquality().hash(toElement);
 
+  @JsonKey(ignore: true)
   @override
   _$EffectEvidenceSynthesisPrecisionEstimateCopyWith<
           _EffectEvidenceSynthesisPrecisionEstimate>
@@ -3454,6 +3468,7 @@ abstract class _EffectEvidenceSynthesisPrecisionEstimate
   @JsonKey(name: '_to')
   Element get toElement;
   @override
+  @JsonKey(ignore: true)
   _$EffectEvidenceSynthesisPrecisionEstimateCopyWith<
       _EffectEvidenceSynthesisPrecisionEstimate> get copyWith;
 }
@@ -3508,6 +3523,7 @@ mixin _$EffectEvidenceSynthesisCertainty {
   List<EffectEvidenceSynthesisCertaintySubcomponent> get certaintySubcomponent;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EffectEvidenceSynthesisCertaintyCopyWith<EffectEvidenceSynthesisCertainty>
       get copyWith;
 }
@@ -3693,6 +3709,7 @@ class _$_EffectEvidenceSynthesisCertainty
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(certaintySubcomponent);
 
+  @JsonKey(ignore: true)
   @override
   _$EffectEvidenceSynthesisCertaintyCopyWith<_EffectEvidenceSynthesisCertainty>
       get copyWith => __$EffectEvidenceSynthesisCertaintyCopyWithImpl<
@@ -3733,6 +3750,7 @@ abstract class _EffectEvidenceSynthesisCertainty
   @override
   List<EffectEvidenceSynthesisCertaintySubcomponent> get certaintySubcomponent;
   @override
+  @JsonKey(ignore: true)
   _$EffectEvidenceSynthesisCertaintyCopyWith<_EffectEvidenceSynthesisCertainty>
       get copyWith;
 }
@@ -3788,6 +3806,7 @@ mixin _$EffectEvidenceSynthesisCertaintySubcomponent {
   List<Annotation> get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EffectEvidenceSynthesisCertaintySubcomponentCopyWith<
       EffectEvidenceSynthesisCertaintySubcomponent> get copyWith;
 }
@@ -3980,6 +3999,7 @@ class _$_EffectEvidenceSynthesisCertaintySubcomponent
       const DeepCollectionEquality().hash(rating) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$EffectEvidenceSynthesisCertaintySubcomponentCopyWith<
           _EffectEvidenceSynthesisCertaintySubcomponent>
@@ -4022,6 +4042,7 @@ abstract class _EffectEvidenceSynthesisCertaintySubcomponent
   @override
   List<Annotation> get note;
   @override
+  @JsonKey(ignore: true)
   _$EffectEvidenceSynthesisCertaintySubcomponentCopyWith<
       _EffectEvidenceSynthesisCertaintySubcomponent> get copyWith;
 }
@@ -4247,6 +4268,7 @@ mixin _$Evidence {
   List<Reference> get outcome;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceCopyWith<Evidence> get copyWith;
 }
 
@@ -5385,6 +5407,7 @@ class _$_Evidence extends _Evidence {
       const DeepCollectionEquality().hash(exposureVariant) ^
       const DeepCollectionEquality().hash(outcome);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceCopyWith<_Evidence> get copyWith =>
       __$EvidenceCopyWithImpl<_Evidence>(this, _$identity);
@@ -5595,6 +5618,7 @@ abstract class _Evidence extends Evidence {
   @override
   List<Reference> get outcome;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceCopyWith<_Evidence> get copyWith;
 }
 
@@ -5823,6 +5847,7 @@ mixin _$EvidenceVariable {
   List<EvidenceVariableCharacteristic> get characteristic;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceVariableCopyWith<EvidenceVariable> get copyWith;
 }
 
@@ -6975,6 +7000,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       const DeepCollectionEquality().hash(typeElement) ^
       const DeepCollectionEquality().hash(characteristic);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceVariableCopyWith<_EvidenceVariable> get copyWith =>
       __$EvidenceVariableCopyWithImpl<_EvidenceVariable>(this, _$identity);
@@ -7191,6 +7217,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @override
   List<EvidenceVariableCharacteristic> get characteristic;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceVariableCopyWith<_EvidenceVariable> get copyWith;
 }
 
@@ -7310,6 +7337,7 @@ mixin _$EvidenceVariableCharacteristic {
   Element get groupMeasureElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $EvidenceVariableCharacteristicCopyWith<EvidenceVariableCharacteristic>
       get copyWith;
 }
@@ -7992,6 +8020,7 @@ class _$_EvidenceVariableCharacteristic
       const DeepCollectionEquality().hash(groupMeasure) ^
       const DeepCollectionEquality().hash(groupMeasureElement);
 
+  @JsonKey(ignore: true)
   @override
   _$EvidenceVariableCharacteristicCopyWith<_EvidenceVariableCharacteristic>
       get copyWith => __$EvidenceVariableCharacteristicCopyWithImpl<
@@ -8095,6 +8124,7 @@ abstract class _EvidenceVariableCharacteristic
   @JsonKey(name: '_groupMeasure')
   Element get groupMeasureElement;
   @override
+  @JsonKey(ignore: true)
   _$EvidenceVariableCharacteristicCopyWith<_EvidenceVariableCharacteristic>
       get copyWith;
 }
@@ -8363,6 +8393,7 @@ mixin _$ResearchDefinition {
   Reference get outcome;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ResearchDefinitionCopyWith<ResearchDefinition> get copyWith;
 }
 
@@ -9785,6 +9816,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
       const DeepCollectionEquality().hash(exposureAlternative) ^
       const DeepCollectionEquality().hash(outcome);
 
+  @JsonKey(ignore: true)
   @override
   _$ResearchDefinitionCopyWith<_ResearchDefinition> get copyWith =>
       __$ResearchDefinitionCopyWithImpl<_ResearchDefinition>(this, _$identity);
@@ -10039,6 +10071,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
   @override
   Reference get outcome;
   @override
+  @JsonKey(ignore: true)
   _$ResearchDefinitionCopyWith<_ResearchDefinition> get copyWith;
 }
 
@@ -10319,6 +10352,7 @@ mixin _$ResearchElementDefinition {
   List<ResearchElementDefinitionCharacteristic> get characteristic;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ResearchElementDefinitionCopyWith<ResearchElementDefinition> get copyWith;
 }
 
@@ -11753,6 +11787,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
       const DeepCollectionEquality().hash(variableTypeElement) ^
       const DeepCollectionEquality().hash(characteristic);
 
+  @JsonKey(ignore: true)
   @override
   _$ResearchElementDefinitionCopyWith<_ResearchElementDefinition>
       get copyWith =>
@@ -12021,6 +12056,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   @override
   List<ResearchElementDefinitionCharacteristic> get characteristic;
   @override
+  @JsonKey(ignore: true)
   _$ResearchElementDefinitionCopyWith<_ResearchElementDefinition> get copyWith;
 }
 
@@ -12191,6 +12227,7 @@ mixin _$ResearchElementDefinitionCharacteristic {
   Element get participantEffectiveGroupMeasureElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ResearchElementDefinitionCharacteristicCopyWith<
       ResearchElementDefinitionCharacteristic> get copyWith;
 }
@@ -13154,6 +13191,7 @@ class _$_ResearchElementDefinitionCharacteristic
       const DeepCollectionEquality()
           .hash(participantEffectiveGroupMeasureElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ResearchElementDefinitionCharacteristicCopyWith<
           _ResearchElementDefinitionCharacteristic>
@@ -13311,6 +13349,7 @@ abstract class _ResearchElementDefinitionCharacteristic
   @JsonKey(name: '_participantEffectiveGroupMeasure')
   Element get participantEffectiveGroupMeasureElement;
   @override
+  @JsonKey(ignore: true)
   _$ResearchElementDefinitionCharacteristicCopyWith<
       _ResearchElementDefinitionCharacteristic> get copyWith;
 }
@@ -13537,6 +13576,7 @@ mixin _$RiskEvidenceSynthesis {
   List<RiskEvidenceSynthesisCertainty> get certainty;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RiskEvidenceSynthesisCopyWith<RiskEvidenceSynthesis> get copyWith;
 }
 
@@ -14748,6 +14788,7 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
       const DeepCollectionEquality().hash(riskEstimate) ^
       const DeepCollectionEquality().hash(certainty);
 
+  @JsonKey(ignore: true)
   @override
   _$RiskEvidenceSynthesisCopyWith<_RiskEvidenceSynthesis> get copyWith =>
       __$RiskEvidenceSynthesisCopyWithImpl<_RiskEvidenceSynthesis>(
@@ -14961,6 +15002,7 @@ abstract class _RiskEvidenceSynthesis extends RiskEvidenceSynthesis {
   @override
   List<RiskEvidenceSynthesisCertainty> get certainty;
   @override
+  @JsonKey(ignore: true)
   _$RiskEvidenceSynthesisCopyWith<_RiskEvidenceSynthesis> get copyWith;
 }
 
@@ -15029,6 +15071,7 @@ mixin _$RiskEvidenceSynthesisSampleSize {
   Element get numberOfParticipantsElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RiskEvidenceSynthesisSampleSizeCopyWith<RiskEvidenceSynthesisSampleSize>
       get copyWith;
 }
@@ -15320,6 +15363,7 @@ class _$_RiskEvidenceSynthesisSampleSize
       const DeepCollectionEquality().hash(numberOfParticipants) ^
       const DeepCollectionEquality().hash(numberOfParticipantsElement);
 
+  @JsonKey(ignore: true)
   @override
   _$RiskEvidenceSynthesisSampleSizeCopyWith<_RiskEvidenceSynthesisSampleSize>
       get copyWith => __$RiskEvidenceSynthesisSampleSizeCopyWithImpl<
@@ -15376,6 +15420,7 @@ abstract class _RiskEvidenceSynthesisSampleSize
   @JsonKey(name: '_numberOfParticipants')
   Element get numberOfParticipantsElement;
   @override
+  @JsonKey(ignore: true)
   _$RiskEvidenceSynthesisSampleSizeCopyWith<_RiskEvidenceSynthesisSampleSize>
       get copyWith;
 }
@@ -15457,6 +15502,7 @@ mixin _$RiskEvidenceSynthesisRiskEstimate {
   List<RiskEvidenceSynthesisPrecisionEstimate> get precisionEstimate;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RiskEvidenceSynthesisRiskEstimateCopyWith<RiskEvidenceSynthesisRiskEstimate>
       get copyWith;
 }
@@ -15854,6 +15900,7 @@ class _$_RiskEvidenceSynthesisRiskEstimate
       const DeepCollectionEquality().hash(numeratorCountElement) ^
       const DeepCollectionEquality().hash(precisionEstimate);
 
+  @JsonKey(ignore: true)
   @override
   _$RiskEvidenceSynthesisRiskEstimateCopyWith<
           _RiskEvidenceSynthesisRiskEstimate>
@@ -15924,6 +15971,7 @@ abstract class _RiskEvidenceSynthesisRiskEstimate
   @override
   List<RiskEvidenceSynthesisPrecisionEstimate> get precisionEstimate;
   @override
+  @JsonKey(ignore: true)
   _$RiskEvidenceSynthesisRiskEstimateCopyWith<
       _RiskEvidenceSynthesisRiskEstimate> get copyWith;
 }
@@ -15993,6 +16041,7 @@ mixin _$RiskEvidenceSynthesisPrecisionEstimate {
   Element get toElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RiskEvidenceSynthesisPrecisionEstimateCopyWith<
       RiskEvidenceSynthesisPrecisionEstimate> get copyWith;
 }
@@ -16281,6 +16330,7 @@ class _$_RiskEvidenceSynthesisPrecisionEstimate
       const DeepCollectionEquality().hash(to) ^
       const DeepCollectionEquality().hash(toElement);
 
+  @JsonKey(ignore: true)
   @override
   _$RiskEvidenceSynthesisPrecisionEstimateCopyWith<
           _RiskEvidenceSynthesisPrecisionEstimate>
@@ -16338,6 +16388,7 @@ abstract class _RiskEvidenceSynthesisPrecisionEstimate
   @JsonKey(name: '_to')
   Element get toElement;
   @override
+  @JsonKey(ignore: true)
   _$RiskEvidenceSynthesisPrecisionEstimateCopyWith<
       _RiskEvidenceSynthesisPrecisionEstimate> get copyWith;
 }
@@ -16391,6 +16442,7 @@ mixin _$RiskEvidenceSynthesisCertainty {
   List<RiskEvidenceSynthesisCertaintySubcomponent> get certaintySubcomponent;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RiskEvidenceSynthesisCertaintyCopyWith<RiskEvidenceSynthesisCertainty>
       get copyWith;
 }
@@ -16573,6 +16625,7 @@ class _$_RiskEvidenceSynthesisCertainty
       const DeepCollectionEquality().hash(note) ^
       const DeepCollectionEquality().hash(certaintySubcomponent);
 
+  @JsonKey(ignore: true)
   @override
   _$RiskEvidenceSynthesisCertaintyCopyWith<_RiskEvidenceSynthesisCertainty>
       get copyWith => __$RiskEvidenceSynthesisCertaintyCopyWithImpl<
@@ -16613,6 +16666,7 @@ abstract class _RiskEvidenceSynthesisCertainty
   @override
   List<RiskEvidenceSynthesisCertaintySubcomponent> get certaintySubcomponent;
   @override
+  @JsonKey(ignore: true)
   _$RiskEvidenceSynthesisCertaintyCopyWith<_RiskEvidenceSynthesisCertainty>
       get copyWith;
 }
@@ -16668,6 +16722,7 @@ mixin _$RiskEvidenceSynthesisCertaintySubcomponent {
   List<Annotation> get note;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RiskEvidenceSynthesisCertaintySubcomponentCopyWith<
       RiskEvidenceSynthesisCertaintySubcomponent> get copyWith;
 }
@@ -16860,6 +16915,7 @@ class _$_RiskEvidenceSynthesisCertaintySubcomponent
       const DeepCollectionEquality().hash(rating) ^
       const DeepCollectionEquality().hash(note);
 
+  @JsonKey(ignore: true)
   @override
   _$RiskEvidenceSynthesisCertaintySubcomponentCopyWith<
           _RiskEvidenceSynthesisCertaintySubcomponent>
@@ -16901,6 +16957,7 @@ abstract class _RiskEvidenceSynthesisCertaintySubcomponent
   @override
   List<Annotation> get note;
   @override
+  @JsonKey(ignore: true)
   _$RiskEvidenceSynthesisCertaintySubcomponentCopyWith<
       _RiskEvidenceSynthesisCertaintySubcomponent> get copyWith;
 }

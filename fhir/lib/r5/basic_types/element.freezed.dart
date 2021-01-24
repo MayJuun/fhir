@@ -42,6 +42,7 @@ mixin _$Element {
   List<FhirExtension> get extension_;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ElementCopyWith<Element> get copyWith;
 }
 
@@ -145,6 +146,7 @@ class _$_Element extends _Element {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_);
 
+  @JsonKey(ignore: true)
   @override
   _$ElementCopyWith<_Element> get copyWith =>
       __$ElementCopyWithImpl<_Element>(this, _$identity);
@@ -169,5 +171,6 @@ abstract class _Element extends Element {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   @override
+  @JsonKey(ignore: true)
   _$ElementCopyWith<_Element> get copyWith;
 }

@@ -125,6 +125,7 @@ mixin _$ExplanationOfBenefit {
   Reference get requestOrganization;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ExplanationOfBenefitCopyWith<ExplanationOfBenefit> get copyWith;
 }
 
@@ -783,6 +784,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
       const DeepCollectionEquality().hash(requestProvider) ^
       const DeepCollectionEquality().hash(requestOrganization);
 
+  @JsonKey(ignore: true)
   @override
   _$ExplanationOfBenefitCopyWith<_ExplanationOfBenefit> get copyWith =>
       __$ExplanationOfBenefitCopyWithImpl<_ExplanationOfBenefit>(
@@ -890,5 +892,6 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @override
   Reference get requestOrganization;
   @override
+  @JsonKey(ignore: true)
   _$ExplanationOfBenefitCopyWith<_ExplanationOfBenefit> get copyWith;
 }

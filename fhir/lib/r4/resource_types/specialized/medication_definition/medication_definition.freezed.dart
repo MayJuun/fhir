@@ -145,6 +145,7 @@ mixin _$MedicinalProduct {
   List<MedicinalProductSpecialDesignation> get specialDesignation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductCopyWith<MedicinalProduct> get copyWith;
 }
 
@@ -875,6 +876,7 @@ class _$_MedicinalProduct extends _MedicinalProduct {
       const DeepCollectionEquality().hash(manufacturingBusinessOperation) ^
       const DeepCollectionEquality().hash(specialDesignation);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductCopyWith<_MedicinalProduct> get copyWith =>
       __$MedicinalProductCopyWithImpl<_MedicinalProduct>(this, _$identity);
@@ -1003,6 +1005,7 @@ abstract class _MedicinalProduct extends MedicinalProduct {
   @override
   List<MedicinalProductSpecialDesignation> get specialDesignation;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductCopyWith<_MedicinalProduct> get copyWith;
 }
 
@@ -1057,6 +1060,7 @@ mixin _$MedicinalProductName {
   List<MedicinalProductCountryLanguage> get countryLanguage;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductNameCopyWith<MedicinalProductName> get copyWith;
 }
 
@@ -1269,6 +1273,7 @@ class _$_MedicinalProductName extends _MedicinalProductName {
       const DeepCollectionEquality().hash(namePart) ^
       const DeepCollectionEquality().hash(countryLanguage);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductNameCopyWith<_MedicinalProductName> get copyWith =>
       __$MedicinalProductNameCopyWithImpl<_MedicinalProductName>(
@@ -1312,6 +1317,7 @@ abstract class _MedicinalProductName extends MedicinalProductName {
   @override
   List<MedicinalProductCountryLanguage> get countryLanguage;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductNameCopyWith<_MedicinalProductName> get copyWith;
 }
 
@@ -1365,6 +1371,7 @@ mixin _$MedicinalProductNamePart {
   Coding get type;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductNamePartCopyWith<MedicinalProductNamePart> get copyWith;
 }
 
@@ -1566,6 +1573,7 @@ class _$_MedicinalProductNamePart extends _MedicinalProductNamePart {
       const DeepCollectionEquality().hash(partElement) ^
       const DeepCollectionEquality().hash(type);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductNamePartCopyWith<_MedicinalProductNamePart> get copyWith =>
       __$MedicinalProductNamePartCopyWithImpl<_MedicinalProductNamePart>(
@@ -1606,6 +1614,7 @@ abstract class _MedicinalProductNamePart extends MedicinalProductNamePart {
   @override
   Coding get type;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductNamePartCopyWith<_MedicinalProductNamePart> get copyWith;
 }
 
@@ -1658,6 +1667,7 @@ mixin _$MedicinalProductCountryLanguage {
   CodeableConcept get language;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductCountryLanguageCopyWith<MedicinalProductCountryLanguage>
       get copyWith;
 }
@@ -1883,6 +1893,7 @@ class _$_MedicinalProductCountryLanguage
       const DeepCollectionEquality().hash(jurisdiction) ^
       const DeepCollectionEquality().hash(language);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductCountryLanguageCopyWith<_MedicinalProductCountryLanguage>
       get copyWith => __$MedicinalProductCountryLanguageCopyWithImpl<
@@ -1922,6 +1933,7 @@ abstract class _MedicinalProductCountryLanguage
   @override
   CodeableConcept get language;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductCountryLanguageCopyWith<_MedicinalProductCountryLanguage>
       get copyWith;
 }
@@ -1990,6 +2002,7 @@ mixin _$MedicinalProductManufacturingBusinessOperation {
   Reference get regulator;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductManufacturingBusinessOperationCopyWith<
       MedicinalProductManufacturingBusinessOperation> get copyWith;
 }
@@ -2320,6 +2333,7 @@ class _$_MedicinalProductManufacturingBusinessOperation
       const DeepCollectionEquality().hash(manufacturer) ^
       const DeepCollectionEquality().hash(regulator);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductManufacturingBusinessOperationCopyWith<
           _MedicinalProductManufacturingBusinessOperation>
@@ -2376,6 +2390,7 @@ abstract class _MedicinalProductManufacturingBusinessOperation
   @override
   Reference get regulator;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductManufacturingBusinessOperationCopyWith<
       _MedicinalProductManufacturingBusinessOperation> get copyWith;
 }
@@ -2448,6 +2463,7 @@ mixin _$MedicinalProductSpecialDesignation {
   CodeableConcept get species;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductSpecialDesignationCopyWith<
       MedicinalProductSpecialDesignation> get copyWith;
 }
@@ -2813,6 +2829,7 @@ class _$_MedicinalProductSpecialDesignation
       const DeepCollectionEquality().hash(dateElement) ^
       const DeepCollectionEquality().hash(species);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductSpecialDesignationCopyWith<
           _MedicinalProductSpecialDesignation>
@@ -2873,6 +2890,7 @@ abstract class _MedicinalProductSpecialDesignation
   @override
   CodeableConcept get species;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductSpecialDesignationCopyWith<
       _MedicinalProductSpecialDesignation> get copyWith;
 }
@@ -3018,6 +3036,7 @@ mixin _$MedicinalProductAuthorization {
   MedicinalProductAuthorizationProcedure get procedure;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductAuthorizationCopyWith<MedicinalProductAuthorization>
       get copyWith;
 }
@@ -3835,6 +3854,7 @@ class _$_MedicinalProductAuthorization extends _MedicinalProductAuthorization {
       const DeepCollectionEquality().hash(regulator) ^
       const DeepCollectionEquality().hash(procedure);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductAuthorizationCopyWith<_MedicinalProductAuthorization>
       get copyWith => __$MedicinalProductAuthorizationCopyWithImpl<
@@ -3967,6 +3987,7 @@ abstract class _MedicinalProductAuthorization
   @override
   MedicinalProductAuthorizationProcedure get procedure;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductAuthorizationCopyWith<_MedicinalProductAuthorization>
       get copyWith;
 }
@@ -4030,6 +4051,7 @@ mixin _$MedicinalProductAuthorizationJurisdictionalAuthorization {
   Period get validityPeriod;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductAuthorizationJurisdictionalAuthorizationCopyWith<
       MedicinalProductAuthorizationJurisdictionalAuthorization> get copyWith;
 }
@@ -4313,6 +4335,7 @@ class _$_MedicinalProductAuthorizationJurisdictionalAuthorization
       const DeepCollectionEquality().hash(legalStatusOfSupply) ^
       const DeepCollectionEquality().hash(validityPeriod);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductAuthorizationJurisdictionalAuthorizationCopyWith<
           _MedicinalProductAuthorizationJurisdictionalAuthorization>
@@ -4364,6 +4387,7 @@ abstract class _MedicinalProductAuthorizationJurisdictionalAuthorization
   @override
   Period get validityPeriod;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductAuthorizationJurisdictionalAuthorizationCopyWith<
       _MedicinalProductAuthorizationJurisdictionalAuthorization> get copyWith;
 }
@@ -4428,6 +4452,7 @@ mixin _$MedicinalProductAuthorizationProcedure {
   List<MedicinalProductAuthorizationProcedure> get application;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductAuthorizationProcedureCopyWith<
       MedicinalProductAuthorizationProcedure> get copyWith;
 }
@@ -4715,6 +4740,7 @@ class _$_MedicinalProductAuthorizationProcedure
       const DeepCollectionEquality().hash(dateDateTimeElement) ^
       const DeepCollectionEquality().hash(application);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductAuthorizationProcedureCopyWith<
           _MedicinalProductAuthorizationProcedure>
@@ -4767,6 +4793,7 @@ abstract class _MedicinalProductAuthorizationProcedure
   @override
   List<MedicinalProductAuthorizationProcedure> get application;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductAuthorizationProcedureCopyWith<
       _MedicinalProductAuthorizationProcedure> get copyWith;
 }
@@ -4864,6 +4891,7 @@ mixin _$MedicinalProductContraindication {
   List<Population> get population;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductContraindicationCopyWith<MedicinalProductContraindication>
       get copyWith;
 }
@@ -5328,6 +5356,7 @@ class _$_MedicinalProductContraindication
       const DeepCollectionEquality().hash(otherTherapy) ^
       const DeepCollectionEquality().hash(population);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductContraindicationCopyWith<_MedicinalProductContraindication>
       get copyWith => __$MedicinalProductContraindicationCopyWithImpl<
@@ -5410,6 +5439,7 @@ abstract class _MedicinalProductContraindication
   @override
   List<Population> get population;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductContraindicationCopyWith<_MedicinalProductContraindication>
       get copyWith;
 }
@@ -5465,6 +5495,7 @@ mixin _$MedicinalProductContraindicationOtherTherapy {
   Reference get medicationReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductContraindicationOtherTherapyCopyWith<
       MedicinalProductContraindicationOtherTherapy> get copyWith;
 }
@@ -5702,6 +5733,7 @@ class _$_MedicinalProductContraindicationOtherTherapy
       const DeepCollectionEquality().hash(medicationCodeableConcept) ^
       const DeepCollectionEquality().hash(medicationReference);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductContraindicationOtherTherapyCopyWith<
           _MedicinalProductContraindicationOtherTherapy>
@@ -5745,6 +5777,7 @@ abstract class _MedicinalProductContraindicationOtherTherapy
   @override
   Reference get medicationReference;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductContraindicationOtherTherapyCopyWith<
       _MedicinalProductContraindicationOtherTherapy> get copyWith;
 }
@@ -5847,6 +5880,7 @@ mixin _$MedicinalProductIndication {
   List<Population> get population;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductIndicationCopyWith<MedicinalProductIndication> get copyWith;
 }
 
@@ -6368,6 +6402,7 @@ class _$_MedicinalProductIndication extends _MedicinalProductIndication {
       const DeepCollectionEquality().hash(undesirableEffect) ^
       const DeepCollectionEquality().hash(population);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductIndicationCopyWith<_MedicinalProductIndication>
       get copyWith => __$MedicinalProductIndicationCopyWithImpl<
@@ -6455,6 +6490,7 @@ abstract class _MedicinalProductIndication extends MedicinalProductIndication {
   @override
   List<Population> get population;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductIndicationCopyWith<_MedicinalProductIndication>
       get copyWith;
 }
@@ -6509,6 +6545,7 @@ mixin _$MedicinalProductIndicationOtherTherapy {
   Reference get medicationReference;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductIndicationOtherTherapyCopyWith<
       MedicinalProductIndicationOtherTherapy> get copyWith;
 }
@@ -6745,6 +6782,7 @@ class _$_MedicinalProductIndicationOtherTherapy
       const DeepCollectionEquality().hash(medicationCodeableConcept) ^
       const DeepCollectionEquality().hash(medicationReference);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductIndicationOtherTherapyCopyWith<
           _MedicinalProductIndicationOtherTherapy>
@@ -6787,6 +6825,7 @@ abstract class _MedicinalProductIndicationOtherTherapy
   @override
   Reference get medicationReference;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductIndicationOtherTherapyCopyWith<
       _MedicinalProductIndicationOtherTherapy> get copyWith;
 }
@@ -6886,6 +6925,7 @@ mixin _$MedicinalProductIngredient {
   MedicinalProductIngredientSubstance get substance;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductIngredientCopyWith<MedicinalProductIngredient> get copyWith;
 }
 
@@ -7383,6 +7423,7 @@ class _$_MedicinalProductIngredient extends _MedicinalProductIngredient {
       const DeepCollectionEquality().hash(specifiedSubstance) ^
       const DeepCollectionEquality().hash(substance);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductIngredientCopyWith<_MedicinalProductIngredient>
       get copyWith => __$MedicinalProductIngredientCopyWithImpl<
@@ -7468,6 +7509,7 @@ abstract class _MedicinalProductIngredient extends MedicinalProductIngredient {
   @override
   MedicinalProductIngredientSubstance get substance;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductIngredientCopyWith<_MedicinalProductIngredient>
       get copyWith;
 }
@@ -7526,6 +7568,7 @@ mixin _$MedicinalProductIngredientSpecifiedSubstance {
   List<MedicinalProductIngredientStrength> get strength;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductIngredientSpecifiedSubstanceCopyWith<
       MedicinalProductIngredientSpecifiedSubstance> get copyWith;
 }
@@ -7766,6 +7809,7 @@ class _$_MedicinalProductIngredientSpecifiedSubstance
       const DeepCollectionEquality().hash(confidentiality) ^
       const DeepCollectionEquality().hash(strength);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductIngredientSpecifiedSubstanceCopyWith<
           _MedicinalProductIngredientSpecifiedSubstance>
@@ -7812,6 +7856,7 @@ abstract class _MedicinalProductIngredientSpecifiedSubstance
   @override
   List<MedicinalProductIngredientStrength> get strength;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductIngredientSpecifiedSubstanceCopyWith<
       _MedicinalProductIngredientSpecifiedSubstance> get copyWith;
 }
@@ -7881,6 +7926,7 @@ mixin _$MedicinalProductIngredientStrength {
   List<MedicinalProductIngredientReferenceStrength> get referenceStrength;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductIngredientStrengthCopyWith<
       MedicinalProductIngredientStrength> get copyWith;
 }
@@ -8224,6 +8270,7 @@ class _$_MedicinalProductIngredientStrength
       const DeepCollectionEquality().hash(country) ^
       const DeepCollectionEquality().hash(referenceStrength);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductIngredientStrengthCopyWith<
           _MedicinalProductIngredientStrength>
@@ -8282,6 +8329,7 @@ abstract class _MedicinalProductIngredientStrength
   @override
   List<MedicinalProductIngredientReferenceStrength> get referenceStrength;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductIngredientStrengthCopyWith<
       _MedicinalProductIngredientStrength> get copyWith;
 }
@@ -8347,6 +8395,7 @@ mixin _$MedicinalProductIngredientReferenceStrength {
   List<CodeableConcept> get country;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductIngredientReferenceStrengthCopyWith<
       MedicinalProductIngredientReferenceStrength> get copyWith;
 }
@@ -8640,6 +8689,7 @@ class _$_MedicinalProductIngredientReferenceStrength
       const DeepCollectionEquality().hash(measurementPointElement) ^
       const DeepCollectionEquality().hash(country);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductIngredientReferenceStrengthCopyWith<
           _MedicinalProductIngredientReferenceStrength>
@@ -8693,6 +8743,7 @@ abstract class _MedicinalProductIngredientReferenceStrength
   @override
   List<CodeableConcept> get country;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductIngredientReferenceStrengthCopyWith<
       _MedicinalProductIngredientReferenceStrength> get copyWith;
 }
@@ -8743,6 +8794,7 @@ mixin _$MedicinalProductIngredientSubstance {
   List<MedicinalProductIngredientStrength> get strength;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductIngredientSubstanceCopyWith<
       MedicinalProductIngredientSubstance> get copyWith;
 }
@@ -8925,6 +8977,7 @@ class _$_MedicinalProductIngredientSubstance
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(strength);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductIngredientSubstanceCopyWith<
           _MedicinalProductIngredientSubstance>
@@ -8964,6 +9017,7 @@ abstract class _MedicinalProductIngredientSubstance
   @override
   List<MedicinalProductIngredientStrength> get strength;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductIngredientSubstanceCopyWith<
       _MedicinalProductIngredientSubstance> get copyWith;
 }
@@ -9065,6 +9119,7 @@ mixin _$MedicinalProductInteraction {
   CodeableConcept get management;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductInteractionCopyWith<MedicinalProductInteraction>
       get copyWith;
 }
@@ -9579,6 +9634,7 @@ class _$_MedicinalProductInteraction extends _MedicinalProductInteraction {
       const DeepCollectionEquality().hash(incidence) ^
       const DeepCollectionEquality().hash(management);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductInteractionCopyWith<_MedicinalProductInteraction>
       get copyWith => __$MedicinalProductInteractionCopyWithImpl<
@@ -9666,6 +9722,7 @@ abstract class _MedicinalProductInteraction
   @override
   CodeableConcept get management;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductInteractionCopyWith<_MedicinalProductInteraction>
       get copyWith;
 }
@@ -9717,6 +9774,7 @@ mixin _$MedicinalProductInteractionInteractant {
   CodeableConcept get itemCodeableConcept;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductInteractionInteractantCopyWith<
       MedicinalProductInteractionInteractant> get copyWith;
 }
@@ -9917,6 +9975,7 @@ class _$_MedicinalProductInteractionInteractant
       const DeepCollectionEquality().hash(itemReference) ^
       const DeepCollectionEquality().hash(itemCodeableConcept);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductInteractionInteractantCopyWith<
           _MedicinalProductInteractionInteractant>
@@ -9956,6 +10015,7 @@ abstract class _MedicinalProductInteractionInteractant
   @override
   CodeableConcept get itemCodeableConcept;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductInteractionInteractantCopyWith<
       _MedicinalProductInteractionInteractant> get copyWith;
 }
@@ -10054,6 +10114,7 @@ mixin _$MedicinalProductManufactured {
   List<CodeableConcept> get otherCharacteristics;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductManufacturedCopyWith<MedicinalProductManufactured>
       get copyWith;
 }
@@ -10552,6 +10613,7 @@ class _$_MedicinalProductManufactured extends _MedicinalProductManufactured {
       const DeepCollectionEquality().hash(physicalCharacteristics) ^
       const DeepCollectionEquality().hash(otherCharacteristics);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductManufacturedCopyWith<_MedicinalProductManufactured>
       get copyWith => __$MedicinalProductManufacturedCopyWithImpl<
@@ -10637,6 +10699,7 @@ abstract class _MedicinalProductManufactured
   @override
   List<CodeableConcept> get otherCharacteristics;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductManufacturedCopyWith<_MedicinalProductManufactured>
       get copyWith;
 }
@@ -10744,6 +10807,7 @@ mixin _$MedicinalProductPackaged {
   List<MedicinalProductPackagedPackageItem> get packageItem;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductPackagedCopyWith<MedicinalProductPackaged> get copyWith;
 }
 
@@ -11274,6 +11338,7 @@ class _$_MedicinalProductPackaged extends _MedicinalProductPackaged {
       const DeepCollectionEquality().hash(batchIdentifier) ^
       const DeepCollectionEquality().hash(packageItem);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductPackagedCopyWith<_MedicinalProductPackaged> get copyWith =>
       __$MedicinalProductPackagedCopyWithImpl<_MedicinalProductPackaged>(
@@ -11368,6 +11433,7 @@ abstract class _MedicinalProductPackaged extends MedicinalProductPackaged {
   @override
   List<MedicinalProductPackagedPackageItem> get packageItem;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductPackagedCopyWith<_MedicinalProductPackaged> get copyWith;
 }
 
@@ -11418,6 +11484,7 @@ mixin _$MedicinalProductPackagedBatchIdentifier {
   Identifier get immediatePackaging;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductPackagedBatchIdentifierCopyWith<
       MedicinalProductPackagedBatchIdentifier> get copyWith;
 }
@@ -11620,6 +11687,7 @@ class _$_MedicinalProductPackagedBatchIdentifier
       const DeepCollectionEquality().hash(outerPackaging) ^
       const DeepCollectionEquality().hash(immediatePackaging);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductPackagedBatchIdentifierCopyWith<
           _MedicinalProductPackagedBatchIdentifier>
@@ -11659,6 +11727,7 @@ abstract class _MedicinalProductPackagedBatchIdentifier
   @override
   Identifier get immediatePackaging;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductPackagedBatchIdentifierCopyWith<
       _MedicinalProductPackagedBatchIdentifier> get copyWith;
 }
@@ -11739,6 +11808,7 @@ mixin _$MedicinalProductPackagedPackageItem {
   List<Reference> get manufacturer;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductPackagedPackageItemCopyWith<
       MedicinalProductPackagedPackageItem> get copyWith;
 }
@@ -12111,6 +12181,7 @@ class _$_MedicinalProductPackagedPackageItem
       const DeepCollectionEquality().hash(shelfLifeStorage) ^
       const DeepCollectionEquality().hash(manufacturer);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductPackagedPackageItemCopyWith<
           _MedicinalProductPackagedPackageItem>
@@ -12179,6 +12250,7 @@ abstract class _MedicinalProductPackagedPackageItem
   @override
   List<Reference> get manufacturer;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductPackagedPackageItemCopyWith<
       _MedicinalProductPackagedPackageItem> get copyWith;
 }
@@ -12280,6 +12352,7 @@ mixin _$MedicinalProductPharmaceutical {
       get routeOfAdministration;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductPharmaceuticalCopyWith<MedicinalProductPharmaceutical>
       get copyWith;
 }
@@ -12759,6 +12832,7 @@ class _$_MedicinalProductPharmaceutical
       const DeepCollectionEquality().hash(characteristics) ^
       const DeepCollectionEquality().hash(routeOfAdministration);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductPharmaceuticalCopyWith<_MedicinalProductPharmaceutical>
       get copyWith => __$MedicinalProductPharmaceuticalCopyWithImpl<
@@ -12845,6 +12919,7 @@ abstract class _MedicinalProductPharmaceutical
   List<MedicinalProductPharmaceuticalRouteOfAdministration>
       get routeOfAdministration;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductPharmaceuticalCopyWith<_MedicinalProductPharmaceutical>
       get copyWith;
 }
@@ -12897,6 +12972,7 @@ mixin _$MedicinalProductPharmaceuticalCharacteristics {
   CodeableConcept get status;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductPharmaceuticalCharacteristicsCopyWith<
       MedicinalProductPharmaceuticalCharacteristics> get copyWith;
 }
@@ -13089,6 +13165,7 @@ class _$_MedicinalProductPharmaceuticalCharacteristics
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(status);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductPharmaceuticalCharacteristicsCopyWith<
           _MedicinalProductPharmaceuticalCharacteristics>
@@ -13129,6 +13206,7 @@ abstract class _MedicinalProductPharmaceuticalCharacteristics
   @override
   CodeableConcept get status;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductPharmaceuticalCharacteristicsCopyWith<
       _MedicinalProductPharmaceuticalCharacteristics> get copyWith;
 }
@@ -13196,6 +13274,7 @@ mixin _$MedicinalProductPharmaceuticalRouteOfAdministration {
   List<MedicinalProductPharmaceuticalTargetSpecies> get targetSpecies;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductPharmaceuticalRouteOfAdministrationCopyWith<
       MedicinalProductPharmaceuticalRouteOfAdministration> get copyWith;
 }
@@ -13541,6 +13620,7 @@ class _$_MedicinalProductPharmaceuticalRouteOfAdministration
       const DeepCollectionEquality().hash(maxTreatmentPeriod) ^
       const DeepCollectionEquality().hash(targetSpecies);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductPharmaceuticalRouteOfAdministrationCopyWith<
           _MedicinalProductPharmaceuticalRouteOfAdministration>
@@ -13597,6 +13677,7 @@ abstract class _MedicinalProductPharmaceuticalRouteOfAdministration
   @override
   List<MedicinalProductPharmaceuticalTargetSpecies> get targetSpecies;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductPharmaceuticalRouteOfAdministrationCopyWith<
       _MedicinalProductPharmaceuticalRouteOfAdministration> get copyWith;
 }
@@ -13649,6 +13730,7 @@ mixin _$MedicinalProductPharmaceuticalTargetSpecies {
   List<MedicinalProductPharmaceuticalWithdrawalPeriod> get withdrawalPeriod;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductPharmaceuticalTargetSpeciesCopyWith<
       MedicinalProductPharmaceuticalTargetSpecies> get copyWith;
 }
@@ -13835,6 +13917,7 @@ class _$_MedicinalProductPharmaceuticalTargetSpecies
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(withdrawalPeriod);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductPharmaceuticalTargetSpeciesCopyWith<
           _MedicinalProductPharmaceuticalTargetSpecies>
@@ -13875,6 +13958,7 @@ abstract class _MedicinalProductPharmaceuticalTargetSpecies
   @override
   List<MedicinalProductPharmaceuticalWithdrawalPeriod> get withdrawalPeriod;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductPharmaceuticalTargetSpeciesCopyWith<
       _MedicinalProductPharmaceuticalTargetSpecies> get copyWith;
 }
@@ -13938,6 +14022,7 @@ mixin _$MedicinalProductPharmaceuticalWithdrawalPeriod {
   Element get supportingInformationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductPharmaceuticalWithdrawalPeriodCopyWith<
       MedicinalProductPharmaceuticalWithdrawalPeriod> get copyWith;
 }
@@ -14189,6 +14274,7 @@ class _$_MedicinalProductPharmaceuticalWithdrawalPeriod
       const DeepCollectionEquality().hash(supportingInformation) ^
       const DeepCollectionEquality().hash(supportingInformationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductPharmaceuticalWithdrawalPeriodCopyWith<
           _MedicinalProductPharmaceuticalWithdrawalPeriod>
@@ -14241,6 +14327,7 @@ abstract class _MedicinalProductPharmaceuticalWithdrawalPeriod
   @JsonKey(name: '_supportingInformation')
   Element get supportingInformationElement;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductPharmaceuticalWithdrawalPeriodCopyWith<
       _MedicinalProductPharmaceuticalWithdrawalPeriod> get copyWith;
 }
@@ -14336,6 +14423,7 @@ mixin _$MedicinalProductUndesirableEffect {
   List<Population> get population;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MedicinalProductUndesirableEffectCopyWith<MedicinalProductUndesirableEffect>
       get copyWith;
 }
@@ -14791,6 +14879,7 @@ class _$_MedicinalProductUndesirableEffect
       const DeepCollectionEquality().hash(frequencyOfOccurrence) ^
       const DeepCollectionEquality().hash(population);
 
+  @JsonKey(ignore: true)
   @override
   _$MedicinalProductUndesirableEffectCopyWith<
           _MedicinalProductUndesirableEffect>
@@ -14869,6 +14958,7 @@ abstract class _MedicinalProductUndesirableEffect
   @override
   List<Population> get population;
   @override
+  @JsonKey(ignore: true)
   _$MedicinalProductUndesirableEffectCopyWith<
       _MedicinalProductUndesirableEffect> get copyWith;
 }
@@ -14967,6 +15057,7 @@ mixin _$SubstanceNucleicAcid {
   List<SubstanceNucleicAcidSubunit> get subunit;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceNucleicAcidCopyWith<SubstanceNucleicAcid> get copyWith;
 }
 
@@ -15468,6 +15559,7 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
       const DeepCollectionEquality().hash(oligoNucleotideType) ^
       const DeepCollectionEquality().hash(subunit);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceNucleicAcidCopyWith<_SubstanceNucleicAcid> get copyWith =>
       __$SubstanceNucleicAcidCopyWithImpl<_SubstanceNucleicAcid>(
@@ -15553,6 +15645,7 @@ abstract class _SubstanceNucleicAcid extends SubstanceNucleicAcid {
   @override
   List<SubstanceNucleicAcidSubunit> get subunit;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceNucleicAcidCopyWith<_SubstanceNucleicAcid> get copyWith;
 }
 
@@ -15631,6 +15724,7 @@ mixin _$SubstanceNucleicAcidSubunit {
   List<SubstanceNucleicAcidSugar> get sugar;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceNucleicAcidSubunitCopyWith<SubstanceNucleicAcidSubunit>
       get copyWith;
 }
@@ -16022,6 +16116,7 @@ class _$_SubstanceNucleicAcidSubunit extends _SubstanceNucleicAcidSubunit {
       const DeepCollectionEquality().hash(linkage) ^
       const DeepCollectionEquality().hash(sugar);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceNucleicAcidSubunitCopyWith<_SubstanceNucleicAcidSubunit>
       get copyWith => __$SubstanceNucleicAcidSubunitCopyWithImpl<
@@ -16088,6 +16183,7 @@ abstract class _SubstanceNucleicAcidSubunit
   @override
   List<SubstanceNucleicAcidSugar> get sugar;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceNucleicAcidSubunitCopyWith<_SubstanceNucleicAcidSubunit>
       get copyWith;
 }
@@ -16155,6 +16251,7 @@ mixin _$SubstanceNucleicAcidLinkage {
   Element get residueSiteElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceNucleicAcidLinkageCopyWith<SubstanceNucleicAcidLinkage>
       get copyWith;
 }
@@ -16455,6 +16552,7 @@ class _$_SubstanceNucleicAcidLinkage extends _SubstanceNucleicAcidLinkage {
       const DeepCollectionEquality().hash(residueSite) ^
       const DeepCollectionEquality().hash(residueSiteElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceNucleicAcidLinkageCopyWith<_SubstanceNucleicAcidLinkage>
       get copyWith => __$SubstanceNucleicAcidLinkageCopyWithImpl<
@@ -16510,6 +16608,7 @@ abstract class _SubstanceNucleicAcidLinkage
   @JsonKey(name: '_residueSite')
   Element get residueSiteElement;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceNucleicAcidLinkageCopyWith<_SubstanceNucleicAcidLinkage>
       get copyWith;
 }
@@ -16570,6 +16669,7 @@ mixin _$SubstanceNucleicAcidSugar {
   Element get residueSiteElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceNucleicAcidSugarCopyWith<SubstanceNucleicAcidSugar> get copyWith;
 }
 
@@ -16818,6 +16918,7 @@ class _$_SubstanceNucleicAcidSugar extends _SubstanceNucleicAcidSugar {
       const DeepCollectionEquality().hash(residueSite) ^
       const DeepCollectionEquality().hash(residueSiteElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceNucleicAcidSugarCopyWith<_SubstanceNucleicAcidSugar>
       get copyWith =>
@@ -16866,6 +16967,7 @@ abstract class _SubstanceNucleicAcidSugar extends SubstanceNucleicAcidSugar {
   @JsonKey(name: '_residueSite')
   Element get residueSiteElement;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceNucleicAcidSugarCopyWith<_SubstanceNucleicAcidSugar> get copyWith;
 }
 
@@ -16963,6 +17065,7 @@ mixin _$SubstancePolymer {
   List<SubstancePolymerRepeat> get repeat;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstancePolymerCopyWith<SubstancePolymer> get copyWith;
 }
 
@@ -17428,6 +17531,7 @@ class _$_SubstancePolymer extends _SubstancePolymer {
       const DeepCollectionEquality().hash(monomerSet) ^
       const DeepCollectionEquality().hash(repeat);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstancePolymerCopyWith<_SubstancePolymer> get copyWith =>
       __$SubstancePolymerCopyWithImpl<_SubstancePolymer>(this, _$identity);
@@ -17512,6 +17616,7 @@ abstract class _SubstancePolymer extends SubstancePolymer {
   @override
   List<SubstancePolymerRepeat> get repeat;
   @override
+  @JsonKey(ignore: true)
   _$SubstancePolymerCopyWith<_SubstancePolymer> get copyWith;
 }
 
@@ -17560,6 +17665,7 @@ mixin _$SubstancePolymerMonomerSet {
   List<SubstancePolymerStartingMaterial> get startingMaterial;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstancePolymerMonomerSetCopyWith<SubstancePolymerMonomerSet> get copyWith;
 }
 
@@ -17741,6 +17847,7 @@ class _$_SubstancePolymerMonomerSet extends _SubstancePolymerMonomerSet {
       const DeepCollectionEquality().hash(ratioType) ^
       const DeepCollectionEquality().hash(startingMaterial);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstancePolymerMonomerSetCopyWith<_SubstancePolymerMonomerSet>
       get copyWith => __$SubstancePolymerMonomerSetCopyWithImpl<
@@ -17777,6 +17884,7 @@ abstract class _SubstancePolymerMonomerSet extends SubstancePolymerMonomerSet {
   @override
   List<SubstancePolymerStartingMaterial> get startingMaterial;
   @override
+  @JsonKey(ignore: true)
   _$SubstancePolymerMonomerSetCopyWith<_SubstancePolymerMonomerSet>
       get copyWith;
 }
@@ -17837,6 +17945,7 @@ mixin _$SubstancePolymerStartingMaterial {
   SubstanceAmount get amount;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstancePolymerStartingMaterialCopyWith<SubstancePolymerStartingMaterial>
       get copyWith;
 }
@@ -18100,6 +18209,7 @@ class _$_SubstancePolymerStartingMaterial
       const DeepCollectionEquality().hash(isDefiningElement) ^
       const DeepCollectionEquality().hash(amount);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstancePolymerStartingMaterialCopyWith<_SubstancePolymerStartingMaterial>
       get copyWith => __$SubstancePolymerStartingMaterialCopyWithImpl<
@@ -18146,6 +18256,7 @@ abstract class _SubstancePolymerStartingMaterial
   @override
   SubstanceAmount get amount;
   @override
+  @JsonKey(ignore: true)
   _$SubstancePolymerStartingMaterialCopyWith<_SubstancePolymerStartingMaterial>
       get copyWith;
 }
@@ -18212,6 +18323,7 @@ mixin _$SubstancePolymerRepeat {
   List<SubstancePolymerRepeatUnit> get repeatUnit;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstancePolymerRepeatCopyWith<SubstancePolymerRepeat> get copyWith;
 }
 
@@ -18500,6 +18612,7 @@ class _$_SubstancePolymerRepeat extends _SubstancePolymerRepeat {
       const DeepCollectionEquality().hash(repeatUnitAmountType) ^
       const DeepCollectionEquality().hash(repeatUnit);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstancePolymerRepeatCopyWith<_SubstancePolymerRepeat> get copyWith =>
       __$SubstancePolymerRepeatCopyWithImpl<_SubstancePolymerRepeat>(
@@ -18552,6 +18665,7 @@ abstract class _SubstancePolymerRepeat extends SubstancePolymerRepeat {
   @override
   List<SubstancePolymerRepeatUnit> get repeatUnit;
   @override
+  @JsonKey(ignore: true)
   _$SubstancePolymerRepeatCopyWith<_SubstancePolymerRepeat> get copyWith;
 }
 
@@ -18614,6 +18728,7 @@ mixin _$SubstancePolymerRepeatUnit {
   List<SubstancePolymerStructuralRepresentation> get structuralRepresentation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstancePolymerRepeatUnitCopyWith<SubstancePolymerRepeatUnit> get copyWith;
 }
 
@@ -18891,6 +19006,7 @@ class _$_SubstancePolymerRepeatUnit extends _SubstancePolymerRepeatUnit {
       const DeepCollectionEquality().hash(degreeOfPolymerisation) ^
       const DeepCollectionEquality().hash(structuralRepresentation);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstancePolymerRepeatUnitCopyWith<_SubstancePolymerRepeatUnit>
       get copyWith => __$SubstancePolymerRepeatUnitCopyWithImpl<
@@ -18940,6 +19056,7 @@ abstract class _SubstancePolymerRepeatUnit extends SubstancePolymerRepeatUnit {
   @override
   List<SubstancePolymerStructuralRepresentation> get structuralRepresentation;
   @override
+  @JsonKey(ignore: true)
   _$SubstancePolymerRepeatUnitCopyWith<_SubstancePolymerRepeatUnit>
       get copyWith;
 }
@@ -18991,6 +19108,7 @@ mixin _$SubstancePolymerDegreeOfPolymerisation {
   SubstanceAmount get amount;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstancePolymerDegreeOfPolymerisationCopyWith<
       SubstancePolymerDegreeOfPolymerisation> get copyWith;
 }
@@ -19181,6 +19299,7 @@ class _$_SubstancePolymerDegreeOfPolymerisation
       const DeepCollectionEquality().hash(degree) ^
       const DeepCollectionEquality().hash(amount);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstancePolymerDegreeOfPolymerisationCopyWith<
           _SubstancePolymerDegreeOfPolymerisation>
@@ -19219,6 +19338,7 @@ abstract class _SubstancePolymerDegreeOfPolymerisation
   @override
   SubstanceAmount get amount;
   @override
+  @JsonKey(ignore: true)
   _$SubstancePolymerDegreeOfPolymerisationCopyWith<
       _SubstancePolymerDegreeOfPolymerisation> get copyWith;
 }
@@ -19277,6 +19397,7 @@ mixin _$SubstancePolymerStructuralRepresentation {
   Attachment get attachment;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstancePolymerStructuralRepresentationCopyWith<
       SubstancePolymerStructuralRepresentation> get copyWith;
 }
@@ -19519,6 +19640,7 @@ class _$_SubstancePolymerStructuralRepresentation
       const DeepCollectionEquality().hash(representationElement) ^
       const DeepCollectionEquality().hash(attachment);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstancePolymerStructuralRepresentationCopyWith<
           _SubstancePolymerStructuralRepresentation>
@@ -19564,6 +19686,7 @@ abstract class _SubstancePolymerStructuralRepresentation
   @override
   Attachment get attachment;
   @override
+  @JsonKey(ignore: true)
   _$SubstancePolymerStructuralRepresentationCopyWith<
       _SubstancePolymerStructuralRepresentation> get copyWith;
 }
@@ -19659,6 +19782,7 @@ mixin _$SubstanceProtein {
   List<SubstanceProteinSubunit> get subunit;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceProteinCopyWith<SubstanceProtein> get copyWith;
 }
 
@@ -20116,6 +20240,7 @@ class _$_SubstanceProtein extends _SubstanceProtein {
       const DeepCollectionEquality().hash(disulfideLinkageElement) ^
       const DeepCollectionEquality().hash(subunit);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceProteinCopyWith<_SubstanceProtein> get copyWith =>
       __$SubstanceProteinCopyWithImpl<_SubstanceProtein>(this, _$identity);
@@ -20197,6 +20322,7 @@ abstract class _SubstanceProtein extends SubstanceProtein {
   @override
   List<SubstanceProteinSubunit> get subunit;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceProteinCopyWith<_SubstanceProtein> get copyWith;
 }
 
@@ -20289,6 +20415,7 @@ mixin _$SubstanceProteinSubunit {
   Element get cTerminalModificationElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceProteinSubunitCopyWith<SubstanceProteinSubunit> get copyWith;
 }
 
@@ -20759,6 +20886,7 @@ class _$_SubstanceProteinSubunit extends _SubstanceProteinSubunit {
       const DeepCollectionEquality().hash(cTerminalModification) ^
       const DeepCollectionEquality().hash(cTerminalModificationElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceProteinSubunitCopyWith<_SubstanceProteinSubunit> get copyWith =>
       __$SubstanceProteinSubunitCopyWithImpl<_SubstanceProteinSubunit>(
@@ -20838,6 +20966,7 @@ abstract class _SubstanceProteinSubunit extends SubstanceProteinSubunit {
   @JsonKey(name: '_cTerminalModification')
   Element get cTerminalModificationElement;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceProteinSubunitCopyWith<_SubstanceProteinSubunit> get copyWith;
 }
 
@@ -20932,6 +21061,7 @@ mixin _$SubstanceReferenceInformation {
   List<SubstanceReferenceInformationTarget> get target;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceReferenceInformationCopyWith<SubstanceReferenceInformation>
       get copyWith;
 }
@@ -21371,6 +21501,7 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
       const DeepCollectionEquality().hash(classification) ^
       const DeepCollectionEquality().hash(target);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceReferenceInformationCopyWith<_SubstanceReferenceInformation>
       get copyWith => __$SubstanceReferenceInformationCopyWithImpl<
@@ -21453,6 +21584,7 @@ abstract class _SubstanceReferenceInformation
   @override
   List<SubstanceReferenceInformationTarget> get target;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceReferenceInformationCopyWith<_SubstanceReferenceInformation>
       get copyWith;
 }
@@ -21506,6 +21638,7 @@ mixin _$SubstanceReferenceInformationGene {
   List<Reference> get source;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceReferenceInformationGeneCopyWith<SubstanceReferenceInformationGene>
       get copyWith;
 }
@@ -21712,6 +21845,7 @@ class _$_SubstanceReferenceInformationGene
       const DeepCollectionEquality().hash(gene) ^
       const DeepCollectionEquality().hash(source);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceReferenceInformationGeneCopyWith<
           _SubstanceReferenceInformationGene>
@@ -21753,6 +21887,7 @@ abstract class _SubstanceReferenceInformationGene
   @override
   List<Reference> get source;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceReferenceInformationGeneCopyWith<
       _SubstanceReferenceInformationGene> get copyWith;
 }
@@ -21807,6 +21942,7 @@ mixin _$SubstanceReferenceInformationGeneElement {
   List<Reference> get source;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceReferenceInformationGeneElementCopyWith<
       SubstanceReferenceInformationGeneElement> get copyWith;
 }
@@ -22011,6 +22147,7 @@ class _$_SubstanceReferenceInformationGeneElement
       const DeepCollectionEquality().hash(element) ^
       const DeepCollectionEquality().hash(source);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceReferenceInformationGeneElementCopyWith<
           _SubstanceReferenceInformationGeneElement>
@@ -22052,6 +22189,7 @@ abstract class _SubstanceReferenceInformationGeneElement
   @override
   List<Reference> get source;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceReferenceInformationGeneElementCopyWith<
       _SubstanceReferenceInformationGeneElement> get copyWith;
 }
@@ -22110,6 +22248,7 @@ mixin _$SubstanceReferenceInformationClassification {
   List<Reference> get source;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceReferenceInformationClassificationCopyWith<
       SubstanceReferenceInformationClassification> get copyWith;
 }
@@ -22335,6 +22474,7 @@ class _$_SubstanceReferenceInformationClassification
       const DeepCollectionEquality().hash(subtype) ^
       const DeepCollectionEquality().hash(source);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceReferenceInformationClassificationCopyWith<
           _SubstanceReferenceInformationClassification>
@@ -22380,6 +22520,7 @@ abstract class _SubstanceReferenceInformationClassification
   @override
   List<Reference> get source;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceReferenceInformationClassificationCopyWith<
       _SubstanceReferenceInformationClassification> get copyWith;
 }
@@ -22458,6 +22599,7 @@ mixin _$SubstanceReferenceInformationTarget {
   List<Reference> get source;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceReferenceInformationTargetCopyWith<
       SubstanceReferenceInformationTarget> get copyWith;
 }
@@ -22883,6 +23025,7 @@ class _$_SubstanceReferenceInformationTarget
       const DeepCollectionEquality().hash(amountType) ^
       const DeepCollectionEquality().hash(source);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceReferenceInformationTargetCopyWith<
           _SubstanceReferenceInformationTarget>
@@ -22949,6 +23092,7 @@ abstract class _SubstanceReferenceInformationTarget
   @override
   List<Reference> get source;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceReferenceInformationTargetCopyWith<
       _SubstanceReferenceInformationTarget> get copyWith;
 }
@@ -23077,6 +23221,7 @@ mixin _$SubstanceSourceMaterial {
   List<SubstanceSourceMaterialPartDescription> get partDescription;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSourceMaterialCopyWith<SubstanceSourceMaterial> get copyWith;
 }
 
@@ -23765,6 +23910,7 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
       const DeepCollectionEquality().hash(organism) ^
       const DeepCollectionEquality().hash(partDescription);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSourceMaterialCopyWith<_SubstanceSourceMaterial> get copyWith =>
       __$SubstanceSourceMaterialCopyWithImpl<_SubstanceSourceMaterial>(
@@ -23880,6 +24026,7 @@ abstract class _SubstanceSourceMaterial extends SubstanceSourceMaterial {
   @override
   List<SubstanceSourceMaterialPartDescription> get partDescription;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSourceMaterialCopyWith<_SubstanceSourceMaterial> get copyWith;
 }
 
@@ -23935,6 +24082,7 @@ mixin _$SubstanceSourceMaterialFractionDescription {
   CodeableConcept get materialType;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSourceMaterialFractionDescriptionCopyWith<
       SubstanceSourceMaterialFractionDescription> get copyWith;
 }
@@ -24150,6 +24298,7 @@ class _$_SubstanceSourceMaterialFractionDescription
       const DeepCollectionEquality().hash(fractionElement) ^
       const DeepCollectionEquality().hash(materialType);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSourceMaterialFractionDescriptionCopyWith<
           _SubstanceSourceMaterialFractionDescription>
@@ -24193,6 +24342,7 @@ abstract class _SubstanceSourceMaterialFractionDescription
   @override
   CodeableConcept get materialType;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSourceMaterialFractionDescriptionCopyWith<
       _SubstanceSourceMaterialFractionDescription> get copyWith;
 }
@@ -24267,6 +24417,7 @@ mixin _$SubstanceSourceMaterialOrganism {
   SubstanceSourceMaterialOrganismGeneral get organismGeneral;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSourceMaterialOrganismCopyWith<SubstanceSourceMaterialOrganism>
       get copyWith;
 }
@@ -24649,6 +24800,7 @@ class _$_SubstanceSourceMaterialOrganism
       const DeepCollectionEquality().hash(hybrid) ^
       const DeepCollectionEquality().hash(organismGeneral);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSourceMaterialOrganismCopyWith<_SubstanceSourceMaterialOrganism>
       get copyWith => __$SubstanceSourceMaterialOrganismCopyWithImpl<
@@ -24710,6 +24862,7 @@ abstract class _SubstanceSourceMaterialOrganism
   @override
   SubstanceSourceMaterialOrganismGeneral get organismGeneral;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSourceMaterialOrganismCopyWith<_SubstanceSourceMaterialOrganism>
       get copyWith;
 }
@@ -24763,6 +24916,7 @@ mixin _$SubstanceSourceMaterialAuthor {
   Element get authorDescriptionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSourceMaterialAuthorCopyWith<SubstanceSourceMaterialAuthor>
       get copyWith;
 }
@@ -24980,6 +25134,7 @@ class _$_SubstanceSourceMaterialAuthor extends _SubstanceSourceMaterialAuthor {
       const DeepCollectionEquality().hash(authorDescription) ^
       const DeepCollectionEquality().hash(authorDescriptionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSourceMaterialAuthorCopyWith<_SubstanceSourceMaterialAuthor>
       get copyWith => __$SubstanceSourceMaterialAuthorCopyWithImpl<
@@ -25022,6 +25177,7 @@ abstract class _SubstanceSourceMaterialAuthor
   @JsonKey(name: '_authorDescription')
   Element get authorDescriptionElement;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSourceMaterialAuthorCopyWith<_SubstanceSourceMaterialAuthor>
       get copyWith;
 }
@@ -25101,6 +25257,7 @@ mixin _$SubstanceSourceMaterialHybrid {
   CodeableConcept get hybridType;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSourceMaterialHybridCopyWith<SubstanceSourceMaterialHybrid>
       get copyWith;
 }
@@ -25476,6 +25633,7 @@ class _$_SubstanceSourceMaterialHybrid extends _SubstanceSourceMaterialHybrid {
       const DeepCollectionEquality().hash(paternalOrganismNameElement) ^
       const DeepCollectionEquality().hash(hybridType);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSourceMaterialHybridCopyWith<_SubstanceSourceMaterialHybrid>
       get copyWith => __$SubstanceSourceMaterialHybridCopyWithImpl<
@@ -25542,6 +25700,7 @@ abstract class _SubstanceSourceMaterialHybrid
   @override
   CodeableConcept get hybridType;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSourceMaterialHybridCopyWith<_SubstanceSourceMaterialHybrid>
       get copyWith;
 }
@@ -25600,6 +25759,7 @@ mixin _$SubstanceSourceMaterialOrganismGeneral {
   CodeableConcept get order;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSourceMaterialOrganismGeneralCopyWith<
       SubstanceSourceMaterialOrganismGeneral> get copyWith;
 }
@@ -25842,6 +26002,7 @@ class _$_SubstanceSourceMaterialOrganismGeneral
       const DeepCollectionEquality().hash(class_) ^
       const DeepCollectionEquality().hash(order);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSourceMaterialOrganismGeneralCopyWith<
           _SubstanceSourceMaterialOrganismGeneral>
@@ -25887,6 +26048,7 @@ abstract class _SubstanceSourceMaterialOrganismGeneral
   @override
   CodeableConcept get order;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSourceMaterialOrganismGeneralCopyWith<
       _SubstanceSourceMaterialOrganismGeneral> get copyWith;
 }
@@ -25939,6 +26101,7 @@ mixin _$SubstanceSourceMaterialPartDescription {
   CodeableConcept get partLocation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSourceMaterialPartDescriptionCopyWith<
       SubstanceSourceMaterialPartDescription> get copyWith;
 }
@@ -26135,6 +26298,7 @@ class _$_SubstanceSourceMaterialPartDescription
       const DeepCollectionEquality().hash(part_) ^
       const DeepCollectionEquality().hash(partLocation);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSourceMaterialPartDescriptionCopyWith<
           _SubstanceSourceMaterialPartDescription>
@@ -26175,6 +26339,7 @@ abstract class _SubstanceSourceMaterialPartDescription
   @override
   CodeableConcept get partLocation;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSourceMaterialPartDescriptionCopyWith<
       _SubstanceSourceMaterialPartDescription> get copyWith;
 }
@@ -26316,6 +26481,7 @@ mixin _$SubstanceSpecification {
   Reference get sourceMaterial;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSpecificationCopyWith<SubstanceSpecification> get copyWith;
 }
 
@@ -27107,6 +27273,7 @@ class _$_SubstanceSpecification extends _SubstanceSpecification {
       const DeepCollectionEquality().hash(protein) ^
       const DeepCollectionEquality().hash(sourceMaterial);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSpecificationCopyWith<_SubstanceSpecification> get copyWith =>
       __$SubstanceSpecificationCopyWithImpl<_SubstanceSpecification>(
@@ -27234,6 +27401,7 @@ abstract class _SubstanceSpecification extends SubstanceSpecification {
   @override
   Reference get sourceMaterial;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSpecificationCopyWith<_SubstanceSpecification> get copyWith;
 }
 
@@ -27312,6 +27480,7 @@ mixin _$SubstanceSpecificationMoiety {
   Element get amountStringElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSpecificationMoietyCopyWith<SubstanceSpecificationMoiety>
       get copyWith;
 }
@@ -27730,6 +27899,7 @@ class _$_SubstanceSpecificationMoiety extends _SubstanceSpecificationMoiety {
       const DeepCollectionEquality().hash(amountString) ^
       const DeepCollectionEquality().hash(amountStringElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSpecificationMoietyCopyWith<_SubstanceSpecificationMoiety>
       get copyWith => __$SubstanceSpecificationMoietyCopyWithImpl<
@@ -27797,6 +27967,7 @@ abstract class _SubstanceSpecificationMoiety
   @JsonKey(name: '_amountString')
   Element get amountStringElement;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSpecificationMoietyCopyWith<_SubstanceSpecificationMoiety>
       get copyWith;
 }
@@ -27870,6 +28041,7 @@ mixin _$SubstanceSpecificationProperty {
   Element get amountStringElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSpecificationPropertyCopyWith<SubstanceSpecificationProperty>
       get copyWith;
 }
@@ -28253,6 +28425,7 @@ class _$_SubstanceSpecificationProperty
       const DeepCollectionEquality().hash(amountString) ^
       const DeepCollectionEquality().hash(amountStringElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSpecificationPropertyCopyWith<_SubstanceSpecificationProperty>
       get copyWith => __$SubstanceSpecificationPropertyCopyWithImpl<
@@ -28313,6 +28486,7 @@ abstract class _SubstanceSpecificationProperty
   @JsonKey(name: '_amountString')
   Element get amountStringElement;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSpecificationPropertyCopyWith<_SubstanceSpecificationProperty>
       get copyWith;
 }
@@ -28392,6 +28566,7 @@ mixin _$SubstanceSpecificationStructure {
   List<SubstanceSpecificationRepresentation> get representation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSpecificationStructureCopyWith<SubstanceSpecificationStructure>
       get copyWith;
 }
@@ -28779,6 +28954,7 @@ class _$_SubstanceSpecificationStructure
       const DeepCollectionEquality().hash(source) ^
       const DeepCollectionEquality().hash(representation);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSpecificationStructureCopyWith<_SubstanceSpecificationStructure>
       get copyWith => __$SubstanceSpecificationStructureCopyWithImpl<
@@ -28845,6 +29021,7 @@ abstract class _SubstanceSpecificationStructure
   @override
   List<SubstanceSpecificationRepresentation> get representation;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSpecificationStructureCopyWith<_SubstanceSpecificationStructure>
       get copyWith;
 }
@@ -28903,6 +29080,7 @@ mixin _$SubstanceSpecificationIsotope {
   SubstanceSpecificationMolecularWeight get molecularWeight;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSpecificationIsotopeCopyWith<SubstanceSpecificationIsotope>
       get copyWith;
 }
@@ -29181,6 +29359,7 @@ class _$_SubstanceSpecificationIsotope extends _SubstanceSpecificationIsotope {
       const DeepCollectionEquality().hash(halfLife) ^
       const DeepCollectionEquality().hash(molecularWeight);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSpecificationIsotopeCopyWith<_SubstanceSpecificationIsotope>
       get copyWith => __$SubstanceSpecificationIsotopeCopyWithImpl<
@@ -29227,6 +29406,7 @@ abstract class _SubstanceSpecificationIsotope
   @override
   SubstanceSpecificationMolecularWeight get molecularWeight;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSpecificationIsotopeCopyWith<_SubstanceSpecificationIsotope>
       get copyWith;
 }
@@ -29280,6 +29460,7 @@ mixin _$SubstanceSpecificationMolecularWeight {
   Quantity get amount;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSpecificationMolecularWeightCopyWith<
       SubstanceSpecificationMolecularWeight> get copyWith;
 }
@@ -29495,6 +29676,7 @@ class _$_SubstanceSpecificationMolecularWeight
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(amount);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSpecificationMolecularWeightCopyWith<
           _SubstanceSpecificationMolecularWeight>
@@ -29536,6 +29718,7 @@ abstract class _SubstanceSpecificationMolecularWeight
   @override
   Quantity get amount;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSpecificationMolecularWeightCopyWith<
       _SubstanceSpecificationMolecularWeight> get copyWith;
 }
@@ -29593,6 +29776,7 @@ mixin _$SubstanceSpecificationRepresentation {
   Attachment get attachment;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSpecificationRepresentationCopyWith<
       SubstanceSpecificationRepresentation> get copyWith;
 }
@@ -29833,6 +30017,7 @@ class _$_SubstanceSpecificationRepresentation
       const DeepCollectionEquality().hash(representationElement) ^
       const DeepCollectionEquality().hash(attachment);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSpecificationRepresentationCopyWith<
           _SubstanceSpecificationRepresentation>
@@ -29878,6 +30063,7 @@ abstract class _SubstanceSpecificationRepresentation
   @override
   Attachment get attachment;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSpecificationRepresentationCopyWith<
       _SubstanceSpecificationRepresentation> get copyWith;
 }
@@ -29944,6 +30130,7 @@ mixin _$SubstanceSpecificationCode {
   List<Reference> get source;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSpecificationCodeCopyWith<SubstanceSpecificationCode> get copyWith;
 }
 
@@ -30232,6 +30419,7 @@ class _$_SubstanceSpecificationCode extends _SubstanceSpecificationCode {
       const DeepCollectionEquality().hash(commentElement) ^
       const DeepCollectionEquality().hash(source);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSpecificationCodeCopyWith<_SubstanceSpecificationCode>
       get copyWith => __$SubstanceSpecificationCodeCopyWithImpl<
@@ -30284,6 +30472,7 @@ abstract class _SubstanceSpecificationCode extends SubstanceSpecificationCode {
   @override
   List<Reference> get source;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSpecificationCodeCopyWith<_SubstanceSpecificationCode>
       get copyWith;
 }
@@ -30368,6 +30557,7 @@ mixin _$SubstanceSpecificationName {
   List<Reference> get source;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSpecificationNameCopyWith<SubstanceSpecificationName> get copyWith;
 }
 
@@ -30748,6 +30938,7 @@ class _$_SubstanceSpecificationName extends _SubstanceSpecificationName {
       const DeepCollectionEquality().hash(official) ^
       const DeepCollectionEquality().hash(source);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSpecificationNameCopyWith<_SubstanceSpecificationName>
       get copyWith => __$SubstanceSpecificationNameCopyWithImpl<
@@ -30818,6 +31009,7 @@ abstract class _SubstanceSpecificationName extends SubstanceSpecificationName {
   @override
   List<Reference> get source;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSpecificationNameCopyWith<_SubstanceSpecificationName>
       get copyWith;
 }
@@ -30875,6 +31067,7 @@ mixin _$SubstanceSpecificationOfficial {
   Element get dateElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSpecificationOfficialCopyWith<SubstanceSpecificationOfficial>
       get copyWith;
 }
@@ -31110,6 +31303,7 @@ class _$_SubstanceSpecificationOfficial
       const DeepCollectionEquality().hash(date) ^
       const DeepCollectionEquality().hash(dateElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSpecificationOfficialCopyWith<_SubstanceSpecificationOfficial>
       get copyWith => __$SubstanceSpecificationOfficialCopyWithImpl<
@@ -31154,6 +31348,7 @@ abstract class _SubstanceSpecificationOfficial
   @JsonKey(name: '_date')
   Element get dateElement;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSpecificationOfficialCopyWith<_SubstanceSpecificationOfficial>
       get copyWith;
 }
@@ -31239,6 +31434,7 @@ mixin _$SubstanceSpecificationRelationship {
   List<Reference> get source;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceSpecificationRelationshipCopyWith<
       SubstanceSpecificationRelationship> get copyWith;
 }
@@ -31723,6 +31919,7 @@ class _$_SubstanceSpecificationRelationship
       const DeepCollectionEquality().hash(amountType) ^
       const DeepCollectionEquality().hash(source);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceSpecificationRelationshipCopyWith<
           _SubstanceSpecificationRelationship>
@@ -31796,6 +31993,7 @@ abstract class _SubstanceSpecificationRelationship
   @override
   List<Reference> get source;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceSpecificationRelationshipCopyWith<
       _SubstanceSpecificationRelationship> get copyWith;
 }

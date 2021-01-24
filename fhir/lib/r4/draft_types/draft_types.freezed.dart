@@ -61,6 +61,7 @@ mixin _$Population {
   CodeableConcept get physiologicalCondition;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PopulationCopyWith<Population> get copyWith;
 }
 
@@ -327,6 +328,7 @@ class _$_Population extends _Population {
       const DeepCollectionEquality().hash(race) ^
       const DeepCollectionEquality().hash(physiologicalCondition);
 
+  @JsonKey(ignore: true)
   @override
   _$PopulationCopyWith<_Population> get copyWith =>
       __$PopulationCopyWithImpl<_Population>(this, _$identity);
@@ -370,6 +372,7 @@ abstract class _Population extends Population {
   @override
   CodeableConcept get physiologicalCondition;
   @override
+  @JsonKey(ignore: true)
   _$PopulationCopyWith<_Population> get copyWith;
 }
 
@@ -423,6 +426,7 @@ mixin _$ProductShelfLife {
   List<CodeableConcept> get specialPrecautionsForStorage;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProductShelfLifeCopyWith<ProductShelfLife> get copyWith;
 }
 
@@ -654,6 +658,7 @@ class _$_ProductShelfLife extends _ProductShelfLife {
       const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(specialPrecautionsForStorage);
 
+  @JsonKey(ignore: true)
   @override
   _$ProductShelfLifeCopyWith<_ProductShelfLife> get copyWith =>
       __$ProductShelfLifeCopyWithImpl<_ProductShelfLife>(this, _$identity);
@@ -695,6 +700,7 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   @override
   List<CodeableConcept> get specialPrecautionsForStorage;
   @override
+  @JsonKey(ignore: true)
   _$ProductShelfLifeCopyWith<_ProductShelfLife> get copyWith;
 }
 
@@ -781,6 +787,7 @@ mixin _$ProdCharacteristic {
   CodeableConcept get scoring;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ProdCharacteristicCopyWith<ProdCharacteristic> get copyWith;
 }
 
@@ -1214,6 +1221,7 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
       const DeepCollectionEquality().hash(image) ^
       const DeepCollectionEquality().hash(scoring);
 
+  @JsonKey(ignore: true)
   @override
   _$ProdCharacteristicCopyWith<_ProdCharacteristic> get copyWith =>
       __$ProdCharacteristicCopyWithImpl<_ProdCharacteristic>(this, _$identity);
@@ -1287,6 +1295,7 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   @override
   CodeableConcept get scoring;
   @override
+  @JsonKey(ignore: true)
   _$ProdCharacteristicCopyWith<_ProdCharacteristic> get copyWith;
 }
 
@@ -1347,6 +1356,7 @@ mixin _$MarketingStatus {
   Element get restoreDateElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MarketingStatusCopyWith<MarketingStatus> get copyWith;
 }
 
@@ -1637,6 +1647,7 @@ class _$_MarketingStatus extends _MarketingStatus {
       const DeepCollectionEquality().hash(restoreDate) ^
       const DeepCollectionEquality().hash(restoreDateElement);
 
+  @JsonKey(ignore: true)
   @override
   _$MarketingStatusCopyWith<_MarketingStatus> get copyWith =>
       __$MarketingStatusCopyWithImpl<_MarketingStatus>(this, _$identity);
@@ -1685,6 +1696,7 @@ abstract class _MarketingStatus extends MarketingStatus {
   @JsonKey(name: '_restoreDate')
   Element get restoreDateElement;
   @override
+  @JsonKey(ignore: true)
   _$MarketingStatusCopyWith<_MarketingStatus> get copyWith;
 }
 
@@ -1752,6 +1764,7 @@ mixin _$SubstanceAmount {
   SubstanceAmountReferenceRange get referenceRange;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceAmountCopyWith<SubstanceAmount> get copyWith;
 }
 
@@ -2097,6 +2110,7 @@ class _$_SubstanceAmount extends _SubstanceAmount {
       const DeepCollectionEquality().hash(amountTextElement) ^
       const DeepCollectionEquality().hash(referenceRange);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceAmountCopyWith<_SubstanceAmount> get copyWith =>
       __$SubstanceAmountCopyWithImpl<_SubstanceAmount>(this, _$identity);
@@ -2151,6 +2165,7 @@ abstract class _SubstanceAmount extends SubstanceAmount {
   @override
   SubstanceAmountReferenceRange get referenceRange;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceAmountCopyWith<_SubstanceAmount> get copyWith;
 }
 
@@ -2199,6 +2214,7 @@ mixin _$SubstanceAmountReferenceRange {
   Quantity get highLimit;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SubstanceAmountReferenceRangeCopyWith<SubstanceAmountReferenceRange>
       get copyWith;
 }
@@ -2391,6 +2407,7 @@ class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
       const DeepCollectionEquality().hash(lowLimit) ^
       const DeepCollectionEquality().hash(highLimit);
 
+  @JsonKey(ignore: true)
   @override
   _$SubstanceAmountReferenceRangeCopyWith<_SubstanceAmountReferenceRange>
       get copyWith => __$SubstanceAmountReferenceRangeCopyWithImpl<
@@ -2427,6 +2444,7 @@ abstract class _SubstanceAmountReferenceRange
   @override
   Quantity get highLimit;
   @override
+  @JsonKey(ignore: true)
   _$SubstanceAmountReferenceRangeCopyWith<_SubstanceAmountReferenceRange>
       get copyWith;
 }

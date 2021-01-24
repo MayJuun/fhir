@@ -197,6 +197,7 @@ mixin _$ValueSet {
   ValueSetExpansion get expansion;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ValueSetCopyWith<ValueSet> get copyWith;
 }
 
@@ -1208,6 +1209,7 @@ class _$_ValueSet extends _ValueSet {
       const DeepCollectionEquality().hash(compose) ^
       const DeepCollectionEquality().hash(expansion);
 
+  @JsonKey(ignore: true)
   @override
   _$ValueSetCopyWith<_ValueSet> get copyWith =>
       __$ValueSetCopyWithImpl<_ValueSet>(this, _$identity);
@@ -1386,6 +1388,7 @@ abstract class _ValueSet extends ValueSet {
   @override
   ValueSetExpansion get expansion;
   @override
+  @JsonKey(ignore: true)
   _$ValueSetCopyWith<_ValueSet> get copyWith;
 }
 
@@ -1437,6 +1440,7 @@ mixin _$ValueSetContact {
   List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ValueSetContactCopyWith<ValueSetContact> get copyWith;
 }
 
@@ -1611,6 +1615,7 @@ class _$_ValueSetContact extends _ValueSetContact {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(telecom);
 
+  @JsonKey(ignore: true)
   @override
   _$ValueSetContactCopyWith<_ValueSetContact> get copyWith =>
       __$ValueSetContactCopyWithImpl<_ValueSetContact>(this, _$identity);
@@ -1649,6 +1654,7 @@ abstract class _ValueSetContact extends ValueSetContact {
   @override
   List<ContactPoint> get telecom;
   @override
+  @JsonKey(ignore: true)
   _$ValueSetContactCopyWith<_ValueSetContact> get copyWith;
 }
 
@@ -1729,6 +1735,7 @@ mixin _$ValueSetCodeSystem {
   List<ValueSetCodeSystemConcept> get concept;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ValueSetCodeSystemCopyWith<ValueSetCodeSystem> get copyWith;
 }
 
@@ -2034,6 +2041,7 @@ class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
       const DeepCollectionEquality().hash(caseSensitiveElement) ^
       const DeepCollectionEquality().hash(concept);
 
+  @JsonKey(ignore: true)
   @override
   _$ValueSetCodeSystemCopyWith<_ValueSetCodeSystem> get copyWith =>
       __$ValueSetCodeSystemCopyWithImpl<_ValueSetCodeSystem>(this, _$identity);
@@ -2101,6 +2109,7 @@ abstract class _ValueSetCodeSystem extends ValueSetCodeSystem {
   @JsonKey(required: true)
   List<ValueSetCodeSystemConcept> get concept;
   @override
+  @JsonKey(ignore: true)
   _$ValueSetCodeSystemCopyWith<_ValueSetCodeSystem> get copyWith;
 }
 
@@ -2175,6 +2184,7 @@ mixin _$ValueSetCodeSystemConcept {
   List<ValueSetCodeSystemConcept> get concept;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ValueSetCodeSystemConceptCopyWith<ValueSetCodeSystemConcept> get copyWith;
 }
 
@@ -2475,6 +2485,7 @@ class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
       const DeepCollectionEquality().hash(designation) ^
       const DeepCollectionEquality().hash(concept);
 
+  @JsonKey(ignore: true)
   @override
   _$ValueSetCodeSystemConceptCopyWith<_ValueSetCodeSystemConcept>
       get copyWith =>
@@ -2537,6 +2548,7 @@ abstract class _ValueSetCodeSystemConcept extends ValueSetCodeSystemConcept {
   @override
   List<ValueSetCodeSystemConcept> get concept;
   @override
+  @JsonKey(ignore: true)
   _$ValueSetCodeSystemConceptCopyWith<_ValueSetCodeSystemConcept> get copyWith;
 }
 
@@ -2597,6 +2609,7 @@ mixin _$ValueSetConceptDesignation {
   Element get valueElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ValueSetConceptDesignationCopyWith<ValueSetConceptDesignation> get copyWith;
 }
 
@@ -2845,6 +2858,7 @@ class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ValueSetConceptDesignationCopyWith<_ValueSetConceptDesignation>
       get copyWith => __$ValueSetConceptDesignationCopyWithImpl<
@@ -2893,6 +2907,7 @@ abstract class _ValueSetConceptDesignation extends ValueSetConceptDesignation {
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(ignore: true)
   _$ValueSetConceptDesignationCopyWith<_ValueSetConceptDesignation>
       get copyWith;
 }
@@ -2949,6 +2964,7 @@ mixin _$ValueSetCompose {
   List<ValueSetComposeInclude> get exclude;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ValueSetComposeCopyWith<ValueSetCompose> get copyWith;
 }
 
@@ -3144,6 +3160,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
       const DeepCollectionEquality().hash(include) ^
       const DeepCollectionEquality().hash(exclude);
 
+  @JsonKey(ignore: true)
   @override
   _$ValueSetComposeCopyWith<_ValueSetCompose> get copyWith =>
       __$ValueSetComposeCopyWithImpl<_ValueSetCompose>(this, _$identity);
@@ -3186,6 +3203,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
   @override
   List<ValueSetComposeInclude> get exclude;
   @override
+  @JsonKey(ignore: true)
   _$ValueSetComposeCopyWith<_ValueSetCompose> get copyWith;
 }
 
@@ -3253,6 +3271,7 @@ mixin _$ValueSetComposeInclude {
   List<ValueSetIncludeFilter> get filter;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ValueSetComposeIncludeCopyWith<ValueSetComposeInclude> get copyWith;
 }
 
@@ -3525,6 +3544,7 @@ class _$_ValueSetComposeInclude extends _ValueSetComposeInclude {
       const DeepCollectionEquality().hash(concept) ^
       const DeepCollectionEquality().hash(filter);
 
+  @JsonKey(ignore: true)
   @override
   _$ValueSetComposeIncludeCopyWith<_ValueSetComposeInclude> get copyWith =>
       __$ValueSetComposeIncludeCopyWithImpl<_ValueSetComposeInclude>(
@@ -3579,6 +3599,7 @@ abstract class _ValueSetComposeInclude extends ValueSetComposeInclude {
   @override
   List<ValueSetIncludeFilter> get filter;
   @override
+  @JsonKey(ignore: true)
   _$ValueSetComposeIncludeCopyWith<_ValueSetComposeInclude> get copyWith;
 }
 
@@ -3643,6 +3664,7 @@ mixin _$ValueSetIncludeConcept {
   List<ValueSetConceptDesignation> get designation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ValueSetIncludeConceptCopyWith<ValueSetIncludeConcept> get copyWith;
 }
 
@@ -3897,6 +3919,7 @@ class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
       const DeepCollectionEquality().hash(displayElement) ^
       const DeepCollectionEquality().hash(designation);
 
+  @JsonKey(ignore: true)
   @override
   _$ValueSetIncludeConceptCopyWith<_ValueSetIncludeConcept> get copyWith =>
       __$ValueSetIncludeConceptCopyWithImpl<_ValueSetIncludeConcept>(
@@ -3949,6 +3972,7 @@ abstract class _ValueSetIncludeConcept extends ValueSetIncludeConcept {
   @override
   List<ValueSetConceptDesignation> get designation;
   @override
+  @JsonKey(ignore: true)
   _$ValueSetIncludeConceptCopyWith<_ValueSetIncludeConcept> get copyWith;
 }
 
@@ -4030,6 +4054,7 @@ mixin _$ValueSetIncludeFilter {
   Element get valueElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ValueSetIncludeFilterCopyWith<ValueSetIncludeFilter> get copyWith;
 }
 
@@ -4323,6 +4348,7 @@ class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ValueSetIncludeFilterCopyWith<_ValueSetIncludeFilter> get copyWith =>
       __$ValueSetIncludeFilterCopyWithImpl<_ValueSetIncludeFilter>(
@@ -4391,6 +4417,7 @@ abstract class _ValueSetIncludeFilter extends ValueSetIncludeFilter {
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(ignore: true)
   _$ValueSetIncludeFilterCopyWith<_ValueSetIncludeFilter> get copyWith;
 }
 
@@ -4472,6 +4499,7 @@ mixin _$ValueSetExpansion {
   List<ValueSetExpansionContains> get contains;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ValueSetExpansionCopyWith<ValueSetExpansion> get copyWith;
 }
 
@@ -4838,6 +4866,7 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
       const DeepCollectionEquality().hash(parameter) ^
       const DeepCollectionEquality().hash(contains);
 
+  @JsonKey(ignore: true)
   @override
   _$ValueSetExpansionCopyWith<_ValueSetExpansion> get copyWith =>
       __$ValueSetExpansionCopyWithImpl<_ValueSetExpansion>(this, _$identity);
@@ -4906,6 +4935,7 @@ abstract class _ValueSetExpansion extends ValueSetExpansion {
   @override
   List<ValueSetExpansionContains> get contains;
   @override
+  @JsonKey(ignore: true)
   _$ValueSetExpansionCopyWith<_ValueSetExpansion> get copyWith;
 }
 
@@ -5002,6 +5032,7 @@ mixin _$ValueSetExpansionParameter {
   Element get valueCodeElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ValueSetExpansionParameterCopyWith<ValueSetExpansionParameter> get copyWith;
 }
 
@@ -5475,6 +5506,7 @@ class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
       const DeepCollectionEquality().hash(valueCode) ^
       const DeepCollectionEquality().hash(valueCodeElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ValueSetExpansionParameterCopyWith<_ValueSetExpansionParameter>
       get copyWith => __$ValueSetExpansionParameterCopyWithImpl<
@@ -5559,6 +5591,7 @@ abstract class _ValueSetExpansionParameter extends ValueSetExpansionParameter {
   @JsonKey(name: '_valueCode')
   Element get valueCodeElement;
   @override
+  @JsonKey(ignore: true)
   _$ValueSetExpansionParameterCopyWith<_ValueSetExpansionParameter>
       get copyWith;
 }
@@ -5645,6 +5678,7 @@ mixin _$ValueSetExpansionContains {
   List<ValueSetExpansionContains> get contains;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ValueSetExpansionContainsCopyWith<ValueSetExpansionContains> get copyWith;
 }
 
@@ -6030,6 +6064,7 @@ class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
       const DeepCollectionEquality().hash(displayElement) ^
       const DeepCollectionEquality().hash(contains);
 
+  @JsonKey(ignore: true)
   @override
   _$ValueSetExpansionContainsCopyWith<_ValueSetExpansionContains>
       get copyWith =>
@@ -6103,6 +6138,7 @@ abstract class _ValueSetExpansionContains extends ValueSetExpansionContains {
   @override
   List<ValueSetExpansionContains> get contains;
   @override
+  @JsonKey(ignore: true)
   _$ValueSetExpansionContainsCopyWith<_ValueSetExpansionContains> get copyWith;
 }
 
@@ -6287,6 +6323,7 @@ mixin _$ConceptMap {
   Element get dateElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConceptMapCopyWith<ConceptMap> get copyWith;
 }
 
@@ -7249,6 +7286,7 @@ class _$_ConceptMap extends _ConceptMap {
       const DeepCollectionEquality().hash(element) ^
       const DeepCollectionEquality().hash(dateElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ConceptMapCopyWith<_ConceptMap> get copyWith =>
       __$ConceptMapCopyWithImpl<_ConceptMap>(this, _$identity);
@@ -7420,6 +7458,7 @@ abstract class _ConceptMap extends ConceptMap {
   @JsonKey(name: '_date')
   Element get dateElement;
   @override
+  @JsonKey(ignore: true)
   _$ConceptMapCopyWith<_ConceptMap> get copyWith;
 }
 
@@ -7467,6 +7506,7 @@ mixin _$ConceptMapContact {
   List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConceptMapContactCopyWith<ConceptMapContact> get copyWith;
 }
 
@@ -7623,6 +7663,7 @@ class _$_ConceptMapContact extends _ConceptMapContact {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(telecom);
 
+  @JsonKey(ignore: true)
   @override
   _$ConceptMapContactCopyWith<_ConceptMapContact> get copyWith =>
       __$ConceptMapContactCopyWithImpl<_ConceptMapContact>(this, _$identity);
@@ -7657,6 +7698,7 @@ abstract class _ConceptMapContact extends ConceptMapContact {
   @override
   List<ContactPoint> get telecom;
   @override
+  @JsonKey(ignore: true)
   _$ConceptMapContactCopyWith<_ConceptMapContact> get copyWith;
 }
 
@@ -7711,6 +7753,7 @@ mixin _$ConceptMapElement {
   List<ConceptMapElementTarget> get target;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConceptMapElementCopyWith<ConceptMapElement> get copyWith;
 }
 
@@ -7915,6 +7958,7 @@ class _$_ConceptMapElement extends _ConceptMapElement {
       const DeepCollectionEquality().hash(codeElement) ^
       const DeepCollectionEquality().hash(target);
 
+  @JsonKey(ignore: true)
   @override
   _$ConceptMapElementCopyWith<_ConceptMapElement> get copyWith =>
       __$ConceptMapElementCopyWithImpl<_ConceptMapElement>(this, _$identity);
@@ -7956,6 +8000,7 @@ abstract class _ConceptMapElement extends ConceptMapElement {
   @override
   List<ConceptMapElementTarget> get target;
   @override
+  @JsonKey(ignore: true)
   _$ConceptMapElementCopyWith<_ConceptMapElement> get copyWith;
 }
 
@@ -8035,6 +8080,7 @@ mixin _$ConceptMapElementTarget {
   List<ConceptMapTargetDependsOn> get product;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConceptMapElementTargetCopyWith<ConceptMapElementTarget> get copyWith;
 }
 
@@ -8367,6 +8413,7 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
       const DeepCollectionEquality().hash(dependsOn) ^
       const DeepCollectionEquality().hash(product);
 
+  @JsonKey(ignore: true)
   @override
   _$ConceptMapElementTargetCopyWith<_ConceptMapElementTarget> get copyWith =>
       __$ConceptMapElementTargetCopyWithImpl<_ConceptMapElementTarget>(
@@ -8433,6 +8480,7 @@ abstract class _ConceptMapElementTarget extends ConceptMapElementTarget {
   @override
   List<ConceptMapTargetDependsOn> get product;
   @override
+  @JsonKey(ignore: true)
   _$ConceptMapElementTargetCopyWith<_ConceptMapElementTarget> get copyWith;
 }
 
@@ -8487,6 +8535,7 @@ mixin _$ConceptMapTargetDependsOn {
   String get code;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ConceptMapTargetDependsOnCopyWith<ConceptMapTargetDependsOn> get copyWith;
 }
 
@@ -8664,6 +8713,7 @@ class _$_ConceptMapTargetDependsOn extends _ConceptMapTargetDependsOn {
       const DeepCollectionEquality().hash(codeSystem) ^
       const DeepCollectionEquality().hash(code);
 
+  @JsonKey(ignore: true)
   @override
   _$ConceptMapTargetDependsOnCopyWith<_ConceptMapTargetDependsOn>
       get copyWith =>
@@ -8707,6 +8757,7 @@ abstract class _ConceptMapTargetDependsOn extends ConceptMapTargetDependsOn {
   @JsonKey(required: true)
   String get code;
   @override
+  @JsonKey(ignore: true)
   _$ConceptMapTargetDependsOnCopyWith<_ConceptMapTargetDependsOn> get copyWith;
 }
 
@@ -8873,6 +8924,7 @@ mixin _$NamingSystem {
   Reference get replacedBy;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NamingSystemCopyWith<NamingSystem> get copyWith;
 }
 
@@ -9682,6 +9734,7 @@ class _$_NamingSystem extends _NamingSystem {
       const DeepCollectionEquality().hash(uniqueId) ^
       const DeepCollectionEquality().hash(replacedBy);
 
+  @JsonKey(ignore: true)
   @override
   _$NamingSystemCopyWith<_NamingSystem> get copyWith =>
       __$NamingSystemCopyWithImpl<_NamingSystem>(this, _$identity);
@@ -9835,6 +9888,7 @@ abstract class _NamingSystem extends NamingSystem {
   @override
   Reference get replacedBy;
   @override
+  @JsonKey(ignore: true)
   _$NamingSystemCopyWith<_NamingSystem> get copyWith;
 }
 
@@ -9882,6 +9936,7 @@ mixin _$NamingSystemContact {
   List<ContactPoint> get telecom;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NamingSystemContactCopyWith<NamingSystemContact> get copyWith;
 }
 
@@ -10038,6 +10093,7 @@ class _$_NamingSystemContact extends _NamingSystemContact {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(telecom);
 
+  @JsonKey(ignore: true)
   @override
   _$NamingSystemContactCopyWith<_NamingSystemContact> get copyWith =>
       __$NamingSystemContactCopyWithImpl<_NamingSystemContact>(
@@ -10073,6 +10129,7 @@ abstract class _NamingSystemContact extends NamingSystemContact {
   @override
   List<ContactPoint> get telecom;
   @override
+  @JsonKey(ignore: true)
   _$NamingSystemContactCopyWith<_NamingSystemContact> get copyWith;
 }
 
@@ -10148,6 +10205,7 @@ mixin _$NamingSystemUniqueId {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NamingSystemUniqueIdCopyWith<NamingSystemUniqueId> get copyWith;
 }
 
@@ -10457,6 +10515,7 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
       const DeepCollectionEquality().hash(preferredElement) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$NamingSystemUniqueIdCopyWith<_NamingSystemUniqueId> get copyWith =>
       __$NamingSystemUniqueIdCopyWithImpl<_NamingSystemUniqueId>(
@@ -10520,5 +10579,6 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$NamingSystemUniqueIdCopyWith<_NamingSystemUniqueId> get copyWith;
 }

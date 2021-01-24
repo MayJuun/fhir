@@ -166,6 +166,7 @@ mixin _$ResearchStudy {
   List<ResearchStudyObjective> get objective;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ResearchStudyCopyWith<ResearchStudy> get copyWith;
 }
 
@@ -1002,6 +1003,7 @@ class _$_ResearchStudy extends _ResearchStudy {
       const DeepCollectionEquality().hash(arm) ^
       const DeepCollectionEquality().hash(objective);
 
+  @JsonKey(ignore: true)
   @override
   _$ResearchStudyCopyWith<_ResearchStudy> get copyWith =>
       __$ResearchStudyCopyWithImpl<_ResearchStudy>(this, _$identity);
@@ -1150,6 +1152,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
   List<ResearchStudyObjective> get objective;
   @override
+  @JsonKey(ignore: true)
   _$ResearchStudyCopyWith<_ResearchStudy> get copyWith;
 }
 
@@ -1208,6 +1211,7 @@ mixin _$ResearchStudyArm {
   Element get descriptionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ResearchStudyArmCopyWith<ResearchStudyArm> get copyWith;
 }
 
@@ -1452,6 +1456,7 @@ class _$_ResearchStudyArm extends _ResearchStudyArm {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ResearchStudyArmCopyWith<_ResearchStudyArm> get copyWith =>
       __$ResearchStudyArmCopyWithImpl<_ResearchStudyArm>(this, _$identity);
@@ -1498,6 +1503,7 @@ abstract class _ResearchStudyArm extends ResearchStudyArm {
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
+  @JsonKey(ignore: true)
   _$ResearchStudyArmCopyWith<_ResearchStudyArm> get copyWith;
 }
 
@@ -1550,6 +1556,7 @@ mixin _$ResearchStudyObjective {
   CodeableConcept get type;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ResearchStudyObjectiveCopyWith<ResearchStudyObjective> get copyWith;
 }
 
@@ -1748,6 +1755,7 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
       const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(type);
 
+  @JsonKey(ignore: true)
   @override
   _$ResearchStudyObjectiveCopyWith<_ResearchStudyObjective> get copyWith =>
       __$ResearchStudyObjectiveCopyWithImpl<_ResearchStudyObjective>(
@@ -1787,6 +1795,7 @@ abstract class _ResearchStudyObjective extends ResearchStudyObjective {
   @override
   CodeableConcept get type;
   @override
+  @JsonKey(ignore: true)
   _$ResearchStudyObjectiveCopyWith<_ResearchStudyObjective> get copyWith;
 }
 
@@ -1905,6 +1914,7 @@ mixin _$ResearchSubject {
   Reference get consent;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ResearchSubjectCopyWith<ResearchSubject> get copyWith;
 }
 
@@ -2514,6 +2524,7 @@ class _$_ResearchSubject extends _ResearchSubject {
       const DeepCollectionEquality().hash(actualArmElement) ^
       const DeepCollectionEquality().hash(consent);
 
+  @JsonKey(ignore: true)
   @override
   _$ResearchSubjectCopyWith<_ResearchSubject> get copyWith =>
       __$ResearchSubjectCopyWithImpl<_ResearchSubject>(this, _$identity);
@@ -2619,6 +2630,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   @override
   Reference get consent;
   @override
+  @JsonKey(ignore: true)
   _$ResearchSubjectCopyWith<_ResearchSubject> get copyWith;
 }
 
@@ -2680,6 +2692,7 @@ mixin _$ResearchSubjectProgress {
   Element get startDateElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ResearchSubjectProgressCopyWith<ResearchSubjectProgress> get copyWith;
 }
 
@@ -2964,6 +2977,7 @@ class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
       const DeepCollectionEquality().hash(startDate) ^
       const DeepCollectionEquality().hash(startDateElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ResearchSubjectProgressCopyWith<_ResearchSubjectProgress> get copyWith =>
       __$ResearchSubjectProgressCopyWithImpl<_ResearchSubjectProgress>(
@@ -3013,5 +3027,6 @@ abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
   @JsonKey(name: '_startDate')
   Element get startDateElement;
   @override
+  @JsonKey(ignore: true)
   _$ResearchSubjectProgressCopyWith<_ResearchSubjectProgress> get copyWith;
 }

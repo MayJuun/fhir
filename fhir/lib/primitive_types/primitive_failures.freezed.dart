@@ -163,100 +163,101 @@ mixin _$PrimitiveFailure<T> {
   T get failedValue;
 
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   });
 
+  @JsonKey(ignore: true)
   $PrimitiveFailureCopyWith<T, PrimitiveFailure<T>> get copyWith;
 }
 
@@ -347,6 +348,7 @@ class _$InvalidBase64Binary<T> extends InvalidBase64Binary<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidBase64BinaryCopyWith<T, InvalidBase64Binary<T>> get copyWith =>
       _$InvalidBase64BinaryCopyWithImpl<T, InvalidBase64Binary<T>>(
@@ -354,27 +356,27 @@ class _$InvalidBase64Binary<T> extends InvalidBase64Binary<T> {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -401,28 +403,28 @@ class _$InvalidBase64Binary<T> extends InvalidBase64Binary<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidBase64Binary != null) {
@@ -433,27 +435,27 @@ class _$InvalidBase64Binary<T> extends InvalidBase64Binary<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -480,28 +482,28 @@ class _$InvalidBase64Binary<T> extends InvalidBase64Binary<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidBase64Binary != null) {
@@ -519,6 +521,7 @@ abstract class InvalidBase64Binary<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidBase64BinaryCopyWith<T, InvalidBase64Binary<T>> get copyWith;
 }
 
@@ -581,33 +584,34 @@ class _$InvalidBoolean<T> extends InvalidBoolean<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidBooleanCopyWith<T, InvalidBoolean<T>> get copyWith =>
       _$InvalidBooleanCopyWithImpl<T, InvalidBoolean<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -634,28 +638,28 @@ class _$InvalidBoolean<T> extends InvalidBoolean<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidBoolean != null) {
@@ -666,27 +670,27 @@ class _$InvalidBoolean<T> extends InvalidBoolean<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -713,28 +717,28 @@ class _$InvalidBoolean<T> extends InvalidBoolean<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidBoolean != null) {
@@ -751,6 +755,7 @@ abstract class InvalidBoolean<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidBooleanCopyWith<T, InvalidBoolean<T>> get copyWith;
 }
 
@@ -813,33 +818,34 @@ class _$InvalidCanonical<T> extends InvalidCanonical<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidCanonicalCopyWith<T, InvalidCanonical<T>> get copyWith =>
       _$InvalidCanonicalCopyWithImpl<T, InvalidCanonical<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -866,28 +872,28 @@ class _$InvalidCanonical<T> extends InvalidCanonical<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidCanonical != null) {
@@ -898,27 +904,27 @@ class _$InvalidCanonical<T> extends InvalidCanonical<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -945,28 +951,28 @@ class _$InvalidCanonical<T> extends InvalidCanonical<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidCanonical != null) {
@@ -984,6 +990,7 @@ abstract class InvalidCanonical<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidCanonicalCopyWith<T, InvalidCanonical<T>> get copyWith;
 }
 
@@ -1046,33 +1053,34 @@ class _$InvalidCode<T> extends InvalidCode<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidCodeCopyWith<T, InvalidCode<T>> get copyWith =>
       _$InvalidCodeCopyWithImpl<T, InvalidCode<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -1099,28 +1107,28 @@ class _$InvalidCode<T> extends InvalidCode<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidCode != null) {
@@ -1131,27 +1139,27 @@ class _$InvalidCode<T> extends InvalidCode<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -1178,28 +1186,28 @@ class _$InvalidCode<T> extends InvalidCode<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidCode != null) {
@@ -1216,6 +1224,7 @@ abstract class InvalidCode<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidCodeCopyWith<T, InvalidCode<T>> get copyWith;
 }
 
@@ -1278,33 +1287,34 @@ class _$InvalidDate<T> extends InvalidDate<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidDateCopyWith<T, InvalidDate<T>> get copyWith =>
       _$InvalidDateCopyWithImpl<T, InvalidDate<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -1331,28 +1341,28 @@ class _$InvalidDate<T> extends InvalidDate<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidDate != null) {
@@ -1363,27 +1373,27 @@ class _$InvalidDate<T> extends InvalidDate<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -1410,28 +1420,28 @@ class _$InvalidDate<T> extends InvalidDate<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidDate != null) {
@@ -1448,6 +1458,7 @@ abstract class InvalidDate<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidDateCopyWith<T, InvalidDate<T>> get copyWith;
 }
 
@@ -1510,33 +1521,34 @@ class _$InvalidDateTime<T> extends InvalidDateTime<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidDateTimeCopyWith<T, InvalidDateTime<T>> get copyWith =>
       _$InvalidDateTimeCopyWithImpl<T, InvalidDateTime<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -1563,28 +1575,28 @@ class _$InvalidDateTime<T> extends InvalidDateTime<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidFhirDateTime != null) {
@@ -1595,27 +1607,27 @@ class _$InvalidDateTime<T> extends InvalidDateTime<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -1642,28 +1654,28 @@ class _$InvalidDateTime<T> extends InvalidDateTime<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidFhirDateTime != null) {
@@ -1681,6 +1693,7 @@ abstract class InvalidDateTime<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidDateTimeCopyWith<T, InvalidDateTime<T>> get copyWith;
 }
 
@@ -1743,33 +1756,34 @@ class _$InvalidDecimal<T> extends InvalidDecimal<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidDecimalCopyWith<T, InvalidDecimal<T>> get copyWith =>
       _$InvalidDecimalCopyWithImpl<T, InvalidDecimal<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -1796,28 +1810,28 @@ class _$InvalidDecimal<T> extends InvalidDecimal<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidDecimal != null) {
@@ -1828,27 +1842,27 @@ class _$InvalidDecimal<T> extends InvalidDecimal<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -1875,28 +1889,28 @@ class _$InvalidDecimal<T> extends InvalidDecimal<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidDecimal != null) {
@@ -1913,6 +1927,7 @@ abstract class InvalidDecimal<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidDecimalCopyWith<T, InvalidDecimal<T>> get copyWith;
 }
 
@@ -1975,33 +1990,34 @@ class _$InvalidId<T> extends InvalidId<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidIdCopyWith<T, InvalidId<T>> get copyWith =>
       _$InvalidIdCopyWithImpl<T, InvalidId<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -2028,28 +2044,28 @@ class _$InvalidId<T> extends InvalidId<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidId != null) {
@@ -2060,27 +2076,27 @@ class _$InvalidId<T> extends InvalidId<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -2107,28 +2123,28 @@ class _$InvalidId<T> extends InvalidId<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidId != null) {
@@ -2145,6 +2161,7 @@ abstract class InvalidId<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidIdCopyWith<T, InvalidId<T>> get copyWith;
 }
 
@@ -2207,33 +2224,34 @@ class _$InvalidInstant<T> extends InvalidInstant<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidInstantCopyWith<T, InvalidInstant<T>> get copyWith =>
       _$InvalidInstantCopyWithImpl<T, InvalidInstant<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -2260,28 +2278,28 @@ class _$InvalidInstant<T> extends InvalidInstant<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidInstant != null) {
@@ -2292,27 +2310,27 @@ class _$InvalidInstant<T> extends InvalidInstant<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -2339,28 +2357,28 @@ class _$InvalidInstant<T> extends InvalidInstant<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidInstant != null) {
@@ -2377,6 +2395,7 @@ abstract class InvalidInstant<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidInstantCopyWith<T, InvalidInstant<T>> get copyWith;
 }
 
@@ -2439,33 +2458,34 @@ class _$InvalidInteger64<T> extends InvalidInteger64<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidInteger64CopyWith<T, InvalidInteger64<T>> get copyWith =>
       _$InvalidInteger64CopyWithImpl<T, InvalidInteger64<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -2492,28 +2512,28 @@ class _$InvalidInteger64<T> extends InvalidInteger64<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidInteger64 != null) {
@@ -2524,27 +2544,27 @@ class _$InvalidInteger64<T> extends InvalidInteger64<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -2571,28 +2591,28 @@ class _$InvalidInteger64<T> extends InvalidInteger64<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidInteger64 != null) {
@@ -2610,6 +2630,7 @@ abstract class InvalidInteger64<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidInteger64CopyWith<T, InvalidInteger64<T>> get copyWith;
 }
 
@@ -2672,33 +2693,34 @@ class _$InvalidInteger<T> extends InvalidInteger<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidIntegerCopyWith<T, InvalidInteger<T>> get copyWith =>
       _$InvalidIntegerCopyWithImpl<T, InvalidInteger<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -2725,28 +2747,28 @@ class _$InvalidInteger<T> extends InvalidInteger<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidInteger != null) {
@@ -2757,27 +2779,27 @@ class _$InvalidInteger<T> extends InvalidInteger<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -2804,28 +2826,28 @@ class _$InvalidInteger<T> extends InvalidInteger<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidInteger != null) {
@@ -2842,6 +2864,7 @@ abstract class InvalidInteger<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidIntegerCopyWith<T, InvalidInteger<T>> get copyWith;
 }
 
@@ -2904,33 +2927,34 @@ class _$InvalidMarkdown<T> extends InvalidMarkdown<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidMarkdownCopyWith<T, InvalidMarkdown<T>> get copyWith =>
       _$InvalidMarkdownCopyWithImpl<T, InvalidMarkdown<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -2957,28 +2981,28 @@ class _$InvalidMarkdown<T> extends InvalidMarkdown<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidMarkdown != null) {
@@ -2989,27 +3013,27 @@ class _$InvalidMarkdown<T> extends InvalidMarkdown<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -3036,28 +3060,28 @@ class _$InvalidMarkdown<T> extends InvalidMarkdown<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidMarkdown != null) {
@@ -3075,6 +3099,7 @@ abstract class InvalidMarkdown<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidMarkdownCopyWith<T, InvalidMarkdown<T>> get copyWith;
 }
 
@@ -3137,33 +3162,34 @@ class _$InvalidOid<T> extends InvalidOid<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidOidCopyWith<T, InvalidOid<T>> get copyWith =>
       _$InvalidOidCopyWithImpl<T, InvalidOid<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -3190,28 +3216,28 @@ class _$InvalidOid<T> extends InvalidOid<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidOid != null) {
@@ -3222,27 +3248,27 @@ class _$InvalidOid<T> extends InvalidOid<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -3269,28 +3295,28 @@ class _$InvalidOid<T> extends InvalidOid<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidOid != null) {
@@ -3307,6 +3333,7 @@ abstract class InvalidOid<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidOidCopyWith<T, InvalidOid<T>> get copyWith;
 }
 
@@ -3369,6 +3396,7 @@ class _$InvalidPositiveInt<T> extends InvalidPositiveInt<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidPositiveIntCopyWith<T, InvalidPositiveInt<T>> get copyWith =>
       _$InvalidPositiveIntCopyWithImpl<T, InvalidPositiveInt<T>>(
@@ -3376,27 +3404,27 @@ class _$InvalidPositiveInt<T> extends InvalidPositiveInt<T> {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -3423,28 +3451,28 @@ class _$InvalidPositiveInt<T> extends InvalidPositiveInt<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidPositiveInt != null) {
@@ -3455,27 +3483,27 @@ class _$InvalidPositiveInt<T> extends InvalidPositiveInt<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -3502,28 +3530,28 @@ class _$InvalidPositiveInt<T> extends InvalidPositiveInt<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidPositiveInt != null) {
@@ -3541,6 +3569,7 @@ abstract class InvalidPositiveInt<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidPositiveIntCopyWith<T, InvalidPositiveInt<T>> get copyWith;
 }
 
@@ -3603,33 +3632,34 @@ class _$InvalidTime<T> extends InvalidTime<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidTimeCopyWith<T, InvalidTime<T>> get copyWith =>
       _$InvalidTimeCopyWithImpl<T, InvalidTime<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -3656,28 +3686,28 @@ class _$InvalidTime<T> extends InvalidTime<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidTime != null) {
@@ -3688,27 +3718,27 @@ class _$InvalidTime<T> extends InvalidTime<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -3735,28 +3765,28 @@ class _$InvalidTime<T> extends InvalidTime<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidTime != null) {
@@ -3773,6 +3803,7 @@ abstract class InvalidTime<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidTimeCopyWith<T, InvalidTime<T>> get copyWith;
 }
 
@@ -3835,6 +3866,7 @@ class _$InvalidUnsignedInt<T> extends InvalidUnsignedInt<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidUnsignedIntCopyWith<T, InvalidUnsignedInt<T>> get copyWith =>
       _$InvalidUnsignedIntCopyWithImpl<T, InvalidUnsignedInt<T>>(
@@ -3842,27 +3874,27 @@ class _$InvalidUnsignedInt<T> extends InvalidUnsignedInt<T> {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -3889,28 +3921,28 @@ class _$InvalidUnsignedInt<T> extends InvalidUnsignedInt<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidUnsignedInt != null) {
@@ -3921,27 +3953,27 @@ class _$InvalidUnsignedInt<T> extends InvalidUnsignedInt<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -3968,28 +4000,28 @@ class _$InvalidUnsignedInt<T> extends InvalidUnsignedInt<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidUnsignedInt != null) {
@@ -4007,6 +4039,7 @@ abstract class InvalidUnsignedInt<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidUnsignedIntCopyWith<T, InvalidUnsignedInt<T>> get copyWith;
 }
 
@@ -4069,33 +4102,34 @@ class _$InvalidFhirUri<T> extends InvalidFhirUri<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidFhirUriCopyWith<T, InvalidFhirUri<T>> get copyWith =>
       _$InvalidFhirUriCopyWithImpl<T, InvalidFhirUri<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -4122,28 +4156,28 @@ class _$InvalidFhirUri<T> extends InvalidFhirUri<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidFhirUri != null) {
@@ -4154,27 +4188,27 @@ class _$InvalidFhirUri<T> extends InvalidFhirUri<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -4201,28 +4235,28 @@ class _$InvalidFhirUri<T> extends InvalidFhirUri<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidFhirUri != null) {
@@ -4239,6 +4273,7 @@ abstract class InvalidFhirUri<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidFhirUriCopyWith<T, InvalidFhirUri<T>> get copyWith;
 }
 
@@ -4301,33 +4336,34 @@ class _$InvalidFhirUrl<T> extends InvalidFhirUrl<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidFhirUrlCopyWith<T, InvalidFhirUrl<T>> get copyWith =>
       _$InvalidFhirUrlCopyWithImpl<T, InvalidFhirUrl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -4354,28 +4390,28 @@ class _$InvalidFhirUrl<T> extends InvalidFhirUrl<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidFhirUrl != null) {
@@ -4386,27 +4422,27 @@ class _$InvalidFhirUrl<T> extends InvalidFhirUrl<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -4433,28 +4469,28 @@ class _$InvalidFhirUrl<T> extends InvalidFhirUrl<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidFhirUrl != null) {
@@ -4471,6 +4507,7 @@ abstract class InvalidFhirUrl<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidFhirUrlCopyWith<T, InvalidFhirUrl<T>> get copyWith;
 }
 
@@ -4533,33 +4570,34 @@ class _$InvalidUuid<T> extends InvalidUuid<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidUuidCopyWith<T, InvalidUuid<T>> get copyWith =>
       _$InvalidUuidCopyWithImpl<T, InvalidUuid<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -4586,28 +4624,28 @@ class _$InvalidUuid<T> extends InvalidUuid<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidUuid != null) {
@@ -4618,27 +4656,27 @@ class _$InvalidUuid<T> extends InvalidUuid<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -4665,28 +4703,28 @@ class _$InvalidUuid<T> extends InvalidUuid<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidUuid != null) {
@@ -4703,6 +4741,7 @@ abstract class InvalidUuid<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidUuidCopyWith<T, InvalidUuid<T>> get copyWith;
 }
 
@@ -4765,33 +4804,34 @@ class _$InvalidEnum<T> extends InvalidEnum<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidEnumCopyWith<T, InvalidEnum<T>> get copyWith =>
       _$InvalidEnumCopyWithImpl<T, InvalidEnum<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result invalidBase64Binary(T failedValue),
-    @required Result invalidBoolean(T failedValue),
-    @required Result invalidCanonical(T failedValue),
-    @required Result invalidCode(T failedValue),
-    @required Result invalidDate(T failedValue),
-    @required Result invalidFhirDateTime(T failedValue),
-    @required Result invalidDecimal(T failedValue),
-    @required Result invalidId(T failedValue),
-    @required Result invalidInstant(T failedValue),
-    @required Result invalidInteger64(T failedValue),
-    @required Result invalidInteger(T failedValue),
-    @required Result invalidMarkdown(T failedValue),
-    @required Result invalidOid(T failedValue),
-    @required Result invalidPositiveInt(T failedValue),
-    @required Result invalidTime(T failedValue),
-    @required Result invalidUnsignedInt(T failedValue),
-    @required Result invalidFhirUri(T failedValue),
-    @required Result invalidFhirUrl(T failedValue),
-    @required Result invalidUuid(T failedValue),
-    @required Result invalidEnum(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult invalidBase64Binary(T failedValue),
+    @required TResult invalidBoolean(T failedValue),
+    @required TResult invalidCanonical(T failedValue),
+    @required TResult invalidCode(T failedValue),
+    @required TResult invalidDate(T failedValue),
+    @required TResult invalidFhirDateTime(T failedValue),
+    @required TResult invalidDecimal(T failedValue),
+    @required TResult invalidId(T failedValue),
+    @required TResult invalidInstant(T failedValue),
+    @required TResult invalidInteger64(T failedValue),
+    @required TResult invalidInteger(T failedValue),
+    @required TResult invalidMarkdown(T failedValue),
+    @required TResult invalidOid(T failedValue),
+    @required TResult invalidPositiveInt(T failedValue),
+    @required TResult invalidTime(T failedValue),
+    @required TResult invalidUnsignedInt(T failedValue),
+    @required TResult invalidFhirUri(T failedValue),
+    @required TResult invalidFhirUrl(T failedValue),
+    @required TResult invalidUuid(T failedValue),
+    @required TResult invalidEnum(T failedValue),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -4818,28 +4858,28 @@ class _$InvalidEnum<T> extends InvalidEnum<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result invalidBase64Binary(T failedValue),
-    Result invalidBoolean(T failedValue),
-    Result invalidCanonical(T failedValue),
-    Result invalidCode(T failedValue),
-    Result invalidDate(T failedValue),
-    Result invalidFhirDateTime(T failedValue),
-    Result invalidDecimal(T failedValue),
-    Result invalidId(T failedValue),
-    Result invalidInstant(T failedValue),
-    Result invalidInteger64(T failedValue),
-    Result invalidInteger(T failedValue),
-    Result invalidMarkdown(T failedValue),
-    Result invalidOid(T failedValue),
-    Result invalidPositiveInt(T failedValue),
-    Result invalidTime(T failedValue),
-    Result invalidUnsignedInt(T failedValue),
-    Result invalidFhirUri(T failedValue),
-    Result invalidFhirUrl(T failedValue),
-    Result invalidUuid(T failedValue),
-    Result invalidEnum(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult invalidBase64Binary(T failedValue),
+    TResult invalidBoolean(T failedValue),
+    TResult invalidCanonical(T failedValue),
+    TResult invalidCode(T failedValue),
+    TResult invalidDate(T failedValue),
+    TResult invalidFhirDateTime(T failedValue),
+    TResult invalidDecimal(T failedValue),
+    TResult invalidId(T failedValue),
+    TResult invalidInstant(T failedValue),
+    TResult invalidInteger64(T failedValue),
+    TResult invalidInteger(T failedValue),
+    TResult invalidMarkdown(T failedValue),
+    TResult invalidOid(T failedValue),
+    TResult invalidPositiveInt(T failedValue),
+    TResult invalidTime(T failedValue),
+    TResult invalidUnsignedInt(T failedValue),
+    TResult invalidFhirUri(T failedValue),
+    TResult invalidFhirUrl(T failedValue),
+    TResult invalidUuid(T failedValue),
+    TResult invalidEnum(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidEnum != null) {
@@ -4850,27 +4890,27 @@ class _$InvalidEnum<T> extends InvalidEnum<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    @required Result invalidBoolean(InvalidBoolean<T> value),
-    @required Result invalidCanonical(InvalidCanonical<T> value),
-    @required Result invalidCode(InvalidCode<T> value),
-    @required Result invalidDate(InvalidDate<T> value),
-    @required Result invalidFhirDateTime(InvalidDateTime<T> value),
-    @required Result invalidDecimal(InvalidDecimal<T> value),
-    @required Result invalidId(InvalidId<T> value),
-    @required Result invalidInstant(InvalidInstant<T> value),
-    @required Result invalidInteger64(InvalidInteger64<T> value),
-    @required Result invalidInteger(InvalidInteger<T> value),
-    @required Result invalidMarkdown(InvalidMarkdown<T> value),
-    @required Result invalidOid(InvalidOid<T> value),
-    @required Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    @required Result invalidTime(InvalidTime<T> value),
-    @required Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    @required Result invalidFhirUri(InvalidFhirUri<T> value),
-    @required Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    @required Result invalidUuid(InvalidUuid<T> value),
-    @required Result invalidEnum(InvalidEnum<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    @required TResult invalidBoolean(InvalidBoolean<T> value),
+    @required TResult invalidCanonical(InvalidCanonical<T> value),
+    @required TResult invalidCode(InvalidCode<T> value),
+    @required TResult invalidDate(InvalidDate<T> value),
+    @required TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    @required TResult invalidDecimal(InvalidDecimal<T> value),
+    @required TResult invalidId(InvalidId<T> value),
+    @required TResult invalidInstant(InvalidInstant<T> value),
+    @required TResult invalidInteger64(InvalidInteger64<T> value),
+    @required TResult invalidInteger(InvalidInteger<T> value),
+    @required TResult invalidMarkdown(InvalidMarkdown<T> value),
+    @required TResult invalidOid(InvalidOid<T> value),
+    @required TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    @required TResult invalidTime(InvalidTime<T> value),
+    @required TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    @required TResult invalidFhirUri(InvalidFhirUri<T> value),
+    @required TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    @required TResult invalidUuid(InvalidUuid<T> value),
+    @required TResult invalidEnum(InvalidEnum<T> value),
   }) {
     assert(invalidBase64Binary != null);
     assert(invalidBoolean != null);
@@ -4897,28 +4937,28 @@ class _$InvalidEnum<T> extends InvalidEnum<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result invalidBase64Binary(InvalidBase64Binary<T> value),
-    Result invalidBoolean(InvalidBoolean<T> value),
-    Result invalidCanonical(InvalidCanonical<T> value),
-    Result invalidCode(InvalidCode<T> value),
-    Result invalidDate(InvalidDate<T> value),
-    Result invalidFhirDateTime(InvalidDateTime<T> value),
-    Result invalidDecimal(InvalidDecimal<T> value),
-    Result invalidId(InvalidId<T> value),
-    Result invalidInstant(InvalidInstant<T> value),
-    Result invalidInteger64(InvalidInteger64<T> value),
-    Result invalidInteger(InvalidInteger<T> value),
-    Result invalidMarkdown(InvalidMarkdown<T> value),
-    Result invalidOid(InvalidOid<T> value),
-    Result invalidPositiveInt(InvalidPositiveInt<T> value),
-    Result invalidTime(InvalidTime<T> value),
-    Result invalidUnsignedInt(InvalidUnsignedInt<T> value),
-    Result invalidFhirUri(InvalidFhirUri<T> value),
-    Result invalidFhirUrl(InvalidFhirUrl<T> value),
-    Result invalidUuid(InvalidUuid<T> value),
-    Result invalidEnum(InvalidEnum<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult invalidBase64Binary(InvalidBase64Binary<T> value),
+    TResult invalidBoolean(InvalidBoolean<T> value),
+    TResult invalidCanonical(InvalidCanonical<T> value),
+    TResult invalidCode(InvalidCode<T> value),
+    TResult invalidDate(InvalidDate<T> value),
+    TResult invalidFhirDateTime(InvalidDateTime<T> value),
+    TResult invalidDecimal(InvalidDecimal<T> value),
+    TResult invalidId(InvalidId<T> value),
+    TResult invalidInstant(InvalidInstant<T> value),
+    TResult invalidInteger64(InvalidInteger64<T> value),
+    TResult invalidInteger(InvalidInteger<T> value),
+    TResult invalidMarkdown(InvalidMarkdown<T> value),
+    TResult invalidOid(InvalidOid<T> value),
+    TResult invalidPositiveInt(InvalidPositiveInt<T> value),
+    TResult invalidTime(InvalidTime<T> value),
+    TResult invalidUnsignedInt(InvalidUnsignedInt<T> value),
+    TResult invalidFhirUri(InvalidFhirUri<T> value),
+    TResult invalidFhirUrl(InvalidFhirUrl<T> value),
+    TResult invalidUuid(InvalidUuid<T> value),
+    TResult invalidEnum(InvalidEnum<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidEnum != null) {
@@ -4935,5 +4975,6 @@ abstract class InvalidEnum<T> extends PrimitiveFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidEnumCopyWith<T, InvalidEnum<T>> get copyWith;
 }

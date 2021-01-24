@@ -191,6 +191,7 @@ mixin _$Appointment {
   List<Period> get requestedPeriod;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AppointmentCopyWith<Appointment> get copyWith;
 }
 
@@ -1147,6 +1148,7 @@ class _$_Appointment extends _Appointment {
       const DeepCollectionEquality().hash(participant) ^
       const DeepCollectionEquality().hash(requestedPeriod);
 
+  @JsonKey(ignore: true)
   @override
   _$AppointmentCopyWith<_Appointment> get copyWith =>
       __$AppointmentCopyWithImpl<_Appointment>(this, _$identity);
@@ -1320,6 +1322,7 @@ abstract class _Appointment extends Appointment {
   @override
   List<Period> get requestedPeriod;
   @override
+  @JsonKey(ignore: true)
   _$AppointmentCopyWith<_Appointment> get copyWith;
 }
 
@@ -1392,6 +1395,7 @@ mixin _$AppointmentParticipant {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AppointmentParticipantCopyWith<AppointmentParticipant> get copyWith;
 }
 
@@ -1698,6 +1702,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
       const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$AppointmentParticipantCopyWith<_AppointmentParticipant> get copyWith =>
       __$AppointmentParticipantCopyWithImpl<_AppointmentParticipant>(
@@ -1757,6 +1762,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$AppointmentParticipantCopyWith<_AppointmentParticipant> get copyWith;
 }
 
@@ -1874,6 +1880,7 @@ mixin _$AppointmentResponse {
   Element get commentElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $AppointmentResponseCopyWith<AppointmentResponse> get copyWith;
 }
 
@@ -2475,6 +2482,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
       const DeepCollectionEquality().hash(comment) ^
       const DeepCollectionEquality().hash(commentElement);
 
+  @JsonKey(ignore: true)
   @override
   _$AppointmentResponseCopyWith<_AppointmentResponse> get copyWith =>
       __$AppointmentResponseCopyWithImpl<_AppointmentResponse>(
@@ -2580,6 +2588,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @JsonKey(name: '_comment')
   Element get commentElement;
   @override
+  @JsonKey(ignore: true)
   _$AppointmentResponseCopyWith<_AppointmentResponse> get copyWith;
 }
 
@@ -2687,6 +2696,7 @@ mixin _$Schedule {
   Element get commentElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ScheduleCopyWith<Schedule> get copyWith;
 }
 
@@ -3206,6 +3216,7 @@ class _$_Schedule extends _Schedule {
       const DeepCollectionEquality().hash(comment) ^
       const DeepCollectionEquality().hash(commentElement);
 
+  @JsonKey(ignore: true)
   @override
   _$ScheduleCopyWith<_Schedule> get copyWith =>
       __$ScheduleCopyWithImpl<_Schedule>(this, _$identity);
@@ -3299,6 +3310,7 @@ abstract class _Schedule extends Schedule {
   @JsonKey(name: '_comment')
   Element get commentElement;
   @override
+  @JsonKey(ignore: true)
   _$ScheduleCopyWith<_Schedule> get copyWith;
 }
 
@@ -3432,6 +3444,7 @@ mixin _$Slot {
   Element get commentElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $SlotCopyWith<Slot> get copyWith;
 }
 
@@ -4103,6 +4116,7 @@ class _$_Slot extends _Slot {
       const DeepCollectionEquality().hash(comment) ^
       const DeepCollectionEquality().hash(commentElement);
 
+  @JsonKey(ignore: true)
   @override
   _$SlotCopyWith<_Slot> get copyWith =>
       __$SlotCopyWithImpl<_Slot>(this, _$identity);
@@ -4222,6 +4236,7 @@ abstract class _Slot extends Slot {
   @JsonKey(name: '_comment')
   Element get commentElement;
   @override
+  @JsonKey(ignore: true)
   _$SlotCopyWith<_Slot> get copyWith;
 }
 
@@ -4428,6 +4443,7 @@ mixin _$Task {
   List<TaskOutput> get output;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TaskCopyWith<Task> get copyWith;
 }
 
@@ -5590,6 +5606,7 @@ class _$_Task extends _Task {
       const DeepCollectionEquality().hash(input) ^
       const DeepCollectionEquality().hash(output);
 
+  @JsonKey(ignore: true)
   @override
   _$TaskCopyWith<_Task> get copyWith =>
       __$TaskCopyWithImpl<_Task>(this, _$identity);
@@ -5782,6 +5799,7 @@ abstract class _Task extends Task {
   @override
   List<TaskOutput> get output;
   @override
+  @JsonKey(ignore: true)
   _$TaskCopyWith<_Task> get copyWith;
 }
 
@@ -5836,6 +5854,7 @@ mixin _$TaskRestriction {
   List<Reference> get recipient;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TaskRestrictionCopyWith<TaskRestriction> get copyWith;
 }
 
@@ -6058,6 +6077,7 @@ class _$_TaskRestriction extends _TaskRestriction {
       const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(recipient);
 
+  @JsonKey(ignore: true)
   @override
   _$TaskRestrictionCopyWith<_TaskRestriction> get copyWith =>
       __$TaskRestrictionCopyWithImpl<_TaskRestriction>(this, _$identity);
@@ -6099,6 +6119,7 @@ abstract class _TaskRestriction extends TaskRestriction {
   @override
   List<Reference> get recipient;
   @override
+  @JsonKey(ignore: true)
   _$TaskRestrictionCopyWith<_TaskRestriction> get copyWith;
 }
 
@@ -6369,6 +6390,7 @@ mixin _$TaskInput {
   Meta get valueMeta;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TaskInputCopyWith<TaskInput> get copyWith;
 }
 
@@ -8197,6 +8219,7 @@ class _$_TaskInput extends _TaskInput {
       const DeepCollectionEquality().hash(valueDosage) ^
       const DeepCollectionEquality().hash(valueMeta);
 
+  @JsonKey(ignore: true)
   @override
   _$TaskInputCopyWith<_TaskInput> get copyWith =>
       __$TaskInputCopyWithImpl<_TaskInput>(this, _$identity);
@@ -8454,6 +8477,7 @@ abstract class _TaskInput extends TaskInput {
   @override
   Meta get valueMeta;
   @override
+  @JsonKey(ignore: true)
   _$TaskInputCopyWith<_TaskInput> get copyWith;
 }
 
@@ -8724,6 +8748,7 @@ mixin _$TaskOutput {
   Meta get valueMeta;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TaskOutputCopyWith<TaskOutput> get copyWith;
 }
 
@@ -10554,6 +10579,7 @@ class _$_TaskOutput extends _TaskOutput {
       const DeepCollectionEquality().hash(valueDosage) ^
       const DeepCollectionEquality().hash(valueMeta);
 
+  @JsonKey(ignore: true)
   @override
   _$TaskOutputCopyWith<_TaskOutput> get copyWith =>
       __$TaskOutputCopyWithImpl<_TaskOutput>(this, _$identity);
@@ -10811,6 +10837,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
   Meta get valueMeta;
   @override
+  @JsonKey(ignore: true)
   _$TaskOutputCopyWith<_TaskOutput> get copyWith;
 }
 
@@ -10950,6 +10977,7 @@ mixin _$VerificationResult {
   List<VerificationResultValidator> get validator;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $VerificationResultCopyWith<VerificationResult> get copyWith;
 }
 
@@ -11700,6 +11728,7 @@ class _$_VerificationResult extends _VerificationResult {
       const DeepCollectionEquality().hash(attestation) ^
       const DeepCollectionEquality().hash(validator);
 
+  @JsonKey(ignore: true)
   @override
   _$VerificationResultCopyWith<_VerificationResult> get copyWith =>
       __$VerificationResultCopyWithImpl<_VerificationResult>(this, _$identity);
@@ -11826,6 +11855,7 @@ abstract class _VerificationResult extends VerificationResult {
   @override
   List<VerificationResultValidator> get validator;
   @override
+  @JsonKey(ignore: true)
   _$VerificationResultCopyWith<_VerificationResult> get copyWith;
 }
 
@@ -11894,6 +11924,7 @@ mixin _$VerificationResultPrimarySource {
   List<CodeableConcept> get pushTypeAvailable;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $VerificationResultPrimarySourceCopyWith<VerificationResultPrimarySource>
       get copyWith;
 }
@@ -12212,6 +12243,7 @@ class _$_VerificationResultPrimarySource
       const DeepCollectionEquality().hash(canPushUpdates) ^
       const DeepCollectionEquality().hash(pushTypeAvailable);
 
+  @JsonKey(ignore: true)
   @override
   _$VerificationResultPrimarySourceCopyWith<_VerificationResultPrimarySource>
       get copyWith => __$VerificationResultPrimarySourceCopyWithImpl<
@@ -12268,6 +12300,7 @@ abstract class _VerificationResultPrimarySource
   @override
   List<CodeableConcept> get pushTypeAvailable;
   @override
+  @JsonKey(ignore: true)
   _$VerificationResultPrimarySourceCopyWith<_VerificationResultPrimarySource>
       get copyWith;
 }
@@ -12351,6 +12384,7 @@ mixin _$VerificationResultAttestation {
   Signature get sourceSignature;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $VerificationResultAttestationCopyWith<VerificationResultAttestation>
       get copyWith;
 }
@@ -12792,6 +12826,7 @@ class _$_VerificationResultAttestation extends _VerificationResultAttestation {
       const DeepCollectionEquality().hash(proxySignature) ^
       const DeepCollectionEquality().hash(sourceSignature);
 
+  @JsonKey(ignore: true)
   @override
   _$VerificationResultAttestationCopyWith<_VerificationResultAttestation>
       get copyWith => __$VerificationResultAttestationCopyWithImpl<
@@ -12862,6 +12897,7 @@ abstract class _VerificationResultAttestation
   @override
   Signature get sourceSignature;
   @override
+  @JsonKey(ignore: true)
   _$VerificationResultAttestationCopyWith<_VerificationResultAttestation>
       get copyWith;
 }
@@ -12918,6 +12954,7 @@ mixin _$VerificationResultValidator {
   Signature get attestationSignature;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $VerificationResultValidatorCopyWith<VerificationResultValidator>
       get copyWith;
 }
@@ -13166,6 +13203,7 @@ class _$_VerificationResultValidator extends _VerificationResultValidator {
       const DeepCollectionEquality().hash(identityCertificateElement) ^
       const DeepCollectionEquality().hash(attestationSignature);
 
+  @JsonKey(ignore: true)
   @override
   _$VerificationResultValidatorCopyWith<_VerificationResultValidator>
       get copyWith => __$VerificationResultValidatorCopyWithImpl<
@@ -13209,6 +13247,7 @@ abstract class _VerificationResultValidator
   @override
   Signature get attestationSignature;
   @override
+  @JsonKey(ignore: true)
   _$VerificationResultValidatorCopyWith<_VerificationResultValidator>
       get copyWith;
 }

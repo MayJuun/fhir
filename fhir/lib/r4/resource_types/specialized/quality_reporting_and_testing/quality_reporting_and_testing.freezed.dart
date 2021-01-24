@@ -318,6 +318,7 @@ mixin _$Measure {
   List<MeasureSupplementalData> get supplementalData;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MeasureCopyWith<Measure> get copyWith;
 }
 
@@ -1983,6 +1984,7 @@ class _$_Measure extends _Measure {
       const DeepCollectionEquality().hash(group) ^
       const DeepCollectionEquality().hash(supplementalData);
 
+  @JsonKey(ignore: true)
   @override
   _$MeasureCopyWith<_Measure> get copyWith =>
       __$MeasureCopyWithImpl<_Measure>(this, _$identity);
@@ -2281,6 +2283,7 @@ abstract class _Measure extends Measure {
   @override
   List<MeasureSupplementalData> get supplementalData;
   @override
+  @JsonKey(ignore: true)
   _$MeasureCopyWith<_Measure> get copyWith;
 }
 
@@ -2338,6 +2341,7 @@ mixin _$MeasureGroup {
   List<MeasureStratifier> get stratifier;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MeasureGroupCopyWith<MeasureGroup> get copyWith;
 }
 
@@ -2573,6 +2577,7 @@ class _$_MeasureGroup extends _MeasureGroup {
       const DeepCollectionEquality().hash(population) ^
       const DeepCollectionEquality().hash(stratifier);
 
+  @JsonKey(ignore: true)
   @override
   _$MeasureGroupCopyWith<_MeasureGroup> get copyWith =>
       __$MeasureGroupCopyWithImpl<_MeasureGroup>(this, _$identity);
@@ -2617,6 +2622,7 @@ abstract class _MeasureGroup extends MeasureGroup {
   @override
   List<MeasureStratifier> get stratifier;
   @override
+  @JsonKey(ignore: true)
   _$MeasureGroupCopyWith<_MeasureGroup> get copyWith;
 }
 
@@ -2671,6 +2677,7 @@ mixin _$MeasurePopulation {
   Expression get criteria;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MeasurePopulationCopyWith<MeasurePopulation> get copyWith;
 }
 
@@ -2901,6 +2908,7 @@ class _$_MeasurePopulation extends _MeasurePopulation {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(criteria);
 
+  @JsonKey(ignore: true)
   @override
   _$MeasurePopulationCopyWith<_MeasurePopulation> get copyWith =>
       __$MeasurePopulationCopyWithImpl<_MeasurePopulation>(this, _$identity);
@@ -2942,6 +2950,7 @@ abstract class _MeasurePopulation extends MeasurePopulation {
   @override
   Expression get criteria;
   @override
+  @JsonKey(ignore: true)
   _$MeasurePopulationCopyWith<_MeasurePopulation> get copyWith;
 }
 
@@ -2999,6 +3008,7 @@ mixin _$MeasureStratifier {
   List<MeasureComponent> get component;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MeasureStratifierCopyWith<MeasureStratifier> get copyWith;
 }
 
@@ -3245,6 +3255,7 @@ class _$_MeasureStratifier extends _MeasureStratifier {
       const DeepCollectionEquality().hash(criteria) ^
       const DeepCollectionEquality().hash(component);
 
+  @JsonKey(ignore: true)
   @override
   _$MeasureStratifierCopyWith<_MeasureStratifier> get copyWith =>
       __$MeasureStratifierCopyWithImpl<_MeasureStratifier>(this, _$identity);
@@ -3289,6 +3300,7 @@ abstract class _MeasureStratifier extends MeasureStratifier {
   @override
   List<MeasureComponent> get component;
   @override
+  @JsonKey(ignore: true)
   _$MeasureStratifierCopyWith<_MeasureStratifier> get copyWith;
 }
 
@@ -3343,6 +3355,7 @@ mixin _$MeasureComponent {
   Expression get criteria;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MeasureComponentCopyWith<MeasureComponent> get copyWith;
 }
 
@@ -3573,6 +3586,7 @@ class _$_MeasureComponent extends _MeasureComponent {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(criteria);
 
+  @JsonKey(ignore: true)
   @override
   _$MeasureComponentCopyWith<_MeasureComponent> get copyWith =>
       __$MeasureComponentCopyWithImpl<_MeasureComponent>(this, _$identity);
@@ -3614,6 +3628,7 @@ abstract class _MeasureComponent extends MeasureComponent {
   @override
   Expression get criteria;
   @override
+  @JsonKey(ignore: true)
   _$MeasureComponentCopyWith<_MeasureComponent> get copyWith;
 }
 
@@ -3672,6 +3687,7 @@ mixin _$MeasureSupplementalData {
   Expression get criteria;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MeasureSupplementalDataCopyWith<MeasureSupplementalData> get copyWith;
 }
 
@@ -3915,6 +3931,7 @@ class _$_MeasureSupplementalData extends _MeasureSupplementalData {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(criteria);
 
+  @JsonKey(ignore: true)
   @override
   _$MeasureSupplementalDataCopyWith<_MeasureSupplementalData> get copyWith =>
       __$MeasureSupplementalDataCopyWithImpl<_MeasureSupplementalData>(
@@ -3960,6 +3977,7 @@ abstract class _MeasureSupplementalData extends MeasureSupplementalData {
   @override
   Expression get criteria;
   @override
+  @JsonKey(ignore: true)
   _$MeasureSupplementalDataCopyWith<_MeasureSupplementalData> get copyWith;
 }
 
@@ -4086,6 +4104,7 @@ mixin _$MeasureReport {
   List<Reference> get evaluatedResource;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MeasureReportCopyWith<MeasureReport> get copyWith;
 }
 
@@ -4720,6 +4739,7 @@ class _$_MeasureReport extends _MeasureReport {
       const DeepCollectionEquality().hash(group) ^
       const DeepCollectionEquality().hash(evaluatedResource);
 
+  @JsonKey(ignore: true)
   @override
   _$MeasureReportCopyWith<_MeasureReport> get copyWith =>
       __$MeasureReportCopyWithImpl<_MeasureReport>(this, _$identity);
@@ -4833,6 +4853,7 @@ abstract class _MeasureReport extends MeasureReport {
   @override
   List<Reference> get evaluatedResource;
   @override
+  @JsonKey(ignore: true)
   _$MeasureReportCopyWith<_MeasureReport> get copyWith;
 }
 
@@ -4886,6 +4907,7 @@ mixin _$MeasureReportGroup {
   List<MeasureReportStratifier> get stratifier;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MeasureReportGroupCopyWith<MeasureReportGroup> get copyWith;
 }
 
@@ -5107,6 +5129,7 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
       const DeepCollectionEquality().hash(measureScore) ^
       const DeepCollectionEquality().hash(stratifier);
 
+  @JsonKey(ignore: true)
   @override
   _$MeasureReportGroupCopyWith<_MeasureReportGroup> get copyWith =>
       __$MeasureReportGroupCopyWithImpl<_MeasureReportGroup>(this, _$identity);
@@ -5147,6 +5170,7 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
   @override
   List<MeasureReportStratifier> get stratifier;
   @override
+  @JsonKey(ignore: true)
   _$MeasureReportGroupCopyWith<_MeasureReportGroup> get copyWith;
 }
 
@@ -5202,6 +5226,7 @@ mixin _$MeasureReportPopulation {
   Reference get subjectResults;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MeasureReportPopulationCopyWith<MeasureReportPopulation> get copyWith;
 }
 
@@ -5433,6 +5458,7 @@ class _$_MeasureReportPopulation extends _MeasureReportPopulation {
       const DeepCollectionEquality().hash(countElement) ^
       const DeepCollectionEquality().hash(subjectResults);
 
+  @JsonKey(ignore: true)
   @override
   _$MeasureReportPopulationCopyWith<_MeasureReportPopulation> get copyWith =>
       __$MeasureReportPopulationCopyWithImpl<_MeasureReportPopulation>(
@@ -5475,6 +5501,7 @@ abstract class _MeasureReportPopulation extends MeasureReportPopulation {
   @override
   Reference get subjectResults;
   @override
+  @JsonKey(ignore: true)
   _$MeasureReportPopulationCopyWith<_MeasureReportPopulation> get copyWith;
 }
 
@@ -5523,6 +5550,7 @@ mixin _$MeasureReportStratifier {
   List<MeasureReportStratum> get stratum;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MeasureReportStratifierCopyWith<MeasureReportStratifier> get copyWith;
 }
 
@@ -5682,6 +5710,7 @@ class _$_MeasureReportStratifier extends _MeasureReportStratifier {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(stratum);
 
+  @JsonKey(ignore: true)
   @override
   _$MeasureReportStratifierCopyWith<_MeasureReportStratifier> get copyWith =>
       __$MeasureReportStratifierCopyWithImpl<_MeasureReportStratifier>(
@@ -5717,6 +5746,7 @@ abstract class _MeasureReportStratifier extends MeasureReportStratifier {
   @override
   List<MeasureReportStratum> get stratum;
   @override
+  @JsonKey(ignore: true)
   _$MeasureReportStratifierCopyWith<_MeasureReportStratifier> get copyWith;
 }
 
@@ -5770,6 +5800,7 @@ mixin _$MeasureReportStratum {
   Quantity get measureScore;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MeasureReportStratumCopyWith<MeasureReportStratum> get copyWith;
 }
 
@@ -5991,6 +6022,7 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
       const DeepCollectionEquality().hash(population) ^
       const DeepCollectionEquality().hash(measureScore);
 
+  @JsonKey(ignore: true)
   @override
   _$MeasureReportStratumCopyWith<_MeasureReportStratum> get copyWith =>
       __$MeasureReportStratumCopyWithImpl<_MeasureReportStratum>(
@@ -6032,6 +6064,7 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
   @override
   Quantity get measureScore;
   @override
+  @JsonKey(ignore: true)
   _$MeasureReportStratumCopyWith<_MeasureReportStratum> get copyWith;
 }
 
@@ -6080,6 +6113,7 @@ mixin _$MeasureReportComponent {
   CodeableConcept get value;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MeasureReportComponentCopyWith<MeasureReportComponent> get copyWith;
 }
 
@@ -6264,6 +6298,7 @@ class _$_MeasureReportComponent extends _MeasureReportComponent {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(value);
 
+  @JsonKey(ignore: true)
   @override
   _$MeasureReportComponentCopyWith<_MeasureReportComponent> get copyWith =>
       __$MeasureReportComponentCopyWithImpl<_MeasureReportComponent>(
@@ -6299,6 +6334,7 @@ abstract class _MeasureReportComponent extends MeasureReportComponent {
   @override
   CodeableConcept get value;
   @override
+  @JsonKey(ignore: true)
   _$MeasureReportComponentCopyWith<_MeasureReportComponent> get copyWith;
 }
 
@@ -6354,6 +6390,7 @@ mixin _$MeasureReportPopulation1 {
   Reference get subjectResults;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $MeasureReportPopulation1CopyWith<MeasureReportPopulation1> get copyWith;
 }
 
@@ -6585,6 +6622,7 @@ class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
       const DeepCollectionEquality().hash(countElement) ^
       const DeepCollectionEquality().hash(subjectResults);
 
+  @JsonKey(ignore: true)
   @override
   _$MeasureReportPopulation1CopyWith<_MeasureReportPopulation1> get copyWith =>
       __$MeasureReportPopulation1CopyWithImpl<_MeasureReportPopulation1>(
@@ -6627,6 +6665,7 @@ abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
   @override
   Reference get subjectResults;
   @override
+  @JsonKey(ignore: true)
   _$MeasureReportPopulation1CopyWith<_MeasureReportPopulation1> get copyWith;
 }
 
@@ -6770,6 +6809,7 @@ mixin _$TestReport {
   TestReportTeardown get teardown;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestReportCopyWith<TestReport> get copyWith;
 }
 
@@ -7507,6 +7547,7 @@ class _$_TestReport extends _TestReport {
       const DeepCollectionEquality().hash(test) ^
       const DeepCollectionEquality().hash(teardown);
 
+  @JsonKey(ignore: true)
   @override
   _$TestReportCopyWith<_TestReport> get copyWith =>
       __$TestReportCopyWithImpl<_TestReport>(this, _$identity);
@@ -7637,6 +7678,7 @@ abstract class _TestReport extends TestReport {
   @override
   TestReportTeardown get teardown;
   @override
+  @JsonKey(ignore: true)
   _$TestReportCopyWith<_TestReport> get copyWith;
 }
 
@@ -7706,6 +7748,7 @@ mixin _$TestReportParticipant {
   Element get displayElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestReportParticipantCopyWith<TestReportParticipant> get copyWith;
 }
 
@@ -7975,6 +8018,7 @@ class _$_TestReportParticipant extends _TestReportParticipant {
       const DeepCollectionEquality().hash(display) ^
       const DeepCollectionEquality().hash(displayElement);
 
+  @JsonKey(ignore: true)
   @override
   _$TestReportParticipantCopyWith<_TestReportParticipant> get copyWith =>
       __$TestReportParticipantCopyWithImpl<_TestReportParticipant>(
@@ -8031,6 +8075,7 @@ abstract class _TestReportParticipant extends TestReportParticipant {
   @JsonKey(name: '_display')
   Element get displayElement;
   @override
+  @JsonKey(ignore: true)
   _$TestReportParticipantCopyWith<_TestReportParticipant> get copyWith;
 }
 
@@ -8075,6 +8120,7 @@ mixin _$TestReportSetup {
   List<TestReportAction> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestReportSetupCopyWith<TestReportSetup> get copyWith;
 }
 
@@ -8220,6 +8266,7 @@ class _$_TestReportSetup extends _TestReportSetup {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$TestReportSetupCopyWith<_TestReportSetup> get copyWith =>
       __$TestReportSetupCopyWithImpl<_TestReportSetup>(this, _$identity);
@@ -8251,6 +8298,7 @@ abstract class _TestReportSetup extends TestReportSetup {
   @override
   List<TestReportAction> get action;
   @override
+  @JsonKey(ignore: true)
   _$TestReportSetupCopyWith<_TestReportSetup> get copyWith;
 }
 
@@ -8299,6 +8347,7 @@ mixin _$TestReportAction {
   TestReportAssert get assert_;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestReportActionCopyWith<TestReportAction> get copyWith;
 }
 
@@ -8489,6 +8538,7 @@ class _$_TestReportAction extends _TestReportAction {
       const DeepCollectionEquality().hash(operation) ^
       const DeepCollectionEquality().hash(assert_);
 
+  @JsonKey(ignore: true)
   @override
   _$TestReportActionCopyWith<_TestReportAction> get copyWith =>
       __$TestReportActionCopyWithImpl<_TestReportAction>(this, _$identity);
@@ -8524,6 +8574,7 @@ abstract class _TestReportAction extends TestReportAction {
   @JsonKey(name: 'assert')
   TestReportAssert get assert_;
   @override
+  @JsonKey(ignore: true)
   _$TestReportActionCopyWith<_TestReportAction> get copyWith;
 }
 
@@ -8592,6 +8643,7 @@ mixin _$TestReportOperation {
   Element get detailElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestReportOperationCopyWith<TestReportOperation> get copyWith;
 }
 
@@ -8869,6 +8921,7 @@ class _$_TestReportOperation extends _TestReportOperation {
       const DeepCollectionEquality().hash(detail) ^
       const DeepCollectionEquality().hash(detailElement);
 
+  @JsonKey(ignore: true)
   @override
   _$TestReportOperationCopyWith<_TestReportOperation> get copyWith =>
       __$TestReportOperationCopyWithImpl<_TestReportOperation>(
@@ -8925,6 +8978,7 @@ abstract class _TestReportOperation extends TestReportOperation {
   @JsonKey(name: '_detail')
   Element get detailElement;
   @override
+  @JsonKey(ignore: true)
   _$TestReportOperationCopyWith<_TestReportOperation> get copyWith;
 }
 
@@ -8993,6 +9047,7 @@ mixin _$TestReportAssert {
   Element get detailElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestReportAssertCopyWith<TestReportAssert> get copyWith;
 }
 
@@ -9268,6 +9323,7 @@ class _$_TestReportAssert extends _TestReportAssert {
       const DeepCollectionEquality().hash(detail) ^
       const DeepCollectionEquality().hash(detailElement);
 
+  @JsonKey(ignore: true)
   @override
   _$TestReportAssertCopyWith<_TestReportAssert> get copyWith =>
       __$TestReportAssertCopyWithImpl<_TestReportAssert>(this, _$identity);
@@ -9323,6 +9379,7 @@ abstract class _TestReportAssert extends TestReportAssert {
   @JsonKey(name: '_detail')
   Element get detailElement;
   @override
+  @JsonKey(ignore: true)
   _$TestReportAssertCopyWith<_TestReportAssert> get copyWith;
 }
 
@@ -9381,6 +9438,7 @@ mixin _$TestReportTest {
   List<TestReportAction1> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestReportTestCopyWith<TestReportTest> get copyWith;
 }
 
@@ -9615,6 +9673,7 @@ class _$_TestReportTest extends _TestReportTest {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$TestReportTestCopyWith<_TestReportTest> get copyWith =>
       __$TestReportTestCopyWithImpl<_TestReportTest>(this, _$identity);
@@ -9660,6 +9719,7 @@ abstract class _TestReportTest extends TestReportTest {
   @override
   List<TestReportAction1> get action;
   @override
+  @JsonKey(ignore: true)
   _$TestReportTestCopyWith<_TestReportTest> get copyWith;
 }
 
@@ -9708,6 +9768,7 @@ mixin _$TestReportAction1 {
   TestReportAssert get assert_;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestReportAction1CopyWith<TestReportAction1> get copyWith;
 }
 
@@ -9898,6 +9959,7 @@ class _$_TestReportAction1 extends _TestReportAction1 {
       const DeepCollectionEquality().hash(operation) ^
       const DeepCollectionEquality().hash(assert_);
 
+  @JsonKey(ignore: true)
   @override
   _$TestReportAction1CopyWith<_TestReportAction1> get copyWith =>
       __$TestReportAction1CopyWithImpl<_TestReportAction1>(this, _$identity);
@@ -9934,6 +9996,7 @@ abstract class _TestReportAction1 extends TestReportAction1 {
   @JsonKey(name: 'assert')
   TestReportAssert get assert_;
   @override
+  @JsonKey(ignore: true)
   _$TestReportAction1CopyWith<_TestReportAction1> get copyWith;
 }
 
@@ -9978,6 +10041,7 @@ mixin _$TestReportTeardown {
   List<TestReportAction2> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestReportTeardownCopyWith<TestReportTeardown> get copyWith;
 }
 
@@ -10123,6 +10187,7 @@ class _$_TestReportTeardown extends _TestReportTeardown {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$TestReportTeardownCopyWith<_TestReportTeardown> get copyWith =>
       __$TestReportTeardownCopyWithImpl<_TestReportTeardown>(this, _$identity);
@@ -10154,6 +10219,7 @@ abstract class _TestReportTeardown extends TestReportTeardown {
   @override
   List<TestReportAction2> get action;
   @override
+  @JsonKey(ignore: true)
   _$TestReportTeardownCopyWith<_TestReportTeardown> get copyWith;
 }
 
@@ -10198,6 +10264,7 @@ mixin _$TestReportAction2 {
   TestReportOperation get operation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestReportAction2CopyWith<TestReportAction2> get copyWith;
 }
 
@@ -10361,6 +10428,7 @@ class _$_TestReportAction2 extends _TestReportAction2 {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(operation);
 
+  @JsonKey(ignore: true)
   @override
   _$TestReportAction2CopyWith<_TestReportAction2> get copyWith =>
       __$TestReportAction2CopyWithImpl<_TestReportAction2>(this, _$identity);
@@ -10392,6 +10460,7 @@ abstract class _TestReportAction2 extends TestReportAction2 {
   @override
   TestReportOperation get operation;
   @override
+  @JsonKey(ignore: true)
   _$TestReportAction2CopyWith<_TestReportAction2> get copyWith;
 }
 
@@ -10593,6 +10662,7 @@ mixin _$TestScript {
   TestScriptTeardown get teardown;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptCopyWith<TestScript> get copyWith;
 }
 
@@ -11642,6 +11712,7 @@ class _$_TestScript extends _TestScript {
       const DeepCollectionEquality().hash(test) ^
       const DeepCollectionEquality().hash(teardown);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptCopyWith<_TestScript> get copyWith =>
       __$TestScriptCopyWithImpl<_TestScript>(this, _$identity);
@@ -11830,6 +11901,7 @@ abstract class _TestScript extends TestScript {
   @override
   TestScriptTeardown get teardown;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptCopyWith<_TestScript> get copyWith;
 }
 
@@ -11881,6 +11953,7 @@ mixin _$TestScriptOrigin {
   Coding get profile;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptOriginCopyWith<TestScriptOrigin> get copyWith;
 }
 
@@ -12082,6 +12155,7 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
       const DeepCollectionEquality().hash(indexElement) ^
       const DeepCollectionEquality().hash(profile);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptOriginCopyWith<_TestScriptOrigin> get copyWith =>
       __$TestScriptOriginCopyWithImpl<_TestScriptOrigin>(this, _$identity);
@@ -12120,6 +12194,7 @@ abstract class _TestScriptOrigin extends TestScriptOrigin {
   @override
   Coding get profile;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptOriginCopyWith<_TestScriptOrigin> get copyWith;
 }
 
@@ -12172,6 +12247,7 @@ mixin _$TestScriptDestination {
   Coding get profile;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptDestinationCopyWith<TestScriptDestination> get copyWith;
 }
 
@@ -12373,6 +12449,7 @@ class _$_TestScriptDestination extends _TestScriptDestination {
       const DeepCollectionEquality().hash(indexElement) ^
       const DeepCollectionEquality().hash(profile);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptDestinationCopyWith<_TestScriptDestination> get copyWith =>
       __$TestScriptDestinationCopyWithImpl<_TestScriptDestination>(
@@ -12412,6 +12489,7 @@ abstract class _TestScriptDestination extends TestScriptDestination {
   @override
   Coding get profile;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptDestinationCopyWith<_TestScriptDestination> get copyWith;
 }
 
@@ -12459,6 +12537,7 @@ mixin _$TestScriptMetadata {
   List<TestScriptCapability> get capability;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptMetadataCopyWith<TestScriptMetadata> get copyWith;
 }
 
@@ -12619,6 +12698,7 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
       const DeepCollectionEquality().hash(link) ^
       const DeepCollectionEquality().hash(capability);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptMetadataCopyWith<_TestScriptMetadata> get copyWith =>
       __$TestScriptMetadataCopyWithImpl<_TestScriptMetadata>(this, _$identity);
@@ -12653,6 +12733,7 @@ abstract class _TestScriptMetadata extends TestScriptMetadata {
   @override
   List<TestScriptCapability> get capability;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptMetadataCopyWith<_TestScriptMetadata> get copyWith;
 }
 
@@ -12708,6 +12789,7 @@ mixin _$TestScriptLink {
   Element get descriptionElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptLinkCopyWith<TestScriptLink> get copyWith;
 }
 
@@ -12927,6 +13009,7 @@ class _$_TestScriptLink extends _TestScriptLink {
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptLinkCopyWith<_TestScriptLink> get copyWith =>
       __$TestScriptLinkCopyWithImpl<_TestScriptLink>(this, _$identity);
@@ -12970,6 +13053,7 @@ abstract class _TestScriptLink extends TestScriptLink {
   @JsonKey(name: '_description')
   Element get descriptionElement;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptLinkCopyWith<_TestScriptLink> get copyWith;
 }
 
@@ -13057,6 +13141,7 @@ mixin _$TestScriptCapability {
   Canonical get capabilities;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptCapabilityCopyWith<TestScriptCapability> get copyWith;
 }
 
@@ -13448,6 +13533,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
       const DeepCollectionEquality().hash(linkElement) ^
       const DeepCollectionEquality().hash(capabilities);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptCapabilityCopyWith<_TestScriptCapability> get copyWith =>
       __$TestScriptCapabilityCopyWithImpl<_TestScriptCapability>(
@@ -13523,6 +13609,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   @override
   Canonical get capabilities;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptCapabilityCopyWith<_TestScriptCapability> get copyWith;
 }
 
@@ -13581,6 +13668,7 @@ mixin _$TestScriptFixture {
   Reference get resource;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptFixtureCopyWith<TestScriptFixture> get copyWith;
 }
 
@@ -13831,6 +13919,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
       const DeepCollectionEquality().hash(autodeleteElement) ^
       const DeepCollectionEquality().hash(resource);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptFixtureCopyWith<_TestScriptFixture> get copyWith =>
       __$TestScriptFixtureCopyWithImpl<_TestScriptFixture>(this, _$identity);
@@ -13876,6 +13965,7 @@ abstract class _TestScriptFixture extends TestScriptFixture {
   @override
   Reference get resource;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptFixtureCopyWith<_TestScriptFixture> get copyWith;
 }
 
@@ -13973,6 +14063,7 @@ mixin _$TestScriptVariable {
   Element get sourceIdElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptVariableCopyWith<TestScriptVariable> get copyWith;
 }
 
@@ -14458,6 +14549,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
       const DeepCollectionEquality().hash(sourceId) ^
       const DeepCollectionEquality().hash(sourceIdElement);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptVariableCopyWith<_TestScriptVariable> get copyWith =>
       __$TestScriptVariableCopyWithImpl<_TestScriptVariable>(this, _$identity);
@@ -14543,6 +14635,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
   @JsonKey(name: '_sourceId')
   Element get sourceIdElement;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptVariableCopyWith<_TestScriptVariable> get copyWith;
 }
 
@@ -14587,6 +14680,7 @@ mixin _$TestScriptSetup {
   List<TestScriptAction> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptSetupCopyWith<TestScriptSetup> get copyWith;
 }
 
@@ -14732,6 +14826,7 @@ class _$_TestScriptSetup extends _TestScriptSetup {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptSetupCopyWith<_TestScriptSetup> get copyWith =>
       __$TestScriptSetupCopyWithImpl<_TestScriptSetup>(this, _$identity);
@@ -14763,6 +14858,7 @@ abstract class _TestScriptSetup extends TestScriptSetup {
   @override
   List<TestScriptAction> get action;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptSetupCopyWith<_TestScriptSetup> get copyWith;
 }
 
@@ -14811,6 +14907,7 @@ mixin _$TestScriptAction {
   TestScriptAssert get assert_;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptActionCopyWith<TestScriptAction> get copyWith;
 }
 
@@ -15001,6 +15098,7 @@ class _$_TestScriptAction extends _TestScriptAction {
       const DeepCollectionEquality().hash(operation) ^
       const DeepCollectionEquality().hash(assert_);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptActionCopyWith<_TestScriptAction> get copyWith =>
       __$TestScriptActionCopyWithImpl<_TestScriptAction>(this, _$identity);
@@ -15036,6 +15134,7 @@ abstract class _TestScriptAction extends TestScriptAction {
   @JsonKey(name: 'assert')
   TestScriptAssert get assert_;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptActionCopyWith<_TestScriptAction> get copyWith;
 }
 
@@ -15206,6 +15305,7 @@ mixin _$TestScriptOperation {
   Element get urlElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptOperationCopyWith<TestScriptOperation> get copyWith;
 }
 
@@ -16060,6 +16160,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
       const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(urlElement);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptOperationCopyWith<_TestScriptOperation> get copyWith =>
       __$TestScriptOperationCopyWithImpl<_TestScriptOperation>(
@@ -16218,6 +16319,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
   @JsonKey(name: '_url')
   Element get urlElement;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptOperationCopyWith<_TestScriptOperation> get copyWith;
 }
 
@@ -16274,6 +16376,7 @@ mixin _$TestScriptRequestHeader {
   Element get valueElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptRequestHeaderCopyWith<TestScriptRequestHeader> get copyWith;
 }
 
@@ -16493,6 +16596,7 @@ class _$_TestScriptRequestHeader extends _TestScriptRequestHeader {
       const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(valueElement);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptRequestHeaderCopyWith<_TestScriptRequestHeader> get copyWith =>
       __$TestScriptRequestHeaderCopyWithImpl<_TestScriptRequestHeader>(
@@ -16537,6 +16641,7 @@ abstract class _TestScriptRequestHeader extends TestScriptRequestHeader {
   @JsonKey(name: '_value')
   Element get valueElement;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptRequestHeaderCopyWith<_TestScriptRequestHeader> get copyWith;
 }
 
@@ -16763,6 +16868,7 @@ mixin _$TestScriptAssert {
   Element get warningOnlyElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptAssertCopyWith<TestScriptAssert> get copyWith;
 }
 
@@ -17943,6 +18049,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
       const DeepCollectionEquality().hash(warningOnly) ^
       const DeepCollectionEquality().hash(warningOnlyElement);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptAssertCopyWith<_TestScriptAssert> get copyWith =>
       __$TestScriptAssertCopyWithImpl<_TestScriptAssert>(this, _$identity);
@@ -18156,6 +18263,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @JsonKey(name: '_warningOnly')
   Element get warningOnlyElement;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptAssertCopyWith<_TestScriptAssert> get copyWith;
 }
 
@@ -18214,6 +18322,7 @@ mixin _$TestScriptTest {
   List<TestScriptAction1> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptTestCopyWith<TestScriptTest> get copyWith;
 }
 
@@ -18448,6 +18557,7 @@ class _$_TestScriptTest extends _TestScriptTest {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptTestCopyWith<_TestScriptTest> get copyWith =>
       __$TestScriptTestCopyWithImpl<_TestScriptTest>(this, _$identity);
@@ -18493,6 +18603,7 @@ abstract class _TestScriptTest extends TestScriptTest {
   @override
   List<TestScriptAction1> get action;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptTestCopyWith<_TestScriptTest> get copyWith;
 }
 
@@ -18541,6 +18652,7 @@ mixin _$TestScriptAction1 {
   TestScriptAssert get assert_;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptAction1CopyWith<TestScriptAction1> get copyWith;
 }
 
@@ -18731,6 +18843,7 @@ class _$_TestScriptAction1 extends _TestScriptAction1 {
       const DeepCollectionEquality().hash(operation) ^
       const DeepCollectionEquality().hash(assert_);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptAction1CopyWith<_TestScriptAction1> get copyWith =>
       __$TestScriptAction1CopyWithImpl<_TestScriptAction1>(this, _$identity);
@@ -18767,6 +18880,7 @@ abstract class _TestScriptAction1 extends TestScriptAction1 {
   @JsonKey(name: 'assert')
   TestScriptAssert get assert_;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptAction1CopyWith<_TestScriptAction1> get copyWith;
 }
 
@@ -18811,6 +18925,7 @@ mixin _$TestScriptTeardown {
   List<TestScriptAction2> get action;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptTeardownCopyWith<TestScriptTeardown> get copyWith;
 }
 
@@ -18956,6 +19071,7 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(action);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptTeardownCopyWith<_TestScriptTeardown> get copyWith =>
       __$TestScriptTeardownCopyWithImpl<_TestScriptTeardown>(this, _$identity);
@@ -18987,6 +19103,7 @@ abstract class _TestScriptTeardown extends TestScriptTeardown {
   @override
   List<TestScriptAction2> get action;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptTeardownCopyWith<_TestScriptTeardown> get copyWith;
 }
 
@@ -19031,6 +19148,7 @@ mixin _$TestScriptAction2 {
   TestScriptOperation get operation;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TestScriptAction2CopyWith<TestScriptAction2> get copyWith;
 }
 
@@ -19194,6 +19312,7 @@ class _$_TestScriptAction2 extends _TestScriptAction2 {
       const DeepCollectionEquality().hash(modifierExtension) ^
       const DeepCollectionEquality().hash(operation);
 
+  @JsonKey(ignore: true)
   @override
   _$TestScriptAction2CopyWith<_TestScriptAction2> get copyWith =>
       __$TestScriptAction2CopyWithImpl<_TestScriptAction2>(this, _$identity);
@@ -19225,5 +19344,6 @@ abstract class _TestScriptAction2 extends TestScriptAction2 {
   @override
   TestScriptOperation get operation;
   @override
+  @JsonKey(ignore: true)
   _$TestScriptAction2CopyWith<_TestScriptAction2> get copyWith;
 }

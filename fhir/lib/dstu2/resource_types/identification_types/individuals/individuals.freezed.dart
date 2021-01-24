@@ -176,6 +176,7 @@ mixin _$Patient {
   List<PatientLink> get link;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PatientCopyWith<Patient> get copyWith;
 }
 
@@ -1057,6 +1058,7 @@ class _$_Patient extends _Patient {
       const DeepCollectionEquality().hash(managingOrganization) ^
       const DeepCollectionEquality().hash(link);
 
+  @JsonKey(ignore: true)
   @override
   _$PatientCopyWith<_Patient> get copyWith =>
       __$PatientCopyWithImpl<_Patient>(this, _$identity);
@@ -1214,6 +1216,7 @@ abstract class _Patient extends Patient {
   @override
   List<PatientLink> get link;
   @override
+  @JsonKey(ignore: true)
   _$PatientCopyWith<_Patient> get copyWith;
 }
 
@@ -1281,6 +1284,7 @@ mixin _$PatientContact {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PatientContactCopyWith<PatientContact> get copyWith;
 }
 
@@ -1595,6 +1599,7 @@ class _$_PatientContact extends _PatientContact {
       const DeepCollectionEquality().hash(organization) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$PatientContactCopyWith<_PatientContact> get copyWith =>
       __$PatientContactCopyWithImpl<_PatientContact>(this, _$identity);
@@ -1649,6 +1654,7 @@ abstract class _PatientContact extends PatientContact {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$PatientContactCopyWith<_PatientContact> get copyWith;
 }
 
@@ -1700,6 +1706,7 @@ mixin _$PatientAnimal {
   CodeableConcept get genderStatus;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PatientAnimalCopyWith<PatientAnimal> get copyWith;
 }
 
@@ -1915,6 +1922,7 @@ class _$_PatientAnimal extends _PatientAnimal {
       const DeepCollectionEquality().hash(breed) ^
       const DeepCollectionEquality().hash(genderStatus);
 
+  @JsonKey(ignore: true)
   @override
   _$PatientAnimalCopyWith<_PatientAnimal> get copyWith =>
       __$PatientAnimalCopyWithImpl<_PatientAnimal>(this, _$identity);
@@ -1953,6 +1961,7 @@ abstract class _PatientAnimal extends PatientAnimal {
   @override
   CodeableConcept get genderStatus;
   @override
+  @JsonKey(ignore: true)
   _$PatientAnimalCopyWith<_PatientAnimal> get copyWith;
 }
 
@@ -2005,6 +2014,7 @@ mixin _$PatientCommunication {
   Element get preferredElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PatientCommunicationCopyWith<PatientCommunication> get copyWith;
 }
 
@@ -2211,6 +2221,7 @@ class _$_PatientCommunication extends _PatientCommunication {
       const DeepCollectionEquality().hash(preferred) ^
       const DeepCollectionEquality().hash(preferredElement);
 
+  @JsonKey(ignore: true)
   @override
   _$PatientCommunicationCopyWith<_PatientCommunication> get copyWith =>
       __$PatientCommunicationCopyWithImpl<_PatientCommunication>(
@@ -2252,6 +2263,7 @@ abstract class _PatientCommunication extends PatientCommunication {
   @JsonKey(name: '_preferred')
   Element get preferredElement;
   @override
+  @JsonKey(ignore: true)
   _$PatientCommunicationCopyWith<_PatientCommunication> get copyWith;
 }
 
@@ -2311,6 +2323,7 @@ mixin _$PatientLink {
   Element get typeElement;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PatientLinkCopyWith<PatientLink> get copyWith;
 }
 
@@ -2526,6 +2539,7 @@ class _$_PatientLink extends _PatientLink {
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(typeElement);
 
+  @JsonKey(ignore: true)
   @override
   _$PatientLinkCopyWith<_PatientLink> get copyWith =>
       __$PatientLinkCopyWithImpl<_PatientLink>(this, _$identity);
@@ -2572,6 +2586,7 @@ abstract class _PatientLink extends PatientLink {
   @JsonKey(name: '_type')
   Element get typeElement;
   @override
+  @JsonKey(ignore: true)
   _$PatientLinkCopyWith<_PatientLink> get copyWith;
 }
 
@@ -2694,6 +2709,7 @@ mixin _$Practitioner {
   List<CodeableConcept> get communication;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PractitionerCopyWith<Practitioner> get copyWith;
 }
 
@@ -3288,6 +3304,7 @@ class _$_Practitioner extends _Practitioner {
       const DeepCollectionEquality().hash(qualification) ^
       const DeepCollectionEquality().hash(communication);
 
+  @JsonKey(ignore: true)
   @override
   _$PractitionerCopyWith<_Practitioner> get copyWith =>
       __$PractitionerCopyWithImpl<_Practitioner>(this, _$identity);
@@ -3397,6 +3414,7 @@ abstract class _Practitioner extends Practitioner {
   @override
   List<CodeableConcept> get communication;
   @override
+  @JsonKey(ignore: true)
   _$PractitionerCopyWith<_Practitioner> get copyWith;
 }
 
@@ -3461,6 +3479,7 @@ mixin _$PractitionerPractitionerRole {
   List<Reference> get healthcareService;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PractitionerPractitionerRoleCopyWith<PractitionerPractitionerRole>
       get copyWith;
 }
@@ -3745,6 +3764,7 @@ class _$_PractitionerPractitionerRole extends _PractitionerPractitionerRole {
       const DeepCollectionEquality().hash(location) ^
       const DeepCollectionEquality().hash(healthcareService);
 
+  @JsonKey(ignore: true)
   @override
   _$PractitionerPractitionerRoleCopyWith<_PractitionerPractitionerRole>
       get copyWith => __$PractitionerPractitionerRoleCopyWithImpl<
@@ -3797,6 +3817,7 @@ abstract class _PractitionerPractitionerRole
   @override
   List<Reference> get healthcareService;
   @override
+  @JsonKey(ignore: true)
   _$PractitionerPractitionerRoleCopyWith<_PractitionerPractitionerRole>
       get copyWith;
 }
@@ -3853,6 +3874,7 @@ mixin _$PractitionerQualification {
   Reference get issuer;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $PractitionerQualificationCopyWith<PractitionerQualification> get copyWith;
 }
 
@@ -4080,6 +4102,7 @@ class _$_PractitionerQualification extends _PractitionerQualification {
       const DeepCollectionEquality().hash(period) ^
       const DeepCollectionEquality().hash(issuer);
 
+  @JsonKey(ignore: true)
   @override
   _$PractitionerQualificationCopyWith<_PractitionerQualification>
       get copyWith =>
@@ -4123,6 +4146,7 @@ abstract class _PractitionerQualification extends PractitionerQualification {
   @override
   Reference get issuer;
   @override
+  @JsonKey(ignore: true)
   _$PractitionerQualificationCopyWith<_PractitionerQualification> get copyWith;
 }
 
@@ -4240,6 +4264,7 @@ mixin _$RelatedPerson {
   Period get period;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $RelatedPersonCopyWith<RelatedPerson> get copyWith;
 }
 
@@ -4826,6 +4851,7 @@ class _$_RelatedPerson extends _RelatedPerson {
       const DeepCollectionEquality().hash(photo) ^
       const DeepCollectionEquality().hash(period);
 
+  @JsonKey(ignore: true)
   @override
   _$RelatedPersonCopyWith<_RelatedPerson> get copyWith =>
       __$RelatedPersonCopyWithImpl<_RelatedPerson>(this, _$identity);
@@ -4930,5 +4956,6 @@ abstract class _RelatedPerson extends RelatedPerson {
   @override
   Period get period;
   @override
+  @JsonKey(ignore: true)
   _$RelatedPersonCopyWith<_RelatedPerson> get copyWith;
 }
