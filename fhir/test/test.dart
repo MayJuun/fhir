@@ -1,8 +1,7 @@
-import 'dart:io';
-
 import 'package:test/test.dart';
 
 import 'expected_json.dart';
+import 'expected_yaml.dart';
 import 'validation/validation.dart';
 
 Future main() async {
@@ -18,21 +17,22 @@ Future main() async {
         '\n\n****Validating Json****',
         () async {
           var testList = await jsonValidation();
+          var tempList = <String>[];
+          for (final i in testList) {
+            tempList.add(i.toString());
+          }
+          testList.clear();
+          testList.addAll(tempList);
 
           var expectList = expectedJson.toList();
-
-          final compareList = expectedJson.toList();
-
-          var string = '';
-          for (final s in expectList) {
-            string += '\n$s';
+          tempList.clear();
+          for (final i in expectList) {
+            tempList.add(i.toString());
           }
-          await File('./test/temp1.txt').writeAsString(string);
-          string = '';
-          for (final s in compareList) {
-            string += '\n$s';
-          }
-          await File('./test/temp2.txt').writeAsString(string);
+          expectList.clear();
+          expectList.addAll(tempList);
+
+          var compareList = tempList;
 
           compareList.forEach((file) {
             testList.remove(file);
@@ -44,24 +44,24 @@ Future main() async {
         timeout: Timeout(Duration(minutes: 10)),
       );
 
-      // test(
-      //   '\n\n****Validating Yaml****',
-      //   () async {
-      //     var testList = await yamlValidation();
+      test(
+        '\n\n****Validating Yaml****',
+        () async {
+          var testList = await yamlValidation();
 
-      //     var expectList = expectedYaml.toList();
+          var expectList = expectedYaml.toList();
 
-      //     final compareList = expectedYaml.toList();
+          final compareList = expectedYaml.toList();
 
-      //     compareList.forEach((file) {
-      //       testList.remove(file);
-      //       expectList.remove(file);
-      //     });
+          compareList.forEach((file) {
+            testList.remove(file);
+            expectList.remove(file);
+          });
 
-      //     expect(testList, expectList);
-      //   },
-      //   timeout: Timeout(Duration(minutes: 10)),
-      // );
+          expect(testList, expectList);
+        },
+        timeout: Timeout(Duration(minutes: 10)),
+      );
     },
   );
 }

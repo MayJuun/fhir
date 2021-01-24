@@ -1,5 +1,6 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart';
+import 'package:fhir_at_rest/fhir_at_rest.dart';
 import 'package:fhir_auth/r4.dart';
 
 import 'new_patient.dart';

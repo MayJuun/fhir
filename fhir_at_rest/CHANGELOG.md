@@ -1,3 +1,9 @@
+## [0.2.0]
+* Simplified still further
+* Now with same dstu2/stu3/r4/r5 folder setup as most other packages
+* single class called FhirRequest that does all of the work (it is a freezed Union)
+* added FHIR® to the Readme - official permission from HL7 and Graham Grieve.
+
 ## [0.1.1]
 * Lots of changes, mostly taking away complexity
 * All parameters and elements are just passed as strings, or maps, so most of the formatting is left up to whoever is designing the call

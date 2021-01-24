@@ -764,6 +764,7 @@ mixin _$FhirRequest {
     @required TResult orElse(),
   });
 
+  @JsonKey(ignore: true)
   $FhirRequestCopyWith<FhirRequest> get copyWith;
 }
 
@@ -965,6 +966,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
       const DeepCollectionEquality().hash(parameters) ^
       const DeepCollectionEquality().hash(client);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirReadRequestCopyWith<_FhirReadRequest> get copyWith =>
       __$FhirReadRequestCopyWithImpl<_FhirReadRequest>(this, _$identity);
@@ -1417,6 +1419,7 @@ abstract class _FhirReadRequest extends FhirRequest {
   @override
   Client get client;
   @override
+  @JsonKey(ignore: true)
   _$FhirReadRequestCopyWith<_FhirReadRequest> get copyWith;
 }
 
@@ -1580,6 +1583,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
       const DeepCollectionEquality().hash(parameters) ^
       const DeepCollectionEquality().hash(client);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirVReadRequestCopyWith<_FhirVReadRequest> get copyWith =>
       __$FhirVReadRequestCopyWithImpl<_FhirVReadRequest>(this, _$identity);
@@ -2034,6 +2038,7 @@ abstract class _FhirVReadRequest extends FhirRequest {
   @override
   Client get client;
   @override
+  @JsonKey(ignore: true)
   _$FhirVReadRequestCopyWith<_FhirVReadRequest> get copyWith;
 }
 
@@ -2178,6 +2183,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
       const DeepCollectionEquality().hash(parameters) ^
       const DeepCollectionEquality().hash(client);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirUpdateRequestCopyWith<_FhirUpdateRequest> get copyWith =>
       __$FhirUpdateRequestCopyWithImpl<_FhirUpdateRequest>(this, _$identity);
@@ -2628,6 +2634,7 @@ abstract class _FhirUpdateRequest extends FhirRequest {
   @override
   Client get client;
   @override
+  @JsonKey(ignore: true)
   _$FhirUpdateRequestCopyWith<_FhirUpdateRequest> get copyWith;
 }
 
@@ -2772,6 +2779,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
       const DeepCollectionEquality().hash(parameters) ^
       const DeepCollectionEquality().hash(client);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirPatchRequestCopyWith<_FhirPatchRequest> get copyWith =>
       __$FhirPatchRequestCopyWithImpl<_FhirPatchRequest>(this, _$identity);
@@ -3222,6 +3230,7 @@ abstract class _FhirPatchRequest extends FhirRequest {
   @override
   Client get client;
   @override
+  @JsonKey(ignore: true)
   _$FhirPatchRequestCopyWith<_FhirPatchRequest> get copyWith;
 }
 
@@ -3375,6 +3384,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
       const DeepCollectionEquality().hash(parameters) ^
       const DeepCollectionEquality().hash(client);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirDeleteRequestCopyWith<_FhirDeleteRequest> get copyWith =>
       __$FhirDeleteRequestCopyWithImpl<_FhirDeleteRequest>(this, _$identity);
@@ -3827,6 +3837,7 @@ abstract class _FhirDeleteRequest extends FhirRequest {
   @override
   Client get client;
   @override
+  @JsonKey(ignore: true)
   _$FhirDeleteRequestCopyWith<_FhirDeleteRequest> get copyWith;
 }
 
@@ -3971,6 +3982,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
       const DeepCollectionEquality().hash(parameters) ^
       const DeepCollectionEquality().hash(client);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirCreateRequestCopyWith<_FhirCreateRequest> get copyWith =>
       __$FhirCreateRequestCopyWithImpl<_FhirCreateRequest>(this, _$identity);
@@ -4421,6 +4433,7 @@ abstract class _FhirCreateRequest extends FhirRequest {
   @override
   Client get client;
   @override
+  @JsonKey(ignore: true)
   _$FhirCreateRequestCopyWith<_FhirCreateRequest> get copyWith;
 }
 
@@ -4590,6 +4603,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
       const DeepCollectionEquality().hash(restfulRequest) ^
       const DeepCollectionEquality().hash(client);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirSearchRequestCopyWith<_FhirSearchRequest> get copyWith =>
       __$FhirSearchRequestCopyWithImpl<_FhirSearchRequest>(this, _$identity);
@@ -5044,6 +5058,7 @@ abstract class _FhirSearchRequest extends FhirRequest {
   @override
   Client get client;
   @override
+  @JsonKey(ignore: true)
   _$FhirSearchRequestCopyWith<_FhirSearchRequest> get copyWith;
 }
 
@@ -5177,6 +5192,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
       const DeepCollectionEquality().hash(parameters) ^
       const DeepCollectionEquality().hash(client);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirSearchAllRequestCopyWith<_FhirSearchAllRequest> get copyWith =>
       __$FhirSearchAllRequestCopyWithImpl<_FhirSearchAllRequest>(
@@ -5626,6 +5642,7 @@ abstract class _FhirSearchAllRequest extends FhirRequest {
   @override
   Client get client;
   @override
+  @JsonKey(ignore: true)
   _$FhirSearchAllRequestCopyWith<_FhirSearchAllRequest> get copyWith;
 }
 
@@ -5771,6 +5788,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
       const DeepCollectionEquality().hash(mode) ^
       const DeepCollectionEquality().hash(client);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirCapabilitiesRequestCopyWith<_FhirCapabilitiesRequest> get copyWith =>
       __$FhirCapabilitiesRequestCopyWithImpl<_FhirCapabilitiesRequest>(
@@ -6222,6 +6240,7 @@ abstract class _FhirCapabilitiesRequest extends FhirRequest {
   @override
   Client get client;
   @override
+  @JsonKey(ignore: true)
   _$FhirCapabilitiesRequestCopyWith<_FhirCapabilitiesRequest> get copyWith;
 }
 
@@ -6377,6 +6396,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
       const DeepCollectionEquality().hash(bundle) ^
       const DeepCollectionEquality().hash(client);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirTransactionRequestCopyWith<_FhirTransactionRequest> get copyWith =>
       __$FhirTransactionRequestCopyWithImpl<_FhirTransactionRequest>(
@@ -6828,6 +6848,7 @@ abstract class _FhirTransactionRequest extends FhirRequest {
   @override
   Client get client;
   @override
+  @JsonKey(ignore: true)
   _$FhirTransactionRequestCopyWith<_FhirTransactionRequest> get copyWith;
 }
 
@@ -6983,6 +7004,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
       const DeepCollectionEquality().hash(bundle) ^
       const DeepCollectionEquality().hash(client);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirBatchRequestCopyWith<_FhirBatchRequest> get copyWith =>
       __$FhirBatchRequestCopyWithImpl<_FhirBatchRequest>(this, _$identity);
@@ -7433,6 +7455,7 @@ abstract class _FhirBatchRequest extends FhirRequest {
   @override
   Client get client;
   @override
+  @JsonKey(ignore: true)
   _$FhirBatchRequestCopyWith<_FhirBatchRequest> get copyWith;
 }
 
@@ -7623,6 +7646,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
       const DeepCollectionEquality().hash(reference) ^
       const DeepCollectionEquality().hash(client);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirHistoryRequestCopyWith<_FhirHistoryRequest> get copyWith =>
       __$FhirHistoryRequestCopyWithImpl<_FhirHistoryRequest>(this, _$identity);
@@ -8083,6 +8107,7 @@ abstract class _FhirHistoryRequest extends FhirRequest {
   @override
   Client get client;
   @override
+  @JsonKey(ignore: true)
   _$FhirHistoryRequestCopyWith<_FhirHistoryRequest> get copyWith;
 }
 
@@ -8263,6 +8288,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
       const DeepCollectionEquality().hash(reference) ^
       const DeepCollectionEquality().hash(client);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirHistoryTypeRequestCopyWith<_FhirHistoryTypeRequest> get copyWith =>
       __$FhirHistoryTypeRequestCopyWithImpl<_FhirHistoryTypeRequest>(
@@ -8722,6 +8748,7 @@ abstract class _FhirHistoryTypeRequest extends FhirRequest {
   @override
   Client get client;
   @override
+  @JsonKey(ignore: true)
   _$FhirHistoryTypeRequestCopyWith<_FhirHistoryTypeRequest> get copyWith;
 }
 
@@ -8892,6 +8919,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
       const DeepCollectionEquality().hash(reference) ^
       const DeepCollectionEquality().hash(client);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirHistoryAllRequestCopyWith<_FhirHistoryAllRequest> get copyWith =>
       __$FhirHistoryAllRequestCopyWithImpl<_FhirHistoryAllRequest>(
@@ -9349,6 +9377,7 @@ abstract class _FhirHistoryAllRequest extends FhirRequest {
   @override
   Client get client;
   @override
+  @JsonKey(ignore: true)
   _$FhirHistoryAllRequestCopyWith<_FhirHistoryAllRequest> get copyWith;
 }
 
@@ -9550,6 +9579,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
       const DeepCollectionEquality().hash(useFormData) ^
       const DeepCollectionEquality().hash(client);
 
+  @JsonKey(ignore: true)
   @override
   _$FhirOperationRequestCopyWith<_FhirOperationRequest> get copyWith =>
       __$FhirOperationRequestCopyWithImpl<_FhirOperationRequest>(
@@ -10035,5 +10065,6 @@ abstract class _FhirOperationRequest extends FhirRequest {
   @override
   Client get client;
   @override
+  @JsonKey(ignore: true)
   _$FhirOperationRequestCopyWith<_FhirOperationRequest> get copyWith;
 }
