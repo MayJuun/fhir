@@ -465,22 +465,22 @@ abstract class FhirRequest with _$FhirRequest {
   String uri({List<String> parameters = const <String>[]}) {
     String uri = _url();
     uri += '?';
-    uri += Uri.encodeQueryComponent(_mode());
-    uri += Uri.encodeQueryComponent(_format());
-    uri += Uri.encodeQueryComponent(_pretty());
-    uri += Uri.encodeQueryComponent(_summary());
+    uri += _mode();
+    uri += _format();
+    uri += _pretty();
+    uri += _summary();
     uri += _elements();
-    uri += Uri.encodeQueryComponent(_parameters(parameters));
+    uri += _parameters(parameters);
     return uri;
   }
 
   String get url {
     String uri = _url();
     uri += '?';
-    uri += Uri.encodeQueryComponent(_mode());
-    uri += Uri.encodeQueryComponent(_format());
-    uri += Uri.encodeQueryComponent(_pretty());
-    uri += Uri.encodeQueryComponent(_summary());
+    uri += _mode();
+    uri += _format();
+    uri += _pretty();
+    uri += _summary();
     uri += _elements();
     return uri;
   }
@@ -499,9 +499,10 @@ abstract class FhirRequest with _$FhirRequest {
 
   String _format({bool join = false}) => maybeMap(
       capabilities: (f) => _encodeParam(
-          '_format=${f?.format ?? "application/json+fhir"}',
+          '_format=${f?.format ?? "application%2Ffhir%2Bjson"}',
           join: true),
-      orElse: () => _encodeParam('_format=${format ?? "application/fhir+json"}',
+      orElse: () => _encodeParam(
+          '_format=${format ?? "application%2Ffhir%2Bjson"}',
           join: join));
 
   String _pretty({bool join = true}) => pretty ?? false

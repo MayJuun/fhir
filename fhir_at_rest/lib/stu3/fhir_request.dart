@@ -470,7 +470,7 @@ abstract class FhirRequest with _$FhirRequest {
     uri += Uri.encodeQueryComponent(_pretty());
     uri += Uri.encodeQueryComponent(_summary());
     uri += _elements();
-    uri += Uri.encodeQueryComponent(_parameters(parameters));
+    uri += _parameters(parameters);
     return uri;
   }
 
@@ -499,9 +499,10 @@ abstract class FhirRequest with _$FhirRequest {
 
   String _format({bool join = false}) => maybeMap(
       capabilities: (f) => _encodeParam(
-          '_format=${f?.format ?? "application/json+fhir"}',
+          '_format=${f?.format ?? "application%2Ffhir%2Bjson"}',
           join: true),
-      orElse: () => _encodeParam('_format=${format ?? "application/fhir+json"}',
+      orElse: () => _encodeParam(
+          '_format=${format ?? "application%2Ffhir%2Bjson"}',
           join: join));
 
   String _pretty({bool join = true}) => pretty ?? false

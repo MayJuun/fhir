@@ -38,13 +38,13 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "dev.fhirfli.authdemo"
+        applicationId "com.fhirfli.fhirauth"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         manifestPlaceholders = [
-            'appAuthRedirectScheme': 'dev.fhirfli.authdemo'
+            'appAuthRedirectScheme': 'com.fhirfli.fhirauth'
         ]
     }
 

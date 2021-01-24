@@ -1,5 +1,6 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart';
+import 'package:fhir_at_rest/r4.dart';
 import 'package:fhir_auth/r4.dart';
 
 import 'new_patient.dart';
@@ -40,28 +41,33 @@ Future fhirRequest({
     return;
   }
 
-  final request1 = rest.CreateRequest.r4(
-    base: Uri.parse(client.baseUrl.toString()),
-    type: R4ResourceType.Patient,
-  );
   final _newPatient = newPatient();
-  final response1 = await request1.request(
-      resource: _newPatient, headers: await client.authHeaders);
-  final newId = response1.fold((l) => l.errorMessage(), (r) => r.id);
+  final request1 = FhirRequest.create(
+    base: Uri.parse(client.baseUrl.toString()),
+    resource: _newPatient,
+  );
 
+  Id newId;
+  try {
+    final response1 = await request1.request(headers: await client.authHeaders);
+    newId = response1.id;
+  } catch (e) {
+    print(e);
+  }
   if (newId is! Id) {
     print(newId);
   } else {
-    final request2 = rest.ReadRequest.r4(
+    final request2 = FhirRequest.read(
       base: Uri.parse(client.baseUrl.toString()),
       type: R4ResourceType.Patient,
       id: newId,
     );
-    final response2 = await request2.request(headers: await client.authHeaders);
-    print(_newPatient.toJson());
-    response2.fold(
-      (l) => print(l.errorMessage()),
-      (r) => print(r.toJson()),
-    );
+    try {
+      final response2 =
+          await request2.request(headers: await client.authHeaders);
+      print(response2.toJson());
+    } catch (e) {
+      print(e);
+    }
   }
 }

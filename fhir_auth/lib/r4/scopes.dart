@@ -96,13 +96,13 @@ abstract class Scopes implements _$Scopes {
     }
     if (clinicalScopes != null) {
       for (final scope in clinicalScopes) {
-        var scopeArgument = scope.value1 == Role.patient ? 'patient' : 'user';
+        var scopeArgument = scope.value1 == Role.patient ? 'patient/' : 'user/';
         scopeArgument += ResourceUtils.resourceTypeToStringMap[scope.value2];
         scopeArgument += scope.value3 == Interaction.any
-            ? '*'
+            ? '.*'
             : scope.value3 == Interaction.write
-                ? 'write'
-                : 'read';
+                ? '.write'
+                : '.read';
         returnValue.add(scopeArgument);
       }
     }

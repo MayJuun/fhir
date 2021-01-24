@@ -6,7 +6,7 @@ import 'package:fhir_at_rest/globals.dart' as globals;
 
 void main() {
   globals.kTestMode = true;
-  final String mimeType = Uri.encodeQueryComponent('application/fhir+json');
+  const String mimeType = 'application/fhir+json';
 
   group('FhirRequest - READ:', () {
     test('get patient', () async {
@@ -18,7 +18,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/12345?_format%3D$mimeType',
+        'http://hapi.fhir.org/baseR4/Patient/12345?_format=$mimeType',
       );
     });
 
@@ -32,7 +32,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/12345?_format%3D$mimeType%26_pretty%3Dtrue',
+        'http://hapi.fhir.org/baseR4/Patient/12345?_format=$mimeType&_pretty=true',
       );
     });
 
@@ -47,7 +47,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/12345?_format%3D$mimeType%26_pretty%3Dtrue%26_summary%3Dtrue',
+        'http://hapi.fhir.org/baseR4/Patient/12345?_format=$mimeType&_pretty=true&_summary=true',
       );
     });
 
@@ -61,7 +61,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/12345?_format%3D$mimeType%26_summary%3Dcount',
+        'http://hapi.fhir.org/baseR4/Patient/12345?_format=$mimeType&_summary=count',
       );
     });
 
@@ -76,7 +76,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/1227442?_format%3Dapplication%2Ffhir%2Bjson%26_pretty%3Dtrue&_elements=name',
+        'http://hapi.fhir.org/baseR4/Patient/1227442?_format=application/fhir+json&_pretty=true&_elements=name',
       );
     });
 
@@ -92,7 +92,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/1227442?_format%3Dapplication%2Ffhir%2Bjson%26_pretty%3Dtrue&_elements=name,gender',
+        'http://hapi.fhir.org/baseR4/Patient/1227442?_format=application/fhir+json&_pretty=true&_elements=name,gender',
       );
     });
   }, tags: ['uri', 'read']);
@@ -108,7 +108,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/12345/_history/6789?_format%3D$mimeType',
+        'http://hapi.fhir.org/baseR4/Patient/12345/_history/6789?_format=$mimeType',
       );
     });
 
@@ -123,7 +123,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/12345/_history/6789?_format%3D$mimeType%26_pretty%3Dtrue',
+        'http://hapi.fhir.org/baseR4/Patient/12345/_history/6789?_format=$mimeType&_pretty=true',
       );
     });
 
@@ -139,7 +139,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/12345/_history/6789?_format%3D$mimeType%26_pretty%3Dtrue%26_summary%3Dtrue',
+        'http://hapi.fhir.org/baseR4/Patient/12345/_history/6789?_format=$mimeType&_pretty=true&_summary=true',
       );
     });
 
@@ -154,7 +154,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/12345/_history/6789?_format%3D$mimeType%26_summary%3Dcount',
+        'http://hapi.fhir.org/baseR4/Patient/12345/_history/6789?_format=$mimeType&_summary=count',
       );
     });
   }, tags: ['uri', 'vread']);
@@ -178,7 +178,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4?_format%3D$mimeType',
+        'http://hapi.fhir.org/baseR4?_format=$mimeType',
       );
     });
 
@@ -214,7 +214,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Observation/12345/_history?_format%3D$mimeType',
+        'http://hapi.fhir.org/baseR4/Observation/12345/_history?_format=$mimeType',
       );
     });
 
@@ -226,7 +226,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Observation/_history?_format%3D$mimeType',
+        'http://hapi.fhir.org/baseR4/Observation/_history?_format=$mimeType',
       );
     });
 
@@ -237,7 +237,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/_history?_format%3D$mimeType',
+        'http://hapi.fhir.org/baseR4/_history?_format=$mimeType',
       );
     });
 
@@ -258,7 +258,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Observation/12345/_history'
-        '?_format%3D$mimeType%26_count%3D10%26_since%3D2020-10-08T16%3A58%3A07.241117Z',
+        '?_format=$mimeType&_count=10&_since=2020-10-08T16:58:07.241117Z',
       );
     });
 
@@ -273,8 +273,8 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/_history?_format%3Dapplication%2Ffhir%2B'
-        'json%26_list%3DList%2F12345%26_count%3D10%26_since%3D2020-10-08',
+        'http://hapi.fhir.org/baseR4/_history?_format=application/fhir+json'
+        '&_list=List/12345&_count=10&_since=2020-10-08',
       );
     });
   }, tags: ['uri', 'history']);
@@ -289,7 +289,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/12345?_format%3D$mimeType',
+        'http://hapi.fhir.org/baseR4/Patient/12345?_format=$mimeType',
       );
     });
   }, tags: ['uri', 'update']);
@@ -304,7 +304,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/12345?_format%3D$mimeType',
+        'http://hapi.fhir.org/baseR4/Patient/12345?_format=$mimeType',
       );
     });
   }, tags: ['uri', 'patch']);
@@ -319,7 +319,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/12345?_format%3D$mimeType',
+        'http://hapi.fhir.org/baseR4/Patient/12345?_format=$mimeType',
       );
     });
   }, tags: ['uri', 'delete']);
@@ -334,7 +334,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient?_format%3D$mimeType',
+        'http://hapi.fhir.org/baseR4/Patient?_format=$mimeType',
       );
     });
   }, tags: ['uri', 'create']);
@@ -349,7 +349,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/metadata'
-        '?mode%3Dnormative%26_format%3D$mimeType',
+        '?mode=normative&_format=$mimeType',
       );
     });
   }, tags: ['uri', 'capabilities']);
@@ -366,7 +366,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/\$everything'
-        '?_format%3D$mimeType%26start%3D2020-01-01%26end%3D2020-08-01',
+        '?_format=$mimeType&start=2020-01-01&end=2020-08-01',
       );
     });
 
@@ -384,7 +384,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Patient/744742/\$everything?_format'
-        '%3Dapplication%2Ffhir%2Bjson%26start%3D2020-01-01%26end%3D2020-08-01',
+        '=application/fhir+json&start=2020-01-01&end=2020-08-01',
       );
     });
   }, tags: ['uri', 'operation']);
@@ -400,7 +400,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient?_format%3D$mimeType%26_id%3D12345',
+        'http://hapi.fhir.org/baseR4/Patient?_format=$mimeType&_id=12345',
       );
     });
 
@@ -413,7 +413,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/_search?_format%3D$mimeType',
+        'http://hapi.fhir.org/baseR4/Patient/_search?_format=$mimeType',
       );
     });
 
@@ -427,7 +427,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Observation'
-        '?_format%3D$mimeType%26_lastUpdated%3Dgt2010-10-01',
+        '?_format=$mimeType&_lastUpdated=gt2010-10-01',
       );
     });
 
@@ -444,7 +444,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Condition'
-        '?_format%3D$mimeType%26_tag%3Dhttp%3A%2F%2Facme.org%2Fcodes%7Cneeds-review',
+        '?_format=$mimeType&_tag=http://acme.org/codes|needs-review',
       );
     });
 
@@ -459,7 +459,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/DiagnosticReport'
-        '?_format%3D$mimeType%26_profile%3Dhttp%3A%2F%2Facme.org%2Fcodes',
+        '?_format=$mimeType&_profile=http://acme.org/codes',
       );
     });
 
@@ -474,7 +474,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Patient'
-        '?_format%3D$mimeType%26gender%3Amissing%3Dtrue',
+        '?_format=$mimeType&gender:missing=true',
       );
     });
 
@@ -489,7 +489,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Patient'
-        '?_format%3D$mimeType%26gender%3Amissing%3Dfalse',
+        '?_format=$mimeType&gender:missing=false',
       );
     });
 
@@ -504,7 +504,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Patient'
-        '?_format%3D$mimeType%26_text%3Aexact%3DStark',
+        '?_format=$mimeType&_text:exact=Stark',
       );
     });
 
@@ -518,7 +518,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Observation?_format%3D$mimeType%26_lastUpdated%3Dle2010-10-01',
+        'http://hapi.fhir.org/baseR4/Observation?_format=$mimeType&_lastUpdated=le2010-10-01',
       );
     });
 
@@ -532,7 +532,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/RiskAssessment?_format%3D$mimeType%26probability%3Dgt0.8',
+        'http://hapi.fhir.org/baseR4/RiskAssessment?_format=$mimeType&probability=gt0.8',
       );
     });
 
@@ -550,7 +550,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Patient'
-        '?_format%3D$mimeType%26birthdate%3Dge2010-01-01%26birthdate%3Dle2011-12-31',
+        '?_format=$mimeType&birthdate=ge2010-01-01&birthdate=le2011-12-31',
       );
     });
 
@@ -569,7 +569,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Patient'
-        '?_format%3D$mimeType%26given%3Deve%26given%3Acontains%3Deve%26given%3Aexact%3Deve',
+        '?_format=$mimeType&given=eve&given:contains=eve&given:exact=eve',
       );
     });
 
@@ -588,7 +588,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4'
-        '?_format%3D$mimeType%26_type%3DPatient%26given%3Deve%26given%3Acontains%3Deve%26given%3Aexact%3Deve',
+        '?_format=$mimeType&_type=Patient&given=eve&given:contains=eve&given:exact=eve',
       );
     });
 
@@ -605,7 +605,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Patient'
-        '?_format%3D$mimeType%26identifier%3Dhttp%3A%2F%2Facme.org%2Fpatient%7C2345',
+        '?_format=$mimeType&identifier=http://acme.org/patient|2345',
       );
     });
 
@@ -620,7 +620,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Composition'
-        '?_format%3D$mimeType%26section%3Anot%3D48765-2',
+        '?_format=$mimeType&section:not=48765-2',
       );
     });
 
@@ -637,7 +637,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Condition'
-        '?_format%3D$mimeType%26code%3Ain%3Dhttp%3A%2F%2Fsnomed.info%2Fsct%3Ffhir_vs%3Disa%2F126851005',
+        '?_format=$mimeType&code:in=http://snomed.info/sct?fhir_vs=isa/126851005',
       );
     });
 
@@ -654,7 +654,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Patient'
-        '?_format%3D$mimeType%26identifier%3Aof-type%3Dhttp%3A%2F%2Fterminology.hl7.org%2FCodeSystem%2Fv2-0203%7CMR%7C446053',
+        '?_format=$mimeType&identifier:of-type=http://terminology.hl7.org/CodeSystem/v2-0203|MR|446053',
       );
     });
 
@@ -671,7 +671,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Observation'
-        '?_format%3D$mimeType%26value-quantity%3Dap5.4%7Chttp%3A%2F%2Funitsofmeasure.org%7Cmg',
+        '?_format=$mimeType&value-quantity=ap5.4|http://unitsofmeasure.org|mg',
       );
     });
 
@@ -688,7 +688,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Observation'
-        '?_format%3D$mimeType%26value-quantity%3D5.4%7Chttp%3A%2F%2Funitsofmeasure.org%7Cmg',
+        '?_format=$mimeType&value-quantity=5.4|http://unitsofmeasure.org|mg',
       );
     });
 
@@ -705,7 +705,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Observation'
-        '?_format%3D$mimeType%26value-quantity%3D0.0054%7Chttp%3A%2F%2Funitsofmeasure.org%7Cg',
+        '?_format=$mimeType&value-quantity=0.0054|http://unitsofmeasure.org|g',
       );
     });
 
@@ -720,7 +720,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Observation'
-        '?_format%3D$mimeType%26subject%3DPatient%2F123',
+        '?_format=$mimeType&subject=Patient/123',
       );
     });
   }, tags: ['uri', 'search']);
