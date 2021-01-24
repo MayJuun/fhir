@@ -215,7 +215,7 @@ abstract class FhirRequest with _$FhirRequest {
     Client client,
   }) = _FhirOperationRequest;
 
-  Future<Map<String, dynamic>> request({
+  Future<Resource> request({
     Map<String, String> headers,
   }) async {
     return await map(
@@ -440,7 +440,7 @@ abstract class FhirRequest with _$FhirRequest {
     return parameters;
   }
 
-  Future<Map<String, dynamic>> _request(
+  Future<Resource> _request(
     RestfulRequest type,
     String uri,
     Map<String, String> headers,
@@ -570,7 +570,7 @@ abstract class FhirRequest with _$FhirRequest {
             '\$${f.operation}',
       );
 
-  Future<Map<String, dynamic>> _makeRequest({
+  Future<Resource> _makeRequest({
     @required RestfulRequest type,
     @required String thisRequest,
     Map<String, String> headers,
@@ -583,7 +583,8 @@ abstract class FhirRequest with _$FhirRequest {
     client ??= Client();
 
     if (globals.kTestMode) {
-      return {'SearchString': thisRequest};
+      return OperationOutcome(
+          issue: [OperationOutcomeIssue(diagnostics: thisRequest)]);
     }
 
     try {
@@ -717,7 +718,7 @@ abstract class FhirRequest with _$FhirRequest {
             '\nResult body: ${result.body}');
       }
     }
-    return json.decode(result.body);
+    return Resource.fromJson(json.decode(result.body));
   }
 
   static const _errorCodes = {

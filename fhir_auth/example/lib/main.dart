@@ -28,9 +28,6 @@ class MyApp extends StatelessWidget {
                   child: const Text('Hapi', style: TextStyle(fontSize: 44)),
                   onPressed: () async => await hapi()),
               RaisedButton(
-                  child: const Text('Logica', style: TextStyle(fontSize: 44)),
-                  onPressed: () async => await logica()),
-              RaisedButton(
                   child: const Text('Mihin', style: TextStyle(fontSize: 44)),
                   onPressed: () async => await mihin()),
             ],
