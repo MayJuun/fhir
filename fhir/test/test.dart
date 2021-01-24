@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:test/test.dart';
 
 import 'expected_json.dart';
-import 'expected_yaml.dart';
 import 'validation/validation.dart';
 
 Future main() async {

@@ -1,4 +1,3 @@
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'primitive_failures.freezed.dart';
