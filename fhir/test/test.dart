@@ -27,12 +27,12 @@ Future main() async {
           for (final s in expectList) {
             string += '\n$s';
           }
-          await File('./test/fhir/temp1.txt').writeAsString(string);
+          await File('./test/temp1.txt').writeAsString(string);
           string = '';
           for (final s in compareList) {
             string += '\n$s';
           }
-          await File('./test/fhir/temp2.txt').writeAsString(string);
+          await File('./test/temp2.txt').writeAsString(string);
 
           compareList.forEach((file) {
             testList.remove(file);

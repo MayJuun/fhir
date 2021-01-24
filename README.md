@@ -47,6 +47,8 @@ I've decided to consolidate into two packages. Anything that doesn't require flu
 
 ## Specific Readme
 
-### 1. [fhir](readme/fhir.md)
-### 2. [fhir_yaml](readme/fhir_yaml.md)
-### 3. [fhir_at_rest](readme/fhir_at_rest.md)
+### 1. [fhir](fhir/fhir.md)
+### 2. [fhir_at_rest](fhir_at_rest/fhir_at_rest.md)
+### 3. [fhir_auth](fhir_auth/fhir_auth.md)
+### 3. [fhir_db](fhir_db/fhir_db.md)
+### 3. [fhir_yaml](readme/fhir_yaml.md)

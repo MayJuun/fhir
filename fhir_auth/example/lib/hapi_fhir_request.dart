@@ -1,11 +1,10 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart';
-import 'package:fhir_at_rest/fhir_at_rest.dart' as rest;
 
 import 'new_patient.dart';
 
 Future hapiFhirRequest(String hapiUrl) async {
-  final request1 = rest.CreateRequest.r4(
+  final request1 = CreateRequest.r4(
     base: Uri.parse(hapiUrl),
     type: R4ResourceType.Patient,
   );

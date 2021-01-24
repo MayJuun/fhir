@@ -1,7 +1,7 @@
 part of 'validation.dart';
 
 Future<List<String>> dstu2Validation() async {
-  var dir = Directory('./test/fhir/dstu2_examples');
+  var dir = Directory('./test/dstu2_examples');
   var string = <String>[];
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();

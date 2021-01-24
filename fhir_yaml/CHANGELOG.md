@@ -1,3 +1,6 @@
+## [0.2.0]
+* Just trying to keep in sync with other packages. No functionality changes. Reorganized github repo.
+
 ## [0.1.0]
 * Added FHIR® to our readme, official permission from HL7 and Graham Grieve!
 
