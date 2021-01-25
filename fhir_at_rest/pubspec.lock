@@ -165,16 +165,16 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      path: "../fhir"
-      relative: true
-    source: path
+      name: fhir
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.2.0"
   fhir_yaml:
     dependency: transitive
     description:
-      path: "../fhir_yaml"
-      relative: true
-    source: path
+      name: fhir_yaml
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.2.0"
   file:
     dependency: transitive
