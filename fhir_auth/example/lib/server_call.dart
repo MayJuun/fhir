@@ -1,5 +1,7 @@
 import 'api.dart';
-import 'server_calls.dart';
+import 'fhir_request.dart';
+import 'gcs_fhir_request.dart';
+import 'hapi_fhir_request.dart';
 
 Future aidbox() async => await fhirRequest(
       url: Api.aidboxUrl,

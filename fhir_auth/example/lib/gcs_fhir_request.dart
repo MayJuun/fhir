@@ -1,4 +1,3 @@
-import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart';
 import 'package:fhir_at_rest/r4.dart';
 import 'package:fhir_auth/r4.dart';
@@ -22,6 +21,7 @@ Future gcsFhirRequest({
     print(e);
   }
   final _newPatient = newPatient();
+  print('Patient to be uploaded: ${_newPatient.toJson()}');
 
   final request1 = FhirRequest.create(
     base: Uri.parse(client.baseUrl.toString()),
@@ -29,8 +29,8 @@ Future gcsFhirRequest({
   );
 
   try {
-    final response1 = await request1.request(headers: await client.headers());
-    print(response1.toJson());
+    final response = await request1.request(headers: await client.headers());
+    print('Uploaded patient: ${response.toJson()}');
   } catch (e) {
     print(e);
   }

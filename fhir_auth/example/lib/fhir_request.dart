@@ -42,6 +42,7 @@ Future fhirRequest({
   }
 
   final _newPatient = newPatient();
+  print('Patient to be uploaded: ${_newPatient.toJson()}');
   final request1 = FhirRequest.create(
     base: Uri.parse(client.baseUrl.toString()),
     resource: _newPatient,
@@ -49,8 +50,8 @@ Future fhirRequest({
 
   Id newId;
   try {
-    final response1 = await request1.request(headers: await client.authHeaders);
-    newId = response1.id;
+    final response = await request1.request(headers: await client.authHeaders);
+    newId = response.id;
   } catch (e) {
     print(e);
   }
@@ -63,9 +64,9 @@ Future fhirRequest({
       id: newId,
     );
     try {
-      final response2 =
+      final response =
           await request2.request(headers: await client.authHeaders);
-      print(response2.toJson());
+      print('Uploaded patient: ${response.toJson()}');
     } catch (e) {
       print(e);
     }
