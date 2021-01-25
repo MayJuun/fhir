@@ -34,14 +34,14 @@
 	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
-    	<dict>
+		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
-        	<array>
-            	<string><your_custom_scheme></string>
-        	</array>
-    	</dict>
+			<array>
+				<string>dev.fhirfli.authdemo</string>
+			</array>
+		</dict>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

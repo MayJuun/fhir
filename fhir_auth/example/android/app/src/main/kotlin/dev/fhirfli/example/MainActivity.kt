@@ -1,4 +1,4 @@
-package dev.fhirfli.example
+package dev.fhirfli.authdemo
 
 import io.flutter.embedding.android.FlutterActivity
 
