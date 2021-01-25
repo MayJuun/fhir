@@ -12,7 +12,7 @@ class GcsClient extends GoogleSignIn {
 
   Future<Map<String, String>> headers() async {
     final headers = await currentUser.authHeaders;
-    headers['Content-Type'] = 'json';
+    headers['Content-Type'] = 'application/fhir+json';
     return headers;
   }
 }
