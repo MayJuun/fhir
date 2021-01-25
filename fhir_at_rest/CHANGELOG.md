@@ -4,6 +4,7 @@
 * single class called FhirRequest that does all of the work (it is a freezed Union)
 * added FHIR® to the Readme - official permission from HL7 and Graham Grieve.
 * changing most formats from 'application/fhir+json' to just 'json' for querying, it should still be 'application/fhir+json' in the headers
+* Fixed it so that not all requests are delete requests. Thanks to [bobosette](https://github.com/bobosette) for [pointing out this issue](https://github.com/fhir-fli/fhir_at_rest/issues/6) to me.
 
 ## [0.1.1]
 * Lots of changes, mostly taking away complexity
