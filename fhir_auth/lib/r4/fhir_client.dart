@@ -160,15 +160,14 @@ class FhirClient {
   /// Request for the CapabilityStatement (or Conformance) and then identifying
   /// the authUrl endpoint & tokenurl endpoing
   Future<Unit> get _getEndpoints async {
-    var thisRequest =
-        '$baseUrl/metadata?mode=full&_format=application/fhir+json';
+    var thisRequest = '$baseUrl/metadata?mode=full&_format=json';
 
     var result = await get(thisRequest);
 
     if (_errorCodeMap.containsKey(result.statusCode)) {
       if (result.statusCode == 422) {
         thisRequest = thisRequest.replaceFirst(
-          '_format=application/fhir+json',
+          '_format=json',
           '_format=application/json',
         );
         result = await get(thisRequest);

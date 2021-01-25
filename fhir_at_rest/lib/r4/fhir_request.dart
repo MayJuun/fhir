@@ -21,7 +21,7 @@ abstract class FhirRequest with _$FhirRequest {
     @required Id id,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
-    @Default('application/fhir+json') String format,
+    @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     Client client,
@@ -35,7 +35,7 @@ abstract class FhirRequest with _$FhirRequest {
     @required Id vid,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
-    @Default('application/fhir+json') String format,
+    @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     Client client,
@@ -47,7 +47,7 @@ abstract class FhirRequest with _$FhirRequest {
     @required Resource resource,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
-    @Default('application/fhir+json') String format,
+    @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     Client client,
@@ -59,7 +59,7 @@ abstract class FhirRequest with _$FhirRequest {
     @required Resource resource,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
-    @Default('application/fhir+json') String format,
+    @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     Client client,
@@ -72,7 +72,7 @@ abstract class FhirRequest with _$FhirRequest {
     @required Id id,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
-    @Default('application/fhir+json') String format,
+    @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     Client client,
@@ -84,7 +84,7 @@ abstract class FhirRequest with _$FhirRequest {
     @required Resource resource,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
-    @Default('application/fhir+json') String format,
+    @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     Client client,
@@ -96,7 +96,7 @@ abstract class FhirRequest with _$FhirRequest {
     @required R4ResourceType type,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
-    @Default('application/fhir+json') String format,
+    @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     @Default(false) bool usePost,
@@ -109,7 +109,7 @@ abstract class FhirRequest with _$FhirRequest {
     @required Uri base,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
-    @Default('application/fhir+json') String format,
+    @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     Client client,
@@ -120,7 +120,7 @@ abstract class FhirRequest with _$FhirRequest {
     @required Uri base,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
-    @Default('application/fhir+json') String format,
+    @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     @Default(Mode.full) Mode mode,
@@ -132,7 +132,7 @@ abstract class FhirRequest with _$FhirRequest {
     @required Uri base,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
-    @Default('application/fhir+json') String format,
+    @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     @required Bundle bundle,
@@ -143,7 +143,7 @@ abstract class FhirRequest with _$FhirRequest {
     @required Uri base,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
-    @Default('application/fhir+json') String format,
+    @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     @required Bundle bundle,
@@ -157,7 +157,7 @@ abstract class FhirRequest with _$FhirRequest {
     @required Id id,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
-    @Default('application/fhir+json') String format,
+    @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     int count,
@@ -173,7 +173,7 @@ abstract class FhirRequest with _$FhirRequest {
     @required R4ResourceType type,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
-    @Default('application/fhir+json') String format,
+    @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     int count,
@@ -188,7 +188,7 @@ abstract class FhirRequest with _$FhirRequest {
     @required Uri base,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
-    @Default('application/fhir+json') String format,
+    @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     int count,
@@ -205,7 +205,7 @@ abstract class FhirRequest with _$FhirRequest {
     Id id,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
-    @Default('application/fhir+json') String format,
+    @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     @Default(<String, dynamic>{}) Map<String, dynamic> fhirParameter,
@@ -498,12 +498,9 @@ abstract class FhirRequest with _$FhirRequest {
       orElse: () => '');
 
   String _format({bool join = false}) => maybeMap(
-      capabilities: (f) => _encodeParam(
-          '_format=${f?.format ?? "application%2Ffhir%2Bjson"}',
-          join: true),
-      orElse: () => _encodeParam(
-          '_format=${format ?? "application%2Ffhir%2Bjson"}',
-          join: join));
+      capabilities: (f) =>
+          _encodeParam('_format=${f?.format ?? "json"}', join: true),
+      orElse: () => _encodeParam('_format=${format ?? "json"}', join: join));
 
   String _pretty({bool join = true}) => pretty ?? false
       ? _encodeParam('_pretty=${pretty.toString()}', join: join)
@@ -650,74 +647,11 @@ abstract class FhirRequest with _$FhirRequest {
     }
 
     if (_errorCodes.containsKey(result.statusCode)) {
-      if (result.statusCode == 422) {
-        thisRequest = thisRequest.replaceFirst(
-          '_format=${Uri.encodeQueryComponent('application/fhir+json')}',
-          '_format=application/json',
-        );
-        headers['Content-Type'] = formData != null
-            ? 'application/x-www-form-urlencoded'
-            : 'application/json';
-        try {
-          switch (type) {
-            case RestfulRequest.get_:
-              {
-                result = await client.get(
-                  thisRequest,
-                  headers: headers,
-                );
-                break;
-              }
-            case RestfulRequest.put_:
-              {
-                result = await client.put(
-                  thisRequest,
-                  headers: headers,
-                  body: resource,
-                  encoding: encoding,
-                );
-                break;
-              }
-            case RestfulRequest.delete_:
-              {
-                result = await client.delete(
-                  thisRequest,
-                  headers: headers,
-                );
-                break;
-              }
-            case RestfulRequest.patch_:
-              {
-                result = await client.patch(
-                  thisRequest,
-                  headers: headers,
-                  body: resource,
-                  encoding: encoding,
-                );
-                break;
-              }
-            case RestfulRequest.post_:
-              {
-                result = await client.post(
-                  thisRequest,
-                  headers: headers,
-                  body: formData ?? jsonEncode(resource),
-                  encoding: encoding,
-                );
-                break;
-              }
-          }
-        } catch (e) {
-          throw HttpException('Failed making restful request, \nException: $e');
-        }
-      }
-      if (_errorCodes.containsKey(result.statusCode)) {
-        throw HttpException('Failed to make restful request'
-            '\nStatus Code: ${result.statusCode} -'
-            ' ${_errorCodes[result.statusCode]}'
-            '\nResult headers: ${result.headers}'
-            '\nResult body: ${result.body}');
-      }
+      throw HttpException('Failed to make restful request'
+          '\nStatus Code: ${result.statusCode} -'
+          ' ${_errorCodes[result.statusCode]}'
+          '\nResult headers: ${result.headers}'
+          '\nResult body: ${result.body}');
     }
     return Resource.fromJson(json.decode(result.body));
   }

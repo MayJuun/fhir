@@ -164,7 +164,7 @@ This is to request the server's capabilities. It uses a ```GET``` and can pass i
 ```
 Result:
 ```
-https://hapi.fhir.org/baseR4/metadata?mode=normative&_format=application/fhir+json
+https://hapi.fhir.org/baseR4/metadata?mode=normative&_format=json
 ```
 ### Batch
 Batch and Transactions function very similarly. They both use ```POST```. They both ONLY accept a Bundle as a resource. Before sending, they both ensure that the resource is a bundle, that the bundle type is either Batch or Transaction (respectively) and will also check and each entry in the bundle has a request and that request has a method. If these conditions are not true, the request will be denied at the server, so it's just easier to check and not waste the bandwidth.

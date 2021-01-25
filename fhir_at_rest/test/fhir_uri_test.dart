@@ -3,7 +3,7 @@ import 'package:fhir_at_rest/r4.dart';
 import 'package:test/test.dart';
 
 void main() {
-  const String mimeType = 'application/fhir+json';
+  const String mimeType = 'json';
 
   group('FHIR URI - READ:', () {
     test('get patient', () async {

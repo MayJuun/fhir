@@ -6,7 +6,7 @@ import 'package:fhir_at_rest/globals.dart' as globals;
 
 void main() {
   globals.kTestMode = true;
-  const String mimeType = 'application/fhir+json';
+  const String mimeType = 'json';
 
   group('FhirRequest - READ:', () {
     test('get patient', () async {
@@ -76,7 +76,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/1227442?_format=application/fhir+json&_pretty=true&_elements=name',
+        'http://hapi.fhir.org/baseR4/Patient/1227442?_format=json&_pretty=true&_elements=name',
       );
     });
 
@@ -92,7 +92,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/Patient/1227442?_format=application/fhir+json&_pretty=true&_elements=name,gender',
+        'http://hapi.fhir.org/baseR4/Patient/1227442?_format=json&_pretty=true&_elements=name,gender',
       );
     });
   }, tags: ['uri', 'read']);
@@ -273,7 +273,7 @@ void main() {
       final OperationOutcome response = await request.request();
       expect(
         response.issue[0].diagnostics,
-        'http://hapi.fhir.org/baseR4/_history?_format=application/fhir+json'
+        'http://hapi.fhir.org/baseR4/_history?_format=json'
         '&_list=List/12345&_count=10&_since=2020-10-08',
       );
     });
@@ -384,7 +384,7 @@ void main() {
       expect(
         response.issue[0].diagnostics,
         'http://hapi.fhir.org/baseR4/Patient/744742/\$everything?_format'
-        '=application/fhir+json&start=2020-01-01&end=2020-08-01',
+        '=json&start=2020-01-01&end=2020-08-01',
       );
     });
   }, tags: ['uri', 'operation']);

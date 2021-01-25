@@ -20,7 +20,7 @@ class _$FhirRequestTearOff {
       @required Id id,
       bool pretty = false,
       Summary summary = Summary.none,
-      String format = 'application/fhir+json',
+      String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       Client client}) {
@@ -45,7 +45,7 @@ class _$FhirRequestTearOff {
       @required Id vid,
       bool pretty = false,
       Summary summary = Summary.none,
-      String format = 'application/fhir+json',
+      String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       Client client}) {
@@ -69,7 +69,7 @@ class _$FhirRequestTearOff {
       @required Resource resource,
       bool pretty = false,
       Summary summary = Summary.none,
-      String format = 'application/fhir+json',
+      String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       Client client}) {
@@ -91,7 +91,7 @@ class _$FhirRequestTearOff {
       @required Resource resource,
       bool pretty = false,
       Summary summary = Summary.none,
-      String format = 'application/fhir+json',
+      String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       Client client}) {
@@ -114,7 +114,7 @@ class _$FhirRequestTearOff {
       @required Id id,
       bool pretty = false,
       Summary summary = Summary.none,
-      String format = 'application/fhir+json',
+      String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       Client client}) {
@@ -137,7 +137,7 @@ class _$FhirRequestTearOff {
       @required Resource resource,
       bool pretty = false,
       Summary summary = Summary.none,
-      String format = 'application/fhir+json',
+      String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       Client client}) {
@@ -159,7 +159,7 @@ class _$FhirRequestTearOff {
       @required Dstu2ResourceType type,
       bool pretty = false,
       Summary summary = Summary.none,
-      String format = 'application/fhir+json',
+      String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       bool usePost = false,
@@ -184,7 +184,7 @@ class _$FhirRequestTearOff {
       {@required Uri base,
       bool pretty = false,
       Summary summary = Summary.none,
-      String format = 'application/fhir+json',
+      String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       Client client}) {
@@ -204,7 +204,7 @@ class _$FhirRequestTearOff {
       {@required Uri base,
       bool pretty = false,
       Summary summary = Summary.none,
-      String format = 'application/fhir+json',
+      String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       Mode mode = Mode.full,
@@ -226,7 +226,7 @@ class _$FhirRequestTearOff {
       {@required Uri base,
       bool pretty = false,
       Summary summary = Summary.none,
-      String format = 'application/fhir+json',
+      String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       @required Bundle bundle,
@@ -248,7 +248,7 @@ class _$FhirRequestTearOff {
       {@required Uri base,
       bool pretty = false,
       Summary summary = Summary.none,
-      String format = 'application/fhir+json',
+      String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       @required Bundle bundle,
@@ -272,7 +272,7 @@ class _$FhirRequestTearOff {
       @required Id id,
       bool pretty = false,
       Summary summary = Summary.none,
-      String format = 'application/fhir+json',
+      String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       int count,
@@ -303,7 +303,7 @@ class _$FhirRequestTearOff {
       @required Dstu2ResourceType type,
       bool pretty = false,
       Summary summary = Summary.none,
-      String format = 'application/fhir+json',
+      String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       int count,
@@ -332,7 +332,7 @@ class _$FhirRequestTearOff {
       {@required Uri base,
       bool pretty = false,
       Summary summary = Summary.none,
-      String format = 'application/fhir+json',
+      String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       int count,
@@ -362,7 +362,7 @@ class _$FhirRequestTearOff {
       Id id,
       bool pretty = false,
       Summary summary = Summary.none,
-      String format = 'application/fhir+json',
+      String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       Map<String, dynamic> fhirParameter = const <String, dynamic>{},
@@ -883,7 +883,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
       @required this.id,
       this.pretty = false,
       this.summary = Summary.none,
-      this.format = 'application/fhir+json',
+      this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.client})
@@ -909,7 +909,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   @JsonKey(defaultValue: Summary.none)
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'application/fhir+json')
+  @JsonKey(defaultValue: 'json')
   @override
   final String format;
   @JsonKey(defaultValue: const <String>[])
@@ -1494,7 +1494,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
       @required this.vid,
       this.pretty = false,
       this.summary = Summary.none,
-      this.format = 'application/fhir+json',
+      this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.client})
@@ -1523,7 +1523,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   @JsonKey(defaultValue: Summary.none)
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'application/fhir+json')
+  @JsonKey(defaultValue: 'json')
   @override
   final String format;
   @JsonKey(defaultValue: const <String>[])
@@ -2105,7 +2105,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
       @required this.resource,
       this.pretty = false,
       this.summary = Summary.none,
-      this.format = 'application/fhir+json',
+      this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.client})
@@ -2128,7 +2128,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   @JsonKey(defaultValue: Summary.none)
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'application/fhir+json')
+  @JsonKey(defaultValue: 'json')
   @override
   final String format;
   @JsonKey(defaultValue: const <String>[])
@@ -2701,7 +2701,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
       @required this.resource,
       this.pretty = false,
       this.summary = Summary.none,
-      this.format = 'application/fhir+json',
+      this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.client})
@@ -2724,7 +2724,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   @JsonKey(defaultValue: Summary.none)
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'application/fhir+json')
+  @JsonKey(defaultValue: 'json')
   @override
   final String format;
   @JsonKey(defaultValue: const <String>[])
@@ -3301,7 +3301,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
       @required this.id,
       this.pretty = false,
       this.summary = Summary.none,
-      this.format = 'application/fhir+json',
+      this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.client})
@@ -3327,7 +3327,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   @JsonKey(defaultValue: Summary.none)
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'application/fhir+json')
+  @JsonKey(defaultValue: 'json')
   @override
   final String format;
   @JsonKey(defaultValue: const <String>[])
@@ -3904,7 +3904,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
       @required this.resource,
       this.pretty = false,
       this.summary = Summary.none,
-      this.format = 'application/fhir+json',
+      this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.client})
@@ -3927,7 +3927,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   @JsonKey(defaultValue: Summary.none)
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'application/fhir+json')
+  @JsonKey(defaultValue: 'json')
   @override
   final String format;
   @JsonKey(defaultValue: const <String>[])
@@ -4508,7 +4508,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
       @required this.type,
       this.pretty = false,
       this.summary = Summary.none,
-      this.format = 'application/fhir+json',
+      this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.usePost = false,
@@ -4535,7 +4535,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   @JsonKey(defaultValue: Summary.none)
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'application/fhir+json')
+  @JsonKey(defaultValue: 'json')
   @override
   final String format;
   @JsonKey(defaultValue: const <String>[])
@@ -5121,7 +5121,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
       {@required this.base,
       this.pretty = false,
       this.summary = Summary.none,
-      this.format = 'application/fhir+json',
+      this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.client})
@@ -5141,7 +5141,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   @JsonKey(defaultValue: Summary.none)
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'application/fhir+json')
+  @JsonKey(defaultValue: 'json')
   @override
   final String format;
   @JsonKey(defaultValue: const <String>[])
@@ -5709,7 +5709,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
       {@required this.base,
       this.pretty = false,
       this.summary = Summary.none,
-      this.format = 'application/fhir+json',
+      this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.mode = Mode.full,
@@ -5731,7 +5731,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   @JsonKey(defaultValue: Summary.none)
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'application/fhir+json')
+  @JsonKey(defaultValue: 'json')
   @override
   final String format;
   @JsonKey(defaultValue: const <String>[])
@@ -6318,7 +6318,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
       {@required this.base,
       this.pretty = false,
       this.summary = Summary.none,
-      this.format = 'application/fhir+json',
+      this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       @required this.bundle,
@@ -6340,7 +6340,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   @JsonKey(defaultValue: Summary.none)
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'application/fhir+json')
+  @JsonKey(defaultValue: 'json')
   @override
   final String format;
   @JsonKey(defaultValue: const <String>[])
@@ -6926,7 +6926,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
       {@required this.base,
       this.pretty = false,
       this.summary = Summary.none,
-      this.format = 'application/fhir+json',
+      this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       @required this.bundle,
@@ -6948,7 +6948,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
   @JsonKey(defaultValue: Summary.none)
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'application/fhir+json')
+  @JsonKey(defaultValue: 'json')
   @override
   final String format;
   @JsonKey(defaultValue: const <String>[])
@@ -7538,7 +7538,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
       @required this.id,
       this.pretty = false,
       this.summary = Summary.none,
-      this.format = 'application/fhir+json',
+      this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.count,
@@ -7568,7 +7568,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   @JsonKey(defaultValue: Summary.none)
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'application/fhir+json')
+  @JsonKey(defaultValue: 'json')
   @override
   final String format;
   @JsonKey(defaultValue: const <String>[])
@@ -8186,7 +8186,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
       @required this.type,
       this.pretty = false,
       this.summary = Summary.none,
-      this.format = 'application/fhir+json',
+      this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.count,
@@ -8213,7 +8213,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   @JsonKey(defaultValue: Summary.none)
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'application/fhir+json')
+  @JsonKey(defaultValue: 'json')
   @override
   final String format;
   @JsonKey(defaultValue: const <String>[])
@@ -8823,7 +8823,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
       {@required this.base,
       this.pretty = false,
       this.summary = Summary.none,
-      this.format = 'application/fhir+json',
+      this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.count,
@@ -8847,7 +8847,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   @JsonKey(defaultValue: Summary.none)
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'application/fhir+json')
+  @JsonKey(defaultValue: 'json')
   @override
   final String format;
   @JsonKey(defaultValue: const <String>[])
@@ -9463,7 +9463,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
       this.id,
       this.pretty = false,
       this.summary = Summary.none,
-      this.format = 'application/fhir+json',
+      this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.fhirParameter = const <String, dynamic>{},
@@ -9495,7 +9495,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   @JsonKey(defaultValue: Summary.none)
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'application/fhir+json')
+  @JsonKey(defaultValue: 'json')
   @override
   final String format;
   @JsonKey(defaultValue: const <String>[])

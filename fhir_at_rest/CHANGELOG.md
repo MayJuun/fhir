@@ -3,6 +3,7 @@
 * Now with same dstu2/stu3/r4/r5 folder setup as most other packages
 * single class called FhirRequest that does all of the work (it is a freezed Union)
 * added FHIR® to the Readme - official permission from HL7 and Graham Grieve.
+* changing most formats from 'application/fhir+json' to just 'json' for querying, it should still be 'application/fhir+json' in the headers
 
 ## [0.1.1]
 * Lots of changes, mostly taking away complexity
