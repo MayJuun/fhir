@@ -450,7 +450,7 @@ abstract class FhirRequest with _$FhirRequest {
   }) async {
     try {
       final result = await _makeRequest(
-          type: RestfulRequest.delete_,
+          type: type,
           thisRequest: uri,
           client: client,
           headers: headers,
