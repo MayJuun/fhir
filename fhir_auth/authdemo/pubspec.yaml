@@ -1,0 +1,25 @@
+name: authdemo
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.0
+  http: ^0.12.2
+  fhir: ^0.2.0
+  fhir_at_rest: 
+    path: ../../fhir_at_rest
+  fhir_auth:
+    path: ../../fhir_auth
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

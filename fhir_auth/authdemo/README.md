@@ -1,4 +1,4 @@
-# example
+# authdemo
 
 A new Flutter project.
 
