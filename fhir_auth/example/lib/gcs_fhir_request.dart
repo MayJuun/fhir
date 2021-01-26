@@ -9,29 +9,29 @@ Future gcsFhirRequest({
   String clientId,
   List<String> scopes,
 }) async {
-  final client = GcsClient(
-    baseUrl: FhirUri(url),
-    clientId: clientId,
-    scopes: scopes,
-  );
+  final client = await GcsClient.initialize(scopes, clientId);
+  //   baseUrl: FhirUri(url),
+  //   clientId: clientId,
+  //   scopes: scopes,
+  // );
 
   try {
-    await client.access();
+    await client.signInWithGoogle();
   } catch (e) {
     print(e);
   }
-  final _newPatient = newPatient();
-  print('Patient to be uploaded: ${_newPatient.toJson()}');
+  // final _newPatient = newPatient();
+  // print('Patient to be uploaded: ${_newPatient.toJson()}');
 
-  final request1 = FhirRequest.create(
-    base: Uri.parse(client.baseUrl.toString()),
-    resource: _newPatient,
-  );
+  // final request1 = FhirRequest.create(
+  //   base: Uri.parse(client.baseUrl.toString()),
+  //   resource: _newPatient,
+  // );
 
-  try {
-    final response = await request1.request(headers: await client.headers());
-    print('Uploaded patient: ${response.toJson()}');
-  } catch (e) {
-    print(e);
-  }
+  // try {
+  //   final response = await request1.request(headers: await client.headers());
+  //   print('Uploaded patient: ${response.toJson()}');
+  // } catch (e) {
+  //   print(e);
+  // }
 }
