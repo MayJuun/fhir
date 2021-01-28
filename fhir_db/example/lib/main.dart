@@ -3,12 +3,14 @@ import 'package:fhir_db/r4.dart';
 import 'package:flutter/material.dart';
 import 'package:test/test.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final resourceDao = ResourceDao();
+  await resourceDao.updatePw('newpw', null);
+  await resourceDao.deleteAllResources(null);
   final id = Id('12345');
 
-  group('Saving Things', () {
+  group('Saving Things:', () {
     test('Save Patient', () async {
       final humanName = HumanName(family: 'Atreides', given: ['Duke']);
       final patient = Patient(id: id, name: [humanName]);
@@ -51,10 +53,7 @@ void main() {
 
       expect((saved as Observation).code.text, 'Observation #1 - Updated');
 
-      // expect((saved as Observation).effectiveDateTime,
-      //     FhirDateTime(DateTime(1981, 09, 18)));
-
-      // expect(saved.meta.versionId, Id('2'));
+      expect(saved.meta.versionId, Id('2'));
     });
 
     test('Save Observation2', () async {
@@ -84,7 +83,7 @@ void main() {
     });
   });
 
-  group('Finding Things', () {
+  group('Finding Things:', () {
     test('Find 1st Patient', () async {
       final search = await resourceDao.find(null,
           resourceType: R4ResourceType.Patient, id: id);
@@ -106,57 +105,56 @@ void main() {
       expect((search[0] as Observation).code.text, 'Observation #3');
     });
 
-    // test('Find All Observations', () async {
-    //   final search = await resourceDao.getResourceType(
-    //     null,
-    //     resourceTypes: [R4ResourceType.Observation].toSet(),
-    //   );
+    test('Find All Observations', () async {
+      final search = await resourceDao.getResourceType(
+        null,
+        resourceTypes: [R4ResourceType.Observation],
+      );
 
-    //   expect(search.length, 3);
+      expect(search.length, 3);
 
-    //   final idList = [];
-    //   for (final obs in search) {
-    //     idList.add(obs.id.toString());
-    //   }
+      final idList = [];
+      for (final obs in search) {
+        idList.add(obs.id.toString());
+      }
 
-    //   expect(idList.contains('obs1'), true);
+      expect(idList.contains('obs1'), true);
 
-    //   expect(idList.contains('obs2'), true);
+      expect(idList.contains('obs2'), true);
 
-    //   expect(idList.contains('obs3'), true);
-    // });
+      expect(idList.contains('obs3'), true);
+    });
 
-    //   test('Find All (non-historical) Resources', () async {
-    //     final search = await resourceDao.getAll(null);
+    test('Find All (non-historical) Resources', () async {
+      final search = await resourceDao.getAll(null);
 
-    //     expect(search.length, 5);
+      expect(search.length, 5);
+      final patList = search.toList();
+      final orgList = search.toList();
+      final obsList = search.toList();
+      patList.retainWhere(
+          (resource) => resource.resourceType == R4ResourceType.Patient);
+      orgList.retainWhere(
+          (resource) => resource.resourceType == R4ResourceType.Organization);
+      obsList.retainWhere(
+          (resource) => resource.resourceType == R4ResourceType.Observation);
 
-    //     final patList = search;
-    //     final orgList = search;
-    //     final obsList = search;
-    //     patList.retainWhere(
-    //         (resource) => resource.resourceType == R4ResourceType.Patient);
-    //     orgList.retainWhere(
-    //         (resource) => resource.resourceType == R4ResourceType.Organization);
-    //     obsList.retainWhere(
-    //         (resource) => resource.resourceType == R4ResourceType.Observation);
+      expect(patList.length, 1);
 
-    //     expect(patList.length, 1);
+      expect(orgList.length, 1);
 
-    //     expect(orgList.length, 1);
-
-    //     expect(obsList, 3);
-    //   });
+      expect(obsList.length, 3);
+    });
   });
 
-  group('Deleting Things', () {
+  group('Deleting Things:', () {
     test('Delete 2nd Observation', () async {
       await resourceDao.delete(
           null, null, R4ResourceType.Observation, Id('obs2'), null, null);
 
       final search = await resourceDao.getResourceType(
         null,
-        resourceTypes: {R4ResourceType.Observation},
+        resourceTypes: [R4ResourceType.Observation],
       );
 
       expect(search.length, 2);
@@ -181,8 +179,8 @@ void main() {
 
       expect(search.length, 2);
 
-      final patList = search;
-      final orgList = search;
+      final patList = search.toList();
+      final orgList = search.toList();
       patList.retainWhere(
           (resource) => resource.resourceType == R4ResourceType.Patient);
       orgList.retainWhere(
@@ -199,6 +197,45 @@ void main() {
       final search = await resourceDao.getAll(null);
 
       expect(search.length, 0);
+    });
+  });
+
+  group('Password Things:', () {
+    final id = Id('12345');
+    final humanName = HumanName(family: 'Atreides', given: ['Duke']);
+    final patient = Patient(id: id, name: [humanName]);
+
+    test('Find Patient after Updated Password', () async {
+      await resourceDao.save(null, patient);
+      await resourceDao.updatePw(null, 'newpw');
+      var search = await resourceDao.find('newpw',
+          resourceType: R4ResourceType.Patient, id: id);
+      search = await resourceDao.find('newp',
+          resourceType: R4ResourceType.Patient, id: id);
+      search = await resourceDao.find('somethingElse',
+          resourceType: R4ResourceType.Patient, id: id);
+      search = await resourceDao.find(null,
+          resourceType: R4ResourceType.Patient, id: id);
+
+      expect(search.length, 1);
+
+      expect((search[0] as Patient).name[0], humanName);
+    });
+
+    test('Throws Error for wrong password', () async {
+      try {
+        final search1 = await resourceDao.find('something',
+            resourceType: R4ResourceType.Patient, id: id);
+        print(search1);
+        final search2 = await resourceDao.find('newpw',
+            resourceType: R4ResourceType.Patient, id: id);
+        print(search2);
+        final search3 = await resourceDao.find(null,
+            resourceType: R4ResourceType.Patient, id: id);
+        print(search3);
+      } catch (e) {
+        print(e);
+      }
     });
   });
 }

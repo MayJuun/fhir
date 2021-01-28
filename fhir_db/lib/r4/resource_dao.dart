@@ -137,27 +137,28 @@ class ResourceDao {
   /// returns all resources of a specific type
   Future<List<Resource>> getResourceType(
     String password, {
-    Set<R4ResourceType> resourceTypes,
-    List resourceTypeStrings,
+    List<R4ResourceType> resourceTypes,
+    List<String> resourceTypeStrings,
     Resource resource,
   }) async {
-    final types = <R4ResourceType>[];
+    final typeList = <R4ResourceType>[];
     if (resource?.resourceType != null) {
-      types.add(resource.resourceType);
+      typeList.add(resource.resourceType);
     }
     if (resourceTypes != null) {
       if (resourceTypes.isNotEmpty) {
-        types.addAll(resourceTypes);
+        typeList.addAll(resourceTypes);
       }
     }
-    final List<Resource> resourceList = [];
-    for (var type in types) {
-      _setStoreType(ResourceUtils.resourceTypeToStringMap[type]);
-      final finder = Finder(sortOrders: [SortOrder('id')]);
-      resourceList.addAll(await _search(password, finder));
+    if (resourceTypeStrings != null) {
+      for (final type in resourceTypeStrings) {
+        typeList.add(ResourceUtils.resourceTypeFromStringMap[type]);
+      }
     }
-    for (var type in resourceTypeStrings) {
-      _setStoreType(type);
+    final Set<R4ResourceType> typeSet = typeList.toSet();
+    final List<Resource> resourceList = [];
+    for (final type in typeSet) {
+      _setStoreType(ResourceUtils.resourceTypeToStringMap[type]);
       final finder = Finder(sortOrders: [SortOrder('id')]);
       resourceList.addAll(await _search(password, finder));
     }
@@ -165,9 +166,14 @@ class ResourceDao {
   }
 
   /// returns all resources in the [db], including historical versions
-  Future<List<Resource>> getAll(String password) async =>
-      await getResourceType(password,
-          resourceTypeStrings: (await _getResourceTypes(password)));
+  Future<List<Resource>> getAll(String password) async {
+    final resourceDynamicList = await _getResourceTypes(password);
+    final resourceStringList =
+        resourceDynamicList.map((resource) => resource.toString());
+    final resourceList = await getResourceType(password,
+        resourceTypeStrings: resourceStringList.toList());
+    return resourceList;
+  }
 
   /// Delete specific resource
   Future<int> delete(

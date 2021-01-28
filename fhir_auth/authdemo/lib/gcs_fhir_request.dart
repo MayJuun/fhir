@@ -9,7 +9,7 @@ Future gcsFhirRequest({
   String clientId,
   List<String> scopes,
 }) async {
-  final client = await GcsClient(
+  final client = GcsClient(
     baseUrl: FhirUri(url),
     clientId: clientId,
     scopes: scopes,
