@@ -6,6 +6,7 @@ import 'package:test/test.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final resourceDao = ResourceDao();
+  await resourceDao.updatePw('newPw', null);
   await resourceDao.deleteAllResources(null);
   final id = Id('12345');
 

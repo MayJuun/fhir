@@ -7,7 +7,7 @@ class ResourceDao {
   ResourceDao();
   StoreRef<String, Map<String, dynamic>> _resourceStore;
   final _typesStore = StoreRef<String, List>.main();
-  final _history = StoreRef<int, Map<String, dynamic>>.main();
+  final _history = StoreRef<String, Map<String, dynamic>>.main();
 
   /// update database password
   Future updatePw(String oldPw, String newPw) =>
@@ -49,9 +49,9 @@ class ResourceDao {
         _setStoreType(resource.resourceTypeString());
         return resource.id == null
             ? await _insert(password, resource)
-            : _resourceStore.findKey(await _db(password),
-                        finder: Finder(filter: Filter.byKey(resource.id))) ==
-                    null
+            : (await find(null,
+                        resourceType: resource.resourceType, id: resource.id))
+                    .isEmpty
                 ? await _insert(password, resource)
                 : await _update(password, resource);
       } else {
@@ -75,14 +75,20 @@ class ResourceDao {
   /// db, will also save the old version
   Future<Resource> _update(String password, Resource resource) async {
     final String id = resource.id.toString();
-    final oldResource =
-        await _resourceStore.record(id).get(await _db(password));
-    await _history.add(await _db(password), oldResource);
+    final oldResource = Resource.fromJson(
+        await _resourceStore.record(id).get(await _db(password)));
+    final historyId =
+        '${ResourceUtils.resourceTypeToStringMap[oldResource.resourceType]}'
+        '/${resource.id}/_history/${oldResource?.meta?.versionId}';
+    await _history
+        .record(historyId)
+        .put(await _db(password), oldResource.toJson());
+
     final _newResource = oldResource == null
         ? resource.newVersion()
-        : oldResource['meta'] == null
+        : oldResource.meta == null
             ? resource.newVersion()
-            : resource.newVersion(oldMeta: Meta.fromJson(oldResource['meta']));
+            : resource.newVersion(oldMeta: oldResource.meta);
     await _resourceStore
         .record(id)
         .put(await _db(password), _newResource.toJson(), merge: true);
@@ -137,27 +143,28 @@ class ResourceDao {
   /// returns all resources of a specific type
   Future<List<Resource>> getResourceType(
     String password, {
-    Set<R5ResourceType> resourceTypes,
-    List resourceTypeStrings,
+    List<R5ResourceType> resourceTypes,
+    List<String> resourceTypeStrings,
     Resource resource,
   }) async {
-    final types = <R5ResourceType>[];
+    final typeList = <R5ResourceType>[];
     if (resource?.resourceType != null) {
-      types.add(resource.resourceType);
+      typeList.add(resource.resourceType);
     }
     if (resourceTypes != null) {
       if (resourceTypes.isNotEmpty) {
-        types.addAll(resourceTypes);
+        typeList.addAll(resourceTypes);
       }
     }
-    final List<Resource> resourceList = [];
-    for (var type in types) {
-      _setStoreType(ResourceUtils.resourceTypeToStringMap[type]);
-      final finder = Finder(sortOrders: [SortOrder('id')]);
-      resourceList.addAll(await _search(password, finder));
+    if (resourceTypeStrings != null) {
+      for (final type in resourceTypeStrings) {
+        typeList.add(ResourceUtils.resourceTypeFromStringMap[type]);
+      }
     }
-    for (var type in resourceTypeStrings) {
-      _setStoreType(type);
+    final Set<R5ResourceType> typeSet = typeList.toSet();
+    final List<Resource> resourceList = [];
+    for (final type in typeSet) {
+      _setStoreType(ResourceUtils.resourceTypeToStringMap[type]);
       final finder = Finder(sortOrders: [SortOrder('id')]);
       resourceList.addAll(await _search(password, finder));
     }
@@ -165,9 +172,14 @@ class ResourceDao {
   }
 
   /// returns all resources in the [db], including historical versions
-  Future<List<Resource>> getAll(String password) async =>
-      await getResourceType(password,
-          resourceTypeStrings: (await _getResourceTypes(password)));
+  Future<List<Resource>> getAll(String password) async {
+    final resourceDynamicList = await _getResourceTypes(password);
+    final resourceStringList =
+        resourceDynamicList.map((resource) => resource.toString());
+    final resourceList = await getResourceType(password,
+        resourceTypeStrings: resourceStringList.toList());
+    return resourceList;
+  }
 
   /// Delete specific resource
   Future<int> delete(
@@ -245,8 +257,12 @@ class ResourceDao {
     final recordSnapshots =
         await _resourceStore.find(await _db(password), finder: finder);
     return recordSnapshots.map((snapshot) {
-      final resource = Resource.fromJson(snapshot.value);
-      return resource;
+      if (snapshot.value != null) {
+        final resource = Resource.fromJson(snapshot.value);
+        return resource;
+      } else {
+        return null;
+      }
     }).toList();
   }
 }
