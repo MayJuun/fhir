@@ -6,7 +6,6 @@ import 'package:test/test.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final resourceDao = ResourceDao();
-  await resourceDao.updatePw('newpw', null);
   await resourceDao.deleteAllResources(null);
   final id = Id('12345');
 
@@ -197,45 +196,6 @@ Future<void> main() async {
       final search = await resourceDao.getAll(null);
 
       expect(search.length, 0);
-    });
-  });
-
-  group('Password Things:', () {
-    final id = Id('12345');
-    final humanName = HumanName(family: 'Atreides', given: ['Duke']);
-    final patient = Patient(id: id, name: [humanName]);
-
-    test('Find Patient after Updated Password', () async {
-      await resourceDao.save(null, patient);
-      await resourceDao.updatePw(null, 'newpw');
-      var search = await resourceDao.find('newpw',
-          resourceType: R4ResourceType.Patient, id: id);
-      search = await resourceDao.find('newp',
-          resourceType: R4ResourceType.Patient, id: id);
-      search = await resourceDao.find('somethingElse',
-          resourceType: R4ResourceType.Patient, id: id);
-      search = await resourceDao.find(null,
-          resourceType: R4ResourceType.Patient, id: id);
-
-      expect(search.length, 1);
-
-      expect((search[0] as Patient).name[0], humanName);
-    });
-
-    test('Throws Error for wrong password', () async {
-      try {
-        final search1 = await resourceDao.find('something',
-            resourceType: R4ResourceType.Patient, id: id);
-        print(search1);
-        final search2 = await resourceDao.find('newpw',
-            resourceType: R4ResourceType.Patient, id: id);
-        print(search2);
-        final search3 = await resourceDao.find(null,
-            resourceType: R4ResourceType.Patient, id: id);
-        print(search3);
-      } catch (e) {
-        print(e);
-      }
     });
   });
 }
