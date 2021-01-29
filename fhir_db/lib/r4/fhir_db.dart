@@ -15,11 +15,13 @@ class FhirDb {
   FhirDb._();
   static final FhirDb _db = FhirDb._();
   static FhirDb get instance => _db;
-  Future updatePassword(String oldPw, String newPw) => _updatePw(oldPw, newPw);
-
   Completer<Database> _dbOpenCompleter;
+  final _dbFactory = getDatabaseFactorySqflite(sqflite.databaseFactory);
 
-  Future<Database> database(String pw) {
+  Future updatePassword(String oldPw, String newPw) async =>
+      await _updatePw(oldPw, newPw);
+
+  Future<Database> database(String pw) async {
     if (_dbOpenCompleter == null) {
       _dbOpenCompleter = Completer();
       _openDatabase(pw);
@@ -28,58 +30,53 @@ class FhirDb {
   }
 
   Future _openDatabase(String pw) async {
-    final appDocumentDir = await getApplicationDocumentsDirectory();
-    final dbPath = join(appDocumentDir.path, 'fhir.db');
-    final dbFactory = getDatabaseFactorySqflite(sqflite.databaseFactory);
-
-    final codec =
-        pw == null || pw == '' ? null : getEncryptSembastCodecAES(password: pw);
-    // getEncryptSembastCodecSalsa20(password: pw);
-
-    final database = codec == null
-        ? await dbFactory.openDatabase(dbPath)
-        : await dbFactory.openDatabase(dbPath, codec: codec);
-
+    final database = await _getDb('fhir.db', pw);
     _dbOpenCompleter.complete(database);
   }
 
-  /// This method will create a new database file using the new password
+  Future<Database> _getDb(String path, String pw) async {
+    final _appDocDir = await getApplicationDocumentsDirectory();
+    final dbPath = join(_appDocDir.path, path);
+    final codec = _codec(pw);
+
+    return codec == null
+        ? await _dbFactory.openDatabase(dbPath)
+        : await _dbFactory.openDatabase(dbPath, codec: codec);
+  }
+
+  SembastCodec _codec(String pw) =>
+      pw == null || pw == '' ? null : getEncryptSembastCodecAES(password: pw);
+  // getEncryptSembastCodecSalsa20(password: pw);
+
   Future _updatePw(String oldPw, String newPw) async {
-    final appDocumentDir = await getApplicationDocumentsDirectory();
-    final dbPath = join(appDocumentDir.path, 'fhir.db');
-    final dbFactory = getDatabaseFactorySqflite(sqflite.databaseFactory);
+    print('updatePw');
 
-    final oldCodec = oldPw == null || oldPw == ''
-        ? null
-        : getEncryptSembastCodecAES(password: oldPw);
-    // getEncryptSembastCodecSalsa20(password: pw);
+    final _appDocDir = await getApplicationDocumentsDirectory();
+    var db = await _getDb(oldPw, 'fhir.db');
+    final exportMap = await exportDatabase(db);
+    await db.close();
 
-    final oldDatabase = oldCodec == null
-        ? await dbFactory.openDatabase(dbPath)
-        : await dbFactory.openDatabase(dbPath, codec: oldCodec);
+    final tempPath = join(_appDocDir.path, 'old_fhir.db');
+    db = await importDatabase(
+      exportMap,
+      _dbFactory,
+      tempPath,
+      codec: _codec(oldPw),
+    );
+    await db.close();
 
-    final exportMap = await exportDatabase(oldDatabase);
+    final dbPath = join(_appDocDir.path, 'fhir.db');
+    db = await importDatabase(
+      exportMap,
+      _dbFactory,
+      dbPath,
+      codec: _codec(newPw),
+    );
 
-    ///make temporary copy of database (encrypted) in case there are issues
-    ///with the copying
-    final tempPath = join(appDocumentDir.path, 'old_fhir.db');
-    await importDatabase(exportMap, dbFactory, tempPath, codec: oldCodec);
+    await _dbFactory.deleteDatabase(tempPath);
 
-    /// close the old database
-    await oldDatabase.close();
-
-    ///delete that file
-    File(dbPath).delete();
-
-    final newCodec = newPw == null || newPw == ''
-        ? null
-        : getEncryptSembastCodecAES(password: newPw);
-    // getEncryptSembastCodecSalsa20(password: newPw);
-
-    /// create new database using new Codec
-    await importDatabase(exportMap, dbFactory, dbPath, codec: newCodec);
-
-    /// delete temporary file
-    File(tempPath).delete();
+    _dbOpenCompleter = null;
+    // _dbOpenCompleter = Completer();
+    // _dbOpenCompleter.complete(db);
   }
 }
