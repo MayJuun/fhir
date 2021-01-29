@@ -36,4 +36,16 @@ Future gcsFhirRequest({
   } catch (e) {
     print(e);
   }
+
+  final request2 = FhirRequest.search(
+    base: Uri.parse(client.baseUrl.toString()),
+    type: R4ResourceType.Patient,
+  );
+
+  try {
+    final response2 = await request2.request(headers: await client.headers());
+    print(response2);
+  } catch (e) {
+    print(e);
+  }
 }
