@@ -13,7 +13,7 @@ class GcsClient extends GoogleSignIn {
     try {
       await signIn();
     } on PlatformException catch (err) {
-      print(err);
+      print('PlatformException: $err');
     } catch (e) {
       print(e);
     }
