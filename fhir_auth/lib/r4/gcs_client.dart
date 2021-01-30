@@ -1,7 +1,5 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
-import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-// import 'package:googleapis/healthcare/v1.dart' show FhirStore;
 
 class GcsClient extends GoogleSignIn {
   GcsClient({this.baseUrl, List<String> scopes, String clientId})
@@ -9,15 +7,7 @@ class GcsClient extends GoogleSignIn {
 
   final FhirUri baseUrl;
 
-  Future access() async {
-    try {
-      await signIn();
-    } on PlatformException catch (err) {
-      print('PlatformException: $err');
-    } catch (e) {
-      print(e);
-    }
-  }
+  Future access() async => await signIn();
 
   Future<Map<String, String>> headers() async {
     final headers = await currentUser.authHeaders;

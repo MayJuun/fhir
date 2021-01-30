@@ -1,9 +1,8 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
-
 import 'package:google_sign_in/google_sign_in.dart';
 
 class GcsClient extends GoogleSignIn {
-  GcsClient({this.baseUrl, String clientId, List<String> scopes})
+  GcsClient({this.baseUrl, List<String> scopes, String clientId})
       : super(clientId: clientId, scopes: scopes);
 
   final FhirUri baseUrl;
