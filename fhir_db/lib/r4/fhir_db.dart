@@ -49,21 +49,13 @@ class FhirDb {
   // getEncryptSembastCodecSalsa20(password: pw);
 
   Future _updatePw(String oldPw, String newPw) async {
-    print('updatePw');
-
     final _appDocDir = await getApplicationDocumentsDirectory();
-    var db = await _getDb(oldPw, 'fhir.db');
+    var db = await _getDb('fhir.db', oldPw);
     final exportMap = await exportDatabase(db);
     await db.close();
 
-    final tempPath = join(_appDocDir.path, 'old_fhir.db');
-    db = await importDatabase(
-      exportMap,
-      _dbFactory,
-      tempPath,
-      codec: _codec(oldPw),
-    );
-    await db.close();
+    File(join(_appDocDir.path, 'fhir.db'))
+        .copy(join(_appDocDir.path, 'old_fhir.db'));
 
     final dbPath = join(_appDocDir.path, 'fhir.db');
     db = await importDatabase(
@@ -73,10 +65,6 @@ class FhirDb {
       codec: _codec(newPw),
     );
 
-    await _dbFactory.deleteDatabase(tempPath);
-
     _dbOpenCompleter = null;
-    // _dbOpenCompleter = Completer();
-    // _dbOpenCompleter.complete(db);
   }
 }

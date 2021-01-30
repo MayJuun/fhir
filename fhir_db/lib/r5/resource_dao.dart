@@ -10,11 +10,12 @@ class ResourceDao {
   final _history = StoreRef<String, Map<String, dynamic>>.main();
 
   /// update database password
-  Future updatePw(String oldPw, String newPw) =>
-      FhirDb.instance.updatePassword(oldPw, newPw);
+  Future updatePw(String oldPw, String newPw) async =>
+      await FhirDb.instance.updatePassword(oldPw, newPw);
 
   /// accessing the actual database instance
-  Future<Database> _db(String password) => FhirDb.instance.database(password);
+  Future<Database> _db(String password) async =>
+      await FhirDb.instance.database(password);
 
   /// allows one store per resourceType (Patient, Observation, etc.)
   void _setStoreType(String resourceType) =>
@@ -30,10 +31,13 @@ class ResourceDao {
         ((await _typesStore.record('resourceTypes').get(await _db(password))) ??
                 [])
             .toList();
+
     final type = ResourceUtils.resourceTypeToStringMap[resourceType];
+
     if (!resourceTypes.contains(type)) {
       resourceTypes.add(type);
     }
+
     await _typesStore
         .record('resourceTypes')
         .put(await _db(password), resourceTypes, merge: false);
@@ -46,7 +50,9 @@ class ResourceDao {
     if (resource != null) {
       if (resource.resourceType != null) {
         await _addResourceType(password, resource.resourceType);
+
         _setStoreType(resource.resourceTypeString());
+
         return resource.id == null
             ? await _insert(password, resource)
             : (await find(null,
@@ -68,6 +74,7 @@ class ResourceDao {
     await _resourceStore
         .record(_newResource.id.toString())
         .put(await _db(password), _newResource.toJson());
+
     return _newResource;
   }
 
@@ -129,6 +136,7 @@ class ResourceDao {
       } else {
         finder = Finder(filter: Filter.equals(field, value));
       }
+
       _setStoreType(ResourceUtils
           .resourceTypeToStringMap[resource?.resourceType ?? resourceType]);
       return await _search(password, finder);
