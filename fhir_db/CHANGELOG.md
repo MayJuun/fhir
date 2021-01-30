@@ -1,3 +1,6 @@
+## [0.2.0]
+* Adjusted the way I change passwords
+* Created tests to ensure proper functioning
 
 ## [0.1.2]
 * Added FHIR® to the Readme because we have official permission from HL7 and Graham Grieve!
