@@ -2,10 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart';
 import 'package:remote_state/remote_state.dart';
 
-import 'basic_login.dart';
-import 'google_login.dart';
 import 'firebase_login.dart';
-
 part 'auth_service.freezed.dart';
 
 @freezed
@@ -36,14 +33,7 @@ abstract class AuthService implements _$AuthService {
   void call(String username, String password) {
     state.value = RemoteState<dynamic>.loading();
     map(
-      loginBasic: (m) async {
-        try {
-          await BasicLogin().call(username, password);
-          state.value = RemoteState<dynamic>.success('Successfully logged in');
-        } catch (e) {
-          state.value = RemoteState<dynamic>.error(e);
-        }
-      },
+      loginBasic: (m) async => null,
       loginFirebase: (m) async {
         try {
           await FirebaseLogin().call(username, password);
@@ -53,15 +43,7 @@ abstract class AuthService implements _$AuthService {
           state.value = RemoteState<dynamic>.error(e);
         }
       },
-      loginGoogle: (m) async {
-        try {
-          await GoogleLogin().call(username, password);
-          state.value =
-              RemoteState<dynamic>.success('Successfully logged in to Google');
-        } catch (e) {
-          state.value = RemoteState<dynamic>.error(e);
-        }
-      },
+      loginGoogle: (m) async => null,
     );
   }
 }

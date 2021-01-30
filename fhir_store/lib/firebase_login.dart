@@ -5,5 +5,6 @@ class FirebaseLogin {
 
   Future<void> call(String username, String password) async {
     FirebaseAuth auth = FirebaseAuth.instance;
+    print(auth);
   }
 }
