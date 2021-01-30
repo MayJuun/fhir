@@ -36,7 +36,9 @@ class FhirDb {
 
   Future<Database> _getDb(String path, String pw) async {
     final _appDocDir = await getApplicationDocumentsDirectory();
+
     final dbPath = join(_appDocDir.path, path);
+
     final codec = _codec(pw);
 
     return codec == null
@@ -65,6 +67,10 @@ class FhirDb {
       codec: _codec(newPw),
     );
 
+    await File(join(_appDocDir.path, 'old_fhir.db')).delete();
+
     _dbOpenCompleter = null;
+    _dbOpenCompleter = Completer();
+    _dbOpenCompleter.complete(db);
   }
 }

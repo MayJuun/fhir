@@ -9,8 +9,6 @@ class ResourceDao {
   final _typesStore = StoreRef<String, List>.main();
   final _history = StoreRef<String, Map<String, dynamic>>.main();
 
-  Future deleteDb() async => await FhirDb.instance.deleteDb();
-
   /// update database password
   Future updatePw(String oldPw, String newPw) async =>
       await FhirDb.instance.updatePassword(oldPw, newPw);
@@ -24,23 +22,19 @@ class ResourceDao {
       _resourceStore = stringMapStoreFactory.store(resourceType);
 
   /// get list of resourceTypes stored in DB
-  Future<List<dynamic>> _getResourceTypes(String password) async {
-    print('a');
-    print(
-        await _typesStore.record('resourceTypes').exists(await _db(password)));
-    print('b');
+  Future<List<String>> _getResourceTypes(String password) async {
     if (await _typesStore.record('resourceTypes').exists(await _db(password))) {
-      return await _typesStore.record('resourceTypes').get(await _db(password));
+      final typeList =
+          await _typesStore.record('resourceTypes').get(await _db(password));
+      return typeList.map((type) => type.toString()).toList();
     } else {
-      return [];
+      return <String>[];
     }
   }
 
   /// keeps track of the [resourceTypes] that are currently in the db
   Future _addResourceType(String password, R4ResourceType resourceType) async {
-    final resourceTypes = (await _getResourceTypes(password))
-        .map((type) => type.toString())
-        .toList();
+    final resourceTypes = await _getResourceTypes(password);
 
     final type = ResourceUtils.resourceTypeToStringMap[resourceType];
 
@@ -50,7 +44,7 @@ class ResourceDao {
 
     await _typesStore
         .record('resourceTypes')
-        .put(await _db(password), resourceTypes, merge: false);
+        .put(await _db(password), resourceTypes);
   }
 
   /// Saves a [Resource] to the local Db, [password] is optional (but after set,
@@ -190,9 +184,7 @@ class ResourceDao {
 
   /// returns all resources in the [db], including historical versions
   Future<List<Resource>> getAll(String password) async {
-    final resourceTypes = (await _getResourceTypes(password))
-        .map((type) => type.toString())
-        .toList();
+    final resourceTypes = await _getResourceTypes(password);
 
     final resourceList =
         await getResourceType(password, resourceTypeStrings: resourceTypes);
@@ -246,26 +238,20 @@ class ResourceDao {
 
   /// Deletes all resources, including historical versions
   Future deleteAllResources(String password) async {
-    print('1');
-    final resourceTypes = (await _getResourceTypes(password))
-        .map((type) => type.toString())
-        .toList();
-    print('2');
+    final resourceTypes = await _getResourceTypes(password);
 
     for (var type in resourceTypes) {
       _setStoreType(type);
       await _resourceStore.delete(await _db(password));
     }
-    print('3');
+
     await _history.delete(await _db(password));
     await _removeResourceTypes(password, resourceTypes);
   }
 
   /// remove the resourceType from the list of types stored in the db
   Future _removeResourceTypes(String password, List types) async {
-    final resourceTypes = (await _getResourceTypes(password))
-        .map((type) => type.toString())
-        .toList();
+    final resourceTypes = await _getResourceTypes(password);
     for (var type in types) {
       resourceTypes.remove(type.toString());
     }

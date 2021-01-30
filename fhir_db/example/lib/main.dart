@@ -5,12 +5,15 @@ import 'package:test/test.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   final resourceDao = ResourceDao();
+
   await resourceDao.deleteAllResources(null);
 
   group('Playing with passwords', () {
     test('Playing with Passwords', () async {
       final patient = Patient(id: Id('1'));
+
       final saved = await resourceDao.save(null, patient);
 
       await resourceDao.updatePw(null, 'newPw');
@@ -411,8 +414,8 @@ Future<void> main() async {
       final search = await resourceDao.getAll('newPw');
 
       expect(search.length, 0);
+
+      await resourceDao.updatePw('newPw', null);
     });
   });
-
-  await resourceDao.updatePw('newPw', null);
 }

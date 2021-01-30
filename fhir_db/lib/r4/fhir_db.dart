@@ -18,11 +18,6 @@ class FhirDb {
   Completer<Database> _dbOpenCompleter;
   final _dbFactory = getDatabaseFactorySqflite(sqflite.databaseFactory);
 
-  Future deleteDb() async {
-    await File(join((await getApplicationDocumentsDirectory()).path, 'fhir.db'))
-        .delete();
-  }
-
   Future updatePassword(String oldPw, String newPw) async =>
       await _updatePw(oldPw, newPw);
 
@@ -41,7 +36,9 @@ class FhirDb {
 
   Future<Database> _getDb(String path, String pw) async {
     final _appDocDir = await getApplicationDocumentsDirectory();
+
     final dbPath = join(_appDocDir.path, path);
+
     final codec = _codec(pw);
 
     return codec == null
