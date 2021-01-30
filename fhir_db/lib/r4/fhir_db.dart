@@ -18,6 +18,11 @@ class FhirDb {
   Completer<Database> _dbOpenCompleter;
   final _dbFactory = getDatabaseFactorySqflite(sqflite.databaseFactory);
 
+  Future deleteDb() async {
+    await File(join((await getApplicationDocumentsDirectory()).path, 'fhir.db'))
+        .delete();
+  }
+
   Future updatePassword(String oldPw, String newPw) async =>
       await _updatePw(oldPw, newPw);
 
@@ -65,6 +70,10 @@ class FhirDb {
       codec: _codec(newPw),
     );
 
+    await File(join(_appDocDir.path, 'old_fhir.db')).delete();
+
     _dbOpenCompleter = null;
+    _dbOpenCompleter = Completer();
+    _dbOpenCompleter.complete(db);
   }
 }

@@ -156,7 +156,7 @@ class ResourceDao {
     List<String> resourceTypeStrings,
     Resource resource,
   }) async {
-    final typeList = <Stu3ResourceType>[];
+    final typeList = <Stu3ResourceType>{};
     if (resource?.resourceType != null) {
       typeList.add(resource.resourceType);
     }
@@ -170,9 +170,8 @@ class ResourceDao {
         typeList.add(ResourceUtils.resourceTypeFromStringMap[type]);
       }
     }
-    final Set<Stu3ResourceType> typeSet = typeList.toSet();
     final List<Resource> resourceList = [];
-    for (final type in typeSet) {
+    for (final type in typeList) {
       _setStoreType(ResourceUtils.resourceTypeToStringMap[type]);
       final finder = Finder(sortOrders: [SortOrder('id')]);
       resourceList.addAll(await _search(password, finder));
@@ -227,11 +226,11 @@ class ResourceDao {
   Future deleteSingleType(String password,
       {Stu3ResourceType resourceType, Resource resource}) async {
     if (resourceType != null || resource?.resourceType != null) {
-      final String type = ResourceUtils
+      final String deleteType = ResourceUtils
           .resourceTypeToStringMap[resourceType ?? resource.resourceType];
-      _setStoreType(type);
+      _setStoreType(deleteType);
       await _resourceStore.delete(await _db(password));
-      await _removeResourceTypes(password, [type]);
+      await _removeResourceTypes(password, [deleteType]);
     }
   }
 
@@ -248,12 +247,9 @@ class ResourceDao {
 
   /// remove the resourceType from the list of types stored in the db
   Future _removeResourceTypes(String password, List types) async {
-    var resourceTypes =
-        ((await _typesStore.record('resourceTypes').get(await _db(password))) ??
-                [])
-            .toList();
+    var resourceTypes = await _getResourceTypes(password);
     for (var type in types) {
-      resourceTypes.remove(type);
+      resourceTypes.remove(type.toString());
     }
     await _typesStore.delete(await _db(password));
     await _typesStore

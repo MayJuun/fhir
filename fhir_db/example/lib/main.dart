@@ -6,7 +6,6 @@ import 'package:test/test.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final resourceDao = ResourceDao();
-  await resourceDao.updatePw('newPw', null);
   await resourceDao.deleteAllResources(null);
 
   group('Playing with passwords', () {
@@ -414,4 +413,6 @@ Future<void> main() async {
       expect(search.length, 0);
     });
   });
+
+  await resourceDao.updatePw('newPw', null);
 }

@@ -1,0 +1,26 @@
+name: fhir_store_demo
+description: Library to test storing FHIR in Cloud Firestore
+version: 0.0.1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fhir: ^0.2.0
+  firebase_core: ^0.7.0
+  cloud_firestore: ^0.16.0
+  get: ^3.23.1
+  freezed: ^0.12.7
+  freezed_annotation: ^0.12.0
+  remote_state: ^1.5.0
+  firebase_auth: ^0.20.0+1
+
+dev_dependencies:
+  build_runner: ^1.10.13
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
