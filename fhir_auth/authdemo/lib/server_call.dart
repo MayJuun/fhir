@@ -9,7 +9,7 @@ Future aidbox() async => await fhirRequest(
       secret: Api.aidboxSecret,
       authUrl: Api.aidboxAuthUrl,
       tokenUrl: Api.aidboxTokenUrl,
-      fhirCallback: Api().fhirCallback,
+      // fhirCallback: Api().fhirCallback,
     );
 
 Future gcs() async => await gcsFhirRequest(
@@ -26,5 +26,5 @@ Future mihin() async => await fhirRequest(
       secret: Api.mihinSecret,
       authUrl: Api.mihinAuthUrl,
       tokenUrl: Api.mihinTokenUrl,
-      fhirCallback: Api().fhirCallback,
+      // fhirCallback: Api().fhirCallback,
     );
