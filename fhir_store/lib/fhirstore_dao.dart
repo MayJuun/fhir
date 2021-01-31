@@ -3,11 +3,22 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fhir/r4.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 // Dao for working with FHIR objects, should look similar to fhir_db
 class FhirStoreDao {
   FhirStoreDao();
   CollectionReference _collection;
+  final auth = FirebaseAuth.instance;
+
+  bool _loggedIn() {
+    print(auth.currentUser);
+    return auth.currentUser == null
+        ? throw FirebaseAuthException(
+            code: 'insufficient-permission',
+            message: 'You must be logged-in for this request.')
+        : true;
+  }
 
   void _setCollectionType(String resourceType) =>
       _collection = FirebaseFirestore.instance.collection(resourceType);
@@ -16,18 +27,27 @@ class FhirStoreDao {
     _setCollectionType('ResourceTypes');
     final _types = await _collection.doc('R4').get();
     if (_types.data() == null) {
-      return [];
+      return <String>[];
     } else if (_types.data() is Map) {
       if (_types.data().isEmpty) {
-        return [];
+        return <String>[];
+      }
+      final resourceTypes = _types['resourceTypes'];
+      if (resourceTypes == null) {
+        return <String>[];
+      } else if (resourceTypes is List) {
+        return List<String>.from(resourceTypes);
       }
     }
-    return _types['resourceTypes'];
+    return <String>[];
   }
 
   Future _addCollectionType(String resourceType) async {
+    print('A');
     final types = await _getResourceTypes();
+    print('B');
     if (!types.contains(resourceType)) {
+      print('C');
       types.add(resourceType);
       await _collection.doc('R4').set({'resourceTypes': types});
     }
@@ -36,6 +56,7 @@ class FhirStoreDao {
 
   /// this is to save newly created or old resources that have been updated
   Future<Resource> save(Resource resource) async {
+    _loggedIn();
     if (resource != null) {
       if (resource.resourceType != null) {
         if (resource.id.toString().contains('_history')) {
@@ -49,7 +70,9 @@ class FhirStoreDao {
         } else {
           final collectionType =
               ResourceUtils.resourceTypeToStringMap[resource.resourceType];
+          print('a');
           await _addCollectionType(collectionType);
+          print('b');
           _setCollectionType(collectionType);
           final _newResource = resource.newVersion();
           await _collection
@@ -71,6 +94,7 @@ class FhirStoreDao {
     String field,
     String value,
   }) async {
+    _loggedIn();
     String searchType;
     String searchId;
     if (resource != null || (resourceType != null && id != null)) {
@@ -95,6 +119,7 @@ class FhirStoreDao {
     List<String> resourceTypeStrings,
     Resource resource,
   }) async {
+    _loggedIn();
     final collectionTypes = <String>{};
     if (resource?.resourceType != null) {
       collectionTypes
@@ -120,8 +145,10 @@ class FhirStoreDao {
     return results;
   }
 
-  Future<List<Resource>> getAll() async =>
-      await getResourceType(resourceTypeStrings: await _getResourceTypes());
+  Future<List<Resource>> getAll() async {
+    _loggedIn();
+    await getResourceType(resourceTypeStrings: await _getResourceTypes());
+  }
 
   Future<void> delete({
     Resource resource,
@@ -130,6 +157,7 @@ class FhirStoreDao {
     String field,
     String value,
   }) async {
+    _loggedIn();
     String deleteType;
     String deleteId;
     if (resource != null || (resourceType != null && id != null)) {
@@ -152,6 +180,7 @@ class FhirStoreDao {
     R4ResourceType resourceType,
     Resource resource,
   }) async {
+    _loggedIn();
     if (resourceType != null || resource?.resourceType != null) {
       final String deleteType = ResourceUtils
           .resourceTypeToStringMap[resourceType ?? resource.resourceType];
@@ -162,6 +191,7 @@ class FhirStoreDao {
   }
 
   Future deleteAllResources() async {
+    _loggedIn();
     final resourceTypes = await _getResourceTypes();
     for (var type in resourceTypes) {
       _setCollectionType(type);

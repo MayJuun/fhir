@@ -26,6 +26,13 @@ subprojects {
 subprojects {
     project.evaluationDependsOn(':app')
 }
+subprojects {
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:deprecation" << "-Xlint:unchecked"
+        }
+    }
+}
 
 task clean(type: Delete) {
     delete rootProject.buildDir

@@ -1,11 +1,15 @@
+import 'package:fhir_store/fhirstore_dao.dart';
 import 'package:fhir_store/fhirstore_login.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'new_patient.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -89,9 +93,55 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
+            Container(
+              width: Get.width * .7,
+              height: Get.height * 0.07,
+              child: RaisedButton(
+                color: Colors.blue,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(Get.width * 0.05),
+                ),
+                onPressed: () {
+                  _uploadPatient();
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    const Text('Upload Patient'),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              width: Get.width * .7,
+              height: Get.height * 0.07,
+              child: RaisedButton(
+                color: Colors.blue,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(Get.width * 0.05),
+                ),
+                onPressed: () async => await FirebaseAuth.instance.signOut(),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    const Text('Signout'),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
     );
+  }
+}
+
+Future _uploadPatient() async {
+  final patient = newPatient();
+  final fhirStoreDao = FhirStoreDao();
+  try {
+    await fhirStoreDao.save(patient);
+  } catch (e) {
+    print(e);
   }
 }

@@ -8,14 +8,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  fhir: ^0.2.0
-  firebase_core: ^0.7.0
   cloud_firestore: ^0.16.0
+  cupertino_icons: ^1.0.0
+  fhir: ^0.2.0
+  firebase_auth: ^0.20.0+1
+  firebase_analytics: ^7.0.1
+  firebase_core: ^0.7.0
   get: ^3.23.1
   freezed: ^0.12.7
   freezed_annotation: ^0.12.0
   remote_state: ^1.5.0
-  firebase_auth: ^0.20.0+1
   fhir_store:
     path: ../../fhir_store
 
