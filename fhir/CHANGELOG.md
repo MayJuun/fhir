@@ -1,5 +1,8 @@
 # fhir
 
+## [0.2.1]
+* Added example (need those pub points!)
+
 ## [0.2.0]
 * Mostly just cleaning up my repos to be easier for me to work with
 * Functionality should be mostly unchanged
