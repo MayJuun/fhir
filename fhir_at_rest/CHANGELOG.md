@@ -1,3 +1,6 @@
+## [0.2.1]
+* Removed dart:io dependency to allow native compatibility (need pub points dammit!)
+
 ## [0.2.0]
 * Simplified still further
 * Now with same dstu2/stu3/r4/r5 folder setup as most other packages

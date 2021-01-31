@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:fhir/r5.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -457,7 +456,7 @@ abstract class FhirRequest with _$FhirRequest {
           resource: resource == null ? null : resource.toJson());
       return result;
     } catch (e) {
-      throw HttpException('Failed to complete a $requestType request, '
+      throw Exception('Failed to complete a $requestType request, '
           '\nReturned exception: $e');
     }
   }
@@ -643,11 +642,11 @@ abstract class FhirRequest with _$FhirRequest {
           }
       }
     } catch (e) {
-      throw HttpException('Failed making restful request, \nException: $e');
+      throw Exception('Failed making restful request, \nException: $e');
     }
 
     if (_errorCodes.containsKey(result.statusCode)) {
-      throw HttpException('Failed to make restful request'
+      throw Exception('Failed to make restful request'
           '\nStatus Code: ${result.statusCode} -'
           ' ${_errorCodes[result.statusCode]}'
           '\nResult headers: ${result.headers}'
