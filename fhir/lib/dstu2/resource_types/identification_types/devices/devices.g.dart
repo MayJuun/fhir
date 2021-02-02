@@ -12,19 +12,17 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Device),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -69,13 +67,12 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     manufactureDate: json['manufactureDate'] == null
         ? null
-        : FhirDateTime.fromJson(json['manufactureDate'] as String),
+        : FhirDateTime.fromJson(json['manufactureDate']),
     manufactureDateElement: json['_manufactureDate'] == null
         ? null
         : Element.fromJson(json['_manufactureDate'] as Map<String, dynamic>),
-    expiry: json['expiry'] == null
-        ? null
-        : FhirDateTime.fromJson(json['expiry'] as String),
+    expiry:
+        json['expiry'] == null ? null : FhirDateTime.fromJson(json['expiry']),
     udi: json['udi'] as String,
     udiElement: json['_udi'] == null
         ? null
@@ -97,7 +94,7 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -298,7 +295,7 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.DeviceComponent),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     idElement: json['_id'] == null
         ? null
         : Element.fromJson(json['_id'] as Map<String, dynamic>),
@@ -307,10 +304,8 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -336,7 +331,7 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     lastSystemChange: json['lastSystemChange'] == null
         ? null
-        : Instant.fromJson(json['lastSystemChange'] as String),
+        : Instant.fromJson(json['lastSystemChange']),
     source: json['source'] == null
         ? null
         : Reference.fromJson(json['source'] as Map<String, dynamic>),
@@ -429,7 +424,7 @@ _$_DeviceComponentProductionSpecification
     _$_$_DeviceComponentProductionSpecificationFromJson(
         Map<String, dynamic> json) {
   return _$_DeviceComponentProductionSpecification(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -477,19 +472,17 @@ _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.DeviceMetric),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -626,7 +619,7 @@ const _$DeviceMetricCategoryEnumMap = {
 _$_DeviceMetricCalibration _$_$_DeviceMetricCalibrationFromJson(
     Map<String, dynamic> json) {
   return _$_DeviceMetricCalibration(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -647,8 +640,7 @@ _$_DeviceMetricCalibration _$_$_DeviceMetricCalibrationFromJson(
     stateElement: json['_state'] == null
         ? null
         : Element.fromJson(json['_state'] as Map<String, dynamic>),
-    time:
-        json['time'] == null ? null : Instant.fromJson(json['time'] as String),
+    time: json['time'] == null ? null : Instant.fromJson(json['time']),
     timeElement: json['_time'] == null
         ? null
         : Element.fromJson(json['_time'] as Map<String, dynamic>),

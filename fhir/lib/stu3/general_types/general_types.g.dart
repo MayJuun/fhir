@@ -39,7 +39,7 @@ _$_Annotation _$_$_AnnotationFromJson(Map<String, dynamic> json) {
     authorStringElement: json['_authorString'] == null
         ? null
         : Element.fromJson(json['_authorString'] as Map<String, dynamic>),
-    time: json['time'] == null ? null : Time.fromJson(json['time'] as String),
+    time: json['time'] == null ? null : Time.fromJson(json['time']),
     timeElement: json['_time'] == null
         ? null
         : Element.fromJson(json['_time'] as Map<String, dynamic>),
@@ -259,7 +259,7 @@ _$_Coding _$_$_CodingFromJson(Map<String, dynamic> json) {
     versionElement: json['_version'] == null
         ? null
         : Element.fromJson(json['_version'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -317,7 +317,7 @@ _$_Quantity _$_$_QuantityFromJson(Map<String, dynamic> json) {
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -373,7 +373,7 @@ _$_FhirDuration _$_$_FhirDurationFromJson(Map<String, dynamic> json) {
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -421,7 +421,7 @@ _$_Distance _$_$_DistanceFromJson(Map<String, dynamic> json) {
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -469,7 +469,7 @@ _$_Count _$_$_CountFromJson(Map<String, dynamic> json) {
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -517,7 +517,7 @@ _$_Money _$_$_MoneyFromJson(Map<String, dynamic> json) {
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -565,7 +565,7 @@ _$_Age _$_$_AgeFromJson(Map<String, dynamic> json) {
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -1128,7 +1128,7 @@ _$_TimingRepeat _$_$_TimingRepeatFromJson(Map<String, dynamic> json) {
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     timeOfDay: (json['timeOfDay'] as List)
-        ?.map((e) => e == null ? null : Time.fromJson(e as String))
+        ?.map((e) => e == null ? null : Time.fromJson(e))
         ?.toList(),
     timeOfDayElement: (json['_timeOfDay'] as List)
         ?.map((e) =>

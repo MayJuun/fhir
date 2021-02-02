@@ -13,7 +13,7 @@ class Boolean {
     );
   }
 
-  factory Boolean.fromJson(String json) => Boolean(json);
+  factory Boolean.fromJson(dynamic json) => Boolean(json);
 
   factory Boolean.fromYaml(dynamic yaml) => yaml is String
       ? Boolean.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -26,8 +26,8 @@ class Boolean {
   bool get isValid => true;
 
   String toString() => value.toString();
-  String toJson() => value;
-  String toYaml() => value;
+  dynamic toJson() => value;
+  dynamic toYaml() => value;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
@@ -43,4 +43,4 @@ class Boolean {
 Either<String, bool> _validateBoolean(dynamic value) =>
     ['true', 'false'].contains(value.toString().toLowerCase())
         ? right(value.toString().toLowerCase() == 'true')
-        : left('FormatError: $value is not a bool');
+        : left('FormatError: "$value" is not a bool');

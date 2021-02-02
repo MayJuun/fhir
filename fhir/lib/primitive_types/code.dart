@@ -13,7 +13,7 @@ class Code {
     );
   }
 
-  factory Code.fromJson(String json) => Code(json);
+  factory Code.fromJson(dynamic json) => Code(json);
 
   factory Code.fromYaml(dynamic yaml) => yaml is String
       ? Code.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -41,4 +41,4 @@ class Code {
 Either<String, String> _validateCode(String value) =>
     RegExp(r'^[^\s]+(\s[^\s]+)*$').hasMatch(value)
         ? right(value)
-        : left('FormatError: $value is not a Code');
+        : left('FormatError: "$value" is not a Code');

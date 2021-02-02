@@ -136,12 +136,12 @@ _$_DataRequirement _$_$_DataRequirementFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
+    type: json['type'] == null ? null : Code.fromJson(json['type']),
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
     profile: (json['profile'] as List)
-        ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
+        ?.map((e) => e == null ? null : Canonical.fromJson(e))
         ?.toList(),
     subjectCodeableConcept: json['subjectCodeableConcept'] == null
         ? null
@@ -231,9 +231,8 @@ _$_DataRequirementCodeFilter _$_$_DataRequirementCodeFilterFromJson(
     searchParamElement: json['_searchParam'] == null
         ? null
         : Element.fromJson(json['_searchParam'] as Map<String, dynamic>),
-    valueSet: json['valueSet'] == null
-        ? null
-        : Canonical.fromJson(json['valueSet'] as String),
+    valueSet:
+        json['valueSet'] == null ? null : Canonical.fromJson(json['valueSet']),
     code: (json['code'] as List)
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
@@ -289,7 +288,7 @@ _$_DataRequirementDateFilter _$_$_DataRequirementDateFilterFromJson(
         : Element.fromJson(json['_searchParam'] as Map<String, dynamic>),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime']),
     valueDateTimeElement: json['_valueDateTime'] == null
         ? null
         : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -393,11 +392,11 @@ _$_ParameterDefinition _$_$_ParameterDefinitionFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    name: json['name'] == null ? null : Code.fromJson(json['name'] as String),
+    name: json['name'] == null ? null : Code.fromJson(json['name']),
     nameElement: json['_name'] == null
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
-    use: json['use'] == null ? null : Code.fromJson(json['use'] as String),
+    use: json['use'] == null ? null : Code.fromJson(json['use']),
     useElement: json['_use'] == null
         ? null
         : Element.fromJson(json['_use'] as Map<String, dynamic>),
@@ -413,13 +412,12 @@ _$_ParameterDefinition _$_$_ParameterDefinitionFromJson(
     documentationElement: json['_documentation'] == null
         ? null
         : Element.fromJson(json['_documentation'] as Map<String, dynamic>),
-    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
+    type: json['type'] == null ? null : Code.fromJson(json['type']),
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    profile: json['profile'] == null
-        ? null
-        : Canonical.fromJson(json['profile'] as String),
+    profile:
+        json['profile'] == null ? null : Canonical.fromJson(json['profile']),
   );
 }
 
@@ -473,22 +471,20 @@ _$_RelatedArtifact _$_$_RelatedArtifactFromJson(Map<String, dynamic> json) {
     displayElement: json['_display'] == null
         ? null
         : Element.fromJson(json['_display'] as Map<String, dynamic>),
-    citation: json['citation'] == null
-        ? null
-        : Markdown.fromJson(json['citation'] as String),
+    citation:
+        json['citation'] == null ? null : Markdown.fromJson(json['citation']),
     citationElement: json['_citation'] == null
         ? null
         : Element.fromJson(json['_citation'] as Map<String, dynamic>),
-    url: json['url'] == null ? null : FhirUrl.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUrl.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
     document: json['document'] == null
         ? null
         : Attachment.fromJson(json['document'] as Map<String, dynamic>),
-    resource: json['resource'] == null
-        ? null
-        : Canonical.fromJson(json['resource'] as String),
+    resource:
+        json['resource'] == null ? null : Canonical.fromJson(json['resource']),
   );
 }
 
@@ -562,7 +558,7 @@ _$_TriggerDefinition _$_$_TriggerDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_timingDate'] as Map<String, dynamic>),
     timingDateTime: json['timingDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['timingDateTime'] as String),
+        : FhirDateTime.fromJson(json['timingDateTime']),
     timingDateTimeElement: json['_timingDateTime'] == null
         ? null
         : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),
@@ -676,7 +672,7 @@ _$_Expression _$_$_ExpressionFromJson(Map<String, dynamic> json) {
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    name: json['name'] == null ? null : Id.fromJson(json['name'] as String),
+    name: json['name'] == null ? null : Id.fromJson(json['name']),
     nameElement: json['_name'] == null
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
@@ -690,9 +686,8 @@ _$_Expression _$_$_ExpressionFromJson(Map<String, dynamic> json) {
     expressionElement: json['_expression'] == null
         ? null
         : Element.fromJson(json['_expression'] as Map<String, dynamic>),
-    reference: json['reference'] == null
-        ? null
-        : FhirUri.fromJson(json['reference'] as String),
+    reference:
+        json['reference'] == null ? null : FhirUri.fromJson(json['reference']),
     referenceElement: json['_reference'] == null
         ? null
         : Element.fromJson(json['_reference'] as Map<String, dynamic>),

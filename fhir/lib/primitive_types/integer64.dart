@@ -13,7 +13,7 @@ class Integer64 {
     );
   }
 
-  factory Integer64.fromJson(String json) => Integer64(json);
+  factory Integer64.fromJson(dynamic json) => Integer64(json);
 
   factory Integer64.fromYaml(dynamic yaml) => yaml is String
       ? Integer64.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -26,8 +26,8 @@ class Integer64 {
   bool get isValid => _value.isRight();
 
   String toString() => value.toString();
-  String toJson() => value;
-  String toYaml() => value;
+  dynamic toJson() => value;
+  dynamic toYaml() => value;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
@@ -43,4 +43,4 @@ class Integer64 {
 Either<String, int> _validateInteger64(dynamic value) =>
     int.tryParse(value.toString()) != null
         ? right(int.parse(value.toString()))
-        : left('FormatError: $value is not an Integer64');
+        : left('FormatError: "$value" is not an Integer64');

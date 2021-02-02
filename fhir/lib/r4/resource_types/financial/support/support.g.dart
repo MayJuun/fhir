@@ -11,19 +11,17 @@ _$_Coverage _$_$_CoverageFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.Coverage),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -48,8 +46,7 @@ _$_Coverage _$_$_CoverageFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -502,19 +499,17 @@ _$_CoverageEligibilityRequest _$_$_CoverageEligibilityRequestFromJson(
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.CoverageEligibilityRequest),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -539,8 +534,7 @@ _$_CoverageEligibilityRequest _$_$_CoverageEligibilityRequestFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -567,9 +561,8 @@ _$_CoverageEligibilityRequest _$_$_CoverageEligibilityRequestFromJson(
     servicedPeriod: json['servicedPeriod'] == null
         ? null
         : Period.fromJson(json['servicedPeriod'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created:
+        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -925,19 +918,17 @@ _$_CoverageEligibilityResponse _$_$_CoverageEligibilityResponseFromJson(
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.CoverageEligibilityResponse),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -962,8 +953,7 @@ _$_CoverageEligibilityResponse _$_$_CoverageEligibilityResponseFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -987,9 +977,8 @@ _$_CoverageEligibilityResponse _$_$_CoverageEligibilityResponseFromJson(
     servicedPeriod: json['servicedPeriod'] == null
         ? null
         : Period.fromJson(json['servicedPeriod'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created:
+        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -1236,7 +1225,7 @@ _$_CoverageEligibilityResponseItem _$_$_CoverageEligibilityResponseItemFromJson(
         ?.toList(),
     authorizationUrl: json['authorizationUrl'] == null
         ? null
-        : FhirUri.fromJson(json['authorizationUrl'] as String),
+        : FhirUri.fromJson(json['authorizationUrl']),
     authorizationUrlElement: json['_authorizationUrl'] == null
         ? null
         : Element.fromJson(json['_authorizationUrl'] as Map<String, dynamic>),
@@ -1404,19 +1393,17 @@ _$_EnrollmentRequest _$_$_EnrollmentRequestFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.EnrollmentRequest),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1441,14 +1428,12 @@ _$_EnrollmentRequest _$_$_EnrollmentRequestFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created:
+        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -1510,19 +1495,17 @@ _$_EnrollmentResponse _$_$_EnrollmentResponseFromJson(
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.EnrollmentResponse),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1547,8 +1530,7 @@ _$_EnrollmentResponse _$_$_EnrollmentResponseFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1565,9 +1547,8 @@ _$_EnrollmentResponse _$_$_EnrollmentResponseFromJson(
     dispositionElement: json['_disposition'] == null
         ? null
         : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created:
+        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),

@@ -13,7 +13,7 @@ class Markdown {
     );
   }
 
-  factory Markdown.fromJson(String json) => Markdown(json);
+  factory Markdown.fromJson(dynamic json) => Markdown(json);
 
   factory Markdown.fromYaml(dynamic yaml) => yaml is String
       ? Markdown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -41,4 +41,4 @@ class Markdown {
 Either<String, String> _validateMarkdown(String value) =>
     RegExp(r'[ \r\n\t\S]+').hasMatch(value)
         ? right(value)
-        : left('FormatError: $value is not a Markdown');
+        : left('FormatError: "$value" is not a Markdown');

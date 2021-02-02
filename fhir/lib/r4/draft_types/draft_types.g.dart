@@ -232,7 +232,7 @@ _$_MarketingStatus _$_$_MarketingStatusFromJson(Map<String, dynamic> json) {
         : Period.fromJson(json['dateRange'] as Map<String, dynamic>),
     restoreDate: json['restoreDate'] == null
         ? null
-        : FhirDateTime.fromJson(json['restoreDate'] as String),
+        : FhirDateTime.fromJson(json['restoreDate']),
     restoreDateElement: json['_restoreDate'] == null
         ? null
         : Element.fromJson(json['_restoreDate'] as Map<String, dynamic>),

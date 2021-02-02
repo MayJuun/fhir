@@ -11,19 +11,17 @@ _$_Evidence _$_$_EvidenceFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R5ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R5ResourceType.Evidence),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -44,7 +42,7 @@ _$_Evidence _$_$_EvidenceFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -75,9 +73,7 @@ _$_Evidence _$_$_EvidenceFromJson(Map<String, dynamic> json) {
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -92,7 +88,7 @@ _$_Evidence _$_$_EvidenceFromJson(Map<String, dynamic> json) {
         ?.toList(),
     description: json['description'] == null
         ? null
-        : Markdown.fromJson(json['description'] as String),
+        : Markdown.fromJson(json['description']),
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -105,15 +101,13 @@ _$_Evidence _$_$_EvidenceFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    purpose: json['purpose'] == null
-        ? null
-        : Markdown.fromJson(json['purpose'] as String),
+    purpose:
+        json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
     purposeElement: json['_purpose'] == null
         ? null
         : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
-    copyright: json['copyright'] == null
-        ? null
-        : Markdown.fromJson(json['copyright'] as String),
+    copyright:
+        json['copyright'] == null ? null : Markdown.fromJson(json['copyright']),
     copyrightElement: json['_copyright'] == null
         ? null
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
@@ -157,9 +151,8 @@ _$_Evidence _$_$_EvidenceFromJson(Map<String, dynamic> json) {
             ? null
             : RelatedArtifact.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    assertion: json['assertion'] == null
-        ? null
-        : Markdown.fromJson(json['assertion'] as String),
+    assertion:
+        json['assertion'] == null ? null : Markdown.fromJson(json['assertion']),
     assertionElement: json['_assertion'] == null
         ? null
         : Element.fromJson(json['_assertion'] as Map<String, dynamic>),
@@ -480,7 +473,7 @@ _$_EvidenceVariableDefinition _$_$_EvidenceVariableDefinitionFromJson(
         ?.toList(),
     description: json['description'] == null
         ? null
-        : Markdown.fromJson(json['description'] as String),
+        : Markdown.fromJson(json['description']),
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -649,19 +642,17 @@ _$_EvidenceVariable _$_$_EvidenceVariableFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R5ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R5ResourceType.EvidenceVariable),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -682,7 +673,7 @@ _$_EvidenceVariable _$_$_EvidenceVariableFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -714,9 +705,7 @@ _$_EvidenceVariable _$_$_EvidenceVariableFromJson(Map<String, dynamic> json) {
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -731,7 +720,7 @@ _$_EvidenceVariable _$_$_EvidenceVariableFromJson(Map<String, dynamic> json) {
         ?.toList(),
     description: json['description'] == null
         ? null
-        : Markdown.fromJson(json['description'] as String),
+        : Markdown.fromJson(json['description']),
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -744,15 +733,13 @@ _$_EvidenceVariable _$_$_EvidenceVariableFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    purpose: json['purpose'] == null
-        ? null
-        : Markdown.fromJson(json['purpose'] as String),
+    purpose:
+        json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
     purposeElement: json['_purpose'] == null
         ? null
         : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
-    copyright: json['copyright'] == null
-        ? null
-        : Markdown.fromJson(json['copyright'] as String),
+    copyright:
+        json['copyright'] == null ? null : Markdown.fromJson(json['copyright']),
     copyrightElement: json['_copyright'] == null
         ? null
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
@@ -973,7 +960,7 @@ _$_EvidenceVariableCharacteristic _$_$_EvidenceVariableCharacteristicFromJson(
             json['definitionReference'] as Map<String, dynamic>),
     definitionCanonical: json['definitionCanonical'] == null
         ? null
-        : Canonical.fromJson(json['definitionCanonical'] as String),
+        : Canonical.fromJson(json['definitionCanonical']),
     definitionCanonicalElement: json['_definitionCanonical'] == null
         ? null
         : Element.fromJson(

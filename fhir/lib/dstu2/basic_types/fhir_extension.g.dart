@@ -9,13 +9,13 @@ part of 'fhir_extension.dart';
 _$_FhirExtension _$_$_FhirExtensionFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['url']);
   return _$_FhirExtension(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -41,13 +41,13 @@ _$_FhirExtension _$_$_FhirExtensionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
     valueBase64Binary: json['valueBase64Binary'] == null
         ? null
-        : Base64Binary.fromJson(json['valueBase64Binary'] as String),
+        : Base64Binary.fromJson(json['valueBase64Binary']),
     valueBase64BinaryElement: json['_valueBase64Binary'] == null
         ? null
         : Element.fromJson(json['_valueBase64Binary'] as Map<String, dynamic>),
     valueInstant: json['valueInstant'] == null
         ? null
-        : Instant.fromJson(json['valueInstant'] as String),
+        : Instant.fromJson(json['valueInstant']),
     valueInstantElement: json['_valueInstant'] == null
         ? null
         : Element.fromJson(json['_valueInstant'] as Map<String, dynamic>),
@@ -55,9 +55,8 @@ _$_FhirExtension _$_$_FhirExtensionFromJson(Map<String, dynamic> json) {
     valueStringElement: json['_valueString'] == null
         ? null
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
-    valueUri: json['valueUri'] == null
-        ? null
-        : FhirUri.fromJson(json['valueUri'] as String),
+    valueUri:
+        json['valueUri'] == null ? null : FhirUri.fromJson(json['valueUri']),
     valueUriElement: json['_valueUri'] == null
         ? null
         : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
@@ -69,30 +68,25 @@ _$_FhirExtension _$_$_FhirExtensionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime']),
     valueDateTimeElement: json['_valueDateTime'] == null
         ? null
         : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
-    valueTime: json['valueTime'] == null
-        ? null
-        : Time.fromJson(json['valueTime'] as String),
+    valueTime:
+        json['valueTime'] == null ? null : Time.fromJson(json['valueTime']),
     valueTimeElement: json['_valueTime'] == null
         ? null
         : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
-    valueCode: json['valueCode'] == null
-        ? null
-        : Code.fromJson(json['valueCode'] as String),
+    valueCode:
+        json['valueCode'] == null ? null : Code.fromJson(json['valueCode']),
     valueCodeElement: json['_valueCode'] == null
         ? null
         : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
-    valueOid: json['valueOid'] == null
-        ? null
-        : Oid.fromJson(json['valueOid'] as String),
+    valueOid: json['valueOid'] == null ? null : Oid.fromJson(json['valueOid']),
     valueOidElement: json['_valueOid'] == null
         ? null
         : Element.fromJson(json['_valueOid'] as Map<String, dynamic>),
-    valueId:
-        json['valueId'] == null ? null : Id.fromJson(json['valueId'] as String),
+    valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
     valueIdElement: json['_valueId'] == null
         ? null
         : Element.fromJson(json['_valueId'] as Map<String, dynamic>),
@@ -110,7 +104,7 @@ _$_FhirExtension _$_$_FhirExtensionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_valuePositiveInt'] as Map<String, dynamic>),
     valueMarkdown: json['valueMarkdown'] == null
         ? null
-        : Markdown.fromJson(json['valueMarkdown'] as String),
+        : Markdown.fromJson(json['valueMarkdown']),
     valueMarkdownElement: json['_valueMarkdown'] == null
         ? null
         : Element.fromJson(json['_valueMarkdown'] as Map<String, dynamic>),

@@ -15,7 +15,7 @@ class FhirDateTime {
     );
   }
 
-  factory FhirDateTime.fromJson(String json) => FhirDateTime(json);
+  factory FhirDateTime.fromJson(dynamic json) => FhirDateTime(json);
 
   factory FhirDateTime.fromYaml(dynamic yaml) => yaml is String
       ? FhirDateTime.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -44,8 +44,8 @@ class FhirDateTime {
                   : false;
 
   String toString() => value.toString();
-  dynamic toJson() => value.toString();
-  dynamic toYaml() => value.toString();
+  String toJson() => value.toString();
+  String toYaml() => value.toString();
 
   String _formattedFhirDateTime(value) => _format == -1
       ? value.toIso8601String()
@@ -62,7 +62,7 @@ Either<String, DateTime> _validateDateTime(String value) => isDate(value)
                 ? value.replaceFirst(' ', 'T')
                 : value)
         ? right(DateTime.parse(value))
-        : left('FormatError: $value is not a DateTime')
+        : left('FormatError: "$value" is not a DateTime')
     : _partialDateTime(value);
 
 Either<String, DateTime> _partialDateTime(String value) {
@@ -80,6 +80,6 @@ Either<String, DateTime> _partialDateTime(String value) {
       DateTime(year, month),
     );
   } else {
-    return left('FormatError: $value is not a DateTime');
+    return left('FormatError: "$value" is not a DateTime');
   }
 }

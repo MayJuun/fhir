@@ -18,16 +18,14 @@ _$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Conformance),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -45,7 +43,7 @@ _$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -62,9 +60,7 @@ _$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
             ? null
             : ConformanceContact.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     description: json['description'] as String,
     requirements: json['requirements'] as String,
     copyright: json['copyright'] as String,
@@ -78,9 +74,8 @@ _$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
         ? null
         : ConformanceImplementation.fromJson(
             json['implementation'] as Map<String, dynamic>),
-    fhirVersion: json['fhirVersion'] == null
-        ? null
-        : Id.fromJson(json['fhirVersion'] as String),
+    fhirVersion:
+        json['fhirVersion'] == null ? null : Id.fromJson(json['fhirVersion']),
     fhirVersionElement: json['_fhirVersion'] == null
         ? null
         : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
@@ -344,16 +339,14 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.CapabilityStatement),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -371,7 +364,7 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -388,9 +381,7 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
             ? null
             : ConformanceContact.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     description: json['description'] as String,
     requirements: json['requirements'] as String,
     copyright: json['copyright'] as String,
@@ -404,9 +395,8 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
         ? null
         : ConformanceImplementation.fromJson(
             json['implementation'] as Map<String, dynamic>),
-    fhirVersion: json['fhirVersion'] == null
-        ? null
-        : Id.fromJson(json['fhirVersion'] as String),
+    fhirVersion:
+        json['fhirVersion'] == null ? null : Id.fromJson(json['fhirVersion']),
     fhirVersionElement: json['_fhirVersion'] == null
         ? null
         : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
@@ -498,7 +488,7 @@ Map<String, dynamic> _$_$_CapabilityStatementToJson(
 _$_ConformanceContact _$_$_ConformanceContactFromJson(
     Map<String, dynamic> json) {
   return _$_ConformanceContact(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -541,7 +531,7 @@ _$_ConformanceSoftware _$_$_ConformanceSoftwareFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['name']);
   return _$_ConformanceSoftware(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -556,7 +546,7 @@ _$_ConformanceSoftware _$_$_ConformanceSoftwareFromJson(
     version: json['version'] as String,
     releaseDate: json['releaseDate'] == null
         ? null
-        : FhirDateTime.fromJson(json['releaseDate'] as String),
+        : FhirDateTime.fromJson(json['releaseDate']),
   );
 }
 
@@ -585,7 +575,7 @@ _$_ConformanceImplementation _$_$_ConformanceImplementationFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['description']);
   return _$_ConformanceImplementation(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -597,7 +587,7 @@ _$_ConformanceImplementation _$_$_ConformanceImplementationFromJson(
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     description: json['description'] as String,
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
   );
 }
 
@@ -624,7 +614,7 @@ Map<String, dynamic> _$_$_ConformanceImplementationToJson(
 _$_ConformanceRest _$_$_ConformanceRestFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['mode', 'resource']);
   return _$_ConformanceRest(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -672,7 +662,7 @@ _$_ConformanceRest _$_$_ConformanceRestFromJson(Map<String, dynamic> json) {
             : ConformanceRestOperation.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     compartment: (json['compartment'] as List)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
         ?.toList(),
   );
 }
@@ -729,7 +719,7 @@ _$_ConformanceMessaging _$_$_ConformanceMessagingFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['event']);
   return _$_ConformanceMessaging(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -787,7 +777,7 @@ _$_ConformanceDocument _$_$_ConformanceDocumentFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['mode', 'profile']);
   return _$_ConformanceDocument(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -840,7 +830,7 @@ const _$DocumentModeEnumMap = {
 _$_ConformanceRestSecurity _$_$_ConformanceRestSecurityFromJson(
     Map<String, dynamic> json) {
   return _$_ConformanceRestSecurity(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -898,7 +888,7 @@ _$_ConformanceRestResource _$_$_ConformanceRestResourceFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type', 'interaction']);
   return _$_ConformanceRestResource(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -911,7 +901,7 @@ _$_ConformanceRestResource _$_$_ConformanceRestResourceFromJson(
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
+    type: json['type'] == null ? null : Code.fromJson(json['type']),
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -1022,7 +1012,7 @@ _$_ConformanceResourceInteraction _$_$_ConformanceResourceInteractionFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_ConformanceResourceInteraction(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1076,7 +1066,7 @@ _$_ConformanceRestOperation _$_$_ConformanceRestOperationFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['name', 'definition']);
   return _$_ConformanceRestOperation(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1121,7 +1111,7 @@ _$_ConformanceMessagingEndpoint _$_$_ConformanceMessagingEndpointFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['protocol', 'address']);
   return _$_ConformanceMessagingEndpoint(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1135,9 +1125,7 @@ _$_ConformanceMessagingEndpoint _$_$_ConformanceMessagingEndpointFromJson(
     protocol: json['protocol'] == null
         ? null
         : Coding.fromJson(json['protocol'] as Map<String, dynamic>),
-    address: json['address'] == null
-        ? null
-        : FhirUri.fromJson(json['address'] as String),
+    address: json['address'] == null ? null : FhirUri.fromJson(json['address']),
     addressElement: json['_address'] == null
         ? null
         : Element.fromJson(json['_address'] as Map<String, dynamic>),
@@ -1170,7 +1158,7 @@ _$_ConformanceMessagingEvent _$_$_ConformanceMessagingEventFromJson(
   $checkKeys(json,
       requiredKeys: const ['code', 'mode', 'focus', 'request', 'response']);
   return _$_ConformanceMessagingEvent(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1191,8 +1179,7 @@ _$_ConformanceMessagingEvent _$_$_ConformanceMessagingEventFromJson(
     modeElement: json['_mode'] == null
         ? null
         : Element.fromJson(json['_mode'] as Map<String, dynamic>),
-    focus:
-        json['focus'] == null ? null : Code.fromJson(json['focus'] as String),
+    focus: json['focus'] == null ? null : Code.fromJson(json['focus']),
     request: json['request'] == null
         ? null
         : Reference.fromJson(json['request'] as Map<String, dynamic>),
@@ -1245,7 +1232,7 @@ const _$EventModeEnumMap = {
 _$_ConformanceSecurityCertificate _$_$_ConformanceSecurityCertificateFromJson(
     Map<String, dynamic> json) {
   return _$_ConformanceSecurityCertificate(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1256,10 +1243,8 @@ _$_ConformanceSecurityCertificate _$_$_ConformanceSecurityCertificateFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
-    blob: json['blob'] == null
-        ? null
-        : Base64Binary.fromJson(json['blob'] as String),
+    type: json['type'] == null ? null : Code.fromJson(json['type']),
+    blob: json['blob'] == null ? null : Base64Binary.fromJson(json['blob']),
     blobElement: json['_blob'] == null
         ? null
         : Element.fromJson(json['_blob'] as Map<String, dynamic>),
@@ -1291,7 +1276,7 @@ _$_ConformanceRestInteraction _$_$_ConformanceRestInteractionFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_ConformanceRestInteraction(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1339,7 +1324,7 @@ _$_ConformanceResourceSearchParam _$_$_ConformanceResourceSearchParamFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['name', 'type']);
   return _$_ConformanceResourceSearchParam(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1355,12 +1340,12 @@ _$_ConformanceResourceSearchParam _$_$_ConformanceResourceSearchParamFromJson(
     name: json['name'] as String,
     definition: json['definition'] == null
         ? null
-        : FhirUri.fromJson(json['definition'] as String),
+        : FhirUri.fromJson(json['definition']),
     type: _$enumDecodeNullable(_$SearchParamTypeEnumMap, json['type'],
         unknownValue: SearchParamType.unknown),
     documentation: json['documentation'] as String,
     target: (json['target'] as List)
-        ?.map((e) => e == null ? null : Code.fromJson(e as String))
+        ?.map((e) => e == null ? null : Code.fromJson(e))
         ?.toList(),
     modifier: (json['modifier'] as List)
         ?.map((e) => _$enumDecodeNullable(_$SearchParamModifierEnumMap, e))
@@ -1436,16 +1421,14 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.OperationDefinition),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -1463,7 +1446,7 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     version: json['version'] as String,
     name: json['name'] as String,
     status: _$enumDecodeNullable(
@@ -1480,22 +1463,20 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
             ? null
             : OperationDefinitionContact.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     description: json['description'] as String,
     requirements: json['requirements'] as String,
     idempotent: json['idempotent'] == null
         ? null
         : Boolean.fromJson(json['idempotent']),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     notes: json['notes'] as String,
     base: json['base'] == null
         ? null
         : Reference.fromJson(json['base'] as Map<String, dynamic>),
     system: json['system'] == null ? null : Boolean.fromJson(json['system']),
     type: (json['type'] as List)
-        ?.map((e) => e == null ? null : Code.fromJson(e as String))
+        ?.map((e) => e == null ? null : Code.fromJson(e))
         ?.toList(),
     instance:
         json['instance'] == null ? null : Boolean.fromJson(json['instance']),
@@ -1569,7 +1550,7 @@ const _$OperationDefinitionKindEnumMap = {
 _$_OperationDefinitionContact _$_$_OperationDefinitionContactFromJson(
     Map<String, dynamic> json) {
   return _$_OperationDefinitionContact(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1612,7 +1593,7 @@ _$_OperationDefinitionParameter _$_$_OperationDefinitionParameterFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['name', 'use', 'min', 'max']);
   return _$_OperationDefinitionParameter(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1625,13 +1606,13 @@ _$_OperationDefinitionParameter _$_$_OperationDefinitionParameterFromJson(
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    name: json['name'] == null ? null : Code.fromJson(json['name'] as String),
+    name: json['name'] == null ? null : Code.fromJson(json['name']),
     use: _$enumDecodeNullable(_$ParameterUseEnumMap, json['use'],
         unknownValue: ParameterUse.unknown),
     min: json['min'] == null ? null : Integer.fromJson(json['min']),
     max: json['max'] as String,
     documentation: json['documentation'] as String,
-    type: json['type'] == null ? null : Code.fromJson(json['type'] as String),
+    type: json['type'] == null ? null : Code.fromJson(json['type']),
     profile: json['profile'] == null
         ? null
         : Reference.fromJson(json['profile'] as Map<String, dynamic>),
@@ -1686,7 +1667,7 @@ _$_OperationDefinitionParameterBinding
         Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['strength']);
   return _$_OperationDefinitionParameterBinding(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1702,7 +1683,7 @@ _$_OperationDefinitionParameterBinding
         unknownValue: OperationDefinitionBindingStrength.unknown),
     valueSetUri: json['valueSetUri'] == null
         ? null
-        : FhirUri.fromJson(json['valueSetUri'] as String),
+        : FhirUri.fromJson(json['valueSetUri']),
     valueSetReference: json['valueSetReference'] == null
         ? null
         : Reference.fromJson(json['valueSetReference'] as Map<String, dynamic>),
@@ -1745,16 +1726,14 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.SearchParameter),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -1772,7 +1751,7 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     name: json['name'] as String,
     status: _$enumDecodeNullable(_$SearchParameterStatusEnumMap, json['status'],
         unknownValue: SearchParameterStatus.unknown),
@@ -1785,15 +1764,13 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
             ? null
             : SearchParameterContact.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     requirements: json['requirements'] as String,
     requirementsElement: json['_requirements'] == null
         ? null
         : Element.fromJson(json['_requirements'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
-    base: json['base'] == null ? null : Code.fromJson(json['base'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
+    base: json['base'] == null ? null : Code.fromJson(json['base']),
     type: _$enumDecodeNullable(_$SearchParameterTypeEnumMap, json['type'],
         unknownValue: SearchParameterType.unknown),
     description: json['description'] as String,
@@ -1802,7 +1779,7 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
         _$SearchParameterXpathUsageEnumMap, json['xpathUsage'],
         unknownValue: SearchParameterXpathUsage.unknown),
     target: (json['target'] as List)
-        ?.map((e) => e == null ? null : Code.fromJson(e as String))
+        ?.map((e) => e == null ? null : Code.fromJson(e))
         ?.toList(),
   );
 }
@@ -1880,7 +1857,7 @@ const _$SearchParameterXpathUsageEnumMap = {
 _$_SearchParameterContact _$_$_SearchParameterContactFromJson(
     Map<String, dynamic> json) {
   return _$_SearchParameterContact(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null

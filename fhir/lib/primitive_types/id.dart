@@ -13,7 +13,7 @@ class Id {
     );
   }
 
-  factory Id.fromJson(String json) => Id(json);
+  factory Id.fromJson(dynamic json) => Id(json);
 
   factory Id.fromYaml(dynamic yaml) => yaml is String
       ? Id.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -41,4 +41,4 @@ class Id {
 Either<String, String> _validateId(String value) =>
     RegExp(r'^[A-Za-z0-9\-\.]{1,64}$').hasMatch(value)
         ? right(value)
-        : left('FormatError: $value is not an Id');
+        : left('FormatError: "$value" is not an Id');

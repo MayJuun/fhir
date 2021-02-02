@@ -11,19 +11,17 @@ _$_Organization _$_$_OrganizationFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Organization),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -249,7 +247,7 @@ const _$Dstu2ResourceTypeEnumMap = {
 _$_OrganizationContact _$_$_OrganizationContactFromJson(
     Map<String, dynamic> json) {
   return _$_OrganizationContact(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -307,19 +305,17 @@ _$_HealthcareService _$_$_HealthcareServiceFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.HealthcareService),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -495,7 +491,7 @@ _$_HealthcareServiceServiceType _$_$_HealthcareServiceServiceTypeFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type']);
   return _$_HealthcareServiceServiceType(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -541,7 +537,7 @@ Map<String, dynamic> _$_$_HealthcareServiceServiceTypeToJson(
 _$_HealthcareServiceAvailableTime _$_$_HealthcareServiceAvailableTimeFromJson(
     Map<String, dynamic> json) {
   return _$_HealthcareServiceAvailableTime(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -564,13 +560,13 @@ _$_HealthcareServiceAvailableTime _$_$_HealthcareServiceAvailableTimeFromJson(
         : Element.fromJson(json['_allDay'] as Map<String, dynamic>),
     availableStartTime: json['availableStartTime'] == null
         ? null
-        : Time.fromJson(json['availableStartTime'] as String),
+        : Time.fromJson(json['availableStartTime']),
     availableStartTimeElement: json['_availableStartTime'] == null
         ? null
         : Element.fromJson(json['_availableStartTime'] as Map<String, dynamic>),
     availableEndTime: json['availableEndTime'] == null
         ? null
-        : Time.fromJson(json['availableEndTime'] as String),
+        : Time.fromJson(json['availableEndTime']),
     availableEndTimeElement: json['_availableEndTime'] == null
         ? null
         : Element.fromJson(json['_availableEndTime'] as Map<String, dynamic>),
@@ -623,7 +619,7 @@ _$_HealthcareServiceNotAvailable _$_$_HealthcareServiceNotAvailableFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['description']);
   return _$_HealthcareServiceNotAvailable(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -671,19 +667,17 @@ _$_Group _$_$_GroupFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Group),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -797,7 +791,7 @@ _$_GroupCharacteristic _$_$_GroupCharacteristicFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['code', 'exclude']);
   return _$_GroupCharacteristic(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -863,7 +857,7 @@ Map<String, dynamic> _$_$_GroupCharacteristicToJson(
 _$_GroupMember _$_$_GroupMemberFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['entity']);
   return _$_GroupMember(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null

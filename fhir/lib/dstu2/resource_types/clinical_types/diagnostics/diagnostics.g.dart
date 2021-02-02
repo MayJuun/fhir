@@ -12,7 +12,7 @@ _$_Observation _$_$_ObservationFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Observation),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     idElement: json['_id'] == null
         ? null
         : Element.fromJson(json['_id'] as Map<String, dynamic>),
@@ -21,13 +21,11 @@ _$_Observation _$_$_ObservationFromJson(Map<String, dynamic> json) {
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -71,16 +69,14 @@ _$_Observation _$_$_ObservationFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
     effectiveDateTime: json['effectiveDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
+        : FhirDateTime.fromJson(json['effectiveDateTime']),
     effectiveDateTimeElement: json['_effectiveDateTime'] == null
         ? null
         : Element.fromJson(json['_effectiveDateTime'] as Map<String, dynamic>),
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    issued: json['issued'] == null
-        ? null
-        : Instant.fromJson(json['issued'] as String),
+    issued: json['issued'] == null ? null : Instant.fromJson(json['issued']),
     issuedElement: json['_issued'] == null
         ? null
         : Element.fromJson(json['_issued'] as Map<String, dynamic>),
@@ -112,15 +108,14 @@ _$_Observation _$_$_ObservationFromJson(Map<String, dynamic> json) {
     valueAttachment: json['valueAttachment'] == null
         ? null
         : Attachment.fromJson(json['valueAttachment'] as Map<String, dynamic>),
-    valueTime: json['valueTime'] == null
-        ? null
-        : Time.fromJson(json['valueTime'] as String),
+    valueTime:
+        json['valueTime'] == null ? null : Time.fromJson(json['valueTime']),
     valueTimeElement: json['_valueTime'] == null
         ? null
         : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime']),
     valueDateTimeElement: json['_valueDateTime'] == null
         ? null
         : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -378,7 +373,7 @@ const _$ObservationStatusEnumMap = {
 _$_ObservationReferenceRange _$_$_ObservationReferenceRangeFromJson(
     Map<String, dynamic> json) {
   return _$_ObservationReferenceRange(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -439,7 +434,7 @@ _$_ObservationRelated _$_$_ObservationRelatedFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['target']);
   return _$_ObservationRelated(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -495,7 +490,7 @@ _$_ObservationComponent _$_$_ObservationComponentFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_ObservationComponent(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -535,15 +530,14 @@ _$_ObservationComponent _$_$_ObservationComponentFromJson(
     valueAttachment: json['valueAttachment'] == null
         ? null
         : Attachment.fromJson(json['valueAttachment'] as Map<String, dynamic>),
-    valueTime: json['valueTime'] == null
-        ? null
-        : Time.fromJson(json['valueTime'] as String),
+    valueTime:
+        json['valueTime'] == null ? null : Time.fromJson(json['valueTime']),
     valueTimeElement: json['_valueTime'] == null
         ? null
         : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime']),
     valueDateTimeElement: json['_valueDateTime'] == null
         ? null
         : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -605,19 +599,17 @@ _$_DiagnosticReport _$_$_DiagnosticReportFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.DiagnosticReport),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -662,16 +654,14 @@ _$_DiagnosticReport _$_$_DiagnosticReportFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
     effectiveDateTime: json['effectiveDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
+        : FhirDateTime.fromJson(json['effectiveDateTime']),
     effectiveDateTimeElement: json['_effectiveDateTime'] == null
         ? null
         : Element.fromJson(json['_effectiveDateTime'] as Map<String, dynamic>),
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    issued: json['issued'] == null
-        ? null
-        : Instant.fromJson(json['issued'] as String),
+    issued: json['issued'] == null ? null : Instant.fromJson(json['issued']),
     issuedElement: json['_issued'] == null
         ? null
         : Element.fromJson(json['_issued'] as Map<String, dynamic>),
@@ -785,7 +775,7 @@ _$_DiagnosticReportImage _$_$_DiagnosticReportImageFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['link']);
   return _$_DiagnosticReportImage(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -833,16 +823,14 @@ _$_DiagnosticOrder _$_$_DiagnosticOrderFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.DiagnosticOrder),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -977,7 +965,7 @@ _$_DiagnosticOrderEvent _$_$_DiagnosticOrderEventFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['status', 'dateTime']);
   return _$_DiagnosticOrderEvent(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -995,7 +983,7 @@ _$_DiagnosticOrderEvent _$_$_DiagnosticOrderEventFromJson(
         : CodeableConcept.fromJson(json['description'] as Map<String, dynamic>),
     dateTime: json['dateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['dateTime'] as String),
+        : FhirDateTime.fromJson(json['dateTime']),
     actor: json['actor'] == null
         ? null
         : Reference.fromJson(json['actor'] as Map<String, dynamic>),
@@ -1045,7 +1033,7 @@ _$_DiagnosticOrderItem _$_$_DiagnosticOrderItemFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_DiagnosticOrderItem(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1123,19 +1111,17 @@ _$_Specimen _$_$_SpecimenFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Specimen),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1181,7 +1167,7 @@ _$_Specimen _$_$_SpecimenFromJson(Map<String, dynamic> json) {
             json['accessionIdentifier'] as Map<String, dynamic>),
     receivedTime: json['receivedTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['receivedTime'] as String),
+        : FhirDateTime.fromJson(json['receivedTime']),
     receivedTimeElement: json['_receivedTime'] == null
         ? null
         : Element.fromJson(json['_receivedTime'] as Map<String, dynamic>),
@@ -1255,7 +1241,7 @@ const _$SpecimenStatusEnumMap = {
 _$_SpecimenCollection _$_$_SpecimenCollectionFromJson(
     Map<String, dynamic> json) {
   return _$_SpecimenCollection(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1274,7 +1260,7 @@ _$_SpecimenCollection _$_$_SpecimenCollectionFromJson(
     comment: (json['comment'] as List)?.map((e) => e as String)?.toList(),
     collectedDateTime: json['collectedDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['collectedDateTime'] as String),
+        : FhirDateTime.fromJson(json['collectedDateTime']),
     collectedDateTimeElement: json['_collectedDateTime'] == null
         ? null
         : Element.fromJson(json['_collectedDateTime'] as Map<String, dynamic>),
@@ -1323,7 +1309,7 @@ Map<String, dynamic> _$_$_SpecimenCollectionToJson(
 
 _$_SpecimenTreatment _$_$_SpecimenTreatmentFromJson(Map<String, dynamic> json) {
   return _$_SpecimenTreatment(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1369,7 +1355,7 @@ Map<String, dynamic> _$_$_SpecimenTreatmentToJson(
 
 _$_SpecimenContainer _$_$_SpecimenContainerFromJson(Map<String, dynamic> json) {
   return _$_SpecimenContainer(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1441,16 +1427,14 @@ _$_BodySite _$_$_BodySiteFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.BodySite),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -1535,19 +1519,17 @@ _$_ImagingStudy _$_$_ImagingStudyFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.ImagingStudy),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1568,16 +1550,15 @@ _$_ImagingStudy _$_$_ImagingStudyFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    started: json['started'] == null
-        ? null
-        : FhirDateTime.fromJson(json['started'] as String),
+    started:
+        json['started'] == null ? null : FhirDateTime.fromJson(json['started']),
     startedElement: json['_started'] == null
         ? null
         : Element.fromJson(json['_started'] as Map<String, dynamic>),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
-    uid: json['uid'] == null ? null : Oid.fromJson(json['uid'] as String),
+    uid: json['uid'] == null ? null : Oid.fromJson(json['uid']),
     accession: json['accession'] == null
         ? null
         : Identifier.fromJson(json['accession'] as Map<String, dynamic>),
@@ -1599,7 +1580,7 @@ _$_ImagingStudy _$_$_ImagingStudyFromJson(Map<String, dynamic> json) {
     availability: _$enumDecodeNullable(
         _$ImagingStudyAvailabilityEnumMap, json['availability'],
         unknownValue: ImagingStudyAvailability.unknown),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     numberOfSeries: json['numberOfSeries'] == null
         ? null
         : UnsignedInt.fromJson(json['numberOfSeries']),
@@ -1696,7 +1677,7 @@ _$_ImagingStudySeries _$_$_ImagingStudySeriesFromJson(
   $checkKeys(json,
       requiredKeys: const ['modality', 'uid', 'numberOfInstances']);
   return _$_ImagingStudySeries(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1715,7 +1696,7 @@ _$_ImagingStudySeries _$_$_ImagingStudySeriesFromJson(
     modality: json['modality'] == null
         ? null
         : Coding.fromJson(json['modality'] as Map<String, dynamic>),
-    uid: json['uid'] == null ? null : Oid.fromJson(json['uid'] as String),
+    uid: json['uid'] == null ? null : Oid.fromJson(json['uid']),
     uidElement: json['_uid'] == null
         ? null
         : Element.fromJson(json['_uid'] as Map<String, dynamic>),
@@ -1732,16 +1713,15 @@ _$_ImagingStudySeries _$_$_ImagingStudySeriesFromJson(
     availability: _$enumDecodeNullable(
         _$SeriesAvailabilityEnumMap, json['availability'],
         unknownValue: SeriesAvailability.unknown),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     bodySite: json['bodySite'] == null
         ? null
         : Coding.fromJson(json['bodySite'] as Map<String, dynamic>),
     laterality: json['laterality'] == null
         ? null
         : Coding.fromJson(json['laterality'] as Map<String, dynamic>),
-    started: json['started'] == null
-        ? null
-        : FhirDateTime.fromJson(json['started'] as String),
+    started:
+        json['started'] == null ? null : FhirDateTime.fromJson(json['started']),
     startedElement: json['_started'] == null
         ? null
         : Element.fromJson(json['_started'] as Map<String, dynamic>),
@@ -1802,7 +1782,7 @@ _$_ImagingStudySeriesInstance _$_$_ImagingStudySeriesInstanceFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['uid', 'sopClass']);
   return _$_ImagingStudySeriesInstance(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1818,13 +1798,11 @@ _$_ImagingStudySeriesInstance _$_$_ImagingStudySeriesInstanceFromJson(
     numberElement: json['_number'] == null
         ? null
         : Element.fromJson(json['_number'] as Map<String, dynamic>),
-    uid: json['uid'] == null ? null : Oid.fromJson(json['uid'] as String),
+    uid: json['uid'] == null ? null : Oid.fromJson(json['uid']),
     uidElement: json['_uid'] == null
         ? null
         : Element.fromJson(json['_uid'] as Map<String, dynamic>),
-    sopClass: json['sopClass'] == null
-        ? null
-        : Oid.fromJson(json['sopClass'] as String),
+    sopClass: json['sopClass'] == null ? null : Oid.fromJson(json['sopClass']),
     type: json['type'] as String,
     title: json['title'] as String,
     titleElement: json['_title'] == null
@@ -1871,16 +1849,14 @@ _$_ImagingObjectSelection _$_$_ImagingObjectSelectionFromJson(
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.ImagingObjectSelection),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -1898,7 +1874,7 @@ _$_ImagingObjectSelection _$_$_ImagingObjectSelectionFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    uid: json['uid'] == null ? null : Oid.fromJson(json['uid'] as String),
+    uid: json['uid'] == null ? null : Oid.fromJson(json['uid']),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -1911,7 +1887,7 @@ _$_ImagingObjectSelection _$_$_ImagingObjectSelectionFromJson(
         : Reference.fromJson(json['author'] as Map<String, dynamic>),
     authoringTime: json['authoringTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['authoringTime'] as String),
+        : FhirDateTime.fromJson(json['authoringTime']),
     study: (json['study'] as List)
         ?.map((e) => e == null
             ? null
@@ -1957,7 +1933,7 @@ _$_ImagingObjectSelectionStudy _$_$_ImagingObjectSelectionStudyFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['uid', 'series']);
   return _$_ImagingObjectSelectionStudy(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1968,8 +1944,8 @@ _$_ImagingObjectSelectionStudy _$_$_ImagingObjectSelectionStudyFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    uid: json['uid'] == null ? null : Oid.fromJson(json['uid'] as String),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    uid: json['uid'] == null ? null : Oid.fromJson(json['uid']),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     imagingStudy: json['imagingStudy'] == null
         ? null
         : Reference.fromJson(json['imagingStudy'] as Map<String, dynamic>),
@@ -2008,7 +1984,7 @@ _$_ImagingObjectSelectionStudySeries
     _$_$_ImagingObjectSelectionStudySeriesFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['instance']);
   return _$_ImagingObjectSelectionStudySeries(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -2019,8 +1995,8 @@ _$_ImagingObjectSelectionStudySeries
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    uid: json['uid'] == null ? null : Oid.fromJson(json['uid'] as String),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    uid: json['uid'] == null ? null : Oid.fromJson(json['uid']),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     instance: (json['instance'] as List)
         ?.map((e) => e == null
             ? null
@@ -2057,7 +2033,7 @@ _$_ImagingObjectSelectionSeriesInstance
         Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['sopClass', 'uid', 'url']);
   return _$_ImagingObjectSelectionSeriesInstance(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -2068,11 +2044,9 @@ _$_ImagingObjectSelectionSeriesInstance
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    sopClass: json['sopClass'] == null
-        ? null
-        : Oid.fromJson(json['sopClass'] as String),
-    uid: json['uid'] == null ? null : Oid.fromJson(json['uid'] as String),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    sopClass: json['sopClass'] == null ? null : Oid.fromJson(json['sopClass']),
+    uid: json['uid'] == null ? null : Oid.fromJson(json['uid']),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     frames: (json['frames'] as List)
         ?.map((e) => e == null
             ? null
@@ -2109,7 +2083,7 @@ _$_ImagingObjectSelectionInstanceFrames
         Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['frameNumbers', 'url']);
   return _$_ImagingObjectSelectionInstanceFrames(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -2121,7 +2095,7 @@ _$_ImagingObjectSelectionInstanceFrames
     frameNumbers: (json['frameNumbers'] as List)
         ?.map((e) => e == null ? null : UnsignedInt.fromJson(e))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
   );
 }
 

@@ -11,19 +11,17 @@ _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R5ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R5ResourceType.Appointment),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -95,13 +93,11 @@ _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    start: json['start'] == null
-        ? null
-        : Instant.fromJson(json['start'] as String),
+    start: json['start'] == null ? null : Instant.fromJson(json['start']),
     startElement: json['_start'] == null
         ? null
         : Element.fromJson(json['_start'] as Map<String, dynamic>),
-    end: json['end'] == null ? null : Instant.fromJson(json['end'] as String),
+    end: json['end'] == null ? null : Instant.fromJson(json['end']),
     endElement: json['_end'] == null
         ? null
         : Element.fromJson(json['_end'] as Map<String, dynamic>),
@@ -115,9 +111,8 @@ _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created:
+        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -492,19 +487,17 @@ _$_AppointmentResponse _$_$_AppointmentResponseFromJson(
     resourceType: _$enumDecodeNullable(
         _$R5ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R5ResourceType.AppointmentResponse),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -532,13 +525,11 @@ _$_AppointmentResponse _$_$_AppointmentResponseFromJson(
     appointment: json['appointment'] == null
         ? null
         : Reference.fromJson(json['appointment'] as Map<String, dynamic>),
-    start: json['start'] == null
-        ? null
-        : Instant.fromJson(json['start'] as String),
+    start: json['start'] == null ? null : Instant.fromJson(json['start']),
     startElement: json['_start'] == null
         ? null
         : Element.fromJson(json['_start'] as Map<String, dynamic>),
-    end: json['end'] == null ? null : Instant.fromJson(json['end'] as String),
+    end: json['end'] == null ? null : Instant.fromJson(json['end']),
     endElement: json['_end'] == null
         ? null
         : Element.fromJson(json['_end'] as Map<String, dynamic>),
@@ -552,7 +543,7 @@ _$_AppointmentResponse _$_$_AppointmentResponseFromJson(
         : Reference.fromJson(json['actor'] as Map<String, dynamic>),
     participantStatus: json['participantStatus'] == null
         ? null
-        : Code.fromJson(json['participantStatus'] as String),
+        : Code.fromJson(json['participantStatus']),
     participantStatusElement: json['_participantStatus'] == null
         ? null
         : Element.fromJson(json['_participantStatus'] as Map<String, dynamic>),
@@ -610,19 +601,17 @@ _$_Schedule _$_$_ScheduleFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R5ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R5ResourceType.Schedule),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -725,19 +714,17 @@ _$_Slot _$_$_SlotFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R5ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R5ResourceType.Slot),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -789,13 +776,11 @@ _$_Slot _$_$_SlotFromJson(Map<String, dynamic> json) {
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    start: json['start'] == null
-        ? null
-        : Instant.fromJson(json['start'] as String),
+    start: json['start'] == null ? null : Instant.fromJson(json['start']),
     startElement: json['_start'] == null
         ? null
         : Element.fromJson(json['_start'] as Map<String, dynamic>),
-    end: json['end'] == null ? null : Instant.fromJson(json['end'] as String),
+    end: json['end'] == null ? null : Instant.fromJson(json['end']),
     endElement: json['_end'] == null
         ? null
         : Element.fromJson(json['_end'] as Map<String, dynamic>),
@@ -872,19 +857,17 @@ _$_Task _$_$_TaskFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R5ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R5ResourceType.Task),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -911,10 +894,10 @@ _$_Task _$_$_TaskFromJson(Map<String, dynamic> json) {
         ?.toList(),
     instantiatesCanonical: json['instantiatesCanonical'] == null
         ? null
-        : Canonical.fromJson(json['instantiatesCanonical'] as String),
+        : Canonical.fromJson(json['instantiatesCanonical']),
     instantiatesUri: json['instantiatesUri'] == null
         ? null
-        : FhirUri.fromJson(json['instantiatesUri'] as String),
+        : FhirUri.fromJson(json['instantiatesUri']),
     instantiatesUriElement: json['_instantiatesUri'] == null
         ? null
         : Element.fromJson(json['_instantiatesUri'] as Map<String, dynamic>),
@@ -947,9 +930,7 @@ _$_Task _$_$_TaskFromJson(Map<String, dynamic> json) {
     intentElement: json['_intent'] == null
         ? null
         : Element.fromJson(json['_intent'] as Map<String, dynamic>),
-    priority: json['priority'] == null
-        ? null
-        : Code.fromJson(json['priority'] as String),
+    priority: json['priority'] == null ? null : Code.fromJson(json['priority']),
     priorityElement: json['_priority'] == null
         ? null
         : Element.fromJson(json['_priority'] as Map<String, dynamic>),
@@ -974,13 +955,13 @@ _$_Task _$_$_TaskFromJson(Map<String, dynamic> json) {
         : Period.fromJson(json['executionPeriod'] as Map<String, dynamic>),
     authoredOn: json['authoredOn'] == null
         ? null
-        : FhirDateTime.fromJson(json['authoredOn'] as String),
+        : FhirDateTime.fromJson(json['authoredOn']),
     authoredOnElement: json['_authoredOn'] == null
         ? null
         : Element.fromJson(json['_authoredOn'] as Map<String, dynamic>),
     lastModified: json['lastModified'] == null
         ? null
-        : FhirDateTime.fromJson(json['lastModified'] as String),
+        : FhirDateTime.fromJson(json['lastModified']),
     lastModifiedElement: json['_lastModified'] == null
         ? null
         : Element.fromJson(json['_lastModified'] as Map<String, dynamic>),
@@ -1196,7 +1177,7 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     valueBase64Binary: json['valueBase64Binary'] == null
         ? null
-        : Base64Binary.fromJson(json['valueBase64Binary'] as String),
+        : Base64Binary.fromJson(json['valueBase64Binary']),
     valueBase64BinaryElement: json['_valueBase64Binary'] == null
         ? null
         : Element.fromJson(json['_valueBase64Binary'] as Map<String, dynamic>),
@@ -1208,13 +1189,12 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
     valueCanonical: json['valueCanonical'] == null
         ? null
-        : Canonical.fromJson(json['valueCanonical'] as String),
+        : Canonical.fromJson(json['valueCanonical']),
     valueCanonicalElement: json['_valueCanonical'] == null
         ? null
         : Element.fromJson(json['_valueCanonical'] as Map<String, dynamic>),
-    valueCode: json['valueCode'] == null
-        ? null
-        : Code.fromJson(json['valueCode'] as String),
+    valueCode:
+        json['valueCode'] == null ? null : Code.fromJson(json['valueCode']),
     valueCodeElement: json['_valueCode'] == null
         ? null
         : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
@@ -1226,7 +1206,7 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime']),
     valueDateTimeElement: json['_valueDateTime'] == null
         ? null
         : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -1236,14 +1216,13 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
     valueDecimalElement: json['_valueDecimal'] == null
         ? null
         : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
-    valueId:
-        json['valueId'] == null ? null : Id.fromJson(json['valueId'] as String),
+    valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
     valueIdElement: json['_valueId'] == null
         ? null
         : Element.fromJson(json['_valueId'] as Map<String, dynamic>),
     valueInstant: json['valueInstant'] == null
         ? null
-        : Instant.fromJson(json['valueInstant'] as String),
+        : Instant.fromJson(json['valueInstant']),
     valueInstantElement: json['_valueInstant'] == null
         ? null
         : Element.fromJson(json['_valueInstant'] as Map<String, dynamic>),
@@ -1261,13 +1240,11 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_valueInteger64'] as Map<String, dynamic>),
     valueMarkdown: json['valueMarkdown'] == null
         ? null
-        : Markdown.fromJson(json['valueMarkdown'] as String),
+        : Markdown.fromJson(json['valueMarkdown']),
     valueMarkdownElement: json['_valueMarkdown'] == null
         ? null
         : Element.fromJson(json['_valueMarkdown'] as Map<String, dynamic>),
-    valueOid: json['valueOid'] == null
-        ? null
-        : Oid.fromJson(json['valueOid'] as String),
+    valueOid: json['valueOid'] == null ? null : Oid.fromJson(json['valueOid']),
     valueOidElement: json['_valueOid'] == null
         ? null
         : Element.fromJson(json['_valueOid'] as Map<String, dynamic>),
@@ -1281,9 +1258,8 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
     valueStringElement: json['_valueString'] == null
         ? null
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
-    valueTime: json['valueTime'] == null
-        ? null
-        : Time.fromJson(json['valueTime'] as String),
+    valueTime:
+        json['valueTime'] == null ? null : Time.fromJson(json['valueTime']),
     valueTimeElement: json['_valueTime'] == null
         ? null
         : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
@@ -1293,21 +1269,18 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
     valueUnsignedIntElement: json['_valueUnsignedInt'] == null
         ? null
         : Element.fromJson(json['_valueUnsignedInt'] as Map<String, dynamic>),
-    valueUri: json['valueUri'] == null
-        ? null
-        : FhirUri.fromJson(json['valueUri'] as String),
+    valueUri:
+        json['valueUri'] == null ? null : FhirUri.fromJson(json['valueUri']),
     valueUriElement: json['_valueUri'] == null
         ? null
         : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
-    valueUrl: json['valueUrl'] == null
-        ? null
-        : FhirUrl.fromJson(json['valueUrl'] as String),
+    valueUrl:
+        json['valueUrl'] == null ? null : FhirUrl.fromJson(json['valueUrl']),
     valueUrlElement: json['_valueUrl'] == null
         ? null
         : Element.fromJson(json['_valueUrl'] as Map<String, dynamic>),
-    valueUuid: json['valueUuid'] == null
-        ? null
-        : Uuid.fromJson(json['valueUuid'] as String),
+    valueUuid:
+        json['valueUuid'] == null ? null : Uuid.fromJson(json['valueUuid']),
     valueUuidElement: json['_valueUuid'] == null
         ? null
         : Element.fromJson(json['_valueUuid'] as Map<String, dynamic>),
@@ -1527,7 +1500,7 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     valueBase64Binary: json['valueBase64Binary'] == null
         ? null
-        : Base64Binary.fromJson(json['valueBase64Binary'] as String),
+        : Base64Binary.fromJson(json['valueBase64Binary']),
     valueBase64BinaryElement: json['_valueBase64Binary'] == null
         ? null
         : Element.fromJson(json['_valueBase64Binary'] as Map<String, dynamic>),
@@ -1539,13 +1512,12 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
     valueCanonical: json['valueCanonical'] == null
         ? null
-        : Canonical.fromJson(json['valueCanonical'] as String),
+        : Canonical.fromJson(json['valueCanonical']),
     valueCanonicalElement: json['_valueCanonical'] == null
         ? null
         : Element.fromJson(json['_valueCanonical'] as Map<String, dynamic>),
-    valueCode: json['valueCode'] == null
-        ? null
-        : Code.fromJson(json['valueCode'] as String),
+    valueCode:
+        json['valueCode'] == null ? null : Code.fromJson(json['valueCode']),
     valueCodeElement: json['_valueCode'] == null
         ? null
         : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
@@ -1557,7 +1529,7 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime']),
     valueDateTimeElement: json['_valueDateTime'] == null
         ? null
         : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -1567,14 +1539,13 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
     valueDecimalElement: json['_valueDecimal'] == null
         ? null
         : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
-    valueId:
-        json['valueId'] == null ? null : Id.fromJson(json['valueId'] as String),
+    valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
     valueIdElement: json['_valueId'] == null
         ? null
         : Element.fromJson(json['_valueId'] as Map<String, dynamic>),
     valueInstant: json['valueInstant'] == null
         ? null
-        : Instant.fromJson(json['valueInstant'] as String),
+        : Instant.fromJson(json['valueInstant']),
     valueInstantElement: json['_valueInstant'] == null
         ? null
         : Element.fromJson(json['_valueInstant'] as Map<String, dynamic>),
@@ -1592,13 +1563,11 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_valueInteger64'] as Map<String, dynamic>),
     valueMarkdown: json['valueMarkdown'] == null
         ? null
-        : Markdown.fromJson(json['valueMarkdown'] as String),
+        : Markdown.fromJson(json['valueMarkdown']),
     valueMarkdownElement: json['_valueMarkdown'] == null
         ? null
         : Element.fromJson(json['_valueMarkdown'] as Map<String, dynamic>),
-    valueOid: json['valueOid'] == null
-        ? null
-        : Oid.fromJson(json['valueOid'] as String),
+    valueOid: json['valueOid'] == null ? null : Oid.fromJson(json['valueOid']),
     valueOidElement: json['_valueOid'] == null
         ? null
         : Element.fromJson(json['_valueOid'] as Map<String, dynamic>),
@@ -1612,9 +1581,8 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
     valueStringElement: json['_valueString'] == null
         ? null
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
-    valueTime: json['valueTime'] == null
-        ? null
-        : Time.fromJson(json['valueTime'] as String),
+    valueTime:
+        json['valueTime'] == null ? null : Time.fromJson(json['valueTime']),
     valueTimeElement: json['_valueTime'] == null
         ? null
         : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
@@ -1624,21 +1592,18 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
     valueUnsignedIntElement: json['_valueUnsignedInt'] == null
         ? null
         : Element.fromJson(json['_valueUnsignedInt'] as Map<String, dynamic>),
-    valueUri: json['valueUri'] == null
-        ? null
-        : FhirUri.fromJson(json['valueUri'] as String),
+    valueUri:
+        json['valueUri'] == null ? null : FhirUri.fromJson(json['valueUri']),
     valueUriElement: json['_valueUri'] == null
         ? null
         : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
-    valueUrl: json['valueUrl'] == null
-        ? null
-        : FhirUrl.fromJson(json['valueUrl'] as String),
+    valueUrl:
+        json['valueUrl'] == null ? null : FhirUrl.fromJson(json['valueUrl']),
     valueUrlElement: json['_valueUrl'] == null
         ? null
         : Element.fromJson(json['_valueUrl'] as Map<String, dynamic>),
-    valueUuid: json['valueUuid'] == null
-        ? null
-        : Uuid.fromJson(json['valueUuid'] as String),
+    valueUuid:
+        json['valueUuid'] == null ? null : Uuid.fromJson(json['valueUuid']),
     valueUuidElement: json['_valueUuid'] == null
         ? null
         : Element.fromJson(json['_valueUuid'] as Map<String, dynamic>),
@@ -1846,19 +1811,17 @@ _$_VerificationResult _$_$_VerificationResultFromJson(
     resourceType: _$enumDecodeNullable(
         _$R5ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R5ResourceType.VerificationResult),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1892,14 +1855,13 @@ _$_VerificationResult _$_$_VerificationResultFromJson(
     need: json['need'] == null
         ? null
         : CodeableConcept.fromJson(json['need'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
     statusDate: json['statusDate'] == null
         ? null
-        : FhirDateTime.fromJson(json['statusDate'] as String),
+        : FhirDateTime.fromJson(json['statusDate']),
     statusDateElement: json['_statusDate'] == null
         ? null
         : Element.fromJson(json['_statusDate'] as Map<String, dynamic>),
@@ -1917,7 +1879,7 @@ _$_VerificationResult _$_$_VerificationResultFromJson(
         : Timing.fromJson(json['frequency'] as Map<String, dynamic>),
     lastPerformed: json['lastPerformed'] == null
         ? null
-        : FhirDateTime.fromJson(json['lastPerformed'] as String),
+        : FhirDateTime.fromJson(json['lastPerformed']),
     lastPerformedElement: json['_lastPerformed'] == null
         ? null
         : Element.fromJson(json['_lastPerformed'] as Map<String, dynamic>),
@@ -2032,7 +1994,7 @@ _$_VerificationResultPrimarySource _$_$_VerificationResultPrimarySourceFromJson(
             json['validationStatus'] as Map<String, dynamic>),
     validationDate: json['validationDate'] == null
         ? null
-        : FhirDateTime.fromJson(json['validationDate'] as String),
+        : FhirDateTime.fromJson(json['validationDate']),
     validationDateElement: json['_validationDate'] == null
         ? null
         : Element.fromJson(json['_validationDate'] as Map<String, dynamic>),

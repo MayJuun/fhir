@@ -13,7 +13,7 @@ class Oid {
     );
   }
 
-  factory Oid.fromJson(String json) => Oid(json);
+  factory Oid.fromJson(dynamic json) => Oid(json);
 
   factory Oid.fromYaml(dynamic yaml) => yaml is String
       ? Oid.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -41,4 +41,4 @@ class Oid {
 Either<String, String> _validateOid(String value) =>
     RegExp(r'^urn:oid:[0-2](\.(0|[1-9][0-9]*))+$').hasMatch(value)
         ? right(value)
-        : left('FormatError: $value is not an Oid');
+        : left('FormatError: "$value" is not an Oid');

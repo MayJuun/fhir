@@ -13,7 +13,7 @@ class Time {
     );
   }
 
-  factory Time.fromJson(String json) => Time(json);
+  factory Time.fromJson(dynamic json) => Time(json);
 
   factory Time.fromYaml(dynamic yaml) => yaml is String
       ? Time.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -42,4 +42,4 @@ Either<String, String> _validateTime(String value) =>
     RegExp(r'^([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?$')
             .hasMatch(value)
         ? right(value)
-        : left('FormatError: $value is not a Time');
+        : left('FormatError: "$value" is not a Time');

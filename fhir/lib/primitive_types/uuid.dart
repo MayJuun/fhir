@@ -14,7 +14,7 @@ class Uuid {
     );
   }
 
-  factory Uuid.fromJson(String json) => Uuid(json);
+  factory Uuid.fromJson(dynamic json) => Uuid(json);
 
   factory Uuid.fromYaml(dynamic yaml) => yaml is String
       ? Uuid.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -40,4 +40,4 @@ class Uuid {
 }
 
 Either<String, String> _validateUuid(String value) =>
-    isUUID(value) ? right(value) : left('FormatError: $value is not a ');
+    isUUID(value) ? right(value) : left('FormatError: "$value" is not a ');

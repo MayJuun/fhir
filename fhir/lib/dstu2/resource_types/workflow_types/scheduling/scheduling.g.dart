@@ -12,19 +12,17 @@ _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Appointment),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -70,13 +68,11 @@ _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    start: json['start'] == null
-        ? null
-        : Instant.fromJson(json['start'] as String),
+    start: json['start'] == null ? null : Instant.fromJson(json['start']),
     startElement: json['_start'] == null
         ? null
         : Element.fromJson(json['_start'] as Map<String, dynamic>),
-    end: json['end'] == null ? null : Instant.fromJson(json['end'] as String),
+    end: json['end'] == null ? null : Instant.fromJson(json['end']),
     endElement: json['_end'] == null
         ? null
         : Element.fromJson(json['_end'] as Map<String, dynamic>),
@@ -295,7 +291,7 @@ _$_AppointmentParticipant _$_$_AppointmentParticipantFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['status']);
   return _$_AppointmentParticipant(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -374,19 +370,17 @@ _$_AppointmentResponse _$_$_AppointmentResponseFromJson(
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.AppointmentResponse),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -414,13 +408,11 @@ _$_AppointmentResponse _$_$_AppointmentResponseFromJson(
     appointment: json['appointment'] == null
         ? null
         : Reference.fromJson(json['appointment'] as Map<String, dynamic>),
-    start: json['start'] == null
-        ? null
-        : Instant.fromJson(json['start'] as String),
+    start: json['start'] == null ? null : Instant.fromJson(json['start']),
     startElement: json['_start'] == null
         ? null
         : Element.fromJson(json['_start'] as Map<String, dynamic>),
-    end: json['end'] == null ? null : Instant.fromJson(json['end'] as String),
+    end: json['end'] == null ? null : Instant.fromJson(json['end']),
     endElement: json['_end'] == null
         ? null
         : Element.fromJson(json['_end'] as Map<String, dynamic>),
@@ -508,19 +500,17 @@ _$_Schedule _$_$_ScheduleFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Schedule),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -604,19 +594,17 @@ _$_Slot _$_$_SlotFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Slot),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -650,13 +638,11 @@ _$_Slot _$_$_SlotFromJson(Map<String, dynamic> json) {
     freeBusyType: _$enumDecodeNullable(
         _$SlotFreeBusyTypeEnumMap, json['freeBusyType'],
         unknownValue: SlotFreeBusyType.unknown),
-    start: json['start'] == null
-        ? null
-        : Instant.fromJson(json['start'] as String),
+    start: json['start'] == null ? null : Instant.fromJson(json['start']),
     startElement: json['_start'] == null
         ? null
         : Element.fromJson(json['_start'] as Map<String, dynamic>),
-    end: json['end'] == null ? null : Instant.fromJson(json['end'] as String),
+    end: json['end'] == null ? null : Instant.fromJson(json['end']),
     endElement: json['_end'] == null
         ? null
         : Element.fromJson(json['_end'] as Map<String, dynamic>),

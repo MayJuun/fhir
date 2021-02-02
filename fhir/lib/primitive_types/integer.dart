@@ -13,7 +13,7 @@ class Integer {
     );
   }
 
-  factory Integer.fromJson(String json) => Integer(json);
+  factory Integer.fromJson(dynamic json) => Integer(json);
 
   factory Integer.fromYaml(dynamic yaml) => yaml is String
       ? Integer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -26,8 +26,8 @@ class Integer {
   bool get isValid => _value.isRight();
 
   String toString() => value.toString();
-  String toJson() => value;
-  String toYaml() => value;
+  dynamic toJson() => value;
+  dynamic toYaml() => value;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
@@ -43,4 +43,4 @@ class Integer {
 Either<String, int> _validateInteger(dynamic value) =>
     int.tryParse(value.toString()) != null
         ? right(int.parse(value.toString()))
-        : left('FormatError: $value is not an Integer');
+        : left('FormatError: "$value" is not an Integer');

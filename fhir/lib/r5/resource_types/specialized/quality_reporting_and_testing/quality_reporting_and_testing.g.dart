@@ -11,19 +11,17 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R5ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R5ResourceType.Measure),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -44,7 +42,7 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -75,9 +73,7 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -92,7 +88,7 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
         ?.toList(),
     description: json['description'] == null
         ? null
-        : Markdown.fromJson(json['description'] as String),
+        : Markdown.fromJson(json['description']),
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -105,15 +101,13 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    purpose: json['purpose'] == null
-        ? null
-        : Markdown.fromJson(json['purpose'] as String),
+    purpose:
+        json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
     purposeElement: json['_purpose'] == null
         ? null
         : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
-    copyright: json['copyright'] == null
-        ? null
-        : Markdown.fromJson(json['copyright'] as String),
+    copyright:
+        json['copyright'] == null ? null : Markdown.fromJson(json['copyright']),
     copyrightElement: json['_copyright'] == null
         ? null
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
@@ -178,11 +172,11 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
             : RelatedArtifact.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     library_: (json['library'] as List)
-        ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
+        ?.map((e) => e == null ? null : Canonical.fromJson(e))
         ?.toList(),
     disclaimer: json['disclaimer'] == null
         ? null
-        : Markdown.fromJson(json['disclaimer'] as String),
+        : Markdown.fromJson(json['disclaimer']),
     disclaimerElement: json['_disclaimer'] == null
         ? null
         : Element.fromJson(json['_disclaimer'] as Map<String, dynamic>),
@@ -206,16 +200,15 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
     rateAggregationElement: json['_rateAggregation'] == null
         ? null
         : Element.fromJson(json['_rateAggregation'] as Map<String, dynamic>),
-    rationale: json['rationale'] == null
-        ? null
-        : Markdown.fromJson(json['rationale'] as String),
+    rationale:
+        json['rationale'] == null ? null : Markdown.fromJson(json['rationale']),
     rationaleElement: json['_rationale'] == null
         ? null
         : Element.fromJson(json['_rationale'] as Map<String, dynamic>),
-    clinicalRecommendationStatement: json['clinicalRecommendationStatement'] ==
-            null
-        ? null
-        : Markdown.fromJson(json['clinicalRecommendationStatement'] as String),
+    clinicalRecommendationStatement:
+        json['clinicalRecommendationStatement'] == null
+            ? null
+            : Markdown.fromJson(json['clinicalRecommendationStatement']),
     clinicalRecommendationStatementElement:
         json['_clinicalRecommendationStatement'] == null
             ? null
@@ -226,15 +219,14 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
         : CodeableConcept.fromJson(
             json['improvementNotation'] as Map<String, dynamic>),
     definition: (json['definition'] as List)
-        ?.map((e) => e == null ? null : Markdown.fromJson(e as String))
+        ?.map((e) => e == null ? null : Markdown.fromJson(e))
         ?.toList(),
     definitionElement: (json['_definition'] as List)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    guidance: json['guidance'] == null
-        ? null
-        : Markdown.fromJson(json['guidance'] as String),
+    guidance:
+        json['guidance'] == null ? null : Markdown.fromJson(json['guidance']),
     guidanceElement: json['_guidance'] == null
         ? null
         : Element.fromJson(json['_guidance'] as Map<String, dynamic>),
@@ -807,19 +799,17 @@ _$_MeasureReport _$_$_MeasureReportFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R5ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R5ResourceType.MeasureReport),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -854,15 +844,12 @@ _$_MeasureReport _$_$_MeasureReportFromJson(Map<String, dynamic> json) {
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    measure: json['measure'] == null
-        ? null
-        : Canonical.fromJson(json['measure'] as String),
+    measure:
+        json['measure'] == null ? null : Canonical.fromJson(json['measure']),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1252,19 +1239,17 @@ _$_TestReport _$_$_TestReportFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R5ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R5ResourceType.TestReport),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1313,9 +1298,8 @@ _$_TestReport _$_$_TestReportFromJson(Map<String, dynamic> json) {
     testerElement: json['_tester'] == null
         ? null
         : Element.fromJson(json['_tester'] as Map<String, dynamic>),
-    issued: json['issued'] == null
-        ? null
-        : FhirDateTime.fromJson(json['issued'] as String),
+    issued:
+        json['issued'] == null ? null : FhirDateTime.fromJson(json['issued']),
     issuedElement: json['_issued'] == null
         ? null
         : Element.fromJson(json['_issued'] as Map<String, dynamic>),
@@ -1418,7 +1402,7 @@ _$_TestReportParticipant _$_$_TestReportParticipantFromJson(
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    uri: json['uri'] == null ? null : FhirUri.fromJson(json['uri'] as String),
+    uri: json['uri'] == null ? null : FhirUri.fromJson(json['uri']),
     uriElement: json['_uri'] == null
         ? null
         : Element.fromJson(json['_uri'] as Map<String, dynamic>),
@@ -1561,15 +1545,12 @@ _$_TestReportOperation _$_$_TestReportOperationFromJson(
     resultElement: json['_result'] == null
         ? null
         : Element.fromJson(json['_result'] as Map<String, dynamic>),
-    message: json['message'] == null
-        ? null
-        : Markdown.fromJson(json['message'] as String),
+    message:
+        json['message'] == null ? null : Markdown.fromJson(json['message']),
     messageElement: json['_message'] == null
         ? null
         : Element.fromJson(json['_message'] as Map<String, dynamic>),
-    detail: json['detail'] == null
-        ? null
-        : FhirUri.fromJson(json['detail'] as String),
+    detail: json['detail'] == null ? null : FhirUri.fromJson(json['detail']),
     detailElement: json['_detail'] == null
         ? null
         : Element.fromJson(json['_detail'] as Map<String, dynamic>),
@@ -1628,9 +1609,8 @@ _$_TestReportAssert _$_$_TestReportAssertFromJson(Map<String, dynamic> json) {
     resultElement: json['_result'] == null
         ? null
         : Element.fromJson(json['_result'] as Map<String, dynamic>),
-    message: json['message'] == null
-        ? null
-        : Markdown.fromJson(json['message'] as String),
+    message:
+        json['message'] == null ? null : Markdown.fromJson(json['message']),
     messageElement: json['_message'] == null
         ? null
         : Element.fromJson(json['_message'] as Map<String, dynamic>),
@@ -1852,19 +1832,17 @@ _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R5ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R5ResourceType.TestScript),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1885,7 +1863,7 @@ _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -1915,9 +1893,7 @@ _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1932,7 +1908,7 @@ _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
         ?.toList(),
     description: json['description'] == null
         ? null
-        : Markdown.fromJson(json['description'] as String),
+        : Markdown.fromJson(json['description']),
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -1945,15 +1921,13 @@ _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    purpose: json['purpose'] == null
-        ? null
-        : Markdown.fromJson(json['purpose'] as String),
+    purpose:
+        json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
     purposeElement: json['_purpose'] == null
         ? null
         : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
-    copyright: json['copyright'] == null
-        ? null
-        : Markdown.fromJson(json['copyright'] as String),
+    copyright:
+        json['copyright'] == null ? null : Markdown.fromJson(json['copyright']),
     copyrightElement: json['_copyright'] == null
         ? null
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
@@ -2219,7 +2193,7 @@ _$_TestScriptLink _$_$_TestScriptLinkFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -2293,7 +2267,7 @@ _$_TestScriptCapability _$_$_TestScriptCapabilityFromJson(
         ? null
         : Element.fromJson(json['_destination'] as Map<String, dynamic>),
     link: (json['link'] as List)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
         ?.toList(),
     linkElement: (json['_link'] as List)
         ?.map((e) =>
@@ -2301,7 +2275,7 @@ _$_TestScriptCapability _$_$_TestScriptCapabilityFromJson(
         ?.toList(),
     capabilities: json['capabilities'] == null
         ? null
-        : Canonical.fromJson(json['capabilities'] as String),
+        : Canonical.fromJson(json['capabilities']),
   );
 }
 
@@ -2434,9 +2408,7 @@ _$_TestScriptVariable _$_$_TestScriptVariableFromJson(
     pathElement: json['_path'] == null
         ? null
         : Element.fromJson(json['_path'] as Map<String, dynamic>),
-    sourceId: json['sourceId'] == null
-        ? null
-        : Id.fromJson(json['sourceId'] as String),
+    sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
     sourceIdElement: json['_sourceId'] == null
         ? null
         : Element.fromJson(json['_sourceId'] as Map<String, dynamic>),
@@ -2575,9 +2547,7 @@ _$_TestScriptOperation _$_$_TestScriptOperationFromJson(
     type: json['type'] == null
         ? null
         : Coding.fromJson(json['type'] as Map<String, dynamic>),
-    resource: json['resource'] == null
-        ? null
-        : Code.fromJson(json['resource'] as String),
+    resource: json['resource'] == null ? null : Code.fromJson(json['resource']),
     resourceElement: json['_resource'] == null
         ? null
         : Element.fromJson(json['_resource'] as Map<String, dynamic>),
@@ -2589,14 +2559,12 @@ _$_TestScriptOperation _$_$_TestScriptOperationFromJson(
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    accept:
-        json['accept'] == null ? null : Code.fromJson(json['accept'] as String),
+    accept: json['accept'] == null ? null : Code.fromJson(json['accept']),
     acceptElement: json['_accept'] == null
         ? null
         : Element.fromJson(json['_accept'] as Map<String, dynamic>),
-    contentType: json['contentType'] == null
-        ? null
-        : Code.fromJson(json['contentType'] as String),
+    contentType:
+        json['contentType'] == null ? null : Code.fromJson(json['contentType']),
     contentTypeElement: json['_contentType'] == null
         ? null
         : Element.fromJson(json['_contentType'] as Map<String, dynamic>),
@@ -2631,27 +2599,21 @@ _$_TestScriptOperation _$_$_TestScriptOperationFromJson(
             ? null
             : TestScriptRequestHeader.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    requestId: json['requestId'] == null
-        ? null
-        : Id.fromJson(json['requestId'] as String),
+    requestId:
+        json['requestId'] == null ? null : Id.fromJson(json['requestId']),
     requestIdElement: json['_requestId'] == null
         ? null
         : Element.fromJson(json['_requestId'] as Map<String, dynamic>),
-    responseId: json['responseId'] == null
-        ? null
-        : Id.fromJson(json['responseId'] as String),
+    responseId:
+        json['responseId'] == null ? null : Id.fromJson(json['responseId']),
     responseIdElement: json['_responseId'] == null
         ? null
         : Element.fromJson(json['_responseId'] as Map<String, dynamic>),
-    sourceId: json['sourceId'] == null
-        ? null
-        : Id.fromJson(json['sourceId'] as String),
+    sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
     sourceIdElement: json['_sourceId'] == null
         ? null
         : Element.fromJson(json['_sourceId'] as Map<String, dynamic>),
-    targetId: json['targetId'] == null
-        ? null
-        : Id.fromJson(json['targetId'] as String),
+    targetId: json['targetId'] == null ? null : Id.fromJson(json['targetId']),
     targetIdElement: json['_targetId'] == null
         ? null
         : Element.fromJson(json['_targetId'] as Map<String, dynamic>),
@@ -2812,9 +2774,8 @@ _$_TestScriptAssert _$_$_TestScriptAssertFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(
             json['_compareToSourcePath'] as Map<String, dynamic>),
-    contentType: json['contentType'] == null
-        ? null
-        : Code.fromJson(json['contentType'] as String),
+    contentType:
+        json['contentType'] == null ? null : Code.fromJson(json['contentType']),
     contentTypeElement: json['_contentType'] == null
         ? null
         : Element.fromJson(json['_contentType'] as Map<String, dynamic>),
@@ -2856,9 +2817,7 @@ _$_TestScriptAssert _$_$_TestScriptAssertFromJson(Map<String, dynamic> json) {
     requestURLElement: json['_requestURL'] == null
         ? null
         : Element.fromJson(json['_requestURL'] as Map<String, dynamic>),
-    resource: json['resource'] == null
-        ? null
-        : Code.fromJson(json['resource'] as String),
+    resource: json['resource'] == null ? null : Code.fromJson(json['resource']),
     resourceElement: json['_resource'] == null
         ? null
         : Element.fromJson(json['_resource'] as Map<String, dynamic>),
@@ -2872,15 +2831,13 @@ _$_TestScriptAssert _$_$_TestScriptAssertFromJson(Map<String, dynamic> json) {
     responseCodeElement: json['_responseCode'] == null
         ? null
         : Element.fromJson(json['_responseCode'] as Map<String, dynamic>),
-    sourceId: json['sourceId'] == null
-        ? null
-        : Id.fromJson(json['sourceId'] as String),
+    sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
     sourceIdElement: json['_sourceId'] == null
         ? null
         : Element.fromJson(json['_sourceId'] as Map<String, dynamic>),
     validateProfileId: json['validateProfileId'] == null
         ? null
-        : Id.fromJson(json['validateProfileId'] as String),
+        : Id.fromJson(json['validateProfileId']),
     validateProfileIdElement: json['_validateProfileId'] == null
         ? null
         : Element.fromJson(json['_validateProfileId'] as Map<String, dynamic>),

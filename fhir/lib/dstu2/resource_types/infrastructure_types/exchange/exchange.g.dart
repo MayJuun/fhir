@@ -12,19 +12,17 @@ _$_MessageHeader _$_$_MessageHeaderFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.MessageHeader),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -45,9 +43,8 @@ _$_MessageHeader _$_$_MessageHeaderFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    timestamp: json['timestamp'] == null
-        ? null
-        : Instant.fromJson(json['timestamp'] as String),
+    timestamp:
+        json['timestamp'] == null ? null : Instant.fromJson(json['timestamp']),
     event: json['event'] == null
         ? null
         : Coding.fromJson(json['event'] as Map<String, dynamic>),
@@ -258,7 +255,7 @@ _$_MessageHeaderResponse _$_$_MessageHeaderResponseFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['identifier', 'code']);
   return _$_MessageHeaderResponse(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -269,9 +266,8 @@ _$_MessageHeaderResponse _$_$_MessageHeaderResponseFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    identifier: json['identifier'] == null
-        ? null
-        : Id.fromJson(json['identifier'] as String),
+    identifier:
+        json['identifier'] == null ? null : Id.fromJson(json['identifier']),
     identifierElement: json['_identifier'] == null
         ? null
         : Element.fromJson(json['_identifier'] as Map<String, dynamic>),
@@ -320,7 +316,7 @@ _$_MessageHeaderSource _$_$_MessageHeaderSourceFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['endpoint']);
   return _$_MessageHeaderSource(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -346,9 +342,8 @@ _$_MessageHeaderSource _$_$_MessageHeaderSourceFromJson(
     contact: json['contact'] == null
         ? null
         : ContactPoint.fromJson(json['contact'] as Map<String, dynamic>),
-    endpoint: json['endpoint'] == null
-        ? null
-        : FhirUri.fromJson(json['endpoint'] as String),
+    endpoint:
+        json['endpoint'] == null ? null : FhirUri.fromJson(json['endpoint']),
     endpointElement: json['_endpoint'] == null
         ? null
         : Element.fromJson(json['_endpoint'] as Map<String, dynamic>),
@@ -386,7 +381,7 @@ _$_MessageHeaderDestination _$_$_MessageHeaderDestinationFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['endpoint']);
   return _$_MessageHeaderDestination(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -404,9 +399,8 @@ _$_MessageHeaderDestination _$_$_MessageHeaderDestinationFromJson(
     target: json['target'] == null
         ? null
         : Reference.fromJson(json['target'] as Map<String, dynamic>),
-    endpoint: json['endpoint'] == null
-        ? null
-        : FhirUri.fromJson(json['endpoint'] as String),
+    endpoint:
+        json['endpoint'] == null ? null : FhirUri.fromJson(json['endpoint']),
     endpointElement: json['_endpoint'] == null
         ? null
         : Element.fromJson(json['_endpoint'] as Map<String, dynamic>),
@@ -442,7 +436,7 @@ _$_OperationOutcome _$_$_OperationOutcomeFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.OperationOutcome),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     idElement: json['_id'] == null
         ? null
         : Element.fromJson(json['_id'] as Map<String, dynamic>),
@@ -451,13 +445,11 @@ _$_OperationOutcome _$_$_OperationOutcomeFromJson(Map<String, dynamic> json) {
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -519,7 +511,7 @@ _$_OperationOutcomeIssue _$_$_OperationOutcomeIssueFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['severity', 'code']);
   return _$_OperationOutcomeIssue(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -532,7 +524,7 @@ _$_OperationOutcomeIssue _$_$_OperationOutcomeIssueFromJson(
         ?.toList(),
     severity: _$enumDecodeNullable(_$IssueSeverityEnumMap, json['severity'],
         unknownValue: IssueSeverity.unknown),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     details: json['details'] == null
         ? null
         : CodeableConcept.fromJson(json['details'] as Map<String, dynamic>),
@@ -577,19 +569,17 @@ _$_Parameters _$_$_ParametersFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Parameters),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -651,7 +641,7 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['name']);
   return _$_ParametersParameter(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -680,7 +670,7 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
         : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime']),
     valueDateTimeElement: json['_valueDateTime'] == null
         ? null
         : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -692,7 +682,7 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
     valueInstant: json['valueInstant'] == null
         ? null
-        : Instant.fromJson(json['valueInstant'] as String),
+        : Instant.fromJson(json['valueInstant']),
     valueInstantElement: json['_valueInstant'] == null
         ? null
         : Element.fromJson(json['_valueInstant'] as Map<String, dynamic>),
@@ -700,9 +690,8 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
     valueStringElement: json['_valueString'] == null
         ? null
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
-    valueUri: json['valueUri'] == null
-        ? null
-        : FhirUri.fromJson(json['valueUri'] as String),
+    valueUri:
+        json['valueUri'] == null ? null : FhirUri.fromJson(json['valueUri']),
     valueUriElement: json['_valueUri'] == null
         ? null
         : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
@@ -712,15 +701,14 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
     valueBooleanElement: json['_valueBoolean'] == null
         ? null
         : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
-    valueCode: json['valueCode'] == null
-        ? null
-        : Code.fromJson(json['valueCode'] as String),
+    valueCode:
+        json['valueCode'] == null ? null : Code.fromJson(json['valueCode']),
     valueCodeElement: json['_valueCode'] == null
         ? null
         : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
     valueBase64Binary: json['valueBase64Binary'] == null
         ? null
-        : Base64Binary.fromJson(json['valueBase64Binary'] as String),
+        : Base64Binary.fromJson(json['valueBase64Binary']),
     valueBase64BinaryElement: json['_valueBase64Binary'] == null
         ? null
         : Element.fromJson(json['_valueBase64Binary'] as Map<String, dynamic>),
@@ -839,19 +827,17 @@ _$_Subscription _$_$_SubscriptionFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Subscription),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -896,7 +882,7 @@ _$_Subscription _$_$_SubscriptionFromJson(Map<String, dynamic> json) {
     channel: json['channel'] == null
         ? null
         : SubscriptionChannel.fromJson(json['channel'] as Map<String, dynamic>),
-    end: json['end'] == null ? null : Instant.fromJson(json['end'] as String),
+    end: json['end'] == null ? null : Instant.fromJson(json['end']),
     endElement: json['_end'] == null
         ? null
         : Element.fromJson(json['_end'] as Map<String, dynamic>),
@@ -959,7 +945,7 @@ _$_SubscriptionChannel _$_$_SubscriptionChannelFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type', 'payload']);
   return _$_SubscriptionChannel(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -975,9 +961,8 @@ _$_SubscriptionChannel _$_$_SubscriptionChannelFromJson(
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    endpoint: json['endpoint'] == null
-        ? null
-        : FhirUri.fromJson(json['endpoint'] as String),
+    endpoint:
+        json['endpoint'] == null ? null : FhirUri.fromJson(json['endpoint']),
     endpointElement: json['_endpoint'] == null
         ? null
         : Element.fromJson(json['_endpoint'] as Map<String, dynamic>),

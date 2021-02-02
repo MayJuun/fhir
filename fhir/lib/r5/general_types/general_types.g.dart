@@ -54,14 +54,11 @@ _$_Annotation _$_$_AnnotationFromJson(Map<String, dynamic> json) {
     authorStringElement: json['_authorString'] == null
         ? null
         : Element.fromJson(json['_authorString'] as Map<String, dynamic>),
-    time: json['time'] == null
-        ? null
-        : FhirDateTime.fromJson(json['time'] as String),
+    time: json['time'] == null ? null : FhirDateTime.fromJson(json['time']),
     timeElement: json['_time'] == null
         ? null
         : Element.fromJson(json['_time'] as Map<String, dynamic>),
-    text:
-        json['text'] == null ? null : Markdown.fromJson(json['text'] as String),
+    text: json['text'] == null ? null : Markdown.fromJson(json['text']),
     textElement: json['_text'] == null
         ? null
         : Element.fromJson(json['_text'] as Map<String, dynamic>),
@@ -98,25 +95,20 @@ _$_Attachment _$_$_AttachmentFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    contentType: json['contentType'] == null
-        ? null
-        : Code.fromJson(json['contentType'] as String),
+    contentType:
+        json['contentType'] == null ? null : Code.fromJson(json['contentType']),
     contentTypeElement: json['_contentType'] == null
         ? null
         : Element.fromJson(json['_contentType'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    data: json['data'] == null
-        ? null
-        : Base64Binary.fromJson(json['data'] as String),
+    data: json['data'] == null ? null : Base64Binary.fromJson(json['data']),
     dataElement: json['_data'] == null
         ? null
         : Element.fromJson(json['_data'] as Map<String, dynamic>),
-    url: json['url'] == null ? null : FhirUrl.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUrl.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -124,9 +116,7 @@ _$_Attachment _$_$_AttachmentFromJson(Map<String, dynamic> json) {
     sizeElement: json['_size'] == null
         ? null
         : Element.fromJson(json['_size'] as Map<String, dynamic>),
-    hash: json['hash'] == null
-        ? null
-        : Base64Binary.fromJson(json['hash'] as String),
+    hash: json['hash'] == null ? null : Base64Binary.fromJson(json['hash']),
     hashElement: json['_hash'] == null
         ? null
         : Element.fromJson(json['_hash'] as Map<String, dynamic>),
@@ -136,7 +126,7 @@ _$_Attachment _$_$_AttachmentFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_title'] as Map<String, dynamic>),
     creation: json['creation'] == null
         ? null
-        : FhirDateTime.fromJson(json['creation'] as String),
+        : FhirDateTime.fromJson(json['creation']),
     creationElement: json['_creation'] == null
         ? null
         : Element.fromJson(json['_creation'] as Map<String, dynamic>),
@@ -223,9 +213,7 @@ _$_Identifier _$_$_IdentifierFromJson(Map<String, dynamic> json) {
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    system: json['system'] == null
-        ? null
-        : FhirUri.fromJson(json['system'] as String),
+    system: json['system'] == null ? null : FhirUri.fromJson(json['system']),
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
@@ -352,9 +340,7 @@ _$_Coding _$_$_CodingFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    system: json['system'] == null
-        ? null
-        : FhirUri.fromJson(json['system'] as String),
+    system: json['system'] == null ? null : FhirUri.fromJson(json['system']),
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
@@ -362,7 +348,7 @@ _$_Coding _$_$_CodingFromJson(Map<String, dynamic> json) {
     versionElement: json['_version'] == null
         ? null
         : Element.fromJson(json['_version'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -426,13 +412,11 @@ _$_Quantity _$_$_QuantityFromJson(Map<String, dynamic> json) {
     unitElement: json['_unit'] == null
         ? null
         : Element.fromJson(json['_unit'] as Map<String, dynamic>),
-    system: json['system'] == null
-        ? null
-        : FhirUri.fromJson(json['system'] as String),
+    system: json['system'] == null ? null : FhirUri.fromJson(json['system']),
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -494,13 +478,11 @@ _$_FhirDuration _$_$_FhirDurationFromJson(Map<String, dynamic> json) {
     unitElement: json['_unit'] == null
         ? null
         : Element.fromJson(json['_unit'] as Map<String, dynamic>),
-    system: json['system'] == null
-        ? null
-        : FhirUri.fromJson(json['system'] as String),
+    system: json['system'] == null ? null : FhirUri.fromJson(json['system']),
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -562,13 +544,11 @@ _$_Distance _$_$_DistanceFromJson(Map<String, dynamic> json) {
     unitElement: json['_unit'] == null
         ? null
         : Element.fromJson(json['_unit'] as Map<String, dynamic>),
-    system: json['system'] == null
-        ? null
-        : FhirUri.fromJson(json['system'] as String),
+    system: json['system'] == null ? null : FhirUri.fromJson(json['system']),
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -630,13 +610,11 @@ _$_Count _$_$_CountFromJson(Map<String, dynamic> json) {
     unitElement: json['_unit'] == null
         ? null
         : Element.fromJson(json['_unit'] as Map<String, dynamic>),
-    system: json['system'] == null
-        ? null
-        : FhirUri.fromJson(json['system'] as String),
+    system: json['system'] == null ? null : FhirUri.fromJson(json['system']),
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -688,9 +666,7 @@ _$_Money _$_$_MoneyFromJson(Map<String, dynamic> json) {
     valueElement: json['_value'] == null
         ? null
         : Element.fromJson(json['_value'] as Map<String, dynamic>),
-    currency: json['currency'] == null
-        ? null
-        : Code.fromJson(json['currency'] as String),
+    currency: json['currency'] == null ? null : Code.fromJson(json['currency']),
     currencyElement: json['_currency'] == null
         ? null
         : Element.fromJson(json['_currency'] as Map<String, dynamic>),
@@ -737,13 +713,11 @@ _$_Age _$_$_AgeFromJson(Map<String, dynamic> json) {
     unitElement: json['_unit'] == null
         ? null
         : Element.fromJson(json['_unit'] as Map<String, dynamic>),
-    system: json['system'] == null
-        ? null
-        : FhirUri.fromJson(json['system'] as String),
+    system: json['system'] == null ? null : FhirUri.fromJson(json['system']),
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -825,15 +799,11 @@ _$_Period _$_$_PeriodFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    start: json['start'] == null
-        ? null
-        : FhirDateTime.fromJson(json['start'] as String),
+    start: json['start'] == null ? null : FhirDateTime.fromJson(json['start']),
     startElement: json['_start'] == null
         ? null
         : Element.fromJson(json['_start'] as Map<String, dynamic>),
-    end: json['end'] == null
-        ? null
-        : FhirDateTime.fromJson(json['end'] as String),
+    end: json['end'] == null ? null : FhirDateTime.fromJson(json['end']),
     endElement: json['_end'] == null
         ? null
         : Element.fromJson(json['_end'] as Map<String, dynamic>),
@@ -977,8 +947,7 @@ _$_Signature _$_$_SignatureFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    when:
-        json['when'] == null ? null : Instant.fromJson(json['when'] as String),
+    when: json['when'] == null ? null : Instant.fromJson(json['when']),
     whenElement: json['_when'] == null
         ? null
         : Element.fromJson(json['_when'] as Map<String, dynamic>),
@@ -990,19 +959,16 @@ _$_Signature _$_$_SignatureFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
     targetFormat: json['targetFormat'] == null
         ? null
-        : Code.fromJson(json['targetFormat'] as String),
+        : Code.fromJson(json['targetFormat']),
     targetFormatElement: json['_targetFormat'] == null
         ? null
         : Element.fromJson(json['_targetFormat'] as Map<String, dynamic>),
-    sigFormat: json['sigFormat'] == null
-        ? null
-        : Code.fromJson(json['sigFormat'] as String),
+    sigFormat:
+        json['sigFormat'] == null ? null : Code.fromJson(json['sigFormat']),
     sigFormatElement: json['_sigFormat'] == null
         ? null
         : Element.fromJson(json['_sigFormat'] as Map<String, dynamic>),
-    data: json['data'] == null
-        ? null
-        : Base64Binary.fromJson(json['data'] as String),
+    data: json['data'] == null ? null : Base64Binary.fromJson(json['data']),
     dataElement: json['_data'] == null
         ? null
         : Element.fromJson(json['_data'] as Map<String, dynamic>),
@@ -1313,7 +1279,7 @@ _$_Timing _$_$_TimingFromJson(Map<String, dynamic> json) {
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     event: (json['event'] as List)
-        ?.map((e) => e == null ? null : FhirDateTime.fromJson(e as String))
+        ?.map((e) => e == null ? null : FhirDateTime.fromJson(e))
         ?.toList(),
     eventElement: (json['_event'] as List)
         ?.map((e) =>
@@ -1427,14 +1393,14 @@ _$_TimingRepeat _$_$_TimingRepeatFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_periodUnit'] as Map<String, dynamic>),
     dayOfWeek: (json['dayOfWeek'] as List)
-        ?.map((e) => e == null ? null : Code.fromJson(e as String))
+        ?.map((e) => e == null ? null : Code.fromJson(e))
         ?.toList(),
     dayOfWeekElement: (json['_dayOfWeek'] as List)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     timeOfDay: (json['timeOfDay'] as List)
-        ?.map((e) => e == null ? null : Time.fromJson(e as String))
+        ?.map((e) => e == null ? null : Time.fromJson(e))
         ?.toList(),
     timeOfDayElement: (json['_timeOfDay'] as List)
         ?.map((e) =>

@@ -12,19 +12,17 @@ _$_PaymentNotice _$_$_PaymentNoticeFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.PaymentNotice),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -55,9 +53,8 @@ _$_PaymentNotice _$_$_PaymentNoticeFromJson(Map<String, dynamic> json) {
     originalRuleset: json['originalRuleset'] == null
         ? null
         : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created:
+        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -258,19 +255,17 @@ _$_PaymentReconciliation _$_$_PaymentReconciliationFromJson(
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.PaymentReconciliation),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -314,9 +309,8 @@ _$_PaymentReconciliation _$_$_PaymentReconciliationFromJson(
     originalRuleset: json['originalRuleset'] == null
         ? null
         : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created:
+        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -410,7 +404,7 @@ _$_PaymentReconciliationDetail _$_$_PaymentReconciliationDetailFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type']);
   return _$_PaymentReconciliationDetail(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -475,7 +469,7 @@ Map<String, dynamic> _$_$_PaymentReconciliationDetailToJson(
 _$_PaymentReconciliationNote _$_$_PaymentReconciliationNoteFromJson(
     Map<String, dynamic> json) {
   return _$_PaymentReconciliationNote(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null

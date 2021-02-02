@@ -8,7 +8,7 @@ part of 'general_types.dart';
 
 _$_Period _$_$_PeriodFromJson(Map<String, dynamic> json) {
   return _$_Period(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -16,15 +16,11 @@ _$_Period _$_$_PeriodFromJson(Map<String, dynamic> json) {
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    start: json['start'] == null
-        ? null
-        : FhirDateTime.fromJson(json['start'] as String),
+    start: json['start'] == null ? null : FhirDateTime.fromJson(json['start']),
     startElement: json['_start'] == null
         ? null
         : Element.fromJson(json['_start'] as Map<String, dynamic>),
-    end: json['end'] == null
-        ? null
-        : FhirDateTime.fromJson(json['end'] as String),
+    end: json['end'] == null ? null : FhirDateTime.fromJson(json['end']),
     endElement: json['_end'] == null
         ? null
         : Element.fromJson(json['_end'] as Map<String, dynamic>),
@@ -53,7 +49,7 @@ Map<String, dynamic> _$_$_PeriodToJson(_$_Period instance) {
 
 _$_Coding _$_$_CodingFromJson(Map<String, dynamic> json) {
   return _$_Coding(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -61,9 +57,7 @@ _$_Coding _$_$_CodingFromJson(Map<String, dynamic> json) {
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    system: json['system'] == null
-        ? null
-        : FhirUri.fromJson(json['system'] as String),
+    system: json['system'] == null ? null : FhirUri.fromJson(json['system']),
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
@@ -71,7 +65,7 @@ _$_Coding _$_$_CodingFromJson(Map<String, dynamic> json) {
     versionElement: json['_version'] == null
         ? null
         : Element.fromJson(json['_version'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -116,7 +110,7 @@ Map<String, dynamic> _$_$_CodingToJson(_$_Coding instance) {
 
 _$_Range _$_$_RangeFromJson(Map<String, dynamic> json) {
   return _$_Range(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -150,7 +144,7 @@ Map<String, dynamic> _$_$_RangeToJson(_$_Range instance) {
 
 _$_Quantity _$_$_QuantityFromJson(Map<String, dynamic> json) {
   return _$_Quantity(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -172,13 +166,11 @@ _$_Quantity _$_$_QuantityFromJson(Map<String, dynamic> json) {
     unitElement: json['_unit'] == null
         ? null
         : Element.fromJson(json['_unit'] as Map<String, dynamic>),
-    system: json['system'] == null
-        ? null
-        : FhirUri.fromJson(json['system'] as String),
+    system: json['system'] == null ? null : FhirUri.fromJson(json['system']),
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -253,7 +245,7 @@ const _$QuantityComparatorEnumMap = {
 
 _$_Attachment _$_$_AttachmentFromJson(Map<String, dynamic> json) {
   return _$_Attachment(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -261,25 +253,20 @@ _$_Attachment _$_$_AttachmentFromJson(Map<String, dynamic> json) {
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    contentType: json['contentType'] == null
-        ? null
-        : Code.fromJson(json['contentType'] as String),
+    contentType:
+        json['contentType'] == null ? null : Code.fromJson(json['contentType']),
     contentTypeElement: json['_contentType'] == null
         ? null
         : Element.fromJson(json['_contentType'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    data: json['data'] == null
-        ? null
-        : Base64Binary.fromJson(json['data'] as String),
+    data: json['data'] == null ? null : Base64Binary.fromJson(json['data']),
     dataElement: json['_data'] == null
         ? null
         : Element.fromJson(json['_data'] as Map<String, dynamic>),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -287,9 +274,7 @@ _$_Attachment _$_$_AttachmentFromJson(Map<String, dynamic> json) {
     sizeElement: json['_size'] == null
         ? null
         : Element.fromJson(json['_size'] as Map<String, dynamic>),
-    hash: json['hash'] == null
-        ? null
-        : Base64Binary.fromJson(json['hash'] as String),
+    hash: json['hash'] == null ? null : Base64Binary.fromJson(json['hash']),
     hashElement: json['_hash'] == null
         ? null
         : Element.fromJson(json['_hash'] as Map<String, dynamic>),
@@ -299,7 +284,7 @@ _$_Attachment _$_$_AttachmentFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_title'] as Map<String, dynamic>),
     creation: json['creation'] == null
         ? null
-        : FhirDateTime.fromJson(json['creation'] as String),
+        : FhirDateTime.fromJson(json['creation']),
     creationElement: json['_creation'] == null
         ? null
         : Element.fromJson(json['_creation'] as Map<String, dynamic>),
@@ -340,7 +325,7 @@ Map<String, dynamic> _$_$_AttachmentToJson(_$_Attachment instance) {
 
 _$_Ratio _$_$_RatioFromJson(Map<String, dynamic> json) {
   return _$_Ratio(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -375,7 +360,7 @@ Map<String, dynamic> _$_$_RatioToJson(_$_Ratio instance) {
 _$_Annotation _$_$_AnnotationFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['text']);
   return _$_Annotation(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -390,9 +375,7 @@ _$_Annotation _$_$_AnnotationFromJson(Map<String, dynamic> json) {
     authorStringElement: json['_authorString'] == null
         ? null
         : Element.fromJson(json['_authorString'] as Map<String, dynamic>),
-    time: json['time'] == null
-        ? null
-        : FhirDateTime.fromJson(json['time'] as String),
+    time: json['time'] == null ? null : FhirDateTime.fromJson(json['time']),
     timeElement: json['_time'] == null
         ? null
         : Element.fromJson(json['_time'] as Map<String, dynamic>),
@@ -430,7 +413,7 @@ _$_SampledData _$_$_SampledDataFromJson(Map<String, dynamic> json) {
   $checkKeys(json,
       requiredKeys: const ['origin', 'period', 'dimensions', 'data']);
   return _$_SampledData(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -502,7 +485,7 @@ Map<String, dynamic> _$_$_SampledDataToJson(_$_SampledData instance) {
 
 _$_CodeableConcept _$_$_CodeableConceptFromJson(Map<String, dynamic> json) {
   return _$_CodeableConcept(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -542,7 +525,7 @@ Map<String, dynamic> _$_$_CodeableConceptToJson(_$_CodeableConcept instance) {
 
 _$_Identifier _$_$_IdentifierFromJson(Map<String, dynamic> json) {
   return _$_Identifier(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -558,9 +541,7 @@ _$_Identifier _$_$_IdentifierFromJson(Map<String, dynamic> json) {
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    system: json['system'] == null
-        ? null
-        : FhirUri.fromJson(json['system'] as String),
+    system: json['system'] == null ? null : FhirUri.fromJson(json['system']),
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
@@ -613,7 +594,7 @@ const _$IdentifierUseEnumMap = {
 _$_Signature _$_$_SignatureFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type', 'when', 'contentType', 'blob']);
   return _$_Signature(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -623,23 +604,17 @@ _$_Signature _$_$_SignatureFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    when:
-        json['when'] == null ? null : Instant.fromJson(json['when'] as String),
+    when: json['when'] == null ? null : Instant.fromJson(json['when']),
     whenElement: json['_when'] == null
         ? null
         : Element.fromJson(json['_when'] as Map<String, dynamic>),
-    whoUri: json['whoUri'] == null
-        ? null
-        : FhirUri.fromJson(json['whoUri'] as String),
+    whoUri: json['whoUri'] == null ? null : FhirUri.fromJson(json['whoUri']),
     whoReference: json['whoReference'] == null
         ? null
         : Reference.fromJson(json['whoReference'] as Map<String, dynamic>),
-    contentType: json['contentType'] == null
-        ? null
-        : Code.fromJson(json['contentType'] as String),
-    blob: json['blob'] == null
-        ? null
-        : Base64Binary.fromJson(json['blob'] as String),
+    contentType:
+        json['contentType'] == null ? null : Code.fromJson(json['contentType']),
+    blob: json['blob'] == null ? null : Base64Binary.fromJson(json['blob']),
     targetFormatElement: json['_targetFormat'] == null
         ? null
         : Element.fromJson(json['_targetFormat'] as Map<String, dynamic>),
@@ -683,7 +658,7 @@ Map<String, dynamic> _$_$_SignatureToJson(_$_Signature instance) {
 
 _$_Timing _$_$_TimingFromJson(Map<String, dynamic> json) {
   return _$_Timing(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -692,7 +667,7 @@ _$_Timing _$_$_TimingFromJson(Map<String, dynamic> json) {
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     event: (json['event'] as List)
-        ?.map((e) => e == null ? null : FhirDateTime.fromJson(e as String))
+        ?.map((e) => e == null ? null : FhirDateTime.fromJson(e))
         ?.toList(),
     eventElement: json['_event'] == null
         ? null
@@ -728,7 +703,7 @@ Map<String, dynamic> _$_$_TimingToJson(_$_Timing instance) {
 
 _$_Address _$_$_AddressFromJson(Map<String, dynamic> json) {
   return _$_Address(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -832,7 +807,7 @@ const _$AddressTypeEnumMap = {
 
 _$_HumanName _$_$_HumanNameFromJson(Map<String, dynamic> json) {
   return _$_HumanName(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -917,7 +892,7 @@ const _$HumanNameUseEnumMap = {
 
 _$_ContactPoint _$_$_ContactPointFromJson(Map<String, dynamic> json) {
   return _$_ContactPoint(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -994,7 +969,7 @@ const _$ContactPointUseEnumMap = {
 
 _$_TimingRepeat _$_$_TimingRepeatFromJson(Map<String, dynamic> json) {
   return _$_TimingRepeat(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1057,7 +1032,7 @@ _$_TimingRepeat _$_$_TimingRepeatFromJson(Map<String, dynamic> json) {
     periodUnitElement: json['_periodUnits'] == null
         ? null
         : Element.fromJson(json['_periodUnits'] as Map<String, dynamic>),
-    when: json['when'] == null ? null : Code.fromJson(json['when'] as String),
+    when: json['when'] == null ? null : Code.fromJson(json['when']),
     whenElement: json['_when'] == null
         ? null
         : Element.fromJson(json['_when'] as Map<String, dynamic>),

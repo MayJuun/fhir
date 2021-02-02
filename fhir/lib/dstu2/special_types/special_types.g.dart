@@ -8,7 +8,7 @@ part of 'special_types.dart';
 
 _$_Meta _$_$_MetaFromJson(Map<String, dynamic> json) {
   return _$_Meta(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -16,20 +16,19 @@ _$_Meta _$_$_MetaFromJson(Map<String, dynamic> json) {
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    versionId: json['versionId'] == null
-        ? null
-        : Id.fromJson(json['versionId'] as String),
+    versionId:
+        json['versionId'] == null ? null : Id.fromJson(json['versionId']),
     versionIdElement: json['_versionId'] == null
         ? null
         : Element.fromJson(json['_versionId'] as Map<String, dynamic>),
     lastUpdated: json['lastUpdated'] == null
         ? null
-        : Instant.fromJson(json['lastUpdated'] as String),
+        : Instant.fromJson(json['lastUpdated']),
     lastUpdatedElement: json['_lastUpdated'] == null
         ? null
         : Element.fromJson(json['_lastUpdated'] as Map<String, dynamic>),
     profile: (json['profile'] as List)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
         ?.toList(),
     security: (json['security'] as List)
         ?.map((e) =>
@@ -68,7 +67,7 @@ Map<String, dynamic> _$_$_MetaToJson(_$_Meta instance) {
 
 _$_Reference _$_$_ReferenceFromJson(Map<String, dynamic> json) {
   return _$_Reference(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -110,7 +109,7 @@ Map<String, dynamic> _$_$_ReferenceToJson(_$_Reference instance) {
 _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['path']);
   return _$_ElementDefinition(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -118,7 +117,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         ?.toList(),
     path: json['path'] as String,
     representation: (json['representation'] as List)
-        ?.map((e) => e == null ? null : Code.fromJson(e as String))
+        ?.map((e) => e == null ? null : Code.fromJson(e))
         ?.toList(),
     representationElement: json['_representation'] == null
         ? null
@@ -142,19 +141,18 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_short'] as Map<String, dynamic>),
     definition: json['definition'] == null
         ? null
-        : Markdown.fromJson(json['definition'] as String),
+        : Markdown.fromJson(json['definition']),
     definitionElement: json['_definition'] == null
         ? null
         : Element.fromJson(json['_definition'] as Map<String, dynamic>),
-    comments: json['comments'] == null
-        ? null
-        : Markdown.fromJson(json['comments'] as String),
+    comments:
+        json['comments'] == null ? null : Markdown.fromJson(json['comments']),
     commentElement: json['_comments'] == null
         ? null
         : Element.fromJson(json['_comments'] as Map<String, dynamic>),
     requirements: json['requirements'] == null
         ? null
-        : Markdown.fromJson(json['requirements'] as String),
+        : Markdown.fromJson(json['requirements']),
     requirementsElement: json['_requirements'] == null
         ? null
         : Element.fromJson(json['_requirements'] as Map<String, dynamic>),
@@ -202,14 +200,14 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
             json['_defaultValueDecimal'] as Map<String, dynamic>),
     defaultValueBase64Binary: json['defaultValueBase64Binary'] == null
         ? null
-        : Base64Binary.fromJson(json['defaultValueBase64Binary'] as String),
+        : Base64Binary.fromJson(json['defaultValueBase64Binary']),
     defaultValueBase64BinaryElement: json['_defaultValueBase64Binary'] == null
         ? null
         : Element.fromJson(
             json['_defaultValueBase64Binary'] as Map<String, dynamic>),
     defaultValueInstant: json['defaultValueInstant'] == null
         ? null
-        : Instant.fromJson(json['defaultValueInstant'] as String),
+        : Instant.fromJson(json['defaultValueInstant']),
     defaultValueInstantElement: json['_defaultValueInstant'] == null
         ? null
         : Element.fromJson(
@@ -220,7 +218,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_defaultValueString'] as Map<String, dynamic>),
     defaultValueUri: json['defaultValueUri'] == null
         ? null
-        : FhirUri.fromJson(json['defaultValueUri'] as String),
+        : FhirUri.fromJson(json['defaultValueUri']),
     defaultValueUriElement: json['_defaultValueUri'] == null
         ? null
         : Element.fromJson(json['_defaultValueUri'] as Map<String, dynamic>),
@@ -232,32 +230,32 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_defaultValueDate'] as Map<String, dynamic>),
     defaultValueDateTime: json['defaultValueDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['defaultValueDateTime'] as String),
+        : FhirDateTime.fromJson(json['defaultValueDateTime']),
     defaultValueDateTimeElement: json['_defaultValueDateTime'] == null
         ? null
         : Element.fromJson(
             json['_defaultValueDateTime'] as Map<String, dynamic>),
     defaultValueTime: json['defaultValueTime'] == null
         ? null
-        : Time.fromJson(json['defaultValueTime'] as String),
+        : Time.fromJson(json['defaultValueTime']),
     defaultValueTimeElement: json['_defaultValueTime'] == null
         ? null
         : Element.fromJson(json['_defaultValueTime'] as Map<String, dynamic>),
     defaultValueCode: json['defaultValueCode'] == null
         ? null
-        : Code.fromJson(json['defaultValueCode'] as String),
+        : Code.fromJson(json['defaultValueCode']),
     defaultValueCodeElement: json['_defaultValueCode'] == null
         ? null
         : Element.fromJson(json['_defaultValueCode'] as Map<String, dynamic>),
     defaultValueOid: json['defaultValueOid'] == null
         ? null
-        : Oid.fromJson(json['defaultValueOid'] as String),
+        : Oid.fromJson(json['defaultValueOid']),
     defaultValueOidElement: json['_defaultValueOid'] == null
         ? null
         : Element.fromJson(json['_defaultValueOid'] as Map<String, dynamic>),
     defaultValueId: json['defaultValueId'] == null
         ? null
-        : Id.fromJson(json['defaultValueId'] as String),
+        : Id.fromJson(json['defaultValueId']),
     defaultValueIdElement: json['_defaultValueId'] == null
         ? null
         : Element.fromJson(json['_defaultValueId'] as Map<String, dynamic>),
@@ -277,7 +275,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
             json['_defaultValuePositiveInt'] as Map<String, dynamic>),
     defaultValueMarkdown: json['defaultValueMarkdown'] == null
         ? null
-        : Markdown.fromJson(json['defaultValueMarkdown'] as String),
+        : Markdown.fromJson(json['defaultValueMarkdown']),
     defaultValueMarkDownElement: json['_defaultValueMarkDown'] == null
         ? null
         : Element.fromJson(
@@ -345,7 +343,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Meta.fromJson(json['defaultValueMeta'] as Map<String, dynamic>),
     meaningWhenMissing: json['meaningWhenMissing'] == null
         ? null
-        : Markdown.fromJson(json['meaningWhenMissing'] as String),
+        : Markdown.fromJson(json['meaningWhenMissing']),
     meaningWhenMissingElement: json['_meaningWhenMissing'] == null
         ? null
         : Element.fromJson(json['_meaningWhenMissing'] as Map<String, dynamic>),
@@ -369,13 +367,13 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_fixedDecimal'] as Map<String, dynamic>),
     fixedBase64Binary: json['fixedBase64Binary'] == null
         ? null
-        : Base64Binary.fromJson(json['fixedBase64Binary'] as String),
+        : Base64Binary.fromJson(json['fixedBase64Binary']),
     fixedBase64BinaryElement: json['_fixedBase64Binary'] == null
         ? null
         : Element.fromJson(json['_fixedBase64Binary'] as Map<String, dynamic>),
     fixedInstant: json['fixedInstant'] == null
         ? null
-        : Instant.fromJson(json['fixedInstant'] as String),
+        : Instant.fromJson(json['fixedInstant']),
     fixedInstantElement: json['_fixedInstant'] == null
         ? null
         : Element.fromJson(json['_fixedInstant'] as Map<String, dynamic>),
@@ -383,9 +381,8 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
     fixedStringElement: json['_fixedString'] == null
         ? null
         : Element.fromJson(json['_fixedString'] as Map<String, dynamic>),
-    fixedUri: json['fixedUri'] == null
-        ? null
-        : FhirUri.fromJson(json['fixedUri'] as String),
+    fixedUri:
+        json['fixedUri'] == null ? null : FhirUri.fromJson(json['fixedUri']),
     fixedUriElement: json['_fixedUri'] == null
         ? null
         : Element.fromJson(json['_fixedUri'] as Map<String, dynamic>),
@@ -397,24 +394,20 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_fixedDate'] as Map<String, dynamic>),
     fixedDateTime: json['fixedDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['fixedDateTime'] as String),
+        : FhirDateTime.fromJson(json['fixedDateTime']),
     fixedDateTimeElement: json['_fixedDateTime'] == null
         ? null
         : Element.fromJson(json['_fixedDateTime'] as Map<String, dynamic>),
-    fixedCode: json['fixedCode'] == null
-        ? null
-        : Code.fromJson(json['fixedCode'] as String),
+    fixedCode:
+        json['fixedCode'] == null ? null : Code.fromJson(json['fixedCode']),
     fixedCodeElement: json['_fixedCode'] == null
         ? null
         : Element.fromJson(json['_fixedCode'] as Map<String, dynamic>),
-    fixedOid: json['fixedOid'] == null
-        ? null
-        : Oid.fromJson(json['fixedOid'] as String),
+    fixedOid: json['fixedOid'] == null ? null : Oid.fromJson(json['fixedOid']),
     fixedOidElement: json['_fixedOid'] == null
         ? null
         : Element.fromJson(json['_fixedOid'] as Map<String, dynamic>),
-    fixedId:
-        json['fixedId'] == null ? null : Id.fromJson(json['fixedId'] as String),
+    fixedId: json['fixedId'] == null ? null : Id.fromJson(json['fixedId']),
     fixedIdElement: json['_fixedId'] == null
         ? null
         : Element.fromJson(json['_fixedId'] as Map<String, dynamic>),
@@ -432,7 +425,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_fixedPositiveInt'] as Map<String, dynamic>),
     fixedMarkdown: json['fixedMarkdown'] == null
         ? null
-        : Markdown.fromJson(json['fixedMarkdown'] as String),
+        : Markdown.fromJson(json['fixedMarkdown']),
     fixedMarkdownElement: json['_fixedMarkdown'] == null
         ? null
         : Element.fromJson(json['_fixedMarkdown'] as Map<String, dynamic>),
@@ -510,14 +503,14 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_patternDecimal'] as Map<String, dynamic>),
     patternBase64Binary: json['patternBase64Binary'] == null
         ? null
-        : Base64Binary.fromJson(json['patternBase64Binary'] as String),
+        : Base64Binary.fromJson(json['patternBase64Binary']),
     patternBase64BinaryElement: json['_patternBase64Binary'] == null
         ? null
         : Element.fromJson(
             json['_patternBase64Binary'] as Map<String, dynamic>),
     patternInstant: json['patternInstant'] == null
         ? null
-        : Instant.fromJson(json['patternInstant'] as String),
+        : Instant.fromJson(json['patternInstant']),
     patternInstantElement: json['_patternInstant'] == null
         ? null
         : Element.fromJson(json['_patternInstant'] as Map<String, dynamic>),
@@ -527,7 +520,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_patternString'] as Map<String, dynamic>),
     patternUri: json['patternUri'] == null
         ? null
-        : FhirUri.fromJson(json['patternUri'] as String),
+        : FhirUri.fromJson(json['patternUri']),
     patternUriElement: json['_patternUri'] == null
         ? null
         : Element.fromJson(json['_patternUri'] as Map<String, dynamic>),
@@ -539,31 +532,27 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_patternDate'] as Map<String, dynamic>),
     patternDateTime: json['patternDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['patternDateTime'] as String),
+        : FhirDateTime.fromJson(json['patternDateTime']),
     patternDateTimeElement: json['_patternDateTime'] == null
         ? null
         : Element.fromJson(json['_patternDateTime'] as Map<String, dynamic>),
-    patternTime: json['patternTime'] == null
-        ? null
-        : Time.fromJson(json['patternTime'] as String),
+    patternTime:
+        json['patternTime'] == null ? null : Time.fromJson(json['patternTime']),
     patternTimeElement: json['_patternTime'] == null
         ? null
         : Element.fromJson(json['_patternTime'] as Map<String, dynamic>),
-    patternCode: json['patternCode'] == null
-        ? null
-        : Code.fromJson(json['patternCode'] as String),
+    patternCode:
+        json['patternCode'] == null ? null : Code.fromJson(json['patternCode']),
     patternCodeElement: json['_patternCode'] == null
         ? null
         : Element.fromJson(json['_patternCode'] as Map<String, dynamic>),
-    patternOid: json['patternOid'] == null
-        ? null
-        : Oid.fromJson(json['patternOid'] as String),
+    patternOid:
+        json['patternOid'] == null ? null : Oid.fromJson(json['patternOid']),
     patternOidElement: json['_patternOid'] == null
         ? null
         : Element.fromJson(json['_patternOid'] as Map<String, dynamic>),
-    patternId: json['patternId'] == null
-        ? null
-        : Id.fromJson(json['patternId'] as String),
+    patternId:
+        json['patternId'] == null ? null : Id.fromJson(json['patternId']),
     patternIdElement: json['_patternId'] == null
         ? null
         : Element.fromJson(json['_patternId'] as Map<String, dynamic>),
@@ -581,7 +570,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_patternPositiveInt'] as Map<String, dynamic>),
     patternMarkdown: json['patternMarkdown'] == null
         ? null
-        : Markdown.fromJson(json['patternMarkdown'] as String),
+        : Markdown.fromJson(json['patternMarkdown']),
     patternMarkdownElement: json['_patternMarkdown'] == null
         ? null
         : Element.fromJson(json['_patternMarkdown'] as Map<String, dynamic>),
@@ -662,14 +651,14 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_exampleDecimal'] as Map<String, dynamic>),
     exampleBase64Binary: json['exampleBase64Binary'] == null
         ? null
-        : Base64Binary.fromJson(json['exampleBase64Binary'] as String),
+        : Base64Binary.fromJson(json['exampleBase64Binary']),
     exampleBase64BinaryElement: json['_exampleBase64Binary'] == null
         ? null
         : Element.fromJson(
             json['_exampleBase64Binary'] as Map<String, dynamic>),
     exampleInstant: json['exampleInstant'] == null
         ? null
-        : Instant.fromJson(json['exampleInstant'] as String),
+        : Instant.fromJson(json['exampleInstant']),
     exampleInstantElement: json['_exampleInstant'] == null
         ? null
         : Element.fromJson(json['_exampleInstant'] as Map<String, dynamic>),
@@ -679,7 +668,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_exampleString'] as Map<String, dynamic>),
     exampleUri: json['exampleUri'] == null
         ? null
-        : FhirUri.fromJson(json['exampleUri'] as String),
+        : FhirUri.fromJson(json['exampleUri']),
     exampleUriElement: json['_exampleUri'] == null
         ? null
         : Element.fromJson(json['_exampleUri'] as Map<String, dynamic>),
@@ -691,31 +680,27 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_exampleDate'] as Map<String, dynamic>),
     exampleDateTime: json['exampleDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['exampleDateTime'] as String),
+        : FhirDateTime.fromJson(json['exampleDateTime']),
     exampleDateTimeElement: json['_exampleDateTime'] == null
         ? null
         : Element.fromJson(json['_exampleDateTime'] as Map<String, dynamic>),
-    exampleTime: json['exampleTime'] == null
-        ? null
-        : Time.fromJson(json['exampleTime'] as String),
+    exampleTime:
+        json['exampleTime'] == null ? null : Time.fromJson(json['exampleTime']),
     exampleTimeElement: json['_exampleTime'] == null
         ? null
         : Element.fromJson(json['_exampleTime'] as Map<String, dynamic>),
-    exampleCode: json['exampleCode'] == null
-        ? null
-        : Code.fromJson(json['exampleCode'] as String),
+    exampleCode:
+        json['exampleCode'] == null ? null : Code.fromJson(json['exampleCode']),
     exampleCodeElement: json['_exampleCode'] == null
         ? null
         : Element.fromJson(json['_exampleCode'] as Map<String, dynamic>),
-    exampleOid: json['exampleOid'] == null
-        ? null
-        : Oid.fromJson(json['exampleOid'] as String),
+    exampleOid:
+        json['exampleOid'] == null ? null : Oid.fromJson(json['exampleOid']),
     exampleOidElement: json['_exampleOid'] == null
         ? null
         : Element.fromJson(json['_exampleOid'] as Map<String, dynamic>),
-    exampleId: json['exampleId'] == null
-        ? null
-        : Id.fromJson(json['exampleId'] as String),
+    exampleId:
+        json['exampleId'] == null ? null : Id.fromJson(json['exampleId']),
     exampleIdElement: json['_exampleId'] == null
         ? null
         : Element.fromJson(json['_exampleId'] as Map<String, dynamic>),
@@ -733,7 +718,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_examplePositiveInt'] as Map<String, dynamic>),
     exampleMarkdown: json['exampleMarkdown'] == null
         ? null
-        : Markdown.fromJson(json['exampleMarkdown'] as String),
+        : Markdown.fromJson(json['exampleMarkdown']),
     exampleMarkdownElement: json['_exampleMarkdown'] == null
         ? null
         : Element.fromJson(json['_exampleMarkdown'] as Map<String, dynamic>),
@@ -814,14 +799,14 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_minValueDecimal'] as Map<String, dynamic>),
     minValueBase64Binary: json['minValueBase64Binary'] == null
         ? null
-        : Base64Binary.fromJson(json['minValueBase64Binary'] as String),
+        : Base64Binary.fromJson(json['minValueBase64Binary']),
     minValueBase64BinaryElement: json['_minValueBase64Binary'] == null
         ? null
         : Element.fromJson(
             json['_minValueBase64Binary'] as Map<String, dynamic>),
     minValueInstant: json['minValueInstant'] == null
         ? null
-        : Instant.fromJson(json['minValueInstant'] as String),
+        : Instant.fromJson(json['minValueInstant']),
     minValueInstantElement: json['_minValueInstant'] == null
         ? null
         : Element.fromJson(json['_minValueInstant'] as Map<String, dynamic>),
@@ -831,7 +816,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_minValueString'] as Map<String, dynamic>),
     minValueUri: json['minValueUri'] == null
         ? null
-        : FhirUri.fromJson(json['minValueUri'] as String),
+        : FhirUri.fromJson(json['minValueUri']),
     minValueUriElement: json['_minValueUri'] == null
         ? null
         : Element.fromJson(json['_minValueUri'] as Map<String, dynamic>),
@@ -849,25 +834,23 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_minValueDateTime'] as Map<String, dynamic>),
     minValueTime: json['minValueTime'] == null
         ? null
-        : Time.fromJson(json['minValueTime'] as String),
+        : Time.fromJson(json['minValueTime']),
     minValueTimeElement: json['_minValueTime'] == null
         ? null
         : Element.fromJson(json['_minValueTime'] as Map<String, dynamic>),
     minValueCode: json['minValueCode'] == null
         ? null
-        : Code.fromJson(json['minValueCode'] as String),
+        : Code.fromJson(json['minValueCode']),
     minValueCodeElement: json['_minValueCode'] == null
         ? null
         : Element.fromJson(json['_minValueCode'] as Map<String, dynamic>),
-    minValueOid: json['minValueOid'] == null
-        ? null
-        : Oid.fromJson(json['minValueOid'] as String),
+    minValueOid:
+        json['minValueOid'] == null ? null : Oid.fromJson(json['minValueOid']),
     minValueOidElement: json['_minValueOid'] == null
         ? null
         : Element.fromJson(json['_minValueOid'] as Map<String, dynamic>),
-    minValueId: json['minValueId'] == null
-        ? null
-        : Id.fromJson(json['minValueId'] as String),
+    minValueId:
+        json['minValueId'] == null ? null : Id.fromJson(json['minValueId']),
     minValueIdElement: json['_minValueId'] == null
         ? null
         : Element.fromJson(json['_minValueId'] as Map<String, dynamic>),
@@ -887,7 +870,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
             json['_minValuePositiveInt'] as Map<String, dynamic>),
     minValueMarkdown: json['minValueMarkdown'] == null
         ? null
-        : Markdown.fromJson(json['minValueMarkdown'] as String),
+        : Markdown.fromJson(json['minValueMarkdown']),
     minValueMarkdownElement: json['_minValueMarkdown'] == null
         ? null
         : Element.fromJson(json['_minValueMarkdown'] as Map<String, dynamic>),
@@ -968,14 +951,14 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_maxValueDecimal'] as Map<String, dynamic>),
     maxValueBase64Binary: json['maxValueBase64Binary'] == null
         ? null
-        : Base64Binary.fromJson(json['maxValueBase64Binary'] as String),
+        : Base64Binary.fromJson(json['maxValueBase64Binary']),
     maxValueBase64BinaryElement: json['_maxValueBase64Binary'] == null
         ? null
         : Element.fromJson(
             json['_maxValueBase64Binary'] as Map<String, dynamic>),
     maxValueInstant: json['maxValueInstant'] == null
         ? null
-        : Instant.fromJson(json['maxValueInstant'] as String),
+        : Instant.fromJson(json['maxValueInstant']),
     maxValueInstantElement: json['_maxValueInstant'] == null
         ? null
         : Element.fromJson(json['_maxValueInstant'] as Map<String, dynamic>),
@@ -985,7 +968,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_maxValueString'] as Map<String, dynamic>),
     maxValueUri: json['maxValueUri'] == null
         ? null
-        : FhirUri.fromJson(json['maxValueUri'] as String),
+        : FhirUri.fromJson(json['maxValueUri']),
     maxValueUriElement: json['_maxValueUri'] == null
         ? null
         : Element.fromJson(json['_maxValueUri'] as Map<String, dynamic>),
@@ -1003,25 +986,23 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_maxValueDateTime'] as Map<String, dynamic>),
     maxValueTime: json['maxValueTime'] == null
         ? null
-        : Time.fromJson(json['maxValueTime'] as String),
+        : Time.fromJson(json['maxValueTime']),
     maxValueTimeElement: json['_maxValueTime'] == null
         ? null
         : Element.fromJson(json['_maxValueTime'] as Map<String, dynamic>),
     maxValueCode: json['maxValueCode'] == null
         ? null
-        : Code.fromJson(json['maxValueCode'] as String),
+        : Code.fromJson(json['maxValueCode']),
     maxValueCodeElement: json['_maxValueCode'] == null
         ? null
         : Element.fromJson(json['_maxValueCode'] as Map<String, dynamic>),
-    maxValueOid: json['maxValueOid'] == null
-        ? null
-        : Oid.fromJson(json['maxValueOid'] as String),
+    maxValueOid:
+        json['maxValueOid'] == null ? null : Oid.fromJson(json['maxValueOid']),
     maxValueOidElement: json['_maxValueOid'] == null
         ? null
         : Element.fromJson(json['_maxValueOid'] as Map<String, dynamic>),
-    maxValueId: json['maxValueId'] == null
-        ? null
-        : Id.fromJson(json['maxValueId'] as String),
+    maxValueId:
+        json['maxValueId'] == null ? null : Id.fromJson(json['maxValueId']),
     maxValueIdElement: json['_maxValueId'] == null
         ? null
         : Element.fromJson(json['_maxValueId'] as Map<String, dynamic>),
@@ -1041,7 +1022,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
             json['_maxValuePositiveInt'] as Map<String, dynamic>),
     maxValueMarkdown: json['maxValueMarkdown'] == null
         ? null
-        : Markdown.fromJson(json['maxValueMarkdown'] as String),
+        : Markdown.fromJson(json['maxValueMarkdown']),
     maxValueMarkdownElement: json['_maxValueMarkdown'] == null
         ? null
         : Element.fromJson(json['_maxValueMarkdown'] as Map<String, dynamic>),
@@ -1108,7 +1089,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_maxLength'] as Map<String, dynamic>),
     condition: (json['condition'] as List)
-        ?.map((e) => e == null ? null : Id.fromJson(e as String))
+        ?.map((e) => e == null ? null : Id.fromJson(e))
         ?.toList(),
     conditionElement: json['_condition'] == null
         ? null
@@ -1543,7 +1524,7 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
 _$_Narrative _$_$_NarrativeFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['status', 'div']);
   return _$_Narrative(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1623,7 +1604,7 @@ _$_ElementDefinitionSlicing _$_$_ElementDefinitionSlicingFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['rules']);
   return _$_ElementDefinitionSlicing(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1681,7 +1662,7 @@ _$_ElementDefinitionBase _$_$_ElementDefinitionBaseFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['path', 'min', 'max']);
   return _$_ElementDefinitionBase(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1727,18 +1708,18 @@ Map<String, dynamic> _$_$_ElementDefinitionBaseToJson(
 _$_ElementDefinitionType _$_$_ElementDefinitionTypeFromJson(
     Map<String, dynamic> json) {
   return _$_ElementDefinitionType(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeExtension: json['_code'] == null
         ? null
         : TypeCodeExtension.fromJson(json['_code'] as Map<String, dynamic>),
     profile: (json['profile'] as List)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
         ?.toList(),
     aggregation: (json['aggregation'] as List)
         ?.map((e) => _$enumDecodeNullable(_$TypeAggregationEnumMap, e))
@@ -1810,13 +1791,13 @@ _$_ElementDefinitionConstraint _$_$_ElementDefinitionConstraintFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['key', 'severity', 'human', 'xpath']);
   return _$_ElementDefinitionConstraint(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    key: json['key'] == null ? null : Id.fromJson(json['key'] as String),
+    key: json['key'] == null ? null : Id.fromJson(json['key']),
     keyElement: json['_key'] == null
         ? null
         : Element.fromJson(json['_key'] as Map<String, dynamic>),
@@ -1877,7 +1858,7 @@ _$_ElementDefinitionBinding _$_$_ElementDefinitionBindingFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['strength']);
   return _$_ElementDefinitionBinding(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1895,7 +1876,7 @@ _$_ElementDefinitionBinding _$_$_ElementDefinitionBindingFromJson(
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
     valueSetUri: json['valueSetUri'] == null
         ? null
-        : FhirUri.fromJson(json['valueSetUri'] as String),
+        : FhirUri.fromJson(json['valueSetUri']),
     valueSetReference: json['valueSetReference'] == null
         ? null
         : Reference.fromJson(json['valueSetReference'] as Map<String, dynamic>),
@@ -1937,7 +1918,7 @@ _$_ElementDefinitionMapping _$_$_ElementDefinitionMappingFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['identity', 'map']);
   return _$_ElementDefinitionMapping(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1945,15 +1926,11 @@ _$_ElementDefinitionMapping _$_$_ElementDefinitionMappingFromJson(
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    identity: json['identity'] == null
-        ? null
-        : Id.fromJson(json['identity'] as String),
+    identity: json['identity'] == null ? null : Id.fromJson(json['identity']),
     identityElement: json['_identity'] == null
         ? null
         : Element.fromJson(json['_identity'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),

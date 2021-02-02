@@ -15,7 +15,7 @@ class Instant {
     );
   }
 
-  factory Instant.fromJson(String json) => Instant(json);
+  factory Instant.fromJson(dynamic json) => Instant(json);
 
   factory Instant.fromYaml(dynamic yaml) => yaml is String
       ? Instant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -44,8 +44,8 @@ class Instant {
                   : false;
 
   String toString() => value.toString();
-  dynamic toJson() => value.toString();
-  dynamic toYaml() => value.toString();
+  String toJson() => value.toString();
+  String toYaml() => value.toString();
 
   String _formattedInstant(value) => _format == -1
       ? value.toIso8601String()
@@ -70,9 +70,9 @@ Either<String, DateTime> _validateInstant(dynamic value) {
     //then check if it matches
     return RegExp(_instantString).hasMatch(stringValue)
         ? right(DateTime.parse(value))
-        : left('FormatError: $value is not an Instant');
+        : left('FormatError: "$value" is not an Instant');
   } else {
-    return left('FormatError: $value is not an Instant');
+    return left('FormatError: "$value" is not an Instant');
   }
 }
 

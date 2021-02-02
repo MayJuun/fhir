@@ -12,16 +12,14 @@ _$_ProcessRequest _$_$_ProcessRequestFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.ProcessRequest),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -51,9 +49,8 @@ _$_ProcessRequest _$_$_ProcessRequestFromJson(Map<String, dynamic> json) {
     originalRuleset: json['originalRuleset'] == null
         ? null
         : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created:
+        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
     target: json['target'] == null
         ? null
         : Reference.fromJson(json['target'] as Map<String, dynamic>),
@@ -268,7 +265,7 @@ _$_ProcessRequestItem _$_$_ProcessRequestItemFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['sequenceLinkId']);
   return _$_ProcessRequestItem(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -309,16 +306,14 @@ _$_ProcessResponse _$_$_ProcessResponseFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.ProcessResponse),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -353,9 +348,8 @@ _$_ProcessResponse _$_$_ProcessResponseFromJson(Map<String, dynamic> json) {
     originalRuleset: json['originalRuleset'] == null
         ? null
         : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created:
+        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
     organization: json['organization'] == null
         ? null
         : Reference.fromJson(json['organization'] as Map<String, dynamic>),
@@ -423,7 +417,7 @@ Map<String, dynamic> _$_$_ProcessResponseToJson(_$_ProcessResponse instance) {
 _$_ProcessResponseNotes _$_$_ProcessResponseNotesFromJson(
     Map<String, dynamic> json) {
   return _$_ProcessResponseNotes(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -466,19 +460,17 @@ _$_SupplyRequest _$_$_SupplyRequestFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.SupplyRequest),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -505,9 +497,7 @@ _$_SupplyRequest _$_$_SupplyRequestFromJson(Map<String, dynamic> json) {
     source: json['source'] == null
         ? null
         : Reference.fromJson(json['source'] as Map<String, dynamic>),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -590,7 +580,7 @@ const _$SupplyRequestStatusEnumMap = {
 
 _$_SupplyRequestWhen _$_$_SupplyRequestWhenFromJson(Map<String, dynamic> json) {
   return _$_SupplyRequestWhen(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -635,19 +625,17 @@ _$_SupplyDelivery _$_$_SupplyDeliveryFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.SupplyDelivery),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -694,9 +682,7 @@ _$_SupplyDelivery _$_$_SupplyDeliveryFromJson(Map<String, dynamic> json) {
     whenPrepared: json['whenPrepared'] == null
         ? null
         : Period.fromJson(json['whenPrepared'] as Map<String, dynamic>),
-    time: json['time'] == null
-        ? null
-        : FhirDateTime.fromJson(json['time'] as String),
+    time: json['time'] == null ? null : FhirDateTime.fromJson(json['time']),
     destination: json['destination'] == null
         ? null
         : Reference.fromJson(json['destination'] as Map<String, dynamic>),

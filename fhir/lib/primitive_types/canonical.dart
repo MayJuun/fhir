@@ -13,7 +13,7 @@ class Canonical {
     );
   }
 
-  factory Canonical.fromJson(String json) => Canonical(json);
+  factory Canonical.fromJson(dynamic json) => Canonical(json);
 
   factory Canonical.fromYaml(dynamic yaml) => yaml is String
       ? Canonical.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -41,4 +41,4 @@ class Canonical {
 Either<String, String> _validateCanonical(String value) =>
     RegExp(r'^\S*$').hasMatch(value)
         ? right(value)
-        : left('FormatError: $value is not a Canonical');
+        : left('FormatError: "$value" is not a Canonical');

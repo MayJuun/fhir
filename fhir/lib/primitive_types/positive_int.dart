@@ -13,7 +13,7 @@ class PositiveInt {
     );
   }
 
-  factory PositiveInt.fromJson(String json) => PositiveInt(json);
+  factory PositiveInt.fromJson(dynamic json) => PositiveInt(json);
 
   factory PositiveInt.fromYaml(dynamic yaml) => yaml is String
       ? PositiveInt.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -26,8 +26,8 @@ class PositiveInt {
   bool get isValid => _value.isRight();
 
   String toString() => value.toString();
-  String toJson() => value;
-  String toYaml() => value;
+  dynamic toJson() => value;
+  dynamic toYaml() => value;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
@@ -45,6 +45,6 @@ Either<String, int> _validatePositiveInt(dynamic value) {
   return val != null
       ? val > 0
           ? right(val)
-          : left('FormatError: $value is not a PositiveInt')
-      : left('FormatError: $value is not a PositiveInt');
+          : left('FormatError: "$value" is not a PositiveInt')
+      : left('FormatError: "$value" is not a PositiveInt');
 }

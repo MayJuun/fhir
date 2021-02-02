@@ -1,3 +1,4 @@
+import 'package:fhir/r4.dart';
 import 'package:test/test.dart';
 
 import 'expected_json.dart';
@@ -5,63 +6,72 @@ import 'expected_yaml.dart';
 import 'validation/validation.dart';
 
 Future main() async {
-  group(
-    'Runs through all tests for all versions of FHIR (except R5 as the online '
-    'examples, json schema, and online description do not currently all match), '
-    'does deep comarison of the map produced with the map that was input, field '
-    'by field. It then reverses them and runs through the same algorithm. Any '
-    'files with errors are printed out in the debug console, and the errors are '
-    'compared with the expected errors stored in the map in "expected.dart". ',
-    () {
-      test(
-        '\n\n****Validating Json****',
-        () async {
-          var testList = await jsonValidation();
-          var tempList = <String>[];
-          for (final i in testList) {
-            tempList.add(i.toString());
-          }
-          testList.clear();
-          testList.addAll(tempList);
+  var id = Id('something');
+  print(id);
+  print(id.runtimeType);
+  var dec = Decimal('something');
+  print(dec);
+  print(dec.runtimeType);
+  print(dec.value);
+  print(id.value);
 
-          var expectList = expectedJson.toList();
-          tempList.clear();
-          for (final i in expectList) {
-            tempList.add(i.toString());
-          }
-          expectList.clear();
-          expectList.addAll(tempList);
+  // group(
+  //   'Runs through all tests for all versions of FHIR (except R5 as the online '
+  //   'examples, json schema, and online description do not currently all match), '
+  //   'does deep comarison of the map produced with the map that was input, field '
+  //   'by field. It then reverses them and runs through the same algorithm. Any '
+  //   'files with errors are printed out in the debug console, and the errors are '
+  //   'compared with the expected errors stored in the map in "expected.dart". ',
+  //   () {
+  //     test(
+  //       '\n\n****Validating Json****',
+  //       () async {
+  //         var testList = await jsonValidation();
+  //         var tempList = <String>[];
+  //         for (final i in testList) {
+  //           tempList.add(i.toString());
+  //         }
+  //         testList.clear();
+  //         testList.addAll(tempList);
 
-          var compareList = tempList;
+  //         var expectList = expectedJson.toList();
+  //         tempList.clear();
+  //         for (final i in expectList) {
+  //           tempList.add(i.toString());
+  //         }
+  //         expectList.clear();
+  //         expectList.addAll(tempList);
 
-          compareList.forEach((file) {
-            testList.remove(file);
-            expectList.remove(file);
-          });
+  //         var compareList = tempList;
 
-          expect(testList, expectList);
-        },
-        timeout: Timeout(Duration(minutes: 10)),
-      );
+  //         compareList.forEach((file) {
+  //           testList.remove(file);
+  //           expectList.remove(file);
+  //         });
 
-      test(
-        '\n\n****Validating Yaml****',
-        () async {
-          var testList = await yamlValidation();
+  //         expect(testList, expectList);
+  //       },
+  //       timeout: Timeout(Duration(minutes: 10)),
+  //     );
 
-          var expectList = expectedYaml.toList();
+  //     test(
+  //       '\n\n****Validating Yaml****',
+  //       () async {
+  //         var testList = await yamlValidation();
 
-          final compareList = expectedYaml.toList();
+  //         var expectList = expectedYaml.toList();
 
-          compareList.forEach((file) {
-            testList.remove(file);
-            expectList.remove(file);
-          });
+  //         final compareList = expectedYaml.toList();
 
-          expect(testList, expectList);
-        },
-        timeout: Timeout(Duration(minutes: 10)),
-      );
-    },
-  );
+  //         compareList.forEach((file) {
+  //           testList.remove(file);
+  //           expectList.remove(file);
+  //         });
+
+  //         expect(testList, expectList);
+  //       },
+  //       timeout: Timeout(Duration(minutes: 10)),
+  //     );
+  //   },
+  // );
 }

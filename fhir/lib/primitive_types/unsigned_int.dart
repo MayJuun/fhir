@@ -13,7 +13,7 @@ class UnsignedInt {
     );
   }
 
-  factory UnsignedInt.fromJson(String json) => UnsignedInt(json);
+  factory UnsignedInt.fromJson(dynamic json) => UnsignedInt(json);
 
   factory UnsignedInt.fromYaml(dynamic yaml) => yaml is String
       ? UnsignedInt.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -26,8 +26,8 @@ class UnsignedInt {
   bool get isValid => _value.isRight();
 
   String toString() => value.toString();
-  String toJson() => value;
-  String toYaml() => value;
+  dynamic toJson() => value;
+  dynamic toYaml() => value;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
@@ -45,6 +45,6 @@ Either<String, int> _validateUnsignedInt(dynamic value) {
   return val != null
       ? val >= 0
           ? right(val)
-          : left('FormatError: $value is not an UnsignedInt')
-      : left('FormatError: $value is not a UnsignedInt');
+          : left('FormatError: "$value" is not an UnsignedInt')
+      : left('FormatError: "$value" is not a UnsignedInt');
 }

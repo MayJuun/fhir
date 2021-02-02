@@ -11,19 +11,17 @@ _$_AuditEvent _$_$_AuditEventFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.AuditEvent),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -59,9 +57,8 @@ _$_AuditEvent _$_$_AuditEventFromJson(Map<String, dynamic> json) {
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
-    recorded: json['recorded'] == null
-        ? null
-        : Instant.fromJson(json['recorded'] as String),
+    recorded:
+        json['recorded'] == null ? null : Instant.fromJson(json['recorded']),
     recordedElement: json['_recorded'] == null
         ? null
         : Element.fromJson(json['_recorded'] as Map<String, dynamic>),
@@ -379,7 +376,7 @@ _$_AuditEventAgent _$_$_AuditEventAgentFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['location'] as Map<String, dynamic>),
     policy: (json['policy'] as List)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
         ?.toList(),
     policyElement: (json['_policy'] as List)
         ?.map((e) =>
@@ -574,9 +571,7 @@ _$_AuditEventEntity _$_$_AuditEventEntityFromJson(Map<String, dynamic> json) {
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    query: json['query'] == null
-        ? null
-        : Base64Binary.fromJson(json['query'] as String),
+    query: json['query'] == null ? null : Base64Binary.fromJson(json['query']),
     queryElement: json['_query'] == null
         ? null
         : Element.fromJson(json['_query'] as Map<String, dynamic>),
@@ -641,7 +636,7 @@ _$_AuditEventDetail _$_$_AuditEventDetailFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
     valueBase64Binary: json['valueBase64Binary'] == null
         ? null
-        : Base64Binary.fromJson(json['valueBase64Binary'] as String),
+        : Base64Binary.fromJson(json['valueBase64Binary']),
     valueBase64BinaryElement: json['_valueBase64Binary'] == null
         ? null
         : Element.fromJson(json['_valueBase64Binary'] as Map<String, dynamic>),
@@ -677,19 +672,17 @@ _$_Consent _$_$_ConsentFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.Consent),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -732,7 +725,7 @@ _$_Consent _$_$_ConsentFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
     dateTime: json['dateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['dateTime'] as String),
+        : FhirDateTime.fromJson(json['dateTime']),
     dateTimeElement: json['_dateTime'] == null
         ? null
         : Element.fromJson(json['_dateTime'] as Map<String, dynamic>),
@@ -839,13 +832,12 @@ _$_ConsentPolicy _$_$_ConsentPolicyFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    authority: json['authority'] == null
-        ? null
-        : FhirUri.fromJson(json['authority'] as String),
+    authority:
+        json['authority'] == null ? null : FhirUri.fromJson(json['authority']),
     authorityElement: json['_authority'] == null
         ? null
         : Element.fromJson(json['_authority'] as Map<String, dynamic>),
-    uri: json['uri'] == null ? null : FhirUri.fromJson(json['uri'] as String),
+    uri: json['uri'] == null ? null : FhirUri.fromJson(json['uri']),
     uriElement: json['_uri'] == null
         ? null
         : Element.fromJson(json['_uri'] as Map<String, dynamic>),
@@ -897,7 +889,7 @@ _$_ConsentVerification _$_$_ConsentVerificationFromJson(
         : Reference.fromJson(json['verifiedWith'] as Map<String, dynamic>),
     verificationDate: json['verificationDate'] == null
         ? null
-        : FhirDateTime.fromJson(json['verificationDate'] as String),
+        : FhirDateTime.fromJson(json['verificationDate']),
     verificationDateElement: json['_verificationDate'] == null
         ? null
         : Element.fromJson(json['_verificationDate'] as Map<String, dynamic>),
@@ -1124,19 +1116,17 @@ _$_Provenance _$_$_ProvenanceFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.Provenance),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1166,18 +1156,17 @@ _$_Provenance _$_$_ProvenanceFromJson(Map<String, dynamic> json) {
         : Period.fromJson(json['occurredPeriod'] as Map<String, dynamic>),
     occurredDateTime: json['occurredDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['occurredDateTime'] as String),
+        : FhirDateTime.fromJson(json['occurredDateTime']),
     occurredDateTimeElement: json['_occurredDateTime'] == null
         ? null
         : Element.fromJson(json['_occurredDateTime'] as Map<String, dynamic>),
-    recorded: json['recorded'] == null
-        ? null
-        : Instant.fromJson(json['recorded'] as String),
+    recorded:
+        json['recorded'] == null ? null : Instant.fromJson(json['recorded']),
     recordedElement: json['_recorded'] == null
         ? null
         : Element.fromJson(json['_recorded'] as Map<String, dynamic>),
     policy: (json['policy'] as List)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
         ?.toList(),
     policyElement: (json['_policy'] as List)
         ?.map((e) =>

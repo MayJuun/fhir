@@ -8,7 +8,7 @@ part of 'element.dart';
 
 _$_Element _$_$_ElementFromJson(Map<String, dynamic> json) {
   return _$_Element(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null

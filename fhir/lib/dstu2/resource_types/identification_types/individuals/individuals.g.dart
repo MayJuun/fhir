@@ -11,7 +11,7 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Patient),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     idElement: json['_id'] == null
         ? null
         : Element.fromJson(json['_id'] as Map<String, dynamic>),
@@ -20,13 +20,11 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -82,7 +80,7 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_deceasedBoolean'] as Map<String, dynamic>),
     deceasedDateTime: json['deceasedDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['deceasedDateTime'] as String),
+        : FhirDateTime.fromJson(json['deceasedDateTime']),
     deceasedDateTimeElement: json['_deceasedDateTime'] == null
         ? null
         : Element.fromJson(json['_deceasedDateTime'] as Map<String, dynamic>),
@@ -338,7 +336,7 @@ const _$PatientGenderEnumMap = {
 
 _$_PatientContact _$_$_PatientContactFromJson(Map<String, dynamic> json) {
   return _$_PatientContact(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -414,7 +412,7 @@ const _$ContactGenderEnumMap = {
 _$_PatientAnimal _$_$_PatientAnimalFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['species']);
   return _$_PatientAnimal(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -462,7 +460,7 @@ _$_PatientCommunication _$_$_PatientCommunicationFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['language']);
   return _$_PatientCommunication(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -508,7 +506,7 @@ Map<String, dynamic> _$_$_PatientCommunicationToJson(
 _$_PatientLink _$_$_PatientLinkFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['other', 'type']);
   return _$_PatientLink(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -562,19 +560,17 @@ _$_Practitioner _$_$_PractitionerFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Practitioner),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -702,7 +698,7 @@ const _$PractitionerGenderEnumMap = {
 _$_PractitionerPractitionerRole _$_$_PractitionerPractitionerRoleFromJson(
     Map<String, dynamic> json) {
   return _$_PractitionerPractitionerRole(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -773,7 +769,7 @@ _$_PractitionerQualification _$_$_PractitionerQualificationFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_PractitionerQualification(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -829,19 +825,17 @@ _$_RelatedPerson _$_$_RelatedPersonFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.RelatedPerson),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),

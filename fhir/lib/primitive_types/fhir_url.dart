@@ -13,7 +13,7 @@ class FhirUrl {
     );
   }
 
-  factory FhirUrl.fromJson(String json) => FhirUrl(json);
+  factory FhirUrl.fromJson(dynamic json) => FhirUrl(json);
 
   factory FhirUrl.fromYaml(dynamic yaml) => yaml is String
       ? FhirUrl.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -43,4 +43,4 @@ class FhirUrl {
 Either<String, Uri> _validateFhirUrl(String value) =>
     Uri.tryParse(value) != null
         ? right(Uri.parse(value))
-        : left('FormatError: $value is not a Url');
+        : left('FormatError: "$value" is not a Url');

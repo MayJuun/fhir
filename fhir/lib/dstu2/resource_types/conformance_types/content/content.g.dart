@@ -14,19 +14,17 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.StructureDefinition),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -47,7 +45,7 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -88,9 +86,7 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
             ? null
             : StructureDefinitionContact.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -112,9 +108,8 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    fhirVersion: json['fhirVersion'] == null
-        ? null
-        : Id.fromJson(json['fhirVersion'] as String),
+    fhirVersion:
+        json['fhirVersion'] == null ? null : Id.fromJson(json['fhirVersion']),
     fhirVersionElement: json['_fhirVersion'] == null
         ? null
         : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
@@ -130,7 +125,7 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
         : Element.fromJson(json['_kind'] as Map<String, dynamic>),
     constrainedType: json['constrainedType'] == null
         ? null
-        : Code.fromJson(json['constrainedType'] as String),
+        : Code.fromJson(json['constrainedType']),
     abstract_:
         json['abstract'] == null ? null : Boolean.fromJson(json['abstract']),
     abstractElement: json['_abstract'] == null
@@ -140,8 +135,7 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
         _$StructureDefinitionContextTypeEnumMap, json['contextType'],
         unknownValue: StructureDefinitionContextType.unknown),
     context: (json['context'] as List)?.map((e) => e as String)?.toList(),
-    base:
-        json['base'] == null ? null : FhirUri.fromJson(json['base'] as String),
+    base: json['base'] == null ? null : FhirUri.fromJson(json['base']),
     snapshot: json['snapshot'] == null
         ? null
         : StructureDefinitionSnapshot.fromJson(
@@ -377,7 +371,7 @@ const _$StructureDefinitionContextTypeEnumMap = {
 _$_StructureDefinitionContact _$_$_StructureDefinitionContactFromJson(
     Map<String, dynamic> json) {
   return _$_StructureDefinitionContact(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -420,7 +414,7 @@ _$_StructureDefinitionMapping _$_$_StructureDefinitionMappingFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['identity']);
   return _$_StructureDefinitionMapping(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -433,13 +427,11 @@ _$_StructureDefinitionMapping _$_$_StructureDefinitionMappingFromJson(
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    identity: json['identity'] == null
-        ? null
-        : Id.fromJson(json['identity'] as String),
+    identity: json['identity'] == null ? null : Id.fromJson(json['identity']),
     identityElement: json['_identity'] == null
         ? null
         : Element.fromJson(json['_identity'] as Map<String, dynamic>),
-    uri: json['uri'] == null ? null : FhirUri.fromJson(json['uri'] as String),
+    uri: json['uri'] == null ? null : FhirUri.fromJson(json['uri']),
     uriElement: json['_uri'] == null
         ? null
         : Element.fromJson(json['_uri'] as Map<String, dynamic>),
@@ -485,7 +477,7 @@ _$_StructureDefinitionSnapshot _$_$_StructureDefinitionSnapshotFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['element']);
   return _$_StructureDefinitionSnapshot(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -527,7 +519,7 @@ _$_StructureDefinitionDifferential _$_$_StructureDefinitionDifferentialFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['element']);
   return _$_StructureDefinitionDifferential(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -571,16 +563,14 @@ _$_DataElement _$_$_DataElementFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.DataElement),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -598,7 +588,7 @@ _$_DataElement _$_$_DataElementFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     identifier: (json['identifier'] as List)
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
@@ -616,9 +606,7 @@ _$_DataElement _$_$_DataElementFromJson(Map<String, dynamic> json) {
             ? null
             : DataElementContact.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     useContext: (json['useContext'] as List)
         ?.map((e) => e == null
             ? null
@@ -703,7 +691,7 @@ const _$DataElementStringencyEnumMap = {
 _$_DataElementContact _$_$_DataElementContactFromJson(
     Map<String, dynamic> json) {
   return _$_DataElementContact(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -746,7 +734,7 @@ _$_DataElementMapping _$_$_DataElementMappingFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['identity']);
   return _$_DataElementMapping(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -759,13 +747,11 @@ _$_DataElementMapping _$_$_DataElementMappingFromJson(
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    identity: json['identity'] == null
-        ? null
-        : Id.fromJson(json['identity'] as String),
+    identity: json['identity'] == null ? null : Id.fromJson(json['identity']),
     identityElement: json['_identity'] == null
         ? null
         : Element.fromJson(json['_identity'] as Map<String, dynamic>),
-    uri: json['uri'] == null ? null : FhirUri.fromJson(json['uri'] as String),
+    uri: json['uri'] == null ? null : FhirUri.fromJson(json['uri']),
     uriElement: json['_uri'] == null
         ? null
         : Element.fromJson(json['_uri'] as Map<String, dynamic>),

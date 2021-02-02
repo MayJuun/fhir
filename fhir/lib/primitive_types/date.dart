@@ -44,8 +44,8 @@ class Date {
                   : false;
 
   String toString() => value.toString();
-  dynamic toJson() => value.toString();
-  dynamic toYaml() => value.toString();
+  String toJson() => value.toString();
+  String toYaml() => value.toString();
 
   String _formattedDate(value) => _format == -1
       ? value.toIso8601String()
@@ -58,7 +58,7 @@ const _dateString =
 Either<String, DateTime> _validateDate(String value) => isDate(value)
     ? RegExp(_dateString).hasMatch(value)
         ? right(DateTime.parse(value))
-        : left('FormatError: $value is not a Date')
+        : left('FormatError: "$value" is not a Date')
     : _partialDateTime(value);
 
 Either<String, DateTime> _partialDateTime(String value) {
@@ -76,6 +76,6 @@ Either<String, DateTime> _partialDateTime(String value) {
       DateTime(year, month),
     );
   } else {
-    return left('FormatError: $value is not a DateTime');
+    return left('FormatError: "$value" is not a DateTime');
   }
 }

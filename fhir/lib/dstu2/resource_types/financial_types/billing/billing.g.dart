@@ -11,19 +11,17 @@ _$_Account _$_$_AccountFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Account),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -269,19 +267,17 @@ _$_Claim _$_$_ClaimFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Claim),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -314,9 +310,8 @@ _$_Claim _$_$_ClaimFromJson(Map<String, dynamic> json) {
     originalRuleset: json['originalRuleset'] == null
         ? null
         : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created:
+        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -492,7 +487,7 @@ const _$ClaimUseEnumMap = {
 
 _$_ClaimPayee _$_$_ClaimPayeeFromJson(Map<String, dynamic> json) {
   return _$_ClaimPayee(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -542,7 +537,7 @@ Map<String, dynamic> _$_$_ClaimPayeeToJson(_$_ClaimPayee instance) {
 _$_ClaimDiagnosis _$_$_ClaimDiagnosisFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['sequence', 'diagnosis']);
   return _$_ClaimDiagnosis(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -589,7 +584,7 @@ _$_ClaimCoverage _$_$_ClaimCoverageFromJson(Map<String, dynamic> json) {
   $checkKeys(json,
       requiredKeys: const ['sequence', 'focal', 'coverage', 'relationship']);
   return _$_ClaimCoverage(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -649,7 +644,7 @@ Map<String, dynamic> _$_$_ClaimCoverageToJson(_$_ClaimCoverage instance) {
 _$_ClaimItem _$_$_ClaimItemFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['sequence', 'type', 'service']);
   return _$_ClaimItem(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -766,7 +761,7 @@ Map<String, dynamic> _$_$_ClaimItemToJson(_$_ClaimItem instance) {
 _$_ClaimItemDetail _$_$_ClaimItemDetailFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['sequence', 'type', 'service']);
   return _$_ClaimItemDetail(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -848,7 +843,7 @@ _$_ClaimDetailSubDetail _$_$_ClaimDetailSubDetailFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['sequence', 'type', 'service']);
   return _$_ClaimDetailSubDetail(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -923,7 +918,7 @@ Map<String, dynamic> _$_$_ClaimDetailSubDetailToJson(
 _$_ClaimItemProsthesis _$_$_ClaimItemProsthesisFromJson(
     Map<String, dynamic> json) {
   return _$_ClaimItemProsthesis(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -968,7 +963,7 @@ Map<String, dynamic> _$_$_ClaimItemProsthesisToJson(
 _$_ClaimMissingTeeth _$_$_ClaimMissingTeethFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['tooth']);
   return _$_ClaimMissingTeeth(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1017,19 +1012,17 @@ _$_ClaimResponse _$_$_ClaimResponseFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.ClaimResponse),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1063,9 +1056,8 @@ _$_ClaimResponse _$_$_ClaimResponseFromJson(Map<String, dynamic> json) {
     originalRuleset: json['originalRuleset'] == null
         ? null
         : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created:
+        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -1223,7 +1215,7 @@ const _$ClaimResponseOutcomeEnumMap = {
 _$_ClaimResponseItem _$_$_ClaimResponseItemFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['sequenceLinkId']);
   return _$_ClaimResponseItem(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1290,7 +1282,7 @@ _$_ClaimResponseItemAdjudication _$_$_ClaimResponseItemAdjudicationFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_ClaimResponseItemAdjudication(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1340,7 +1332,7 @@ _$_ClaimResponseItemDetail _$_$_ClaimResponseItemDetailFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['sequenceLinkId']);
   return _$_ClaimResponseItemDetail(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1394,7 +1386,7 @@ _$_ClaimResponseDetailSubDetail _$_$_ClaimResponseDetailSubDetailFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['sequenceLinkId']);
   return _$_ClaimResponseDetailSubDetail(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1441,7 +1433,7 @@ _$_ClaimResponseAddItem _$_$_ClaimResponseAddItemFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['service']);
   return _$_ClaimResponseAddItem(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1507,7 +1499,7 @@ _$_ClaimResponseAddItemDetail _$_$_ClaimResponseAddItemDetailFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['service']);
   return _$_ClaimResponseAddItemDetail(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1558,7 +1550,7 @@ _$_ClaimResponseError _$_$_ClaimResponseErrorFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_ClaimResponseError(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1609,7 +1601,7 @@ Map<String, dynamic> _$_$_ClaimResponseErrorToJson(
 
 _$_ClaimResponseNote _$_$_ClaimResponseNoteFromJson(Map<String, dynamic> json) {
   return _$_ClaimResponseNote(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1667,7 +1659,7 @@ _$_ClaimResponseCoverage _$_$_ClaimResponseCoverageFromJson(
   $checkKeys(json,
       requiredKeys: const ['sequence', 'focal', 'coverage', 'relationship']);
   return _$_ClaimResponseCoverage(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null

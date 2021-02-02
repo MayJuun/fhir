@@ -11,19 +11,17 @@ _$_Claim _$_$_ClaimFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R5ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R5ResourceType.Claim),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -48,8 +46,7 @@ _$_Claim _$_$_ClaimFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -70,9 +67,8 @@ _$_Claim _$_$_ClaimFromJson(Map<String, dynamic> json) {
     billablePeriod: json['billablePeriod'] == null
         ? null
         : Period.fromJson(json['billablePeriod'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created:
+        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -732,9 +728,7 @@ _$_ClaimProcedure _$_$_ClaimProcedureFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1281,19 +1275,17 @@ _$_ClaimResponse _$_$_ClaimResponseFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R5ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R5ResourceType.ClaimResponse),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1318,8 +1310,7 @@ _$_ClaimResponse _$_$_ClaimResponseFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1329,16 +1320,15 @@ _$_ClaimResponse _$_$_ClaimResponseFromJson(Map<String, dynamic> json) {
     subType: json['subType'] == null
         ? null
         : CodeableConcept.fromJson(json['subType'] as Map<String, dynamic>),
-    use: json['use'] == null ? null : Code.fromJson(json['use'] as String),
+    use: json['use'] == null ? null : Code.fromJson(json['use']),
     useElement: json['_use'] == null
         ? null
         : Element.fromJson(json['_use'] as Map<String, dynamic>),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created:
+        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -1351,9 +1341,7 @@ _$_ClaimResponse _$_$_ClaimResponseFromJson(Map<String, dynamic> json) {
     request: json['request'] == null
         ? null
         : Reference.fromJson(json['request'] as Map<String, dynamic>),
-    outcome: json['outcome'] == null
-        ? null
-        : Code.fromJson(json['outcome'] as String),
+    outcome: json['outcome'] == null ? null : Code.fromJson(json['outcome']),
     outcomeElement: json['_outcome'] == null
         ? null
         : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
@@ -2390,19 +2378,17 @@ _$_Invoice _$_$_InvoiceFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R5ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R5ResourceType.Invoice),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2445,9 +2431,7 @@ _$_Invoice _$_$_InvoiceFromJson(Map<String, dynamic> json) {
     recipient: json['recipient'] == null
         ? null
         : Reference.fromJson(json['recipient'] as Map<String, dynamic>),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2480,7 +2464,7 @@ _$_Invoice _$_$_InvoiceFromJson(Map<String, dynamic> json) {
         : Money.fromJson(json['totalGross'] as Map<String, dynamic>),
     paymentTerms: json['paymentTerms'] == null
         ? null
-        : Markdown.fromJson(json['paymentTerms'] as String),
+        : Markdown.fromJson(json['paymentTerms']),
     paymentTermsElement: json['_paymentTerms'] == null
         ? null
         : Element.fromJson(json['_paymentTerms'] as Map<String, dynamic>),

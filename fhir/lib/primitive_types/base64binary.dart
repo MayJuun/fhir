@@ -10,7 +10,7 @@ class Base64Binary {
     return Base64Binary._(value);
   }
 
-  factory Base64Binary.fromJson(String json) => Base64Binary(json);
+  factory Base64Binary.fromJson(dynamic json) => Base64Binary(json);
 
   factory Base64Binary.fromYaml(dynamic yaml) => yaml is String
       ? Base64Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))

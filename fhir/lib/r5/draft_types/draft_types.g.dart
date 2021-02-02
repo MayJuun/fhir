@@ -234,7 +234,7 @@ _$_MarketingStatus _$_$_MarketingStatusFromJson(Map<String, dynamic> json) {
         : Period.fromJson(json['dateRange'] as Map<String, dynamic>),
     restoreDate: json['restoreDate'] == null
         ? null
-        : FhirDateTime.fromJson(json['restoreDate'] as String),
+        : FhirDateTime.fromJson(json['restoreDate']),
     restoreDateElement: json['_restoreDate'] == null
         ? null
         : Element.fromJson(json['_restoreDate'] as Map<String, dynamic>),
@@ -267,19 +267,17 @@ Map<String, dynamic> _$_$_MarketingStatusToJson(_$_MarketingStatus instance) {
 _$_Citation _$_$_CitationFromJson(Map<String, dynamic> json) {
   return _$_Citation(
     resourceType: json['resourceType'] as String ?? 'Citation',
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -300,7 +298,7 @@ _$_Citation _$_$_CitationFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -331,9 +329,7 @@ _$_Citation _$_$_CitationFromJson(Map<String, dynamic> json) {
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -348,7 +344,7 @@ _$_Citation _$_$_CitationFromJson(Map<String, dynamic> json) {
         ?.toList(),
     description: json['description'] == null
         ? null
-        : Markdown.fromJson(json['description'] as String),
+        : Markdown.fromJson(json['description']),
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -361,15 +357,13 @@ _$_Citation _$_$_CitationFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    purpose: json['purpose'] == null
-        ? null
-        : Markdown.fromJson(json['purpose'] as String),
+    purpose:
+        json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
     purposeElement: json['_purpose'] == null
         ? null
         : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
-    copyright: json['copyright'] == null
-        ? null
-        : Markdown.fromJson(json['copyright'] as String),
+    copyright:
+        json['copyright'] == null ? null : Markdown.fromJson(json['copyright']),
     copyrightElement: json['_copyright'] == null
         ? null
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
@@ -399,7 +393,7 @@ _$_Citation _$_$_CitationFromJson(Map<String, dynamic> json) {
         ?.toList(),
     dateCited: json['dateCited'] == null
         ? null
-        : FhirDateTime.fromJson(json['dateCited'] as String),
+        : FhirDateTime.fromJson(json['dateCited']),
     dateCitedElement: json['_dateCited'] == null
         ? null
         : Element.fromJson(json['_dateCited'] as Map<String, dynamic>),
@@ -420,7 +414,7 @@ _$_Citation _$_$_CitationFromJson(Map<String, dynamic> json) {
             json['publicationInfo'] as Map<String, dynamic>),
     articleTitle: json['articleTitle'] == null
         ? null
-        : Markdown.fromJson(json['articleTitle'] as String),
+        : Markdown.fromJson(json['articleTitle']),
     articleTitleElement: json['_articleTitle'] == null
         ? null
         : Element.fromJson(json['_articleTitle'] as Map<String, dynamic>),
@@ -438,15 +432,14 @@ _$_Citation _$_$_CitationFromJson(Map<String, dynamic> json) {
             ? null
             : CitationArticleUrl.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    abstract_: json['abstract'] == null
-        ? null
-        : Markdown.fromJson(json['abstract'] as String),
+    abstract_:
+        json['abstract'] == null ? null : Markdown.fromJson(json['abstract']),
     abstractElement: json['_abstract'] == null
         ? null
         : Element.fromJson(json['_abstract'] as Map<String, dynamic>),
     abstractCopyright: json['abstractCopyright'] == null
         ? null
-        : Markdown.fromJson(json['abstractCopyright'] as String),
+        : Markdown.fromJson(json['abstractCopyright']),
     abstractCopyrightElement: json['_abstractCopyright'] == null
         ? null
         : Element.fromJson(json['_abstractCopyright'] as Map<String, dynamic>),
@@ -644,8 +637,7 @@ _$_CitationSummary _$_$_CitationSummaryFromJson(Map<String, dynamic> json) {
     style: json['style'] == null
         ? null
         : CodeableConcept.fromJson(json['style'] as Map<String, dynamic>),
-    text:
-        json['text'] == null ? null : Markdown.fromJson(json['text'] as String),
+    text: json['text'] == null ? null : Markdown.fromJson(json['text']),
     textElement: json['_text'] == null
         ? null
         : Element.fromJson(json['_text'] as Map<String, dynamic>),
@@ -924,13 +916,13 @@ _$_CitationPublicationInfo _$_$_CitationPublicationInfoFromJson(
             json['publishedIn'] as Map<String, dynamic>),
     entryDate: json['entryDate'] == null
         ? null
-        : FhirDateTime.fromJson(json['entryDate'] as String),
+        : FhirDateTime.fromJson(json['entryDate']),
     entryDateElement: json['_entryDate'] == null
         ? null
         : Element.fromJson(json['_entryDate'] as Map<String, dynamic>),
     revisionDate: json['revisionDate'] == null
         ? null
-        : FhirDateTime.fromJson(json['revisionDate'] as String),
+        : FhirDateTime.fromJson(json['revisionDate']),
     revisionDateElement: json['_revisionDate'] == null
         ? null
         : Element.fromJson(json['_revisionDate'] as Map<String, dynamic>),
@@ -1056,9 +1048,7 @@ _$_CitationAlternativeTitle _$_$_CitationAlternativeTitleFromJson(
     language: json['language'] == null
         ? null
         : CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
-    title: json['title'] == null
-        ? null
-        : Markdown.fromJson(json['title'] as String),
+    title: json['title'] == null ? null : Markdown.fromJson(json['title']),
     titleElement: json['_title'] == null
         ? null
         : Element.fromJson(json['_title'] as Map<String, dynamic>),
@@ -1157,7 +1147,7 @@ _$_CitationArticleUrl _$_$_CitationArticleUrlFromJson(
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -1205,15 +1195,14 @@ _$_CitationAlternativeAbstract _$_$_CitationAlternativeAbstractFromJson(
     language: json['language'] == null
         ? null
         : CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
-    abstract_: json['abstract'] == null
-        ? null
-        : Markdown.fromJson(json['abstract'] as String),
+    abstract_:
+        json['abstract'] == null ? null : Markdown.fromJson(json['abstract']),
     abstractElement: json['_abstract'] == null
         ? null
         : Element.fromJson(json['_abstract'] as Map<String, dynamic>),
     abstractCopyright: json['abstractCopyright'] == null
         ? null
-        : Markdown.fromJson(json['abstractCopyright'] as String),
+        : Markdown.fromJson(json['abstractCopyright']),
     abstractCopyrightElement: json['_abstractCopyright'] == null
         ? null
         : Element.fromJson(json['_abstractCopyright'] as Map<String, dynamic>),
@@ -1479,9 +1468,7 @@ _$_CitationSummary1 _$_$_CitationSummary1FromJson(Map<String, dynamic> json) {
     source: json['source'] == null
         ? null
         : CodeableConcept.fromJson(json['source'] as Map<String, dynamic>),
-    value: json['value'] == null
-        ? null
-        : Markdown.fromJson(json['value'] as String),
+    value: json['value'] == null ? null : Markdown.fromJson(json['value']),
     valueElement: json['_value'] == null
         ? null
         : Element.fromJson(json['_value'] as Map<String, dynamic>),
@@ -1769,13 +1756,13 @@ _$_CitationPublicationInfo1 _$_$_CitationPublicationInfo1FromJson(
             json['publishedIn'] as Map<String, dynamic>),
     entryDate: json['entryDate'] == null
         ? null
-        : FhirDateTime.fromJson(json['entryDate'] as String),
+        : FhirDateTime.fromJson(json['entryDate']),
     entryDateElement: json['_entryDate'] == null
         ? null
         : Element.fromJson(json['_entryDate'] as Map<String, dynamic>),
     revisionDate: json['revisionDate'] == null
         ? null
-        : FhirDateTime.fromJson(json['revisionDate'] as String),
+        : FhirDateTime.fromJson(json['revisionDate']),
     revisionDateElement: json['_revisionDate'] == null
         ? null
         : Element.fromJson(json['_revisionDate'] as Map<String, dynamic>),
@@ -2088,9 +2075,7 @@ _$_CitationPubMedPubDate _$_$_CitationPubMedPubDateFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['publicationState'] as Map<String, dynamic>),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2137,7 +2122,7 @@ _$_CitationRelatedArticle _$_$_CitationRelatedArticleFromJson(
         : Reference.fromJson(json['citationReference'] as Map<String, dynamic>),
     citationMarkdown: json['citationMarkdown'] == null
         ? null
-        : Markdown.fromJson(json['citationMarkdown'] as String),
+        : Markdown.fromJson(json['citationMarkdown']),
     citationMarkdownElement: json['_citationMarkdown'] == null
         ? null
         : Element.fromJson(json['_citationMarkdown'] as Map<String, dynamic>),
@@ -2174,19 +2159,17 @@ Map<String, dynamic> _$_$_CitationRelatedArticleToJson(
 _$_EvidenceReport _$_$_EvidenceReportFromJson(Map<String, dynamic> json) {
   return _$_EvidenceReport(
     resourceType: json['resourceType'] as String ?? 'EvidenceReport',
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2207,7 +2190,7 @@ _$_EvidenceReport _$_$_EvidenceReportFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -2238,9 +2221,7 @@ _$_EvidenceReport _$_$_EvidenceReportFromJson(Map<String, dynamic> json) {
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2255,7 +2236,7 @@ _$_EvidenceReport _$_$_EvidenceReportFromJson(Map<String, dynamic> json) {
         ?.toList(),
     description: json['description'] == null
         ? null
-        : Markdown.fromJson(json['description'] as String),
+        : Markdown.fromJson(json['description']),
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
@@ -2268,15 +2249,13 @@ _$_EvidenceReport _$_$_EvidenceReportFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    purpose: json['purpose'] == null
-        ? null
-        : Markdown.fromJson(json['purpose'] as String),
+    purpose:
+        json['purpose'] == null ? null : Markdown.fromJson(json['purpose']),
     purposeElement: json['_purpose'] == null
         ? null
         : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
-    copyright: json['copyright'] == null
-        ? null
-        : Markdown.fromJson(json['copyright'] as String),
+    copyright:
+        json['copyright'] == null ? null : Markdown.fromJson(json['copyright']),
     copyrightElement: json['_copyright'] == null
         ? null
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
@@ -2646,7 +2625,7 @@ _$_EvidenceReportSection _$_$_EvidenceReportSectionFromJson(
     text: json['text'] == null
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    mode: json['mode'] == null ? null : Code.fromJson(json['mode'] as String),
+    mode: json['mode'] == null ? null : Code.fromJson(json['mode']),
     modeElement: json['_mode'] == null
         ? null
         : Element.fromJson(json['_mode'] as Map<String, dynamic>),

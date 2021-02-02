@@ -11,19 +11,17 @@ _$_TestReport _$_$_TestReportFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Stu3ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Stu3ResourceType.TestReport),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -608,19 +606,17 @@ _$_TestScript _$_$_TestScriptFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Stu3ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Stu3ResourceType.TestScript),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1085,9 +1081,7 @@ _$_TestScriptVariable _$_$_TestScriptVariableFromJson(
     pathElement: json['_path'] == null
         ? null
         : Element.fromJson(json['_path'] as Map<String, dynamic>),
-    sourceId: json['sourceId'] == null
-        ? null
-        : Id.fromJson(json['sourceId'] as String),
+    sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
     sourceIdElement: json['_sourceId'] == null
         ? null
         : Element.fromJson(json['_sourceId'] as Map<String, dynamic>),
@@ -1209,8 +1203,7 @@ Map<String, dynamic> _$_$_TestScriptRulesetToJson(
 
 _$_TestScriptRule1 _$_$_TestScriptRule1FromJson(Map<String, dynamic> json) {
   return _$_TestScriptRule1(
-    ruleId:
-        json['ruleId'] == null ? null : Id.fromJson(json['ruleId'] as String),
+    ruleId: json['ruleId'] == null ? null : Id.fromJson(json['ruleId']),
     ruleIdElement: json['_ruleId'] == null
         ? null
         : Element.fromJson(json['_ruleId'] as Map<String, dynamic>),
@@ -1368,27 +1361,21 @@ _$_TestScriptOperation _$_$_TestScriptOperationFromJson(
             ? null
             : TestScriptRequestHeader.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    requestId: json['requestId'] == null
-        ? null
-        : Id.fromJson(json['requestId'] as String),
+    requestId:
+        json['requestId'] == null ? null : Id.fromJson(json['requestId']),
     requestIdElement: json['_requestId'] == null
         ? null
         : Element.fromJson(json['_requestId'] as Map<String, dynamic>),
-    responseId: json['responseId'] == null
-        ? null
-        : Id.fromJson(json['responseId'] as String),
+    responseId:
+        json['responseId'] == null ? null : Id.fromJson(json['responseId']),
     responseIdElement: json['_responseId'] == null
         ? null
         : Element.fromJson(json['_responseId'] as Map<String, dynamic>),
-    sourceId: json['sourceId'] == null
-        ? null
-        : Id.fromJson(json['sourceId'] as String),
+    sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
     sourceIdElement: json['_sourceId'] == null
         ? null
         : Element.fromJson(json['_sourceId'] as Map<String, dynamic>),
-    targetId: json['targetId'] == null
-        ? null
-        : Id.fromJson(json['targetId'] as String),
+    targetId: json['targetId'] == null ? null : Id.fromJson(json['targetId']),
     targetIdElement: json['_targetId'] == null
         ? null
         : Element.fromJson(json['_targetId'] as Map<String, dynamic>),
@@ -1580,9 +1567,7 @@ _$_TestScriptAssert _$_$_TestScriptAssertFromJson(Map<String, dynamic> json) {
     ruleset: json['ruleset'] == null
         ? null
         : TestScriptRuleset1.fromJson(json['ruleset'] as Map<String, dynamic>),
-    sourceId: json['sourceId'] == null
-        ? null
-        : Id.fromJson(json['sourceId'] as String),
+    sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
     sourceIdElement: json['_sourceId'] == null
         ? null
         : Element.fromJson(json['_sourceId'] as Map<String, dynamic>),
@@ -1729,8 +1714,7 @@ const _$TestScriptAssertResponseEnumMap = {
 
 _$_TestScriptRule2 _$_$_TestScriptRule2FromJson(Map<String, dynamic> json) {
   return _$_TestScriptRule2(
-    ruleId:
-        json['ruleId'] == null ? null : Id.fromJson(json['ruleId'] as String),
+    ruleId: json['ruleId'] == null ? null : Id.fromJson(json['ruleId']),
     ruleIdElement: json['_ruleId'] == null
         ? null
         : Element.fromJson(json['_ruleId'] as Map<String, dynamic>),
@@ -1789,9 +1773,8 @@ Map<String, dynamic> _$_$_TestScriptParam2ToJson(_$_TestScriptParam2 instance) {
 _$_TestScriptRuleset1 _$_$_TestScriptRuleset1FromJson(
     Map<String, dynamic> json) {
   return _$_TestScriptRuleset1(
-    rulesetId: json['rulesetId'] == null
-        ? null
-        : Id.fromJson(json['rulesetId'] as String),
+    rulesetId:
+        json['rulesetId'] == null ? null : Id.fromJson(json['rulesetId']),
     rulesetIdElement: json['_rulesetId'] == null
         ? null
         : Element.fromJson(json['_rulesetId'] as Map<String, dynamic>),
@@ -1821,8 +1804,7 @@ Map<String, dynamic> _$_$_TestScriptRuleset1ToJson(
 
 _$_TestScriptRule3 _$_$_TestScriptRule3FromJson(Map<String, dynamic> json) {
   return _$_TestScriptRule3(
-    ruleId:
-        json['ruleId'] == null ? null : Id.fromJson(json['ruleId'] as String),
+    ruleId: json['ruleId'] == null ? null : Id.fromJson(json['ruleId']),
     ruleIdElement: json['_ruleId'] == null
         ? null
         : Element.fromJson(json['_ruleId'] as Map<String, dynamic>),

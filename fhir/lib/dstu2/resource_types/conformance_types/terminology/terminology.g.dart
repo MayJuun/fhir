@@ -12,7 +12,7 @@ _$_ValueSet _$_$_ValueSetFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.ValueSet),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     idElement: json['_id'] == null
         ? null
         : Element.fromJson(json['_id'] as Map<String, dynamic>),
@@ -21,13 +21,11 @@ _$_ValueSet _$_$_ValueSetFromJson(Map<String, dynamic> json) {
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -48,7 +46,7 @@ _$_ValueSet _$_$_ValueSetFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -83,9 +81,7 @@ _$_ValueSet _$_$_ValueSetFromJson(Map<String, dynamic> json) {
             ? null
             : ValueSetContact.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -328,7 +324,7 @@ const _$ValueSetStatusEnumMap = {
 
 _$_ValueSetContact _$_$_ValueSetContactFromJson(Map<String, dynamic> json) {
   return _$_ValueSetContact(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -373,7 +369,7 @@ _$_ValueSetCodeSystem _$_$_ValueSetCodeSystemFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['system', 'concept']);
   return _$_ValueSetCodeSystem(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -386,9 +382,7 @@ _$_ValueSetCodeSystem _$_$_ValueSetCodeSystemFromJson(
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    system: json['system'] == null
-        ? null
-        : FhirUri.fromJson(json['system'] as String),
+    system: json['system'] == null ? null : FhirUri.fromJson(json['system']),
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
@@ -440,7 +434,7 @@ _$_ValueSetCodeSystemConcept _$_$_ValueSetCodeSystemConceptFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_ValueSetCodeSystemConcept(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -453,7 +447,7 @@ _$_ValueSetCodeSystemConcept _$_$_ValueSetCodeSystemConceptFromJson(
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -509,7 +503,7 @@ _$_ValueSetConceptDesignation _$_$_ValueSetConceptDesignationFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['value']);
   return _$_ValueSetConceptDesignation(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -520,9 +514,7 @@ _$_ValueSetConceptDesignation _$_$_ValueSetConceptDesignationFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -561,7 +553,7 @@ Map<String, dynamic> _$_$_ValueSetConceptDesignationToJson(
 
 _$_ValueSetCompose _$_$_ValueSetComposeFromJson(Map<String, dynamic> json) {
   return _$_ValueSetCompose(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -575,7 +567,7 @@ _$_ValueSetCompose _$_$_ValueSetComposeFromJson(Map<String, dynamic> json) {
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     import_: (json['import'] as List)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
         ?.toList(),
     include: (json['include'] as List)
         ?.map((e) => e == null
@@ -615,7 +607,7 @@ _$_ValueSetComposeInclude _$_$_ValueSetComposeIncludeFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['system']);
   return _$_ValueSetComposeInclude(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -628,9 +620,7 @@ _$_ValueSetComposeInclude _$_$_ValueSetComposeIncludeFromJson(
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    system: json['system'] == null
-        ? null
-        : FhirUri.fromJson(json['system'] as String),
+    system: json['system'] == null ? null : FhirUri.fromJson(json['system']),
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
@@ -680,7 +670,7 @@ _$_ValueSetIncludeConcept _$_$_ValueSetIncludeConceptFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['code']);
   return _$_ValueSetIncludeConcept(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -693,7 +683,7 @@ _$_ValueSetIncludeConcept _$_$_ValueSetIncludeConceptFromJson(
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -738,7 +728,7 @@ _$_ValueSetIncludeFilter _$_$_ValueSetIncludeFilterFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['property', 'op', 'value']);
   return _$_ValueSetIncludeFilter(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -751,9 +741,7 @@ _$_ValueSetIncludeFilter _$_$_ValueSetIncludeFilterFromJson(
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    property: json['property'] == null
-        ? null
-        : Code.fromJson(json['property'] as String),
+    property: json['property'] == null ? null : Code.fromJson(json['property']),
     propertyElement: json['_property'] == null
         ? null
         : Element.fromJson(json['_property'] as Map<String, dynamic>),
@@ -762,8 +750,7 @@ _$_ValueSetIncludeFilter _$_$_ValueSetIncludeFilterFromJson(
     opElement: json['_op'] == null
         ? null
         : Element.fromJson(json['_op'] as Map<String, dynamic>),
-    value:
-        json['value'] == null ? null : Code.fromJson(json['value'] as String),
+    value: json['value'] == null ? null : Code.fromJson(json['value']),
     valueElement: json['_value'] == null
         ? null
         : Element.fromJson(json['_value'] as Map<String, dynamic>),
@@ -808,7 +795,7 @@ const _$FilterOpEnumMap = {
 _$_ValueSetExpansion _$_$_ValueSetExpansionFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['identifier', 'timestamp']);
   return _$_ValueSetExpansion(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -823,13 +810,13 @@ _$_ValueSetExpansion _$_$_ValueSetExpansionFromJson(Map<String, dynamic> json) {
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
     identifier: json['identifier'] == null
         ? null
-        : FhirUri.fromJson(json['identifier'] as String),
+        : FhirUri.fromJson(json['identifier']),
     identifierElement: json['_identifier'] == null
         ? null
         : Element.fromJson(json['_identifier'] as Map<String, dynamic>),
     timestamp: json['timestamp'] == null
         ? null
-        : FhirDateTime.fromJson(json['timestamp'] as String),
+        : FhirDateTime.fromJson(json['timestamp']),
     timestampElement: json['_timestamp'] == null
         ? null
         : Element.fromJson(json['_timestamp'] as Map<String, dynamic>),
@@ -889,7 +876,7 @@ _$_ValueSetExpansionParameter _$_$_ValueSetExpansionParameterFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['name']);
   return _$_ValueSetExpansionParameter(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -928,15 +915,13 @@ _$_ValueSetExpansionParameter _$_$_ValueSetExpansionParameterFromJson(
     valueDecimalElement: json['_valueDecimal'] == null
         ? null
         : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
-    valueUri: json['valueUri'] == null
-        ? null
-        : FhirUri.fromJson(json['valueUri'] as String),
+    valueUri:
+        json['valueUri'] == null ? null : FhirUri.fromJson(json['valueUri']),
     valueUriElement: json['_valueUri'] == null
         ? null
         : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
-    valueCode: json['valueCode'] == null
-        ? null
-        : Code.fromJson(json['valueCode'] as String),
+    valueCode:
+        json['valueCode'] == null ? null : Code.fromJson(json['valueCode']),
     valueCodeElement: json['_valueCode'] == null
         ? null
         : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
@@ -979,7 +964,7 @@ Map<String, dynamic> _$_$_ValueSetExpansionParameterToJson(
 _$_ValueSetExpansionContains _$_$_ValueSetExpansionContainsFromJson(
     Map<String, dynamic> json) {
   return _$_ValueSetExpansionContains(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -992,9 +977,7 @@ _$_ValueSetExpansionContains _$_$_ValueSetExpansionContainsFromJson(
         ?.toList(),
     fhirComments:
         (json['fhir_comments'] as List)?.map((e) => e as String)?.toList(),
-    system: json['system'] == null
-        ? null
-        : FhirUri.fromJson(json['system'] as String),
+    system: json['system'] == null ? null : FhirUri.fromJson(json['system']),
     systemElement: json['_system'] == null
         ? null
         : Element.fromJson(json['_system'] as Map<String, dynamic>),
@@ -1007,7 +990,7 @@ _$_ValueSetExpansionContains _$_$_ValueSetExpansionContainsFromJson(
     versionElement: json['_version'] == null
         ? null
         : Element.fromJson(json['_version'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -1060,19 +1043,17 @@ _$_ConceptMap _$_$_ConceptMapFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.ConceptMap),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1093,7 +1074,7 @@ _$_ConceptMap _$_$_ConceptMapFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -1128,9 +1109,7 @@ _$_ConceptMap _$_$_ConceptMapFromJson(Map<String, dynamic> json) {
             ? null
             : ConceptMapContact.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     description: json['description'] as String,
     descriptionElement: json['_description'] == null
         ? null
@@ -1145,18 +1124,16 @@ _$_ConceptMap _$_$_ConceptMapFromJson(Map<String, dynamic> json) {
     copyrightElement: json['_copyright'] == null
         ? null
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
-    sourceUri: json['sourceUri'] == null
-        ? null
-        : FhirUri.fromJson(json['sourceUri'] as String),
+    sourceUri:
+        json['sourceUri'] == null ? null : FhirUri.fromJson(json['sourceUri']),
     sourceUriElement: json['_sourceUri'] == null
         ? null
         : Element.fromJson(json['_sourceUri'] as Map<String, dynamic>),
     sourceReference: json['sourceReference'] == null
         ? null
         : Reference.fromJson(json['sourceReference'] as Map<String, dynamic>),
-    targetUri: json['targetUri'] == null
-        ? null
-        : FhirUri.fromJson(json['targetUri'] as String),
+    targetUri:
+        json['targetUri'] == null ? null : FhirUri.fromJson(json['targetUri']),
     targetUriElement: json['_targetUri'] == null
         ? null
         : Element.fromJson(json['_targetUri'] as Map<String, dynamic>),
@@ -1240,7 +1217,7 @@ const _$ConceptMapStatusEnumMap = {
 
 _$_ConceptMapContact _$_$_ConceptMapContactFromJson(Map<String, dynamic> json) {
   return _$_ConceptMapContact(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1281,7 +1258,7 @@ Map<String, dynamic> _$_$_ConceptMapContactToJson(
 
 _$_ConceptMapElement _$_$_ConceptMapElementFromJson(Map<String, dynamic> json) {
   return _$_ConceptMapElement(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1294,8 +1271,8 @@ _$_ConceptMapElement _$_$_ConceptMapElementFromJson(Map<String, dynamic> json) {
         ?.toList(),
     codeSystem: json['codeSystem'] == null
         ? null
-        : FhirUri.fromJson(json['codeSystem'] as String),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+        : FhirUri.fromJson(json['codeSystem']),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -1333,7 +1310,7 @@ _$_ConceptMapElementTarget _$_$_ConceptMapElementTargetFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['equivalence']);
   return _$_ConceptMapElementTarget(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1346,8 +1323,8 @@ _$_ConceptMapElementTarget _$_$_ConceptMapElementTargetFromJson(
         ?.toList(),
     codeSystem: json['codeSystem'] == null
         ? null
-        : FhirUri.fromJson(json['codeSystem'] as String),
-    code: json['code'] == null ? null : Code.fromJson(json['code'] as String),
+        : FhirUri.fromJson(json['codeSystem']),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -1419,7 +1396,7 @@ _$_ConceptMapTargetDependsOn _$_$_ConceptMapTargetDependsOnFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['element', 'codeSystem', 'code']);
   return _$_ConceptMapTargetDependsOn(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1430,12 +1407,10 @@ _$_ConceptMapTargetDependsOn _$_$_ConceptMapTargetDependsOnFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    element: json['element'] == null
-        ? null
-        : FhirUri.fromJson(json['element'] as String),
+    element: json['element'] == null ? null : FhirUri.fromJson(json['element']),
     codeSystem: json['codeSystem'] == null
         ? null
-        : FhirUri.fromJson(json['codeSystem'] as String),
+        : FhirUri.fromJson(json['codeSystem']),
     code: json['code'] as String,
   );
 }
@@ -1468,19 +1443,17 @@ _$_NamingSystem _$_$_NamingSystemFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.NamingSystem),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1528,9 +1501,7 @@ _$_NamingSystem _$_$_NamingSystemFromJson(Map<String, dynamic> json) {
     responsibleElement: json['_responsible'] == null
         ? null
         : Element.fromJson(json['_responsible'] as Map<String, dynamic>),
-    date: json['date'] == null
-        ? null
-        : FhirDateTime.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1628,7 +1599,7 @@ const _$NamingSystemKindEnumMap = {
 _$_NamingSystemContact _$_$_NamingSystemContactFromJson(
     Map<String, dynamic> json) {
   return _$_NamingSystemContact(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1671,7 +1642,7 @@ _$_NamingSystemUniqueId _$_$_NamingSystemUniqueIdFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type', 'value']);
   return _$_NamingSystemUniqueId(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null

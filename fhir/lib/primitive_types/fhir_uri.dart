@@ -13,7 +13,7 @@ class FhirUri {
     );
   }
 
-  factory FhirUri.fromJson(String json) => FhirUri(json);
+  factory FhirUri.fromJson(dynamic json) => FhirUri(json);
 
   factory FhirUri.fromYaml(dynamic yaml) => yaml is String
       ? FhirUri.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -43,4 +43,4 @@ class FhirUri {
 Either<String, Uri> _validateFhirUri(String value) =>
     Uri.tryParse(value) != null
         ? right(Uri.parse(value))
-        : left('FormatError: $value is not a Uri');
+        : left('FormatError: "$value" is not a Uri');

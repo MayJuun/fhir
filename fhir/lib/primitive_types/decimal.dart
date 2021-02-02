@@ -13,7 +13,7 @@ class Decimal {
     );
   }
 
-  factory Decimal.fromJson(String json) => Decimal(json);
+  factory Decimal.fromJson(dynamic json) => Decimal(json);
 
   factory Decimal.fromYaml(dynamic yaml) => yaml is String
       ? Decimal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
@@ -26,8 +26,8 @@ class Decimal {
   bool get isValid => _value.isRight();
 
   String toString() => value.toString();
-  String toJson() => value;
-  String toYaml() => value;
+  dynamic toJson() => value;
+  dynamic toYaml() => value;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
@@ -43,4 +43,4 @@ class Decimal {
 Either<String, double> _validateDecimal(dynamic value) =>
     double.tryParse(value.toString()) != null
         ? right(double.parse(value.toString()))
-        : left('FormatError: $value is not a Decimal');
+        : left('FormatError: "$value" is not a Decimal');

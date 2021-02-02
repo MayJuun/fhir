@@ -11,19 +11,17 @@ _$_Account _$_$_AccountFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Stu3ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Stu3ResourceType.Account),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -359,19 +357,17 @@ _$_ChargeItem _$_$_ChargeItemFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Stu3ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Stu3ResourceType.ChargeItem),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -419,7 +415,7 @@ _$_ChargeItem _$_$_ChargeItemFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['context'] as Map<String, dynamic>),
     occurrenceDateTime: json['occurrenceDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
+        : FhirDateTime.fromJson(json['occurrenceDateTime']),
     occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
         ? null
         : Element.fromJson(json['_occurrenceDateTime'] as Map<String, dynamic>),
@@ -452,7 +448,7 @@ _$_ChargeItem _$_$_ChargeItemFromJson(Map<String, dynamic> json) {
         ?.toList(),
     factorOverride: json['factorOverride'] == null
         ? null
-        : Id.fromJson(json['factorOverride'] as String),
+        : Id.fromJson(json['factorOverride']),
     factorOverrideElement: json['_factorOverride'] == null
         ? null
         : Element.fromJson(json['_factorOverride'] as Map<String, dynamic>),
@@ -603,19 +599,17 @@ _$_Contract _$_$_ContractFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Stu3ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Stu3ResourceType.Contract),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -870,7 +864,7 @@ _$_ContractValuedItem _$_$_ContractValuedItemFromJson(
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     effectiveTime: json['effectiveTime'] == null
         ? null
-        : Time.fromJson(json['effectiveTime'] as String),
+        : Time.fromJson(json['effectiveTime']),
     effectiveTimeElement: json['_effectiveTime'] == null
         ? null
         : Element.fromJson(json['_effectiveTime'] as Map<String, dynamic>),
@@ -1049,7 +1043,7 @@ _$_ContractValuedItem1 _$_$_ContractValuedItem1FromJson(
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     effectiveTime: json['effectiveTime'] == null
         ? null
-        : Time.fromJson(json['effectiveTime'] as String),
+        : Time.fromJson(json['effectiveTime']),
     effectiveTimeElement: json['_effectiveTime'] == null
         ? null
         : Element.fromJson(json['_effectiveTime'] as Map<String, dynamic>),
@@ -1183,19 +1177,17 @@ _$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
     resourceType: _$enumDecodeNullable(
         _$Stu3ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Stu3ResourceType.ExplanationOfBenefit),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1799,28 +1791,28 @@ _$_ExplanationOfBenefitItem _$_$_ExplanationOfBenefitItemFromJson(
         ? null
         : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
     careTeamLinkId: (json['careTeamLinkId'] as List)
-        ?.map((e) => e == null ? null : Id.fromJson(e as String))
+        ?.map((e) => e == null ? null : Id.fromJson(e))
         ?.toList(),
     careTeamLinkIdElement: (json['_careTeamLinkId'] as List)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     diagnosisLinkId: (json['diagnosisLinkId'] as List)
-        ?.map((e) => e == null ? null : Id.fromJson(e as String))
+        ?.map((e) => e == null ? null : Id.fromJson(e))
         ?.toList(),
     diagnosisLinkIdElement: (json['_diagnosisLinkId'] as List)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     procedureLinkId: (json['procedureLinkId'] as List)
-        ?.map((e) => e == null ? null : Id.fromJson(e as String))
+        ?.map((e) => e == null ? null : Id.fromJson(e))
         ?.toList(),
     procedureLinkIdElement: (json['_procedureLinkId'] as List)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     informationLinkId: (json['informationLinkId'] as List)
-        ?.map((e) => e == null ? null : Id.fromJson(e as String))
+        ?.map((e) => e == null ? null : Id.fromJson(e))
         ?.toList(),
     informationLinkIdElement: (json['_informationLinkId'] as List)
         ?.map((e) =>
@@ -2220,7 +2212,7 @@ _$_ExplanationOfBenefitAddItem _$_$_ExplanationOfBenefitAddItemFromJson(
     Map<String, dynamic> json) {
   return _$_ExplanationOfBenefitAddItem(
     sequenceLinkId: (json['sequenceLinkId'] as List)
-        ?.map((e) => e == null ? null : Id.fromJson(e as String))
+        ?.map((e) => e == null ? null : Id.fromJson(e))
         ?.toList(),
     sequenceLinkIdElement: (json['_sequenceLinkId'] as List)
         ?.map((e) =>

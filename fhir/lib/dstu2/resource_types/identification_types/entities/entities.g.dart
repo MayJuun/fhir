@@ -11,19 +11,17 @@ _$_Location _$_$_LocationFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Location),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -283,7 +281,7 @@ const _$LocationModeEnumMap = {
 _$_LocationPosition _$_$_LocationPositionFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['longitude', 'latitude']);
   return _$_LocationPosition(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -341,19 +339,17 @@ _$_Substance _$_$_SubstanceFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Substance),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -443,7 +439,7 @@ Map<String, dynamic> _$_$_SubstanceToJson(_$_Substance instance) {
 
 _$_SubstanceInstance _$_$_SubstanceInstanceFromJson(Map<String, dynamic> json) {
   return _$_SubstanceInstance(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -457,9 +453,8 @@ _$_SubstanceInstance _$_$_SubstanceInstanceFromJson(Map<String, dynamic> json) {
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    expiry: json['expiry'] == null
-        ? null
-        : FhirDateTime.fromJson(json['expiry'] as String),
+    expiry:
+        json['expiry'] == null ? null : FhirDateTime.fromJson(json['expiry']),
     expiryElement: json['_expiry'] == null
         ? null
         : Element.fromJson(json['_expiry'] as Map<String, dynamic>),
@@ -495,7 +490,7 @@ _$_SubstanceIngredient _$_$_SubstanceIngredientFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['substance']);
   return _$_SubstanceIngredient(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -540,19 +535,17 @@ _$_Person _$_$_PersonFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Person),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -669,7 +662,7 @@ const _$PersonGenderEnumMap = {
 _$_PersonLink _$_$_PersonLinkFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['target']);
   return _$_PersonLink(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -724,19 +717,17 @@ _$_Contract _$_$_ContractFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Contract),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -760,9 +751,8 @@ _$_Contract _$_$_ContractFromJson(Map<String, dynamic> json) {
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    issued: json['issued'] == null
-        ? null
-        : FhirDateTime.fromJson(json['issued'] as String),
+    issued:
+        json['issued'] == null ? null : FhirDateTime.fromJson(json['issued']),
     issuedElement: json['_issued'] == null
         ? null
         : Element.fromJson(json['_issued'] as Map<String, dynamic>),
@@ -896,7 +886,7 @@ Map<String, dynamic> _$_$_ContractToJson(_$_Contract instance) {
 _$_ContractActor _$_$_ContractActorFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['entity']);
   return _$_ContractActor(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -940,7 +930,7 @@ Map<String, dynamic> _$_$_ContractActorToJson(_$_ContractActor instance) {
 _$_ContractValuedItem _$_$_ContractValuedItemFromJson(
     Map<String, dynamic> json) {
   return _$_ContractValuedItem(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -963,7 +953,7 @@ _$_ContractValuedItem _$_$_ContractValuedItemFromJson(
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     effectiveTime: json['effectiveTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['effectiveTime'] as String),
+        : FhirDateTime.fromJson(json['effectiveTime']),
     effectiveTimeElement: json['_effectiveTime'] == null
         ? null
         : Element.fromJson(json['_effectiveTime'] as Map<String, dynamic>),
@@ -1027,7 +1017,7 @@ Map<String, dynamic> _$_$_ContractValuedItemToJson(
 _$_ContractSigner _$_$_ContractSignerFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['type', 'party', 'signature']);
   return _$_ContractSigner(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1070,7 +1060,7 @@ Map<String, dynamic> _$_$_ContractSignerToJson(_$_ContractSigner instance) {
 
 _$_ContractTerm _$_$_ContractTermFromJson(Map<String, dynamic> json) {
   return _$_ContractTerm(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1084,9 +1074,8 @@ _$_ContractTerm _$_$_ContractTermFromJson(Map<String, dynamic> json) {
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    issued: json['issued'] == null
-        ? null
-        : FhirDateTime.fromJson(json['issued'] as String),
+    issued:
+        json['issued'] == null ? null : FhirDateTime.fromJson(json['issued']),
     issuedElement: json['_issued'] == null
         ? null
         : Element.fromJson(json['_issued'] as Map<String, dynamic>),
@@ -1169,7 +1158,7 @@ Map<String, dynamic> _$_$_ContractTermToJson(_$_ContractTerm instance) {
 _$_ContractTermActor _$_$_ContractTermActorFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['entity']);
   return _$_ContractTermActor(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1213,7 +1202,7 @@ Map<String, dynamic> _$_$_ContractTermActorToJson(
 
 _$_ContractFriendly _$_$_ContractFriendlyFromJson(Map<String, dynamic> json) {
   return _$_ContractFriendly(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1255,7 +1244,7 @@ Map<String, dynamic> _$_$_ContractFriendlyToJson(_$_ContractFriendly instance) {
 
 _$_ContractLegal _$_$_ContractLegalFromJson(Map<String, dynamic> json) {
   return _$_ContractLegal(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -1297,7 +1286,7 @@ Map<String, dynamic> _$_$_ContractLegalToJson(_$_ContractLegal instance) {
 
 _$_ContractRule _$_$_ContractRuleFromJson(Map<String, dynamic> json) {
   return _$_ContractRule(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null

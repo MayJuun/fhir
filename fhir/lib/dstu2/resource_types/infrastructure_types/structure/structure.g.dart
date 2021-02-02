@@ -12,19 +12,17 @@ _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Media),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -280,31 +278,27 @@ _$_Binary _$_$_BinaryFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Binary),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    contentType: json['contentType'] == null
-        ? null
-        : Code.fromJson(json['contentType'] as String),
+    contentType:
+        json['contentType'] == null ? null : Code.fromJson(json['contentType']),
     contentTypeElement: json['_contentType'] == null
         ? null
         : Element.fromJson(json['_contentType'] as Map<String, dynamic>),
-    content: json['content'] == null
-        ? null
-        : Base64Binary.fromJson(json['content'] as String),
+    content:
+        json['content'] == null ? null : Base64Binary.fromJson(json['content']),
   )
     ..text = json['text'] == null
         ? null
@@ -361,19 +355,17 @@ _$_Bundle _$_$_BundleFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Bundle),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -467,7 +459,7 @@ const _$BundleTypeEnumMap = {
 _$_BundleLink _$_$_BundleLinkFromJson(Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['relation', 'url']);
   return _$_BundleLink(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -484,7 +476,7 @@ _$_BundleLink _$_$_BundleLinkFromJson(Map<String, dynamic> json) {
     relationElement: json['_relation'] == null
         ? null
         : Element.fromJson(json['_relation'] as Map<String, dynamic>),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -515,7 +507,7 @@ Map<String, dynamic> _$_$_BundleLinkToJson(_$_BundleLink instance) {
 
 _$_BundleEntry _$_$_BundleEntryFromJson(Map<String, dynamic> json) {
   return _$_BundleEntry(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -532,9 +524,7 @@ _$_BundleEntry _$_$_BundleEntryFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : BundleLink.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    fullUrl: json['fullUrl'] == null
-        ? null
-        : FhirUri.fromJson(json['fullUrl'] as String),
+    fullUrl: json['fullUrl'] == null ? null : FhirUri.fromJson(json['fullUrl']),
     fullUrlElement: json['_fullUrl'] == null
         ? null
         : Element.fromJson(json['_fullUrl'] as Map<String, dynamic>),
@@ -581,7 +571,7 @@ Map<String, dynamic> _$_$_BundleEntryToJson(_$_BundleEntry instance) {
 
 _$_BundleEntrySearch _$_$_BundleEntrySearchFromJson(Map<String, dynamic> json) {
   return _$_BundleEntrySearch(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -640,7 +630,7 @@ _$_BundleEntryRequest _$_$_BundleEntryRequestFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['method', 'url']);
   return _$_BundleEntryRequest(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -658,7 +648,7 @@ _$_BundleEntryRequest _$_$_BundleEntryRequestFromJson(
     methodElement: json['_method'] == null
         ? null
         : Element.fromJson(json['_method'] as Map<String, dynamic>),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url'] as String),
+    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -668,7 +658,7 @@ _$_BundleEntryRequest _$_$_BundleEntryRequestFromJson(
         : Element.fromJson(json['_ifNoneMatch'] as Map<String, dynamic>),
     ifModifiedSince: json['ifModifiedSince'] == null
         ? null
-        : Instant.fromJson(json['ifModifiedSince'] as String),
+        : Instant.fromJson(json['ifModifiedSince']),
     ifModifiedSinceElement: json['_ifModifiedSince'] == null
         ? null
         : Element.fromJson(json['_ifModifiedSince'] as Map<String, dynamic>),
@@ -726,7 +716,7 @@ _$_BundleEntryResponse _$_$_BundleEntryResponseFromJson(
     Map<String, dynamic> json) {
   $checkKeys(json, requiredKeys: const ['status']);
   return _$_BundleEntryResponse(
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List)
         ?.map((e) => e == null
             ? null
@@ -743,9 +733,8 @@ _$_BundleEntryResponse _$_$_BundleEntryResponseFromJson(
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    location: json['location'] == null
-        ? null
-        : FhirUri.fromJson(json['location'] as String),
+    location:
+        json['location'] == null ? null : FhirUri.fromJson(json['location']),
     locationElement: json['_location'] == null
         ? null
         : Element.fromJson(json['_location'] as Map<String, dynamic>),
@@ -755,7 +744,7 @@ _$_BundleEntryResponse _$_$_BundleEntryResponseFromJson(
         : Element.fromJson(json['_etag'] as Map<String, dynamic>),
     lastModified: json['lastModified'] == null
         ? null
-        : Instant.fromJson(json['lastModified'] as String),
+        : Instant.fromJson(json['lastModified']),
     lastModifiedElement: json['_lastModified'] == null
         ? null
         : Element.fromJson(json['_lastModified'] as Map<String, dynamic>),
@@ -795,19 +784,17 @@ _$_Basic _$_$_BasicFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Basic),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),

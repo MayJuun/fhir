@@ -273,7 +273,7 @@ _$_DataRequirementCodeFilter _$_$_DataRequirementCodeFilterFromJson(
         ? null
         : Reference.fromJson(json['valueSetReference'] as Map<String, dynamic>),
     valueCode: (json['valueCode'] as List)
-        ?.map((e) => e == null ? null : Code.fromJson(e as String))
+        ?.map((e) => e == null ? null : Code.fromJson(e))
         ?.toList(),
     valueCodeElement: (json['_valueCode'] as List)
         ?.map((e) =>
@@ -326,7 +326,7 @@ _$_DataRequirementDateFilter _$_$_DataRequirementDateFilterFromJson(
         : Element.fromJson(json['_path'] as Map<String, dynamic>),
     valueDateTime: json['valueDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['valueDateTime'] as String),
+        : FhirDateTime.fromJson(json['valueDateTime']),
     valueDateTimeElement: json['_valueDateTime'] == null
         ? null
         : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -442,7 +442,7 @@ _$_TriggerDefinition _$_$_TriggerDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_eventTimingDate'] as Map<String, dynamic>),
     eventTimingDateTime: json['eventTimingDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['eventTimingDateTime'] as String),
+        : FhirDateTime.fromJson(json['eventTimingDateTime']),
     eventTimingDateTimeElement: json['_eventTimingDateTime'] == null
         ? null
         : Element.fromJson(

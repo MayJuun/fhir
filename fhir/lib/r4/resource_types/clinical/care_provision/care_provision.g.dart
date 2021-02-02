@@ -11,19 +11,17 @@ _$_CarePlan _$_$_CarePlanFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.CarePlan),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -49,10 +47,10 @@ _$_CarePlan _$_$_CarePlanFromJson(Map<String, dynamic> json) {
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     instantiatesCanonical: (json['instantiatesCanonical'] as List)
-        ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
+        ?.map((e) => e == null ? null : Canonical.fromJson(e))
         ?.toList(),
     instantiatesUri: (json['instantiatesUri'] as List)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
         ?.toList(),
     instantiatesUriElement: (json['_instantiatesUri'] as List)
         ?.map((e) =>
@@ -70,13 +68,11 @@ _$_CarePlan _$_$_CarePlanFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    intent:
-        json['intent'] == null ? null : Code.fromJson(json['intent'] as String),
+    intent: json['intent'] == null ? null : Code.fromJson(json['intent']),
     intentElement: json['_intent'] == null
         ? null
         : Element.fromJson(json['_intent'] as Map<String, dynamic>),
@@ -102,9 +98,8 @@ _$_CarePlan _$_$_CarePlanFromJson(Map<String, dynamic> json) {
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created:
+        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -466,15 +461,15 @@ _$_CarePlanDetail _$_$_CarePlanDetailFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    kind: json['kind'] == null ? null : Code.fromJson(json['kind'] as String),
+    kind: json['kind'] == null ? null : Code.fromJson(json['kind']),
     kindElement: json['_kind'] == null
         ? null
         : Element.fromJson(json['_kind'] as Map<String, dynamic>),
     instantiatesCanonical: (json['instantiatesCanonical'] as List)
-        ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
+        ?.map((e) => e == null ? null : Canonical.fromJson(e))
         ?.toList(),
     instantiatesUri: (json['instantiatesUri'] as List)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
         ?.toList(),
     instantiatesUriElement: (json['_instantiatesUri'] as List)
         ?.map((e) =>
@@ -615,19 +610,17 @@ _$_CareTeam _$_$_CareTeamFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.CareTeam),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -818,19 +811,17 @@ _$_Goal _$_$_GoalFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.Goal),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1086,19 +1077,17 @@ _$_NutritionOrder _$_$_NutritionOrderFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.NutritionOrder),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1124,29 +1113,27 @@ _$_NutritionOrder _$_$_NutritionOrderFromJson(Map<String, dynamic> json) {
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     instantiatesCanonical: (json['instantiatesCanonical'] as List)
-        ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
+        ?.map((e) => e == null ? null : Canonical.fromJson(e))
         ?.toList(),
     instantiatesUri: (json['instantiatesUri'] as List)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
         ?.toList(),
     instantiatesUriElement: (json['_instantiatesUri'] as List)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     instantiates: (json['instantiates'] as List)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
         ?.toList(),
     instantiatesElement: (json['_instantiates'] as List)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    intent:
-        json['intent'] == null ? null : Code.fromJson(json['intent'] as String),
+    intent: json['intent'] == null ? null : Code.fromJson(json['intent']),
     intentElement: json['_intent'] == null
         ? null
         : Element.fromJson(json['_intent'] as Map<String, dynamic>),
@@ -1158,7 +1145,7 @@ _$_NutritionOrder _$_$_NutritionOrderFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
     dateTime: json['dateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['dateTime'] as String),
+        : FhirDateTime.fromJson(json['dateTime']),
     dateTimeElement: json['_dateTime'] == null
         ? null
         : Element.fromJson(json['_dateTime'] as Map<String, dynamic>),
@@ -1623,19 +1610,17 @@ _$_RequestGroup _$_$_RequestGroupFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.RequestGroup),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1661,14 +1646,14 @@ _$_RequestGroup _$_$_RequestGroupFromJson(Map<String, dynamic> json) {
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     instantiatesCanonical: (json['instantiatesCanonical'] as List)
-        ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
+        ?.map((e) => e == null ? null : Canonical.fromJson(e))
         ?.toList(),
     instantiatesCanonicalElement: (json['_instantiatesCanonical'] as List)
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     instantiatesUri: (json['instantiatesUri'] as List)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
         ?.toList(),
     instantiatesUriElement: (json['_instantiatesUri'] as List)
         ?.map((e) =>
@@ -1685,19 +1670,15 @@ _$_RequestGroup _$_$_RequestGroupFromJson(Map<String, dynamic> json) {
     groupIdentifier: json['groupIdentifier'] == null
         ? null
         : Identifier.fromJson(json['groupIdentifier'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    intent:
-        json['intent'] == null ? null : Code.fromJson(json['intent'] as String),
+    intent: json['intent'] == null ? null : Code.fromJson(json['intent']),
     intentElement: json['_intent'] == null
         ? null
         : Element.fromJson(json['_intent'] as Map<String, dynamic>),
-    priority: json['priority'] == null
-        ? null
-        : Code.fromJson(json['priority'] as String),
+    priority: json['priority'] == null ? null : Code.fromJson(json['priority']),
     priorityElement: json['_priority'] == null
         ? null
         : Element.fromJson(json['_priority'] as Map<String, dynamic>),
@@ -1712,7 +1693,7 @@ _$_RequestGroup _$_$_RequestGroupFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
     authoredOn: json['authoredOn'] == null
         ? null
-        : FhirDateTime.fromJson(json['authoredOn'] as String),
+        : FhirDateTime.fromJson(json['authoredOn']),
     authoredOnElement: json['_authoredOn'] == null
         ? null
         : Element.fromJson(json['_authoredOn'] as Map<String, dynamic>),
@@ -1828,9 +1809,7 @@ _$_RequestGroupAction _$_$_RequestGroupActionFromJson(
     textEquivalentElement: json['_textEquivalent'] == null
         ? null
         : Element.fromJson(json['_textEquivalent'] as Map<String, dynamic>),
-    priority: json['priority'] == null
-        ? null
-        : Code.fromJson(json['priority'] as String),
+    priority: json['priority'] == null ? null : Code.fromJson(json['priority']),
     priorityElement: json['_priority'] == null
         ? null
         : Element.fromJson(json['_priority'] as Map<String, dynamic>),
@@ -1856,7 +1835,7 @@ _$_RequestGroupAction _$_$_RequestGroupActionFromJson(
         ?.toList(),
     timingDateTime: json['timingDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['timingDateTime'] as String),
+        : FhirDateTime.fromJson(json['timingDateTime']),
     timingDateTimeElement: json['_timingDateTime'] == null
         ? null
         : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),
@@ -1884,31 +1863,31 @@ _$_RequestGroupAction _$_$_RequestGroupActionFromJson(
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     groupingBehavior: json['groupingBehavior'] == null
         ? null
-        : Code.fromJson(json['groupingBehavior'] as String),
+        : Code.fromJson(json['groupingBehavior']),
     groupingBehaviorElement: json['_groupingBehavior'] == null
         ? null
         : Element.fromJson(json['_groupingBehavior'] as Map<String, dynamic>),
     selectionBehavior: json['selectionBehavior'] == null
         ? null
-        : Code.fromJson(json['selectionBehavior'] as String),
+        : Code.fromJson(json['selectionBehavior']),
     selectionBehaviorElement: json['_selectionBehavior'] == null
         ? null
         : Element.fromJson(json['_selectionBehavior'] as Map<String, dynamic>),
     requiredBehavior: json['requiredBehavior'] == null
         ? null
-        : Code.fromJson(json['requiredBehavior'] as String),
+        : Code.fromJson(json['requiredBehavior']),
     requiredBehaviorElement: json['_requiredBehavior'] == null
         ? null
         : Element.fromJson(json['_requiredBehavior'] as Map<String, dynamic>),
     precheckBehavior: json['precheckBehavior'] == null
         ? null
-        : Code.fromJson(json['precheckBehavior'] as String),
+        : Code.fromJson(json['precheckBehavior']),
     precheckBehaviorElement: json['_precheckBehavior'] == null
         ? null
         : Element.fromJson(json['_precheckBehavior'] as Map<String, dynamic>),
     cardinalityBehavior: json['cardinalityBehavior'] == null
         ? null
-        : Code.fromJson(json['cardinalityBehavior'] as String),
+        : Code.fromJson(json['cardinalityBehavior']),
     cardinalityBehaviorElement: json['_cardinalityBehavior'] == null
         ? null
         : Element.fromJson(
@@ -1997,7 +1976,7 @@ _$_RequestGroupCondition _$_$_RequestGroupConditionFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    kind: json['kind'] == null ? null : Code.fromJson(json['kind'] as String),
+    kind: json['kind'] == null ? null : Code.fromJson(json['kind']),
     kindElement: json['_kind'] == null
         ? null
         : Element.fromJson(json['_kind'] as Map<String, dynamic>),
@@ -2042,15 +2021,13 @@ _$_RequestGroupRelatedAction _$_$_RequestGroupRelatedActionFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    actionId: json['actionId'] == null
-        ? null
-        : Id.fromJson(json['actionId'] as String),
+    actionId: json['actionId'] == null ? null : Id.fromJson(json['actionId']),
     actionIdElement: json['_actionId'] == null
         ? null
         : Element.fromJson(json['_actionId'] as Map<String, dynamic>),
     relationship: json['relationship'] == null
         ? null
-        : Code.fromJson(json['relationship'] as String),
+        : Code.fromJson(json['relationship']),
     relationshipElement: json['_relationship'] == null
         ? null
         : Element.fromJson(json['_relationship'] as Map<String, dynamic>),
@@ -2092,19 +2069,17 @@ _$_RiskAssessment _$_$_RiskAssessmentFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.RiskAssessment),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2135,8 +2110,7 @@ _$_RiskAssessment _$_$_RiskAssessmentFromJson(Map<String, dynamic> json) {
     parent: json['parent'] == null
         ? null
         : Reference.fromJson(json['parent'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -2154,7 +2128,7 @@ _$_RiskAssessment _$_$_RiskAssessmentFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
     occurrenceDateTime: json['occurrenceDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
+        : FhirDateTime.fromJson(json['occurrenceDateTime']),
     occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
         ? null
         : Element.fromJson(json['_occurrenceDateTime'] as Map<String, dynamic>),
@@ -2332,19 +2306,17 @@ _$_ServiceRequest _$_$_ServiceRequestFromJson(Map<String, dynamic> json) {
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.ServiceRequest),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2370,10 +2342,10 @@ _$_ServiceRequest _$_$_ServiceRequestFromJson(Map<String, dynamic> json) {
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     instantiatesCanonical: (json['instantiatesCanonical'] as List)
-        ?.map((e) => e == null ? null : Canonical.fromJson(e as String))
+        ?.map((e) => e == null ? null : Canonical.fromJson(e))
         ?.toList(),
     instantiatesUri: (json['instantiatesUri'] as List)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e as String))
+        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
         ?.toList(),
     instantiatesUriElement: (json['_instantiatesUri'] as List)
         ?.map((e) =>
@@ -2390,13 +2362,11 @@ _$_ServiceRequest _$_$_ServiceRequestFromJson(Map<String, dynamic> json) {
     requisition: json['requisition'] == null
         ? null
         : Identifier.fromJson(json['requisition'] as Map<String, dynamic>),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    intent:
-        json['intent'] == null ? null : Code.fromJson(json['intent'] as String),
+    intent: json['intent'] == null ? null : Code.fromJson(json['intent']),
     intentElement: json['_intent'] == null
         ? null
         : Element.fromJson(json['_intent'] as Map<String, dynamic>),
@@ -2405,9 +2375,7 @@ _$_ServiceRequest _$_$_ServiceRequestFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    priority: json['priority'] == null
-        ? null
-        : Code.fromJson(json['priority'] as String),
+    priority: json['priority'] == null ? null : Code.fromJson(json['priority']),
     priorityElement: json['_priority'] == null
         ? null
         : Element.fromJson(json['_priority'] as Map<String, dynamic>),
@@ -2442,7 +2410,7 @@ _$_ServiceRequest _$_$_ServiceRequestFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
     occurrenceDateTime: json['occurrenceDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
+        : FhirDateTime.fromJson(json['occurrenceDateTime']),
     occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
         ? null
         : Element.fromJson(json['_occurrenceDateTime'] as Map<String, dynamic>),
@@ -2464,7 +2432,7 @@ _$_ServiceRequest _$_$_ServiceRequestFromJson(Map<String, dynamic> json) {
             json['asNeededCodeableConcept'] as Map<String, dynamic>),
     authoredOn: json['authoredOn'] == null
         ? null
-        : FhirDateTime.fromJson(json['authoredOn'] as String),
+        : FhirDateTime.fromJson(json['authoredOn']),
     authoredOnElement: json['_authoredOn'] == null
         ? null
         : Element.fromJson(json['_authoredOn'] as Map<String, dynamic>),
@@ -2628,19 +2596,17 @@ _$_VisionPrescription _$_$_VisionPrescriptionFromJson(
     resourceType: _$enumDecodeNullable(
         _$R4ResourceTypeEnumMap, json['resourceType'],
         unknownValue: R4ResourceType.VisionPrescription),
-    id: json['id'] == null ? null : Id.fromJson(json['id'] as String),
+    id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
         : Meta.fromJson(json['meta'] as Map<String, dynamic>),
     implicitRules: json['implicitRules'] == null
         ? null
-        : FhirUri.fromJson(json['implicitRules'] as String),
+        : FhirUri.fromJson(json['implicitRules']),
     implicitRulesElement: json['_implicitRules'] == null
         ? null
         : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null
-        ? null
-        : Code.fromJson(json['language'] as String),
+    language: json['language'] == null ? null : Code.fromJson(json['language']),
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -2665,14 +2631,12 @@ _$_VisionPrescription _$_$_VisionPrescriptionFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    status:
-        json['status'] == null ? null : Code.fromJson(json['status'] as String),
+    status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : FhirDateTime.fromJson(json['created'] as String),
+    created:
+        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -2684,7 +2648,7 @@ _$_VisionPrescription _$_$_VisionPrescriptionFromJson(
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
     dateWritten: json['dateWritten'] == null
         ? null
-        : FhirDateTime.fromJson(json['dateWritten'] as String),
+        : FhirDateTime.fromJson(json['dateWritten']),
     dateWrittenElement: json['_dateWritten'] == null
         ? null
         : Element.fromJson(json['_dateWritten'] as Map<String, dynamic>),
