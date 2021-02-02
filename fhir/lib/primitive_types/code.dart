@@ -41,4 +41,5 @@ class Code {
 Either<String, String> _validateCode(String value) =>
     RegExp(r'^[^\s]+(\s[^\s]+)*$').hasMatch(value)
         ? right(value)
-        : left('FormatError: "$value" is not a Code');
+        : left('FormatError: "$value" is not a Code, as defined by: '
+            'https://www.hl7.org/fhir/datatypes.html#code');

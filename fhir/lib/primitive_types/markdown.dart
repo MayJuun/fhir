@@ -41,4 +41,5 @@ class Markdown {
 Either<String, String> _validateMarkdown(String value) =>
     RegExp(r'[ \r\n\t\S]+').hasMatch(value)
         ? right(value)
-        : left('FormatError: "$value" is not a Markdown');
+        : left('FormatError: "$value" is not a Markdown, as defined by: '
+            'https://www.hl7.org/fhir/datatypes.html#markdown');

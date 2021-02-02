@@ -41,4 +41,5 @@ class Canonical {
 Either<String, String> _validateCanonical(String value) =>
     RegExp(r'^\S*$').hasMatch(value)
         ? right(value)
-        : left('FormatError: "$value" is not a Canonical');
+        : left('FormatError: "$value" is not a Canonical, as defined by:'
+            'https://www.hl7.org/fhir/datatypes.html#canonical');

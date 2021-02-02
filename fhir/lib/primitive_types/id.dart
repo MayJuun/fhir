@@ -41,4 +41,5 @@ class Id {
 Either<String, String> _validateId(String value) =>
     RegExp(r'^[A-Za-z0-9\-\.]{1,64}$').hasMatch(value)
         ? right(value)
-        : left('FormatError: "$value" is not an Id');
+        : left('FormatError: "$value" is not an Id, as defined by: '
+            'https://www.hl7.org/fhir/datatypes.html#id');

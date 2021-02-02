@@ -1,5 +1,4 @@
 import 'dart:convert';
-// import 'dart:io';
 
 import 'package:fhir/dstu2.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -279,29 +278,24 @@ abstract class FhirRequest with _$FhirRequest {
       ),
       transaction: (m) async {
         if (m.bundle == null) {
-          throw const FormatException(
-            'A Transaction request was made, but no Bundle was included.',
-          );
+          return _operationOutcome(
+              'A Transaction request was made, but no Bundle was included.');
         }
 
         if (m.bundle.type != BundleType.transaction) {
-          throw const FormatException(
-            'A Transaction request was made, but the included Bundle is not a'
-            ' transaction type.',
-          );
+          return _operationOutcome(
+              'A Transaction request was made, but no Bundle was included.');
         }
         if (m.bundle.entry != null) {
           for (var entry in m.bundle.entry) {
             if (entry.request == null) {
-              throw FormatException(
+              return _operationOutcome(
                   'Each bundle entry requires a request, but at least one of '
-                  'the entries in this bundle is missing a request.',
-                  entry);
+                  'the entries in this bundle is missing a request.');
             } else if (entry.request.method == null) {
-              throw FormatException(
+              return _operationOutcome(
                   'Each bundle entry request needs a method type specified, but'
-                  ' at least one entry in this bundle is missing a method',
-                  entry);
+                  ' at least one entry in this bundle is missing a method');
             }
           }
         }
@@ -315,29 +309,25 @@ abstract class FhirRequest with _$FhirRequest {
       },
       batch: (m) async {
         if (m.bundle == null) {
-          throw const FormatException(
-            'A Transaction request was made, but no Bundle was included.',
-          );
+          return _operationOutcome(
+              'A Transaction request was made, but no Bundle was included.');
         }
 
         if (m.bundle.type != BundleType.batch) {
-          throw const FormatException(
-            'A Batch request was made, but the included Bundle is not a'
-            ' batch type.',
-          );
+          return _operationOutcome(
+              'A Batch request was made, but the included Bundle is not a'
+              ' batch type.');
         }
         if (m.bundle.entry != null) {
           for (var entry in m.bundle.entry) {
             if (entry.request == null) {
-              throw FormatException(
+              return _operationOutcome(
                   'Each bundle entry requires a request, but at least one of '
-                  'the entries in this bundle is missing a request.',
-                  entry);
+                  'the entries in this bundle is missing a request.');
             } else if (entry.request.method == null) {
-              throw FormatException(
+              return _operationOutcome(
                   'Each bundle entry request needs a method type specified, but'
-                  ' at least one entry in this bundle is missing a method',
-                  entry);
+                  ' at least one entry in this bundle is missing a method');
             }
           }
         }
@@ -457,18 +447,18 @@ abstract class FhirRequest with _$FhirRequest {
           resource: resource == null ? null : resource.toJson());
       return result;
     } catch (e) {
-      throw Exception('Failed to complete a $requestType request, '
-          '\nReturned exception: $e');
+      return _operationOutcome('Failed to complete a $requestType request, ',
+          diagnostics: 'Exception: $e');
     }
   }
 
   String uri({List<String> parameters = const <String>[]}) {
     String uri = _url();
     uri += '?';
-    uri += Uri.encodeQueryComponent(_mode());
-    uri += Uri.encodeQueryComponent(_format());
-    uri += Uri.encodeQueryComponent(_pretty());
-    uri += Uri.encodeQueryComponent(_summary());
+    uri += _mode();
+    uri += _format();
+    uri += _pretty();
+    uri += _summary();
     uri += _elements();
     uri += _parameters(parameters);
     return uri;
@@ -477,10 +467,10 @@ abstract class FhirRequest with _$FhirRequest {
   String get url {
     String uri = _url();
     uri += '?';
-    uri += Uri.encodeQueryComponent(_mode());
-    uri += Uri.encodeQueryComponent(_format());
-    uri += Uri.encodeQueryComponent(_pretty());
-    uri += Uri.encodeQueryComponent(_summary());
+    uri += _mode();
+    uri += _format();
+    uri += _pretty();
+    uri += _summary();
     uri += _elements();
     return uri;
   }
@@ -581,13 +571,7 @@ abstract class FhirRequest with _$FhirRequest {
     client ??= Client();
 
     if (globals.kTestMode) {
-      return OperationOutcome(issue: [
-        OperationOutcomeIssue(
-          code: Code('111'),
-          diagnostics: thisRequest,
-          severity: IssueSeverity.information,
-        )
-      ]);
+      return _operationOutcome(thisRequest);
     }
 
     try {
@@ -648,18 +632,35 @@ abstract class FhirRequest with _$FhirRequest {
           }
       }
     } catch (e) {
-      throw Exception('Failed making restful request, \nException: $e');
+      return _operationOutcome('Failed to complete a restful request, ',
+          diagnostics: 'Exception: $e');
     }
 
     if (_errorCodes.containsKey(result.statusCode)) {
-      throw Exception('Failed to make restful request'
-          '\nStatus Code: ${result.statusCode} -'
-          ' ${_errorCodes[result.statusCode]}'
-          '\nResult headers: ${result.headers}'
-          '\nResult body: ${result.body}');
+      return OperationOutcome(issue: [
+        OperationOutcomeIssue(
+          severity: IssueSeverity.error,
+          code: Code('unknown'),
+          details: CodeableConcept(text: 'Failed to make restful request'),
+          diagnostics: '\nStatus Code: ${result.statusCode} -'
+              ' ${_errorCodes[result.statusCode]}'
+              '\nResult headers: ${result.headers}'
+              '\nResult body: ${result.body}',
+        )
+      ]);
     }
     return Resource.fromJson(json.decode(result.body));
   }
+
+  OperationOutcome _operationOutcome(String issue, {String diagnostics}) =>
+      OperationOutcome(issue: [
+        OperationOutcomeIssue(
+          severity: IssueSeverity.error,
+          code: Code('value'),
+          details: CodeableConcept(text: issue),
+          diagnostics: diagnostics,
+        )
+      ]);
 
   static const _errorCodes = {
     400: 'Bad Request',

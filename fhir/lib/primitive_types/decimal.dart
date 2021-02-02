@@ -43,4 +43,5 @@ class Decimal {
 Either<String, double> _validateDecimal(dynamic value) =>
     double.tryParse(value.toString()) != null
         ? right(double.parse(value.toString()))
-        : left('FormatError: "$value" is not a Decimal');
+        : left('FormatError: "$value" is not a Decimal, as defined by: '
+            'https://www.hl7.org/fhir/datatypes.html#decimal');

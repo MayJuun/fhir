@@ -17,38 +17,10 @@ As well as the R5 Preview #3:
 - As all parts of this are new (FHIR, Flutter, using the two together), I'd love to hear from you if you're working in this space.
 You can email me at <grey@fhirfli.dev>.
 
-## How To Use
-
-In order to use this package in your app, you must include the following in your pubspec.yaml file under dependencies:
-```
-dependencies:
-  fhir: ^0.2.0
-```
-Or if you want to include the most recent unreleased version from Github
-```
-fhir:
-  git:
-    url: git://github.com/Dokotela/fhir.git
-```
-Then, in any file where you're going to be using it, simply import it like this:
-```
-import 'package:fhir/r4.dart';
-```
-Or, you may need to rename the package, for instance, there are some variables FHIR uses that overlap with dart:core, or if you're going to be using more than oen version of FHIR in the same file:
-```
-import 'package:fhir/r4.dart' as r4;
-import 'package:fhir/stu3.dart' as stu3;
-```
-And then just remember to append r4 or stu3 to any variables you use from the library.
-
-## Dart functionality
-
-I've decided to consolidate into two packages. Anything that doesn't require flutter will stay in this package. And anything that will use Flutter functionality will go in the fhir_flutter package.
-
 ## Specific Readme
 
-### 1. [fhir](fhir/fhir.md)
-### 2. [fhir_at_rest](fhir_at_rest/fhir_at_rest.md)
-### 3. [fhir_auth](fhir_auth/fhir_auth.md)
-### 3. [fhir_db](fhir_db/fhir_db.md)
-### 3. [fhir_yaml](readme/fhir_yaml.md)
+### 1. [fhir](fhir/README.md) - base package for working with FHIR resources
+### 2. [fhir_at_rest](fhir_at_rest/README.md) - package for assisting with RESTFul calls to FHIR servers
+### 3. [fhir_auth](fhir_auth/README.md) - authentication package (SMART on FHIR, Google)
+### 3. [fhir_db](fhir_db/README.md) - local, embedded, encrypted database
+### 3. [fhir_yaml](readme/README.md) - convenience package for converting to Yaml

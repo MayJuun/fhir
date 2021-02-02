@@ -43,4 +43,5 @@ class Integer {
 Either<String, int> _validateInteger(dynamic value) =>
     int.tryParse(value.toString()) != null
         ? right(int.parse(value.toString()))
-        : left('FormatError: "$value" is not an Integer');
+        : left('FormatError: "$value" is not an Integer, as defined by: '
+            'https://www.hl7.org/fhir/datatypes.html#integer');

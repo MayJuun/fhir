@@ -38,7 +38,7 @@ class Date {
       : o is Date
           ? o == value
           : o is DateTime
-              ? o == value
+              ? o == DateTime.tryParse(value)
               : o is String
                   ? o == value.toString()
                   : false;
@@ -58,7 +58,8 @@ const _dateString =
 Either<String, DateTime> _validateDate(String value) => isDate(value)
     ? RegExp(_dateString).hasMatch(value)
         ? right(DateTime.parse(value))
-        : left('FormatError: "$value" is not a Date')
+        : left('FormatError: "$value" is not a Date, as defined by: '
+            'https://www.hl7.org/fhir/datatypes.html#date')
     : _partialDateTime(value);
 
 Either<String, DateTime> _partialDateTime(String value) {
@@ -76,6 +77,7 @@ Either<String, DateTime> _partialDateTime(String value) {
       DateTime(year, month),
     );
   } else {
-    return left('FormatError: "$value" is not a DateTime');
+    return left('FormatError: "$value" is not a Date, as defined by: '
+        'https://www.hl7.org/fhir/datatypes.html#date');
   }
 }

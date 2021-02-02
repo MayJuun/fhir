@@ -43,4 +43,5 @@ class FhirUrl {
 Either<String, Uri> _validateFhirUrl(String value) =>
     Uri.tryParse(value) != null
         ? right(Uri.parse(value))
-        : left('FormatError: "$value" is not a Url');
+        : left('FormatError: "$value" is not a Url, as defined by: '
+            'https://www.hl7.org/fhir/datatypes.html#url');

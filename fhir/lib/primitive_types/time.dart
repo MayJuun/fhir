@@ -42,4 +42,5 @@ Either<String, String> _validateTime(String value) =>
     RegExp(r'^([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?$')
             .hasMatch(value)
         ? right(value)
-        : left('FormatError: "$value" is not a Time');
+        : left('FormatError: "$value" is not a Time, as defined by: '
+            'https://www.hl7.org/fhir/datatypes.html#time');

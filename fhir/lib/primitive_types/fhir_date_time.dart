@@ -38,7 +38,7 @@ class FhirDateTime {
       : o is FhirDateTime
           ? o == value
           : o is DateTime
-              ? o == value
+              ? o == DateTime.tryParse(value)
               : o is String
                   ? o == value.toString()
                   : false;
@@ -62,7 +62,8 @@ Either<String, DateTime> _validateDateTime(String value) => isDate(value)
                 ? value.replaceFirst(' ', 'T')
                 : value)
         ? right(DateTime.parse(value))
-        : left('FormatError: "$value" is not a DateTime')
+        : left('FormatError: "$value" is not a DateTime, as defined by: '
+            'https://www.hl7.org/fhir/datatypes.html#datetime')
     : _partialDateTime(value);
 
 Either<String, DateTime> _partialDateTime(String value) {
@@ -80,6 +81,7 @@ Either<String, DateTime> _partialDateTime(String value) {
       DateTime(year, month),
     );
   } else {
-    return left('FormatError: "$value" is not a DateTime');
+    return left('FormatError: "$value" is not a DateTime, as defined by: '
+        'https://www.hl7.org/fhir/datatypes.html#datetime');
   }
 }

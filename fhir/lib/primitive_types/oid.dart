@@ -41,4 +41,5 @@ class Oid {
 Either<String, String> _validateOid(String value) =>
     RegExp(r'^urn:oid:[0-2](\.(0|[1-9][0-9]*))+$').hasMatch(value)
         ? right(value)
-        : left('FormatError: "$value" is not an Oid');
+        : left('FormatError: "$value" is not an Oid, as defined by: '
+            'https://www.hl7.org/fhir/datatypes.html#oid');

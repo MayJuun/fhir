@@ -38,7 +38,7 @@ class Instant {
       : o is Instant
           ? o == value
           : o is DateTime
-              ? o == value
+              ? o == DateTime.tryParse(value)
               : o is String
                   ? o == value.toString()
                   : false;
@@ -70,9 +70,11 @@ Either<String, DateTime> _validateInstant(dynamic value) {
     //then check if it matches
     return RegExp(_instantString).hasMatch(stringValue)
         ? right(DateTime.parse(value))
-        : left('FormatError: "$value" is not an Instant');
+        : left('FormatError: "$value" is not an Instant, as defined by: '
+            'https://www.hl7.org/fhir/datatypes.html#instant');
   } else {
-    return left('FormatError: "$value" is not an Instant');
+    return left('FormatError: "$value" is not an Instant, as defined by: '
+        'https://www.hl7.org/fhir/datatypes.html#instant');
   }
 }
 

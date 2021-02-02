@@ -45,6 +45,8 @@ Either<String, int> _validateUnsignedInt(dynamic value) {
   return val != null
       ? val >= 0
           ? right(val)
-          : left('FormatError: "$value" is not an UnsignedInt')
-      : left('FormatError: "$value" is not a UnsignedInt');
+          : left('FormatError: "$value" is not an UnsignedInt, as defined by: '
+              'https://www.hl7.org/fhir/datatypes.html#unsignedInt')
+      : left('FormatError: "$value" is not a UnsignedInt, as defined by: '
+          'https://www.hl7.org/fhir/datatypes.html#unsignedInt');
 }

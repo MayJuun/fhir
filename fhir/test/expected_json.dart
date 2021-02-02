@@ -1,50 +1,30 @@
 const expectedJson = [
   'File: \'./test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json\'\n'
-      'input: observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change :: output:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change is not a valid Id',
+      'input: observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change :: output:FormatError: "observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change" is not an Id, as defined by: https://www.hl7.org/fhir/datatypes.html#id',
   'File: \'./test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.json\'\n'
-      'input: observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant :: output:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant is not a valid Id',
+      'input: observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant :: output:FormatError: "observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant" is not an Id, as defined by: https://www.hl7.org/fhir/datatypes.html#id',
   'File: \'./test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.canonical.json\'\n'
-      'input: observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart :: output:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart is not a valid Id',
+      'input: observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart :: output:FormatError: "observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart" is not an Id, as defined by: https://www.hl7.org/fhir/datatypes.html#id',
   'File: \'./test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.json\'\n'
-      'input: observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart :: output:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart is not a valid Id',
+      'input: observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart :: output:FormatError: "observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart" is not an Id, as defined by: https://www.hl7.org/fhir/datatypes.html#id',
   'File: \'./test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.canonical.json\'\n'
-      'input: observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant :: output:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant is not a valid Id',
+      'input: observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant :: output:FormatError: "observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant" is not an Id, as defined by: https://www.hl7.org/fhir/datatypes.html#id',
   'File: \'./test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.canonical.json\'\n'
-      'input: observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change :: output:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change is not a valid Id',
+      'input: observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change :: output:FormatError: "observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change" is not an Id, as defined by: https://www.hl7.org/fhir/datatypes.html#id',
   'File: \'./test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.json\'\n'
-      'input: observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change is not a valid Id :: output:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change',
+      'input: FormatError: "observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change" is not an Id, as defined by: https://www.hl7.org/fhir/datatypes.html#id :: output:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change',
   'File: \'./test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.json\'\n'
-      'input: observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant is not a valid Id :: output:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant',
+      'input: FormatError: "observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant" is not an Id, as defined by: https://www.hl7.org/fhir/datatypes.html#id :: output:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant',
   'File: \'./test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.canonical.json\'\n'
-      'input: observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart is not a valid Id :: output:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart',
+      'input: FormatError: "observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart" is not an Id, as defined by: https://www.hl7.org/fhir/datatypes.html#id :: output:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart',
   'File: \'./test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart.json\'\n'
-      'input: observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart is not a valid Id :: output:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart',
+      'input: FormatError: "observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart" is not an Id, as defined by: https://www.hl7.org/fhir/datatypes.html#id :: output:observation-genetics-cg-prf-1a-Observation-chromosome-genomicstart',
   'File: \'./test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant.canonical.json\'\n'
-      'input: observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant is not a valid Id :: output:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant',
+      'input: FormatError: "observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant" is not an Id, as defined by: https://www.hl7.org/fhir/datatypes.html#id :: output:observation-genetics-cg-prf-1a-Observation-condition-gene-dnavariant',
   'File: \'./test/dstu2_examples/observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change.canonical.json\'\n'
-      'input: observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change is not a valid Id :: output:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change',
+      'input: FormatError: "observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change" is not an Id, as defined by: https://www.hl7.org/fhir/datatypes.html#id :: output:observation-genetics-cg-prf-1a-Observation-gene-amino-acid-change',
   'File: \'./test/r4_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json\'\n'
-      'input: questionnaireresponse-extensions-QuestionnaireResponse-item-subject :: output:questionnaireresponse-extensions-QuestionnaireResponse-item-subject is not a valid Id',
+      'input: questionnaireresponse-extensions-QuestionnaireResponse-item-subject :: output:FormatError: "questionnaireresponse-extensions-QuestionnaireResponse-item-subject" is not an Id, as defined by: https://www.hl7.org/fhir/datatypes.html#id',
   'File: \'./test/r4_examples/questionnaireresponse-extensions-QuestionnaireResponse-item-subject.json\'\n'
-      'input: questionnaireresponse-extensions-QuestionnaireResponse-item-subject is not a valid Id :: output:questionnaireresponse-extensions-QuestionnaireResponse-item-subject',
-  """File: './test/dstu2_examples/v2-tables.json'
-input: CHESTÂ  :: output:CHESTÂ  is not a valid CodeFile: './test/dstu2_examples/v2-tables.json'
-input: KIDNÂ  :: output:KIDNÂ  is not a valid CodeFile: './test/dstu2_examples/v2-tables.json'
-input:   :: output:  is not a valid CodeFile: './test/dstu2_examples/v2-tables.json'
-input: Â  :: output:Â  is not a valid Code""",
-  """File: './test/dstu2_examples/v2-tables.json'
-input: CHESTÂ  is not a valid Code :: output:CHESTÂ File: './test/dstu2_examples/v2-tables.json'
-input: KIDNÂ  is not a valid Code :: output:KIDNÂ File: './test/dstu2_examples/v2-tables.json'
-input:   is not a valid Code :: output: File: './test/dstu2_examples/v2-tables.json'
-input: Â  is not a valid Code :: output:Â """,
-  """File: './test/r4_examples/v2-tables.json'
-input: CHESTÂ  :: output:CHESTÂ  is not a valid CodeFile: './test/r4_examples/v2-tables.json'
-input: KIDNÂ  :: output:KIDNÂ  is not a valid CodeFile: './test/r4_examples/v2-tables.json'
-input:   :: output:  is not a valid CodeFile: './test/r4_examples/v2-tables.json'
-input: Â  :: output:Â  is not a valid Code""",
-  """File: './test/r4_examples/v2-tables.json'
-input: CHESTÂ  is not a valid Code :: output:CHESTÂ File: './test/r4_examples/v2-tables.json'
-input: KIDNÂ  is not a valid Code :: output:KIDNÂ File: './test/r4_examples/v2-tables.json'
-input:   is not a valid Code :: output: File: './test/r4_examples/v2-tables.json'
-input: Â  is not a valid Code :: output:Â """,
+      'input: FormatError: "questionnaireresponse-extensions-QuestionnaireResponse-item-subject" is not an Id, as defined by: https://www.hl7.org/fhir/datatypes.html#id :: output:questionnaireresponse-extensions-QuestionnaireResponse-item-subject',
 ];

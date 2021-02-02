@@ -43,4 +43,5 @@ class Integer64 {
 Either<String, int> _validateInteger64(dynamic value) =>
     int.tryParse(value.toString()) != null
         ? right(int.parse(value.toString()))
-        : left('FormatError: "$value" is not an Integer64');
+        : left('FormatError: "$value" is not an Integer64, as defined by: '
+            'http://hl7.org/fhir/2020Feb/datatypes.html#integer64');

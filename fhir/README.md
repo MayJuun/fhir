@@ -88,12 +88,18 @@ input: ```FhirDateTime('2015-02-07T13:28:17-05:00')```, output: ```2015-02-07T18
 input: ```FhirDateTime('2015-02-07T13:28:17')```, output: ```2015-02-07T13:28:17.000``` - you're technically supposed to have a time zone when you specify more than a simple date  
 input: ```FhirDateTime('2017-01-01T00:00:00.000Z')```, output: ```2017-01-01T00:00:00.000Z```
 
-## Upcoming
-Two affiliated packages that add more function to this one are:
-1. [fhir_at_rest](https://github.com/fhir-fli/fhir_at_rest) is a package to assist with any RESTful requests that will follow the FHIR spec
-2. [fhir_db](https://github.com/fhir-fli/fhir_db) is essentially just the [Sembast_SQFLite](https://pub.dev/packages/sembast_sqflite) by [Alex Tekartik](https://www.tekartik.com/) that I added some convenience functions to store FHIR resources. 
-2. I am also working on an auth package that will include Smart on FHIR, but that hasn't been fully implemented yet.
+UPDATE: [Hooray for user input!](https://github.com/fhir-fli/fhir/issues/13#issuecomment-771186955). Working with primitives has been nagging at me for a while now, and this gave me the impetus to try and fix it. It MOSTLY shouldn't effect anyone's code. It's still going to serialize/deserialize in the same way. The difference is that now you can get the value from the field without having to fold it (I love [Dartz](https://pub.dev/packages/dartz), but I don't think I was using it the best way for these). Now, however, you can do this:
+```
+final obs = Observation(
+      code: CodeableConcept(), effectiveDateTime: FhirDateTime('2020-01-01'));
+print(obs.effectiveDateTime == DateTime(2020, 1, 1)); // true
+```
 
+Note that this only works in one direction because the classes override the ```==``` operator. This means that if you try
+```
+print(DateTime(2020, 1, 1) == obs.effectiveDateTime); // false
+```
+It will be false, because it will use the DateTime ```==``` instead.
 
 ## Validation
 - For validation testing, I run all of the sample files from hl7 through a tester. There is an errors.txt file in the test folder where all of the errors are reported (the file name and then the specific field). Currently the only errors involve Codes and IDs. The Codes have to due with the fact that [code is not supposed to have leading or trailing white space](https://www.hl7.org/fhir/datatypes.html#code). The issues with the IDs are that [IDs are not supposed to be more than 64 characters](https://www.hl7.org/fhir/datatypes.html#id), and these are 65. However, if it turns out that no one wants to enforce these as strictly as I do, I may relax them. Also, for r5, there are some fields that I'm not sure if they're supposed to be lists or not, and there are a number of reference I'm not sure if I have the correct name (because the names differe on the website vs. the downloadable schema). I've kept whichever one seemed to be present in the examples.
@@ -158,62 +164,8 @@ Missing "part 'resource.g.dart';".
 |                | simpleQuantity  |                     |                   |                    |
 |                | timing          |                     |                   |                    |
 
-| [ResourceTypes](https://www.hl7.org/fhir/resourcelist.html) | by Category              |                            |                                 |                                   |     |     |
-| :---------------------------------------------------------- | :----------------------- | -------------------------- | ------------------------------- | --------------------------------- | --- | --- |
-| **Base**                                                    |
-| _Individuals_                                               | _Entities1_              | _Entities2_                | _Workflow_                      | Management                        |
-| Group                                                       | Endpoing                 | BiologicallyDerivedProduct | Appointment                     | Encounter                         |
-| Patient                                                     | HealthcareService        | Device                     | AppointmentResponse             | EpisodeOfCare                     |
-| Person                                                      | Location                 | DeviceMetric               | Schedule                        | Flag                              |
-| Practitioner                                                | Organization             | Substance                  | Slot                            | Library                           |
-| PractitionerRole                                            | OrganizationAffiliation  |                            | VerificationResult              | List                              |
-| RelatedPerson                                               |
-| **Clinical**                                                |
-| _Summary_                                                   | _Diagnostics_            | _Medications_              | _CareProvision_                 | _RequestAndResponse_              |
-| AdverseEvent                                                | BodyStructure            | Immunization               | CarePlan                        | Communication                     |
-| AllergyIntolerance                                          | DiagnosticReport         | ImmunizationEvaluation     | CareTeam                        | CommunicationRequest              |
-| ClinicalImpression                                          | ImagingStudy             | ImmunizationRecommendation | Goal                            | DeviceRequest                     |
-| DetectedIssue                                               | Media                    | Medication                 | NutritionOrder                  | DeviceUseStatement                |
-| FamilyMemberHistory                                         | MolecularSequence        | MedicationAdministration   | RequestGroup                    | GuidanceResponse                  |
-| Procedure                                                   | Observation              | MedicationDispense         | RiskAssessment                  | SupplyDelivery                    |
-|                                                             | QuestionnaireResponse    | MedicationKnowledge        | VisionPrescription              | SupplyRequest                     |
-|                                                             | Specimen                 | MedicationRequest          |
-|                                                             |                          | MedicationStatement        |
-| **Financial**                                               |
-| _Support_                                                   | _Billing_                | _Payment_                  | _General_                       |
-| Coverage                                                    | Claim                    | PaymentNotice              | Account                         |
-| CoverageEligibilityRequest                                  | ClaimResponse            | PaymentReconciliation      | ChargeItem                      |
-| CoverageEligibilityResponse                                 | Invoice                  |                            | ChargeItemDefinition            |
-| EnrollmentRequest                                           |                          |                            | Contract                        |
-| EnrollmentResponse                                          |                          |                            | ExplanationOfBenefits           |
-|                                                             |                          |                            | InsurancePlan                   |
-| **Foundation**                                              |
-| _Conformance_                                               | _Terminology_            | _Security_                 | _Documents_                     | _Other_                           |
-| CapabilityStatement                                         | CodeSystem               | AuditEvent                 | CatalogEntry                    | Basic                             |
-| CompartmentDefinition                                       | ConceptMap               | Consent                    | Composition                     | Binary                            |
-| ExampleScenario                                             | NamingSystem             | Provenance                 | DocumentManifest                | Bundle                            |
-| GraphDefinition                                             | TerminologyCapabilities  | DocumentReference          |                                 | Linkage                           |
-| ImplementationGuide                                         | ValueSet                 |                            |                                 | MessageHeader                     |
-| MessageDefinition                                           |                          |                            |                                 | OperationOutcome                  |
-| OperationDefinition                                         |                          |                            |                                 | Parameters                        |
-| SearchParameter                                             |                          |                            |                                 | Subscription                      |
-| StructureDefinition                                         |
-| StructureMap                                                |
-| **Specialized**                                             |
-| _Public Health And Research_                                | _Definitional Artifacts_ | _Evidence Based Medicine_  | _Quality Reporting And Testing_ | _Medication Definition_           |
-| ResearchStudy                                               | ActivityDefinition       | EffectEvidenceSynthesis    | Measure                         | MedicinalProduct                  |
-| ResearchSubject                                             | DeviceDefinition         | Evidence                   | MeasureReport                   | MedicinalProductAuthorization     |
-|                                                             | EventDefinition          | EvidenceVariable           | TestScript                      | MedicinalProductContraindication  |
-|                                                             | ObservationDefinition    | ResearchDefinition         | TestReport                      | MedicinalProductIndication        |
-|                                                             | PlanDefinition           | ResearchElementDefinition  |                                 | MedicinalProductIngredient        |
-|                                                             | Quesionnaire             | RiskEvidenceSynthesis      |                                 | MedicinalProductInteraction       |
-|                                                             | SpecimenDefinition       |                            |                                 | MedicinalProductManufactured      |
-|                                                             |                          |                            |                                 | MedicinalProductPackaged          |
-|                                                             |                          |                            |                                 | MedicinalProductPharmaceutical    |
-|                                                             |                          |                            |                                 | MedicinalProductUndesirableEffect |
-|                                                             |                          |                            |                                 | SubstanceNucleicAcid              |
-|                                                             |                          |                            |                                 | SubstancePolymer                  |
-|                                                             |                          |                            |                                 | SubstanceProtein                  |
-|                                                             |                          |                            |                                 | SubstanceReferenceInformation     |
-|                                                             |                          |                            |                                 | SubstanceSpecification            |
-|                                                             |                          |                            |                                 | SubstanceSourceMaterial           |
+The full resource lists I've decided it's not worth upkeeping since HL7 does that already.
+## [Resource Index Dstu2](https://www.hl7.org/fhir/DSTU2/resourcelist.html)
+## [Resource Index Stu3](http://hl7.org/fhir/stu3/resourcelist.html)
+## [Resource Index R4](https://www.hl7.org/fhir/resourcelist.html)
+## [Resource Index R5 Preview #3](http://hl7.org/fhir/2020Sep/resourcelist.html)

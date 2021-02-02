@@ -43,4 +43,5 @@ class Boolean {
 Either<String, bool> _validateBoolean(dynamic value) =>
     ['true', 'false'].contains(value.toString().toLowerCase())
         ? right(value.toString().toLowerCase() == 'true')
-        : left('FormatError: "$value" is not a bool');
+        : left('FormatError: "$value" is not a bool, as defined by:'
+            ' https://www.hl7.org/fhir/datatypes.html#boolean');

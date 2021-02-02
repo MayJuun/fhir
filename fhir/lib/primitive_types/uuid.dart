@@ -39,5 +39,7 @@ class Uuid {
   int get hashCode => value.hashCode;
 }
 
-Either<String, String> _validateUuid(String value) =>
-    isUUID(value) ? right(value) : left('FormatError: "$value" is not a ');
+Either<String, String> _validateUuid(String value) => isUUID(value)
+    ? right(value)
+    : left('FormatError: "$value" is not a UUID, as defined by: '
+        'https://www.hl7.org/fhir/datatypes.html#uuid');
