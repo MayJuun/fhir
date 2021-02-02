@@ -1,40 +1,46 @@
 import 'dart:convert';
 import 'package:dartz/dartz.dart';
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'primitive_failures.dart';
-import 'primitive_objects.dart';
-
-class Integer extends PrimitiveObject<int> {
-  @override
-  final Either<PrimitiveFailure<String>, int> value;
+class Integer {
+  const Integer._(this._value);
 
   factory Integer(dynamic value) {
     assert(value != null);
     return Integer._(
-      validateInteger(value),
+      _validateInteger(value),
     );
   }
 
-  const Integer._(this.value);
+  factory Integer.fromJson(String json) => Integer(json);
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Integer.fromYaml(dynamic yaml) => yaml is String
       ? Integer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Integer.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
-  factory Integer.fromJson(dynamic json) => Integer(json);
+  final Either<String, int> _value;
+  dynamic get value => _value.fold((l) => l, (r) => r);
+  bool get isValid => _value.isRight();
 
-  @override
-  dynamic toJson() => value.fold(
-        (l) => '${l.errorMessage()}',
-        (r) => r,
-      );
+  String toString() => value.toString();
+  String toJson() => value;
+  String toYaml() => value;
+
+  bool operator ==(Object o) => identical(this, o)
+      ? true
+      : o is int
+          ? o == value
+          : o is String
+              ? o == value.toString()
+              : false;
+
+  int get hashCode => value.hashCode;
 }
+
+Either<String, int> _validateInteger(dynamic value) =>
+    int.tryParse(value.toString()) != null
+        ? right(int.parse(value.toString()))
+        : left('FormatError: $value is not an Integer');

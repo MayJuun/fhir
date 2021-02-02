@@ -1,40 +1,50 @@
 import 'dart:convert';
 import 'package:dartz/dartz.dart';
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'primitive_failures.dart';
-import 'primitive_objects.dart';
-
-class PositiveInt extends PrimitiveObject<int> {
-  @override
-  final Either<PrimitiveFailure<String>, int> value;
+class PositiveInt {
+  const PositiveInt._(this._value);
 
   factory PositiveInt(dynamic value) {
     assert(value != null);
     return PositiveInt._(
-      validatePositiveInt(value),
+      _validatePositiveInt(value),
     );
   }
 
-  const PositiveInt._(this.value);
+  factory PositiveInt.fromJson(String json) => PositiveInt(json);
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory PositiveInt.fromYaml(dynamic yaml) => yaml is String
       ? PositiveInt.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PositiveInt.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
-  factory PositiveInt.fromJson(dynamic json) => PositiveInt(json);
+  final Either<String, int> _value;
+  dynamic get value => _value.fold((l) => l, (r) => r);
+  bool get isValid => _value.isRight();
 
-  @override
-  dynamic toJson() => value.fold(
-        (l) => '${l.errorMessage()}',
-        (r) => r,
-      );
+  String toString() => value.toString();
+  String toJson() => value;
+  String toYaml() => value;
+
+  bool operator ==(Object o) => identical(this, o)
+      ? true
+      : o is int
+          ? o == value
+          : o is String
+              ? o == value.toString()
+              : false;
+
+  int get hashCode => value.hashCode;
+}
+
+Either<String, int> _validatePositiveInt(dynamic value) {
+  var val = int.tryParse(value.toString());
+  return val != null
+      ? val > 0
+          ? right(val)
+          : left('FormatError: $value is not a PositiveInt')
+      : left('FormatError: $value is not a PositiveInt');
 }

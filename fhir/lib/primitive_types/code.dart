@@ -1,34 +1,44 @@
 import 'dart:convert';
 import 'package:dartz/dartz.dart';
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'primitive_failures.dart';
-import 'primitive_objects.dart';
+class Code {
+  const Code._(this._value);
 
-class Code extends PrimitiveObject<String> {
-  @override
-  final Either<PrimitiveFailure<String>, String> value;
-
-  factory Code(String value) {
+  factory Code(dynamic value) {
     assert(value != null);
     return Code._(
-      validateCode(value),
+      _validateCode(value),
     );
   }
 
-  const Code._(this.value);
+  factory Code.fromJson(String json) => Code(json);
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Code.fromYaml(dynamic yaml) => yaml is String
       ? Code.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Code.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
-  factory Code.fromJson(String json) => Code(json);
+  final Either<String, String> _value;
+  String get value => _value.fold((l) => l, (r) => r);
+  bool get isValid => _value.isRight();
+
+  String toString() => value;
+  String toJson() => value;
+  String toYaml() => value;
+
+  bool operator ==(Object o) => identical(this, o)
+      ? true
+      : o is String
+          ? o == value
+          : false;
+
+  int get hashCode => value.hashCode;
 }
+
+Either<String, String> _validateCode(String value) =>
+    RegExp(r'^[^\s]+(\s[^\s]+)*$').hasMatch(value)
+        ? right(value)
+        : left('FormatError: $value is not a Code');

@@ -1,40 +1,50 @@
 import 'dart:convert';
 import 'package:dartz/dartz.dart';
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'primitive_failures.dart';
-import 'primitive_objects.dart';
-
-class UnsignedInt extends PrimitiveObject<int> {
-  @override
-  final Either<PrimitiveFailure<String>, int> value;
+class UnsignedInt {
+  const UnsignedInt._(this._value);
 
   factory UnsignedInt(dynamic value) {
     assert(value != null);
     return UnsignedInt._(
-      validateUnsignedInt(value),
+      _validateUnsignedInt(value),
     );
   }
 
-  const UnsignedInt._(this.value);
+  factory UnsignedInt.fromJson(String json) => UnsignedInt(json);
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory UnsignedInt.fromYaml(dynamic yaml) => yaml is String
       ? UnsignedInt.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? UnsignedInt.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
-  factory UnsignedInt.fromJson(dynamic json) => UnsignedInt(json);
+  final Either<String, int> _value;
+  dynamic get value => _value.fold((l) => l, (r) => r);
+  bool get isValid => _value.isRight();
 
-  @override
-  dynamic toJson() => value.fold(
-        (l) => '${l.errorMessage()}',
-        (r) => r,
-      );
+  String toString() => value.toString();
+  String toJson() => value;
+  String toYaml() => value;
+
+  bool operator ==(Object o) => identical(this, o)
+      ? true
+      : o is int
+          ? o == value
+          : o is String
+              ? o == value.toString()
+              : false;
+
+  int get hashCode => value.hashCode;
+}
+
+Either<String, int> _validateUnsignedInt(dynamic value) {
+  var val = int.tryParse(value.toString());
+  return val != null
+      ? val >= 0
+          ? right(val)
+          : left('FormatError: $value is not an UnsignedInt')
+      : left('FormatError: $value is not a UnsignedInt');
 }

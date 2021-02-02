@@ -1,33 +1,36 @@
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'primitive_failures.dart';
-import 'primitive_objects.dart';
-
-class Base64Binary extends PrimitiveObject<String> {
-  @override
-  final Either<PrimitiveFailure<String>, String> value;
+class Base64Binary {
+  const Base64Binary._(this._value);
 
   factory Base64Binary(String value) {
     assert(value != null);
-    return Base64Binary._(
-      validateBase64Binary(value),
-    );
+    return Base64Binary._(value);
   }
-  const Base64Binary._(this.value);
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
+  factory Base64Binary.fromJson(String json) => Base64Binary(json);
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Base64Binary.fromYaml(dynamic yaml) => yaml is String
       ? Base64Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Base64Binary.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
-  factory Base64Binary.fromJson(String json) => Base64Binary(json);
+  final String _value;
+  String get value => _value;
+  bool get isValid => true;
+
+  String toString() => value;
+  String toJson() => value;
+  String toYaml() => value;
+
+  bool operator ==(Object o) => identical(this, o)
+      ? true
+      : o is String
+          ? o == value
+          : false;
+
+  int get hashCode => value.hashCode;
 }

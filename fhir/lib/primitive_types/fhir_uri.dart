@@ -1,37 +1,46 @@
 import 'dart:convert';
 import 'package:dartz/dartz.dart';
-import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'primitive_failures.dart';
-import 'primitive_objects.dart';
+class FhirUri {
+  const FhirUri._(this._value);
 
-class FhirUri extends PrimitiveObject<Uri> {
-  @override
-  final Either<PrimitiveFailure<String>, Uri> value;
-
-  factory FhirUri(String value) {
+  factory FhirUri(dynamic value) {
     assert(value != null);
     return FhirUri._(
-      validateFhirUri(value),
+      _validateFhirUri(value),
     );
   }
 
-  const FhirUri._(this.value);
+  factory FhirUri.fromJson(String json) => FhirUri(json);
 
-  /// because occasionally you need a Uri
-  Uri toUri() => Uri.parse(toString());
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory FhirUri.fromYaml(dynamic yaml) => yaml is String
       ? FhirUri.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? FhirUri.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
-  factory FhirUri.fromJson(String json) => FhirUri(json);
+  final Either<String, Uri> _value;
+  dynamic get value => _value.fold((l) => l, (r) => r);
+  bool get isValid => _value.isRight();
+
+  String toString() => value.toString();
+  String toJson() => value.toString();
+  String toYaml() => value.toString();
+
+  bool operator ==(Object o) => identical(this, o)
+      ? true
+      : o is Uri
+          ? o == value
+          : o is String
+              ? o == value.toString()
+              : false;
+
+  int get hashCode => value.hashCode;
 }
+
+Either<String, Uri> _validateFhirUri(String value) =>
+    Uri.tryParse(value) != null
+        ? right(Uri.parse(value))
+        : left('FormatError: $value is not a Uri');

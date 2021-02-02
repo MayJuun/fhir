@@ -1,34 +1,43 @@
 import 'dart:convert';
 import 'package:dartz/dartz.dart';
-import 'package:fhir_yaml/fhir_yaml.dart';
+import 'package:string_validator/string_validator.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
-import 'primitive_failures.dart';
-import 'primitive_objects.dart';
-
-class Uuid extends PrimitiveObject<String> {
-  @override
-  final Either<PrimitiveFailure<String>, String> value;
+class Uuid {
+  const Uuid._(this._value);
 
   factory Uuid(String value) {
     assert(value != null);
     return Uuid._(
-      validateUuid(value),
+      _validateUuid(value),
     );
   }
 
-  const Uuid._(this.value);
+  factory Uuid.fromJson(String json) => Uuid(json);
 
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
   factory Uuid.fromYaml(dynamic yaml) => yaml is String
       ? Uuid.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Uuid.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
-  factory Uuid.fromJson(String json) => Uuid(json);
+  final Either<String, String> _value;
+  String get value => _value.fold((l) => l, (r) => r);
+  bool get isValid => _value.isRight();
+
+  String toString() => value;
+  String toJson() => value;
+  String toYaml() => value;
+
+  bool operator ==(Object o) => identical(this, o)
+      ? true
+      : o is String
+          ? o == value
+          : false;
+
+  int get hashCode => value.hashCode;
 }
+
+Either<String, String> _validateUuid(String value) =>
+    isUUID(value) ? right(value) : left('FormatError: $value is not a ');
