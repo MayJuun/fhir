@@ -86,11 +86,21 @@ String _formatValue(
     if (_containsSpecialCharacters(value) ||
         _containsEscapeCharacters(value) ||
         value.contains('"') ||
-        value[0] == ' ' ||
-        value[value.length - 1] == ' ' ||
         (_containsFloatingPointPattern(value) &&
             style != YamlStyle.pubspecYaml)) {
       return ' "${_withEscapes(value)}"';
+    }
+
+    if (value.toString().isNotEmpty) {
+      if (value[0] == ' ' || value[value.length - 1] == ' ') {
+        return ' "${_withEscapes(value)}"';
+      }
+    }
+
+    if (value is String) {
+      if (value.isEmpty) {
+        return " ''";
+      }
     }
 
     /// checks if it is an integer or a double

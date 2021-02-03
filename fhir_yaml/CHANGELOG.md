@@ -1,3 +1,6 @@
+## [0.2.1]
+* Still used the same, but was hanging on empty strings, should be fixed now.
+
 ## [0.2.0]
 * Just trying to keep in sync with other packages. No functionality changes. Reorganized github repo.
 

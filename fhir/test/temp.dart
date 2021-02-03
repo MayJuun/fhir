@@ -1,23 +1,31 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:fhir/dstu2.dart';
+import 'package:fhir/r4.dart';
+import 'package:fhir_yaml/fhir_yaml.dart';
 
 import 'validation/validation.dart';
 
 Future<void> main() async {
-  var string = [];
-  var filename = './test/testing.json';
+  final ext = {'valueString': ""};
 
-  var contents = await File(filename).readAsString();
-  await File('./test/temp.yaml')
-      .writeAsString(Resource.fromJson(json.decode(contents)).toYaml());
+  print(json2yaml(ext));
 
-  var resource =
-      Resource.fromYaml((Resource.fromJson(json.decode(contents)).toYaml()));
+  // var string = [];
+  // var filename = './test/testing.json';
 
-  await File('./test/temp.json').writeAsString(
-      jsonEncode(Resource.fromJson(json.decode(contents)).toJson()));
+  // var contents = await File(filename).readAsString();
+
+  // print(Resource.fromJson(json.decode(contents)).toYaml());
+
+  // await File('./test/temp.yaml')
+  //     .writeAsString(Resource.fromJson(json.decode(contents)).toYaml());
+
+  // var resource =
+  //     Resource.fromYaml((Resource.fromJson(json.decode(contents)).toYaml()));
+
+  // await File('./test/temp.json').writeAsString(
+  //     jsonEncode(Resource.fromJson(json.decode(contents)).toJson()));
   // if (resource == null) {
   //   print('nullFile: $filename');
   // } else {

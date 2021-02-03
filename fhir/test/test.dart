@@ -54,9 +54,6 @@ Future main() async {
           var testList = await yamlValidation();
           var tempList = <String>[];
 
-          print(testList);
-          await File('./test/temp_yaml.txt').writeAsString(testList.toString());
-
           for (final i in testList) {
             tempList.add(i.toString());
           }

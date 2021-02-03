@@ -36,7 +36,6 @@ Future<List<String>> r4ValidationYaml() async {
   var dir = Directory('./test/r4_examples');
   var string = <String>[];
   for (var file in await dir.list().toList()) {
-    print(file);
     var contents = await File(file.path).readAsString();
     var tempResource = r4.Resource.fromJson(json.decode(contents));
     if (tempResource == null) {

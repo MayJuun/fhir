@@ -13,7 +13,8 @@ dependencies:
   string_validator: ^0.1.4
   freezed_annotation: ^0.12.0
   yaml: ^2.2.1
-  fhir_yaml: ^0.2.0
+  fhir_yaml: 
+    path: ../fhir_yaml
 
 dev_dependencies:
   json_serializable: ^3.5.1
