@@ -12,11 +12,12 @@ dependencies:
   cupertino_icons: ^1.0.0
   http: ^0.12.2
   fhir: ^0.2.3
-  fhir_at_rest: ^0.2.0
+  fhir_at_rest: ^0.2.3
   fhir_auth:
     path: ../../fhir_auth
   google_sign_in: ^4.5.9
   oauth2: ^1.6.3
+  aad_oauth: ^0.2.1
 
 dev_dependencies:
   flutter_test:

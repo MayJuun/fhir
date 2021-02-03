@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
               RaisedButton(
                   child: const Text('Azure', style: TextStyle(fontSize: 44)),
                   // need to authorize app online before logging in via app
-                  onPressed: () async => await aidbox()),
+                  onPressed: () async => await azure()),
               RaisedButton(
                   child:
                       const Text('GCP Health', style: TextStyle(fontSize: 44)),

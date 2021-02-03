@@ -1,4 +1,5 @@
 import 'api.dart';
+import 'azure_request.dart';
 import 'fhir_request.dart';
 import 'gcs_fhir_request.dart';
 import 'hapi_fhir_request.dart';
@@ -12,7 +13,7 @@ Future aidbox() async => await fhirRequest(
       fhirCallback: Api().fhirCallback,
     );
 
-Future azure() async => await fhirRequest(
+Future azure() async => await azureRequest(
       url: Api.azureUrl,
       clientId: Api.azureClientId,
       secret: Api.azureSecret,
