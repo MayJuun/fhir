@@ -28,7 +28,7 @@ class Base64Binary {
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is String
+      : o is Base64Binary || o is String
           ? o == value
           : false;
 

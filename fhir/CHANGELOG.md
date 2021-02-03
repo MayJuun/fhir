@@ -1,5 +1,8 @@
 # fhir
 
+## [0.2.3]
+* Need to override ```==``` better for the same type of object
+
 ## [0.2.2]
 * [Hooray for user input!](https://github.com/fhir-fli/fhir/issues/13)
 * Adjusted primitives to make them easier to work with

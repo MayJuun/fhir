@@ -31,7 +31,7 @@ class Boolean {
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is bool
+      : o is Boolean || o is bool
           ? o == value
           : o is String
               ? o == value.toString()

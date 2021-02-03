@@ -31,7 +31,7 @@ class FhirUrl {
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Uri
+      : o is FhirUrl || o is Uri
           ? o == value
           : o is String
               ? o == value.toString()
