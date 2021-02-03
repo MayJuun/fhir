@@ -22,13 +22,13 @@ You can email me at <grey@fhirfli.dev>.
 In order to use this package in your app, you must include the following in your pubspec.yaml file under dependencies:
 ```
 dependencies:
-  fhir: ^0.1.5
+  fhir: ^0.2.2
 ```
 Or if you want to include the most recent unreleased version from Github
 ```
 fhir:
   git:
-    url: git://github.com/Dokotela/fhir.git
+    url: git://github.com/MayJuun/fhir/tree/dev/fhir
 ```
 Then, in any file where you're going to be using it, simply import it like this:
 ```
