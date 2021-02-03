@@ -1,0 +1,37 @@
+name: fhir_store
+description: A new Flutter project.
+
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cloud_firestore: ^0.16.0
+  cupertino_icons: ^1.0.0
+  fhir: ^0.2.0
+  firebase_auth: ^0.20.0
+  firebase_analytics: ^7.0.1
+  firebase_core: ^0.7.0
+  freezed_annotation: ^0.12.0
+  get: ^3.23.1
+  github_sign_in: ^0.0.3
+  google_sign_in: ^4.5.9
+  remote_state: ^1.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  freezed: ^0.12.7
+  build_runner: ^1.10.13
+
+flutter:
+  uses-material-design: true
+
+        
+    
+    
+                                      
