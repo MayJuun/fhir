@@ -16,7 +16,7 @@ Future gcsFhirRequest({
   );
 
   try {
-    await client.access();
+    await client.login();
   } catch (e) {
     print(e);
   }

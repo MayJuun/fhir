@@ -32,7 +32,7 @@ Future fhirRequest({
   );
 
   try {
-    await client.access(
+    await client.login(
       authUrl: authUrl,
       tokenUrl: tokenUrl,
     );

@@ -8,8 +8,7 @@ dependencies:
     sdk: flutter
   fhir_db:
     path: ../../fhir_db
-  fhir: 
-    path: ../../fhir
+  fhir: ^0.2.3
 
 dev_dependencies:
   dependency_validator: ^2.0.1

@@ -7,7 +7,7 @@ class GcsClient extends GoogleSignIn {
 
   final FhirUri baseUrl;
 
-  Future access() async => await signIn();
+  Future login() async => await signIn();
 
   Future<Map<String, String>> headers() async {
     final headers = await currentUser.authHeaders;
