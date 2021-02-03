@@ -1,3 +1,6 @@
+## [0.2.3]
+* Updated dependencies (again)
+
 ## [0.2.2]
 * Instead of throwing Exceptions, it now catches them, and returns them as an OperationOutcome
 * Updated dependencies
