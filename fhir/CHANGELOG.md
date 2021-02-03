@@ -3,7 +3,7 @@
 ## [0.2.2]
 * [Hooray for user input!](https://github.com/fhir-fli/fhir/issues/13)
 * Adjusted primitives to make them easier to work with
-* Because it override the ```==``` operator, the primitive must come first when comparing to raw value
+* Because it overrides the ```==``` operator, the primitive must come first when comparing to raw value
 
 ## [0.2.1]
 * Added example (need those pub points!)

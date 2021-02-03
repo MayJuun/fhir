@@ -33,11 +33,11 @@ This function is implemented in a very basic and perhaps naive way, please let m
 
 ## Usage
 
-To use json2yaml, add the following dependency to pubspec.yaml:
+To use fhir_yaml, add the following dependency to pubspec.yaml:
 
 ```
 dependencies:
-  json2yaml: ^1.0.0
+  fhir_yaml: ^0.2.1
 ```
 
 ## Advanced usage: YAML formatting styles

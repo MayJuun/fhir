@@ -17,7 +17,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient/12345?_format=$mimeType',
       );
     });
@@ -31,7 +31,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient/12345?_format=$mimeType&_pretty=true',
       );
     });
@@ -46,7 +46,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient/12345?_format=$mimeType&_pretty=true&_summary=true',
       );
     });
@@ -60,7 +60,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient/12345?_format=$mimeType&_summary=count',
       );
     });
@@ -75,7 +75,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient/1227442?_format=json&_pretty=true&_elements=name',
       );
     });
@@ -91,7 +91,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient/1227442?_format=json&_pretty=true&_elements=name,gender',
       );
     });
@@ -107,7 +107,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient/12345/_history/6789?_format=$mimeType',
       );
     });
@@ -122,7 +122,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient/12345/_history/6789?_format=$mimeType&_pretty=true',
       );
     });
@@ -138,7 +138,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient/12345/_history/6789?_format=$mimeType&_pretty=true&_summary=true',
       );
     });
@@ -153,7 +153,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient/12345/_history/6789?_format=$mimeType&_summary=count',
       );
     });
@@ -177,7 +177,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4?_format=$mimeType',
       );
     });
@@ -213,7 +213,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Observation/12345/_history?_format=$mimeType',
       );
     });
@@ -225,7 +225,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Observation/_history?_format=$mimeType',
       );
     });
@@ -236,7 +236,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/_history?_format=$mimeType',
       );
     });
@@ -256,7 +256,7 @@ void main() {
 
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Observation/12345/_history'
         '?_format=$mimeType&_count=10&_since=2020-10-08T16:58:07.241117Z',
       );
@@ -272,7 +272,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/_history?_format=json'
         '&_list=List/12345&_count=10&_since=2020-10-08',
       );
@@ -288,7 +288,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient/12345?_format=$mimeType',
       );
     });
@@ -303,7 +303,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient/12345?_format=$mimeType',
       );
     });
@@ -318,7 +318,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient/12345?_format=$mimeType',
       );
     });
@@ -333,7 +333,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient?_format=$mimeType',
       );
     });
@@ -347,7 +347,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/metadata'
         '?mode=normative&_format=$mimeType',
       );
@@ -364,7 +364,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/\$everything'
         '?_format=$mimeType&start=2020-01-01&end=2020-08-01',
       );
@@ -382,7 +382,7 @@ void main() {
 
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient/744742/\$everything?_format'
         '=json&start=2020-01-01&end=2020-08-01',
       );
@@ -399,7 +399,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient?_format=$mimeType&_id=12345',
       );
     });
@@ -412,7 +412,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient/_search?_format=$mimeType',
       );
     });
@@ -425,7 +425,7 @@ void main() {
           parameters: parameters);
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Observation'
         '?_format=$mimeType&_lastUpdated=gt2010-10-01',
       );
@@ -442,7 +442,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Condition'
         '?_format=$mimeType&_tag=http://acme.org/codes|needs-review',
       );
@@ -457,7 +457,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/DiagnosticReport'
         '?_format=$mimeType&_profile=http://acme.org/codes',
       );
@@ -472,7 +472,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient'
         '?_format=$mimeType&gender:missing=true',
       );
@@ -487,7 +487,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient'
         '?_format=$mimeType&gender:missing=false',
       );
@@ -502,7 +502,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient'
         '?_format=$mimeType&_text:exact=Stark',
       );
@@ -517,7 +517,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Observation?_format=$mimeType&_lastUpdated=le2010-10-01',
       );
     });
@@ -531,7 +531,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/RiskAssessment?_format=$mimeType&probability=gt0.8',
       );
     });
@@ -548,7 +548,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient'
         '?_format=$mimeType&birthdate=ge2010-01-01&birthdate=le2011-12-31',
       );
@@ -567,7 +567,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient'
         '?_format=$mimeType&given=eve&given:contains=eve&given:exact=eve',
       );
@@ -586,7 +586,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4'
         '?_format=$mimeType&_type=Patient&given=eve&given:contains=eve&given:exact=eve',
       );
@@ -603,7 +603,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient'
         '?_format=$mimeType&identifier=http://acme.org/patient|2345',
       );
@@ -618,7 +618,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Composition'
         '?_format=$mimeType&section:not=48765-2',
       );
@@ -635,7 +635,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Condition'
         '?_format=$mimeType&code:in=http://snomed.info/sct?fhir_vs=isa/126851005',
       );
@@ -652,7 +652,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Patient'
         '?_format=$mimeType&identifier:of-type=http://terminology.hl7.org/CodeSystem/v2-0203|MR|446053',
       );
@@ -669,7 +669,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Observation'
         '?_format=$mimeType&value-quantity=ap5.4|http://unitsofmeasure.org|mg',
       );
@@ -686,7 +686,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Observation'
         '?_format=$mimeType&value-quantity=5.4|http://unitsofmeasure.org|mg',
       );
@@ -703,7 +703,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Observation'
         '?_format=$mimeType&value-quantity=0.0054|http://unitsofmeasure.org|g',
       );
@@ -718,7 +718,7 @@ void main() {
       );
       final OperationOutcome response = await request.request();
       expect(
-        response.issue[0].diagnostics,
+        response.issue[0].details.text,
         'http://hapi.fhir.org/baseR4/Observation'
         '?_format=$mimeType&subject=Patient/123',
       );

@@ -23,4 +23,4 @@ You can email me at <grey@fhirfli.dev>.
 ### 2. [fhir_at_rest](fhir_at_rest/README.md) - package for assisting with RESTFul calls to FHIR servers
 ### 3. [fhir_auth](fhir_auth/README.md) - authentication package (SMART on FHIR, Google)
 ### 3. [fhir_db](fhir_db/README.md) - local, embedded, encrypted database
-### 3. [fhir_yaml](readme/README.md) - convenience package for converting to Yaml
+### 3. [fhir_yaml](fhir_yaml/README.md) - convenience package for converting to Yaml
