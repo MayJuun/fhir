@@ -95,7 +95,7 @@ class FhirClient {
     }
     return {
       HttpHeaders.authorizationHeader:
-          'Bearer ${secureStorage.read(key: "access_token")}'
+          'Bearer ${await secureStorage.read(key: "access_token")}'
     };
   }
 
@@ -183,8 +183,10 @@ class FhirClient {
   /// Request for the CapabilityStatement (or Conformance) and then identifying
   /// the authUrl endpoint & tokenurl endpoing
   Future<Unit> get _getEndpoints async {
+    print('here4');
     var thisRequest = '$baseUrl/metadata?mode=full&_format=json';
 
+    print(thisRequest);
     var result = await get(thisRequest);
 
     if (_errorCodeMap.containsKey(result.statusCode)) {
@@ -193,13 +195,14 @@ class FhirClient {
           '_format=json',
           '_format=application/json',
         );
+        print('here3');
         result = await get(thisRequest);
       }
       if (_errorCodeMap.containsKey(result.statusCode)) {
         throw HttpException('StatusCode: ${result.statusCode}\n${result.body}');
       }
     }
-
+    print('here2');
     Map<String, dynamic> returnResult;
 
     /// because I can't figure out why aidbox only has strings not lists for
