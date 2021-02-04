@@ -16,22 +16,35 @@ class FhirDateTime {
   factory FhirDateTime(inValue) {
     assert(inValue != null);
 
-    if (inValue is DateTime) {
-      return FhirDateTime._(inValue.toIso8601String(), inValue, true,
-          DateTimePrecision.FULL, null);
-    } else if (inValue is String) {
-      try {
-        final dateTimeValue = _parseDateTime(inValue);
-        return FhirDateTime._(
-            inValue, dateTimeValue, true, _getPrecision(inValue), null);
-      } on FormatException catch (e) {
-        return FhirDateTime._(
-            inValue, null, false, DateTimePrecision.INVALID, e);
-      }
-    } else {
-      throw ArgumentError(
-          'FhirDateTime can only be constructed from String or DateTime.');
+    switch (inValue.runtimeType.toString()) {
+      case 'DateTime':
+        return FhirDateTime._(inValue.toIso8601String(), inValue, true,
+            DateTimePrecision.FULL, null);
+      case 'String':
+        try {
+          final dateTimeValue = _parseDateTime(inValue);
+          return FhirDateTime._(
+              inValue, dateTimeValue, true, _getPrecision(inValue), null);
+        } on FormatException catch (e) {
+          return FhirDateTime._(
+              inValue, null, false, DateTimePrecision.INVALID, e);
+        }
+        break;
+      default:
+        throw ArgumentError(
+            'FhirDateTime cannot be constructed from $inValue.');
     }
+  }
+
+  factory FhirDateTime.fromDateTime(DateTime dateTime,
+      [DateTimePrecision precision = DateTimePrecision.FULL]) {
+    assert(dateTime != null && precision != null);
+
+    final dateString = dateTime.toIso8601String();
+    final len = [4, 7, 10, dateString.length][precision.index];
+
+    return FhirDateTime._(
+        dateString.substring(0, len), dateTime, true, precision, null);
   }
 
   factory FhirDateTime.fromJson(dynamic json) => FhirDateTime(json);
@@ -68,8 +81,12 @@ class FhirDateTime {
   String toJson() => _valueString;
   String toYaml() => _valueString;
 
-  static const _dateTimeRegExp =
-      r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?';
+  static final _dateTimeYYYYExp =
+      RegExp(r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$');
+  static final _dateTimeYYYYMMExp = RegExp(
+      r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])$');
+  static final _dateTimeFULLExp = RegExp(
+      r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?');
 
   static DateTime _parseDateTime(String value) {
     if (value.length <= 7) {
@@ -77,7 +94,7 @@ class FhirDateTime {
     } else {
       value.replaceFirst(' ', 'T');
       try {
-        if (RegExp(_dateTimeRegExp).hasMatch(value)) {
+        if (_dateTimeFULLExp.hasMatch(value)) {
           return DateTime.parse(value);
         } else {
           throw FormatException();
@@ -93,12 +110,9 @@ class FhirDateTime {
   static DateTime _parsePartialDateTime(String value) {
     assert(value != null);
 
-    if (RegExp(r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$')
-        .hasMatch(value)) {
+    if (_dateTimeYYYYExp.hasMatch(value)) {
       return DateTime(int.parse(value));
-    } else if (RegExp(
-            r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])$')
-        .hasMatch(value)) {
+    } else if (_dateTimeYYYYMMExp.hasMatch(value)) {
       var year = int.parse(value.split('-')[0]);
       var month = int.parse(value.split('-')[1]);
       return DateTime(year, month);

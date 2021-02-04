@@ -1,18 +1,33 @@
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
-import 'package:string_validator/string_validator.dart';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
 class Instant {
-  const Instant._(this._value, this._format);
+  const Instant._(
+      this._valueString, this._valueDateTime, this._isValid, this._parseError);
 
-  factory Instant(_value) {
-    assert(_value != null);
-    return Instant._(
-      _validateInstant(_value.toString()),
-      _value.toString().length <= 10 ? _value.toString().length : -1,
-    );
+  factory Instant(inValue) {
+    assert(inValue != null);
+
+    switch (inValue.runtimeType.toString()) {
+      case 'DateTime':
+        return Instant._(inValue.toIso8601String(), inValue, true, null);
+      case 'String':
+        try {
+          final dateTimeValue = _parseDateTime(inValue);
+          return Instant._(inValue, dateTimeValue, true, null);
+        } on FormatException catch (e) {
+          return Instant._(inValue, null, false, e);
+        }
+        break;
+      default:
+        throw ArgumentError('Instant cannot be constructed from $inValue.');
+    }
+  }
+
+  factory Instant.fromDateTime(DateTime dateTime) {
+    assert(dateTime != null);
+
+    return Instant._(dateTime.toIso8601String(), dateTime, true, null);
   }
 
   factory Instant.fromJson(dynamic json) => Instant(json);
@@ -23,60 +38,45 @@ class Instant {
           ? Instant.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
-  final Either<String, DateTime> _value;
-  final int _format;
+  final String _valueString;
+  final DateTime _valueDateTime;
+  final bool _isValid;
+  final Exception _parseError;
 
-  bool get isValid => _value.isRight();
-  int get hashCode => _value.hashCode;
-  String get value => _value.fold(
-        (l) => l,
-        (r) => _formattedInstant(r),
-      );
+  bool get isValid => _isValid;
+  int get hashCode => _valueString.hashCode;
+  DateTime get value => _valueDateTime;
+  Exception get parseError => _parseError;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is Instant
           ? o == value
           : o is DateTime
-              ? o == DateTime.tryParse(value)
+              ? o == _valueDateTime
               : o is String
-                  ? o == value.toString()
+                  ? o == _valueString
                   : false;
 
-  String toString() => value.toString();
-  String toJson() => value.toString();
-  String toYaml() => value.toString();
+  String toString() => _valueString;
+  String toJson() => _valueString;
+  String toYaml() => _valueString;
 
-  String _formattedInstant(value) => _format == -1
-      ? value.toIso8601String()
-      : value.toIso8601String().substring(0, _format);
-}
+  static final _instantExp = RegExp(
+      r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))');
 
-Either<String, DateTime> _validateInstant(dynamic value) {
-  var stringValue = value.toString();
-
-  //if it is a date
-  if (isDate(stringValue)) {
-    // first change it to a UTC _value
-    stringValue = DateTime.parse(stringValue).toUtc().toString();
-
-    //Add the T instead of a space as FHIR specification requires
-    stringValue = stringValue.length <= 10
-        ? stringValue
-        : stringValue[10] != ' '
-            ? stringValue
-            : stringValue.replaceFirst(' ', 'T');
-
-    //then check if it matches
-    return RegExp(_instantString).hasMatch(stringValue)
-        ? right(DateTime.parse(value))
-        : left('FormatError: "$value" is not an Instant, as defined by: '
+  static DateTime _parseDateTime(String value) {
+      value.replaceFirst(' ', 'T');
+      try {
+        if (_instantExp.hasMatch(value)) {
+          return DateTime.parse(value);
+        } else {
+          throw FormatException();
+        }
+      } on FormatException {
+        throw FormatException(
+            'FormatException: "$value" is not an Instant, as defined by: '
             'https://www.hl7.org/fhir/datatypes.html#instant');
-  } else {
-    return left('FormatError: "$value" is not an Instant, as defined by: '
-        'https://www.hl7.org/fhir/datatypes.html#instant');
+      }
   }
 }
-
-const _instantString =
-    r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))';
