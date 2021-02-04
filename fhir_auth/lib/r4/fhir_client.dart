@@ -104,26 +104,16 @@ class FhirClient {
     /// point. The clientId, the redirect Url, the client secret, the
     /// authorize and token enpoints, a list of scopes, and if there are any
     /// other additional parameters are passed, they are included
-    final request = secret == null
-        ? AuthorizationTokenRequest(
-            clientId,
-            redirectUri.toString(),
-            serviceConfiguration: AuthorizationServiceConfiguration(
-              authorize.toString(),
-              token.toString(),
-            ),
-            scopes: scopes.scopesList(),
-          )
-        : AuthorizationTokenRequest(
-            clientId,
-            redirectUri.toString(),
-            clientSecret: secret,
-            serviceConfiguration: AuthorizationServiceConfiguration(
-              authorize.toString(),
-              token.toString(),
-            ),
-            scopes: scopes.scopesList(),
-          );
+    final request = AuthorizationTokenRequest(
+      clientId,
+      redirectUri.toString(),
+      clientSecret: secret,
+      serviceConfiguration: AuthorizationServiceConfiguration(
+        authorize.toString(),
+        token.toString(),
+      ),
+      scopes: scopes != null ? scopes.scopesList() : null,
+    );
     request.additionalParameters = additionalParameters ?? <String, String>{};
     request.additionalParameters['nonce'] = _nonce();
     request.additionalParameters['aud'] = baseUrl.toString();
