@@ -100,6 +100,8 @@ Note the url is the baseUrl for your query, if you attache /metadata to the end,
       'https://healthcare.googleapis.com/v1/projects/myProjectName/locations/us-east4/datasets/myDataSet/fhirStores/myFhirStore/fhir';
   static const gcsScopes = ['https://www.googleapis.com/auth/cloud-platform'];
 ```
+I also have a tutorial for setting up your Google Healthcare API here: https://www.fhirfli.dev/gcp-healthcare-api-part-1-creating-fhir-store
+
 ```Azure API for FHIR``` - this is similar to SMART on FHIR, with one exception
 ```
   static const azureClientId = 'myAzureClientId';
@@ -112,6 +114,7 @@ Note the url is the baseUrl for your query, if you attache /metadata to the end,
       'https://login.microsoftonline.com/$azureTenantId/oauth2/token';
 ```
 Notice that capability statement will not give the proper endpoints, but it will not attach the url to the resource parameter for the authURl, this is important, and it won't work without it. 
+This is my Azure tutorial, it's not as complete as the one above, but it should be a reasonable start: https://www.fhirfli.dev/azure-fhir-setup
 
 # Example
 
