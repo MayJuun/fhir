@@ -1,5 +1,9 @@
 # fhir
 
+## [0.2.4]
+* Big thanks to [Tiloc](https://github.com/tiloc) for his PR on this one. He redid Date, FhirDateTime and Instant to be more useful. So you can now call .toString(), .toYaml(), .toJson() and now ALSO .value on any of these. The first 3 will return the proper format for that specification, and .value will return a dart DateTime so you can actually perform calculations.
+* Also added in a whole lot more examples to test since I've been playing with bulk downloads.
+
 ## [0.2.3]
 * Need to override ```==``` better for the same type of object
 
