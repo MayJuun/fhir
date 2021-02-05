@@ -66,9 +66,9 @@ Future smartRequest({
       id: newId,
     );
     try {
-      final response =
+      final response2 =
           await request2.request(headers: await client.authHeaders);
-      print('Uploaded patient: ${response.toJson()}');
+      print('Uploaded patient: ${response2.toJson()}');
     } catch (e) {
       print(e);
     }

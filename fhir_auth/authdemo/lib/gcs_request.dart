@@ -20,6 +20,7 @@ Future gcsRequest({
   } catch (e) {
     print(e);
   }
+
   final _newPatient = newPatient();
   print('Patient to be uploaded: ${_newPatient.toJson()}');
   final request1 = FhirRequest.create(
@@ -37,18 +38,18 @@ Future gcsRequest({
   } catch (e) {
     print(e);
   }
-
   if (newId is! Id) {
     print(newId);
   } else {
-    final request2 = FhirRequest.search(
+    final request2 = FhirRequest.read(
       base: client.baseUrl.uri,
       type: R4ResourceType.Patient,
+      id: newId,
     );
     try {
       final response2 =
           await request2.request(headers: await client.authHeaders);
-      print(response2.toJson());
+      print('Uploaded patient: ${response2.toJson()}');
     } catch (e) {
       print(e);
     }

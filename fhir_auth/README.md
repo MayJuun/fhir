@@ -1,6 +1,6 @@
 # fhir_auth
 
-I'm finally publishing this package. It's for authenticating and authorizing a user when accessing a FHIR server. It now works with SMART on FHIR, Google Signin for Google's Healthcare API and Azure's FHIR API. AWS, I'm coming for you next!
+I'm finally publishing this package. It's for authenticating and authorizing a user when accessing a FHIR server. It now works with SMART on FHIR, Google Signin for Google's Healthcare API and Azure's FHIR API. AWS, I'm coming for you next! (although probably not until their Healthlake AND Amplify are a little more developed).
 
 A Dart/Flutter package for working with FHIR® resources. FHIR® is the registered trademark of HL7 and is used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this product by HL7. 
 
@@ -81,7 +81,41 @@ I've also included the ability to use Google sign-in, so if you'd like to connec
 
 # ```API file```
 
-I'm going to show here a copy (with numbers changed, obviously) of my API file that I use for these calls to test and ensure that it works the way I want it to. I think the example shows the flow pretty well. I've also tried to make both the SmartClient and the GCS Client function as similarly as possible.
+I'm going to show here a copy (with numbers changed, obviously) of my API file that I use for these calls to test and ensure that it works the way I want it to. 
+
+```SMART on FHIR``` - this is the same flow for HAPI or Aidbox, zum beispiel.
+```
+  static const clientId = 'myClientId';
+  static const secret = 'donottellanyonemysupersecretsecret';
+  static const url = 'https://myfhirserver.myorg/fhir';
+  static const mihinAuthUrl = null;
+  static const mihinTokenUrl = null;
+```
+Note the url is the baseUrl for your query, if you attache /metadata to the end, it should return a CapabilityStatement/Conformance. Pay attention to this, because different servers creat their urls differently.
+
+```Google Healthcare API```
+```
+  static const gcsClientId = 'alphanumericstring.apps.googleusercontent.com';
+  static const gcsUrl =
+      'https://healthcare.googleapis.com/v1/projects/myProjectName/locations/us-east4/datasets/myDataSet/fhirStores/myFhirStore/fhir';
+  static const gcsScopes = ['https://www.googleapis.com/auth/cloud-platform'];
+```
+```Azure API for FHIR``` - this is similar to SMART on FHIR, with one exception
+```
+  static const azureClientId = 'myAzureClientId';
+  static const azureTenantId = 'myAzureTenantId';
+  static const azureSecret = 'myAzureSecret';
+  static const azureUrl = 'https://myfhirserver.azurehealthcareapis.com';
+  static const azureAuthUrl =
+      'https://login.microsoftonline.com/$azureTenantId/oauth2/authorize?resource=$azureUrl';
+  static const azureTokenUrl =
+      'https://login.microsoftonline.com/$azureTenantId/oauth2/token';
+```
+Notice that capability statement will not give the proper endpoints, but it will not attach the url to the resource parameter for the authURl, this is important, and it won't work without it. 
+
+# Example
+
+I think the example shows the flow pretty well. I've also tried to make both the SmartClient and the GCS Client function as similarly as possible.
 
 So for the SmartClient, initialize as:
 ```
@@ -119,6 +153,13 @@ await client.login();
 final newPatient = Patient(id: '123');
 final request1 = FhirRequest.create(base: client.baseUrl.uri);
 final response1 = await request1.request(headers: await client.authHeaders);
+final request2 = FhirRequest.read(
+  base: client.baseUrl.uri,
+  type: R4ResourceType.Patient,
+  id: newId,
+);
+final response2 = await request2.request(headers: await client.authHeaders);
+```
 
 # Alpha Version
 
