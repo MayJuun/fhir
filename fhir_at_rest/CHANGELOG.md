@@ -1,4 +1,4 @@
-## [0.2.3]
+## [0.2.4]
 * Updated dependencies for new Dates in basic FHIR package
 
 ## [0.2.3]

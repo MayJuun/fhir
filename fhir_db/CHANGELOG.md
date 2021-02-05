@@ -1,3 +1,6 @@
+## [0.2.4]
+* Updated Dependencies for base FHIR package new Date functionality
+
 ## [0.2.1]
 * Updated Dependencies
 
