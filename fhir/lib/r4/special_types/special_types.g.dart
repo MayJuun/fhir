@@ -485,7 +485,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_defaultValueCode'] as Map<String, dynamic>),
     defaultValueDate: json['defaultValueDate'] == null
         ? null
-        : Date.fromJson(json['defaultValueDate'] as String),
+        : Date.fromJson(json['defaultValueDate']),
     defaultValueDateElement: json['_defaultValueDate'] == null
         ? null
         : Element.fromJson(json['_defaultValueDate'] as Map<String, dynamic>),
@@ -725,9 +725,8 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
     fixedCodeElement: json['_fixedCode'] == null
         ? null
         : Element.fromJson(json['_fixedCode'] as Map<String, dynamic>),
-    fixedDate: json['fixedDate'] == null
-        ? null
-        : Date.fromJson(json['fixedDate'] as String),
+    fixedDate:
+        json['fixedDate'] == null ? null : Date.fromJson(json['fixedDate']),
     fixedDateElement: json['_fixedDate'] == null
         ? null
         : Element.fromJson(json['_fixedDate'] as Map<String, dynamic>),
@@ -932,9 +931,8 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
     patternCodeElement: json['_patternCode'] == null
         ? null
         : Element.fromJson(json['_patternCode'] as Map<String, dynamic>),
-    patternDate: json['patternDate'] == null
-        ? null
-        : Date.fromJson(json['patternDate'] as String),
+    patternDate:
+        json['patternDate'] == null ? null : Date.fromJson(json['patternDate']),
     patternDateElement: json['_patternDate'] == null
         ? null
         : Element.fromJson(json['_patternDate'] as Map<String, dynamic>),
@@ -1131,7 +1129,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         ?.toList(),
     minValueDate: json['minValueDate'] == null
         ? null
-        : Date.fromJson(json['minValueDate'] as String),
+        : Date.fromJson(json['minValueDate']),
     minValueDateElement: json['_minValueDate'] == null
         ? null
         : Element.fromJson(json['_minValueDate'] as Map<String, dynamic>),
@@ -1184,7 +1182,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Quantity.fromJson(json['minValueQuantity'] as Map<String, dynamic>),
     maxValueDate: json['maxValueDate'] == null
         ? null
-        : Date.fromJson(json['maxValueDate'] as String),
+        : Date.fromJson(json['maxValueDate']),
     maxValueDateElement: json['_maxValueDate'] == null
         ? null
         : Element.fromJson(json['_maxValueDate'] as Map<String, dynamic>),
@@ -1978,9 +1976,8 @@ _$_ElementDefinitionExample _$_$_ElementDefinitionExampleFromJson(
     valueCodeElement: json['_valueCode'] == null
         ? null
         : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
-    valueDate: json['valueDate'] == null
-        ? null
-        : Date.fromJson(json['valueDate'] as String),
+    valueDate:
+        json['valueDate'] == null ? null : Date.fromJson(json['valueDate']),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),

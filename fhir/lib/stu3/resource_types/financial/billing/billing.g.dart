@@ -494,9 +494,8 @@ _$_ClaimInformation _$_$_ClaimInformationFromJson(Map<String, dynamic> json) {
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-    timingDate: json['timingDate'] == null
-        ? null
-        : Date.fromJson(json['timingDate'] as String),
+    timingDate:
+        json['timingDate'] == null ? null : Date.fromJson(json['timingDate']),
     timingDateElement: json['_timingDate'] == null
         ? null
         : Element.fromJson(json['_timingDate'] as Map<String, dynamic>),
@@ -599,7 +598,7 @@ _$_ClaimProcedure _$_$_ClaimProcedureFromJson(Map<String, dynamic> json) {
     sequenceElement: json['_sequence'] == null
         ? null
         : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -689,7 +688,7 @@ Map<String, dynamic> _$_$_ClaimInsuranceToJson(_$_ClaimInsurance instance) {
 
 _$_ClaimAccident _$_$_ClaimAccidentFromJson(Map<String, dynamic> json) {
   return _$_ClaimAccident(
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -778,7 +777,7 @@ _$_ClaimItem _$_$_ClaimItemFromJson(Map<String, dynamic> json) {
         ?.toList(),
     servicedDate: json['servicedDate'] == null
         ? null
-        : Date.fromJson(json['servicedDate'] as String),
+        : Date.fromJson(json['servicedDate']),
     servicedDateElement: json['_servicedDate'] == null
         ? null
         : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -1607,7 +1606,7 @@ _$_ClaimResponsePayment _$_$_ClaimResponsePaymentFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['adjustmentReason'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),

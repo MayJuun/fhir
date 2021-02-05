@@ -7163,7 +7163,7 @@ _$_StructureMapSource _$_$_StructureMapSourceFromJson(
         : Element.fromJson(json['_defaultValueCode'] as Map<String, dynamic>),
     defaultValueDate: json['defaultValueDate'] == null
         ? null
-        : Date.fromJson(json['defaultValueDate'] as String),
+        : Date.fromJson(json['defaultValueDate']),
     defaultValueDateElement: json['_defaultValueDate'] == null
         ? null
         : Element.fromJson(json['_defaultValueDate'] as Map<String, dynamic>),

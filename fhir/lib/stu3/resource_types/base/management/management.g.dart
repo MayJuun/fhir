@@ -988,7 +988,7 @@ _$_Library _$_$_LibraryFromJson(Map<String, dynamic> json) {
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1010,13 +1010,13 @@ _$_Library _$_$_LibraryFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_usage'] as Map<String, dynamic>),
     approvalDate: json['approvalDate'] == null
         ? null
-        : Date.fromJson(json['approvalDate'] as String),
+        : Date.fromJson(json['approvalDate']),
     approvalDateElement: json['_approvalDate'] == null
         ? null
         : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
     lastReviewDate: json['lastReviewDate'] == null
         ? null
-        : Date.fromJson(json['lastReviewDate'] as String),
+        : Date.fromJson(json['lastReviewDate']),
     lastReviewDateElement: json['_lastReviewDate'] == null
         ? null
         : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -1214,7 +1214,7 @@ _$_List_ _$_$_List_FromJson(Map<String, dynamic> json) {
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1306,7 +1306,7 @@ _$_ListEntry _$_$_ListEntryFromJson(Map<String, dynamic> json) {
     deletedElement: json['_deleted'] == null
         ? null
         : Element.fromJson(json['_deleted'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),

@@ -881,9 +881,8 @@ _$_Goal _$_$_GoalFromJson(Map<String, dynamic> json) {
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    startDate: json['startDate'] == null
-        ? null
-        : Date.fromJson(json['startDate'] as String),
+    startDate:
+        json['startDate'] == null ? null : Date.fromJson(json['startDate']),
     startDateElement: json['_startDate'] == null
         ? null
         : Element.fromJson(json['_startDate'] as Map<String, dynamic>),
@@ -894,9 +893,8 @@ _$_Goal _$_$_GoalFromJson(Map<String, dynamic> json) {
     target: json['target'] == null
         ? null
         : GoalTarget.fromJson(json['target'] as Map<String, dynamic>),
-    statusDate: json['statusDate'] == null
-        ? null
-        : Date.fromJson(json['statusDate'] as String),
+    statusDate:
+        json['statusDate'] == null ? null : Date.fromJson(json['statusDate']),
     statusDateElement: json['_statusDate'] == null
         ? null
         : Element.fromJson(json['_statusDate'] as Map<String, dynamic>),
@@ -1011,9 +1009,7 @@ _$_GoalTarget _$_$_GoalTargetFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['detailCodeableConcept'] as Map<String, dynamic>),
-    dueDate: json['dueDate'] == null
-        ? null
-        : Date.fromJson(json['dueDate'] as String),
+    dueDate: json['dueDate'] == null ? null : Date.fromJson(json['dueDate']),
     dueDateElement: json['_dueDate'] == null
         ? null
         : Element.fromJson(json['_dueDate'] as Map<String, dynamic>),
@@ -2211,9 +2207,8 @@ _$_VisionPrescription _$_$_VisionPrescriptionFromJson(
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-    dateWritten: json['dateWritten'] == null
-        ? null
-        : Date.fromJson(json['dateWritten'] as String),
+    dateWritten:
+        json['dateWritten'] == null ? null : Date.fromJson(json['dateWritten']),
     dateWrittenElement: json['_dateWritten'] == null
         ? null
         : Element.fromJson(json['_dateWritten'] as Map<String, dynamic>),

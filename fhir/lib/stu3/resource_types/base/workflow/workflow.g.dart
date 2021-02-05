@@ -1833,9 +1833,8 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
     valueUriElement: json['_valueUri'] == null
         ? null
         : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
-    valueDate: json['valueDate'] == null
-        ? null
-        : Date.fromJson(json['valueDate'] as String),
+    valueDate:
+        json['valueDate'] == null ? null : Date.fromJson(json['valueDate']),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
@@ -2135,9 +2134,8 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
     valueUriElement: json['_valueUri'] == null
         ? null
         : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
-    valueDate: json['valueDate'] == null
-        ? null
-        : Date.fromJson(json['valueDate'] as String),
+    valueDate:
+        json['valueDate'] == null ? null : Date.fromJson(json['valueDate']),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),

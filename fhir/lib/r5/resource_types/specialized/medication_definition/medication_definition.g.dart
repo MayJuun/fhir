@@ -334,9 +334,8 @@ _$_AdministrableProductDefinitionProperty
     valueQuantity: json['valueQuantity'] == null
         ? null
         : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
-    valueDate: json['valueDate'] == null
-        ? null
-        : Date.fromJson(json['valueDate'] as String),
+    valueDate:
+        json['valueDate'] == null ? null : Date.fromJson(json['valueDate']),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
@@ -1541,9 +1540,8 @@ _$_ManufacturedItemDefinitionProperty
     valueQuantity: json['valueQuantity'] == null
         ? null
         : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
-    valueDate: json['valueDate'] == null
-        ? null
-        : Date.fromJson(json['valueDate'] as String),
+    valueDate:
+        json['valueDate'] == null ? null : Date.fromJson(json['valueDate']),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
@@ -2477,9 +2475,8 @@ _$_PackagedProductDefinitionProperty
     valueQuantity: json['valueQuantity'] == null
         ? null
         : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
-    valueDate: json['valueDate'] == null
-        ? null
-        : Date.fromJson(json['valueDate'] as String),
+    valueDate:
+        json['valueDate'] == null ? null : Date.fromJson(json['valueDate']),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),

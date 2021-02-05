@@ -1,6 +1,8 @@
 # fhir_auth
 
-I'm finally publishing this package. It's for authenticating and authorizing a user when accessing a FHIR server. 
+I'm finally publishing this package. It's for authenticating and authorizing a user when accessing a FHIR server. It now works with SMART on FHIR, Google Signin for Google's Healthcare API and Azure's FHIR API. AWS, I'm coming for you next!
+
+A Dart/Flutter package for working with FHIR® resources. FHIR® is the registered trademark of HL7 and is used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this product by HL7. 
 
 # Full SMART on FHIR 
 
@@ -76,6 +78,10 @@ To the file, ```ios/Runner/Info/plist```, this time I add it to the end so that 
 # Google Sign-in
 
 I've also included the ability to use Google sign-in, so if you'd like to connect to the Google Healthcare API. Follow (Part 1)[https://www.fhirfli.dev/gcp-healthcare-api-part-1-creating-fhir-store] and (Part 2)[https://www.fhirfli.dev/gcp-healthcare-api-part-2-attempting-authentication] for instructions.
+
+# ```API file```
+
+I'm going to show here a copy (with numbers changed, obviously) of my API file that I use for these calls to test and ensure that it works the way I want it to.
 
 # Alpha Version
 

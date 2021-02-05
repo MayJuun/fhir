@@ -1,3 +1,9 @@
+## [0.2.4]
+* Updated Dependencies for base FHIR package new Date functionality
+
+## [0.2.1]
+* Updated Dependencies
+
 ## [0.2.0]
 * Adjusted the way I change passwords
 * Created tests to ensure proper functioning

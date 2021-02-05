@@ -31,7 +31,7 @@ class Decimal {
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is double
+      : o is Decimal || o is double
           ? o == value
           : o is String
               ? o == value.toString()

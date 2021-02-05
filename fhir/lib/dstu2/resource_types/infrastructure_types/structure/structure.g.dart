@@ -828,9 +828,7 @@ _$_Basic _$_$_BasicFromJson(Map<String, dynamic> json) {
     author: json['author'] == null
         ? null
         : Reference.fromJson(json['author'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : Date.fromJson(json['created'] as String),
+    created: json['created'] == null ? null : Date.fromJson(json['created']),
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),

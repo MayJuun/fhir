@@ -430,7 +430,7 @@ _$_PaymentReconciliationDetail _$_$_PaymentReconciliationDetailFromJson(
     payee: json['payee'] == null
         ? null
         : Reference.fromJson(json['payee'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),

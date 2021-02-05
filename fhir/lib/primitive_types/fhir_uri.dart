@@ -24,6 +24,7 @@ class FhirUri {
   final Either<String, Uri> _value;
   dynamic get value => _value.fold((l) => l, (r) => r);
   bool get isValid => _value.isRight();
+  Uri get uri => Uri.tryParse(value);
 
   String toString() => value.toString();
   String toJson() => value.toString();
@@ -31,7 +32,7 @@ class FhirUri {
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Uri
+      : o is FhirUri || o is Uri
           ? o == value
           : o is String
               ? o == value.toString()

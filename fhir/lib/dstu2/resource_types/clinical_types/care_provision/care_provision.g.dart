@@ -633,9 +633,8 @@ _$_Goal _$_$_GoalFromJson(Map<String, dynamic> json) {
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    startDate: json['startDate'] == null
-        ? null
-        : Date.fromJson(json['startDate'] as String),
+    startDate:
+        json['startDate'] == null ? null : Date.fromJson(json['startDate']),
     startDateElement: json['_startDate'] == null
         ? null
         : Element.fromJson(json['_startDate'] as Map<String, dynamic>),
@@ -643,9 +642,8 @@ _$_Goal _$_$_GoalFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['startCodeableConcept'] as Map<String, dynamic>),
-    targetDate: json['targetDate'] == null
-        ? null
-        : Date.fromJson(json['targetDate'] as String),
+    targetDate:
+        json['targetDate'] == null ? null : Date.fromJson(json['targetDate']),
     targetQuantity: json['targetQuantity'] == null
         ? null
         : Quantity.fromJson(json['targetQuantity'] as Map<String, dynamic>),
@@ -657,9 +655,8 @@ _$_Goal _$_$_GoalFromJson(Map<String, dynamic> json) {
     description: json['description'] as String,
     status: _$enumDecodeNullable(_$GoalStatusEnumMap, json['status'],
         unknownValue: GoalStatus.unknown),
-    statusDate: json['statusDate'] == null
-        ? null
-        : Date.fromJson(json['statusDate'] as String),
+    statusDate:
+        json['statusDate'] == null ? null : Date.fromJson(json['statusDate']),
     statusDateElement: json['_statusDate'] == null
         ? null
         : Element.fromJson(json['_statusDate'] as Map<String, dynamic>),

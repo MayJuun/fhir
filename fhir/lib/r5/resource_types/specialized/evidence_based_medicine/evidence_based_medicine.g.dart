@@ -113,13 +113,13 @@ _$_Evidence _$_$_EvidenceFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
     approvalDate: json['approvalDate'] == null
         ? null
-        : Date.fromJson(json['approvalDate'] as String),
+        : Date.fromJson(json['approvalDate']),
     approvalDateElement: json['_approvalDate'] == null
         ? null
         : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
     lastReviewDate: json['lastReviewDate'] == null
         ? null
-        : Date.fromJson(json['lastReviewDate'] as String),
+        : Date.fromJson(json['lastReviewDate']),
     lastReviewDateElement: json['_lastReviewDate'] == null
         ? null
         : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -745,13 +745,13 @@ _$_EvidenceVariable _$_$_EvidenceVariableFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
     approvalDate: json['approvalDate'] == null
         ? null
-        : Date.fromJson(json['approvalDate'] as String),
+        : Date.fromJson(json['approvalDate']),
     approvalDateElement: json['_approvalDate'] == null
         ? null
         : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
     lastReviewDate: json['lastReviewDate'] == null
         ? null
-        : Date.fromJson(json['lastReviewDate'] as String),
+        : Date.fromJson(json['lastReviewDate']),
     lastReviewDateElement: json['_lastReviewDate'] == null
         ? null
         : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),

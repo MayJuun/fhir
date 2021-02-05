@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:math';
 
 import 'package:dartz/dartz.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -23,6 +24,7 @@ class FhirClient {
     this.authorize,
     this.token,
     this.secret,
+    @Default(false) this.isLoggedIn,
   });
 
   /// specify the baseUrl of the Capability Statement (or conformance
@@ -58,13 +60,29 @@ class FhirClient {
   /// this is for testing, you shouldn't store the secret in the object
   String secret;
 
-  /// this is for testing, you shouldn't store the accessToken in the object
-  String _accessToken;
-
-  /// this is for testing, you shouldn't store the refreshToken in the object
-  String _refreshToken;
-
   DateTime _accessTokenExpiration;
+
+  bool isLoggedIn;
+
+  final FlutterSecureStorage secureStorage = const FlutterSecureStorage();
+
+  /// the function when you're ready to request access, be sure to pass in the
+  /// the client secret when you make a request if you're creating a confidential
+  /// app
+  Future<Unit> login({
+    String authUrl,
+    String tokenUrl,
+  }) async {
+    if (authUrl == null || tokenUrl == null) {
+      await _getEndpoints;
+    } else {
+      authorize = FhirUri(authUrl);
+      token = FhirUri(tokenUrl);
+    }
+    await _tokens;
+    isLoggedIn = true;
+    return unit;
+  }
 
   /// attempting to follow convention of other packages, this getter allows one
   /// to call for [authHeaders], it will automatically check if if the
@@ -75,7 +93,10 @@ class FhirClient {
         await _refresh;
       }
     }
-    return {HttpHeaders.authorizationHeader: 'Bearer $_accessToken'};
+    return {
+      HttpHeaders.authorizationHeader:
+          'Bearer ${await secureStorage.read(key: "access_token")}'
+    };
   }
 
   Future<Unit> get _tokens async {
@@ -83,38 +104,28 @@ class FhirClient {
     /// point. The clientId, the redirect Url, the client secret, the
     /// authorize and token enpoints, a list of scopes, and if there are any
     /// other additional parameters are passed, they are included
-    final request = secret == null
-        ? AuthorizationTokenRequest(
-            clientId,
-            redirectUri.toString(),
-            serviceConfiguration: AuthorizationServiceConfiguration(
-              authorize.toString(),
-              token.toString(),
-            ),
-            scopes: scopes.scopesList(),
-          )
-        : AuthorizationTokenRequest(
-            clientId,
-            redirectUri.toString(),
-            clientSecret: secret,
-            serviceConfiguration: AuthorizationServiceConfiguration(
-              authorize.toString(),
-              token.toString(),
-            ),
-            scopes: scopes.scopesList(),
-          );
+    final request = AuthorizationTokenRequest(
+      clientId,
+      redirectUri.toString(),
+      clientSecret: secret,
+      serviceConfiguration: AuthorizationServiceConfiguration(
+        authorize.toString(),
+        token.toString(),
+      ),
+      scopes: scopes != null ? scopes.scopesList() : null,
+    );
     request.additionalParameters = additionalParameters ?? <String, String>{};
     request.additionalParameters['nonce'] = _nonce();
     request.additionalParameters['aud'] = baseUrl.toString();
 
-    /// call the authorizeAndExchangeCode method
     final authorization =
         await FlutterAppAuth().authorizeAndExchangeCode(request);
 
-    print('received authorization');
+    await secureStorage.write(
+        key: 'access_token', value: authorization.accessToken);
+    await secureStorage.write(
+        key: 'refresh_token', value: authorization.accessToken);
 
-    _accessToken = authorization.accessToken;
-    _refreshToken = authorization.refreshToken;
     _accessTokenExpiration = authorization.accessTokenExpirationDateTime;
 
     return unit;
@@ -129,7 +140,7 @@ class FhirClient {
               authorize.toString(),
               token.toString(),
             ),
-            refreshToken: _refreshToken,
+            refreshToken: await secureStorage.read(key: 'refresh_token'),
             grantType: 'refresh_token',
             scopes: scopes.scopesList(),
             issuer: clientId,
@@ -142,7 +153,7 @@ class FhirClient {
               authorize.toString(),
               token.toString(),
             ),
-            refreshToken: _refreshToken,
+            refreshToken: await secureStorage.read(key: 'refresh_token'),
             grantType: 'refresh_token',
             scopes: scopes.scopesList(),
             issuer: clientId,
@@ -151,8 +162,10 @@ class FhirClient {
         additionalParameters ?? <String, String>{};
     tokenRequest.additionalParameters['nonce'] = _nonce();
     final authorization = await FlutterAppAuth().token(tokenRequest);
-    _accessToken = authorization.accessToken;
-    _refreshToken = authorization.refreshToken;
+    await secureStorage.write(
+        key: 'access_token', value: authorization.accessToken);
+    await secureStorage.write(
+        key: 'refresh_token', value: authorization.accessToken);
     _accessTokenExpiration = authorization.accessTokenExpirationDateTime;
     return unit;
   }
@@ -176,7 +189,6 @@ class FhirClient {
         throw HttpException('StatusCode: ${result.statusCode}\n${result.body}');
       }
     }
-
     Map<String, dynamic> returnResult;
 
     /// because I can't figure out why aidbox only has strings not lists for
@@ -202,22 +214,6 @@ class FhirClient {
       throw const HttpException('No Token Url in CapabilityStatement');
     }
     return unit;
-  }
-
-  /// the function when you're ready to request access, be sure to pass in the
-  /// the client secret when you make a request if you're creating a confidential
-  /// app
-  Future<Unit> access({
-    String authUrl,
-    String tokenUrl,
-  }) async {
-    if (authUrl == null || tokenUrl == null) {
-      await _getEndpoints;
-    } else {
-      authorize = FhirUri(authUrl);
-      token = FhirUri(tokenUrl);
-    }
-    return await _tokens;
   }
 
   /// convenience method for finding either the token or authorize endpoint

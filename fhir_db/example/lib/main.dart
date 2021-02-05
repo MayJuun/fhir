@@ -8,6 +8,7 @@ Future<void> main() async {
 
   final resourceDao = ResourceDao();
 
+  // await resourceDao.updatePw('newPw', null);
   await resourceDao.deleteAllResources(null);
 
   group('Playing with passwords', () {
@@ -19,6 +20,8 @@ Future<void> main() async {
       await resourceDao.updatePw(null, 'newPw');
       final search1 = await resourceDao.find('newPw',
           resourceType: R4ResourceType.Patient, id: Id('1'));
+      print(saved.hashCode);
+      print(search1[0].hashCode);
       expect(saved, search1[0]);
 
       await resourceDao.updatePw('newPw', 'newerPw');

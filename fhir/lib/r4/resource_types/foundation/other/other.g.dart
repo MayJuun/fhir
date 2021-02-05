@@ -52,9 +52,7 @@ _$_Basic _$_$_BasicFromJson(Map<String, dynamic> json) {
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    created: json['created'] == null
-        ? null
-        : Date.fromJson(json['created'] as String),
+    created: json['created'] == null ? null : Date.fromJson(json['created']),
     createdElement: json['_created'] == null
         ? null
         : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -1518,9 +1516,8 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
     valueCodeElement: json['_valueCode'] == null
         ? null
         : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
-    valueDate: json['valueDate'] == null
-        ? null
-        : Date.fromJson(json['valueDate'] as String),
+    valueDate:
+        json['valueDate'] == null ? null : Date.fromJson(json['valueDate']),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),

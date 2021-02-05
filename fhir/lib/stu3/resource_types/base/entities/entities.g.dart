@@ -66,13 +66,13 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_manufacturer'] as Map<String, dynamic>),
     manufactureDate: json['manufactureDate'] == null
         ? null
-        : Date.fromJson(json['manufactureDate'] as String),
+        : Date.fromJson(json['manufactureDate']),
     manufactureDateElement: json['_manufactureDate'] == null
         ? null
         : Element.fromJson(json['_manufactureDate'] as Map<String, dynamic>),
     expirationDate: json['expirationDate'] == null
         ? null
-        : Date.fromJson(json['expirationDate'] as String),
+        : Date.fromJson(json['expirationDate']),
     expirationDateElement: json['_expirationDate'] == null
         ? null
         : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),

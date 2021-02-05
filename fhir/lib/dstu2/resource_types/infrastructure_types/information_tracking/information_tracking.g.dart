@@ -716,9 +716,8 @@ _$_QuestionnaireResponseQuestionAnswer
     valueIntegerElement: json['_valueInteger'] == null
         ? null
         : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
-    valueDate: json['valueDate'] == null
-        ? null
-        : Date.fromJson(json['valueDate'] as String),
+    valueDate:
+        json['valueDate'] == null ? null : Date.fromJson(json['valueDate']),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),

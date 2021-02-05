@@ -31,7 +31,7 @@ class Id {
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is String
+      : o is Id || o is String
           ? o == value
           : false;
 

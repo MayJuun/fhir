@@ -31,7 +31,7 @@ class Markdown {
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is String
+      : o is Markdown || o is String
           ? o == value
           : false;
 

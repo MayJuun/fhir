@@ -31,7 +31,7 @@ class Time {
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is String
+      : o is Time || o is String
           ? o == value
           : false;
 

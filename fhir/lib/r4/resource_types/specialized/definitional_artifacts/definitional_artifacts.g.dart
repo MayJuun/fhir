@@ -130,13 +130,13 @@ _$_ActivityDefinition _$_$_ActivityDefinitionFromJson(
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
     approvalDate: json['approvalDate'] == null
         ? null
-        : Date.fromJson(json['approvalDate'] as String),
+        : Date.fromJson(json['approvalDate']),
     approvalDateElement: json['_approvalDate'] == null
         ? null
         : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
     lastReviewDate: json['lastReviewDate'] == null
         ? null
-        : Date.fromJson(json['lastReviewDate'] as String),
+        : Date.fromJson(json['lastReviewDate']),
     lastReviewDateElement: json['_lastReviewDate'] == null
         ? null
         : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -1313,13 +1313,13 @@ _$_EventDefinition _$_$_EventDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
     approvalDate: json['approvalDate'] == null
         ? null
-        : Date.fromJson(json['approvalDate'] as String),
+        : Date.fromJson(json['approvalDate']),
     approvalDateElement: json['_approvalDate'] == null
         ? null
         : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
     lastReviewDate: json['lastReviewDate'] == null
         ? null
-        : Date.fromJson(json['lastReviewDate'] as String),
+        : Date.fromJson(json['lastReviewDate']),
     lastReviewDateElement: json['_lastReviewDate'] == null
         ? null
         : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -1906,13 +1906,13 @@ _$_PlanDefinition _$_$_PlanDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
     approvalDate: json['approvalDate'] == null
         ? null
-        : Date.fromJson(json['approvalDate'] as String),
+        : Date.fromJson(json['approvalDate']),
     approvalDateElement: json['_approvalDate'] == null
         ? null
         : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
     lastReviewDate: json['lastReviewDate'] == null
         ? null
-        : Date.fromJson(json['lastReviewDate'] as String),
+        : Date.fromJson(json['lastReviewDate']),
     lastReviewDateElement: json['_lastReviewDate'] == null
         ? null
         : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -2825,13 +2825,13 @@ _$_Questionnaire _$_$_QuestionnaireFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
     approvalDate: json['approvalDate'] == null
         ? null
-        : Date.fromJson(json['approvalDate'] as String),
+        : Date.fromJson(json['approvalDate']),
     approvalDateElement: json['_approvalDate'] == null
         ? null
         : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
     lastReviewDate: json['lastReviewDate'] == null
         ? null
-        : Date.fromJson(json['lastReviewDate'] as String),
+        : Date.fromJson(json['lastReviewDate']),
     lastReviewDateElement: json['_lastReviewDate'] == null
         ? null
         : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -3131,9 +3131,8 @@ _$_QuestionnaireEnableWhen _$_$_QuestionnaireEnableWhenFromJson(
     answerIntegerElement: json['_answerInteger'] == null
         ? null
         : Element.fromJson(json['_answerInteger'] as Map<String, dynamic>),
-    answerDate: json['answerDate'] == null
-        ? null
-        : Date.fromJson(json['answerDate'] as String),
+    answerDate:
+        json['answerDate'] == null ? null : Date.fromJson(json['answerDate']),
     answerDateElement: json['_answerDate'] == null
         ? null
         : Element.fromJson(json['_answerDate'] as Map<String, dynamic>),
@@ -3235,9 +3234,8 @@ _$_QuestionnaireAnswerOption _$_$_QuestionnaireAnswerOptionFromJson(
     valueIntegerElement: json['_valueInteger'] == null
         ? null
         : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
-    valueDate: json['valueDate'] == null
-        ? null
-        : Date.fromJson(json['valueDate'] as String),
+    valueDate:
+        json['valueDate'] == null ? null : Date.fromJson(json['valueDate']),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
@@ -3327,9 +3325,8 @@ _$_QuestionnaireInitial _$_$_QuestionnaireInitialFromJson(
     valueIntegerElement: json['_valueInteger'] == null
         ? null
         : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
-    valueDate: json['valueDate'] == null
-        ? null
-        : Date.fromJson(json['valueDate'] as String),
+    valueDate:
+        json['valueDate'] == null ? null : Date.fromJson(json['valueDate']),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),

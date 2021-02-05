@@ -31,7 +31,7 @@ class Integer64 {
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is int
+      : o is Integer64 || o is int
           ? o == value
           : o is String
               ? o == value.toString()

@@ -870,9 +870,8 @@ _$_Goal _$_$_GoalFromJson(Map<String, dynamic> json) {
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    startDate: json['startDate'] == null
-        ? null
-        : Date.fromJson(json['startDate'] as String),
+    startDate:
+        json['startDate'] == null ? null : Date.fromJson(json['startDate']),
     startDateElement: json['_startDate'] == null
         ? null
         : Element.fromJson(json['_startDate'] as Map<String, dynamic>),
@@ -884,9 +883,8 @@ _$_Goal _$_$_GoalFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : GoalTarget.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    statusDate: json['statusDate'] == null
-        ? null
-        : Date.fromJson(json['statusDate'] as String),
+    statusDate:
+        json['statusDate'] == null ? null : Date.fromJson(json['statusDate']),
     statusDateElement: json['_statusDate'] == null
         ? null
         : Element.fromJson(json['_statusDate'] as Map<String, dynamic>),
@@ -1028,9 +1026,7 @@ _$_GoalTarget _$_$_GoalTargetFromJson(Map<String, dynamic> json) {
     detailRatio: json['detailRatio'] == null
         ? null
         : Ratio.fromJson(json['detailRatio'] as Map<String, dynamic>),
-    dueDate: json['dueDate'] == null
-        ? null
-        : Date.fromJson(json['dueDate'] as String),
+    dueDate: json['dueDate'] == null ? null : Date.fromJson(json['dueDate']),
     dueDateElement: json['_dueDate'] == null
         ? null
         : Element.fromJson(json['_dueDate'] as Map<String, dynamic>),

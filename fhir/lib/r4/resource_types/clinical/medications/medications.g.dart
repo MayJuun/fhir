@@ -101,7 +101,7 @@ _$_Immunization _$_$_ImmunizationFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
     expirationDate: json['expirationDate'] == null
         ? null
-        : Date.fromJson(json['expirationDate'] as String),
+        : Date.fromJson(json['expirationDate']),
     expirationDateElement: json['_expirationDate'] == null
         ? null
         : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),

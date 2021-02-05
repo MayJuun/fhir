@@ -31,7 +31,7 @@ class UnsignedInt {
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is int
+      : o is UnsignedInt || o is int
           ? o == value
           : o is String
               ? o == value.toString()

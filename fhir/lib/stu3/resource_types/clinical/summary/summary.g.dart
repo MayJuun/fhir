@@ -56,7 +56,7 @@ _$_AdverseEvent _$_$_AdverseEventFromJson(Map<String, dynamic> json) {
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -473,7 +473,7 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
         : Element.fromJson(json['_onsetString'] as Map<String, dynamic>),
     assertedDate: json['assertedDate'] == null
         ? null
-        : Date.fromJson(json['assertedDate'] as String),
+        : Date.fromJson(json['assertedDate']),
     assertedDateElement: json['_assertedDate'] == null
         ? null
         : Element.fromJson(json['_assertedDate'] as Map<String, dynamic>),
@@ -739,7 +739,7 @@ _$_ClinicalImpression _$_$_ClinicalImpressionFromJson(
     effectivePeriod: json['effectivePeriod'] == null
         ? null
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1039,7 +1039,7 @@ _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_abatementString'] as Map<String, dynamic>),
     assertedDate: json['assertedDate'] == null
         ? null
-        : Date.fromJson(json['assertedDate'] as String),
+        : Date.fromJson(json['assertedDate']),
     assertedDateElement: json['_assertedDate'] == null
         ? null
         : Element.fromJson(json['_assertedDate'] as Map<String, dynamic>),
@@ -1247,7 +1247,7 @@ _$_DetectedIssue _$_$_DetectedIssueFromJson(Map<String, dynamic> json) {
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1332,7 +1332,7 @@ _$_DetectedIssueMitigation _$_$_DetectedIssueMitigationFromJson(
     action: json['action'] == null
         ? null
         : CodeableConcept.fromJson(json['action'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1420,7 +1420,7 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1440,9 +1440,7 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
     bornPeriod: json['bornPeriod'] == null
         ? null
         : Period.fromJson(json['bornPeriod'] as Map<String, dynamic>),
-    bornDate: json['bornDate'] == null
-        ? null
-        : Date.fromJson(json['bornDate'] as String),
+    bornDate: json['bornDate'] == null ? null : Date.fromJson(json['bornDate']),
     bornDateElement: json['_bornDate'] == null
         ? null
         : Element.fromJson(json['_bornDate'] as Map<String, dynamic>),
@@ -1480,7 +1478,7 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
         : Range.fromJson(json['deceasedRange'] as Map<String, dynamic>),
     deceasedDate: json['deceasedDate'] == null
         ? null
-        : Date.fromJson(json['deceasedDate'] as String),
+        : Date.fromJson(json['deceasedDate']),
     deceasedDateElement: json['_deceasedDate'] == null
         ? null
         : Element.fromJson(json['_deceasedDate'] as Map<String, dynamic>),
