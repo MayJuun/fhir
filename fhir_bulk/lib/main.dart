@@ -11,7 +11,7 @@ Future<void> main() async {
     var contentList = contents.split('\n');
     for (var resource in contentList) {
       i++;
-      if (i > 14000) break;
+      if (i > 16000) break;
       var resourceFile = Resource.fromJson(json.decode(resource));
       if (resourceFile.id.isValid) {
         await File(
