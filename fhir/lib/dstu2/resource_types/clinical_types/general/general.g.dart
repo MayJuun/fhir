@@ -476,7 +476,7 @@ _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['asserter'] as Map<String, dynamic>),
     dateRecorded: json['dateRecorded'] == null
         ? null
-        : Date.fromJson(json['dateRecorded'] as String),
+        : Date.fromJson(json['dateRecorded']),
     dateRecordedElement: json['_dateRecorded'] == null
         ? null
         : Element.fromJson(json['_dateRecorded'] as Map<String, dynamic>),
@@ -1391,9 +1391,7 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
     bornPeriod: json['bornPeriod'] == null
         ? null
         : Period.fromJson(json['bornPeriod'] as Map<String, dynamic>),
-    bornDate: json['bornDate'] == null
-        ? null
-        : Date.fromJson(json['bornDate'] as String),
+    bornDate: json['bornDate'] == null ? null : Date.fromJson(json['bornDate']),
     bornDateElement: json['_bornDate'] == null
         ? null
         : Element.fromJson(json['_bornDate'] as Map<String, dynamic>),
@@ -1425,7 +1423,7 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
         : Range.fromJson(json['deceasedRange'] as Map<String, dynamic>),
     deceasedDate: json['deceasedDate'] == null
         ? null
-        : Date.fromJson(json['deceasedDate'] as String),
+        : Date.fromJson(json['deceasedDate']),
     deceasedDateElement: json['_deceasedDate'] == null
         ? null
         : Element.fromJson(json['_deceasedDate'] as Map<String, dynamic>),

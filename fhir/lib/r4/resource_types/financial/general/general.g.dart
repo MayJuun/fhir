@@ -810,13 +810,13 @@ _$_ChargeItemDefinition _$_$_ChargeItemDefinitionFromJson(
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
     approvalDate: json['approvalDate'] == null
         ? null
-        : Date.fromJson(json['approvalDate'] as String),
+        : Date.fromJson(json['approvalDate']),
     approvalDateElement: json['_approvalDate'] == null
         ? null
         : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
     lastReviewDate: json['lastReviewDate'] == null
         ? null
-        : Date.fromJson(json['lastReviewDate'] as String),
+        : Date.fromJson(json['lastReviewDate']),
     lastReviewDateElement: json['_lastReviewDate'] == null
         ? null
         : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -1741,9 +1741,8 @@ _$_ContractAnswer _$_$_ContractAnswerFromJson(Map<String, dynamic> json) {
     valueIntegerElement: json['_valueInteger'] == null
         ? null
         : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
-    valueDate: json['valueDate'] == null
-        ? null
-        : Date.fromJson(json['valueDate'] as String),
+    valueDate:
+        json['valueDate'] == null ? null : Date.fromJson(json['valueDate']),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
@@ -3012,9 +3011,8 @@ _$_ExplanationOfBenefitSupportingInfo
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-    timingDate: json['timingDate'] == null
-        ? null
-        : Date.fromJson(json['timingDate'] as String),
+    timingDate:
+        json['timingDate'] == null ? null : Date.fromJson(json['timingDate']),
     timingDateElement: json['_timingDate'] == null
         ? null
         : Element.fromJson(json['_timingDate'] as Map<String, dynamic>),
@@ -3285,7 +3283,7 @@ _$_ExplanationOfBenefitAccident _$_$_ExplanationOfBenefitAccidentFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -3394,7 +3392,7 @@ _$_ExplanationOfBenefitItem _$_$_ExplanationOfBenefitItemFromJson(
         ?.toList(),
     servicedDate: json['servicedDate'] == null
         ? null
-        : Date.fromJson(json['servicedDate'] as String),
+        : Date.fromJson(json['servicedDate']),
     servicedDateElement: json['_servicedDate'] == null
         ? null
         : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -3867,7 +3865,7 @@ _$_ExplanationOfBenefitAddItem _$_$_ExplanationOfBenefitAddItemFromJson(
         ?.toList(),
     servicedDate: json['servicedDate'] == null
         ? null
-        : Date.fromJson(json['servicedDate'] as String),
+        : Date.fromJson(json['servicedDate']),
     servicedDateElement: json['_servicedDate'] == null
         ? null
         : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -4227,7 +4225,7 @@ _$_ExplanationOfBenefitPayment _$_$_ExplanationOfBenefitPaymentFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['adjustmentReason'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),

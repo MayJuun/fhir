@@ -64,7 +64,7 @@ _$_Immunization _$_$_ImmunizationFromJson(Map<String, dynamic> json) {
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -90,7 +90,7 @@ _$_Immunization _$_$_ImmunizationFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
     expirationDate: json['expirationDate'] == null
         ? null
-        : Date.fromJson(json['expirationDate'] as String),
+        : Date.fromJson(json['expirationDate']),
     expirationDateElement: json['_expirationDate'] == null
         ? null
         : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
@@ -402,7 +402,7 @@ Map<String, dynamic> _$_$_ImmunizationExplanationToJson(
 _$_ImmunizationReaction _$_$_ImmunizationReactionFromJson(
     Map<String, dynamic> json) {
   return _$_ImmunizationReaction(
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -592,7 +592,7 @@ _$_ImmunizationRecommendationRecommendation
     _$_$_ImmunizationRecommendationRecommendationFromJson(
         Map<String, dynamic> json) {
   return _$_ImmunizationRecommendationRecommendation(
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -967,7 +967,7 @@ _$_MedicationBatch _$_$_MedicationBatchFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
     expirationDate: json['expirationDate'] == null
         ? null
-        : Date.fromJson(json['expirationDate'] as String),
+        : Date.fromJson(json['expirationDate']),
     expirationDateElement: json['_expirationDate'] == null
         ? null
         : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
@@ -1972,7 +1972,7 @@ _$_MedicationStatement _$_$_MedicationStatementFromJson(
         : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
     dateAsserted: json['dateAsserted'] == null
         ? null
-        : Date.fromJson(json['dateAsserted'] as String),
+        : Date.fromJson(json['dateAsserted']),
     dateAssertedElement: json['_dateAsserted'] == null
         ? null
         : Element.fromJson(json['_dateAsserted'] as Map<String, dynamic>),

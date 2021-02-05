@@ -549,7 +549,7 @@ _$_CoverageEligibilityRequest _$_$_CoverageEligibilityRequestFromJson(
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
     servicedDate: json['servicedDate'] == null
         ? null
-        : Date.fromJson(json['servicedDate'] as String),
+        : Date.fromJson(json['servicedDate']),
     servicedDateElement: json['_servicedDate'] == null
         ? null
         : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -965,7 +965,7 @@ _$_CoverageEligibilityResponse _$_$_CoverageEligibilityResponseFromJson(
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
     servicedDate: json['servicedDate'] == null
         ? null
-        : Date.fromJson(json['servicedDate'] as String),
+        : Date.fromJson(json['servicedDate']),
     servicedDateElement: json['_servicedDate'] == null
         ? null
         : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),

@@ -441,9 +441,8 @@ _$_CapabilityStatementSoftware _$_$_CapabilityStatementSoftwareFromJson(
     versionElement: json['_version'] == null
         ? null
         : Element.fromJson(json['_version'] as Map<String, dynamic>),
-    releaseDate: json['releaseDate'] == null
-        ? null
-        : Date.fromJson(json['releaseDate'] as String),
+    releaseDate:
+        json['releaseDate'] == null ? null : Date.fromJson(json['releaseDate']),
     releaseDateElement: json['_releaseDate'] == null
         ? null
         : Element.fromJson(json['_releaseDate'] as Map<String, dynamic>),
@@ -1529,7 +1528,7 @@ _$_DataElement _$_$_DataElementFromJson(Map<String, dynamic> json) {
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1757,7 +1756,7 @@ _$_GraphDefinition _$_$_GraphDefinitionFromJson(Map<String, dynamic> json) {
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2076,7 +2075,7 @@ _$_ImplementationGuide _$_$_ImplementationGuideFromJson(
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2512,7 +2511,7 @@ _$_MessageDefinition _$_$_MessageDefinitionFromJson(Map<String, dynamic> json) {
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -3199,7 +3198,7 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -3898,7 +3897,7 @@ _$_StructureMap _$_$_StructureMapFromJson(Map<String, dynamic> json) {
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -4296,7 +4295,7 @@ _$_StructureMapSource _$_$_StructureMapSourceFromJson(
         : Element.fromJson(json['_defaultValueUri'] as Map<String, dynamic>),
     defaultValueDate: json['defaultValueDate'] == null
         ? null
-        : Date.fromJson(json['defaultValueDate'] as String),
+        : Date.fromJson(json['defaultValueDate']),
     defaultValueDateElement: json['_defaultValueDate'] == null
         ? null
         : Element.fromJson(json['_defaultValueDate'] as Map<String, dynamic>),

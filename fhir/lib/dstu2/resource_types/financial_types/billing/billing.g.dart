@@ -376,9 +376,7 @@ _$_Claim _$_$_ClaimFromJson(Map<String, dynamic> json) {
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     school: json['school'] as String,
-    accident: json['accident'] == null
-        ? null
-        : Date.fromJson(json['accident'] as String),
+    accident: json['accident'] == null ? null : Date.fromJson(json['accident']),
     accidentType: json['accidentType'] == null
         ? null
         : Coding.fromJson(json['accidentType'] as Map<String, dynamic>),
@@ -676,9 +674,8 @@ _$_ClaimItem _$_$_ClaimItemFromJson(Map<String, dynamic> json) {
     servicedDateElement: json['_servicedDate'] == null
         ? null
         : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
-    serviceDate: json['serviceDate'] == null
-        ? null
-        : Date.fromJson(json['serviceDate'] as String),
+    serviceDate:
+        json['serviceDate'] == null ? null : Date.fromJson(json['serviceDate']),
     quantity: json['quantity'] == null
         ? null
         : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
@@ -930,9 +927,8 @@ _$_ClaimItemProsthesis _$_$_ClaimItemProsthesisFromJson(
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     initial: json['initial'] == null ? null : Boolean.fromJson(json['initial']),
-    priorDate: json['priorDate'] == null
-        ? null
-        : Date.fromJson(json['priorDate'] as String),
+    priorDate:
+        json['priorDate'] == null ? null : Date.fromJson(json['priorDate']),
     priorMaterial: json['priorMaterial'] == null
         ? null
         : Coding.fromJson(json['priorMaterial'] as Map<String, dynamic>),
@@ -982,7 +978,7 @@ _$_ClaimMissingTeeth _$_$_ClaimMissingTeethFromJson(Map<String, dynamic> json) {
         : Coding.fromJson(json['reason'] as Map<String, dynamic>),
     extractionDate: json['extractionDate'] == null
         ? null
-        : Date.fromJson(json['extractionDate'] as String),
+        : Date.fromJson(json['extractionDate']),
   );
 }
 
@@ -1115,9 +1111,8 @@ _$_ClaimResponse _$_$_ClaimResponseFromJson(Map<String, dynamic> json) {
         ? null
         : Coding.fromJson(
             json['paymentAdjustmentReason'] as Map<String, dynamic>),
-    paymentDate: json['paymentDate'] == null
-        ? null
-        : Date.fromJson(json['paymentDate'] as String),
+    paymentDate:
+        json['paymentDate'] == null ? null : Date.fromJson(json['paymentDate']),
     paymentDateElement: json['_paymentDate'] == null
         ? null
         : Element.fromJson(json['_paymentDate'] as Map<String, dynamic>),

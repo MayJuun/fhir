@@ -436,7 +436,7 @@ _$_TriggerDefinition _$_$_TriggerDefinitionFromJson(Map<String, dynamic> json) {
             json['eventTimingReference'] as Map<String, dynamic>),
     eventTimingDate: json['eventTimingDate'] == null
         ? null
-        : Date.fromJson(json['eventTimingDate'] as String),
+        : Date.fromJson(json['eventTimingDate']),
     eventTimingDateElement: json['_eventTimingDate'] == null
         ? null
         : Element.fromJson(json['_eventTimingDate'] as Map<String, dynamic>),

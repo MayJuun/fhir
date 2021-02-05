@@ -56,9 +56,8 @@ _$_PaymentNotice _$_$_PaymentNoticeFromJson(Map<String, dynamic> json) {
     response: json['response'] == null
         ? null
         : Reference.fromJson(json['response'] as Map<String, dynamic>),
-    statusDate: json['statusDate'] == null
-        ? null
-        : Date.fromJson(json['statusDate'] as String),
+    statusDate:
+        json['statusDate'] == null ? null : Date.fromJson(json['statusDate']),
     statusDateElement: json['_statusDate'] == null
         ? null
         : Element.fromJson(json['_statusDate'] as Map<String, dynamic>),
@@ -432,7 +431,7 @@ _$_PaymentReconciliationDetail _$_$_PaymentReconciliationDetailFromJson(
     payee: json['payee'] == null
         ? null
         : Reference.fromJson(json['payee'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),

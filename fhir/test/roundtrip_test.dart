@@ -13,9 +13,9 @@ Future main() async {
     'files with errors are printed out in the debug console',
     () {
       test(
-        '\n\n****Validating Json****'
+        '\n****Json has been Validated****'
         '\nThere are some expected errors, these have been saved in '
-        'expected_json.dart, and compared to the output of the test',
+        'expected_json.dart, and compared to the output of the test\n\n',
         () async {
           var testList = await jsonValidation();
           var tempList = <String>[];
@@ -47,9 +47,9 @@ Future main() async {
       );
 
       test(
-        '\n\n****Validating Yaml****'
+        '\n****Yaml has been Validated****'
         '\nThere are some expected errors, these have been saved in '
-        'expected_yaml.dart, and compared to the output of the test',
+        'expected_yaml.dart, and compared to the output of the test\n\n',
         () async {
           var testList = await yamlValidation();
           var tempList = <String>[];

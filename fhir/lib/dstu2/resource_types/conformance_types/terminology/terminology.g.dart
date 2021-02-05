@@ -85,9 +85,8 @@ _$_ValueSet _$_$_ValueSetFromJson(Map<String, dynamic> json) {
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
-    lockedDate: json['lockedDate'] == null
-        ? null
-        : Date.fromJson(json['lockedDate'] as String),
+    lockedDate:
+        json['lockedDate'] == null ? null : Date.fromJson(json['lockedDate']),
     lockedDateElement: json['_lockedDate'] == null
         ? null
         : Element.fromJson(json['_lockedDate'] as Map<String, dynamic>),

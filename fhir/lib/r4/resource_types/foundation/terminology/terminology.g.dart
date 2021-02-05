@@ -2521,9 +2521,8 @@ _$_ValueSetCompose _$_$_ValueSetComposeFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    lockedDate: json['lockedDate'] == null
-        ? null
-        : Date.fromJson(json['lockedDate'] as String),
+    lockedDate:
+        json['lockedDate'] == null ? null : Date.fromJson(json['lockedDate']),
     lockedDateElement: json['_lockedDate'] == null
         ? null
         : Element.fromJson(json['_lockedDate'] as Map<String, dynamic>),

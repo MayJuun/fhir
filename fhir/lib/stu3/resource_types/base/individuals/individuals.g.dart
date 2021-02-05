@@ -429,9 +429,8 @@ _$_Patient _$_$_PatientFromJson(Map<String, dynamic> json) {
     genderElement: json['_gender'] == null
         ? null
         : Element.fromJson(json['_gender'] as Map<String, dynamic>),
-    birthDate: json['birthDate'] == null
-        ? null
-        : Date.fromJson(json['birthDate'] as String),
+    birthDate:
+        json['birthDate'] == null ? null : Date.fromJson(json['birthDate']),
     birthDateElement: json['_birthDate'] == null
         ? null
         : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
@@ -771,9 +770,8 @@ _$_Person _$_$_PersonFromJson(Map<String, dynamic> json) {
     genderElement: json['_gender'] == null
         ? null
         : Element.fromJson(json['_gender'] as Map<String, dynamic>),
-    birthDate: json['birthDate'] == null
-        ? null
-        : Date.fromJson(json['birthDate'] as String),
+    birthDate:
+        json['birthDate'] == null ? null : Date.fromJson(json['birthDate']),
     birthDateElement: json['_birthDate'] == null
         ? null
         : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
@@ -943,9 +941,8 @@ _$_Practitioner _$_$_PractitionerFromJson(Map<String, dynamic> json) {
     genderElement: json['_gender'] == null
         ? null
         : Element.fromJson(json['_gender'] as Map<String, dynamic>),
-    birthDate: json['birthDate'] == null
-        ? null
-        : Date.fromJson(json['birthDate'] as String),
+    birthDate:
+        json['birthDate'] == null ? null : Date.fromJson(json['birthDate']),
     birthDateElement: json['_birthDate'] == null
         ? null
         : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
@@ -1343,9 +1340,8 @@ _$_RelatedPerson _$_$_RelatedPersonFromJson(Map<String, dynamic> json) {
     genderElement: json['_gender'] == null
         ? null
         : Element.fromJson(json['_gender'] as Map<String, dynamic>),
-    birthDate: json['birthDate'] == null
-        ? null
-        : Date.fromJson(json['birthDate'] as String),
+    birthDate:
+        json['birthDate'] == null ? null : Date.fromJson(json['birthDate']),
     birthDateElement: json['_birthDate'] == null
         ? null
         : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),

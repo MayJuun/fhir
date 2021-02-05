@@ -2,6 +2,7 @@ import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart';
 import 'package:fhir_at_rest/r4.dart';
 import 'package:fhir_auth/r4.dart';
+import 'package:http/http.dart';
 
 import 'new_patient.dart';
 
@@ -69,6 +70,14 @@ Future fhirRequest({
       final response =
           await request2.request(headers: await client.authHeaders);
       print('Uploaded patient: ${response.toJson()}');
+    } catch (e) {
+      print(e);
+    }
+    try {
+      final bulk = await get('${client.baseUrl.toString()}/Condition/\$export',
+          headers: await client.authHeaders);
+      print(bulk.headers);
+      print(bulk.body);
     } catch (e) {
       print(e);
     }

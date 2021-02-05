@@ -28,6 +28,7 @@ class FhirUrl {
   String toString() => value.toString();
   String toJson() => value.toString();
   String toYaml() => value.toString();
+  Uri get url => Uri.tryParse(value);
 
   bool operator ==(Object o) => identical(this, o)
       ? true

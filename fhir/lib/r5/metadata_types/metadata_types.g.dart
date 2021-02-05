@@ -550,9 +550,8 @@ _$_TriggerDefinition _$_$_TriggerDefinitionFromJson(Map<String, dynamic> json) {
     timingReference: json['timingReference'] == null
         ? null
         : Reference.fromJson(json['timingReference'] as Map<String, dynamic>),
-    timingDate: json['timingDate'] == null
-        ? null
-        : Date.fromJson(json['timingDate'] as String),
+    timingDate:
+        json['timingDate'] == null ? null : Date.fromJson(json['timingDate']),
     timingDateElement: json['_timingDate'] == null
         ? null
         : Element.fromJson(json['_timingDate'] as Map<String, dynamic>),

@@ -1198,9 +1198,8 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
     valueCodeElement: json['_valueCode'] == null
         ? null
         : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
-    valueDate: json['valueDate'] == null
-        ? null
-        : Date.fromJson(json['valueDate'] as String),
+    valueDate:
+        json['valueDate'] == null ? null : Date.fromJson(json['valueDate']),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
@@ -1521,9 +1520,8 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
     valueCodeElement: json['_valueCode'] == null
         ? null
         : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
-    valueDate: json['valueDate'] == null
-        ? null
-        : Date.fromJson(json['valueDate'] as String),
+    valueDate:
+        json['valueDate'] == null ? null : Date.fromJson(json['valueDate']),
     valueDateElement: json['_valueDate'] == null
         ? null
         : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
@@ -1885,7 +1883,7 @@ _$_VerificationResult _$_$_VerificationResultFromJson(
         : Element.fromJson(json['_lastPerformed'] as Map<String, dynamic>),
     nextScheduled: json['nextScheduled'] == null
         ? null
-        : Date.fromJson(json['nextScheduled'] as String),
+        : Date.fromJson(json['nextScheduled']),
     nextScheduledElement: json['_nextScheduled'] == null
         ? null
         : Element.fromJson(json['_nextScheduled'] as Map<String, dynamic>),
@@ -2062,7 +2060,7 @@ _$_VerificationResultAttestation _$_$_VerificationResultAttestationFromJson(
         ? null
         : CodeableConcept.fromJson(
             json['communicationMethod'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),

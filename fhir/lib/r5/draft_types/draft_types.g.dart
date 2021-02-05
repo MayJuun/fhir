@@ -369,13 +369,13 @@ _$_Citation _$_$_CitationFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
     approvalDate: json['approvalDate'] == null
         ? null
-        : Date.fromJson(json['approvalDate'] as String),
+        : Date.fromJson(json['approvalDate']),
     approvalDateElement: json['_approvalDate'] == null
         ? null
         : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
     lastReviewDate: json['lastReviewDate'] == null
         ? null
-        : Date.fromJson(json['lastReviewDate'] as String),
+        : Date.fromJson(json['lastReviewDate']),
     lastReviewDateElement: json['_lastReviewDate'] == null
         ? null
         : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -839,7 +839,7 @@ _$_CitationPublicationDate _$_$_CitationPublicationDateFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -990,9 +990,8 @@ _$_CitationPublishedIn _$_$_CitationPublishedInFromJson(
     publisherLocationElement: json['_publisherLocation'] == null
         ? null
         : Element.fromJson(json['_publisherLocation'] as Map<String, dynamic>),
-    startDate: json['startDate'] == null
-        ? null
-        : Date.fromJson(json['startDate'] as String),
+    startDate:
+        json['startDate'] == null ? null : Date.fromJson(json['startDate']),
     startDateElement: json['_startDate'] == null
         ? null
         : Element.fromJson(json['_startDate'] as Map<String, dynamic>),
@@ -1626,7 +1625,7 @@ _$_CitationPublicationDate1 _$_$_CitationPublicationDate1FromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1826,9 +1825,8 @@ _$_CitationPublishedIn1 _$_$_CitationPublishedIn1FromJson(
     publisherLocationElement: json['_publisherLocation'] == null
         ? null
         : Element.fromJson(json['_publisherLocation'] as Map<String, dynamic>),
-    startDate: json['startDate'] == null
-        ? null
-        : Date.fromJson(json['startDate'] as String),
+    startDate:
+        json['startDate'] == null ? null : Date.fromJson(json['startDate']),
     startDateElement: json['_startDate'] == null
         ? null
         : Element.fromJson(json['_startDate'] as Map<String, dynamic>),
@@ -1987,21 +1985,19 @@ _$_CitationMedlinePubMed _$_$_CitationMedlinePubMedFromJson(
     pmidVersionElement: json['_pmidVersion'] == null
         ? null
         : Element.fromJson(json['_pmidVersion'] as Map<String, dynamic>),
-    dateCreated: json['dateCreated'] == null
-        ? null
-        : Date.fromJson(json['dateCreated'] as String),
+    dateCreated:
+        json['dateCreated'] == null ? null : Date.fromJson(json['dateCreated']),
     dateCreatedElement: json['_dateCreated'] == null
         ? null
         : Element.fromJson(json['_dateCreated'] as Map<String, dynamic>),
     dateCompleted: json['dateCompleted'] == null
         ? null
-        : Date.fromJson(json['dateCompleted'] as String),
+        : Date.fromJson(json['dateCompleted']),
     dateCompletedElement: json['_dateCompleted'] == null
         ? null
         : Element.fromJson(json['_dateCompleted'] as Map<String, dynamic>),
-    dateRevised: json['dateRevised'] == null
-        ? null
-        : Date.fromJson(json['dateRevised'] as String),
+    dateRevised:
+        json['dateRevised'] == null ? null : Date.fromJson(json['dateRevised']),
     dateRevisedElement: json['_dateRevised'] == null
         ? null
         : Element.fromJson(json['_dateRevised'] as Map<String, dynamic>),
@@ -2261,13 +2257,13 @@ _$_EvidenceReport _$_$_EvidenceReportFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
     approvalDate: json['approvalDate'] == null
         ? null
-        : Date.fromJson(json['approvalDate'] as String),
+        : Date.fromJson(json['approvalDate']),
     approvalDateElement: json['_approvalDate'] == null
         ? null
         : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
     lastReviewDate: json['lastReviewDate'] == null
         ? null
-        : Date.fromJson(json['lastReviewDate'] as String),
+        : Date.fromJson(json['lastReviewDate']),
     lastReviewDateElement: json['_lastReviewDate'] == null
         ? null
         : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),

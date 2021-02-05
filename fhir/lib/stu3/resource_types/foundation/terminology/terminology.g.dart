@@ -1169,7 +1169,7 @@ _$_ExpansionProfile _$_$_ExpansionProfileFromJson(Map<String, dynamic> json) {
     experimentalElement: json['_experimental'] == null
         ? null
         : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date'] as String),
+    date: json['date'] == null ? null : Date.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1964,9 +1964,8 @@ const _$ValueSetStatusEnumMap = {
 
 _$_ValueSetCompose _$_$_ValueSetComposeFromJson(Map<String, dynamic> json) {
   return _$_ValueSetCompose(
-    lockedDate: json['lockedDate'] == null
-        ? null
-        : Date.fromJson(json['lockedDate'] as String),
+    lockedDate:
+        json['lockedDate'] == null ? null : Date.fromJson(json['lockedDate']),
     lockedDateElement: json['_lockedDate'] == null
         ? null
         : Element.fromJson(json['_lockedDate'] as Map<String, dynamic>),

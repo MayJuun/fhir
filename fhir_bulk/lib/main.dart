@@ -2,22 +2,26 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:fhir/r4.dart';
+import 'package:mime/mime.dart';
 
 Future<void> main() async {
-  int i = 0;
-  final dir = Directory('./lib/examples-ndjson');
-  for (var file in await dir.list().toList()) {
-    var contents = await File(file.path).readAsString();
-    var contentList = contents.split('\n');
-    for (var resource in contentList) {
-      i++;
-      if (i > 17000) break;
-      var resourceFile = Resource.fromJson(json.decode(resource));
-      if (resourceFile.id.isValid) {
-        await File(
-                './lib/examples/${resourceFile.resourceTypeString().toLowerCase()}_${resourceFile.id}.json')
-            .writeAsString(json.encode(resourceFile.toJson()));
-      }
-    }
-  }
+  print(lookupMimeType('./azure_fhir_auth_example.zip'));
+  print(lookupMimeType('./lib/patients.ndjson.gz'));
+  print(lookupMimeType('./lib/temp.tar'));
+  // int i = 0;
+  // final dir = Directory('./lib/examples-ndjson');
+  // for (var file in await dir.list().toList()) {
+  //   var contents = await File(file.path).readAsString();
+  //   var contentList = contents.split('\n');
+  //   for (var resource in contentList) {
+  //     i++;
+  //     if (i > 17000) break;
+  //     var resourceFile = Resource.fromJson(json.decode(resource));
+  //     if (resourceFile.id.isValid) {
+  //       await File(
+  //               './lib/examples/${resourceFile.resourceTypeString().toLowerCase()}_${resourceFile.id}.json')
+  //           .writeAsString(json.encode(resourceFile.toJson()));
+  //     }
+  //   }
+  // }
 }
