@@ -81,7 +81,44 @@ I've also included the ability to use Google sign-in, so if you'd like to connec
 
 # ```API file```
 
-I'm going to show here a copy (with numbers changed, obviously) of my API file that I use for these calls to test and ensure that it works the way I want it to.
+I'm going to show here a copy (with numbers changed, obviously) of my API file that I use for these calls to test and ensure that it works the way I want it to. I think the example shows the flow pretty well. I've also tried to make both the SmartClient and the GCS Client function as similarly as possible.
+
+So for the SmartClient, initialize as:
+```
+  final client = SmartClient(
+    baseUrl: FhirUri(url),
+    clientId: clientId,
+    redirectUri: fhirCallback,
+    scopes: Scopes(
+      clinicalScopes: [
+        const Tuple3(
+          Role.patient,
+          R4ResourceType.Patient,
+          Interaction.any,
+        ),
+      ],
+      openid: true,
+      offlineAccess: true,
+    ),
+    secret: secret,
+    authUrl: authUrl == null ? null : FhirUri(authUrl),
+    tokenUrl: tokenUrl == null ? null : FhirUri(tokenUrl),
+  );
+```
+GCS Client requires fewer arguments (because you don't need to specify scopes for their Healthcare API)
+```
+  final client = GcsClient(
+    baseUrl: FhirUri(url),
+    clientId: clientId,
+    scopes: scopes,
+  );
+```
+After this, the flow is the same for both:
+```
+await client.login();
+final newPatient = Patient(id: '123');
+final request1 = FhirRequest.create(base: client.baseUrl.uri);
+final response1 = await request1.request(headers: await client.authHeaders);
 
 # Alpha Version
 

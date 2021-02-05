@@ -11,8 +11,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.0
   http: ^0.12.2
-  fhir: ^0.2.3
-  fhir_at_rest: ^0.2.3
+  fhir: ^0.2.4
+  fhir_at_rest: ^0.2.4
   fhir_auth:
     path: ../../fhir_auth
   google_sign_in: ^4.5.9

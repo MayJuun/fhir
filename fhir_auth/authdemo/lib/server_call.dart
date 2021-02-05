@@ -1,9 +1,9 @@
 import 'api.dart';
-import 'fhir_request.dart';
-import 'gcs_fhir_request.dart';
-import 'hapi_fhir_request.dart';
+import 'gcs_request.dart';
+import 'hapi_request.dart';
+import 'smart_request.dart';
 
-Future aidbox() async => await fhirRequest(
+Future aidbox() async => await smartRequest(
       url: Api.aidboxUrl,
       clientId: Api.aidboxClientId,
       secret: Api.aidboxSecret,
@@ -12,7 +12,7 @@ Future aidbox() async => await fhirRequest(
       fhirCallback: Api.fhirCallback,
     );
 
-Future azure() async => await fhirRequest(
+Future azure() async => await smartRequest(
       url: Api.azureUrl,
       clientId: Api.azureClientId,
       secret: Api.azureSecret,
@@ -21,15 +21,15 @@ Future azure() async => await fhirRequest(
       fhirCallback: Api.fhirCallback,
     );
 
-Future gcs() async => await gcsFhirRequest(
+Future gcs() async => await gcsRequest(
       url: Api.gcsUrl,
       clientId: Api.gcsClientId,
       scopes: Api.gcsScopes,
     );
 
-Future hapi() async => await hapiFhirRequest(Api.hapiUrl);
+Future hapi() async => await hapiRequest(Api.hapiUrl);
 
-Future mihin() async => await fhirRequest(
+Future mihin() async => await smartRequest(
       url: Api.mihinUrl,
       clientId: Api.mihinClientId,
       secret: Api.mihinSecret,

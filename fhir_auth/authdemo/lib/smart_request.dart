@@ -2,11 +2,11 @@ import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart';
 import 'package:fhir_at_rest/r4.dart';
 import 'package:fhir_auth/r4.dart';
-import 'package:http/http.dart';
+import 'package:fhir_auth/r4/smart_client.dart';
 
 import 'new_patient.dart';
 
-Future fhirRequest({
+Future smartRequest({
   String url,
   String clientId,
   String secret,
@@ -14,7 +14,7 @@ Future fhirRequest({
   String tokenUrl,
   FhirUri fhirCallback,
 }) async {
-  final client = FhirClient(
+  final client = SmartClient(
     baseUrl: FhirUri(url),
     clientId: clientId,
     redirectUri: fhirCallback,
@@ -37,13 +37,13 @@ Future fhirRequest({
   try {
     await client.login();
   } catch (e) {
-    return;
+    print(e);
   }
 
   final _newPatient = newPatient();
   print('Patient to be uploaded: ${_newPatient.toJson()}');
   final request1 = FhirRequest.create(
-    base: Uri.parse(client.baseUrl.toString()),
+    base: client.baseUrl.uri,
     resource: _newPatient,
   );
 
@@ -53,7 +53,7 @@ Future fhirRequest({
   try {
     final response = await request1.request(headers: await client.authHeaders);
     newId = response.id;
-    print(response.toJson());
+    print('Uploaded patient: ${response?.toJson()}');
   } catch (e) {
     print(e);
   }
@@ -61,7 +61,7 @@ Future fhirRequest({
     print(newId);
   } else {
     final request2 = FhirRequest.read(
-      base: Uri.parse(client.baseUrl.toString()),
+      base: client.baseUrl.uri,
       type: R4ResourceType.Patient,
       id: newId,
     );
@@ -69,14 +69,6 @@ Future fhirRequest({
       final response =
           await request2.request(headers: await client.authHeaders);
       print('Uploaded patient: ${response.toJson()}');
-    } catch (e) {
-      print(e);
-    }
-    try {
-      final bulk = await get('${client.baseUrl.toString()}/Condition/\$export',
-          headers: await client.authHeaders);
-      print(bulk.headers);
-      print(bulk.body);
     } catch (e) {
       print(e);
     }
