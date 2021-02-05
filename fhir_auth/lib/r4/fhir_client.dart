@@ -21,8 +21,8 @@ class FhirClient {
     this.launch,
     this.scopes,
     this.additionalParameters,
-    this.authorize,
-    this.token,
+    this.authUrl,
+    this.tokenUrl,
     this.secret,
     @Default(false) this.isLoggedIn,
   });
@@ -52,10 +52,10 @@ class FhirClient {
   Map<String, String> additionalParameters = <String, String>{};
 
   /// the authorize Url from the Conformance/Capability Statement
-  FhirUri authorize;
+  FhirUri authUrl;
 
   /// the token Url from the Conformance/Capability Statement
-  FhirUri token;
+  FhirUri tokenUrl;
 
   /// this is for testing, you shouldn't store the secret in the object
   String secret;
@@ -64,20 +64,19 @@ class FhirClient {
 
   bool isLoggedIn;
 
+  final FlutterAppAuth appAuth = FlutterAppAuth();
+
   final FlutterSecureStorage secureStorage = const FlutterSecureStorage();
 
   /// the function when you're ready to request access, be sure to pass in the
   /// the client secret when you make a request if you're creating a confidential
   /// app
-  Future<Unit> login({
-    String authUrl,
-    String tokenUrl,
-  }) async {
+  Future<Unit> login() async {
     if (authUrl == null || tokenUrl == null) {
       await _getEndpoints;
     } else {
-      authorize = FhirUri(authUrl);
-      token = FhirUri(tokenUrl);
+      authUrl = FhirUri(authUrl);
+      tokenUrl = FhirUri(tokenUrl);
     }
     await _tokens;
     isLoggedIn = true;
@@ -109,8 +108,8 @@ class FhirClient {
       redirectUri.toString(),
       clientSecret: secret,
       serviceConfiguration: AuthorizationServiceConfiguration(
-        authorize.toString(),
-        token.toString(),
+        authUrl.toString(),
+        tokenUrl.toString(),
       ),
       scopes: scopes != null ? scopes.scopesList() : null,
     );
@@ -118,8 +117,7 @@ class FhirClient {
     request.additionalParameters['nonce'] = _nonce();
     request.additionalParameters['aud'] = baseUrl.toString();
 
-    final authorization =
-        await FlutterAppAuth().authorizeAndExchangeCode(request);
+    final authorization = await appAuth.authorizeAndExchangeCode(request);
 
     await secureStorage.write(
         key: 'access_token', value: authorization.accessToken);
@@ -137,8 +135,8 @@ class FhirClient {
             clientId,
             redirectUri.toString(),
             serviceConfiguration: AuthorizationServiceConfiguration(
-              authorize.toString(),
-              token.toString(),
+              authUrl.toString(),
+              tokenUrl.toString(),
             ),
             refreshToken: await secureStorage.read(key: 'refresh_token'),
             grantType: 'refresh_token',
@@ -150,8 +148,8 @@ class FhirClient {
             redirectUri.toString(),
             clientSecret: secret,
             serviceConfiguration: AuthorizationServiceConfiguration(
-              authorize.toString(),
-              token.toString(),
+              authUrl.toString(),
+              tokenUrl.toString(),
             ),
             refreshToken: await secureStorage.read(key: 'refresh_token'),
             grantType: 'refresh_token',
@@ -161,7 +159,7 @@ class FhirClient {
     tokenRequest.additionalParameters =
         additionalParameters ?? <String, String>{};
     tokenRequest.additionalParameters['nonce'] = _nonce();
-    final authorization = await FlutterAppAuth().token(tokenRequest);
+    final authorization = await appAuth.token(tokenRequest);
     await secureStorage.write(
         key: 'access_token', value: authorization.accessToken);
     await secureStorage.write(
@@ -203,14 +201,14 @@ class FhirClient {
     final CapabilityStatement capabilityStatement =
         CapabilityStatement.fromJson(returnResult);
 
-    token = _getUri(capabilityStatement, 'token');
-    authorize = _getUri(capabilityStatement, 'authorize');
+    tokenUrl = _getUri(capabilityStatement, 'token');
+    authUrl = _getUri(capabilityStatement, 'authorize');
 
     /// if either authorize or token are still null, we return a failure
-    if (authorize == null) {
+    if (authUrl == null) {
       throw const HttpException('No Authorize Url in CapabilityStatement');
     }
-    if (token == null) {
+    if (tokenUrl == null) {
       throw const HttpException('No Token Url in CapabilityStatement');
     }
     return unit;

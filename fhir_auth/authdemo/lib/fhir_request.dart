@@ -30,13 +30,12 @@ Future fhirRequest({
       offlineAccess: true,
     ),
     secret: secret,
+    authUrl: authUrl == null ? null : FhirUri(authUrl),
+    tokenUrl: tokenUrl == null ? null : FhirUri(tokenUrl),
   );
 
   try {
-    await client.login(
-      authUrl: authUrl,
-      tokenUrl: tokenUrl,
-    );
+    await client.login();
   } catch (e) {
     return;
   }
