@@ -1,18 +1,50 @@
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
-import 'package:string_validator/string_validator.dart';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
+
+enum DateTimePrecision {
+  YYYY,
+  YYYYMM,
+  YYYYMMDD,
+  FULL,
+  INVALID,
+}
 
 class FhirDateTime {
-  const FhirDateTime._(this._value, this._format);
+  const FhirDateTime._(this._valueString, this._valueDateTime, this._isValid,
+      this._precision, this._parseError);
 
-  factory FhirDateTime(_value) {
-    assert(_value != null);
+  factory FhirDateTime(inValue) {
+    assert(inValue != null);
+
+    switch (inValue.runtimeType.toString()) {
+      case 'DateTime':
+        return FhirDateTime._(inValue.toIso8601String(), inValue, true,
+            DateTimePrecision.FULL, null);
+      case 'String':
+        try {
+          final dateTimeValue = _parseDateTime(inValue);
+          return FhirDateTime._(
+              inValue, dateTimeValue, true, _getPrecision(inValue), null);
+        } on FormatException catch (e) {
+          return FhirDateTime._(
+              inValue, null, false, DateTimePrecision.INVALID, e);
+        }
+        break;
+      default:
+        throw ArgumentError(
+            'FhirDateTime cannot be constructed from $inValue.');
+    }
+  }
+
+  factory FhirDateTime.fromDateTime(DateTime dateTime,
+      [DateTimePrecision precision = DateTimePrecision.FULL]) {
+    assert(dateTime != null && precision != null);
+
+    final dateString = dateTime.toIso8601String();
+    final len = [4, 7, 10, dateString.length][precision.index];
+
     return FhirDateTime._(
-      _validateDateTime(_value.toString()),
-      _value.toString().length <= 10 ? _value.toString().length : -1,
-    );
+        dateString.substring(0, len), dateTime, true, precision, null);
   }
 
   factory FhirDateTime.fromJson(dynamic json) => FhirDateTime(json);
@@ -23,65 +55,86 @@ class FhirDateTime {
           ? FhirDateTime.fromJson(jsonDecode(jsonEncode(yaml)))
           : null;
 
-  final Either<String, DateTime> _value;
-  final int _format;
+  final String _valueString;
+  final DateTime _valueDateTime;
+  final bool _isValid;
+  final DateTimePrecision _precision;
+  final Exception _parseError;
 
-  bool get isValid => _value.isRight();
-  int get hashCode => _value.hashCode;
-  String get value => _value.fold(
-        (l) => l,
-        (r) => _formattedFhirDateTime(r),
-      );
+  bool get isValid => _isValid;
+  int get hashCode => _valueString.hashCode;
+  DateTime get value => _valueDateTime;
+  Exception get parseError => _parseError;
+  DateTimePrecision get precision => _precision;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is FhirDateTime
           ? o == value
           : o is DateTime
-              ? o == DateTime.tryParse(value)
+              ? o == _valueDateTime
               : o is String
-                  ? o == value.toString()
+                  ? o == _valueString
                   : false;
 
-  String toString() => value.toString();
-  String toJson() => value.toString();
-  String toYaml() => value.toString();
+  String toString() => _valueString;
+  String toJson() => _valueString;
+  String toYaml() => _valueString;
 
-  String _formattedFhirDateTime(value) => _format == -1
-      ? value.toIso8601String()
-      : value.toIso8601String().substring(0, _format);
-}
+  static final _dateTimeYYYYExp =
+      RegExp(r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$');
+  static final _dateTimeYYYYMMExp = RegExp(
+      r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])$');
+  static final _dateTimeFULLExp = RegExp(
+      r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?');
 
-const _dateTimeString =
-    r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?';
+  static DateTime _parseDateTime(String value) {
+    if (value.length <= 7) {
+      return _parsePartialDateTime(value);
+    } else {
+      value.replaceFirst(' ', 'T');
+      try {
+        if (_dateTimeFULLExp.hasMatch(value)) {
+          return DateTime.parse(value);
+        } else {
+          throw FormatException();
+        }
+      } on FormatException {
+        throw FormatException(
+            'FormatException: "$value" is not a DateTime, as defined by: '
+            'https://www.hl7.org/fhir/datatypes.html#datetime');
+      }
+    }
+  }
 
-Either<String, DateTime> _validateDateTime(String value) => isDate(value)
-    ? RegExp(_dateTimeString).hasMatch(value.length <= 10
-            ? value
-            : value[10] == ' '
-                ? value.replaceFirst(' ', 'T')
-                : value)
-        ? right(DateTime.parse(value))
-        : left('FormatError: "$value" is not a DateTime, as defined by: '
-            'https://www.hl7.org/fhir/datatypes.html#datetime')
-    : _partialDateTime(value);
+  static DateTime _parsePartialDateTime(String value) {
+    assert(value != null);
 
-Either<String, DateTime> _partialDateTime(String value) {
-  assert(value != null);
+    if (_dateTimeYYYYExp.hasMatch(value)) {
+      return DateTime(int.parse(value));
+    } else if (_dateTimeYYYYMMExp.hasMatch(value)) {
+      var year = int.parse(value.split('-')[0]);
+      var month = int.parse(value.split('-')[1]);
+      return DateTime(year, month);
+    } else {
+      throw FormatException(
+          'FormatException: "$value" is not a DateTime, as defined by: '
+          'https://www.hl7.org/fhir/datatypes.html#datetime');
+    }
+  }
 
-  if (RegExp(r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$')
-      .hasMatch(value)) {
-    return right(DateTime(int.parse(value)));
-  } else if (RegExp(
-          r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])$')
-      .hasMatch(value)) {
-    var year = int.parse(value.split('-')[0]);
-    var month = int.parse(value.split('-')[1]);
-    return right(
-      DateTime(year, month),
-    );
-  } else {
-    return left('FormatError: "$value" is not a DateTime, as defined by: '
-        'https://www.hl7.org/fhir/datatypes.html#datetime');
+  static DateTimePrecision _getPrecision(String value) {
+    assert(value != null);
+
+    switch (value.length) {
+      case 4:
+        return DateTimePrecision.YYYY;
+      case 7:
+        return DateTimePrecision.YYYYMM;
+      case 10:
+        return DateTimePrecision.YYYYMMDD;
+      default:
+        return DateTimePrecision.FULL;
+    }
   }
 }
