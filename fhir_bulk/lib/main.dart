@@ -1,34 +1,50 @@
+import 'dart:convert';
 import 'dart:io';
 
+import 'package:fhir/r4.dart';
+import 'package:http/http.dart';
+import 'package:linkify/linkify.dart';
 import 'package:mime/mime.dart';
 import 'package:archive/archive.dart';
 import 'package:archive/archive_io.dart';
 
 Future<void> main() async {
-  await _unArchive('./lib/in/azure_fhir_auth_example.zip');
-  await _unArchive('./lib/in/patients.ndjson.gz');
-  await _unArchive('./lib/in/R_DV2.CSV.gz');
-  await _unArchive('./lib/in/rim0247c.zip');
-  await _unArchive('./lib/in/samples.tar.gz');
-  // int i = 0;
-  // final dir = Directory('./lib/examples-ndjson');
-  // for (var file in await dir.list().toList()) {
-  //   var contents = await File(file.path).readAsString();
-  //   var contentList = contents.split('\n');
-  //   for (var resource in contentList) {
-  //     i++;
-  //     if (i > 17000) break;
-  //     var resourceFile = Resource.fromJson(json.decode(resource));
-  //     if (resourceFile.id.isValid) {
-  //       await File(
-  //               './lib/examples/${resourceFile.resourceTypeString().toLowerCase()}_${resourceFile.id}.json')
-  //           .writeAsString(json.encode(resourceFile.toJson()));
-  //     }
-  //   }
-  // }
+  final response = await get(
+      'https://bulk-data.smarthealthit.org/eyJlcnIiOiIiLCJwYWdlIjoxMDAwMCwiZHVyIjoxMCwidGx0IjoxNSwibSI6MSwic3R1Ijo0LCJkZWwiOjB9/fhir/Patient/\$export',
+      headers: {
+        'accept': 'application/fhir+json',
+        'prefer': 'respond-async',
+      });
+  final resource = Resource.fromJson(json.decode(response.body));
+  if (resource is OperationOutcome) {
+    final link =
+        'https://${linkify(linkify(resource.issue[0].diagnostics)[1].text)[0].text.replaceAll('"', '')}';
+    var response = await get(link);
+    while (response.body.isEmpty) {
+      await Future.delayed(
+          Duration(seconds: int.parse(response.headers['retry-after'])));
+      response = await get(link);
+    }
+    final resourceList = json.decode(response.body)['output'];
+    final stringList = <String>[];
+    for (final resource in resourceList) {
+      final ndjson = await get(resource['url']);
+      stringList.addAll(ndjson.body.split('\n'));
+    }
+    print(stringList.length);
+    final bundle = Bundle(entry: <BundleEntry>[]);
+    for (final resource in stringList) {
+      if (resource.isNotEmpty) {
+        bundle.entry.add(
+            BundleEntry(resource: Resource.fromJson(json.decode(resource))));
+      }
+    }
+    print(bundle.entry.length);
+    await File('./lib/out.json').writeAsString(jsonEncode(bundle.toJson()));
+  }
 }
 
-Future<void> _unArchive(String path) async {
+Future<void> unArchive(String path) async {
   if (lookupMimeType(path) == 'application/zip' ||
       path.split('.').last == 'zip') {
     final bytes = await File(path).readAsBytes();
