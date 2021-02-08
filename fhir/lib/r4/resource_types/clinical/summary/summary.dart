@@ -526,6 +526,29 @@ abstract class AllergyIntolerance
     List<AllergyIntoleranceReaction> reaction,
   }) = _AllergyIntolerance;
 
+  factory AllergyIntolerance.usCoreMinimum({
+    CodeableConcept clinicalStatus,
+    CodeableConcept verificationStatus,
+    CodeableConcept code,
+    @required Reference patient,
+    Reference encounter,
+    FhirDateTime onsetDateTime,
+    @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
+    Age onsetAge,
+    Period onsetPeriod,
+    Range onsetRange,
+    String onsetString,
+    @JsonKey(name: '_onsetString') Element onsetStringElement,
+    FhirDateTime recordedDate,
+    @JsonKey(name: '_recordedDate') Element recordedDateElement,
+    Reference recorder,
+    Reference asserter,
+    FhirDateTime lastOccurrence,
+    @JsonKey(name: '_lastOccurrence') Element lastOccurrenceElement,
+    List<Annotation> note,
+    List<AllergyIntoleranceReaction> reaction,
+  }) = _AllergyIntolerance;
+
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
