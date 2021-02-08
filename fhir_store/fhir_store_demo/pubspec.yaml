@@ -1,6 +1,5 @@
 name: fhir_store_demo
 description: Library to test storing FHIR in Cloud Firestore
-version: 0.0.1
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

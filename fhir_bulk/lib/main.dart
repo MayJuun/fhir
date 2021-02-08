@@ -1,34 +1,25 @@
 import 'dart:io';
-
 import 'package:mime/mime.dart';
 import 'package:archive/archive.dart';
 import 'package:archive/archive_io.dart';
 
+import 'r4/bulk_request.dart';
+
 Future<void> main() async {
-  await _unArchive('./lib/in/azure_fhir_auth_example.zip');
-  await _unArchive('./lib/in/patients.ndjson.gz');
-  await _unArchive('./lib/in/R_DV2.CSV.gz');
-  await _unArchive('./lib/in/rim0247c.zip');
-  await _unArchive('./lib/in/samples.tar.gz');
-  // int i = 0;
-  // final dir = Directory('./lib/examples-ndjson');
-  // for (var file in await dir.list().toList()) {
-  //   var contents = await File(file.path).readAsString();
-  //   var contentList = contents.split('\n');
-  //   for (var resource in contentList) {
-  //     i++;
-  //     if (i > 17000) break;
-  //     var resourceFile = Resource.fromJson(json.decode(resource));
-  //     if (resourceFile.id.isValid) {
-  //       await File(
-  //               './lib/examples/${resourceFile.resourceTypeString().toLowerCase()}_${resourceFile.id}.json')
-  //           .writeAsString(json.encode(resourceFile.toJson()));
-  //     }
-  //   }
-  // }
+  final url = Uri.parse(
+      'https://bulk-data.smarthealthit.org/eyJlcnIiOiIiLCJwYWdlIjoxMDAwMCwiZHVyIjoxMCwidGx0IjoxNSwibSI6MSwic3R1Ijo0LCJkZWwiOjB9/fhir');
+  final bulkRequest = BulkRequest.patient(base: url);
+  final response = await bulkRequest.request();
+  if (response == null) {
+    print('null');
+  } else if (response.isEmpty) {
+    print('isEmpty');
+  } else {
+    print(response.length);
+  }
 }
 
-Future<void> _unArchive(String path) async {
+Future<void> unArchive(String path) async {
   if (lookupMimeType(path) == 'application/zip' ||
       path.split('.').last == 'zip') {
     final bytes = await File(path).readAsBytes();
