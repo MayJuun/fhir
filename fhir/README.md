@@ -14,8 +14,7 @@ As well as the R5 Preview #3:
 
 ## Say Hello!
 
-- As all parts of this are new (FHIR, Flutter, using the two together), I'd love to hear from you if you're working in this space.
-You can email me at <grey@fhirfli.dev>.
+- As all parts of this are new (FHIR, Flutter, using the two together), I'd love to hear from you if you're working in this space. Open to PR, suggestions or requests. You can email me at <grey@fhirfli.dev>.
 
 ## How To Use
 
@@ -76,7 +75,18 @@ All of the FHIR resources are immutable classes using the [freezed package](http
     HumanName(family: 'NewLastName', given: ['SameFirstName'])
   ]);
 ```
-And that's essentially all there is at this point. This is still very much a developing package, so there are likely to be breaking changes as I try and figure out how it should all work. I welcome any and all feedback, suggestions or pull requests.
+
+## US Core
+
+Someone recently mentioned that I should try and incorporate the US Core IG into this package, so I've attempted to do so. US Core is generally a subset of the full FHIR spec (except for patient). That means, if you have already have a resource, you can pass it into a FHIR resource just like you would normally do. For thos resources that are included in the US Core spec, I've added new constructors to the classes. This way you may define, as you normally would:
+```
+final allergyIntolerance = AllergyIntolerance();
+```
+OR you may call:
+```
+final allergyIntolerance = AllergyIntolerance.usCoreMinimum();
+```
+This will still create a patient object that can be used like any other. However, when initially constructing it, the available parameters to pass in are only those that are included in the US Core IG.
 
 ## Primitive Values
 Primitive values are [these](https://www.hl7.org/fhir/datatypes.html), things like instant, string, integer, etc. Howevever, because FHIR has some definitions of how they define some of these values that differ from Dart, I've made all of them (except String) and primitiveObject. This has a couple of useful things (and one or two annoying ones). In order to make something like an integer, you have to write it like this: ```Integer(128)``` or ```Integer('128)```. Yes, a little annoying, but it prevents inappropriate formatting, especially for things like dates that are a lot trickier. You can, however, check equality without this. For instance, ```Integer(128) == 128``` will evaluate to true. 

@@ -200,6 +200,51 @@ abstract class CarePlan with Resource implements _$CarePlan {
     List<Annotation> note,
   }) = _CarePlan;
 
+  factory CarePlan.usCore({
+    @Default(R4ResourceType.CarePlan)
+    @JsonKey(unknownEnumValue: R4ResourceType.CarePlan)
+        R4ResourceType resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    Code language,
+    @JsonKey(name: '_language') Element languageElement,
+    @required Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    List<Canonical> instantiatesCanonical,
+    List<FhirUri> instantiatesUri,
+    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
+    List<Reference> basedOn,
+    List<Reference> replaces,
+    List<Reference> partOf,
+    @required Code status,
+    @JsonKey(name: '_status') Element statusElement,
+    @required Code intent,
+    @JsonKey(name: '_intent') Element intentElement,
+    List<CodeableConcept> category,
+    String title,
+    @JsonKey(name: '_title') Element titleElement,
+    String description,
+    @JsonKey(name: '_description') Element descriptionElement,
+    @required Reference subject,
+    Reference encounter,
+    Period period,
+    FhirDateTime created,
+    @JsonKey(name: '_created') Element createdElement,
+    Reference author,
+    List<Reference> contributor,
+    List<Reference> careTeam,
+    List<Reference> addresses,
+    List<Reference> supportingInfo,
+    List<Reference> goal,
+    List<CarePlanActivity> activity,
+    List<Annotation> note,
+  }) = _CarePlan;
+
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 

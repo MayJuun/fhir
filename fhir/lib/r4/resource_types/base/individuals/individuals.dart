@@ -620,6 +620,39 @@ abstract class Patient with Resource implements _$Patient {
     );
   }
 
+  factory Patient.usCoreMinimum({
+    List<PatientUsCoreRace> usCoreRace,
+    List<PatientUsCoreDetailedRace> usCoreDetailedRace,
+    FhirExtension usCoreRaceText,
+    PatientUsCoreEthnicity usCoreEthnicity,
+    List<PatientUsCoreDetailedEthnicity> usCoreDetailedEthnicity,
+    FhirExtension usCoreEthnicityText,
+    PatientUsCoreBirthSex usCoreBirthSex,
+    List<Identifier> identifier,
+    List<HumanName> name,
+    List<ContactPoint> telecom,
+    @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender gender,
+    Date birthDate,
+    List<Address> address,
+    List<PatientCommunication> communication,
+  }) =>
+      Patient.usCore(
+        usCoreRace: usCoreRace,
+        usCoreDetailedRace: usCoreDetailedRace,
+        usCoreRaceText: usCoreRaceText,
+        usCoreEthnicity: usCoreEthnicity,
+        usCoreDetailedEthnicity: usCoreDetailedEthnicity,
+        usCoreEthnicityText: usCoreEthnicityText,
+        usCoreBirthSex: usCoreBirthSex,
+        identifier: identifier,
+        name: name,
+        telecom: telecom,
+        gender: gender,
+        birthDate: birthDate,
+        address: address,
+        communication: communication,
+      );
+
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
