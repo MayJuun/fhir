@@ -5,8 +5,8 @@ import 'package:fhir/r4.dart';
 import 'package:mime/mime.dart';
 import 'package:archive/archive.dart';
 
-abstract class FhirBulkCompress {
-  static List<Resource> fromBulkData(String content) {
+abstract class FhirBulk {
+  static List<Resource> fromData(String content) {
     final resourceStrings = content.split('\n');
     final resourceList = <Resource>[];
     for (final resource in resourceStrings) {
@@ -17,17 +17,17 @@ abstract class FhirBulkCompress {
     return resourceList;
   }
 
-  static Future<List<Resource>> fromBulkFile(String path) async {
+  static Future<List<Resource>> fromFile(String path) async {
     final resourceList = <Resource>[];
     if (path == null) {
       return resourceList;
     } else {
       final file = await File(path).readAsString();
-      return fromBulkData(file);
+      return fromData(file);
     }
   }
 
-  static Future<List<Resource>> fromBulkCompressedData(
+  static Future<List<Resource>> fromCompressedData(
       String contentType, dynamic content) async {
     final resourceList = <Resource>[];
     if (contentType == 'application/zip' ||
@@ -36,7 +36,7 @@ abstract class FhirBulkCompress {
       for (final file in archive) {
         if (file.isFile) {
           final data = file.content as List<int>;
-          resourceList.addAll(fromBulkData(utf8.decode(data)));
+          resourceList.addAll(fromData(utf8.decode(data)));
         }
       }
     } else if (contentType == 'application/x-tar') {
@@ -44,28 +44,28 @@ abstract class FhirBulkCompress {
       for (final file in archive) {
         if (file.isFile) {
           final data = GZipDecoder().decodeBytes(content);
-          resourceList.addAll(fromBulkData(utf8.decode(data)));
+          resourceList.addAll(fromData(utf8.decode(data)));
         }
       }
     } else if (contentType == 'application/gzip') {
       final data = GZipDecoder().decodeBytes(content);
-      resourceList.addAll(fromBulkData(utf8.decode(data)));
+      resourceList.addAll(fromData(utf8.decode(data)));
     }
     return resourceList;
   }
 
-  static Future<List<Resource>> fromBulkCompressedFile(String path) async {
+  static Future<List<Resource>> fromCompressedFile(String path) async {
     final data = await File(path).readAsBytes();
     if (lookupMimeType(path) == 'application/zip' ||
         lookupMimeType(path) == 'application/x-zip-compressed' ||
         path.split('.').last == 'zip') {
-      return fromBulkCompressedData('application/zip', data);
+      return fromCompressedData('application/zip', data);
     } else if (lookupMimeType(path) == 'application/x-tar' ||
         path.contains('.tar.gz')) {
-      return fromBulkCompressedData('application/x-tar', data);
+      return fromCompressedData('application/x-tar', data);
     } else if (lookupMimeType(path) == 'application/gzip' ||
         path.split('.').last == 'gz') {
-      return fromBulkCompressedData('application/gzip', data);
+      return fromCompressedData('application/gzip', data);
     }
     return <Resource>[];
   }

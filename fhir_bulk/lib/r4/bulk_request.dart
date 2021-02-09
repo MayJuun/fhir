@@ -5,6 +5,8 @@ import 'package:fhir/r4.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart';
 
+import 'from_bulk.dart';
+
 part 'bulk_request.freezed.dart';
 
 @freezed
@@ -28,7 +30,7 @@ abstract class BulkRequest with _$BulkRequest {
     Client client,
   }) = _BulkGroupRequest;
 
-  ///  Group
+  ///  System
   factory BulkRequest.system({
     @required Uri base,
     FhirDateTime since,
@@ -68,20 +70,22 @@ abstract class BulkRequest with _$BulkRequest {
     FhirDateTime since,
     List<Tuple2<R4ResourceType, Id>> types,
   ) {
-    String returnString = '';
+    String sinceString = '';
+    String typeString = '';
     if (since != null) {
-      returnString = '?_since=$since';
+      sinceString = '?_since=$since';
     }
     if (types != null) {
-      returnString += returnString.isEmpty ? '?' : '&';
+      typeString = sinceString.isEmpty ? '?' : '&';
       for (final type in types) {
         if (type.value1 != null) {
-          returnString +=
+          typeString += typeString.length == 1 ? '_type=' : ',';
+          typeString +=
               '${ResourceUtils.resourceTypeToStringMap[type.value1]}${type.value2 != null ? "/${type.value2}" : ""}';
         }
       }
     }
-    return returnString;
+    return '$sinceString$typeString';
   }
 
   Future<List<Resource>> _request(
@@ -93,9 +97,9 @@ abstract class BulkRequest with _$BulkRequest {
     client ??= Client();
     List<Resource> returnList = <Resource>[];
 
-    // if (globals.kTestMode) {
-    //   return _operationOutcome(uri);
-    // }
+    if (kTestMode) {
+      return _operationOutcome(uri);
+    }
 
     try {
       final resultWithLocation = await client.get(uri, headers: headers);
@@ -114,12 +118,7 @@ abstract class BulkRequest with _$BulkRequest {
       final responseBody = jsonDecode(resultWithTime.body)['output'];
       for (final resource in responseBody) {
         final ndjsonList = await client.get(resource['url'], headers: headers);
-        final resourceList = ndjsonList.body.split('\n');
-        for (final resource in resourceList) {
-          if (resource.isNotEmpty) {
-            returnList.add(Resource.fromJson(jsonDecode(resource)));
-          }
-        }
+        returnList.addAll(FhirBulk.fromData(ndjsonList.body));
       }
     } catch (e) {
       return _operationOutcome('Failed to complete a Bulk request',
@@ -181,3 +180,5 @@ enum RestfulRequest {
   post_,
   patch_,
 }
+
+bool kTestMode = false;
