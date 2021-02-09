@@ -8,6 +8,7 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'summary.enums.dart';
+part 'summary.uscore.dart';
 part 'summary.freezed.dart';
 part 'summary.g.dart';
 
@@ -526,19 +527,106 @@ abstract class AllergyIntolerance
     List<AllergyIntoleranceReaction> reaction,
   }) = _AllergyIntolerance;
 
+  factory AllergyIntolerance.usCore({
+    AllergyIntoleranceClinicalStatus clinicalStatus,
+    AllergyIntoleranceVerificationStatus verificationStatus,
+    @required AllergyIntoleranceIdentity identity,
+    @required Reference patient,
+    List<AllergyIntoleranceReaction> reaction,
+    @Default(R4ResourceType.AllergyIntolerance)
+    @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
+        R4ResourceType resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    Code language,
+    @JsonKey(name: '_language') Element languageElement,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+        AllergyIntoleranceType type,
+    @JsonKey(name: '_type') Element typeElement,
+    List<AllergyIntoleranceCategory> category,
+    @JsonKey(name: '_category') List<Element> categoryElement,
+    @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+        AllergyIntoleranceCriticality criticality,
+    @JsonKey(name: '_criticality') Element criticalityElement,
+    Reference encounter,
+    FhirDateTime onsetDateTime,
+    @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
+    Age onsetAge,
+    Period onsetPeriod,
+    Range onsetRange,
+    String onsetString,
+    @JsonKey(name: '_onsetString') Element onsetStringElement,
+    FhirDateTime recordedDate,
+    @JsonKey(name: '_recordedDate') Element recordedDateElement,
+    Reference recorder,
+    Reference asserter,
+    FhirDateTime lastOccurrence,
+    @JsonKey(name: '_lastOccurrence') Element lastOccurrenceElement,
+    List<Annotation> note,
+  }) =>
+      AllergyIntolerance(
+        clinicalStatus: codeableConceptFromClinicalStatus[clinicalStatus],
+        verificationStatus:
+            codeableConceptFromVerificationStatus[verificationStatus],
+        code: codeableConceptFromIdentity[identity],
+        patient: patient,
+        reaction: reaction,
+        resourceType: resourceType,
+        id: id,
+        meta: meta,
+        implicitRules: implicitRules,
+        implicitRulesElement: implicitRulesElement,
+        language: language,
+        languageElement: languageElement,
+        text: text,
+        contained: contained,
+        extension_: extension_,
+        modifierExtension: modifierExtension,
+        identifier: identifier,
+        type: type,
+        typeElement: typeElement,
+        category: category,
+        categoryElement: categoryElement,
+        criticality: criticality,
+        criticalityElement: criticalityElement,
+        encounter: encounter,
+        onsetDateTime: onsetDateTime,
+        onsetDateTimeElement: onsetDateTimeElement,
+        onsetAge: onsetAge,
+        onsetPeriod: onsetPeriod,
+        onsetRange: onsetRange,
+        onsetString: onsetString,
+        onsetStringElement: onsetStringElement,
+        recordedDate: recordedDate,
+        recordedDateElement: recordedDateElement,
+        recorder: recorder,
+        asserter: asserter,
+        lastOccurrence: lastOccurrence,
+        lastOccurrenceElement: lastOccurrenceElement,
+        note: note,
+      );
+
   factory AllergyIntolerance.usCoreMinimum({
-    CodeableConcept clinicalStatus,
-    CodeableConcept verificationStatus,
-    @required CodeableConcept code,
+    AllergyIntoleranceClinicalStatus clinicalStatus,
+    AllergyIntoleranceVerificationStatus verificationStatus,
+    @required AllergyIntoleranceIdentity identity,
     @required Reference patient,
     List<AllergyIntoleranceReaction> reaction,
   }) =>
-      AllergyIntolerance(
-          clinicalStatus: clinicalStatus,
-          verificationStatus: verificationStatus,
-          code: code,
-          patient: patient,
-          reaction: reaction);
+      AllergyIntolerance.usCore(
+        clinicalStatus: clinicalStatus,
+        verificationStatus: verificationStatus,
+        identity: identity,
+        patient: patient,
+        reaction: reaction,
+      );
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());

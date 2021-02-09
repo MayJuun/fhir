@@ -17,6 +17,13 @@ enum PatientUsCoreRace {
   asked_but_no_answer,
 }
 
+final codeconept = CodeableConcept(coding: [
+  Coding(
+      system: FhirUri(
+          'http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical'),
+      code: Code('active'))
+]);
+
 final extensionFromRace = {
   PatientUsCoreRace.american_indian_or_alaska_native: FhirExtension(
       url: FhirUri('ombCategory'),

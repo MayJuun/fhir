@@ -1,2 +1,2 @@
-// export 'enums/enums.dart';
-// export 'r4/fhir_request.dart';
+export 'r4/bulk_request.dart';
+export 'r4/from_bulk.dart';

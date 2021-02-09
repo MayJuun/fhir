@@ -4,13 +4,11 @@ import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 class Decimal {
-  const Decimal._(this._value);
+  const Decimal._(this._value, this._isInt);
 
   factory Decimal(dynamic value) {
     assert(value != null);
-    return Decimal._(
-      _validateDecimal(value),
-    );
+    return Decimal._(_validateDecimal(value), _checkIfInt(value));
   }
 
   factory Decimal.fromJson(dynamic json) => Decimal(json);
@@ -22,12 +20,14 @@ class Decimal {
           : null;
 
   final Either<String, double> _value;
+  final bool _isInt;
   dynamic get value => _value.fold((l) => l, (r) => r);
   bool get isValid => _value.isRight();
 
-  String toString() => value.toString();
-  dynamic toJson() => value;
-  dynamic toYaml() => value;
+  String toString() =>
+      _isInt && (value is double) ? value.toInt().toString() : value.toString();
+  dynamic toJson() => _isInt && (value is double) ? value.toInt() : value;
+  dynamic toYaml() => _isInt && (value is double) ? value.toInt() : value;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
@@ -39,6 +39,8 @@ class Decimal {
 
   int get hashCode => value.hashCode;
 }
+
+bool _checkIfInt(dynamic value) => int.tryParse(value) != null;
 
 Either<String, double> _validateDecimal(dynamic value) =>
     double.tryParse(value.toString()) != null
