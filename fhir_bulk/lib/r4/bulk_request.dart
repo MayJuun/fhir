@@ -128,15 +128,6 @@ abstract class BulkRequest with _$BulkRequest {
     return returnList;
   }
 
-  //       case RestfulRequest.delete_:
-  //         {
-  //           result = await client.delete(
-  //             thisRequest,
-  //             headers: headers,
-  //           );
-  //           break;
-  //         }
-
   List<OperationOutcome> _failedHttp(int statusCode, Response result) {
     return [
       OperationOutcome(
