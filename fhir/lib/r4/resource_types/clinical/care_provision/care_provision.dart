@@ -8,6 +8,7 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'care_provision.enums.dart';
+part 'care_provision.uscore.dart';
 part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';
 
@@ -201,6 +202,10 @@ abstract class CarePlan with Resource implements _$CarePlan {
   }) = _CarePlan;
 
   factory CarePlan.usCore({
+    @required NarrativeStatus narrativeStatus,
+    @required CarePlanStatus status,
+    @required CarePlanIntent intent,
+    @required Reference subject,
     @Default(R4ResourceType.CarePlan)
     @JsonKey(unknownEnumValue: R4ResourceType.CarePlan)
         R4ResourceType resourceType,
@@ -210,7 +215,6 @@ abstract class CarePlan with Resource implements _$CarePlan {
     @JsonKey(name: '_implicitRules') Element implicitRulesElement,
     Code language,
     @JsonKey(name: '_language') Element languageElement,
-    @required Narrative text,
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
@@ -221,16 +225,13 @@ abstract class CarePlan with Resource implements _$CarePlan {
     List<Reference> basedOn,
     List<Reference> replaces,
     List<Reference> partOf,
-    @required Code status,
     @JsonKey(name: '_status') Element statusElement,
-    @required Code intent,
     @JsonKey(name: '_intent') Element intentElement,
     List<CodeableConcept> category,
     String title,
     @JsonKey(name: '_title') Element titleElement,
     String description,
     @JsonKey(name: '_description') Element descriptionElement,
-    @required Reference subject,
     Reference encounter,
     Period period,
     FhirDateTime created,
@@ -243,7 +244,71 @@ abstract class CarePlan with Resource implements _$CarePlan {
     List<Reference> goal,
     List<CarePlanActivity> activity,
     List<Annotation> note,
-  }) = _CarePlan;
+  }) {
+    category ??= <CodeableConcept>[];
+    category.add(CodeableConcept(coding: [
+      Coding(
+        system:
+            FhirUri('http://hl7.org/fhir/us/core/CodeSystem/careplan-category'),
+        code: Code('assess-plan'),
+      )
+    ]));
+    return CarePlan(
+      text: Narrative(status: narrativeStatus, div: ''),
+      status: codeFromCarePlanStatus[status],
+      intent: codeFromCarePlanIntent[intent],
+      subject: subject,
+      category: category,
+      resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
+      language: language,
+      languageElement: languageElement,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      identifier: identifier,
+      instantiatesCanonical: instantiatesCanonical,
+      instantiatesUri: instantiatesUri,
+      instantiatesUriElement: instantiatesUriElement,
+      basedOn: basedOn,
+      replaces: replaces,
+      partOf: partOf,
+      statusElement: statusElement,
+      intentElement: intentElement,
+      title: title,
+      titleElement: titleElement,
+      description: description,
+      descriptionElement: descriptionElement,
+      encounter: encounter,
+      period: period,
+      created: created,
+      createdElement: createdElement,
+      author: author,
+      contributor: contributor,
+      careTeam: careTeam,
+      addresses: addresses,
+      supportingInfo: supportingInfo,
+      goal: goal,
+      activity: activity,
+      note: note,
+    );
+  }
+
+  factory CarePlan.usCoreMinimum({
+    @required NarrativeStatus narrativeStatus,
+    @required CarePlanStatus status,
+    @required CarePlanIntent intent,
+    @required Reference subject,
+  }) =>
+      CarePlan.usCore(
+        narrativeStatus: narrativeStatus,
+        status: status,
+        intent: intent,
+        subject: subject,
+      );
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
