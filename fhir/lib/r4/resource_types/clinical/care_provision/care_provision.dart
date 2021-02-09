@@ -696,6 +696,84 @@ abstract class CareTeam with Resource implements _$CareTeam {
     List<Annotation> note,
   }) = _CareTeam;
 
+  factory CareTeam.usCore({
+    @JsonKey(unknownEnumValue: CareTeamStatus.unknown) CareTeamStatus status,
+    @required Reference subject,
+    @required CareTeamProviderRole role,
+    @required Reference member,
+    @Default(R4ResourceType.CareTeam)
+    @JsonKey(unknownEnumValue: R4ResourceType.CareTeam)
+        R4ResourceType resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    Code language,
+    @JsonKey(name: '_language') Element languageElement,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    @JsonKey(name: '_status') Element statusElement,
+    List<CodeableConcept> category,
+    String name,
+    @JsonKey(name: '_name') Element nameElement,
+    Reference encounter,
+    Period period,
+    List<CareTeamParticipant> participant,
+    List<CodeableConcept> reasonCode,
+    List<Reference> reasonReference,
+    List<Reference> managingOrganization,
+    List<ContactPoint> telecom,
+    List<Annotation> note,
+  }) {
+    participant ??= <CareTeamParticipant>[];
+    participant.add(CareTeamParticipant(
+        role: [codeableConceptFromProviderRole[role]], member: member));
+    return CareTeam(
+      status: status,
+      subject: subject,
+      participant: participant,
+      resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
+      language: language,
+      languageElement: languageElement,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      identifier: identifier,
+      statusElement: statusElement,
+      category: category,
+      name: name,
+      nameElement: nameElement,
+      encounter: encounter,
+      period: period,
+      reasonCode: reasonCode,
+      reasonReference: reasonReference,
+      managingOrganization: managingOrganization,
+      telecom: telecom,
+      note: note,
+    );
+  }
+
+  factory CareTeam.usCoreMinimum({
+    @JsonKey(unknownEnumValue: CareTeamStatus.unknown) CareTeamStatus status,
+    @required Reference subject,
+    @required CareTeamProviderRole role,
+    @required Reference member,
+  }) =>
+      CareTeam.usCore(
+        status: status,
+        subject: subject,
+        role: role,
+        member: member,
+      );
+
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
