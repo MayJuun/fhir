@@ -1,3 +1,8 @@
+## [0.2.1]
+* Updated dependencies
+* Added documentation
+* made it available on web (removed dart:io)
+
 ## [0.2.0]
 * Updated dependencies
 * Attempted to make GCS Client Similar to SmartClient

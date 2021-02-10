@@ -1,7 +1,8 @@
 name: fhir_auth
 description: A Dart/Flutter package for authorization & authentication, includes SMART on FHIR and Google sign-in
-version: 0.2.0
-homepage: https://github.com/MayJuun/fhir/tree/main/fhir_auth
+version: 0.2.1
+homepage: https://www.fhirfli.dev/
+repository: https://github.com/MayJuun/fhir/tree/main/fhir_auth
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

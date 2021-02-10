@@ -1,8 +1,8 @@
 import 'dart:convert';
-import 'dart:io';
 import 'dart:math';
 
 import 'package:dartz/dartz.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart';
 import 'package:flutter_appauth/flutter_appauth.dart';
@@ -82,7 +82,8 @@ class SmartClient extends FhirClient {
       try {
         await _getEndpoints;
       } catch (e) {
-        throw HttpException(e);
+        throw PlatformException(
+            code: e, message: 'Failed to get Auth & Token Endpoints');
       }
     } else {
       authUrl = FhirUri(authUrl);
@@ -91,7 +92,7 @@ class SmartClient extends FhirClient {
     try {
       await _tokens;
     } catch (e) {
-      throw HttpException(e);
+      throw PlatformException(code: e, message: 'Failed to get Access Token');
     }
     isLoggedIn = true;
     return unit;
@@ -115,10 +116,13 @@ class SmartClient extends FhirClient {
         await _refresh;
       }
     }
-    return {
-      HttpHeaders.authorizationHeader:
-          'Bearer ${await secureStorage.read(key: "access_token")}'
+
+    final Map<String, String> authorizationHeaders = {
+      'Content-Type': 'application/fhir+json'
     };
+    authorizationHeaders['Authorization'] =
+        'Bearer ${await secureStorage.read(key: "access_token")}';
+    return authorizationHeaders;
   }
 
   Future<Unit> get _tokens async {
@@ -207,7 +211,7 @@ class SmartClient extends FhirClient {
         result = await get(thisRequest);
       }
       if (_errorCodeMap.containsKey(result.statusCode)) {
-        throw HttpException('StatusCode: ${result.statusCode}\n${result.body}');
+        throw Exception('StatusCode: ${result.statusCode}\n${result.body}');
       }
     }
     Map<String, dynamic> returnResult;
@@ -229,10 +233,10 @@ class SmartClient extends FhirClient {
 
     /// if either authorize or token are still null, we return a failure
     if (authUrl == null) {
-      throw const HttpException('No Authorize Url in CapabilityStatement');
+      throw Exception('No Authorize Url in CapabilityStatement');
     }
     if (tokenUrl == null) {
-      throw const HttpException('No Token Url in CapabilityStatement');
+      throw Exception('No Token Url in CapabilityStatement');
     }
     return unit;
   }

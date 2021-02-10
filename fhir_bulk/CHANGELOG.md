@@ -1,3 +1,6 @@
+## [0.2.1]
+* added documentation
+
 ## [0.2.0]
 * Initia publication (2021-02-09)
 * Recommended for development purposes to work with the ONC guidelines
