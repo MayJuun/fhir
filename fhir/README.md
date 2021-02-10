@@ -205,6 +205,6 @@ Missing "part 'resource.g.dart';".
 
 The full resource lists I've decided it's not worth upkeeping since HL7 does that already.
 ## [Resource Index Dstu2](https://www.hl7.org/fhir/DSTU2/resourcelist.html)
-## [Resource Index Stu3](http://hl7.org/fhir/stu3/resourcelist.html)
+## [Resource Index Stu3](https://hl7.org/fhir/stu3/resourcelist.html)
 ## [Resource Index R4](https://www.hl7.org/fhir/resourcelist.html)
-## [Resource Index R5 Preview #3](http://hl7.org/fhir/2020Sep/resourcelist.html)
+## [Resource Index R5 Preview #3](https://hl7.org/fhir/2020Sep/resourcelist.html)
