@@ -1,6 +1,6 @@
 name: fhir_bulk
 description: A Dart/Flutter package for authorization & authentication, includes SMART on FHIR and Google sign-in
-version: 0.0.1
+version: 0.2.0
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -8,8 +8,7 @@ environment:
 dependencies:
   archive: ^2.0.13
   dartz: ^0.9.2
-  fhir: 
-    path: ../fhir
+  fhir: ^0.2.4
   freezed_annotation: ^0.12.0
   http: ^0.12.2
   mime: ^0.9.7
