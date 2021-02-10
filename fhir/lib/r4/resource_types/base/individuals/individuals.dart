@@ -8,6 +8,7 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'individuals.enums.dart';
+part 'individuals.uscore.dart';
 part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
@@ -478,6 +479,179 @@ abstract class Patient with Resource implements _$Patient {
     Reference managingOrganization,
     List<PatientLink> link,
   }) = _Patient;
+
+  factory Patient.usCore({
+    @Default(R4ResourceType.Patient)
+    @JsonKey(unknownEnumValue: R4ResourceType.Patient)
+        R4ResourceType resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    Code language,
+    @JsonKey(name: '_language') Element languageElement,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    List<PatientUsCoreRace> usCoreRace,
+    List<PatientUsCoreDetailedRace> usCoreDetailedRace,
+    FhirExtension usCoreRaceText,
+    PatientUsCoreEthnicity usCoreEthnicity,
+    List<PatientUsCoreDetailedEthnicity> usCoreDetailedEthnicity,
+    FhirExtension usCoreEthnicityText,
+    PatientUsCoreBirthSex usCoreBirthSex,
+    List<Identifier> identifier,
+    Boolean active,
+    @JsonKey(name: '_active') Element activeElement,
+    List<HumanName> name,
+    List<ContactPoint> telecom,
+    @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender gender,
+    @JsonKey(name: '_gender') Element genderElement,
+    Date birthDate,
+    @JsonKey(name: '_birthDate') Element birthDateElement,
+    Boolean deceasedBoolean,
+    @JsonKey(name: '_deceasedBoolean') Element deceasedBooleanElement,
+    FhirDateTime deceasedDateTime,
+    @JsonKey(name: '_deceasedDateTime') Element deceasedDateTimeElement,
+    List<Address> address,
+    CodeableConcept maritalStatus,
+    Boolean multipleBirthBoolean,
+    @JsonKey(name: '_multipleBirthBoolean') Element multipleBirthBooleanElement,
+    Integer multipleBirthInteger,
+    @JsonKey(name: '_multipleBirthInteger') Element multipleBirthIntegerElement,
+    List<Attachment> photo,
+    List<PatientContact> contact,
+    List<PatientCommunication> communication,
+    List<Reference> generalPractitioner,
+    Reference managingOrganization,
+    List<PatientLink> link,
+  }) {
+    if (usCoreRace != null ||
+        usCoreDetailedRace != null ||
+        usCoreRaceText != null) {
+      extension_ ??= <FhirExtension>[];
+      final raceExtension = FhirExtension(
+          extension_: <FhirExtension>[],
+          url: FhirUri(
+              'http://hl7.org/fhir/us/core/StructureDefinition/us-core-race'));
+      if (usCoreRace != null) {
+        for (final race in usCoreRace) {
+          raceExtension.extension_.add(extensionFromRace[race]);
+        }
+      }
+      if (usCoreDetailedRace != null) {
+        for (final detailedRace in usCoreDetailedRace) {
+          raceExtension.extension_.add(extensionFromDetailedRace[detailedRace]);
+        }
+      }
+      if (usCoreRaceText != null) {
+        raceExtension.extension_.add(usCoreRaceText);
+      }
+      extension_.add(raceExtension);
+    }
+
+    if (usCoreEthnicity != null ||
+        usCoreDetailedEthnicity != null ||
+        usCoreEthnicityText != null) {
+      extension_ ??= <FhirExtension>[];
+      final ethnicityExtension = FhirExtension(
+          extension_: <FhirExtension>[],
+          url: FhirUri(
+              'http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity'));
+      if (usCoreEthnicity != null) {
+        ethnicityExtension.extension_
+            .add(extensionFromEthnicity[usCoreEthnicity]);
+      }
+      if (usCoreDetailedEthnicity != null) {
+        for (final detailedEthnicity in usCoreDetailedEthnicity) {
+          ethnicityExtension.extension_
+              .add(extensionFromDetailedEthnicity[detailedEthnicity]);
+        }
+      }
+      if (usCoreEthnicityText != null) {
+        ethnicityExtension.extension_.add(usCoreEthnicityText);
+      }
+      extension_.add(ethnicityExtension);
+    }
+
+    if (usCoreBirthSex != null) {
+      extension_ ??= <FhirExtension>[];
+      extension_.add(extensionFromBirthSex[usCoreBirthSex]);
+    }
+
+    return Patient(
+      resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
+      language: language,
+      languageElement: languageElement,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      identifier: identifier,
+      active: active,
+      activeElement: activeElement,
+      name: name,
+      telecom: telecom,
+      gender: gender,
+      genderElement: genderElement,
+      birthDate: birthDate,
+      birthDateElement: birthDateElement,
+      deceasedBoolean: deceasedBoolean,
+      deceasedBooleanElement: deceasedBooleanElement,
+      deceasedDateTime: deceasedDateTime,
+      deceasedDateTimeElement: deceasedDateTimeElement,
+      address: address,
+      maritalStatus: maritalStatus,
+      multipleBirthBoolean: multipleBirthBoolean,
+      multipleBirthBooleanElement: multipleBirthBooleanElement,
+      multipleBirthInteger: multipleBirthInteger,
+      multipleBirthIntegerElement: multipleBirthIntegerElement,
+      photo: photo,
+      contact: contact,
+      communication: communication,
+      generalPractitioner: generalPractitioner,
+      managingOrganization: managingOrganization,
+      link: link,
+    );
+  }
+
+  factory Patient.usCoreMinimum({
+    List<PatientUsCoreRace> usCoreRace,
+    List<PatientUsCoreDetailedRace> usCoreDetailedRace,
+    FhirExtension usCoreRaceText,
+    PatientUsCoreEthnicity usCoreEthnicity,
+    List<PatientUsCoreDetailedEthnicity> usCoreDetailedEthnicity,
+    FhirExtension usCoreEthnicityText,
+    PatientUsCoreBirthSex usCoreBirthSex,
+    List<Identifier> identifier,
+    List<HumanName> name,
+    List<ContactPoint> telecom,
+    @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender gender,
+    Date birthDate,
+    List<Address> address,
+    List<PatientCommunication> communication,
+  }) =>
+      Patient.usCore(
+        usCoreRace: usCoreRace,
+        usCoreDetailedRace: usCoreDetailedRace,
+        usCoreRaceText: usCoreRaceText,
+        usCoreEthnicity: usCoreEthnicity,
+        usCoreDetailedEthnicity: usCoreDetailedEthnicity,
+        usCoreEthnicityText: usCoreEthnicityText,
+        usCoreBirthSex: usCoreBirthSex,
+        identifier: identifier,
+        name: name,
+        telecom: telecom,
+        gender: gender,
+        birthDate: birthDate,
+        address: address,
+        communication: communication,
+      );
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());

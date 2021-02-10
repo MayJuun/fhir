@@ -8,6 +8,7 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'summary.enums.dart';
+part 'summary.uscore.dart';
 part 'summary.freezed.dart';
 part 'summary.g.dart';
 
@@ -526,6 +527,108 @@ abstract class AllergyIntolerance
     List<AllergyIntoleranceReaction> reaction,
   }) = _AllergyIntolerance;
 
+  factory AllergyIntolerance.usCore({
+    AllergyIntoleranceClinicalStatus clinicalStatus,
+    AllergyIntoleranceVerificationStatus verificationStatus,
+    @required AllergyIntoleranceIdentity identity,
+    @required Reference patient,
+    List<AllergyIntoleranceReaction> reaction,
+    @Default(R4ResourceType.AllergyIntolerance)
+    @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
+        R4ResourceType resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    Code language,
+    @JsonKey(name: '_language') Element languageElement,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+        AllergyIntoleranceType type,
+    @JsonKey(name: '_type') Element typeElement,
+    List<AllergyIntoleranceCategory> category,
+    @JsonKey(name: '_category') List<Element> categoryElement,
+    @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+        AllergyIntoleranceCriticality criticality,
+    @JsonKey(name: '_criticality') Element criticalityElement,
+    Reference encounter,
+    FhirDateTime onsetDateTime,
+    @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
+    Age onsetAge,
+    Period onsetPeriod,
+    Range onsetRange,
+    String onsetString,
+    @JsonKey(name: '_onsetString') Element onsetStringElement,
+    FhirDateTime recordedDate,
+    @JsonKey(name: '_recordedDate') Element recordedDateElement,
+    Reference recorder,
+    Reference asserter,
+    FhirDateTime lastOccurrence,
+    @JsonKey(name: '_lastOccurrence') Element lastOccurrenceElement,
+    List<Annotation> note,
+  }) =>
+      AllergyIntolerance(
+        clinicalStatus:
+            codeableConceptFromAllergyIntoleranceClinicalStatus[clinicalStatus],
+        verificationStatus:
+            codeableConceptFromVerificationStatus[verificationStatus],
+        code: codeableConceptFromAllergyIntoleranceIdentity[identity],
+        patient: patient,
+        reaction: reaction,
+        resourceType: resourceType,
+        id: id,
+        meta: meta,
+        implicitRules: implicitRules,
+        implicitRulesElement: implicitRulesElement,
+        language: language,
+        languageElement: languageElement,
+        text: text,
+        contained: contained,
+        extension_: extension_,
+        modifierExtension: modifierExtension,
+        identifier: identifier,
+        type: type,
+        typeElement: typeElement,
+        category: category,
+        categoryElement: categoryElement,
+        criticality: criticality,
+        criticalityElement: criticalityElement,
+        encounter: encounter,
+        onsetDateTime: onsetDateTime,
+        onsetDateTimeElement: onsetDateTimeElement,
+        onsetAge: onsetAge,
+        onsetPeriod: onsetPeriod,
+        onsetRange: onsetRange,
+        onsetString: onsetString,
+        onsetStringElement: onsetStringElement,
+        recordedDate: recordedDate,
+        recordedDateElement: recordedDateElement,
+        recorder: recorder,
+        asserter: asserter,
+        lastOccurrence: lastOccurrence,
+        lastOccurrenceElement: lastOccurrenceElement,
+        note: note,
+      );
+
+  factory AllergyIntolerance.usCoreMinimum({
+    AllergyIntoleranceClinicalStatus clinicalStatus,
+    AllergyIntoleranceVerificationStatus verificationStatus,
+    @required AllergyIntoleranceIdentity identity,
+    @required Reference patient,
+    List<AllergyIntoleranceReaction> reaction,
+  }) =>
+      AllergyIntolerance.usCore(
+        clinicalStatus: clinicalStatus,
+        verificationStatus: verificationStatus,
+        identity: identity,
+        patient: patient,
+        reaction: reaction,
+      );
+
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
@@ -624,6 +727,11 @@ abstract class AllergyIntoleranceReaction
     CodeableConcept exposureRoute,
     List<Annotation> note,
   }) = _AllergyIntoleranceReaction;
+
+  factory AllergyIntoleranceReaction.usCoreMinimum({
+    @required List<CodeableConcept> manifestation,
+  }) =>
+      AllergyIntoleranceReaction(manifestation: manifestation);
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -1181,6 +1289,116 @@ abstract class Condition with Resource implements _$Condition {
     List<ConditionEvidence> evidence,
     List<Annotation> note,
   }) = _Condition;
+
+  factory Condition.usCore({
+    ConditionClinicalStatus clinicalStatus,
+    ConditionVerificationStatus verificationStatus,
+    @required ConditionCategory conditionCategory,
+    @required CodeableConcept code,
+    @required Reference subject,
+    @Default(R4ResourceType.Condition)
+    @JsonKey(unknownEnumValue: R4ResourceType.Condition)
+        R4ResourceType resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    Code language,
+    @JsonKey(name: '_language') Element languageElement,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    List<CodeableConcept> category,
+    CodeableConcept severity,
+    List<CodeableConcept> bodySite,
+    Reference encounter,
+    FhirDateTime onsetDateTime,
+    @JsonKey(name: '_onsetDateTime') Element onsetDateTimeElement,
+    Age onsetAge,
+    Period onsetPeriod,
+    Range onsetRange,
+    String onsetString,
+    @JsonKey(name: '_onsetString') Element onsetStringElement,
+    FhirDateTime abatementDateTime,
+    @JsonKey(name: '_abatementDateTime') Element abatementDateTimeElement,
+    Age abatementAge,
+    Period abatementPeriod,
+    Range abatementRange,
+    String abatementString,
+    @JsonKey(name: '_abatementString') Element abatementStringElement,
+    FhirDateTime recordedDate,
+    @JsonKey(name: '_recordedDate') Element recordedDateElement,
+    Reference recorder,
+    Reference asserter,
+    List<ConditionStage> stage,
+    List<ConditionEvidence> evidence,
+    List<Annotation> note,
+  }) {
+    category ??= <CodeableConcept>[];
+    category.add(codeableConceptFromConditionCategory[category]);
+    return Condition(
+      clinicalStatus:
+          codeableConceptFromConditionClinicalStatus[clinicalStatus],
+      verificationStatus:
+          codeableConceptFromVerificationStatus[verificationStatus],
+      category: category,
+      code: code,
+      subject: subject,
+      resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
+      language: language,
+      languageElement: languageElement,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      identifier: identifier,
+      severity: severity,
+      bodySite: bodySite,
+      encounter: encounter,
+      onsetDateTime: onsetDateTime,
+      onsetDateTimeElement: onsetDateTimeElement,
+      onsetAge: onsetAge,
+      onsetPeriod: onsetPeriod,
+      onsetRange: onsetRange,
+      onsetString: onsetString,
+      onsetStringElement: onsetStringElement,
+      abatementDateTime: abatementDateTime,
+      abatementDateTimeElement: abatementDateTimeElement,
+      abatementAge: abatementAge,
+      abatementPeriod: abatementPeriod,
+      abatementRange: abatementRange,
+      abatementString: abatementString,
+      abatementStringElement: abatementStringElement,
+      recordedDate: recordedDate,
+      recordedDateElement: recordedDateElement,
+      recorder: recorder,
+      asserter: asserter,
+      stage: stage,
+      evidence: evidence,
+      note: note,
+    );
+  }
+
+  factory Condition.usCoreMinimum({
+    ConditionClinicalStatus clinicalStatus,
+    ConditionVerificationStatus verificationStatus,
+    @required ConditionCategory conditionCategory,
+    @required CodeableConcept code,
+    @required Reference subject,
+  }) =>
+      Condition.usCore(
+        clinicalStatus: clinicalStatus,
+        verificationStatus: verificationStatus,
+        conditionCategory: conditionCategory,
+        code: code,
+        subject: subject,
+      );
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());

@@ -8,6 +8,7 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'care_provision.enums.dart';
+part 'care_provision.uscore.dart';
 part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';
 
@@ -199,6 +200,115 @@ abstract class CarePlan with Resource implements _$CarePlan {
     List<CarePlanActivity> activity,
     List<Annotation> note,
   }) = _CarePlan;
+
+  factory CarePlan.usCore({
+    @required NarrativeStatus narrativeStatus,
+    @required CarePlanStatus status,
+    @required CarePlanIntent intent,
+    @required Reference subject,
+    @Default(R4ResourceType.CarePlan)
+    @JsonKey(unknownEnumValue: R4ResourceType.CarePlan)
+        R4ResourceType resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    Code language,
+    @JsonKey(name: '_language') Element languageElement,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    List<Canonical> instantiatesCanonical,
+    List<FhirUri> instantiatesUri,
+    @JsonKey(name: '_instantiatesUri') List<Element> instantiatesUriElement,
+    List<Reference> basedOn,
+    List<Reference> replaces,
+    List<Reference> partOf,
+    @JsonKey(name: '_status') Element statusElement,
+    @JsonKey(name: '_intent') Element intentElement,
+    List<CodeableConcept> category,
+    String title,
+    @JsonKey(name: '_title') Element titleElement,
+    String description,
+    @JsonKey(name: '_description') Element descriptionElement,
+    Reference encounter,
+    Period period,
+    FhirDateTime created,
+    @JsonKey(name: '_created') Element createdElement,
+    Reference author,
+    List<Reference> contributor,
+    List<Reference> careTeam,
+    List<Reference> addresses,
+    List<Reference> supportingInfo,
+    List<Reference> goal,
+    List<CarePlanActivity> activity,
+    List<Annotation> note,
+  }) {
+    category ??= <CodeableConcept>[];
+    category.add(CodeableConcept(coding: [
+      Coding(
+        system:
+            FhirUri('http://hl7.org/fhir/us/core/CodeSystem/careplan-category'),
+        code: Code('assess-plan'),
+      )
+    ]));
+    return CarePlan(
+      text: Narrative(status: narrativeStatus, div: ''),
+      status: codeFromCarePlanStatus[status],
+      intent: codeFromCarePlanIntent[intent],
+      subject: subject,
+      category: category,
+      resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
+      language: language,
+      languageElement: languageElement,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      identifier: identifier,
+      instantiatesCanonical: instantiatesCanonical,
+      instantiatesUri: instantiatesUri,
+      instantiatesUriElement: instantiatesUriElement,
+      basedOn: basedOn,
+      replaces: replaces,
+      partOf: partOf,
+      statusElement: statusElement,
+      intentElement: intentElement,
+      title: title,
+      titleElement: titleElement,
+      description: description,
+      descriptionElement: descriptionElement,
+      encounter: encounter,
+      period: period,
+      created: created,
+      createdElement: createdElement,
+      author: author,
+      contributor: contributor,
+      careTeam: careTeam,
+      addresses: addresses,
+      supportingInfo: supportingInfo,
+      goal: goal,
+      activity: activity,
+      note: note,
+    );
+  }
+
+  factory CarePlan.usCoreMinimum({
+    @required NarrativeStatus narrativeStatus,
+    @required CarePlanStatus status,
+    @required CarePlanIntent intent,
+    @required Reference subject,
+  }) =>
+      CarePlan.usCore(
+        narrativeStatus: narrativeStatus,
+        status: status,
+        intent: intent,
+        subject: subject,
+      );
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -585,6 +695,84 @@ abstract class CareTeam with Resource implements _$CareTeam {
     List<ContactPoint> telecom,
     List<Annotation> note,
   }) = _CareTeam;
+
+  factory CareTeam.usCore({
+    @JsonKey(unknownEnumValue: CareTeamStatus.unknown) CareTeamStatus status,
+    @required Reference subject,
+    @required CareTeamProviderRole role,
+    @required Reference member,
+    @Default(R4ResourceType.CareTeam)
+    @JsonKey(unknownEnumValue: R4ResourceType.CareTeam)
+        R4ResourceType resourceType,
+    Id id,
+    Meta meta,
+    FhirUri implicitRules,
+    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
+    Code language,
+    @JsonKey(name: '_language') Element languageElement,
+    Narrative text,
+    List<Resource> contained,
+    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    List<FhirExtension> modifierExtension,
+    List<Identifier> identifier,
+    @JsonKey(name: '_status') Element statusElement,
+    List<CodeableConcept> category,
+    String name,
+    @JsonKey(name: '_name') Element nameElement,
+    Reference encounter,
+    Period period,
+    List<CareTeamParticipant> participant,
+    List<CodeableConcept> reasonCode,
+    List<Reference> reasonReference,
+    List<Reference> managingOrganization,
+    List<ContactPoint> telecom,
+    List<Annotation> note,
+  }) {
+    participant ??= <CareTeamParticipant>[];
+    participant.add(CareTeamParticipant(
+        role: [codeableConceptFromProviderRole[role]], member: member));
+    return CareTeam(
+      status: status,
+      subject: subject,
+      participant: participant,
+      resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
+      language: language,
+      languageElement: languageElement,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      identifier: identifier,
+      statusElement: statusElement,
+      category: category,
+      name: name,
+      nameElement: nameElement,
+      encounter: encounter,
+      period: period,
+      reasonCode: reasonCode,
+      reasonReference: reasonReference,
+      managingOrganization: managingOrganization,
+      telecom: telecom,
+      note: note,
+    );
+  }
+
+  factory CareTeam.usCoreMinimum({
+    @JsonKey(unknownEnumValue: CareTeamStatus.unknown) CareTeamStatus status,
+    @required Reference subject,
+    @required CareTeamProviderRole role,
+    @required Reference member,
+  }) =>
+      CareTeam.usCore(
+        status: status,
+        subject: subject,
+        role: role,
+        member: member,
+      );
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
