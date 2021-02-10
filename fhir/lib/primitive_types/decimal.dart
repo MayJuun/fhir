@@ -40,7 +40,7 @@ class Decimal {
   int get hashCode => value.hashCode;
 }
 
-bool _checkIfInt(dynamic value) => int.tryParse(value) != null;
+bool _checkIfInt(dynamic value) => int.tryParse(value.toString()) != null;
 
 Either<String, double> _validateDecimal(dynamic value) =>
     double.tryParse(value.toString()) != null

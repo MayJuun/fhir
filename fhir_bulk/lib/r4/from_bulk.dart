@@ -6,6 +6,15 @@ import 'package:mime/mime.dart';
 import 'package:archive/archive.dart';
 
 abstract class FhirBulk {
+  static String toNdJson(List<Resource> resources) {
+    String stringList = '';
+    for (final resource in resources) {
+      stringList += '\n${json.encode(resource.toJson())}';
+    }
+    stringList = stringList.replaceFirst('\n', '');
+    return stringList;
+  }
+
   static List<Resource> fromData(String content) {
     final resourceStrings = content.split('\n');
     final resourceList = <Resource>[];
@@ -40,11 +49,11 @@ abstract class FhirBulk {
         }
       }
     } else if (contentType == 'application/x-tar') {
-      final archive = TarDecoder().decodeBytes(content);
+      final unzipped = GZipDecoder().decodeBytes(content);
+      final archive = TarDecoder().decodeBytes(unzipped);
       for (final file in archive) {
         if (file.isFile) {
-          final data = GZipDecoder().decodeBytes(content);
-          resourceList.addAll(fromData(utf8.decode(data)));
+          resourceList.addAll(fromData(utf8.decode(file.content as List<int>)));
         }
       }
     } else if (contentType == 'application/gzip') {
