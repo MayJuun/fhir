@@ -8,6 +8,7 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'documents.enums.dart';
+part 'documents.uscore.dart';
 part 'documents.freezed.dart';
 part 'documents.g.dart';
 
@@ -1112,6 +1113,61 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     @required List<DocumentReferenceContent> content,
     DocumentReferenceContext context,
   }) = _DocumentReference;
+
+  factory DocumentReference.usCore({
+    List<Identifier> identifier,
+    @required DocumentReferenceStatus status,
+    @required CodeableConcept type,
+    @required List<CodeableConcept> category,
+    @required Reference subject,
+    Instant date,
+    List<Reference> author,
+    Reference custodian,
+    @required List<DocumentReferenceContent> content,
+    DocumentReferenceContext context,
+  }) =>
+      DocumentReference(
+        identifier: identifier,
+        status: status,
+        type: type,
+        category: category,
+        subject: subject,
+        date: date,
+        author: author,
+        custodian: custodian,
+        content: content,
+        context: context,
+      );
+
+  factory DocumentReference.usCoreMinimum({
+    @required DocumentReferenceStatus status,
+    @required DocumentReferenceType documentReferenceType,
+    List<CodeableConcept> category,
+    @required Reference subject,
+    @required List<DocumentReferenceContent> content,
+  }) {
+    category ??= <CodeableConcept>[];
+    category.add(
+      CodeableConcept(
+        coding: [
+          Coding(
+            system: FhirUri(
+                'http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category'),
+            code: Code('clinical-note'),
+            display: 'Clinical Note',
+          ),
+        ],
+        text: 'Clinical Note',
+      ),
+    );
+    return DocumentReference.usCore(
+      status: status,
+      type: codeableConceptFromDocumentReferenceType[documentReferenceType],
+      category: category,
+      subject: subject,
+      content: content,
+    );
+  }
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());

@@ -8,6 +8,7 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'diagnostics.enums.dart';
+part 'diagnostics.uscore.dart';
 part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 
@@ -316,6 +317,97 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
     List<CodeableConcept> conclusionCode,
     List<Attachment> presentedForm,
   }) = _DiagnosticReport;
+
+  factory DiagnosticReport.usCore({
+    @required DiagnosticReportStatus status,
+    @required List<CodeableConcept> category,
+    @required CodeableConcept code,
+    @required Reference subject,
+    FhirDateTime effectiveDateTime,
+    Period effectivePeriod,
+    Instant issued,
+    Reference encounter,
+    List<Reference> performer,
+    List<Attachment> presentedForm,
+    List<Reference> result,
+  }) {
+    return DiagnosticReport(
+      status: status,
+      category: category,
+      code: code,
+      subject: subject,
+      encounter: encounter,
+      effectiveDateTime: effectiveDateTime,
+      effectivePeriod: effectivePeriod,
+      issued: issued,
+      performer: performer,
+      presentedForm: presentedForm,
+      result: result,
+    );
+  }
+
+  factory DiagnosticReport.usCoreLaboratoryResultsReporting({
+    @required DiagnosticReportStatus status,
+    @required CodeableConcept code,
+    @required Reference subject,
+    FhirDateTime effectiveDateTime,
+    Period effectivePeriod,
+    @required Instant issued,
+    List<Reference> performer,
+    List<Reference> result,
+  }) {
+    List<CodeableConcept> category = [
+      CodeableConcept(
+        coding: [
+          Coding(
+            system: FhirUri('http://terminology.hl7.org/CodeSystem/v2-0074'),
+            code: Code('LAB'),
+          ),
+        ],
+      ),
+    ];
+    return DiagnosticReport.usCore(
+      status: status,
+      category: category,
+      code: code,
+      subject: subject,
+      effectiveDateTime: effectiveDateTime,
+      effectivePeriod: effectivePeriod,
+      issued: issued,
+      performer: performer,
+      result: result,
+    );
+  }
+
+  factory DiagnosticReport.usCoreReportAndNoteExchange({
+    @required DiagnosticReportStatus status,
+    @required CodeableConcept diagnosticReportCategory,
+    List<CodeableConcept> category,
+    @required CodeableConcept code,
+    @required Reference subject,
+    Reference encounter,
+    FhirDateTime effectiveDateTime,
+    Period effectivePeriod,
+    Instant issued,
+    List<Reference> performer,
+    List<Attachment> presentedForm,
+  }) {
+    category ??= <CodeableConcept>[];
+    category.add(
+        codeableConceptFromDiagnosticReportCategory[diagnosticReportCategory]);
+    return DiagnosticReport.usCore(
+      status: status,
+      category: category,
+      code: code,
+      subject: subject,
+      encounter: encounter,
+      effectiveDateTime: effectiveDateTime,
+      effectivePeriod: effectivePeriod,
+      issued: issued,
+      performer: performer,
+      presentedForm: presentedForm,
+    );
+  }
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
