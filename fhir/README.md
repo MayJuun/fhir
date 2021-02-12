@@ -93,11 +93,6 @@ final allergyIntolerance = AllergyIntolerance.usCoreMinimum();
 This will still create a patient object that can be used like any other. However, when initially constructing it, the available parameters to pass in are only those that are included in the US Core IG.
 
 ToDo:
-US Core Encounter Profile
-US Core Goal Profile
-US Core Immunization Profile
-US Core Implantable Device Profile
-US Core Laboratory Result Observation Profile
 US Core Location Profile
 US Core Medication Profile
 US Core MedicationRequest Profile

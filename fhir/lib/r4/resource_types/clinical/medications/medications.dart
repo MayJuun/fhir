@@ -8,6 +8,7 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'medications.freezed.dart';
+part 'medications.uscore.dart';
 part 'medications.g.dart';
 
 @freezed
@@ -217,6 +218,25 @@ abstract class Immunization with Resource implements _$Immunization {
     List<ImmunizationReaction> reaction,
     List<ImmunizationProtocolApplied> protocolApplied,
   }) = _Immunization;
+
+  factory Immunization.usCore({
+    @required ImmunizationStatus status,
+    ImmunizationStatusReason statusReason,
+    @required ImmunizationVaccineCode vaccineCode,
+    @required Reference patient,
+    FhirDateTime occurrenceDateTime,
+    String occurrenceString,
+    @required Boolean primarySource,
+  }) =>
+      Immunization(
+        status: codeFromImmunizationStatus[status],
+        statusReason: codeableConceptFromImmunizationStatusReason[statusReason],
+        vaccineCode: codeableConceptFromImmunizationVaccineCode[vaccineCode],
+        patient: patient,
+        occurrenceDateTime: occurrenceDateTime,
+        occurrenceString: occurrenceString,
+        primarySource: primarySource,
+      );
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());

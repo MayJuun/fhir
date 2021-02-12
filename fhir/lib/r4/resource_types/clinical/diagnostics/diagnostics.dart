@@ -2375,6 +2375,71 @@ abstract class Observation with Resource implements _$Observation {
     List<ObservationComponent> component,
   }) = _Observation;
 
+  factory Observation.usCore({
+    @required ObservationStatus status,
+    List<CodeableConcept> category,
+    @required CodeableConcept code,
+    @required Reference subject,
+    FhirDateTime effectiveDateTime,
+    Period effectivePeriod,
+    Quantity valueQuantity,
+    CodeableConcept valueCodeableConcept,
+    String valueString,
+    Boolean valueBoolean,
+    Integer valueInteger,
+    Range valueRange,
+    Ratio valueRatio,
+    SampledData valueSampledData,
+    Time valueTime,
+    FhirDateTime valueDateTime,
+    Period valuePeriod,
+    ObservationDataAbsentReason observationDataAbsentReason,
+  }) {
+    category ??= <CodeableConcept>[];
+    category.add(
+      CodeableConcept(
+        coding: [
+          Coding(
+            system: FhirUri(
+                'http://terminology.hl7.org/CodeSystem/observation-category'),
+            code: Code('laboratory'),
+            display: 'Laboratory',
+          ),
+        ],
+        text: 'Laboratory',
+      ),
+    );
+
+    return Observation(
+      status: status,
+      code: code,
+      subject: subject,
+      category: category,
+      effectiveDateTime: effectiveDateTime,
+      effectivePeriod: effectivePeriod,
+      valueQuantity: valueQuantity,
+      valueCodeableConcept: valueCodeableConcept,
+      valueString: valueString,
+      valueBoolean: valueBoolean,
+      valueInteger: valueInteger,
+      valueRange: valueRange,
+      valueRatio: valueRatio,
+      valueSampledData: valueSampledData,
+      valueTime: valueTime,
+      valueDateTime: valueDateTime,
+      valuePeriod: valuePeriod,
+      dataAbsentReason: codeableConceptFromObservationDataAbsentReason[
+          observationDataAbsentReason],
+    );
+  }
+
+  factory Observation.usCoreMinimum({
+    @required ObservationStatus status,
+    @required CodeableConcept code,
+    @required Reference subject,
+  }) =>
+      Observation.usCore(status: status, code: code, subject: subject);
+
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 

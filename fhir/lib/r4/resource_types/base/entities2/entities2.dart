@@ -662,6 +662,31 @@ abstract class Device with Resource implements _$Device {
     Reference parent,
   }) = _Device;
 
+  factory Device.usCore({
+    DeviceUdiCarrier udiCarrier,
+    String distinctIdentifier,
+    FhirDateTime manufactureDate,
+    FhirDateTime expirationDate,
+    String lotNumber,
+    @required CodeableConcept type,
+    @required Reference patient,
+  }) =>
+      Device(
+        udiCarrier: [udiCarrier],
+        distinctIdentifier: distinctIdentifier,
+        manufactureDate: manufactureDate,
+        expirationDate: expirationDate,
+        lotNumber: lotNumber,
+        type: type,
+        patient: patient,
+      );
+
+  factory Device.usCoreMinimum({
+    @required CodeableConcept type,
+    @required Reference patient,
+  }) =>
+      Device.usCore(type: type, patient: patient);
+
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
