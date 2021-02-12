@@ -2440,6 +2440,30 @@ abstract class Observation with Resource implements _$Observation {
   }) =>
       Observation.usCore(status: status, code: code, subject: subject);
 
+  factory Observation.usCorePediatricBmiForAge({
+    @required Reference subject,
+    @required double bmiPercentForAge,
+  }) =>
+      Observation(
+        subject: subject,
+        code: CodeableConcept(
+          coding: [
+            Coding(
+              system: FhirUri('http://loinc.org'),
+              code: Code('59576-9'),
+              display: 'Body mass index (BMI) [Percentile] Per age and sex',
+            ),
+          ],
+          text: 'BMI',
+        ),
+        valueQuantity: Quantity(
+          value: Decimal(bmiPercentForAge),
+          unit: '%',
+          system: FhirUri('http://unitsofmeasure.org'),
+          code: Code('%'),
+        ),
+      );
+
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
