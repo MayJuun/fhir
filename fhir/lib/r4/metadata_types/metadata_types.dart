@@ -607,7 +607,7 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-        RelatedArtifactType type,
+        RelatedArtifactType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
@@ -690,7 +690,7 @@ abstract class TriggerDefinition implements _$TriggerDefinition {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-        TriggerDefinitionType type,
+        TriggerDefinitionType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -830,7 +830,7 @@ abstract class Expression implements _$Expression {
     Id? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
-        ExpressionLanguage language,
+        ExpressionLanguage? language,
     @JsonKey(name: '_language') Element? languageElement,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,

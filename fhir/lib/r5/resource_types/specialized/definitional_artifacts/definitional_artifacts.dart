@@ -348,7 +348,7 @@ abstract class ConditionDefinitionPrecondition
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConditionDefinitionPreconditionType.unknown)
-        ConditionDefinitionPreconditionType type,
+        ConditionDefinitionPreconditionType? type,
     @JsonKey(name: '_type') Element? typeElement,
     required CodeableConcept? code,
     CodeableConcept? valueCodeableConcept,
@@ -384,7 +384,7 @@ abstract class ConditionDefinitionQuestionnaire
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConditionDefinitionQuestionnairePurpose.unknown)
-        ConditionDefinitionQuestionnairePurpose purpose,
+        ConditionDefinitionQuestionnairePurpose? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     required Reference? reference,
   }) = _ConditionDefinitionQuestionnaire;
@@ -546,7 +546,7 @@ abstract class DeviceDefinitionDeviceName
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: DeviceDefinitionDeviceNameType.unknown)
-        DeviceDefinitionDeviceNameType type,
+        DeviceDefinitionDeviceNameType? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _DeviceDefinitionDeviceName;
 
@@ -721,7 +721,7 @@ abstract class EventDefinition with Resource implements _$EventDefinition {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: EventDefinitionStatus.unknown)
-        EventDefinitionStatus status,
+        EventDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -835,7 +835,7 @@ abstract class ObservationDefinition
         List<Element>? permittedDataTypeElement,
     Boolean? multipleResultsAllowed,
     @JsonKey(name: '_multipleResultsAllowed')
-        Element multipleResultsAllowedElement,
+        Element? multipleResultsAllowedElement,
     CodeableConcept? bodySite,
     CodeableConcept? method,
     Reference? specimen,
@@ -916,13 +916,13 @@ abstract class ObservationDefinitionQualifiedInterval
     @JsonKey(
         unknownEnumValue:
             ObservationDefinitionQualifiedIntervalCategory.unknown)
-        ObservationDefinitionQualifiedIntervalCategory category,
+        ObservationDefinitionQualifiedIntervalCategory? category,
     @JsonKey(name: '_category') Element? categoryElement,
     Range? range,
     CodeableConcept? context,
     List<CodeableConcept>? appliesTo,
     @JsonKey(unknownEnumValue: ObservationDefinitionQualifiedIntervalGender.unknown)
-        ObservationDefinitionQualifiedIntervalGender gender,
+        ObservationDefinitionQualifiedIntervalGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Range? age,
     Range? gestationalAge,
@@ -1013,7 +1013,7 @@ abstract class PlanDefinition with Resource implements _$PlanDefinition {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
-        PlanDefinitionStatus status,
+        PlanDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1173,19 +1173,19 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
     List<PlanDefinitionParticipant>? participant,
     CodeableConcept? type,
     @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
-        PlanDefinitionActionGroupingBehavior groupingBehavior,
+        PlanDefinitionActionGroupingBehavior? groupingBehavior,
     @JsonKey(name: '_groupingBehavior') Element? groupingBehaviorElement,
     @JsonKey(unknownEnumValue: PlanDefinitionActionSelectionBehavior.unknown)
-        PlanDefinitionActionSelectionBehavior selectionBehavior,
+        PlanDefinitionActionSelectionBehavior? selectionBehavior,
     @JsonKey(name: '_selectionBehavior') Element? selectionBehaviorElement,
     @JsonKey(unknownEnumValue: PlanDefinitionActionRequiredBehavior.unknown)
         PlanDefinitionActionRequiredBehavior requiredBehavior,
     @JsonKey(name: '_requiredBehavior') Element? requiredBehaviorElement,
     @JsonKey(unknownEnumValue: PlanDefinitionActionPrecheckBehavior.unknown)
-        PlanDefinitionActionPrecheckBehavior precheckBehavior,
+        PlanDefinitionActionPrecheckBehavior? precheckBehavior,
     @JsonKey(name: '_precheckBehavior') Element? precheckBehaviorElement,
     @JsonKey(unknownEnumValue: PlanDefinitionActionCardinalityBehavior.unknown)
-        PlanDefinitionActionCardinalityBehavior cardinalityBehavior,
+        PlanDefinitionActionCardinalityBehavior? cardinalityBehavior,
     @JsonKey(name: '_cardinalityBehavior') Element? cardinalityBehaviorElement,
     Canonical? definitionCanonical,
     @JsonKey(name: '_definitionCanonical') Element? definitionCanonicalElement,
@@ -1221,7 +1221,7 @@ abstract class PlanDefinitionCondition implements _$PlanDefinitionCondition {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: PlanDefinitionConditionKind.unknown)
-        PlanDefinitionConditionKind kind,
+        PlanDefinitionConditionKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     Expression? expression,
   }) = _PlanDefinitionCondition;
@@ -1287,7 +1287,7 @@ abstract class PlanDefinitionParticipant
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
-        PlanDefinitionParticipantType type,
+        PlanDefinitionParticipantType? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? role,
   }) = _PlanDefinitionParticipant;
@@ -1368,7 +1368,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-        QuestionnaireStatus status,
+        QuestionnaireStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1431,11 +1431,11 @@ abstract class QuestionnaireItem implements _$QuestionnaireItem {
     String? text,
     @JsonKey(name: '_text') Element? textElement,
     @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-        QuestionnaireItemType type,
+        QuestionnaireItemType? type,
     @JsonKey(name: '_type') Element? typeElement,
     List<QuestionnaireEnableWhen>? enableWhen,
     @JsonKey(unknownEnumValue: QuestionnaireItemEnableBehavior.unknown)
-        QuestionnaireItemEnableBehavior enableBehavior,
+        QuestionnaireItemEnableBehavior? enableBehavior,
     @JsonKey(name: '_enableBehavior') Element? enableBehaviorElement,
     @JsonKey(name: 'required') Boolean? required_,
     @JsonKey(name: '_required') Element? requiredElement,
@@ -1478,7 +1478,7 @@ abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
     String? question,
     @JsonKey(name: '_question') Element? questionElement,
     @JsonKey(name: 'operator', unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
-        QuestionnaireEnableWhenOperator operator_,
+        QuestionnaireEnableWhenOperator? operator_,
     @JsonKey(name: '_operator') Element? operatorElement,
     Boolean? answerBoolean,
     @JsonKey(name: '_answerBoolean') Element? answerBooleanElement,
@@ -1691,7 +1691,7 @@ abstract class SpecimenDefinitionTypeTested
     @JsonKey(name: '_isDerived') Element? isDerivedElement,
     CodeableConcept? type,
     @JsonKey(unknownEnumValue: SpecimenDefinitionTypeTestedPreference.unknown)
-        SpecimenDefinitionTypeTestedPreference preference,
+        SpecimenDefinitionTypeTestedPreference? preference,
     @JsonKey(name: '_preference') Element? preferenceElement,
     SpecimenDefinitionContainer? container,
     String? requirement,

@@ -1415,13 +1415,13 @@ abstract class EvidenceVariableCharacteristic
     @JsonKey(name: '_exclude') Element? excludeElement,
     FhirDateTime? participantEffectiveDateTime,
     @JsonKey(name: '_participantEffectiveDateTime')
-        Element participantEffectiveDateTimeElement,
+        Element? participantEffectiveDateTimeElement,
     Period? participantEffectivePeriod,
     FhirDuration? participantEffectiveDuration,
     Timing? participantEffectiveTiming,
     FhirDuration? timeFromStart,
     @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
-        EvidenceVariableCharacteristicGroupMeasure groupMeasure,
+        EvidenceVariableCharacteristicGroupMeasure? groupMeasure,
     @JsonKey(name: '_groupMeasure') Element? groupMeasureElement,
   }) = _EvidenceVariableCharacteristic;
 
@@ -1705,7 +1705,7 @@ abstract class ResearchDefinition
     String? subtitle,
     @JsonKey(name: '_subtitle') Element? subtitleElement,
     @JsonKey(unknownEnumValue: ResearchDefinitionStatus.unknown)
-        ResearchDefinitionStatus status,
+        ResearchDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2030,7 +2030,7 @@ abstract class ResearchElementDefinition
     String? subtitle,
     @JsonKey(name: '_subtitle') Element? subtitleElement,
     @JsonKey(unknownEnumValue: ResearchElementDefinitionStatus.unknown)
-        ResearchElementDefinitionStatus status,
+        ResearchElementDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2066,10 +2066,10 @@ abstract class ResearchElementDefinition
     List<RelatedArtifact>? relatedArtifact,
     @JsonKey(name: 'library') List<Canonical>? library_,
     @JsonKey(unknownEnumValue: ResearchElementDefinitionType.unknown)
-        ResearchElementDefinitionType type,
+        ResearchElementDefinitionType? type,
     @JsonKey(name: '_type') Element? typeElement,
     @JsonKey(unknownEnumValue: ResearchElementDefinitionVariableType.unknown)
-        ResearchElementDefinitionVariableType variableType,
+        ResearchElementDefinitionVariableType? variableType,
     @JsonKey(name: '_variableType') Element? variableTypeElement,
     required List<ResearchElementDefinitionCharacteristic>? characteristic,
   }) = _ResearchElementDefinition;
@@ -2226,10 +2226,10 @@ abstract class ResearchElementDefinitionCharacteristic
     CodeableConcept? unitOfMeasure,
     String? studyEffectiveDescription,
     @JsonKey(name: '_studyEffectiveDescription')
-        Element studyEffectiveDescriptionElement,
+        Element? studyEffectiveDescriptionElement,
     FhirDateTime? studyEffectiveDateTime,
     @JsonKey(name: '_studyEffectiveDateTime')
-        Element studyEffectiveDateTimeElement,
+        Element? studyEffectiveDateTimeElement,
     Period? studyEffectivePeriod,
     FhirDuration? studyEffectiveDuration,
     Timing? studyEffectiveTiming,
@@ -2238,16 +2238,16 @@ abstract class ResearchElementDefinitionCharacteristic
         unknownEnumValue:
             ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
                 .unknown)
-        ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure
+        ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasure?
             studyEffectiveGroupMeasure,
     @JsonKey(name: '_studyEffectiveGroupMeasure')
-        Element studyEffectiveGroupMeasureElement,
+        Element? studyEffectiveGroupMeasureElement,
     String? participantEffectiveDescription,
     @JsonKey(name: '_participantEffectiveDescription')
-        Element participantEffectiveDescriptionElement,
+        Element? participantEffectiveDescriptionElement,
     FhirDateTime? participantEffectiveDateTime,
     @JsonKey(name: '_participantEffectiveDateTime')
-        Element participantEffectiveDateTimeElement,
+        Element? participantEffectiveDateTimeElement,
     Period? participantEffectivePeriod,
     FhirDuration? participantEffectiveDuration,
     Timing? participantEffectiveTiming,
@@ -2256,10 +2256,10 @@ abstract class ResearchElementDefinitionCharacteristic
         unknownEnumValue:
             ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
                 .unknown)
-        ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure
+        ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasure?
             participantEffectiveGroupMeasure,
     @JsonKey(name: '_participantEffectiveGroupMeasure')
-        Element participantEffectiveGroupMeasureElement,
+        Element? participantEffectiveGroupMeasureElement,
   }) = _ResearchElementDefinitionCharacteristic;
 
   /// Produces a Yaml formatted String version of the object
@@ -2501,7 +2501,7 @@ abstract class RiskEvidenceSynthesis
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: RiskEvidenceSynthesisStatus.unknown)
-        RiskEvidenceSynthesisStatus status,
+        RiskEvidenceSynthesisStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,

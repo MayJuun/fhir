@@ -936,12 +936,12 @@ abstract class ImmunizationRecommendationRecommendation
     @JsonKey(name: '_series') Element? seriesElement,
     PositiveInt? doseNumberPositiveInt,
     @JsonKey(name: '_doseNumberPositiveInt')
-        Element doseNumberPositiveIntElement,
+        Element? doseNumberPositiveIntElement,
     String? doseNumberString,
     @JsonKey(name: '_doseNumberString') Element? doseNumberStringElement,
     PositiveInt? seriesDosesPositiveInt,
     @JsonKey(name: '_seriesDosesPositiveInt')
-        Element seriesDosesPositiveIntElement,
+        Element? seriesDosesPositiveIntElement,
     String? seriesDosesString,
     @JsonKey(name: '_seriesDosesString') Element? seriesDosesStringElement,
     List<Reference>? supportingImmunization,
@@ -2218,7 +2218,7 @@ abstract class MedicationKnowledge
     List<MedicationKnowledgeIngredient>? ingredient,
     Markdown? preparationInstruction,
     @JsonKey(name: '_preparationInstruction')
-        Element preparationInstructionElement,
+        Element? preparationInstructionElement,
     List<CodeableConcept>? intendedRoute,
     List<MedicationKnowledgeCost>? cost,
     List<MedicationKnowledgeMonitoringProgram>? monitoringProgram,
@@ -3672,7 +3672,7 @@ abstract class MedicationRequestDispenseRequest
     Period? validityPeriod,
     UnsignedInt? numberOfRepeatsAllowed,
     @JsonKey(name: '_numberOfRepeatsAllowed')
-        Element numberOfRepeatsAllowedElement,
+        Element? numberOfRepeatsAllowedElement,
     Quantity? quantity,
     FhirDuration? expectedSupplyDuration,
     Reference? performer,

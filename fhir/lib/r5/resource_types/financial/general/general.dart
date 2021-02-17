@@ -249,7 +249,7 @@ abstract class ChargeItemDefinition
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
-        ChargeItemDefinitionStatus status,
+        ChargeItemDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1048,7 +1048,7 @@ abstract class ExplanationOfBenefit
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
-        ExplanationOfBenefitStatus status,
+        ExplanationOfBenefitStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required CodeableConcept? type,
     CodeableConcept? subType,
@@ -1793,7 +1793,7 @@ abstract class ExplanationOfBenefitProcessNote
     PositiveInt? number,
     @JsonKey(name: '_number') Element? numberElement,
     @JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown)
-        ExplanationOfBenefitProcessNoteType type,
+        ExplanationOfBenefitProcessNoteType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -1917,7 +1917,7 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
-        InsurancePlanStatus status,
+        InsurancePlanStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? type,
     String? name,

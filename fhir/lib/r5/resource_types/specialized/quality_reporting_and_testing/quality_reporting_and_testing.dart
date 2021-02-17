@@ -284,10 +284,10 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
-        MeasureReportStatus status,
+        MeasureReportStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     @JsonKey(unknownEnumValue: MeasureReportType.unknown)
-        MeasureReportType type,
+        MeasureReportType? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Canonical? measure,
     Reference? subject,
@@ -515,7 +515,7 @@ abstract class TestReport with Resource implements _$TestReport {
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: TestReportStatus.unknown)
-        TestReportStatus status,
+        TestReportStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Reference? testScript,
     @JsonKey(unknownEnumValue: TestReportResult.unknown)
@@ -558,7 +558,7 @@ abstract class TestReportParticipant implements _$TestReportParticipant {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
-        TestReportParticipantType type,
+        TestReportParticipantType? type,
     @JsonKey(name: '_type') Element? typeElement,
     FhirUri? uri,
     @JsonKey(name: '_uri') Element? uriElement,
@@ -844,7 +844,7 @@ abstract class TestScript with Resource implements _$TestScript {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-        TestScriptStatus status,
+        TestScriptStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1195,7 +1195,7 @@ abstract class TestScriptOperation implements _$TestScriptOperation {
     Boolean? encodeRequestUrl,
     @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
     @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
-        TestScriptOperationMethod method,
+        TestScriptOperationMethod? method,
     @JsonKey(name: '_method') Element? methodElement,
     Integer? origin,
     @JsonKey(name: '_origin') Element? originElement,
@@ -1273,13 +1273,13 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
-        TestScriptAssertDirection direction,
+        TestScriptAssertDirection? direction,
     @JsonKey(name: '_direction') Element? directionElement,
     String? compareToSourceId,
     @JsonKey(name: '_compareToSourceId') Element? compareToSourceIdElement,
     String? compareToSourceExpression,
     @JsonKey(name: '_compareToSourceExpression')
-        Element compareToSourceExpressionElement,
+        Element? compareToSourceExpressionElement,
     String? compareToSourcePath,
     @JsonKey(name: '_compareToSourcePath') Element? compareToSourcePathElement,
     Code? contentType,
@@ -1293,7 +1293,7 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
     Boolean? navigationLinks,
     @JsonKey(name: '_navigationLinks') Element? navigationLinksElement,
     @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
-        TestScriptAssertOperator operator_,
+        TestScriptAssertOperator? operator_,
     @JsonKey(name: '_operator') Element? operatorElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,

@@ -167,7 +167,7 @@ abstract class CompositionAttester implements _$CompositionAttester {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
-        CompositionAttesterMode mode,
+        CompositionAttesterMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     FhirDateTime? time,
     @JsonKey(name: '_time') Element? timeElement,
@@ -308,7 +308,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
     Identifier? masterIdentifier,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-        DocumentManifestStatus status,
+        DocumentManifestStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
     Reference? subject,
@@ -389,7 +389,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     List<Identifier>? identifier,
     List<Reference>? basedOn,
     @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-        DocumentReferenceStatus status,
+        DocumentReferenceStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Code? docStatus,
     @JsonKey(name: '_docStatus') Element? docStatusElement,
@@ -441,7 +441,7 @@ abstract class DocumentReferenceAttester
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DocumentReferenceAttesterMode.unknown)
-        DocumentReferenceAttesterMode mode,
+        DocumentReferenceAttesterMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     FhirDateTime? time,
     @JsonKey(name: '_time') Element? timeElement,
@@ -475,7 +475,7 @@ abstract class DocumentReferenceRelatesTo
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
-        DocumentReferenceRelatesToCode code,
+        DocumentReferenceRelatesToCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     required Reference? target,
   }) = _DocumentReferenceRelatesTo;

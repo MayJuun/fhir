@@ -275,7 +275,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
-        EpisodeOfCareStatus status,
+        EpisodeOfCareStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<EpisodeOfCareStatusHistory>? statusHistory,
     List<CodeableConcept>? type,
@@ -315,7 +315,7 @@ abstract class EpisodeOfCareStatusHistory
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EpisodeOfCareStatusHistoryStatus.unknown)
-        EpisodeOfCareStatusHistoryStatus status,
+        EpisodeOfCareStatusHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period? period,
   }) = _EpisodeOfCareStatusHistory;

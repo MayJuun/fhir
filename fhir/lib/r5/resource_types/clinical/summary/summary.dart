@@ -315,7 +315,7 @@ abstract class AllergyIntolerance
     List<AllergyIntoleranceCategory>? category,
     @JsonKey(name: '_category') List<Element>? categoryElement,
     @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
-        AllergyIntoleranceCriticality criticality,
+        AllergyIntoleranceCriticality? criticality,
     @JsonKey(name: '_criticality') Element? criticalityElement,
     CodeableConcept? code,
     required Reference? patient,
@@ -369,7 +369,7 @@ abstract class AllergyIntoleranceReaction
     FhirDateTime? onset,
     @JsonKey(name: '_onset') Element? onsetElement,
     @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
-        AllergyIntoleranceReactionSeverity severity,
+        AllergyIntoleranceReactionSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     CodeableConcept? exposureRoute,
     List<Annotation>? note,
@@ -633,7 +633,7 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? code,
     @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
-        DetectedIssueSeverity severity,
+        DetectedIssueSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     Reference? patient,
     FhirDateTime? identifiedDateTime,
@@ -748,7 +748,7 @@ abstract class FamilyMemberHistory
     List<FhirUri>? instantiatesUri,
     @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
-        FamilyMemberHistoryStatus status,
+        FamilyMemberHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? dataAbsentReason,
     required Reference? patient,

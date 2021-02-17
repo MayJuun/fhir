@@ -1477,7 +1477,7 @@ abstract class SubstanceDefinitionStructure
     @JsonKey(name: '_molecularFormula') Element? molecularFormulaElement,
     String? molecularFormulaByMoiety,
     @JsonKey(name: '_molecularFormulaByMoiety')
-        Element molecularFormulaByMoietyElement,
+        Element? molecularFormulaByMoietyElement,
     List<SubstanceDefinitionIsotope>? isotope,
     SubstanceDefinitionMolecularWeight? molecularWeight,
     List<CodeableConcept>? technique,
@@ -2020,7 +2020,7 @@ abstract class SubstancePolymerRepeat implements _$SubstancePolymerRepeat {
     List<FhirExtension>? modifierExtension,
     String? averageMolecularFormula,
     @JsonKey(name: '_averageMolecularFormula')
-        Element averageMolecularFormulaElement,
+        Element? averageMolecularFormulaElement,
     CodeableConcept? repeatUnitAmountType,
     List<SubstancePolymerRepeatUnit>? repeatUnit,
   }) = _SubstancePolymerRepeat;
@@ -2208,11 +2208,11 @@ abstract class SubstanceProteinSubunit implements _$SubstanceProteinSubunit {
     Identifier? nTerminalModificationId,
     String? nTerminalModification,
     @JsonKey(name: '_nTerminalModification')
-        Element nTerminalModificationElement,
+        Element? nTerminalModificationElement,
     Identifier? cTerminalModificationId,
     String? cTerminalModification,
     @JsonKey(name: '_cTerminalModification')
-        Element cTerminalModificationElement,
+        Element? cTerminalModificationElement,
   }) = _SubstanceProteinSubunit;
 
   /// Produces a Yaml formatted String version of the object
@@ -2486,7 +2486,7 @@ abstract class SubstanceSourceMaterialOrganism
     CodeableConcept? intraspecificType,
     String? intraspecificDescription,
     @JsonKey(name: '_intraspecificDescription')
-        Element intraspecificDescriptionElement,
+        Element? intraspecificDescriptionElement,
     List<SubstanceSourceMaterialAuthor>? author,
     SubstanceSourceMaterialHybrid? hybrid,
     SubstanceSourceMaterialOrganismGeneral? organismGeneral,

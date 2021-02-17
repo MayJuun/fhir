@@ -290,7 +290,7 @@ abstract class TriggerDefinition implements _$TriggerDefinition {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-        TriggerDefinitionType type,
+        TriggerDefinitionType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,

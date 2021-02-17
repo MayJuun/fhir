@@ -484,7 +484,7 @@ abstract class CoverageEligibilityResponseItem
     List<CoverageEligibilityResponseBenefit>? benefit,
     Boolean? authorizationRequired,
     @JsonKey(name: '_authorizationRequired')
-        Element authorizationRequiredElement,
+        Element? authorizationRequiredElement,
     List<CodeableConcept>? authorizationSupporting,
     FhirUri? authorizationUrl,
     @JsonKey(name: '_authorizationUrl') Element? authorizationUrlElement,
@@ -651,7 +651,7 @@ abstract class EnrollmentResponse
     @JsonKey(name: '_status') Element? statusElement,
     Reference? request,
     @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-        EnrollmentResponseOutcome outcome,
+        EnrollmentResponseOutcome? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,

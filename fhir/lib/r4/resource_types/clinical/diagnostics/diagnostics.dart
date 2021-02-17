@@ -1337,7 +1337,7 @@ abstract class MolecularSequenceReferenceSeq
     String? referenceSeqString,
     @JsonKey(name: '_referenceSeqString') Element? referenceSeqStringElement,
     @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-        MolecularSequenceReferenceSeqStrand strand,
+        MolecularSequenceReferenceSeqStrand? strand,
     @JsonKey(name: '_strand') Element? strandElement,
     Integer? windowStart,
     @JsonKey(name: '_windowStart') Element? windowStartElement,
@@ -1579,7 +1579,7 @@ abstract class MolecularSequenceQuality implements _$MolecularSequenceQuality {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-        MolecularSequenceQualityType type,
+        MolecularSequenceQualityType? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? standardSequence,
     Integer? start,
@@ -1792,7 +1792,7 @@ abstract class MolecularSequenceRepository
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-        MolecularSequenceRepositoryType type,
+        MolecularSequenceRepositoryType? type,
     @JsonKey(name: '_type') Element? typeElement,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -2273,7 +2273,7 @@ abstract class Observation with Resource implements _$Observation {
     List<Reference>? basedOn,
     List<Reference>? partOf,
     @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-        ObservationStatus status,
+        ObservationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     required CodeableConcept? code,
@@ -2676,7 +2676,7 @@ abstract class QuestionnaireResponse
     List<Reference>? partOf,
     Canonical? questionnaire,
     @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-        QuestionnaireResponseStatus status,
+        QuestionnaireResponseStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? subject,
     Reference? encounter,

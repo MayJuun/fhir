@@ -58,14 +58,14 @@ abstract class CapabilityStatement
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
-        CapabilityStatementKind kind,
+        CapabilityStatementKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     List<Canonical>? instantiates,
     List<Canonical>? imports,
     CapabilityStatementSoftware? software,
     CapabilityStatementImplementation? implementation,
     @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
-        CapabilityStatementFhirVersion fhirVersion,
+        CapabilityStatementFhirVersion? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     List<Code>? format,
     @JsonKey(name: '_format') List<Element>? formatElement,
@@ -171,7 +171,7 @@ abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
-        CapabilityStatementRestMode mode,
+        CapabilityStatementRestMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -249,7 +249,7 @@ abstract class CapabilityStatementResource
     @JsonKey(name: '_documentation') Element? documentationElement,
     List<CapabilityStatementInteraction>? interaction,
     @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
-        CapabilityStatementResourceVersioning versioning,
+        CapabilityStatementResourceVersioning? versioning,
     @JsonKey(name: '_versioning') Element? versioningElement,
     Boolean? readHistory,
     @JsonKey(name: '_readHistory') Element? readHistoryElement,
@@ -258,12 +258,12 @@ abstract class CapabilityStatementResource
     Boolean? conditionalCreate,
     @JsonKey(name: '_conditionalCreate') Element? conditionalCreateElement,
     @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
-        CapabilityStatementResourceConditionalRead conditionalRead,
+        CapabilityStatementResourceConditionalRead? conditionalRead,
     @JsonKey(name: '_conditionalRead') Element? conditionalReadElement,
     Boolean? conditionalUpdate,
     @JsonKey(name: '_conditionalUpdate') Element? conditionalUpdateElement,
     @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
-        CapabilityStatementResourceConditionalDelete conditionalDelete,
+        CapabilityStatementResourceConditionalDelete? conditionalDelete,
     @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
     List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
     @JsonKey(name: '_referencePolicy') List<Element>? referencePolicyElement,
@@ -302,7 +302,7 @@ abstract class CapabilityStatementInteraction
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
-        CapabilityStatementInteractionCode code,
+        CapabilityStatementInteractionCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -340,7 +340,7 @@ abstract class CapabilityStatementSearchParam
     @JsonKey(name: '_name') Element? nameElement,
     Canonical? definition,
     @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
-        CapabilityStatementSearchParamType type,
+        CapabilityStatementSearchParamType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -408,7 +408,7 @@ abstract class CapabilityStatementInteraction1
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
-        CapabilityStatementInteraction1Code code,
+        CapabilityStatementInteraction1Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -508,7 +508,7 @@ abstract class CapabilityStatementSupportedMessage
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
-        CapabilityStatementSupportedMessageMode mode,
+        CapabilityStatementSupportedMessageMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     required Canonical? definition,
   }) = _CapabilityStatementSupportedMessage;
@@ -542,7 +542,7 @@ abstract class CapabilityStatementDocument
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
-        CapabilityStatementDocumentMode mode,
+        CapabilityStatementDocumentMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -596,7 +596,7 @@ abstract class CapabilityStatement2
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: CapabilityStatement2Status.unknown)
-        CapabilityStatement2Status status,
+        CapabilityStatement2Status? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -620,7 +620,7 @@ abstract class CapabilityStatement2
     CapabilityStatement2Software? software,
     CapabilityStatement2Implementation? implementation,
     @JsonKey(unknownEnumValue: CapabilityStatement2FhirVersion.unknown)
-        CapabilityStatement2FhirVersion fhirVersion,
+        CapabilityStatement2FhirVersion? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     List<Code>? format,
     @JsonKey(name: '_format') List<Element>? formatElement,
@@ -835,7 +835,7 @@ abstract class CapabilityStatement2SearchParam
     @JsonKey(name: '_name') Element? nameElement,
     Canonical? definition,
     @JsonKey(unknownEnumValue: CapabilityStatement2SearchParamType.unknown)
-        CapabilityStatement2SearchParamType type,
+        CapabilityStatement2SearchParamType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -957,7 +957,7 @@ abstract class CompartmentDefinition
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
-        CompartmentDefinitionStatus status,
+        CompartmentDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -975,7 +975,7 @@ abstract class CompartmentDefinition
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
-        CompartmentDefinitionCode code,
+        CompartmentDefinitionCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     Boolean? search,
     @JsonKey(name: '_search') Element? searchElement,
@@ -1060,7 +1060,7 @@ abstract class ExampleScenario with Resource implements _$ExampleScenario {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: ExampleScenarioStatus.unknown)
-        ExampleScenarioStatus status,
+        ExampleScenarioStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1110,7 +1110,7 @@ abstract class ExampleScenarioActor implements _$ExampleScenarioActor {
     String? actorId,
     @JsonKey(name: '_actorId') Element? actorIdElement,
     @JsonKey(unknownEnumValue: ExampleScenarioActorType.unknown)
-        ExampleScenarioActorType type,
+        ExampleScenarioActorType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -1406,7 +1406,7 @@ abstract class GraphDefinition with Resource implements _$GraphDefinition {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
-        GraphDefinitionStatus status,
+        GraphDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1525,7 +1525,7 @@ abstract class GraphDefinitionCompartment
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: GraphDefinitionCompartmentUse.unknown)
-        GraphDefinitionCompartmentUse use,
+        GraphDefinitionCompartmentUse? use,
     @JsonKey(name: '_use') Element? useElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -1585,7 +1585,7 @@ abstract class ImplementationGuide
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
-        ImplementationGuideStatus status,
+        ImplementationGuideStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1605,7 +1605,7 @@ abstract class ImplementationGuide
     Id? packageId,
     @JsonKey(name: '_packageId') Element? packageIdElement,
     @JsonKey(unknownEnumValue: ImplementationGuideLicense.unknown)
-        ImplementationGuideLicense license,
+        ImplementationGuideLicense? license,
     @JsonKey(name: '_license') Element? licenseElement,
     List<ImplementationGuideFhirVersion>? fhirVersion,
     @JsonKey(name: '_fhirVersion') List<Element>? fhirVersionElement,
@@ -1815,7 +1815,7 @@ abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: ImplementationGuidePageGeneration.unknown)
-        ImplementationGuidePageGeneration generation,
+        ImplementationGuidePageGeneration? generation,
     @JsonKey(name: '_generation') Element? generationElement,
     List<ImplementationGuidePage>? page,
   }) = _ImplementationGuidePage;
@@ -2034,7 +2034,7 @@ abstract class MessageDefinition with Resource implements _$MessageDefinition {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
-        MessageDefinitionStatus status,
+        MessageDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2058,7 +2058,7 @@ abstract class MessageDefinition with Resource implements _$MessageDefinition {
     FhirUri? eventUri,
     @JsonKey(name: '_eventUri') Element? eventUriElement,
     @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
-        MessageDefinitionCategory category,
+        MessageDefinitionCategory? category,
     @JsonKey(name: '_category') Element? categoryElement,
     List<MessageDefinitionFocus>? focus,
     @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
@@ -2180,7 +2180,7 @@ abstract class OperationDefinition
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
-        OperationDefinitionStatus status,
+        OperationDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2198,7 +2198,7 @@ abstract class OperationDefinition
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-        OperationDefinitionKind kind,
+        OperationDefinitionKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     Boolean? affectsState,
     @JsonKey(name: '_affectsState') Element? affectsStateElement,
@@ -2249,7 +2249,7 @@ abstract class OperationDefinitionParameter
     Code? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: OperationDefinitionParameterUse.unknown)
-        OperationDefinitionParameterUse use,
+        OperationDefinitionParameterUse? use,
     @JsonKey(name: '_use') Element? useElement,
     Integer? min,
     @JsonKey(name: '_min') Element? minElement,
@@ -2261,7 +2261,7 @@ abstract class OperationDefinitionParameter
     @JsonKey(name: '_type') Element? typeElement,
     List<Canonical>? targetProfile,
     @JsonKey(unknownEnumValue: OperationDefinitionParameterSearchType.unknown)
-        OperationDefinitionParameterSearchType searchType,
+        OperationDefinitionParameterSearchType? searchType,
     @JsonKey(name: '_searchType') Element? searchTypeElement,
     OperationDefinitionBinding? binding,
     List<OperationDefinitionReferencedFrom>? referencedFrom,
@@ -2295,7 +2295,7 @@ abstract class OperationDefinitionBinding
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
-        OperationDefinitionBindingStrength strength,
+        OperationDefinitionBindingStrength? strength,
     @JsonKey(name: '_strength') Element? strengthElement,
     required Canonical? valueSet,
   }) = _OperationDefinitionBinding;
@@ -2411,7 +2411,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-        SearchParameterStatus status,
+        SearchParameterStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2434,14 +2434,14 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     List<Code>? base,
     @JsonKey(name: '_base') List<Element>? baseElement,
     @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-        SearchParameterType type,
+        SearchParameterType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
     String? xpath,
     @JsonKey(name: '_xpath') Element? xpathElement,
     @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-        SearchParameterXpathUsage xpathUsage,
+        SearchParameterXpathUsage? xpathUsage,
     @JsonKey(name: '_xpathUsage') Element? xpathUsageElement,
     List<Code>? target,
     @JsonKey(name: '_target') List<Element>? targetElement,
@@ -2534,7 +2534,7 @@ abstract class StructureDefinition
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
-        StructureDefinitionStatus status,
+        StructureDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2553,11 +2553,11 @@ abstract class StructureDefinition
     @JsonKey(name: '_copyright') Element? copyrightElement,
     List<Coding>? keyword,
     @JsonKey(unknownEnumValue: StructureDefinitionFhirVersion.unknown)
-        StructureDefinitionFhirVersion fhirVersion,
+        StructureDefinitionFhirVersion? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     List<StructureDefinitionMapping>? mapping,
     @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
-        StructureDefinitionKind kind,
+        StructureDefinitionKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     @JsonKey(name: 'abstract') Boolean? abstract_,
     @JsonKey(name: '_abstract') Element? abstractElement,
@@ -2568,7 +2568,7 @@ abstract class StructureDefinition
     @JsonKey(name: '_type') Element? typeElement,
     Canonical? baseDefinition,
     @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
-        StructureDefinitionDerivation derivation,
+        StructureDefinitionDerivation? derivation,
     @JsonKey(name: '_derivation') Element? derivationElement,
     StructureDefinitionSnapshot? snapshot,
     StructureDefinitionDifferential? differential,
@@ -2636,7 +2636,7 @@ abstract class StructureDefinitionContext
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-        StructureDefinitionContextType type,
+        StructureDefinitionContextType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
@@ -2747,7 +2747,7 @@ abstract class StructureMap with Resource implements _$StructureMap {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
-        StructureMapStatus status,
+        StructureMapStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2795,7 +2795,7 @@ abstract class StructureMapStructure implements _$StructureMapStructure {
     List<FhirExtension>? modifierExtension,
     required Canonical? url,
     @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown)
-        StructureMapStructureMode mode,
+        StructureMapStructureMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? alias,
     @JsonKey(name: '_alias') Element? aliasElement,
@@ -2832,7 +2832,7 @@ abstract class StructureMapGroup implements _$StructureMapGroup {
     @JsonKey(name: 'extends') Id? extends_,
     @JsonKey(name: '_extends') Element? extendsElement,
     @JsonKey(unknownEnumValue: StructureMapGroupTypeMode.unknown)
-        StructureMapGroupTypeMode typeMode,
+        StructureMapGroupTypeMode? typeMode,
     @JsonKey(name: '_typeMode') Element? typeModeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -2869,7 +2869,7 @@ abstract class StructureMapInput implements _$StructureMapInput {
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
     @JsonKey(unknownEnumValue: StructureMapInputMode.unknown)
-        StructureMapInputMode mode,
+        StructureMapInputMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -2943,12 +2943,12 @@ abstract class StructureMapSource implements _$StructureMapSource {
     @JsonKey(name: '_type') Element? typeElement,
     Base64Binary? defaultValueBase64Binary,
     @JsonKey(name: '_defaultValueBase64Binary')
-        Element defaultValueBase64BinaryElement,
+        Element? defaultValueBase64BinaryElement,
     Boolean? defaultValueBoolean,
     @JsonKey(name: '_defaultValueBoolean') Element? defaultValueBooleanElement,
     Canonical? defaultValueCanonical,
     @JsonKey(name: '_defaultValueCanonical')
-        Element defaultValueCanonicalElement,
+        Element? defaultValueCanonicalElement,
     Code? defaultValueCode,
     @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
     Date? defaultValueDate,
@@ -2966,7 +2966,7 @@ abstract class StructureMapSource implements _$StructureMapSource {
     @JsonKey(name: '_defaultValueInteger') Element? defaultValueIntegerElement,
     Integer64? defaultValueInteger64,
     @JsonKey(name: '_defaultValueInteger64')
-        Element defaultValueInteger64Element,
+        Element? defaultValueInteger64Element,
     Markdown? defaultValueMarkdown,
     @JsonKey(name: '_defaultValueMarkdown')
         Element? defaultValueMarkdownElement,
@@ -2974,14 +2974,14 @@ abstract class StructureMapSource implements _$StructureMapSource {
     @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
     PositiveInt? defaultValuePositiveInt,
     @JsonKey(name: '_defaultValuePositiveInt')
-        Element defaultValuePositiveIntElement,
+        Element? defaultValuePositiveIntElement,
     String? defaultValueString,
     @JsonKey(name: '_defaultValueString') Element? defaultValueStringElement,
     Time? defaultValueTime,
     @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
     UnsignedInt? defaultValueUnsignedInt,
     @JsonKey(name: '_defaultValueUnsignedInt')
-        Element defaultValueUnsignedIntElement,
+        Element? defaultValueUnsignedIntElement,
     FhirUri? defaultValueUri,
     @JsonKey(name: '_defaultValueUri') Element? defaultValueUriElement,
     FhirUrl? defaultValueUrl,
@@ -3022,7 +3022,7 @@ abstract class StructureMapSource implements _$StructureMapSource {
     String? element,
     @JsonKey(name: '_element') Element? elementElement,
     @JsonKey(unknownEnumValue: StructureMapSourceListMode.unknown)
-        StructureMapSourceListMode listMode,
+        StructureMapSourceListMode? listMode,
     @JsonKey(name: '_listMode') Element? listModeElement,
     Id? variable,
     @JsonKey(name: '_variable') Element? variableElement,
@@ -3061,7 +3061,7 @@ abstract class StructureMapTarget implements _$StructureMapTarget {
     Id? context,
     @JsonKey(name: '_context') Element? contextElement,
     @JsonKey(unknownEnumValue: StructureMapTargetContextType.unknown)
-        StructureMapTargetContextType contextType,
+        StructureMapTargetContextType? contextType,
     @JsonKey(name: '_contextType') Element? contextTypeElement,
     String? element,
     @JsonKey(name: '_element') Element? elementElement,
@@ -3072,7 +3072,7 @@ abstract class StructureMapTarget implements _$StructureMapTarget {
     Id? listRuleId,
     @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
     @JsonKey(unknownEnumValue: StructureMapTargetTransform.unknown)
-        StructureMapTargetTransform transform,
+        StructureMapTargetTransform? transform,
     @JsonKey(name: '_transform') Element? transformElement,
     List<StructureMapParameter>? parameter,
   }) = _StructureMapTarget;

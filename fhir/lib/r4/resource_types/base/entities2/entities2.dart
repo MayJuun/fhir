@@ -848,7 +848,7 @@ abstract class DeviceDeviceName implements _$DeviceDeviceName {
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
-        DeviceDeviceNameType type,
+        DeviceDeviceNameType? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _DeviceDeviceName;
 
@@ -1194,13 +1194,13 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
     Reference? source,
     Reference? parent,
     @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
-        DeviceMetricOperationalStatus operationalStatus,
+        DeviceMetricOperationalStatus? operationalStatus,
     @JsonKey(name: '_operationalStatus') Element? operationalStatusElement,
     @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
-        DeviceMetricColor color,
+        DeviceMetricColor? color,
     @JsonKey(name: '_color') Element? colorElement,
     @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
-        DeviceMetricCategory category,
+        DeviceMetricCategory? category,
     @JsonKey(name: '_category') Element? categoryElement,
     Timing? measurementPeriod,
     List<DeviceMetricCalibration>? calibration,
@@ -1270,10 +1270,10 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
-        DeviceMetricCalibrationType type,
+        DeviceMetricCalibrationType? type,
     @JsonKey(name: '_type') Element? typeElement,
     @JsonKey(unknownEnumValue: DeviceMetricCalibrationState.unknown)
-        DeviceMetricCalibrationState state,
+        DeviceMetricCalibrationState? state,
     @JsonKey(name: '_state') Element? stateElement,
     Instant? time,
     @JsonKey(name: '_time') Element? timeElement,

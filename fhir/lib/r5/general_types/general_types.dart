@@ -261,7 +261,7 @@ abstract class FhirDuration implements _$FhirDuration {
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     @JsonKey(unknownEnumValue: DurationComparator.unknown)
-        DurationComparator comparator,
+        DurationComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
     String? unit,
     @JsonKey(name: '_unit') Element? unitElement,
@@ -297,7 +297,7 @@ abstract class Distance implements _$Distance {
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     @JsonKey(unknownEnumValue: DistanceComparator.unknown)
-        DistanceComparator comparator,
+        DistanceComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
     String? unit,
     @JsonKey(name: '_unit') Element? unitElement,
@@ -333,7 +333,7 @@ abstract class Count implements _$Count {
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     @JsonKey(unknownEnumValue: CountComparator.unknown)
-        CountComparator comparator,
+        CountComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
     String? unit,
     @JsonKey(name: '_unit') Element? unitElement,
@@ -663,7 +663,7 @@ abstract class ContactPoint implements _$ContactPoint {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-        ContactPointSystem system,
+        ContactPointSystem? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -739,7 +739,7 @@ abstract class TimingRepeat implements _$TimingRepeat {
     Decimal? durationMax,
     @JsonKey(name: '_durationMax') Element? durationMaxElement,
     @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
-        TimingRepeatDurationUnit durationUnit,
+        TimingRepeatDurationUnit? durationUnit,
     @JsonKey(name: '_durationUnit') Element? durationUnitElement,
     PositiveInt? frequency,
     @JsonKey(name: '_frequency') Element? frequencyElement,
@@ -750,7 +750,7 @@ abstract class TimingRepeat implements _$TimingRepeat {
     Decimal? periodMax,
     @JsonKey(name: '_periodMax') Element? periodMaxElement,
     @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
-        TimingRepeatPeriodUnit periodUnit,
+        TimingRepeatPeriodUnit? periodUnit,
     @JsonKey(name: '_periodUnit') Element? periodUnitElement,
     List<Code>? dayOfWeek,
     @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,

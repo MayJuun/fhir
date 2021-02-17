@@ -1448,7 +1448,7 @@ abstract class MedicationRequestDispenseRequest
     Period? validityPeriod,
     UnsignedInt? numberOfRepeatsAllowed,
     @JsonKey(name: '_numberOfRepeatsAllowed')
-        Element numberOfRepeatsAllowedElement,
+        Element? numberOfRepeatsAllowedElement,
     Quantity? quantity,
     FhirDuration? expectedSupplyDuration,
     Reference? dispenser,

@@ -1238,7 +1238,7 @@ abstract class EvidenceReportRelatesTo implements _$EvidenceReportRelatesTo {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EvidenceReportRelatesToCode.unknown)
-        EvidenceReportRelatesToCode code,
+        EvidenceReportRelatesToCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     Identifier? targetIdentifier,
     Reference? targetReference,

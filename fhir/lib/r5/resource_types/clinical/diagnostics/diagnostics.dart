@@ -165,7 +165,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-        ImagingStudyStatus status,
+        ImagingStudyStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Coding>? modality,
     required Reference? subject,
@@ -357,7 +357,7 @@ abstract class MolecularSequence with Resource implements _$MolecularSequence {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-        MolecularSequenceType type,
+        MolecularSequenceType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Integer? coordinateSystem,
     @JsonKey(name: '_coordinateSystem') Element? coordinateSystemElement,
@@ -407,14 +407,14 @@ abstract class MolecularSequenceReferenceSeq
     String? genomeBuild,
     @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
     @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown)
-        MolecularSequenceReferenceSeqOrientation orientation,
+        MolecularSequenceReferenceSeqOrientation? orientation,
     @JsonKey(name: '_orientation') Element? orientationElement,
     CodeableConcept? referenceSeqId,
     Reference? referenceSeqPointer,
     String? referenceSeqString,
     @JsonKey(name: '_referenceSeqString') Element? referenceSeqStringElement,
     @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqStrand.unknown)
-        MolecularSequenceReferenceSeqStrand strand,
+        MolecularSequenceReferenceSeqStrand? strand,
     @JsonKey(name: '_strand') Element? strandElement,
     Integer? windowStart,
     @JsonKey(name: '_windowStart') Element? windowStartElement,
@@ -486,7 +486,7 @@ abstract class MolecularSequenceQuality implements _$MolecularSequenceQuality {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
-        MolecularSequenceQualityType type,
+        MolecularSequenceQualityType? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? standardSequence,
     Integer? start,
@@ -581,7 +581,7 @@ abstract class MolecularSequenceRepository
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
-        MolecularSequenceRepositoryType type,
+        MolecularSequenceRepositoryType? type,
     @JsonKey(name: '_type') Element? typeElement,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -731,7 +731,7 @@ abstract class Observation with Resource implements _$Observation {
     List<Reference>? basedOn,
     List<Reference>? partOf,
     @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-        ObservationStatus status,
+        ObservationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     required CodeableConcept? code,
@@ -900,7 +900,7 @@ abstract class QuestionnaireResponse
     List<Reference>? partOf,
     Canonical? questionnaire,
     @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
-        QuestionnaireResponseStatus status,
+        QuestionnaireResponseStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? subject,
     Reference? encounter,

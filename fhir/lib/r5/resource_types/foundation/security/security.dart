@@ -116,7 +116,7 @@ abstract class AuditEventNetwork implements _$AuditEventNetwork {
     String? address,
     @JsonKey(name: '_address') Element? addressElement,
     @JsonKey(unknownEnumValue: AuditEventNetworkType.unknown)
-        AuditEventNetworkType type,
+        AuditEventNetworkType? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _AuditEventNetwork;
 
@@ -359,7 +359,7 @@ abstract class ConsentProvision implements _$ConsentProvision {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-        ConsentProvisionType type,
+        ConsentProvisionType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Period? period,
     List<ConsentActor>? actor,
@@ -426,7 +426,7 @@ abstract class ConsentData implements _$ConsentData {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-        ConsentDataMeaning meaning,
+        ConsentDataMeaning? meaning,
     @JsonKey(name: '_meaning') Element? meaningElement,
     required Reference? reference,
   }) = _ConsentData;
@@ -466,7 +466,7 @@ abstract class Permission with Resource implements _$Permission {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: PermissionStatus.unknown)
-        PermissionStatus status,
+        PermissionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? intent,
     Reference? asserter,

@@ -261,10 +261,10 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
     @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicCombination.unknown)
         EvidenceVariableCharacteristicCombination characteristicCombination,
     @JsonKey(name: '_characteristicCombination')
-        Element characteristicCombinationElement,
+        Element? characteristicCombinationElement,
     List<EvidenceVariableCharacteristic>? characteristic,
     @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
-        EvidenceVariableHandling handling,
+        EvidenceVariableHandling? handling,
     @JsonKey(name: '_handling') Element? handlingElement,
     List<EvidenceVariableCategory>? category,
   }) = _EvidenceVariable;
@@ -307,7 +307,7 @@ abstract class EvidenceVariableCharacteristic
     @JsonKey(name: '_exclude') Element? excludeElement,
     EvidenceVariableTimeFromStart? timeFromStart,
     @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
-        EvidenceVariableCharacteristicGroupMeasure groupMeasure,
+        EvidenceVariableCharacteristicGroupMeasure? groupMeasure,
     @JsonKey(name: '_groupMeasure') Element? groupMeasureElement,
   }) = _EvidenceVariableCharacteristic;
 

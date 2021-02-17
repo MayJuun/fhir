@@ -385,7 +385,7 @@ abstract class Practitioner with Resource implements _$Practitioner {
     List<ContactPoint>? telecom,
     List<Address>? address,
     @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-        PractitionerGender gender,
+        PractitionerGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -475,7 +475,7 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
     List<PractitionerRoleNotAvailable>? notAvailable,
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
-        Element availabilityExceptionsElement,
+        Element? availabilityExceptionsElement,
     List<Reference>? endpoint,
   }) = _PractitionerRole;
 
@@ -588,7 +588,7 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
     List<HumanName>? name,
     List<ContactPoint>? telecom,
     @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-        RelatedPersonGender gender,
+        RelatedPersonGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,

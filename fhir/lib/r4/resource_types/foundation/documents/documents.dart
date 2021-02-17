@@ -1112,7 +1112,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     Identifier? masterIdentifier,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-        DocumentReferenceStatus status,
+        DocumentReferenceStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Code? docStatus,
     @JsonKey(name: '_docStatus') Element? docStatusElement,
@@ -1196,7 +1196,7 @@ abstract class DocumentReferenceRelatesTo
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
-        DocumentReferenceRelatesToCode code,
+        DocumentReferenceRelatesToCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     required Reference? target,
   }) = _DocumentReferenceRelatesTo;

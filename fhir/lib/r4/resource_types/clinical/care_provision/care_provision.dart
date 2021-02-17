@@ -3011,7 +3011,7 @@ abstract class VisionPrescriptionPrism implements _$VisionPrescriptionPrism {
     Decimal? amount,
     @JsonKey(name: '_amount') Element? amountElement,
     @JsonKey(unknownEnumValue: VisionPrescriptionPrismBase.unknown)
-        VisionPrescriptionPrismBase base,
+        VisionPrescriptionPrismBase? base,
     @JsonKey(name: '_base') Element? baseElement,
   }) = _VisionPrescriptionPrism;
 

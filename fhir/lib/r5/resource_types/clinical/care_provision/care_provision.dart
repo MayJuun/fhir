@@ -694,7 +694,7 @@ abstract class NutritionOrderEnteralFormula
     CodeableConcept? baseFormulaType,
     String? baseFormulaProductName,
     @JsonKey(name: '_baseFormulaProductName')
-        Element baseFormulaProductNameElement,
+        Element? baseFormulaProductNameElement,
     CodeableConcept? additiveType,
     String? additiveProductName,
     @JsonKey(name: '_additiveProductName') Element? additiveProductNameElement,
@@ -704,7 +704,7 @@ abstract class NutritionOrderEnteralFormula
     Quantity? maxVolumeToDeliver,
     String? administrationInstruction,
     @JsonKey(name: '_administrationInstruction')
-        Element administrationInstructionElement,
+        Element? administrationInstructionElement,
   }) = _NutritionOrderEnteralFormula;
 
   /// Produces a Yaml formatted String version of the object
@@ -1175,7 +1175,7 @@ abstract class VisionPrescriptionLensSpecification
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? product,
     @JsonKey(unknownEnumValue: VisionPrescriptionLensSpecificationEye.unknown)
-        VisionPrescriptionLensSpecificationEye eye,
+        VisionPrescriptionLensSpecificationEye? eye,
     @JsonKey(name: '_eye') Element? eyeElement,
     Decimal? sphere,
     @JsonKey(name: '_sphere') Element? sphereElement,
@@ -1230,7 +1230,7 @@ abstract class VisionPrescriptionPrism implements _$VisionPrescriptionPrism {
     Decimal? amount,
     @JsonKey(name: '_amount') Element? amountElement,
     @JsonKey(unknownEnumValue: VisionPrescriptionPrismBase.unknown)
-        VisionPrescriptionPrismBase base,
+        VisionPrescriptionPrismBase? base,
     @JsonKey(name: '_base') Element? baseElement,
   }) = _VisionPrescriptionPrism;
 

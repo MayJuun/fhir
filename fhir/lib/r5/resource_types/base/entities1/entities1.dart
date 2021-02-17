@@ -269,7 +269,7 @@ abstract class Location with Resource implements _$Location {
     List<LocationHoursOfOperation>? hoursOfOperation,
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
-        Element availabilityExceptionsElement,
+        Element? availabilityExceptionsElement,
     List<Reference>? endpoint,
   }) = _Location;
 

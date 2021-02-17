@@ -428,7 +428,7 @@ abstract class CodeSystemProperty implements _$CodeSystemProperty {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     @JsonKey(unknownEnumValue: CodeSystemPropertyType.unknown)
-        CodeSystemPropertyType type,
+        CodeSystemPropertyType? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _CodeSystemProperty;
 
@@ -903,7 +903,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-        ConceptMapStatus status,
+        ConceptMapStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1181,7 +1181,7 @@ abstract class ConceptMapTarget implements _$ConceptMapTarget {
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
     @JsonKey(unknownEnumValue: ConceptMapTargetEquivalence.unknown)
-        ConceptMapTargetEquivalence equivalence,
+        ConceptMapTargetEquivalence? equivalence,
     @JsonKey(name: '_equivalence') Element? equivalenceElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
@@ -1347,7 +1347,7 @@ abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-        ConceptMapUnmappedMode mode,
+        ConceptMapUnmappedMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -1513,7 +1513,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-        NamingSystemStatus status,
+        NamingSystemStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     @JsonKey(unknownEnumValue: NamingSystemKind.unknown) NamingSystemKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
@@ -1611,7 +1611,7 @@ abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
-        NamingSystemUniqueIdType type,
+        NamingSystemUniqueIdType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -1844,7 +1844,7 @@ abstract class TerminologyCapabilities
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: TerminologyCapabilitiesStatus.unknown)
-        TerminologyCapabilitiesStatus status,
+        TerminologyCapabilitiesStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1870,7 +1870,7 @@ abstract class TerminologyCapabilities
     List<TerminologyCapabilitiesCodeSystem>? codeSystem,
     TerminologyCapabilitiesExpansion? expansion,
     @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
-        TerminologyCapabilitiesCodeSearch codeSearch,
+        TerminologyCapabilitiesCodeSearch? codeSearch,
     @JsonKey(name: '_codeSearch') Element? codeSearchElement,
     TerminologyCapabilitiesValidateCode? validateCode,
     TerminologyCapabilitiesTranslation? translation,

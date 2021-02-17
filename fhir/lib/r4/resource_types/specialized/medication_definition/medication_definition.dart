@@ -685,7 +685,7 @@ abstract class MedicinalProductAuthorization
         Element dateOfFirstAuthorizationElement,
     FhirDateTime? internationalBirthDate,
     @JsonKey(name: '_internationalBirthDate')
-        Element internationalBirthDateElement,
+        Element? internationalBirthDateElement,
     CodeableConcept? legalBasis,
     List<MedicinalProductAuthorizationJurisdictionalAuthorization>
         jurisdictionalAuthorization,
@@ -2651,7 +2651,7 @@ abstract class MedicinalProductPharmaceuticalWithdrawalPeriod
     required Quantity? value,
     String? supportingInformation,
     @JsonKey(name: '_supportingInformation')
-        Element supportingInformationElement,
+        Element? supportingInformationElement,
   }) = _MedicinalProductPharmaceuticalWithdrawalPeriod;
 
   /// Produces a Yaml formatted String version of the object
@@ -3469,7 +3469,7 @@ abstract class SubstancePolymerRepeat implements _$SubstancePolymerRepeat {
     @JsonKey(name: '_numberOfUnits') Element? numberOfUnitsElement,
     String? averageMolecularFormula,
     @JsonKey(name: '_averageMolecularFormula')
-        Element averageMolecularFormulaElement,
+        Element? averageMolecularFormulaElement,
     CodeableConcept? repeatUnitAmountType,
     List<SubstancePolymerRepeatUnit>? repeatUnit,
   }) = _SubstancePolymerRepeat;
@@ -3926,11 +3926,11 @@ abstract class SubstanceProteinSubunit implements _$SubstanceProteinSubunit {
     Identifier? nTerminalModificationId,
     String? nTerminalModification,
     @JsonKey(name: '_nTerminalModification')
-        Element nTerminalModificationElement,
+        Element? nTerminalModificationElement,
     Identifier? cTerminalModificationId,
     String? cTerminalModification,
     @JsonKey(name: '_cTerminalModification')
-        Element cTerminalModificationElement,
+        Element? cTerminalModificationElement,
   }) = _SubstanceProteinSubunit;
 
   /// Produces a Yaml formatted String version of the object
@@ -4693,7 +4693,7 @@ abstract class SubstanceSourceMaterialOrganism
     CodeableConcept? intraspecificType,
     String? intraspecificDescription,
     @JsonKey(name: '_intraspecificDescription')
-        Element intraspecificDescriptionElement,
+        Element? intraspecificDescriptionElement,
     List<SubstanceSourceMaterialAuthor>? author,
     SubstanceSourceMaterialHybrid? hybrid,
     SubstanceSourceMaterialOrganismGeneral? organismGeneral,
@@ -5470,7 +5470,7 @@ abstract class SubstanceSpecificationStructure
     @JsonKey(name: '_molecularFormula') Element? molecularFormulaElement,
     String? molecularFormulaByMoiety,
     @JsonKey(name: '_molecularFormulaByMoiety')
-        Element molecularFormulaByMoietyElement,
+        Element? molecularFormulaByMoietyElement,
     List<SubstanceSpecificationIsotope>? isotope,
     SubstanceSpecificationMolecularWeight? molecularWeight,
     List<Reference>? source,

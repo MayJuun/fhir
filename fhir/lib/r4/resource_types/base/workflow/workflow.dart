@@ -1896,7 +1896,7 @@ abstract class VerificationResultAttestation
         Element? sourceIdentityCertificateElement,
     String? proxyIdentityCertificate,
     @JsonKey(name: '_proxyIdentityCertificate')
-        Element proxyIdentityCertificateElement,
+        Element? proxyIdentityCertificateElement,
     Signature? proxySignature,
     Signature? sourceSignature,
   }) = _VerificationResultAttestation;

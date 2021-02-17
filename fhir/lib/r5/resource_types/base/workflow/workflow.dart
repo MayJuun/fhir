@@ -669,10 +669,10 @@ abstract class VerificationResultAttestation
     @JsonKey(name: '_date') Element? dateElement,
     String? sourceIdentityCertificate,
     @JsonKey(name: '_sourceIdentityCertificate')
-        Element sourceIdentityCertificateElement,
+        Element? sourceIdentityCertificateElement,
     String? proxyIdentityCertificate,
     @JsonKey(name: '_proxyIdentityCertificate')
-        Element proxyIdentityCertificateElement,
+        Element? proxyIdentityCertificateElement,
     Signature? proxySignature,
     Signature? sourceSignature,
   }) = _VerificationResultAttestation;

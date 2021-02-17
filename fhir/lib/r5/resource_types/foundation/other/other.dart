@@ -492,7 +492,7 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
     Id? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
     @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
-        MessageHeaderResponseCode code,
+        MessageHeaderResponseCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     Reference? details,
   }) = _MessageHeaderResponse;
@@ -559,10 +559,10 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
-        OperationOutcomeIssueSeverity severity,
+        OperationOutcomeIssueSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
-        OperationOutcomeIssueCode code,
+        OperationOutcomeIssueCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     CodeableConcept? details,
     String? diagnostics,
@@ -765,7 +765,7 @@ abstract class Subscription with Resource implements _$Subscription {
     Code? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
     @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
-        SubscriptionContent content,
+        SubscriptionContent? content,
     @JsonKey(name: '_content') Element? contentElement,
   }) = _Subscription;
 
@@ -838,11 +838,11 @@ abstract class SubscriptionStatus
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: SubscriptionStatusType.unknown)
-        SubscriptionStatusType type,
+        SubscriptionStatusType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Integer64? eventsSinceSubscriptionStart,
     @JsonKey(name: '_eventsSinceSubscriptionStart')
-        Element eventsSinceSubscriptionStartElement,
+        Element? eventsSinceSubscriptionStartElement,
     Integer? eventsInNotification,
     @JsonKey(name: '_eventsInNotification')
         Element? eventsInNotificationElement,
@@ -896,7 +896,7 @@ abstract class SubscriptionTopic with Resource implements _$SubscriptionTopic {
     @JsonKey(name: '_title') Element? titleElement,
     List<Canonical>? derivedFrom,
     @JsonKey(unknownEnumValue: SubscriptionTopicStatus.unknown)
-        SubscriptionTopicStatus status,
+        SubscriptionTopicStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,

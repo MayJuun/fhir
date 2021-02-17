@@ -1819,7 +1819,7 @@ abstract class FamilyMemberHistory
     List<FhirUri>? instantiatesUri,
     @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
-        FamilyMemberHistoryStatus status,
+        FamilyMemberHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? dataAbsentReason,
     required Reference? patient,

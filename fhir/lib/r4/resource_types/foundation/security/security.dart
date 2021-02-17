@@ -1083,7 +1083,7 @@ abstract class ConsentData implements _$ConsentData {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-        ConsentDataMeaning meaning,
+        ConsentDataMeaning? meaning,
     @JsonKey(name: '_meaning') Element? meaningElement,
     required Reference? reference,
   }) = _ConsentData;
