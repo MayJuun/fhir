@@ -52,13 +52,13 @@ abstract class Population implements _$Population {
   ///  specific population to which this applies.
   factory Population({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Range ageRange,
-    CodeableConcept ageCodeableConcept,
-    CodeableConcept gender,
-    CodeableConcept race,
-    CodeableConcept physiologicalCondition,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Range? ageRange,
+    CodeableConcept? ageCodeableConcept,
+    CodeableConcept? gender,
+    CodeableConcept? race,
+    CodeableConcept? physiologicalCondition,
   }) = _Population;
 
   /// Produces a Yaml formatted String version of the object
@@ -128,12 +128,12 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
   ///  term and the controlled term identifier shall be specified.
   factory ProductShelfLife({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    @required CodeableConcept type,
-    @required Quantity period,
-    List<CodeableConcept> specialPrecautionsForStorage,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    @required CodeableConcept? type,
+    @required Quantity? period,
+    List<CodeableConcept>? specialPrecautionsForStorage,
   }) = _ProductShelfLife;
 
   /// Produces a Yaml formatted String version of the object
@@ -239,22 +239,22 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
   ///  be used.
   factory ProdCharacteristic({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Quantity height,
-    Quantity width,
-    Quantity depth,
-    Quantity weight,
-    Quantity nominalVolume,
-    Quantity externalDiameter,
-    String shape,
-    @JsonKey(name: '_shape') Element shapeElement,
-    List<String> color,
-    @JsonKey(name: '_color') List<Element> colorElement,
-    List<String> imprint,
-    @JsonKey(name: '_imprint') List<Element> imprintElement,
-    List<Attachment> image,
-    CodeableConcept scoring,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Quantity? height,
+    Quantity? width,
+    Quantity? depth,
+    Quantity? weight,
+    Quantity? nominalVolume,
+    Quantity? externalDiameter,
+    String? shape,
+    @JsonKey(name: '_shape') Element? shapeElement,
+    List<String>? color,
+    @JsonKey(name: '_color') List<Element>? colorElement,
+    List<String>? imprint,
+    @JsonKey(name: '_imprint') List<Element>? imprintElement,
+    List<Attachment>? image,
+    CodeableConcept? scoring,
   }) = _ProdCharacteristic;
 
   /// Produces a Yaml formatted String version of the object
@@ -339,14 +339,14 @@ abstract class MarketingStatus implements _$MarketingStatus {
   /// [_restoreDate]: Extensions for restoreDate
   factory MarketingStatus({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept country,
-    CodeableConcept jurisdiction,
-    @required CodeableConcept status,
-    @required Period dateRange,
-    FhirDateTime restoreDate,
-    @JsonKey(name: '_restoreDate') Element restoreDateElement,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @required CodeableConcept? country,
+    CodeableConcept? jurisdiction,
+    @required CodeableConcept? status,
+    @required Period? dateRange,
+    FhirDateTime? restoreDate,
+    @JsonKey(name: '_restoreDate') Element? restoreDateElement,
   }) = _MarketingStatus;
 
   /// Produces a Yaml formatted String version of the object
@@ -434,16 +434,16 @@ abstract class SubstanceAmount implements _$SubstanceAmount {
   /// [referenceRange]: Reference range of possible or expected values.
   factory SubstanceAmount({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Quantity amountQuantity,
-    Range amountRange,
-    String amountString,
-    @JsonKey(name: '_amountString') Element amountStringElement,
-    CodeableConcept amountType,
-    String amountText,
-    @JsonKey(name: '_amountText') Element amountTextElement,
-    SubstanceAmountReferenceRange referenceRange,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Quantity? amountQuantity,
+    Range? amountRange,
+    String? amountString,
+    @JsonKey(name: '_amountString') Element? amountStringElement,
+    CodeableConcept? amountType,
+    String? amountText,
+    @JsonKey(name: '_amountText') Element? amountTextElement,
+    SubstanceAmountReferenceRange? referenceRange,
   }) = _SubstanceAmount;
 
   /// Produces a Yaml formatted String version of the object
@@ -505,10 +505,10 @@ abstract class SubstanceAmountReferenceRange
   /// [highLimit]: Upper limit possible or expected.
   factory SubstanceAmountReferenceRange({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Quantity lowLimit,
-    Quantity highLimit,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Quantity? lowLimit,
+    Quantity? highLimit,
   }) = _SubstanceAmountReferenceRange;
 
   /// Produces a Yaml formatted String version of the object

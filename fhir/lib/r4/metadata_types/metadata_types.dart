@@ -36,10 +36,10 @@ abstract class ContactDetail implements _$ContactDetail {
   ///  or the organization.
   factory ContactDetail({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    List<ContactPoint> telecom,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    List<ContactPoint>? telecom,
   }) = _ContactDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -89,12 +89,12 @@ abstract class Contributor implements _$Contributor {
   ///  with the contributor.
   factory Contributor({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType type,
-    @JsonKey(name: '_type') Element typeElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    List<ContactDetail> contact,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    List<ContactDetail>? contact,
   }) = _Contributor;
 
   /// Produces a Yaml formatted String version of the object
@@ -176,19 +176,19 @@ abstract class DataRequirement implements _$DataRequirement {
   /// [sort]: Specifies the order of the results to be returned.
   factory DataRequirement({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    Code type,
-    @JsonKey(name: '_type') Element typeElement,
-    List<Canonical> profile,
-    CodeableConcept subjectCodeableConcept,
-    Reference subjectReference,
-    List<String> mustSupport,
-    @JsonKey(name: '_mustSupport') List<Element> mustSupportElement,
-    List<DataRequirementCodeFilter> codeFilter,
-    List<DataRequirementDateFilter> dateFilter,
-    PositiveInt limit,
-    @JsonKey(name: '_limit') Element limitElement,
-    List<DataRequirementSort> sort,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    Code? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    List<Canonical>? profile,
+    CodeableConcept? subjectCodeableConcept,
+    Reference? subjectReference,
+    List<String>? mustSupport,
+    @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
+    List<DataRequirementCodeFilter>? codeFilter,
+    List<DataRequirementDateFilter>? dateFilter,
+    PositiveInt? limit,
+    @JsonKey(name: '_limit') Element? limitElement,
+    List<DataRequirementSort>? sort,
   }) = _DataRequirement;
 
   /// Produces a Yaml formatted String version of the object
@@ -270,14 +270,14 @@ abstract class DataRequirementCodeFilter
   ///  matching a code in the value set or one of the specified codes.
   factory DataRequirementCodeFilter({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String path,
-    @JsonKey(name: '_path') Element pathElement,
-    String searchParam,
-    @JsonKey(name: '_searchParam') Element searchParamElement,
-    Canonical valueSet,
-    List<Coding> code,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? path,
+    @JsonKey(name: '_path') Element? pathElement,
+    String? searchParam,
+    @JsonKey(name: '_searchParam') Element? searchParamElement,
+    Canonical? valueSet,
+    List<Coding>? code,
   }) = _DataRequirementCodeFilter;
 
   /// Produces a Yaml formatted String version of the object
@@ -372,16 +372,16 @@ abstract class DataRequirementDateFilter
   ///  return only those data items that fall within Duration before now.
   factory DataRequirementDateFilter({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String path,
-    @JsonKey(name: '_path') Element pathElement,
-    String searchParam,
-    @JsonKey(name: '_searchParam') Element searchParamElement,
-    FhirDateTime valueDateTime,
-    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-    Period valuePeriod,
-    FhirDuration valueDuration,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? path,
+    @JsonKey(name: '_path') Element? pathElement,
+    String? searchParam,
+    @JsonKey(name: '_searchParam') Element? searchParamElement,
+    FhirDateTime? valueDateTime,
+    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+    Period? valuePeriod,
+    FhirDuration? valueDuration,
   }) = _DataRequirementDateFilter;
 
   /// Produces a Yaml formatted String version of the object
@@ -447,13 +447,13 @@ abstract class DataRequirementSort implements _$DataRequirementSort {
   /// [_direction]: Extensions for direction
   factory DataRequirementSort({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String path,
-    @JsonKey(name: '_path') Element pathElement,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? path,
+    @JsonKey(name: '_path') Element? pathElement,
     @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
         DataRequirementSortDirection direction,
-    @JsonKey(name: '_direction') Element directionElement,
+    @JsonKey(name: '_direction') Element? directionElement,
   }) = _DataRequirementSort;
 
   /// Produces a Yaml formatted String version of the object
@@ -524,20 +524,20 @@ abstract class ParameterDefinition implements _$ParameterDefinition {
   ///  conform to, or that the output data will conform to.
   factory ParameterDefinition({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    Code name,
-    @JsonKey(name: '_name') Element nameElement,
-    Code use,
-    @JsonKey(name: '_use') Element useElement,
-    Integer min,
-    @JsonKey(name: '_min') Element minElement,
-    String max,
-    @JsonKey(name: '_max') Element maxElement,
-    String documentation,
-    @JsonKey(name: '_documentation') Element documentationElement,
-    Code type,
-    @JsonKey(name: '_type') Element typeElement,
-    Canonical profile,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    Code? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    Code? use,
+    @JsonKey(name: '_use') Element? useElement,
+    Integer? min,
+    @JsonKey(name: '_min') Element? minElement,
+    String? max,
+    @JsonKey(name: '_max') Element? maxElement,
+    String? documentation,
+    @JsonKey(name: '_documentation') Element? documentationElement,
+    Code? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    Canonical? profile,
   }) = _ParameterDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -605,20 +605,20 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
   ///  or other knowledge resource.
   factory RelatedArtifact({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
         RelatedArtifactType type,
-    @JsonKey(name: '_type') Element typeElement,
-    String label,
-    @JsonKey(name: '_label') Element labelElement,
-    String display,
-    @JsonKey(name: '_display') Element displayElement,
-    Markdown citation,
-    @JsonKey(name: '_citation') Element citationElement,
-    FhirUrl url,
-    @JsonKey(name: '_url') Element urlElement,
-    Attachment document,
-    Canonical resource,
+    @JsonKey(name: '_type') Element? typeElement,
+    String? label,
+    @JsonKey(name: '_label') Element? labelElement,
+    String? display,
+    @JsonKey(name: '_display') Element? displayElement,
+    Markdown? citation,
+    @JsonKey(name: '_citation') Element? citationElement,
+    FhirUrl? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    Attachment? document,
+    Canonical? resource,
   }) = _RelatedArtifact;
 
   /// Produces a Yaml formatted String version of the object
@@ -688,20 +688,20 @@ abstract class TriggerDefinition implements _$TriggerDefinition {
   ///  trigger fires.
   factory TriggerDefinition({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
         TriggerDefinitionType type,
-    @JsonKey(name: '_type') Element typeElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    Timing timingTiming,
-    Reference timingReference,
-    Date timingDate,
-    @JsonKey(name: '_timingDate') Element timingDateElement,
-    FhirDateTime timingDateTime,
-    @JsonKey(name: '_timingDateTime') Element timingDateTimeElement,
-    List<DataRequirement> data,
-    Expression condition,
+    @JsonKey(name: '_type') Element? typeElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    Timing? timingTiming,
+    Reference? timingReference,
+    Date? timingDate,
+    @JsonKey(name: '_timingDate') Element? timingDateElement,
+    FhirDateTime? timingDateTime,
+    @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
+    List<DataRequirement>? data,
+    Expression? condition,
   }) = _TriggerDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -756,12 +756,12 @@ abstract class UsageContext implements _$UsageContext {
   ///  context of use. The interpretation of the value is defined by the code.
   factory UsageContext({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    @required Coding code,
-    CodeableConcept valueCodeableConcept,
-    Quantity valueQuantity,
-    Range valueRange,
-    Reference valueReference,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @required Coding? code,
+    CodeableConcept? valueCodeableConcept,
+    Quantity? valueQuantity,
+    Range? valueRange,
+    Reference? valueReference,
   }) = _UsageContext;
 
   /// Produces a Yaml formatted String version of the object
@@ -824,18 +824,18 @@ abstract class Expression implements _$Expression {
   /// [_reference]: Extensions for reference
   factory Expression({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    Id name,
-    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    Id? name,
+    @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: ExpressionLanguage.unknown)
         ExpressionLanguage language,
-    @JsonKey(name: '_language') Element languageElement,
-    String expression,
-    @JsonKey(name: '_expression') Element expressionElement,
-    FhirUri reference,
-    @JsonKey(name: '_reference') Element referenceElement,
+    @JsonKey(name: '_language') Element? languageElement,
+    String? expression,
+    @JsonKey(name: '_expression') Element? expressionElement,
+    FhirUri? reference,
+    @JsonKey(name: '_reference') Element? referenceElement,
   }) = _Expression;
 
   /// Produces a Yaml formatted String version of the object

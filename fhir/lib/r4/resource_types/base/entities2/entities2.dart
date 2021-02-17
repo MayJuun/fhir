@@ -115,32 +115,32 @@ abstract class BiologicallyDerivedProduct
     @Default(R4ResourceType.BiologicallyDerivedProduct)
     @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown)
         BiologicallyDerivedProductProductCategory productCategory,
-    @JsonKey(name: '_productCategory') Element productCategoryElement,
-    CodeableConcept productCode,
+    @JsonKey(name: '_productCategory') Element? productCategoryElement,
+    CodeableConcept? productCode,
     @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown)
         BiologicallyDerivedProductStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<Reference> request,
-    Integer quantity,
-    @JsonKey(name: '_quantity') Element quantityElement,
-    List<Reference> parent,
-    BiologicallyDerivedProductCollection collection,
-    List<BiologicallyDerivedProductProcessing> processing,
-    BiologicallyDerivedProductManipulation manipulation,
-    List<BiologicallyDerivedProductStorage> storage,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<Reference>? request,
+    Integer? quantity,
+    @JsonKey(name: '_quantity') Element? quantityElement,
+    List<Reference>? parent,
+    BiologicallyDerivedProductCollection? collection,
+    List<BiologicallyDerivedProductProcessing>? processing,
+    BiologicallyDerivedProductManipulation? manipulation,
+    List<BiologicallyDerivedProductStorage>? storage,
   }) = _BiologicallyDerivedProduct;
 
   /// Produces a Yaml formatted String version of the object
@@ -206,13 +206,13 @@ abstract class BiologicallyDerivedProductCollection
   /// [collectedPeriod]: Time of product collection.
   factory BiologicallyDerivedProductCollection({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Reference collector,
-    Reference source,
-    FhirDateTime collectedDateTime,
-    @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
-    Period collectedPeriod,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Reference? collector,
+    Reference? source,
+    FhirDateTime? collectedDateTime,
+    @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
+    Period? collectedPeriod,
   }) = _BiologicallyDerivedProductCollection;
 
   /// Produces a Yaml formatted String version of the object
@@ -281,15 +281,15 @@ abstract class BiologicallyDerivedProductProcessing
   /// [timePeriod]: Time of processing.
   factory BiologicallyDerivedProductProcessing({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    CodeableConcept procedure,
-    Reference additive,
-    FhirDateTime timeDateTime,
-    @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
-    Period timePeriod,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    CodeableConcept? procedure,
+    Reference? additive,
+    FhirDateTime? timeDateTime,
+    @JsonKey(name: '_timeDateTime') Element? timeDateTimeElement,
+    Period? timePeriod,
   }) = _BiologicallyDerivedProductProcessing;
 
   /// Produces a Yaml formatted String version of the object
@@ -355,13 +355,13 @@ abstract class BiologicallyDerivedProductManipulation
   /// [timePeriod]: Time of manipulation.
   factory BiologicallyDerivedProductManipulation({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    FhirDateTime timeDateTime,
-    @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
-    Period timePeriod,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    FhirDateTime? timeDateTime,
+    @JsonKey(name: '_timeDateTime') Element? timeDateTimeElement,
+    Period? timePeriod,
   }) = _BiologicallyDerivedProductManipulation;
 
   /// Produces a Yaml formatted String version of the object
@@ -430,16 +430,16 @@ abstract class BiologicallyDerivedProductStorage
   /// [duration]: Storage timeperiod.
   factory BiologicallyDerivedProductStorage({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    Decimal temperature,
-    @JsonKey(name: '_temperature') Element temperatureElement,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    Decimal? temperature,
+    @JsonKey(name: '_temperature') Element? temperatureElement,
     @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
         BiologicallyDerivedProductStorageScale scale,
-    @JsonKey(name: '_scale') Element scaleElement,
-    Period duration,
+    @JsonKey(name: '_scale') Element? scaleElement,
+    Period? duration,
   }) = _BiologicallyDerivedProductStorage;
 
   /// Produces a Yaml formatted String version of the object
@@ -616,78 +616,53 @@ abstract class Device with Resource implements _$Device {
     @Default(R4ResourceType.Device)
     @JsonKey(unknownEnumValue: R4ResourceType.Device)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Reference definition,
-    List<DeviceUdiCarrier> udiCarrier,
-    @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<CodeableConcept> statusReason,
-    String distinctIdentifier,
-    @JsonKey(name: '_distinctIdentifier') Element distinctIdentifierElement,
-    String manufacturer,
-    @JsonKey(name: '_manufacturer') Element manufacturerElement,
-    FhirDateTime manufactureDate,
-    @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
-    FhirDateTime expirationDate,
-    @JsonKey(name: '_expirationDate') Element expirationDateElement,
-    String lotNumber,
-    @JsonKey(name: '_lotNumber') Element lotNumberElement,
-    String serialNumber,
-    @JsonKey(name: '_serialNumber') Element serialNumberElement,
-    List<DeviceDeviceName> deviceName,
-    String modelNumber,
-    @JsonKey(name: '_modelNumber') Element modelNumberElement,
-    String partNumber,
-    @JsonKey(name: '_partNumber') Element partNumberElement,
-    CodeableConcept type,
-    List<DeviceSpecialization> specialization,
-    List<DeviceVersion> version,
-    List<DeviceProperty> property,
-    Reference patient,
-    Reference owner,
-    List<ContactPoint> contact,
-    Reference location,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    List<Annotation> note,
-    List<CodeableConcept> safety,
-    Reference parent,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Reference? definition,
+    List<DeviceUdiCarrier>? udiCarrier,
+    @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<CodeableConcept>? statusReason,
+    String? distinctIdentifier,
+    @JsonKey(name: '_distinctIdentifier') Element? distinctIdentifierElement,
+    String? manufacturer,
+    @JsonKey(name: '_manufacturer') Element? manufacturerElement,
+    FhirDateTime? manufactureDate,
+    @JsonKey(name: '_manufactureDate') Element? manufactureDateElement,
+    FhirDateTime? expirationDate,
+    @JsonKey(name: '_expirationDate') Element? expirationDateElement,
+    String? lotNumber,
+    @JsonKey(name: '_lotNumber') Element? lotNumberElement,
+    String? serialNumber,
+    @JsonKey(name: '_serialNumber') Element? serialNumberElement,
+    List<DeviceDeviceName>? deviceName,
+    String? modelNumber,
+    @JsonKey(name: '_modelNumber') Element? modelNumberElement,
+    String? partNumber,
+    @JsonKey(name: '_partNumber') Element? partNumberElement,
+    CodeableConcept? type,
+    List<DeviceSpecialization>? specialization,
+    List<DeviceVersion>? version,
+    List<DeviceProperty>? property,
+    Reference? patient,
+    Reference? owner,
+    List<ContactPoint>? contact,
+    Reference? location,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Annotation>? note,
+    List<CodeableConcept>? safety,
+    Reference? parent,
   }) = _Device;
-
-  factory Device.usCore({
-    DeviceUdiCarrier udiCarrier,
-    String distinctIdentifier,
-    FhirDateTime manufactureDate,
-    FhirDateTime expirationDate,
-    String lotNumber,
-    @required CodeableConcept type,
-    @required Reference patient,
-  }) =>
-      Device(
-        udiCarrier: [udiCarrier],
-        distinctIdentifier: distinctIdentifier,
-        manufactureDate: manufactureDate,
-        expirationDate: expirationDate,
-        lotNumber: lotNumber,
-        type: type,
-        patient: patient,
-      );
-
-  factory Device.usCoreMinimum({
-    @required CodeableConcept type,
-    @required Reference patient,
-  }) =>
-      Device.usCore(type: type, patient: patient);
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
@@ -783,21 +758,21 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
   /// [_entryType]: Extensions for entryType
   factory DeviceUdiCarrier({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String deviceIdentifier,
-    @JsonKey(name: '_deviceIdentifier') Element deviceIdentifierElement,
-    FhirUri issuer,
-    @JsonKey(name: '_issuer') Element issuerElement,
-    FhirUri jurisdiction,
-    @JsonKey(name: '_jurisdiction') Element jurisdictionElement,
-    Base64Binary carrierAIDC,
-    @JsonKey(name: '_carrierAIDC') Element carrierAIDCElement,
-    String carrierHRF,
-    @JsonKey(name: '_carrierHRF') Element carrierHRFElement,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? deviceIdentifier,
+    @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
+    FhirUri? issuer,
+    @JsonKey(name: '_issuer') Element? issuerElement,
+    FhirUri? jurisdiction,
+    @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
+    Base64Binary? carrierAIDC,
+    @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
+    String? carrierHRF,
+    @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
     @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
         DeviceUdiCarrierEntryType entryType,
-    @JsonKey(name: '_entryType') Element entryTypeElement,
+    @JsonKey(name: '_entryType') Element? entryTypeElement,
   }) = _DeviceUdiCarrier;
 
   /// Produces a Yaml formatted String version of the object
@@ -860,13 +835,13 @@ abstract class DeviceDeviceName implements _$DeviceDeviceName {
   /// [_type]: Extensions for type
   factory DeviceDeviceName({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
         DeviceDeviceNameType type,
-    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
   }) = _DeviceDeviceName;
 
   /// Produces a Yaml formatted String version of the object
@@ -926,11 +901,11 @@ abstract class DeviceSpecialization implements _$DeviceSpecialization {
   /// [_version]: Extensions for version
   factory DeviceSpecialization({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept systemType,
-    String version,
-    @JsonKey(name: '_version') Element versionElement,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @required CodeableConcept? systemType,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
   }) = _DeviceSpecialization;
 
   /// Produces a Yaml formatted String version of the object
@@ -991,12 +966,12 @@ abstract class DeviceVersion implements _$DeviceVersion {
   /// [_value]: Extensions for value
   factory DeviceVersion({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    Identifier component,
-    String value,
-    @JsonKey(name: '_value') Element valueElement,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    Identifier? component,
+    String? value,
+    @JsonKey(name: '_value') Element? valueElement,
   }) = _DeviceVersion;
 
   /// Produces a Yaml formatted String version of the object
@@ -1056,11 +1031,11 @@ abstract class DeviceProperty implements _$DeviceProperty {
   /// [valueCode]: Property value as a code, e.g., NTP4 (synced to NTP).
   factory DeviceProperty({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    List<Quantity> valueQuantity,
-    List<CodeableConcept> valueCode,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @required CodeableConcept? type,
+    List<Quantity>? valueQuantity,
+    List<CodeableConcept>? valueCode,
   }) = _DeviceProperty;
 
   /// Produces a Yaml formatted String version of the object
@@ -1195,32 +1170,32 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
     @Default(R4ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @required CodeableConcept type,
-    CodeableConcept unit,
-    Reference source,
-    Reference parent,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    @required CodeableConcept? type,
+    CodeableConcept? unit,
+    Reference? source,
+    Reference? parent,
     @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
         DeviceMetricOperationalStatus operationalStatus,
-    @JsonKey(name: '_operationalStatus') Element operationalStatusElement,
+    @JsonKey(name: '_operationalStatus') Element? operationalStatusElement,
     @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
         DeviceMetricColor color,
-    @JsonKey(name: '_color') Element colorElement,
+    @JsonKey(name: '_color') Element? colorElement,
     @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
         DeviceMetricCategory category,
-    @JsonKey(name: '_category') Element categoryElement,
-    Timing measurementPeriod,
-    List<DeviceMetricCalibration> calibration,
+    @JsonKey(name: '_category') Element? categoryElement,
+    Timing? measurementPeriod,
+    List<DeviceMetricCalibration>? calibration,
   }) = _DeviceMetric;
 
   /// Produces a Yaml formatted String version of the object
@@ -1284,16 +1259,16 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
   /// [_time]: Extensions for time
   factory DeviceMetricCalibration({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
         DeviceMetricCalibrationType type,
-    @JsonKey(name: '_type') Element typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
     @JsonKey(unknownEnumValue: DeviceMetricCalibrationState.unknown)
         DeviceMetricCalibrationState state,
-    @JsonKey(name: '_state') Element stateElement,
-    Instant time,
-    @JsonKey(name: '_time') Element timeElement,
+    @JsonKey(name: '_state') Element? stateElement,
+    Instant? time,
+    @JsonKey(name: '_time') Element? timeElement,
   }) = _DeviceMetricCalibration;
 
   /// Produces a Yaml formatted String version of the object
@@ -1396,25 +1371,25 @@ abstract class Substance with Resource implements _$Substance {
     @Default(R4ResourceType.Substance)
     @JsonKey(unknownEnumValue: R4ResourceType.Substance)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: SubstanceStatus.unknown) SubstanceStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<CodeableConcept> category,
-    @required CodeableConcept code,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<SubstanceInstance> instance,
-    List<SubstanceIngredient> ingredient,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    @JsonKey(unknownEnumValue: SubstanceStatus.unknown) SubstanceStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<CodeableConcept>? category,
+    @required CodeableConcept? code,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<SubstanceInstance>? instance,
+    List<SubstanceIngredient>? ingredient,
   }) = _Substance;
 
   /// Produces a Yaml formatted String version of the object
@@ -1475,12 +1450,12 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
   /// [quantity]: The amount of the substance.
   factory SubstanceInstance({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    FhirDateTime expiry,
-    @JsonKey(name: '_expiry') Element expiryElement,
-    Quantity quantity,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    FhirDateTime? expiry,
+    @JsonKey(name: '_expiry') Element? expiryElement,
+    Quantity? quantity,
   }) = _SubstanceInstance;
 
   /// Produces a Yaml formatted String version of the object
@@ -1541,11 +1516,11 @@ abstract class SubstanceIngredient implements _$SubstanceIngredient {
   ///  substance.
   factory SubstanceIngredient({
     String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Ratio quantity,
-    CodeableConcept substanceCodeableConcept,
-    Reference substanceReference,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Ratio? quantity,
+    CodeableConcept? substanceCodeableConcept,
+    Reference? substanceReference,
   }) = _SubstanceIngredient;
 
   /// Produces a Yaml formatted String version of the object
