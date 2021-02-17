@@ -260,7 +260,7 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-        SupplyDeliveryStatus status,
+        SupplyDeliveryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? patient,
     CodeableConcept? type,

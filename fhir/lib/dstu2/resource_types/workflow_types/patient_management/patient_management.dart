@@ -177,7 +177,7 @@ abstract class EncounterLocation with _$EncounterLocation {
     List<FhirExtension>? modifierExtension,
     required Reference? location,
     @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
-        EncounterLocationStatus status,
+        EncounterLocationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? period,
   }) = _EncounterLocation;
@@ -332,7 +332,7 @@ abstract class Communication with Resource implements _$Communication {
     List<CommunicationPayload>? payload,
     List<CodeableConcept>? medium,
     @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
-        CommunicationStatus status,
+        CommunicationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? encounter,
     FhirDateTime? sent,

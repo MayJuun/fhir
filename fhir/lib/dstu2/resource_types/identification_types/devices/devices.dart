@@ -170,10 +170,10 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
     Reference? source,
     Reference? parent,
     @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
-        DeviceMetricOperationalStatus operationalStatus,
+        DeviceMetricOperationalStatus? operationalStatus,
     @JsonKey(name: '_operationalStatus') Element? operationalStatusElement,
     @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
-        DeviceMetricColor color,
+        DeviceMetricColor? color,
     @JsonKey(name: '_color') Element? colorElement,
     @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
         required DeviceMetricCategory category,

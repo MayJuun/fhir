@@ -304,7 +304,7 @@ abstract class DiagnosticOrder with Resource implements _$DiagnosticOrder {
     @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
         DiagnosticOrderStatus? status,
     @JsonKey(unknownEnumValue: DiagnosticOrderPriority.unknown)
-        DiagnosticOrderPriority priority,
+        DiagnosticOrderPriority? priority,
     List<DiagnosticOrderEvent>? event,
     List<DiagnosticOrderItem>? item,
     List<Annotation>? note,
@@ -601,7 +601,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
     List<Coding>? modalityList,
     Reference? referrer,
     @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
-        ImagingStudyAvailability availability,
+        ImagingStudyAvailability? availability,
     FhirUri? url,
     required UnsignedInt? numberOfSeries,
     @JsonKey(name: '_numberOfSeries') Element? numberOfSeriesElement,
@@ -648,7 +648,7 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
     required UnsignedInt? numberOfInstances,
     @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
     @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
-        SeriesAvailability availability,
+        SeriesAvailability? availability,
     FhirUri? url,
     Coding? bodySite,
     Coding? laterality,

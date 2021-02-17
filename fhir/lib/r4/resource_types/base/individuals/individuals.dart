@@ -1256,7 +1256,7 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
     List<PractitionerRoleNotAvailable>? notAvailable,
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
-        Element availabilityExceptionsElement,
+        Element? availabilityExceptionsElement,
     List<Reference>? endpoint,
   }) = _PractitionerRole;
 

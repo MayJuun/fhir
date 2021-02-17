@@ -80,7 +80,7 @@ abstract class PaymentReconciliation
     List<Identifier>? identifier,
     Reference? request,
     @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
-        PaymentReconciliationOutcome outcome,
+        PaymentReconciliationOutcome? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,

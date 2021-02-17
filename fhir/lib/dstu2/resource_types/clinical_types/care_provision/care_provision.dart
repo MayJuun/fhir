@@ -412,7 +412,7 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
     required FhirDateTime? dateTime,
     @JsonKey(name: '_dateTime') Element? dateTimeElement,
     @JsonKey(unknownEnumValue: NutritionOrderStatus.unknown)
-        NutritionOrderStatus status,
+        NutritionOrderStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Reference>? allergyIntolerance,
     List<CodeableConcept>? foodPreferenceModifier,
@@ -520,7 +520,7 @@ abstract class NutritionOrderEnteralFormula
     CodeableConcept? baseFormulaType,
     String? baseFormulaProductName,
     @JsonKey(name: '_baseFormulaProductName')
-        Element baseFormulaProductNameElement,
+        Element? baseFormulaProductNameElement,
     CodeableConcept? additiveType,
     @JsonKey(name: '_additiveProductName') Element? additiveProductNameElement,
     String? additiveProductName,
@@ -530,7 +530,7 @@ abstract class NutritionOrderEnteralFormula
     Quantity? maxVolumeToDeliver,
     String? administrationInstruction,
     @JsonKey(name: '_administrationInstruction')
-        Element administrationInstructionElement,
+        Element? administrationInstructionElement,
   }) = _NutritionOrderEnteralFormula;
 
   /// Produces a Yaml formatted String version of the object

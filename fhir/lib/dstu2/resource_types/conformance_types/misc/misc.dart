@@ -603,7 +603,7 @@ abstract class TestScriptActionOperation with _$TestScriptActionOperation {
     @JsonKey(unknownEnumValue: OperationAccept.unknown) OperationAccept? accept,
     @JsonKey(name: '_accept') Element? acceptElement,
     @JsonKey(unknownEnumValue: OperationContentType.unknown)
-        OperationContentType contentType,
+        OperationContentType? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
     Integer? destination,
     @JsonKey(name: '_destination') Element? destinationElement,
@@ -683,14 +683,14 @@ abstract class TestScriptActionAssert with _$TestScriptActionAssert {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     @JsonKey(unknownEnumValue: AssertDirection.unknown)
-        AssertDirection direction,
+        AssertDirection? direction,
     @JsonKey(name: '_direction') Element? directionElement,
     String? compareToSourceId,
     @JsonKey(name: '_compareToSourceId') Element? compareToSourceIdElement,
     String? compareToSourcePath,
     @JsonKey(name: '_compareToSourcePath') Element? compareToSourcePathElement,
     @JsonKey(unknownEnumValue: AssertContentType.unknown)
-        AssertContentType contentType,
+        AssertContentType? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
     String? headerField,
     @JsonKey(name: '_headerField') Element? headerFieldElement,
@@ -699,7 +699,7 @@ abstract class TestScriptActionAssert with _$TestScriptActionAssert {
     Boolean? navigationLinks,
     @JsonKey(name: '_navigationLinks') Element? navigationLinksElement,
     @JsonKey(unknownEnumValue: AssertOperator.unknown, name: 'operator')
-        AssertOperator operator_,
+        AssertOperator? operator_,
     @JsonKey(name: '_operator') Element? operatorElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,

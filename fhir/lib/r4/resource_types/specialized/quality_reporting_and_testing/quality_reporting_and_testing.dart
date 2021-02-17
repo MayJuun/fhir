@@ -861,7 +861,7 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
         MeasureReportStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     @JsonKey(unknownEnumValue: MeasureReportType.unknown)
-        MeasureReportType type,
+        MeasureReportType? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Canonical? measure,
     Reference? subject,

@@ -133,7 +133,7 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
     List<HealthcareServiceNotAvailable>? notAvailable,
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
-        Element availabilityExceptionsElement,
+        Element? availabilityExceptionsElement,
   }) = _HealthcareService;
 
   /// Produces a Yaml formatted String version of the object

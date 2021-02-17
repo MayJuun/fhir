@@ -5052,7 +5052,7 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
-        InsurancePlanStatus status,
+        InsurancePlanStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? type,
     String? name,

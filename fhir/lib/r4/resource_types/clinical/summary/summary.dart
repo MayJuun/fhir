@@ -1473,7 +1473,7 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? code,
     @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
-        DetectedIssueSeverity severity,
+        DetectedIssueSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     Reference? patient,
     FhirDateTime? identifiedDateTime,

@@ -820,7 +820,7 @@ abstract class EpisodeOfCareStatusHistory
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EpisodeOfCareStatusHistoryStatus.unknown)
-        EpisodeOfCareStatusHistoryStatus status,
+        EpisodeOfCareStatusHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period? period,
   }) = _EpisodeOfCareStatusHistory;

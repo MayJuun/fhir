@@ -31,7 +31,7 @@ abstract class Conformance with Resource implements _$Conformance {
     String? version,
     String? name,
     @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-        ConformanceStatus status,
+        ConformanceStatus? status,
     Boolean? experimental,
     String? publisher,
     List<ConformanceContact>? contact,
@@ -94,7 +94,7 @@ abstract class CapabilityStatement
     String? version,
     String? name,
     @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-        ConformanceStatus status,
+        ConformanceStatus? status,
     Boolean? experimental,
     String? publisher,
     List<ConformanceContact>? contact,
@@ -236,7 +236,7 @@ abstract class ConformanceRest with _$ConformanceRest {
     required List<ConformanceRestResource>? resource,
     List<ConformanceRestInteraction>? interaction,
     @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
-        RestTransactionMode transactionMode,
+        RestTransactionMode? transactionMode,
     List<ConformanceResourceSearchParam>? searchParam,
     List<ConformanceRestOperation>? operation,
     List<FhirUri>? compartment,
@@ -365,7 +365,7 @@ abstract class ConformanceRestResource with _$ConformanceRestResource {
     @JsonKey(required: true)
         required List<ConformanceResourceInteraction> interaction,
     @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
-        ResourceVersioning versioning,
+        ResourceVersioning? versioning,
     Boolean? readHistory,
     Boolean? updateCreate,
     @JsonKey(name: '_updateCreate') Element? updateCreateElement,
@@ -373,7 +373,7 @@ abstract class ConformanceRestResource with _$ConformanceRestResource {
     @JsonKey(name: '_conditionalCreate') Element? conditionalCreateElement,
     Boolean? conditionalUpdate,
     @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
-        ResourceConditionalDelete conditionalDelete,
+        ResourceConditionalDelete? conditionalDelete,
     @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
     List<String>? searchInclude,
     List<String>? searchRevInclude,
@@ -807,7 +807,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     required FhirUri? url,
     required String? name,
     @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-        SearchParameterStatus status,
+        SearchParameterStatus? status,
     Boolean? experimental,
     String? publisher,
     List<SearchParameterContact>? contact,
@@ -821,7 +821,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     String? description,
     String? xpath,
     @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-        SearchParameterXpathUsage xpathUsage,
+        SearchParameterXpathUsage? xpathUsage,
     List<Code>? target,
   }) = _SearchParameter;
 

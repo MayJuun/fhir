@@ -480,7 +480,7 @@ abstract class MedicationDispense
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
-        MedicationDispenseStatus status,
+        MedicationDispenseStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? patient,
     Reference? dispenser,

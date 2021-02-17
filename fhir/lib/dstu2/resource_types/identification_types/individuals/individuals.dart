@@ -337,7 +337,7 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
     HumanName? name,
     List<ContactPoint>? telecom,
     @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-        RelatedPersonGender gender,
+        RelatedPersonGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,

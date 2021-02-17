@@ -943,7 +943,7 @@ abstract class ConsentProvision implements _$ConsentProvision {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-        ConsentProvisionType type,
+        ConsentProvisionType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Period? period,
     List<ConsentActor>? actor,

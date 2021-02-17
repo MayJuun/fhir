@@ -779,7 +779,7 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
     String? carrierHRF,
     @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
     @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
-        DeviceUdiCarrierEntryType entryType,
+        DeviceUdiCarrierEntryType? entryType,
     @JsonKey(name: '_entryType') Element? entryTypeElement,
   }) = _DeviceUdiCarrier;
 

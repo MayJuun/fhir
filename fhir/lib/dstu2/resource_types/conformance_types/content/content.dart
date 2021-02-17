@@ -66,7 +66,7 @@ abstract class StructureDefinition
     @JsonKey(name: 'abstract', required: true) required Boolean? abstract_,
     @JsonKey(name: '_abstract') Element? abstractElement,
     @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-        StructureDefinitionContextType contextType,
+        StructureDefinitionContextType? contextType,
     List<String>? context,
     FhirUri? base,
     StructureDefinitionSnapshot? snapshot,
@@ -242,7 +242,7 @@ abstract class DataElement with Resource implements _$DataElement {
     List<CodeableConcept>? useContext,
     String? copyright,
     @JsonKey(unknownEnumValue: DataElementStringency.unknown)
-        DataElementStringency stringency,
+        DataElementStringency? stringency,
     List<DataElementMapping>? mapping,
     required List<ElementDefinition>? element,
   }) = _DataElement;

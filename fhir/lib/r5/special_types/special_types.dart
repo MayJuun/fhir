@@ -545,7 +545,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     @JsonKey(name: '_defaultValueInteger') Element? defaultValueIntegerElement,
     Integer64? defaultValueInteger64,
     @JsonKey(name: '_defaultValueInteger64')
-        Element defaultValueInteger64Element,
+        Element? defaultValueInteger64Element,
     Markdown? defaultValueMarkdown,
     @JsonKey(name: '_defaultValueMarkdown')
         Element? defaultValueMarkdownElement,
@@ -830,7 +830,7 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
     Boolean? ordered,
     @JsonKey(name: '_ordered') Element? orderedElement,
     @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
-        ElementDefinitionSlicingRules rules,
+        ElementDefinitionSlicingRules? rules,
     @JsonKey(name: '_rules') Element? rulesElement,
   }) = _ElementDefinitionSlicing;
 
@@ -861,7 +861,7 @@ abstract class ElementDefinitionDiscriminator
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
-        ElementDefinitionDiscriminatorType type,
+        ElementDefinitionDiscriminatorType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
@@ -933,7 +933,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
     List<ElementDefinitionTypeAggregation>? aggregation,
     @JsonKey(name: '_aggregation') List<Element>? aggregationElement,
     @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
-        ElementDefinitionTypeVersioning versioning,
+        ElementDefinitionTypeVersioning? versioning,
     @JsonKey(name: '_versioning') Element? versioningElement,
   }) = _ElementDefinitionType;
 
@@ -1067,7 +1067,7 @@ abstract class ElementDefinitionConstraint
     String? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
     @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-        ElementDefinitionConstraintSeverity severity,
+        ElementDefinitionConstraintSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     String? human,
     @JsonKey(name: '_human') Element? humanElement,
@@ -1104,7 +1104,7 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-        ElementDefinitionBindingStrength strength,
+        ElementDefinitionBindingStrength? strength,
     @JsonKey(name: '_strength') Element? strengthElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,

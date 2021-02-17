@@ -498,7 +498,7 @@ abstract class ContactPoint implements _$ContactPoint {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-        ContactPointSystem system,
+        ContactPointSystem? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,

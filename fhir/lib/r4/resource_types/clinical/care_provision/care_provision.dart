@@ -2920,7 +2920,7 @@ abstract class VisionPrescriptionLensSpecification
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? product,
     @JsonKey(unknownEnumValue: VisionPrescriptionLensSpecificationEye.unknown)
-        VisionPrescriptionLensSpecificationEye eye,
+        VisionPrescriptionLensSpecificationEye? eye,
     @JsonKey(name: '_eye') Element? eyeElement,
     Decimal? sphere,
     @JsonKey(name: '_sphere') Element? sphereElement,

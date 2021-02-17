@@ -231,7 +231,7 @@ abstract class EnrollmentResponse
     List<Identifier>? identifier,
     Reference? request,
     @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-        EnrollmentResponseOutcome outcome,
+        EnrollmentResponseOutcome? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,

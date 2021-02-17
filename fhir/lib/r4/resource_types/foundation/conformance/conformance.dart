@@ -509,7 +509,7 @@ abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
-        CapabilityStatementRestMode mode,
+        CapabilityStatementRestMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,

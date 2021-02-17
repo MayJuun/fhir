@@ -232,7 +232,7 @@ abstract class DeviceUseRequest with Resource implements _$DeviceUseRequest {
     CodeableConcept? bodySiteCodeableConcept,
     Reference? bodySiteReference,
     @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
-        DeviceUseRequestStatus status,
+        DeviceUseRequestStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Reference? device,
     Reference? encounter,
@@ -247,7 +247,7 @@ abstract class DeviceUseRequest with Resource implements _$DeviceUseRequest {
     Period? timingPeriod,
     FhirDateTime? timingDateTime,
     @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
-        DeviceUseRequestPriority priority,
+        DeviceUseRequestPriority? priority,
     @JsonKey(name: '_priority') Element? priorityElement,
   }) = _DeviceUseRequest;
 

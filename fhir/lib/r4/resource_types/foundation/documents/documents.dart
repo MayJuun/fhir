@@ -458,7 +458,7 @@ abstract class CompositionAttester implements _$CompositionAttester {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
-        CompositionAttesterMode mode,
+        CompositionAttesterMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     FhirDateTime? time,
     @JsonKey(name: '_time') Element? timeElement,

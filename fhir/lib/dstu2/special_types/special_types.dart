@@ -134,10 +134,10 @@ abstract class ElementDefinition implements _$ElementDefinition {
     @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
     UnsignedInt? defaultValueUnsignedInt,
     @JsonKey(name: '_defaultValueUnsignedInt')
-        Element defaultValueUnsignedIntElement,
+        Element? defaultValueUnsignedIntElement,
     PositiveInt? defaultValuePositiveInt,
     @JsonKey(name: '_defaultValuePositiveInt')
-        Element defaultValuePositiveIntElement,
+        Element? defaultValuePositiveIntElement,
     Markdown? defaultValueMarkdown,
     @JsonKey(name: '_defaultValueMarkDown')
         Element? defaultValueMarkDownElement,

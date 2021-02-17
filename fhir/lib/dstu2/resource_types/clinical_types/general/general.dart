@@ -83,7 +83,7 @@ abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     CodeableConcept? substance,
     @JsonKey(unknownEnumValue: ReactionCertainty.unknown)
-        ReactionCertainty certainty,
+        ReactionCertainty? certainty,
     @JsonKey(name: '_certainty') Element? certaintyElement,
     required List<CodeableConcept>? manifestation,
     String? description,
@@ -91,7 +91,7 @@ abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
     FhirDateTime? onset,
     @JsonKey(name: '_onset') Element? onsetElement,
     @JsonKey(unknownEnumValue: ReactionSeverity.unknown)
-        ReactionSeverity severity,
+        ReactionSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     CodeableConcept? exposureRoute,
     Annotation? note,
@@ -141,7 +141,7 @@ abstract class Condition with Resource implements _$Condition {
     required CodeableConcept? code,
     CodeableConcept? category,
     @JsonKey(unknownEnumValue: ConditionClinicalStatus.unknown)
-        ConditionClinicalStatus clinicalStatus,
+        ConditionClinicalStatus? clinicalStatus,
     @JsonKey(required: true, unknownEnumValue: ConditionVerificationStatus.unknown)
         required ConditionVerificationStatus verificationStatus,
     CodeableConcept? severity,
@@ -542,7 +542,7 @@ abstract class FamilyMemberHistory
     @JsonKey(name: '_name') Element? nameElement,
     required CodeableConcept? relationship,
     @JsonKey(unknownEnumValue: FamilyMemberHistoryGender.unknown)
-        FamilyMemberHistoryGender gender,
+        FamilyMemberHistoryGender? gender,
     Period? bornPeriod,
     Date? bornDate,
     @JsonKey(name: '_bornDate') Element? bornDateElement,
@@ -722,7 +722,7 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
     Reference? patient,
     CodeableConcept? category,
     @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
-        DetectedIssueSeverity severity,
+        DetectedIssueSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     List<Reference>? implicated,
     String? detail,
