@@ -608,7 +608,7 @@ abstract class EncounterLocation implements _$EncounterLocation {
     List<FhirExtension>? modifierExtension,
     required Reference? location,
     @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
-        EncounterLocationStatus status,
+        EncounterLocationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? physicalType,
     Period? period,
@@ -744,7 +744,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
-        EpisodeOfCareStatus status,
+        EpisodeOfCareStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<EpisodeOfCareStatusHistory>? statusHistory,
     List<CodeableConcept>? type,

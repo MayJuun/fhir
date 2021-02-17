@@ -1963,7 +1963,7 @@ abstract class StructureMapSource implements _$StructureMapSource {
     @JsonKey(name: '_defaultValueDecimal') Element? defaultValueDecimalElement,
     String? defaultValueBase64Binary,
     @JsonKey(name: '_defaultValueBase64Binary')
-        Element defaultValueBase64BinaryElement,
+        Element? defaultValueBase64BinaryElement,
     String? defaultValueInstant,
     @JsonKey(name: '_defaultValueInstant') Element? defaultValueInstantElement,
     String? defaultValueString,

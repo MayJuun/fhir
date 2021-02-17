@@ -784,7 +784,7 @@ abstract class ChargeItemDefinition
     List<Canonical>? partOf,
     List<Canonical>? replaces,
     @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
-        ChargeItemDefinitionStatus status,
+        ChargeItemDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -2943,7 +2943,7 @@ abstract class ExplanationOfBenefit
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
-        ExplanationOfBenefitStatus status,
+        ExplanationOfBenefitStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required CodeableConcept? type,
     CodeableConcept? subType,

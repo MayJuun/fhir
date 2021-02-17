@@ -506,12 +506,12 @@ abstract class AllergyIntolerance
     CodeableConcept? clinicalStatus,
     CodeableConcept? verificationStatus,
     @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
-        AllergyIntoleranceType type,
+        AllergyIntoleranceType? type,
     @JsonKey(name: '_type') Element? typeElement,
     List<AllergyIntoleranceCategory>? category,
     @JsonKey(name: '_category') List<Element>? categoryElement,
     @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
-        AllergyIntoleranceCriticality criticality,
+        AllergyIntoleranceCriticality? criticality,
     @JsonKey(name: '_criticality') Element? criticalityElement,
     CodeableConcept? code,
     required Reference? patient,

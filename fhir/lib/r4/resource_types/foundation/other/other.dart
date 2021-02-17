@@ -1243,7 +1243,7 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
     Id? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
     @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
-        MessageHeaderResponseCode code,
+        MessageHeaderResponseCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     Reference? details,
   }) = _MessageHeaderResponse;

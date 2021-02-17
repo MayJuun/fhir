@@ -426,7 +426,7 @@ abstract class EffectEvidenceSynthesisResultsByExposure
     @JsonKey(
         unknownEnumValue:
             EffectEvidenceSynthesisResultsByExposureExposureState.unknown)
-        EffectEvidenceSynthesisResultsByExposureExposureState exposureState,
+        EffectEvidenceSynthesisResultsByExposureExposureState? exposureState,
     @JsonKey(name: '_exposureState') Element? exposureStateElement,
     CodeableConcept? variantState,
     required Reference? riskEvidenceSynthesis,

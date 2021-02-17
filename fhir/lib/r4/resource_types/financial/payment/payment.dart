@@ -455,7 +455,7 @@ abstract class PaymentReconciliationProcessNote
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
-        PaymentReconciliationProcessNoteType type,
+        PaymentReconciliationProcessNoteType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,

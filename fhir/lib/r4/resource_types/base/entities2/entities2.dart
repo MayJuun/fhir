@@ -131,7 +131,7 @@ abstract class BiologicallyDerivedProduct
     @JsonKey(name: '_productCategory') Element? productCategoryElement,
     CodeableConcept? productCode,
     @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown)
-        BiologicallyDerivedProductStatus status,
+        BiologicallyDerivedProductStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Reference>? request,
     Integer? quantity,
@@ -443,7 +443,7 @@ abstract class BiologicallyDerivedProductStorage
     Decimal? temperature,
     @JsonKey(name: '_temperature') Element? temperatureElement,
     @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
-        BiologicallyDerivedProductStorageScale scale,
+        BiologicallyDerivedProductStorageScale? scale,
     @JsonKey(name: '_scale') Element? scaleElement,
     Period? duration,
   }) = _BiologicallyDerivedProductStorage;

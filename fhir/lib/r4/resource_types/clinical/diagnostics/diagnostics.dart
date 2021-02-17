@@ -558,7 +558,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
-        ImagingStudyStatus status,
+        ImagingStudyStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Coding>? modality,
     required Reference? subject,
@@ -1204,7 +1204,7 @@ abstract class MolecularSequence with Resource implements _$MolecularSequence {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
-        MolecularSequenceType type,
+        MolecularSequenceType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Integer? coordinateSystem,
     @JsonKey(name: '_coordinateSystem') Element? coordinateSystemElement,

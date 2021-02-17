@@ -1169,7 +1169,7 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
     @JsonKey(name: '_moduleCanonical') Element? moduleCanonicalElement,
     CodeableConcept? moduleCodeableConcept,
     @JsonKey(unknownEnumValue: GuidanceResponseStatus.unknown)
-        GuidanceResponseStatus status,
+        GuidanceResponseStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? subject,
     Reference? encounter,
@@ -1316,7 +1316,7 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
     List<Reference>? basedOn,
     List<Reference>? partOf,
     @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-        SupplyDeliveryStatus status,
+        SupplyDeliveryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? patient,
     CodeableConcept? type,

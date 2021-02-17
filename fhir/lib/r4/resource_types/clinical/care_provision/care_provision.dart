@@ -812,7 +812,7 @@ abstract class Goal with Resource implements _$Goal {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
-        GoalLifecycleStatus lifecycleStatus,
+        GoalLifecycleStatus? lifecycleStatus,
     @JsonKey(name: '_lifecycleStatus') Element? lifecycleStatusElement,
     CodeableConcept? achievementStatus,
     List<CodeableConcept>? category,
@@ -1538,7 +1538,7 @@ abstract class NutritionOrderEnteralFormula
     CodeableConcept? baseFormulaType,
     String? baseFormulaProductName,
     @JsonKey(name: '_baseFormulaProductName')
-        Element baseFormulaProductNameElement,
+        Element? baseFormulaProductNameElement,
     CodeableConcept? additiveType,
     String? additiveProductName,
     @JsonKey(name: '_additiveProductName') Element? additiveProductNameElement,

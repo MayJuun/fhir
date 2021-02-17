@@ -872,7 +872,7 @@ abstract class DeviceDefinitionDeviceName
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: DeviceDefinitionDeviceNameType.unknown)
-        DeviceDefinitionDeviceNameType type,
+        DeviceDefinitionDeviceNameType? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _DeviceDefinitionDeviceName;
 

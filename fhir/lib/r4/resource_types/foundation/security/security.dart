@@ -129,7 +129,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
     Instant? recorded,
     @JsonKey(name: '_recorded') Element? recordedElement,
     @JsonKey(unknownEnumValue: AuditEventOutcome.unknown)
-        AuditEventOutcome outcome,
+        AuditEventOutcome? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? outcomeDesc,
     @JsonKey(name: '_outcomeDesc') Element? outcomeDescElement,
@@ -316,7 +316,7 @@ abstract class AuditEventNetwork implements _$AuditEventNetwork {
     String? address,
     @JsonKey(name: '_address') Element? addressElement,
     @JsonKey(unknownEnumValue: AuditEventNetworkType.unknown)
-        AuditEventNetworkType type,
+        AuditEventNetworkType? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _AuditEventNetwork;
 

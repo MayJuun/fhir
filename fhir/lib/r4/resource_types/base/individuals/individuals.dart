@@ -894,7 +894,7 @@ abstract class PersonLink implements _$PersonLink {
     List<FhirExtension>? modifierExtension,
     required Reference? target,
     @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-        PersonLinkAssurance assurance,
+        PersonLinkAssurance? assurance,
     @JsonKey(name: '_assurance') Element? assuranceElement,
   }) = _PersonLink;
 
@@ -1031,7 +1031,7 @@ abstract class Practitioner with Resource implements _$Practitioner {
     List<ContactPoint>? telecom,
     List<Address>? address,
     @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-        PractitionerGender gender,
+        PractitionerGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,

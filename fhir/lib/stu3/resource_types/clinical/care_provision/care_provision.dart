@@ -539,7 +539,7 @@ abstract class NutritionOrderEnteralFormula
     Quantity? maxVolumeToDeliver,
     String? administrationInstruction,
     @JsonKey(name: '_administrationInstruction')
-        Element administrationInstructionElement,
+        Element? administrationInstructionElement,
   }) = _NutritionOrderEnteralFormula;
 
   /// Produces a Yaml formatted String version of the object

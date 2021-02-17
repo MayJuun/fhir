@@ -483,7 +483,7 @@ abstract class TestScriptLink implements _$TestScriptLink {
 abstract class TestScriptCapability implements _$TestScriptCapability {
   TestScriptCapability._();
   factory TestScriptCapability({
-    @JsonKey(name: 'required') Boolean required_,
+    @JsonKey(name: 'required') Boolean? required_,
     @JsonKey(name: '_required') Element? requiredElement,
     Boolean? validated,
     @JsonKey(name: '_validated') Element? validatedElement,
@@ -855,7 +855,7 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
     @JsonKey(name: '_compareToSourceId') Element? compareToSourceIdElement,
     String? compareToSourceExpression,
     @JsonKey(name: '_compareToSourceExpression')
-        Element compareToSourceExpressionElement,
+        Element? compareToSourceExpressionElement,
     String? compareToSourcePath,
     @JsonKey(name: '_compareToSourcePath') Element? compareToSourcePathElement,
     TestScriptAssertContentType? contentType,

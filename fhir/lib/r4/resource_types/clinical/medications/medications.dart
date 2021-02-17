@@ -521,7 +521,7 @@ abstract class ImmunizationProtocolApplied
     @JsonKey(name: '_doseNumberString') Element? doseNumberStringElement,
     PositiveInt? seriesDosesPositiveInt,
     @JsonKey(name: '_seriesDosesPositiveInt')
-        Element seriesDosesPositiveIntElement,
+        Element? seriesDosesPositiveIntElement,
     String? seriesDosesString,
     @JsonKey(name: '_seriesDosesString') Element? seriesDosesStringElement,
   }) = _ImmunizationProtocolApplied;
@@ -693,7 +693,7 @@ abstract class ImmunizationEvaluation
     @JsonKey(name: '_series') Element? seriesElement,
     PositiveInt? doseNumberPositiveInt,
     @JsonKey(name: '_doseNumberPositiveInt')
-        Element doseNumberPositiveIntElement,
+        Element? doseNumberPositiveIntElement,
     String? doseNumberString,
     @JsonKey(name: '_doseNumberString') Element? doseNumberStringElement,
     PositiveInt? seriesDosesPositiveInt,

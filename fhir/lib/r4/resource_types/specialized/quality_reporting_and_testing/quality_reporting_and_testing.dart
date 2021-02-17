@@ -858,7 +858,7 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
-        MeasureReportStatus status,
+        MeasureReportStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     @JsonKey(unknownEnumValue: MeasureReportType.unknown)
         MeasureReportType type,

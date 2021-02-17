@@ -252,14 +252,14 @@ abstract class CapabilityStatement
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
-        CapabilityStatementKind kind,
+        CapabilityStatementKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     List<Canonical>? instantiates,
     List<Canonical>? imports,
     CapabilityStatementSoftware? software,
     CapabilityStatementImplementation? implementation,
     @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
-        CapabilityStatementFhirVersion fhirVersion,
+        CapabilityStatementFhirVersion? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     List<Code>? format,
     @JsonKey(name: '_format') List<Element>? formatElement,

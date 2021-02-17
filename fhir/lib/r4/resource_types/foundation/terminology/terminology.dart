@@ -250,14 +250,14 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
     @JsonKey(name: '_caseSensitive') Element? caseSensitiveElement,
     Canonical? valueSet,
     @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
-        CodeSystemHierarchyMeaning hierarchyMeaning,
+        CodeSystemHierarchyMeaning? hierarchyMeaning,
     @JsonKey(name: '_hierarchyMeaning') Element? hierarchyMeaningElement,
     Boolean? compositional,
     @JsonKey(name: '_compositional') Element? compositionalElement,
     Boolean? versionNeeded,
     @JsonKey(name: '_versionNeeded') Element? versionNeededElement,
     @JsonKey(unknownEnumValue: CodeSystemContent.unknown)
-        CodeSystemContent content,
+        CodeSystemContent? content,
     @JsonKey(name: '_content') Element? contentElement,
     Canonical? supplements,
     UnsignedInt? count,
