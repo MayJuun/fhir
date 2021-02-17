@@ -90,7 +90,7 @@ abstract class Observation with Resource implements _$Observation {
 abstract class ObservationReferenceRange with _$ObservationReferenceRange {
   ObservationReferenceRange._();
   factory ObservationReferenceRange({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -124,7 +124,7 @@ abstract class ObservationReferenceRange with _$ObservationReferenceRange {
 abstract class ObservationRelated with _$ObservationRelated {
   ObservationRelated._();
   factory ObservationRelated({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -153,7 +153,7 @@ abstract class ObservationRelated with _$ObservationRelated {
 abstract class ObservationComponent with _$ObservationComponent {
   ObservationComponent._();
   factory ObservationComponent({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -256,7 +256,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
 abstract class DiagnosticReportImage with _$DiagnosticReportImage {
   DiagnosticReportImage._();
   factory DiagnosticReportImage({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? comment,
@@ -333,7 +333,7 @@ abstract class DiagnosticOrder with Resource implements _$DiagnosticOrder {
 abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
   DiagnosticOrderEvent._();
   factory DiagnosticOrderEvent({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true, unknownEnumValue: EventStatus.unknown)
@@ -365,7 +365,7 @@ abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
 abstract class DiagnosticOrderItem with _$DiagnosticOrderItem {
   DiagnosticOrderItem._();
   factory DiagnosticOrderItem({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required CodeableConcept? code,
@@ -444,7 +444,7 @@ abstract class Specimen with Resource implements _$Specimen {
 abstract class SpecimenCollection with _$SpecimenCollection {
   SpecimenCollection._();
   factory SpecimenCollection({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     List<FhirExtension>? modifierExtension,
@@ -479,7 +479,7 @@ abstract class SpecimenCollection with _$SpecimenCollection {
 abstract class SpecimenTreatment with _$SpecimenTreatment {
   SpecimenTreatment._();
   factory SpecimenTreatment({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -508,7 +508,7 @@ abstract class SpecimenTreatment with _$SpecimenTreatment {
 abstract class SpecimenContainer with _$SpecimenContainer {
   SpecimenContainer._();
   factory SpecimenContainer({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
@@ -639,7 +639,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
 abstract class ImagingStudySeries with _$ImagingStudySeries {
   ImagingStudySeries._();
   factory ImagingStudySeries({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     UnsignedInt? number,
@@ -682,7 +682,7 @@ abstract class ImagingStudySeries with _$ImagingStudySeries {
 abstract class ImagingStudySeriesInstance with _$ImagingStudySeriesInstance {
   ImagingStudySeriesInstance._();
   factory ImagingStudySeriesInstance({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     UnsignedInt? number,
@@ -761,7 +761,7 @@ abstract class ImagingObjectSelection
 abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
   ImagingObjectSelectionStudy._();
   factory ImagingObjectSelectionStudy({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Oid? uid,
@@ -795,7 +795,7 @@ abstract class ImagingObjectSelectionStudySeries
     with _$ImagingObjectSelectionStudySeries {
   ImagingObjectSelectionStudySeries._();
   factory ImagingObjectSelectionStudySeries({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Oid? uid,
@@ -830,7 +830,7 @@ abstract class ImagingObjectSelectionSeriesInstance
     with _$ImagingObjectSelectionSeriesInstance {
   ImagingObjectSelectionSeriesInstance._();
   factory ImagingObjectSelectionSeriesInstance({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Oid? sopClass,
@@ -864,7 +864,7 @@ abstract class ImagingObjectSelectionInstanceFrames
     with _$ImagingObjectSelectionInstanceFrames {
   ImagingObjectSelectionInstanceFrames._();
   factory ImagingObjectSelectionInstanceFrames({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirExtension? modifierExte,
     @JsonKey(required: true) @required List<UnsignedInt>? frameNumbers,

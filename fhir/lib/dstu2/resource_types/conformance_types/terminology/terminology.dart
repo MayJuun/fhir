@@ -84,7 +84,7 @@ abstract class ValueSet with Resource implements _$ValueSet {
 abstract class ValueSetContact with _$ValueSetContact {
   ValueSetContact._();
   factory ValueSetContact({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -113,7 +113,7 @@ abstract class ValueSetContact with _$ValueSetContact {
 abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
   ValueSetCodeSystem._();
   factory ValueSetCodeSystem({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -147,7 +147,7 @@ abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
 abstract class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
   ValueSetCodeSystemConcept._();
   factory ValueSetCodeSystemConcept({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -183,7 +183,7 @@ abstract class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
 abstract class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
   ValueSetConceptDesignation._();
   factory ValueSetConceptDesignation({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? language,
@@ -215,7 +215,7 @@ abstract class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
 abstract class ValueSetCompose with _$ValueSetCompose {
   ValueSetCompose._();
   factory ValueSetCompose({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -245,7 +245,7 @@ abstract class ValueSetCompose with _$ValueSetCompose {
 abstract class ValueSetComposeInclude with _$ValueSetComposeInclude {
   ValueSetComposeInclude._();
   factory ValueSetComposeInclude({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -278,7 +278,7 @@ abstract class ValueSetComposeInclude with _$ValueSetComposeInclude {
 abstract class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
   ValueSetIncludeConcept._();
   factory ValueSetIncludeConcept({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -310,7 +310,7 @@ abstract class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
 abstract class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
   ValueSetIncludeFilter._();
   factory ValueSetIncludeFilter({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -345,7 +345,7 @@ abstract class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
 abstract class ValueSetExpansion with _$ValueSetExpansion {
   ValueSetExpansion._();
   factory ValueSetExpansion({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -382,7 +382,7 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
 abstract class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
   ValueSetExpansionParameter._();
   factory ValueSetExpansionParameter({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -424,7 +424,7 @@ abstract class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
 abstract class ValueSetExpansionContains with _$ValueSetExpansionContains {
   ValueSetExpansionContains._();
   factory ValueSetExpansionContains({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -530,7 +530,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
 abstract class ConceptMapContact with _$ConceptMapContact {
   ConceptMapContact._();
   factory ConceptMapContact({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -558,7 +558,7 @@ abstract class ConceptMapContact with _$ConceptMapContact {
 abstract class ConceptMapElement with _$ConceptMapElement {
   ConceptMapElement._();
   factory ConceptMapElement({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? codeSystem,
@@ -588,7 +588,7 @@ abstract class ConceptMapElement with _$ConceptMapElement {
 abstract class ConceptMapElementTarget with _$ConceptMapElementTarget {
   ConceptMapElementTarget._();
   factory ConceptMapElementTarget({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? codeSystem,
@@ -625,7 +625,7 @@ abstract class ConceptMapElementTarget with _$ConceptMapElementTarget {
 abstract class ConceptMapTargetDependsOn with _$ConceptMapTargetDependsOn {
   ConceptMapTargetDependsOn._();
   factory ConceptMapTargetDependsOn({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required FhirUri? element,
@@ -716,7 +716,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
 abstract class NamingSystemContact with _$NamingSystemContact {
   NamingSystemContact._();
   factory NamingSystemContact({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -744,7 +744,7 @@ abstract class NamingSystemContact with _$NamingSystemContact {
 abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
   NamingSystemUniqueId._();
   factory NamingSystemUniqueId({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true, unknownEnumValue: UniqueIdType.unknown)

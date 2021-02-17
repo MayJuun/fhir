@@ -67,7 +67,7 @@ abstract class Location with Resource implements _$Location {
 abstract class LocationPosition with _$LocationPosition {
   LocationPosition._();
   factory LocationPosition({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Decimal? longitude,
@@ -142,7 +142,7 @@ abstract class Substance with Resource implements _$Substance {
 abstract class SubstanceInstance with _$SubstanceInstance {
   SubstanceInstance._();
   factory SubstanceInstance({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -172,7 +172,7 @@ abstract class SubstanceInstance with _$SubstanceInstance {
 abstract class SubstanceIngredient with _$SubstanceIngredient {
   SubstanceIngredient._();
   factory SubstanceIngredient({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Ratio? quantity,
@@ -248,7 +248,7 @@ abstract class Person with Resource implements _$Person {
 abstract class PersonLink with _$PersonLink {
   PersonLink._();
   factory PersonLink({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Reference? target,
@@ -333,7 +333,7 @@ abstract class Contract with Resource implements _$Contract {
 abstract class ContractActor with _$ContractActor {
   ContractActor._();
   factory ContractActor({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Reference? entity,
@@ -361,7 +361,7 @@ abstract class ContractActor with _$ContractActor {
 abstract class ContractValuedItem with _$ContractValuedItem {
   ContractValuedItem._();
   factory ContractValuedItem({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? entityCodeableConcept,
@@ -400,7 +400,7 @@ abstract class ContractValuedItem with _$ContractValuedItem {
 abstract class ContractSigner with _$ContractSigner {
   ContractSigner._();
   factory ContractSigner({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Coding? type,
@@ -429,7 +429,7 @@ abstract class ContractSigner with _$ContractSigner {
 abstract class ContractTerm with _$ContractTerm {
   ContractTerm._();
   factory ContractTerm({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -469,7 +469,7 @@ abstract class ContractTerm with _$ContractTerm {
 abstract class ContractTermActor with _$ContractTermActor {
   ContractTermActor._();
   factory ContractTermActor({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Reference? entity,
@@ -497,7 +497,7 @@ abstract class ContractTermActor with _$ContractTermActor {
 abstract class ContractFriendly with _$ContractFriendly {
   ContractFriendly._();
   factory ContractFriendly({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? contentAttachment,
@@ -525,7 +525,7 @@ abstract class ContractFriendly with _$ContractFriendly {
 abstract class ContractLegal with _$ContractLegal {
   ContractLegal._();
   factory ContractLegal({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? contentAttachment,
@@ -553,7 +553,7 @@ abstract class ContractLegal with _$ContractLegal {
 abstract class ContractRule with _$ContractRule {
   ContractRule._();
   factory ContractRule({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? contentAttachment,

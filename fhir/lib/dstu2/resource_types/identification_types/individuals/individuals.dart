@@ -80,7 +80,7 @@ abstract class Patient with Resource implements _$Patient {
 abstract class PatientContact with _$PatientContact {
   PatientContact._();
   factory PatientContact({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? relationship,
@@ -114,7 +114,7 @@ abstract class PatientContact with _$PatientContact {
 abstract class PatientAnimal with _$PatientAnimal {
   PatientAnimal._();
   factory PatientAnimal({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required CodeableConcept? species,
@@ -143,7 +143,7 @@ abstract class PatientAnimal with _$PatientAnimal {
 abstract class PatientCommunication with _$PatientCommunication {
   PatientCommunication._();
   factory PatientCommunication({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required CodeableConcept? language,
@@ -172,7 +172,7 @@ abstract class PatientCommunication with _$PatientCommunication {
 abstract class PatientLink with _$PatientLink {
   PatientLink._();
   factory PatientLink({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Reference? other,
@@ -255,7 +255,7 @@ abstract class PractitionerPractitionerRole
     with _$PractitionerPractitionerRole {
   PractitionerPractitionerRole._();
   factory PractitionerPractitionerRole({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     List<FhirExtension>? modifierExtension,
@@ -289,7 +289,7 @@ abstract class PractitionerPractitionerRole
 abstract class PractitionerQualification with _$PractitionerQualification {
   PractitionerQualification._();
   factory PractitionerQualification({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,

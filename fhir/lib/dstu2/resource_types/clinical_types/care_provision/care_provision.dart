@@ -71,7 +71,7 @@ abstract class CarePlan with Resource implements _$CarePlan {
 abstract class CarePlanRelatedPlan with _$CarePlanRelatedPlan {
   CarePlanRelatedPlan._();
   factory CarePlanRelatedPlan({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: RelatedPlanCode.unknown) RelatedPlanCode? code,
@@ -99,7 +99,7 @@ abstract class CarePlanRelatedPlan with _$CarePlanRelatedPlan {
 abstract class CarePlanParticipant with _$CarePlanParticipant {
   CarePlanParticipant._();
   factory CarePlanParticipant({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? role,
@@ -127,7 +127,7 @@ abstract class CarePlanParticipant with _$CarePlanParticipant {
 abstract class CarePlanActivity with _$CarePlanActivity {
   CarePlanActivity._();
   factory CarePlanActivity({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -158,7 +158,7 @@ abstract class CarePlanActivity with _$CarePlanActivity {
 abstract class CarePlanActivityDetail with _$CarePlanActivityDetail {
   CarePlanActivityDetail._();
   factory CarePlanActivityDetail({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -262,7 +262,7 @@ abstract class Goal with Resource implements _$Goal {
 abstract class GoalOutcome with _$GoalOutcome {
   GoalOutcome._();
   factory GoalOutcome({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? resultCodeableConcept,
@@ -447,7 +447,7 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
 abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   NutritionOrderOralDiet._();
   factory NutritionOrderOralDiet({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -481,7 +481,7 @@ abstract class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
 abstract class NutritionOrderSupplement with _$NutritionOrderSupplement {
   NutritionOrderSupplement._();
   factory NutritionOrderSupplement({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -517,7 +517,7 @@ abstract class NutritionOrderEnteralFormula
     with _$NutritionOrderEnteralFormula {
   NutritionOrderEnteralFormula._();
   factory NutritionOrderEnteralFormula({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -560,7 +560,7 @@ abstract class NutritionOrderOralDietNutrient
     with _$NutritionOrderOralDietNutrient {
   NutritionOrderOralDietNutrient._();
   factory NutritionOrderOralDietNutrient({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -593,7 +593,7 @@ abstract class NutritionOrderOralDietTexture
     with _$NutritionOrderOralDietTexture {
   NutritionOrderOralDietTexture._();
   factory NutritionOrderOralDietTexture({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -624,7 +624,7 @@ abstract class NutritionOrderEnteralFormulaAdministration
     with _$NutritionOrderEnteralFormulaAdministration {
   NutritionOrderEnteralFormulaAdministration._();
   factory NutritionOrderEnteralFormulaAdministration({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Timing? schedule,
@@ -657,7 +657,7 @@ abstract class NutritionOrderEnteralFormulaAdministration
 abstract class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
   VisionPrescriptionDispense._();
   factory VisionPrescriptionDispense({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Coding? product,

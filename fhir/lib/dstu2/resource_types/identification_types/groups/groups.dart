@@ -63,7 +63,7 @@ abstract class Organization with Resource implements _$Organization {
 abstract class OrganizationContact with _$OrganizationContact {
   OrganizationContact._();
   factory OrganizationContact({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -158,7 +158,7 @@ abstract class HealthcareServiceServiceType
     with _$HealthcareServiceServiceType {
   HealthcareServiceServiceType._();
   factory HealthcareServiceServiceType({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required CodeableConcept? type,
@@ -188,7 +188,7 @@ abstract class HealthcareServiceAvailableTime
     with _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
   factory HealthcareServiceAvailableTime({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<AvailableTimeDaysOfWeek>? daysOfWeek,
@@ -205,14 +205,14 @@ abstract class HealthcareServiceAvailableTime
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) => yaml
+          is String
+      ? HealthcareServiceAvailableTime.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? HealthcareServiceAvailableTime.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? HealthcareServiceAvailableTime.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-                  : throw ArgumentError(
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
               'HealthcareServiceAvailableTime cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
@@ -226,7 +226,7 @@ abstract class HealthcareServiceNotAvailable
     with _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
   factory HealthcareServiceNotAvailable({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required String? description,
@@ -305,7 +305,7 @@ abstract class Group with Resource implements _$Group {
 abstract class GroupCharacteristic with _$GroupCharacteristic {
   GroupCharacteristic._();
   factory GroupCharacteristic({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required CodeableConcept? code,
@@ -339,7 +339,7 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
 abstract class GroupMember with _$GroupMember {
   GroupMember._();
   factory GroupMember({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Reference? entity,

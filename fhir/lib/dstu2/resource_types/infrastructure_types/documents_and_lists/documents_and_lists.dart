@@ -71,7 +71,7 @@ abstract class Composition with Resource implements _$Composition {
 abstract class CompositionAttester with _$CompositionAttester {
   CompositionAttester._();
   factory CompositionAttester({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required List<AttesterMode>? mode,
@@ -102,7 +102,7 @@ abstract class CompositionAttester with _$CompositionAttester {
 abstract class CompositionEvent with _$CompositionEvent {
   CompositionEvent._();
   factory CompositionEvent({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
@@ -131,7 +131,7 @@ abstract class CompositionEvent with _$CompositionEvent {
 abstract class CompositionSection with _$CompositionSection {
   CompositionSection._();
   factory CompositionSection({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -222,7 +222,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
 abstract class DocumentManifestContent with _$DocumentManifestContent {
   DocumentManifestContent._();
   factory DocumentManifestContent({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? pAttachment,
@@ -250,7 +250,7 @@ abstract class DocumentManifestContent with _$DocumentManifestContent {
 abstract class DocumentManifestRelated with _$DocumentManifestRelated {
   DocumentManifestRelated._();
   factory DocumentManifestRelated({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -336,7 +336,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
 abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   DocumentReferenceRelatesTo._();
   factory DocumentReferenceRelatesTo({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true, unknownEnumValue: RelatesToCode.unknown)
@@ -368,7 +368,7 @@ abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
 abstract class DocumentReferenceContent with _$DocumentReferenceContent {
   DocumentReferenceContent._();
   factory DocumentReferenceContent({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Attachment? attachment,
@@ -397,7 +397,7 @@ abstract class DocumentReferenceContent with _$DocumentReferenceContent {
 abstract class DocumentReferenceContext with _$DocumentReferenceContext {
   DocumentReferenceContext._();
   factory DocumentReferenceContext({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? encounter,
@@ -432,7 +432,7 @@ abstract class DocumentReferenceContextRelated
     with _$DocumentReferenceContextRelated {
   DocumentReferenceContextRelated._();
   factory DocumentReferenceContextRelated({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -519,7 +519,7 @@ abstract class List_ with Resource implements _$List_ {
 abstract class ListEntry with _$ListEntry {
   ListEntry._();
   factory ListEntry({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,

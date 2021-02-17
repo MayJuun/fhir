@@ -143,7 +143,7 @@ abstract class Bundle with Resource implements _$Bundle {
 abstract class BundleLink with _$BundleLink {
   BundleLink._();
   factory BundleLink({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -174,7 +174,7 @@ abstract class BundleLink with _$BundleLink {
 abstract class BundleEntry with _$BundleEntry {
   BundleEntry._();
   factory BundleEntry({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -208,7 +208,7 @@ abstract class BundleEntry with _$BundleEntry {
 abstract class BundleEntrySearch with _$BundleEntrySearch {
   BundleEntrySearch._();
   factory BundleEntrySearch({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -239,7 +239,7 @@ abstract class BundleEntrySearch with _$BundleEntrySearch {
 abstract class BundleEntryRequest with _$BundleEntryRequest {
   BundleEntryRequest._();
   factory BundleEntryRequest({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -280,7 +280,7 @@ abstract class BundleEntryRequest with _$BundleEntryRequest {
 abstract class BundleEntryResponse with _$BundleEntryResponse {
   BundleEntryResponse._();
   factory BundleEntryResponse({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,

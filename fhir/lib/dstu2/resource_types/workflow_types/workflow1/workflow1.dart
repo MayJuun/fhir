@@ -57,7 +57,7 @@ abstract class Order with Resource implements _$Order {
 abstract class OrderWhen with _$OrderWhen {
   OrderWhen._();
   factory OrderWhen({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -186,7 +186,7 @@ abstract class CommunicationRequest
 abstract class CommunicationRequestPayload with _$CommunicationRequestPayload {
   CommunicationRequestPayload._();
   factory CommunicationRequestPayload({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? contentString,

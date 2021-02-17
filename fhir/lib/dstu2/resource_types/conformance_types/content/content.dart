@@ -97,7 +97,7 @@ abstract class StructureDefinition
 abstract class StructureDefinitionContact with _$StructureDefinitionContact {
   StructureDefinitionContact._();
   factory StructureDefinitionContact({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -126,7 +126,7 @@ abstract class StructureDefinitionContact with _$StructureDefinitionContact {
 abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
   StructureDefinitionMapping._();
   factory StructureDefinitionMapping({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -162,7 +162,7 @@ abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
 abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   StructureDefinitionSnapshot._();
   factory StructureDefinitionSnapshot({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required List<ElementDefinition>? element,
@@ -191,7 +191,7 @@ abstract class StructureDefinitionDifferential
     with _$StructureDefinitionDifferential {
   StructureDefinitionDifferential._();
   factory StructureDefinitionDifferential({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required List<ElementDefinition>? element,
@@ -272,7 +272,7 @@ abstract class DataElement with Resource implements _$DataElement {
 abstract class DataElementContact with _$DataElementContact {
   DataElementContact._();
   factory DataElementContact({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -300,7 +300,7 @@ abstract class DataElementContact with _$DataElementContact {
 abstract class DataElementMapping with _$DataElementMapping {
   DataElementMapping._();
   factory DataElementMapping({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,

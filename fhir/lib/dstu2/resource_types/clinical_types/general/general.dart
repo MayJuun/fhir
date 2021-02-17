@@ -77,7 +77,7 @@ abstract class AllergyIntolerance
 abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   AllergyIntoleranceReaction._();
   factory AllergyIntoleranceReaction({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -189,7 +189,7 @@ abstract class Condition with Resource implements _$Condition {
 abstract class ConditionStage with _$ConditionStage {
   ConditionStage._();
   factory ConditionStage({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     List<FhirExtension>? modifierExtension,
@@ -218,7 +218,7 @@ abstract class ConditionStage with _$ConditionStage {
 abstract class ConditionEvidence with _$ConditionEvidence {
   ConditionEvidence._();
   factory ConditionEvidence({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -310,7 +310,7 @@ abstract class Procedure with Resource implements _$Procedure {
 abstract class ProcedurePerformer with _$ProcedurePerformer {
   ProcedurePerformer._();
   factory ProcedurePerformer({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -339,7 +339,7 @@ abstract class ProcedurePerformer with _$ProcedurePerformer {
 abstract class ProcedureFocalDevice with _$ProcedureFocalDevice {
   ProcedureFocalDevice._();
   factory ProcedureFocalDevice({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? action,
@@ -431,7 +431,7 @@ abstract class ClinicalImpressionInvestigations
     with _$ClinicalImpressionInvestigations {
   ClinicalImpressionInvestigations._();
   factory ClinicalImpressionInvestigations({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required CodeableConcept? code,
@@ -462,7 +462,7 @@ abstract class ClinicalImpressionInvestigations
 abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   ClinicalImpressionFinding._();
   factory ClinicalImpressionFinding({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required CodeableConcept? item,
@@ -491,7 +491,7 @@ abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
 abstract class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut {
   ClinicalImpressionRuledOut._();
   factory ClinicalImpressionRuledOut({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required CodeableConcept? item,
@@ -592,7 +592,7 @@ abstract class FamilyMemberHistoryCondition
     with _$FamilyMemberHistoryCondition {
   FamilyMemberHistoryCondition._();
   factory FamilyMemberHistoryCondition({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required CodeableConcept? code,
@@ -674,7 +674,7 @@ abstract class RiskAssessment with Resource implements _$RiskAssessment {
 abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   RiskAssessmentPrediction._();
   factory RiskAssessmentPrediction({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required CodeableConcept? outcome,
@@ -762,7 +762,7 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
 abstract class DetectedIssueMitigation with _$DetectedIssueMitigation {
   DetectedIssueMitigation._();
   factory DetectedIssueMitigation({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required CodeableConcept? action,

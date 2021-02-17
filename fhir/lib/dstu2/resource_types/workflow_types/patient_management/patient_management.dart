@@ -75,7 +75,7 @@ abstract class Encounter with Resource implements _$Encounter {
 abstract class EncounterStatusHistory with _$EncounterStatusHistory {
   EncounterStatusHistory._();
   factory EncounterStatusHistory({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true, unknownEnumValue: EncounterHistoryStatus.unknown)
@@ -106,7 +106,7 @@ abstract class EncounterStatusHistory with _$EncounterStatusHistory {
 abstract class EncounterParticipant with _$EncounterParticipant {
   EncounterParticipant._();
   factory EncounterParticipant({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
@@ -135,7 +135,7 @@ abstract class EncounterParticipant with _$EncounterParticipant {
 abstract class EncounterHospitalization with _$EncounterHospitalization {
   EncounterHospitalization._();
   factory EncounterHospitalization({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     List<FhirExtension>? modifierExtension,
@@ -174,7 +174,7 @@ abstract class EncounterHospitalization with _$EncounterHospitalization {
 abstract class EncounterLocation with _$EncounterLocation {
   EncounterLocation._();
   factory EncounterLocation({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Reference? location,
@@ -255,7 +255,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
 abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   EpisodeOfCareStatusHistory._();
   factory EpisodeOfCareStatusHistory({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(
@@ -288,7 +288,7 @@ abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
 abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
   EpisodeOfCareCareTeam._();
   factory EpisodeOfCareCareTeam({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? role,
@@ -370,7 +370,7 @@ abstract class Communication with Resource implements _$Communication {
 abstract class CommunicationPayload with _$CommunicationPayload {
   CommunicationPayload._();
   factory CommunicationPayload({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? contentString,

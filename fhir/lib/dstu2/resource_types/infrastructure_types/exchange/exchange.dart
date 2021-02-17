@@ -62,7 +62,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
 abstract class MessageHeaderResponse with _$MessageHeaderResponse {
   MessageHeaderResponse._();
   factory MessageHeaderResponse({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Id? identifier,
@@ -95,7 +95,7 @@ abstract class MessageHeaderResponse with _$MessageHeaderResponse {
 abstract class MessageHeaderSource with _$MessageHeaderSource {
   MessageHeaderSource._();
   factory MessageHeaderSource({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -130,7 +130,7 @@ abstract class MessageHeaderSource with _$MessageHeaderSource {
 abstract class MessageHeaderDestination with _$MessageHeaderDestination {
   MessageHeaderDestination._();
   factory MessageHeaderDestination({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -200,7 +200,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
 abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
   OperationOutcomeIssue._();
   factory OperationOutcomeIssue({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
@@ -266,7 +266,7 @@ abstract class Parameters with Resource implements _$Parameters {
 abstract class ParametersParameter with _$ParametersParameter {
   ParametersParameter._();
   factory ParametersParameter({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required String? name,
@@ -380,7 +380,7 @@ abstract class Subscription with Resource implements _$Subscription {
 abstract class SubscriptionChannel with _$SubscriptionChannel {
   SubscriptionChannel._();
   factory SubscriptionChannel({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)

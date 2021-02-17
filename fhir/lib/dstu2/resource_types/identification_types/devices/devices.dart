@@ -119,7 +119,7 @@ abstract class DeviceComponentProductionSpecification
     with _$DeviceComponentProductionSpecification {
   DeviceComponentProductionSpecification._();
   factory DeviceComponentProductionSpecification({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? specType,
@@ -131,14 +131,14 @@ abstract class DeviceComponentProductionSpecification
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory DeviceComponentProductionSpecification.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory DeviceComponentProductionSpecification.fromYaml(dynamic yaml) => yaml
+          is String
+      ? DeviceComponentProductionSpecification.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? DeviceComponentProductionSpecification.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? DeviceComponentProductionSpecification.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-                               : throw ArgumentError(
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
               'DeviceComponentProductionSpecification cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
@@ -204,7 +204,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
 abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
   DeviceMetricCalibration._();
   factory DeviceMetricCalibration({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CalibrationType.unknown) CalibrationType? type,

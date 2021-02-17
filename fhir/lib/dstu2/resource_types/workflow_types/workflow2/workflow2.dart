@@ -67,7 +67,7 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
 abstract class ProcessRequestItem with _$ProcessRequestItem {
   ProcessRequestItem._();
   factory ProcessRequestItem({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Integer? sequenceLinkId,
@@ -141,7 +141,7 @@ abstract class ProcessResponse with Resource implements _$ProcessResponse {
 abstract class ProcessResponseNotes with _$ProcessResponseNotes {
   ProcessResponseNotes._();
   factory ProcessResponseNotes({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Coding? type,
@@ -218,7 +218,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
 abstract class SupplyRequestWhen with _$SupplyRequestWhen {
   SupplyRequestWhen._();
   factory SupplyRequestWhen({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,

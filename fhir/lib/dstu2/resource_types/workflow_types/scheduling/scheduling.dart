@@ -74,7 +74,7 @@ abstract class Appointment with Resource implements _$Appointment {
 abstract class AppointmentParticipant with _$AppointmentParticipant {
   AppointmentParticipant._();
   factory AppointmentParticipant({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,

@@ -143,7 +143,7 @@ abstract class CapabilityStatement
 abstract class ConformanceContact with _$ConformanceContact {
   ConformanceContact._();
   factory ConformanceContact({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -171,7 +171,7 @@ abstract class ConformanceContact with _$ConformanceContact {
 abstract class ConformanceSoftware with _$ConformanceSoftware {
   ConformanceSoftware._();
   factory ConformanceSoftware({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required String? name,
@@ -200,7 +200,7 @@ abstract class ConformanceSoftware with _$ConformanceSoftware {
 abstract class ConformanceImplementation with _$ConformanceImplementation {
   ConformanceImplementation._();
   factory ConformanceImplementation({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required String? description,
@@ -229,7 +229,7 @@ abstract class ConformanceImplementation with _$ConformanceImplementation {
 abstract class ConformanceRest with _$ConformanceRest {
   ConformanceRest._();
   factory ConformanceRest({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -269,7 +269,7 @@ abstract class ConformanceRest with _$ConformanceRest {
 abstract class ConformanceMessaging with _$ConformanceMessaging {
   ConformanceMessaging._();
   factory ConformanceMessaging({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -300,7 +300,7 @@ abstract class ConformanceMessaging with _$ConformanceMessaging {
 abstract class ConformanceDocument with _$ConformanceDocument {
   ConformanceDocument._();
   factory ConformanceDocument({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -332,7 +332,7 @@ abstract class ConformanceDocument with _$ConformanceDocument {
 abstract class ConformanceRestSecurity with _$ConformanceRestSecurity {
   ConformanceRestSecurity._();
   factory ConformanceRestSecurity({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? cors,
@@ -363,7 +363,7 @@ abstract class ConformanceRestSecurity with _$ConformanceRestSecurity {
 abstract class ConformanceRestResource with _$ConformanceRestResource {
   ConformanceRestResource._();
   factory ConformanceRestResource({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -411,7 +411,7 @@ abstract class ConformanceResourceInteraction
     with _$ConformanceResourceInteraction {
   ConformanceResourceInteraction._();
   factory ConformanceResourceInteraction({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true, unknownEnumValue: ResourceInteractionCode.unknown)
@@ -424,14 +424,14 @@ abstract class ConformanceResourceInteraction
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ConformanceResourceInteraction.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ConformanceResourceInteraction.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ConformanceResourceInteraction.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ConformanceResourceInteraction.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ConformanceResourceInteraction.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-                     : throw ArgumentError(
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
               'ConformanceResourceInteraction cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
@@ -444,7 +444,7 @@ abstract class ConformanceResourceInteraction
 abstract class ConformanceRestOperation with _$ConformanceRestOperation {
   ConformanceRestOperation._();
   factory ConformanceRestOperation({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -475,7 +475,7 @@ abstract class ConformanceMessagingEndpoint
     with _$ConformanceMessagingEndpoint {
   ConformanceMessagingEndpoint._();
   factory ConformanceMessagingEndpoint({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Coding? protocol,
@@ -505,7 +505,7 @@ abstract class ConformanceMessagingEndpoint
 abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
   ConformanceMessagingEvent._();
   factory ConformanceMessagingEvent({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Coding? code,
@@ -543,7 +543,7 @@ abstract class ConformanceSecurityCertificate
     with _$ConformanceSecurityCertificate {
   ConformanceSecurityCertificate._();
   factory ConformanceSecurityCertificate({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? type,
@@ -555,14 +555,14 @@ abstract class ConformanceSecurityCertificate
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ConformanceSecurityCertificate.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ConformanceSecurityCertificate.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ConformanceSecurityCertificate.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ConformanceSecurityCertificate.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ConformanceSecurityCertificate.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-                    : throw ArgumentError(
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
               'ConformanceSecurityCertificate cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
@@ -575,7 +575,7 @@ abstract class ConformanceSecurityCertificate
 abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
   ConformanceRestInteraction._();
   factory ConformanceRestInteraction({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true, unknownEnumValue: RestInteractionCode.unknown)
@@ -607,7 +607,7 @@ abstract class ConformanceResourceSearchParam
     with _$ConformanceResourceSearchParam {
   ConformanceResourceSearchParam._();
   factory ConformanceResourceSearchParam({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -626,14 +626,14 @@ abstract class ConformanceResourceSearchParam
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ConformanceResourceSearchParam.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ConformanceResourceSearchParam.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ConformanceResourceSearchParam.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ConformanceResourceSearchParam.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ConformanceResourceSearchParam.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-                      : throw ArgumentError(
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
               'ConformanceResourceSearchParam cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
@@ -706,7 +706,7 @@ abstract class OperationDefinition
 abstract class OperationDefinitionContact with _$OperationDefinitionContact {
   OperationDefinitionContact._();
   factory OperationDefinitionContact({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -736,7 +736,7 @@ abstract class OperationDefinitionParameter
     with _$OperationDefinitionParameter {
   OperationDefinitionParameter._();
   factory OperationDefinitionParameter({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -776,7 +776,7 @@ abstract class OperationDefinitionParameterBinding
     with _$OperationDefinitionParameterBinding {
   OperationDefinitionParameterBinding._();
   factory OperationDefinitionParameterBinding({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(
@@ -793,14 +793,14 @@ abstract class OperationDefinitionParameterBinding
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory OperationDefinitionParameterBinding.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory OperationDefinitionParameterBinding.fromYaml(dynamic yaml) => yaml
+          is String
+      ? OperationDefinitionParameterBinding.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? OperationDefinitionParameterBinding.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? OperationDefinitionParameterBinding.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-                   : throw ArgumentError(
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
               'OperationDefinitionParameterBinding cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
@@ -867,7 +867,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
 abstract class SearchParameterContact with _$SearchParameterContact {
   SearchParameterContact._();
   factory SearchParameterContact({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,

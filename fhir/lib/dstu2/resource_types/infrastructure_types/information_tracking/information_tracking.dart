@@ -67,7 +67,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
 abstract class QuestionnaireGroup with _$QuestionnaireGroup {
   QuestionnaireGroup._();
   factory QuestionnaireGroup({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -104,7 +104,7 @@ abstract class QuestionnaireGroup with _$QuestionnaireGroup {
 abstract class QuestionnaireGroupQuestion with _$QuestionnaireGroupQuestion {
   QuestionnaireGroupQuestion._();
   factory QuestionnaireGroupQuestion({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -195,7 +195,7 @@ abstract class QuestionnaireResponse
 abstract class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
   QuestionnaireResponseGroup._();
   factory QuestionnaireResponseGroup({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -232,7 +232,7 @@ abstract class QuestionnaireResponseGroupQuestion
     with _$QuestionnaireResponseGroupQuestion {
   QuestionnaireResponseGroupQuestion._();
   factory QuestionnaireResponseGroupQuestion({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -265,7 +265,7 @@ abstract class QuestionnaireResponseQuestionAnswer
     with _$QuestionnaireResponseQuestionAnswer {
   QuestionnaireResponseQuestionAnswer._();
   factory QuestionnaireResponseQuestionAnswer({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -364,7 +364,7 @@ abstract class Provenance with Resource implements _$Provenance {
 abstract class ProvenanceAgent with _$ProvenanceAgent {
   ProvenanceAgent._();
   factory ProvenanceAgent({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -395,7 +395,7 @@ abstract class ProvenanceAgent with _$ProvenanceAgent {
 abstract class ProvenanceEntity with _$ProvenanceEntity {
   ProvenanceEntity._();
   factory ProvenanceEntity({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -431,7 +431,7 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
 abstract class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent {
   ProvenanceAgentRelatedAgent._();
   factory ProvenanceAgentRelatedAgent({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required CodeableConcept? type,
@@ -500,7 +500,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
 abstract class AuditEventEvent with _$AuditEventEvent {
   AuditEventEvent._();
   factory AuditEventEvent({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required Coding? type,
@@ -533,7 +533,7 @@ abstract class AuditEventEvent with _$AuditEventEvent {
 abstract class AuditEventParticipant with _$AuditEventParticipant {
   AuditEventParticipant._();
   factory AuditEventParticipant({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? role,
@@ -571,7 +571,7 @@ abstract class AuditEventParticipant with _$AuditEventParticipant {
 abstract class AuditEventSource with _$AuditEventSource {
   AuditEventSource._();
   factory AuditEventSource({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? site,
@@ -601,7 +601,7 @@ abstract class AuditEventSource with _$AuditEventSource {
 abstract class AuditEventObject with _$AuditEventObject {
   AuditEventObject._();
   factory AuditEventObject({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -639,7 +639,7 @@ abstract class AuditEventParticipantNetwork
     with _$AuditEventParticipantNetwork {
   AuditEventParticipantNetwork._();
   factory AuditEventParticipantNetwork({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? address,
@@ -670,7 +670,7 @@ abstract class AuditEventParticipantNetwork
 abstract class AuditEventObjectDetail with _$AuditEventObjectDetail {
   AuditEventObjectDetail._();
   factory AuditEventObjectDetail({
-    Id id,
+    Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(required: true) @required String? type,
