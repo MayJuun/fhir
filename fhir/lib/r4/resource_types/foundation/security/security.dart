@@ -120,7 +120,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required Coding? type,
+    required Coding? type,
     List<Coding>? subtype,
     @JsonKey(unknownEnumValue: AuditEventAction.unknown)
         AuditEventAction action,
@@ -134,8 +134,8 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
     String? outcomeDesc,
     @JsonKey(name: '_outcomeDesc') Element? outcomeDescElement,
     List<CodeableConcept>? purposeOfEvent,
-    @required List<AuditEventAgent>? agent,
-    @required AuditEventSource? source,
+    required List<AuditEventAgent>? agent,
+    required AuditEventSource? source,
     List<AuditEventEntity>? entity,
   }) = _AuditEvent;
 
@@ -384,7 +384,7 @@ abstract class AuditEventSource implements _$AuditEventSource {
     List<FhirExtension>? modifierExtension,
     String? site,
     @JsonKey(name: '_site') Element? siteElement,
-    @required Reference? observer,
+    required Reference? observer,
     List<Coding>? type,
   }) = _AuditEventSource;
 
@@ -700,8 +700,8 @@ abstract class Consent with Resource implements _$Consent {
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: ConsentStatus.unknown) ConsentStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    @required CodeableConcept? scope,
-    @required List<CodeableConcept>? category,
+    required CodeableConcept? scope,
+    required List<CodeableConcept>? category,
     Reference? patient,
     FhirDateTime? dateTime,
     @JsonKey(name: '_dateTime') Element? dateTimeElement,
@@ -1017,8 +1017,8 @@ abstract class ConsentActor implements _$ConsentActor {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required CodeableConcept? role,
-    @required Reference? reference,
+    required CodeableConcept? role,
+    required Reference? reference,
   }) = _ConsentActor;
 
   /// Produces a Yaml formatted String version of the object
@@ -1085,7 +1085,7 @@ abstract class ConsentData implements _$ConsentData {
     @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
         ConsentDataMeaning meaning,
     @JsonKey(name: '_meaning') Element? meaningElement,
-    @required Reference? reference,
+    required Reference? reference,
   }) = _ConsentData;
 
   /// Produces a Yaml formatted String version of the object
@@ -1223,7 +1223,7 @@ abstract class Provenance with Resource implements _$Provenance {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required List<Reference>? target,
+    required List<Reference>? target,
     Period? occurredPeriod,
     FhirDateTime? occurredDateTime,
     @JsonKey(name: '_occurredDateTime') Element? occurredDateTimeElement,
@@ -1234,7 +1234,7 @@ abstract class Provenance with Resource implements _$Provenance {
     Reference? location,
     List<CodeableConcept>? reason,
     CodeableConcept? activity,
-    @required List<ProvenanceAgent>? agent,
+    required List<ProvenanceAgent>? agent,
     List<ProvenanceEntity>? entity,
     List<Signature>? signature,
   }) = _Provenance;
@@ -1311,7 +1311,7 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
     List<CodeableConcept>? role,
-    @required Reference? who,
+    required Reference? who,
     Reference? onBehalfOf,
   }) = _ProvenanceAgent;
 
@@ -1389,7 +1389,7 @@ abstract class ProvenanceEntity implements _$ProvenanceEntity {
     @JsonKey(unknownEnumValue: ProvenanceEntityRole.unknown)
         ProvenanceEntityRole role,
     @JsonKey(name: '_role') Element? roleElement,
-    @required Reference? what,
+    required Reference? what,
     List<ProvenanceAgent>? agent,
   }) = _ProvenanceEntity;
 

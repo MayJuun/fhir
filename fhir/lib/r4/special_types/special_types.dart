@@ -19,7 +19,7 @@ abstract class Narrative implements _$Narrative {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: NarrativeStatus.unknown) NarrativeStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    @required String? div,
+    required String? div,
   }) = _Narrative;
 
   /// Produces a Yaml formatted String version of the object

@@ -262,7 +262,7 @@ abstract class EligibilityResponseBenefitBalance
     implements _$EligibilityResponseBenefitBalance {
   EligibilityResponseBenefitBalance._();
   factory EligibilityResponseBenefitBalance({
-    @required CodeableConcept category,
+    required CodeableConcept category,
     CodeableConcept? subCategory,
     Boolean? excluded,
     @JsonKey(name: '_excluded') Element? excludedElement,
@@ -301,7 +301,7 @@ abstract class EligibilityResponseFinancial
     implements _$EligibilityResponseFinancial {
   EligibilityResponseFinancial._();
   factory EligibilityResponseFinancial({
-    @required CodeableConcept type,
+    required CodeableConcept type,
     Decimal? allowedUnsignedInt,
     @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
     String? allowedString,
@@ -334,7 +334,7 @@ abstract class EligibilityResponseFinancial
 abstract class EligibilityResponseError implements _$EligibilityResponseError {
   EligibilityResponseError._();
   factory EligibilityResponseError({
-    @required CodeableConcept code,
+    required CodeableConcept code,
   }) = _EligibilityResponseError;
 
   /// Produces a Yaml formatted String version of the object

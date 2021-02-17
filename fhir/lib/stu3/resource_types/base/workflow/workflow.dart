@@ -54,7 +54,7 @@ abstract class Appointment with Resource implements _$Appointment {
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
     List<Reference>? incomingReferral,
-    @required List<AppointmentParticipant>? participant,
+    required List<AppointmentParticipant>? participant,
     List<Period>? requestedPeriod,
   }) = _Appointment;
 
@@ -124,7 +124,7 @@ abstract class AppointmentResponse
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @required Reference? appointment,
+    required Reference? appointment,
     String? start,
     @JsonKey(name: '_start') Element? startElement,
     String? end,
@@ -513,7 +513,7 @@ abstract class Schedule with Resource implements _$Schedule {
     CodeableConcept? serviceCategory,
     List<CodeableConcept>? serviceType,
     List<CodeableConcept>? specialty,
-    @required List<Reference>? actor,
+    required List<Reference>? actor,
     Period? planningHorizon,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
@@ -558,7 +558,7 @@ abstract class Slot with Resource implements _$Slot {
     List<CodeableConcept>? serviceType,
     List<CodeableConcept>? specialty,
     CodeableConcept? appointmentType,
-    @required Reference? schedule,
+    required Reference? schedule,
     SlotStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     String? start,
@@ -661,7 +661,7 @@ abstract class Task with Resource implements _$Task {
 abstract class TaskRequester implements _$TaskRequester {
   TaskRequester._();
   factory TaskRequester({
-    @required Reference agent,
+    required Reference agent,
     Reference? onBehalfOf,
   }) = _TaskRequester;
 
@@ -713,7 +713,7 @@ abstract class TaskRestriction implements _$TaskRestriction {
 abstract class TaskInput implements _$TaskInput {
   TaskInput._();
   factory TaskInput({
-    @required CodeableConcept type,
+    required CodeableConcept type,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     Decimal? valueInteger,
@@ -807,7 +807,7 @@ abstract class TaskInput implements _$TaskInput {
 abstract class TaskOutput implements _$TaskOutput {
   TaskOutput._();
   factory TaskOutput({
-    @required CodeableConcept type,
+    required CodeableConcept type,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     Decimal? valueInteger,

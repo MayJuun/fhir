@@ -31,8 +31,7 @@ abstract class Observation with Resource implements _$Observation {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-    @required
-        ObservationStatus status,
+        required ObservationStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? category,
     required CodeableConcept? code,
@@ -211,8 +210,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-    @required
-        DiagnosticReportStatus status,
+        required DiagnosticReportStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? category,
     required CodeableConcept? code,
@@ -336,9 +334,7 @@ abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: EventStatus.unknown)
-    @required
-        EventStatus status,
+    @JsonKey(unknownEnumValue: EventStatus.unknown) required EventStatus status,
     CodeableConcept? description,
     required FhirDateTime? dateTime,
     Reference? actor,
@@ -768,8 +764,7 @@ abstract class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
     FhirUri? url,
     Reference? imagingStudy,
     @JsonKey(required: true)
-    @required
-        List<ImagingObjectSelectionStudySeries> series,
+        required List<ImagingObjectSelectionStudySeries> series,
   }) = _ImagingObjectSelectionStudy;
 
   /// Produces a Yaml formatted String version of the object
@@ -801,8 +796,7 @@ abstract class ImagingObjectSelectionStudySeries
     Oid? uid,
     FhirUri? url,
     @JsonKey(required: true)
-    @required
-        List<ImagingObjectSelectionSeriesInstance> instance,
+        required List<ImagingObjectSelectionSeriesInstance> instance,
   }) = _ImagingObjectSelectionStudySeries;
 
   /// Produces a Yaml formatted String version of the object

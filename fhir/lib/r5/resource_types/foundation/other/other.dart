@@ -29,7 +29,7 @@ abstract class Basic with Resource implements _$Basic {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @required CodeableConcept? code,
+    required CodeableConcept? code,
     Reference? subject,
     Date? created,
     @JsonKey(name: '_created') Element? createdElement,
@@ -316,7 +316,7 @@ abstract class Linkage with Resource implements _$Linkage {
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     Reference? author,
-    @required List<LinkageItem>? item,
+    required List<LinkageItem>? item,
   }) = _Linkage;
 
   /// Produces a Yaml formatted String version of the object
@@ -345,7 +345,7 @@ abstract class LinkageItem implements _$LinkageItem {
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
     @JsonKey(name: '_type') Element? typeElement,
-    @required Reference? resource,
+    required Reference? resource,
   }) = _LinkageItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -389,7 +389,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     Reference? sender,
     Reference? enterer,
     Reference? author,
-    @required MessageHeaderSource? source,
+    required MessageHeaderSource? source,
     Reference? responsible,
     CodeableConcept? reason,
     MessageHeaderResponse? response,
@@ -531,7 +531,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required List<OperationOutcomeIssue>? issue,
+    required List<OperationOutcomeIssue>? issue,
   }) = _OperationOutcome;
 
   /// Produces a Yaml formatted String version of the object
@@ -746,14 +746,14 @@ abstract class Subscription with Resource implements _$Subscription {
     @JsonKey(name: '_name') Element? nameElement,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    @required Reference? topic,
+    required Reference? topic,
     List<ContactPoint>? contact,
     Instant? end,
     @JsonKey(name: '_end') Element? endElement,
     String? reason,
     @JsonKey(name: '_reason') Element? reasonElement,
     List<SubscriptionFilterBy>? filterBy,
-    @required Coding? channelType,
+    required Coding? channelType,
     FhirUrl? endpoint,
     @JsonKey(name: '_endpoint') Element? endpointElement,
     List<String>? header,
@@ -846,10 +846,10 @@ abstract class SubscriptionStatus
     Integer? eventsInNotification,
     @JsonKey(name: '_eventsInNotification')
         Element? eventsInNotificationElement,
-    @required Reference? subscription,
+    required Reference? subscription,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    @required Canonical? topic,
+    required Canonical? topic,
     List<CodeableConcept>? error,
   }) = _SubscriptionStatus;
 

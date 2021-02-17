@@ -31,7 +31,7 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
     Id? requestId,
     @JsonKey(name: '_requestId') Element? requestIdElement,
     Identifier? identifier,
-    @required Reference? module,
+    required Reference? module,
     GuidanceResponseStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? subject,

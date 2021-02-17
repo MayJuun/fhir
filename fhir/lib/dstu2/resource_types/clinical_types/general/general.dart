@@ -142,10 +142,8 @@ abstract class Condition with Resource implements _$Condition {
     CodeableConcept? category,
     @JsonKey(unknownEnumValue: ConditionClinicalStatus.unknown)
         ConditionClinicalStatus clinicalStatus,
-    @JsonKey(
-        required: true, unknownEnumValue: ConditionVerificationStatus.unknown)
-    @required
-        ConditionVerificationStatus verificationStatus,
+    @JsonKey(required: true, unknownEnumValue: ConditionVerificationStatus.unknown)
+        required ConditionVerificationStatus verificationStatus,
     CodeableConcept? severity,
     FhirDateTime? onsetDateTime,
     @JsonKey(name: '_onsetDateTime') Element? onsetDateTimeElement,
@@ -263,8 +261,7 @@ abstract class Procedure with Resource implements _$Procedure {
     List<Identifier>? identifier,
     required Reference? subject,
     @JsonKey(unknownEnumValue: ProcedureStatus.unknown)
-    @required
-        ProcedureStatus status,
+        required ProcedureStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? category,
     required CodeableConcept? code,
@@ -385,8 +382,7 @@ abstract class ClinicalImpression
     required Reference? patient,
     Reference? assessor,
     @JsonKey(unknownEnumValue: ClinicalImpressionStatus.unknown)
-    @required
-        ClinicalImpressionStatus status,
+        required ClinicalImpressionStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
@@ -539,10 +535,8 @@ abstract class FamilyMemberHistory
     required Reference? patient,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
-    @JsonKey(
-        required: true, unknownEnumValue: FamilyMemberHistoryStatus.unknown)
-    @required
-        FamilyMemberHistoryStatus status,
+    @JsonKey(required: true, unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+        required FamilyMemberHistoryStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,

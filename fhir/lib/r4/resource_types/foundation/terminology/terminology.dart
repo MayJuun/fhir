@@ -1019,7 +1019,7 @@ abstract class ConceptMapGroup implements _$ConceptMapGroup {
     @JsonKey(name: '_target') Element? targetElement,
     String? targetVersion,
     @JsonKey(name: '_targetVersion') Element? targetVersionElement,
-    @required List<ConceptMapElement>? element,
+    required List<ConceptMapElement>? element,
     ConceptMapUnmapped? unmapped,
   }) = _ConceptMapGroup;
 
@@ -1531,7 +1531,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     List<CodeableConcept>? jurisdiction,
     String? usage,
     @JsonKey(name: '_usage') Element? usageElement,
-    @required List<NamingSystemUniqueId>? uniqueId,
+    required List<NamingSystemUniqueId>? uniqueId,
   }) = _NamingSystem;
 
   /// Produces a Yaml formatted String version of the object
@@ -2915,7 +2915,7 @@ abstract class ValueSetCompose implements _$ValueSetCompose {
     @JsonKey(name: '_lockedDate') Element? lockedDateElement,
     Boolean? inactive,
     @JsonKey(name: '_inactive') Element? inactiveElement,
-    @required List<ValueSetInclude>? include,
+    required List<ValueSetInclude>? include,
     List<ValueSetInclude>? exclude,
   }) = _ValueSetCompose;
 

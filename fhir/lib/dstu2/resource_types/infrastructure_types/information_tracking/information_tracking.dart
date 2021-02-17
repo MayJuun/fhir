@@ -33,8 +33,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-    @required
-        QuestionnaireStatus status,
+        required QuestionnaireStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
@@ -160,10 +159,8 @@ abstract class QuestionnaireResponse
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     Reference? questionnaire,
-    @JsonKey(
-        required: true, unknownEnumValue: QuestionnaireResponseStatus.unknown)
-    @required
-        QuestionnaireResponseStatus status,
+    @JsonKey(required: true, unknownEnumValue: QuestionnaireResponseStatus.unknown)
+        required QuestionnaireResponseStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? subject,
     Reference? author,
@@ -399,7 +396,7 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(unknownEnumValue: EntityRole.unknown) @required EntityRole role,
+    @JsonKey(unknownEnumValue: EntityRole.unknown) required EntityRole role,
     @JsonKey(name: '_role') Element? roleElement,
     required Coding? type,
     required FhirUri? reference,

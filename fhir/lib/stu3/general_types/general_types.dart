@@ -466,7 +466,7 @@ abstract class Ratio implements _$Ratio {
 abstract class SampledData implements _$SampledData {
   SampledData._();
   factory SampledData({
-    @required Quantity origin,
+    required Quantity origin,
     Decimal? period,
     @JsonKey(name: '_period') Element? periodElement,
     Decimal? factor,
@@ -502,7 +502,7 @@ abstract class SampledData implements _$SampledData {
 abstract class Signature implements _$Signature {
   Signature._();
   factory Signature({
-    @required List<Coding> type,
+    required List<Coding> type,
     String? when,
     @JsonKey(name: '_when') Element? whenElement,
     String? whoUri,

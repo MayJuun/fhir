@@ -30,8 +30,7 @@ abstract class Appointment with Resource implements _$Appointment {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-    @required
-        AppointmentStatus status,
+        required AppointmentStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
     CodeableConcept? reason,
@@ -48,9 +47,7 @@ abstract class Appointment with Resource implements _$Appointment {
     List<Reference>? slot,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-    @JsonKey(required: true)
-    @required
-        List<AppointmentParticipant>? participant,
+    @JsonKey(required: true) required List<AppointmentParticipant>? participant,
   }) = _Appointment;
 
   /// Produces a Yaml formatted String version of the object
@@ -83,8 +80,7 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
         ParticipantRequired required_,
     @JsonKey(name: '_required') Element? requiredElement,
     @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
-    @required
-        ParticipantStatus status,
+        required ParticipantStatus status,
     @JsonKey(name: '_status') Element? statusElement,
   }) = _AppointmentParticipant;
 
@@ -132,11 +128,8 @@ abstract class AppointmentResponse
     @JsonKey(name: '_end') Element? endElement,
     List<CodeableConcept>? participantType,
     Reference? actor,
-    @JsonKey(
-        required: true,
-        unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
-    @required
-        AppointmentResponseParticipantStatus participantStatus,
+    @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
+        required AppointmentResponseParticipantStatus participantStatus,
     @JsonKey(name: '_participantStatus') Element? participantStatusElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
@@ -222,8 +215,7 @@ abstract class Slot with Resource implements _$Slot {
     CodeableConcept? type,
     required Reference? schedule,
     @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
-    @required
-        SlotFreeBusyType freeBusyType,
+        required SlotFreeBusyType freeBusyType,
     required Instant? start,
     @JsonKey(name: '_start') Element? startElement,
     required Instant? end,

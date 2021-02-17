@@ -29,7 +29,7 @@ abstract class Basic with Resource implements _$Basic {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @required CodeableConcept? code,
+    required CodeableConcept? code,
     Reference? subject,
     String? created,
     @JsonKey(name: '_created') Element? createdElement,
@@ -306,7 +306,7 @@ abstract class Linkage with Resource implements _$Linkage {
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     Reference? author,
-    @required List<LinkageItem>? item,
+    required List<LinkageItem>? item,
   }) = _Linkage;
 
   /// Produces a Yaml formatted String version of the object
@@ -332,7 +332,7 @@ abstract class LinkageItem implements _$LinkageItem {
   factory LinkageItem({
     LinkageItemType type,
     @JsonKey(name: '_type') Element? typeElement,
-    @required Reference? resource,
+    required Reference? resource,
   }) = _LinkageItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -392,7 +392,7 @@ abstract class Media with Resource implements _$Media {
     @JsonKey(name: '_frames') Element? framesElement,
     Decimal? duration,
     @JsonKey(name: '_duration') Element? durationElement,
-    @required Attachment? content,
+    required Attachment? content,
     List<Annotation>? note,
   }) = _Media;
 
@@ -429,7 +429,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required Coding? event,
+    required Coding? event,
     List<MessageHeaderDestination>? destination,
     Reference? receiver,
     Reference? sender,
@@ -437,7 +437,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     @JsonKey(name: '_timestamp') Element? timestampElement,
     Reference? enterer,
     Reference? author,
-    @required MessageHeaderSource? source,
+    required MessageHeaderSource? source,
     Reference? responsible,
     CodeableConcept? reason,
     MessageHeaderResponse? response,
@@ -567,7 +567,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required List<OperationOutcomeIssue>? issue,
+    required List<OperationOutcomeIssue>? issue,
   }) = _OperationOutcome;
 
   /// Produces a Yaml formatted String version of the object
@@ -783,7 +783,7 @@ abstract class Subscription with Resource implements _$Subscription {
     @JsonKey(name: '_criteria') Element? criteriaElement,
     String? error,
     @JsonKey(name: '_error') Element? errorElement,
-    @required SubscriptionChannel? channel,
+    required SubscriptionChannel? channel,
     List<Coding>? tag,
   }) = _Subscription;
 

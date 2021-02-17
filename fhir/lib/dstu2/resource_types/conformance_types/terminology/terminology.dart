@@ -37,8 +37,7 @@ abstract class ValueSet with Resource implements _$ValueSet {
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-    @required
-        ValueSetStatus status,
+        required ValueSetStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -316,7 +315,7 @@ abstract class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     required Code? property,
     @JsonKey(name: '_property') Element? propertyElement,
-    @JsonKey(unknownEnumValue: FilterOp.unknown) @required FilterOp op,
+    @JsonKey(unknownEnumValue: FilterOp.unknown) required FilterOp op,
     @JsonKey(name: '_op') Element? opElement,
     required Code? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -482,8 +481,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-    @required
-        ConceptMapStatus status,
+        required ConceptMapStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -593,8 +591,7 @@ abstract class ConceptMapElementTarget with _$ConceptMapElementTarget {
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
-    @required
-        TargetEquivalence equivalence,
+        required TargetEquivalence equivalence,
     @JsonKey(name: '_equivalence') Element? equivalenceElement,
     String? comments,
     @JsonKey(name: '_comments') Element? commentsElement,
@@ -669,12 +666,10 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     required String? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-    @required
-        NamingSystemStatus status,
+        required NamingSystemStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
-    @required
-        NamingSystemKind kind,
+        required NamingSystemKind kind,
     @JsonKey(name: '_kind') Element? kindElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
@@ -745,9 +740,7 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: UniqueIdType.unknown)
-    @required
-        UniqueIdType type,
+    @JsonKey(unknownEnumValue: UniqueIdType.unknown) required UniqueIdType type,
     @JsonKey(name: '_type') Element? typeElement,
     required String? value,
     @JsonKey(name: '_value') Element? valueElement,

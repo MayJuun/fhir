@@ -382,11 +382,8 @@ abstract class MedicationAdministration
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(
-        required: true,
-        unknownEnumValue: MedicationAdministrationStatus.unknown)
-    @required
-        MedicationAdministrationStatus status,
+    @JsonKey(required: true, unknownEnumValue: MedicationAdministrationStatus.unknown)
+        required MedicationAdministrationStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     required Reference? patient,
     Reference? practitioner,
@@ -622,10 +619,8 @@ abstract class MedicationStatement
     Reference? informationSource,
     FhirDateTime? dateAsserted,
     @JsonKey(name: '_dateAsserted') Element? dateAssertedElement,
-    @JsonKey(
-        required: true, unknownEnumValue: MedicationStatementStatus.unknown)
-    @required
-        MedicationStatementStatus status,
+    @JsonKey(required: true, unknownEnumValue: MedicationStatementStatus.unknown)
+        required MedicationStatementStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? wasNotTaken,
     List<CodeableConcept>? reasonNotTaken,
@@ -717,8 +712,7 @@ abstract class Immunization with Resource implements _$Immunization {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: ImmunizationStatus.unknown)
-    @required
-        ImmunizationStatus status,
+        required ImmunizationStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirDateTime? date,
     required CodeableConcept? vaccineCode,
@@ -880,8 +874,7 @@ abstract class ImmunizationRecommendation
     List<Identifier>? identifier,
     required Reference? patient,
     @JsonKey(required: true)
-    @required
-        List<ImmunizationRecommendationRecommendation> recommendation,
+        required List<ImmunizationRecommendationRecommendation> recommendation,
   }) = _ImmunizationRecommendation;
 
   /// Produces a Yaml formatted String version of the object

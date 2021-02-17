@@ -112,7 +112,7 @@ abstract class Measure with Resource implements _$Measure {
 abstract class MeasureGroup implements _$MeasureGroup {
   MeasureGroup._();
   factory MeasureGroup({
-    @required Identifier identifier,
+    required Identifier identifier,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
@@ -248,12 +248,12 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
     @JsonKey(name: '_status') Element? statusElement,
     MeasureReportType? type,
     @JsonKey(name: '_type') Element? typeElement,
-    @required Reference? measure,
+    required Reference? measure,
     Reference? patient,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? reportingOrganization,
-    @required Period? period,
+    required Period? period,
     List<MeasureReportGroup>? group,
     Reference? evaluatedResources,
   }) = _MeasureReport;
@@ -279,7 +279,7 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
 abstract class MeasureReportGroup implements _$MeasureReportGroup {
   MeasureReportGroup._();
   factory MeasureReportGroup({
-    @required Identifier identifier,
+    required Identifier identifier,
     List<MeasureReportPopulation>? population,
     Decimal? measureScore,
     @JsonKey(name: '_measureScore') Element? measureScoreElement,

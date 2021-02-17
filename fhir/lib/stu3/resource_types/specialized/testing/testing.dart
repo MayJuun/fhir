@@ -33,7 +33,7 @@ abstract class TestReport with Resource implements _$TestReport {
     @JsonKey(name: '_name') Element? nameElement,
     TestReportStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    @required Reference? testScript,
+    required Reference? testScript,
     TestReportResult? result,
     @JsonKey(name: '_result') Element? resultElement,
     Decimal? score,
@@ -98,7 +98,7 @@ abstract class TestReportParticipant implements _$TestReportParticipant {
 abstract class TestReportSetup implements _$TestReportSetup {
   TestReportSetup._();
   factory TestReportSetup({
-    @required List<TestReportAction> action,
+    required List<TestReportAction> action,
   }) = _TestReportSetup;
 
   /// Produces a Yaml formatted String version of the object
@@ -209,7 +209,7 @@ abstract class TestReportTest implements _$TestReportTest {
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @required List<TestReportAction1>? action,
+    required List<TestReportAction1>? action,
   }) = _TestReportTest;
 
   /// Produces a Yaml formatted String version of the object
@@ -258,7 +258,7 @@ abstract class TestReportAction1 implements _$TestReportAction1 {
 abstract class TestReportTeardown implements _$TestReportTeardown {
   TestReportTeardown._();
   factory TestReportTeardown({
-    @required List<TestReportAction2> action,
+    required List<TestReportAction2> action,
   }) = _TestReportTeardown;
 
   /// Produces a Yaml formatted String version of the object
@@ -282,7 +282,7 @@ abstract class TestReportTeardown implements _$TestReportTeardown {
 abstract class TestReportAction2 implements _$TestReportAction2 {
   TestReportAction2._();
   factory TestReportAction2({
-    @required TestReportOperation operation,
+    required TestReportOperation operation,
   }) = _TestReportAction2;
 
   /// Produces a Yaml formatted String version of the object
@@ -381,7 +381,7 @@ abstract class TestScriptOrigin implements _$TestScriptOrigin {
   factory TestScriptOrigin({
     Decimal index,
     @JsonKey(name: '_index') Element? indexElement,
-    @required Coding? profile,
+    required Coding? profile,
   }) = _TestScriptOrigin;
 
   /// Produces a Yaml formatted String version of the object
@@ -407,7 +407,7 @@ abstract class TestScriptDestination implements _$TestScriptDestination {
   factory TestScriptDestination({
     Decimal index,
     @JsonKey(name: '_index') Element? indexElement,
-    @required Coding? profile,
+    required Coding? profile,
   }) = _TestScriptDestination;
 
   /// Produces a Yaml formatted String version of the object
@@ -432,7 +432,7 @@ abstract class TestScriptMetadata implements _$TestScriptMetadata {
   TestScriptMetadata._();
   factory TestScriptMetadata({
     List<TestScriptLink>? link,
-    @required List<TestScriptCapability>? capability,
+    required List<TestScriptCapability>? capability,
   }) = _TestScriptMetadata;
 
   /// Produces a Yaml formatted String version of the object
@@ -495,7 +495,7 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
     @JsonKey(name: '_destination') Element? destinationElement,
     List<String>? link,
     @JsonKey(name: '_link') List<Element>? linkElement,
-    @required Reference? capabilities,
+    required Reference? capabilities,
   }) = _TestScriptCapability;
 
   /// Produces a Yaml formatted String version of the object
@@ -586,7 +586,7 @@ abstract class TestScriptVariable implements _$TestScriptVariable {
 abstract class TestScriptRule implements _$TestScriptRule {
   TestScriptRule._();
   factory TestScriptRule({
-    @required Reference resource,
+    required Reference resource,
     List<TestScriptParam>? param,
   }) = _TestScriptRule;
 
@@ -638,8 +638,8 @@ abstract class TestScriptParam implements _$TestScriptParam {
 abstract class TestScriptRuleset implements _$TestScriptRuleset {
   TestScriptRuleset._();
   factory TestScriptRuleset({
-    @required Reference resource,
-    @required List<TestScriptRule1>? rule,
+    required Reference resource,
+    required List<TestScriptRule1>? rule,
   }) = _TestScriptRuleset;
 
   /// Produces a Yaml formatted String version of the object
@@ -716,7 +716,7 @@ abstract class TestScriptParam1 implements _$TestScriptParam1 {
 abstract class TestScriptSetup implements _$TestScriptSetup {
   TestScriptSetup._();
   factory TestScriptSetup({
-    @required List<TestScriptAction> action,
+    required List<TestScriptAction> action,
   }) = _TestScriptSetup;
 
   /// Produces a Yaml formatted String version of the object
@@ -1051,7 +1051,7 @@ abstract class TestScriptTest implements _$TestScriptTest {
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @required List<TestScriptAction1>? action,
+    required List<TestScriptAction1>? action,
   }) = _TestScriptTest;
 
   /// Produces a Yaml formatted String version of the object
@@ -1100,7 +1100,7 @@ abstract class TestScriptAction1 implements _$TestScriptAction1 {
 abstract class TestScriptTeardown implements _$TestScriptTeardown {
   TestScriptTeardown._();
   factory TestScriptTeardown({
-    @required List<TestScriptAction2> action,
+    required List<TestScriptAction2> action,
   }) = _TestScriptTeardown;
 
   /// Produces a Yaml formatted String version of the object
@@ -1124,7 +1124,7 @@ abstract class TestScriptTeardown implements _$TestScriptTeardown {
 abstract class TestScriptAction2 implements _$TestScriptAction2 {
   TestScriptAction2._();
   factory TestScriptAction2({
-    @required TestScriptOperation operation,
+    required TestScriptOperation operation,
   }) = _TestScriptAction2;
 
   /// Produces a Yaml formatted String version of the object

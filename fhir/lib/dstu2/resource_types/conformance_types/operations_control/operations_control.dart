@@ -40,15 +40,13 @@ abstract class Conformance with Resource implements _$Conformance {
     String? requirements,
     String? copyright,
     @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-    @required
-        ConformanceKind kind,
+        required ConformanceKind kind,
     ConformanceSoftware? software,
     ConformanceImplementation? implementation,
     required Id? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-    @required
-        ConformanceAcceptUnknown acceptUnknown,
+        required ConformanceAcceptUnknown acceptUnknown,
     @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
     required List<ConformanceFormat>? format,
     List<Reference>? profile,
@@ -105,15 +103,13 @@ abstract class CapabilityStatement
     String? requirements,
     String? copyright,
     @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-    @required
-        ConformanceKind kind,
+        required ConformanceKind kind,
     ConformanceSoftware? software,
     ConformanceImplementation? implementation,
     required Id? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-    @required
-        ConformanceAcceptUnknown acceptUnknown,
+        required ConformanceAcceptUnknown acceptUnknown,
     @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
     required List<ConformanceFormat>? format,
     List<Reference>? profile,
@@ -233,7 +229,7 @@ abstract class ConformanceRest with _$ConformanceRest {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(unknownEnumValue: RestMode.unknown) @required RestMode mode,
+    @JsonKey(unknownEnumValue: RestMode.unknown) required RestMode mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? documentation,
     ConformanceRestSecurity? security,
@@ -302,9 +298,7 @@ abstract class ConformanceDocument with _$ConformanceDocument {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(unknownEnumValue: DocumentMode.unknown)
-    @required
-        DocumentMode mode,
+    @JsonKey(unknownEnumValue: DocumentMode.unknown) required DocumentMode mode,
     String? documentation,
     required Reference? profile,
   }) = _ConformanceDocument;
@@ -369,8 +363,7 @@ abstract class ConformanceRestResource with _$ConformanceRestResource {
     @JsonKey(name: '_type') Element? typeElement,
     Reference? profile,
     @JsonKey(required: true)
-    @required
-        List<ConformanceResourceInteraction> interaction,
+        required List<ConformanceResourceInteraction> interaction,
     @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
         ResourceVersioning versioning,
     Boolean? readHistory,
@@ -413,8 +406,7 @@ abstract class ConformanceResourceInteraction
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
-    @required
-        ResourceInteractionCode code,
+        required ResourceInteractionCode code,
     String? documentation,
   }) = _ConformanceResourceInteraction;
 
@@ -508,7 +500,7 @@ abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
     List<FhirExtension>? modifierExtension,
     required Coding? code,
     @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory? category,
-    @JsonKey(unknownEnumValue: EventMode.unknown) @required EventMode mode,
+    @JsonKey(unknownEnumValue: EventMode.unknown) required EventMode mode,
     @JsonKey(name: '_mode') Element? modeElement,
     required Code? focus,
     required Reference? request,
@@ -575,8 +567,7 @@ abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
-    @required
-        RestInteractionCode code,
+        required RestInteractionCode code,
     String? documentation,
   }) = _ConformanceRestInteraction;
 
@@ -610,8 +601,7 @@ abstract class ConformanceResourceSearchParam
     required String? name,
     FhirUri? definition,
     @JsonKey(unknownEnumValue: SearchParamType.unknown)
-    @required
-        SearchParamType type,
+        required SearchParamType type,
     String? documentation,
     List<Code>? target,
     List<SearchParamModifier>? modifier,
@@ -658,13 +648,10 @@ abstract class OperationDefinition
     FhirUri? url,
     String? version,
     required String? name,
-    @JsonKey(
-        required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
-    @required
-        OperationDefinitionStatus status,
+    @JsonKey(required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
+        required OperationDefinitionStatus status,
     @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-    @required
-        OperationDefinitionKind kind,
+        required OperationDefinitionKind kind,
     Boolean? experimental,
     String? publisher,
     List<OperationDefinitionContact>? contact,
@@ -737,7 +724,7 @@ abstract class OperationDefinitionParameter
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     required Code? name,
-    @JsonKey(unknownEnumValue: ParameterUse.unknown) @required ParameterUse use,
+    @JsonKey(unknownEnumValue: ParameterUse.unknown) required ParameterUse use,
     required Integer? min,
     required String? max,
     String? documentation,
@@ -777,8 +764,7 @@ abstract class OperationDefinitionParameterBinding
         required: true,
         unknownEnumValue: OperationDefinitionBindingStrength.unknown)
     @JsonKey(required: true)
-    @required
-        OperationDefinitionBindingStrength strength,
+        required OperationDefinitionBindingStrength strength,
     FhirUri? valueSetUri,
     Reference? valueSetReference,
   }) = _OperationDefinitionParameterBinding;
@@ -831,8 +817,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     required Code? code,
     Code? base,
     @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-    @required
-        SearchParameterType type,
+        required SearchParameterType type,
     String? description,
     String? xpath,
     @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)

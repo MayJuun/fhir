@@ -131,8 +131,8 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
-    @required CodeableConcept? type,
-    @required Quantity? period,
+    required CodeableConcept? type,
+    required Quantity? period,
     List<CodeableConcept>? specialPrecautionsForStorage,
   }) = _ProductShelfLife;
 
@@ -341,10 +341,10 @@ abstract class MarketingStatus implements _$MarketingStatus {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required CodeableConcept? country,
+    required CodeableConcept? country,
     CodeableConcept? jurisdiction,
-    @required CodeableConcept? status,
-    @required Period? dateRange,
+    required CodeableConcept? status,
+    required Period? dateRange,
     FhirDateTime? restoreDate,
     @JsonKey(name: '_restoreDate') Element? restoreDateElement,
   }) = _MarketingStatus;

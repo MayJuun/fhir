@@ -170,7 +170,7 @@ abstract class Encounter with Resource implements _$Encounter {
     @JsonKey(unknownEnumValue: EncounterStatus.unknown) EncounterStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<EncounterStatusHistory>? statusHistory,
-    @JsonKey(name: 'class') @required Coding? class_,
+    @JsonKey(name: 'class') required Coding? class_,
     List<EncounterClassHistory>? classHistory,
     List<CodeableConcept>? type,
     CodeableConcept? serviceType,
@@ -254,7 +254,7 @@ abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
     @JsonKey(unknownEnumValue: EncounterStatusHistoryStatus.unknown)
         EncounterStatusHistoryStatus status,
     @JsonKey(name: '_status') Element? statusElement,
-    @required Period? period,
+    required Period? period,
   }) = _EncounterStatusHistory;
 
   /// Produces a Yaml formatted String version of the object
@@ -313,8 +313,8 @@ abstract class EncounterClassHistory implements _$EncounterClassHistory {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'class') @required Coding? class_,
-    @required Period? period,
+    @JsonKey(name: 'class') required Coding? class_,
+    required Period? period,
   }) = _EncounterClassHistory;
 
   /// Produces a Yaml formatted String version of the object
@@ -446,7 +446,7 @@ abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required Reference? condition,
+    required Reference? condition,
     CodeableConcept? use,
     PositiveInt? rank,
     @JsonKey(name: '_rank') Element? rankElement,
@@ -606,7 +606,7 @@ abstract class EncounterLocation implements _$EncounterLocation {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required Reference? location,
+    required Reference? location,
     @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
         EncounterLocationStatus status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -749,7 +749,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
     List<EpisodeOfCareStatusHistory>? statusHistory,
     List<CodeableConcept>? type,
     List<EpisodeOfCareDiagnosis>? diagnosis,
-    @required Reference? patient,
+    required Reference? patient,
     Reference? managingOrganization,
     Period? period,
     List<Reference>? referralRequest,
@@ -822,7 +822,7 @@ abstract class EpisodeOfCareStatusHistory
     @JsonKey(unknownEnumValue: EpisodeOfCareStatusHistoryStatus.unknown)
         EpisodeOfCareStatusHistoryStatus status,
     @JsonKey(name: '_status') Element? statusElement,
-    @required Period? period,
+    required Period? period,
   }) = _EpisodeOfCareStatusHistory;
 
   /// Produces a Yaml formatted String version of the object
@@ -889,7 +889,7 @@ abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required Reference? condition,
+    required Reference? condition,
     CodeableConcept? role,
     PositiveInt? rank,
     @JsonKey(name: '_rank') Element? rankElement,
@@ -1015,8 +1015,8 @@ abstract class Flag with Resource implements _$Flag {
     @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
-    @required CodeableConcept? code,
-    @required Reference? subject,
+    required CodeableConcept? code,
+    required Reference? subject,
     Period? period,
     Reference? encounter,
     Reference? author,
@@ -1283,7 +1283,7 @@ abstract class Library with Resource implements _$Library {
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
-    @required CodeableConcept? type,
+    required CodeableConcept? type,
     CodeableConcept? subjectCodeableConcept,
     Reference? subjectReference,
     FhirDateTime? date,
@@ -1534,7 +1534,7 @@ abstract class ListEntry implements _$ListEntry {
     @JsonKey(name: '_deleted') Element? deletedElement,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
-    @required Reference? item,
+    required Reference? item,
   }) = _ListEntry;
 
   /// Produces a Yaml formatted String version of the object

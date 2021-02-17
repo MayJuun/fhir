@@ -102,7 +102,7 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
 abstract class UsageContext implements _$UsageContext {
   UsageContext._();
   factory UsageContext({
-    @required Coding code,
+    required Coding code,
     CodeableConcept? valueCodeableConcept,
     Quantity? valueQuantity,
     Range? valueRange,

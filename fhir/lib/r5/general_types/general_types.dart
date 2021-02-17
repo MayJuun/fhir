@@ -506,7 +506,7 @@ abstract class SampledData implements _$SampledData {
   factory SampledData({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @required Quantity? origin,
+    required Quantity? origin,
     Decimal? period,
     @JsonKey(name: '_period') Element? periodElement,
     Decimal? factor,
@@ -544,10 +544,10 @@ abstract class Signature implements _$Signature {
   factory Signature({
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @required List<Coding>? type,
+    required List<Coding>? type,
     Instant? when,
     @JsonKey(name: '_when') Element? whenElement,
-    @required Reference? who,
+    required Reference? who,
     Reference? onBehalfOf,
     Code? targetFormat,
     @JsonKey(name: '_targetFormat') Element? targetFormatElement,

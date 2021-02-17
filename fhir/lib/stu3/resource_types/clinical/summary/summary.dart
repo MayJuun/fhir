@@ -71,7 +71,7 @@ abstract class AdverseEventSuspectEntity
     implements _$AdverseEventSuspectEntity {
   AdverseEventSuspectEntity._();
   factory AdverseEventSuspectEntity({
-    @required Reference instance,
+    required Reference instance,
     AdverseEventSuspectEntityCausality? causality,
     @JsonKey(name: '_causality') Element? causalityElement,
     CodeableConcept? causalityAssessment,
@@ -132,7 +132,7 @@ abstract class AllergyIntolerance
     AllergyIntoleranceCriticality? criticality,
     @JsonKey(name: '_criticality') Element? criticalityElement,
     CodeableConcept? code,
-    @required Reference? patient,
+    required Reference? patient,
     FhirDateTime? onsetDateTime,
     @JsonKey(name: '_onsetDateTime') Element? onsetDateTimeElement,
     Age? onsetAge,
@@ -173,7 +173,7 @@ abstract class AllergyIntoleranceReaction
   AllergyIntoleranceReaction._();
   factory AllergyIntoleranceReaction({
     CodeableConcept substance,
-    @required List<CodeableConcept>? manifestation,
+    required List<CodeableConcept>? manifestation,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     String? onset,
@@ -227,7 +227,7 @@ abstract class ClinicalImpression
     CodeableConcept? code,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @required Reference? subject,
+    required Reference? subject,
     Reference? context,
     FhirDateTime? effectiveDateTime,
     @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
@@ -271,7 +271,7 @@ abstract class ClinicalImpressionInvestigation
     implements _$ClinicalImpressionInvestigation {
   ClinicalImpressionInvestigation._();
   factory ClinicalImpressionInvestigation({
-    @required CodeableConcept code,
+    required CodeableConcept code,
     List<Reference>? item,
   }) = _ClinicalImpressionInvestigation;
 
@@ -350,7 +350,7 @@ abstract class Condition with Resource implements _$Condition {
     CodeableConcept? severity,
     CodeableConcept? code,
     List<CodeableConcept>? bodySite,
-    @required Reference? subject,
+    required Reference? subject,
     Reference? context,
     FhirDateTime? onsetDateTime,
     @JsonKey(name: '_onsetDateTime') Element? onsetDateTimeElement,
@@ -499,7 +499,7 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
 abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
   DetectedIssueMitigation._();
   factory DetectedIssueMitigation({
-    @required CodeableConcept action,
+    required CodeableConcept action,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? author,
@@ -548,12 +548,12 @@ abstract class FamilyMemberHistory
     Boolean? notDone,
     @JsonKey(name: '_notDone') Element? notDoneElement,
     CodeableConcept? notDoneReason,
-    @required Reference? patient,
+    required Reference? patient,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    @required CodeableConcept? relationship,
+    required CodeableConcept? relationship,
     FamilyMemberHistoryGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Period? bornPeriod,
@@ -603,7 +603,7 @@ abstract class FamilyMemberHistoryCondition
     implements _$FamilyMemberHistoryCondition {
   FamilyMemberHistoryCondition._();
   factory FamilyMemberHistoryCondition({
-    @required CodeableConcept code,
+    required CodeableConcept code,
     CodeableConcept? outcome,
     Age? onsetAge,
     Range? onsetRange,
@@ -659,7 +659,7 @@ abstract class Procedure with Resource implements _$Procedure {
     CodeableConcept? notDoneReason,
     CodeableConcept? category,
     CodeableConcept? code,
-    @required Reference? subject,
+    required Reference? subject,
     Reference? context,
     FhirDateTime? performedDateTime,
     @JsonKey(name: '_performedDateTime') Element? performedDateTimeElement,
@@ -702,7 +702,7 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
   ProcedurePerformer._();
   factory ProcedurePerformer({
     CodeableConcept role,
-    @required Reference? actor,
+    required Reference? actor,
     Reference? onBehalfOf,
   }) = _ProcedurePerformer;
 
@@ -728,7 +728,7 @@ abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
   ProcedureFocalDevice._();
   factory ProcedureFocalDevice({
     CodeableConcept action,
-    @required Reference? manipulated,
+    required Reference? manipulated,
   }) = _ProcedureFocalDevice;
 
   /// Produces a Yaml formatted String version of the object

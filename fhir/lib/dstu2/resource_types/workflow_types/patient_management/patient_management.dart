@@ -30,8 +30,7 @@ abstract class Encounter with Resource implements _$Encounter {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: EncounterStatus.unknown)
-    @required
-        EncounterStatus status,
+        required EncounterStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     List<EncounterStatusHistory>? statusHistory,
     @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
@@ -79,8 +78,7 @@ abstract class EncounterStatusHistory with _$EncounterStatusHistory {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
-    @required
-        EncounterHistoryStatus status,
+        required EncounterHistoryStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period? period,
   }) = _EncounterStatusHistory;
@@ -220,8 +218,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
-    @required
-        EpisodeOfCareStatus status,
+        required EpisodeOfCareStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     List<EpisodeOfCareStatusHistory>? statusHistory,
     List<CodeableConcept>? type,
@@ -258,10 +255,8 @@ abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(
-        required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-    @required
-        EpisodeOfCareHistoryStatus status,
+    @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
+        required EpisodeOfCareHistoryStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period? period,
   }) = _EpisodeOfCareStatusHistory;
@@ -415,7 +410,7 @@ abstract class Flag with Resource implements _$Flag {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     CodeableConcept? category,
-    @JsonKey(unknownEnumValue: FlagStatus.unknown) @required FlagStatus status,
+    @JsonKey(unknownEnumValue: FlagStatus.unknown) required FlagStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? period,
     required Reference? subject,

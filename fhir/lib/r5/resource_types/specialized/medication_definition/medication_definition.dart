@@ -38,9 +38,8 @@ abstract class AdministrableProductDefinition
     List<Reference>? ingredient,
     List<Reference>? device,
     List<AdministrableProductDefinitionProperty>? property,
-    @required
-        List<AdministrableProductDefinitionRouteOfAdministration>
-            routeOfAdministration,
+    required List<AdministrableProductDefinitionRouteOfAdministration>
+        routeOfAdministration,
   }) = _AdministrableProductDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -71,7 +70,7 @@ abstract class AdministrableProductDefinitionProperty
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required CodeableConcept? type,
+    required CodeableConcept? type,
     CodeableConcept? valueCodeableConcept,
     Quantity? valueQuantity,
     Date? valueDate,
@@ -110,7 +109,7 @@ abstract class AdministrableProductDefinitionRouteOfAdministration
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required CodeableConcept? code,
+    required CodeableConcept? code,
     Quantity? firstDose,
     Quantity? maxSingleDose,
     Quantity? maxDosePerDay,
@@ -148,7 +147,7 @@ abstract class AdministrableProductDefinitionTargetSpecies
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required CodeableConcept? code,
+    required CodeableConcept? code,
     List<AdministrableProductDefinitionWithdrawalPeriod>? withdrawalPeriod,
   }) = _AdministrableProductDefinitionTargetSpecies;
 
@@ -180,8 +179,8 @@ abstract class AdministrableProductDefinitionWithdrawalPeriod
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required CodeableConcept? tissue,
-    @required Quantity? value,
+    required CodeableConcept? tissue,
+    required Quantity? value,
     String? supportingInformation,
     @JsonKey(name: '_supportingInformation')
         Element supportingInformationElement,
@@ -301,7 +300,7 @@ abstract class ClinicalUseIssueOtherTherapy
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required CodeableConcept? therapyRelationshipType,
+    required CodeableConcept? therapyRelationshipType,
     CodeableConcept? medicationCodeableConcept,
     Reference? medicationReference,
   }) = _ClinicalUseIssueOtherTherapy;
@@ -473,7 +472,7 @@ abstract class Ingredient with Resource implements _$Ingredient {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
-    @required CodeableConcept? role,
+    required CodeableConcept? role,
     List<CodeableConcept>? function,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -578,7 +577,7 @@ abstract class IngredientReferenceStrength
     List<FhirExtension>? modifierExtension,
     CodeableConcept? substanceCodeableConcept,
     Reference? substanceReference,
-    @required Ratio? strength,
+    required Ratio? strength,
     Ratio? strengthHighLimit,
     String? measurementPoint,
     @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
@@ -613,7 +612,7 @@ abstract class IngredientSpecifiedSubstance
     List<FhirExtension>? modifierExtension,
     CodeableConcept? codeCodeableConcept,
     Reference? codeReference,
-    @required CodeableConcept? group,
+    required CodeableConcept? group,
     CodeableConcept? confidentiality,
     List<IngredientStrength>? strength,
   }) = _IngredientSpecifiedSubstance;
@@ -656,7 +655,7 @@ abstract class ManufacturedItemDefinition
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @required CodeableConcept? manufacturedDoseForm,
+    required CodeableConcept? manufacturedDoseForm,
     CodeableConcept? unitOfPresentation,
     List<Reference>? manufacturer,
     List<Reference>? ingredient,
@@ -689,7 +688,7 @@ abstract class ManufacturedItemDefinitionProperty
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required CodeableConcept? type,
+    required CodeableConcept? type,
     CodeableConcept? valueCodeableConcept,
     Quantity? valueQuantity,
     Date? valueDate,
@@ -766,7 +765,7 @@ abstract class MedicinalProductDefinition
     List<Reference>? masterFile,
     List<MedicinalProductDefinitionContact>? contact,
     List<Reference>? clinicalTrial,
-    @required List<MedicinalProductDefinitionName>? name,
+    required List<MedicinalProductDefinitionName>? name,
     List<MedicinalProductDefinitionCrossReference>? crossReference,
     List<MedicinalProductDefinitionManufacturingBusinessOperation>
         manufacturingBusinessOperation,
@@ -799,7 +798,7 @@ abstract class MedicinalProductDefinitionContact
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
-    @required Reference? contact,
+    required Reference? contact,
   }) = _MedicinalProductDefinitionContact;
 
   /// Produces a Yaml formatted String version of the object
@@ -867,7 +866,7 @@ abstract class MedicinalProductDefinitionNamePart
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'part') String? part_,
     @JsonKey(name: '_part') Element? partElement,
-    @required CodeableConcept? type,
+    required CodeableConcept? type,
   }) = _MedicinalProductDefinitionNamePart;
 
   /// Produces a Yaml formatted String version of the object
@@ -898,9 +897,9 @@ abstract class MedicinalProductDefinitionCountryLanguage
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required CodeableConcept? country,
+    required CodeableConcept? country,
     CodeableConcept? jurisdiction,
-    @required CodeableConcept? language,
+    required CodeableConcept? language,
   }) = _MedicinalProductDefinitionCountryLanguage;
 
   /// Produces a Yaml formatted String version of the object
@@ -1059,7 +1058,7 @@ abstract class PackagedProductDefinitionBatchIdentifier
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required Identifier? outerPackaging,
+    required Identifier? outerPackaging,
     Identifier? immediatePackaging,
   }) = _PackagedProductDefinitionBatchIdentifier;
 
@@ -1132,7 +1131,7 @@ abstract class PackagedProductDefinitionProperty
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required CodeableConcept? type,
+    required CodeableConcept? type,
     CodeableConcept? valueCodeableConcept,
     Quantity? valueQuantity,
     Date? valueDate,
@@ -1264,7 +1263,7 @@ abstract class RegulatedAuthorizationRelatedDate
     Period? datePeriod,
     FhirDateTime? dateDateTime,
     @JsonKey(name: '_dateDateTime') Element? dateDateTimeElement,
-    @required CodeableConcept? type,
+    required CodeableConcept? type,
   }) = _RegulatedAuthorizationRelatedDate;
 
   /// Produces a Yaml formatted String version of the object

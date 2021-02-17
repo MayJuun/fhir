@@ -36,8 +36,7 @@ abstract class Composition with Resource implements _$Composition {
     required String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: CompositionStatus.unknown)
-    @required
-        CompositionStatus status,
+        required CompositionStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     Code? confidentiality,
     @JsonKey(name: '_confidentiality') Element? confidentialityElement,
@@ -192,8 +191,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
     FhirUri? source,
     @JsonKey(name: '_source') Element? sourceElement,
     @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-    @required
-        DocumentManifestStatus status,
+        required DocumentManifestStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -302,8 +300,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     FhirDateTime? created,
     required Instant? indexed,
     @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-    @required
-        DocumentReferenceStatus status,
+        required DocumentReferenceStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? docStatus,
     @JsonKey(name: '_docStatus') Element? docStatusElement,
@@ -340,8 +337,7 @@ abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: RelatesToCode.unknown)
-    @required
-        RelatesToCode code,
+        required RelatesToCode code,
     @JsonKey(name: '_code') Element? codeElement,
     required Reference? target,
   }) = _DocumentReferenceRelatesTo;
@@ -483,12 +479,12 @@ abstract class List_ with Resource implements _$List_ {
     Reference? subject,
     Reference? source,
     Reference? encounter,
-    @JsonKey(unknownEnumValue: ListStatus.unknown) @required ListStatus status,
+    @JsonKey(unknownEnumValue: ListStatus.unknown) required ListStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? orderedBy,
-    @JsonKey(unknownEnumValue: ListMode.unknown) @required ListMode mode,
+    @JsonKey(unknownEnumValue: ListMode.unknown) required ListMode mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? note,
     List<ListEntry>? entry,

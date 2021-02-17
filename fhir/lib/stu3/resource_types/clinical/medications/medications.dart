@@ -33,8 +33,8 @@ abstract class Immunization with Resource implements _$Immunization {
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? notGiven,
     @JsonKey(name: '_notGiven') Element? notGivenElement,
-    @required CodeableConcept? vaccineCode,
-    @required Reference? patient,
+    required CodeableConcept? vaccineCode,
+    required Reference? patient,
     Reference? encounter,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
@@ -79,7 +79,7 @@ abstract class ImmunizationPractitioner implements _$ImmunizationPractitioner {
   ImmunizationPractitioner._();
   factory ImmunizationPractitioner({
     CodeableConcept role,
-    @required Reference? actor,
+    required Reference? actor,
   }) = _ImmunizationPractitioner;
 
   /// Produces a Yaml formatted String version of the object
@@ -167,8 +167,8 @@ abstract class ImmunizationVaccinationProtocol
     @JsonKey(name: '_series') Element? seriesElement,
     Decimal? seriesDoses,
     @JsonKey(name: '_seriesDoses') Element? seriesDosesElement,
-    @required List<CodeableConcept>? targetDisease,
-    @required CodeableConcept? doseStatus,
+    required List<CodeableConcept>? targetDisease,
+    required CodeableConcept? doseStatus,
     CodeableConcept? doseStatusReason,
   }) = _ImmunizationVaccinationProtocol;
 
@@ -212,8 +212,8 @@ abstract class ImmunizationRecommendation
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @required Reference? patient,
-    @required List<ImmunizationRecommendationRecommendation>? recommendation,
+    required Reference? patient,
+    required List<ImmunizationRecommendationRecommendation>? recommendation,
   }) = _ImmunizationRecommendation;
 
   /// Produces a Yaml formatted String version of the object
@@ -245,7 +245,7 @@ abstract class ImmunizationRecommendationRecommendation
     CodeableConcept? targetDisease,
     Decimal? doseNumber,
     @JsonKey(name: '_doseNumber') Element? doseNumberElement,
-    @required CodeableConcept? forecastStatus,
+    required CodeableConcept? forecastStatus,
     List<ImmunizationRecommendationDateCriterion>? dateCriterion,
     ImmunizationRecommendationProtocol? protocol,
     List<Reference>? supportingImmunization,
@@ -277,7 +277,7 @@ abstract class ImmunizationRecommendationDateCriterion
     implements _$ImmunizationRecommendationDateCriterion {
   ImmunizationRecommendationDateCriterion._();
   factory ImmunizationRecommendationDateCriterion({
-    @required CodeableConcept code,
+    required CodeableConcept code,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
   }) = _ImmunizationRecommendationDateCriterion;
@@ -518,7 +518,7 @@ abstract class MedicationAdministration
     CodeableConcept? category,
     CodeableConcept? medicationCodeableConcept,
     Reference? medicationReference,
-    @required Reference? subject,
+    required Reference? subject,
     Reference? context,
     List<Reference>? supportingInformation,
     FhirDateTime? effectiveDateTime,
@@ -560,7 +560,7 @@ abstract class MedicationAdministrationPerformer
     implements _$MedicationAdministrationPerformer {
   MedicationAdministrationPerformer._();
   factory MedicationAdministrationPerformer({
-    @required Reference actor,
+    required Reference actor,
     Reference? onBehalfOf,
   }) = _MedicationAdministrationPerformer;
 
@@ -692,7 +692,7 @@ abstract class MedicationDispensePerformer
     implements _$MedicationDispensePerformer {
   MedicationDispensePerformer._();
   factory MedicationDispensePerformer({
-    @required Reference actor,
+    required Reference actor,
     Reference? onBehalfOf,
   }) = _MedicationDispensePerformer;
 
@@ -776,7 +776,7 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
     @JsonKey(name: '_priority') Element? priorityElement,
     CodeableConcept? medicationCodeableConcept,
     Reference? medicationReference,
-    @required Reference? subject,
+    required Reference? subject,
     Reference? context,
     List<Reference>? supportingInformation,
     String? authoredOn,
@@ -816,7 +816,7 @@ abstract class MedicationRequestRequester
     implements _$MedicationRequestRequester {
   MedicationRequestRequester._();
   factory MedicationRequestRequester({
-    @required Reference agent,
+    required Reference agent,
     Reference? onBehalfOf,
   }) = _MedicationRequestRequester;
 
@@ -934,7 +934,7 @@ abstract class MedicationStatement
     Date? dateAsserted,
     @JsonKey(name: '_dateAsserted') Element? dateAssertedElement,
     Reference? informationSource,
-    @required Reference? subject,
+    required Reference? subject,
     List<Reference>? derivedFrom,
     MedicationStatementTaken? taken,
     @JsonKey(name: '_taken') Element? takenElement,

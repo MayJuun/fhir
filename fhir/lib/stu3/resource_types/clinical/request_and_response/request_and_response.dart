@@ -195,7 +195,7 @@ abstract class CommunicationRequestRequester
     implements _$CommunicationRequestRequester {
   CommunicationRequestRequester._();
   factory CommunicationRequestRequester({
-    @required Reference agent,
+    required Reference agent,
     Reference? onBehalfOf,
   }) = _CommunicationRequestRequester;
 
@@ -241,12 +241,12 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
     Identifier? groupIdentifier,
     String? status,
     @JsonKey(name: '_status') Element? statusElement,
-    @required CodeableConcept? intent,
+    required CodeableConcept? intent,
     String? priority,
     @JsonKey(name: '_priority') Element? priorityElement,
     Reference? codeReference,
     CodeableConcept? codeCodeableConcept,
-    @required Reference? subject,
+    required Reference? subject,
     Reference? context,
     FhirDateTime? occurrenceDateTime,
     @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
@@ -285,7 +285,7 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
 abstract class DeviceRequestRequester implements _$DeviceRequestRequester {
   DeviceRequestRequester._();
   factory DeviceRequestRequester({
-    @required Reference agent,
+    required Reference agent,
     Reference? onBehalfOf,
   }) = _DeviceRequestRequester;
 
@@ -328,7 +328,7 @@ abstract class DeviceUseStatement
     List<Identifier>? identifier,
     DeviceUseStatementStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    @required Reference? subject,
+    required Reference? subject,
     Period? whenUsed,
     Timing? timingTiming,
     Period? timingPeriod,
@@ -337,7 +337,7 @@ abstract class DeviceUseStatement
     String? recordedOn,
     @JsonKey(name: '_recordedOn') Element? recordedOnElement,
     Reference? source,
-    @required Reference? device,
+    required Reference? device,
     List<CodeableConcept>? indication,
     CodeableConcept? bodySite,
     List<Annotation>? note,
@@ -498,7 +498,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
 abstract class SupplyRequestOrderedItem implements _$SupplyRequestOrderedItem {
   SupplyRequestOrderedItem._();
   factory SupplyRequestOrderedItem({
-    @required Quantity quantity,
+    required Quantity quantity,
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
   }) = _SupplyRequestOrderedItem;
@@ -525,7 +525,7 @@ abstract class SupplyRequestOrderedItem implements _$SupplyRequestOrderedItem {
 abstract class SupplyRequestRequester implements _$SupplyRequestRequester {
   SupplyRequestRequester._();
   factory SupplyRequestRequester({
-    @required Reference agent,
+    required Reference agent,
     Reference? onBehalfOf,
   }) = _SupplyRequestRequester;
 

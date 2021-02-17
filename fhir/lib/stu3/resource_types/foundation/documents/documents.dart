@@ -31,13 +31,13 @@ abstract class Composition with Resource implements _$Composition {
     Identifier? identifier,
     CompositionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    @required CodeableConcept? type,
+    required CodeableConcept? type,
     @JsonKey(name: 'class') CodeableConcept? class_,
-    @required Reference? subject,
+    required Reference? subject,
     Reference? encounter,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
-    @required List<Reference>? author,
+    required List<Reference>? author,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     Id? confidentiality,
@@ -211,7 +211,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
     @JsonKey(name: '_source') Element? sourceElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @required List<DocumentManifestContent>? content,
+    required List<DocumentManifestContent>? content,
     List<DocumentManifestRelated>? related,
   }) = _DocumentManifest;
 
@@ -305,7 +305,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     @JsonKey(name: '_status') Element? statusElement,
     String? docStatus,
     @JsonKey(name: '_docStatus') Element? docStatusElement,
-    @required CodeableConcept? type,
+    required CodeableConcept? type,
     @JsonKey(name: 'class') CodeableConcept? class_,
     Reference? subject,
     String? created,
@@ -319,7 +319,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<CodeableConcept>? securityLabel,
-    @required List<DocumentReferenceContent>? content,
+    required List<DocumentReferenceContent>? content,
     DocumentReferenceContext? context,
   }) = _DocumentReference;
 
@@ -347,7 +347,7 @@ abstract class DocumentReferenceRelatesTo
   factory DocumentReferenceRelatesTo({
     DocumentReferenceRelatesToCode code,
     @JsonKey(name: '_code') Element? codeElement,
-    @required Reference? target,
+    required Reference? target,
   }) = _DocumentReferenceRelatesTo;
 
   /// Produces a Yaml formatted String version of the object
@@ -372,7 +372,7 @@ abstract class DocumentReferenceRelatesTo
 abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
   DocumentReferenceContent._();
   factory DocumentReferenceContent({
-    @required Attachment attachment,
+    required Attachment attachment,
     Coding? format,
   }) = _DocumentReferenceContent;
 

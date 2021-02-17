@@ -64,7 +64,7 @@ abstract class Group with Resource implements _$Group {
 abstract class GroupCharacteristic implements _$GroupCharacteristic {
   GroupCharacteristic._();
   factory GroupCharacteristic({
-    @required CodeableConcept code,
+    required CodeableConcept code,
     CodeableConcept? valueCodeableConcept,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -96,7 +96,7 @@ abstract class GroupCharacteristic implements _$GroupCharacteristic {
 abstract class GroupMember implements _$GroupMember {
   GroupMember._();
   factory GroupMember({
-    @required Reference entity,
+    required Reference entity,
     Period? period,
     Boolean? inactive,
     @JsonKey(name: '_inactive') Element? inactiveElement,
@@ -218,7 +218,7 @@ abstract class PatientContact implements _$PatientContact {
 abstract class PatientAnimal implements _$PatientAnimal {
   PatientAnimal._();
   factory PatientAnimal({
-    @required CodeableConcept species,
+    required CodeableConcept species,
     CodeableConcept? breed,
     CodeableConcept? genderStatus,
   }) = _PatientAnimal;
@@ -244,7 +244,7 @@ abstract class PatientAnimal implements _$PatientAnimal {
 abstract class PatientCommunication implements _$PatientCommunication {
   PatientCommunication._();
   factory PatientCommunication({
-    @required CodeableConcept language,
+    required CodeableConcept language,
     Boolean? preferred,
     @JsonKey(name: '_preferred') Element? preferredElement,
   }) = _PatientCommunication;
@@ -270,7 +270,7 @@ abstract class PatientCommunication implements _$PatientCommunication {
 abstract class PatientLink implements _$PatientLink {
   PatientLink._();
   factory PatientLink({
-    @required Reference other,
+    required Reference other,
     PatientLinkType? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _PatientLink;
@@ -344,7 +344,7 @@ abstract class Person with Resource implements _$Person {
 abstract class PersonLink implements _$PersonLink {
   PersonLink._();
   factory PersonLink({
-    @required Reference target,
+    required Reference target,
     PersonLinkAssurance? assurance,
     @JsonKey(name: '_assurance') Element? assuranceElement,
   }) = _PersonLink;
@@ -421,7 +421,7 @@ abstract class PractitionerQualification
   PractitionerQualification._();
   factory PractitionerQualification({
     List<Identifier>? identifier,
-    @required CodeableConcept? code,
+    required CodeableConcept? code,
     Period? period,
     Reference? issuer,
   }) = _PractitionerQualification;
@@ -578,7 +578,7 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
     List<Identifier>? identifier,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
-    @required Reference? patient,
+    required Reference? patient,
     CodeableConcept? relationship,
     List<HumanName>? name,
     List<ContactPoint>? telecom,

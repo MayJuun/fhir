@@ -176,7 +176,7 @@ abstract class PatientLink with _$PatientLink {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? other,
-    @JsonKey(unknownEnumValue: LinkType.unknown) @required LinkType type,
+    @JsonKey(unknownEnumValue: LinkType.unknown) required LinkType type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _PatientLink;
 

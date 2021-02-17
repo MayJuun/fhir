@@ -31,8 +31,7 @@ abstract class CarePlan with Resource implements _$CarePlan {
     List<Identifier>? identifier,
     Reference? subject,
     @JsonKey(unknownEnumValue: CarePlanStatus.unknown)
-    @required
-        CarePlanStatus status,
+        required CarePlanStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? context,
     Period? period,
@@ -228,7 +227,7 @@ abstract class Goal with Resource implements _$Goal {
     Quantity? targetQuantity,
     List<CodeableConcept>? category,
     required String? description,
-    @JsonKey(unknownEnumValue: GoalStatus.unknown) @required GoalStatus status,
+    @JsonKey(unknownEnumValue: GoalStatus.unknown) required GoalStatus status,
     Date? statusDate,
     @JsonKey(name: '_statusDate') Element? statusDateElement,
     CodeableConcept? statusReason,
@@ -300,8 +299,7 @@ abstract class ReferralRequest with Resource implements _$ReferralRequest {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ReferralRequestStatus.unknown)
-    @required
-        ReferralRequestStatus status,
+        required ReferralRequestStatus status,
     List<Identifier>? identifier,
     FhirDateTime? date,
     CodeableConcept? type,

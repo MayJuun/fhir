@@ -445,8 +445,7 @@ abstract class Narrative implements _$Narrative {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-    @required
-        NarrativeStatus status,
+        required NarrativeStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     required String? div,
   }) = _Narrative;
@@ -480,8 +479,7 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
     Boolean? ordered,
     @JsonKey(name: '_ordered') Element? orderedElement,
     @JsonKey(unknownEnumValue: SlicingRules.unknown)
-    @required
-        SlicingRules rules,
+        required SlicingRules rules,
     @JsonKey(name: '_rules') Element? rulesElement,
   }) = _ElementDefinitionSlicing;
 
@@ -601,8 +599,7 @@ abstract class ElementDefinitionConstraint
     String? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
     @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
-    @required
-        ConstraintSeverity severity,
+        required ConstraintSeverity severity,
     @JsonKey(name: '_severity') Element? severityElement,
     required String? human,
     @JsonKey(name: '_human') Element? humanElement,
@@ -634,11 +631,8 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
   factory ElementDefinitionBinding({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(
-        required: true,
-        unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-    @required
-        ElementDefinitionBindingStrength strength,
+    @JsonKey(required: true, unknownEnumValue: ElementDefinitionBindingStrength.unknown)
+        required ElementDefinitionBindingStrength strength,
     @JsonKey(name: '_strength') Element? strengthElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,

@@ -39,10 +39,8 @@ abstract class StructureDefinition
     @JsonKey(name: '_name') Element? nameElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
-    @JsonKey(
-        required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
-    @required
-        StructureDefinitionStatus status,
+    @JsonKey(required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
+        required StructureDefinitionStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -62,11 +60,10 @@ abstract class StructureDefinition
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     List<StructureDefinitionMapping>? mapping,
     @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
-    @required
-        StructureDefinitionKind kind,
+        required StructureDefinitionKind kind,
     @JsonKey(name: '_kind') Element? kindElement,
     Code? constrainedType,
-    @JsonKey(name: 'abstract', required: true) @required Boolean? abstract_,
+    @JsonKey(name: 'abstract', required: true) required Boolean? abstract_,
     @JsonKey(name: '_abstract') Element? abstractElement,
     @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
         StructureDefinitionContextType contextType,
@@ -237,8 +234,7 @@ abstract class DataElement with Resource implements _$DataElement {
     String? version,
     String? name,
     @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-    @required
-        DataElementStatus status,
+        required DataElementStatus status,
     Boolean? experimental,
     String? publisher,
     List<DataElementContact>? contact,

@@ -264,7 +264,7 @@ abstract class CapabilityStatementResource
     Reference? profile,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
-    @required List<CapabilityStatementInteraction>? interaction,
+    required List<CapabilityStatementInteraction>? interaction,
     CapabilityStatementResourceVersioning? versioning,
     @JsonKey(name: '_versioning') Element? versioningElement,
     Boolean? readHistory,
@@ -410,7 +410,7 @@ abstract class CapabilityStatementOperation
   factory CapabilityStatementOperation({
     String name,
     @JsonKey(name: '_name') Element? nameElement,
-    @required Reference? definition,
+    required Reference? definition,
   }) = _CapabilityStatementOperation;
 
   /// Produces a Yaml formatted String version of the object
@@ -468,7 +468,7 @@ abstract class CapabilityStatementEndpoint
     implements _$CapabilityStatementEndpoint {
   CapabilityStatementEndpoint._();
   factory CapabilityStatementEndpoint({
-    @required Coding protocol,
+    required Coding protocol,
     String? address,
     @JsonKey(name: '_address') Element? addressElement,
   }) = _CapabilityStatementEndpoint;
@@ -498,7 +498,7 @@ abstract class CapabilityStatementSupportedMessage
   factory CapabilityStatementSupportedMessage({
     CapabilityStatementSupportedMessageMode mode,
     @JsonKey(name: '_mode') Element? modeElement,
-    @required Reference? definition,
+    required Reference? definition,
   }) = _CapabilityStatementSupportedMessage;
 
   /// Produces a Yaml formatted String version of the object
@@ -525,15 +525,15 @@ abstract class CapabilityStatementSupportedMessage
 abstract class CapabilityStatementEvent implements _$CapabilityStatementEvent {
   CapabilityStatementEvent._();
   factory CapabilityStatementEvent({
-    @required Coding code,
+    required Coding code,
     CapabilityStatementEventCategory? category,
     @JsonKey(name: '_category') Element? categoryElement,
     CapabilityStatementEventMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? focus,
     @JsonKey(name: '_focus') Element? focusElement,
-    @required Reference? request,
-    @required Reference? response,
+    required Reference? request,
+    required Reference? response,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
   }) = _CapabilityStatementEvent;
@@ -565,7 +565,7 @@ abstract class CapabilityStatementDocument
     @JsonKey(name: '_mode') Element? modeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
-    @required Reference? profile,
+    required Reference? profile,
   }) = _CapabilityStatementDocument;
 
   /// Produces a Yaml formatted String version of the object
@@ -723,7 +723,7 @@ abstract class DataElement with Resource implements _$DataElement {
     DataElementStringency? stringency,
     @JsonKey(name: '_stringency') Element? stringencyElement,
     List<DataElementMapping>? mapping,
-    @required List<ElementDefinition>? element,
+    required List<ElementDefinition>? element,
   }) = _DataElement;
 
   /// Produces a Yaml formatted String version of the object
@@ -850,7 +850,7 @@ abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
     @JsonKey(name: '_max') Element? maxElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @required List<GraphDefinitionTarget>? target,
+    required List<GraphDefinitionTarget>? target,
   }) = _GraphDefinitionLink;
 
   /// Produces a Yaml formatted String version of the object
@@ -1037,7 +1037,7 @@ abstract class ImplementationGuidePackage
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @required List<ImplementationGuideResource>? resource,
+    required List<ImplementationGuideResource>? resource,
   }) = _ImplementationGuidePackage;
 
   /// Produces a Yaml formatted String version of the object
@@ -1102,7 +1102,7 @@ abstract class ImplementationGuideGlobal
   factory ImplementationGuideGlobal({
     String type,
     @JsonKey(name: '_type') Element? typeElement,
-    @required Reference? profile,
+    required Reference? profile,
   }) = _ImplementationGuideGlobal;
 
   /// Produces a Yaml formatted String version of the object
@@ -1205,7 +1205,7 @@ abstract class MessageDefinition with Resource implements _$MessageDefinition {
     Reference? base,
     List<Reference>? parent,
     List<Reference>? replaces,
-    @required Coding? event,
+    required Coding? event,
     String? category,
     @JsonKey(name: '_category') Element? categoryElement,
     List<MessageDefinitionFocus>? focus,
@@ -1266,7 +1266,7 @@ abstract class MessageDefinitionAllowedResponse
     implements _$MessageDefinitionAllowedResponse {
   MessageDefinitionAllowedResponse._();
   factory MessageDefinitionAllowedResponse({
-    @required Reference message,
+    required Reference message,
     String? situation,
     @JsonKey(name: '_situation') Element? situationElement,
   }) = _MessageDefinitionAllowedResponse;
@@ -1555,7 +1555,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
 abstract class SearchParameterComponent implements _$SearchParameterComponent {
   SearchParameterComponent._();
   factory SearchParameterComponent({
-    @required Reference definition,
+    required Reference definition,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
   }) = _SearchParameterComponent;
@@ -1702,7 +1702,7 @@ abstract class StructureDefinitionSnapshot
     implements _$StructureDefinitionSnapshot {
   StructureDefinitionSnapshot._();
   factory StructureDefinitionSnapshot({
-    @required List<ElementDefinition> element,
+    required List<ElementDefinition> element,
   }) = _StructureDefinitionSnapshot;
 
   /// Produces a Yaml formatted String version of the object
@@ -1728,7 +1728,7 @@ abstract class StructureDefinitionDifferential
     implements _$StructureDefinitionDifferential {
   StructureDefinitionDifferential._();
   factory StructureDefinitionDifferential({
-    @required List<ElementDefinition> element,
+    required List<ElementDefinition> element,
   }) = _StructureDefinitionDifferential;
 
   /// Produces a Yaml formatted String version of the object
@@ -1797,7 +1797,7 @@ abstract class StructureMap with Resource implements _$StructureMap {
     List<StructureMapStructure>? structure,
     @JsonKey(name: 'import') List<String>? import_,
     @JsonKey(name: '_import') List<Element>? importElement,
-    @required List<StructureMapGroup>? group,
+    required List<StructureMapGroup>? group,
   }) = _StructureMap;
 
   /// Produces a Yaml formatted String version of the object
@@ -1860,8 +1860,8 @@ abstract class StructureMapGroup implements _$StructureMapGroup {
     @JsonKey(name: '_typeMode') Element? typeModeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
-    @required List<StructureMapInput>? input,
-    @required List<StructureMapRule>? rule,
+    required List<StructureMapInput>? input,
+    required List<StructureMapRule>? rule,
   }) = _StructureMapGroup;
 
   /// Produces a Yaml formatted String version of the object
@@ -1918,7 +1918,7 @@ abstract class StructureMapRule implements _$StructureMapRule {
   factory StructureMapRule({
     String name,
     @JsonKey(name: '_name') Element? nameElement,
-    @required List<StructureMapSource>? source,
+    required List<StructureMapSource>? source,
     List<StructureMapTarget>? target,
     List<StructureMapRule>? rule,
     List<StructureMapDependent>? dependent,

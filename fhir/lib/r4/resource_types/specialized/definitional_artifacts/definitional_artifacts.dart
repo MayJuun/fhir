@@ -532,7 +532,7 @@ abstract class ActivityDefinitionDynamicValue
     List<FhirExtension>? modifierExtension,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
-    @required Expression? expression,
+    required Expression? expression,
   }) = _ActivityDefinitionDynamicValue;
 
   /// Produces a Yaml formatted String version of the object
@@ -1003,7 +1003,7 @@ abstract class DeviceDefinitionCapability
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required CodeableConcept? type,
+    required CodeableConcept? type,
     List<CodeableConcept>? description,
   }) = _DeviceDefinitionCapability;
 
@@ -1066,7 +1066,7 @@ abstract class DeviceDefinitionProperty implements _$DeviceDefinitionProperty {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required CodeableConcept? type,
+    required CodeableConcept? type,
     List<Quantity>? valueQuantity,
     List<CodeableConcept>? valueCode,
   }) = _DeviceDefinitionProperty;
@@ -1134,7 +1134,7 @@ abstract class DeviceDefinitionMaterial implements _$DeviceDefinitionMaterial {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required CodeableConcept? substance,
+    required CodeableConcept? substance,
     Boolean? alternate,
     @JsonKey(name: '_alternate') Element? alternateElement,
     Boolean? allergenicIndicator,
@@ -1416,7 +1416,7 @@ abstract class EventDefinition with Resource implements _$EventDefinition {
     List<ContactDetail>? reviewer,
     List<ContactDetail>? endorser,
     List<RelatedArtifact>? relatedArtifact,
-    @required List<TriggerDefinition>? trigger,
+    required List<TriggerDefinition>? trigger,
   }) = _EventDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -1557,7 +1557,7 @@ abstract class ObservationDefinition
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? category,
-    @required CodeableConcept? code,
+    required CodeableConcept? code,
     List<Identifier>? identifier,
     List<ObservationDefinitionPermittedDataType>? permittedDataType,
     @JsonKey(name: '_permittedDataType')
@@ -2129,7 +2129,7 @@ abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? category,
-    @required CodeableConcept? description,
+    required CodeableConcept? description,
     CodeableConcept? priority,
     CodeableConcept? start,
     List<CodeableConcept>? addresses,

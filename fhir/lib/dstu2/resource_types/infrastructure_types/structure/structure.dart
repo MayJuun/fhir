@@ -28,7 +28,7 @@ abstract class Media with Resource implements _$Media {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: MediaType.unknown) @required MediaType type,
+    @JsonKey(unknownEnumValue: MediaType.unknown) required MediaType type,
     CodeableConcept? subtype,
     List<Identifier>? identifier,
     Reference? subject,
@@ -110,7 +110,7 @@ abstract class Bundle with Resource implements _$Bundle {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
-    @JsonKey(unknownEnumValue: BundleType.unknown) @required BundleType type,
+    @JsonKey(unknownEnumValue: BundleType.unknown) required BundleType type,
     @JsonKey(name: '_type') Element? typeElement,
     UnsignedInt? total,
     @JsonKey(name: '_total') Element? totalElement,
@@ -240,8 +240,7 @@ abstract class BundleEntryRequest with _$BundleEntryRequest {
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: RequestMethod.unknown)
-    @required
-        RequestMethod method,
+        required RequestMethod method,
     @JsonKey(name: '_method') Element? methodElement,
     required FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,

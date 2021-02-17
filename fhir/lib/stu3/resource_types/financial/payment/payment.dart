@@ -120,7 +120,7 @@ abstract class PaymentReconciliationDetail
     implements _$PaymentReconciliationDetail {
   PaymentReconciliationDetail._();
   factory PaymentReconciliationDetail({
-    @required CodeableConcept type,
+    required CodeableConcept type,
     Reference? request,
     Reference? response,
     Reference? submitter,

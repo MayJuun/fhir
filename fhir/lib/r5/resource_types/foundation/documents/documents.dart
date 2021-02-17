@@ -39,7 +39,7 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
     Period? effectivePeriod,
     Boolean? orderable,
     @JsonKey(name: '_orderable') Element? orderableElement,
-    @required Reference? referencedItem,
+    required Reference? referencedItem,
     List<CatalogEntryRelatedEntry>? relatedEntry,
     Reference? updatedBy,
     List<Annotation>? note,
@@ -82,7 +82,7 @@ abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
     @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationship.unknown)
         CatalogEntryRelatedEntryRelationship relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
-    @required Reference? target,
+    required Reference? target,
   }) = _CatalogEntryRelatedEntry;
 
   /// Produces a Yaml formatted String version of the object
@@ -124,13 +124,13 @@ abstract class Composition with Resource implements _$Composition {
     @JsonKey(unknownEnumValue: CompositionStatus.unknown)
         CompositionStatus status,
     @JsonKey(name: '_status') Element? statusElement,
-    @required CodeableConcept? type,
+    required CodeableConcept? type,
     List<CodeableConcept>? category,
     Reference? subject,
     Reference? encounter,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
-    @required List<Reference>? author,
+    required List<Reference>? author,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     Code? confidentiality,
@@ -320,7 +320,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
     @JsonKey(name: '_source') Element? sourceElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @required List<Reference>? content,
+    required List<Reference>? content,
     List<DocumentManifestRelated>? related,
   }) = _DocumentManifest;
 
@@ -410,7 +410,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<CodeableConcept>? securityLabel,
-    @required List<DocumentReferenceContent>? content,
+    required List<DocumentReferenceContent>? content,
     Reference? sourcePatientInfo,
     List<Reference>? related,
   }) = _DocumentReference;
@@ -477,7 +477,7 @@ abstract class DocumentReferenceRelatesTo
     @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
         DocumentReferenceRelatesToCode code,
     @JsonKey(name: '_code') Element? codeElement,
-    @required Reference? target,
+    required Reference? target,
   }) = _DocumentReferenceRelatesTo;
 
   /// Produces a Yaml formatted String version of the object
@@ -505,7 +505,7 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required Attachment? attachment,
+    required Attachment? attachment,
     Coding? format,
     Identifier? identifier,
   }) = _DocumentReferenceContent;

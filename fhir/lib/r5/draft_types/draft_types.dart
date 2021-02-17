@@ -122,7 +122,7 @@ abstract class MarketingStatus implements _$MarketingStatus {
     List<FhirExtension>? modifierExtension,
     CodeableConcept? country,
     CodeableConcept? jurisdiction,
-    @required CodeableConcept? status,
+    required CodeableConcept? status,
     Period? dateRange,
     FhirDateTime? restoreDate,
     @JsonKey(name: '_restoreDate') Element? restoreDateElement,
@@ -936,7 +936,7 @@ abstract class CitationKeywordList implements _$CitationKeywordList {
     List<FhirExtension>? modifierExtension,
     String? owner,
     @JsonKey(name: '_owner') Element? ownerElement,
-    @required List<CitationKeyword>? keyword,
+    required List<CitationKeyword>? keyword,
   }) = _CitationKeywordList;
 
   /// Produces a Yaml formatted String version of the object
@@ -1138,7 +1138,7 @@ abstract class EvidenceReport implements _$EvidenceReport {
     CodeableConcept? type,
     List<Annotation>? note,
     List<RelatedArtifact>? relatedArtifact,
-    @required EvidenceReportSubject? subject,
+    required EvidenceReportSubject? subject,
     List<ContactDetail>? author,
     List<ContactDetail>? editor,
     List<ContactDetail>? reviewer,
@@ -1200,7 +1200,7 @@ abstract class EvidenceReportCharacteristic
     String id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @required CodeableConcept? code,
+    required CodeableConcept? code,
     Reference? valueReference,
     CodeableConcept? valueCodeableConcept,
     Boolean? valueBoolean,

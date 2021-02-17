@@ -69,7 +69,7 @@ abstract class Evidence with Resource implements _$Evidence {
     // ToDo
     //  List<Annotation> note,
     Annotation? note,
-    @required List<EvidenceVariableDefinition>? variableDefinition,
+    required List<EvidenceVariableDefinition>? variableDefinition,
     CodeableConcept? synthesisType,
     CodeableConcept? studyType,
     List<Statistic>? statistic,
@@ -105,7 +105,7 @@ abstract class EvidenceVariableDefinition
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<Annotation>? note,
-    @required CodeableConcept? variableRole,
+    required CodeableConcept? variableRole,
     Reference? observed,
     Reference? intended,
     CodeableConcept? directnessMatch,
