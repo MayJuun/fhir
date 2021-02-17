@@ -596,14 +596,16 @@ abstract class ExpansionProfileExcludedSystem
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ExpansionProfileExcludedSystem.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ExpansionProfileExcludedSystem.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ExpansionProfileExcludedSystem.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ExpansionProfileExcludedSystem.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ExpansionProfileExcludedSystem.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ExpansionProfileExcludedSystem cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExpansionProfileExcludedSystem.fromJson(Map<String, dynamic> json) =>

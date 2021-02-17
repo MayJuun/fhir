@@ -150,14 +150,16 @@ abstract class ActivityDefinitionDynamicValue
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ActivityDefinitionDynamicValue.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ActivityDefinitionDynamicValue.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ActivityDefinitionDynamicValue.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ActivityDefinitionDynamicValue.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ActivityDefinitionDynamicValue.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ActivityDefinitionDynamicValue cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ActivityDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>

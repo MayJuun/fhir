@@ -280,14 +280,16 @@ abstract class EligibilityResponseBenefitBalance
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory EligibilityResponseBenefitBalance.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory EligibilityResponseBenefitBalance.fromYaml(dynamic yaml) => yaml
+          is String
+      ? EligibilityResponseBenefitBalance.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? EligibilityResponseBenefitBalance.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? EligibilityResponseBenefitBalance.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'EligibilityResponseBenefitBalance cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory EligibilityResponseBenefitBalance.fromJson(
           Map<String, dynamic> json) =>

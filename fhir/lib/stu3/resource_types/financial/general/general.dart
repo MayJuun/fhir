@@ -688,14 +688,16 @@ abstract class ExplanationOfBenefitInformation
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ExplanationOfBenefitInformation.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ExplanationOfBenefitInformation.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ExplanationOfBenefitInformation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ExplanationOfBenefitInformation.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ExplanationOfBenefitInformation.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ExplanationOfBenefitInformation cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitInformation.fromJson(Map<String, dynamic> json) =>
@@ -929,14 +931,16 @@ abstract class ExplanationOfBenefitAdjudication
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ExplanationOfBenefitAdjudication.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ExplanationOfBenefitAdjudication.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ExplanationOfBenefitAdjudication.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ExplanationOfBenefitAdjudication.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ExplanationOfBenefitAdjudication.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ExplanationOfBenefitAdjudication cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory ExplanationOfBenefitAdjudication.fromJson(
           Map<String, dynamic> json) =>
@@ -1146,14 +1150,16 @@ abstract class ExplanationOfBenefitProcessNote
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ExplanationOfBenefitProcessNote.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ExplanationOfBenefitProcessNote.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ExplanationOfBenefitProcessNote.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ExplanationOfBenefitProcessNote.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ExplanationOfBenefitProcessNote.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ExplanationOfBenefitProcessNote cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =>
@@ -1183,14 +1189,16 @@ abstract class ExplanationOfBenefitBenefitBalance
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ExplanationOfBenefitBenefitBalance.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ExplanationOfBenefitBenefitBalance.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ExplanationOfBenefitBenefitBalance.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ExplanationOfBenefitBenefitBalance.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ExplanationOfBenefitBenefitBalance.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ExplanationOfBenefitBenefitBalance cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory ExplanationOfBenefitBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
