@@ -18,40 +18,40 @@ abstract class Encounter with Resource implements _$Encounter {
     @Default(Dstu2ResourceType.Encounter)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
     @required
         EncounterStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<EncounterStatusHistory> statusHistory,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<EncounterStatusHistory>? statusHistory,
     @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
         EncounterClass class_,
-    @JsonKey(name: '_class') Element classElement,
-    List<CodeableConcept> type,
-    CodeableConcept priority,
-    Reference patient,
-    List<Reference> episodeOfCare,
-    List<Reference> incomingReferral,
-    List<EncounterParticipant> participant,
-    Reference appointment,
-    Period period,
-    Quantity length,
-    List<CodeableConcept> reason,
-    List<Reference> indication,
-    EncounterHospitalization hospitalization,
-    List<EncounterLocation> location,
-    Reference serviceProvider,
-    Reference partOf,
+    @JsonKey(name: '_class') Element? classElement,
+    List<CodeableConcept>? type,
+    CodeableConcept? priority,
+    Reference? patient,
+    List<Reference>? episodeOfCare,
+    List<Reference>? incomingReferral,
+    List<EncounterParticipant>? participant,
+    Reference? appointment,
+    Period? period,
+    Quantity? length,
+    List<CodeableConcept>? reason,
+    List<Reference>? indication,
+    EncounterHospitalization? hospitalization,
+    List<EncounterLocation>? location,
+    Reference? serviceProvider,
+    Reference? partOf,
   }) = _Encounter;
 
   /// Produces a Yaml formatted String version of the object
@@ -76,13 +76,13 @@ abstract class EncounterStatusHistory with _$EncounterStatusHistory {
   EncounterStatusHistory._();
   factory EncounterStatusHistory({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(required: true, unknownEnumValue: EncounterHistoryStatus.unknown)
     @required
         EncounterHistoryStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(required: true) @required Period period,
+    @JsonKey(name: '_status') Element? statusElement,
+    @JsonKey(required: true) @required Period? period,
   }) = _EncounterStatusHistory;
 
   /// Produces a Yaml formatted String version of the object
@@ -107,11 +107,11 @@ abstract class EncounterParticipant with _$EncounterParticipant {
   EncounterParticipant._();
   factory EncounterParticipant({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<CodeableConcept> type,
-    Period period,
-    Reference individual,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<CodeableConcept>? type,
+    Period? period,
+    Reference? individual,
   }) = _EncounterParticipant;
 
   /// Produces a Yaml formatted String version of the object
@@ -136,20 +136,20 @@ abstract class EncounterHospitalization with _$EncounterHospitalization {
   EncounterHospitalization._();
   factory EncounterHospitalization({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-    List<FhirExtension> modifierExtension,
-    Identifier preAdmissionIdentifier,
-    Reference origin,
-    CodeableConcept admitSource,
-    List<Reference> admittingDiagnosis,
-    CodeableConcept reAdmission,
-    List<CodeableConcept> dietPreference,
-    List<CodeableConcept> specialCourtesy,
-    List<CodeableConcept> specialArrangement,
-    Reference destination,
-    CodeableConcept dischargeDisposition,
-    List<Reference> dischargeDiagnosis,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    List<FhirExtension>? modifierExtension,
+    Identifier? preAdmissionIdentifier,
+    Reference? origin,
+    CodeableConcept? admitSource,
+    List<Reference>? admittingDiagnosis,
+    CodeableConcept? reAdmission,
+    List<CodeableConcept>? dietPreference,
+    List<CodeableConcept>? specialCourtesy,
+    List<CodeableConcept>? specialArrangement,
+    Reference? destination,
+    CodeableConcept? dischargeDisposition,
+    List<Reference>? dischargeDiagnosis,
   }) = _EncounterHospitalization;
 
   /// Produces a Yaml formatted String version of the object
@@ -175,13 +175,13 @@ abstract class EncounterLocation with _$EncounterLocation {
   EncounterLocation._();
   factory EncounterLocation({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required Reference location,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(required: true) @required Reference? location,
     @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
         EncounterLocationStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Period period,
+    @JsonKey(name: '_status') Element? statusElement,
+    Period? period,
   }) = _EncounterLocation;
 
   /// Produces a Yaml formatted String version of the object
@@ -208,30 +208,30 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
     @Default(Dstu2ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
     @required
         EpisodeOfCareStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<EpisodeOfCareStatusHistory> statusHistory,
-    List<CodeableConcept> type,
-    List<Reference> condition,
-    @JsonKey(required: true) @required Reference patient,
-    Reference managingOrganization,
-    Period period,
-    List<Reference> referralRequest,
-    Reference careManager,
-    List<EpisodeOfCareCareTeam> careTeam,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<EpisodeOfCareStatusHistory>? statusHistory,
+    List<CodeableConcept>? type,
+    List<Reference>? condition,
+    @JsonKey(required: true) @required Reference? patient,
+    Reference? managingOrganization,
+    Period? period,
+    List<Reference>? referralRequest,
+    Reference? careManager,
+    List<EpisodeOfCareCareTeam>? careTeam,
   }) = _EpisodeOfCare;
 
   /// Produces a Yaml formatted String version of the object
@@ -256,14 +256,14 @@ abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   EpisodeOfCareStatusHistory._();
   factory EpisodeOfCareStatusHistory({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(
         required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
     @required
         EpisodeOfCareHistoryStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(required: true) @required Period period,
+    @JsonKey(name: '_status') Element? statusElement,
+    @JsonKey(required: true) @required Period? period,
   }) = _EpisodeOfCareStatusHistory;
 
   /// Produces a Yaml formatted String version of the object
@@ -289,11 +289,11 @@ abstract class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
   EpisodeOfCareCareTeam._();
   factory EpisodeOfCareCareTeam({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<CodeableConcept> role,
-    Period period,
-    Reference member,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<CodeableConcept>? role,
+    Period? period,
+    Reference? member,
   }) = _EpisodeOfCareCareTeam;
 
   /// Produces a Yaml formatted String version of the object
@@ -320,33 +320,33 @@ abstract class Communication with Resource implements _$Communication {
     @Default(Dstu2ResourceType.Communication)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    CodeableConcept category,
-    Reference sender,
-    List<Reference> recipient,
-    List<CommunicationPayload> payload,
-    List<CodeableConcept> medium,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    CodeableConcept? category,
+    Reference? sender,
+    List<Reference>? recipient,
+    List<CommunicationPayload>? payload,
+    List<CodeableConcept>? medium,
     @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
         CommunicationStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Reference encounter,
-    FhirDateTime sent,
-    @JsonKey(name: '_sent') Element sentElement,
-    FhirDateTime received,
-    @JsonKey(name: '_received') Element receivedElement,
-    List<CodeableConcept> reason,
-    Reference subject,
-    Reference requestDetail,
+    @JsonKey(name: '_status') Element? statusElement,
+    Reference? encounter,
+    FhirDateTime? sent,
+    @JsonKey(name: '_sent') Element? sentElement,
+    FhirDateTime? received,
+    @JsonKey(name: '_received') Element? receivedElement,
+    List<CodeableConcept>? reason,
+    Reference? subject,
+    Reference? requestDetail,
   }) = _Communication;
 
   /// Produces a Yaml formatted String version of the object
@@ -371,12 +371,12 @@ abstract class CommunicationPayload with _$CommunicationPayload {
   CommunicationPayload._();
   factory CommunicationPayload({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String contentString,
-    @JsonKey(name: '_contentString') Element contentStringElement,
-    Attachment contentAttachment,
-    Reference contentReference,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? contentString,
+    @JsonKey(name: '_contentString') Element? contentStringElement,
+    Attachment? contentAttachment,
+    Reference? contentReference,
   }) = _CommunicationPayload;
 
   /// Produces a Yaml formatted String version of the object
@@ -403,27 +403,27 @@ abstract class Flag with Resource implements _$Flag {
     @Default(Dstu2ResourceType.Flag)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    CodeableConcept category,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    CodeableConcept? category,
     @JsonKey(required: true, unknownEnumValue: FlagStatus.unknown)
     @required
         FlagStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Period period,
-    @JsonKey(required: true) @required Reference subject,
-    Reference encounter,
-    Reference author,
-    @JsonKey(required: true) @required CodeableConcept code,
+    @JsonKey(name: '_status') Element? statusElement,
+    Period? period,
+    @JsonKey(required: true) @required Reference? subject,
+    Reference? encounter,
+    Reference? author,
+    @JsonKey(required: true) @required CodeableConcept? code,
   }) = _Flag;
 
   /// Produces a Yaml formatted String version of the object

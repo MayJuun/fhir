@@ -735,7 +735,7 @@ abstract class OperationDefinitionParameter
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(required: true) @required Code? name,
-    @JsonKey(required true, unknownEnumValue: ParameterUse.unknown)
+    @JsonKey(required: true, unknownEnumValue: ParameterUse.unknown)
     @required
         ParameterUse use,
     @JsonKey(required: true) @required Integer? min,
