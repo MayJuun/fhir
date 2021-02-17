@@ -18,43 +18,43 @@ abstract class Conformance with Resource implements _$Conformance {
     @Default(Dstu2ResourceType.Conformance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    String version,
-    String name,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    Code? language,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    String? version,
+    String? name,
     @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
         ConformanceStatus status,
-    Boolean experimental,
-    String publisher,
-    List<ConformanceContact> contact,
-    @JsonKey(required: true) @required FhirDateTime date,
-    String description,
-    String requirements,
-    String copyright,
+    Boolean? experimental,
+    String? publisher,
+    List<ConformanceContact>? contact,
+    @JsonKey(required: true) @required FhirDateTime? date,
+    String? description,
+    String? requirements,
+    String? copyright,
     @JsonKey(required: true, unknownEnumValue: ConformanceKind.unknown)
     @required
         ConformanceKind kind,
-    ConformanceSoftware software,
-    ConformanceImplementation implementation,
-    @JsonKey(required: true) @required Id fhirVersion,
-    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
+    ConformanceSoftware? software,
+    ConformanceImplementation? implementation,
+    @JsonKey(required: true) @required Id? fhirVersion,
+    @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
     @required
         ConformanceAcceptUnknown acceptUnknown,
-    @JsonKey(name: '_acceptUnknown') Element acceptUnknownElement,
-    @JsonKey(required: true) @required List<ConformanceFormat> format,
-    List<Reference> profile,
-    List<ConformanceRest> rest,
-    List<ConformanceMessaging> messaging,
-    List<ConformanceDocument> document,
+    @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
+    @JsonKey(required: true) @required List<ConformanceFormat>? format,
+    List<Reference>? profile,
+    List<ConformanceRest>? rest,
+    List<ConformanceMessaging>? messaging,
+    List<ConformanceDocument>? document,
   }) = _Conformance;
 
   /// Produces a Yaml formatted String version of the object
@@ -83,43 +83,43 @@ abstract class CapabilityStatement
     @Default(Dstu2ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    String version,
-    String name,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    Code? language,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    String? version,
+    String? name,
     @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
         ConformanceStatus status,
-    Boolean experimental,
-    String publisher,
-    List<ConformanceContact> contact,
-    @JsonKey(required: true) @required FhirDateTime date,
-    String description,
-    String requirements,
-    String copyright,
+    Boolean? experimental,
+    String? publisher,
+    List<ConformanceContact>? contact,
+    @JsonKey(required: true) @required FhirDateTime? date,
+    String? description,
+    String? requirements,
+    String? copyright,
     @JsonKey(required: true, unknownEnumValue: ConformanceKind.unknown)
     @required
         ConformanceKind kind,
-    ConformanceSoftware software,
-    ConformanceImplementation implementation,
-    @JsonKey(required: true) @required Id fhirVersion,
-    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
+    ConformanceSoftware? software,
+    ConformanceImplementation? implementation,
+    @JsonKey(required: true) @required Id? fhirVersion,
+    @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
     @required
         ConformanceAcceptUnknown acceptUnknown,
-    @JsonKey(name: '_acceptUnknown') Element acceptUnknownElement,
-    @JsonKey(required: true) @required List<ConformanceFormat> format,
-    List<Reference> profile,
-    List<ConformanceRest> rest,
-    List<ConformanceMessaging> messaging,
-    List<ConformanceDocument> document,
+    @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
+    @JsonKey(required: true) @required List<ConformanceFormat>? format,
+    List<Reference>? profile,
+    List<ConformanceRest>? rest,
+    List<ConformanceMessaging>? messaging,
+    List<ConformanceDocument>? document,
   }) = _CapabilityStatement;
 
   /// Produces a Yaml formatted String version of the object
@@ -144,10 +144,10 @@ abstract class ConformanceContact with _$ConformanceContact {
   ConformanceContact._();
   factory ConformanceContact({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    List<ContactPoint> telecom,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    List<ContactPoint>? telecom,
   }) = _ConformanceContact;
 
   /// Produces a Yaml formatted String version of the object
@@ -172,11 +172,11 @@ abstract class ConformanceSoftware with _$ConformanceSoftware {
   ConformanceSoftware._();
   factory ConformanceSoftware({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required String name,
-    String version,
-    FhirDateTime releaseDate,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(required: true) @required String? name,
+    String? version,
+    FhirDateTime? releaseDate,
   }) = _ConformanceSoftware;
 
   /// Produces a Yaml formatted String version of the object
@@ -201,10 +201,10 @@ abstract class ConformanceImplementation with _$ConformanceImplementation {
   ConformanceImplementation._();
   factory ConformanceImplementation({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required String description,
-    FhirUri url,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(required: true) @required String? description,
+    FhirUri? url,
   }) = _ConformanceImplementation;
 
   /// Produces a Yaml formatted String version of the object
@@ -230,22 +230,22 @@ abstract class ConformanceRest with _$ConformanceRest {
   ConformanceRest._();
   factory ConformanceRest({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(required: true, unknownEnumValue: RestMode.unknown)
     @required
         RestMode mode,
-    @JsonKey(name: '_mode') Element modeElement,
-    String documentation,
-    ConformanceRestSecurity security,
-    @JsonKey(required: true) @required List<ConformanceRestResource> resource,
-    List<ConformanceRestInteraction> interaction,
+    @JsonKey(name: '_mode') Element? modeElement,
+    String? documentation,
+    ConformanceRestSecurity? security,
+    @JsonKey(required: true) @required List<ConformanceRestResource>? resource,
+    List<ConformanceRestInteraction>? interaction,
     @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
         RestTransactionMode transactionMode,
-    List<ConformanceResourceSearchParam> searchParam,
-    List<ConformanceRestOperation> operation,
-    List<FhirUri> compartment,
+    List<ConformanceResourceSearchParam>? searchParam,
+    List<ConformanceRestOperation>? operation,
+    List<FhirUri>? compartment,
   }) = _ConformanceRest;
 
   /// Produces a Yaml formatted String version of the object
@@ -270,13 +270,13 @@ abstract class ConformanceMessaging with _$ConformanceMessaging {
   ConformanceMessaging._();
   factory ConformanceMessaging({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-    List<ConformanceMessagingEndpoint> endpoint,
-    UnsignedInt reliableCache,
-    String documentation,
-    @JsonKey(required: true) @required List<ConformanceMessagingEvent> event,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    List<ConformanceMessagingEndpoint>? endpoint,
+    UnsignedInt? reliableCache,
+    String? documentation,
+    @JsonKey(required: true) @required List<ConformanceMessagingEvent>? event,
   }) = _ConformanceMessaging;
 
   /// Produces a Yaml formatted String version of the object
@@ -301,14 +301,14 @@ abstract class ConformanceDocument with _$ConformanceDocument {
   ConformanceDocument._();
   factory ConformanceDocument({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(required: true, unknownEnumValue: DocumentMode.unknown)
     @required
         DocumentMode mode,
-    String documentation,
-    @JsonKey(required: true) @required Reference profile,
+    String? documentation,
+    @JsonKey(required: true) @required Reference? profile,
   }) = _ConformanceDocument;
 
   /// Produces a Yaml formatted String version of the object
@@ -333,13 +333,13 @@ abstract class ConformanceRestSecurity with _$ConformanceRestSecurity {
   ConformanceRestSecurity._();
   factory ConformanceRestSecurity({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Boolean cors,
-    @JsonKey(name: '_cors') Element corsElement,
-    List<CodeableConcept> service,
-    String description,
-    List<ConformanceSecurityCertificate> certificate,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Boolean? cors,
+    @JsonKey(name: '_cors') Element? corsElement,
+    List<CodeableConcept>? service,
+    String? description,
+    List<ConformanceSecurityCertificate>? certificate,
   }) = _ConformanceRestSecurity;
 
   /// Produces a Yaml formatted String version of the object
@@ -364,29 +364,29 @@ abstract class ConformanceRestResource with _$ConformanceRestResource {
   ConformanceRestResource._();
   factory ConformanceRestResource({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-    @JsonKey(required: true) @required Code type,
-    @JsonKey(name: '_type') Element typeElement,
-    Reference profile,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    @JsonKey(required: true) @required Code? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    Reference? profile,
     @JsonKey(required: true)
     @required
         List<ConformanceResourceInteraction> interaction,
     @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
         ResourceVersioning versioning,
-    Boolean readHistory,
-    Boolean updateCreate,
-    @JsonKey(name: '_updateCreate') Element updateCreateElement,
-    Boolean conditionalCreate,
-    @JsonKey(name: '_conditionalCreate') Element conditionalCreateElement,
-    Boolean conditionalUpdate,
+    Boolean? readHistory,
+    Boolean? updateCreate,
+    @JsonKey(name: '_updateCreate') Element? updateCreateElement,
+    Boolean? conditionalCreate,
+    @JsonKey(name: '_conditionalCreate') Element? conditionalCreateElement,
+    Boolean? conditionalUpdate,
     @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
         ResourceConditionalDelete conditionalDelete,
-    @JsonKey(name: '_conditionalDelete') Element conditionalDeleteElement,
-    List<String> searchInclude,
-    List<String> searchRevInclude,
-    List<ConformanceResourceSearchParam> searchParam,
+    @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
+    List<String>? searchInclude,
+    List<String>? searchRevInclude,
+    List<ConformanceResourceSearchParam>? searchParam,
   }) = _ConformanceRestResource;
 
   /// Produces a Yaml formatted String version of the object
@@ -412,12 +412,12 @@ abstract class ConformanceResourceInteraction
   ConformanceResourceInteraction._();
   factory ConformanceResourceInteraction({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(required: true, unknownEnumValue: ResourceInteractionCode.unknown)
     @required
         ResourceInteractionCode code,
-    String documentation,
+    String? documentation,
   }) = _ConformanceResourceInteraction;
 
   /// Produces a Yaml formatted String version of the object
@@ -443,11 +443,11 @@ abstract class ConformanceRestOperation with _$ConformanceRestOperation {
   ConformanceRestOperation._();
   factory ConformanceRestOperation({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-    @JsonKey(required: true) @required String name,
-    @JsonKey(required: true) @required Reference definition,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    @JsonKey(required: true) @required String? name,
+    @JsonKey(required: true) @required Reference? definition,
   }) = _ConformanceRestOperation;
 
   /// Produces a Yaml formatted String version of the object
@@ -474,11 +474,11 @@ abstract class ConformanceMessagingEndpoint
   ConformanceMessagingEndpoint._();
   factory ConformanceMessagingEndpoint({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required Coding protocol,
-    @JsonKey(required: true) @required FhirUri address,
-    @JsonKey(name: '_address') Element addressElement,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(required: true) @required Coding? protocol,
+    @JsonKey(required: true) @required FhirUri? address,
+    @JsonKey(name: '_address') Element? addressElement,
   }) = _ConformanceMessagingEndpoint;
 
   /// Produces a Yaml formatted String version of the object
@@ -504,18 +504,18 @@ abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
   ConformanceMessagingEvent._();
   factory ConformanceMessagingEvent({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required Coding code,
-    @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory category,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(required: true) @required Coding? code,
+    @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory? category,
     @JsonKey(required: true, unknownEnumValue: EventMode.unknown)
     @required
         EventMode mode,
-    @JsonKey(name: '_mode') Element modeElement,
-    @JsonKey(required: true) @required Code focus,
-    @JsonKey(required: true) @required Reference request,
-    @JsonKey(required: true) @required Reference response,
-    String documentation,
+    @JsonKey(name: '_mode') Element? modeElement,
+    @JsonKey(required: true) @required Code? focus,
+    @JsonKey(required: true) @required Reference? request,
+    @JsonKey(required: true) @required Reference? response,
+    String? documentation,
   }) = _ConformanceMessagingEvent;
 
   /// Produces a Yaml formatted String version of the object
@@ -542,11 +542,11 @@ abstract class ConformanceSecurityCertificate
   ConformanceSecurityCertificate._();
   factory ConformanceSecurityCertificate({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Code type,
-    Base64Binary blob,
-    @JsonKey(name: '_blob') Element blobElement,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Code? type,
+    Base64Binary? blob,
+    @JsonKey(name: '_blob') Element? blobElement,
   }) = _ConformanceSecurityCertificate;
 
   /// Produces a Yaml formatted String version of the object
@@ -572,12 +572,12 @@ abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
   ConformanceRestInteraction._();
   factory ConformanceRestInteraction({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(required: true, unknownEnumValue: RestInteractionCode.unknown)
     @required
         RestInteractionCode code,
-    String documentation,
+    String? documentation,
   }) = _ConformanceRestInteraction;
 
   /// Produces a Yaml formatted String version of the object
@@ -604,18 +604,18 @@ abstract class ConformanceResourceSearchParam
   ConformanceResourceSearchParam._();
   factory ConformanceResourceSearchParam({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-    @JsonKey(required: true) @required String name,
-    FhirUri definition,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    @JsonKey(required: true) @required String? name,
+    FhirUri? definition,
     @JsonKey(required: true, unknownEnumValue: SearchParamType.unknown)
     @required
         SearchParamType type,
-    String documentation,
-    List<Code> target,
-    List<SearchParamModifier> modifier,
-    List<String> chain,
+    String? documentation,
+    List<Code>? target,
+    List<SearchParamModifier>? modifier,
+    List<String>? chain,
   }) = _ConformanceResourceSearchParam;
 
   /// Produces a Yaml formatted String version of the object
@@ -645,17 +645,17 @@ abstract class OperationDefinition
     @Default(Dstu2ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    String version,
-    @JsonKey(required: true) @required String name,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    Code? language,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    String? version,
+    @JsonKey(required: true) @required String? name,
     @JsonKey(
         required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
     @required
@@ -663,20 +663,20 @@ abstract class OperationDefinition
     @JsonKey(required: true, unknownEnumValue: OperationDefinitionKind.unknown)
     @required
         OperationDefinitionKind kind,
-    Boolean experimental,
-    String publisher,
-    List<OperationDefinitionContact> contact,
-    FhirDateTime date,
-    String description,
-    String requirements,
-    Boolean idempotent,
-    @JsonKey(required: true) @required Code code,
-    String notes,
-    Reference base,
-    @JsonKey(required: true) @required Boolean system,
-    List<Code> type,
-    @JsonKey(required: true) @required Boolean instance,
-    List<OperationDefinitionParameter> parameter,
+    Boolean? experimental,
+    String? publisher,
+    List<OperationDefinitionContact>? contact,
+    FhirDateTime? date,
+    String? description,
+    String? requirements,
+    Boolean? idempotent,
+    @JsonKey(required: true) @required Code? code,
+    String? notes,
+    Reference? base,
+    @JsonKey(required: true) @required Boolean? system,
+    List<Code>? type,
+    @JsonKey(required: true) @required Boolean? instance,
+    List<OperationDefinitionParameter>? parameter,
   }) = _OperationDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -701,10 +701,10 @@ abstract class OperationDefinitionContact with _$OperationDefinitionContact {
   OperationDefinitionContact._();
   factory OperationDefinitionContact({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    List<ContactPoint> telecom,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    List<ContactPoint>? telecom,
   }) = _OperationDefinitionContact;
 
   /// Produces a Yaml formatted String version of the object
@@ -731,20 +731,20 @@ abstract class OperationDefinitionParameter
   OperationDefinitionParameter._();
   factory OperationDefinitionParameter({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-    @JsonKey(required: true) @required Code name,
-    @JsonKey(required: true, unknownEnumValue: ParameterUse.unknown)
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    @JsonKey(required: true) @required Code? name,
+    @JsonKey(required true, unknownEnumValue: ParameterUse.unknown)
     @required
         ParameterUse use,
-    @JsonKey(required: true) @required Integer min,
-    @JsonKey(required: true) @required String max,
-    String documentation,
-    Code type,
-    Reference profile,
-    OperationDefinitionParameterBinding binding,
-    @JsonKey(name: 'part') List<OperationDefinitionParameter> part_,
+    @JsonKey(required: true) @required Integer? min,
+    @JsonKey(required: true) @required String? max,
+    String? documentation,
+    Code? type,
+    Reference? profile,
+    OperationDefinitionParameterBinding? binding,
+    @JsonKey(name: 'part') List<OperationDefinitionParameter>? part_,
   }) = _OperationDefinitionParameter;
 
   /// Produces a Yaml formatted String version of the object
@@ -771,16 +771,16 @@ abstract class OperationDefinitionParameterBinding
   OperationDefinitionParameterBinding._();
   factory OperationDefinitionParameterBinding({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(
         required: true,
         unknownEnumValue: OperationDefinitionBindingStrength.unknown)
     @JsonKey(required: true)
     @required
         OperationDefinitionBindingStrength strength,
-    FhirUri valueSetUri,
-    Reference valueSetReference,
+    FhirUri? valueSetUri,
+    Reference? valueSetReference,
   }) = _OperationDefinitionParameterBinding;
 
   /// Produces a Yaml formatted String version of the object
@@ -808,34 +808,34 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     @Default(Dstu2ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required FhirUri url,
-    @JsonKey(required: true) @required String name,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    Code? language,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(required: true) @required FhirUri? url,
+    @JsonKey(required: true) @required String? name,
     @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
         SearchParameterStatus status,
-    Boolean experimental,
-    String publisher,
-    List<SearchParameterContact> contact,
-    FhirDateTime date,
-    String requirements,
-    @JsonKey(name: '_requirements') Element requirementsElement,
-    @JsonKey(required: true) @required Code code,
-    Code base,
+    Boolean? experimental,
+    String? publisher,
+    List<SearchParameterContact>? contact,
+    FhirDateTime? date,
+    String? requirements,
+    @JsonKey(name: '_requirements') Element? requirementsElement,
+    @JsonKey(required: true) @required Code? code,
+    Code? base,
     @JsonKey(required: true, unknownEnumValue: SearchParameterType.unknown)
     @required
         SearchParameterType type,
-    String description,
-    String xpath,
+    String? description,
+    String? xpath,
     @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
         SearchParameterXpathUsage xpathUsage,
-    List<Code> target,
+    List<Code>? target,
   }) = _SearchParameter;
 
   /// Produces a Yaml formatted String version of the object
@@ -860,10 +860,10 @@ abstract class SearchParameterContact with _$SearchParameterContact {
   SearchParameterContact._();
   factory SearchParameterContact({
     Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    List<ContactPoint> telecom,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    List<ContactPoint>? telecom,
   }) = _SearchParameterContact;
 
   /// Produces a Yaml formatted String version of the object
