@@ -1,17 +1,17 @@
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
 import 'package:string_validator/string_validator.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 class Uuid {
-  const Uuid._(this._value);
+  const Uuid._(this._valueString, this._valueUri, this._isValid);
 
-  factory Uuid(String value) {
-    assert(value != null);
-    return Uuid._(
-      _validateUuid(value),
-    );
+  factory Uuid(dynamic inValue) {
+    assert(inValue != null);
+    if (inValue is String) {
+      return Uuid._(inValue, isUUID(inValue) ? inValue : null, isUUID(inValue));
+    }
+    throw ArgumentError('Uuid cannot be constructed from $inValue.');
   }
 
   factory Uuid.fromJson(dynamic json) => Uuid(json);
@@ -20,26 +20,26 @@ class Uuid {
       ? Uuid.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Uuid.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final Either<String, String> _value;
-  String get value => _value.fold((l) => l, (r) => r);
-  bool get isValid => _value.isRight();
+  final String _valueString;
+  final String? _valueUri;
+  final bool _isValid;
 
-  String toString() => value;
-  String toJson() => value;
-  String toYaml() => value;
+  bool get isValid => _isValid;
+  int get hashCode => _valueString.hashCode;
+  String? get value => _valueUri;
+
+  String toString() => _valueString;
+  String toJson() => _valueString;
+  String toYaml() => _valueString;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Uuid || o is String
-          ? o == value
-          : false;
-
-  int get hashCode => value.hashCode;
+      : o is Uuid
+          ? o.value == _valueUri
+          : o is String
+              ? o == _valueString
+              : false;
 }
-
-Either<String, String> _validateUuid(String value) => isUUID(value)
-    ? right(value)
-    : left('FormatError: "$value" is not a UUID, as defined by: '
-        'https://www.hl7.org/fhir/datatypes.html#uuid');

@@ -47,7 +47,9 @@ abstract class BodySite with Resource implements _$BodySite {
       ? BodySite.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? BodySite.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'BodySite cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BodySite.fromJson(Map<String, dynamic> json) =>
@@ -103,7 +105,9 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
       ? DiagnosticReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DiagnosticReport.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DiagnosticReport cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
@@ -128,7 +132,9 @@ abstract class DiagnosticReportPerformer
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DiagnosticReportPerformer.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DiagnosticReportPerformer cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DiagnosticReportPerformer.fromJson(Map<String, dynamic> json) =>
@@ -152,7 +158,9 @@ abstract class DiagnosticReportImage implements _$DiagnosticReportImage {
       ? DiagnosticReportImage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DiagnosticReportImage.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DiagnosticReportImage cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
@@ -194,7 +202,9 @@ abstract class ImagingManifest with Resource implements _$ImagingManifest {
       ? ImagingManifest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ImagingManifest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ImagingManifest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImagingManifest.fromJson(Map<String, dynamic> json) =>
@@ -220,7 +230,9 @@ abstract class ImagingManifestStudy implements _$ImagingManifestStudy {
       ? ImagingManifestStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ImagingManifestStudy.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ImagingManifestStudy cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImagingManifestStudy.fromJson(Map<String, dynamic> json) =>
@@ -245,7 +257,9 @@ abstract class ImagingManifestSeries implements _$ImagingManifestSeries {
       ? ImagingManifestSeries.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ImagingManifestSeries.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ImagingManifestSeries cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImagingManifestSeries.fromJson(Map<String, dynamic> json) =>
@@ -270,7 +284,9 @@ abstract class ImagingManifestInstance implements _$ImagingManifestInstance {
       ? ImagingManifestInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ImagingManifestInstance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ImagingManifestInstance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImagingManifestInstance.fromJson(Map<String, dynamic> json) =>
@@ -329,7 +345,9 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
       ? ImagingStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ImagingStudy.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ImagingStudy cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
@@ -368,7 +386,9 @@ abstract class ImagingStudySeries implements _$ImagingStudySeries {
       ? ImagingStudySeries.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ImagingStudySeries.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ImagingStudySeries cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
@@ -397,7 +417,9 @@ abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
       ? ImagingStudyInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ImagingStudyInstance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ImagingStudyInstance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
@@ -471,7 +493,9 @@ abstract class Observation with Resource implements _$Observation {
       ? Observation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Observation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Observation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Observation.fromJson(Map<String, dynamic> json) =>
@@ -501,7 +525,9 @@ abstract class ObservationReferenceRange
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ObservationReferenceRange.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ObservationReferenceRange cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
@@ -525,7 +551,9 @@ abstract class ObservationRelated implements _$ObservationRelated {
       ? ObservationRelated.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ObservationRelated.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ObservationRelated cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ObservationRelated.fromJson(Map<String, dynamic> json) =>
@@ -563,7 +591,9 @@ abstract class ObservationComponent implements _$ObservationComponent {
       ? ObservationComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ObservationComponent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ObservationComponent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
@@ -612,7 +642,9 @@ abstract class QuestionnaireResponse
       ? QuestionnaireResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? QuestionnaireResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'QuestionnaireResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
@@ -644,7 +676,9 @@ abstract class QuestionnaireResponseItem
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? QuestionnaireResponseItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'QuestionnaireResponseItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
@@ -688,7 +722,9 @@ abstract class QuestionnaireResponseAnswer
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? QuestionnaireResponseAnswer.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'QuestionnaireResponseAnswer cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
@@ -741,7 +777,9 @@ abstract class Sequence with Resource implements _$Sequence {
       ? Sequence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Sequence.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Sequence cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Sequence.fromJson(Map<String, dynamic> json) =>
@@ -775,7 +813,9 @@ abstract class SequenceReferenceSeq implements _$SequenceReferenceSeq {
       ? SequenceReferenceSeq.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SequenceReferenceSeq.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SequenceReferenceSeq cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SequenceReferenceSeq.fromJson(Map<String, dynamic> json) =>
@@ -807,7 +847,9 @@ abstract class SequenceVariant implements _$SequenceVariant {
       ? SequenceVariant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SequenceVariant.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SequenceVariant cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SequenceVariant.fromJson(Map<String, dynamic> json) =>
@@ -853,7 +895,9 @@ abstract class SequenceQuality implements _$SequenceQuality {
       ? SequenceQuality.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SequenceQuality.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SequenceQuality cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SequenceQuality.fromJson(Map<String, dynamic> json) =>
@@ -886,7 +930,9 @@ abstract class SequenceRepository implements _$SequenceRepository {
       ? SequenceRepository.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SequenceRepository.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SequenceRepository cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SequenceRepository.fromJson(Map<String, dynamic> json) =>
@@ -934,7 +980,9 @@ abstract class Specimen with Resource implements _$Specimen {
       ? Specimen.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Specimen.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Specimen cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Specimen.fromJson(Map<String, dynamic> json) =>
@@ -962,7 +1010,9 @@ abstract class SpecimenCollection implements _$SpecimenCollection {
       ? SpecimenCollection.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SpecimenCollection.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SpecimenCollection cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
@@ -990,7 +1040,9 @@ abstract class SpecimenProcessing implements _$SpecimenProcessing {
       ? SpecimenProcessing.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SpecimenProcessing.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SpecimenProcessing cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SpecimenProcessing.fromJson(Map<String, dynamic> json) =>
@@ -1019,7 +1071,9 @@ abstract class SpecimenContainer implements _$SpecimenContainer {
       ? SpecimenContainer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SpecimenContainer.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SpecimenContainer cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>

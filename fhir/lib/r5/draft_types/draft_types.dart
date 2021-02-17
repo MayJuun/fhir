@@ -33,7 +33,9 @@ abstract class Population implements _$Population {
       ? Population.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Population.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Population cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Population.fromJson(Map<String, dynamic> json) =>
@@ -62,7 +64,9 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
       ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProductShelfLife cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProductShelfLife.fromJson(Map<String, dynamic> json) =>
@@ -100,7 +104,9 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
       ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProdCharacteristic cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
@@ -130,7 +136,9 @@ abstract class MarketingStatus implements _$MarketingStatus {
       ? MarketingStatus.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MarketingStatus.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MarketingStatus cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MarketingStatus.fromJson(Map<String, dynamic> json) =>
@@ -219,7 +227,9 @@ abstract class Citation implements _$Citation {
       ? Citation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Citation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Citation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Citation.fromJson(Map<String, dynamic> json) =>
@@ -246,7 +256,9 @@ abstract class CitationSummary implements _$CitationSummary {
       ? CitationSummary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationSummary.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationSummary cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationSummary.fromJson(Map<String, dynamic> json) =>
@@ -274,7 +286,9 @@ abstract class CitationVariantCitation implements _$CitationVariantCitation {
       ? CitationVariantCitation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationVariantCitation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationVariantCitation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationVariantCitation.fromJson(Map<String, dynamic> json) =>
@@ -304,7 +318,9 @@ abstract class CitationJournal implements _$CitationJournal {
       ? CitationJournal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationJournal.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationJournal cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationJournal.fromJson(Map<String, dynamic> json) =>
@@ -334,7 +350,9 @@ abstract class CitationJournalIssue implements _$CitationJournalIssue {
       ? CitationJournalIssue.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationJournalIssue.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationJournalIssue cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationJournalIssue.fromJson(Map<String, dynamic> json) =>
@@ -370,7 +388,9 @@ abstract class CitationPublicationDate implements _$CitationPublicationDate {
       ? CitationPublicationDate.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationPublicationDate.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationPublicationDate cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPublicationDate.fromJson(Map<String, dynamic> json) =>
@@ -401,7 +421,9 @@ abstract class CitationPublicationInfo implements _$CitationPublicationInfo {
       ? CitationPublicationInfo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationPublicationInfo.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationPublicationInfo cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPublicationInfo.fromJson(Map<String, dynamic> json) =>
@@ -434,7 +456,9 @@ abstract class CitationPublishedIn implements _$CitationPublishedIn {
       ? CitationPublishedIn.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationPublishedIn.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationPublishedIn cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPublishedIn.fromJson(Map<String, dynamic> json) =>
@@ -463,7 +487,9 @@ abstract class CitationAlternativeTitle implements _$CitationAlternativeTitle {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationAlternativeTitle.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationAlternativeTitle cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationAlternativeTitle.fromJson(Map<String, dynamic> json) =>
@@ -493,7 +519,9 @@ abstract class CitationPagination implements _$CitationPagination {
       ? CitationPagination.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationPagination.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationPagination cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPagination.fromJson(Map<String, dynamic> json) =>
@@ -520,7 +548,9 @@ abstract class CitationArticleUrl implements _$CitationArticleUrl {
       ? CitationArticleUrl.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationArticleUrl.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationArticleUrl cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationArticleUrl.fromJson(Map<String, dynamic> json) =>
@@ -552,7 +582,9 @@ abstract class CitationAlternativeAbstract
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationAlternativeAbstract.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationAlternativeAbstract cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationAlternativeAbstract.fromJson(Map<String, dynamic> json) =>
@@ -580,7 +612,9 @@ abstract class CitationContributorship implements _$CitationContributorship {
       ? CitationContributorship.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationContributorship.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationContributorship cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationContributorship.fromJson(Map<String, dynamic> json) =>
@@ -620,7 +654,9 @@ abstract class CitationEntry implements _$CitationEntry {
       ? CitationEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationEntry.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationEntry cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationEntry.fromJson(Map<String, dynamic> json) =>
@@ -649,7 +685,9 @@ abstract class CitationAffiliationInfo implements _$CitationAffiliationInfo {
       ? CitationAffiliationInfo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationAffiliationInfo.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationAffiliationInfo cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationAffiliationInfo.fromJson(Map<String, dynamic> json) =>
@@ -678,7 +716,9 @@ abstract class CitationSummary1 implements _$CitationSummary1 {
       ? CitationSummary1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationSummary1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationSummary1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationSummary1.fromJson(Map<String, dynamic> json) =>
@@ -707,7 +747,9 @@ abstract class CitationAlternativeForm implements _$CitationAlternativeForm {
       ? CitationAlternativeForm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationAlternativeForm.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationAlternativeForm cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationAlternativeForm.fromJson(Map<String, dynamic> json) =>
@@ -737,7 +779,9 @@ abstract class CitationJournalIssue1 implements _$CitationJournalIssue1 {
       ? CitationJournalIssue1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationJournalIssue1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationJournalIssue1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationJournalIssue1.fromJson(Map<String, dynamic> json) =>
@@ -774,7 +818,9 @@ abstract class CitationPublicationDate1 implements _$CitationPublicationDate1 {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationPublicationDate1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationPublicationDate1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPublicationDate1.fromJson(Map<String, dynamic> json) =>
@@ -804,7 +850,9 @@ abstract class CitationPagination1 implements _$CitationPagination1 {
       ? CitationPagination1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationPagination1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationPagination1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPagination1.fromJson(Map<String, dynamic> json) =>
@@ -836,7 +884,9 @@ abstract class CitationPublicationInfo1 implements _$CitationPublicationInfo1 {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationPublicationInfo1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationPublicationInfo1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPublicationInfo1.fromJson(Map<String, dynamic> json) =>
@@ -868,7 +918,9 @@ abstract class CitationPublishedIn1 implements _$CitationPublishedIn1 {
       ? CitationPublishedIn1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationPublishedIn1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationPublishedIn1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPublishedIn1.fromJson(Map<String, dynamic> json) =>
@@ -895,7 +947,9 @@ abstract class CitationKeywordList implements _$CitationKeywordList {
       ? CitationKeywordList.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationKeywordList.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationKeywordList cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationKeywordList.fromJson(Map<String, dynamic> json) =>
@@ -923,7 +977,9 @@ abstract class CitationKeyword implements _$CitationKeyword {
       ? CitationKeyword.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationKeyword.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationKeyword cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationKeyword.fromJson(Map<String, dynamic> json) =>
@@ -962,7 +1018,9 @@ abstract class CitationMedlinePubMed implements _$CitationMedlinePubMed {
       ? CitationMedlinePubMed.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationMedlinePubMed.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationMedlinePubMed cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationMedlinePubMed.fromJson(Map<String, dynamic> json) =>
@@ -989,7 +1047,9 @@ abstract class CitationPubMedPubDate implements _$CitationPubMedPubDate {
       ? CitationPubMedPubDate.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationPubMedPubDate.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationPubMedPubDate cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPubMedPubDate.fromJson(Map<String, dynamic> json) =>
@@ -1017,7 +1077,9 @@ abstract class CitationRelatedArticle implements _$CitationRelatedArticle {
       ? CitationRelatedArticle.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CitationRelatedArticle.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CitationRelatedArticle cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationRelatedArticle.fromJson(Map<String, dynamic> json) =>
@@ -1093,7 +1155,9 @@ abstract class EvidenceReport implements _$EvidenceReport {
       ? EvidenceReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EvidenceReport.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EvidenceReport cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceReport.fromJson(Map<String, dynamic> json) =>
@@ -1119,7 +1183,9 @@ abstract class EvidenceReportSubject implements _$EvidenceReportSubject {
       ? EvidenceReportSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EvidenceReportSubject.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EvidenceReportSubject cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceReportSubject.fromJson(Map<String, dynamic> json) =>
@@ -1155,7 +1221,9 @@ abstract class EvidenceReportCharacteristic
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EvidenceReportCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EvidenceReportCharacteristic cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceReportCharacteristic.fromJson(Map<String, dynamic> json) =>
@@ -1184,7 +1252,9 @@ abstract class EvidenceReportRelatesTo implements _$EvidenceReportRelatesTo {
       ? EvidenceReportRelatesTo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EvidenceReportRelatesTo.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EvidenceReportRelatesTo cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceReportRelatesTo.fromJson(Map<String, dynamic> json) =>
@@ -1221,7 +1291,9 @@ abstract class EvidenceReportSection implements _$EvidenceReportSection {
       ? EvidenceReportSection.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EvidenceReportSection.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EvidenceReportSection cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceReportSection.fromJson(Map<String, dynamic> json) =>

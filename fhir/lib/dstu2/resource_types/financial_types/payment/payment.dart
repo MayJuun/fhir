@@ -49,7 +49,9 @@ abstract class PaymentNotice with Resource implements _$PaymentNotice {
       ? PaymentNotice.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PaymentNotice.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PaymentNotice cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
@@ -104,7 +106,9 @@ abstract class PaymentReconciliation
       ? PaymentReconciliation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PaymentReconciliation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PaymentReconciliation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
@@ -137,7 +141,9 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PaymentReconciliationDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PaymentReconciliationDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
@@ -166,7 +172,9 @@ abstract class PaymentReconciliationNote with _$PaymentReconciliationNote {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PaymentReconciliationNote.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PaymentReconciliationNote cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =>

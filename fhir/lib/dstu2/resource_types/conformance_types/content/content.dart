@@ -84,7 +84,9 @@ abstract class StructureDefinition
       ? StructureDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? StructureDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'StructureDefinition cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
@@ -111,7 +113,9 @@ abstract class StructureDefinitionContact with _$StructureDefinitionContact {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? StructureDefinitionContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'StructureDefinitionContact cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureDefinitionContact.fromJson(Map<String, dynamic> json) =>
@@ -145,7 +149,9 @@ abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? StructureDefinitionMapping.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'StructureDefinitionMapping cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
@@ -171,7 +177,9 @@ abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? StructureDefinitionSnapshot.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'StructureDefinitionSnapshot cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
@@ -249,7 +257,9 @@ abstract class DataElement with Resource implements _$DataElement {
       ? DataElement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DataElement.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DataElement cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DataElement.fromJson(Map<String, dynamic> json) =>
@@ -275,7 +285,9 @@ abstract class DataElementContact with _$DataElementContact {
       ? DataElementContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DataElementContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DataElementContact cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DataElementContact.fromJson(Map<String, dynamic> json) =>
@@ -308,7 +320,9 @@ abstract class DataElementMapping with _$DataElementMapping {
       ? DataElementMapping.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DataElementMapping.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DataElementMapping cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DataElementMapping.fromJson(Map<String, dynamic> json) =>

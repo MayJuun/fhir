@@ -85,7 +85,9 @@ abstract class Evidence with Resource implements _$Evidence {
       ? Evidence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Evidence.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Evidence cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Evidence.fromJson(Map<String, dynamic> json) =>
@@ -118,7 +120,9 @@ abstract class EvidenceVariableDefinition
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EvidenceVariableDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EvidenceVariableDefinition cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableDefinition.fromJson(Map<String, dynamic> json) =>
@@ -149,7 +153,9 @@ abstract class EvidenceCertainty implements _$EvidenceCertainty {
       ? EvidenceCertainty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EvidenceCertainty.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EvidenceCertainty cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceCertainty.fromJson(Map<String, dynamic> json) =>
@@ -182,7 +188,9 @@ abstract class EvidenceCertaintySubcomponent
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EvidenceCertaintySubcomponent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EvidenceCertaintySubcomponent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceCertaintySubcomponent.fromJson(Map<String, dynamic> json) =>
@@ -269,7 +277,9 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
       ? EvidenceVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EvidenceVariable.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EvidenceVariable cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariable.fromJson(Map<String, dynamic> json) =>
@@ -343,7 +353,9 @@ abstract class EvidenceVariableTimeFromStart
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EvidenceVariableTimeFromStart.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EvidenceVariableTimeFromStart cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableTimeFromStart.fromJson(Map<String, dynamic> json) =>
@@ -373,7 +385,9 @@ abstract class EvidenceVariableCategory implements _$EvidenceVariableCategory {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EvidenceVariableCategory.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EvidenceVariableCategory cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =>

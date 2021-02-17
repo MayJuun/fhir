@@ -99,7 +99,9 @@ abstract class FhirExtension implements _$FhirExtension {
       ? FhirExtension.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? FhirExtension.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'FhirExtension cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FhirExtension.fromJson(Map<String, dynamic> json) =>

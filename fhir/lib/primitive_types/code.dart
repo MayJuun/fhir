@@ -1,17 +1,14 @@
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 class Code {
-  const Code._(this._value);
+  const Code._(this._valueString, this._valueCode, this._isValid);
 
-  factory Code(dynamic value) {
-    assert(value != null);
-    return Code._(
-      _validateCode(value),
-    );
-  }
+  factory Code(String inValue) =>
+      RegExp(r'^[^\s]+(\s[^\s]+)*$').hasMatch(inValue)
+          ? Code._(inValue, inValue, true)
+          : Code._(inValue, null, false);
 
   factory Code.fromJson(dynamic json) => Code(json);
 
@@ -19,27 +16,26 @@ class Code {
       ? Code.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Code.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final Either<String, String> _value;
-  String get value => _value.fold((l) => l, (r) => r);
-  bool get isValid => _value.isRight();
+  final String _valueString;
+  final String? _valueCode;
+  final bool _isValid;
 
-  String toString() => value;
-  String toJson() => value;
-  String toYaml() => value;
+  bool get isValid => _isValid;
+  int get hashCode => _valueString.hashCode;
+  String? get value => _valueCode;
+
+  String toString() => _valueString;
+  String toJson() => _valueString;
+  String toYaml() => _valueString;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Code || o is String
-          ? o == value
-          : false;
-
-  int get hashCode => value.hashCode;
+      : o is Code
+          ? o.value == _valueCode
+          : o is String
+              ? o == _valueString
+              : false;
 }
-
-Either<String, String> _validateCode(String value) =>
-    RegExp(r'^[^\s]+(\s[^\s]+)*$').hasMatch(value)
-        ? right(value)
-        : left('FormatError: "$value" is not a Code, as defined by: '
-            'https://www.hl7.org/fhir/datatypes.html#code');

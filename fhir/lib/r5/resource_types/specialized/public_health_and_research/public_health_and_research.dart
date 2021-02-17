@@ -66,7 +66,9 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
       ? ResearchStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ResearchStudy.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ResearchStudy cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
@@ -95,7 +97,9 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
       ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ResearchStudyArm cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
@@ -122,7 +126,9 @@ abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
       ? ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ResearchStudyObjective cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
@@ -169,7 +175,9 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
       ? ResearchSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ResearchSubject.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ResearchSubject cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
@@ -199,7 +207,9 @@ abstract class ResearchSubjectProgress implements _$ResearchSubjectProgress {
       ? ResearchSubjectProgress.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ResearchSubjectProgress.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ResearchSubjectProgress cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchSubjectProgress.fromJson(Map<String, dynamic> json) =>

@@ -45,7 +45,9 @@ class Resource {
       ? Resource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Resource.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Resource cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Returns a [Map<String, dynamic>] of the [Resource]
   Map<String, dynamic> toJson() {

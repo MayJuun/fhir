@@ -52,7 +52,9 @@ abstract class Account with Resource implements _$Account {
       ? Account.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Account.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Account cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Account.fromJson(Map<String, dynamic> json) =>
@@ -119,7 +121,9 @@ abstract class Claim with Resource implements _$Claim {
       ? Claim.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Claim.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Claim cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
@@ -146,7 +150,9 @@ abstract class ClaimPayee with _$ClaimPayee {
       ? ClaimPayee.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimPayee.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimPayee cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimPayee.fromJson(Map<String, dynamic> json) =>
@@ -173,7 +179,9 @@ abstract class ClaimDiagnosis with _$ClaimDiagnosis {
       ? ClaimDiagnosis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimDiagnosis.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimDiagnosis cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
@@ -205,7 +213,9 @@ abstract class ClaimCoverage with _$ClaimCoverage {
       ? ClaimCoverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimCoverage.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimCoverage cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimCoverage.fromJson(Map<String, dynamic> json) =>
@@ -249,7 +259,9 @@ abstract class ClaimItem with _$ClaimItem {
       ? ClaimItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimItem.fromJson(Map<String, dynamic> json) =>
@@ -285,7 +297,9 @@ abstract class ClaimItemDetail with _$ClaimItemDetail {
       ? ClaimItemDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimItemDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimItemDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimItemDetail.fromJson(Map<String, dynamic> json) =>
@@ -320,7 +334,9 @@ abstract class ClaimDetailSubDetail with _$ClaimDetailSubDetail {
       ? ClaimDetailSubDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimDetailSubDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimDetailSubDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimDetailSubDetail.fromJson(Map<String, dynamic> json) =>
@@ -347,7 +363,9 @@ abstract class ClaimItemProsthesis with _$ClaimItemProsthesis {
       ? ClaimItemProsthesis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimItemProsthesis.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimItemProsthesis cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimItemProsthesis.fromJson(Map<String, dynamic> json) =>
@@ -374,7 +392,9 @@ abstract class ClaimMissingTeeth with _$ClaimMissingTeeth {
       ? ClaimMissingTeeth.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimMissingTeeth.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimMissingTeeth cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimMissingTeeth.fromJson(Map<String, dynamic> json) =>
@@ -439,7 +459,9 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
       ? ClaimResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
@@ -469,7 +491,9 @@ abstract class ClaimResponseItem with _$ClaimResponseItem {
       ? ClaimResponseItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
@@ -499,7 +523,9 @@ abstract class ClaimResponseItemAdjudication
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseItemAdjudication.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseItemAdjudication cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseItemAdjudication.fromJson(Map<String, dynamic> json) =>
@@ -526,7 +552,9 @@ abstract class ClaimResponseItemDetail with _$ClaimResponseItemDetail {
       ? ClaimResponseItemDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseItemDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseItemDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseItemDetail.fromJson(Map<String, dynamic> json) =>
@@ -554,7 +582,9 @@ abstract class ClaimResponseDetailSubDetail
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseDetailSubDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseDetailSubDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseDetailSubDetail.fromJson(Map<String, dynamic> json) =>
@@ -584,7 +614,9 @@ abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
       ? ClaimResponseAddItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseAddItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseAddItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
@@ -612,7 +644,9 @@ abstract class ClaimResponseAddItemDetail with _$ClaimResponseAddItemDetail {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseAddItemDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseAddItemDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseAddItemDetail.fromJson(Map<String, dynamic> json) =>
@@ -640,7 +674,9 @@ abstract class ClaimResponseError with _$ClaimResponseError {
       ? ClaimResponseError.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseError.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseError cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
@@ -670,7 +706,9 @@ abstract class ClaimResponseNote with _$ClaimResponseNote {
       ? ClaimResponseNote.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseNote.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseNote cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseNote.fromJson(Map<String, dynamic> json) =>
@@ -702,7 +740,9 @@ abstract class ClaimResponseCoverage with _$ClaimResponseCoverage {
       ? ClaimResponseCoverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ClaimResponseCoverage.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ClaimResponseCoverage cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClaimResponseCoverage.fromJson(Map<String, dynamic> json) =>

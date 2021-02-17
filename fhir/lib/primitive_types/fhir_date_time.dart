@@ -27,9 +27,8 @@ class FhirDateTime {
               inValue, dateTimeValue, true, _getPrecision(inValue), null);
         } on FormatException catch (e) {
           return FhirDateTime._(
-              inValue, null, false, DateTimePrecision.INVALID, e);
+              inValue, DateTime.now(), false, DateTimePrecision.INVALID, e);
         }
-        break;
       default:
         throw ArgumentError(
             'FhirDateTime cannot be constructed from $inValue.');
@@ -38,8 +37,6 @@ class FhirDateTime {
 
   factory FhirDateTime.fromDateTime(DateTime dateTime,
       [DateTimePrecision precision = DateTimePrecision.FULL]) {
-    assert(dateTime != null && precision != null);
-
     final dateString = dateTime.toIso8601String();
     final len = [4, 7, 10, dateString.length][precision.index];
 
@@ -53,18 +50,19 @@ class FhirDateTime {
       ? FhirDateTime.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? FhirDateTime.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
   final DateTime _valueDateTime;
   final bool _isValid;
   final DateTimePrecision _precision;
-  final Exception _parseError;
+  final Exception? _parseError;
 
   bool get isValid => _isValid;
   int get hashCode => _valueString.hashCode;
   DateTime get value => _valueDateTime;
-  Exception get parseError => _parseError;
+  Exception? get parseError => _parseError;
   DateTimePrecision get precision => _precision;
 
   bool operator ==(Object o) => identical(this, o)

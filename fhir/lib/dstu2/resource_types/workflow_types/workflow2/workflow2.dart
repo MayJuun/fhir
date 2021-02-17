@@ -54,7 +54,9 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
       ? ProcessRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProcessRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProcessRequest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
@@ -79,7 +81,9 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
       ? ProcessRequestItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProcessRequestItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProcessRequestItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
@@ -124,7 +128,9 @@ abstract class ProcessResponse with Resource implements _$ProcessResponse {
       ? ProcessResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProcessResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProcessResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
@@ -150,7 +156,9 @@ abstract class ProcessResponseNotes with _$ProcessResponseNotes {
       ? ProcessResponseNotes.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProcessResponseNotes.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProcessResponseNotes cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcessResponseNotes.fromJson(Map<String, dynamic> json) =>
@@ -197,7 +205,9 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
       ? SupplyRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SupplyRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SupplyRequest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
@@ -223,7 +233,9 @@ abstract class SupplyRequestWhen with _$SupplyRequestWhen {
       ? SupplyRequestWhen.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SupplyRequestWhen.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SupplyRequestWhen cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SupplyRequestWhen.fromJson(Map<String, dynamic> json) =>
@@ -270,7 +282,9 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
       ? SupplyDelivery.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SupplyDelivery.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SupplyDelivery cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>

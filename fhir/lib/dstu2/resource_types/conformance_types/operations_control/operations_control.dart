@@ -65,7 +65,9 @@ abstract class Conformance with Resource implements _$Conformance {
       ? Conformance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Conformance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Conformance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Conformance.fromJson(Map<String, dynamic> json) =>
@@ -128,7 +130,9 @@ abstract class CapabilityStatement
       ? CapabilityStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CapabilityStatement.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CapabilityStatement cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
@@ -154,7 +158,9 @@ abstract class ConformanceContact with _$ConformanceContact {
       ? ConformanceContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConformanceContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConformanceContact cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceContact.fromJson(Map<String, dynamic> json) =>
@@ -181,7 +187,9 @@ abstract class ConformanceSoftware with _$ConformanceSoftware {
       ? ConformanceSoftware.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConformanceSoftware.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConformanceSoftware cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceSoftware.fromJson(Map<String, dynamic> json) =>
@@ -208,7 +216,9 @@ abstract class ConformanceImplementation with _$ConformanceImplementation {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConformanceImplementation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConformanceImplementation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceImplementation.fromJson(Map<String, dynamic> json) =>
@@ -246,7 +256,9 @@ abstract class ConformanceRest with _$ConformanceRest {
       ? ConformanceRest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConformanceRest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConformanceRest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceRest.fromJson(Map<String, dynamic> json) =>
@@ -275,7 +287,9 @@ abstract class ConformanceMessaging with _$ConformanceMessaging {
       ? ConformanceMessaging.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConformanceMessaging.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConformanceMessaging cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceMessaging.fromJson(Map<String, dynamic> json) =>
@@ -305,7 +319,9 @@ abstract class ConformanceDocument with _$ConformanceDocument {
       ? ConformanceDocument.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConformanceDocument.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConformanceDocument cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceDocument.fromJson(Map<String, dynamic> json) =>
@@ -334,7 +350,9 @@ abstract class ConformanceRestSecurity with _$ConformanceRestSecurity {
       ? ConformanceRestSecurity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConformanceRestSecurity.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConformanceRestSecurity cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceRestSecurity.fromJson(Map<String, dynamic> json) =>
@@ -379,7 +397,9 @@ abstract class ConformanceRestResource with _$ConformanceRestResource {
       ? ConformanceRestResource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConformanceRestResource.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConformanceRestResource cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceRestResource.fromJson(Map<String, dynamic> json) =>
@@ -439,7 +459,9 @@ abstract class ConformanceRestOperation with _$ConformanceRestOperation {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConformanceRestOperation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConformanceRestOperation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceRestOperation.fromJson(Map<String, dynamic> json) =>
@@ -468,7 +490,9 @@ abstract class ConformanceMessagingEndpoint
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConformanceMessagingEndpoint.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConformanceMessagingEndpoint cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json) =>
@@ -503,7 +527,9 @@ abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConformanceMessagingEvent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConformanceMessagingEvent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceMessagingEvent.fromJson(Map<String, dynamic> json) =>
@@ -563,7 +589,9 @@ abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConformanceRestInteraction.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConformanceRestInteraction cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =>
@@ -659,7 +687,9 @@ abstract class OperationDefinition
       ? OperationDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? OperationDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'OperationDefinition cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
@@ -686,7 +716,9 @@ abstract class OperationDefinitionContact with _$OperationDefinitionContact {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? OperationDefinitionContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'OperationDefinitionContact cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationDefinitionContact.fromJson(Map<String, dynamic> json) =>
@@ -724,7 +756,9 @@ abstract class OperationDefinitionParameter
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? OperationDefinitionParameter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'OperationDefinitionParameter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
@@ -812,7 +846,9 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
       ? SearchParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SearchParameter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SearchParameter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SearchParameter.fromJson(Map<String, dynamic> json) =>
@@ -838,7 +874,9 @@ abstract class SearchParameterContact with _$SearchParameterContact {
       ? SearchParameterContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SearchParameterContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SearchParameterContact cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SearchParameterContact.fromJson(Map<String, dynamic> json) =>

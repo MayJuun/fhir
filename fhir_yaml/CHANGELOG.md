@@ -1,3 +1,9 @@
+## [0.3.0-nullsafety.0]
+* Upgraded example to use nullsafety
+
+## [0.2.1-nullsafety.1]
+* Migrating to null safety, didn't have to change anything apart from some dependencies.
+
 ## [0.2.1]
 * Still used the same, but was hanging on empty strings, should be fixed now.
 

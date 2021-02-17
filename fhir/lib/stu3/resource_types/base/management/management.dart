@@ -60,7 +60,9 @@ abstract class Encounter with Resource implements _$Encounter {
       ? Encounter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Encounter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Encounter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Encounter.fromJson(Map<String, dynamic> json) =>
@@ -84,7 +86,9 @@ abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
       ? EncounterStatusHistory.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EncounterStatusHistory.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EncounterStatusHistory cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
@@ -107,7 +111,9 @@ abstract class EncounterClassHistory implements _$EncounterClassHistory {
       ? EncounterClassHistory.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EncounterClassHistory.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EncounterClassHistory cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EncounterClassHistory.fromJson(Map<String, dynamic> json) =>
@@ -131,7 +137,9 @@ abstract class EncounterParticipant implements _$EncounterParticipant {
       ? EncounterParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EncounterParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EncounterParticipant cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EncounterParticipant.fromJson(Map<String, dynamic> json) =>
@@ -156,7 +164,9 @@ abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
       ? EncounterDiagnosis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EncounterDiagnosis.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EncounterDiagnosis cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EncounterDiagnosis.fromJson(Map<String, dynamic> json) =>
@@ -187,7 +197,9 @@ abstract class EncounterHospitalization implements _$EncounterHospitalization {
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EncounterHospitalization.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EncounterHospitalization cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
@@ -212,7 +224,9 @@ abstract class EncounterLocation implements _$EncounterLocation {
       ? EncounterLocation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EncounterLocation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EncounterLocation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
@@ -259,7 +273,9 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
       ? EpisodeOfCare.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EpisodeOfCare.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EpisodeOfCare cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
@@ -285,7 +301,9 @@ abstract class EpisodeOfCareStatusHistory
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EpisodeOfCareStatusHistory.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EpisodeOfCareStatusHistory cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
@@ -310,7 +328,9 @@ abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
       ? EpisodeOfCareDiagnosis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? EpisodeOfCareDiagnosis.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'EpisodeOfCareDiagnosis cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EpisodeOfCareDiagnosis.fromJson(Map<String, dynamic> json) =>
@@ -353,7 +373,9 @@ abstract class Flag with Resource implements _$Flag {
       ? Flag.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Flag.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Flag cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
@@ -426,7 +448,9 @@ abstract class Library with Resource implements _$Library {
       ? Library.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Library.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Library cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Library.fromJson(Map<String, dynamic> json) =>
@@ -477,7 +501,9 @@ abstract class List_ with Resource implements _$List_ {
       ? List_.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? List_.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'List_ cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory List_.fromJson(Map<String, dynamic> json) => _$List_FromJson(json);
@@ -503,7 +529,9 @@ abstract class ListEntry implements _$ListEntry {
       ? ListEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ListEntry.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ListEntry cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ListEntry.fromJson(Map<String, dynamic> json) =>

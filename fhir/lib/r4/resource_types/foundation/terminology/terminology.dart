@@ -275,7 +275,9 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
       ? CodeSystem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CodeSystem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CodeSystem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CodeSystem.fromJson(Map<String, dynamic> json) =>
@@ -352,7 +354,9 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
       ? CodeSystemFilter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CodeSystemFilter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CodeSystemFilter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CodeSystemFilter.fromJson(Map<String, dynamic> json) =>
@@ -436,7 +440,9 @@ abstract class CodeSystemProperty implements _$CodeSystemProperty {
       ? CodeSystemProperty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CodeSystemProperty.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CodeSystemProperty cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CodeSystemProperty.fromJson(Map<String, dynamic> json) =>
@@ -524,7 +530,9 @@ abstract class CodeSystemConcept implements _$CodeSystemConcept {
       ? CodeSystemConcept.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CodeSystemConcept.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CodeSystemConcept cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CodeSystemConcept.fromJson(Map<String, dynamic> json) =>
@@ -591,7 +599,9 @@ abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
       ? CodeSystemDesignation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CodeSystemDesignation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CodeSystemDesignation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CodeSystemDesignation.fromJson(Map<String, dynamic> json) =>
@@ -688,7 +698,9 @@ abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
       ? CodeSystemProperty1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? CodeSystemProperty1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'CodeSystemProperty1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CodeSystemProperty1.fromJson(Map<String, dynamic> json) =>
@@ -927,7 +939,9 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
       ? ConceptMap.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConceptMap.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConceptMap cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMap.fromJson(Map<String, dynamic> json) =>
@@ -1017,7 +1031,9 @@ abstract class ConceptMapGroup implements _$ConceptMapGroup {
       ? ConceptMapGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConceptMapGroup.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConceptMapGroup cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMapGroup.fromJson(Map<String, dynamic> json) =>
@@ -1085,7 +1101,9 @@ abstract class ConceptMapElement implements _$ConceptMapElement {
       ? ConceptMapElement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConceptMapElement.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConceptMapElement cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
@@ -1179,7 +1197,9 @@ abstract class ConceptMapTarget implements _$ConceptMapTarget {
       ? ConceptMapTarget.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConceptMapTarget.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConceptMapTarget cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMapTarget.fromJson(Map<String, dynamic> json) =>
@@ -1259,7 +1279,9 @@ abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
       ? ConceptMapDependsOn.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConceptMapDependsOn.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConceptMapDependsOn cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =>
@@ -1342,7 +1364,9 @@ abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
       ? ConceptMapUnmapped.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConceptMapUnmapped.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConceptMapUnmapped cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =>
@@ -1518,7 +1542,9 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
       ? NamingSystem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? NamingSystem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'NamingSystem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NamingSystem.fromJson(Map<String, dynamic> json) =>
@@ -1604,7 +1630,9 @@ abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
       ? NamingSystemUniqueId.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? NamingSystemUniqueId.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'NamingSystemUniqueId cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
@@ -1857,7 +1885,9 @@ abstract class TerminologyCapabilities
       ? TerminologyCapabilities.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TerminologyCapabilities.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TerminologyCapabilities cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilities.fromJson(Map<String, dynamic> json) =>
@@ -2228,7 +2258,9 @@ abstract class TerminologyCapabilitiesFilter
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TerminologyCapabilitiesFilter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TerminologyCapabilitiesFilter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesFilter.fromJson(Map<String, dynamic> json) =>
@@ -2794,7 +2826,9 @@ abstract class ValueSet with Resource implements _$ValueSet {
       ? ValueSet.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ValueSet.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ValueSet cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSet.fromJson(Map<String, dynamic> json) =>
@@ -2875,7 +2909,9 @@ abstract class ValueSetCompose implements _$ValueSetCompose {
       ? ValueSetCompose.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ValueSetCompose.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ValueSetCompose cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
@@ -2957,7 +2993,9 @@ abstract class ValueSetInclude implements _$ValueSetInclude {
       ? ValueSetInclude.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ValueSetInclude.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ValueSetInclude cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetInclude.fromJson(Map<String, dynamic> json) =>
@@ -3029,7 +3067,9 @@ abstract class ValueSetConcept implements _$ValueSetConcept {
       ? ValueSetConcept.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ValueSetConcept.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ValueSetConcept cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetConcept.fromJson(Map<String, dynamic> json) =>
@@ -3097,7 +3137,9 @@ abstract class ValueSetDesignation implements _$ValueSetDesignation {
       ? ValueSetDesignation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ValueSetDesignation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ValueSetDesignation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetDesignation.fromJson(Map<String, dynamic> json) =>
@@ -3174,7 +3216,9 @@ abstract class ValueSetFilter implements _$ValueSetFilter {
       ? ValueSetFilter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ValueSetFilter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ValueSetFilter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetFilter.fromJson(Map<String, dynamic> json) =>
@@ -3270,7 +3314,9 @@ abstract class ValueSetExpansion implements _$ValueSetExpansion {
       ? ValueSetExpansion.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ValueSetExpansion.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ValueSetExpansion cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
@@ -3373,7 +3419,9 @@ abstract class ValueSetParameter implements _$ValueSetParameter {
       ? ValueSetParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ValueSetParameter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ValueSetParameter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetParameter.fromJson(Map<String, dynamic> json) =>
@@ -3485,7 +3533,9 @@ abstract class ValueSetContains implements _$ValueSetContains {
       ? ValueSetContains.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ValueSetContains.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ValueSetContains cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ValueSetContains.fromJson(Map<String, dynamic> json) =>

@@ -60,7 +60,9 @@ abstract class Device with Resource implements _$Device {
       ? Device.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Device.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Device cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
@@ -103,7 +105,9 @@ abstract class DeviceComponent with Resource implements _$DeviceComponent {
       ? DeviceComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DeviceComponent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DeviceComponent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceComponent.fromJson(Map<String, dynamic> json) =>
@@ -185,7 +189,9 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
       ? DeviceMetric.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DeviceMetric.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DeviceMetric cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
@@ -215,7 +221,9 @@ abstract class DeviceMetricCalibration with _$DeviceMetricCalibration {
       ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DeviceMetricCalibration cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>

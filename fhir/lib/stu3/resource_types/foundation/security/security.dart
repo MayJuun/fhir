@@ -52,7 +52,9 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
       ? AuditEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AuditEvent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AuditEvent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEvent.fromJson(Map<String, dynamic> json) =>
@@ -88,7 +90,9 @@ abstract class AuditEventAgent implements _$AuditEventAgent {
       ? AuditEventAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AuditEventAgent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AuditEventAgent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventAgent.fromJson(Map<String, dynamic> json) =>
@@ -113,7 +117,9 @@ abstract class AuditEventNetwork implements _$AuditEventNetwork {
       ? AuditEventNetwork.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AuditEventNetwork.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AuditEventNetwork cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
@@ -138,7 +144,9 @@ abstract class AuditEventSource implements _$AuditEventSource {
       ? AuditEventSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AuditEventSource.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AuditEventSource cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
@@ -172,7 +180,9 @@ abstract class AuditEventEntity implements _$AuditEventEntity {
       ? AuditEventEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AuditEventEntity.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AuditEventEntity cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventEntity.fromJson(Map<String, dynamic> json) =>
@@ -197,7 +207,9 @@ abstract class AuditEventDetail implements _$AuditEventDetail {
       ? AuditEventDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AuditEventDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AuditEventDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventDetail.fromJson(Map<String, dynamic> json) =>
@@ -254,7 +266,9 @@ abstract class Consent with Resource implements _$Consent {
       ? Consent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Consent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Consent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Consent.fromJson(Map<String, dynamic> json) =>
@@ -277,7 +291,9 @@ abstract class ConsentActor implements _$ConsentActor {
       ? ConsentActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConsentActor.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConsentActor cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentActor.fromJson(Map<String, dynamic> json) =>
@@ -302,7 +318,9 @@ abstract class ConsentPolicy implements _$ConsentPolicy {
       ? ConsentPolicy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConsentPolicy.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConsentPolicy cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentPolicy.fromJson(Map<String, dynamic> json) =>
@@ -326,7 +344,9 @@ abstract class ConsentData implements _$ConsentData {
       ? ConsentData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConsentData.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConsentData cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentData.fromJson(Map<String, dynamic> json) =>
@@ -358,7 +378,9 @@ abstract class ConsentExcept implements _$ConsentExcept {
       ? ConsentExcept.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConsentExcept.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConsentExcept cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentExcept.fromJson(Map<String, dynamic> json) =>
@@ -381,7 +403,9 @@ abstract class ConsentActor1 implements _$ConsentActor1 {
       ? ConsentActor1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConsentActor1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConsentActor1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentActor1.fromJson(Map<String, dynamic> json) =>
@@ -405,7 +429,9 @@ abstract class ConsentData1 implements _$ConsentData1 {
       ? ConsentData1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ConsentData1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ConsentData1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentData1.fromJson(Map<String, dynamic> json) =>
@@ -451,7 +477,9 @@ abstract class Provenance with Resource implements _$Provenance {
       ? Provenance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Provenance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Provenance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Provenance.fromJson(Map<String, dynamic> json) =>
@@ -480,7 +508,9 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
       ? ProvenanceAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProvenanceAgent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProvenanceAgent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
@@ -508,7 +538,9 @@ abstract class ProvenanceEntity implements _$ProvenanceEntity {
       ? ProvenanceEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProvenanceEntity.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProvenanceEntity cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
