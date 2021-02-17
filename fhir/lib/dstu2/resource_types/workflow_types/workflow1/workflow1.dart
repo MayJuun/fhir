@@ -101,7 +101,7 @@ abstract class OrderResponse with Resource implements _$OrderResponse {
     required Reference? request,
     FhirDateTime? date,
     Reference? who,
-    @JsonKey(required: true, unknownEnumValue: OrderResponseOrderStatus.unknown)
+    @JsonKey(unknownEnumValue: OrderResponseOrderStatus.unknown)
     @required
         OrderResponseOrderStatus orderStatus,
     @JsonKey(name: '_orderStatus') Element? orderStatusElement,

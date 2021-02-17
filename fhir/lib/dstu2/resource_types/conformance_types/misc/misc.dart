@@ -118,7 +118,7 @@ abstract class ImplementationGuideDependency
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: DependencyType.unknown)
+    @JsonKey(unknownEnumValue: DependencyType.unknown)
     @required
         DependencyType type,
     required FhirUri? uri,
@@ -214,9 +214,7 @@ abstract class ImplementationGuidePage with _$ImplementationGuidePage {
     List<FhirExtension>? modifierExtension,
     required FhirUri? source,
     required String? name,
-    @JsonKey(required: true, unknownEnumValue: PageKind.unknown)
-    @required
-        PageKind kind,
+    @JsonKey(unknownEnumValue: PageKind.unknown) @required PageKind kind,
     List<Code>? type,
     List<String>? package,
     Code? format,
@@ -248,7 +246,7 @@ abstract class ImplementationGuidePackageResource
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: ResourcePurpose.unknown)
+    @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
     @required
         ResourcePurpose purpose,
     String? name,
@@ -302,7 +300,7 @@ abstract class TestScript with Resource implements _$TestScript {
     String? version,
     required String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(required: true, unknownEnumValue: TestScriptStatus.unknown)
+    @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
     @required
         TestScriptStatus status,
     @JsonKey(name: '_status') Element? statusElement,

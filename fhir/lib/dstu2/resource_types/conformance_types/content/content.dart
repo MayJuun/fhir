@@ -61,7 +61,7 @@ abstract class StructureDefinition
     Id? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     List<StructureDefinitionMapping>? mapping,
-    @JsonKey(required: true, unknownEnumValue: StructureDefinitionKind.unknown)
+    @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
     @required
         StructureDefinitionKind kind,
     @JsonKey(name: '_kind') Element? kindElement,
@@ -236,7 +236,7 @@ abstract class DataElement with Resource implements _$DataElement {
     List<Identifier>? identifier,
     String? version,
     String? name,
-    @JsonKey(required: true, unknownEnumValue: DataElementStatus.unknown)
+    @JsonKey(unknownEnumValue: DataElementStatus.unknown)
     @required
         DataElementStatus status,
     Boolean? experimental,

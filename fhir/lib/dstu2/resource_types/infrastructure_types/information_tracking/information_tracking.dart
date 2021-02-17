@@ -32,7 +32,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
     List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
-    @JsonKey(required: true, unknownEnumValue: QuestionnaireStatus.unknown)
+    @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
     @required
         QuestionnaireStatus status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -399,9 +399,7 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true, unknownEnumValue: EntityRole.unknown)
-    @required
-        EntityRole role,
+    @JsonKey(unknownEnumValue: EntityRole.unknown) @required EntityRole role,
     @JsonKey(name: '_role') Element? roleElement,
     required Coding? type,
     required FhirUri? reference,

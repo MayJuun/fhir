@@ -39,14 +39,14 @@ abstract class Conformance with Resource implements _$Conformance {
     String? description,
     String? requirements,
     String? copyright,
-    @JsonKey(required: true, unknownEnumValue: ConformanceKind.unknown)
+    @JsonKey(unknownEnumValue: ConformanceKind.unknown)
     @required
         ConformanceKind kind,
     ConformanceSoftware? software,
     ConformanceImplementation? implementation,
     required Id? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
-    @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
+    @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
     @required
         ConformanceAcceptUnknown acceptUnknown,
     @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
@@ -104,14 +104,14 @@ abstract class CapabilityStatement
     String? description,
     String? requirements,
     String? copyright,
-    @JsonKey(required: true, unknownEnumValue: ConformanceKind.unknown)
+    @JsonKey(unknownEnumValue: ConformanceKind.unknown)
     @required
         ConformanceKind kind,
     ConformanceSoftware? software,
     ConformanceImplementation? implementation,
     required Id? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
-    @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
+    @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
     @required
         ConformanceAcceptUnknown acceptUnknown,
     @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
@@ -233,9 +233,7 @@ abstract class ConformanceRest with _$ConformanceRest {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true, unknownEnumValue: RestMode.unknown)
-    @required
-        RestMode mode,
+    @JsonKey(unknownEnumValue: RestMode.unknown) @required RestMode mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? documentation,
     ConformanceRestSecurity? security,
@@ -304,7 +302,7 @@ abstract class ConformanceDocument with _$ConformanceDocument {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true, unknownEnumValue: DocumentMode.unknown)
+    @JsonKey(unknownEnumValue: DocumentMode.unknown)
     @required
         DocumentMode mode,
     String? documentation,
@@ -414,7 +412,7 @@ abstract class ConformanceResourceInteraction
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: ResourceInteractionCode.unknown)
+    @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
     @required
         ResourceInteractionCode code,
     String? documentation,
@@ -510,9 +508,7 @@ abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
     List<FhirExtension>? modifierExtension,
     required Coding? code,
     @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory? category,
-    @JsonKey(required: true, unknownEnumValue: EventMode.unknown)
-    @required
-        EventMode mode,
+    @JsonKey(unknownEnumValue: EventMode.unknown) @required EventMode mode,
     @JsonKey(name: '_mode') Element? modeElement,
     required Code? focus,
     required Reference? request,
@@ -578,7 +574,7 @@ abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: RestInteractionCode.unknown)
+    @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
     @required
         RestInteractionCode code,
     String? documentation,
@@ -613,7 +609,7 @@ abstract class ConformanceResourceSearchParam
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     required String? name,
     FhirUri? definition,
-    @JsonKey(required: true, unknownEnumValue: SearchParamType.unknown)
+    @JsonKey(unknownEnumValue: SearchParamType.unknown)
     @required
         SearchParamType type,
     String? documentation,
@@ -666,7 +662,7 @@ abstract class OperationDefinition
         required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
     @required
         OperationDefinitionStatus status,
-    @JsonKey(required: true, unknownEnumValue: OperationDefinitionKind.unknown)
+    @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
     @required
         OperationDefinitionKind kind,
     Boolean? experimental,
@@ -741,9 +737,7 @@ abstract class OperationDefinitionParameter
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     required Code? name,
-    @JsonKey(required: true, unknownEnumValue: ParameterUse.unknown)
-    @required
-        ParameterUse use,
+    @JsonKey(unknownEnumValue: ParameterUse.unknown) @required ParameterUse use,
     required Integer? min,
     required String? max,
     String? documentation,
@@ -836,7 +830,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     @JsonKey(name: '_requirements') Element? requirementsElement,
     required Code? code,
     Code? base,
-    @JsonKey(required: true, unknownEnumValue: SearchParameterType.unknown)
+    @JsonKey(unknownEnumValue: SearchParameterType.unknown)
     @required
         SearchParameterType type,
     String? description,

@@ -67,7 +67,7 @@ abstract class MessageHeaderResponse with _$MessageHeaderResponse {
     List<FhirExtension>? modifierExtension,
     required Id? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
-    @JsonKey(required: true, unknownEnumValue: ResponseCode.unknown)
+    @JsonKey(unknownEnumValue: ResponseCode.unknown)
     @required
         ResponseCode code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -203,7 +203,7 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
+    @JsonKey(unknownEnumValue: IssueSeverity.unknown)
     @required
         IssueSeverity severity,
     required Code? code,
@@ -347,7 +347,7 @@ abstract class Subscription with Resource implements _$Subscription {
     List<ContactPoint>? contact,
     required String? reason,
     @JsonKey(name: '_reason') Element? reasonElement,
-    @JsonKey(required: true, unknownEnumValue: SubscriptionStatus.unknown)
+    @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
     @required
         SubscriptionStatus status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -383,9 +383,7 @@ abstract class SubscriptionChannel with _$SubscriptionChannel {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
-    @required
-        ChannelType type,
+    @JsonKey(unknownEnumValue: ChannelType.unknown) @required ChannelType type,
     @JsonKey(name: '_type') Element? typeElement,
     FhirUri? endpoint,
     @JsonKey(name: '_endpoint') Element? endpointElement,

@@ -444,7 +444,7 @@ abstract class Narrative implements _$Narrative {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true, unknownEnumValue: NarrativeStatus.unknown)
+    @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
     @required
         NarrativeStatus status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -479,7 +479,7 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
     @JsonKey(name: '_description') Element? descriptionElement,
     Boolean? ordered,
     @JsonKey(name: '_ordered') Element? orderedElement,
-    @JsonKey(required: true, unknownEnumValue: SlicingRules.unknown)
+    @JsonKey(unknownEnumValue: SlicingRules.unknown)
     @required
         SlicingRules rules,
     @JsonKey(name: '_rules') Element? rulesElement,
@@ -600,7 +600,7 @@ abstract class ElementDefinitionConstraint
     @JsonKey(name: '_key') Element? keyElement,
     String? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
-    @JsonKey(required: true, unknownEnumValue: ConstraintSeverity.unknown)
+    @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
     @required
         ConstraintSeverity severity,
     @JsonKey(name: '_severity') Element? severityElement,

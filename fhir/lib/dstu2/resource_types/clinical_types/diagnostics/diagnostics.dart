@@ -30,7 +30,7 @@ abstract class Observation with Resource implements _$Observation {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(required: true, unknownEnumValue: ObservationStatus.unknown)
+    @JsonKey(unknownEnumValue: ObservationStatus.unknown)
     @required
         ObservationStatus status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -210,7 +210,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(required: true, unknownEnumValue: DiagnosticReportStatus.unknown)
+    @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
     @required
         DiagnosticReportStatus status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -336,7 +336,7 @@ abstract class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: EventStatus.unknown)
+    @JsonKey(unknownEnumValue: EventStatus.unknown)
     @required
         EventStatus status,
     CodeableConcept? description,

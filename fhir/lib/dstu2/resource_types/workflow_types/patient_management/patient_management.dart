@@ -29,7 +29,7 @@ abstract class Encounter with Resource implements _$Encounter {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(required: true, unknownEnumValue: EncounterStatus.unknown)
+    @JsonKey(unknownEnumValue: EncounterStatus.unknown)
     @required
         EncounterStatus status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -78,7 +78,7 @@ abstract class EncounterStatusHistory with _$EncounterStatusHistory {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: EncounterHistoryStatus.unknown)
+    @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
     @required
         EncounterHistoryStatus status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -219,7 +219,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(required: true, unknownEnumValue: EpisodeOfCareStatus.unknown)
+    @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
     @required
         EpisodeOfCareStatus status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -415,9 +415,7 @@ abstract class Flag with Resource implements _$Flag {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     CodeableConcept? category,
-    @JsonKey(required: true, unknownEnumValue: FlagStatus.unknown)
-    @required
-        FlagStatus status,
+    @JsonKey(unknownEnumValue: FlagStatus.unknown) @required FlagStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? period,
     required Reference? subject,

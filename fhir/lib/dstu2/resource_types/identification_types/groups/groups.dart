@@ -270,9 +270,7 @@ abstract class Group with Resource implements _$Group {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(required: true, unknownEnumValue: GroupType.unknown)
-    @required
-        GroupType type,
+    @JsonKey(unknownEnumValue: GroupType.unknown) @required GroupType type,
     @JsonKey(name: '_type') Element? typeElement,
     required Boolean? actual,
     @JsonKey(name: '_actual') Element? actualElement,

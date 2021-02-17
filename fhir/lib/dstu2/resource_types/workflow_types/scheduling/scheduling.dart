@@ -29,7 +29,7 @@ abstract class Appointment with Resource implements _$Appointment {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(required: true, unknownEnumValue: AppointmentStatus.unknown)
+    @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
     @required
         AppointmentStatus status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -82,7 +82,7 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
     @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
         ParticipantRequired required_,
     @JsonKey(name: '_required') Element? requiredElement,
-    @JsonKey(required: true, unknownEnumValue: ParticipantStatus.unknown)
+    @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
     @required
         ParticipantStatus status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -221,7 +221,7 @@ abstract class Slot with Resource implements _$Slot {
     List<Identifier>? identifier,
     CodeableConcept? type,
     required Reference? schedule,
-    @JsonKey(required: true, unknownEnumValue: SlotFreeBusyType.unknown)
+    @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
     @required
         SlotFreeBusyType freeBusyType,
     required Instant? start,

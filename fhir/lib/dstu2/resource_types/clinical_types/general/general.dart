@@ -262,7 +262,7 @@ abstract class Procedure with Resource implements _$Procedure {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     required Reference? subject,
-    @JsonKey(required: true, unknownEnumValue: ProcedureStatus.unknown)
+    @JsonKey(unknownEnumValue: ProcedureStatus.unknown)
     @required
         ProcedureStatus status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -384,7 +384,7 @@ abstract class ClinicalImpression
     List<FhirExtension>? modifierExtension,
     required Reference? patient,
     Reference? assessor,
-    @JsonKey(required: true, unknownEnumValue: ClinicalImpressionStatus.unknown)
+    @JsonKey(unknownEnumValue: ClinicalImpressionStatus.unknown)
     @required
         ClinicalImpressionStatus status,
     @JsonKey(name: '_status') Element? statusElement,

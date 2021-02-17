@@ -26,7 +26,7 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: ProcessRequestAction.unknown)
+    @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
     @required
         ProcessRequestAction action,
     List<Identifier>? identifier,

@@ -78,9 +78,7 @@ abstract class Claim with Resource implements _$Claim {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: ClaimType.unknown)
-    @required
-        ClaimType type,
+    @JsonKey(unknownEnumValue: ClaimType.unknown) @required ClaimType type,
     List<Identifier>? identifier,
     Coding? ruleset,
     Coding? originalRuleset,
