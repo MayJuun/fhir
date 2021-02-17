@@ -38,7 +38,7 @@ abstract class PaymentNotice with Resource implements _$PaymentNotice {
     Reference? organization,
     Reference? request,
     Reference? response,
-    @JsonKey(required: true) @required Coding? paymentStatus,
+    required Coding? paymentStatus,
   }) = _PaymentNotice;
 
   /// Produces a Yaml formatted String version of the object
@@ -94,7 +94,7 @@ abstract class PaymentReconciliation
     Reference? requestOrganization,
     List<PaymentReconciliationDetail>? detail,
     Coding? form,
-    @JsonKey(required: true) @required Quantity? total,
+    required Quantity? total,
     List<PaymentReconciliationNote>? note,
   }) = _PaymentReconciliation;
 
@@ -122,7 +122,7 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required Coding? type,
+    required Coding? type,
     Reference? request,
     Reference? responce,
     Reference? submitter,

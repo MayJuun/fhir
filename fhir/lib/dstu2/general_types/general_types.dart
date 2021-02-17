@@ -218,7 +218,7 @@ abstract class Annotation implements _$Annotation {
     @JsonKey(name: '_authorString') Element? authorStringElement,
     FhirDateTime? time,
     @JsonKey(name: '_time') Element? timeElement,
-    @JsonKey(required: true) @required String? text,
+    required String? text,
     @JsonKey(name: '_text') Element? textElement,
   }) = _Annotation;
 
@@ -245,8 +245,8 @@ abstract class SampledData implements _$SampledData {
   factory SampledData({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(required: true) @required Quantity? origin,
-    @JsonKey(required: true) @required Decimal? period,
+    required Quantity? origin,
+    required Decimal? period,
     @JsonKey(name: '_period') Element? periodElement,
     Decimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
@@ -254,9 +254,9 @@ abstract class SampledData implements _$SampledData {
     @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
     Decimal? upperLimit,
     @JsonKey(name: '_upperLimit') Element? upperLimitElement,
-    @JsonKey(required: true) @required PositiveInt? dimensions,
+    required PositiveInt? dimensions,
     @JsonKey(name: '_dimensions') Element? dimensionsElement,
-    @JsonKey(required: true) @required String? data,
+    required String? data,
     @JsonKey(name: '_data') Element? dataElement,
   }) = _SampledData;
 
@@ -347,13 +347,13 @@ abstract class Signature implements _$Signature {
   factory Signature({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(required: true) @required List<Coding>? type,
-    @JsonKey(required: true) @required Instant? when,
+    required List<Coding>? type,
+    required Instant? when,
     @JsonKey(name: '_when') Element? whenElement,
     FhirUri? whoUri,
     Reference? whoReference,
-    @JsonKey(required: true) @required Code? contentType,
-    @JsonKey(required: true) @required Base64Binary? blob,
+    required Code? contentType,
+    required Base64Binary? blob,
     @JsonKey(name: '_targetFormat') Element? targetFormatElement,
     @JsonKey(name: '_sigFormat') Element? sigFormatElement,
     @JsonKey(name: '_data') Element? dataElement,

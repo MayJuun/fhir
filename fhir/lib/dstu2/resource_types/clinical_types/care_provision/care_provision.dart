@@ -75,7 +75,7 @@ abstract class CarePlanRelatedPlan with _$CarePlanRelatedPlan {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: RelatedPlanCode.unknown) RelatedPlanCode? code,
-    @JsonKey(required: true) @required Reference? plan,
+    required Reference? plan,
   }) = _CarePlanRelatedPlan;
 
   /// Produces a Yaml formatted String version of the object
@@ -170,7 +170,7 @@ abstract class CarePlanActivityDetail with _$CarePlanActivityDetail {
     @JsonKey(unknownEnumValue: DetailStatus.unknown) DetailStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? statusReason,
-    @JsonKey(required: true) @required Boolean? prohibited,
+    required Boolean? prohibited,
     Timing? scheduledTiming,
     Period? scheduledPeriod,
     String? scheduledString,
@@ -227,7 +227,7 @@ abstract class Goal with Resource implements _$Goal {
     Date? targetDate,
     Quantity? targetQuantity,
     List<CodeableConcept>? category,
-    @JsonKey(required: true) @required String? description,
+    required String? description,
     @JsonKey(required: true, unknownEnumValue: GoalStatus.unknown)
     @required
         GoalStatus status,
@@ -354,8 +354,8 @@ abstract class ProcedureRequest with Resource implements _$ProcedureRequest {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(required: true) @required Reference? subject,
-    @JsonKey(required: true) @required CodeableConcept? code,
+    required Reference? subject,
+    required CodeableConcept? code,
     List<CodeableConcept>? bodySite,
     CodeableConcept? reasonCodeableConcept,
     Reference? reasonReference,
@@ -409,11 +409,11 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required Reference? patient,
+    required Reference? patient,
     Reference? orderer,
     List<Identifier>? identifier,
     Reference? encounter,
-    @JsonKey(required: true) @required FhirDateTime? dateTime,
+    required FhirDateTime? dateTime,
     @JsonKey(name: '_dateTime') Element? dateTimeElement,
     @JsonKey(unknownEnumValue: NutritionOrderStatus.unknown)
         NutritionOrderStatus status,
@@ -660,7 +660,7 @@ abstract class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required Coding? product,
+    required Coding? product,
     @JsonKey(unknownEnumValue: DispenseEye.unknown) DispenseEye? eye,
     Decimal? sphere,
     Decimal? cylinder,

@@ -29,11 +29,11 @@ abstract class Composition with Resource implements _$Composition {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
-    @JsonKey(required: true) @required FhirDateTime? date,
+    required FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
-    @JsonKey(required: true) @required CodeableConcept? type,
+    required CodeableConcept? type,
     @JsonKey(name: 'class') CodeableConcept? class_,
-    @JsonKey(required: true) @required String? title,
+    required String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(required: true, unknownEnumValue: CompositionStatus.unknown)
     @required
@@ -41,8 +41,8 @@ abstract class Composition with Resource implements _$Composition {
     @JsonKey(name: '_status') Element? statusElement,
     Code? confidentiality,
     @JsonKey(name: '_confidentiality') Element? confidentialityElement,
-    @JsonKey(required: true) @required Reference? subject,
-    @JsonKey(required: true) @required List<Reference>? author,
+    required Reference? subject,
+    required List<Reference>? author,
     List<CompositionAttester>? attester,
     Reference? custodian,
     List<CompositionEvent>? event,
@@ -74,7 +74,7 @@ abstract class CompositionAttester with _$CompositionAttester {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required List<AttesterMode>? mode,
+    required List<AttesterMode>? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     FhirDateTime? time,
     @JsonKey(name: '_time') Element? timeElement,
@@ -197,7 +197,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
     @JsonKey(name: '_status') Element? statusElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @JsonKey(required: true) @required List<DocumentManifestContent>? content,
+    required List<DocumentManifestContent>? content,
     List<DocumentManifestRelated>? related,
   }) = _DocumentManifest;
 
@@ -294,13 +294,13 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     Identifier? masterIdentifier,
     List<Identifier>? identifier,
     Reference? subject,
-    @JsonKey(required: true) @required CodeableConcept? type,
+    required CodeableConcept? type,
     @JsonKey(name: 'class') CodeableConcept? class_,
     List<Reference>? author,
     Reference? custodian,
     Reference? authenticator,
     FhirDateTime? created,
-    @JsonKey(required: true) @required Instant? indexed,
+    required Instant? indexed,
     @JsonKey(required: true, unknownEnumValue: DocumentReferenceStatus.unknown)
     @required
         DocumentReferenceStatus status,
@@ -311,7 +311,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<CodeableConcept>? securityLabel,
-    @JsonKey(required: true) @required List<DocumentReferenceContent>? content,
+    required List<DocumentReferenceContent>? content,
     DocumentReferenceContext? context,
   }) = _DocumentReference;
 
@@ -343,7 +343,7 @@ abstract class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
     @required
         RelatesToCode code,
     @JsonKey(name: '_code') Element? codeElement,
-    @JsonKey(required: true) @required Reference? target,
+    required Reference? target,
   }) = _DocumentReferenceRelatesTo;
 
   /// Produces a Yaml formatted String version of the object
@@ -371,7 +371,7 @@ abstract class DocumentReferenceContent with _$DocumentReferenceContent {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required Attachment? attachment,
+    required Attachment? attachment,
     List<Coding>? format,
   }) = _DocumentReferenceContent;
 
@@ -528,7 +528,7 @@ abstract class ListEntry with _$ListEntry {
     @JsonKey(name: '_deleted') Element? deletedElement,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
-    @JsonKey(required: true) @required Reference? item,
+    required Reference? item,
   }) = _ListEntry;
 
   /// Produces a Yaml formatted String version of the object

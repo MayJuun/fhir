@@ -28,10 +28,10 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required Instant? timestamp,
-    @JsonKey(required: true) @required Coding? event,
+    required Instant? timestamp,
+    required Coding? event,
     MessageHeaderResponse? response,
-    @JsonKey(required: true) @required MessageHeaderSource? source,
+    required MessageHeaderSource? source,
     List<MessageHeaderDestination>? destination,
     Reference? enterer,
     Reference? author,
@@ -65,7 +65,7 @@ abstract class MessageHeaderResponse with _$MessageHeaderResponse {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required Id? identifier,
+    required Id? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
     @JsonKey(required: true, unknownEnumValue: ResponseCode.unknown)
     @required
@@ -105,7 +105,7 @@ abstract class MessageHeaderSource with _$MessageHeaderSource {
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     ContactPoint? contact,
-    @JsonKey(required: true) @required FhirUri? endpoint,
+    required FhirUri? endpoint,
     @JsonKey(name: '_endpoint') Element? endpointElement,
   }) = _MessageHeaderSource;
 
@@ -136,7 +136,7 @@ abstract class MessageHeaderDestination with _$MessageHeaderDestination {
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Reference? target,
-    @JsonKey(required: true) @required FhirUri? endpoint,
+    required FhirUri? endpoint,
     @JsonKey(name: '_endpoint') Element? endpointElement,
   }) = _MessageHeaderDestination;
 
@@ -176,7 +176,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required List<OperationOutcomeIssue>? issue,
+    required List<OperationOutcomeIssue>? issue,
   }) = _OperationOutcome;
 
   /// Produces a Yaml formatted String version of the object
@@ -206,7 +206,7 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
     @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
     @required
         IssueSeverity severity,
-    @JsonKey(required: true) @required Code? code,
+    required Code? code,
     CodeableConcept? details,
     String? diagnostics,
     List<String>? location,
@@ -269,7 +269,7 @@ abstract class ParametersParameter with _$ParametersParameter {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required String? name,
+    required String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Integer? valueInteger,
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -342,10 +342,10 @@ abstract class Subscription with Resource implements _$Subscription {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required String? criteria,
+    required String? criteria,
     @JsonKey(name: '_criteria') Element? criteriaElement,
     List<ContactPoint>? contact,
-    @JsonKey(required: true) @required String? reason,
+    required String? reason,
     @JsonKey(name: '_reason') Element? reasonElement,
     @JsonKey(required: true, unknownEnumValue: SubscriptionStatus.unknown)
     @required
@@ -353,7 +353,7 @@ abstract class Subscription with Resource implements _$Subscription {
     @JsonKey(name: '_status') Element? statusElement,
     String? error,
     @JsonKey(name: '_error') Element? errorElement,
-    @JsonKey(required: true) @required SubscriptionChannel? channel,
+    required SubscriptionChannel? channel,
     Instant? end,
     @JsonKey(name: '_end') Element? endElement,
     List<Coding>? tag,
@@ -389,7 +389,7 @@ abstract class SubscriptionChannel with _$SubscriptionChannel {
     @JsonKey(name: '_type') Element? typeElement,
     FhirUri? endpoint,
     @JsonKey(name: '_endpoint') Element? endpointElement,
-    @JsonKey(required: true) @required String? payload,
+    required String? payload,
     @JsonKey(name: '_payload') Element? payloadElement,
     String? header,
     @JsonKey(name: '_header') List<Element>? headerElement,

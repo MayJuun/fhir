@@ -117,7 +117,7 @@ abstract class PatientAnimal with _$PatientAnimal {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required CodeableConcept? species,
+    required CodeableConcept? species,
     CodeableConcept? breed,
     CodeableConcept? genderStatus,
   }) = _PatientAnimal;
@@ -146,7 +146,7 @@ abstract class PatientCommunication with _$PatientCommunication {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required CodeableConcept? language,
+    required CodeableConcept? language,
     Boolean? preferred,
     @JsonKey(name: '_preferred') Element? preferredElement,
   }) = _PatientCommunication;
@@ -175,7 +175,7 @@ abstract class PatientLink with _$PatientLink {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required Reference? other,
+    required Reference? other,
     @JsonKey(required: true, unknownEnumValue: LinkType.unknown)
     @required
         LinkType type,
@@ -293,7 +293,7 @@ abstract class PractitionerQualification with _$PractitionerQualification {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(required: true) @required CodeableConcept? code,
+    required CodeableConcept? code,
     Period? period,
     Reference? issuer,
   }) = _PractitionerQualification;
@@ -334,7 +334,7 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(required: true) @required Reference? patient,
+    required Reference? patient,
     CodeableConcept? relationship,
     HumanName? name,
     List<ContactPoint>? telecom,

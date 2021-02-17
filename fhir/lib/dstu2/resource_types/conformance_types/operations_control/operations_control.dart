@@ -35,7 +35,7 @@ abstract class Conformance with Resource implements _$Conformance {
     Boolean? experimental,
     String? publisher,
     List<ConformanceContact>? contact,
-    @JsonKey(required: true) @required FhirDateTime? date,
+    required FhirDateTime? date,
     String? description,
     String? requirements,
     String? copyright,
@@ -44,13 +44,13 @@ abstract class Conformance with Resource implements _$Conformance {
         ConformanceKind kind,
     ConformanceSoftware? software,
     ConformanceImplementation? implementation,
-    @JsonKey(required: true) @required Id? fhirVersion,
+    required Id? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
     @required
         ConformanceAcceptUnknown acceptUnknown,
     @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
-    @JsonKey(required: true) @required List<ConformanceFormat>? format,
+    required List<ConformanceFormat>? format,
     List<Reference>? profile,
     List<ConformanceRest>? rest,
     List<ConformanceMessaging>? messaging,
@@ -100,7 +100,7 @@ abstract class CapabilityStatement
     Boolean? experimental,
     String? publisher,
     List<ConformanceContact>? contact,
-    @JsonKey(required: true) @required FhirDateTime? date,
+    required FhirDateTime? date,
     String? description,
     String? requirements,
     String? copyright,
@@ -109,13 +109,13 @@ abstract class CapabilityStatement
         ConformanceKind kind,
     ConformanceSoftware? software,
     ConformanceImplementation? implementation,
-    @JsonKey(required: true) @required Id? fhirVersion,
+    required Id? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
     @required
         ConformanceAcceptUnknown acceptUnknown,
     @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
-    @JsonKey(required: true) @required List<ConformanceFormat>? format,
+    required List<ConformanceFormat>? format,
     List<Reference>? profile,
     List<ConformanceRest>? rest,
     List<ConformanceMessaging>? messaging,
@@ -174,7 +174,7 @@ abstract class ConformanceSoftware with _$ConformanceSoftware {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required String? name,
+    required String? name,
     String? version,
     FhirDateTime? releaseDate,
   }) = _ConformanceSoftware;
@@ -203,7 +203,7 @@ abstract class ConformanceImplementation with _$ConformanceImplementation {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required String? description,
+    required String? description,
     FhirUri? url,
   }) = _ConformanceImplementation;
 
@@ -239,7 +239,7 @@ abstract class ConformanceRest with _$ConformanceRest {
     @JsonKey(name: '_mode') Element? modeElement,
     String? documentation,
     ConformanceRestSecurity? security,
-    @JsonKey(required: true) @required List<ConformanceRestResource>? resource,
+    required List<ConformanceRestResource>? resource,
     List<ConformanceRestInteraction>? interaction,
     @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
         RestTransactionMode transactionMode,
@@ -276,7 +276,7 @@ abstract class ConformanceMessaging with _$ConformanceMessaging {
     List<ConformanceMessagingEndpoint>? endpoint,
     UnsignedInt? reliableCache,
     String? documentation,
-    @JsonKey(required: true) @required List<ConformanceMessagingEvent>? event,
+    required List<ConformanceMessagingEvent>? event,
   }) = _ConformanceMessaging;
 
   /// Produces a Yaml formatted String version of the object
@@ -308,7 +308,7 @@ abstract class ConformanceDocument with _$ConformanceDocument {
     @required
         DocumentMode mode,
     String? documentation,
-    @JsonKey(required: true) @required Reference? profile,
+    required Reference? profile,
   }) = _ConformanceDocument;
 
   /// Produces a Yaml formatted String version of the object
@@ -367,7 +367,7 @@ abstract class ConformanceRestResource with _$ConformanceRestResource {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true) @required Code? type,
+    required Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     Reference? profile,
     @JsonKey(required: true)
@@ -448,8 +448,8 @@ abstract class ConformanceRestOperation with _$ConformanceRestOperation {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true) @required String? name,
-    @JsonKey(required: true) @required Reference? definition,
+    required String? name,
+    required Reference? definition,
   }) = _ConformanceRestOperation;
 
   /// Produces a Yaml formatted String version of the object
@@ -478,8 +478,8 @@ abstract class ConformanceMessagingEndpoint
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required Coding? protocol,
-    @JsonKey(required: true) @required FhirUri? address,
+    required Coding? protocol,
+    required FhirUri? address,
     @JsonKey(name: '_address') Element? addressElement,
   }) = _ConformanceMessagingEndpoint;
 
@@ -508,15 +508,15 @@ abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required Coding? code,
+    required Coding? code,
     @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory? category,
     @JsonKey(required: true, unknownEnumValue: EventMode.unknown)
     @required
         EventMode mode,
     @JsonKey(name: '_mode') Element? modeElement,
-    @JsonKey(required: true) @required Code? focus,
-    @JsonKey(required: true) @required Reference? request,
-    @JsonKey(required: true) @required Reference? response,
+    required Code? focus,
+    required Reference? request,
+    required Reference? response,
     String? documentation,
   }) = _ConformanceMessagingEvent;
 
@@ -611,7 +611,7 @@ abstract class ConformanceResourceSearchParam
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true) @required String? name,
+    required String? name,
     FhirUri? definition,
     @JsonKey(required: true, unknownEnumValue: SearchParamType.unknown)
     @required
@@ -661,7 +661,7 @@ abstract class OperationDefinition
     List<FhirExtension>? modifierExtension,
     FhirUri? url,
     String? version,
-    @JsonKey(required: true) @required String? name,
+    required String? name,
     @JsonKey(
         required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
     @required
@@ -676,12 +676,12 @@ abstract class OperationDefinition
     String? description,
     String? requirements,
     Boolean? idempotent,
-    @JsonKey(required: true) @required Code? code,
+    required Code? code,
     String? notes,
     Reference? base,
-    @JsonKey(required: true) @required Boolean? system,
+    required Boolean? system,
     List<Code>? type,
-    @JsonKey(required: true) @required Boolean? instance,
+    required Boolean? instance,
     List<OperationDefinitionParameter>? parameter,
   }) = _OperationDefinition;
 
@@ -740,12 +740,12 @@ abstract class OperationDefinitionParameter
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true) @required Code? name,
+    required Code? name,
     @JsonKey(required: true, unknownEnumValue: ParameterUse.unknown)
     @required
         ParameterUse use,
-    @JsonKey(required: true) @required Integer? min,
-    @JsonKey(required: true) @required String? max,
+    required Integer? min,
+    required String? max,
     String? documentation,
     Code? type,
     Reference? profile,
@@ -824,8 +824,8 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required FhirUri? url,
-    @JsonKey(required: true) @required String? name,
+    required FhirUri? url,
+    required String? name,
     @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
         SearchParameterStatus status,
     Boolean? experimental,
@@ -834,7 +834,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     FhirDateTime? date,
     String? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
-    @JsonKey(required: true) @required Code? code,
+    required Code? code,
     Code? base,
     @JsonKey(required: true, unknownEnumValue: SearchParameterType.unknown)
     @required

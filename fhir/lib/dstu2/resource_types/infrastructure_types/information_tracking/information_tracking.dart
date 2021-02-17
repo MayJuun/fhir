@@ -43,7 +43,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
     List<ContactPoint>? telecom,
     List<Code>? subjectType,
     @JsonKey(name: '_subjectType') List<Element>? subjectTypeElement,
-    @JsonKey(required: true) @required QuestionnaireGroup? group,
+    required QuestionnaireGroup? group,
   }) = _Questionnaire;
 
   /// Produces a Yaml formatted String version of the object
@@ -329,9 +329,9 @@ abstract class Provenance with Resource implements _$Provenance {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required List<Reference>? target,
+    required List<Reference>? target,
     Period? period,
-    @JsonKey(required: true) @required Instant? recorded,
+    required Instant? recorded,
     @JsonKey(name: '_recorded') Element? recordedElement,
     List<CodeableConcept>? reason,
     CodeableConcept? activity,
@@ -368,7 +368,7 @@ abstract class ProvenanceAgent with _$ProvenanceAgent {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true) @required Coding? role,
+    required Coding? role,
     Reference? actor,
     Identifier? userId,
     List<ProvenanceAgentRelatedAgent>? relatedAgent,
@@ -403,8 +403,8 @@ abstract class ProvenanceEntity with _$ProvenanceEntity {
     @required
         EntityRole role,
     @JsonKey(name: '_role') Element? roleElement,
-    @JsonKey(required: true) @required Coding? type,
-    @JsonKey(required: true) @required FhirUri? reference,
+    required Coding? type,
+    required FhirUri? reference,
     @JsonKey(name: '_reference') Element? referenceElement,
     String? display,
     ProvenanceAgent? agent,
@@ -434,8 +434,8 @@ abstract class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required CodeableConcept? type,
-    @JsonKey(required: true) @required FhirUri? target,
+    required CodeableConcept? type,
+    required FhirUri? target,
   }) = _ProvenanceAgentRelatedAgent;
 
   /// Produces a Yaml formatted String version of the object
@@ -473,9 +473,9 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required AuditEventEvent? event,
-    @JsonKey(required: true) @required List<AuditEventParticipant>? participant,
-    @JsonKey(required: true) @required AuditEventSource? source,
+    required AuditEventEvent? event,
+    required List<AuditEventParticipant>? participant,
+    required AuditEventSource? source,
     List<AuditEventObject>? object,
   }) = _AuditEvent;
 
@@ -503,10 +503,10 @@ abstract class AuditEventEvent with _$AuditEventEvent {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required Coding? type,
+    required Coding? type,
     List<Coding>? subtype,
     Code? action,
-    @JsonKey(required: true) @required Instant? dateTime,
+    required Instant? dateTime,
     Code? outcome,
     String? outcomeDesc,
     List<Coding>? purposeOfEvent,
@@ -542,7 +542,7 @@ abstract class AuditEventParticipant with _$AuditEventParticipant {
     String? altId,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(required: true) @required Boolean? requestor,
+    required Boolean? requestor,
     Reference? location,
     List<FhirUri>? policy,
     Coding? media,
@@ -576,7 +576,7 @@ abstract class AuditEventSource with _$AuditEventSource {
     List<FhirExtension>? modifierExtension,
     String? site,
     @JsonKey(name: '_site') Element? siteElement,
-    @JsonKey(required: true) @required Identifier? identifier,
+    required Identifier? identifier,
     List<Coding>? type,
   }) = _AuditEventSource;
 
@@ -673,9 +673,9 @@ abstract class AuditEventObjectDetail with _$AuditEventObjectDetail {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required String? type,
+    required String? type,
     @JsonKey(name: '_type') Element? typeElement,
-    @JsonKey(required: true) @required Base64Binary? value,
+    required Base64Binary? value,
   }) = _AuditEventObjectDetail;
 
   /// Produces a Yaml formatted String version of the object

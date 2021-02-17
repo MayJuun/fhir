@@ -187,9 +187,9 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
     Reference? target,
     Reference? provider,
     Reference? organization,
-    @JsonKey(required: true) @required Reference? subject,
-    @JsonKey(required: true) @required Reference? coverage,
-    @JsonKey(required: true) @required Coding? relationship,
+    required Reference? subject,
+    required Reference? coverage,
+    required Coding? relationship,
   }) = _EnrollmentRequest;
 
   /// Produces a Yaml formatted String version of the object

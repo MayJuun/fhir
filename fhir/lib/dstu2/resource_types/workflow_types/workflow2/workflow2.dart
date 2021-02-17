@@ -70,7 +70,7 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required Integer? sequenceLinkId,
+    required Integer? sequenceLinkId,
   }) = _ProcessRequestItem;
 
   /// Produces a Yaml formatted String version of the object

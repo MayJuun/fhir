@@ -111,7 +111,7 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
     Reference? providedBy,
     CodeableConcept? serviceCategory,
     List<HealthcareServiceServiceType>? serviceType,
-    @JsonKey(required: true) @required Reference? location,
+    required Reference? location,
     String? serviceName,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
@@ -161,7 +161,7 @@ abstract class HealthcareServiceServiceType
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required CodeableConcept? type,
+    required CodeableConcept? type,
     List<CodeableConcept>? specialty,
   }) = _HealthcareServiceServiceType;
 
@@ -229,7 +229,7 @@ abstract class HealthcareServiceNotAvailable
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required String? description,
+    required String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Period? during,
   }) = _HealthcareServiceNotAvailable;
@@ -274,7 +274,7 @@ abstract class Group with Resource implements _$Group {
     @required
         GroupType type,
     @JsonKey(name: '_type') Element? typeElement,
-    @JsonKey(required: true) @required Boolean? actual,
+    required Boolean? actual,
     @JsonKey(name: '_actual') Element? actualElement,
     CodeableConcept? code,
     String? name,
@@ -308,13 +308,13 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required CodeableConcept? code,
+    required CodeableConcept? code,
     CodeableConcept? valueCodeableConcept,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     Quantity? valueQuantity,
     Range? valueRange,
-    @JsonKey(required: true) @required Boolean? exclude,
+    required Boolean? exclude,
     Period? period,
   }) = _GroupCharacteristic;
 
@@ -342,7 +342,7 @@ abstract class GroupMember with _$GroupMember {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required Reference? entity,
+    required Reference? entity,
     Period? period,
     Boolean? inactive,
     @JsonKey(name: '_inactive') Element? inactiveElement,

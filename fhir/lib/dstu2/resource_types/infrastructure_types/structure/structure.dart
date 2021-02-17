@@ -46,7 +46,7 @@ abstract class Media with Resource implements _$Media {
     @JsonKey(name: '_frames') Element? framesElement,
     UnsignedInt? duration,
     @JsonKey(name: '_duration') Element? durationElement,
-    @JsonKey(required: true) @required Attachment? content,
+    required Attachment? content,
   }) = _Media;
 
   /// Produces a Yaml formatted String version of the object
@@ -147,9 +147,9 @@ abstract class BundleLink with _$BundleLink {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true) @required String? relation,
+    required String? relation,
     @JsonKey(name: '_relation') Element? relationElement,
-    @JsonKey(required: true) @required FhirUri? url,
+    required FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
   }) = _BundleLink;
 
@@ -247,7 +247,7 @@ abstract class BundleEntryRequest with _$BundleEntryRequest {
     @required
         RequestMethod method,
     @JsonKey(name: '_method') Element? methodElement,
-    @JsonKey(required: true) @required FhirUri? url,
+    required FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     String? ifNoneMatch,
     @JsonKey(name: '_ifNoneMatch') Element? ifNoneMatchElement,
@@ -284,7 +284,7 @@ abstract class BundleEntryResponse with _$BundleEntryResponse {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true) @required String? status,
+    required String? status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirUri? location,
     @JsonKey(name: '_location') Element? locationElement,
@@ -329,7 +329,7 @@ abstract class Basic with Resource implements _$Basic {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(required: true) @required CodeableConcept? code,
+    required CodeableConcept? code,
     Reference? subject,
     Reference? author,
     Date? created,

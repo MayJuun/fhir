@@ -117,13 +117,13 @@ abstract class ValueSetCodeSystem with _$ValueSetCodeSystem {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true) @required FhirUri? system,
+    required FhirUri? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     Boolean? caseSensitive,
     @JsonKey(name: '_caseSensitive') Element? caseSensitiveElement,
-    @JsonKey(required: true) @required List<ValueSetCodeSystemConcept>? concept,
+    required List<ValueSetCodeSystemConcept>? concept,
   }) = _ValueSetCodeSystem;
 
   /// Produces a Yaml formatted String version of the object
@@ -151,7 +151,7 @@ abstract class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true) @required Code? code,
+    required Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     @JsonKey(name: 'abstract') Boolean? abstract_,
     String? display,
@@ -189,7 +189,7 @@ abstract class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
-    @JsonKey(required: true) @required String? value,
+    required String? value,
     @JsonKey(name: '_value') Element? valueElement,
   }) = _ValueSetConceptDesignation;
 
@@ -249,7 +249,7 @@ abstract class ValueSetComposeInclude with _$ValueSetComposeInclude {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true) @required FhirUri? system,
+    required FhirUri? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
@@ -282,7 +282,7 @@ abstract class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true) @required Code? code,
+    required Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
@@ -314,13 +314,13 @@ abstract class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true) @required Code? property,
+    required Code? property,
     @JsonKey(name: '_property') Element? propertyElement,
     @JsonKey(required: true, unknownEnumValue: FilterOp.unknown)
     @required
         FilterOp op,
     @JsonKey(name: '_op') Element? opElement,
-    @JsonKey(required: true) @required Code? value,
+    required Code? value,
     @JsonKey(name: '_value') Element? valueElement,
   }) = _ValueSetIncludeFilter;
 
@@ -349,9 +349,9 @@ abstract class ValueSetExpansion with _$ValueSetExpansion {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true) @required FhirUri? identifier,
+    required FhirUri? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
-    @JsonKey(required: true) @required FhirDateTime? timestamp,
+    required FhirDateTime? timestamp,
     @JsonKey(name: '_timestamp') Element? timestampElement,
     Integer? total,
     @JsonKey(name: '_total') Element? totalElement,
@@ -386,7 +386,7 @@ abstract class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(required: true) @required String? name,
+    required String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? valueString,
     @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -628,9 +628,9 @@ abstract class ConceptMapTargetDependsOn with _$ConceptMapTargetDependsOn {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required FhirUri? element,
-    @JsonKey(required: true) @required FhirUri? codeSystem,
-    @JsonKey(required: true) @required String? code,
+    required FhirUri? element,
+    required FhirUri? codeSystem,
+    required String? code,
   }) = _ConceptMapTargetDependsOn;
 
   /// Produces a Yaml formatted String version of the object
@@ -668,7 +668,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required String? name,
+    required String? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(required: true, unknownEnumValue: NamingSystemStatus.unknown)
     @required
@@ -683,7 +683,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     List<NamingSystemContact>? contact,
     String? responsible,
     @JsonKey(name: '_responsible') Element? responsibleElement,
-    @JsonKey(required: true) @required FhirDateTime? date,
+    required FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? type,
     String? description,
@@ -691,7 +691,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     List<CodeableConcept>? useContext,
     String? usage,
     @JsonKey(name: '_usage') Element? usageElement,
-    @JsonKey(required: true) @required List<NamingSystemUniqueId>? uniqueId,
+    required List<NamingSystemUniqueId>? uniqueId,
     Reference? replacedBy,
   }) = _NamingSystem;
 
@@ -751,7 +751,7 @@ abstract class NamingSystemUniqueId with _$NamingSystemUniqueId {
     @required
         UniqueIdType type,
     @JsonKey(name: '_type') Element? typeElement,
-    @JsonKey(required: true) @required String? value,
+    required String? value,
     @JsonKey(name: '_value') Element? valueElement,
     Boolean? preferred,
     @JsonKey(name: '_preferred') Element? preferredElement,

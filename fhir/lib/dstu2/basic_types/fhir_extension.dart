@@ -16,7 +16,7 @@ abstract class FhirExtension with _$FhirExtension {
   factory FhirExtension({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(required: true) @required FhirUri? url,
+    required FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     Boolean? valueBoolean,

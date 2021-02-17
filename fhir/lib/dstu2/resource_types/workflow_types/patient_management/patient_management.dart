@@ -82,7 +82,7 @@ abstract class EncounterStatusHistory with _$EncounterStatusHistory {
     @required
         EncounterHistoryStatus status,
     @JsonKey(name: '_status') Element? statusElement,
-    @JsonKey(required: true) @required Period? period,
+    required Period? period,
   }) = _EncounterStatusHistory;
 
   /// Produces a Yaml formatted String version of the object
@@ -177,7 +177,7 @@ abstract class EncounterLocation with _$EncounterLocation {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true) @required Reference? location,
+    required Reference? location,
     @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
         EncounterLocationStatus status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -226,7 +226,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
     List<EpisodeOfCareStatusHistory>? statusHistory,
     List<CodeableConcept>? type,
     List<Reference>? condition,
-    @JsonKey(required: true) @required Reference? patient,
+    required Reference? patient,
     Reference? managingOrganization,
     Period? period,
     List<Reference>? referralRequest,
@@ -263,7 +263,7 @@ abstract class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
     @required
         EpisodeOfCareHistoryStatus status,
     @JsonKey(name: '_status') Element? statusElement,
-    @JsonKey(required: true) @required Period? period,
+    required Period? period,
   }) = _EpisodeOfCareStatusHistory;
 
   /// Produces a Yaml formatted String version of the object
@@ -420,10 +420,10 @@ abstract class Flag with Resource implements _$Flag {
         FlagStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? period,
-    @JsonKey(required: true) @required Reference? subject,
+    required Reference? subject,
     Reference? encounter,
     Reference? author,
-    @JsonKey(required: true) @required CodeableConcept? code,
+    required CodeableConcept? code,
   }) = _Flag;
 
   /// Produces a Yaml formatted String version of the object
