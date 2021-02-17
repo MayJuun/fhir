@@ -201,14 +201,16 @@ abstract class StructureDefinitionDifferential
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory StructureDefinitionDifferential.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory StructureDefinitionDifferential.fromYaml(dynamic yaml) => yaml
+          is String
+      ? StructureDefinitionDifferential.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? StructureDefinitionDifferential.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? StructureDefinitionDifferential.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'StructureDefinitionDifferential cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>

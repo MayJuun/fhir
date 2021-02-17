@@ -264,14 +264,16 @@ abstract class ImplementationGuidePackageResource
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ImplementationGuidePackageResource.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ImplementationGuidePackageResource.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ImplementationGuidePackageResource.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ImplementationGuidePackageResource.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ImplementationGuidePackageResource.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ImplementationGuidePackageResource cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   factory ImplementationGuidePackageResource.fromJson(
           Map<String, dynamic> json) =>

@@ -85,14 +85,16 @@ abstract class BiologicallyDerivedProductCollection
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory BiologicallyDerivedProductCollection.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory BiologicallyDerivedProductCollection.fromYaml(dynamic yaml) => yaml
+          is String
+      ? BiologicallyDerivedProductCollection.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? BiologicallyDerivedProductCollection.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? BiologicallyDerivedProductCollection.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'BiologicallyDerivedProductCollection cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory BiologicallyDerivedProductCollection.fromJson(
           Map<String, dynamic> json) =>
@@ -120,14 +122,16 @@ abstract class BiologicallyDerivedProductProcessing
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory BiologicallyDerivedProductProcessing.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory BiologicallyDerivedProductProcessing.fromYaml(dynamic yaml) => yaml
+          is String
+      ? BiologicallyDerivedProductProcessing.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? BiologicallyDerivedProductProcessing.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? BiologicallyDerivedProductProcessing.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'BiologicallyDerivedProductProcessing cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory BiologicallyDerivedProductProcessing.fromJson(
           Map<String, dynamic> json) =>
@@ -153,14 +157,16 @@ abstract class BiologicallyDerivedProductManipulation
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory BiologicallyDerivedProductManipulation.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory BiologicallyDerivedProductManipulation.fromYaml(dynamic yaml) => yaml
+          is String
+      ? BiologicallyDerivedProductManipulation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? BiologicallyDerivedProductManipulation.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? BiologicallyDerivedProductManipulation.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'BiologicallyDerivedProductManipulation cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory BiologicallyDerivedProductManipulation.fromJson(
           Map<String, dynamic> json) =>
@@ -189,14 +195,16 @@ abstract class BiologicallyDerivedProductStorage
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory BiologicallyDerivedProductStorage.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory BiologicallyDerivedProductStorage.fromYaml(dynamic yaml) => yaml
+          is String
+      ? BiologicallyDerivedProductStorage.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? BiologicallyDerivedProductStorage.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? BiologicallyDerivedProductStorage.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'BiologicallyDerivedProductStorage cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory BiologicallyDerivedProductStorage.fromJson(
           Map<String, dynamic> json) =>
@@ -711,14 +719,16 @@ abstract class NutritionProductProductCharacteristic
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory NutritionProductProductCharacteristic.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory NutritionProductProductCharacteristic.fromYaml(dynamic yaml) => yaml
+          is String
+      ? NutritionProductProductCharacteristic.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? NutritionProductProductCharacteristic.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? NutritionProductProductCharacteristic.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'NutritionProductProductCharacteristic cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory NutritionProductProductCharacteristic.fromJson(
           Map<String, dynamic> json) =>

@@ -138,7 +138,9 @@ abstract class DeviceComponentProductionSpecification
           : yaml is YamlMap
               ? DeviceComponentProductionSpecification.fromJson(
                   jsonDecode(jsonEncode(yaml)))
-              : null;
+                               : throw ArgumentError(
+              'DeviceComponentProductionSpecification cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   factory DeviceComponentProductionSpecification.fromJson(
           Map<String, dynamic> json) =>

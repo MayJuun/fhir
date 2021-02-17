@@ -431,7 +431,9 @@ abstract class ConformanceResourceInteraction
           : yaml is YamlMap
               ? ConformanceResourceInteraction.fromJson(
                   jsonDecode(jsonEncode(yaml)))
-              : null;
+                     : throw ArgumentError(
+              'ConformanceResourceInteraction cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceResourceInteraction.fromJson(Map<String, dynamic> json) =>
@@ -560,7 +562,9 @@ abstract class ConformanceSecurityCertificate
           : yaml is YamlMap
               ? ConformanceSecurityCertificate.fromJson(
                   jsonDecode(jsonEncode(yaml)))
-              : null;
+                    : throw ArgumentError(
+              'ConformanceSecurityCertificate cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceSecurityCertificate.fromJson(Map<String, dynamic> json) =>
@@ -629,7 +633,9 @@ abstract class ConformanceResourceSearchParam
           : yaml is YamlMap
               ? ConformanceResourceSearchParam.fromJson(
                   jsonDecode(jsonEncode(yaml)))
-              : null;
+                      : throw ArgumentError(
+              'ConformanceResourceSearchParam cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceResourceSearchParam.fromJson(Map<String, dynamic> json) =>
@@ -794,7 +800,9 @@ abstract class OperationDefinitionParameterBinding
           : yaml is YamlMap
               ? OperationDefinitionParameterBinding.fromJson(
                   jsonDecode(jsonEncode(yaml)))
-              : null;
+                   : throw ArgumentError(
+              'OperationDefinitionParameterBinding cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   factory OperationDefinitionParameterBinding.fromJson(
           Map<String, dynamic> json) =>

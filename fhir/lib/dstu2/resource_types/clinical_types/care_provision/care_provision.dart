@@ -572,14 +572,16 @@ abstract class NutritionOrderOralDietNutrient
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory NutritionOrderOralDietNutrient.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory NutritionOrderOralDietNutrient.fromYaml(dynamic yaml) => yaml
+          is String
+      ? NutritionOrderOralDietNutrient.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? NutritionOrderOralDietNutrient.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? NutritionOrderOralDietNutrient.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'NutritionOrderOralDietNutrient cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionOrderOralDietNutrient.fromJson(Map<String, dynamic> json) =>
@@ -635,14 +637,16 @@ abstract class NutritionOrderEnteralFormulaAdministration
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory NutritionOrderEnteralFormulaAdministration.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory NutritionOrderEnteralFormulaAdministration.fromYaml(dynamic yaml) => yaml
+          is String
+      ? NutritionOrderEnteralFormulaAdministration.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? NutritionOrderEnteralFormulaAdministration.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? NutritionOrderEnteralFormulaAdministration.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'NutritionOrderEnteralFormulaAdministration cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   factory NutritionOrderEnteralFormulaAdministration.fromJson(
           Map<String, dynamic> json) =>

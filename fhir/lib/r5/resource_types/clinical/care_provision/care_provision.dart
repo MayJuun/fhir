@@ -457,14 +457,16 @@ abstract class NutritionIntakeIngredientLabel
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory NutritionIntakeIngredientLabel.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory NutritionIntakeIngredientLabel.fromYaml(dynamic yaml) => yaml
+          is String
+      ? NutritionIntakeIngredientLabel.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? NutritionIntakeIngredientLabel.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? NutritionIntakeIngredientLabel.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'NutritionIntakeIngredientLabel cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionIntakeIngredientLabel.fromJson(Map<String, dynamic> json) =>
@@ -1202,14 +1204,16 @@ abstract class VisionPrescriptionLensSpecification
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory VisionPrescriptionLensSpecification.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory VisionPrescriptionLensSpecification.fromYaml(dynamic yaml) => yaml
+          is String
+      ? VisionPrescriptionLensSpecification.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? VisionPrescriptionLensSpecification.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? VisionPrescriptionLensSpecification.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'VisionPrescriptionLensSpecification cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory VisionPrescriptionLensSpecification.fromJson(
           Map<String, dynamic> json) =>

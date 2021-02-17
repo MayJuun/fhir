@@ -809,14 +809,16 @@ abstract class ImagingObjectSelectionStudySeries
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ImagingObjectSelectionStudySeries.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ImagingObjectSelectionStudySeries.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ImagingObjectSelectionStudySeries.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ImagingObjectSelectionStudySeries.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ImagingObjectSelectionStudySeries.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ImagingObjectSelectionStudySeries cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   factory ImagingObjectSelectionStudySeries.fromJson(
           Map<String, dynamic> json) =>
@@ -841,14 +843,16 @@ abstract class ImagingObjectSelectionSeriesInstance
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ImagingObjectSelectionSeriesInstance.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ImagingObjectSelectionSeriesInstance.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ImagingObjectSelectionSeriesInstance.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ImagingObjectSelectionSeriesInstance.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ImagingObjectSelectionSeriesInstance.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ImagingObjectSelectionSeriesInstance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   factory ImagingObjectSelectionSeriesInstance.fromJson(
           Map<String, dynamic> json) =>
@@ -871,14 +875,16 @@ abstract class ImagingObjectSelectionInstanceFrames
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ImagingObjectSelectionInstanceFrames.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ImagingObjectSelectionInstanceFrames.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ImagingObjectSelectionInstanceFrames.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ImagingObjectSelectionInstanceFrames.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ImagingObjectSelectionInstanceFrames.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ImagingObjectSelectionInstanceFrames cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   factory ImagingObjectSelectionInstanceFrames.fromJson(
           Map<String, dynamic> json) =>

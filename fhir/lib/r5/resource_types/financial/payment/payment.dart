@@ -179,14 +179,16 @@ abstract class PaymentReconciliationProcessNote
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory PaymentReconciliationProcessNote.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory PaymentReconciliationProcessNote.fromYaml(dynamic yaml) => yaml
+          is String
+      ? PaymentReconciliationProcessNote.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? PaymentReconciliationProcessNote.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? PaymentReconciliationProcessNote.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'PaymentReconciliationProcessNote cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory PaymentReconciliationProcessNote.fromJson(
           Map<String, dynamic> json) =>

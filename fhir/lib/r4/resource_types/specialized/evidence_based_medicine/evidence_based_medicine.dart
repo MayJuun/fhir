@@ -354,14 +354,16 @@ abstract class EffectEvidenceSynthesisSampleSize
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory EffectEvidenceSynthesisSampleSize.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory EffectEvidenceSynthesisSampleSize.fromYaml(dynamic yaml) => yaml
+          is String
+      ? EffectEvidenceSynthesisSampleSize.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? EffectEvidenceSynthesisSampleSize.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? EffectEvidenceSynthesisSampleSize.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'EffectEvidenceSynthesisSampleSize cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory EffectEvidenceSynthesisSampleSize.fromJson(
           Map<String, dynamic> json) =>
@@ -434,14 +436,16 @@ abstract class EffectEvidenceSynthesisResultsByExposure
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory EffectEvidenceSynthesisResultsByExposure.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory EffectEvidenceSynthesisResultsByExposure.fromYaml(dynamic yaml) => yaml
+          is String
+      ? EffectEvidenceSynthesisResultsByExposure.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? EffectEvidenceSynthesisResultsByExposure.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? EffectEvidenceSynthesisResultsByExposure.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'EffectEvidenceSynthesisResultsByExposure cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory EffectEvidenceSynthesisResultsByExposure.fromJson(
           Map<String, dynamic> json) =>
@@ -517,14 +521,16 @@ abstract class EffectEvidenceSynthesisEffectEstimate
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory EffectEvidenceSynthesisEffectEstimate.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory EffectEvidenceSynthesisEffectEstimate.fromYaml(dynamic yaml) => yaml
+          is String
+      ? EffectEvidenceSynthesisEffectEstimate.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? EffectEvidenceSynthesisEffectEstimate.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? EffectEvidenceSynthesisEffectEstimate.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'EffectEvidenceSynthesisEffectEstimate cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory EffectEvidenceSynthesisEffectEstimate.fromJson(
           Map<String, dynamic> json) =>
@@ -595,14 +601,16 @@ abstract class EffectEvidenceSynthesisPrecisionEstimate
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory EffectEvidenceSynthesisPrecisionEstimate.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory EffectEvidenceSynthesisPrecisionEstimate.fromYaml(dynamic yaml) => yaml
+          is String
+      ? EffectEvidenceSynthesisPrecisionEstimate.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? EffectEvidenceSynthesisPrecisionEstimate.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? EffectEvidenceSynthesisPrecisionEstimate.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'EffectEvidenceSynthesisPrecisionEstimate cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory EffectEvidenceSynthesisPrecisionEstimate.fromJson(
           Map<String, dynamic> json) =>
@@ -663,14 +671,16 @@ abstract class EffectEvidenceSynthesisCertainty
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory EffectEvidenceSynthesisCertainty.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory EffectEvidenceSynthesisCertainty.fromYaml(dynamic yaml) => yaml
+          is String
+      ? EffectEvidenceSynthesisCertainty.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? EffectEvidenceSynthesisCertainty.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? EffectEvidenceSynthesisCertainty.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'EffectEvidenceSynthesisCertainty cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory EffectEvidenceSynthesisCertainty.fromJson(
           Map<String, dynamic> json) =>
@@ -737,7 +747,9 @@ abstract class EffectEvidenceSynthesisCertaintySubcomponent
           : yaml is YamlMap
               ? EffectEvidenceSynthesisCertaintySubcomponent.fromJson(
                   jsonDecode(jsonEncode(yaml)))
-              : null;
+              : throw ArgumentError(
+                  'EffectEvidenceSynthesisCertaintySubcomponent cannot be constructed from input provided,'
+                  ' it is neither a yaml string or a yaml map.');
 
   factory EffectEvidenceSynthesisCertaintySubcomponent.fromJson(
           Map<String, dynamic> json) =>
@@ -1417,14 +1429,16 @@ abstract class EvidenceVariableCharacteristic
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory EvidenceVariableCharacteristic.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory EvidenceVariableCharacteristic.fromYaml(dynamic yaml) => yaml
+          is String
+      ? EvidenceVariableCharacteristic.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? EvidenceVariableCharacteristic.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? EvidenceVariableCharacteristic.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'EvidenceVariableCharacteristic cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =>
@@ -2252,14 +2266,16 @@ abstract class ResearchElementDefinitionCharacteristic
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory ResearchElementDefinitionCharacteristic.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ResearchElementDefinitionCharacteristic.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ResearchElementDefinitionCharacteristic.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ResearchElementDefinitionCharacteristic.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ResearchElementDefinitionCharacteristic.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ResearchElementDefinitionCharacteristic cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory ResearchElementDefinitionCharacteristic.fromJson(
           Map<String, dynamic> json) =>
@@ -2600,14 +2616,16 @@ abstract class RiskEvidenceSynthesisSampleSize
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory RiskEvidenceSynthesisSampleSize.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory RiskEvidenceSynthesisSampleSize.fromYaml(dynamic yaml) => yaml
+          is String
+      ? RiskEvidenceSynthesisSampleSize.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? RiskEvidenceSynthesisSampleSize.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? RiskEvidenceSynthesisSampleSize.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'RiskEvidenceSynthesisSampleSize cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskEvidenceSynthesisSampleSize.fromJson(Map<String, dynamic> json) =>
@@ -2693,14 +2711,16 @@ abstract class RiskEvidenceSynthesisRiskEstimate
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory RiskEvidenceSynthesisRiskEstimate.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory RiskEvidenceSynthesisRiskEstimate.fromYaml(dynamic yaml) => yaml
+          is String
+      ? RiskEvidenceSynthesisRiskEstimate.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? RiskEvidenceSynthesisRiskEstimate.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? RiskEvidenceSynthesisRiskEstimate.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'RiskEvidenceSynthesisRiskEstimate cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory RiskEvidenceSynthesisRiskEstimate.fromJson(
           Map<String, dynamic> json) =>
@@ -2771,14 +2791,16 @@ abstract class RiskEvidenceSynthesisPrecisionEstimate
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory RiskEvidenceSynthesisPrecisionEstimate.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory RiskEvidenceSynthesisPrecisionEstimate.fromYaml(dynamic yaml) => yaml
+          is String
+      ? RiskEvidenceSynthesisPrecisionEstimate.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? RiskEvidenceSynthesisPrecisionEstimate.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? RiskEvidenceSynthesisPrecisionEstimate.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'RiskEvidenceSynthesisPrecisionEstimate cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory RiskEvidenceSynthesisPrecisionEstimate.fromJson(
           Map<String, dynamic> json) =>
@@ -2839,14 +2861,16 @@ abstract class RiskEvidenceSynthesisCertainty
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory RiskEvidenceSynthesisCertainty.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory RiskEvidenceSynthesisCertainty.fromYaml(dynamic yaml) => yaml
+          is String
+      ? RiskEvidenceSynthesisCertainty.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? RiskEvidenceSynthesisCertainty.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? RiskEvidenceSynthesisCertainty.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'RiskEvidenceSynthesisCertainty cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskEvidenceSynthesisCertainty.fromJson(Map<String, dynamic> json) =>
@@ -2906,14 +2930,16 @@ abstract class RiskEvidenceSynthesisCertaintySubcomponent
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory RiskEvidenceSynthesisCertaintySubcomponent.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory RiskEvidenceSynthesisCertaintySubcomponent.fromYaml(dynamic yaml) => yaml
+          is String
+      ? RiskEvidenceSynthesisCertaintySubcomponent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? RiskEvidenceSynthesisCertaintySubcomponent.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? RiskEvidenceSynthesisCertaintySubcomponent.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'RiskEvidenceSynthesisCertaintySubcomponent cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory RiskEvidenceSynthesisCertaintySubcomponent.fromJson(
           Map<String, dynamic> json) =>

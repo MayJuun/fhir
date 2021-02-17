@@ -669,8 +669,6 @@ abstract class AuditEventParticipantNetwork
 @freezed
 abstract class AuditEventObjectDetail with _$AuditEventObjectDetail {
   AuditEventObjectDetail._();
-
-  /// 444444444444444444444444444444444444444444444444444444444444
   factory AuditEventObjectDetail({
     Id id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,

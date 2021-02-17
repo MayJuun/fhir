@@ -237,14 +237,16 @@ abstract class CoverageEligibilityRequestSupportingInfo
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityRequestSupportingInfo.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityRequestSupportingInfo.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityRequestSupportingInfo.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityRequestSupportingInfo.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityRequestSupportingInfo.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityRequestSupportingInfo cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CoverageEligibilityRequestSupportingInfo.fromJson(
           Map<String, dynamic> json) =>
@@ -270,14 +272,16 @@ abstract class CoverageEligibilityRequestInsurance
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityRequestInsurance.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityRequestInsurance.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityRequestInsurance.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityRequestInsurance.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityRequestInsurance.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityRequestInsurance cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CoverageEligibilityRequestInsurance.fromJson(
           Map<String, dynamic> json) =>
@@ -310,14 +314,16 @@ abstract class CoverageEligibilityRequestItem
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityRequestItem.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityRequestItem.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityRequestItem.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityRequestItem.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityRequestItem.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityRequestItem cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =>
@@ -340,14 +346,16 @@ abstract class CoverageEligibilityRequestDiagnosis
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityRequestDiagnosis.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityRequestDiagnosis.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityRequestDiagnosis.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityRequestDiagnosis.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityRequestDiagnosis.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityRequestDiagnosis cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CoverageEligibilityRequestDiagnosis.fromJson(
           Map<String, dynamic> json) =>
@@ -436,14 +444,16 @@ abstract class CoverageEligibilityResponseInsurance
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityResponseInsurance.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityResponseInsurance.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityResponseInsurance.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityResponseInsurance.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityResponseInsurance.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityResponseInsurance cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CoverageEligibilityResponseInsurance.fromJson(
           Map<String, dynamic> json) =>
@@ -484,14 +494,16 @@ abstract class CoverageEligibilityResponseItem
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityResponseItem.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityResponseItem.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityResponseItem.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityResponseItem.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityResponseItem.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityResponseItem cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =>
@@ -523,14 +535,16 @@ abstract class CoverageEligibilityResponseBenefit
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityResponseBenefit.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityResponseBenefit.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityResponseBenefit.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityResponseBenefit.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityResponseBenefit.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityResponseBenefit cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CoverageEligibilityResponseBenefit.fromJson(
           Map<String, dynamic> json) =>
@@ -552,14 +566,16 @@ abstract class CoverageEligibilityResponseError
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CoverageEligibilityResponseError.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CoverageEligibilityResponseError.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CoverageEligibilityResponseError.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CoverageEligibilityResponseError.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CoverageEligibilityResponseError.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CoverageEligibilityResponseError cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CoverageEligibilityResponseError.fromJson(
           Map<String, dynamic> json) =>

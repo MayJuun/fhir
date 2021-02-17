@@ -539,14 +539,16 @@ abstract class ActivityDefinitionDynamicValue
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory ActivityDefinitionDynamicValue.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ActivityDefinitionDynamicValue.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ActivityDefinitionDynamicValue.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ActivityDefinitionDynamicValue.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ActivityDefinitionDynamicValue.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ActivityDefinitionDynamicValue cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ActivityDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
@@ -806,14 +808,16 @@ abstract class DeviceDefinitionUdiDeviceIdentifier
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory DeviceDefinitionUdiDeviceIdentifier.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory DeviceDefinitionUdiDeviceIdentifier.fromYaml(dynamic yaml) => yaml
+          is String
+      ? DeviceDefinitionUdiDeviceIdentifier.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? DeviceDefinitionUdiDeviceIdentifier.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? DeviceDefinitionUdiDeviceIdentifier.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'DeviceDefinitionUdiDeviceIdentifier cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory DeviceDefinitionUdiDeviceIdentifier.fromJson(
           Map<String, dynamic> json) =>
@@ -944,14 +948,16 @@ abstract class DeviceDefinitionSpecialization
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory DeviceDefinitionSpecialization.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory DeviceDefinitionSpecialization.fromYaml(dynamic yaml) => yaml
+          is String
+      ? DeviceDefinitionSpecialization.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? DeviceDefinitionSpecialization.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? DeviceDefinitionSpecialization.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'DeviceDefinitionSpecialization cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceDefinitionSpecialization.fromJson(Map<String, dynamic> json) =>
@@ -1651,14 +1657,16 @@ abstract class ObservationDefinitionQuantitativeDetails
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory ObservationDefinitionQuantitativeDetails.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ObservationDefinitionQuantitativeDetails.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ObservationDefinitionQuantitativeDetails.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ObservationDefinitionQuantitativeDetails.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ObservationDefinitionQuantitativeDetails.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ObservationDefinitionQuantitativeDetails cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory ObservationDefinitionQuantitativeDetails.fromJson(
           Map<String, dynamic> json) =>
@@ -1750,14 +1758,16 @@ abstract class ObservationDefinitionQualifiedInterval
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory ObservationDefinitionQualifiedInterval.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ObservationDefinitionQualifiedInterval.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ObservationDefinitionQualifiedInterval.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ObservationDefinitionQualifiedInterval.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ObservationDefinitionQualifiedInterval.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ObservationDefinitionQualifiedInterval cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory ObservationDefinitionQualifiedInterval.fromJson(
           Map<String, dynamic> json) =>

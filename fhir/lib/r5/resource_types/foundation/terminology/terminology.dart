@@ -718,14 +718,16 @@ abstract class TerminologyCapabilitiesSoftware
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory TerminologyCapabilitiesSoftware.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory TerminologyCapabilitiesSoftware.fromYaml(dynamic yaml) => yaml
+          is String
+      ? TerminologyCapabilitiesSoftware.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? TerminologyCapabilitiesSoftware.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? TerminologyCapabilitiesSoftware.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'TerminologyCapabilitiesSoftware cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesSoftware.fromJson(Map<String, dynamic> json) =>
@@ -750,14 +752,16 @@ abstract class TerminologyCapabilitiesImplementation
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory TerminologyCapabilitiesImplementation.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory TerminologyCapabilitiesImplementation.fromYaml(dynamic yaml) => yaml
+          is String
+      ? TerminologyCapabilitiesImplementation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? TerminologyCapabilitiesImplementation.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? TerminologyCapabilitiesImplementation.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'TerminologyCapabilitiesImplementation cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory TerminologyCapabilitiesImplementation.fromJson(
           Map<String, dynamic> json) =>
@@ -782,14 +786,16 @@ abstract class TerminologyCapabilitiesCodeSystem
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory TerminologyCapabilitiesCodeSystem.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory TerminologyCapabilitiesCodeSystem.fromYaml(dynamic yaml) => yaml
+          is String
+      ? TerminologyCapabilitiesCodeSystem.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? TerminologyCapabilitiesCodeSystem.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? TerminologyCapabilitiesCodeSystem.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'TerminologyCapabilitiesCodeSystem cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory TerminologyCapabilitiesCodeSystem.fromJson(
           Map<String, dynamic> json) =>
@@ -821,14 +827,16 @@ abstract class TerminologyCapabilitiesVersion
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory TerminologyCapabilitiesVersion.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory TerminologyCapabilitiesVersion.fromYaml(dynamic yaml) => yaml
+          is String
+      ? TerminologyCapabilitiesVersion.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? TerminologyCapabilitiesVersion.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? TerminologyCapabilitiesVersion.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'TerminologyCapabilitiesVersion cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesVersion.fromJson(Map<String, dynamic> json) =>
@@ -890,14 +898,16 @@ abstract class TerminologyCapabilitiesExpansion
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory TerminologyCapabilitiesExpansion.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory TerminologyCapabilitiesExpansion.fromYaml(dynamic yaml) => yaml
+          is String
+      ? TerminologyCapabilitiesExpansion.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? TerminologyCapabilitiesExpansion.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? TerminologyCapabilitiesExpansion.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'TerminologyCapabilitiesExpansion cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory TerminologyCapabilitiesExpansion.fromJson(
           Map<String, dynamic> json) =>
@@ -922,14 +932,16 @@ abstract class TerminologyCapabilitiesParameter
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory TerminologyCapabilitiesParameter.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory TerminologyCapabilitiesParameter.fromYaml(dynamic yaml) => yaml
+          is String
+      ? TerminologyCapabilitiesParameter.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? TerminologyCapabilitiesParameter.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? TerminologyCapabilitiesParameter.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'TerminologyCapabilitiesParameter cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory TerminologyCapabilitiesParameter.fromJson(
           Map<String, dynamic> json) =>
@@ -952,14 +964,16 @@ abstract class TerminologyCapabilitiesValidateCode
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory TerminologyCapabilitiesValidateCode.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory TerminologyCapabilitiesValidateCode.fromYaml(dynamic yaml) => yaml
+          is String
+      ? TerminologyCapabilitiesValidateCode.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? TerminologyCapabilitiesValidateCode.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? TerminologyCapabilitiesValidateCode.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'TerminologyCapabilitiesValidateCode cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory TerminologyCapabilitiesValidateCode.fromJson(
           Map<String, dynamic> json) =>
@@ -982,14 +996,16 @@ abstract class TerminologyCapabilitiesTranslation
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory TerminologyCapabilitiesTranslation.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory TerminologyCapabilitiesTranslation.fromYaml(dynamic yaml) => yaml
+          is String
+      ? TerminologyCapabilitiesTranslation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? TerminologyCapabilitiesTranslation.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? TerminologyCapabilitiesTranslation.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'TerminologyCapabilitiesTranslation cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory TerminologyCapabilitiesTranslation.fromJson(
           Map<String, dynamic> json) =>
@@ -1012,14 +1028,16 @@ abstract class TerminologyCapabilitiesClosure
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory TerminologyCapabilitiesClosure.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory TerminologyCapabilitiesClosure.fromYaml(dynamic yaml) => yaml
+          is String
+      ? TerminologyCapabilitiesClosure.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? TerminologyCapabilitiesClosure.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? TerminologyCapabilitiesClosure.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'TerminologyCapabilitiesClosure cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesClosure.fromJson(Map<String, dynamic> json) =>

@@ -442,14 +442,16 @@ abstract class ClinicalImpressionInvestigations
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ClinicalImpressionInvestigations.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ClinicalImpressionInvestigations.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ClinicalImpressionInvestigations.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ClinicalImpressionInvestigations.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ClinicalImpressionInvestigations.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ClinicalImpressionInvestigations cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   factory ClinicalImpressionInvestigations.fromJson(
           Map<String, dynamic> json) =>

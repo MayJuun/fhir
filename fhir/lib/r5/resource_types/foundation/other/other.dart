@@ -961,14 +961,16 @@ abstract class SubscriptionTopicResourceTrigger
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory SubscriptionTopicResourceTrigger.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory SubscriptionTopicResourceTrigger.fromYaml(dynamic yaml) => yaml
+          is String
+      ? SubscriptionTopicResourceTrigger.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? SubscriptionTopicResourceTrigger.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? SubscriptionTopicResourceTrigger.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'SubscriptionTopicResourceTrigger cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory SubscriptionTopicResourceTrigger.fromJson(
           Map<String, dynamic> json) =>
@@ -995,14 +997,16 @@ abstract class SubscriptionTopicQueryCriteria
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory SubscriptionTopicQueryCriteria.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory SubscriptionTopicQueryCriteria.fromYaml(dynamic yaml) => yaml
+          is String
+      ? SubscriptionTopicQueryCriteria.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? SubscriptionTopicQueryCriteria.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? SubscriptionTopicQueryCriteria.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'SubscriptionTopicQueryCriteria cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubscriptionTopicQueryCriteria.fromJson(Map<String, dynamic> json) =>

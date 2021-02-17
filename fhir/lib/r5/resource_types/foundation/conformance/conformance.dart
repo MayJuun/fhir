@@ -147,14 +147,16 @@ abstract class CapabilityStatementImplementation
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CapabilityStatementImplementation.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CapabilityStatementImplementation.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CapabilityStatementImplementation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CapabilityStatementImplementation.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CapabilityStatementImplementation.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CapabilityStatementImplementation cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CapabilityStatementImplementation.fromJson(
           Map<String, dynamic> json) =>
@@ -310,14 +312,16 @@ abstract class CapabilityStatementInteraction
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CapabilityStatementInteraction.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CapabilityStatementInteraction.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CapabilityStatementInteraction.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CapabilityStatementInteraction.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CapabilityStatementInteraction.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CapabilityStatementInteraction cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =>
@@ -346,14 +350,16 @@ abstract class CapabilityStatementSearchParam
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CapabilityStatementSearchParam.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CapabilityStatementSearchParam.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CapabilityStatementSearchParam.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CapabilityStatementSearchParam.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CapabilityStatementSearchParam.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CapabilityStatementSearchParam cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =>
@@ -412,14 +418,16 @@ abstract class CapabilityStatementInteraction1
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CapabilityStatementInteraction1.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CapabilityStatementInteraction1.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CapabilityStatementInteraction1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CapabilityStatementInteraction1.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CapabilityStatementInteraction1.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CapabilityStatementInteraction1 cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =>
@@ -509,14 +517,16 @@ abstract class CapabilityStatementSupportedMessage
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CapabilityStatementSupportedMessage.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CapabilityStatementSupportedMessage.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CapabilityStatementSupportedMessage.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CapabilityStatementSupportedMessage.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CapabilityStatementSupportedMessage.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CapabilityStatementSupportedMessage cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CapabilityStatementSupportedMessage.fromJson(
           Map<String, dynamic> json) =>
@@ -690,14 +700,16 @@ abstract class CapabilityStatement2Implementation
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CapabilityStatement2Implementation.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CapabilityStatement2Implementation.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CapabilityStatement2Implementation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CapabilityStatement2Implementation.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CapabilityStatement2Implementation.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CapabilityStatement2Implementation cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CapabilityStatement2Implementation.fromJson(
           Map<String, dynamic> json) =>
@@ -795,14 +807,16 @@ abstract class CapabilityStatement2Interaction
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CapabilityStatement2Interaction.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CapabilityStatement2Interaction.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CapabilityStatement2Interaction.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CapabilityStatement2Interaction.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CapabilityStatement2Interaction.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CapabilityStatement2Interaction cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatement2Interaction.fromJson(Map<String, dynamic> json) =>
@@ -831,14 +845,16 @@ abstract class CapabilityStatement2SearchParam
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CapabilityStatement2SearchParam.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CapabilityStatement2SearchParam.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CapabilityStatement2SearchParam.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CapabilityStatement2SearchParam.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CapabilityStatement2SearchParam.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CapabilityStatement2SearchParam cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatement2SearchParam.fromJson(Map<String, dynamic> json) =>
@@ -896,14 +912,16 @@ abstract class CapabilityStatement2Interaction1
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory CapabilityStatement2Interaction1.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory CapabilityStatement2Interaction1.fromYaml(dynamic yaml) => yaml
+          is String
+      ? CapabilityStatement2Interaction1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? CapabilityStatement2Interaction1.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? CapabilityStatement2Interaction1.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'CapabilityStatement2Interaction1 cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory CapabilityStatement2Interaction1.fromJson(
           Map<String, dynamic> json) =>
@@ -1201,14 +1219,16 @@ abstract class ExampleScenarioContainedInstance
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory ExampleScenarioContainedInstance.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory ExampleScenarioContainedInstance.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ExampleScenarioContainedInstance.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ExampleScenarioContainedInstance.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ExampleScenarioContainedInstance.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ExampleScenarioContainedInstance cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory ExampleScenarioContainedInstance.fromJson(
           Map<String, dynamic> json) =>
@@ -2115,14 +2135,16 @@ abstract class MessageDefinitionAllowedResponse
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory MessageDefinitionAllowedResponse.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory MessageDefinitionAllowedResponse.fromYaml(dynamic yaml) => yaml
+          is String
+      ? MessageDefinitionAllowedResponse.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? MessageDefinitionAllowedResponse.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? MessageDefinitionAllowedResponse.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'MessageDefinitionAllowedResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory MessageDefinitionAllowedResponse.fromJson(
           Map<String, dynamic> json) =>
@@ -2314,14 +2336,16 @@ abstract class OperationDefinitionReferencedFrom
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory OperationDefinitionReferencedFrom.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory OperationDefinitionReferencedFrom.fromYaml(dynamic yaml) => yaml
+          is String
+      ? OperationDefinitionReferencedFrom.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? OperationDefinitionReferencedFrom.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? OperationDefinitionReferencedFrom.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'OperationDefinitionReferencedFrom cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory OperationDefinitionReferencedFrom.fromJson(
           Map<String, dynamic> json) =>
@@ -2680,14 +2704,16 @@ abstract class StructureDefinitionDifferential
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory StructureDefinitionDifferential.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory StructureDefinitionDifferential.fromYaml(dynamic yaml) => yaml
+          is String
+      ? StructureDefinitionDifferential.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? StructureDefinitionDifferential.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? StructureDefinitionDifferential.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'StructureDefinitionDifferential cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>

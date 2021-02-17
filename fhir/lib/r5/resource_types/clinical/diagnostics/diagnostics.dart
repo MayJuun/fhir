@@ -634,14 +634,16 @@ abstract class MolecularSequenceStructureVariant
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory MolecularSequenceStructureVariant.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory MolecularSequenceStructureVariant.fromYaml(dynamic yaml) => yaml
+          is String
+      ? MolecularSequenceStructureVariant.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? MolecularSequenceStructureVariant.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? MolecularSequenceStructureVariant.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'MolecularSequenceStructureVariant cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory MolecularSequenceStructureVariant.fromJson(
           Map<String, dynamic> json) =>

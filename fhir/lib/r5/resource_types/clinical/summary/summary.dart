@@ -181,14 +181,16 @@ abstract class AdverseEventContributingFactor
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory AdverseEventContributingFactor.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory AdverseEventContributingFactor.fromYaml(dynamic yaml) => yaml
+          is String
+      ? AdverseEventContributingFactor.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? AdverseEventContributingFactor.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? AdverseEventContributingFactor.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'AdverseEventContributingFactor cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AdverseEventContributingFactor.fromJson(Map<String, dynamic> json) =>

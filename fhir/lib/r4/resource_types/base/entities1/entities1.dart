@@ -506,14 +506,16 @@ abstract class HealthcareServiceAvailableTime
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts [Yaml String] as an argument
-  factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) => yaml
+          is String
+      ? HealthcareServiceAvailableTime.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? HealthcareServiceAvailableTime.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? HealthcareServiceAvailableTime.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'HealthcareServiceAvailableTime cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
