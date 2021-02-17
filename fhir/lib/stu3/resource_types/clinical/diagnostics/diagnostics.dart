@@ -1053,7 +1053,7 @@ abstract class SpecimenProcessing implements _$SpecimenProcessing {
 abstract class SpecimenContainer implements _$SpecimenContainer {
   SpecimenContainer._();
   factory SpecimenContainer({
-    List<Identifier> identifier,
+    List<Identifier>? identifier,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     CodeableConcept? type,

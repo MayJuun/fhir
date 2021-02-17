@@ -1780,7 +1780,7 @@ abstract class RequestGroup with Resource implements _$RequestGroup {
     List<Identifier>? identifier,
     List<Canonical>? instantiatesCanonical,
     @JsonKey(name: '_instantiatesCanonical')
-        List<Element> instantiatesCanonicalElement,
+        List<Element>? instantiatesCanonicalElement,
     List<FhirUri>? instantiatesUri,
     @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
     List<Reference>? basedOn,

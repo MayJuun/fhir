@@ -127,7 +127,7 @@ abstract class CarePlan with Resource implements _$CarePlan {
 abstract class CarePlanActivity implements _$CarePlanActivity {
   CarePlanActivity._();
   factory CarePlanActivity({
-    List<CodeableConcept> outcomeCodeableConcept,
+    List<CodeableConcept>? outcomeCodeableConcept,
     List<Reference>? outcomeReference,
     List<Annotation>? progress,
     Reference? reference,
@@ -414,7 +414,7 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
 abstract class NutritionOrderOralDiet implements _$NutritionOrderOralDiet {
   NutritionOrderOralDiet._();
   factory NutritionOrderOralDiet({
-    List<CodeableConcept> type,
+    List<CodeableConcept>? type,
     List<Timing>? schedule,
     List<NutritionOrderNutrient>? nutrient,
     List<NutritionOrderTexture>? texture,

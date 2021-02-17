@@ -124,7 +124,7 @@ abstract class EncounterClassHistory implements _$EncounterClassHistory {
 abstract class EncounterParticipant implements _$EncounterParticipant {
   EncounterParticipant._();
   factory EncounterParticipant({
-    List<CodeableConcept> type,
+    List<CodeableConcept>? type,
     Period? period,
     Reference? individual,
   }) = _EncounterParticipant;

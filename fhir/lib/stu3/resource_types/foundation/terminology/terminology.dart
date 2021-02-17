@@ -156,7 +156,7 @@ abstract class CodeSystemProperty implements _$CodeSystemProperty {
 abstract class CodeSystemConcept implements _$CodeSystemConcept {
   CodeSystemConcept._();
   factory CodeSystemConcept({
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
@@ -643,7 +643,7 @@ abstract class ExpansionProfileDesignation
 abstract class ExpansionProfileInclude implements _$ExpansionProfileInclude {
   ExpansionProfileInclude._();
   factory ExpansionProfileInclude({
-    List<ExpansionProfileDesignation1> designation,
+    List<ExpansionProfileDesignation1>? designation,
   }) = _ExpansionProfileInclude;
 
   /// Produces a Yaml formatted String version of the object
@@ -695,7 +695,7 @@ abstract class ExpansionProfileDesignation1
 abstract class ExpansionProfileExclude implements _$ExpansionProfileExclude {
   ExpansionProfileExclude._();
   factory ExpansionProfileExclude({
-    List<ExpansionProfileDesignation2> designation,
+    List<ExpansionProfileDesignation2>? designation,
   }) = _ExpansionProfileExclude;
 
   /// Produces a Yaml formatted String version of the object
@@ -934,7 +934,7 @@ abstract class ValueSetCompose implements _$ValueSetCompose {
 abstract class ValueSetInclude implements _$ValueSetInclude {
   ValueSetInclude._();
   factory ValueSetInclude({
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
@@ -966,7 +966,7 @@ abstract class ValueSetInclude implements _$ValueSetInclude {
 abstract class ValueSetConcept implements _$ValueSetConcept {
   ValueSetConcept._();
   factory ValueSetConcept({
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,

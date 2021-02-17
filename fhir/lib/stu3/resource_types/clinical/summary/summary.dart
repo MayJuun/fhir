@@ -422,7 +422,7 @@ abstract class ConditionStage implements _$ConditionStage {
 abstract class ConditionEvidence implements _$ConditionEvidence {
   ConditionEvidence._();
   factory ConditionEvidence({
-    List<CodeableConcept> code,
+    List<CodeableConcept>? code,
     List<Reference>? detail,
   }) = _ConditionEvidence;
 

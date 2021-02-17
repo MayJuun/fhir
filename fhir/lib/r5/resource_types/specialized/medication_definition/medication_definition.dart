@@ -2412,11 +2412,11 @@ abstract class SubstanceSourceMaterial
     List<Identifier>? parentSubstanceId,
     List<String>? parentSubstanceName,
     @JsonKey(name: '_parentSubstanceName')
-        List<Element> parentSubstanceNameElement,
+        List<Element>? parentSubstanceNameElement,
     List<CodeableConcept>? countryOfOrigin,
     List<String>? geographicalLocation,
     @JsonKey(name: '_geographicalLocation')
-        List<Element> geographicalLocationElement,
+        List<Element>? geographicalLocationElement,
     CodeableConcept? developmentStage,
     List<SubstanceSourceMaterialFractionDescription>? fractionDescription,
     SubstanceSourceMaterialOrganism? organism,

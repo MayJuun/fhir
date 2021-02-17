@@ -569,7 +569,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
 abstract class TypeCodeExtension implements _$TypeCodeExtension {
   TypeCodeExtension._();
   factory TypeCodeExtension({
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
   }) = _TypeCodeExtension;
 
   /// Produces a Yaml formatted String version of the object

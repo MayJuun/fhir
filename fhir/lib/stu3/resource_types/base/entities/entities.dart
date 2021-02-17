@@ -392,7 +392,7 @@ abstract class HealthcareServiceAvailableTime
     implements _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
   factory HealthcareServiceAvailableTime({
-    List<HealthcareServiceAvailableTimeDaysOfWeek> daysOfWeek,
+    List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
     @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
     Boolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,

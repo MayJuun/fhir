@@ -166,7 +166,7 @@ abstract class BundleLink implements _$BundleLink {
 abstract class BundleEntry implements _$BundleEntry {
   BundleEntry._();
   factory BundleEntry({
-    List<BundleLink> link,
+    List<BundleLink>? link,
     String? fullUrl,
     @JsonKey(name: '_fullUrl') Element? fullUrlElement,
     Resource? resource,

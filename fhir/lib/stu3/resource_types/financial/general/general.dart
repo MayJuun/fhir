@@ -1037,7 +1037,7 @@ abstract class ExplanationOfBenefitAddItem
     implements _$ExplanationOfBenefitAddItem {
   ExplanationOfBenefitAddItem._();
   factory ExplanationOfBenefitAddItem({
-    List<Id> sequenceLinkId,
+    List<Id>? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') List<Element>? sequenceLinkIdElement,
     CodeableConcept? revenue,
     CodeableConcept? category,

@@ -419,7 +419,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
 abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
   ElementDefinitionSlicing._();
   factory ElementDefinitionSlicing({
-    List<ElementDefinitionDiscriminator> discriminator,
+    List<ElementDefinitionDiscriminator>? discriminator,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Boolean? ordered,
@@ -510,7 +510,7 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
 abstract class ElementDefinitionType implements _$ElementDefinitionType {
   ElementDefinitionType._();
   factory ElementDefinitionType({
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? profile,
@@ -679,7 +679,7 @@ abstract class ElementDefinitionConstraint
 abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
   ElementDefinitionBinding._();
   factory ElementDefinitionBinding({
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     ElementDefinitionBindingStrength? strength,
     @JsonKey(name: '_strength') Element? strengthElement,
     String? description,

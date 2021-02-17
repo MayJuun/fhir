@@ -791,7 +791,7 @@ abstract class CoverageEligibilityRequestItem
     List<FhirExtension>? modifierExtension,
     List<PositiveInt>? supportingInfoSequence,
     @JsonKey(name: '_supportingInfoSequence')
-        List<Element> supportingInfoSequenceElement,
+        List<Element>? supportingInfoSequenceElement,
     CodeableConcept? category,
     CodeableConcept? productOrService,
     List<CodeableConcept>? modifier,

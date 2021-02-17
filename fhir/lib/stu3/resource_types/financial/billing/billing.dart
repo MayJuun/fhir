@@ -625,7 +625,7 @@ abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
 abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
   ClaimResponseAddItem._();
   factory ClaimResponseAddItem({
-    List<Id> sequenceLinkId,
+    List<Id>? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') List<Element>? sequenceLinkIdElement,
     CodeableConcept? revenue,
     CodeableConcept? category,

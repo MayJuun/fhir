@@ -71,7 +71,7 @@ abstract class CapabilityStatement
     @JsonKey(name: '_patchFormat') List<Element>? patchFormatElement,
     List<Id>? implementationGuide,
     @JsonKey(name: '_implementationGuide')
-        List<Element> implementationGuideElement,
+        List<Element>? implementationGuideElement,
     List<Reference>? profile,
     List<CapabilityStatementRest>? rest,
     List<CapabilityStatementMessaging>? messaging,
@@ -196,7 +196,7 @@ abstract class CapabilityStatementSecurity
     implements _$CapabilityStatementSecurity {
   CapabilityStatementSecurity._();
   factory CapabilityStatementSecurity({
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Boolean? cors,
     @JsonKey(name: '_cors') Element? corsElement,
     List<CodeableConcept>? service,
@@ -436,7 +436,7 @@ abstract class CapabilityStatementMessaging
     implements _$CapabilityStatementMessaging {
   CapabilityStatementMessaging._();
   factory CapabilityStatementMessaging({
-    List<CapabilityStatementEndpoint> endpoint,
+    List<CapabilityStatementEndpoint>? endpoint,
     Decimal? reliableCache,
     @JsonKey(name: '_reliableCache') Element? reliableCacheElement,
     String? documentation,
@@ -1416,7 +1416,7 @@ abstract class OperationDefinitionBinding
     implements _$OperationDefinitionBinding {
   OperationDefinitionBinding._();
   factory OperationDefinitionBinding({
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     OperationDefinitionBindingStrength? strength,
     @JsonKey(name: '_strength') Element? strengthElement,
     String? valueSetUri,
@@ -1447,7 +1447,7 @@ abstract class OperationDefinitionOverload
     implements _$OperationDefinitionOverload {
   OperationDefinitionOverload._();
   factory OperationDefinitionOverload({
-    List<String> parameterName,
+    List<String>? parameterName,
     @JsonKey(name: '_parameterName') List<Element>? parameterNameElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,

@@ -611,7 +611,7 @@ abstract class ContractOffer implements _$ContractOffer {
     @JsonKey(name: '_linkId') List<Element>? linkIdElement,
     List<UnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
-        List<Element> securityLabelNumberElement,
+        List<Element>? securityLabelNumberElement,
   }) = _ContractOffer;
 
   /// Produces a Yaml formatted String version of the object
@@ -730,7 +730,7 @@ abstract class ContractAsset implements _$ContractAsset {
     List<ContractAnswer>? answer,
     List<UnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
-        List<Element> securityLabelNumberElement,
+        List<Element>? securityLabelNumberElement,
     List<ContractValuedItem>? valuedItem,
   }) = _ContractAsset;
 
@@ -810,7 +810,7 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
     @JsonKey(name: '_linkId') List<Element>? linkIdElement,
     List<UnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
-        List<Element> securityLabelNumberElement,
+        List<Element>? securityLabelNumberElement,
   }) = _ContractValuedItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -866,7 +866,7 @@ abstract class ContractAction implements _$ContractAction {
     List<Annotation>? note,
     List<UnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
-        List<Element> securityLabelNumberElement,
+        List<Element>? securityLabelNumberElement,
   }) = _ContractAction;
 
   /// Produces a Yaml formatted String version of the object
@@ -1413,7 +1413,7 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
         List<Element>? procedureSequenceElement,
     List<PositiveInt>? informationSequence,
     @JsonKey(name: '_informationSequence')
-        List<Element> informationSequenceElement,
+        List<Element>? informationSequenceElement,
     CodeableConcept? revenue,
     CodeableConcept? category,
     @required CodeableConcept? productOrService,

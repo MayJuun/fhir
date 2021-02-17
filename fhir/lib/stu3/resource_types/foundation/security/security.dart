@@ -65,7 +65,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
 abstract class AuditEventAgent implements _$AuditEventAgent {
   AuditEventAgent._();
   factory AuditEventAgent({
-    List<CodeableConcept> role,
+    List<CodeableConcept>? role,
     Reference? reference,
     Identifier? userId,
     String? altId,
@@ -490,7 +490,7 @@ abstract class Provenance with Resource implements _$Provenance {
 abstract class ProvenanceAgent implements _$ProvenanceAgent {
   ProvenanceAgent._();
   factory ProvenanceAgent({
-    List<CodeableConcept> role,
+    List<CodeableConcept>? role,
     String? whoUri,
     @JsonKey(name: '_whoUri') Element? whoUriElement,
     Reference? whoReference,

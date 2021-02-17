@@ -187,7 +187,7 @@ abstract class Patient with Resource implements _$Patient {
 abstract class PatientContact implements _$PatientContact {
   PatientContact._();
   factory PatientContact({
-    List<CodeableConcept> relationship,
+    List<CodeableConcept>? relationship,
     HumanName? name,
     List<ContactPoint>? telecom,
     Address? address,
@@ -420,7 +420,7 @@ abstract class PractitionerQualification
     implements _$PractitionerQualification {
   PractitionerQualification._();
   factory PractitionerQualification({
-    List<Identifier> identifier,
+    List<Identifier>? identifier,
     @required CodeableConcept? code,
     Period? period,
     Reference? issuer,
@@ -502,7 +502,7 @@ abstract class PractitionerRoleAvailableTime
     implements _$PractitionerRoleAvailableTime {
   PractitionerRoleAvailableTime._();
   factory PractitionerRoleAvailableTime({
-    List<String> daysOfWeek,
+    List<String>? daysOfWeek,
     @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
     Boolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,

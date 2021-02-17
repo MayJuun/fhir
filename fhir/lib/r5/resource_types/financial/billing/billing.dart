@@ -361,7 +361,7 @@ abstract class ClaimItem implements _$ClaimItem {
         List<Element>? procedureSequenceElement,
     List<PositiveInt>? informationSequence,
     @JsonKey(name: '_informationSequence')
-        List<Element> informationSequenceElement,
+        List<Element>? informationSequenceElement,
     CodeableConcept? revenue,
     CodeableConcept? category,
     @required CodeableConcept? productOrService,

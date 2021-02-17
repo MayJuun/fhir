@@ -79,7 +79,7 @@ abstract class Appointment with Resource implements _$Appointment {
 abstract class AppointmentParticipant implements _$AppointmentParticipant {
   AppointmentParticipant._();
   factory AppointmentParticipant({
-    List<CodeableConcept> type,
+    List<CodeableConcept>? type,
     Reference? actor,
     @JsonKey(name: 'required') AppointmentParticipantRequired? required_,
     @JsonKey(name: '_required') Element? requiredElement,

@@ -431,7 +431,7 @@ abstract class TestScriptDestination implements _$TestScriptDestination {
 abstract class TestScriptMetadata implements _$TestScriptMetadata {
   TestScriptMetadata._();
   factory TestScriptMetadata({
-    List<TestScriptLink> link,
+    List<TestScriptLink>? link,
     @required List<TestScriptCapability>? capability,
   }) = _TestScriptMetadata;
 

@@ -15,7 +15,7 @@ part 'general_types.g.dart';
 abstract class BackboneElement implements _$BackboneElement {
   BackboneElement._();
   factory BackboneElement({
-    List<FhirExtension> modifierExtension,
+    List<FhirExtension>? modifierExtension,
   }) = _BackboneElement;
 
   /// Produces a Yaml formatted String version of the object
@@ -140,7 +140,7 @@ abstract class Identifier implements _$Identifier {
 abstract class CodeableConcept implements _$CodeableConcept {
   CodeableConcept._();
   factory CodeableConcept({
-    List<Coding> coding,
+    List<Coding>? coding,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
   }) = _CodeableConcept;
@@ -648,7 +648,7 @@ abstract class ContactPoint implements _$ContactPoint {
 abstract class Timing implements _$Timing {
   Timing._();
   factory Timing({
-    List<String> event,
+    List<String>? event,
     @JsonKey(name: '_event') List<Element>? eventElement,
     TimingRepeat? repeat,
     CodeableConcept? code,

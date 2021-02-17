@@ -70,7 +70,7 @@ abstract class Composition with Resource implements _$Composition {
 abstract class CompositionAttester implements _$CompositionAttester {
   CompositionAttester._();
   factory CompositionAttester({
-    List<CompositionAttesterMode> mode,
+    List<CompositionAttesterMode>? mode,
     @JsonKey(name: '_mode') List<Element>? modeElement,
     Time? time,
     @JsonKey(name: '_time') Element? timeElement,
@@ -125,7 +125,7 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
 abstract class CompositionEvent implements _$CompositionEvent {
   CompositionEvent._();
   factory CompositionEvent({
-    List<CodeableConcept> code,
+    List<CodeableConcept>? code,
     Period? period,
     List<Reference>? detail,
   }) = _CompositionEvent;

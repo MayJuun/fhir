@@ -104,7 +104,7 @@ abstract class ImmunizationPractitioner implements _$ImmunizationPractitioner {
 abstract class ImmunizationExplanation implements _$ImmunizationExplanation {
   ImmunizationExplanation._();
   factory ImmunizationExplanation({
-    List<CodeableConcept> reason,
+    List<CodeableConcept>? reason,
     List<CodeableConcept>? reasonNotGiven,
   }) = _ImmunizationExplanation;
 
