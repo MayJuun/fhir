@@ -152,7 +152,7 @@ abstract class CommunicationRequest
     List<CodeableConcept>? medium,
     Reference? requester,
     @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
-        CommunicationRequestStatus status,
+        CommunicationRequestStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? encounter,
     FhirDateTime? scheduledDateTime,

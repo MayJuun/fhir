@@ -876,7 +876,7 @@ abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
     PositiveInt? number,
     @JsonKey(name: '_number') Element? numberElement,
     @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
-        ClaimResponseProcessNoteType type,
+        ClaimResponseProcessNoteType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,

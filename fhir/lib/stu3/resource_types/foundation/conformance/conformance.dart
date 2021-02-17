@@ -1987,7 +1987,7 @@ abstract class StructureMapSource implements _$StructureMapSource {
     @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
     Decimal? defaultValueUnsignedInt,
     @JsonKey(name: '_defaultValueUnsignedInt')
-        Element defaultValueUnsignedIntElement,
+        Element? defaultValueUnsignedIntElement,
     Decimal? defaultValuePositiveInt,
     @JsonKey(name: '_defaultValuePositiveInt')
         Element defaultValuePositiveIntElement,

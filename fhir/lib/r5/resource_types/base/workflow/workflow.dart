@@ -30,7 +30,7 @@ abstract class Appointment with Resource implements _$Appointment {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-        AppointmentStatus status,
+        AppointmentStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? cancelationReason,
     List<CodeableConcept>? serviceCategory,

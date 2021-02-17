@@ -218,7 +218,7 @@ abstract class MedicationOrder with Resource implements _$MedicationOrder {
     List<Identifier>? identifier,
     FhirDateTime? dateWritten,
     @JsonKey(unknownEnumValue: MedicationOrderStatus.unknown)
-        MedicationOrderStatus status,
+        MedicationOrderStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirDateTime? dateEnded,
     CodeableConcept? reasonEnded,

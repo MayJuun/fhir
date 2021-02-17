@@ -202,7 +202,7 @@ abstract class PatientContact implements _$PatientContact {
     List<ContactPoint>? telecom,
     Address? address,
     @JsonKey(unknownEnumValue: PatientContactGender.unknown)
-        PatientContactGender gender,
+        PatientContactGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Reference? organization,
     Period? period,

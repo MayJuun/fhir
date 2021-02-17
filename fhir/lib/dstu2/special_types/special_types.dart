@@ -112,7 +112,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     @JsonKey(name: '_defaultValueDecimal') Element? defaultValueDecimalElement,
     Base64Binary? defaultValueBase64Binary,
     @JsonKey(name: '_defaultValueBase64Binary')
-        Element defaultValueBase64BinaryElement,
+        Element? defaultValueBase64BinaryElement,
     Instant? defaultValueInstant,
     @JsonKey(name: '_defaultValueInstant') Element? defaultValueInstantElement,
     String? defaultValueString,

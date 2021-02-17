@@ -1543,7 +1543,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-        SupplyRequestStatus status,
+        SupplyRequestStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? category,
     Code? priority,

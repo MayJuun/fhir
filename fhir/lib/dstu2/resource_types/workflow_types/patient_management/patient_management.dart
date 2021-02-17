@@ -34,7 +34,7 @@ abstract class Encounter with Resource implements _$Encounter {
     @JsonKey(name: '_status') Element? statusElement,
     List<EncounterStatusHistory>? statusHistory,
     @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
-        EncounterClass class_,
+        EncounterClass? class_,
     @JsonKey(name: '_class') Element? classElement,
     List<CodeableConcept>? type,
     CodeableConcept? priority,

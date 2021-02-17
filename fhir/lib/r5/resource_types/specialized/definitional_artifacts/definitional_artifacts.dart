@@ -40,7 +40,7 @@ abstract class ActivityDefinition
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-        ActivityDefinitionStatus status,
+        ActivityDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,

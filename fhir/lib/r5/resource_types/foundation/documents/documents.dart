@@ -34,7 +34,7 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
     @JsonKey(unknownEnumValue: CatalogEntryType.unknown) CatalogEntryType? type,
     @JsonKey(name: '_type') Element? typeElement,
     @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
-        CatalogEntryStatus status,
+        CatalogEntryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? effectivePeriod,
     Boolean? orderable,

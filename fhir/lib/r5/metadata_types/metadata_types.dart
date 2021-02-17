@@ -186,7 +186,7 @@ abstract class DataRequirementSort implements _$DataRequirementSort {
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
     @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-        DataRequirementSortDirection direction,
+        DataRequirementSortDirection? direction,
     @JsonKey(name: '_direction') Element? directionElement,
   }) = _DataRequirementSort;
 

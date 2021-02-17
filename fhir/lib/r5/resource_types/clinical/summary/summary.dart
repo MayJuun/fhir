@@ -32,7 +32,7 @@ abstract class AdverseEvent with Resource implements _$AdverseEvent {
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
-        AdverseEventActuality actuality,
+        AdverseEventActuality? actuality,
     @JsonKey(name: '_actuality') Element? actualityElement,
     List<CodeableConcept>? category,
     CodeableConcept? code,

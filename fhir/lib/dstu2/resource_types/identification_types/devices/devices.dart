@@ -92,7 +92,7 @@ abstract class DeviceComponent with Resource implements _$DeviceComponent {
     List<CodeableConcept>? operationalStatus,
     CodeableConcept? parameterGroup,
     @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
-        DeviceComponentMeasurementPrinciple measurementPrinciple,
+        DeviceComponentMeasurementPrinciple? measurementPrinciple,
     List<DeviceComponentProductionSpecification>? productionSpecification,
     CodeableConcept? languageCode,
   }) = _DeviceComponent;

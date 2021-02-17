@@ -33,7 +33,7 @@ abstract class ExplanationOfBenefit
     List<Identifier>? identifier,
     Reference? request,
     @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
-        ExplanationOfBenefitOutcome outcome,
+        ExplanationOfBenefitOutcome? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,

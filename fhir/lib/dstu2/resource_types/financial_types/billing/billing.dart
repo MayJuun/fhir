@@ -426,7 +426,7 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
     Reference? requestProvider,
     Reference? requestOrganization,
     @JsonKey(unknownEnumValue: ClaimResponseOutcome.unknown)
-        ClaimResponseOutcome outcome,
+        ClaimResponseOutcome? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,

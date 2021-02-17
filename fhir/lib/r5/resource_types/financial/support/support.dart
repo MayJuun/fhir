@@ -395,7 +395,7 @@ abstract class CoverageEligibilityResponse
     Reference? requestor,
     required Reference? request,
     @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-        CoverageEligibilityResponseOutcome outcome,
+        CoverageEligibilityResponseOutcome? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,

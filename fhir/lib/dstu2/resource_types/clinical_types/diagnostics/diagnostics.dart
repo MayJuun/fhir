@@ -302,7 +302,7 @@ abstract class DiagnosticOrder with Resource implements _$DiagnosticOrder {
     List<Reference>? supportingInformation,
     List<Reference>? specimen,
     @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
-        DiagnosticOrderStatus status,
+        DiagnosticOrderStatus? status,
     @JsonKey(unknownEnumValue: DiagnosticOrderPriority.unknown)
         DiagnosticOrderPriority priority,
     List<DiagnosticOrderEvent>? event,

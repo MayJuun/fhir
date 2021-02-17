@@ -361,14 +361,14 @@ abstract class ProcedureRequest with Resource implements _$ProcedureRequest {
     Reference? encounter,
     Reference? performer,
     @JsonKey(unknownEnumValue: ProcedureRequestStatus.unknown)
-        ProcedureRequestStatus status,
+        ProcedureRequestStatus? status,
     List<Annotation>? notes,
     Boolean? asNeededBoolean,
     CodeableConcept? asNeededCodeableConcept,
     FhirDateTime? orderedOn,
     Reference? orderer,
     @JsonKey(unknownEnumValue: ProcedureRequestPriority.unknown)
-        ProcedureRequestPriority priority,
+        ProcedureRequestPriority? priority,
   }) = _ProcedureRequest;
 
   /// Produces a Yaml formatted String version of the object

@@ -122,7 +122,7 @@ abstract class CarePlanDetail implements _$CarePlanDetail {
     List<CodeableReference>? reason,
     List<Reference>? goal,
     @JsonKey(unknownEnumValue: CarePlanDetailStatus.unknown)
-        CarePlanDetailStatus status,
+        CarePlanDetailStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? statusReason,
     Boolean? doNotPerform,

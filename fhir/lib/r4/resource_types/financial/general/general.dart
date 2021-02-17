@@ -4717,7 +4717,7 @@ abstract class ExplanationOfBenefitProcessNote
     PositiveInt? number,
     @JsonKey(name: '_number') Element? numberElement,
     @JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown)
-        ExplanationOfBenefitProcessNoteType type,
+        ExplanationOfBenefitProcessNoteType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,

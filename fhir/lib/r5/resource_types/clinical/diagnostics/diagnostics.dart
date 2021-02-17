@@ -77,7 +77,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
     List<Identifier>? identifier,
     List<Reference>? basedOn,
     @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-        DiagnosticReportStatus status,
+        DiagnosticReportStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     required CodeableConcept? code,

@@ -111,7 +111,7 @@ abstract class Quantity implements _$Quantity {
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     @JsonKey(unknownEnumValue: QuantityComparator.unknown)
-        QuantityComparator comparator,
+        QuantityComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
     String? unit,
     @JsonKey(name: '_unit') Element? unitElement,

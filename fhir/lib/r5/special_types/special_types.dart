@@ -522,12 +522,12 @@ abstract class ElementDefinition implements _$ElementDefinition {
     List<ElementDefinitionType>? type,
     Base64Binary? defaultValueBase64Binary,
     @JsonKey(name: '_defaultValueBase64Binary')
-        Element defaultValueBase64BinaryElement,
+        Element? defaultValueBase64BinaryElement,
     Boolean? defaultValueBoolean,
     @JsonKey(name: '_defaultValueBoolean') Element? defaultValueBooleanElement,
     Canonical? defaultValueCanonical,
     @JsonKey(name: '_defaultValueCanonical')
-        Element defaultValueCanonicalElement,
+        Element? defaultValueCanonicalElement,
     Code? defaultValueCode,
     @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
     Date? defaultValueDate,
@@ -553,14 +553,14 @@ abstract class ElementDefinition implements _$ElementDefinition {
     @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
     PositiveInt? defaultValuePositiveInt,
     @JsonKey(name: '_defaultValuePositiveInt')
-        Element defaultValuePositiveIntElement,
+        Element? defaultValuePositiveIntElement,
     String? defaultValueString,
     @JsonKey(name: '_defaultValueString') Element? defaultValueStringElement,
     Time? defaultValueTime,
     @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
     UnsignedInt? defaultValueUnsignedInt,
     @JsonKey(name: '_defaultValueUnsignedInt')
-        Element defaultValueUnsignedIntElement,
+        Element? defaultValueUnsignedIntElement,
     FhirUri? defaultValueUri,
     @JsonKey(name: '_defaultValueUri') Element? defaultValueUriElement,
     FhirUrl? defaultValueUrl,

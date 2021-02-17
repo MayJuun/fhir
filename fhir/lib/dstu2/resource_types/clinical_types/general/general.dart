@@ -39,16 +39,16 @@ abstract class AllergyIntolerance
     Reference? reporter,
     required CodeableConcept? substance,
     @JsonKey(unknownEnumValue: AllergyIntoleranceStatus.unknown)
-        AllergyIntoleranceStatus status,
+        AllergyIntoleranceStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
-        AllergyIntoleranceCriticality criticality,
+        AllergyIntoleranceCriticality? criticality,
     @JsonKey(name: '_criticality') Element? criticalityElement,
     @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
-        AllergyIntoleranceType type,
+        AllergyIntoleranceType? type,
     @JsonKey(name: '_type') Element? typeElement,
     @JsonKey(unknownEnumValue: AllergyIntoleranceCategory.unknown)
-        AllergyIntoleranceCategory category,
+        AllergyIntoleranceCategory? category,
     @JsonKey(name: '_category') Element? categoryElement,
     FhirDateTime? lastOccurence,
     @JsonKey(name: '_lastOccurence') Element? lastOccurenceElement,

@@ -132,7 +132,7 @@ abstract class EligibilityResponse
     List<Identifier>? identifier,
     Reference? request,
     @JsonKey(unknownEnumValue: EligibilityResponseOutcome.unknown)
-        EligibilityResponseOutcome outcome,
+        EligibilityResponseOutcome? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,

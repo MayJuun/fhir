@@ -1330,7 +1330,7 @@ abstract class MolecularSequenceReferenceSeq
     String? genomeBuild,
     @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
     @JsonKey(unknownEnumValue: MolecularSequenceReferenceSeqOrientation.unknown)
-        MolecularSequenceReferenceSeqOrientation orientation,
+        MolecularSequenceReferenceSeqOrientation? orientation,
     @JsonKey(name: '_orientation') Element? orientationElement,
     CodeableConcept? referenceSeqId,
     Reference? referenceSeqPointer,

@@ -321,7 +321,7 @@ abstract class DeviceUseStatement
     List<Identifier>? identifier,
     List<Reference>? basedOn,
     @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-        DeviceUseStatementStatus status,
+        DeviceUseStatementStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     required Reference? subject,

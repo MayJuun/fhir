@@ -628,7 +628,7 @@ abstract class AllergyIntoleranceReaction
     FhirDateTime? onset,
     @JsonKey(name: '_onset') Element? onsetElement,
     @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
-        AllergyIntoleranceReactionSeverity severity,
+        AllergyIntoleranceReactionSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     CodeableConcept? exposureRoute,
     List<Annotation>? note,

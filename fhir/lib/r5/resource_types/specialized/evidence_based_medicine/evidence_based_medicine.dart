@@ -224,7 +224,7 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
-        EvidenceVariableStatus status,
+        EvidenceVariableStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,

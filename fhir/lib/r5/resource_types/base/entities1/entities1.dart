@@ -109,7 +109,7 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
     List<HealthcareServiceNotAvailable>? notAvailable,
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
-        Element availabilityExceptionsElement,
+        Element? availabilityExceptionsElement,
     List<Reference>? endpoint,
   }) = _HealthcareService;
 

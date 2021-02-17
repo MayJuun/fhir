@@ -186,7 +186,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
     FhirDateTime? date,
     Identifier? identifier,
     @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-        SupplyRequestStatus status,
+        SupplyRequestStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? kind,
     Reference? orderedItem,

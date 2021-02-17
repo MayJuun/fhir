@@ -183,7 +183,7 @@ abstract class AdministrableProductDefinitionWithdrawalPeriod
     required Quantity? value,
     String? supportingInformation,
     @JsonKey(name: '_supportingInformation')
-        Element supportingInformationElement,
+        Element? supportingInformationElement,
   }) = _AdministrableProductDefinitionWithdrawalPeriod;
 
   /// Produces a Yaml formatted String version of the object

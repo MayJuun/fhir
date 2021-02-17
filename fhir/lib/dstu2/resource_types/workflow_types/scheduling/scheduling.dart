@@ -77,7 +77,7 @@ abstract class AppointmentParticipant with _$AppointmentParticipant {
     List<CodeableConcept>? type,
     Reference? actor,
     @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-        ParticipantRequired required_,
+        ParticipantRequired? required_,
     @JsonKey(name: '_required') Element? requiredElement,
     @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
         required ParticipantStatus status,
