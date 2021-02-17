@@ -19,16 +19,16 @@ part 'resource_types_enum.dart';
 /// in this class is only used if the resourceType is not previously known
 @JsonSerializable()
 class Resource {
-  Id id;
-  Stu3ResourceType resourceType;
-  Meta meta;
-  FhirUri implicitRules;
-  Code language;
-  Narrative text;
-  List<Resource> contained;
+  Id? id;
+  Stu3ResourceType? resourceType;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Code? language;
+  Narrative? text;
+  List<Resource>? contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension> extension_;
-  List<FhirExtension> modifierExtension;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
 
   /// produce a string of the [resourceType]
   String resourceTypeString() =>
