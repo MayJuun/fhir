@@ -157,7 +157,7 @@ abstract class MedicinalProduct with Resource implements _$MedicinalProduct {
     List<Reference>? clinicalTrial,
     required List<MedicinalProductName>? name,
     List<Identifier>? crossReference,
-    List<MedicinalProductManufacturingBusinessOperation>
+    List<MedicinalProductManufacturingBusinessOperation>?
         manufacturingBusinessOperation,
     List<MedicinalProductSpecialDesignation>? specialDesignation,
   }) = _MedicinalProduct;

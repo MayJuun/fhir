@@ -237,7 +237,7 @@ abstract class EffectEvidenceSynthesis
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: EffectEvidenceSynthesisStatus.unknown)
-        EffectEvidenceSynthesisStatus status,
+        EffectEvidenceSynthesisStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,

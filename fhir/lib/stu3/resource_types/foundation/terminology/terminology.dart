@@ -526,7 +526,7 @@ abstract class ExpansionProfile with Resource implements _$ExpansionProfile {
     @JsonKey(name: '_excludeNotForUI') Element? excludeNotForUIElement,
     Boolean? excludePostCoordinated,
     @JsonKey(name: '_excludePostCoordinated')
-        Element excludePostCoordinatedElement,
+        Element? excludePostCoordinatedElement,
     String? displayLanguage,
     @JsonKey(name: '_displayLanguage') Element? displayLanguageElement,
     Boolean? limitedExpansion,

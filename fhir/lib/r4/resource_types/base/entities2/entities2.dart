@@ -127,7 +127,7 @@ abstract class BiologicallyDerivedProduct
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown)
-        BiologicallyDerivedProductProductCategory productCategory,
+        BiologicallyDerivedProductProductCategory? productCategory,
     @JsonKey(name: '_productCategory') Element? productCategoryElement,
     CodeableConcept? productCode,
     @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown)

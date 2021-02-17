@@ -333,7 +333,7 @@ abstract class ActivityDefinition
     String? subtitle,
     @JsonKey(name: '_subtitle') Element? subtitleElement,
     @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
-        ActivityDefinitionStatus status,
+        ActivityDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,

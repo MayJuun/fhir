@@ -583,7 +583,7 @@ abstract class BundleRequest implements _$BundleRequest {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
-        BundleRequestMethod method,
+        BundleRequestMethod? method,
     @JsonKey(name: '_method') Element? methodElement,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,

@@ -2099,7 +2099,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     List<ElementDefinitionType>? type,
     Base64Binary? defaultValueBase64Binary,
     @JsonKey(name: '_defaultValueBase64Binary')
-        Element defaultValueBase64BinaryElement,
+        Element? defaultValueBase64BinaryElement,
     Boolean? defaultValueBoolean,
     @JsonKey(name: '_defaultValueBoolean') Element? defaultValueBooleanElement,
     Canonical? defaultValueCanonical,

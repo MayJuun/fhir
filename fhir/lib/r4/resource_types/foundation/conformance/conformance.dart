@@ -234,7 +234,7 @@ abstract class CapabilityStatement
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
-        CapabilityStatementStatus status,
+        CapabilityStatementStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,

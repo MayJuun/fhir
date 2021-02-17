@@ -159,7 +159,7 @@ abstract class AdverseEvent with Resource implements _$AdverseEvent {
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
-        AdverseEventActuality actuality,
+        AdverseEventActuality? actuality,
     @JsonKey(name: '_actuality') Element? actualityElement,
     List<CodeableConcept>? category,
     CodeableConcept? event,

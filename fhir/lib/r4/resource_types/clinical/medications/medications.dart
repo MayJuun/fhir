@@ -516,7 +516,7 @@ abstract class ImmunizationProtocolApplied
     List<CodeableConcept>? targetDisease,
     PositiveInt? doseNumberPositiveInt,
     @JsonKey(name: '_doseNumberPositiveInt')
-        Element doseNumberPositiveIntElement,
+        Element? doseNumberPositiveIntElement,
     String? doseNumberString,
     @JsonKey(name: '_doseNumberString') Element? doseNumberStringElement,
     PositiveInt? seriesDosesPositiveInt,

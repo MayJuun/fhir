@@ -348,7 +348,7 @@ abstract class Measure with Resource implements _$Measure {
     @JsonKey(name: '_rationale') Element? rationaleElement,
     Markdown? clinicalRecommendationStatement,
     @JsonKey(name: '_clinicalRecommendationStatement')
-        Element clinicalRecommendationStatementElement,
+        Element? clinicalRecommendationStatementElement,
     CodeableConcept? improvementNotation,
     List<Markdown>? definition,
     @JsonKey(name: '_definition') List<Element>? definitionElement,

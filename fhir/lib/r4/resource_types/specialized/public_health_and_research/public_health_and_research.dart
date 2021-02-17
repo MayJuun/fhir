@@ -176,7 +176,7 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
     List<Reference>? protocol,
     List<Reference>? partOf,
     @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-        ResearchStudyStatus status,
+        ResearchStudyStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? primaryPurposeType,
     CodeableConcept? phase,

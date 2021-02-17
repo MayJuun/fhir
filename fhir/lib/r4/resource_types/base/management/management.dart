@@ -252,7 +252,7 @@ abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EncounterStatusHistoryStatus.unknown)
-        EncounterStatusHistoryStatus status,
+        EncounterStatusHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period? period,
   }) = _EncounterStatusHistory;

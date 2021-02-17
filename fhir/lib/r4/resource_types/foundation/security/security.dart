@@ -123,7 +123,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
     required Coding? type,
     List<Coding>? subtype,
     @JsonKey(unknownEnumValue: AuditEventAction.unknown)
-        AuditEventAction action,
+        AuditEventAction? action,
     @JsonKey(name: '_action') Element? actionElement,
     Period? period,
     Instant? recorded,

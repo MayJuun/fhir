@@ -461,7 +461,7 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
     @JsonKey(name: '_definitionUri') List<Element>? definitionUriElement,
     List<Canonical>? definitionCanonical,
     @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
-        ChargeItemStatus status,
+        ChargeItemStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Reference>? partOf,
     required CodeableConcept? code,

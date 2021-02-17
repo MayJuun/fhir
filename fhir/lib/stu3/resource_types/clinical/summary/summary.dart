@@ -77,7 +77,7 @@ abstract class AdverseEventSuspectEntity
     CodeableConcept? causalityAssessment,
     String? causalityProductRelatedness,
     @JsonKey(name: '_causalityProductRelatedness')
-        Element causalityProductRelatednessElement,
+        Element? causalityProductRelatednessElement,
     CodeableConcept? causalityMethod,
     Reference? causalityAuthor,
     CodeableConcept? causalityResult,

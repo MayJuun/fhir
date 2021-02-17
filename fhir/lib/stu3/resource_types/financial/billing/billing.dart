@@ -697,7 +697,7 @@ abstract class ClaimResponseError implements _$ClaimResponseError {
         Element? detailSequenceLinkIdElement,
     Id? subdetailSequenceLinkId,
     @JsonKey(name: '_subdetailSequenceLinkId')
-        Element subdetailSequenceLinkIdElement,
+        Element? subdetailSequenceLinkIdElement,
     required CodeableConcept? code,
   }) = _ClaimResponseError;
 

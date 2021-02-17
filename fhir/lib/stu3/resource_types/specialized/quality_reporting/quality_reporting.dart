@@ -78,7 +78,7 @@ abstract class Measure with Resource implements _$Measure {
     @JsonKey(name: '_rationale') Element? rationaleElement,
     String? clinicalRecommendationStatement,
     @JsonKey(name: '_clinicalRecommendationStatement')
-        Element clinicalRecommendationStatementElement,
+        Element? clinicalRecommendationStatementElement,
     String? improvementNotation,
     @JsonKey(name: '_improvementNotation') Element? improvementNotationElement,
     List<String>? definition,

@@ -529,7 +529,7 @@ abstract class NutritionOrderEnteralFormula
     CodeableConcept? baseFormulaType,
     String? baseFormulaProductName,
     @JsonKey(name: '_baseFormulaProductName')
-        Element baseFormulaProductNameElement,
+        Element? baseFormulaProductNameElement,
     CodeableConcept? additiveType,
     String? additiveProductName,
     @JsonKey(name: '_additiveProductName') Element? additiveProductNameElement,

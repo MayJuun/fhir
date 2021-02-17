@@ -229,7 +229,7 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: CodeSystemStatus.unknown)
-        CodeSystemStatus status,
+        CodeSystemStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,

@@ -135,7 +135,7 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
     List<Identifier>? additionalIdentifier,
     List<CodeableConcept>? classification,
     @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
-        CatalogEntryStatus status,
+        CatalogEntryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? validityPeriod,
     FhirDateTime? validTo,
