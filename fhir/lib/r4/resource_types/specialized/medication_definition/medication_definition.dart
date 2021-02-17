@@ -218,7 +218,7 @@ abstract class MedicinalProductName implements _$MedicinalProductName {
   ///
   /// [countryLanguage]: Country where the name applies.
   factory MedicinalProductName({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? productName,
@@ -281,7 +281,7 @@ abstract class MedicinalProductNamePart implements _$MedicinalProductNamePart {
   ///
   /// [type]: Idenifying type for this part of the name (e.g. strength part).
   factory MedicinalProductNamePart({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'part') String? part_,
@@ -346,7 +346,7 @@ abstract class MedicinalProductCountryLanguage
   ///
   /// [language]: Language code for this name.
   factory MedicinalProductCountryLanguage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? country,
@@ -423,7 +423,7 @@ abstract class MedicinalProductManufacturingBusinessOperation
   ///
   /// [regulator]: A regulator which oversees the operation.
   factory MedicinalProductManufacturingBusinessOperation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? operationType,
@@ -509,7 +509,7 @@ abstract class MedicinalProductSpecialDesignation
   ///
   /// [species]: Animal species for which this applies.
   factory MedicinalProductSpecialDesignation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
@@ -755,7 +755,7 @@ abstract class MedicinalProductAuthorizationJurisdictionalAuthorization
   ///
   /// [validityPeriod]: The start and expected end date of the authorization.
   factory MedicinalProductAuthorizationJurisdictionalAuthorization({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
@@ -830,7 +830,7 @@ abstract class MedicinalProductAuthorizationProcedure
   ///
   /// [application]: Applcations submitted to obtain a marketing authorization.
   factory MedicinalProductAuthorizationProcedure({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -1027,7 +1027,7 @@ abstract class MedicinalProductContraindicationOtherTherapy
   /// substance, medicinal product or class of products) as part of an
   ///  indication or contraindication.
   factory MedicinalProductContraindicationOtherTherapy({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? therapyRelationshipType,
@@ -1225,7 +1225,7 @@ abstract class MedicinalProductIndicationOtherTherapy
   /// substance, medicinal product or class of products) as part of an
   ///  indication or contraindication.
   factory MedicinalProductIndicationOtherTherapy({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? therapyRelationshipType,
@@ -1414,7 +1414,7 @@ abstract class MedicinalProductIngredientSpecifiedSubstance
   /// [strength]: Quantity of the substance or specified substance present in
   ///  the manufactured item or pharmaceutical product.
   factory MedicinalProductIngredientSpecifiedSubstance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -1499,7 +1499,7 @@ abstract class MedicinalProductIngredientStrength
   ///
   /// [referenceStrength]: Strength expressed in terms of a reference substance.
   factory MedicinalProductIngredientStrength({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Ratio? presentation,
@@ -1577,7 +1577,7 @@ abstract class MedicinalProductIngredientReferenceStrength
   ///
   /// [country]: The country or countries for which the strength range applies.
   factory MedicinalProductIngredientReferenceStrength({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? substance,
@@ -1645,7 +1645,7 @@ abstract class MedicinalProductIngredientSubstance
   /// [strength]: Quantity of the substance or specified substance present in
   ///  the manufactured item or pharmaceutical product.
   factory MedicinalProductIngredientSubstance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -1833,7 +1833,7 @@ abstract class MedicinalProductInteractionInteractant
   /// [itemCodeableConcept]: The specific medication, food or laboratory test
   ///  that interacts.
   factory MedicinalProductInteractionInteractant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? itemReference,
@@ -2143,7 +2143,7 @@ abstract class MedicinalProductPackagedBatchIdentifier
   /// [immediatePackaging]: A number appearing on the immediate packaging (and
   ///  not the outer packaging).
   factory MedicinalProductPackagedBatchIdentifier({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Identifier? outerPackaging,
@@ -2228,7 +2228,7 @@ abstract class MedicinalProductPackagedPackageItem
   ///
   /// [manufacturer]: Manufacturer of this Package Item.
   factory MedicinalProductPackagedPackageItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
@@ -2422,7 +2422,7 @@ abstract class MedicinalProductPharmaceuticalCharacteristics
   ///
   /// [status]: The status of characteristic e.g. assigned or pending.
   factory MedicinalProductPharmaceuticalCharacteristics({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -2506,7 +2506,7 @@ abstract class MedicinalProductPharmaceuticalRouteOfAdministration
   ///
   /// [targetSpecies]: A species for which this route applies.
   factory MedicinalProductPharmaceuticalRouteOfAdministration({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -2576,7 +2576,7 @@ abstract class MedicinalProductPharmaceuticalTargetSpecies
   /// [withdrawalPeriod]: A species specific time during which consumption of
   ///  animal product is not appropriate.
   factory MedicinalProductPharmaceuticalTargetSpecies({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -2644,7 +2644,7 @@ abstract class MedicinalProductPharmaceuticalWithdrawalPeriod
   ///
   /// [_supportingInformation]: Extensions for supportingInformation
   factory MedicinalProductPharmaceuticalWithdrawalPeriod({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? tissue,
@@ -2982,7 +2982,7 @@ abstract class SubstanceNucleicAcidSubunit
   ///
   /// [sugar]: 5.3.6.8.1 Sugar ID (Mandatory).
   factory SubstanceNucleicAcidSubunit({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? subunit,
@@ -3071,7 +3071,7 @@ abstract class SubstanceNucleicAcidLinkage
   ///
   /// [_residueSite]: Extensions for residueSite
   factory SubstanceNucleicAcidLinkage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? connectivity,
@@ -3149,7 +3149,7 @@ abstract class SubstanceNucleicAcidSugar
   ///
   /// [_residueSite]: Extensions for residueSite
   factory SubstanceNucleicAcidSugar({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -3324,7 +3324,7 @@ abstract class SubstancePolymerMonomerSet
   ///
   /// [startingMaterial]: Todo.
   factory SubstancePolymerMonomerSet({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? ratioType,
@@ -3390,7 +3390,7 @@ abstract class SubstancePolymerStartingMaterial
   ///
   /// [amount]: Todo.
   factory SubstancePolymerStartingMaterial({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? material,
@@ -3462,7 +3462,7 @@ abstract class SubstancePolymerRepeat implements _$SubstancePolymerRepeat {
   ///
   /// [repeatUnit]: Todo.
   factory SubstancePolymerRepeat({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? numberOfUnits,
@@ -3534,7 +3534,7 @@ abstract class SubstancePolymerRepeatUnit
   ///
   /// [structuralRepresentation]: Todo.
   factory SubstancePolymerRepeatUnit({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? orientationOfPolymerisation,
@@ -3598,7 +3598,7 @@ abstract class SubstancePolymerDegreeOfPolymerisation
   ///
   /// [amount]: Todo.
   factory SubstancePolymerDegreeOfPolymerisation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? degree,
@@ -3664,7 +3664,7 @@ abstract class SubstancePolymerStructuralRepresentation
   ///
   /// [attachment]: Todo.
   factory SubstancePolymerStructuralRepresentation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -3913,7 +3913,7 @@ abstract class SubstanceProteinSubunit implements _$SubstanceProteinSubunit {
   ///
   /// [_cTerminalModification]: Extensions for cTerminalModification
   factory SubstanceProteinSubunit({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? subunit,
@@ -4099,7 +4099,7 @@ abstract class SubstanceReferenceInformationGene
   ///
   /// [source]: Todo.
   factory SubstanceReferenceInformationGene({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? geneSequenceOrigin,
@@ -4164,7 +4164,7 @@ abstract class SubstanceReferenceInformationGeneElement
   ///
   /// [source]: Todo.
   factory SubstanceReferenceInformationGeneElement({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -4231,7 +4231,7 @@ abstract class SubstanceReferenceInformationClassification
   ///
   /// [source]: Todo.
   factory SubstanceReferenceInformationClassification({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? domain,
@@ -4313,7 +4313,7 @@ abstract class SubstanceReferenceInformationTarget
   ///
   /// [source]: Todo.
   factory SubstanceReferenceInformationTarget({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? target,
@@ -4585,7 +4585,7 @@ abstract class SubstanceSourceMaterialFractionDescription
   /// component. For Herbal preparations the particulars of the extracts
   ///  (liquid/dry) is described in Specified Substance Group 1.
   factory SubstanceSourceMaterialFractionDescription({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? fraction,
@@ -4684,7 +4684,7 @@ abstract class SubstanceSourceMaterialOrganism
   ///
   /// [organismGeneral]: 4.9.13.7.1 Kingdom (Conditional).
   factory SubstanceSourceMaterialOrganism({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? family,
@@ -4777,7 +4777,7 @@ abstract class SubstanceSourceMaterialAuthor
   ///
   /// [_authorDescription]: Extensions for authorDescription
   factory SubstanceSourceMaterialAuthor({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? authorType,
@@ -4874,7 +4874,7 @@ abstract class SubstanceSourceMaterialHybrid
   ///
   /// [hybridType]: The hybrid type of an organism shall be specified.
   factory SubstanceSourceMaterialHybrid({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? maternalOrganismId,
@@ -4961,7 +4961,7 @@ abstract class SubstanceSourceMaterialOrganismGeneral
   ///
   /// [order]: The order of an organism shall be specified,.
   factory SubstanceSourceMaterialOrganismGeneral({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? kingdom,
@@ -5041,7 +5041,7 @@ abstract class SubstanceSourceMaterialPartDescription
   /// extracted from different anatomical locations of the organism. Multiple
   ///  alternative locations may apply.
   factory SubstanceSourceMaterialPartDescription({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'part') CodeableConcept? part_,
@@ -5283,7 +5283,7 @@ abstract class SubstanceSpecificationMoiety
   ///
   /// [_amountString]: Extensions for amountString
   factory SubstanceSpecificationMoiety({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? role,
@@ -5371,7 +5371,7 @@ abstract class SubstanceSpecificationProperty
   ///
   /// [_amountString]: Extensions for amountString
   factory SubstanceSpecificationProperty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? category,
@@ -5461,7 +5461,7 @@ abstract class SubstanceSpecificationStructure
   ///
   /// [representation]: Molecular structural representation.
   factory SubstanceSpecificationStructure({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? stereochemistry,
@@ -5541,7 +5541,7 @@ abstract class SubstanceSpecificationIsotope
   /// [molecularWeight]: The molecular weight or weight range (for proteins,
   ///  polymers or nucleic acids).
   factory SubstanceSpecificationIsotope({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -5611,7 +5611,7 @@ abstract class SubstanceSpecificationMolecularWeight
   /// only a single definite value for a given element is given, it would be
   ///  captured in this field.
   factory SubstanceSpecificationMolecularWeight({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? method,
@@ -5680,7 +5680,7 @@ abstract class SubstanceSpecificationRepresentation
   ///
   /// [attachment]: An attached file with the structural representation.
   factory SubstanceSpecificationRepresentation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -5756,7 +5756,7 @@ abstract class SubstanceSpecificationCode
   ///
   /// [source]: Supporting literature.
   factory SubstanceSpecificationCode({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -5845,7 +5845,7 @@ abstract class SubstanceSpecificationName
   ///
   /// [source]: Supporting literature.
   factory SubstanceSpecificationName({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -5921,7 +5921,7 @@ abstract class SubstanceSpecificationOfficial
   ///
   /// [_date]: Extensions for date
   factory SubstanceSpecificationOfficial({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? authority,
@@ -6022,7 +6022,7 @@ abstract class SubstanceSpecificationRelationship
   ///
   /// [source]: Supporting literature.
   factory SubstanceSpecificationRelationship({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? substanceReference,

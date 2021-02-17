@@ -103,7 +103,7 @@ abstract class AuditEventAgent implements _$AuditEventAgent {
 abstract class AuditEventNetwork implements _$AuditEventNetwork {
   AuditEventNetwork._();
   factory AuditEventNetwork({
-    String address,
+    String? address,
     @JsonKey(name: '_address') Element? addressElement,
     AuditEventNetworkType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -130,7 +130,7 @@ abstract class AuditEventNetwork implements _$AuditEventNetwork {
 abstract class AuditEventSource implements _$AuditEventSource {
   AuditEventSource._();
   factory AuditEventSource({
-    String site,
+    String? site,
     @JsonKey(name: '_site') Element? siteElement,
     required Identifier? identifier,
     List<Coding>? type,
@@ -157,7 +157,7 @@ abstract class AuditEventSource implements _$AuditEventSource {
 abstract class AuditEventEntity implements _$AuditEventEntity {
   AuditEventEntity._();
   factory AuditEventEntity({
-    Identifier identifier,
+    Identifier? identifier,
     Reference? reference,
     Coding? type,
     Coding? role,
@@ -193,7 +193,7 @@ abstract class AuditEventEntity implements _$AuditEventEntity {
 abstract class AuditEventDetail implements _$AuditEventDetail {
   AuditEventDetail._();
   factory AuditEventDetail({
-    String type,
+    String? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -304,7 +304,7 @@ abstract class ConsentActor implements _$ConsentActor {
 abstract class ConsentPolicy implements _$ConsentPolicy {
   ConsentPolicy._();
   factory ConsentPolicy({
-    String authority,
+    String? authority,
     @JsonKey(name: '_authority') Element? authorityElement,
     String? uri,
     @JsonKey(name: '_uri') Element? uriElement,
@@ -331,7 +331,7 @@ abstract class ConsentPolicy implements _$ConsentPolicy {
 abstract class ConsentData implements _$ConsentData {
   ConsentData._();
   factory ConsentData({
-    ConsentDataMeaning meaning,
+    ConsentDataMeaning? meaning,
     @JsonKey(name: '_meaning') Element? meaningElement,
     required Reference? reference,
   }) = _ConsentData;
@@ -357,7 +357,7 @@ abstract class ConsentData implements _$ConsentData {
 abstract class ConsentExcept implements _$ConsentExcept {
   ConsentExcept._();
   factory ConsentExcept({
-    ConsentExceptType type,
+    ConsentExceptType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Period? period,
     List<ConsentActor1>? actor,
@@ -416,7 +416,7 @@ abstract class ConsentActor1 implements _$ConsentActor1 {
 abstract class ConsentData1 implements _$ConsentData1 {
   ConsentData1._();
   factory ConsentData1({
-    ConsentData1Meaning meaning,
+    ConsentData1Meaning? meaning,
     @JsonKey(name: '_meaning') Element? meaningElement,
     required Reference? reference,
   }) = _ConsentData1;
@@ -521,7 +521,7 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
 abstract class ProvenanceEntity implements _$ProvenanceEntity {
   ProvenanceEntity._();
   factory ProvenanceEntity({
-    ProvenanceEntityRole role,
+    ProvenanceEntityRole? role,
     @JsonKey(name: '_role') Element? roleElement,
     String? whatUri,
     @JsonKey(name: '_whatUri') Element? whatUriElement,

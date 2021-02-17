@@ -75,7 +75,7 @@ abstract class Device with Resource implements _$Device {
 abstract class DeviceUdi implements _$DeviceUdi {
   DeviceUdi._();
   factory DeviceUdi({
-    String deviceIdentifier,
+    String? deviceIdentifier,
     @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -162,7 +162,7 @@ abstract class DeviceComponentProductionSpecification
     implements _$DeviceComponentProductionSpecification {
   DeviceComponentProductionSpecification._();
   factory DeviceComponentProductionSpecification({
-    CodeableConcept specType,
+    CodeableConcept? specType,
     Identifier? componentId,
     String? productionSpec,
     @JsonKey(name: '_productionSpec') Element? productionSpecElement,
@@ -241,7 +241,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
 abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
   DeviceMetricCalibration._();
   factory DeviceMetricCalibration({
-    DeviceMetricCalibrationType type,
+    DeviceMetricCalibrationType? type,
     @JsonKey(name: '_type') Element? typeElement,
     DeviceMetricCalibrationState? state,
     @JsonKey(name: '_state') Element? stateElement,
@@ -427,7 +427,7 @@ abstract class HealthcareServiceNotAvailable
     implements _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
   factory HealthcareServiceNotAvailable({
-    String description,
+    String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Period? during,
   }) = _HealthcareServiceNotAvailable;
@@ -510,7 +510,7 @@ abstract class Location with Resource implements _$Location {
 abstract class LocationPosition implements _$LocationPosition {
   LocationPosition._();
   factory LocationPosition({
-    Decimal longitude,
+    Decimal? longitude,
     @JsonKey(name: '_longitude') Element? longitudeElement,
     Decimal? latitude,
     @JsonKey(name: '_latitude') Element? latitudeElement,
@@ -588,7 +588,7 @@ abstract class Organization with Resource implements _$Organization {
 abstract class OrganizationContact implements _$OrganizationContact {
   OrganizationContact._();
   factory OrganizationContact({
-    CodeableConcept purpose,
+    CodeableConcept? purpose,
     HumanName? name,
     List<ContactPoint>? telecom,
     Address? address,
@@ -660,7 +660,7 @@ abstract class Substance with Resource implements _$Substance {
 abstract class SubstanceInstance implements _$SubstanceInstance {
   SubstanceInstance._();
   factory SubstanceInstance({
-    Identifier identifier,
+    Identifier? identifier,
     String? expiry,
     @JsonKey(name: '_expiry') Element? expiryElement,
     Quantity? quantity,
@@ -687,7 +687,7 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
 abstract class SubstanceIngredient implements _$SubstanceIngredient {
   SubstanceIngredient._();
   factory SubstanceIngredient({
-    Ratio quantity,
+    Ratio? quantity,
     CodeableConcept? substanceCodeableConcept,
     Reference? substanceReference,
   }) = _SubstanceIngredient;

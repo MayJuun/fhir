@@ -69,7 +69,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
 abstract class AuditEventAgent implements _$AuditEventAgent {
   AuditEventAgent._();
   factory AuditEventAgent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -110,7 +110,7 @@ abstract class AuditEventAgent implements _$AuditEventAgent {
 abstract class AuditEventNetwork implements _$AuditEventNetwork {
   AuditEventNetwork._();
   factory AuditEventNetwork({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? address,
@@ -141,7 +141,7 @@ abstract class AuditEventNetwork implements _$AuditEventNetwork {
 abstract class AuditEventSource implements _$AuditEventSource {
   AuditEventSource._();
   factory AuditEventSource({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? site,
@@ -171,7 +171,7 @@ abstract class AuditEventSource implements _$AuditEventSource {
 abstract class AuditEventEntity implements _$AuditEventEntity {
   AuditEventEntity._();
   factory AuditEventEntity({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? what,
@@ -207,7 +207,7 @@ abstract class AuditEventEntity implements _$AuditEventEntity {
 abstract class AuditEventDetail implements _$AuditEventDetail {
   AuditEventDetail._();
   factory AuditEventDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? type,
@@ -292,7 +292,7 @@ abstract class Consent with Resource implements _$Consent {
 abstract class ConsentPolicy implements _$ConsentPolicy {
   ConsentPolicy._();
   factory ConsentPolicy({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? authority,
@@ -322,7 +322,7 @@ abstract class ConsentPolicy implements _$ConsentPolicy {
 abstract class ConsentVerification implements _$ConsentVerification {
   ConsentVerification._();
   factory ConsentVerification({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? verified,
@@ -355,7 +355,7 @@ abstract class ConsentVerification implements _$ConsentVerification {
 abstract class ConsentProvision implements _$ConsentProvision {
   ConsentProvision._();
   factory ConsentProvision({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
@@ -394,7 +394,7 @@ abstract class ConsentProvision implements _$ConsentProvision {
 abstract class ConsentActor implements _$ConsentActor {
   ConsentActor._();
   factory ConsentActor({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? role,
@@ -422,7 +422,7 @@ abstract class ConsentActor implements _$ConsentActor {
 abstract class ConsentData implements _$ConsentData {
   ConsentData._();
   factory ConsentData({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
@@ -502,7 +502,7 @@ abstract class PermissionProcessingActivity
     implements _$PermissionProcessingActivity {
   PermissionProcessingActivity._();
   factory PermissionProcessingActivity({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Reference>? partyReference,
@@ -532,7 +532,7 @@ abstract class PermissionProcessingActivity
 abstract class PermissionJustification implements _$PermissionJustification {
   PermissionJustification._();
   factory PermissionJustification({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Reference>? evidence,
@@ -610,7 +610,7 @@ abstract class Provenance with Resource implements _$Provenance {
 abstract class ProvenanceAgent implements _$ProvenanceAgent {
   ProvenanceAgent._();
   factory ProvenanceAgent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -640,7 +640,7 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
 abstract class ProvenanceEntity implements _$ProvenanceEntity {
   ProvenanceEntity._();
   factory ProvenanceEntity({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ProvenanceEntityRole.unknown)

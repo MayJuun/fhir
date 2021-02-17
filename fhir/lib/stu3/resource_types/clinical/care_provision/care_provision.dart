@@ -16,7 +16,7 @@ abstract class VisionPrescriptionDispense
     implements _$VisionPrescriptionDispense {
   VisionPrescriptionDispense._();
   factory VisionPrescriptionDispense({
-    CodeableConcept product,
+    CodeableConcept? product,
     VisionPrescriptionDispenseEye? eye,
     @JsonKey(name: '_eye') Element? eyeElement,
     Decimal? sphere,
@@ -155,7 +155,7 @@ abstract class CarePlanActivity implements _$CarePlanActivity {
 abstract class CarePlanDetail implements _$CarePlanDetail {
   CarePlanDetail._();
   factory CarePlanDetail({
-    CodeableConcept category,
+    CodeableConcept? category,
     Reference? definition,
     CodeableConcept? code,
     List<CodeableConcept>? reasonCode,
@@ -252,7 +252,7 @@ abstract class CareTeam with Resource implements _$CareTeam {
 abstract class CareTeamParticipant implements _$CareTeamParticipant {
   CareTeamParticipant._();
   factory CareTeamParticipant({
-    CodeableConcept role,
+    CodeableConcept? role,
     Reference? member,
     Reference? onBehalfOf,
     Period? period,
@@ -334,7 +334,7 @@ abstract class Goal with Resource implements _$Goal {
 abstract class GoalTarget implements _$GoalTarget {
   GoalTarget._();
   factory GoalTarget({
-    CodeableConcept measure,
+    CodeableConcept? measure,
     Quantity? detailQuantity,
     Range? detailRange,
     CodeableConcept? detailCodeableConcept,
@@ -444,7 +444,7 @@ abstract class NutritionOrderOralDiet implements _$NutritionOrderOralDiet {
 abstract class NutritionOrderNutrient implements _$NutritionOrderNutrient {
   NutritionOrderNutrient._();
   factory NutritionOrderNutrient({
-    CodeableConcept modifier,
+    CodeableConcept? modifier,
     Quantity? amount,
   }) = _NutritionOrderNutrient;
 
@@ -469,7 +469,7 @@ abstract class NutritionOrderNutrient implements _$NutritionOrderNutrient {
 abstract class NutritionOrderTexture implements _$NutritionOrderTexture {
   NutritionOrderTexture._();
   factory NutritionOrderTexture({
-    CodeableConcept modifier,
+    CodeableConcept? modifier,
     CodeableConcept? foodType,
   }) = _NutritionOrderTexture;
 
@@ -494,7 +494,7 @@ abstract class NutritionOrderTexture implements _$NutritionOrderTexture {
 abstract class NutritionOrderSupplement implements _$NutritionOrderSupplement {
   NutritionOrderSupplement._();
   factory NutritionOrderSupplement({
-    CodeableConcept type,
+    CodeableConcept? type,
     String? productName,
     @JsonKey(name: '_productName') Element? productNameElement,
     List<Timing>? schedule,
@@ -526,7 +526,7 @@ abstract class NutritionOrderEnteralFormula
     implements _$NutritionOrderEnteralFormula {
   NutritionOrderEnteralFormula._();
   factory NutritionOrderEnteralFormula({
-    CodeableConcept baseFormulaType,
+    CodeableConcept? baseFormulaType,
     String? baseFormulaProductName,
     @JsonKey(name: '_baseFormulaProductName')
         Element baseFormulaProductNameElement,
@@ -565,7 +565,7 @@ abstract class NutritionOrderAdministration
     implements _$NutritionOrderAdministration {
   NutritionOrderAdministration._();
   factory NutritionOrderAdministration({
-    Timing schedule,
+    Timing? schedule,
     Quantity? quantity,
     Quantity? rateSimpleQuantity,
     Ratio? rateRatio,

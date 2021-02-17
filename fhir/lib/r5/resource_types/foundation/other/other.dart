@@ -133,7 +133,7 @@ abstract class Bundle with Resource implements _$Bundle {
 abstract class BundleLink implements _$BundleLink {
   BundleLink._();
   factory BundleLink({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? relation,
@@ -163,7 +163,7 @@ abstract class BundleLink implements _$BundleLink {
 abstract class BundleEntry implements _$BundleEntry {
   BundleEntry._();
   factory BundleEntry({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<BundleLink>? link,
@@ -196,7 +196,7 @@ abstract class BundleEntry implements _$BundleEntry {
 abstract class BundleSearch implements _$BundleSearch {
   BundleSearch._();
   factory BundleSearch({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: BundleSearchMode.unknown) BundleSearchMode? mode,
@@ -226,7 +226,7 @@ abstract class BundleSearch implements _$BundleSearch {
 abstract class BundleRequest implements _$BundleRequest {
   BundleRequest._();
   factory BundleRequest({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
@@ -265,7 +265,7 @@ abstract class BundleRequest implements _$BundleRequest {
 abstract class BundleResponse implements _$BundleResponse {
   BundleResponse._();
   factory BundleResponse({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? status,
@@ -340,7 +340,7 @@ abstract class Linkage with Resource implements _$Linkage {
 abstract class LinkageItem implements _$LinkageItem {
   LinkageItem._();
   factory LinkageItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
@@ -418,7 +418,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
 abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
   MessageHeaderDestination._();
   factory MessageHeaderDestination({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -451,7 +451,7 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
 abstract class MessageHeaderSource implements _$MessageHeaderSource {
   MessageHeaderSource._();
   factory MessageHeaderSource({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -486,7 +486,7 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
 abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
   MessageHeaderResponse._();
   factory MessageHeaderResponse({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? identifier,
@@ -555,7 +555,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
 abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
   OperationOutcomeIssue._();
   factory OperationOutcomeIssue({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
@@ -627,7 +627,7 @@ abstract class Parameters with Resource implements _$Parameters {
 abstract class ParametersParameter implements _$ParametersParameter {
   ParametersParameter._();
   factory ParametersParameter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -790,7 +790,7 @@ abstract class Subscription with Resource implements _$Subscription {
 abstract class SubscriptionFilterBy implements _$SubscriptionFilterBy {
   SubscriptionFilterBy._();
   factory SubscriptionFilterBy({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? searchParamName,
@@ -943,7 +943,7 @@ abstract class SubscriptionTopicResourceTrigger
     implements _$SubscriptionTopicResourceTrigger {
   SubscriptionTopicResourceTrigger._();
   factory SubscriptionTopicResourceTrigger({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -982,7 +982,7 @@ abstract class SubscriptionTopicQueryCriteria
     implements _$SubscriptionTopicQueryCriteria {
   SubscriptionTopicQueryCriteria._();
   factory SubscriptionTopicQueryCriteria({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? previous,
@@ -1018,7 +1018,7 @@ abstract class SubscriptionTopicCanFilterBy
     implements _$SubscriptionTopicCanFilterBy {
   SubscriptionTopicCanFilterBy._();
   factory SubscriptionTopicCanFilterBy({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? searchParamName,

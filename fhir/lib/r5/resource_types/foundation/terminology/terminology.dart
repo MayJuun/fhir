@@ -97,7 +97,7 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
 abstract class CodeSystemFilter implements _$CodeSystemFilter {
   CodeSystemFilter._();
   factory CodeSystemFilter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -131,7 +131,7 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
 abstract class CodeSystemProperty implements _$CodeSystemProperty {
   CodeSystemProperty._();
   factory CodeSystemProperty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -166,7 +166,7 @@ abstract class CodeSystemProperty implements _$CodeSystemProperty {
 abstract class CodeSystemConcept implements _$CodeSystemConcept {
   CodeSystemConcept._();
   factory CodeSystemConcept({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -201,7 +201,7 @@ abstract class CodeSystemConcept implements _$CodeSystemConcept {
 abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
   CodeSystemDesignation._();
   factory CodeSystemDesignation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? language,
@@ -232,7 +232,7 @@ abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
 abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
   CodeSystemProperty1._();
   factory CodeSystemProperty1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -345,7 +345,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
 abstract class ConceptMapGroup implements _$ConceptMapGroup {
   ConceptMapGroup._();
   factory ConceptMapGroup({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? source,
@@ -381,7 +381,7 @@ abstract class ConceptMapGroup implements _$ConceptMapGroup {
 abstract class ConceptMapElement implements _$ConceptMapElement {
   ConceptMapElement._();
   factory ConceptMapElement({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -414,7 +414,7 @@ abstract class ConceptMapElement implements _$ConceptMapElement {
 abstract class ConceptMapTarget implements _$ConceptMapTarget {
   ConceptMapTarget._();
   factory ConceptMapTarget({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -451,7 +451,7 @@ abstract class ConceptMapTarget implements _$ConceptMapTarget {
 abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
   ConceptMapDependsOn._();
   factory ConceptMapDependsOn({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? property,
@@ -484,7 +484,7 @@ abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
 abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
   ConceptMapUnmapped._();
   factory ConceptMapUnmapped({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
@@ -589,7 +589,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
 abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
   NamingSystemUniqueId._();
   factory NamingSystemUniqueId({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
@@ -705,7 +705,7 @@ abstract class TerminologyCapabilitiesSoftware
     implements _$TerminologyCapabilitiesSoftware {
   TerminologyCapabilitiesSoftware._();
   factory TerminologyCapabilitiesSoftware({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -739,7 +739,7 @@ abstract class TerminologyCapabilitiesImplementation
     implements _$TerminologyCapabilitiesImplementation {
   TerminologyCapabilitiesImplementation._();
   factory TerminologyCapabilitiesImplementation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -773,7 +773,7 @@ abstract class TerminologyCapabilitiesCodeSystem
     implements _$TerminologyCapabilitiesCodeSystem {
   TerminologyCapabilitiesCodeSystem._();
   factory TerminologyCapabilitiesCodeSystem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Canonical? uri,
@@ -807,7 +807,7 @@ abstract class TerminologyCapabilitiesVersion
     implements _$TerminologyCapabilitiesVersion {
   TerminologyCapabilitiesVersion._();
   factory TerminologyCapabilitiesVersion({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? code,
@@ -848,7 +848,7 @@ abstract class TerminologyCapabilitiesFilter
     implements _$TerminologyCapabilitiesFilter {
   TerminologyCapabilitiesFilter._();
   factory TerminologyCapabilitiesFilter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -880,7 +880,7 @@ abstract class TerminologyCapabilitiesExpansion
     implements _$TerminologyCapabilitiesExpansion {
   TerminologyCapabilitiesExpansion._();
   factory TerminologyCapabilitiesExpansion({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? hierarchical,
@@ -919,7 +919,7 @@ abstract class TerminologyCapabilitiesParameter
     implements _$TerminologyCapabilitiesParameter {
   TerminologyCapabilitiesParameter._();
   factory TerminologyCapabilitiesParameter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? name,
@@ -953,7 +953,7 @@ abstract class TerminologyCapabilitiesValidateCode
     implements _$TerminologyCapabilitiesValidateCode {
   TerminologyCapabilitiesValidateCode._();
   factory TerminologyCapabilitiesValidateCode({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? translations,
@@ -985,7 +985,7 @@ abstract class TerminologyCapabilitiesTranslation
     implements _$TerminologyCapabilitiesTranslation {
   TerminologyCapabilitiesTranslation._();
   factory TerminologyCapabilitiesTranslation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? needsMap,
@@ -1017,7 +1017,7 @@ abstract class TerminologyCapabilitiesClosure
     implements _$TerminologyCapabilitiesClosure {
   TerminologyCapabilitiesClosure._();
   factory TerminologyCapabilitiesClosure({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? translation,
@@ -1114,7 +1114,7 @@ abstract class ValueSet with Resource implements _$ValueSet {
 abstract class ValueSetCompose implements _$ValueSetCompose {
   ValueSetCompose._();
   factory ValueSetCompose({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Date? lockedDate,
@@ -1148,7 +1148,7 @@ abstract class ValueSetCompose implements _$ValueSetCompose {
 abstract class ValueSetInclude implements _$ValueSetInclude {
   ValueSetInclude._();
   factory ValueSetInclude({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? system,
@@ -1181,7 +1181,7 @@ abstract class ValueSetInclude implements _$ValueSetInclude {
 abstract class ValueSetConcept implements _$ValueSetConcept {
   ValueSetConcept._();
   factory ValueSetConcept({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -1212,7 +1212,7 @@ abstract class ValueSetConcept implements _$ValueSetConcept {
 abstract class ValueSetDesignation implements _$ValueSetDesignation {
   ValueSetDesignation._();
   factory ValueSetDesignation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? language,
@@ -1243,7 +1243,7 @@ abstract class ValueSetDesignation implements _$ValueSetDesignation {
 abstract class ValueSetFilter implements _$ValueSetFilter {
   ValueSetFilter._();
   factory ValueSetFilter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? property,
@@ -1275,7 +1275,7 @@ abstract class ValueSetFilter implements _$ValueSetFilter {
 abstract class ValueSetExpansion implements _$ValueSetExpansion {
   ValueSetExpansion._();
   factory ValueSetExpansion({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? identifier,
@@ -1312,7 +1312,7 @@ abstract class ValueSetExpansion implements _$ValueSetExpansion {
 abstract class ValueSetParameter implements _$ValueSetParameter {
   ValueSetParameter._();
   factory ValueSetParameter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -1354,7 +1354,7 @@ abstract class ValueSetParameter implements _$ValueSetParameter {
 abstract class ValueSetProperty implements _$ValueSetProperty {
   ValueSetProperty._();
   factory ValueSetProperty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -1384,7 +1384,7 @@ abstract class ValueSetProperty implements _$ValueSetProperty {
 abstract class ValueSetContains implements _$ValueSetContains {
   ValueSetContains._();
   factory ValueSetContains({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? system,
@@ -1425,7 +1425,7 @@ abstract class ValueSetContains implements _$ValueSetContains {
 abstract class ValueSetProperty1 implements _$ValueSetProperty1 {
   ValueSetProperty1._();
   factory ValueSetProperty1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,

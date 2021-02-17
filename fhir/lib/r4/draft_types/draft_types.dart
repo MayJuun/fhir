@@ -51,7 +51,7 @@ abstract class Population implements _$Population {
   /// [physiologicalCondition]: The existing physiological conditions of the
   ///  specific population to which this applies.
   factory Population({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Range? ageRange,
@@ -127,7 +127,7 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
   /// can be specified using an appropriate controlled vocabulary The controlled
   ///  term and the controlled term identifier shall be specified.
   factory ProductShelfLife({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -238,7 +238,7 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
   factory ProdCharacteristic({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Quantity? height,
@@ -338,7 +338,7 @@ abstract class MarketingStatus implements _$MarketingStatus {
   ///
   /// [_restoreDate]: Extensions for restoreDate
   factory MarketingStatus({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? country,
@@ -433,7 +433,7 @@ abstract class SubstanceAmount implements _$SubstanceAmount {
   ///
   /// [referenceRange]: Reference range of possible or expected values.
   factory SubstanceAmount({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Quantity? amountQuantity,
@@ -504,7 +504,7 @@ abstract class SubstanceAmountReferenceRange
   ///
   /// [highLimit]: Upper limit possible or expected.
   factory SubstanceAmountReferenceRange({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Quantity? lowLimit,

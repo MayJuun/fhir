@@ -421,7 +421,7 @@ abstract class MeasureGroup implements _$MeasureGroup {
   /// either the name of a valid CQL expression defined within a referenced
   ///  library or a valid FHIR Resource Path.
   factory MeasureGroup({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -488,7 +488,7 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
   /// [criteria]: An expression that specifies the criteria for the population,
   ///  typically the name of an expression in a library.
   factory MeasurePopulation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -562,7 +562,7 @@ abstract class MeasureStratifier implements _$MeasureStratifier {
   /// report, specified as either the name of a valid CQL expression defined
   ///  within a referenced library or a valid FHIR Resource Path.
   factory MeasureStratifier({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -635,7 +635,7 @@ abstract class MeasureComponent implements _$MeasureComponent {
   /// within a referenced library, but it may also be a path to a stratifier
   ///  element.
   factory MeasureComponent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -712,7 +712,7 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
   /// also be a path to a specific data element. The criteria defines the data
   ///  to be returned for this element.
   factory MeasureSupplementalData({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -936,7 +936,7 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
   /// [stratifier]: When a measure includes multiple stratifiers, there will be
   ///  a stratifier group for each stratifier defined by the measure.
   factory MeasureReportGroup({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -1003,7 +1003,7 @@ abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
   /// [subjectResults]: This element refers to a List of subject level
   ///  MeasureReport resources, one for each subject in this population.
   factory MeasureReportPopulation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -1068,7 +1068,7 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
   /// the stratifier. For example, when stratifying on administrative gender,
   ///  there will be four strata, one for each possible gender value.
   factory MeasureReportStratifier({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
@@ -1137,7 +1137,7 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
   /// appropriate for the measure type and scoring method, and based on only the
   ///  members of this stratum.
   factory MeasureReportStratum({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? value,
@@ -1199,7 +1199,7 @@ abstract class MeasureReportComponent implements _$MeasureReportComponent {
   ///
   /// [value]: The stratum component value.
   factory MeasureReportComponent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -1265,7 +1265,7 @@ abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
   /// MeasureReport resources, one for each subject in this population in this
   ///  stratum.
   factory MeasureReportPopulation1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -1493,7 +1493,7 @@ abstract class TestReportParticipant implements _$TestReportParticipant {
   ///
   /// [_display]: Extensions for display
   factory TestReportParticipant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
@@ -1555,7 +1555,7 @@ abstract class TestReportSetup implements _$TestReportSetup {
   ///
   /// [action]: Action would contain either an operation or an assertion.
   factory TestReportSetup({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<TestReportAction>? action,
@@ -1614,7 +1614,7 @@ abstract class TestReportAction implements _$TestReportAction {
   /// [assert]: The results of the assertion performed on the previous
   ///  operations.
   factory TestReportAction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     TestReportOperation? operation,
@@ -1681,7 +1681,7 @@ abstract class TestReportOperation implements _$TestReportOperation {
   ///
   /// [_detail]: Extensions for detail
   factory TestReportOperation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
@@ -1753,7 +1753,7 @@ abstract class TestReportAssert implements _$TestReportAssert {
   ///
   /// [_detail]: Extensions for detail
   factory TestReportAssert({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
@@ -1825,7 +1825,7 @@ abstract class TestReportTest implements _$TestReportTest {
   ///
   /// [action]: Action would contain either an operation or an assertion.
   factory TestReportTest({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -1888,7 +1888,7 @@ abstract class TestReportAction1 implements _$TestReportAction1 {
   /// [assert]: The results of the assertion performed on the previous
   ///  operations.
   factory TestReportAction1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     TestReportOperation? operation,
@@ -1945,7 +1945,7 @@ abstract class TestReportTeardown implements _$TestReportTeardown {
   ///
   /// [action]: The teardown action will only contain an operation.
   factory TestReportTeardown({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<TestReportAction2>? action,
@@ -2001,7 +2001,7 @@ abstract class TestReportAction2 implements _$TestReportAction2 {
   ///
   /// [operation]: An operation would involve a REST request to a server.
   factory TestReportAction2({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required TestReportOperation? operation,
@@ -2300,7 +2300,7 @@ abstract class TestScriptOrigin implements _$TestScriptOrigin {
   ///
   /// [profile]: The type of origin profile the test system supports.
   factory TestScriptOrigin({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? index,
@@ -2364,7 +2364,7 @@ abstract class TestScriptDestination implements _$TestScriptDestination {
   ///
   /// [profile]: The type of destination profile the test system supports.
   factory TestScriptDestination({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? index,
@@ -2426,7 +2426,7 @@ abstract class TestScriptMetadata implements _$TestScriptMetadata {
   /// [capability]: Capabilities that must exist and are assumed to function
   ///  correctly on the FHIR server being tested.
   factory TestScriptMetadata({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<TestScriptLink>? link,
@@ -2491,7 +2491,7 @@ abstract class TestScriptLink implements _$TestScriptLink {
   ///
   /// [_description]: Extensions for description
   factory TestScriptLink({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? url,
@@ -2582,7 +2582,7 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
   /// referenced capability statement, then all tests in this script are
   ///  skipped.
   factory TestScriptCapability({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'required') Boolean? required_,
@@ -2666,7 +2666,7 @@ abstract class TestScriptFixture implements _$TestScriptFixture {
   /// [resource]: Reference to the resource (containing the contents of the
   ///  resource needed for operations).
   factory TestScriptFixture({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? autocreate,
@@ -2766,7 +2766,7 @@ abstract class TestScriptVariable implements _$TestScriptVariable {
   ///
   /// [_sourceId]: Extensions for sourceId
   factory TestScriptVariable({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -2838,7 +2838,7 @@ abstract class TestScriptSetup implements _$TestScriptSetup {
   ///
   /// [action]: Action would contain either an operation or an assertion.
   factory TestScriptSetup({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<TestScriptAction>? action,
@@ -2898,7 +2898,7 @@ abstract class TestScriptAction implements _$TestScriptAction {
   /// [assert]: Evaluates the results of previous operations to determine if the
   ///  server under test behaves appropriately.
   factory TestScriptAction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     TestScriptOperation? operation,
@@ -3032,7 +3032,7 @@ abstract class TestScriptOperation implements _$TestScriptOperation {
   ///
   /// [_url]: Extensions for url
   factory TestScriptOperation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Coding? type,
@@ -3127,7 +3127,7 @@ abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
   ///
   /// [_value]: Extensions for value
   factory TestScriptRequestHeader({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? field,
@@ -3296,7 +3296,7 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
   ///
   /// [_warningOnly]: Extensions for warningOnly
   factory TestScriptAssert({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? label,
@@ -3411,7 +3411,7 @@ abstract class TestScriptTest implements _$TestScriptTest {
   ///
   /// [action]: Action would contain either an operation or an assertion.
   factory TestScriptTest({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -3475,7 +3475,7 @@ abstract class TestScriptAction1 implements _$TestScriptAction1 {
   /// [assert]: Evaluates the results of previous operations to determine if the
   ///  server under test behaves appropriately.
   factory TestScriptAction1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     TestScriptOperation? operation,
@@ -3533,7 +3533,7 @@ abstract class TestScriptTeardown implements _$TestScriptTeardown {
   ///
   /// [action]: The teardown action will only contain an operation.
   factory TestScriptTeardown({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<TestScriptAction2>? action,
@@ -3590,7 +3590,7 @@ abstract class TestScriptAction2 implements _$TestScriptAction2 {
   ///
   /// [operation]: An operation would involve a REST request to a server.
   factory TestScriptAction2({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required TestScriptOperation? operation,

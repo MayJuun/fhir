@@ -73,7 +73,7 @@ abstract class Coverage with Resource implements _$Coverage {
 abstract class CoverageGrouping implements _$CoverageGrouping {
   CoverageGrouping._();
   factory CoverageGrouping({
-    String group,
+    String? group,
     @JsonKey(name: '_group') Element? groupElement,
     String? groupDisplay,
     @JsonKey(name: '_groupDisplay') Element? groupDisplayElement,
@@ -234,7 +234,7 @@ abstract class EligibilityResponseInsurance
     implements _$EligibilityResponseInsurance {
   EligibilityResponseInsurance._();
   factory EligibilityResponseInsurance({
-    Reference coverage,
+    Reference? coverage,
     Reference? contract,
     List<EligibilityResponseBenefitBalance>? benefitBalance,
   }) = _EligibilityResponseInsurance;

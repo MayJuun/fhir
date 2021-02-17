@@ -142,7 +142,7 @@ abstract class MeasureGroup implements _$MeasureGroup {
 abstract class MeasurePopulation implements _$MeasurePopulation {
   MeasurePopulation._();
   factory MeasurePopulation({
-    Identifier identifier,
+    Identifier? identifier,
     CodeableConcept? code,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -173,7 +173,7 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
 abstract class MeasureStratifier implements _$MeasureStratifier {
   MeasureStratifier._();
   factory MeasureStratifier({
-    Identifier identifier,
+    Identifier? identifier,
     String? criteria,
     @JsonKey(name: '_criteria') Element? criteriaElement,
     String? path,
@@ -201,7 +201,7 @@ abstract class MeasureStratifier implements _$MeasureStratifier {
 abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
   MeasureSupplementalData._();
   factory MeasureSupplementalData({
-    Identifier identifier,
+    Identifier? identifier,
     List<CodeableConcept>? usage,
     String? criteria,
     @JsonKey(name: '_criteria') Element? criteriaElement,
@@ -307,7 +307,7 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
 abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
   MeasureReportPopulation._();
   factory MeasureReportPopulation({
-    Identifier identifier,
+    Identifier? identifier,
     CodeableConcept? code,
     Decimal? count,
     @JsonKey(name: '_count') Element? countElement,
@@ -335,7 +335,7 @@ abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
 abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
   MeasureReportStratifier._();
   factory MeasureReportStratifier({
-    Identifier identifier,
+    Identifier? identifier,
     List<MeasureReportStratum>? stratum,
   }) = _MeasureReportStratifier;
 
@@ -360,7 +360,7 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
 abstract class MeasureReportStratum implements _$MeasureReportStratum {
   MeasureReportStratum._();
   factory MeasureReportStratum({
-    String value,
+    String? value,
     @JsonKey(name: '_value') Element? valueElement,
     List<MeasureReportPopulation1>? population,
     Decimal? measureScore,
@@ -388,7 +388,7 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
 abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
   MeasureReportPopulation1._();
   factory MeasureReportPopulation1({
-    Identifier identifier,
+    Identifier? identifier,
     CodeableConcept? code,
     Decimal? count,
     @JsonKey(name: '_count') Element? countElement,

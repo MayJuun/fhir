@@ -80,7 +80,7 @@ abstract class CarePlan with Resource implements _$CarePlan {
 abstract class CarePlanActivity implements _$CarePlanActivity {
   CarePlanActivity._();
   factory CarePlanActivity({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableReference>? outcome,
@@ -110,7 +110,7 @@ abstract class CarePlanActivity implements _$CarePlanActivity {
 abstract class CarePlanDetail implements _$CarePlanDetail {
   CarePlanDetail._();
   factory CarePlanDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? kind,
@@ -215,7 +215,7 @@ abstract class CareTeam with Resource implements _$CareTeam {
 abstract class CareTeamParticipant implements _$CareTeamParticipant {
   CareTeamParticipant._();
   factory CareTeamParticipant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? role,
@@ -304,7 +304,7 @@ abstract class Goal with Resource implements _$Goal {
 abstract class GoalTarget implements _$GoalTarget {
   GoalTarget._();
   factory GoalTarget({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? measure,
@@ -408,7 +408,7 @@ abstract class NutritionIntakeConsumedItem
     implements _$NutritionIntakeConsumedItem {
   NutritionIntakeConsumedItem._();
   factory NutritionIntakeConsumedItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -445,7 +445,7 @@ abstract class NutritionIntakeIngredientLabel
     implements _$NutritionIntakeIngredientLabel {
   NutritionIntakeIngredientLabel._();
   factory NutritionIntakeIngredientLabel({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? nutrientCodeableConcept,
@@ -477,7 +477,7 @@ abstract class NutritionIntakeIngredientLabel
 abstract class NutritionIntakePerformer implements _$NutritionIntakePerformer {
   NutritionIntakePerformer._();
   factory NutritionIntakePerformer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
@@ -564,7 +564,7 @@ abstract class NutritionOrder with Resource implements _$NutritionOrder {
 abstract class NutritionOrderOralDiet implements _$NutritionOrderOralDiet {
   NutritionOrderOralDiet._();
   factory NutritionOrderOralDiet({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
@@ -597,7 +597,7 @@ abstract class NutritionOrderOralDiet implements _$NutritionOrderOralDiet {
 abstract class NutritionOrderNutrient implements _$NutritionOrderNutrient {
   NutritionOrderNutrient._();
   factory NutritionOrderNutrient({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? modifier,
@@ -625,7 +625,7 @@ abstract class NutritionOrderNutrient implements _$NutritionOrderNutrient {
 abstract class NutritionOrderTexture implements _$NutritionOrderTexture {
   NutritionOrderTexture._();
   factory NutritionOrderTexture({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? modifier,
@@ -653,7 +653,7 @@ abstract class NutritionOrderTexture implements _$NutritionOrderTexture {
 abstract class NutritionOrderSupplement implements _$NutritionOrderSupplement {
   NutritionOrderSupplement._();
   factory NutritionOrderSupplement({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -688,7 +688,7 @@ abstract class NutritionOrderEnteralFormula
     implements _$NutritionOrderEnteralFormula {
   NutritionOrderEnteralFormula._();
   factory NutritionOrderEnteralFormula({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? baseFormulaType,
@@ -730,7 +730,7 @@ abstract class NutritionOrderAdministration
     implements _$NutritionOrderAdministration {
   NutritionOrderAdministration._();
   factory NutritionOrderAdministration({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Timing? schedule,
@@ -821,7 +821,7 @@ abstract class RequestGroup with Resource implements _$RequestGroup {
 abstract class RequestGroupAction implements _$RequestGroupAction {
   RequestGroupAction._();
   factory RequestGroupAction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? prefix,
@@ -882,7 +882,7 @@ abstract class RequestGroupAction implements _$RequestGroupAction {
 abstract class RequestGroupCondition implements _$RequestGroupCondition {
   RequestGroupCondition._();
   factory RequestGroupCondition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? kind,
@@ -912,7 +912,7 @@ abstract class RequestGroupRelatedAction
     implements _$RequestGroupRelatedAction {
   RequestGroupRelatedAction._();
   factory RequestGroupRelatedAction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? actionId,
@@ -1001,7 +1001,7 @@ abstract class RiskAssessment with Resource implements _$RiskAssessment {
 abstract class RiskAssessmentPrediction implements _$RiskAssessmentPrediction {
   RiskAssessmentPrediction._();
   factory RiskAssessmentPrediction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? outcome,
@@ -1170,7 +1170,7 @@ abstract class VisionPrescriptionLensSpecification
     implements _$VisionPrescriptionLensSpecification {
   VisionPrescriptionLensSpecification._();
   factory VisionPrescriptionLensSpecification({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? product,
@@ -1224,7 +1224,7 @@ abstract class VisionPrescriptionLensSpecification
 abstract class VisionPrescriptionPrism implements _$VisionPrescriptionPrism {
   VisionPrescriptionPrism._();
   factory VisionPrescriptionPrism({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Decimal? amount,

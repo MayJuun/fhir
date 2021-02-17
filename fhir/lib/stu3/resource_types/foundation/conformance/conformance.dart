@@ -100,7 +100,7 @@ abstract class CapabilityStatementSoftware
     implements _$CapabilityStatementSoftware {
   CapabilityStatementSoftware._();
   factory CapabilityStatementSoftware({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
@@ -131,7 +131,7 @@ abstract class CapabilityStatementImplementation
     implements _$CapabilityStatementImplementation {
   CapabilityStatementImplementation._();
   factory CapabilityStatementImplementation({
-    String description,
+    String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -161,7 +161,7 @@ abstract class CapabilityStatementImplementation
 abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
   CapabilityStatementRest._();
   factory CapabilityStatementRest({
-    CapabilityStatementRestMode mode,
+    CapabilityStatementRestMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -228,7 +228,7 @@ abstract class CapabilityStatementCertificate
     implements _$CapabilityStatementCertificate {
   CapabilityStatementCertificate._();
   factory CapabilityStatementCertificate({
-    String type,
+    String? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? blob,
     @JsonKey(name: '_blob') Element? blobElement,
@@ -259,7 +259,7 @@ abstract class CapabilityStatementResource
     implements _$CapabilityStatementResource {
   CapabilityStatementResource._();
   factory CapabilityStatementResource({
-    String type,
+    String? type,
     @JsonKey(name: '_type') Element? typeElement,
     Reference? profile,
     String? documentation,
@@ -311,7 +311,7 @@ abstract class CapabilityStatementInteraction
     implements _$CapabilityStatementInteraction {
   CapabilityStatementInteraction._();
   factory CapabilityStatementInteraction({
-    CapabilityStatementInteractionCode code,
+    CapabilityStatementInteractionCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -342,7 +342,7 @@ abstract class CapabilityStatementSearchParam
     implements _$CapabilityStatementSearchParam {
   CapabilityStatementSearchParam._();
   factory CapabilityStatementSearchParam({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? definition,
     @JsonKey(name: '_definition') Element? definitionElement,
@@ -377,7 +377,7 @@ abstract class CapabilityStatementInteraction1
     implements _$CapabilityStatementInteraction1 {
   CapabilityStatementInteraction1._();
   factory CapabilityStatementInteraction1({
-    CapabilityStatementInteraction1Code code,
+    CapabilityStatementInteraction1Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -408,7 +408,7 @@ abstract class CapabilityStatementOperation
     implements _$CapabilityStatementOperation {
   CapabilityStatementOperation._();
   factory CapabilityStatementOperation({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     required Reference? definition,
   }) = _CapabilityStatementOperation;
@@ -496,7 +496,7 @@ abstract class CapabilityStatementSupportedMessage
     implements _$CapabilityStatementSupportedMessage {
   CapabilityStatementSupportedMessage._();
   factory CapabilityStatementSupportedMessage({
-    CapabilityStatementSupportedMessageMode mode,
+    CapabilityStatementSupportedMessageMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     required Reference? definition,
   }) = _CapabilityStatementSupportedMessage;
@@ -561,7 +561,7 @@ abstract class CapabilityStatementDocument
     implements _$CapabilityStatementDocument {
   CapabilityStatementDocument._();
   factory CapabilityStatementDocument({
-    CapabilityStatementDocumentMode mode,
+    CapabilityStatementDocumentMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
@@ -655,7 +655,7 @@ abstract class CompartmentDefinitionResource
     implements _$CompartmentDefinitionResource {
   CompartmentDefinitionResource._();
   factory CompartmentDefinitionResource({
-    Code code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     List<String>? param,
     @JsonKey(name: '_param') List<Element>? paramElement,
@@ -747,7 +747,7 @@ abstract class DataElement with Resource implements _$DataElement {
 abstract class DataElementMapping implements _$DataElementMapping {
   DataElementMapping._();
   factory DataElementMapping({
-    Id identity,
+    Id? identity,
     @JsonKey(name: '_identity') Element? identityElement,
     String? uri,
     @JsonKey(name: '_uri') Element? uriElement,
@@ -840,7 +840,7 @@ abstract class GraphDefinition with Resource implements _$GraphDefinition {
 abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
   GraphDefinitionLink._();
   factory GraphDefinitionLink({
-    String path,
+    String? path,
     @JsonKey(name: '_path') Element? pathElement,
     String? sliceName,
     @JsonKey(name: '_sliceName') Element? sliceNameElement,
@@ -874,7 +874,7 @@ abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
 abstract class GraphDefinitionTarget implements _$GraphDefinitionTarget {
   GraphDefinitionTarget._();
   factory GraphDefinitionTarget({
-    String type,
+    String? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? profile,
     @JsonKey(name: '_profile') Element? profileElement,
@@ -904,7 +904,7 @@ abstract class GraphDefinitionCompartment
     implements _$GraphDefinitionCompartment {
   GraphDefinitionCompartment._();
   factory GraphDefinitionCompartment({
-    Code code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     GraphDefinitionCompartmentRule? rule,
     @JsonKey(name: '_rule') Element? ruleElement,
@@ -1004,7 +1004,7 @@ abstract class ImplementationGuideDependency
     implements _$ImplementationGuideDependency {
   ImplementationGuideDependency._();
   factory ImplementationGuideDependency({
-    ImplementationGuideDependencyType type,
+    ImplementationGuideDependencyType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? uri,
     @JsonKey(name: '_uri') Element? uriElement,
@@ -1033,7 +1033,7 @@ abstract class ImplementationGuidePackage
     implements _$ImplementationGuidePackage {
   ImplementationGuidePackage._();
   factory ImplementationGuidePackage({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -1063,7 +1063,7 @@ abstract class ImplementationGuideResource
     implements _$ImplementationGuideResource {
   ImplementationGuideResource._();
   factory ImplementationGuideResource({
-    Boolean example,
+    Boolean? example,
     @JsonKey(name: '_example') Element? exampleElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -1100,7 +1100,7 @@ abstract class ImplementationGuideGlobal
     implements _$ImplementationGuideGlobal {
   ImplementationGuideGlobal._();
   factory ImplementationGuideGlobal({
-    String type,
+    String? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Reference? profile,
   }) = _ImplementationGuideGlobal;
@@ -1127,7 +1127,7 @@ abstract class ImplementationGuideGlobal
 abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
   ImplementationGuidePage._();
   factory ImplementationGuidePage({
-    String source,
+    String? source,
     @JsonKey(name: '_source') Element? sourceElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
@@ -1235,7 +1235,7 @@ abstract class MessageDefinition with Resource implements _$MessageDefinition {
 abstract class MessageDefinitionFocus implements _$MessageDefinitionFocus {
   MessageDefinitionFocus._();
   factory MessageDefinitionFocus({
-    Code code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Reference? profile,
     Decimal? min,
@@ -1374,7 +1374,7 @@ abstract class OperationDefinitionParameter
     implements _$OperationDefinitionParameter {
   OperationDefinitionParameter._();
   factory OperationDefinitionParameter({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     OperationDefinitionParameterUse? use,
     @JsonKey(name: '_use') Element? useElement,
@@ -1669,7 +1669,7 @@ abstract class StructureDefinitionMapping
     implements _$StructureDefinitionMapping {
   StructureDefinitionMapping._();
   factory StructureDefinitionMapping({
-    Id identity,
+    Id? identity,
     @JsonKey(name: '_identity') Element? identityElement,
     String? uri,
     @JsonKey(name: '_uri') Element? uriElement,
@@ -1821,7 +1821,7 @@ abstract class StructureMap with Resource implements _$StructureMap {
 abstract class StructureMapStructure implements _$StructureMapStructure {
   StructureMapStructure._();
   factory StructureMapStructure({
-    String url,
+    String? url,
     @JsonKey(name: '_url') Element? urlElement,
     StructureMapStructureMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
@@ -1852,7 +1852,7 @@ abstract class StructureMapStructure implements _$StructureMapStructure {
 abstract class StructureMapGroup implements _$StructureMapGroup {
   StructureMapGroup._();
   factory StructureMapGroup({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(name: 'extends') String? extends_,
     @JsonKey(name: '_extends') Element? extendsElement,
@@ -1885,7 +1885,7 @@ abstract class StructureMapGroup implements _$StructureMapGroup {
 abstract class StructureMapInput implements _$StructureMapInput {
   StructureMapInput._();
   factory StructureMapInput({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -1916,7 +1916,7 @@ abstract class StructureMapInput implements _$StructureMapInput {
 abstract class StructureMapRule implements _$StructureMapRule {
   StructureMapRule._();
   factory StructureMapRule({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     required List<StructureMapSource>? source,
     List<StructureMapTarget>? target,
@@ -1947,7 +1947,7 @@ abstract class StructureMapRule implements _$StructureMapRule {
 abstract class StructureMapSource implements _$StructureMapSource {
   StructureMapSource._();
   factory StructureMapSource({
-    String context,
+    String? context,
     @JsonKey(name: '_context') Element? contextElement,
     Decimal? min,
     @JsonKey(name: '_min') Element? minElement,
@@ -2063,7 +2063,7 @@ abstract class StructureMapSource implements _$StructureMapSource {
 abstract class StructureMapTarget implements _$StructureMapTarget {
   StructureMapTarget._();
   factory StructureMapTarget({
-    String context,
+    String? context,
     @JsonKey(name: '_context') Element? contextElement,
     StructureMapTargetContextType? contextType,
     @JsonKey(name: '_contextType') Element? contextTypeElement,
@@ -2101,7 +2101,7 @@ abstract class StructureMapTarget implements _$StructureMapTarget {
 abstract class StructureMapParameter implements _$StructureMapParameter {
   StructureMapParameter._();
   factory StructureMapParameter({
-    Id valueId,
+    Id? valueId,
     @JsonKey(name: '_valueId') Element? valueIdElement,
     String? valueString,
     @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -2134,7 +2134,7 @@ abstract class StructureMapParameter implements _$StructureMapParameter {
 abstract class StructureMapDependent implements _$StructureMapDependent {
   StructureMapDependent._();
   factory StructureMapDependent({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     List<String>? variable,
     @JsonKey(name: '_variable') List<Element>? variableElement,

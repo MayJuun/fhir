@@ -121,7 +121,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
 abstract class DiagnosticReportMedia implements _$DiagnosticReportMedia {
   DiagnosticReportMedia._();
   factory DiagnosticReportMedia({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? comment,
@@ -210,7 +210,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
 abstract class ImagingStudyProcedure implements _$ImagingStudyProcedure {
   ImagingStudyProcedure._();
   factory ImagingStudyProcedure({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? valueReference,
@@ -238,7 +238,7 @@ abstract class ImagingStudyProcedure implements _$ImagingStudyProcedure {
 abstract class ImagingStudySeries implements _$ImagingStudySeries {
   ImagingStudySeries._();
   factory ImagingStudySeries({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? uid,
@@ -281,7 +281,7 @@ abstract class ImagingStudySeries implements _$ImagingStudySeries {
 abstract class ImagingStudyPerformer implements _$ImagingStudyPerformer {
   ImagingStudyPerformer._();
   factory ImagingStudyPerformer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
@@ -309,7 +309,7 @@ abstract class ImagingStudyPerformer implements _$ImagingStudyPerformer {
 abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
   ImagingStudyInstance._();
   factory ImagingStudyInstance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? uid,
@@ -400,7 +400,7 @@ abstract class MolecularSequenceReferenceSeq
     implements _$MolecularSequenceReferenceSeq {
   MolecularSequenceReferenceSeq._();
   factory MolecularSequenceReferenceSeq({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? chromosome,
@@ -444,7 +444,7 @@ abstract class MolecularSequenceReferenceSeq
 abstract class MolecularSequenceVariant implements _$MolecularSequenceVariant {
   MolecularSequenceVariant._();
   factory MolecularSequenceVariant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? start,
@@ -482,7 +482,7 @@ abstract class MolecularSequenceVariant implements _$MolecularSequenceVariant {
 abstract class MolecularSequenceQuality implements _$MolecularSequenceQuality {
   MolecularSequenceQuality._();
   factory MolecularSequenceQuality({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
@@ -536,7 +536,7 @@ abstract class MolecularSequenceQuality implements _$MolecularSequenceQuality {
 abstract class MolecularSequenceRoc implements _$MolecularSequenceRoc {
   MolecularSequenceRoc._();
   factory MolecularSequenceRoc({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Integer>? score,
@@ -577,7 +577,7 @@ abstract class MolecularSequenceRepository
     implements _$MolecularSequenceRepository {
   MolecularSequenceRepository._();
   factory MolecularSequenceRepository({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
@@ -618,7 +618,7 @@ abstract class MolecularSequenceStructureVariant
     implements _$MolecularSequenceStructureVariant {
   MolecularSequenceStructureVariant._();
   factory MolecularSequenceStructureVariant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? variantType,
@@ -654,7 +654,7 @@ abstract class MolecularSequenceStructureVariant
 abstract class MolecularSequenceOuter implements _$MolecularSequenceOuter {
   MolecularSequenceOuter._();
   factory MolecularSequenceOuter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? start,
@@ -684,7 +684,7 @@ abstract class MolecularSequenceOuter implements _$MolecularSequenceOuter {
 abstract class MolecularSequenceInner implements _$MolecularSequenceInner {
   MolecularSequenceInner._();
   factory MolecularSequenceInner({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? start,
@@ -799,7 +799,7 @@ abstract class ObservationReferenceRange
     implements _$ObservationReferenceRange {
   ObservationReferenceRange._();
   factory ObservationReferenceRange({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Quantity? low,
@@ -833,7 +833,7 @@ abstract class ObservationReferenceRange
 abstract class ObservationComponent implements _$ObservationComponent {
   ObservationComponent._();
   factory ObservationComponent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -933,7 +933,7 @@ abstract class QuestionnaireResponseItem
     implements _$QuestionnaireResponseItem {
   QuestionnaireResponseItem._();
   factory QuestionnaireResponseItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? linkId,
@@ -969,7 +969,7 @@ abstract class QuestionnaireResponseAnswer
     implements _$QuestionnaireResponseAnswer {
   QuestionnaireResponseAnswer._();
   factory QuestionnaireResponseAnswer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? valueBoolean,
@@ -1068,7 +1068,7 @@ abstract class Specimen with Resource implements _$Specimen {
 abstract class SpecimenCollection implements _$SpecimenCollection {
   SpecimenCollection._();
   factory SpecimenCollection({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? collector,
@@ -1104,7 +1104,7 @@ abstract class SpecimenCollection implements _$SpecimenCollection {
 abstract class SpecimenProcessing implements _$SpecimenProcessing {
   SpecimenProcessing._();
   factory SpecimenProcessing({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -1137,7 +1137,7 @@ abstract class SpecimenProcessing implements _$SpecimenProcessing {
 abstract class SpecimenContainer implements _$SpecimenContainer {
   SpecimenContainer._();
   factory SpecimenContainer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,

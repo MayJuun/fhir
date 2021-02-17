@@ -74,7 +74,7 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
 abstract class ResearchStudyArm implements _$ResearchStudyArm {
   ResearchStudyArm._();
   factory ResearchStudyArm({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     CodeableConcept? code,
     String? description,

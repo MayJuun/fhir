@@ -15,7 +15,7 @@ part 'special_types.g.dart';
 abstract class Narrative implements _$Narrative {
   Narrative._();
   factory Narrative({
-    NarrativeStatus status,
+    NarrativeStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required String? div,
   }) = _Narrative;
@@ -41,7 +41,7 @@ abstract class Narrative implements _$Narrative {
 abstract class Reference implements _$Reference {
   Reference._();
   factory Reference({
-    String reference,
+    String? reference,
     @JsonKey(name: '_reference') Element? referenceElement,
     Identifier? identifier,
     String? display,
@@ -69,7 +69,7 @@ abstract class Reference implements _$Reference {
 abstract class Meta implements _$Meta {
   Meta._();
   factory Meta({
-    Id versionId,
+    Id? versionId,
     @JsonKey(name: '_versionId') Element? versionIdElement,
     Instant? lastUpdated,
     @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
@@ -99,7 +99,7 @@ abstract class Meta implements _$Meta {
 abstract class ElementDefinition implements _$ElementDefinition {
   ElementDefinition._();
   factory ElementDefinition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
@@ -451,7 +451,7 @@ abstract class ElementDefinitionDiscriminator
     implements _$ElementDefinitionDiscriminator {
   ElementDefinitionDiscriminator._();
   factory ElementDefinitionDiscriminator({
-    ElementDefinitionDiscriminatorType type,
+    ElementDefinitionDiscriminatorType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
@@ -481,7 +481,7 @@ abstract class ElementDefinitionDiscriminator
 abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
   ElementDefinitionBase._();
   factory ElementDefinitionBase({
-    String path,
+    String? path,
     @JsonKey(name: '_path') Element? pathElement,
     Decimal? min,
     @JsonKey(name: '_min') Element? minElement,
@@ -544,7 +544,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
 abstract class ElementDefinitionExample implements _$ElementDefinitionExample {
   ElementDefinitionExample._();
   factory ElementDefinitionExample({
-    String label,
+    String? label,
     @JsonKey(name: '_label') Element? labelElement,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -641,7 +641,7 @@ abstract class ElementDefinitionConstraint
     implements _$ElementDefinitionConstraint {
   ElementDefinitionConstraint._();
   factory ElementDefinitionConstraint({
-    String key,
+    String? key,
     @JsonKey(name: '_key') Element? keyElement,
     String? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
@@ -711,7 +711,7 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
 abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
   ElementDefinitionMapping._();
   factory ElementDefinitionMapping({
-    Id identity,
+    Id? identity,
     @JsonKey(name: '_identity') Element? identityElement,
     String? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -743,7 +743,7 @@ abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
 abstract class Dosage implements _$Dosage {
   Dosage._();
   factory Dosage({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,

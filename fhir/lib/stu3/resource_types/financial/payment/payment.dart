@@ -153,7 +153,7 @@ abstract class PaymentReconciliationProcessNote
     implements _$PaymentReconciliationProcessNote {
   PaymentReconciliationProcessNote._();
   factory PaymentReconciliationProcessNote({
-    CodeableConcept type,
+    CodeableConcept? type,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
   }) = _PaymentReconciliationProcessNote;

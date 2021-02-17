@@ -335,7 +335,7 @@ abstract class BundleLink implements _$BundleLink {
   ///
   /// [_url]: Extensions for url
   factory BundleLink({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? relation,
@@ -418,7 +418,7 @@ abstract class BundleEntry implements _$BundleEntry {
   /// 'request' entry in the batch or transaction being responded to or what the
   ///  results of an operation where when returning history.
   factory BundleEntry({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<BundleLink>? link,
@@ -487,7 +487,7 @@ abstract class BundleSearch implements _$BundleSearch {
   ///
   /// [_score]: Extensions for score
   factory BundleSearch({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: BundleSearchMode.unknown) BundleSearchMode? mode,
@@ -579,7 +579,7 @@ abstract class BundleRequest implements _$BundleRequest {
   ///
   /// [_ifNoneExist]: Extensions for ifNoneExist
   factory BundleRequest({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
@@ -670,7 +670,7 @@ abstract class BundleResponse implements _$BundleResponse {
   /// [outcome]: An OperationOutcome containing hints and warnings produced as
   ///  part of processing this entry in a batch or transaction.
   factory BundleResponse({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? status,
@@ -848,7 +848,7 @@ abstract class LinkageItem implements _$LinkageItem {
   ///
   /// [resource]: The resource instance being linked as part of the group.
   factory LinkageItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
@@ -1076,7 +1076,7 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
   /// particular person or department when routing to a specific application
   ///  isn't sufficient.
   factory MessageHeaderDestination({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -1160,7 +1160,7 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
   ///
   /// [_endpoint]: Extensions for endpoint
   factory MessageHeaderSource({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -1237,7 +1237,7 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
   ///
   /// [details]: Full details of any issues found in the message.
   factory MessageHeaderResponse({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? identifier,
@@ -1428,7 +1428,7 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
   ///
   /// [_expression]: Extensions for expression
   factory OperationOutcomeIssue({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
@@ -1700,7 +1700,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
   ///
   /// [part]: A named part of a multi-part parameter.
   factory ParametersParameter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -1990,7 +1990,7 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
   ///
   /// [_header]: Extensions for header
   factory SubscriptionChannel({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: SubscriptionChannelType.unknown)

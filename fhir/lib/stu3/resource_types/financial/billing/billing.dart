@@ -83,7 +83,7 @@ abstract class Claim with Resource implements _$Claim {
 abstract class ClaimRelated implements _$ClaimRelated {
   ClaimRelated._();
   factory ClaimRelated({
-    Reference claim,
+    Reference? claim,
     CodeableConcept? relationship,
     Identifier? reference,
   }) = _ClaimRelated;
@@ -134,7 +134,7 @@ abstract class ClaimPayee implements _$ClaimPayee {
 abstract class ClaimCareTeam implements _$ClaimCareTeam {
   ClaimCareTeam._();
   factory ClaimCareTeam({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required Reference? provider,
     Boolean? responsible,
@@ -164,7 +164,7 @@ abstract class ClaimCareTeam implements _$ClaimCareTeam {
 abstract class ClaimInformation implements _$ClaimInformation {
   ClaimInformation._();
   factory ClaimInformation({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required CodeableConcept? category,
     CodeableConcept? code,
@@ -200,7 +200,7 @@ abstract class ClaimInformation implements _$ClaimInformation {
 abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
   ClaimDiagnosis._();
   factory ClaimDiagnosis({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? diagnosisCodeableConcept,
     Reference? diagnosisReference,
@@ -229,7 +229,7 @@ abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
 abstract class ClaimProcedure implements _$ClaimProcedure {
   ClaimProcedure._();
   factory ClaimProcedure({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
@@ -258,7 +258,7 @@ abstract class ClaimProcedure implements _$ClaimProcedure {
 abstract class ClaimInsurance implements _$ClaimInsurance {
   ClaimInsurance._();
   factory ClaimInsurance({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     Boolean? focal,
     @JsonKey(name: '_focal') Element? focalElement,
@@ -291,7 +291,7 @@ abstract class ClaimInsurance implements _$ClaimInsurance {
 abstract class ClaimAccident implements _$ClaimAccident {
   ClaimAccident._();
   factory ClaimAccident({
-    Date date,
+    Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? type,
     Address? locationAddress,
@@ -319,7 +319,7 @@ abstract class ClaimAccident implements _$ClaimAccident {
 abstract class ClaimItem implements _$ClaimItem {
   ClaimItem._();
   factory ClaimItem({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     List<Id>? careTeamLinkId,
     @JsonKey(name: '_careTeamLinkId') List<Element>? careTeamLinkIdElement,
@@ -374,7 +374,7 @@ abstract class ClaimItem implements _$ClaimItem {
 abstract class ClaimDetail implements _$ClaimDetail {
   ClaimDetail._();
   factory ClaimDetail({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? revenue,
     CodeableConcept? category,
@@ -411,7 +411,7 @@ abstract class ClaimDetail implements _$ClaimDetail {
 abstract class ClaimSubDetail implements _$ClaimSubDetail {
   ClaimSubDetail._();
   factory ClaimSubDetail({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? revenue,
     CodeableConcept? category,
@@ -509,7 +509,7 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
 abstract class ClaimResponseItem implements _$ClaimResponseItem {
   ClaimResponseItem._();
   factory ClaimResponseItem({
-    Id sequenceLinkId,
+    Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     List<Decimal>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
@@ -568,7 +568,7 @@ abstract class ClaimResponseAdjudication
 abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
   ClaimResponseDetail._();
   factory ClaimResponseDetail({
-    Id sequenceLinkId,
+    Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     List<Decimal>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
@@ -597,7 +597,7 @@ abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
 abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
   ClaimResponseSubDetail._();
   factory ClaimResponseSubDetail({
-    Id sequenceLinkId,
+    Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     List<Decimal>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
@@ -659,7 +659,7 @@ abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
 abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
   ClaimResponseDetail1._();
   factory ClaimResponseDetail1({
-    CodeableConcept revenue,
+    CodeableConcept? revenue,
     CodeableConcept? category,
     CodeableConcept? service,
     List<CodeableConcept>? modifier,
@@ -690,7 +690,7 @@ abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
 abstract class ClaimResponseError implements _$ClaimResponseError {
   ClaimResponseError._();
   factory ClaimResponseError({
-    Id sequenceLinkId,
+    Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     Id? detailSequenceLinkId,
     @JsonKey(name: '_detailSequenceLinkId')
@@ -722,7 +722,7 @@ abstract class ClaimResponseError implements _$ClaimResponseError {
 abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
   ClaimResponsePayment._();
   factory ClaimResponsePayment({
-    CodeableConcept type,
+    CodeableConcept? type,
     Money? adjustment,
     CodeableConcept? adjustmentReason,
     Date? date,
@@ -752,7 +752,7 @@ abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
 abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
   ClaimResponseProcessNote._();
   factory ClaimResponseProcessNote({
-    Decimal number,
+    Decimal? number,
     @JsonKey(name: '_number') Element? numberElement,
     CodeableConcept? type,
     String? text,
@@ -782,7 +782,7 @@ abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
 abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
   ClaimResponseInsurance._();
   factory ClaimResponseInsurance({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     Boolean? focal,
     @JsonKey(name: '_focal') Element? focalElement,

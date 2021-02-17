@@ -39,7 +39,7 @@ abstract class BackboneElement implements _$BackboneElement {
 abstract class Annotation implements _$Annotation {
   Annotation._();
   factory Annotation({
-    Reference authorReference,
+    Reference? authorReference,
     String? authorString,
     @JsonKey(name: '_authorString') Element? authorStringElement,
     Time? time,
@@ -69,7 +69,7 @@ abstract class Annotation implements _$Annotation {
 abstract class Attachment implements _$Attachment {
   Attachment._();
   factory Attachment({
-    String contentType,
+    String? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
     String? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -108,7 +108,7 @@ abstract class Attachment implements _$Attachment {
 abstract class Identifier implements _$Identifier {
   Identifier._();
   factory Identifier({
-    IdentifierUse use,
+    IdentifierUse? use,
     @JsonKey(name: '_use') Element? useElement,
     CodeableConcept? type,
     String? system,
@@ -166,7 +166,7 @@ abstract class CodeableConcept implements _$CodeableConcept {
 abstract class Coding implements _$Coding {
   Coding._();
   factory Coding({
-    String system,
+    String? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
@@ -198,7 +198,7 @@ abstract class Coding implements _$Coding {
 abstract class Quantity implements _$Quantity {
   Quantity._();
   factory Quantity({
-    Decimal value,
+    Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -231,7 +231,7 @@ abstract class Quantity implements _$Quantity {
 abstract class FhirDuration implements _$FhirDuration {
   FhirDuration._();
   factory FhirDuration({
-    Decimal value,
+    Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -264,7 +264,7 @@ abstract class FhirDuration implements _$FhirDuration {
 abstract class Distance implements _$Distance {
   Distance._();
   factory Distance({
-    Decimal value,
+    Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -297,7 +297,7 @@ abstract class Distance implements _$Distance {
 abstract class Count implements _$Count {
   Count._();
   factory Count({
-    Decimal value,
+    Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -329,7 +329,7 @@ abstract class Count implements _$Count {
 abstract class Money implements _$Money {
   Money._();
   factory Money({
-    Decimal value,
+    Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -361,7 +361,7 @@ abstract class Money implements _$Money {
 abstract class Age implements _$Age {
   Age._();
   factory Age({
-    Decimal value,
+    Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
     @JsonKey(name: '_comparator') Element? comparatorElement,
@@ -392,7 +392,7 @@ abstract class Age implements _$Age {
 abstract class Range implements _$Range {
   Range._();
   factory Range({
-    Quantity low,
+    Quantity? low,
     Quantity? high,
   }) = _Range;
 
@@ -416,7 +416,7 @@ abstract class Range implements _$Range {
 abstract class Period implements _$Period {
   Period._();
   factory Period({
-    String start,
+    String? start,
     @JsonKey(name: '_start') Element? startElement,
     String? end,
     @JsonKey(name: '_end') Element? endElement,
@@ -442,7 +442,7 @@ abstract class Period implements _$Period {
 abstract class Ratio implements _$Ratio {
   Ratio._();
   factory Ratio({
-    Quantity numerator,
+    Quantity? numerator,
     Quantity? denominator,
   }) = _Ratio;
 
@@ -538,7 +538,7 @@ abstract class Signature implements _$Signature {
 abstract class HumanName implements _$HumanName {
   HumanName._();
   factory HumanName({
-    HumanNameUse use,
+    HumanNameUse? use,
     @JsonKey(name: '_use') Element? useElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -574,7 +574,7 @@ abstract class HumanName implements _$HumanName {
 abstract class Address implements _$Address {
   Address._();
   factory Address({
-    AddressUse use,
+    AddressUse? use,
     @JsonKey(name: '_use') Element? useElement,
     AddressType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -616,7 +616,7 @@ abstract class Address implements _$Address {
 abstract class ContactPoint implements _$ContactPoint {
   ContactPoint._();
   factory ContactPoint({
-    ContactPointSystem system,
+    ContactPointSystem? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -674,7 +674,7 @@ abstract class Timing implements _$Timing {
 abstract class TimingRepeat implements _$TimingRepeat {
   TimingRepeat._();
   factory TimingRepeat({
-    FhirDuration boundsDuration,
+    FhirDuration? boundsDuration,
     Range? boundsRange,
     Period? boundsPeriod,
     Decimal? count,

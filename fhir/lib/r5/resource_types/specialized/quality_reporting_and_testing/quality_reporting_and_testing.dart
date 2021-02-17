@@ -116,7 +116,7 @@ abstract class Measure with Resource implements _$Measure {
 abstract class MeasureGroup implements _$MeasureGroup {
   MeasureGroup._();
   factory MeasureGroup({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -147,7 +147,7 @@ abstract class MeasureGroup implements _$MeasureGroup {
 abstract class MeasurePopulation implements _$MeasurePopulation {
   MeasurePopulation._();
   factory MeasurePopulation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -177,7 +177,7 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
 abstract class MeasureStratifier implements _$MeasureStratifier {
   MeasureStratifier._();
   factory MeasureStratifier({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -208,7 +208,7 @@ abstract class MeasureStratifier implements _$MeasureStratifier {
 abstract class MeasureComponent implements _$MeasureComponent {
   MeasureComponent._();
   factory MeasureComponent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -238,7 +238,7 @@ abstract class MeasureComponent implements _$MeasureComponent {
 abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
   MeasureSupplementalData._();
   factory MeasureSupplementalData({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -321,7 +321,7 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
 abstract class MeasureReportGroup implements _$MeasureReportGroup {
   MeasureReportGroup._();
   factory MeasureReportGroup({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -351,7 +351,7 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
 abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
   MeasureReportPopulation._();
   factory MeasureReportPopulation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -381,7 +381,7 @@ abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
 abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
   MeasureReportStratifier._();
   factory MeasureReportStratifier({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
@@ -409,7 +409,7 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
 abstract class MeasureReportStratum implements _$MeasureReportStratum {
   MeasureReportStratum._();
   factory MeasureReportStratum({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? value,
@@ -439,7 +439,7 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
 abstract class MeasureReportComponent implements _$MeasureReportComponent {
   MeasureReportComponent._();
   factory MeasureReportComponent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -467,7 +467,7 @@ abstract class MeasureReportComponent implements _$MeasureReportComponent {
 abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
   MeasureReportPopulation1._();
   factory MeasureReportPopulation1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -554,7 +554,7 @@ abstract class TestReport with Resource implements _$TestReport {
 abstract class TestReportParticipant implements _$TestReportParticipant {
   TestReportParticipant._();
   factory TestReportParticipant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
@@ -587,7 +587,7 @@ abstract class TestReportParticipant implements _$TestReportParticipant {
 abstract class TestReportSetup implements _$TestReportSetup {
   TestReportSetup._();
   factory TestReportSetup({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<TestReportAction>? action,
@@ -614,7 +614,7 @@ abstract class TestReportSetup implements _$TestReportSetup {
 abstract class TestReportAction implements _$TestReportAction {
   TestReportAction._();
   factory TestReportAction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     TestReportOperation? operation,
@@ -642,7 +642,7 @@ abstract class TestReportAction implements _$TestReportAction {
 abstract class TestReportOperation implements _$TestReportOperation {
   TestReportOperation._();
   factory TestReportOperation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
@@ -675,7 +675,7 @@ abstract class TestReportOperation implements _$TestReportOperation {
 abstract class TestReportAssert implements _$TestReportAssert {
   TestReportAssert._();
   factory TestReportAssert({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
@@ -708,7 +708,7 @@ abstract class TestReportAssert implements _$TestReportAssert {
 abstract class TestReportTest implements _$TestReportTest {
   TestReportTest._();
   factory TestReportTest({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -739,7 +739,7 @@ abstract class TestReportTest implements _$TestReportTest {
 abstract class TestReportAction1 implements _$TestReportAction1 {
   TestReportAction1._();
   factory TestReportAction1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     TestReportOperation? operation,
@@ -767,7 +767,7 @@ abstract class TestReportAction1 implements _$TestReportAction1 {
 abstract class TestReportTeardown implements _$TestReportTeardown {
   TestReportTeardown._();
   factory TestReportTeardown({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<TestReportAction2>? action,
@@ -794,7 +794,7 @@ abstract class TestReportTeardown implements _$TestReportTeardown {
 abstract class TestReportAction2 implements _$TestReportAction2 {
   TestReportAction2._();
   factory TestReportAction2({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required TestReportOperation? operation,
@@ -893,7 +893,7 @@ abstract class TestScript with Resource implements _$TestScript {
 abstract class TestScriptOrigin implements _$TestScriptOrigin {
   TestScriptOrigin._();
   factory TestScriptOrigin({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? index,
@@ -922,7 +922,7 @@ abstract class TestScriptOrigin implements _$TestScriptOrigin {
 abstract class TestScriptDestination implements _$TestScriptDestination {
   TestScriptDestination._();
   factory TestScriptDestination({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? index,
@@ -951,7 +951,7 @@ abstract class TestScriptDestination implements _$TestScriptDestination {
 abstract class TestScriptMetadata implements _$TestScriptMetadata {
   TestScriptMetadata._();
   factory TestScriptMetadata({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<TestScriptLink>? link,
@@ -979,7 +979,7 @@ abstract class TestScriptMetadata implements _$TestScriptMetadata {
 abstract class TestScriptLink implements _$TestScriptLink {
   TestScriptLink._();
   factory TestScriptLink({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? url,
@@ -1009,7 +1009,7 @@ abstract class TestScriptLink implements _$TestScriptLink {
 abstract class TestScriptCapability implements _$TestScriptCapability {
   TestScriptCapability._();
   factory TestScriptCapability({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'required') Boolean? required_,
@@ -1048,7 +1048,7 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
 abstract class TestScriptFixture implements _$TestScriptFixture {
   TestScriptFixture._();
   factory TestScriptFixture({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? autocreate,
@@ -1079,7 +1079,7 @@ abstract class TestScriptFixture implements _$TestScriptFixture {
 abstract class TestScriptVariable implements _$TestScriptVariable {
   TestScriptVariable._();
   factory TestScriptVariable({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -1121,7 +1121,7 @@ abstract class TestScriptVariable implements _$TestScriptVariable {
 abstract class TestScriptSetup implements _$TestScriptSetup {
   TestScriptSetup._();
   factory TestScriptSetup({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<TestScriptAction>? action,
@@ -1148,7 +1148,7 @@ abstract class TestScriptSetup implements _$TestScriptSetup {
 abstract class TestScriptAction implements _$TestScriptAction {
   TestScriptAction._();
   factory TestScriptAction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     TestScriptOperation? operation,
@@ -1176,7 +1176,7 @@ abstract class TestScriptAction implements _$TestScriptAction {
 abstract class TestScriptOperation implements _$TestScriptOperation {
   TestScriptOperation._();
   factory TestScriptOperation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Coding? type,
@@ -1235,7 +1235,7 @@ abstract class TestScriptOperation implements _$TestScriptOperation {
 abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
   TestScriptRequestHeader._();
   factory TestScriptRequestHeader({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? field,
@@ -1265,7 +1265,7 @@ abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
 abstract class TestScriptAssert implements _$TestScriptAssert {
   TestScriptAssert._();
   factory TestScriptAssert({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? label,
@@ -1340,7 +1340,7 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
 abstract class TestScriptTest implements _$TestScriptTest {
   TestScriptTest._();
   factory TestScriptTest({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -1371,7 +1371,7 @@ abstract class TestScriptTest implements _$TestScriptTest {
 abstract class TestScriptAction1 implements _$TestScriptAction1 {
   TestScriptAction1._();
   factory TestScriptAction1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     TestScriptOperation? operation,
@@ -1399,7 +1399,7 @@ abstract class TestScriptAction1 implements _$TestScriptAction1 {
 abstract class TestScriptTeardown implements _$TestScriptTeardown {
   TestScriptTeardown._();
   factory TestScriptTeardown({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<TestScriptAction2>? action,
@@ -1426,7 +1426,7 @@ abstract class TestScriptTeardown implements _$TestScriptTeardown {
 abstract class TestScriptAction2 implements _$TestScriptAction2 {
   TestScriptAction2._();
   factory TestScriptAction2({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required TestScriptOperation? operation,

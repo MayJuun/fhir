@@ -202,7 +202,7 @@ abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
   ///
   /// [item]: The reference to the related item.
   factory CatalogEntryRelatedEntry({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationtype.unknown)
@@ -454,7 +454,7 @@ abstract class CompositionAttester implements _$CompositionAttester {
   ///
   /// [party]: Who attested the composition in the specified way.
   factory CompositionAttester({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
@@ -530,7 +530,7 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
   ///
   /// [targetReference]: The target composition/document of this relationship.
   factory CompositionRelatesTo({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -609,7 +609,7 @@ abstract class CompositionEvent implements _$CompositionEvent {
   /// documented. For example, this could be used to document such a colonoscopy
   ///  or an appendectomy.
   factory CompositionEvent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
@@ -719,7 +719,7 @@ abstract class CompositionSection implements _$CompositionSection {
   ///
   /// [section]: A nested sub-section within this section.
   factory CompositionSection({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? title,
@@ -947,7 +947,7 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
   /// [ref]: Related Resource to this DocumentManifest. For example, Order,
   ///  ServiceRequest,  Procedure, EligibilityRequest, etc.
   factory DocumentManifestRelated({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -1192,7 +1192,7 @@ abstract class DocumentReferenceRelatesTo
   ///
   /// [target]: The target document of this relationship.
   factory DocumentReferenceRelatesTo({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
@@ -1261,7 +1261,7 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
   /// that the document conforms to beyond the base format indicated in the
   ///  mimeType.
   factory DocumentReferenceContent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Attachment? attachment,
@@ -1345,7 +1345,7 @@ abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
   /// [related]: Related identifiers or resources associated with the
   ///  DocumentReference.
   factory DocumentReferenceContext({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Reference>? encounter,

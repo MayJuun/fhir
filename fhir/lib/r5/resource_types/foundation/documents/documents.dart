@@ -76,7 +76,7 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
 abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
   CatalogEntryRelatedEntry._();
   factory CatalogEntryRelatedEntry({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationship.unknown)
@@ -163,7 +163,7 @@ abstract class Composition with Resource implements _$Composition {
 abstract class CompositionAttester implements _$CompositionAttester {
   CompositionAttester._();
   factory CompositionAttester({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
@@ -195,7 +195,7 @@ abstract class CompositionAttester implements _$CompositionAttester {
 abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
   CompositionRelatesTo._();
   factory CompositionRelatesTo({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -225,7 +225,7 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
 abstract class CompositionEvent implements _$CompositionEvent {
   CompositionEvent._();
   factory CompositionEvent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
@@ -254,7 +254,7 @@ abstract class CompositionEvent implements _$CompositionEvent {
 abstract class CompositionSection implements _$CompositionSection {
   CompositionSection._();
   factory CompositionSection({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? title,
@@ -345,7 +345,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
 abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
   DocumentManifestRelated._();
   factory DocumentManifestRelated({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -437,7 +437,7 @@ abstract class DocumentReferenceAttester
     implements _$DocumentReferenceAttester {
   DocumentReferenceAttester._();
   factory DocumentReferenceAttester({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DocumentReferenceAttesterMode.unknown)
@@ -471,7 +471,7 @@ abstract class DocumentReferenceRelatesTo
     implements _$DocumentReferenceRelatesTo {
   DocumentReferenceRelatesTo._();
   factory DocumentReferenceRelatesTo({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
@@ -502,7 +502,7 @@ abstract class DocumentReferenceRelatesTo
 abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
   DocumentReferenceContent._();
   factory DocumentReferenceContent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Attachment? attachment,

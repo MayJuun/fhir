@@ -15,7 +15,7 @@ part 'general_types.g.dart';
 abstract class BackboneType implements _$BackboneType {
   BackboneType._();
   factory BackboneType({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
   }) = _BackboneType;
@@ -41,7 +41,7 @@ abstract class BackboneType implements _$BackboneType {
 abstract class Annotation implements _$Annotation {
   Annotation._();
   factory Annotation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Reference? authorReference,
     String? authorString,
@@ -73,7 +73,7 @@ abstract class Annotation implements _$Annotation {
 abstract class Attachment implements _$Attachment {
   Attachment._();
   factory Attachment({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
@@ -124,7 +124,7 @@ abstract class Attachment implements _$Attachment {
 abstract class Identifier implements _$Identifier {
   Identifier._();
   factory Identifier({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse? use,
     @JsonKey(name: '_use') Element? useElement,
@@ -158,7 +158,7 @@ abstract class Identifier implements _$Identifier {
 abstract class CodeableConcept implements _$CodeableConcept {
   CodeableConcept._();
   factory CodeableConcept({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<Coding>? coding,
     String? text,
@@ -186,7 +186,7 @@ abstract class CodeableConcept implements _$CodeableConcept {
 abstract class Coding implements _$Coding {
   Coding._();
   factory Coding({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirUri? system,
     @JsonKey(name: '_system') Element? systemElement,
@@ -220,7 +220,7 @@ abstract class Coding implements _$Coding {
 abstract class Quantity implements _$Quantity {
   Quantity._();
   factory Quantity({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -256,7 +256,7 @@ abstract class Quantity implements _$Quantity {
 abstract class FhirDuration implements _$FhirDuration {
   FhirDuration._();
   factory FhirDuration({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -292,7 +292,7 @@ abstract class FhirDuration implements _$FhirDuration {
 abstract class Distance implements _$Distance {
   Distance._();
   factory Distance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -328,7 +328,7 @@ abstract class Distance implements _$Distance {
 abstract class Count implements _$Count {
   Count._();
   factory Count({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -363,7 +363,7 @@ abstract class Count implements _$Count {
 abstract class Money implements _$Money {
   Money._();
   factory Money({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -391,7 +391,7 @@ abstract class Money implements _$Money {
 abstract class Age implements _$Age {
   Age._();
   factory Age({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -424,7 +424,7 @@ abstract class Age implements _$Age {
 abstract class Range implements _$Range {
   Range._();
   factory Range({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Quantity? low,
     Quantity? high,
@@ -450,7 +450,7 @@ abstract class Range implements _$Range {
 abstract class Period implements _$Period {
   Period._();
   factory Period({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirDateTime? start,
     @JsonKey(name: '_start') Element? startElement,
@@ -478,7 +478,7 @@ abstract class Period implements _$Period {
 abstract class Ratio implements _$Ratio {
   Ratio._();
   factory Ratio({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Quantity? numerator,
     Quantity? denominator,
@@ -504,7 +504,7 @@ abstract class Ratio implements _$Ratio {
 abstract class SampledData implements _$SampledData {
   SampledData._();
   factory SampledData({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required Quantity? origin,
     Decimal? period,
@@ -542,7 +542,7 @@ abstract class SampledData implements _$SampledData {
 abstract class Signature implements _$Signature {
   Signature._();
   factory Signature({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required List<Coding>? type,
     Instant? when,
@@ -578,7 +578,7 @@ abstract class Signature implements _$Signature {
 abstract class HumanName implements _$HumanName {
   HumanName._();
   factory HumanName({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse? use,
     @JsonKey(name: '_use') Element? useElement,
@@ -616,7 +616,7 @@ abstract class HumanName implements _$HumanName {
 abstract class Address implements _$Address {
   Address._();
   factory Address({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse? use,
     @JsonKey(name: '_use') Element? useElement,
@@ -660,7 +660,7 @@ abstract class Address implements _$Address {
 abstract class ContactPoint implements _$ContactPoint {
   ContactPoint._();
   factory ContactPoint({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
         ContactPointSystem system,
@@ -695,7 +695,7 @@ abstract class ContactPoint implements _$ContactPoint {
 abstract class Timing implements _$Timing {
   Timing._();
   factory Timing({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<FhirDateTime>? event,
@@ -724,7 +724,7 @@ abstract class Timing implements _$Timing {
 abstract class TimingRepeat implements _$TimingRepeat {
   TimingRepeat._();
   factory TimingRepeat({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirDuration? boundsDuration,

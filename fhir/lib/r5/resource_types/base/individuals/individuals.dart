@@ -65,7 +65,7 @@ abstract class Group with Resource implements _$Group {
 abstract class GroupCharacteristic implements _$GroupCharacteristic {
   GroupCharacteristic._();
   factory GroupCharacteristic({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -101,7 +101,7 @@ abstract class GroupCharacteristic implements _$GroupCharacteristic {
 abstract class GroupMember implements _$GroupMember {
   GroupMember._();
   factory GroupMember({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? entity,
@@ -194,7 +194,7 @@ abstract class Patient with Resource implements _$Patient {
 abstract class PatientContact implements _$PatientContact {
   PatientContact._();
   factory PatientContact({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? relationship,
@@ -229,7 +229,7 @@ abstract class PatientContact implements _$PatientContact {
 abstract class PatientCommunication implements _$PatientCommunication {
   PatientCommunication._();
   factory PatientCommunication({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? language,
@@ -258,7 +258,7 @@ abstract class PatientCommunication implements _$PatientCommunication {
 abstract class PatientLink implements _$PatientLink {
   PatientLink._();
   factory PatientLink({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? other,
@@ -335,7 +335,7 @@ abstract class Person with Resource implements _$Person {
 abstract class PersonLink implements _$PersonLink {
   PersonLink._();
   factory PersonLink({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? target,
@@ -416,7 +416,7 @@ abstract class PractitionerQualification
     implements _$PractitionerQualification {
   PractitionerQualification._();
   factory PractitionerQualification({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
@@ -501,7 +501,7 @@ abstract class PractitionerRoleAvailableTime
     implements _$PractitionerRoleAvailableTime {
   PractitionerRoleAvailableTime._();
   factory PractitionerRoleAvailableTime({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Code>? daysOfWeek,
@@ -537,7 +537,7 @@ abstract class PractitionerRoleNotAvailable
     implements _$PractitionerRoleNotAvailable {
   PractitionerRoleNotAvailable._();
   factory PractitionerRoleNotAvailable({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -620,7 +620,7 @@ abstract class RelatedPersonCommunication
     implements _$RelatedPersonCommunication {
   RelatedPersonCommunication._();
   factory RelatedPersonCommunication({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? language,

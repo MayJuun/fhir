@@ -98,7 +98,7 @@ abstract class CompositionAttester implements _$CompositionAttester {
 abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
   CompositionRelatesTo._();
   factory CompositionRelatesTo({
-    Code code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Identifier? targetIdentifier,
     Reference? targetReference,
@@ -151,7 +151,7 @@ abstract class CompositionEvent implements _$CompositionEvent {
 abstract class CompositionSection implements _$CompositionSection {
   CompositionSection._();
   factory CompositionSection({
-    String title,
+    String? title,
     @JsonKey(name: '_title') Element? titleElement,
     CodeableConcept? code,
     Narrative? text,
@@ -236,7 +236,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
 abstract class DocumentManifestContent implements _$DocumentManifestContent {
   DocumentManifestContent._();
   factory DocumentManifestContent({
-    Attachment pAttachment,
+    Attachment? pAttachment,
     Reference? pReference,
   }) = _DocumentManifestContent;
 
@@ -261,7 +261,7 @@ abstract class DocumentManifestContent implements _$DocumentManifestContent {
 abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
   DocumentManifestRelated._();
   factory DocumentManifestRelated({
-    Identifier identifier,
+    Identifier? identifier,
     Reference? ref,
   }) = _DocumentManifestRelated;
 
@@ -345,7 +345,7 @@ abstract class DocumentReferenceRelatesTo
     implements _$DocumentReferenceRelatesTo {
   DocumentReferenceRelatesTo._();
   factory DocumentReferenceRelatesTo({
-    DocumentReferenceRelatesToCode code,
+    DocumentReferenceRelatesToCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     required Reference? target,
   }) = _DocumentReferenceRelatesTo;
@@ -398,7 +398,7 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
 abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
   DocumentReferenceContext._();
   factory DocumentReferenceContext({
-    Reference encounter,
+    Reference? encounter,
     List<CodeableConcept>? event,
     Period? period,
     CodeableConcept? facilityType,
@@ -429,7 +429,7 @@ abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
 abstract class DocumentReferenceRelated implements _$DocumentReferenceRelated {
   DocumentReferenceRelated._();
   factory DocumentReferenceRelated({
-    Identifier identifier,
+    Identifier? identifier,
     Reference? ref,
   }) = _DocumentReferenceRelated;
 

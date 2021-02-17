@@ -67,7 +67,7 @@ abstract class AdministrableProductDefinitionProperty
     implements _$AdministrableProductDefinitionProperty {
   AdministrableProductDefinitionProperty._();
   factory AdministrableProductDefinitionProperty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -106,7 +106,7 @@ abstract class AdministrableProductDefinitionRouteOfAdministration
     implements _$AdministrableProductDefinitionRouteOfAdministration {
   AdministrableProductDefinitionRouteOfAdministration._();
   factory AdministrableProductDefinitionRouteOfAdministration({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -144,7 +144,7 @@ abstract class AdministrableProductDefinitionTargetSpecies
     implements _$AdministrableProductDefinitionTargetSpecies {
   AdministrableProductDefinitionTargetSpecies._();
   factory AdministrableProductDefinitionTargetSpecies({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -176,7 +176,7 @@ abstract class AdministrableProductDefinitionWithdrawalPeriod
     implements _$AdministrableProductDefinitionWithdrawalPeriod {
   AdministrableProductDefinitionWithdrawalPeriod._();
   factory AdministrableProductDefinitionWithdrawalPeriod({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? tissue,
@@ -262,7 +262,7 @@ abstract class ClinicalUseIssueContraindication
     implements _$ClinicalUseIssueContraindication {
   ClinicalUseIssueContraindication._();
   factory ClinicalUseIssueContraindication({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? diseaseSymptomProcedure,
@@ -297,7 +297,7 @@ abstract class ClinicalUseIssueOtherTherapy
     implements _$ClinicalUseIssueOtherTherapy {
   ClinicalUseIssueOtherTherapy._();
   factory ClinicalUseIssueOtherTherapy({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? therapyRelationshipType,
@@ -328,7 +328,7 @@ abstract class ClinicalUseIssueIndication
     implements _$ClinicalUseIssueIndication {
   ClinicalUseIssueIndication._();
   factory ClinicalUseIssueIndication({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? diseaseSymptomProcedure,
@@ -363,7 +363,7 @@ abstract class ClinicalUseIssueInteraction
     implements _$ClinicalUseIssueInteraction {
   ClinicalUseIssueInteraction._();
   factory ClinicalUseIssueInteraction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<ClinicalUseIssueInteractant>? interactant,
@@ -396,7 +396,7 @@ abstract class ClinicalUseIssueInteractant
     implements _$ClinicalUseIssueInteractant {
   ClinicalUseIssueInteractant._();
   factory ClinicalUseIssueInteractant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? itemReference,
@@ -426,7 +426,7 @@ abstract class ClinicalUseIssueUndesirableEffect
     implements _$ClinicalUseIssueUndesirableEffect {
   ClinicalUseIssueUndesirableEffect._();
   factory ClinicalUseIssueUndesirableEffect({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? symptomConditionEffect,
@@ -504,7 +504,7 @@ abstract class Ingredient with Resource implements _$Ingredient {
 abstract class IngredientSubstance implements _$IngredientSubstance {
   IngredientSubstance._();
   factory IngredientSubstance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? codeCodeableConcept,
@@ -533,7 +533,7 @@ abstract class IngredientSubstance implements _$IngredientSubstance {
 abstract class IngredientStrength implements _$IngredientStrength {
   IngredientStrength._();
   factory IngredientStrength({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Ratio? presentation,
@@ -572,7 +572,7 @@ abstract class IngredientReferenceStrength
     implements _$IngredientReferenceStrength {
   IngredientReferenceStrength._();
   factory IngredientReferenceStrength({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? substanceCodeableConcept,
@@ -607,7 +607,7 @@ abstract class IngredientSpecifiedSubstance
     implements _$IngredientSpecifiedSubstance {
   IngredientSpecifiedSubstance._();
   factory IngredientSpecifiedSubstance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? codeCodeableConcept,
@@ -685,7 +685,7 @@ abstract class ManufacturedItemDefinitionProperty
     implements _$ManufacturedItemDefinitionProperty {
   ManufacturedItemDefinitionProperty._();
   factory ManufacturedItemDefinitionProperty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -794,7 +794,7 @@ abstract class MedicinalProductDefinitionContact
     implements _$MedicinalProductDefinitionContact {
   MedicinalProductDefinitionContact._();
   factory MedicinalProductDefinitionContact({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -826,7 +826,7 @@ abstract class MedicinalProductDefinitionName
     implements _$MedicinalProductDefinitionName {
   MedicinalProductDefinitionName._();
   factory MedicinalProductDefinitionName({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? productName,
@@ -861,7 +861,7 @@ abstract class MedicinalProductDefinitionNamePart
     implements _$MedicinalProductDefinitionNamePart {
   MedicinalProductDefinitionNamePart._();
   factory MedicinalProductDefinitionNamePart({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'part') String? part_,
@@ -894,7 +894,7 @@ abstract class MedicinalProductDefinitionCountryLanguage
     implements _$MedicinalProductDefinitionCountryLanguage {
   MedicinalProductDefinitionCountryLanguage._();
   factory MedicinalProductDefinitionCountryLanguage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? country,
@@ -927,7 +927,7 @@ abstract class MedicinalProductDefinitionCrossReference
     implements _$MedicinalProductDefinitionCrossReference {
   MedicinalProductDefinitionCrossReference._();
   factory MedicinalProductDefinitionCrossReference({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? productCodeableConcept,
@@ -960,7 +960,7 @@ abstract class MedicinalProductDefinitionManufacturingBusinessOperation
     implements _$MedicinalProductDefinitionManufacturingBusinessOperation {
   MedicinalProductDefinitionManufacturingBusinessOperation._();
   factory MedicinalProductDefinitionManufacturingBusinessOperation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? typeCodeableConcept,
@@ -1055,7 +1055,7 @@ abstract class PackagedProductDefinitionBatchIdentifier
     implements _$PackagedProductDefinitionBatchIdentifier {
   PackagedProductDefinitionBatchIdentifier._();
   factory PackagedProductDefinitionBatchIdentifier({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Identifier? outerPackaging,
@@ -1087,7 +1087,7 @@ abstract class PackagedProductDefinitionPackage
     implements _$PackagedProductDefinitionPackage {
   PackagedProductDefinitionPackage._();
   factory PackagedProductDefinitionPackage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
@@ -1128,7 +1128,7 @@ abstract class PackagedProductDefinitionProperty
     implements _$PackagedProductDefinitionProperty {
   PackagedProductDefinitionProperty._();
   factory PackagedProductDefinitionProperty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -1166,7 +1166,7 @@ abstract class PackagedProductDefinitionContainedItem
     implements _$PackagedProductDefinitionContainedItem {
   PackagedProductDefinitionContainedItem._();
   factory PackagedProductDefinitionContainedItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Reference>? item,
@@ -1257,7 +1257,7 @@ abstract class RegulatedAuthorizationRelatedDate
     implements _$RegulatedAuthorizationRelatedDate {
   RegulatedAuthorizationRelatedDate._();
   factory RegulatedAuthorizationRelatedDate({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Period? datePeriod,
@@ -1291,7 +1291,7 @@ abstract class RegulatedAuthorizationCase
     implements _$RegulatedAuthorizationCase {
   RegulatedAuthorizationCase._();
   factory RegulatedAuthorizationCase({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -1389,7 +1389,7 @@ abstract class SubstanceDefinitionMoiety
     implements _$SubstanceDefinitionMoiety {
   SubstanceDefinitionMoiety._();
   factory SubstanceDefinitionMoiety({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? role,
@@ -1429,7 +1429,7 @@ abstract class SubstanceDefinitionProperty
     implements _$SubstanceDefinitionProperty {
   SubstanceDefinitionProperty._();
   factory SubstanceDefinitionProperty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? category,
@@ -1468,7 +1468,7 @@ abstract class SubstanceDefinitionStructure
     implements _$SubstanceDefinitionStructure {
   SubstanceDefinitionStructure._();
   factory SubstanceDefinitionStructure({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? stereochemistry,
@@ -1508,7 +1508,7 @@ abstract class SubstanceDefinitionIsotope
     implements _$SubstanceDefinitionIsotope {
   SubstanceDefinitionIsotope._();
   factory SubstanceDefinitionIsotope({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -1541,7 +1541,7 @@ abstract class SubstanceDefinitionMolecularWeight
     implements _$SubstanceDefinitionMolecularWeight {
   SubstanceDefinitionMolecularWeight._();
   factory SubstanceDefinitionMolecularWeight({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? method,
@@ -1574,7 +1574,7 @@ abstract class SubstanceDefinitionRepresentation
     implements _$SubstanceDefinitionRepresentation {
   SubstanceDefinitionRepresentation._();
   factory SubstanceDefinitionRepresentation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -1608,7 +1608,7 @@ abstract class SubstanceDefinitionRepresentation
 abstract class SubstanceDefinitionCode implements _$SubstanceDefinitionCode {
   SubstanceDefinitionCode._();
   factory SubstanceDefinitionCode({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -1640,7 +1640,7 @@ abstract class SubstanceDefinitionCode implements _$SubstanceDefinitionCode {
 abstract class SubstanceDefinitionName implements _$SubstanceDefinitionName {
   SubstanceDefinitionName._();
   factory SubstanceDefinitionName({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -1680,7 +1680,7 @@ abstract class SubstanceDefinitionOfficial
     implements _$SubstanceDefinitionOfficial {
   SubstanceDefinitionOfficial._();
   factory SubstanceDefinitionOfficial({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? authority,
@@ -1712,7 +1712,7 @@ abstract class SubstanceDefinitionRelationship
     implements _$SubstanceDefinitionRelationship {
   SubstanceDefinitionRelationship._();
   factory SubstanceDefinitionRelationship({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? substanceDefinitionReference,
@@ -1800,7 +1800,7 @@ abstract class SubstanceNucleicAcidSubunit
     implements _$SubstanceNucleicAcidSubunit {
   SubstanceNucleicAcidSubunit._();
   factory SubstanceNucleicAcidSubunit({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? subunit,
@@ -1839,7 +1839,7 @@ abstract class SubstanceNucleicAcidLinkage
     implements _$SubstanceNucleicAcidLinkage {
   SubstanceNucleicAcidLinkage._();
   factory SubstanceNucleicAcidLinkage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? connectivity,
@@ -1874,7 +1874,7 @@ abstract class SubstanceNucleicAcidSugar
     implements _$SubstanceNucleicAcidSugar {
   SubstanceNucleicAcidSugar._();
   factory SubstanceNucleicAcidSugar({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -1951,7 +1951,7 @@ abstract class SubstancePolymerMonomerSet
     implements _$SubstancePolymerMonomerSet {
   SubstancePolymerMonomerSet._();
   factory SubstancePolymerMonomerSet({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? ratioType,
@@ -1981,7 +1981,7 @@ abstract class SubstancePolymerStartingMaterial
     implements _$SubstancePolymerStartingMaterial {
   SubstancePolymerStartingMaterial._();
   factory SubstancePolymerStartingMaterial({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -2015,7 +2015,7 @@ abstract class SubstancePolymerStartingMaterial
 abstract class SubstancePolymerRepeat implements _$SubstancePolymerRepeat {
   SubstancePolymerRepeat._();
   factory SubstancePolymerRepeat({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? averageMolecularFormula,
@@ -2047,7 +2047,7 @@ abstract class SubstancePolymerRepeatUnit
     implements _$SubstancePolymerRepeatUnit {
   SubstancePolymerRepeatUnit._();
   factory SubstancePolymerRepeatUnit({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? unit,
@@ -2082,7 +2082,7 @@ abstract class SubstancePolymerDegreeOfPolymerisation
     implements _$SubstancePolymerDegreeOfPolymerisation {
   SubstancePolymerDegreeOfPolymerisation._();
   factory SubstancePolymerDegreeOfPolymerisation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -2119,7 +2119,7 @@ abstract class SubstancePolymerStructuralRepresentation
     implements _$SubstancePolymerStructuralRepresentation {
   SubstancePolymerStructuralRepresentation._();
   factory SubstancePolymerStructuralRepresentation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -2195,7 +2195,7 @@ abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
 abstract class SubstanceProteinSubunit implements _$SubstanceProteinSubunit {
   SubstanceProteinSubunit._();
   factory SubstanceProteinSubunit({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? subunit,
@@ -2281,7 +2281,7 @@ abstract class SubstanceReferenceInformationGene
     implements _$SubstanceReferenceInformationGene {
   SubstanceReferenceInformationGene._();
   factory SubstanceReferenceInformationGene({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? geneSequenceOrigin,
@@ -2314,7 +2314,7 @@ abstract class SubstanceReferenceInformationGeneElement
     implements _$SubstanceReferenceInformationGeneElement {
   SubstanceReferenceInformationGeneElement._();
   factory SubstanceReferenceInformationGeneElement({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -2347,7 +2347,7 @@ abstract class SubstanceReferenceInformationTarget
     implements _$SubstanceReferenceInformationTarget {
   SubstanceReferenceInformationTarget._();
   factory SubstanceReferenceInformationTarget({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? target,
@@ -2444,7 +2444,7 @@ abstract class SubstanceSourceMaterialFractionDescription
     implements _$SubstanceSourceMaterialFractionDescription {
   SubstanceSourceMaterialFractionDescription._();
   factory SubstanceSourceMaterialFractionDescription({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? fraction,
@@ -2477,7 +2477,7 @@ abstract class SubstanceSourceMaterialOrganism
     implements _$SubstanceSourceMaterialOrganism {
   SubstanceSourceMaterialOrganism._();
   factory SubstanceSourceMaterialOrganism({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? family,
@@ -2517,7 +2517,7 @@ abstract class SubstanceSourceMaterialAuthor
     implements _$SubstanceSourceMaterialAuthor {
   SubstanceSourceMaterialAuthor._();
   factory SubstanceSourceMaterialAuthor({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? authorType,
@@ -2548,7 +2548,7 @@ abstract class SubstanceSourceMaterialHybrid
     implements _$SubstanceSourceMaterialHybrid {
   SubstanceSourceMaterialHybrid._();
   factory SubstanceSourceMaterialHybrid({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? maternalOrganismId,
@@ -2587,7 +2587,7 @@ abstract class SubstanceSourceMaterialOrganismGeneral
     implements _$SubstanceSourceMaterialOrganismGeneral {
   SubstanceSourceMaterialOrganismGeneral._();
   factory SubstanceSourceMaterialOrganismGeneral({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? kingdom,
@@ -2621,7 +2621,7 @@ abstract class SubstanceSourceMaterialPartDescription
     implements _$SubstanceSourceMaterialPartDescription {
   SubstanceSourceMaterialPartDescription._();
   factory SubstanceSourceMaterialPartDescription({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'part') CodeableConcept? part_,

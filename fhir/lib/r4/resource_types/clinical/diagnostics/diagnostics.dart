@@ -380,7 +380,7 @@ abstract class DiagnosticReportMedia implements _$DiagnosticReportMedia {
   ///
   /// [link]: Reference to the image source.
   factory DiagnosticReportMedia({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? comment,
@@ -686,7 +686,7 @@ abstract class ImagingStudySeries implements _$ImagingStudySeries {
   /// [instance]: A single SOP instance within the series, e.g. an image, or
   ///  presentation state.
   factory ImagingStudySeries({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? uid,
@@ -765,7 +765,7 @@ abstract class ImagingStudyPerformer implements _$ImagingStudyPerformer {
   ///
   /// [actor]: Indicates who or what performed the series.
   factory ImagingStudyPerformer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
@@ -838,7 +838,7 @@ abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
   ///
   /// [_title]: Extensions for title
   factory ImagingStudyInstance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? uid,
@@ -1323,7 +1323,7 @@ abstract class MolecularSequenceReferenceSeq
   ///
   /// [_windowEnd]: Extensions for windowEnd
   factory MolecularSequenceReferenceSeq({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? chromosome,
@@ -1435,7 +1435,7 @@ abstract class MolecularSequenceVariant implements _$MolecularSequenceVariant {
   /// [variantPointer]: A pointer to an Observation containing variant
   ///  information.
   factory MolecularSequenceVariant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? start,
@@ -1575,7 +1575,7 @@ abstract class MolecularSequenceQuality implements _$MolecularSequenceQuality {
   /// [roc]: Receiver Operator Characteristic (ROC) Curve  to give
   ///  sensitivity/specificity tradeoff.
   factory MolecularSequenceQuality({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
@@ -1690,7 +1690,7 @@ abstract class MolecularSequenceRoc implements _$MolecularSequenceRoc {
   ///
   /// [_fMeasure]: Extensions for fMeasure
   factory MolecularSequenceRoc({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Integer>? score,
@@ -1788,7 +1788,7 @@ abstract class MolecularSequenceRepository
   ///
   /// [_readsetId]: Extensions for readsetId
   factory MolecularSequenceRepository({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
@@ -1872,7 +1872,7 @@ abstract class MolecularSequenceStructureVariant
   ///
   /// [inner]: Structural variant inner.
   factory MolecularSequenceStructureVariant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? variantType,
@@ -1946,7 +1946,7 @@ abstract class MolecularSequenceOuter implements _$MolecularSequenceOuter {
   ///
   /// [_end]: Extensions for end
   factory MolecularSequenceOuter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? start,
@@ -2014,7 +2014,7 @@ abstract class MolecularSequenceInner implements _$MolecularSequenceInner {
   ///
   /// [_end]: Extensions for end
   factory MolecularSequenceInner({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? start,
@@ -2397,7 +2397,7 @@ abstract class ObservationReferenceRange
   ///
   /// [_text]: Extensions for text
   factory ObservationReferenceRange({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Quantity? low,
@@ -2513,7 +2513,7 @@ abstract class ObservationComponent implements _$ObservationComponent {
   /// [referenceRange]: Guidance on how to interpret the value by comparison to
   ///  a normal or recommended range.
   factory ObservationComponent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -2757,7 +2757,7 @@ abstract class QuestionnaireResponseItem
   ///
   /// [item]: Questions or sub-groups nested beneath a question or group.
   factory QuestionnaireResponseItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? linkId,
@@ -2877,7 +2877,7 @@ abstract class QuestionnaireResponseAnswer
   /// [item]: Nested groups and/or questions found within this particular
   ///  answer.
   factory QuestionnaireResponseAnswer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? valueBoolean,
@@ -3128,7 +3128,7 @@ abstract class SpecimenCollection implements _$SpecimenCollection {
   /// [fastingStatusDuration]: Abstinence or reduction from some or all food,
   ///  drink, or both, for a period of time prior to sample collection.
   factory SpecimenCollection({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? collector,
@@ -3209,7 +3209,7 @@ abstract class SpecimenProcessing implements _$SpecimenProcessing {
   /// occurred.  For example the time of sample fixation or the period of time
   ///  the sample was in formalin.
   factory SpecimenProcessing({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -3292,7 +3292,7 @@ abstract class SpecimenContainer implements _$SpecimenContainer {
   /// [additiveReference]: Introduced substance to preserve, maintain or enhance
   ///  the specimen. Examples: Formalin, Citrate, EDTA.
   factory SpecimenContainer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,

@@ -91,7 +91,7 @@ abstract class Immunization with Resource implements _$Immunization {
 abstract class ImmunizationPerformer implements _$ImmunizationPerformer {
   ImmunizationPerformer._();
   factory ImmunizationPerformer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
@@ -119,7 +119,7 @@ abstract class ImmunizationPerformer implements _$ImmunizationPerformer {
 abstract class ImmunizationEducation implements _$ImmunizationEducation {
   ImmunizationEducation._();
   factory ImmunizationEducation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? documentType,
@@ -153,7 +153,7 @@ abstract class ImmunizationEducation implements _$ImmunizationEducation {
 abstract class ImmunizationReaction implements _$ImmunizationReaction {
   ImmunizationReaction._();
   factory ImmunizationReaction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirDateTime? date,
@@ -185,7 +185,7 @@ abstract class ImmunizationProtocolApplied
     implements _$ImmunizationProtocolApplied {
   ImmunizationProtocolApplied._();
   factory ImmunizationProtocolApplied({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? series,
@@ -332,7 +332,7 @@ abstract class ImmunizationRecommendationRecommendation
     implements _$ImmunizationRecommendationRecommendation {
   ImmunizationRecommendationRecommendation._();
   factory ImmunizationRecommendationRecommendation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? vaccineCode,
@@ -384,7 +384,7 @@ abstract class ImmunizationRecommendationDateCriterion
     implements _$ImmunizationRecommendationDateCriterion {
   ImmunizationRecommendationDateCriterion._();
   factory ImmunizationRecommendationDateCriterion({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -461,7 +461,7 @@ abstract class Medication with Resource implements _$Medication {
 abstract class MedicationIngredient implements _$MedicationIngredient {
   MedicationIngredient._();
   factory MedicationIngredient({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? itemCodeableConcept,
@@ -494,7 +494,7 @@ abstract class MedicationIngredient implements _$MedicationIngredient {
 abstract class MedicationBatch implements _$MedicationBatch {
   MedicationBatch._();
   factory MedicationBatch({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? lotNumber,
@@ -591,7 +591,7 @@ abstract class MedicationAdministrationPerformer
     implements _$MedicationAdministrationPerformer {
   MedicationAdministrationPerformer._();
   factory MedicationAdministrationPerformer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
@@ -623,7 +623,7 @@ abstract class MedicationAdministrationDosage
     implements _$MedicationAdministrationDosage {
   MedicationAdministrationDosage._();
   factory MedicationAdministrationDosage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? text,
@@ -732,7 +732,7 @@ abstract class MedicationDispensePerformer
     implements _$MedicationDispensePerformer {
   MedicationDispensePerformer._();
   factory MedicationDispensePerformer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
@@ -762,7 +762,7 @@ abstract class MedicationDispenseSubstitution
     implements _$MedicationDispenseSubstitution {
   MedicationDispenseSubstitution._();
   factory MedicationDispenseSubstitution({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? wasSubstituted,
@@ -866,7 +866,7 @@ abstract class MedicationKnowledgeRelatedMedicationKnowledge
     implements _$MedicationKnowledgeRelatedMedicationKnowledge {
   MedicationKnowledgeRelatedMedicationKnowledge._();
   factory MedicationKnowledgeRelatedMedicationKnowledge({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -899,7 +899,7 @@ abstract class MedicationKnowledgeMonograph
     implements _$MedicationKnowledgeMonograph {
   MedicationKnowledgeMonograph._();
   factory MedicationKnowledgeMonograph({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -929,7 +929,7 @@ abstract class MedicationKnowledgeIngredient
     implements _$MedicationKnowledgeIngredient {
   MedicationKnowledgeIngredient._();
   factory MedicationKnowledgeIngredient({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? itemCodeableConcept,
@@ -963,7 +963,7 @@ abstract class MedicationKnowledgeIngredient
 abstract class MedicationKnowledgeCost implements _$MedicationKnowledgeCost {
   MedicationKnowledgeCost._();
   factory MedicationKnowledgeCost({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Period>? effectiveDate,
@@ -996,7 +996,7 @@ abstract class MedicationKnowledgeMonitoringProgram
     implements _$MedicationKnowledgeMonitoringProgram {
   MedicationKnowledgeMonitoringProgram._();
   factory MedicationKnowledgeMonitoringProgram({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -1029,7 +1029,7 @@ abstract class MedicationKnowledgeAdministrationGuideline
     implements _$MedicationKnowledgeAdministrationGuideline {
   MedicationKnowledgeAdministrationGuideline._();
   factory MedicationKnowledgeAdministrationGuideline({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<MedicationKnowledgeDosage>? dosage,
@@ -1063,7 +1063,7 @@ abstract class MedicationKnowledgeDosage
     implements _$MedicationKnowledgeDosage {
   MedicationKnowledgeDosage._();
   factory MedicationKnowledgeDosage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -1093,7 +1093,7 @@ abstract class MedicationKnowledgePatientCharacteristic
     implements _$MedicationKnowledgePatientCharacteristic {
   MedicationKnowledgePatientCharacteristic._();
   factory MedicationKnowledgePatientCharacteristic({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -1126,7 +1126,7 @@ abstract class MedicationKnowledgeMedicineClassification
     implements _$MedicationKnowledgeMedicineClassification {
   MedicationKnowledgeMedicineClassification._();
   factory MedicationKnowledgeMedicineClassification({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -1158,7 +1158,7 @@ abstract class MedicationKnowledgePackaging
     implements _$MedicationKnowledgePackaging {
   MedicationKnowledgePackaging._();
   factory MedicationKnowledgePackaging({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -1193,7 +1193,7 @@ abstract class MedicationKnowledgeDrugCharacteristic
     implements _$MedicationKnowledgeDrugCharacteristic {
   MedicationKnowledgeDrugCharacteristic._();
   factory MedicationKnowledgeDrugCharacteristic({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -1231,7 +1231,7 @@ abstract class MedicationKnowledgeRegulatory
     implements _$MedicationKnowledgeRegulatory {
   MedicationKnowledgeRegulatory._();
   factory MedicationKnowledgeRegulatory({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? regulatoryAuthority,
@@ -1263,7 +1263,7 @@ abstract class MedicationKnowledgeSubstitution
     implements _$MedicationKnowledgeSubstitution {
   MedicationKnowledgeSubstitution._();
   factory MedicationKnowledgeSubstitution({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -1296,7 +1296,7 @@ abstract class MedicationKnowledgeMaxDispense
     implements _$MedicationKnowledgeMaxDispense {
   MedicationKnowledgeMaxDispense._();
   factory MedicationKnowledgeMaxDispense({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Quantity? quantity,
@@ -1328,7 +1328,7 @@ abstract class MedicationKnowledgeKineticCharacteristic
     implements _$MedicationKnowledgeKineticCharacteristic {
   MedicationKnowledgeKineticCharacteristic._();
   factory MedicationKnowledgeKineticCharacteristic({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -1440,7 +1440,7 @@ abstract class MedicationRequestDispenseRequest
     implements _$MedicationRequestDispenseRequest {
   MedicationRequestDispenseRequest._();
   factory MedicationRequestDispenseRequest({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     MedicationRequestInitialFill? initialFill,
@@ -1479,7 +1479,7 @@ abstract class MedicationRequestInitialFill
     implements _$MedicationRequestInitialFill {
   MedicationRequestInitialFill._();
   factory MedicationRequestInitialFill({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Quantity? quantity,
@@ -1509,7 +1509,7 @@ abstract class MedicationRequestSubstitution
     implements _$MedicationRequestSubstitution {
   MedicationRequestSubstitution._();
   factory MedicationRequestSubstitution({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? allowedBoolean,

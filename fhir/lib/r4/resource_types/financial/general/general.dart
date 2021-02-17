@@ -197,7 +197,7 @@ abstract class AccountCoverage implements _$AccountCoverage {
   ///
   /// [_priority]: Extensions for priority
   factory AccountCoverage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? coverage,
@@ -264,7 +264,7 @@ abstract class AccountGuarantor implements _$AccountGuarantor {
   /// [period]: The timeframe during which the guarantor accepts responsibility
   ///  for the account.
   factory AccountGuarantor({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? party,
@@ -552,7 +552,7 @@ abstract class ChargeItemPerformer implements _$ChargeItemPerformer {
   /// [actor]: The device, practitioner, etc. who performed or participated in
   ///  the service.
   factory ChargeItemPerformer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
@@ -880,7 +880,7 @@ abstract class ChargeItemDefinitionApplicability
   ///
   /// [_expression]: Extensions for expression
   factory ChargeItemDefinitionApplicability({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -956,7 +956,7 @@ abstract class ChargeItemDefinitionPropertyGroup
   /// The priceComponent element can be used to offer transparency to the
   ///  recipient of the Invoice of how the prices have been calculated.
   factory ChargeItemDefinitionPropertyGroup({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<ChargeItemDefinitionApplicability>? applicability,
@@ -1032,7 +1032,7 @@ abstract class ChargeItemDefinitionPriceComponent
   ///
   /// [amount]: The amount calculated for this component.
   factory ChargeItemDefinitionPriceComponent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? type,
@@ -1411,7 +1411,7 @@ abstract class ContractContentDefinition
   ///
   /// [_copyright]: Extensions for copyright
   factory ContractContentDefinition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -1512,7 +1512,7 @@ abstract class ContractTerm implements _$ContractTerm {
   ///
   /// [group]: Nested group of Contract Provisions.
   factory ContractTerm({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -1594,7 +1594,7 @@ abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
   /// [control]: Security label privacy tag that species the manner in which
   ///  term and/or term elements are to be protected.
   factory ContractSecurityLabel({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<UnsignedInt>? number,
@@ -1683,7 +1683,7 @@ abstract class ContractOffer implements _$ContractOffer {
   ///
   /// [_securityLabelNumber]: Extensions for securityLabelNumber
   factory ContractOffer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
@@ -1754,7 +1754,7 @@ abstract class ContractParty implements _$ContractParty {
   ///
   /// [role]: How the party participates in the offer.
   factory ContractParty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<Reference>? reference,
@@ -1885,7 +1885,7 @@ abstract class ContractAnswer implements _$ContractAnswer {
   /// participation, the date of occupancy of a rental, warrently duration, or
   ///  whether biospecimen may be used for further research.
   factory ContractAnswer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? valueBoolean,
@@ -2002,7 +2002,7 @@ abstract class ContractAsset implements _$ContractAsset {
   ///
   /// [valuedItem]: Contract Valued Item List.
   factory ContractAsset({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? scope,
@@ -2086,7 +2086,7 @@ abstract class ContractContext implements _$ContractContext {
   ///
   /// [_text]: Extensions for text
   factory ContractContext({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? reference,
@@ -2204,7 +2204,7 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
   ///
   /// [_securityLabelNumber]: Extensions for securityLabelNumber
   factory ContractValuedItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? entityCodeableConcept,
@@ -2364,7 +2364,7 @@ abstract class ContractAction implements _$ContractAction {
   ///
   /// [_securityLabelNumber]: Extensions for securityLabelNumber
   factory ContractAction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? doNotPerform,
@@ -2455,7 +2455,7 @@ abstract class ContractSubject implements _$ContractSubject {
   ///
   /// [role]: Role type of agent assigned roles in this Contract.
   factory ContractSubject({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<Reference>? reference,
@@ -2516,7 +2516,7 @@ abstract class ContractSigner implements _$ContractSigner {
   ///
   /// [signature]: Legally binding Contract DSIG signature contents in Base64.
   factory ContractSigner({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding? type,
@@ -2580,7 +2580,7 @@ abstract class ContractFriendly implements _$ContractFriendly {
   /// and representation intended to enhance comprehension and ensure
   ///  understandability.
   factory ContractFriendly({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? contentAttachment,
@@ -2639,7 +2639,7 @@ abstract class ContractLegal implements _$ContractLegal {
   ///
   /// [contentReference]: Contract legal text in human renderable form.
   factory ContractLegal({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? contentAttachment,
@@ -2700,7 +2700,7 @@ abstract class ContractRule implements _$ContractRule {
   /// [contentReference]: Computable Contract conveyed using a policy rule
   ///  language (e.g. XACML, DKAL, SecPal).
   factory ContractRule({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? contentAttachment,
@@ -3052,7 +3052,7 @@ abstract class ExplanationOfBenefitRelated
   /// [reference]: An alternate organizational reference to the case or file to
   ///  which this particular claim pertains.
   factory ExplanationOfBenefitRelated({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? claim,
@@ -3117,7 +3117,7 @@ abstract class ExplanationOfBenefitPayee
   /// [party]: Reference to the individual or organization to whom any payment
   ///  will be made.
   factory ExplanationOfBenefitPayee({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -3193,7 +3193,7 @@ abstract class ExplanationOfBenefitCareTeam
   /// [qualification]: The qualification of the practitioner which is applicable
   ///  for this service.
   factory ExplanationOfBenefitCareTeam({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -3301,7 +3301,7 @@ abstract class ExplanationOfBenefitSupportingInfo
   /// [reason]: Provides the reason in the situation where a reason code is
   ///  required in addition to the content.
   factory ExplanationOfBenefitSupportingInfo({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -3394,7 +3394,7 @@ abstract class ExplanationOfBenefitDiagnosis
   /// products and services to a particular health condition (such as heart
   ///  attack) which is based on a predetermined grouping code system.
   factory ExplanationOfBenefitDiagnosis({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -3476,7 +3476,7 @@ abstract class ExplanationOfBenefitProcedure
   ///
   /// [udi]: Unique Device Identifiers associated with this line item.
   factory ExplanationOfBenefitProcedure({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -3557,7 +3557,7 @@ abstract class ExplanationOfBenefitInsurance
   ///
   /// [_preAuthRef]: Extensions for preAuthRef
   factory ExplanationOfBenefitInsurance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? focal,
@@ -3632,7 +3632,7 @@ abstract class ExplanationOfBenefitAccident
   ///
   /// [locationReference]: The physical location of the accident event.
   factory ExplanationOfBenefitAccident({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Date? date,
@@ -3780,7 +3780,7 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
   ///
   /// [detail]: Second-tier of goods and services.
   factory ExplanationOfBenefitItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -3890,7 +3890,7 @@ abstract class ExplanationOfBenefitAdjudication
   ///
   /// [_value]: Extensions for value
   factory ExplanationOfBenefitAdjudication({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? category,
@@ -4001,7 +4001,7 @@ abstract class ExplanationOfBenefitDetail
   ///
   /// [subDetail]: Third-tier of goods and services.
   factory ExplanationOfBenefitDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -4120,7 +4120,7 @@ abstract class ExplanationOfBenefitSubDetail
   ///
   /// [adjudication]: The adjudication results.
   factory ExplanationOfBenefitSubDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -4264,7 +4264,7 @@ abstract class ExplanationOfBenefitAddItem
   ///
   /// [detail]: The second-tier service adjudications for payor added services.
   factory ExplanationOfBenefitAddItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<PositiveInt>? itemSequence,
@@ -4382,7 +4382,7 @@ abstract class ExplanationOfBenefitDetail1
   /// [subDetail]: The third-tier service adjudications for payor added
   ///  services.
   factory ExplanationOfBenefitDetail1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? productOrService,
@@ -4480,7 +4480,7 @@ abstract class ExplanationOfBenefitSubDetail1
   ///
   /// [adjudication]: The adjudication results.
   factory ExplanationOfBenefitSubDetail1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? productOrService,
@@ -4557,7 +4557,7 @@ abstract class ExplanationOfBenefitTotal
   ///
   /// [amount]: Monetary total amount associated with the category.
   factory ExplanationOfBenefitTotal({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? category,
@@ -4633,7 +4633,7 @@ abstract class ExplanationOfBenefitPayment
   ///
   /// [identifier]: Issuer's unique identifier for the payment instrument.
   factory ExplanationOfBenefitPayment({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -4711,7 +4711,7 @@ abstract class ExplanationOfBenefitProcessNote
   ///
   /// [language]: A code to define the language used in the text of the note.
   factory ExplanationOfBenefitProcessNote({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? number,
@@ -4805,7 +4805,7 @@ abstract class ExplanationOfBenefitBenefitBalance
   ///
   /// [financial]: Benefits Used to date.
   factory ExplanationOfBenefitBenefitBalance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? category,
@@ -4897,7 +4897,7 @@ abstract class ExplanationOfBenefitFinancial
   ///
   /// [usedMoney]: The quantity of the benefit which have been consumed to date.
   factory ExplanationOfBenefitFinancial({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -5127,7 +5127,7 @@ abstract class InsurancePlanContact implements _$InsurancePlanContact {
   ///
   /// [address]: Visiting or postal addresses for the contact.
   factory InsurancePlanContact({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? purpose,
@@ -5191,7 +5191,7 @@ abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage {
   ///
   /// [benefit]: Specific benefits under this type of coverage.
   factory InsurancePlanCoverage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -5257,7 +5257,7 @@ abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit {
   ///
   /// [limit]: The specific limits on the benefit.
   factory InsurancePlanBenefit({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -5319,7 +5319,7 @@ abstract class InsurancePlanLimit implements _$InsurancePlanLimit {
   ///
   /// [code]: The specific limit on the benefit.
   factory InsurancePlanLimit({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Quantity? value,
@@ -5390,7 +5390,7 @@ abstract class InsurancePlanPlan implements _$InsurancePlanPlan {
   /// [specificCost]: Costs associated with the coverage provided by the
   ///  product.
   factory InsurancePlanPlan({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
@@ -5462,7 +5462,7 @@ abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost {
   ///
   /// [_comment]: Extensions for comment
   factory InsurancePlanGeneralCost({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -5528,7 +5528,7 @@ abstract class InsurancePlanSpecificCost
   ///
   /// [benefit]: List of the specific benefits under this category of benefit.
   factory InsurancePlanSpecificCost({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? category,
@@ -5589,7 +5589,7 @@ abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1 {
   ///
   /// [cost]: List of the costs associated with a specific benefit.
   factory InsurancePlanBenefit1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -5656,7 +5656,7 @@ abstract class InsurancePlanCost implements _$InsurancePlanCost {
   /// [value]: The actual cost value. (some of the costs may be represented as
   ///  percentages rather than currency, e.g. 10% coinsurance).
   factory InsurancePlanCost({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,

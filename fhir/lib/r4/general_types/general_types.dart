@@ -42,7 +42,7 @@ abstract class Annotation implements _$Annotation {
   ///
   /// [_text]: Extensions for text
   factory Annotation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Reference? authorReference,
     String? authorString,
@@ -124,7 +124,7 @@ abstract class Attachment implements _$Attachment {
   ///
   /// [_creation]: Extensions for creation
   factory Attachment({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
@@ -199,7 +199,7 @@ abstract class Identifier implements _$Identifier {
   ///
   /// [assigner]: Organization that issued/manages the identifier.
   factory Identifier({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse? use,
     @JsonKey(name: '_use') Element? useElement,
@@ -254,7 +254,7 @@ abstract class CodeableConcept implements _$CodeableConcept {
   ///
   /// [_text]: Extensions for text
   factory CodeableConcept({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<Coding>? coding,
     String? text,
@@ -324,7 +324,7 @@ abstract class Coding implements _$Coding {
   ///
   /// [_userSelected]: Extensions for userSelected
   factory Coding({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirUri? system,
     @JsonKey(name: '_system') Element? systemElement,
@@ -399,7 +399,7 @@ abstract class Quantity implements _$Quantity {
   ///
   /// [_code]: Extensions for code
   factory Quantity({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -473,7 +473,7 @@ abstract class FhirDuration implements _$FhirDuration {
   ///
   /// [_code]: Extensions for code
   factory FhirDuration({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -547,7 +547,7 @@ abstract class Distance implements _$Distance {
   ///
   /// [_code]: Extensions for code
   factory Distance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -624,7 +624,7 @@ abstract class Count implements _$Count {
   ///
   /// [_code]: Extensions for code
   factory Count({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -679,7 +679,7 @@ abstract class Money implements _$Money {
   ///
   /// [_currency]: Extensions for currency
   factory Money({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -746,7 +746,7 @@ abstract class Age implements _$Age {
   ///
   /// [_code]: Extensions for code
   factory Age({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Decimal? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -795,7 +795,7 @@ abstract class Range implements _$Range {
   ///
   /// [high]: The high limit. The boundary is inclusive.
   factory Range({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Quantity? low,
     Quantity? high,
@@ -845,7 +845,7 @@ abstract class Period implements _$Period {
   ///
   /// [_end]: Extensions for end
   factory Period({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirDateTime? start,
     @JsonKey(name: '_start') Element? startElement,
@@ -890,7 +890,7 @@ abstract class Ratio implements _$Ratio {
   ///
   /// [denominator]: The value of the denominator.
   factory Ratio({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Quantity? numerator,
     Quantity? denominator,
@@ -967,7 +967,7 @@ abstract class SampledData implements _$SampledData {
   ///
   /// [_data]: Extensions for data
   factory SampledData({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required Quantity? origin,
     Decimal? period,
@@ -1053,7 +1053,7 @@ abstract class Signature implements _$Signature {
   ///
   /// [_data]: Extensions for data
   factory Signature({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required List<Coding>? type,
     Instant? when,
@@ -1135,7 +1135,7 @@ abstract class HumanName implements _$HumanName {
   /// [period]: Indicates the period of time when this name was valid for the
   ///  named person.
   factory HumanName({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse? use,
     @JsonKey(name: '_use') Element? useElement,
@@ -1238,7 +1238,7 @@ abstract class Address implements _$Address {
   ///
   /// [period]: Time period when address was/is in use.
   factory Address({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse? use,
     @JsonKey(name: '_use') Element? useElement,
@@ -1317,7 +1317,7 @@ abstract class ContactPoint implements _$ContactPoint {
   ///
   /// [period]: Time period when the contact point was/is in use.
   factory ContactPoint({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
         ContactPointSystem system,
@@ -1397,7 +1397,7 @@ abstract class Timing implements _$Timing {
   /// the exception that .repeat.bounds still applies over the code (and is not
   ///  contained in the code).
   factory Timing({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<FhirDateTime>? event,
@@ -1545,7 +1545,7 @@ abstract class TimingRepeat implements _$TimingRepeat {
   ///
   /// [_offset]: Extensions for offset
   factory TimingRepeat({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirDuration? boundsDuration,

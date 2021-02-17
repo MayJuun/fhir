@@ -75,7 +75,7 @@ abstract class Communication with Resource implements _$Communication {
 abstract class CommunicationPayload implements _$CommunicationPayload {
   CommunicationPayload._();
   factory CommunicationPayload({
-    String contentString,
+    String? contentString,
     @JsonKey(name: '_contentString') Element? contentStringElement,
     Attachment? contentAttachment,
     Reference? contentReference,
@@ -166,7 +166,7 @@ abstract class CommunicationRequestPayload
     implements _$CommunicationRequestPayload {
   CommunicationRequestPayload._();
   factory CommunicationRequestPayload({
-    String contentString,
+    String? contentString,
     @JsonKey(name: '_contentString') Element? contentStringElement,
     Attachment? contentAttachment,
     Reference? contentReference,
@@ -416,7 +416,7 @@ abstract class SupplyDeliverySuppliedItem
     implements _$SupplyDeliverySuppliedItem {
   SupplyDeliverySuppliedItem._();
   factory SupplyDeliverySuppliedItem({
-    Quantity quantity,
+    Quantity? quantity,
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
   }) = _SupplyDeliverySuppliedItem;

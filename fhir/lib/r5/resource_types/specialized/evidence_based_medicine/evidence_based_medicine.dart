@@ -99,7 +99,7 @@ abstract class EvidenceVariableDefinition
     implements _$EvidenceVariableDefinition {
   EvidenceVariableDefinition._();
   factory EvidenceVariableDefinition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Markdown? description,
@@ -133,7 +133,7 @@ abstract class EvidenceVariableDefinition
 abstract class EvidenceCertainty implements _$EvidenceCertainty {
   EvidenceCertainty._();
   factory EvidenceCertainty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -167,7 +167,7 @@ abstract class EvidenceCertaintySubcomponent
     implements _$EvidenceCertaintySubcomponent {
   EvidenceCertaintySubcomponent._();
   factory EvidenceCertaintySubcomponent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -291,7 +291,7 @@ abstract class EvidenceVariableCharacteristic
     implements _$EvidenceVariableCharacteristic {
   EvidenceVariableCharacteristic._();
   factory EvidenceVariableCharacteristic({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -336,7 +336,7 @@ abstract class EvidenceVariableTimeFromStart
     implements _$EvidenceVariableTimeFromStart {
   EvidenceVariableTimeFromStart._();
   factory EvidenceVariableTimeFromStart({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -368,7 +368,7 @@ abstract class EvidenceVariableTimeFromStart
 abstract class EvidenceVariableCategory implements _$EvidenceVariableCategory {
   EvidenceVariableCategory._();
   factory EvidenceVariableCategory({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,

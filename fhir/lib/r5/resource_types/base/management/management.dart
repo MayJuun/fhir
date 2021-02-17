@@ -75,7 +75,7 @@ abstract class Encounter with Resource implements _$Encounter {
 abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
   EncounterStatusHistory._();
   factory EncounterStatusHistory({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EncounterStatusHistoryStatus.unknown)
@@ -105,7 +105,7 @@ abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
 abstract class EncounterClassHistory implements _$EncounterClassHistory {
   EncounterClassHistory._();
   factory EncounterClassHistory({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'class') required Coding? class_,
@@ -133,7 +133,7 @@ abstract class EncounterClassHistory implements _$EncounterClassHistory {
 abstract class EncounterParticipant implements _$EncounterParticipant {
   EncounterParticipant._();
   factory EncounterParticipant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
@@ -162,7 +162,7 @@ abstract class EncounterParticipant implements _$EncounterParticipant {
 abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
   EncounterDiagnosis._();
   factory EncounterDiagnosis({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? condition,
@@ -192,7 +192,7 @@ abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
 abstract class EncounterHospitalization implements _$EncounterHospitalization {
   EncounterHospitalization._();
   factory EncounterHospitalization({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? preAdmissionIdentifier,
@@ -228,7 +228,7 @@ abstract class EncounterHospitalization implements _$EncounterHospitalization {
 abstract class EncounterLocation implements _$EncounterLocation {
   EncounterLocation._();
   factory EncounterLocation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? location,
@@ -311,7 +311,7 @@ abstract class EpisodeOfCareStatusHistory
     implements _$EpisodeOfCareStatusHistory {
   EpisodeOfCareStatusHistory._();
   factory EpisodeOfCareStatusHistory({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EpisodeOfCareStatusHistoryStatus.unknown)
@@ -342,7 +342,7 @@ abstract class EpisodeOfCareStatusHistory
 abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
   EpisodeOfCareDiagnosis._();
   factory EpisodeOfCareDiagnosis({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? condition,
@@ -551,7 +551,7 @@ abstract class List_ with Resource implements _$List_ {
 abstract class ListEntry implements _$ListEntry {
   ListEntry._();
   factory ListEntry({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? flag,

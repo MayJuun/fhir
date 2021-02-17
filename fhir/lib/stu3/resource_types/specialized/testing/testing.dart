@@ -69,7 +69,7 @@ abstract class TestReport with Resource implements _$TestReport {
 abstract class TestReportParticipant implements _$TestReportParticipant {
   TestReportParticipant._();
   factory TestReportParticipant({
-    TestReportParticipantType type,
+    TestReportParticipantType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? uri,
     @JsonKey(name: '_uri') Element? uriElement,
@@ -122,7 +122,7 @@ abstract class TestReportSetup implements _$TestReportSetup {
 abstract class TestReportAction implements _$TestReportAction {
   TestReportAction._();
   factory TestReportAction({
-    TestReportOperation operation,
+    TestReportOperation? operation,
     @JsonKey(name: 'assert') TestReportAssert? assert_,
   }) = _TestReportAction;
 
@@ -147,7 +147,7 @@ abstract class TestReportAction implements _$TestReportAction {
 abstract class TestReportOperation implements _$TestReportOperation {
   TestReportOperation._();
   factory TestReportOperation({
-    TestReportOperationResult result,
+    TestReportOperationResult? result,
     @JsonKey(name: '_result') Element? resultElement,
     String? message,
     @JsonKey(name: '_message') Element? messageElement,
@@ -176,7 +176,7 @@ abstract class TestReportOperation implements _$TestReportOperation {
 abstract class TestReportAssert implements _$TestReportAssert {
   TestReportAssert._();
   factory TestReportAssert({
-    TestReportAssertResult result,
+    TestReportAssertResult? result,
     @JsonKey(name: '_result') Element? resultElement,
     String? message,
     @JsonKey(name: '_message') Element? messageElement,
@@ -205,7 +205,7 @@ abstract class TestReportAssert implements _$TestReportAssert {
 abstract class TestReportTest implements _$TestReportTest {
   TestReportTest._();
   factory TestReportTest({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -233,7 +233,7 @@ abstract class TestReportTest implements _$TestReportTest {
 abstract class TestReportAction1 implements _$TestReportAction1 {
   TestReportAction1._();
   factory TestReportAction1({
-    TestReportOperation operation,
+    TestReportOperation? operation,
     @JsonKey(name: 'assert') TestReportAssert? assert_,
   }) = _TestReportAction1;
 
@@ -379,7 +379,7 @@ abstract class TestScript with Resource implements _$TestScript {
 abstract class TestScriptOrigin implements _$TestScriptOrigin {
   TestScriptOrigin._();
   factory TestScriptOrigin({
-    Decimal index,
+    Decimal? index,
     @JsonKey(name: '_index') Element? indexElement,
     required Coding? profile,
   }) = _TestScriptOrigin;
@@ -405,7 +405,7 @@ abstract class TestScriptOrigin implements _$TestScriptOrigin {
 abstract class TestScriptDestination implements _$TestScriptDestination {
   TestScriptDestination._();
   factory TestScriptDestination({
-    Decimal index,
+    Decimal? index,
     @JsonKey(name: '_index') Element? indexElement,
     required Coding? profile,
   }) = _TestScriptDestination;
@@ -456,7 +456,7 @@ abstract class TestScriptMetadata implements _$TestScriptMetadata {
 abstract class TestScriptLink implements _$TestScriptLink {
   TestScriptLink._();
   factory TestScriptLink({
-    String url,
+    String? url,
     @JsonKey(name: '_url') Element? urlElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -519,7 +519,7 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
 abstract class TestScriptFixture implements _$TestScriptFixture {
   TestScriptFixture._();
   factory TestScriptFixture({
-    Boolean autocreate,
+    Boolean? autocreate,
     @JsonKey(name: '_autocreate') Element? autocreateElement,
     Boolean? autodelete,
     @JsonKey(name: '_autodelete') Element? autodeleteElement,
@@ -547,7 +547,7 @@ abstract class TestScriptFixture implements _$TestScriptFixture {
 abstract class TestScriptVariable implements _$TestScriptVariable {
   TestScriptVariable._();
   factory TestScriptVariable({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? defaultValue,
     @JsonKey(name: '_defaultValue') Element? defaultValueElement,
@@ -611,7 +611,7 @@ abstract class TestScriptRule implements _$TestScriptRule {
 abstract class TestScriptParam implements _$TestScriptParam {
   TestScriptParam._();
   factory TestScriptParam({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -663,7 +663,7 @@ abstract class TestScriptRuleset implements _$TestScriptRuleset {
 abstract class TestScriptRule1 implements _$TestScriptRule1 {
   TestScriptRule1._();
   factory TestScriptRule1({
-    Id ruleId,
+    Id? ruleId,
     @JsonKey(name: '_ruleId') Element? ruleIdElement,
     List<TestScriptParam1>? param,
   }) = _TestScriptRule1;
@@ -689,7 +689,7 @@ abstract class TestScriptRule1 implements _$TestScriptRule1 {
 abstract class TestScriptParam1 implements _$TestScriptParam1 {
   TestScriptParam1._();
   factory TestScriptParam1({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -740,7 +740,7 @@ abstract class TestScriptSetup implements _$TestScriptSetup {
 abstract class TestScriptAction implements _$TestScriptAction {
   TestScriptAction._();
   factory TestScriptAction({
-    TestScriptOperation operation,
+    TestScriptOperation? operation,
     @JsonKey(name: 'assert') TestScriptAssert? assert_,
   }) = _TestScriptAction;
 
@@ -765,7 +765,7 @@ abstract class TestScriptAction implements _$TestScriptAction {
 abstract class TestScriptOperation implements _$TestScriptOperation {
   TestScriptOperation._();
   factory TestScriptOperation({
-    Coding type,
+    Coding? type,
     String? resource,
     @JsonKey(name: '_resource') Element? resourceElement,
     String? label,
@@ -818,7 +818,7 @@ abstract class TestScriptOperation implements _$TestScriptOperation {
 abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
   TestScriptRequestHeader._();
   factory TestScriptRequestHeader({
-    String field,
+    String? field,
     @JsonKey(name: '_field') Element? fieldElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -845,7 +845,7 @@ abstract class TestScriptRequestHeader implements _$TestScriptRequestHeader {
 abstract class TestScriptAssert implements _$TestScriptAssert {
   TestScriptAssert._();
   factory TestScriptAssert({
-    String label,
+    String? label,
     @JsonKey(name: '_label') Element? labelElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -915,7 +915,7 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
 abstract class TestScriptRule2 implements _$TestScriptRule2 {
   TestScriptRule2._();
   factory TestScriptRule2({
-    Id ruleId,
+    Id? ruleId,
     @JsonKey(name: '_ruleId') Element? ruleIdElement,
     List<TestScriptParam2>? param,
   }) = _TestScriptRule2;
@@ -941,7 +941,7 @@ abstract class TestScriptRule2 implements _$TestScriptRule2 {
 abstract class TestScriptParam2 implements _$TestScriptParam2 {
   TestScriptParam2._();
   factory TestScriptParam2({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -968,7 +968,7 @@ abstract class TestScriptParam2 implements _$TestScriptParam2 {
 abstract class TestScriptRuleset1 implements _$TestScriptRuleset1 {
   TestScriptRuleset1._();
   factory TestScriptRuleset1({
-    Id rulesetId,
+    Id? rulesetId,
     @JsonKey(name: '_rulesetId') Element? rulesetIdElement,
     List<TestScriptRule3>? rule,
   }) = _TestScriptRuleset1;
@@ -994,7 +994,7 @@ abstract class TestScriptRuleset1 implements _$TestScriptRuleset1 {
 abstract class TestScriptRule3 implements _$TestScriptRule3 {
   TestScriptRule3._();
   factory TestScriptRule3({
-    Id ruleId,
+    Id? ruleId,
     @JsonKey(name: '_ruleId') Element? ruleIdElement,
     List<TestScriptParam3>? param,
   }) = _TestScriptRule3;
@@ -1020,7 +1020,7 @@ abstract class TestScriptRule3 implements _$TestScriptRule3 {
 abstract class TestScriptParam3 implements _$TestScriptParam3 {
   TestScriptParam3._();
   factory TestScriptParam3({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -1047,7 +1047,7 @@ abstract class TestScriptParam3 implements _$TestScriptParam3 {
 abstract class TestScriptTest implements _$TestScriptTest {
   TestScriptTest._();
   factory TestScriptTest({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -1075,7 +1075,7 @@ abstract class TestScriptTest implements _$TestScriptTest {
 abstract class TestScriptAction1 implements _$TestScriptAction1 {
   TestScriptAction1._();
   factory TestScriptAction1({
-    TestScriptOperation operation,
+    TestScriptOperation? operation,
     @JsonKey(name: 'assert') TestScriptAssert? assert_,
   }) = _TestScriptAction1;
 

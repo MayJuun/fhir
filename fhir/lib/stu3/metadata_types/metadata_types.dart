@@ -15,7 +15,7 @@ part 'metadata_types.g.dart';
 abstract class ContactDetail implements _$ContactDetail {
   ContactDetail._();
   factory ContactDetail({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     List<ContactPoint>? telecom,
   }) = _ContactDetail;
@@ -41,7 +41,7 @@ abstract class ContactDetail implements _$ContactDetail {
 abstract class Contributor implements _$Contributor {
   Contributor._();
   factory Contributor({
-    ContributorType type,
+    ContributorType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -69,7 +69,7 @@ abstract class Contributor implements _$Contributor {
 abstract class RelatedArtifact implements _$RelatedArtifact {
   RelatedArtifact._();
   factory RelatedArtifact({
-    RelatedArtifactType type,
+    RelatedArtifactType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
@@ -129,7 +129,7 @@ abstract class UsageContext implements _$UsageContext {
 abstract class DataRequirement implements _$DataRequirement {
   DataRequirement._();
   factory DataRequirement({
-    String type,
+    String? type,
     @JsonKey(name: '_type') Element? typeElement,
     List<String>? profile,
     @JsonKey(name: '_profile') List<Element>? profileElement,
@@ -161,7 +161,7 @@ abstract class DataRequirementCodeFilter
     implements _$DataRequirementCodeFilter {
   DataRequirementCodeFilter._();
   factory DataRequirementCodeFilter({
-    String path,
+    String? path,
     @JsonKey(name: '_path') Element? pathElement,
     String? valueSetString,
     @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
@@ -195,7 +195,7 @@ abstract class DataRequirementDateFilter
     implements _$DataRequirementDateFilter {
   DataRequirementDateFilter._();
   factory DataRequirementDateFilter({
-    String path,
+    String? path,
     @JsonKey(name: '_path') Element? pathElement,
     FhirDateTime? valueDateTime,
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
@@ -225,7 +225,7 @@ abstract class DataRequirementDateFilter
 abstract class ParameterDefinition implements _$ParameterDefinition {
   ParameterDefinition._();
   factory ParameterDefinition({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? use,
     @JsonKey(name: '_use') Element? useElement,
@@ -261,7 +261,7 @@ abstract class ParameterDefinition implements _$ParameterDefinition {
 abstract class TriggerDefinition implements _$TriggerDefinition {
   TriggerDefinition._();
   factory TriggerDefinition({
-    TriggerDefinitionType type,
+    TriggerDefinitionType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? eventName,
     @JsonKey(name: '_eventName') Element? eventNameElement,

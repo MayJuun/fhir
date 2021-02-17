@@ -126,7 +126,7 @@ abstract class PaymentReconciliationDetail
     implements _$PaymentReconciliationDetail {
   PaymentReconciliationDetail._();
   factory PaymentReconciliationDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -165,7 +165,7 @@ abstract class PaymentReconciliationProcessNote
     implements _$PaymentReconciliationProcessNote {
   PaymentReconciliationProcessNote._();
   factory PaymentReconciliationProcessNote({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)

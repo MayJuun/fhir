@@ -265,7 +265,7 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
   ///
   /// [_description]: Extensions for description
   factory ResearchStudyArm({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -334,7 +334,7 @@ abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
   ///
   /// [type]: The kind of study objective.
   factory ResearchStudyObjective({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,

@@ -80,7 +80,7 @@ abstract class Claim with Resource implements _$Claim {
 abstract class ClaimRelated implements _$ClaimRelated {
   ClaimRelated._();
   factory ClaimRelated({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? claim,
@@ -109,7 +109,7 @@ abstract class ClaimRelated implements _$ClaimRelated {
 abstract class ClaimPayee implements _$ClaimPayee {
   ClaimPayee._();
   factory ClaimPayee({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -137,7 +137,7 @@ abstract class ClaimPayee implements _$ClaimPayee {
 abstract class ClaimCareTeam implements _$ClaimCareTeam {
   ClaimCareTeam._();
   factory ClaimCareTeam({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -170,7 +170,7 @@ abstract class ClaimCareTeam implements _$ClaimCareTeam {
 abstract class ClaimSupportingInfo implements _$ClaimSupportingInfo {
   ClaimSupportingInfo._();
   factory ClaimSupportingInfo({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -211,7 +211,7 @@ abstract class ClaimSupportingInfo implements _$ClaimSupportingInfo {
 abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
   ClaimDiagnosis._();
   factory ClaimDiagnosis({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -244,7 +244,7 @@ abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
 abstract class ClaimProcedure implements _$ClaimProcedure {
   ClaimProcedure._();
   factory ClaimProcedure({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -278,7 +278,7 @@ abstract class ClaimProcedure implements _$ClaimProcedure {
 abstract class ClaimInsurance implements _$ClaimInsurance {
   ClaimInsurance._();
   factory ClaimInsurance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -315,7 +315,7 @@ abstract class ClaimInsurance implements _$ClaimInsurance {
 abstract class ClaimAccident implements _$ClaimAccident {
   ClaimAccident._();
   factory ClaimAccident({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Date? date,
@@ -346,7 +346,7 @@ abstract class ClaimAccident implements _$ClaimAccident {
 abstract class ClaimItem implements _$ClaimItem {
   ClaimItem._();
   factory ClaimItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -406,7 +406,7 @@ abstract class ClaimItem implements _$ClaimItem {
 abstract class ClaimDetail implements _$ClaimDetail {
   ClaimDetail._();
   factory ClaimDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -446,7 +446,7 @@ abstract class ClaimDetail implements _$ClaimDetail {
 abstract class ClaimSubDetail implements _$ClaimSubDetail {
   ClaimSubDetail._();
   factory ClaimSubDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -554,7 +554,7 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
 abstract class ClaimResponseItem implements _$ClaimResponseItem {
   ClaimResponseItem._();
   factory ClaimResponseItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? itemSequence,
@@ -587,7 +587,7 @@ abstract class ClaimResponseAdjudication
     implements _$ClaimResponseAdjudication {
   ClaimResponseAdjudication._();
   factory ClaimResponseAdjudication({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? category,
@@ -619,7 +619,7 @@ abstract class ClaimResponseAdjudication
 abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
   ClaimResponseDetail._();
   factory ClaimResponseDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? detailSequence,
@@ -651,7 +651,7 @@ abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
 abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
   ClaimResponseSubDetail._();
   factory ClaimResponseSubDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? subDetailSequence,
@@ -682,7 +682,7 @@ abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
 abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
   ClaimResponseAddItem._();
   factory ClaimResponseAddItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<PositiveInt>? itemSequence,
@@ -736,7 +736,7 @@ abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
 abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
   ClaimResponseDetail1._();
   factory ClaimResponseDetail1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? productOrService,
@@ -773,7 +773,7 @@ abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
 abstract class ClaimResponseSubDetail1 implements _$ClaimResponseSubDetail1 {
   ClaimResponseSubDetail1._();
   factory ClaimResponseSubDetail1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? productOrService,
@@ -809,7 +809,7 @@ abstract class ClaimResponseSubDetail1 implements _$ClaimResponseSubDetail1 {
 abstract class ClaimResponseTotal implements _$ClaimResponseTotal {
   ClaimResponseTotal._();
   factory ClaimResponseTotal({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? category,
@@ -837,7 +837,7 @@ abstract class ClaimResponseTotal implements _$ClaimResponseTotal {
 abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
   ClaimResponsePayment._();
   factory ClaimResponsePayment({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -870,7 +870,7 @@ abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
 abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
   ClaimResponseProcessNote._();
   factory ClaimResponseProcessNote({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? number,
@@ -905,7 +905,7 @@ abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
 abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
   ClaimResponseInsurance._();
   factory ClaimResponseInsurance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -939,7 +939,7 @@ abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
 abstract class ClaimResponseError implements _$ClaimResponseError {
   ClaimResponseError._();
   factory ClaimResponseError({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? itemSequence,
@@ -1028,7 +1028,7 @@ abstract class Invoice with Resource implements _$Invoice {
 abstract class InvoiceParticipant implements _$InvoiceParticipant {
   InvoiceParticipant._();
   factory InvoiceParticipant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? role,
@@ -1056,7 +1056,7 @@ abstract class InvoiceParticipant implements _$InvoiceParticipant {
 abstract class InvoiceLineItem implements _$InvoiceLineItem {
   InvoiceLineItem._();
   factory InvoiceLineItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -1087,7 +1087,7 @@ abstract class InvoiceLineItem implements _$InvoiceLineItem {
 abstract class InvoicePriceComponent implements _$InvoicePriceComponent {
   InvoicePriceComponent._();
   factory InvoicePriceComponent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)

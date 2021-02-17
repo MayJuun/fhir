@@ -377,7 +377,7 @@ abstract class PaymentReconciliationDetail
   /// [amount]: The monetary amount allocated from the total payment to the
   ///  payable.
   factory PaymentReconciliationDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -451,7 +451,7 @@ abstract class PaymentReconciliationProcessNote
   ///
   /// [_text]: Extensions for text
   factory PaymentReconciliationProcessNote({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)

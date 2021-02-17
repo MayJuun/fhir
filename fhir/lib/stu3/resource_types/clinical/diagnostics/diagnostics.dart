@@ -119,7 +119,7 @@ abstract class DiagnosticReportPerformer
     implements _$DiagnosticReportPerformer {
   DiagnosticReportPerformer._();
   factory DiagnosticReportPerformer({
-    CodeableConcept role,
+    CodeableConcept? role,
     required Reference? actor,
   }) = _DiagnosticReportPerformer;
 
@@ -145,7 +145,7 @@ abstract class DiagnosticReportPerformer
 abstract class DiagnosticReportImage implements _$DiagnosticReportImage {
   DiagnosticReportImage._();
   factory DiagnosticReportImage({
-    String comment,
+    String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
     required Reference? link,
   }) = _DiagnosticReportImage;
@@ -215,7 +215,7 @@ abstract class ImagingManifest with Resource implements _$ImagingManifest {
 abstract class ImagingManifestStudy implements _$ImagingManifestStudy {
   ImagingManifestStudy._();
   factory ImagingManifestStudy({
-    Id uid,
+    Id? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     Reference? imagingStudy,
     List<Reference>? endpoint,
@@ -243,7 +243,7 @@ abstract class ImagingManifestStudy implements _$ImagingManifestStudy {
 abstract class ImagingManifestSeries implements _$ImagingManifestSeries {
   ImagingManifestSeries._();
   factory ImagingManifestSeries({
-    Id uid,
+    Id? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     List<Reference>? endpoint,
     required List<ImagingManifestInstance>? instance,
@@ -270,7 +270,7 @@ abstract class ImagingManifestSeries implements _$ImagingManifestSeries {
 abstract class ImagingManifestInstance implements _$ImagingManifestInstance {
   ImagingManifestInstance._();
   factory ImagingManifestInstance({
-    String sopClass,
+    String? sopClass,
     @JsonKey(name: '_sopClass') Element? sopClassElement,
     Id? uid,
     @JsonKey(name: '_uid') Element? uidElement,
@@ -358,7 +358,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
 abstract class ImagingStudySeries implements _$ImagingStudySeries {
   ImagingStudySeries._();
   factory ImagingStudySeries({
-    Id uid,
+    Id? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     Decimal? number,
     @JsonKey(name: '_number') Element? numberElement,
@@ -399,7 +399,7 @@ abstract class ImagingStudySeries implements _$ImagingStudySeries {
 abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
   ImagingStudyInstance._();
   factory ImagingStudyInstance({
-    Id uid,
+    Id? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     Decimal? number,
     @JsonKey(name: '_number') Element? numberElement,
@@ -507,7 +507,7 @@ abstract class ObservationReferenceRange
     implements _$ObservationReferenceRange {
   ObservationReferenceRange._();
   factory ObservationReferenceRange({
-    Quantity low,
+    Quantity? low,
     Quantity? high,
     CodeableConcept? type,
     List<CodeableConcept>? appliesTo,
@@ -538,7 +538,7 @@ abstract class ObservationReferenceRange
 abstract class ObservationRelated implements _$ObservationRelated {
   ObservationRelated._();
   factory ObservationRelated({
-    ObservationRelatedType type,
+    ObservationRelatedType? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Reference? target,
   }) = _ObservationRelated;
@@ -656,7 +656,7 @@ abstract class QuestionnaireResponseItem
     implements _$QuestionnaireResponseItem {
   QuestionnaireResponseItem._();
   factory QuestionnaireResponseItem({
-    String linkId,
+    String? linkId,
     @JsonKey(name: '_linkId') Element? linkIdElement,
     String? definition,
     @JsonKey(name: '_definition') Element? definitionElement,
@@ -690,7 +690,7 @@ abstract class QuestionnaireResponseAnswer
     implements _$QuestionnaireResponseAnswer {
   QuestionnaireResponseAnswer._();
   factory QuestionnaireResponseAnswer({
-    Boolean valueBoolean,
+    Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     Decimal? valueDecimal,
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
@@ -790,7 +790,7 @@ abstract class Sequence with Resource implements _$Sequence {
 abstract class SequenceReferenceSeq implements _$SequenceReferenceSeq {
   SequenceReferenceSeq._();
   factory SequenceReferenceSeq({
-    CodeableConcept chromosome,
+    CodeableConcept? chromosome,
     String? genomeBuild,
     @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
     CodeableConcept? referenceSeqId,
@@ -826,7 +826,7 @@ abstract class SequenceReferenceSeq implements _$SequenceReferenceSeq {
 abstract class SequenceVariant implements _$SequenceVariant {
   SequenceVariant._();
   factory SequenceVariant({
-    Decimal start,
+    Decimal? start,
     @JsonKey(name: '_start') Element? startElement,
     Decimal? end,
     @JsonKey(name: '_end') Element? endElement,
@@ -860,7 +860,7 @@ abstract class SequenceVariant implements _$SequenceVariant {
 abstract class SequenceQuality implements _$SequenceQuality {
   SequenceQuality._();
   factory SequenceQuality({
-    SequenceQualityType type,
+    SequenceQualityType? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? standardSequence,
     Decimal? start,
@@ -908,7 +908,7 @@ abstract class SequenceQuality implements _$SequenceQuality {
 abstract class SequenceRepository implements _$SequenceRepository {
   SequenceRepository._();
   factory SequenceRepository({
-    SequenceRepositoryType type,
+    SequenceRepositoryType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -993,7 +993,7 @@ abstract class Specimen with Resource implements _$Specimen {
 abstract class SpecimenCollection implements _$SpecimenCollection {
   SpecimenCollection._();
   factory SpecimenCollection({
-    Reference collector,
+    Reference? collector,
     FhirDateTime? collectedDateTime,
     @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
     Period? collectedPeriod,
@@ -1023,7 +1023,7 @@ abstract class SpecimenCollection implements _$SpecimenCollection {
 abstract class SpecimenProcessing implements _$SpecimenProcessing {
   SpecimenProcessing._();
   factory SpecimenProcessing({
-    String description,
+    String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     CodeableConcept? procedure,
     List<Reference>? additive,

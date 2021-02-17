@@ -71,7 +71,7 @@ abstract class BiologicallyDerivedProductCollection
     implements _$BiologicallyDerivedProductCollection {
   BiologicallyDerivedProductCollection._();
   factory BiologicallyDerivedProductCollection({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? collector,
@@ -106,7 +106,7 @@ abstract class BiologicallyDerivedProductProcessing
     implements _$BiologicallyDerivedProductProcessing {
   BiologicallyDerivedProductProcessing._();
   factory BiologicallyDerivedProductProcessing({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -143,7 +143,7 @@ abstract class BiologicallyDerivedProductManipulation
     implements _$BiologicallyDerivedProductManipulation {
   BiologicallyDerivedProductManipulation._();
   factory BiologicallyDerivedProductManipulation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -178,7 +178,7 @@ abstract class BiologicallyDerivedProductStorage
     implements _$BiologicallyDerivedProductStorage {
   BiologicallyDerivedProductStorage._();
   factory BiologicallyDerivedProductStorage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -290,7 +290,7 @@ abstract class Device with Resource implements _$Device {
 abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
   DeviceUdiCarrier._();
   factory DeviceUdiCarrier({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? deviceIdentifier,
@@ -329,7 +329,7 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
 abstract class DeviceDeviceName implements _$DeviceDeviceName {
   DeviceDeviceName._();
   factory DeviceDeviceName({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -360,7 +360,7 @@ abstract class DeviceDeviceName implements _$DeviceDeviceName {
 abstract class DeviceSpecialization implements _$DeviceSpecialization {
   DeviceSpecialization._();
   factory DeviceSpecialization({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? systemType,
@@ -389,7 +389,7 @@ abstract class DeviceSpecialization implements _$DeviceSpecialization {
 abstract class DeviceVersion implements _$DeviceVersion {
   DeviceVersion._();
   factory DeviceVersion({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -419,7 +419,7 @@ abstract class DeviceVersion implements _$DeviceVersion {
 abstract class DeviceProperty implements _$DeviceProperty {
   DeviceProperty._();
   factory DeviceProperty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -448,7 +448,7 @@ abstract class DeviceProperty implements _$DeviceProperty {
 abstract class DeviceOperationalStatus implements _$DeviceOperationalStatus {
   DeviceOperationalStatus._();
   factory DeviceOperationalStatus({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? value,
@@ -476,7 +476,7 @@ abstract class DeviceOperationalStatus implements _$DeviceOperationalStatus {
 abstract class DeviceAssociationStatus implements _$DeviceAssociationStatus {
   DeviceAssociationStatus._();
   factory DeviceAssociationStatus({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? value,
@@ -556,7 +556,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
 abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
   DeviceMetricCalibration._();
   factory DeviceMetricCalibration({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
@@ -638,7 +638,7 @@ abstract class NutritionProduct with Resource implements _$NutritionProduct {
 abstract class NutritionProductNutrient implements _$NutritionProductNutrient {
   NutritionProductNutrient._();
   factory NutritionProductNutrient({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? itemCodeableConcept,
@@ -669,7 +669,7 @@ abstract class NutritionProductIngredient
     implements _$NutritionProductIngredient {
   NutritionProductIngredient._();
   factory NutritionProductIngredient({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? itemCodeableConcept,
@@ -700,7 +700,7 @@ abstract class NutritionProductProductCharacteristic
     implements _$NutritionProductProductCharacteristic {
   NutritionProductProductCharacteristic._();
   factory NutritionProductProductCharacteristic({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -739,7 +739,7 @@ abstract class NutritionProductProductCharacteristic
 abstract class NutritionProductInstance implements _$NutritionProductInstance {
   NutritionProductInstance._();
   factory NutritionProductInstance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Quantity? quantity,
@@ -819,7 +819,7 @@ abstract class Substance with Resource implements _$Substance {
 abstract class SubstanceInstance implements _$SubstanceInstance {
   SubstanceInstance._();
   factory SubstanceInstance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -849,7 +849,7 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
 abstract class SubstanceIngredient implements _$SubstanceIngredient {
   SubstanceIngredient._();
   factory SubstanceIngredient({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Ratio? quantity,

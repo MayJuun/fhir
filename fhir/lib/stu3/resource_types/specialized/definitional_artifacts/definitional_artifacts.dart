@@ -108,7 +108,7 @@ abstract class ActivityDefinitionParticipant
     implements _$ActivityDefinitionParticipant {
   ActivityDefinitionParticipant._();
   factory ActivityDefinitionParticipant({
-    String type,
+    String? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? role,
   }) = _ActivityDefinitionParticipant;
@@ -136,7 +136,7 @@ abstract class ActivityDefinitionDynamicValue
     implements _$ActivityDefinitionDynamicValue {
   ActivityDefinitionDynamicValue._();
   factory ActivityDefinitionDynamicValue({
-    String description,
+    String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
@@ -246,7 +246,7 @@ abstract class PlanDefinition with Resource implements _$PlanDefinition {
 abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
   PlanDefinitionGoal._();
   factory PlanDefinitionGoal({
-    CodeableConcept category,
+    CodeableConcept? category,
     required CodeableConcept? description,
     CodeableConcept? priority,
     CodeableConcept? start,
@@ -276,7 +276,7 @@ abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
 abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
   PlanDefinitionTarget._();
   factory PlanDefinitionTarget({
-    CodeableConcept measure,
+    CodeableConcept? measure,
     Quantity? detailQuantity,
     Range? detailRange,
     CodeableConcept? detailCodeableConcept,
@@ -304,7 +304,7 @@ abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
 abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
   PlanDefinitionAction._();
   factory PlanDefinitionAction({
-    String label,
+    String? label,
     @JsonKey(name: '_label') Element? labelElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
@@ -367,7 +367,7 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
 abstract class PlanDefinitionCondition implements _$PlanDefinitionCondition {
   PlanDefinitionCondition._();
   factory PlanDefinitionCondition({
-    PlanDefinitionConditionKind kind,
+    PlanDefinitionConditionKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -399,7 +399,7 @@ abstract class PlanDefinitionRelatedAction
     implements _$PlanDefinitionRelatedAction {
   PlanDefinitionRelatedAction._();
   factory PlanDefinitionRelatedAction({
-    Id actionId,
+    Id? actionId,
     @JsonKey(name: '_actionId') Element? actionIdElement,
     PlanDefinitionRelatedActionRelationship? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -430,7 +430,7 @@ abstract class PlanDefinitionParticipant
     implements _$PlanDefinitionParticipant {
   PlanDefinitionParticipant._();
   factory PlanDefinitionParticipant({
-    PlanDefinitionParticipantType type,
+    PlanDefinitionParticipantType? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? role,
   }) = _PlanDefinitionParticipant;
@@ -458,7 +458,7 @@ abstract class PlanDefinitionDynamicValue
     implements _$PlanDefinitionDynamicValue {
   PlanDefinitionDynamicValue._();
   factory PlanDefinitionDynamicValue({
-    String description,
+    String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
@@ -561,7 +561,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
 abstract class QuestionnaireItem implements _$QuestionnaireItem {
   QuestionnaireItem._();
   factory QuestionnaireItem({
-    String linkId,
+    String? linkId,
     @JsonKey(name: '_linkId') Element? linkIdElement,
     String? definition,
     @JsonKey(name: '_definition') Element? definitionElement,
@@ -628,7 +628,7 @@ abstract class QuestionnaireItem implements _$QuestionnaireItem {
 abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
   QuestionnaireEnableWhen._();
   factory QuestionnaireEnableWhen({
-    String question,
+    String? question,
     @JsonKey(name: '_question') Element? questionElement,
     Boolean? hasAnswer,
     @JsonKey(name: '_hasAnswer') Element? hasAnswerElement,
@@ -675,7 +675,7 @@ abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
 abstract class QuestionnaireOption implements _$QuestionnaireOption {
   QuestionnaireOption._();
   factory QuestionnaireOption({
-    Decimal valueInteger,
+    Decimal? valueInteger,
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
     Date? valueDate,
     @JsonKey(name: '_valueDate') Element? valueDateElement,

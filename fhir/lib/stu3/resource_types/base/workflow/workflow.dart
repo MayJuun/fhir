@@ -216,7 +216,7 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
 abstract class ProcessRequestItem implements _$ProcessRequestItem {
   ProcessRequestItem._();
   factory ProcessRequestItem({
-    Id sequenceLinkId,
+    Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
   }) = _ProcessRequestItem;
 
@@ -294,7 +294,7 @@ abstract class ProcessResponseProcessNote
     implements _$ProcessResponseProcessNote {
   ProcessResponseProcessNote._();
   factory ProcessResponseProcessNote({
-    CodeableConcept type,
+    CodeableConcept? type,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
   }) = _ProcessResponseProcessNote;
@@ -377,7 +377,7 @@ abstract class RequestGroup with Resource implements _$RequestGroup {
 abstract class RequestGroupAction implements _$RequestGroupAction {
   RequestGroupAction._();
   factory RequestGroupAction({
-    String label,
+    String? label,
     @JsonKey(name: '_label') Element? labelElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
@@ -432,7 +432,7 @@ abstract class RequestGroupAction implements _$RequestGroupAction {
 abstract class RequestGroupCondition implements _$RequestGroupCondition {
   RequestGroupCondition._();
   factory RequestGroupCondition({
-    String kind,
+    String? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -464,7 +464,7 @@ abstract class RequestGroupRelatedAction
     implements _$RequestGroupRelatedAction {
   RequestGroupRelatedAction._();
   factory RequestGroupRelatedAction({
-    Id actionId,
+    Id? actionId,
     @JsonKey(name: '_actionId') Element? actionIdElement,
     String? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -686,7 +686,7 @@ abstract class TaskRequester implements _$TaskRequester {
 abstract class TaskRestriction implements _$TaskRestriction {
   TaskRestriction._();
   factory TaskRestriction({
-    Decimal repetitions,
+    Decimal? repetitions,
     @JsonKey(name: '_repetitions') Element? repetitionsElement,
     Period? period,
     List<Reference>? recipient,

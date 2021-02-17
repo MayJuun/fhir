@@ -81,7 +81,7 @@ abstract class AdverseEvent with Resource implements _$AdverseEvent {
 abstract class AdverseEventParticipant implements _$AdverseEventParticipant {
   AdverseEventParticipant._();
   factory AdverseEventParticipant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
@@ -110,7 +110,7 @@ abstract class AdverseEventSuspectEntity
     implements _$AdverseEventSuspectEntity {
   AdverseEventSuspectEntity._();
   factory AdverseEventSuspectEntity({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? instanceCodeableConcept,
@@ -140,7 +140,7 @@ abstract class AdverseEventSuspectEntity
 abstract class AdverseEventCausality implements _$AdverseEventCausality {
   AdverseEventCausality._();
   factory AdverseEventCausality({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? assessmentMethod,
@@ -170,7 +170,7 @@ abstract class AdverseEventContributingFactor
     implements _$AdverseEventContributingFactor {
   AdverseEventContributingFactor._();
   factory AdverseEventContributingFactor({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? itemReference,
@@ -202,7 +202,7 @@ abstract class AdverseEventPreventiveAction
     implements _$AdverseEventPreventiveAction {
   AdverseEventPreventiveAction._();
   factory AdverseEventPreventiveAction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? itemReference,
@@ -232,7 +232,7 @@ abstract class AdverseEventMitigatingAction
     implements _$AdverseEventMitigatingAction {
   AdverseEventMitigatingAction._();
   factory AdverseEventMitigatingAction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? itemReference,
@@ -262,7 +262,7 @@ abstract class AdverseEventSupportingInfo
     implements _$AdverseEventSupportingInfo {
   AdverseEventSupportingInfo._();
   factory AdverseEventSupportingInfo({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? itemReference,
@@ -359,7 +359,7 @@ abstract class AllergyIntoleranceReaction
     implements _$AllergyIntoleranceReaction {
   AllergyIntoleranceReaction._();
   factory AllergyIntoleranceReaction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? substance,
@@ -461,7 +461,7 @@ abstract class ClinicalImpressionFinding
     implements _$ClinicalImpressionFinding {
   ClinicalImpressionFinding._();
   factory ClinicalImpressionFinding({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? itemCodeableConcept,
@@ -558,7 +558,7 @@ abstract class Condition with Resource implements _$Condition {
 abstract class ConditionStage implements _$ConditionStage {
   ConditionStage._();
   factory ConditionStage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? summary,
@@ -587,7 +587,7 @@ abstract class ConditionStage implements _$ConditionStage {
 abstract class ConditionEvidence implements _$ConditionEvidence {
   ConditionEvidence._();
   factory ConditionEvidence({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
@@ -670,7 +670,7 @@ abstract class DetectedIssue with Resource implements _$DetectedIssue {
 abstract class DetectedIssueEvidence implements _$DetectedIssueEvidence {
   DetectedIssueEvidence._();
   factory DetectedIssueEvidence({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
@@ -698,7 +698,7 @@ abstract class DetectedIssueEvidence implements _$DetectedIssueEvidence {
 abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
   DetectedIssueMitigation._();
   factory DetectedIssueMitigation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? action,
@@ -805,7 +805,7 @@ abstract class FamilyMemberHistoryCondition
     implements _$FamilyMemberHistoryCondition {
   FamilyMemberHistoryCondition._();
   factory FamilyMemberHistoryCondition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -843,7 +843,7 @@ abstract class FamilyMemberHistoryProcedure
     implements _$FamilyMemberHistoryProcedure {
   FamilyMemberHistoryProcedure._();
   factory FamilyMemberHistoryProcedure({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -957,7 +957,7 @@ abstract class Procedure with Resource implements _$Procedure {
 abstract class ProcedurePerformer implements _$ProcedurePerformer {
   ProcedurePerformer._();
   factory ProcedurePerformer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
@@ -986,7 +986,7 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
 abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
   ProcedureFocalDevice._();
   factory ProcedureFocalDevice({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? action,

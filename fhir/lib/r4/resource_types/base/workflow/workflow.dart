@@ -288,7 +288,7 @@ abstract class AppointmentParticipant implements _$AppointmentParticipant {
   ///
   /// [period]: Participation period of the actor.
   factory AppointmentParticipant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
@@ -1018,7 +1018,7 @@ abstract class TaskRestriction implements _$TaskRestriction {
   /// [recipient]: For requests that are targeted to more than on potential
   ///  recipient/target, for whom is fulfillment sought?
   factory TaskRestriction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? repetitions,
@@ -1217,7 +1217,7 @@ abstract class TaskInput implements _$TaskInput {
   ///
   /// [valueMeta]: The value of the input parameter as a basic type.
   factory TaskInput({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -1481,7 +1481,7 @@ abstract class TaskOutput implements _$TaskOutput {
   ///
   /// [valueMeta]: The value of the Output parameter as a basic type.
   factory TaskOutput({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -1788,7 +1788,7 @@ abstract class VerificationResultPrimarySource
   /// [pushTypeAvailable]: Type of alerts/updates the primary source can send
   ///  (specific requested changes; any changes; as defined by source).
   factory VerificationResultPrimarySource({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? who,
@@ -1883,7 +1883,7 @@ abstract class VerificationResultAttestation
   /// [sourceSignature]: Signed assertion by the attestation source that they
   ///  have attested to the information.
   factory VerificationResultAttestation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? who,
@@ -1961,7 +1961,7 @@ abstract class VerificationResultValidator
   /// [attestationSignature]: Signed assertion by the validator that they have
   ///  validated the information.
   factory VerificationResultValidator({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? organization,

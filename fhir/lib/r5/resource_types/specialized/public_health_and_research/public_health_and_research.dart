@@ -79,7 +79,7 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
 abstract class ResearchStudyArm implements _$ResearchStudyArm {
   ResearchStudyArm._();
   factory ResearchStudyArm({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -110,7 +110,7 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
 abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
   ResearchStudyObjective._();
   factory ResearchStudyObjective({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -188,7 +188,7 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
 abstract class ResearchSubjectProgress implements _$ResearchSubjectProgress {
   ResearchSubjectProgress._();
   factory ResearchSubjectProgress({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,

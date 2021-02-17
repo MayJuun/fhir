@@ -248,7 +248,7 @@ abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
   ///
   /// [period]: The time that the episode was in the specified status.
   factory EncounterStatusHistory({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EncounterStatusHistoryStatus.unknown)
@@ -310,7 +310,7 @@ abstract class EncounterClassHistory implements _$EncounterClassHistory {
   ///
   /// [period]: The time that the episode was in the specified class.
   factory EncounterClassHistory({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'class') required Coding? class_,
@@ -374,7 +374,7 @@ abstract class EncounterParticipant implements _$EncounterParticipant {
   ///
   /// [individual]: Persons involved in the encounter other than the patient.
   factory EncounterParticipant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
@@ -443,7 +443,7 @@ abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
   ///
   /// [_rank]: Extensions for rank
   factory EncounterDiagnosis({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? condition,
@@ -524,7 +524,7 @@ abstract class EncounterHospitalization implements _$EncounterHospitalization {
   ///
   /// [dischargeDisposition]: Category or kind of location after discharge.
   factory EncounterHospitalization({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? preAdmissionIdentifier,
@@ -603,7 +603,7 @@ abstract class EncounterLocation implements _$EncounterLocation {
   /// [period]: Time period during which the patient was present at the
   ///  location.
   factory EncounterLocation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? location,
@@ -816,7 +816,7 @@ abstract class EpisodeOfCareStatusHistory
   /// [period]: The period during this EpisodeOfCare that the specific status
   ///  applied.
   factory EpisodeOfCareStatusHistory({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EpisodeOfCareStatusHistoryStatus.unknown)
@@ -886,7 +886,7 @@ abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
   ///
   /// [_rank]: Extensions for rank
   factory EpisodeOfCareDiagnosis({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? condition,
@@ -1526,7 +1526,7 @@ abstract class ListEntry implements _$ListEntry {
   ///
   /// [item]: A reference to the actual resource from which data was derived.
   factory ListEntry({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? flag,

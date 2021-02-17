@@ -535,7 +535,7 @@ abstract class PractitionerRoleNotAvailable
     implements _$PractitionerRoleNotAvailable {
   PractitionerRoleNotAvailable._();
   factory PractitionerRoleNotAvailable({
-    String description,
+    String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Period? during,
   }) = _PractitionerRoleNotAvailable;

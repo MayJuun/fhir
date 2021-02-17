@@ -135,7 +135,7 @@ abstract class HealthcareServiceEligibility
     implements _$HealthcareServiceEligibility {
   HealthcareServiceEligibility._();
   factory HealthcareServiceEligibility({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -166,7 +166,7 @@ abstract class HealthcareServiceAvailableTime
     implements _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
   factory HealthcareServiceAvailableTime({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
@@ -204,7 +204,7 @@ abstract class HealthcareServiceNotAvailable
     implements _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
   factory HealthcareServiceNotAvailable({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -294,7 +294,7 @@ abstract class Location with Resource implements _$Location {
 abstract class LocationPosition implements _$LocationPosition {
   LocationPosition._();
   factory LocationPosition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Decimal? longitude,
@@ -326,7 +326,7 @@ abstract class LocationPosition implements _$LocationPosition {
 abstract class LocationHoursOfOperation implements _$LocationHoursOfOperation {
   LocationHoursOfOperation._();
   factory LocationHoursOfOperation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Code>? daysOfWeek,
@@ -410,7 +410,7 @@ abstract class Organization with Resource implements _$Organization {
 abstract class OrganizationContact implements _$OrganizationContact {
   OrganizationContact._();
   factory OrganizationContact({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? purpose,

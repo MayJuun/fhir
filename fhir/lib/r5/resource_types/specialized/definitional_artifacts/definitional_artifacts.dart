@@ -128,7 +128,7 @@ abstract class ActivityDefinitionParticipant
     implements _$ActivityDefinitionParticipant {
   ActivityDefinitionParticipant._();
   factory ActivityDefinitionParticipant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? type,
@@ -159,7 +159,7 @@ abstract class ActivityDefinitionDynamicValue
     implements _$ActivityDefinitionDynamicValue {
   ActivityDefinitionDynamicValue._();
   factory ActivityDefinitionDynamicValue({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? path,
@@ -282,7 +282,7 @@ abstract class ConditionDefinitionObservation
     implements _$ConditionDefinitionObservation {
   ConditionDefinitionObservation._();
   factory ConditionDefinitionObservation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? category,
@@ -314,7 +314,7 @@ abstract class ConditionDefinitionMedication
     implements _$ConditionDefinitionMedication {
   ConditionDefinitionMedication._();
   factory ConditionDefinitionMedication({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? category,
@@ -344,7 +344,7 @@ abstract class ConditionDefinitionPrecondition
     implements _$ConditionDefinitionPrecondition {
   ConditionDefinitionPrecondition._();
   factory ConditionDefinitionPrecondition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConditionDefinitionPreconditionType.unknown)
@@ -380,7 +380,7 @@ abstract class ConditionDefinitionQuestionnaire
     implements _$ConditionDefinitionQuestionnaire {
   ConditionDefinitionQuestionnaire._();
   factory ConditionDefinitionQuestionnaire({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConditionDefinitionQuestionnairePurpose.unknown)
@@ -413,7 +413,7 @@ abstract class ConditionDefinitionQuestionnaire
 abstract class ConditionDefinitionPlan implements _$ConditionDefinitionPlan {
   ConditionDefinitionPlan._();
   factory ConditionDefinitionPlan({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? role,
@@ -504,7 +504,7 @@ abstract class DeviceDefinitionUdiDeviceIdentifier
     implements _$DeviceDefinitionUdiDeviceIdentifier {
   DeviceDefinitionUdiDeviceIdentifier._();
   factory DeviceDefinitionUdiDeviceIdentifier({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? deviceIdentifier,
@@ -540,7 +540,7 @@ abstract class DeviceDefinitionDeviceName
     implements _$DeviceDefinitionDeviceName {
   DeviceDefinitionDeviceName._();
   factory DeviceDefinitionDeviceName({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -573,7 +573,7 @@ abstract class DeviceDefinitionSpecialization
     implements _$DeviceDefinitionSpecialization {
   DeviceDefinitionSpecialization._();
   factory DeviceDefinitionSpecialization({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? systemType,
@@ -607,7 +607,7 @@ abstract class DeviceDefinitionCapability
     implements _$DeviceDefinitionCapability {
   DeviceDefinitionCapability._();
   factory DeviceDefinitionCapability({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -636,7 +636,7 @@ abstract class DeviceDefinitionCapability
 abstract class DeviceDefinitionProperty implements _$DeviceDefinitionProperty {
   DeviceDefinitionProperty._();
   factory DeviceDefinitionProperty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -666,7 +666,7 @@ abstract class DeviceDefinitionProperty implements _$DeviceDefinitionProperty {
 abstract class DeviceDefinitionMaterial implements _$DeviceDefinitionMaterial {
   DeviceDefinitionMaterial._();
   factory DeviceDefinitionMaterial({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? substance,
@@ -874,7 +874,7 @@ abstract class ObservationDefinitionQuantitativeDetails
     implements _$ObservationDefinitionQuantitativeDetails {
   ObservationDefinitionQuantitativeDetails._();
   factory ObservationDefinitionQuantitativeDetails({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? customaryUnit,
@@ -910,7 +910,7 @@ abstract class ObservationDefinitionQualifiedInterval
     implements _$ObservationDefinitionQualifiedInterval {
   ObservationDefinitionQualifiedInterval._();
   factory ObservationDefinitionQualifiedInterval({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(
@@ -955,7 +955,7 @@ abstract class ObservationDefinitionComponent
     implements _$ObservationDefinitionComponent {
   ObservationDefinitionComponent._();
   factory ObservationDefinitionComponent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -1074,7 +1074,7 @@ abstract class PlanDefinition with Resource implements _$PlanDefinition {
 abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
   PlanDefinitionGoal._();
   factory PlanDefinitionGoal({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? category,
@@ -1107,7 +1107,7 @@ abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
 abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
   PlanDefinitionTarget._();
   factory PlanDefinitionTarget({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? measure,
@@ -1138,7 +1138,7 @@ abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
 abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
   PlanDefinitionAction._();
   factory PlanDefinitionAction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? prefix,
@@ -1217,7 +1217,7 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
 abstract class PlanDefinitionCondition implements _$PlanDefinitionCondition {
   PlanDefinitionCondition._();
   factory PlanDefinitionCondition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: PlanDefinitionConditionKind.unknown)
@@ -1248,7 +1248,7 @@ abstract class PlanDefinitionRelatedAction
     implements _$PlanDefinitionRelatedAction {
   PlanDefinitionRelatedAction._();
   factory PlanDefinitionRelatedAction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? actionId,
@@ -1283,7 +1283,7 @@ abstract class PlanDefinitionParticipant
     implements _$PlanDefinitionParticipant {
   PlanDefinitionParticipant._();
   factory PlanDefinitionParticipant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
@@ -1315,7 +1315,7 @@ abstract class PlanDefinitionDynamicValue
     implements _$PlanDefinitionDynamicValue {
   PlanDefinitionDynamicValue._();
   factory PlanDefinitionDynamicValue({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? path,
@@ -1418,7 +1418,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
 abstract class QuestionnaireItem implements _$QuestionnaireItem {
   QuestionnaireItem._();
   factory QuestionnaireItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? linkId,
@@ -1472,7 +1472,7 @@ abstract class QuestionnaireItem implements _$QuestionnaireItem {
 abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
   QuestionnaireEnableWhen._();
   factory QuestionnaireEnableWhen({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? question,
@@ -1521,7 +1521,7 @@ abstract class QuestionnaireAnswerOption
     implements _$QuestionnaireAnswerOption {
   QuestionnaireAnswerOption._();
   factory QuestionnaireAnswerOption({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? valueInteger,
@@ -1560,7 +1560,7 @@ abstract class QuestionnaireAnswerOption
 abstract class QuestionnaireInitial implements _$QuestionnaireInitial {
   QuestionnaireInitial._();
   factory QuestionnaireInitial({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? valueBoolean,
@@ -1684,7 +1684,7 @@ abstract class SpecimenDefinitionTypeTested
     implements _$SpecimenDefinitionTypeTested {
   SpecimenDefinitionTypeTested._();
   factory SpecimenDefinitionTypeTested({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? isDerived,
@@ -1727,7 +1727,7 @@ abstract class SpecimenDefinitionContainer
     implements _$SpecimenDefinitionContainer {
   SpecimenDefinitionContainer._();
   factory SpecimenDefinitionContainer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? material,
@@ -1767,7 +1767,7 @@ abstract class SpecimenDefinitionAdditive
     implements _$SpecimenDefinitionAdditive {
   SpecimenDefinitionAdditive._();
   factory SpecimenDefinitionAdditive({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? additiveCodeableConcept,
@@ -1797,7 +1797,7 @@ abstract class SpecimenDefinitionHandling
     implements _$SpecimenDefinitionHandling {
   SpecimenDefinitionHandling._();
   factory SpecimenDefinitionHandling({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? temperatureQualifier,

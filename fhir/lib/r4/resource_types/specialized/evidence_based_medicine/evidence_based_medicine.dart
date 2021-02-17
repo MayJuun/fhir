@@ -338,7 +338,7 @@ abstract class EffectEvidenceSynthesisSampleSize
   ///
   /// [_numberOfParticipants]: Extensions for numberOfParticipants
   factory EffectEvidenceSynthesisSampleSize({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -418,7 +418,7 @@ abstract class EffectEvidenceSynthesisResultsByExposure
   ///
   /// [riskEvidenceSynthesis]: Reference to a RiskEvidenceSynthesis resource.
   factory EffectEvidenceSynthesisResultsByExposure({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -504,7 +504,7 @@ abstract class EffectEvidenceSynthesisEffectEstimate
   /// [precisionEstimate]: A description of the precision of the estimate for
   ///  the effect.
   factory EffectEvidenceSynthesisEffectEstimate({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -585,7 +585,7 @@ abstract class EffectEvidenceSynthesisPrecisionEstimate
   ///
   /// [_to]: Extensions for to
   factory EffectEvidenceSynthesisPrecisionEstimate({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -659,7 +659,7 @@ abstract class EffectEvidenceSynthesisCertainty
   /// [certaintySubcomponent]: A description of a component of the overall
   ///  certainty.
   factory EffectEvidenceSynthesisCertainty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? rating,
@@ -728,7 +728,7 @@ abstract class EffectEvidenceSynthesisCertaintySubcomponent
   /// [note]: A human-readable string to clarify or explain concepts about the
   ///  resource.
   factory EffectEvidenceSynthesisCertaintySubcomponent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -1398,7 +1398,7 @@ abstract class EvidenceVariableCharacteristic
   ///
   /// [_groupMeasure]: Extensions for groupMeasure
   factory EvidenceVariableCharacteristic({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -2212,7 +2212,7 @@ abstract class ResearchElementDefinitionCharacteristic
   /// [_participantEffectiveGroupMeasure]: Extensions for
   ///  participantEffectiveGroupMeasure
   factory ResearchElementDefinitionCharacteristic({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? definitionCodeableConcept,
@@ -2600,7 +2600,7 @@ abstract class RiskEvidenceSynthesisSampleSize
   ///
   /// [_numberOfParticipants]: Extensions for numberOfParticipants
   factory RiskEvidenceSynthesisSampleSize({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -2691,7 +2691,7 @@ abstract class RiskEvidenceSynthesisRiskEstimate
   /// [precisionEstimate]: A description of the precision of the estimate for
   ///  the effect.
   factory RiskEvidenceSynthesisRiskEstimate({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -2775,7 +2775,7 @@ abstract class RiskEvidenceSynthesisPrecisionEstimate
   ///
   /// [_to]: Extensions for to
   factory RiskEvidenceSynthesisPrecisionEstimate({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -2849,7 +2849,7 @@ abstract class RiskEvidenceSynthesisCertainty
   /// [certaintySubcomponent]: A description of a component of the overall
   ///  certainty.
   factory RiskEvidenceSynthesisCertainty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? rating,
@@ -2918,7 +2918,7 @@ abstract class RiskEvidenceSynthesisCertaintySubcomponent
   /// [note]: A human-readable string to clarify or explain concepts about the
   ///  resource.
   factory RiskEvidenceSynthesisCertaintySubcomponent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,

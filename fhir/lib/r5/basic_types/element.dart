@@ -14,7 +14,7 @@ part 'element.g.dart';
 abstract class Element with _$Element {
   Element._();
   factory Element({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
   }) = _Element;
 

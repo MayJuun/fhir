@@ -82,7 +82,7 @@ abstract class Appointment with Resource implements _$Appointment {
 abstract class AppointmentParticipant implements _$AppointmentParticipant {
   AppointmentParticipant._();
   factory AppointmentParticipant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
@@ -337,7 +337,7 @@ abstract class Task with Resource implements _$Task {
 abstract class TaskRestriction implements _$TaskRestriction {
   TaskRestriction._();
   factory TaskRestriction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? repetitions,
@@ -367,7 +367,7 @@ abstract class TaskRestriction implements _$TaskRestriction {
 abstract class TaskInput implements _$TaskInput {
   TaskInput._();
   factory TaskInput({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -465,7 +465,7 @@ abstract class TaskInput implements _$TaskInput {
 abstract class TaskOutput implements _$TaskOutput {
   TaskOutput._();
   factory TaskOutput({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -621,7 +621,7 @@ abstract class VerificationResultPrimarySource
     implements _$VerificationResultPrimarySource {
   VerificationResultPrimarySource._();
   factory VerificationResultPrimarySource({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? who,
@@ -659,7 +659,7 @@ abstract class VerificationResultAttestation
     implements _$VerificationResultAttestation {
   VerificationResultAttestation._();
   factory VerificationResultAttestation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? who,
@@ -700,7 +700,7 @@ abstract class VerificationResultValidator
     implements _$VerificationResultValidator {
   VerificationResultValidator._();
   factory VerificationResultValidator({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? organization,

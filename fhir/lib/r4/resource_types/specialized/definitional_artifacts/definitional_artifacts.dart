@@ -454,7 +454,7 @@ abstract class ActivityDefinitionParticipant
   /// [role]: The role the participant should play in performing the described
   ///  action.
   factory ActivityDefinitionParticipant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? type,
@@ -527,7 +527,7 @@ abstract class ActivityDefinitionDynamicValue
   /// [expression]: An expression specifying the value of the customized
   ///  element.
   factory ActivityDefinitionDynamicValue({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? path,
@@ -793,7 +793,7 @@ abstract class DeviceDefinitionUdiDeviceIdentifier
   ///
   /// [_jurisdiction]: Extensions for jurisdiction
   factory DeviceDefinitionUdiDeviceIdentifier({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? deviceIdentifier,
@@ -866,7 +866,7 @@ abstract class DeviceDefinitionDeviceName
   ///
   /// [_type]: Extensions for type
   factory DeviceDefinitionDeviceName({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -935,7 +935,7 @@ abstract class DeviceDefinitionSpecialization
   ///
   /// [_version]: Extensions for version
   factory DeviceDefinitionSpecialization({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? systemType,
@@ -1000,7 +1000,7 @@ abstract class DeviceDefinitionCapability
   ///
   /// [description]: Description of capability.
   factory DeviceDefinitionCapability({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -1063,7 +1063,7 @@ abstract class DeviceDefinitionProperty implements _$DeviceDefinitionProperty {
   ///
   /// [valueCode]: Property value as a code, e.g., NTP4 (synced to NTP).
   factory DeviceDefinitionProperty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -1131,7 +1131,7 @@ abstract class DeviceDefinitionMaterial implements _$DeviceDefinitionMaterial {
   ///
   /// [_allergenicIndicator]: Extensions for allergenicIndicator
   factory DeviceDefinitionMaterial({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? substance,
@@ -1642,7 +1642,7 @@ abstract class ObservationDefinitionQuantitativeDetails
   ///
   /// [_decimalPrecision]: Extensions for decimalPrecision
   factory ObservationDefinitionQuantitativeDetails({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? customaryUnit,
@@ -1734,7 +1734,7 @@ abstract class ObservationDefinitionQualifiedInterval
   ///
   /// [_condition]: Extensions for condition
   factory ObservationDefinitionQualifiedInterval({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(
@@ -2125,7 +2125,7 @@ abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
   ///
   /// [target]: Indicates what should be done and within what timeframe.
   factory PlanDefinitionGoal({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? category,
@@ -2215,7 +2215,7 @@ abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
   /// [due]: Indicates the timeframe after the start of the goal in which the
   ///  goal should be met.
   factory PlanDefinitionTarget({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? measure,
@@ -2411,7 +2411,7 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
   /// sub-actions, at most one may be chosen as part of realizing the action
   ///  definition.
   factory PlanDefinitionAction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? prefix,
@@ -2527,7 +2527,7 @@ abstract class PlanDefinitionCondition implements _$PlanDefinitionCondition {
   /// [expression]: An expression that returns true or false, indicating whether
   ///  the condition is satisfied.
   factory PlanDefinitionCondition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: PlanDefinitionConditionKind.unknown)
@@ -2602,7 +2602,7 @@ abstract class PlanDefinitionRelatedAction
   /// [offsetRange]: A duration or range of durations to apply to the
   ///  relationship. For example, 30-60 minutes before.
   factory PlanDefinitionRelatedAction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? actionId,
@@ -2674,7 +2674,7 @@ abstract class PlanDefinitionParticipant
   /// [role]: The role the participant should play in performing the described
   ///  action.
   factory PlanDefinitionParticipant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
@@ -2750,7 +2750,7 @@ abstract class PlanDefinitionDynamicValue
   /// [expression]: An expression specifying the value of the customized
   ///  element.
   factory PlanDefinitionDynamicValue({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? path,
@@ -3141,7 +3141,7 @@ abstract class QuestionnaireItem implements _$QuestionnaireItem {
   /// [item]: Text, questions and other groups to be nested beneath a question
   ///  or group.
   factory QuestionnaireItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? linkId,
@@ -3277,7 +3277,7 @@ abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
   /// [answerReference]: A value that the referenced question is tested using
   ///  the specified operator in order for the item to be enabled.
   factory QuestionnaireEnableWhen({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? question,
@@ -3386,7 +3386,7 @@ abstract class QuestionnaireAnswerOption
   ///
   /// [_initialSelected]: Extensions for initialSelected
   factory QuestionnaireAnswerOption({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? valueInteger,
@@ -3494,7 +3494,7 @@ abstract class QuestionnaireInitial implements _$QuestionnaireInitial {
   ///
   /// [valueReference]: The actual value to for an initial answer.
   factory QuestionnaireInitial({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? valueBoolean,
@@ -3711,7 +3711,7 @@ abstract class SpecimenDefinitionTypeTested
   /// [handling]: Set of instructions for preservation/transport of the specimen
   ///  at a defined temperature interval, prior the testing process.
   factory SpecimenDefinitionTypeTested({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? isDerived,
@@ -3807,7 +3807,7 @@ abstract class SpecimenDefinitionContainer
   ///
   /// [_preparation]: Extensions for preparation
   factory SpecimenDefinitionContainer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? material,
@@ -3882,7 +3882,7 @@ abstract class SpecimenDefinitionAdditive
   /// preserve, maintain or enhance the specimen. Examples: Formalin, Citrate,
   ///  EDTA.
   factory SpecimenDefinitionAdditive({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? additiveCodeableConcept,
@@ -3954,7 +3954,7 @@ abstract class SpecimenDefinitionHandling
   ///
   /// [_instruction]: Extensions for instruction
   factory SpecimenDefinitionHandling({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? temperatureQualifier,

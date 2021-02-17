@@ -411,7 +411,7 @@ abstract class HealthcareServiceEligibility
   ///
   /// [_comment]: Extensions for comment
   factory HealthcareServiceEligibility({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -489,7 +489,7 @@ abstract class HealthcareServiceAvailableTime
   ///
   /// [_availableEndTime]: Extensions for availableEndTime
   factory HealthcareServiceAvailableTime({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
@@ -562,7 +562,7 @@ abstract class HealthcareServiceNotAvailable
   /// [during]: Service is not available (seasonally or for a public holiday)
   ///  from this date.
   factory HealthcareServiceNotAvailable({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -818,7 +818,7 @@ abstract class LocationPosition implements _$LocationPosition {
   ///
   /// [_altitude]: Extensions for altitude
   factory LocationPosition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Decimal? longitude,
@@ -895,7 +895,7 @@ abstract class LocationHoursOfOperation implements _$LocationHoursOfOperation {
   ///
   /// [_closingTime]: Extensions for closingTime
   factory LocationHoursOfOperation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Code>? daysOfWeek,
@@ -1105,7 +1105,7 @@ abstract class OrganizationContact implements _$OrganizationContact {
   ///
   /// [address]: Visiting or postal addresses for the contact.
   factory OrganizationContact({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? purpose,

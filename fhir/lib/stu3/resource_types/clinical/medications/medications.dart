@@ -78,7 +78,7 @@ abstract class Immunization with Resource implements _$Immunization {
 abstract class ImmunizationPractitioner implements _$ImmunizationPractitioner {
   ImmunizationPractitioner._();
   factory ImmunizationPractitioner({
-    CodeableConcept role,
+    CodeableConcept? role,
     required Reference? actor,
   }) = _ImmunizationPractitioner;
 
@@ -129,7 +129,7 @@ abstract class ImmunizationExplanation implements _$ImmunizationExplanation {
 abstract class ImmunizationReaction implements _$ImmunizationReaction {
   ImmunizationReaction._();
   factory ImmunizationReaction({
-    Date date,
+    Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? detail,
     Boolean? reported,
@@ -158,7 +158,7 @@ abstract class ImmunizationVaccinationProtocol
     implements _$ImmunizationVaccinationProtocol {
   ImmunizationVaccinationProtocol._();
   factory ImmunizationVaccinationProtocol({
-    Decimal doseSequence,
+    Decimal? doseSequence,
     @JsonKey(name: '_doseSequence') Element? doseSequenceElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -239,7 +239,7 @@ abstract class ImmunizationRecommendationRecommendation
     implements _$ImmunizationRecommendationRecommendation {
   ImmunizationRecommendationRecommendation._();
   factory ImmunizationRecommendationRecommendation({
-    Date date,
+    Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? vaccineCode,
     CodeableConcept? targetDisease,
@@ -307,7 +307,7 @@ abstract class ImmunizationRecommendationProtocol
     implements _$ImmunizationRecommendationProtocol {
   ImmunizationRecommendationProtocol._();
   factory ImmunizationRecommendationProtocol({
-    Decimal doseSequence,
+    Decimal? doseSequence,
     @JsonKey(name: '_doseSequence') Element? doseSequenceElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -388,7 +388,7 @@ abstract class Medication with Resource implements _$Medication {
 abstract class MedicationIngredient implements _$MedicationIngredient {
   MedicationIngredient._();
   factory MedicationIngredient({
-    CodeableConcept itemCodeableConcept,
+    CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
     Boolean? isActive,
     @JsonKey(name: '_isActive') Element? isActiveElement,
@@ -416,7 +416,7 @@ abstract class MedicationIngredient implements _$MedicationIngredient {
 abstract class MedicationPackage implements _$MedicationPackage {
   MedicationPackage._();
   factory MedicationPackage({
-    CodeableConcept container,
+    CodeableConcept? container,
     List<MedicationContent>? content,
     List<MedicationBatch>? batch,
   }) = _MedicationPackage;
@@ -442,7 +442,7 @@ abstract class MedicationPackage implements _$MedicationPackage {
 abstract class MedicationContent implements _$MedicationContent {
   MedicationContent._();
   factory MedicationContent({
-    CodeableConcept itemCodeableConcept,
+    CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
     Quantity? amount,
   }) = _MedicationContent;
@@ -468,7 +468,7 @@ abstract class MedicationContent implements _$MedicationContent {
 abstract class MedicationBatch implements _$MedicationBatch {
   MedicationBatch._();
   factory MedicationBatch({
-    String lotNumber,
+    String? lotNumber,
     @JsonKey(name: '_lotNumber') Element? lotNumberElement,
     Date? expirationDate,
     @JsonKey(name: '_expirationDate') Element? expirationDateElement,
@@ -589,7 +589,7 @@ abstract class MedicationAdministrationDosage
     implements _$MedicationAdministrationDosage {
   MedicationAdministrationDosage._();
   factory MedicationAdministrationDosage({
-    String text,
+    String? text,
     @JsonKey(name: '_text') Element? textElement,
     CodeableConcept? site,
     CodeableConcept? route,
@@ -719,7 +719,7 @@ abstract class MedicationDispenseSubstitution
     implements _$MedicationDispenseSubstitution {
   MedicationDispenseSubstitution._();
   factory MedicationDispenseSubstitution({
-    Boolean wasSubstituted,
+    Boolean? wasSubstituted,
     @JsonKey(name: '_wasSubstituted') Element? wasSubstitutedElement,
     CodeableConcept? type,
     List<CodeableConcept>? reason,
@@ -843,7 +843,7 @@ abstract class MedicationRequestDispenseRequest
     implements _$MedicationRequestDispenseRequest {
   MedicationRequestDispenseRequest._();
   factory MedicationRequestDispenseRequest({
-    Period validityPeriod,
+    Period? validityPeriod,
     Decimal? numberOfRepeatsAllowed,
     @JsonKey(name: '_numberOfRepeatsAllowed')
         Element numberOfRepeatsAllowedElement,
@@ -877,7 +877,7 @@ abstract class MedicationRequestSubstitution
     implements _$MedicationRequestSubstitution {
   MedicationRequestSubstitution._();
   factory MedicationRequestSubstitution({
-    Boolean allowed,
+    Boolean? allowed,
     @JsonKey(name: '_allowed') Element? allowedElement,
     CodeableConcept? reason,
   }) = _MedicationRequestSubstitution;

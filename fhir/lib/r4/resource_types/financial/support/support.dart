@@ -237,7 +237,7 @@ abstract class CoverageClass implements _$CoverageClass {
   ///
   /// [_name]: Extensions for name
   factory CoverageClass({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -306,7 +306,7 @@ abstract class CoverageCostToBeneficiary
   /// [exception]: A suite of codes indicating exceptions or reductions to
   ///  patient costs and their effective periods.
   factory CoverageCostToBeneficiary({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -369,7 +369,7 @@ abstract class CoverageException implements _$CoverageException {
   ///
   /// [period]: The timeframe during when the exception is in force.
   factory CoverageException({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -612,7 +612,7 @@ abstract class CoverageEligibilityRequestSupportingInfo
   ///
   /// [_appliesToAll]: Extensions for appliesToAll
   factory CoverageEligibilityRequestSupportingInfo({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -692,7 +692,7 @@ abstract class CoverageEligibilityRequestInsurance
   ///
   /// [_businessArrangement]: Extensions for businessArrangement
   factory CoverageEligibilityRequestInsurance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? focal,
@@ -786,7 +786,7 @@ abstract class CoverageEligibilityRequestItem
   /// [detail]: The plan/proposal/order describing the proposed service in
   ///  detail.
   factory CoverageEligibilityRequestItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<PositiveInt>? supportingInfoSequence,
@@ -864,7 +864,7 @@ abstract class CoverageEligibilityRequestDiagnosis
   /// [diagnosisReference]: The nature of illness or problem in a coded form or
   ///  as a reference to an external defined Condition.
   factory CoverageEligibilityRequestDiagnosis({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? diagnosisCodeableConcept,
@@ -1118,7 +1118,7 @@ abstract class CoverageEligibilityResponseInsurance
   /// [item]: Benefits and optionally current balances, and authorization
   ///  details by category or service.
   factory CoverageEligibilityResponseInsurance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? coverage,
@@ -1230,7 +1230,7 @@ abstract class CoverageEligibilityResponseItem
   ///
   /// [_authorizationUrl]: Extensions for authorizationUrl
   factory CoverageEligibilityResponseItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? category,
@@ -1335,7 +1335,7 @@ abstract class CoverageEligibilityResponseBenefit
   ///
   /// [usedMoney]: The quantity of the benefit which have been consumed to date.
   factory CoverageEligibilityResponseBenefit({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -1407,7 +1407,7 @@ abstract class CoverageEligibilityResponseError
   /// [code]: An error code,from a specified code system, which details why the
   ///  eligibility check could not be performed.
   factory CoverageEligibilityResponseError({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,

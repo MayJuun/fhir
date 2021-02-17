@@ -333,7 +333,7 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
   ///
   /// [_value]: Extensions for value
   factory CodeSystemFilter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -418,7 +418,7 @@ abstract class CodeSystemProperty implements _$CodeSystemProperty {
   ///
   /// [_type]: Extensions for type
   factory CodeSystemProperty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -508,7 +508,7 @@ abstract class CodeSystemConcept implements _$CodeSystemConcept {
   /// concepts. The nature of the relationships is variable
   ///  (is-a/contains/categorizes) - see hierarchyMeaning.
   factory CodeSystemConcept({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -581,7 +581,7 @@ abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
   ///
   /// [_value]: Extensions for value
   factory CodeSystemDesignation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? language,
@@ -670,7 +670,7 @@ abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
   ///
   /// [_valueDecimal]: Extensions for valueDecimal
   factory CodeSystemProperty1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -1008,7 +1008,7 @@ abstract class ConceptMapGroup implements _$ConceptMapGroup {
   /// element is ignored in a code is specified to have equivalence =
   ///  unmatched.
   factory ConceptMapGroup({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? source,
@@ -1083,7 +1083,7 @@ abstract class ConceptMapElement implements _$ConceptMapElement {
   ///
   /// [target]: A concept from the target value set that this concept maps to.
   factory ConceptMapElement({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -1173,7 +1173,7 @@ abstract class ConceptMapTarget implements _$ConceptMapTarget {
   /// still be useful without a place for the additional data elements, but the
   ///  equivalence cannot be relied on.
   factory ConceptMapTarget({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -1259,7 +1259,7 @@ abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
   ///
   /// [_display]: Extensions for display
   factory ConceptMapDependsOn({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? property,
@@ -1343,7 +1343,7 @@ abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
   /// instance to use for mapping if this ConceptMap resource contains no
   ///  matching mapping for the source concept.
   factory ConceptMapUnmapped({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
@@ -1607,7 +1607,7 @@ abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
   /// considered appropriate to refer to the naming system.  Outside of this
   ///  window, the identifier might be non-deterministic.
   factory NamingSystemUniqueId({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
@@ -1938,7 +1938,7 @@ abstract class TerminologyCapabilitiesSoftware
   /// [_version]: Extensions for version
   ///
   factory TerminologyCapabilitiesSoftware({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -2010,7 +2010,7 @@ abstract class TerminologyCapabilitiesImplementation
   ///
   /// [_url]: Extensions for url
   factory TerminologyCapabilitiesImplementation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -2083,7 +2083,7 @@ abstract class TerminologyCapabilitiesCodeSystem
   ///
   /// [_subsumption]: Extensions for subsumption
   factory TerminologyCapabilitiesCodeSystem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Canonical? uri,
@@ -2170,7 +2170,7 @@ abstract class TerminologyCapabilitiesVersion
   ///
   /// [_property]: Extensions for property
   factory TerminologyCapabilitiesVersion({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? code,
@@ -2248,7 +2248,7 @@ abstract class TerminologyCapabilitiesFilter
   ///
   /// [_op]: Extensions for op
   factory TerminologyCapabilitiesFilter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -2327,7 +2327,7 @@ abstract class TerminologyCapabilitiesExpansion
   ///
   /// [_textFilter]: Extensions for textFilter
   factory TerminologyCapabilitiesExpansion({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? hierarchical,
@@ -2403,7 +2403,7 @@ abstract class TerminologyCapabilitiesParameter
   ///
   /// [_documentation]: Extensions for documentation
   factory TerminologyCapabilitiesParameter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? name,
@@ -2470,7 +2470,7 @@ abstract class TerminologyCapabilitiesValidateCode
   ///
   /// [_translations]: Extensions for translations
   factory TerminologyCapabilitiesValidateCode({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? translations,
@@ -2535,7 +2535,7 @@ abstract class TerminologyCapabilitiesTranslation
   ///
   /// [_needsMap]: Extensions for needsMap
   factory TerminologyCapabilitiesTranslation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? needsMap,
@@ -2600,7 +2600,7 @@ abstract class TerminologyCapabilitiesClosure
   ///
   /// [_translation]: Extensions for translation
   factory TerminologyCapabilitiesClosure({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? translation,
@@ -2908,7 +2908,7 @@ abstract class ValueSetCompose implements _$ValueSetCompose {
   /// [exclude]: Exclude one or more codes from the value set based on code
   ///  system filters and/or other value sets.
   factory ValueSetCompose({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Date? lockedDate,
@@ -2991,7 +2991,7 @@ abstract class ValueSetInclude implements _$ValueSetInclude {
   /// ValueSet.url.  If multiple value sets are specified this includes the
   ///  union of the contents of all of the referenced value sets.
   factory ValueSetInclude({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? system,
@@ -3067,7 +3067,7 @@ abstract class ValueSetConcept implements _$ValueSetConcept {
   /// this value set - other languages, aliases, specialized purposes, used for
   ///  particular purposes, etc.
   factory ValueSetConcept({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -3137,7 +3137,7 @@ abstract class ValueSetDesignation implements _$ValueSetDesignation {
   ///
   /// [_value]: Extensions for value
   factory ValueSetDesignation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? language,
@@ -3215,7 +3215,7 @@ abstract class ValueSetFilter implements _$ValueSetFilter {
   ///
   /// [_value]: Extensions for value
   factory ValueSetFilter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? property,
@@ -3309,7 +3309,7 @@ abstract class ValueSetExpansion implements _$ValueSetExpansion {
   ///
   /// [contains]: The codes that are contained in the value set expansion.
   factory ValueSetExpansion({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? identifier,
@@ -3408,7 +3408,7 @@ abstract class ValueSetParameter implements _$ValueSetParameter {
   ///
   /// [_valueDateTime]: Extensions for valueDateTime
   factory ValueSetParameter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -3524,7 +3524,7 @@ abstract class ValueSetContains implements _$ValueSetContains {
   /// [contains]: Other codes and entries contained under this entry in the
   ///  hierarchy.
   factory ValueSetContains({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? system,

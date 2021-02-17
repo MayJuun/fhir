@@ -205,7 +205,7 @@ abstract class BiologicallyDerivedProductCollection
   ///
   /// [collectedPeriod]: Time of product collection.
   factory BiologicallyDerivedProductCollection({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? collector,
@@ -282,7 +282,7 @@ abstract class BiologicallyDerivedProductProcessing
   ///
   /// [timePeriod]: Time of processing.
   factory BiologicallyDerivedProductProcessing({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -358,7 +358,7 @@ abstract class BiologicallyDerivedProductManipulation
   ///
   /// [timePeriod]: Time of manipulation.
   factory BiologicallyDerivedProductManipulation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -435,7 +435,7 @@ abstract class BiologicallyDerivedProductStorage
   ///
   /// [duration]: Storage timeperiod.
   factory BiologicallyDerivedProductStorage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -765,7 +765,7 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
   ///
   /// [_entryType]: Extensions for entryType
   factory DeviceUdiCarrier({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? deviceIdentifier,
@@ -842,7 +842,7 @@ abstract class DeviceDeviceName implements _$DeviceDeviceName {
   ///
   /// [_type]: Extensions for type
   factory DeviceDeviceName({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -908,7 +908,7 @@ abstract class DeviceSpecialization implements _$DeviceSpecialization {
   ///
   /// [_version]: Extensions for version
   factory DeviceSpecialization({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? systemType,
@@ -973,7 +973,7 @@ abstract class DeviceVersion implements _$DeviceVersion {
   ///
   /// [_value]: Extensions for value
   factory DeviceVersion({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -1038,7 +1038,7 @@ abstract class DeviceProperty implements _$DeviceProperty {
   ///
   /// [valueCode]: Property value as a code, e.g., NTP4 (synced to NTP).
   factory DeviceProperty({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -1266,7 +1266,7 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
   ///
   /// [_time]: Extensions for time
   factory DeviceMetricCalibration({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
@@ -1457,7 +1457,7 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
   ///
   /// [quantity]: The amount of the substance.
   factory SubstanceInstance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -1523,7 +1523,7 @@ abstract class SubstanceIngredient implements _$SubstanceIngredient {
   /// [substanceReference]: Another substance that is a component of this
   ///  substance.
   factory SubstanceIngredient({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Ratio? quantity,

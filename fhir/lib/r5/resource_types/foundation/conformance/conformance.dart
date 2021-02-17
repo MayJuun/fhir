@@ -99,7 +99,7 @@ abstract class CapabilityStatementSoftware
     implements _$CapabilityStatementSoftware {
   CapabilityStatementSoftware._();
   factory CapabilityStatementSoftware({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -133,7 +133,7 @@ abstract class CapabilityStatementImplementation
     implements _$CapabilityStatementImplementation {
   CapabilityStatementImplementation._();
   factory CapabilityStatementImplementation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -167,7 +167,7 @@ abstract class CapabilityStatementImplementation
 abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
   CapabilityStatementRest._();
   factory CapabilityStatementRest({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
@@ -205,7 +205,7 @@ abstract class CapabilityStatementSecurity
     implements _$CapabilityStatementSecurity {
   CapabilityStatementSecurity._();
   factory CapabilityStatementSecurity({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? cors,
@@ -238,7 +238,7 @@ abstract class CapabilityStatementResource
     implements _$CapabilityStatementResource {
   CapabilityStatementResource._();
   factory CapabilityStatementResource({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? type,
@@ -298,7 +298,7 @@ abstract class CapabilityStatementInteraction
     implements _$CapabilityStatementInteraction {
   CapabilityStatementInteraction._();
   factory CapabilityStatementInteraction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
@@ -333,7 +333,7 @@ abstract class CapabilityStatementSearchParam
     implements _$CapabilityStatementSearchParam {
   CapabilityStatementSearchParam._();
   factory CapabilityStatementSearchParam({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -371,7 +371,7 @@ abstract class CapabilityStatementOperation
     implements _$CapabilityStatementOperation {
   CapabilityStatementOperation._();
   factory CapabilityStatementOperation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -404,7 +404,7 @@ abstract class CapabilityStatementInteraction1
     implements _$CapabilityStatementInteraction1 {
   CapabilityStatementInteraction1._();
   factory CapabilityStatementInteraction1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
@@ -439,7 +439,7 @@ abstract class CapabilityStatementMessaging
     implements _$CapabilityStatementMessaging {
   CapabilityStatementMessaging._();
   factory CapabilityStatementMessaging({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CapabilityStatementEndpoint>? endpoint,
@@ -473,7 +473,7 @@ abstract class CapabilityStatementEndpoint
     implements _$CapabilityStatementEndpoint {
   CapabilityStatementEndpoint._();
   factory CapabilityStatementEndpoint({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding? protocol,
@@ -504,7 +504,7 @@ abstract class CapabilityStatementSupportedMessage
     implements _$CapabilityStatementSupportedMessage {
   CapabilityStatementSupportedMessage._();
   factory CapabilityStatementSupportedMessage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
@@ -538,7 +538,7 @@ abstract class CapabilityStatementDocument
     implements _$CapabilityStatementDocument {
   CapabilityStatementDocument._();
   factory CapabilityStatementDocument({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
@@ -652,7 +652,7 @@ abstract class CapabilityStatement2Software
     implements _$CapabilityStatement2Software {
   CapabilityStatement2Software._();
   factory CapabilityStatement2Software({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -686,7 +686,7 @@ abstract class CapabilityStatement2Implementation
     implements _$CapabilityStatement2Implementation {
   CapabilityStatement2Implementation._();
   factory CapabilityStatement2Implementation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -720,7 +720,7 @@ abstract class CapabilityStatement2Implementation
 abstract class CapabilityStatement2Rest implements _$CapabilityStatement2Rest {
   CapabilityStatement2Rest._();
   factory CapabilityStatement2Rest({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? mode,
@@ -757,7 +757,7 @@ abstract class CapabilityStatement2Resource
     implements _$CapabilityStatement2Resource {
   CapabilityStatement2Resource._();
   factory CapabilityStatement2Resource({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? type,
@@ -794,7 +794,7 @@ abstract class CapabilityStatement2Interaction
     implements _$CapabilityStatement2Interaction {
   CapabilityStatement2Interaction._();
   factory CapabilityStatement2Interaction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -828,7 +828,7 @@ abstract class CapabilityStatement2SearchParam
     implements _$CapabilityStatement2SearchParam {
   CapabilityStatement2SearchParam._();
   factory CapabilityStatement2SearchParam({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -866,7 +866,7 @@ abstract class CapabilityStatement2Operation
     implements _$CapabilityStatement2Operation {
   CapabilityStatement2Operation._();
   factory CapabilityStatement2Operation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -899,7 +899,7 @@ abstract class CapabilityStatement2Interaction1
     implements _$CapabilityStatement2Interaction1 {
   CapabilityStatement2Interaction1._();
   factory CapabilityStatement2Interaction1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -1004,7 +1004,7 @@ abstract class CompartmentDefinitionResource
     implements _$CompartmentDefinitionResource {
   CompartmentDefinitionResource._();
   factory CompartmentDefinitionResource({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -1104,7 +1104,7 @@ abstract class ExampleScenario with Resource implements _$ExampleScenario {
 abstract class ExampleScenarioActor implements _$ExampleScenarioActor {
   ExampleScenarioActor._();
   factory ExampleScenarioActor({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? actorId,
@@ -1139,7 +1139,7 @@ abstract class ExampleScenarioActor implements _$ExampleScenarioActor {
 abstract class ExampleScenarioInstance implements _$ExampleScenarioInstance {
   ExampleScenarioInstance._();
   factory ExampleScenarioInstance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? resourceId,
@@ -1175,7 +1175,7 @@ abstract class ExampleScenarioInstance implements _$ExampleScenarioInstance {
 abstract class ExampleScenarioVersion implements _$ExampleScenarioVersion {
   ExampleScenarioVersion._();
   factory ExampleScenarioVersion({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? versionId,
@@ -1206,7 +1206,7 @@ abstract class ExampleScenarioContainedInstance
     implements _$ExampleScenarioContainedInstance {
   ExampleScenarioContainedInstance._();
   factory ExampleScenarioContainedInstance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? resourceId,
@@ -1239,7 +1239,7 @@ abstract class ExampleScenarioContainedInstance
 abstract class ExampleScenarioProcess implements _$ExampleScenarioProcess {
   ExampleScenarioProcess._();
   factory ExampleScenarioProcess({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? title,
@@ -1274,7 +1274,7 @@ abstract class ExampleScenarioProcess implements _$ExampleScenarioProcess {
 abstract class ExampleScenarioStep implements _$ExampleScenarioStep {
   ExampleScenarioStep._();
   factory ExampleScenarioStep({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<ExampleScenarioProcess>? process,
@@ -1305,7 +1305,7 @@ abstract class ExampleScenarioStep implements _$ExampleScenarioStep {
 abstract class ExampleScenarioOperation implements _$ExampleScenarioOperation {
   ExampleScenarioOperation._();
   factory ExampleScenarioOperation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? number,
@@ -1351,7 +1351,7 @@ abstract class ExampleScenarioAlternative
     implements _$ExampleScenarioAlternative {
   ExampleScenarioAlternative._();
   factory ExampleScenarioAlternative({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? title,
@@ -1450,7 +1450,7 @@ abstract class GraphDefinition with Resource implements _$GraphDefinition {
 abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
   GraphDefinitionLink._();
   factory GraphDefinitionLink({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? path,
@@ -1487,7 +1487,7 @@ abstract class GraphDefinitionLink implements _$GraphDefinitionLink {
 abstract class GraphDefinitionTarget implements _$GraphDefinitionTarget {
   GraphDefinitionTarget._();
   factory GraphDefinitionTarget({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? type,
@@ -1521,7 +1521,7 @@ abstract class GraphDefinitionCompartment
     implements _$GraphDefinitionCompartment {
   GraphDefinitionCompartment._();
   factory GraphDefinitionCompartment({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: GraphDefinitionCompartmentUse.unknown)
@@ -1637,7 +1637,7 @@ abstract class ImplementationGuideDependsOn
     implements _$ImplementationGuideDependsOn {
   ImplementationGuideDependsOn._();
   factory ImplementationGuideDependsOn({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Canonical? uri,
@@ -1670,7 +1670,7 @@ abstract class ImplementationGuideGlobal
     implements _$ImplementationGuideGlobal {
   ImplementationGuideGlobal._();
   factory ImplementationGuideGlobal({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? type,
@@ -1701,7 +1701,7 @@ abstract class ImplementationGuideDefinition
     implements _$ImplementationGuideDefinition {
   ImplementationGuideDefinition._();
   factory ImplementationGuideDefinition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<ImplementationGuideGrouping>? grouping,
@@ -1734,7 +1734,7 @@ abstract class ImplementationGuideGrouping
     implements _$ImplementationGuideGrouping {
   ImplementationGuideGrouping._();
   factory ImplementationGuideGrouping({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -1766,7 +1766,7 @@ abstract class ImplementationGuideResource
     implements _$ImplementationGuideResource {
   ImplementationGuideResource._();
   factory ImplementationGuideResource({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? reference,
@@ -1806,7 +1806,7 @@ abstract class ImplementationGuideResource
 abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
   ImplementationGuidePage._();
   factory ImplementationGuidePage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUrl? nameUrl,
@@ -1842,7 +1842,7 @@ abstract class ImplementationGuideParameter
     implements _$ImplementationGuideParameter {
   ImplementationGuideParameter._();
   factory ImplementationGuideParameter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? code,
@@ -1874,7 +1874,7 @@ abstract class ImplementationGuideTemplate
     implements _$ImplementationGuideTemplate {
   ImplementationGuideTemplate._();
   factory ImplementationGuideTemplate({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -1908,7 +1908,7 @@ abstract class ImplementationGuideManifest
     implements _$ImplementationGuideManifest {
   ImplementationGuideManifest._();
   factory ImplementationGuideManifest({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUrl? rendering,
@@ -1944,7 +1944,7 @@ abstract class ImplementationGuideResource1
     implements _$ImplementationGuideResource1 {
   ImplementationGuideResource1._();
   factory ImplementationGuideResource1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? reference,
@@ -1978,7 +1978,7 @@ abstract class ImplementationGuideResource1
 abstract class ImplementationGuidePage1 implements _$ImplementationGuidePage1 {
   ImplementationGuidePage1._();
   factory ImplementationGuidePage1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -2089,7 +2089,7 @@ abstract class MessageDefinition with Resource implements _$MessageDefinition {
 abstract class MessageDefinitionFocus implements _$MessageDefinitionFocus {
   MessageDefinitionFocus._();
   factory MessageDefinitionFocus({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? code,
@@ -2123,7 +2123,7 @@ abstract class MessageDefinitionAllowedResponse
     implements _$MessageDefinitionAllowedResponse {
   MessageDefinitionAllowedResponse._();
   factory MessageDefinitionAllowedResponse({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Canonical? message,
@@ -2243,7 +2243,7 @@ abstract class OperationDefinitionParameter
     implements _$OperationDefinitionParameter {
   OperationDefinitionParameter._();
   factory OperationDefinitionParameter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? name,
@@ -2291,7 +2291,7 @@ abstract class OperationDefinitionBinding
     implements _$OperationDefinitionBinding {
   OperationDefinitionBinding._();
   factory OperationDefinitionBinding({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
@@ -2323,7 +2323,7 @@ abstract class OperationDefinitionReferencedFrom
     implements _$OperationDefinitionReferencedFrom {
   OperationDefinitionReferencedFrom._();
   factory OperationDefinitionReferencedFrom({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? source,
@@ -2357,7 +2357,7 @@ abstract class OperationDefinitionOverload
     implements _$OperationDefinitionOverload {
   OperationDefinitionOverload._();
   factory OperationDefinitionOverload({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<String>? parameterName,
@@ -2479,7 +2479,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
 abstract class SearchParameterComponent implements _$SearchParameterComponent {
   SearchParameterComponent._();
   factory SearchParameterComponent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Canonical? definition,
@@ -2596,7 +2596,7 @@ abstract class StructureDefinitionMapping
     implements _$StructureDefinitionMapping {
   StructureDefinitionMapping._();
   factory StructureDefinitionMapping({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? identity,
@@ -2632,7 +2632,7 @@ abstract class StructureDefinitionContext
     implements _$StructureDefinitionContext {
   StructureDefinitionContext._();
   factory StructureDefinitionContext({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
@@ -2665,7 +2665,7 @@ abstract class StructureDefinitionSnapshot
     implements _$StructureDefinitionSnapshot {
   StructureDefinitionSnapshot._();
   factory StructureDefinitionSnapshot({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<ElementDefinition>? element,
@@ -2694,7 +2694,7 @@ abstract class StructureDefinitionDifferential
     implements _$StructureDefinitionDifferential {
   StructureDefinitionDifferential._();
   factory StructureDefinitionDifferential({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<ElementDefinition>? element,
@@ -2790,7 +2790,7 @@ abstract class StructureMap with Resource implements _$StructureMap {
 abstract class StructureMapStructure implements _$StructureMapStructure {
   StructureMapStructure._();
   factory StructureMapStructure({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Canonical? url,
@@ -2824,7 +2824,7 @@ abstract class StructureMapStructure implements _$StructureMapStructure {
 abstract class StructureMapGroup implements _$StructureMapGroup {
   StructureMapGroup._();
   factory StructureMapGroup({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? name,
@@ -2861,7 +2861,7 @@ abstract class StructureMapGroup implements _$StructureMapGroup {
 abstract class StructureMapInput implements _$StructureMapInput {
   StructureMapInput._();
   factory StructureMapInput({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? name,
@@ -2896,7 +2896,7 @@ abstract class StructureMapInput implements _$StructureMapInput {
 abstract class StructureMapRule implements _$StructureMapRule {
   StructureMapRule._();
   factory StructureMapRule({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? name,
@@ -2930,7 +2930,7 @@ abstract class StructureMapRule implements _$StructureMapRule {
 abstract class StructureMapSource implements _$StructureMapSource {
   StructureMapSource._();
   factory StructureMapSource({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? context,
@@ -3055,7 +3055,7 @@ abstract class StructureMapSource implements _$StructureMapSource {
 abstract class StructureMapTarget implements _$StructureMapTarget {
   StructureMapTarget._();
   factory StructureMapTarget({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? context,
@@ -3098,7 +3098,7 @@ abstract class StructureMapTarget implements _$StructureMapTarget {
 abstract class StructureMapParameter implements _$StructureMapParameter {
   StructureMapParameter._();
   factory StructureMapParameter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? valueId,
@@ -3134,7 +3134,7 @@ abstract class StructureMapParameter implements _$StructureMapParameter {
 abstract class StructureMapDependent implements _$StructureMapDependent {
   StructureMapDependent._();
   factory StructureMapDependent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? name,

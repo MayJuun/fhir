@@ -172,7 +172,7 @@ abstract class AllergyIntoleranceReaction
     implements _$AllergyIntoleranceReaction {
   AllergyIntoleranceReaction._();
   factory AllergyIntoleranceReaction({
-    CodeableConcept substance,
+    CodeableConcept? substance,
     required List<CodeableConcept>? manifestation,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -300,7 +300,7 @@ abstract class ClinicalImpressionFinding
     implements _$ClinicalImpressionFinding {
   ClinicalImpressionFinding._();
   factory ClinicalImpressionFinding({
-    CodeableConcept itemCodeableConcept,
+    CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
     String? basis,
     @JsonKey(name: '_basis') Element? basisElement,
@@ -397,7 +397,7 @@ abstract class Condition with Resource implements _$Condition {
 abstract class ConditionStage implements _$ConditionStage {
   ConditionStage._();
   factory ConditionStage({
-    CodeableConcept summary,
+    CodeableConcept? summary,
     List<Reference>? assessment,
   }) = _ConditionStage;
 
@@ -701,7 +701,7 @@ abstract class Procedure with Resource implements _$Procedure {
 abstract class ProcedurePerformer implements _$ProcedurePerformer {
   ProcedurePerformer._();
   factory ProcedurePerformer({
-    CodeableConcept role,
+    CodeableConcept? role,
     required Reference? actor,
     Reference? onBehalfOf,
   }) = _ProcedurePerformer;
@@ -727,7 +727,7 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
 abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
   ProcedureFocalDevice._();
   factory ProcedureFocalDevice({
-    CodeableConcept action,
+    CodeableConcept? action,
     required Reference? manipulated,
   }) = _ProcedureFocalDevice;
 

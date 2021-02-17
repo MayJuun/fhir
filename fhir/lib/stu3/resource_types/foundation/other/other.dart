@@ -139,7 +139,7 @@ abstract class Bundle with Resource implements _$Bundle {
 abstract class BundleLink implements _$BundleLink {
   BundleLink._();
   factory BundleLink({
-    String relation,
+    String? relation,
     @JsonKey(name: '_relation') Element? relationElement,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -196,7 +196,7 @@ abstract class BundleEntry implements _$BundleEntry {
 abstract class BundleSearch implements _$BundleSearch {
   BundleSearch._();
   factory BundleSearch({
-    BundleSearchMode mode,
+    BundleSearchMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Decimal? score,
     @JsonKey(name: '_score') Element? scoreElement,
@@ -223,7 +223,7 @@ abstract class BundleSearch implements _$BundleSearch {
 abstract class BundleRequest implements _$BundleRequest {
   BundleRequest._();
   factory BundleRequest({
-    BundleRequestMethod method,
+    BundleRequestMethod? method,
     @JsonKey(name: '_method') Element? methodElement,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -258,7 +258,7 @@ abstract class BundleRequest implements _$BundleRequest {
 abstract class BundleResponse implements _$BundleResponse {
   BundleResponse._();
   factory BundleResponse({
-    String status,
+    String? status,
     @JsonKey(name: '_status') Element? statusElement,
     String? location,
     @JsonKey(name: '_location') Element? locationElement,
@@ -330,7 +330,7 @@ abstract class Linkage with Resource implements _$Linkage {
 abstract class LinkageItem implements _$LinkageItem {
   LinkageItem._();
   factory LinkageItem({
-    LinkageItemType type,
+    LinkageItemType? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Reference? resource,
   }) = _LinkageItem;
@@ -465,7 +465,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
 abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
   MessageHeaderDestination._();
   factory MessageHeaderDestination({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Reference? target,
     String? endpoint,
@@ -494,7 +494,7 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
 abstract class MessageHeaderSource implements _$MessageHeaderSource {
   MessageHeaderSource._();
   factory MessageHeaderSource({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? software,
     @JsonKey(name: '_software') Element? softwareElement,
@@ -526,7 +526,7 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
 abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
   MessageHeaderResponse._();
   factory MessageHeaderResponse({
-    Id identifier,
+    Id? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
     MessageHeaderResponseCode? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -591,7 +591,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
 abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
   OperationOutcomeIssue._();
   factory OperationOutcomeIssue({
-    OperationOutcomeIssueSeverity severity,
+    OperationOutcomeIssueSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     OperationOutcomeIssueCode? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -662,7 +662,7 @@ abstract class Parameters with Resource implements _$Parameters {
 abstract class ParametersParameter implements _$ParametersParameter {
   ParametersParameter._();
   factory ParametersParameter({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -808,7 +808,7 @@ abstract class Subscription with Resource implements _$Subscription {
 abstract class SubscriptionChannel implements _$SubscriptionChannel {
   SubscriptionChannel._();
   factory SubscriptionChannel({
-    SubscriptionChannelType type,
+    SubscriptionChannelType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? endpoint,
     @JsonKey(name: '_endpoint') Element? endpointElement,

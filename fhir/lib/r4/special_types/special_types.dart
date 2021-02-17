@@ -15,7 +15,7 @@ part 'special_types.g.dart';
 abstract class Narrative implements _$Narrative {
   Narrative._();
   factory Narrative({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: NarrativeStatus.unknown) NarrativeStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -92,7 +92,7 @@ abstract class Reference implements _$Reference {
   ///
   /// [_display]: Extensions for display
   factory Reference({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? reference,
     @JsonKey(name: '_reference') Element? referenceElement,
@@ -169,7 +169,7 @@ abstract class Meta with _$Meta {
   /// are not required to consider the tags when interpreting the meaning of a
   ///  resource.
   factory Meta({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Id? versionId,
     @JsonKey(name: '_versionId') Element? versionIdElement,
@@ -275,7 +275,7 @@ abstract class Dosage implements _$Dosage {
   /// [maxDosePerLifetime]: Upper limit on medication per lifetime of the
   ///  patient.
   factory Dosage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Integer? sequence,
@@ -358,7 +358,7 @@ abstract class DosageDoseAndRate implements _$DosageDoseAndRate {
   ///
   /// [rateQuantity]: Amount of medication per unit of time.
   factory DosageDoseAndRate({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -2064,7 +2064,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   /// [mapping]: Identifies a concept from an external specification that
   ///  roughly corresponds to this element.
   factory ElementDefinition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? path,
@@ -2439,7 +2439,7 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
   ///
   /// [_rules]: Extensions for rules
   factory ElementDefinitionSlicing({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<ElementDefinitionDiscriminator>? discriminator,
@@ -2513,7 +2513,7 @@ abstract class ElementDefinitionDiscriminator
   ///
   /// [_path]: Extensions for path
   factory ElementDefinitionDiscriminator({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
@@ -2587,7 +2587,7 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
   ///
   /// [_max]: Extensions for max
   factory ElementDefinitionBase({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? path,
@@ -2683,7 +2683,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
   ///
   /// [_versioning]: Extensions for versioning
   factory ElementDefinitionType({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? code,
@@ -2938,7 +2938,7 @@ abstract class ElementDefinitionExample implements _$ElementDefinitionExample {
   /// [valueMeta]: The actual value for the element, which must be one of the
   ///  types allowed for this element.
   factory ElementDefinitionExample({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? label,
@@ -3098,7 +3098,7 @@ abstract class ElementDefinitionConstraint
   /// [source]: A reference to the original source of the constraint, for
   ///  traceability purposes.
   factory ElementDefinitionConstraint({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? key,
@@ -3179,7 +3179,7 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
   /// [valueSet]: Refers to the value set that identifies the set of codes the
   ///  binding refers to.
   factory ElementDefinitionBinding({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
@@ -3257,7 +3257,7 @@ abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
   ///
   /// [_comment]: Extensions for comment
   factory ElementDefinitionMapping({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? identity,

@@ -94,7 +94,7 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
 abstract class CodeSystemFilter implements _$CodeSystemFilter {
   CodeSystemFilter._();
   factory CodeSystemFilter({
-    Code code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -125,7 +125,7 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
 abstract class CodeSystemProperty implements _$CodeSystemProperty {
   CodeSystemProperty._();
   factory CodeSystemProperty({
-    Code code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? uri,
     @JsonKey(name: '_uri') Element? uriElement,
@@ -189,7 +189,7 @@ abstract class CodeSystemConcept implements _$CodeSystemConcept {
 abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
   CodeSystemDesignation._();
   factory CodeSystemDesignation({
-    String language,
+    String? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
     String? value,
@@ -217,7 +217,7 @@ abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
 abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
   CodeSystemProperty1._();
   factory CodeSystemProperty1({
-    Code code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Code? valueCode,
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
@@ -322,7 +322,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
 abstract class ConceptMapGroup implements _$ConceptMapGroup {
   ConceptMapGroup._();
   factory ConceptMapGroup({
-    String source,
+    String? source,
     @JsonKey(name: '_source') Element? sourceElement,
     String? sourceVersion,
     @JsonKey(name: '_sourceVersion') Element? sourceVersionElement,
@@ -355,7 +355,7 @@ abstract class ConceptMapGroup implements _$ConceptMapGroup {
 abstract class ConceptMapElement implements _$ConceptMapElement {
   ConceptMapElement._();
   factory ConceptMapElement({
-    Code code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
@@ -383,7 +383,7 @@ abstract class ConceptMapElement implements _$ConceptMapElement {
 abstract class ConceptMapTarget implements _$ConceptMapTarget {
   ConceptMapTarget._();
   factory ConceptMapTarget({
-    Code code,
+    Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
@@ -416,7 +416,7 @@ abstract class ConceptMapTarget implements _$ConceptMapTarget {
 abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
   ConceptMapDependsOn._();
   factory ConceptMapDependsOn({
-    String property,
+    String? property,
     @JsonKey(name: '_property') Element? propertyElement,
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
@@ -447,7 +447,7 @@ abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
 abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
   ConceptMapUnmapped._();
   factory ConceptMapUnmapped({
-    ConceptMapUnmappedMode mode,
+    ConceptMapUnmappedMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -555,7 +555,7 @@ abstract class ExpansionProfileFixedVersion
     implements _$ExpansionProfileFixedVersion {
   ExpansionProfileFixedVersion._();
   factory ExpansionProfileFixedVersion({
-    String system,
+    String? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
@@ -586,7 +586,7 @@ abstract class ExpansionProfileExcludedSystem
     implements _$ExpansionProfileExcludedSystem {
   ExpansionProfileExcludedSystem._();
   factory ExpansionProfileExcludedSystem({
-    String system,
+    String? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
@@ -617,7 +617,7 @@ abstract class ExpansionProfileDesignation
     implements _$ExpansionProfileDesignation {
   ExpansionProfileDesignation._();
   factory ExpansionProfileDesignation({
-    ExpansionProfileInclude include,
+    ExpansionProfileInclude? include,
     ExpansionProfileExclude? exclude,
   }) = _ExpansionProfileDesignation;
 
@@ -668,7 +668,7 @@ abstract class ExpansionProfileDesignation1
     implements _$ExpansionProfileDesignation1 {
   ExpansionProfileDesignation1._();
   factory ExpansionProfileDesignation1({
-    String language,
+    String? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
   }) = _ExpansionProfileDesignation1;
@@ -720,7 +720,7 @@ abstract class ExpansionProfileDesignation2
     implements _$ExpansionProfileDesignation2 {
   ExpansionProfileDesignation2._();
   factory ExpansionProfileDesignation2({
-    String language,
+    String? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
   }) = _ExpansionProfileDesignation2;
@@ -805,7 +805,7 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
 abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
   NamingSystemUniqueId._();
   factory NamingSystemUniqueId({
-    NamingSystemUniqueIdType type,
+    NamingSystemUniqueIdType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -905,7 +905,7 @@ abstract class ValueSet with Resource implements _$ValueSet {
 abstract class ValueSetCompose implements _$ValueSetCompose {
   ValueSetCompose._();
   factory ValueSetCompose({
-    Date lockedDate,
+    Date? lockedDate,
     @JsonKey(name: '_lockedDate') Element? lockedDateElement,
     Boolean? inactive,
     @JsonKey(name: '_inactive') Element? inactiveElement,
@@ -995,7 +995,7 @@ abstract class ValueSetConcept implements _$ValueSetConcept {
 abstract class ValueSetDesignation implements _$ValueSetDesignation {
   ValueSetDesignation._();
   factory ValueSetDesignation({
-    String language,
+    String? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
     String? value,
@@ -1023,7 +1023,7 @@ abstract class ValueSetDesignation implements _$ValueSetDesignation {
 abstract class ValueSetFilter implements _$ValueSetFilter {
   ValueSetFilter._();
   factory ValueSetFilter({
-    String property,
+    String? property,
     @JsonKey(name: '_property') Element? propertyElement,
     ValueSetFilterOp? op,
     @JsonKey(name: '_op') Element? opElement,
@@ -1052,7 +1052,7 @@ abstract class ValueSetFilter implements _$ValueSetFilter {
 abstract class ValueSetExpansion implements _$ValueSetExpansion {
   ValueSetExpansion._();
   factory ValueSetExpansion({
-    String identifier,
+    String? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
     FhirDateTime? timestamp,
     @JsonKey(name: '_timestamp') Element? timestampElement,
@@ -1085,7 +1085,7 @@ abstract class ValueSetExpansion implements _$ValueSetExpansion {
 abstract class ValueSetParameter implements _$ValueSetParameter {
   ValueSetParameter._();
   factory ValueSetParameter({
-    String name,
+    String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? valueString,
     @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -1122,7 +1122,7 @@ abstract class ValueSetParameter implements _$ValueSetParameter {
 abstract class ValueSetContains implements _$ValueSetContains {
   ValueSetContains._();
   factory ValueSetContains({
-    String system,
+    String? system,
     @JsonKey(name: '_system') Element? systemElement,
     @JsonKey(name: 'abstract') Boolean? abstract_,
     @JsonKey(name: '_abstract') Element? abstractElement,

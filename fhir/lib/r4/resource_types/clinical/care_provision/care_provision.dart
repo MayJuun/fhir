@@ -270,7 +270,7 @@ abstract class CarePlanActivity implements _$CarePlanActivity {
   /// care plan system (e.g. form driven) that doesn't know about specific
   ///  resources such as procedure etc.
   factory CarePlanActivity({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? outcomeCodeableConcept,
@@ -413,7 +413,7 @@ abstract class CarePlanDetail implements _$CarePlanDetail {
   ///
   /// [_description]: Extensions for description
   factory CarePlanDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? kind,
@@ -654,7 +654,7 @@ abstract class CareTeamParticipant implements _$CareTeamParticipant {
   /// [period]: Indicates when the specific member or organization did (or is
   ///  intended to) come into effect and end.
   factory CareTeamParticipant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? role,
@@ -950,7 +950,7 @@ abstract class GoalTarget implements _$GoalTarget {
   /// [dueDuration]: Indicates either the date or the duration after start by
   ///  which the goal should be met.
   factory GoalTarget({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? measure,
@@ -1229,7 +1229,7 @@ abstract class NutritionOrderOralDiet implements _$NutritionOrderOralDiet {
   ///
   /// [_instruction]: Extensions for instruction
   factory NutritionOrderOralDiet({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
@@ -1294,7 +1294,7 @@ abstract class NutritionOrderNutrient implements _$NutritionOrderNutrient {
   ///
   /// [amount]: The quantity of the specified nutrient to include in diet.
   factory NutritionOrderNutrient({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? modifier,
@@ -1355,7 +1355,7 @@ abstract class NutritionOrderTexture implements _$NutritionOrderTexture {
   /// [foodType]: The food type(s) (e.g. meats, all foods)  that the texture
   ///  modification applies to.  This could be all foods types.
   factory NutritionOrderTexture({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? modifier,
@@ -1429,7 +1429,7 @@ abstract class NutritionOrderSupplement implements _$NutritionOrderSupplement {
   ///
   /// [_instruction]: Extensions for instruction
   factory NutritionOrderSupplement({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -1532,7 +1532,7 @@ abstract class NutritionOrderEnteralFormula
   ///
   /// [_administrationInstruction]: Extensions for administrationInstruction
   factory NutritionOrderEnteralFormula({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? baseFormulaType,
@@ -1613,7 +1613,7 @@ abstract class NutritionOrderAdministration
   /// [rateRatio]: The rate of administration of formula via a feeding pump,
   ///  e.g. 60 mL per hour, according to the specified schedule.
   factory NutritionOrderAdministration({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Timing? schedule,
@@ -1947,7 +1947,7 @@ abstract class RequestGroupAction implements _$RequestGroupAction {
   ///
   /// [action]: Sub actions.
   factory RequestGroupAction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? prefix,
@@ -2043,7 +2043,7 @@ abstract class RequestGroupCondition implements _$RequestGroupCondition {
   /// [expression]: An expression that returns true or false, indicating whether
   ///  or not the condition is satisfied.
   factory RequestGroupCondition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? kind,
@@ -2115,7 +2115,7 @@ abstract class RequestGroupRelatedAction
   /// [offsetRange]: A duration or range of durations to apply to the
   ///  relationship. For example, 30-60 minutes before.
   factory RequestGroupRelatedAction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? actionId,
@@ -2372,7 +2372,7 @@ abstract class RiskAssessmentPrediction implements _$RiskAssessmentPrediction {
   ///
   /// [_rationale]: Extensions for rationale
   factory RiskAssessmentPrediction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? outcome,
@@ -2915,7 +2915,7 @@ abstract class VisionPrescriptionLensSpecification
   /// [note]: Notes for special requirements such as coatings and lens
   ///  materials.
   factory VisionPrescriptionLensSpecification({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? product,
@@ -3005,7 +3005,7 @@ abstract class VisionPrescriptionPrism implements _$VisionPrescriptionPrism {
   ///
   /// [_base]: Extensions for base
   factory VisionPrescriptionPrism({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Decimal? amount,

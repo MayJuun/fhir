@@ -231,7 +231,7 @@ abstract class AuditEventAgent implements _$AuditEventAgent {
   /// [purposeOfUse]: The reason (purpose of use), specific to this agent, that
   ///  was used during the event being recorded.
   factory AuditEventAgent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -310,7 +310,7 @@ abstract class AuditEventNetwork implements _$AuditEventNetwork {
   ///
   /// [_type]: Extensions for type
   factory AuditEventNetwork({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? address,
@@ -379,7 +379,7 @@ abstract class AuditEventSource implements _$AuditEventSource {
   ///
   /// [type]: Code specifying the type of source where event originated.
   factory AuditEventSource({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? site,
@@ -464,7 +464,7 @@ abstract class AuditEventEntity implements _$AuditEventEntity {
   /// [detail]: Tagged value pairs for conveying additional information about
   ///  the entity.
   factory AuditEventEntity({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? what,
@@ -542,7 +542,7 @@ abstract class AuditEventDetail implements _$AuditEventDetail {
   ///
   /// [_valueBase64Binary]: Extensions for valueBase64Binary
   factory AuditEventDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? type,
@@ -776,7 +776,7 @@ abstract class ConsentPolicy implements _$ConsentPolicy {
   ///
   /// [_uri]: Extensions for uri
   factory ConsentPolicy({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? authority,
@@ -846,7 +846,7 @@ abstract class ConsentVerification implements _$ConsentVerification {
   ///
   /// [_verificationDate]: Extensions for verificationDate
   factory ConsentVerification({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? verified,
@@ -939,7 +939,7 @@ abstract class ConsentProvision implements _$ConsentProvision {
   ///
   /// [provision]: Rules which provide exceptions to the base rule or subrules.
   factory ConsentProvision({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
@@ -1014,7 +1014,7 @@ abstract class ConsentActor implements _$ConsentActor {
   /// type, use group to identify a set of actors by some property they share
   ///  (e.g. 'admitting officers').
   factory ConsentActor({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? role,
@@ -1079,7 +1079,7 @@ abstract class ConsentData implements _$ConsentData {
   /// [reference]: A reference to a specific resource that defines which
   ///  resources are covered by this consent.
   factory ConsentData({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
@@ -1306,7 +1306,7 @@ abstract class ProvenanceAgent implements _$ProvenanceAgent {
   /// [onBehalfOf]: The individual, device, or organization for whom the change
   ///  was made.
   factory ProvenanceAgent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -1383,7 +1383,7 @@ abstract class ProvenanceEntity implements _$ProvenanceEntity {
   /// description can be understood as shorthand for saying that the agent was
   ///  responsible for the activity which generated the entity.
   factory ProvenanceEntity({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ProvenanceEntityRole.unknown)

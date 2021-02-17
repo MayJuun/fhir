@@ -257,7 +257,7 @@ abstract class ClaimRelated implements _$ClaimRelated {
   /// [reference]: An alternate organizational reference to the case or file to
   ///  which this particular claim pertains.
   factory ClaimRelated({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? claim,
@@ -319,7 +319,7 @@ abstract class ClaimPayee implements _$ClaimPayee {
   /// [party]: Reference to the individual or organization to whom any payment
   ///  will be made.
   factory ClaimPayee({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -392,7 +392,7 @@ abstract class ClaimCareTeam implements _$ClaimCareTeam {
   /// [qualification]: The qualification of the practitioner which is applicable
   ///  for this service.
   factory ClaimCareTeam({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -497,7 +497,7 @@ abstract class ClaimSupportingInfo implements _$ClaimSupportingInfo {
   /// [reason]: Provides the reason in the situation where a reason code is
   ///  required in addition to the content.
   factory ClaimSupportingInfo({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -585,7 +585,7 @@ abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
   /// products and services to a particular health condition (such as heart
   ///  attack) which is based on a predetermined grouping code system.
   factory ClaimDiagnosis({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -664,7 +664,7 @@ abstract class ClaimProcedure implements _$ClaimProcedure {
   ///
   /// [udi]: Unique Device Identifiers associated with this line item.
   factory ClaimProcedure({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -758,7 +758,7 @@ abstract class ClaimInsurance implements _$ClaimInsurance {
   /// [claimResponse]: The result of the adjudication of the line items for the
   ///  Coverage specified in this insurance.
   factory ClaimInsurance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -836,7 +836,7 @@ abstract class ClaimAccident implements _$ClaimAccident {
   ///
   /// [locationReference]: The physical location of the accident event.
   factory ClaimAccident({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Date? date,
@@ -974,7 +974,7 @@ abstract class ClaimItem implements _$ClaimItem {
   /// [detail]: A claim detail line. Either a simple (a product or service) or a
   ///  'group' of sub-details which are simple items.
   factory ClaimItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -1102,7 +1102,7 @@ abstract class ClaimDetail implements _$ClaimDetail {
   /// [subDetail]: A claim detail line. Either a simple (a product or service)
   ///  or a 'group' of sub-details which are simple items.
   factory ClaimDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -1207,7 +1207,7 @@ abstract class ClaimSubDetail implements _$ClaimSubDetail {
   ///
   /// [udi]: Unique Device Identifiers associated with this line item.
   factory ClaimSubDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -1504,7 +1504,7 @@ abstract class ClaimResponseItem implements _$ClaimResponseItem {
   /// [detail]: A claim detail. Either a simple (a product or service) or a
   ///  'group' of sub-details which are simple items.
   factory ClaimResponseItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? itemSequence,
@@ -1580,7 +1580,7 @@ abstract class ClaimResponseAdjudication
   ///
   /// [_value]: Extensions for value
   factory ClaimResponseAdjudication({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? category,
@@ -1652,7 +1652,7 @@ abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
   ///
   /// [subDetail]: A sub-detail adjudication of a simple product or service.
   factory ClaimResponseDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? detailSequence,
@@ -1723,7 +1723,7 @@ abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
   ///
   /// [adjudication]: The adjudication results.
   factory ClaimResponseSubDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? subDetailSequence,
@@ -1852,7 +1852,7 @@ abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
   ///
   /// [detail]: The second-tier service adjudications for payor added services.
   factory ClaimResponseAddItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<PositiveInt>? itemSequence,
@@ -1966,7 +1966,7 @@ abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
   /// [subDetail]: The third-tier service adjudications for payor added
   ///  services.
   factory ClaimResponseDetail1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? productOrService,
@@ -2060,7 +2060,7 @@ abstract class ClaimResponseSubDetail1 implements _$ClaimResponseSubDetail1 {
   ///
   /// [adjudication]: The adjudication results.
   factory ClaimResponseSubDetail1({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? productOrService,
@@ -2131,7 +2131,7 @@ abstract class ClaimResponseTotal implements _$ClaimResponseTotal {
   ///
   /// [amount]: Monetary total amount associated with the category.
   factory ClaimResponseTotal({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? category,
@@ -2203,7 +2203,7 @@ abstract class ClaimResponsePayment implements _$ClaimResponsePayment {
   ///
   /// [identifier]: Issuer's unique identifier for the payment instrument.
   factory ClaimResponsePayment({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -2277,7 +2277,7 @@ abstract class ClaimResponseProcessNote implements _$ClaimResponseProcessNote {
   ///
   /// [language]: A code to define the language used in the text of the note.
   factory ClaimResponseProcessNote({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? number,
@@ -2362,7 +2362,7 @@ abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
   /// [claimResponse]: The result of the adjudication of the line items for the
   ///  Coverage specified in this insurance.
   factory ClaimResponseInsurance({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -2444,7 +2444,7 @@ abstract class ClaimResponseError implements _$ClaimResponseError {
   /// [code]: An error code, from a specified code system, which details why the
   ///  claim could not be adjudicated.
   factory ClaimResponseError({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? itemSequence,
@@ -2677,7 +2677,7 @@ abstract class InvoiceParticipant implements _$InvoiceParticipant {
   /// [actor]: The device, practitioner, etc. who performed or participated in
   ///  the service.
   factory InvoiceParticipant({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? role,
@@ -2753,7 +2753,7 @@ abstract class InvoiceLineItem implements _$InvoiceLineItem {
   /// The priceComponent element can be used to offer transparency to the
   ///  recipient of the Invoice as to how the prices have been calculated.
   factory InvoiceLineItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     PositiveInt? sequence,
@@ -2825,7 +2825,7 @@ abstract class InvoicePriceComponent implements _$InvoicePriceComponent {
   ///
   /// [amount]: The amount calculated for this component.
   factory InvoicePriceComponent({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)

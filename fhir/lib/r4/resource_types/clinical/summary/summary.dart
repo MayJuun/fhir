@@ -242,7 +242,7 @@ abstract class AdverseEventSuspectEntity
   ///
   /// [causality]: Information on the possible cause of the event.
   factory AdverseEventSuspectEntity({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? instance,
@@ -312,7 +312,7 @@ abstract class AdverseEventCausality implements _$AdverseEventCausality {
   ///
   /// [method]: ProbabilityScale | Bayesian | Checklist.
   factory AdverseEventCausality({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? assessment,
@@ -618,7 +618,7 @@ abstract class AllergyIntoleranceReaction
   /// [note]: Additional text about the adverse reaction event not captured in
   ///  other fields.
   factory AllergyIntoleranceReaction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? substance,
@@ -898,7 +898,7 @@ abstract class ClinicalImpressionInvestigation
   ///
   /// [item]: A record of a specific investigation that was undertaken.
   factory ClinicalImpressionInvestigation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -973,7 +973,7 @@ abstract class ClinicalImpressionFinding
   ///
   /// [_basis]: Extensions for basis
   factory ClinicalImpressionFinding({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? itemCodeableConcept,
@@ -1256,7 +1256,7 @@ abstract class ConditionStage implements _$ConditionStage {
   ///
   /// [type]: The kind of staging, such as pathological or clinical staging.
   factory ConditionStage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? summary,
@@ -1319,7 +1319,7 @@ abstract class ConditionEvidence implements _$ConditionEvidence {
   /// [detail]: Links to other relevant information, including pathology
   ///  reports.
   factory ConditionEvidence({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
@@ -1544,7 +1544,7 @@ abstract class DetectedIssueEvidence implements _$DetectedIssueEvidence {
   /// [detail]: Links to resources that constitute evidence for the detected
   ///  issue such as a GuidanceResponse or MeasureReport.
   factory DetectedIssueEvidence({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
@@ -1612,7 +1612,7 @@ abstract class DetectedIssueMitigation implements _$DetectedIssueMitigation {
   /// [author]: Identifies the practitioner who determined the mitigation and
   ///  takes responsibility for the mitigation step occurring.
   factory DetectedIssueMitigation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? action,
@@ -1939,7 +1939,7 @@ abstract class FamilyMemberHistoryCondition
   /// [note]: An area where general notes can be placed about this specific
   ///  condition.
   factory FamilyMemberHistoryCondition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -2261,7 +2261,7 @@ abstract class ProcedurePerformer implements _$ProcedurePerformer {
   /// [onBehalfOf]: The organization the device or practitioner was acting on
   ///  behalf of.
   factory ProcedurePerformer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
@@ -2324,7 +2324,7 @@ abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
   /// [manipulated]: The device that was manipulated (changed) during the
   ///  procedure.
   factory ProcedureFocalDevice({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? action,

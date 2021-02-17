@@ -186,7 +186,7 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
 abstract class ChargeItemParticipant implements _$ChargeItemParticipant {
   ChargeItemParticipant._();
   factory ChargeItemParticipant({
-    CodeableConcept role,
+    CodeableConcept? role,
     required Reference? actor,
   }) = _ChargeItemParticipant;
 
@@ -324,7 +324,7 @@ abstract class ContractSigner implements _$ContractSigner {
 abstract class ContractValuedItem implements _$ContractValuedItem {
   ContractValuedItem._();
   factory ContractValuedItem({
-    CodeableConcept entityCodeableConcept,
+    CodeableConcept? entityCodeableConcept,
     Reference? entityReference,
     Identifier? identifier,
     Time? effectiveTime,
@@ -359,7 +359,7 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
 abstract class ContractTerm implements _$ContractTerm {
   ContractTerm._();
   factory ContractTerm({
-    Identifier identifier,
+    Identifier? identifier,
     String? issued,
     @JsonKey(name: '_issued') Element? issuedElement,
     Period? applies,
@@ -422,7 +422,7 @@ abstract class ContractAgent1 implements _$ContractAgent1 {
 abstract class ContractValuedItem1 implements _$ContractValuedItem1 {
   ContractValuedItem1._();
   factory ContractValuedItem1({
-    CodeableConcept entityCodeableConcept,
+    CodeableConcept? entityCodeableConcept,
     Reference? entityReference,
     Identifier? identifier,
     Time? effectiveTime,
@@ -457,7 +457,7 @@ abstract class ContractValuedItem1 implements _$ContractValuedItem1 {
 abstract class ContractFriendly implements _$ContractFriendly {
   ContractFriendly._();
   factory ContractFriendly({
-    Attachment contentAttachment,
+    Attachment? contentAttachment,
     Reference? contentReference,
   }) = _ContractFriendly;
 
@@ -482,7 +482,7 @@ abstract class ContractFriendly implements _$ContractFriendly {
 abstract class ContractLegal implements _$ContractLegal {
   ContractLegal._();
   factory ContractLegal({
-    Attachment contentAttachment,
+    Attachment? contentAttachment,
     Reference? contentReference,
   }) = _ContractLegal;
 
@@ -507,7 +507,7 @@ abstract class ContractLegal implements _$ContractLegal {
 abstract class ContractRule implements _$ContractRule {
   ContractRule._();
   factory ContractRule({
-    Attachment contentAttachment,
+    Attachment? contentAttachment,
     Reference? contentReference,
   }) = _ContractRule;
 
@@ -614,7 +614,7 @@ abstract class ExplanationOfBenefitRelated
     implements _$ExplanationOfBenefitRelated {
   ExplanationOfBenefitRelated._();
   factory ExplanationOfBenefitRelated({
-    Reference claim,
+    Reference? claim,
     CodeableConcept? relationship,
     Identifier? reference,
   }) = _ExplanationOfBenefitRelated;
@@ -642,7 +642,7 @@ abstract class ExplanationOfBenefitPayee
     implements _$ExplanationOfBenefitPayee {
   ExplanationOfBenefitPayee._();
   factory ExplanationOfBenefitPayee({
-    CodeableConcept type,
+    CodeableConcept? type,
     Reference? party,
   }) = _ExplanationOfBenefitPayee;
 
@@ -669,7 +669,7 @@ abstract class ExplanationOfBenefitInformation
     implements _$ExplanationOfBenefitInformation {
   ExplanationOfBenefitInformation._();
   factory ExplanationOfBenefitInformation({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required CodeableConcept? category,
     CodeableConcept? code,
@@ -709,7 +709,7 @@ abstract class ExplanationOfBenefitCareTeam
     implements _$ExplanationOfBenefitCareTeam {
   ExplanationOfBenefitCareTeam._();
   factory ExplanationOfBenefitCareTeam({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required Reference? provider,
     Boolean? responsible,
@@ -741,7 +741,7 @@ abstract class ExplanationOfBenefitDiagnosis
     implements _$ExplanationOfBenefitDiagnosis {
   ExplanationOfBenefitDiagnosis._();
   factory ExplanationOfBenefitDiagnosis({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? diagnosisCodeableConcept,
     Reference? diagnosisReference,
@@ -772,7 +772,7 @@ abstract class ExplanationOfBenefitProcedure
     implements _$ExplanationOfBenefitProcedure {
   ExplanationOfBenefitProcedure._();
   factory ExplanationOfBenefitProcedure({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
@@ -803,7 +803,7 @@ abstract class ExplanationOfBenefitInsurance
     implements _$ExplanationOfBenefitInsurance {
   ExplanationOfBenefitInsurance._();
   factory ExplanationOfBenefitInsurance({
-    Reference coverage,
+    Reference? coverage,
     List<String>? preAuthRef,
     @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement,
   }) = _ExplanationOfBenefitInsurance;
@@ -831,7 +831,7 @@ abstract class ExplanationOfBenefitAccident
     implements _$ExplanationOfBenefitAccident {
   ExplanationOfBenefitAccident._();
   factory ExplanationOfBenefitAccident({
-    Date date,
+    Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? type,
     Address? locationAddress,
@@ -860,7 +860,7 @@ abstract class ExplanationOfBenefitAccident
 abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
   ExplanationOfBenefitItem._();
   factory ExplanationOfBenefitItem({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     List<Id>? careTeamLinkId,
     @JsonKey(name: '_careTeamLinkId') List<Element>? careTeamLinkIdElement,
@@ -952,7 +952,7 @@ abstract class ExplanationOfBenefitDetail
     implements _$ExplanationOfBenefitDetail {
   ExplanationOfBenefitDetail._();
   factory ExplanationOfBenefitDetail({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required CodeableConcept? type,
     CodeableConcept? revenue,
@@ -995,7 +995,7 @@ abstract class ExplanationOfBenefitSubDetail
     implements _$ExplanationOfBenefitSubDetail {
   ExplanationOfBenefitSubDetail._();
   factory ExplanationOfBenefitSubDetail({
-    Decimal sequence,
+    Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required CodeableConcept? type,
     CodeableConcept? revenue,
@@ -1073,7 +1073,7 @@ abstract class ExplanationOfBenefitDetail1
     implements _$ExplanationOfBenefitDetail1 {
   ExplanationOfBenefitDetail1._();
   factory ExplanationOfBenefitDetail1({
-    CodeableConcept revenue,
+    CodeableConcept? revenue,
     CodeableConcept? category,
     CodeableConcept? service,
     List<CodeableConcept>? modifier,
@@ -1106,7 +1106,7 @@ abstract class ExplanationOfBenefitPayment
     implements _$ExplanationOfBenefitPayment {
   ExplanationOfBenefitPayment._();
   factory ExplanationOfBenefitPayment({
-    CodeableConcept type,
+    CodeableConcept? type,
     Money? adjustment,
     CodeableConcept? adjustmentReason,
     Date? date,
@@ -1138,7 +1138,7 @@ abstract class ExplanationOfBenefitProcessNote
     implements _$ExplanationOfBenefitProcessNote {
   ExplanationOfBenefitProcessNote._();
   factory ExplanationOfBenefitProcessNote({
-    Decimal number,
+    Decimal? number,
     @JsonKey(name: '_number') Element? numberElement,
     CodeableConcept? type,
     String? text,

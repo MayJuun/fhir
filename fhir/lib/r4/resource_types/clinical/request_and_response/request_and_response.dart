@@ -257,7 +257,7 @@ abstract class CommunicationPayload implements _$CommunicationPayload {
   /// [contentReference]: A communicated content (or for multi-part
   ///  communications, one portion of the communication).
   factory CommunicationPayload({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? contentString,
@@ -531,7 +531,7 @@ abstract class CommunicationRequestPayload
   /// [contentReference]: The communicated content (or for multi-part
   ///  communications, one portion of the communication).
   factory CommunicationRequestPayload({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? contentString,
@@ -822,7 +822,7 @@ abstract class DeviceRequestParameter implements _$DeviceRequestParameter {
   ///
   /// [_valueBoolean]: Extensions for valueBoolean
   factory DeviceRequestParameter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -1389,7 +1389,7 @@ abstract class SupplyDeliverySuppliedItem
   /// dispensed. This is either a link to a resource representing the details of
   ///  the item or a code that identifies the item from a known list.
   factory SupplyDeliverySuppliedItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Quantity? quantity,
@@ -1626,7 +1626,7 @@ abstract class SupplyRequestParameter implements _$SupplyRequestParameter {
   ///
   /// [_valueBoolean]: Extensions for valueBoolean
   factory SupplyRequestParameter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,

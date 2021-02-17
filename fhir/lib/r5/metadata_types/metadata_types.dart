@@ -15,7 +15,7 @@ part 'metadata_types.g.dart';
 abstract class ContactDetail implements _$ContactDetail {
   ContactDetail._();
   factory ContactDetail({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -43,7 +43,7 @@ abstract class ContactDetail implements _$ContactDetail {
 abstract class Contributor implements _$Contributor {
   Contributor._();
   factory Contributor({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -73,7 +73,7 @@ abstract class Contributor implements _$Contributor {
 abstract class DataRequirement implements _$DataRequirement {
   DataRequirement._();
   factory DataRequirement({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -111,7 +111,7 @@ abstract class DataRequirementCodeFilter
     implements _$DataRequirementCodeFilter {
   DataRequirementCodeFilter._();
   factory DataRequirementCodeFilter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? path,
@@ -145,7 +145,7 @@ abstract class DataRequirementDateFilter
     implements _$DataRequirementDateFilter {
   DataRequirementDateFilter._();
   factory DataRequirementDateFilter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? path,
@@ -180,7 +180,7 @@ abstract class DataRequirementDateFilter
 abstract class DataRequirementSort implements _$DataRequirementSort {
   DataRequirementSort._();
   factory DataRequirementSort({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? path,
@@ -211,7 +211,7 @@ abstract class DataRequirementSort implements _$DataRequirementSort {
 abstract class ParameterDefinition implements _$ParameterDefinition {
   ParameterDefinition._();
   factory ParameterDefinition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -249,7 +249,7 @@ abstract class ParameterDefinition implements _$ParameterDefinition {
 abstract class RelatedArtifact implements _$RelatedArtifact {
   RelatedArtifact._();
   factory RelatedArtifact({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
         RelatedArtifactType type,
@@ -287,7 +287,7 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
 abstract class TriggerDefinition implements _$TriggerDefinition {
   TriggerDefinition._();
   factory TriggerDefinition({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
         TriggerDefinitionType type,
@@ -325,7 +325,7 @@ abstract class TriggerDefinition implements _$TriggerDefinition {
 abstract class UsageContext implements _$UsageContext {
   UsageContext._();
   factory UsageContext({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required Coding? code,
     CodeableConcept? valueCodeableConcept,
@@ -355,7 +355,7 @@ abstract class UsageContext implements _$UsageContext {
 abstract class Expression implements _$Expression {
   Expression._();
   factory Expression({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,

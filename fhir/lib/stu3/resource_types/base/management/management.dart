@@ -73,7 +73,7 @@ abstract class Encounter with Resource implements _$Encounter {
 abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
   EncounterStatusHistory._();
   factory EncounterStatusHistory({
-    EncounterStatusHistoryStatus status,
+    EncounterStatusHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period? period,
   }) = _EncounterStatusHistory;
@@ -177,7 +177,7 @@ abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
 abstract class EncounterHospitalization implements _$EncounterHospitalization {
   EncounterHospitalization._();
   factory EncounterHospitalization({
-    Identifier preAdmissionIdentifier,
+    Identifier? preAdmissionIdentifier,
     Reference? origin,
     CodeableConcept? admitSource,
     CodeableConcept? reAdmission,
@@ -287,7 +287,7 @@ abstract class EpisodeOfCareStatusHistory
     implements _$EpisodeOfCareStatusHistory {
   EpisodeOfCareStatusHistory._();
   factory EpisodeOfCareStatusHistory({
-    EpisodeOfCareStatusHistoryStatus status,
+    EpisodeOfCareStatusHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period? period,
   }) = _EpisodeOfCareStatusHistory;
@@ -513,7 +513,7 @@ abstract class List_ with Resource implements _$List_ {
 abstract class ListEntry implements _$ListEntry {
   ListEntry._();
   factory ListEntry({
-    CodeableConcept flag,
+    CodeableConcept? flag,
     Boolean? deleted,
     @JsonKey(name: '_deleted') Element? deletedElement,
     Date? date,

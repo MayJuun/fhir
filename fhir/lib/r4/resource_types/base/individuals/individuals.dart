@@ -219,7 +219,7 @@ abstract class GroupCharacteristic implements _$GroupCharacteristic {
   /// [period]: The period over which the characteristic is tested; e.g. the
   ///  patient had an operation during the month of June.
   factory GroupCharacteristic({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -295,7 +295,7 @@ abstract class GroupMember implements _$GroupMember {
   ///
   /// [_inactive]: Extensions for inactive
   factory GroupMember({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? entity,
@@ -557,7 +557,7 @@ abstract class PatientContact implements _$PatientContact {
   /// [period]: The period during which this contact person or organization is
   ///  valid to be contacted relating to this patient.
   factory PatientContact({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? relationship,
@@ -630,7 +630,7 @@ abstract class PatientCommunication implements _$PatientCommunication {
   ///
   /// [_preferred]: Extensions for preferred
   factory PatientCommunication({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? language,
@@ -693,7 +693,7 @@ abstract class PatientLink implements _$PatientLink {
   ///
   /// [_type]: Extensions for type
   factory PatientLink({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? other,
@@ -889,7 +889,7 @@ abstract class PersonLink implements _$PersonLink {
   ///
   /// [_assurance]: Extensions for assurance
   factory PersonLink({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? target,
@@ -1098,7 +1098,7 @@ abstract class PractitionerQualification
   ///
   /// [issuer]: Organization that regulates and issues the qualification.
   factory PractitionerQualification({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
@@ -1330,7 +1330,7 @@ abstract class PractitionerRoleAvailableTime
   ///
   /// [_availableEndTime]: Extensions for availableEndTime
   factory PractitionerRoleAvailableTime({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Code>? daysOfWeek,
@@ -1402,7 +1402,7 @@ abstract class PractitionerRoleNotAvailable
   /// [during]: Service is not available (seasonally or for a public holiday)
   ///  from this date.
   factory PractitionerRoleNotAvailable({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? description,
@@ -1615,7 +1615,7 @@ abstract class RelatedPersonCommunication
   ///
   /// [_preferred]: Extensions for preferred
   factory RelatedPersonCommunication({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? language,

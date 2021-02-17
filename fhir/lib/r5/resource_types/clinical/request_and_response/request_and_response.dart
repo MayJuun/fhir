@@ -78,7 +78,7 @@ abstract class Communication with Resource implements _$Communication {
 abstract class CommunicationPayload implements _$CommunicationPayload {
   CommunicationPayload._();
   factory CommunicationPayload({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? contentAttachment,
@@ -173,7 +173,7 @@ abstract class CommunicationRequestPayload
     implements _$CommunicationRequestPayload {
   CommunicationRequestPayload._();
   factory CommunicationRequestPayload({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? contentAttachment,
@@ -271,7 +271,7 @@ abstract class DeviceRequest with Resource implements _$DeviceRequest {
 abstract class DeviceRequestParameter implements _$DeviceRequestParameter {
   DeviceRequestParameter._();
   factory DeviceRequestParameter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
@@ -475,7 +475,7 @@ abstract class SupplyDeliverySuppliedItem
     implements _$SupplyDeliverySuppliedItem {
   SupplyDeliverySuppliedItem._();
   factory SupplyDeliverySuppliedItem({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Quantity? quantity,
@@ -563,7 +563,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
 abstract class SupplyRequestParameter implements _$SupplyRequestParameter {
   SupplyRequestParameter._();
   factory SupplyRequestParameter({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,

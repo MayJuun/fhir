@@ -26,7 +26,7 @@ abstract class Element with _$Element {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   factory Element({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
   }) = _Element;
 

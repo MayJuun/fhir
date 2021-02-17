@@ -273,7 +273,7 @@ abstract class ImmunizationPerformer implements _$ImmunizationPerformer {
   ///
   /// [actor]: The practitioner or organization who performed the action.
   factory ImmunizationPerformer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
@@ -347,7 +347,7 @@ abstract class ImmunizationEducation implements _$ImmunizationEducation {
   ///
   /// [_presentationDate]: Extensions for presentationDate
   factory ImmunizationEducation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? documentType,
@@ -419,7 +419,7 @@ abstract class ImmunizationReaction implements _$ImmunizationReaction {
   ///
   /// [_reported]: Extensions for reported
   factory ImmunizationReaction({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirDateTime? date,
@@ -507,7 +507,7 @@ abstract class ImmunizationProtocolApplied
   ///
   /// [_seriesDosesString]: Extensions for seriesDosesString
   factory ImmunizationProtocolApplied({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? series,
@@ -921,7 +921,7 @@ abstract class ImmunizationRecommendationRecommendation
   /// status and recommendation.  This includes patient observations, adverse
   ///  reactions and allergy/intolerance information.
   factory ImmunizationRecommendationRecommendation({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? vaccineCode,
@@ -1008,7 +1008,7 @@ abstract class ImmunizationRecommendationDateCriterion
   ///
   /// [_value]: Extensions for value
   factory ImmunizationRecommendationDateCriterion({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? code,
@@ -1216,7 +1216,7 @@ abstract class MedicationIngredient implements _$MedicationIngredient {
   /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
   ///  ratio where the numerator is 250mg and the denominator is 1 tablet.
   factory MedicationIngredient({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? itemCodeableConcept,
@@ -1284,7 +1284,7 @@ abstract class MedicationBatch implements _$MedicationBatch {
   ///
   /// [_expirationDate]: Extensions for expirationDate
   factory MedicationBatch({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? lotNumber,
@@ -1554,7 +1554,7 @@ abstract class MedicationAdministrationPerformer
   ///
   /// [actor]: Indicates who or what performed the medication administration.
   factory MedicationAdministrationPerformer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
@@ -1652,7 +1652,7 @@ abstract class MedicationAdministrationDosage
   /// of time, e.g. 500 ml per 2 hours.  Other examples:  200 mcg/min or 200
   ///  mcg/1 minute; 1 liter/8 hours.
   factory MedicationAdministrationDosage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? text,
@@ -1947,7 +1947,7 @@ abstract class MedicationDispensePerformer
   /// [actor]: The device, practitioner, etc. who performed the action.  It
   ///  should be assumed that the actor is the dispenser of the medication.
   factory MedicationDispensePerformer({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
@@ -2021,7 +2021,7 @@ abstract class MedicationDispenseSubstitution
   /// [responsibleParty]: The person or organization that has primary
   ///  responsibility for the substitution.
   factory MedicationDispenseSubstitution({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? wasSubstituted,
@@ -2285,7 +2285,7 @@ abstract class MedicationKnowledgeRelatedMedicationKnowledge
   /// [reference]: Associated documentation about the associated medication
   ///  knowledge.
   factory MedicationKnowledgeRelatedMedicationKnowledge({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -2350,7 +2350,7 @@ abstract class MedicationKnowledgeMonograph
   ///
   /// [source]: Associated documentation about the medication.
   factory MedicationKnowledgeMonograph({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -2422,7 +2422,7 @@ abstract class MedicationKnowledgeIngredient
   /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
   ///  ratio where the numerator is 250mg and the denominator is 1 tablet.
   factory MedicationKnowledgeIngredient({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? itemCodeableConcept,
@@ -2490,7 +2490,7 @@ abstract class MedicationKnowledgeCost implements _$MedicationKnowledgeCost {
   ///
   /// [cost]: The price of the medication.
   factory MedicationKnowledgeCost({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -2554,7 +2554,7 @@ abstract class MedicationKnowledgeMonitoringProgram
   ///
   /// [_name]: Extensions for name
   factory MedicationKnowledgeMonitoringProgram({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -2626,7 +2626,7 @@ abstract class MedicationKnowledgeAdministrationGuidelines
   /// to the administration guidelines (for example, height, weight, gender,
   ///  etc.).
   factory MedicationKnowledgeAdministrationGuidelines({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<MedicationKnowledgeDosage>? dosage,
@@ -2692,7 +2692,7 @@ abstract class MedicationKnowledgeDosage
   ///
   /// [dosage]: Dosage for the medication for the specific guidelines.
   factory MedicationKnowledgeDosage({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -2759,7 +2759,7 @@ abstract class MedicationKnowledgePatientCharacteristics
   ///
   /// [_value]: Extensions for value
   factory MedicationKnowledgePatientCharacteristics({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? characteristicCodeableConcept,
@@ -2826,7 +2826,7 @@ abstract class MedicationKnowledgeMedicineClassification
   /// [classification]: Specific category assigned to the medication (e.g.
   ///  anti-infective, anti-hypertensive, antibiotic, etc.).
   factory MedicationKnowledgeMedicineClassification({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -2891,7 +2891,7 @@ abstract class MedicationKnowledgePackaging
   /// [quantity]: The number of product units the package would contain if fully
   ///  loaded.
   factory MedicationKnowledgePackaging({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -2963,7 +2963,7 @@ abstract class MedicationKnowledgeDrugCharacteristic
   ///
   /// [_valueBase64Binary]: Extensions for valueBase64Binary
   factory MedicationKnowledgeDrugCharacteristic({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
@@ -3037,7 +3037,7 @@ abstract class MedicationKnowledgeRegulatory
   /// [maxDispense]: The maximum number of units of the medication that can be
   ///  dispensed in a period.
   factory MedicationKnowledgeRegulatory({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference? regulatoryAuthority,
@@ -3103,7 +3103,7 @@ abstract class MedicationKnowledgeSubstitution
   ///
   /// [_allowed]: Extensions for allowed
   factory MedicationKnowledgeSubstitution({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? type,
@@ -3165,7 +3165,7 @@ abstract class MedicationKnowledgeSchedule
   ///
   /// [schedule]: Specifies the specific drug schedule.
   factory MedicationKnowledgeSchedule({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept? schedule,
@@ -3226,7 +3226,7 @@ abstract class MedicationKnowledgeMaxDispense
   ///
   /// [period]: The period that applies to the maximum number of units.
   factory MedicationKnowledgeMaxDispense({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Quantity? quantity,
@@ -3293,7 +3293,7 @@ abstract class MedicationKnowledgeKinetics
   /// [halfLifePeriod]: The time required for any specified property (e.g., the
   ///  concentration of a substance in the body) to decrease by half.
   factory MedicationKnowledgeKinetics({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Quantity>? areaUnderCurve,
@@ -3664,7 +3664,7 @@ abstract class MedicationRequestDispenseRequest
   /// [performer]: Indicates the intended dispensing Organization specified by
   ///  the prescriber.
   factory MedicationRequestDispenseRequest({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     MedicationRequestInitialFill? initialFill,
@@ -3740,7 +3740,7 @@ abstract class MedicationRequestInitialFill
   /// [duration]: The length of time that the first dispense is expected to
   ///  last.
   factory MedicationRequestInitialFill({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Quantity? quantity,
@@ -3812,7 +3812,7 @@ abstract class MedicationRequestSubstitution
   /// [reason]: Indicates the reason for the substitution, or why substitution
   ///  must or must not be performed.
   factory MedicationRequestSubstitution({
-    String id,
+    String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Boolean? allowedBoolean,
