@@ -1419,7 +1419,7 @@ abstract class TestReport with Resource implements _$TestReport {
     @JsonKey(name: '_status') Element? statusElement,
     required Reference? testScript,
     @JsonKey(unknownEnumValue: TestReportResult.unknown)
-        TestReportResult result,
+        TestReportResult? result,
     @JsonKey(name: '_result') Element? resultElement,
     Decimal? score,
     @JsonKey(name: '_score') Element? scoreElement,
@@ -1685,7 +1685,7 @@ abstract class TestReportOperation implements _$TestReportOperation {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
-        TestReportOperationResult result,
+        TestReportOperationResult? result,
     @JsonKey(name: '_result') Element? resultElement,
     Markdown? message,
     @JsonKey(name: '_message') Element? messageElement,
@@ -1757,7 +1757,7 @@ abstract class TestReportAssert implements _$TestReportAssert {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
-        TestReportAssertResult result,
+        TestReportAssertResult? result,
     @JsonKey(name: '_result') Element? resultElement,
     Markdown? message,
     @JsonKey(name: '_message') Element? messageElement,
@@ -3329,7 +3329,7 @@ abstract class TestScriptAssert implements _$TestScriptAssert {
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
     @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
-        TestScriptAssertRequestMethod requestMethod,
+        TestScriptAssertRequestMethod? requestMethod,
     @JsonKey(name: '_requestMethod') Element? requestMethodElement,
     String? requestURL,
     @JsonKey(name: '_requestURL') Element? requestURLElement,

@@ -2452,7 +2452,7 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
         PlanDefinitionActionSelectionBehavior? selectionBehavior,
     @JsonKey(name: '_selectionBehavior') Element? selectionBehaviorElement,
     @JsonKey(unknownEnumValue: PlanDefinitionActionRequiredBehavior.unknown)
-        PlanDefinitionActionRequiredBehavior requiredBehavior,
+        PlanDefinitionActionRequiredBehavior? requiredBehavior,
     @JsonKey(name: '_requiredBehavior') Element? requiredBehaviorElement,
     @JsonKey(unknownEnumValue: PlanDefinitionActionPrecheckBehavior.unknown)
         PlanDefinitionActionPrecheckBehavior? precheckBehavior,
@@ -2608,7 +2608,7 @@ abstract class PlanDefinitionRelatedAction
     Id? actionId,
     @JsonKey(name: '_actionId') Element? actionIdElement,
     @JsonKey(unknownEnumValue: PlanDefinitionRelatedActionRelationship.unknown)
-        PlanDefinitionRelatedActionRelationship relationship,
+        PlanDefinitionRelatedActionRelationship? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
     FhirDuration? offsetDuration,
     Range? offsetRange,

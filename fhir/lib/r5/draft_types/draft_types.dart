@@ -1111,7 +1111,7 @@ abstract class EvidenceReport implements _$EvidenceReport {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
-        EvidenceReportStatus status,
+        EvidenceReportStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,

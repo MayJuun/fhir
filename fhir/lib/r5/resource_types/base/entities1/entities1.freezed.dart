@@ -17,8 +17,8 @@ class _$EndpointTearOff {
   const _$EndpointTearOff();
 
   _Endpoint call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
-          R4ResourceType resourceType = R4ResourceType.Endpoint,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
+          R5ResourceType resourceType = R5ResourceType.Endpoint,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -95,8 +95,8 @@ const $Endpoint = _$EndpointTearOff();
 
 /// @nodoc
 mixin _$Endpoint {
-  @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
+  R5ResourceType get resourceType;
   Id? get id;
   Meta? get meta;
   FhirUri? get implicitRules;
@@ -143,8 +143,8 @@ abstract class $EndpointCopyWith<$Res> {
   factory $EndpointCopyWith(Endpoint value, $Res Function(Endpoint) then) =
       _$EndpointCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -234,7 +234,7 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -413,8 +413,8 @@ abstract class _$EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
       __$EndpointCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -515,7 +515,7 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
     return _then(_Endpoint(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -583,8 +583,8 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
 /// @nodoc
 class _$_Endpoint extends _Endpoint {
   _$_Endpoint(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
-          this.resourceType = R4ResourceType.Endpoint,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
+          this.resourceType = R5ResourceType.Endpoint,
       this.id,
       this.meta,
       this.implicitRules,
@@ -626,8 +626,8 @@ class _$_Endpoint extends _Endpoint {
       _$_$_EndpointFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
-  final R4ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
+  final R5ResourceType resourceType;
   @override
   final Id? id;
   @override
@@ -815,8 +815,8 @@ class _$_Endpoint extends _Endpoint {
 abstract class _Endpoint extends Endpoint {
   _Endpoint._() : super._();
   factory _Endpoint(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -856,8 +856,8 @@ abstract class _Endpoint extends Endpoint {
   factory _Endpoint.fromJson(Map<String, dynamic> json) = _$_Endpoint.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
+  R5ResourceType get resourceType;
   @override
   Id? get id;
   @override
@@ -933,8 +933,8 @@ class _$HealthcareServiceTearOff {
   const _$HealthcareServiceTearOff();
 
   _HealthcareService call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
-          R4ResourceType resourceType = R4ResourceType.HealthcareService,
+      {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
+          R5ResourceType resourceType = R5ResourceType.HealthcareService,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -1039,8 +1039,8 @@ const $HealthcareService = _$HealthcareServiceTearOff();
 
 /// @nodoc
 mixin _$HealthcareService {
-  @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
+  R5ResourceType get resourceType;
   Id? get id;
   Meta? get meta;
   FhirUri? get implicitRules;
@@ -1102,8 +1102,8 @@ abstract class $HealthcareServiceCopyWith<$Res> {
           HealthcareService value, $Res Function(HealthcareService) then) =
       _$HealthcareServiceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -1224,7 +1224,7 @@ class _$HealthcareServiceCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -1467,8 +1467,8 @@ abstract class _$HealthcareServiceCopyWith<$Res>
       __$HealthcareServiceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -1603,7 +1603,7 @@ class __$HealthcareServiceCopyWithImpl<$Res>
     return _then(_HealthcareService(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -1710,8 +1710,8 @@ class __$HealthcareServiceCopyWithImpl<$Res>
 /// @nodoc
 class _$_HealthcareService extends _HealthcareService {
   _$_HealthcareService(
-      {@JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
-          this.resourceType = R4ResourceType.HealthcareService,
+      {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
+          this.resourceType = R5ResourceType.HealthcareService,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1767,8 +1767,8 @@ class _$_HealthcareService extends _HealthcareService {
       _$_$_HealthcareServiceFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
-  final R4ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
+  final R5ResourceType resourceType;
   @override
   final Id? id;
   @override
@@ -2013,8 +2013,8 @@ class _$_HealthcareService extends _HealthcareService {
 abstract class _HealthcareService extends HealthcareService {
   _HealthcareService._() : super._();
   factory _HealthcareService(
-      {@JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -2069,8 +2069,8 @@ abstract class _HealthcareService extends HealthcareService {
       _$_HealthcareService.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
+  R5ResourceType get resourceType;
   @override
   Id? get id;
   @override
@@ -3235,8 +3235,8 @@ class _$LocationTearOff {
   const _$LocationTearOff();
 
   _Location call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Location)
-          R4ResourceType resourceType = R4ResourceType.Location,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Location)
+          R5ResourceType resourceType = R5ResourceType.Location,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -3329,8 +3329,8 @@ const $Location = _$LocationTearOff();
 
 /// @nodoc
 mixin _$Location {
-  @JsonKey(unknownEnumValue: R4ResourceType.Location)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Location)
+  R5ResourceType get resourceType;
   Id? get id;
   Meta? get meta;
   FhirUri? get implicitRules;
@@ -3386,8 +3386,8 @@ abstract class $LocationCopyWith<$Res> {
   factory $LocationCopyWith(Location value, $Res Function(Location) then) =
       _$LocationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Location)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Location)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -3498,7 +3498,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -3746,8 +3746,8 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       __$LocationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Location)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Location)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -3874,7 +3874,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
     return _then(_Location(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -3955,8 +3955,8 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
 /// @nodoc
 class _$_Location extends _Location {
   _$_Location(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Location)
-          this.resourceType = R4ResourceType.Location,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Location)
+          this.resourceType = R5ResourceType.Location,
       this.id,
       this.meta,
       this.implicitRules,
@@ -4007,8 +4007,8 @@ class _$_Location extends _Location {
       _$_$_LocationFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.Location)
-  final R4ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Location)
+  final R5ResourceType resourceType;
   @override
   final Id? id;
   @override
@@ -4227,8 +4227,8 @@ class _$_Location extends _Location {
 abstract class _Location extends Location {
   _Location._() : super._();
   factory _Location(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Location)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Location)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -4277,8 +4277,8 @@ abstract class _Location extends Location {
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.Location)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Location)
+  R5ResourceType get resourceType;
   @override
   Id? get id;
   @override
@@ -5183,8 +5183,8 @@ class _$OrganizationTearOff {
   const _$OrganizationTearOff();
 
   _Organization call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Organization)
-          R4ResourceType resourceType = R4ResourceType.Organization,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
+          R5ResourceType resourceType = R5ResourceType.Organization,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -5252,8 +5252,8 @@ const $Organization = _$OrganizationTearOff();
 
 /// @nodoc
 mixin _$Organization {
-  @JsonKey(unknownEnumValue: R4ResourceType.Organization)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Organization)
+  R5ResourceType get resourceType;
   Id? get id;
   Meta? get meta;
   FhirUri? get implicitRules;
@@ -5295,8 +5295,8 @@ abstract class $OrganizationCopyWith<$Res> {
           Organization value, $Res Function(Organization) then) =
       _$OrganizationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Organization)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -5374,7 +5374,7 @@ class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -5510,8 +5510,8 @@ abstract class _$OrganizationCopyWith<$Res>
       __$OrganizationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Organization)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -5598,7 +5598,7 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
     return _then(_Organization(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -5654,8 +5654,8 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
 /// @nodoc
 class _$_Organization extends _Organization {
   _$_Organization(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Organization)
-          this.resourceType = R4ResourceType.Organization,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
+          this.resourceType = R5ResourceType.Organization,
       this.id,
       this.meta,
       this.implicitRules,
@@ -5691,8 +5691,8 @@ class _$_Organization extends _Organization {
       _$_$_OrganizationFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.Organization)
-  final R4ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Organization)
+  final R5ResourceType resourceType;
   @override
   final Id? id;
   @override
@@ -5863,8 +5863,8 @@ class _$_Organization extends _Organization {
 abstract class _Organization extends Organization {
   _Organization._() : super._();
   factory _Organization(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Organization)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -5899,8 +5899,8 @@ abstract class _Organization extends Organization {
       _$_Organization.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.Organization)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Organization)
+  R5ResourceType get resourceType;
   @override
   Id? get id;
   @override
@@ -6290,8 +6290,8 @@ class _$OrganizationAffiliationTearOff {
   const _$OrganizationAffiliationTearOff();
 
   _OrganizationAffiliation call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
-          R4ResourceType resourceType = R4ResourceType.OrganizationAffiliation,
+      {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
+          R5ResourceType resourceType = R5ResourceType.OrganizationAffiliation,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -6357,8 +6357,8 @@ const $OrganizationAffiliation = _$OrganizationAffiliationTearOff();
 
 /// @nodoc
 mixin _$OrganizationAffiliation {
-  @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
+  R5ResourceType get resourceType;
   Id? get id;
   Meta? get meta;
   FhirUri? get implicitRules;
@@ -6398,8 +6398,8 @@ abstract class $OrganizationAffiliationCopyWith<$Res> {
           $Res Function(OrganizationAffiliation) then) =
       _$OrganizationAffiliationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -6477,7 +6477,7 @@ class _$OrganizationAffiliationCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -6629,8 +6629,8 @@ abstract class _$OrganizationAffiliationCopyWith<$Res>
       __$OrganizationAffiliationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -6719,7 +6719,7 @@ class __$OrganizationAffiliationCopyWithImpl<$Res>
     return _then(_OrganizationAffiliation(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -6780,8 +6780,8 @@ class __$OrganizationAffiliationCopyWithImpl<$Res>
 /// @nodoc
 class _$_OrganizationAffiliation extends _OrganizationAffiliation {
   _$_OrganizationAffiliation(
-      {@JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
-          this.resourceType = R4ResourceType.OrganizationAffiliation,
+      {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
+          this.resourceType = R5ResourceType.OrganizationAffiliation,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6815,8 +6815,8 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
       _$_$_OrganizationAffiliationFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
-  final R4ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
+  final R5ResourceType resourceType;
   @override
   final Id? id;
   @override
@@ -6987,8 +6987,8 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
 abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   _OrganizationAffiliation._() : super._();
   factory _OrganizationAffiliation(
-      {@JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -7021,8 +7021,8 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
       _$_OrganizationAffiliation.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
+  R5ResourceType get resourceType;
   @override
   Id? get id;
   @override

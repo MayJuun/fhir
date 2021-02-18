@@ -259,7 +259,7 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
     Boolean? actual,
     @JsonKey(name: '_actual') Element? actualElement,
     @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicCombination.unknown)
-        EvidenceVariableCharacteristicCombination characteristicCombination,
+        EvidenceVariableCharacteristicCombination? characteristicCombination,
     @JsonKey(name: '_characteristicCombination')
         Element? characteristicCombinationElement,
     List<EvidenceVariableCharacteristic>? characteristic,

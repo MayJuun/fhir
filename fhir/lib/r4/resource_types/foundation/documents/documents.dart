@@ -877,7 +877,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
     Identifier? masterIdentifier,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-        DocumentManifestStatus status,
+        DocumentManifestStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
     Reference? subject,

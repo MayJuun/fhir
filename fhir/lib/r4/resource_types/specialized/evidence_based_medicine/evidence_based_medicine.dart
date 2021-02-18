@@ -1276,7 +1276,7 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
     List<ContactDetail>? endorser,
     List<RelatedArtifact>? relatedArtifact,
     @JsonKey(unknownEnumValue: EvidenceVariableType.unknown)
-        EvidenceVariableType type,
+        EvidenceVariableType? type,
     @JsonKey(name: '_type') Element? typeElement,
     required List<EvidenceVariableCharacteristic>? characteristic,
   }) = _EvidenceVariable;

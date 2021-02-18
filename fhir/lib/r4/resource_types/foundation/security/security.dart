@@ -1387,7 +1387,7 @@ abstract class ProvenanceEntity implements _$ProvenanceEntity {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ProvenanceEntityRole.unknown)
-        ProvenanceEntityRole role,
+        ProvenanceEntityRole? role,
     @JsonKey(name: '_role') Element? roleElement,
     required Reference? what,
     List<ProvenanceAgent>? agent,

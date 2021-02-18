@@ -682,12 +682,12 @@ abstract class MedicinalProductAuthorization
     Period? dataExclusivityPeriod,
     FhirDateTime? dateOfFirstAuthorization,
     @JsonKey(name: '_dateOfFirstAuthorization')
-        Element dateOfFirstAuthorizationElement,
+        Element? dateOfFirstAuthorizationElement,
     FhirDateTime? internationalBirthDate,
     @JsonKey(name: '_internationalBirthDate')
         Element? internationalBirthDateElement,
     CodeableConcept? legalBasis,
-    List<MedicinalProductAuthorizationJurisdictionalAuthorization>
+    List<MedicinalProductAuthorizationJurisdictionalAuthorization>?
         jurisdictionalAuthorization,
     Reference? holder,
     Reference? regulator,

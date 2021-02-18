@@ -59,7 +59,7 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
     @JsonKey(name: '_caseSensitive') Element? caseSensitiveElement,
     Canonical? valueSet,
     @JsonKey(unknownEnumValue: CodeSystemHierarchyMeaning.unknown)
-        CodeSystemHierarchyMeaning hierarchyMeaning,
+        CodeSystemHierarchyMeaning? hierarchyMeaning,
     @JsonKey(name: '_hierarchyMeaning') Element? hierarchyMeaningElement,
     Boolean? compositional,
     @JsonKey(name: '_compositional') Element? compositionalElement,
@@ -422,7 +422,7 @@ abstract class ConceptMapTarget implements _$ConceptMapTarget {
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
     @JsonKey(unknownEnumValue: ConceptMapTargetRelationship.unknown)
-        ConceptMapTargetRelationship relationship,
+        ConceptMapTargetRelationship? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,

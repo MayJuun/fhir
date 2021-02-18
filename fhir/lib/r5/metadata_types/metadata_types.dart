@@ -252,7 +252,7 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-        RelatedArtifactType type,
+        RelatedArtifactType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? label,
     @JsonKey(name: '_label') Element? labelElement,

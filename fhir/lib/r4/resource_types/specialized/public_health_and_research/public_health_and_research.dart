@@ -461,7 +461,7 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-        ResearchSubjectStatus status,
+        ResearchSubjectStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? period,
     required Reference? study,

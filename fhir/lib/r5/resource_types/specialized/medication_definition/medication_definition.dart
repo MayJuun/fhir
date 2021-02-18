@@ -226,7 +226,7 @@ abstract class ClinicalUseIssue with Resource implements _$ClinicalUseIssue {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: ClinicalUseIssueType.unknown)
-        ClinicalUseIssueType type,
+        ClinicalUseIssueType? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? category,
     List<Reference>? subject,
@@ -767,7 +767,7 @@ abstract class MedicinalProductDefinition
     List<Reference>? clinicalTrial,
     required List<MedicinalProductDefinitionName>? name,
     List<MedicinalProductDefinitionCrossReference>? crossReference,
-    List<MedicinalProductDefinitionManufacturingBusinessOperation>
+    List<MedicinalProductDefinitionManufacturingBusinessOperation>?
         manufacturingBusinessOperation,
   }) = _MedicinalProductDefinition;
 

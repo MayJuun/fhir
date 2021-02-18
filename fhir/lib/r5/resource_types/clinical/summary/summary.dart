@@ -310,7 +310,7 @@ abstract class AllergyIntolerance
     CodeableConcept? clinicalStatus,
     CodeableConcept? verificationStatus,
     @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
-        AllergyIntoleranceType type,
+        AllergyIntoleranceType? type,
     @JsonKey(name: '_type') Element? typeElement,
     List<AllergyIntoleranceCategory>? category,
     @JsonKey(name: '_category') List<Element>? categoryElement,

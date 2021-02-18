@@ -80,7 +80,7 @@ abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationship.unknown)
-        CatalogEntryRelatedEntryRelationship relationship,
+        CatalogEntryRelatedEntryRelationship? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
     required Reference? target,
   }) = _CatalogEntryRelatedEntry;
@@ -122,7 +122,7 @@ abstract class Composition with Resource implements _$Composition {
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     @JsonKey(unknownEnumValue: CompositionStatus.unknown)
-        CompositionStatus status,
+        CompositionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required CodeableConcept? type,
     List<CodeableConcept>? category,

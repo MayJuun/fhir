@@ -346,12 +346,12 @@ abstract class ImmunizationRecommendationRecommendation
     String? series,
     @JsonKey(name: '_series') Element? seriesElement,
     //ToDo
-    String doseNumber,
+    String? doseNumber,
     PositiveInt? doseNumberPositiveInt,
     String? doseNumberString,
     @JsonKey(name: '_doseNumber') Element? doseNumberElement,
     //ToDo
-    String seriesDoses,
+    String? seriesDoses,
     PositiveInt? seriesDosesPositiveInt,
     String? seriesDosesString,
     @JsonKey(name: '_seriesDoses') Element? seriesDosesElement,
@@ -703,7 +703,7 @@ abstract class MedicationDispense
     List<Annotation>? note,
     String? renderedDosageInstruction,
     @JsonKey(name: '_renderedDosageInstruction')
-        Element renderedDosageInstructionElement,
+        Element? renderedDosageInstructionElement,
     List<Dosage>? dosageInstruction,
     MedicationDispenseSubstitution? substitution,
     List<Reference>? detectedIssue,

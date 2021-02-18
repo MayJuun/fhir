@@ -2104,7 +2104,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     @JsonKey(name: '_defaultValueBoolean') Element? defaultValueBooleanElement,
     Canonical? defaultValueCanonical,
     @JsonKey(name: '_defaultValueCanonical')
-        Element defaultValueCanonicalElement,
+        Element? defaultValueCanonicalElement,
     Code? defaultValueCode,
     @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
     Date? defaultValueDate,
@@ -2448,7 +2448,7 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
     Boolean? ordered,
     @JsonKey(name: '_ordered') Element? orderedElement,
     @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
-        ElementDefinitionSlicingRules rules,
+        ElementDefinitionSlicingRules? rules,
     @JsonKey(name: '_rules') Element? rulesElement,
   }) = _ElementDefinitionSlicing;
 

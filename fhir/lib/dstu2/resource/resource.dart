@@ -41,7 +41,7 @@ class Resource {
   String toYaml() => json2yaml(toJson());
 
   /// Returns a Resource, accepts [Yaml String] as an argument
-  static Resource fromYaml(dynamic yaml) => yaml is String
+  static Resource? fromYaml(dynamic yaml) => yaml is String
       ? Resource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Resource.fromJson(jsonDecode(jsonEncode(yaml)))
@@ -65,16 +65,16 @@ class Resource {
     writeNotNull('implicitRules', implicitRules?.toJson());
     writeNotNull('language', language?.toJson());
     writeNotNull('text', text?.toJson());
-    writeNotNull('contained', contained?.map((e) => e?.toJson())?.toList());
-    writeNotNull('extension', extension_?.map((e) => e?.toJson())?.toList());
+    writeNotNull('contained', contained?.map((e) => e.toJson()).toList());
+    writeNotNull('extension', extension_?.map((e) => e.toJson()).toList());
     writeNotNull('modifierExtension',
-        modifierExtension?.map((e) => e?.toJson())?.toList());
+        modifierExtension?.map((e) => e.toJson()).toList());
     return val;
   }
 
   /// Acts like a constructor, returns a [Resource], accepts a
   /// [Map<String, Dyamic] as an argument
-  static Resource fromJson(Map<String, dynamic> json) =>
+  static Resource? fromJson(Map<String, dynamic> json) =>
       _resourceFromJson(json);
 
   /// Updates the [meta] field of this Resource, updates the [lastUpdated], adds

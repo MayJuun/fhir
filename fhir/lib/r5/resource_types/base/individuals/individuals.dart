@@ -340,7 +340,7 @@ abstract class PersonLink implements _$PersonLink {
     List<FhirExtension>? modifierExtension,
     required Reference? target,
     @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-        PersonLinkAssurance assurance,
+        PersonLinkAssurance? assurance,
     @JsonKey(name: '_assurance') Element? assuranceElement,
   }) = _PersonLink;
 

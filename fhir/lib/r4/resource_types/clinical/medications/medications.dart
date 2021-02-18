@@ -2210,7 +2210,7 @@ abstract class MedicationKnowledge
     Quantity? amount,
     List<String>? synonym,
     @JsonKey(name: '_synonym') List<Element>? synonymElement,
-    List<MedicationKnowledgeRelatedMedicationKnowledge>
+    List<MedicationKnowledgeRelatedMedicationKnowledge>?
         relatedMedicationKnowledge,
     List<Reference>? associatedMedication,
     List<CodeableConcept>? productType,

@@ -233,7 +233,7 @@ abstract class EncounterLocation implements _$EncounterLocation {
     List<FhirExtension>? modifierExtension,
     required Reference? location,
     @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
-        EncounterLocationStatus status,
+        EncounterLocationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? physicalType,
     Period? period,

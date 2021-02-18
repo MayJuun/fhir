@@ -87,11 +87,11 @@ abstract class AppointmentParticipant implements _$AppointmentParticipant {
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
     Reference? actor,
-    @JsonKey(unknownEnumValue: AppointmentParticipantRequired.unknown)
-        AppointmentParticipantRequired required,
+    @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+        AppointmentParticipantRequired? required_,
     @JsonKey(name: '_required') Element? requiredElement,
     @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-        AppointmentParticipantStatus status,
+        AppointmentParticipantStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? period,
   }) = _AppointmentParticipant;

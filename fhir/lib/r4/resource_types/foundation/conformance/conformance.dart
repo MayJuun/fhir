@@ -2943,7 +2943,7 @@ abstract class GraphDefinitionCompartment
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     @JsonKey(unknownEnumValue: GraphDefinitionCompartmentRule.unknown)
-        GraphDefinitionCompartmentRule rule,
+        GraphDefinitionCompartmentRule? rule,
     @JsonKey(name: '_rule') Element? ruleElement,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
@@ -4319,7 +4319,7 @@ abstract class MessageDefinition with Resource implements _$MessageDefinition {
     @JsonKey(name: '_category') Element? categoryElement,
     List<MessageDefinitionFocus>? focus,
     @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
-        MessageDefinitionResponseRequired responseRequired,
+        MessageDefinitionResponseRequired? responseRequired,
     @JsonKey(name: '_responseRequired') Element? responseRequiredElement,
     List<MessageDefinitionAllowedResponse>? allowedResponse,
     List<Canonical>? graph,

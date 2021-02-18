@@ -17,8 +17,8 @@ class _$AccountTearOff {
   const _$AccountTearOff();
 
   _Account call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Account)
-          R4ResourceType resourceType = R4ResourceType.Account,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Account)
+          R5ResourceType resourceType = R5ResourceType.Account,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -89,8 +89,8 @@ const $Account = _$AccountTearOff();
 
 /// @nodoc
 mixin _$Account {
-  @JsonKey(unknownEnumValue: R4ResourceType.Account)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Account)
+  R5ResourceType get resourceType;
   Id? get id;
   Meta? get meta;
   FhirUri? get implicitRules;
@@ -133,8 +133,8 @@ abstract class $AccountCopyWith<$Res> {
   factory $AccountCopyWith(Account value, $Res Function(Account) then) =
       _$AccountCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Account)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Account)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -219,7 +219,7 @@ class _$AccountCopyWithImpl<$Res> implements $AccountCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -402,8 +402,8 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       __$AccountCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Account)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Account)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -500,7 +500,7 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
     return _then(_Account(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -561,8 +561,8 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
 /// @nodoc
 class _$_Account extends _Account {
   _$_Account(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Account)
-          this.resourceType = R4ResourceType.Account,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Account)
+          this.resourceType = R5ResourceType.Account,
       this.id,
       this.meta,
       this.implicitRules,
@@ -600,8 +600,8 @@ class _$_Account extends _Account {
       _$_$_AccountFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.Account)
-  final R4ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Account)
+  final R5ResourceType resourceType;
   @override
   final Id? id;
   @override
@@ -779,8 +779,8 @@ class _$_Account extends _Account {
 abstract class _Account extends Account {
   _Account._() : super._();
   factory _Account(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Account)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Account)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -816,8 +816,8 @@ abstract class _Account extends Account {
   factory _Account.fromJson(Map<String, dynamic> json) = _$_Account.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.Account)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Account)
+  R5ResourceType get resourceType;
   @override
   Id? get id;
   @override
@@ -1506,8 +1506,8 @@ class _$ChargeItemTearOff {
   const _$ChargeItemTearOff();
 
   _ChargeItem call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
-          R4ResourceType resourceType = R4ResourceType.ChargeItem,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ChargeItem)
+          R5ResourceType resourceType = R5ResourceType.ChargeItem,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -1623,8 +1623,8 @@ const $ChargeItem = _$ChargeItemTearOff();
 
 /// @nodoc
 mixin _$ChargeItem {
-  @JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.ChargeItem)
+  R5ResourceType get resourceType;
   Id? get id;
   Meta? get meta;
   FhirUri? get implicitRules;
@@ -1692,8 +1692,8 @@ abstract class $ChargeItemCopyWith<$Res> {
           ChargeItem value, $Res Function(ChargeItem) then) =
       _$ChargeItemCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ChargeItem)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -1834,7 +1834,7 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -2196,8 +2196,8 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
       __$ChargeItemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ChargeItem)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -2362,7 +2362,7 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
     return _then(_ChargeItem(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -2479,8 +2479,8 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
 /// @nodoc
 class _$_ChargeItem extends _ChargeItem {
   _$_ChargeItem(
-      {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
-          this.resourceType = R4ResourceType.ChargeItem,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ChargeItem)
+          this.resourceType = R5ResourceType.ChargeItem,
       this.id,
       this.meta,
       this.implicitRules,
@@ -2542,8 +2542,8 @@ class _$_ChargeItem extends _ChargeItem {
       _$_$_ChargeItemFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
-  final R4ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.ChargeItem)
+  final R5ResourceType resourceType;
   @override
   final Id? id;
   @override
@@ -2808,8 +2808,8 @@ class _$_ChargeItem extends _ChargeItem {
 abstract class _ChargeItem extends ChargeItem {
   _ChargeItem._() : super._();
   factory _ChargeItem(
-      {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ChargeItem)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -2870,8 +2870,8 @@ abstract class _ChargeItem extends ChargeItem {
       _$_ChargeItem.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.ChargeItem)
+  R5ResourceType get resourceType;
   @override
   Id? get id;
   @override
@@ -3255,8 +3255,8 @@ class _$ChargeItemDefinitionTearOff {
   const _$ChargeItemDefinitionTearOff();
 
   _ChargeItemDefinition call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
-          R4ResourceType resourceType = R4ResourceType.ChargeItemDefinition,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ChargeItemDefinition)
+          R5ResourceType resourceType = R5ResourceType.ChargeItemDefinition,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -3277,14 +3277,12 @@ class _$ChargeItemDefinitionTearOff {
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
+      String? name,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      List<FhirUri>? derivedFromUri,
-      @JsonKey(name: '_derivedFromUri')
-          List<Element>? derivedFromUriElement,
-      List<Canonical>? partOf,
-      List<Canonical>? replaces,
       @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
           ChargeItemDefinitionStatus? status,
       @JsonKey(name: '_status')
@@ -3304,6 +3302,9 @@ class _$ChargeItemDefinitionTearOff {
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
+      Markdown? purpose,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
@@ -3314,6 +3315,11 @@ class _$ChargeItemDefinitionTearOff {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
+      List<FhirUri>? derivedFromUri,
+      @JsonKey(name: '_derivedFromUri')
+          List<Element>? derivedFromUriElement,
+      List<Canonical>? partOf,
+      List<Canonical>? replaces,
       CodeableConcept? code,
       List<Reference>? instance,
       List<ChargeItemDefinitionApplicability>? applicability,
@@ -3335,12 +3341,10 @@ class _$ChargeItemDefinitionTearOff {
       identifier: identifier,
       version: version,
       versionElement: versionElement,
+      name: name,
+      nameElement: nameElement,
       title: title,
       titleElement: titleElement,
-      derivedFromUri: derivedFromUri,
-      derivedFromUriElement: derivedFromUriElement,
-      partOf: partOf,
-      replaces: replaces,
       status: status,
       statusElement: statusElement,
       experimental: experimental,
@@ -3354,6 +3358,8 @@ class _$ChargeItemDefinitionTearOff {
       descriptionElement: descriptionElement,
       useContext: useContext,
       jurisdiction: jurisdiction,
+      purpose: purpose,
+      purposeElement: purposeElement,
       copyright: copyright,
       copyrightElement: copyrightElement,
       approvalDate: approvalDate,
@@ -3361,6 +3367,10 @@ class _$ChargeItemDefinitionTearOff {
       lastReviewDate: lastReviewDate,
       lastReviewDateElement: lastReviewDateElement,
       effectivePeriod: effectivePeriod,
+      derivedFromUri: derivedFromUri,
+      derivedFromUriElement: derivedFromUriElement,
+      partOf: partOf,
+      replaces: replaces,
       code: code,
       instance: instance,
       applicability: applicability,
@@ -3378,8 +3388,8 @@ const $ChargeItemDefinition = _$ChargeItemDefinitionTearOff();
 
 /// @nodoc
 mixin _$ChargeItemDefinition {
-  @JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.ChargeItemDefinition)
+  R5ResourceType get resourceType;
   Id? get id;
   Meta? get meta;
   FhirUri? get implicitRules;
@@ -3400,14 +3410,12 @@ mixin _$ChargeItemDefinition {
   String? get version;
   @JsonKey(name: '_version')
   Element? get versionElement;
+  String? get name;
+  @JsonKey(name: '_name')
+  Element? get nameElement;
   String? get title;
   @JsonKey(name: '_title')
   Element? get titleElement;
-  List<FhirUri>? get derivedFromUri;
-  @JsonKey(name: '_derivedFromUri')
-  List<Element>? get derivedFromUriElement;
-  List<Canonical>? get partOf;
-  List<Canonical>? get replaces;
   @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
   ChargeItemDefinitionStatus? get status;
   @JsonKey(name: '_status')
@@ -3427,6 +3435,9 @@ mixin _$ChargeItemDefinition {
   Element? get descriptionElement;
   List<UsageContext>? get useContext;
   List<CodeableConcept>? get jurisdiction;
+  Markdown? get purpose;
+  @JsonKey(name: '_purpose')
+  Element? get purposeElement;
   Markdown? get copyright;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
@@ -3437,6 +3448,11 @@ mixin _$ChargeItemDefinition {
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   Period? get effectivePeriod;
+  List<FhirUri>? get derivedFromUri;
+  @JsonKey(name: '_derivedFromUri')
+  List<Element>? get derivedFromUriElement;
+  List<Canonical>? get partOf;
+  List<Canonical>? get replaces;
   CodeableConcept? get code;
   List<Reference>? get instance;
   List<ChargeItemDefinitionApplicability>? get applicability;
@@ -3453,8 +3469,8 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
           $Res Function(ChargeItemDefinition) then) =
       _$ChargeItemDefinitionCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ChargeItemDefinition)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -3475,14 +3491,12 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
+      String? name,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      List<FhirUri>? derivedFromUri,
-      @JsonKey(name: '_derivedFromUri')
-          List<Element>? derivedFromUriElement,
-      List<Canonical>? partOf,
-      List<Canonical>? replaces,
       @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
           ChargeItemDefinitionStatus? status,
       @JsonKey(name: '_status')
@@ -3502,6 +3516,9 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
+      Markdown? purpose,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
@@ -3512,6 +3529,11 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
+      List<FhirUri>? derivedFromUri,
+      @JsonKey(name: '_derivedFromUri')
+          List<Element>? derivedFromUriElement,
+      List<Canonical>? partOf,
+      List<Canonical>? replaces,
       CodeableConcept? code,
       List<Reference>? instance,
       List<ChargeItemDefinitionApplicability>? applicability,
@@ -3523,12 +3545,14 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get urlElement;
   $ElementCopyWith<$Res>? get versionElement;
+  $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get titleElement;
   $ElementCopyWith<$Res>? get statusElement;
   $ElementCopyWith<$Res>? get experimentalElement;
   $ElementCopyWith<$Res>? get dateElement;
   $ElementCopyWith<$Res>? get publisherElement;
   $ElementCopyWith<$Res>? get descriptionElement;
+  $ElementCopyWith<$Res>? get purposeElement;
   $ElementCopyWith<$Res>? get copyrightElement;
   $ElementCopyWith<$Res>? get approvalDateElement;
   $ElementCopyWith<$Res>? get lastReviewDateElement;
@@ -3563,12 +3587,10 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
     Object? identifier = freezed,
     Object? version = freezed,
     Object? versionElement = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
     Object? title = freezed,
     Object? titleElement = freezed,
-    Object? derivedFromUri = freezed,
-    Object? derivedFromUriElement = freezed,
-    Object? partOf = freezed,
-    Object? replaces = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? experimental = freezed,
@@ -3582,6 +3604,8 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
     Object? useContext = freezed,
     Object? jurisdiction = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
     Object? approvalDate = freezed,
@@ -3589,6 +3613,10 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
     Object? lastReviewDate = freezed,
     Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
+    Object? derivedFromUri = freezed,
+    Object? derivedFromUriElement = freezed,
+    Object? partOf = freezed,
+    Object? replaces = freezed,
     Object? code = freezed,
     Object? instance = freezed,
     Object? applicability = freezed,
@@ -3597,7 +3625,7 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -3630,19 +3658,13 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
       versionElement: versionElement == freezed
           ? _value.versionElement
           : versionElement as Element?,
+      name: name == freezed ? _value.name : name as String?,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element?,
       title: title == freezed ? _value.title : title as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
           : titleElement as Element?,
-      derivedFromUri: derivedFromUri == freezed
-          ? _value.derivedFromUri
-          : derivedFromUri as List<FhirUri>?,
-      derivedFromUriElement: derivedFromUriElement == freezed
-          ? _value.derivedFromUriElement
-          : derivedFromUriElement as List<Element>?,
-      partOf: partOf == freezed ? _value.partOf : partOf as List<Canonical>?,
-      replaces:
-          replaces == freezed ? _value.replaces : replaces as List<Canonical>?,
       status: status == freezed
           ? _value.status
           : status as ChargeItemDefinitionStatus?,
@@ -3676,6 +3698,10 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
           : jurisdiction as List<CodeableConcept>?,
+      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element?,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown?,
       copyrightElement: copyrightElement == freezed
@@ -3695,6 +3721,15 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period?,
+      derivedFromUri: derivedFromUri == freezed
+          ? _value.derivedFromUri
+          : derivedFromUri as List<FhirUri>?,
+      derivedFromUriElement: derivedFromUriElement == freezed
+          ? _value.derivedFromUriElement
+          : derivedFromUriElement as List<Element>?,
+      partOf: partOf == freezed ? _value.partOf : partOf as List<Canonical>?,
+      replaces:
+          replaces == freezed ? _value.replaces : replaces as List<Canonical>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       instance:
           instance == freezed ? _value.instance : instance as List<Reference>?,
@@ -3774,6 +3809,17 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $ElementCopyWith<$Res>? get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
+      return _then(_value.copyWith(nameElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res>? get titleElement {
     if (_value.titleElement == null) {
       return null;
@@ -3836,6 +3882,17 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
 
     return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
       return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get purposeElement {
+    if (_value.purposeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.purposeElement!, (value) {
+      return _then(_value.copyWith(purposeElement: value));
     });
   }
 
@@ -3903,8 +3960,8 @@ abstract class _$ChargeItemDefinitionCopyWith<$Res>
       __$ChargeItemDefinitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ChargeItemDefinition)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -3925,14 +3982,12 @@ abstract class _$ChargeItemDefinitionCopyWith<$Res>
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
+      String? name,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      List<FhirUri>? derivedFromUri,
-      @JsonKey(name: '_derivedFromUri')
-          List<Element>? derivedFromUriElement,
-      List<Canonical>? partOf,
-      List<Canonical>? replaces,
       @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
           ChargeItemDefinitionStatus? status,
       @JsonKey(name: '_status')
@@ -3952,6 +4007,9 @@ abstract class _$ChargeItemDefinitionCopyWith<$Res>
           Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
+      Markdown? purpose,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
@@ -3962,6 +4020,11 @@ abstract class _$ChargeItemDefinitionCopyWith<$Res>
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
+      List<FhirUri>? derivedFromUri,
+      @JsonKey(name: '_derivedFromUri')
+          List<Element>? derivedFromUriElement,
+      List<Canonical>? partOf,
+      List<Canonical>? replaces,
       CodeableConcept? code,
       List<Reference>? instance,
       List<ChargeItemDefinitionApplicability>? applicability,
@@ -3980,6 +4043,8 @@ abstract class _$ChargeItemDefinitionCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get versionElement;
   @override
+  $ElementCopyWith<$Res>? get nameElement;
+  @override
   $ElementCopyWith<$Res>? get titleElement;
   @override
   $ElementCopyWith<$Res>? get statusElement;
@@ -3991,6 +4056,8 @@ abstract class _$ChargeItemDefinitionCopyWith<$Res>
   $ElementCopyWith<$Res>? get publisherElement;
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
+  @override
+  $ElementCopyWith<$Res>? get purposeElement;
   @override
   $ElementCopyWith<$Res>? get copyrightElement;
   @override
@@ -4032,12 +4099,10 @@ class __$ChargeItemDefinitionCopyWithImpl<$Res>
     Object? identifier = freezed,
     Object? version = freezed,
     Object? versionElement = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
     Object? title = freezed,
     Object? titleElement = freezed,
-    Object? derivedFromUri = freezed,
-    Object? derivedFromUriElement = freezed,
-    Object? partOf = freezed,
-    Object? replaces = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
     Object? experimental = freezed,
@@ -4051,6 +4116,8 @@ class __$ChargeItemDefinitionCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
     Object? useContext = freezed,
     Object? jurisdiction = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
     Object? approvalDate = freezed,
@@ -4058,6 +4125,10 @@ class __$ChargeItemDefinitionCopyWithImpl<$Res>
     Object? lastReviewDate = freezed,
     Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
+    Object? derivedFromUri = freezed,
+    Object? derivedFromUriElement = freezed,
+    Object? partOf = freezed,
+    Object? replaces = freezed,
     Object? code = freezed,
     Object? instance = freezed,
     Object? applicability = freezed,
@@ -4066,7 +4137,7 @@ class __$ChargeItemDefinitionCopyWithImpl<$Res>
     return _then(_ChargeItemDefinition(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -4099,19 +4170,13 @@ class __$ChargeItemDefinitionCopyWithImpl<$Res>
       versionElement: versionElement == freezed
           ? _value.versionElement
           : versionElement as Element?,
+      name: name == freezed ? _value.name : name as String?,
+      nameElement:
+          nameElement == freezed ? _value.nameElement : nameElement as Element?,
       title: title == freezed ? _value.title : title as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
           : titleElement as Element?,
-      derivedFromUri: derivedFromUri == freezed
-          ? _value.derivedFromUri
-          : derivedFromUri as List<FhirUri>?,
-      derivedFromUriElement: derivedFromUriElement == freezed
-          ? _value.derivedFromUriElement
-          : derivedFromUriElement as List<Element>?,
-      partOf: partOf == freezed ? _value.partOf : partOf as List<Canonical>?,
-      replaces:
-          replaces == freezed ? _value.replaces : replaces as List<Canonical>?,
       status: status == freezed
           ? _value.status
           : status as ChargeItemDefinitionStatus?,
@@ -4145,6 +4210,10 @@ class __$ChargeItemDefinitionCopyWithImpl<$Res>
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
           : jurisdiction as List<CodeableConcept>?,
+      purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
+      purposeElement: purposeElement == freezed
+          ? _value.purposeElement
+          : purposeElement as Element?,
       copyright:
           copyright == freezed ? _value.copyright : copyright as Markdown?,
       copyrightElement: copyrightElement == freezed
@@ -4164,6 +4233,15 @@ class __$ChargeItemDefinitionCopyWithImpl<$Res>
       effectivePeriod: effectivePeriod == freezed
           ? _value.effectivePeriod
           : effectivePeriod as Period?,
+      derivedFromUri: derivedFromUri == freezed
+          ? _value.derivedFromUri
+          : derivedFromUri as List<FhirUri>?,
+      derivedFromUriElement: derivedFromUriElement == freezed
+          ? _value.derivedFromUriElement
+          : derivedFromUriElement as List<Element>?,
+      partOf: partOf == freezed ? _value.partOf : partOf as List<Canonical>?,
+      replaces:
+          replaces == freezed ? _value.replaces : replaces as List<Canonical>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       instance:
           instance == freezed ? _value.instance : instance as List<Reference>?,
@@ -4182,8 +4260,8 @@ class __$ChargeItemDefinitionCopyWithImpl<$Res>
 /// @nodoc
 class _$_ChargeItemDefinition extends _ChargeItemDefinition {
   _$_ChargeItemDefinition(
-      {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
-          this.resourceType = R4ResourceType.ChargeItemDefinition,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ChargeItemDefinition)
+          this.resourceType = R5ResourceType.ChargeItemDefinition,
       this.id,
       this.meta,
       this.implicitRules,
@@ -4204,14 +4282,12 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
       this.version,
       @JsonKey(name: '_version')
           this.versionElement,
+      this.name,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.derivedFromUri,
-      @JsonKey(name: '_derivedFromUri')
-          this.derivedFromUriElement,
-      this.partOf,
-      this.replaces,
       @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
           this.status,
       @JsonKey(name: '_status')
@@ -4231,6 +4307,9 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
           this.descriptionElement,
       this.useContext,
       this.jurisdiction,
+      this.purpose,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
@@ -4241,6 +4320,11 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
+      this.derivedFromUri,
+      @JsonKey(name: '_derivedFromUri')
+          this.derivedFromUriElement,
+      this.partOf,
+      this.replaces,
       this.code,
       this.instance,
       this.applicability,
@@ -4251,8 +4335,8 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
       _$_$_ChargeItemDefinitionFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
-  final R4ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.ChargeItemDefinition)
+  final R5ResourceType resourceType;
   @override
   final Id? id;
   @override
@@ -4289,19 +4373,15 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
   @JsonKey(name: '_version')
   final Element? versionElement;
   @override
+  final String? name;
+  @override
+  @JsonKey(name: '_name')
+  final Element? nameElement;
+  @override
   final String? title;
   @override
   @JsonKey(name: '_title')
   final Element? titleElement;
-  @override
-  final List<FhirUri>? derivedFromUri;
-  @override
-  @JsonKey(name: '_derivedFromUri')
-  final List<Element>? derivedFromUriElement;
-  @override
-  final List<Canonical>? partOf;
-  @override
-  final List<Canonical>? replaces;
   @override
   @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
   final ChargeItemDefinitionStatus? status;
@@ -4335,6 +4415,11 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
   @override
   final List<CodeableConcept>? jurisdiction;
   @override
+  final Markdown? purpose;
+  @override
+  @JsonKey(name: '_purpose')
+  final Element? purposeElement;
+  @override
   final Markdown? copyright;
   @override
   @JsonKey(name: '_copyright')
@@ -4352,6 +4437,15 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
   @override
   final Period? effectivePeriod;
   @override
+  final List<FhirUri>? derivedFromUri;
+  @override
+  @JsonKey(name: '_derivedFromUri')
+  final List<Element>? derivedFromUriElement;
+  @override
+  final List<Canonical>? partOf;
+  @override
+  final List<Canonical>? replaces;
+  @override
   final CodeableConcept? code;
   @override
   final List<Reference>? instance;
@@ -4362,7 +4456,7 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
 
   @override
   String toString() {
-    return 'ChargeItemDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, title: $title, titleElement: $titleElement, derivedFromUri: $derivedFromUri, derivedFromUriElement: $derivedFromUriElement, partOf: $partOf, replaces: $replaces, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, code: $code, instance: $instance, applicability: $applicability, propertyGroup: $propertyGroup)';
+    return 'ChargeItemDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, derivedFromUri: $derivedFromUri, derivedFromUriElement: $derivedFromUriElement, partOf: $partOf, replaces: $replaces, code: $code, instance: $instance, applicability: $applicability, propertyGroup: $propertyGroup)';
   }
 
   @override
@@ -4413,32 +4507,31 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
             (identical(other.versionElement, versionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.versionElement, versionElement)) &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.nameElement, nameElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.nameElement, nameElement)) &&
             (identical(other.title, title) ||
                 const DeepCollectionEquality().equals(other.title, title)) &&
             (identical(other.titleElement, titleElement) ||
                 const DeepCollectionEquality()
                     .equals(other.titleElement, titleElement)) &&
-            (identical(other.derivedFromUri, derivedFromUri) ||
-                const DeepCollectionEquality()
-                    .equals(other.derivedFromUri, derivedFromUri)) &&
-            (identical(other.derivedFromUriElement, derivedFromUriElement) ||
-                const DeepCollectionEquality().equals(
-                    other.derivedFromUriElement, derivedFromUriElement)) &&
-            (identical(other.partOf, partOf) ||
-                const DeepCollectionEquality().equals(other.partOf, partOf)) &&
-            (identical(other.replaces, replaces) ||
-                const DeepCollectionEquality()
-                    .equals(other.replaces, replaces)) &&
             (identical(other.status, status) ||
                 const DeepCollectionEquality().equals(other.status, status)) &&
             (identical(other.statusElement, statusElement) ||
                 const DeepCollectionEquality()
                     .equals(other.statusElement, statusElement)) &&
             (identical(other.experimental, experimental) ||
-                const DeepCollectionEquality().equals(other.experimental, experimental)) &&
-            (identical(other.experimentalElement, experimentalElement) || const DeepCollectionEquality().equals(other.experimentalElement, experimentalElement)) &&
-            (identical(other.date, date) || const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.dateElement, dateElement) || const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
+                const DeepCollectionEquality()
+                    .equals(other.experimental, experimental)) &&
+            (identical(other.experimentalElement, experimentalElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.experimentalElement, experimentalElement)) &&
+            (identical(other.date, date) ||
+                const DeepCollectionEquality().equals(other.date, date)) &&
+            (identical(other.dateElement, dateElement) ||
+                const DeepCollectionEquality().equals(other.dateElement, dateElement)) &&
             (identical(other.publisher, publisher) || const DeepCollectionEquality().equals(other.publisher, publisher)) &&
             (identical(other.publisherElement, publisherElement) || const DeepCollectionEquality().equals(other.publisherElement, publisherElement)) &&
             (identical(other.contact, contact) || const DeepCollectionEquality().equals(other.contact, contact)) &&
@@ -4446,6 +4539,8 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
             (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
             (identical(other.useContext, useContext) || const DeepCollectionEquality().equals(other.useContext, useContext)) &&
             (identical(other.jurisdiction, jurisdiction) || const DeepCollectionEquality().equals(other.jurisdiction, jurisdiction)) &&
+            (identical(other.purpose, purpose) || const DeepCollectionEquality().equals(other.purpose, purpose)) &&
+            (identical(other.purposeElement, purposeElement) || const DeepCollectionEquality().equals(other.purposeElement, purposeElement)) &&
             (identical(other.copyright, copyright) || const DeepCollectionEquality().equals(other.copyright, copyright)) &&
             (identical(other.copyrightElement, copyrightElement) || const DeepCollectionEquality().equals(other.copyrightElement, copyrightElement)) &&
             (identical(other.approvalDate, approvalDate) || const DeepCollectionEquality().equals(other.approvalDate, approvalDate)) &&
@@ -4453,6 +4548,10 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
             (identical(other.lastReviewDate, lastReviewDate) || const DeepCollectionEquality().equals(other.lastReviewDate, lastReviewDate)) &&
             (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
             (identical(other.effectivePeriod, effectivePeriod) || const DeepCollectionEquality().equals(other.effectivePeriod, effectivePeriod)) &&
+            (identical(other.derivedFromUri, derivedFromUri) || const DeepCollectionEquality().equals(other.derivedFromUri, derivedFromUri)) &&
+            (identical(other.derivedFromUriElement, derivedFromUriElement) || const DeepCollectionEquality().equals(other.derivedFromUriElement, derivedFromUriElement)) &&
+            (identical(other.partOf, partOf) || const DeepCollectionEquality().equals(other.partOf, partOf)) &&
+            (identical(other.replaces, replaces) || const DeepCollectionEquality().equals(other.replaces, replaces)) &&
             (identical(other.code, code) || const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.instance, instance) || const DeepCollectionEquality().equals(other.instance, instance)) &&
             (identical(other.applicability, applicability) || const DeepCollectionEquality().equals(other.applicability, applicability)) &&
@@ -4478,12 +4577,10 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
       const DeepCollectionEquality().hash(identifier) ^
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(versionElement) ^
+      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(nameElement) ^
       const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(titleElement) ^
-      const DeepCollectionEquality().hash(derivedFromUri) ^
-      const DeepCollectionEquality().hash(derivedFromUriElement) ^
-      const DeepCollectionEquality().hash(partOf) ^
-      const DeepCollectionEquality().hash(replaces) ^
       const DeepCollectionEquality().hash(status) ^
       const DeepCollectionEquality().hash(statusElement) ^
       const DeepCollectionEquality().hash(experimental) ^
@@ -4497,6 +4594,8 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(useContext) ^
       const DeepCollectionEquality().hash(jurisdiction) ^
+      const DeepCollectionEquality().hash(purpose) ^
+      const DeepCollectionEquality().hash(purposeElement) ^
       const DeepCollectionEquality().hash(copyright) ^
       const DeepCollectionEquality().hash(copyrightElement) ^
       const DeepCollectionEquality().hash(approvalDate) ^
@@ -4504,6 +4603,10 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
       const DeepCollectionEquality().hash(lastReviewDate) ^
       const DeepCollectionEquality().hash(lastReviewDateElement) ^
       const DeepCollectionEquality().hash(effectivePeriod) ^
+      const DeepCollectionEquality().hash(derivedFromUri) ^
+      const DeepCollectionEquality().hash(derivedFromUriElement) ^
+      const DeepCollectionEquality().hash(partOf) ^
+      const DeepCollectionEquality().hash(replaces) ^
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(instance) ^
       const DeepCollectionEquality().hash(applicability) ^
@@ -4524,8 +4627,8 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
 abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   _ChargeItemDefinition._() : super._();
   factory _ChargeItemDefinition(
-          {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
-              R4ResourceType resourceType,
+          {@JsonKey(unknownEnumValue: R5ResourceType.ChargeItemDefinition)
+              R5ResourceType resourceType,
           Id? id,
           Meta? meta,
           FhirUri? implicitRules,
@@ -4546,14 +4649,12 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
           String? version,
           @JsonKey(name: '_version')
               Element? versionElement,
+          String? name,
+          @JsonKey(name: '_name')
+              Element? nameElement,
           String? title,
           @JsonKey(name: '_title')
               Element? titleElement,
-          List<FhirUri>? derivedFromUri,
-          @JsonKey(name: '_derivedFromUri')
-              List<Element>? derivedFromUriElement,
-          List<Canonical>? partOf,
-          List<Canonical>? replaces,
           @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
               ChargeItemDefinitionStatus? status,
           @JsonKey(name: '_status')
@@ -4573,6 +4674,9 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
               Element? descriptionElement,
           List<UsageContext>? useContext,
           List<CodeableConcept>? jurisdiction,
+          Markdown? purpose,
+          @JsonKey(name: '_purpose')
+              Element? purposeElement,
           Markdown? copyright,
           @JsonKey(name: '_copyright')
               Element? copyrightElement,
@@ -4583,6 +4687,11 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
           @JsonKey(name: '_lastReviewDate')
               Element? lastReviewDateElement,
           Period? effectivePeriod,
+          List<FhirUri>? derivedFromUri,
+          @JsonKey(name: '_derivedFromUri')
+              List<Element>? derivedFromUriElement,
+          List<Canonical>? partOf,
+          List<Canonical>? replaces,
           CodeableConcept? code,
           List<Reference>? instance,
           List<ChargeItemDefinitionApplicability>? applicability,
@@ -4593,8 +4702,8 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
       _$_ChargeItemDefinition.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.ChargeItemDefinition)
+  R5ResourceType get resourceType;
   @override
   Id? get id;
   @override
@@ -4631,19 +4740,15 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   @JsonKey(name: '_version')
   Element? get versionElement;
   @override
+  String? get name;
+  @override
+  @JsonKey(name: '_name')
+  Element? get nameElement;
+  @override
   String? get title;
   @override
   @JsonKey(name: '_title')
   Element? get titleElement;
-  @override
-  List<FhirUri>? get derivedFromUri;
-  @override
-  @JsonKey(name: '_derivedFromUri')
-  List<Element>? get derivedFromUriElement;
-  @override
-  List<Canonical>? get partOf;
-  @override
-  List<Canonical>? get replaces;
   @override
   @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
   ChargeItemDefinitionStatus? get status;
@@ -4677,6 +4782,11 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   @override
   List<CodeableConcept>? get jurisdiction;
   @override
+  Markdown? get purpose;
+  @override
+  @JsonKey(name: '_purpose')
+  Element? get purposeElement;
+  @override
   Markdown? get copyright;
   @override
   @JsonKey(name: '_copyright')
@@ -4693,6 +4803,15 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   Element? get lastReviewDateElement;
   @override
   Period? get effectivePeriod;
+  @override
+  List<FhirUri>? get derivedFromUri;
+  @override
+  @JsonKey(name: '_derivedFromUri')
+  List<Element>? get derivedFromUriElement;
+  @override
+  List<Canonical>? get partOf;
+  @override
+  List<Canonical>? get replaces;
   @override
   CodeableConcept? get code;
   @override
@@ -5765,8 +5884,8 @@ class _$ContractTearOff {
   const _$ContractTearOff();
 
   _Contract call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Contract)
-          R4ResourceType resourceType = R4ResourceType.Contract,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Contract)
+          R5ResourceType resourceType = R5ResourceType.Contract,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -5902,8 +6021,8 @@ const $Contract = _$ContractTearOff();
 
 /// @nodoc
 mixin _$Contract {
-  @JsonKey(unknownEnumValue: R4ResourceType.Contract)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Contract)
+  R5ResourceType get resourceType;
   Id? get id;
   Meta? get meta;
   FhirUri? get implicitRules;
@@ -5981,8 +6100,8 @@ abstract class $ContractCopyWith<$Res> {
   factory $ContractCopyWith(Contract value, $Res Function(Contract) then) =
       _$ContractCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Contract)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Contract)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -6146,7 +6265,7 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -6550,8 +6669,8 @@ abstract class _$ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
       __$ContractCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Contract)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Contract)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -6741,7 +6860,7 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
     return _then(_Contract(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -6867,8 +6986,8 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
 /// @nodoc
 class _$_Contract extends _Contract {
   _$_Contract(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Contract)
-          this.resourceType = R4ResourceType.Contract,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Contract)
+          this.resourceType = R5ResourceType.Contract,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6941,8 +7060,8 @@ class _$_Contract extends _Contract {
       _$_$_ContractFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.Contract)
-  final R4ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Contract)
+  final R5ResourceType resourceType;
   @override
   final Id? id;
   @override
@@ -7245,8 +7364,8 @@ class _$_Contract extends _Contract {
 abstract class _Contract extends Contract {
   _Contract._() : super._();
   factory _Contract(
-      {@JsonKey(unknownEnumValue: R4ResourceType.Contract)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Contract)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -7317,8 +7436,8 @@ abstract class _Contract extends Contract {
   factory _Contract.fromJson(Map<String, dynamic> json) = _$_Contract.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.Contract)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.Contract)
+  R5ResourceType get resourceType;
   @override
   Id? get id;
   @override
@@ -12492,11 +12611,7 @@ class _$ContractActionTearOff {
       List<String>? performerLinkId,
       @JsonKey(name: '_performerLinkId')
           List<Element>? performerLinkIdElement,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<String>? reason,
-      @JsonKey(name: '_reason')
-          List<Element>? reasonElement,
+      List<CodeableReference>? reason,
       List<String>? reasonLinkId,
       @JsonKey(name: '_reasonLinkId')
           List<Element>? reasonLinkIdElement,
@@ -12531,10 +12646,7 @@ class _$ContractActionTearOff {
       performer: performer,
       performerLinkId: performerLinkId,
       performerLinkIdElement: performerLinkIdElement,
-      reasonCode: reasonCode,
-      reasonReference: reasonReference,
       reason: reason,
-      reasonElement: reasonElement,
       reasonLinkId: reasonLinkId,
       reasonLinkIdElement: reasonLinkIdElement,
       note: note,
@@ -12586,11 +12698,7 @@ mixin _$ContractAction {
   List<String>? get performerLinkId;
   @JsonKey(name: '_performerLinkId')
   List<Element>? get performerLinkIdElement;
-  List<CodeableConcept>? get reasonCode;
-  List<Reference>? get reasonReference;
-  List<String>? get reason;
-  @JsonKey(name: '_reason')
-  List<Element>? get reasonElement;
+  List<CodeableReference>? get reason;
   List<String>? get reasonLinkId;
   @JsonKey(name: '_reasonLinkId')
   List<Element>? get reasonLinkIdElement;
@@ -12643,11 +12751,7 @@ abstract class $ContractActionCopyWith<$Res> {
       List<String>? performerLinkId,
       @JsonKey(name: '_performerLinkId')
           List<Element>? performerLinkIdElement,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<String>? reason,
-      @JsonKey(name: '_reason')
-          List<Element>? reasonElement,
+      List<CodeableReference>? reason,
       List<String>? reasonLinkId,
       @JsonKey(name: '_reasonLinkId')
           List<Element>? reasonLinkIdElement,
@@ -12705,10 +12809,7 @@ class _$ContractActionCopyWithImpl<$Res>
     Object? performer = freezed,
     Object? performerLinkId = freezed,
     Object? performerLinkIdElement = freezed,
-    Object? reasonCode = freezed,
-    Object? reasonReference = freezed,
     Object? reason = freezed,
-    Object? reasonElement = freezed,
     Object? reasonLinkId = freezed,
     Object? reasonLinkIdElement = freezed,
     Object? note = freezed,
@@ -12781,16 +12882,9 @@ class _$ContractActionCopyWithImpl<$Res>
       performerLinkIdElement: performerLinkIdElement == freezed
           ? _value.performerLinkIdElement
           : performerLinkIdElement as List<Element>?,
-      reasonCode: reasonCode == freezed
-          ? _value.reasonCode
-          : reasonCode as List<CodeableConcept>?,
-      reasonReference: reasonReference == freezed
-          ? _value.reasonReference
-          : reasonReference as List<Reference>?,
-      reason: reason == freezed ? _value.reason : reason as List<String>?,
-      reasonElement: reasonElement == freezed
-          ? _value.reasonElement
-          : reasonElement as List<Element>?,
+      reason: reason == freezed
+          ? _value.reason
+          : reason as List<CodeableReference>?,
       reasonLinkId: reasonLinkId == freezed
           ? _value.reasonLinkId
           : reasonLinkId as List<String>?,
@@ -12959,11 +13053,7 @@ abstract class _$ContractActionCopyWith<$Res>
       List<String>? performerLinkId,
       @JsonKey(name: '_performerLinkId')
           List<Element>? performerLinkIdElement,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<String>? reason,
-      @JsonKey(name: '_reason')
-          List<Element>? reasonElement,
+      List<CodeableReference>? reason,
       List<String>? reasonLinkId,
       @JsonKey(name: '_reasonLinkId')
           List<Element>? reasonLinkIdElement,
@@ -13033,10 +13123,7 @@ class __$ContractActionCopyWithImpl<$Res>
     Object? performer = freezed,
     Object? performerLinkId = freezed,
     Object? performerLinkIdElement = freezed,
-    Object? reasonCode = freezed,
-    Object? reasonReference = freezed,
     Object? reason = freezed,
-    Object? reasonElement = freezed,
     Object? reasonLinkId = freezed,
     Object? reasonLinkIdElement = freezed,
     Object? note = freezed,
@@ -13109,16 +13196,9 @@ class __$ContractActionCopyWithImpl<$Res>
       performerLinkIdElement: performerLinkIdElement == freezed
           ? _value.performerLinkIdElement
           : performerLinkIdElement as List<Element>?,
-      reasonCode: reasonCode == freezed
-          ? _value.reasonCode
-          : reasonCode as List<CodeableConcept>?,
-      reasonReference: reasonReference == freezed
-          ? _value.reasonReference
-          : reasonReference as List<Reference>?,
-      reason: reason == freezed ? _value.reason : reason as List<String>?,
-      reasonElement: reasonElement == freezed
-          ? _value.reasonElement
-          : reasonElement as List<Element>?,
+      reason: reason == freezed
+          ? _value.reason
+          : reason as List<CodeableReference>?,
       reasonLinkId: reasonLinkId == freezed
           ? _value.reasonLinkId
           : reasonLinkId as List<String>?,
@@ -13167,10 +13247,7 @@ class _$_ContractAction extends _ContractAction {
       this.performer,
       this.performerLinkId,
       @JsonKey(name: '_performerLinkId') this.performerLinkIdElement,
-      this.reasonCode,
-      this.reasonReference,
       this.reason,
-      @JsonKey(name: '_reason') this.reasonElement,
       this.reasonLinkId,
       @JsonKey(name: '_reasonLinkId') this.reasonLinkIdElement,
       this.note,
@@ -13241,14 +13318,7 @@ class _$_ContractAction extends _ContractAction {
   @JsonKey(name: '_performerLinkId')
   final List<Element>? performerLinkIdElement;
   @override
-  final List<CodeableConcept>? reasonCode;
-  @override
-  final List<Reference>? reasonReference;
-  @override
-  final List<String>? reason;
-  @override
-  @JsonKey(name: '_reason')
-  final List<Element>? reasonElement;
+  final List<CodeableReference>? reason;
   @override
   final List<String>? reasonLinkId;
   @override
@@ -13264,7 +13334,7 @@ class _$_ContractAction extends _ContractAction {
 
   @override
   String toString() {
-    return 'ContractAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, type: $type, subject: $subject, intent: $intent, linkId: $linkId, linkIdElement: $linkIdElement, status: $status, context: $context, contextLinkId: $contextLinkId, contextLinkIdElement: $contextLinkIdElement, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, requester: $requester, requesterLinkId: $requesterLinkId, requesterLinkIdElement: $requesterLinkIdElement, performerType: $performerType, performerRole: $performerRole, performer: $performer, performerLinkId: $performerLinkId, performerLinkIdElement: $performerLinkIdElement, reasonCode: $reasonCode, reasonReference: $reasonReference, reason: $reason, reasonElement: $reasonElement, reasonLinkId: $reasonLinkId, reasonLinkIdElement: $reasonLinkIdElement, note: $note, securityLabelNumber: $securityLabelNumber, securityLabelNumberElement: $securityLabelNumberElement)';
+    return 'ContractAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, type: $type, subject: $subject, intent: $intent, linkId: $linkId, linkIdElement: $linkIdElement, status: $status, context: $context, contextLinkId: $contextLinkId, contextLinkIdElement: $contextLinkIdElement, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, requester: $requester, requesterLinkId: $requesterLinkId, requesterLinkIdElement: $requesterLinkIdElement, performerType: $performerType, performerRole: $performerRole, performer: $performer, performerLinkId: $performerLinkId, performerLinkIdElement: $performerLinkIdElement, reason: $reason, reasonLinkId: $reasonLinkId, reasonLinkIdElement: $reasonLinkIdElement, note: $note, securityLabelNumber: $securityLabelNumber, securityLabelNumberElement: $securityLabelNumberElement)';
   }
 
   @override
@@ -13337,10 +13407,7 @@ class _$_ContractAction extends _ContractAction {
             (identical(other.performer, performer) || const DeepCollectionEquality().equals(other.performer, performer)) &&
             (identical(other.performerLinkId, performerLinkId) || const DeepCollectionEquality().equals(other.performerLinkId, performerLinkId)) &&
             (identical(other.performerLinkIdElement, performerLinkIdElement) || const DeepCollectionEquality().equals(other.performerLinkIdElement, performerLinkIdElement)) &&
-            (identical(other.reasonCode, reasonCode) || const DeepCollectionEquality().equals(other.reasonCode, reasonCode)) &&
-            (identical(other.reasonReference, reasonReference) || const DeepCollectionEquality().equals(other.reasonReference, reasonReference)) &&
             (identical(other.reason, reason) || const DeepCollectionEquality().equals(other.reason, reason)) &&
-            (identical(other.reasonElement, reasonElement) || const DeepCollectionEquality().equals(other.reasonElement, reasonElement)) &&
             (identical(other.reasonLinkId, reasonLinkId) || const DeepCollectionEquality().equals(other.reasonLinkId, reasonLinkId)) &&
             (identical(other.reasonLinkIdElement, reasonLinkIdElement) || const DeepCollectionEquality().equals(other.reasonLinkIdElement, reasonLinkIdElement)) &&
             (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
@@ -13377,10 +13444,7 @@ class _$_ContractAction extends _ContractAction {
       const DeepCollectionEquality().hash(performer) ^
       const DeepCollectionEquality().hash(performerLinkId) ^
       const DeepCollectionEquality().hash(performerLinkIdElement) ^
-      const DeepCollectionEquality().hash(reasonCode) ^
-      const DeepCollectionEquality().hash(reasonReference) ^
       const DeepCollectionEquality().hash(reason) ^
-      const DeepCollectionEquality().hash(reasonElement) ^
       const DeepCollectionEquality().hash(reasonLinkId) ^
       const DeepCollectionEquality().hash(reasonLinkIdElement) ^
       const DeepCollectionEquality().hash(note) ^
@@ -13434,11 +13498,7 @@ abstract class _ContractAction extends ContractAction {
       List<String>? performerLinkId,
       @JsonKey(name: '_performerLinkId')
           List<Element>? performerLinkIdElement,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<String>? reason,
-      @JsonKey(name: '_reason')
-          List<Element>? reasonElement,
+      List<CodeableReference>? reason,
       List<String>? reasonLinkId,
       @JsonKey(name: '_reasonLinkId')
           List<Element>? reasonLinkIdElement,
@@ -13510,14 +13570,7 @@ abstract class _ContractAction extends ContractAction {
   @JsonKey(name: '_performerLinkId')
   List<Element>? get performerLinkIdElement;
   @override
-  List<CodeableConcept>? get reasonCode;
-  @override
-  List<Reference>? get reasonReference;
-  @override
-  List<String>? get reason;
-  @override
-  @JsonKey(name: '_reason')
-  List<Element>? get reasonElement;
+  List<CodeableReference>? get reason;
   @override
   List<String>? get reasonLinkId;
   @override
@@ -14911,8 +14964,8 @@ class _$ExplanationOfBenefitTearOff {
   const _$ExplanationOfBenefitTearOff();
 
   _ExplanationOfBenefit call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
-          R4ResourceType resourceType = R4ResourceType.ExplanationOfBenefit,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ExplanationOfBenefit)
+          R5ResourceType resourceType = R5ResourceType.ExplanationOfBenefit,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -15059,8 +15112,8 @@ const $ExplanationOfBenefit = _$ExplanationOfBenefitTearOff();
 
 /// @nodoc
 mixin _$ExplanationOfBenefit {
-  @JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.ExplanationOfBenefit)
+  R5ResourceType get resourceType;
   Id? get id;
   Meta? get meta;
   FhirUri? get implicitRules;
@@ -15144,8 +15197,8 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
           $Res Function(ExplanationOfBenefit) then) =
       _$ExplanationOfBenefitCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ExplanationOfBenefit)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -15328,7 +15381,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -15837,8 +15890,8 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
       __$ExplanationOfBenefitCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ExplanationOfBenefit)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -16055,7 +16108,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
     return _then(_ExplanationOfBenefit(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -16207,8 +16260,8 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
 /// @nodoc
 class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   _$_ExplanationOfBenefit(
-      {@JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
-          this.resourceType = R4ResourceType.ExplanationOfBenefit,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ExplanationOfBenefit)
+          this.resourceType = R5ResourceType.ExplanationOfBenefit,
       this.id,
       this.meta,
       this.implicitRules,
@@ -16286,8 +16339,8 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
       _$_$_ExplanationOfBenefitFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
-  final R4ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.ExplanationOfBenefit)
+  final R5ResourceType resourceType;
   @override
   final Id? id;
   @override
@@ -16615,8 +16668,8 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   _ExplanationOfBenefit._() : super._();
   factory _ExplanationOfBenefit(
-          {@JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
-              R4ResourceType resourceType,
+          {@JsonKey(unknownEnumValue: R5ResourceType.ExplanationOfBenefit)
+              R5ResourceType resourceType,
           Id? id,
           Meta? meta,
           FhirUri? implicitRules,
@@ -16694,8 +16747,8 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
       _$_ExplanationOfBenefit.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.ExplanationOfBenefit)
+  R5ResourceType get resourceType;
   @override
   Id? get id;
   @override
@@ -27301,8 +27354,8 @@ class _$InsurancePlanTearOff {
   const _$InsurancePlanTearOff();
 
   _InsurancePlan call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
-          R4ResourceType resourceType = R4ResourceType.InsurancePlan,
+      {@JsonKey(unknownEnumValue: R5ResourceType.InsurancePlan)
+          R5ResourceType resourceType = R5ResourceType.InsurancePlan,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -27379,8 +27432,8 @@ const $InsurancePlan = _$InsurancePlanTearOff();
 
 /// @nodoc
 mixin _$InsurancePlan {
-  @JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.InsurancePlan)
+  R5ResourceType get resourceType;
   Id? get id;
   Meta? get meta;
   FhirUri? get implicitRules;
@@ -27427,8 +27480,8 @@ abstract class $InsurancePlanCopyWith<$Res> {
           InsurancePlan value, $Res Function(InsurancePlan) then) =
       _$InsurancePlanCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.InsurancePlan)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -27518,7 +27571,7 @@ class _$InsurancePlanCopyWithImpl<$Res>
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -27687,8 +27740,8 @@ abstract class _$InsurancePlanCopyWith<$Res>
       __$InsurancePlanCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.InsurancePlan)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -27789,7 +27842,7 @@ class __$InsurancePlanCopyWithImpl<$Res>
     return _then(_InsurancePlan(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
+          : resourceType as R5ResourceType,
       id: id == freezed ? _value.id : id as Id?,
       meta: meta == freezed ? _value.meta : meta as Meta?,
       implicitRules: implicitRules == freezed
@@ -27856,8 +27909,8 @@ class __$InsurancePlanCopyWithImpl<$Res>
 /// @nodoc
 class _$_InsurancePlan extends _InsurancePlan {
   _$_InsurancePlan(
-      {@JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
-          this.resourceType = R4ResourceType.InsurancePlan,
+      {@JsonKey(unknownEnumValue: R5ResourceType.InsurancePlan)
+          this.resourceType = R5ResourceType.InsurancePlan,
       this.id,
       this.meta,
       this.implicitRules,
@@ -27898,8 +27951,8 @@ class _$_InsurancePlan extends _InsurancePlan {
       _$_$_InsurancePlanFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
-  final R4ResourceType resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.InsurancePlan)
+  final R5ResourceType resourceType;
   @override
   final Id? id;
   @override
@@ -28090,8 +28143,8 @@ class _$_InsurancePlan extends _InsurancePlan {
 abstract class _InsurancePlan extends InsurancePlan {
   _InsurancePlan._() : super._();
   factory _InsurancePlan(
-      {@JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
-          R4ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.InsurancePlan)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -28131,8 +28184,8 @@ abstract class _InsurancePlan extends InsurancePlan {
       _$_InsurancePlan.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
-  R4ResourceType get resourceType;
+  @JsonKey(unknownEnumValue: R5ResourceType.InsurancePlan)
+  R5ResourceType get resourceType;
   @override
   Id? get id;
   @override

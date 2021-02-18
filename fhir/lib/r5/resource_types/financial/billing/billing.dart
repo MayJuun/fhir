@@ -1091,7 +1091,7 @@ abstract class InvoicePriceComponent implements _$InvoicePriceComponent {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
-        InvoicePriceComponentType type,
+        InvoicePriceComponentType? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? code,
     Decimal? factor,

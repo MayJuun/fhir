@@ -261,7 +261,7 @@ abstract class Goal with Resource implements _$Goal {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
-        GoalLifecycleStatus lifecycleStatus,
+        GoalLifecycleStatus? lifecycleStatus,
     @JsonKey(name: '_lifecycleStatus') Element? lifecycleStatusElement,
     CodeableConcept? achievementStatus,
     List<CodeableConcept>? category,

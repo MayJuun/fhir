@@ -1435,7 +1435,7 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
         OperationOutcomeIssueSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
-        OperationOutcomeIssueCode code,
+        OperationOutcomeIssueCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     CodeableConcept? details,
     String? diagnostics,
@@ -1902,7 +1902,7 @@ abstract class Subscription with Resource implements _$Subscription {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
-        SubscriptionStatus status,
+        SubscriptionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<ContactPoint>? contact,
     Instant? end,
@@ -1994,7 +1994,7 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: SubscriptionChannelType.unknown)
-        SubscriptionChannelType type,
+        SubscriptionChannelType? type,
     @JsonKey(name: '_type') Element? typeElement,
     FhirUrl? endpoint,
     @JsonKey(name: '_endpoint') Element? endpointElement,
