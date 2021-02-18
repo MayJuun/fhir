@@ -19,7 +19,7 @@ class Resource {
   FhirUri? implicitRules;
   Code? language;
   Narrative? text;
-  List<Resource>? contained;
+  List<Resource?>? contained;
   @JsonKey(name: 'extension')
   List<FhirExtension>? extension_;
   List<FhirExtension>? modifierExtension;

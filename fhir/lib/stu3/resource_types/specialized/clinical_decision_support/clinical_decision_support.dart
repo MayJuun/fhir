@@ -25,7 +25,7 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource>? contained,
+    List<Resource?>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Id? requestId,
