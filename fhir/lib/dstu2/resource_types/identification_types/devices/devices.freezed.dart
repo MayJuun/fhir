@@ -28,7 +28,7 @@ class _$DeviceTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -119,7 +119,7 @@ mixin _$Device {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   List<FhirExtension>? get modifierExtension;
@@ -174,7 +174,7 @@ abstract class $DeviceCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -287,7 +287,7 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -508,7 +508,7 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -636,7 +636,7 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -760,7 +760,7 @@ class _$_Device extends _Device {
   @override
   final Narrative? text;
   @override
-  final List<Resource>? contained;
+  final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
@@ -966,7 +966,7 @@ abstract class _Device extends Device {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -1022,7 +1022,7 @@ abstract class _Device extends Device {
   @override
   Narrative? get text;
   @override
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1102,7 +1102,7 @@ class _$DeviceComponentTearOff {
       FhirUri? implicitRules,
       Code? language,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -1160,7 +1160,7 @@ mixin _$DeviceComponent {
   FhirUri? get implicitRules;
   Code? get language;
   Narrative? get text;
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   List<FhirExtension>? get modifierExtension;
@@ -1196,7 +1196,7 @@ abstract class $DeviceComponentCopyWith<$Res> {
       FhirUri? implicitRules,
       Code? language,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -1270,7 +1270,7 @@ class _$DeviceComponentCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -1421,7 +1421,7 @@ abstract class _$DeviceComponentCopyWith<$Res>
       FhirUri? implicitRules,
       Code? language,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -1506,7 +1506,7 @@ class __$DeviceComponentCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -1592,7 +1592,7 @@ class _$_DeviceComponent extends _DeviceComponent {
   @override
   final Narrative? text;
   @override
-  final List<Resource>? contained;
+  final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
@@ -1733,7 +1733,7 @@ abstract class _DeviceComponent extends DeviceComponent {
       FhirUri? implicitRules,
       Code? language,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -1769,7 +1769,7 @@ abstract class _DeviceComponent extends DeviceComponent {
   @override
   Narrative? get text;
   @override
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2133,7 +2133,7 @@ class _$DeviceMetricTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -2205,7 +2205,7 @@ mixin _$DeviceMetric {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   List<FhirExtension>? get modifierExtension;
@@ -2251,7 +2251,7 @@ abstract class $DeviceMetricCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -2344,7 +2344,7 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -2545,7 +2545,7 @@ abstract class _$DeviceMetricCopyWith<$Res>
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -2653,7 +2653,7 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -2756,7 +2756,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   @override
   final Narrative? text;
   @override
-  final List<Resource>? contained;
+  final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
@@ -2924,7 +2924,7 @@ abstract class _DeviceMetric extends DeviceMetric {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -2971,7 +2971,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   @override
   Narrative? get text;
   @override
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;

@@ -28,7 +28,7 @@ class _$EndpointTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -106,7 +106,7 @@ mixin _$Endpoint {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   List<FhirExtension>? get modifierExtension;
@@ -154,7 +154,7 @@ abstract class $EndpointCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -250,7 +250,7 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -424,7 +424,7 @@ abstract class _$EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -531,7 +531,7 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -645,7 +645,7 @@ class _$_Endpoint extends _Endpoint {
   @override
   final Narrative? text;
   @override
-  final List<Resource>? contained;
+  final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
@@ -826,7 +826,7 @@ abstract class _Endpoint extends Endpoint {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -875,7 +875,7 @@ abstract class _Endpoint extends Endpoint {
   @override
   Narrative? get text;
   @override
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -944,7 +944,7 @@ class _$HealthcareServiceTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -1050,7 +1050,7 @@ mixin _$HealthcareService {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   List<FhirExtension>? get modifierExtension;
@@ -1113,7 +1113,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -1240,7 +1240,7 @@ class _$HealthcareServiceCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -1478,7 +1478,7 @@ abstract class _$HealthcareServiceCopyWith<$Res>
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -1619,7 +1619,7 @@ class __$HealthcareServiceCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -1786,7 +1786,7 @@ class _$_HealthcareService extends _HealthcareService {
   @override
   final Narrative? text;
   @override
-  final List<Resource>? contained;
+  final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
@@ -2024,7 +2024,7 @@ abstract class _HealthcareService extends HealthcareService {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -2088,7 +2088,7 @@ abstract class _HealthcareService extends HealthcareService {
   @override
   Narrative? get text;
   @override
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3246,7 +3246,7 @@ class _$LocationTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -3340,7 +3340,7 @@ mixin _$Location {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   List<FhirExtension>? get modifierExtension;
@@ -3397,7 +3397,7 @@ abstract class $LocationCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -3514,7 +3514,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -3757,7 +3757,7 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -3890,7 +3890,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -4026,7 +4026,7 @@ class _$_Location extends _Location {
   @override
   final Narrative? text;
   @override
-  final List<Resource>? contained;
+  final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
@@ -4238,7 +4238,7 @@ abstract class _Location extends Location {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -4296,7 +4296,7 @@ abstract class _Location extends Location {
   @override
   Narrative? get text;
   @override
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5194,7 +5194,7 @@ class _$OrganizationTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -5263,7 +5263,7 @@ mixin _$Organization {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   List<FhirExtension>? get modifierExtension;
@@ -5306,7 +5306,7 @@ abstract class $OrganizationCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -5390,7 +5390,7 @@ class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -5521,7 +5521,7 @@ abstract class _$OrganizationCopyWith<$Res>
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -5614,7 +5614,7 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -5710,7 +5710,7 @@ class _$_Organization extends _Organization {
   @override
   final Narrative? text;
   @override
-  final List<Resource>? contained;
+  final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
@@ -5874,7 +5874,7 @@ abstract class _Organization extends Organization {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -5918,7 +5918,7 @@ abstract class _Organization extends Organization {
   @override
   Narrative? get text;
   @override
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -6301,7 +6301,7 @@ class _$OrganizationAffiliationTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -6368,7 +6368,7 @@ mixin _$OrganizationAffiliation {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   List<FhirExtension>? get modifierExtension;
@@ -6409,7 +6409,7 @@ abstract class $OrganizationAffiliationCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -6493,7 +6493,7 @@ class _$OrganizationAffiliationCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -6640,7 +6640,7 @@ abstract class _$OrganizationAffiliationCopyWith<$Res>
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -6735,7 +6735,7 @@ class __$OrganizationAffiliationCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -6834,7 +6834,7 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
   @override
   final Narrative? text;
   @override
-  final List<Resource>? contained;
+  final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
@@ -6998,7 +6998,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -7040,7 +7040,7 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   @override
   Narrative? get text;
   @override
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;

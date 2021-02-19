@@ -28,7 +28,8 @@ _$_Encounter _$_$_EncounterFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
         ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -130,7 +131,7 @@ Map<String, dynamic> _$_$_EncounterToJson(_$_Encounter instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
+      'contained', instance.contained?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -709,7 +710,8 @@ _$_EpisodeOfCare _$_$_EpisodeOfCareFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
         ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -779,7 +781,7 @@ Map<String, dynamic> _$_$_EpisodeOfCareToJson(_$_EpisodeOfCare instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
+      'contained', instance.contained?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -937,7 +939,8 @@ _$_Flag _$_$_FlagFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
         ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -993,7 +996,7 @@ Map<String, dynamic> _$_$_FlagToJson(_$_Flag instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
+      'contained', instance.contained?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1040,7 +1043,8 @@ _$_Library _$_$_LibraryFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
         ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1193,7 +1197,7 @@ Map<String, dynamic> _$_$_LibraryToJson(_$_Library instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
+      'contained', instance.contained?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1284,7 +1288,8 @@ _$_List_ _$_$_List_FromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
         ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1359,7 +1364,7 @@ Map<String, dynamic> _$_$_List_ToJson(_$_List_ instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
+      'contained', instance.contained?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',

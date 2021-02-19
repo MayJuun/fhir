@@ -29,7 +29,8 @@ _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
         ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -107,7 +108,7 @@ Map<String, dynamic> _$_$_AppointmentToJson(_$_Appointment instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
+      'contained', instance.contained?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -375,7 +376,8 @@ _$_AppointmentResponse _$_$_AppointmentResponseFromJson(
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
         ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -437,7 +439,7 @@ Map<String, dynamic> _$_$_AppointmentResponseToJson(
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
+      'contained', instance.contained?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -493,7 +495,8 @@ _$_Schedule _$_$_ScheduleFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
         ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -539,7 +542,7 @@ Map<String, dynamic> _$_$_ScheduleToJson(_$_Schedule instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
+      'contained', instance.contained?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -576,7 +579,8 @@ _$_Slot _$_$_SlotFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
         ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -635,7 +639,7 @@ Map<String, dynamic> _$_$_SlotToJson(_$_Slot instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
+      'contained', instance.contained?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',

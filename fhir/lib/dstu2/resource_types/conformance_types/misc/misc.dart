@@ -658,14 +658,16 @@ abstract class TestScriptOperationRequestHeader
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory TestScriptOperationRequestHeader.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory TestScriptOperationRequestHeader.fromYaml(dynamic yaml) => yaml
+          is String
+      ? TestScriptOperationRequestHeader.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? TestScriptOperationRequestHeader.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? TestScriptOperationRequestHeader.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'TestScriptOperationRequestHeader cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   factory TestScriptOperationRequestHeader.fromJson(
           Map<String, dynamic> json) =>

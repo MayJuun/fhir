@@ -29,7 +29,7 @@ class _$StructureDefinitionTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -162,7 +162,7 @@ mixin _$StructureDefinition {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   List<FhirExtension>? get modifierExtension;
@@ -244,7 +244,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -405,7 +405,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -731,7 +731,7 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -913,7 +913,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -1109,7 +1109,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   @override
   final Narrative? text;
   @override
-  final List<Resource>? contained;
+  final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
@@ -1391,7 +1391,7 @@ abstract class _StructureDefinition extends StructureDefinition {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -1474,7 +1474,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   @override
   Narrative? get text;
   @override
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2764,7 +2764,7 @@ class _$DataElementTearOff {
       FhirUri? implicitRules,
       Code? language,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -2828,7 +2828,7 @@ mixin _$DataElement {
   FhirUri? get implicitRules;
   Code? get language;
   Narrative? get text;
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   List<FhirExtension>? get modifierExtension;
@@ -2867,7 +2867,7 @@ abstract class $DataElementCopyWith<$Res> {
       FhirUri? implicitRules,
       Code? language,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -2939,7 +2939,7 @@ class _$DataElementCopyWithImpl<$Res> implements $DataElementCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -3015,7 +3015,7 @@ abstract class _$DataElementCopyWith<$Res>
       FhirUri? implicitRules,
       Code? language,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -3091,7 +3091,7 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource>?,
+          : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension>?,
@@ -3181,7 +3181,7 @@ class _$_DataElement extends _DataElement {
   @override
   final Narrative? text;
   @override
-  final List<Resource>? contained;
+  final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
@@ -3338,7 +3338,7 @@ abstract class _DataElement extends DataElement {
       FhirUri? implicitRules,
       Code? language,
       Narrative? text,
-      List<Resource>? contained,
+      List<Resource?>? contained,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -3376,7 +3376,7 @@ abstract class _DataElement extends DataElement {
   @override
   Narrative? get text;
   @override
-  List<Resource>? get contained;
+  List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;

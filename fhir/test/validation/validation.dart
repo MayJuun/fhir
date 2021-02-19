@@ -122,7 +122,7 @@ String checkEquality(dynamic input, dynamic output, String file) {
   else if (DateTime.tryParse(input) != null &&
       DateTime.tryParse(output) != null) {
     /// if they're dates and they mean the same dateTime return empty string
-    if (DateTime.tryParse(input).isAtSameMomentAs(DateTime.tryParse(output)))
+    if (DateTime.parse(input).isAtSameMomentAs(DateTime.parse(output)))
       return '';
   }
 

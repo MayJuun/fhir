@@ -243,14 +243,16 @@ abstract class QuestionnaireResponseGroupQuestion
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory QuestionnaireResponseGroupQuestion.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory QuestionnaireResponseGroupQuestion.fromYaml(dynamic yaml) => yaml
+          is String
+      ? QuestionnaireResponseGroupQuestion.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? QuestionnaireResponseGroupQuestion.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? QuestionnaireResponseGroupQuestion.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'QuestionnaireResponseGroupQuestion cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   factory QuestionnaireResponseGroupQuestion.fromJson(
           Map<String, dynamic> json) =>
@@ -295,14 +297,16 @@ abstract class QuestionnaireResponseQuestionAnswer
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory QuestionnaireResponseQuestionAnswer.fromYaml(dynamic yaml) =>
-      yaml is String
+  factory QuestionnaireResponseQuestionAnswer.fromYaml(dynamic yaml) => yaml
+          is String
+      ? QuestionnaireResponseQuestionAnswer.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? QuestionnaireResponseQuestionAnswer.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? QuestionnaireResponseQuestionAnswer.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'QuestionnaireResponseQuestionAnswer cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   factory QuestionnaireResponseQuestionAnswer.fromJson(
           Map<String, dynamic> json) =>

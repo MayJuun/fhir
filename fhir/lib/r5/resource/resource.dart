@@ -59,7 +59,7 @@ class Resource {
     writeNotNull('implicitRules', implicitRules?.toJson());
     writeNotNull('language', language?.toJson());
     writeNotNull('text', text?.toJson());
-    writeNotNull('contained', contained?.map((e) => e.toJson()).toList());
+    writeNotNull('contained', contained?.map((e) => e?.toJson()).toList());
     writeNotNull('extension', extension_?.map((e) => e.toJson()).toList());
     writeNotNull('modifierExtension',
         modifierExtension?.map((e) => e.toJson()).toList());
