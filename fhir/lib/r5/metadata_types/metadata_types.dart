@@ -327,7 +327,7 @@ abstract class UsageContext implements _$UsageContext {
   factory UsageContext({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    required Coding? code,
+    required Coding code,
     CodeableConcept? valueCodeableConcept,
     Quantity? valueQuantity,
     Range? valueRange,

@@ -34,7 +34,7 @@ abstract class Order with Resource implements _$Order {
     CodeableConcept? reasonCodeableConcept,
     Reference? reasonReference,
     OrderWhen? when,
-    required List<Reference?>? detail,
+    required List<Reference> detail,
   }) = _Order;
 
   /// Produces a Yaml formatted String version of the object
@@ -98,7 +98,7 @@ abstract class OrderResponse with Resource implements _$OrderResponse {
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     List<Identifier?>? identifier,
-    required Reference? request,
+    required Reference request,
     FhirDateTime? date,
     Reference? who,
     @JsonKey(unknownEnumValue: OrderResponseOrderStatus.unknown)
@@ -234,7 +234,7 @@ abstract class DeviceUseRequest with Resource implements _$DeviceUseRequest {
     @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
         DeviceUseRequestStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    required Reference? device,
+    required Reference device,
     Reference? encounter,
     List<Identifier?>? identifier,
     List<CodeableConcept?>? indication,
@@ -242,7 +242,7 @@ abstract class DeviceUseRequest with Resource implements _$DeviceUseRequest {
     List<CodeableConcept?>? prnReason,
     FhirDateTime? orderedOn,
     FhirDateTime? recordedOn,
-    required Reference? subject,
+    required Reference subject,
     Timing? timingTiming,
     Period? timingPeriod,
     FhirDateTime? timingDateTime,
@@ -290,13 +290,13 @@ abstract class DeviceUseStatement
     CodeableConcept? bodySiteCodeableConcept,
     Reference? bodySiteReference,
     Period? whenUsed,
-    required Reference? device,
+    required Reference device,
     List<Identifier?>? identifier,
     List<CodeableConcept?>? indication,
     List<String?>? notes,
     FhirDateTime? recordedOn,
     @JsonKey(name: '_recordedOn') Element? recordedOnElement,
-    required Reference? subject,
+    required Reference subject,
     Timing? timingTiming,
     Period? timingPeriod,
     FhirDateTime? timingDateTime,

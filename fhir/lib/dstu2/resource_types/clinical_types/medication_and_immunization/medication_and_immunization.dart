@@ -89,7 +89,7 @@ abstract class MedicationProductIngredient with _$MedicationProductIngredient {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Reference? item,
+    required Reference item,
     Ratio? amount,
   }) = _MedicationProductIngredient;
 
@@ -177,7 +177,7 @@ abstract class MedicationPackageContent with _$MedicationPackageContent {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Reference? item,
+    required Reference item,
     Quantity? amount,
   }) = _MedicationPackageContent;
 
@@ -340,7 +340,7 @@ abstract class MedicationOrderSubstitution with _$MedicationOrderSubstitution {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? type,
+    required CodeableConcept type,
     CodeableConcept? reason,
   }) = _MedicationOrderSubstitution;
 
@@ -385,7 +385,7 @@ abstract class MedicationAdministration
     @JsonKey(required: true, unknownEnumValue: MedicationAdministrationStatus.unknown)
         required MedicationAdministrationStatus status,
     @JsonKey(name: '_status') Element? statusElement,
-    required Reference? patient,
+    required Reference patient,
     Reference? practitioner,
     Reference? encounter,
     Reference? prescription,
@@ -570,7 +570,7 @@ abstract class MedicationDispenseSubstitution
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? type,
+    required CodeableConcept type,
     List<CodeableConcept?>? reason,
     List<Reference?>? responsibleParty,
   }) = _MedicationDispenseSubstitution;
@@ -615,7 +615,7 @@ abstract class MedicationStatement
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     List<Identifier?>? identifier,
-    required Reference? patient,
+    required Reference patient,
     Reference? informationSource,
     FhirDateTime? dateAsserted,
     @JsonKey(name: '_dateAsserted') Element? dateAssertedElement,
@@ -715,10 +715,10 @@ abstract class Immunization with Resource implements _$Immunization {
         required ImmunizationStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirDateTime? date,
-    required CodeableConcept? vaccineCode,
-    required Reference? patient,
-    required Boolean? wasNotGiven,
-    required Boolean? reported,
+    required CodeableConcept vaccineCode,
+    required Reference patient,
+    required Boolean wasNotGiven,
+    required Boolean reported,
     Reference? performer,
     Reference? requester,
     Reference? encounter,
@@ -821,14 +821,14 @@ abstract class ImmunizationVaccinationProtocol
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required PositiveInt? doseSequence,
+    required PositiveInt doseSequence,
     String? description,
     Reference? authority,
     String? series,
     @JsonKey(name: '_series') Element? seriesElement,
     PositiveInt? seriesDoses,
     List<CodeableConcept?>? targetDisease,
-    required CodeableConcept? doseStatus,
+    required CodeableConcept doseStatus,
     CodeableConcept? doseStatusReason,
   }) = _ImmunizationVaccinationProtocol;
 
@@ -872,7 +872,7 @@ abstract class ImmunizationRecommendation
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     List<Identifier?>? identifier,
-    required Reference? patient,
+    required Reference patient,
     @JsonKey(required: true)
         required List<ImmunizationRecommendationRecommendation> recommendation,
   }) = _ImmunizationRecommendation;
@@ -903,10 +903,10 @@ abstract class ImmunizationRecommendationRecommendation
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required FhirDateTime? date,
-    required CodeableConcept? vaccineCode,
+    required FhirDateTime date,
+    required CodeableConcept vaccineCode,
     PositiveInt? doseNumber,
-    required CodeableConcept? forecastStatus,
+    required CodeableConcept forecastStatus,
     List<ImmunizationRecommendationRecommendationDateCriterion?>? dateCriterion,
     ImmunizationRecommendationRecommendationProtocol? protocol,
     List<Reference?>? supportingImmunization,
@@ -941,8 +941,8 @@ abstract class ImmunizationRecommendationRecommendationDateCriterion
     Id? id,
     FhirExtension? extensio,
     FhirExtension? modifier,
-    required CodeableConcept? code,
-    required FhirDateTime? value,
+    required CodeableConcept code,
+    required FhirDateTime value,
     @JsonKey(name: '_value') Element? valueElement,
   }) = _ImmunizationRecommendationRecommendationDateCriterion;
 

@@ -421,7 +421,7 @@ abstract class PractitionerQualification
   PractitionerQualification._();
   factory PractitionerQualification({
     List<Identifier?>? identifier,
-    required CodeableConcept? code,
+    required CodeableConcept code,
     Period? period,
     Reference? issuer,
   }) = _PractitionerQualification;
@@ -578,7 +578,7 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
     List<Identifier?>? identifier,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
-    required Reference? patient,
+    required Reference patient,
     CodeableConcept? relationship,
     List<HumanName?>? name,
     List<ContactPoint?>? telecom,

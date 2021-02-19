@@ -184,8 +184,8 @@ abstract class Immunization with Resource implements _$Immunization {
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? statusReason,
-    required CodeableConcept? vaccineCode,
-    required Reference? patient,
+    required CodeableConcept vaccineCode,
+    required Reference patient,
     Reference? encounter,
     FhirDateTime? occurrenceDateTime,
     @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
@@ -277,7 +277,7 @@ abstract class ImmunizationPerformer implements _$ImmunizationPerformer {
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     CodeableConcept? function,
-    required Reference? actor,
+    required Reference actor,
   }) = _ImmunizationPerformer;
 
   /// Produces a Yaml formatted String version of the object
@@ -679,13 +679,13 @@ abstract class ImmunizationEvaluation
     List<Identifier?>? identifier,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    required Reference? patient,
+    required Reference patient,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? authority,
-    required CodeableConcept? targetDisease,
-    required Reference? immunizationEvent,
-    required CodeableConcept? doseStatus,
+    required CodeableConcept targetDisease,
+    required Reference immunizationEvent,
+    required CodeableConcept doseStatus,
     List<CodeableConcept?>? doseStatusReason,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -811,11 +811,11 @@ abstract class ImmunizationRecommendation
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     List<Identifier?>? identifier,
-    required Reference? patient,
+    required Reference patient,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? authority,
-    required List<ImmunizationRecommendationRecommendation?>? recommendation,
+    required List<ImmunizationRecommendationRecommendation> recommendation,
   }) = _ImmunizationRecommendation;
 
   /// Produces a Yaml formatted String version of the object
@@ -927,7 +927,7 @@ abstract class ImmunizationRecommendationRecommendation
     List<CodeableConcept?>? vaccineCode,
     CodeableConcept? targetDisease,
     List<CodeableConcept?>? contraindicatedVaccineCode,
-    required CodeableConcept? forecastStatus,
+    required CodeableConcept forecastStatus,
     List<CodeableConcept?>? forecastReason,
     List<ImmunizationRecommendationDateCriterion?>? dateCriterion,
     String? description,
@@ -1011,7 +1011,7 @@ abstract class ImmunizationRecommendationDateCriterion
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? code,
+    required CodeableConcept code,
     FhirDateTime? value,
     @JsonKey(name: '_value') Element? valueElement,
   }) = _ImmunizationRecommendationDateCriterion;
@@ -1480,7 +1480,7 @@ abstract class MedicationAdministration
     CodeableConcept? category,
     CodeableConcept? medicationCodeableConcept,
     Reference? medicationReference,
-    required Reference? subject,
+    required Reference subject,
     Reference? context,
     List<Reference?>? supportingInformation,
     FhirDateTime? effectiveDateTime,
@@ -1558,7 +1558,7 @@ abstract class MedicationAdministrationPerformer
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     CodeableConcept? function,
-    required Reference? actor,
+    required Reference actor,
   }) = _MedicationAdministrationPerformer;
 
   /// Produces a Yaml formatted String version of the object
@@ -1951,7 +1951,7 @@ abstract class MedicationDispensePerformer
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     CodeableConcept? function,
-    required Reference? actor,
+    required Reference actor,
   }) = _MedicationDispensePerformer;
 
   /// Produces a Yaml formatted String version of the object
@@ -2289,8 +2289,8 @@ abstract class MedicationKnowledgeRelatedMedicationKnowledge
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? type,
-    required List<Reference?>? reference,
+    required CodeableConcept type,
+    required List<Reference> reference,
   }) = _MedicationKnowledgeRelatedMedicationKnowledge;
 
   /// Produces a Yaml formatted String version of the object
@@ -2494,10 +2494,10 @@ abstract class MedicationKnowledgeCost implements _$MedicationKnowledgeCost {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? type,
+    required CodeableConcept type,
     String? source,
     @JsonKey(name: '_source') Element? sourceElement,
-    required Money? cost,
+    required Money cost,
   }) = _MedicationKnowledgeCost;
 
   /// Produces a Yaml formatted String version of the object
@@ -2696,8 +2696,8 @@ abstract class MedicationKnowledgeDosage
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? type,
-    required List<Dosage?>? dosage,
+    required CodeableConcept type,
+    required List<Dosage> dosage,
   }) = _MedicationKnowledgeDosage;
 
   /// Produces a Yaml formatted String version of the object
@@ -2830,7 +2830,7 @@ abstract class MedicationKnowledgeMedicineClassification
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? type,
+    required CodeableConcept type,
     List<CodeableConcept?>? classification,
   }) = _MedicationKnowledgeMedicineClassification;
 
@@ -3041,7 +3041,7 @@ abstract class MedicationKnowledgeRegulatory
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Reference? regulatoryAuthority,
+    required Reference regulatoryAuthority,
     List<MedicationKnowledgeSubstitution?>? substitution,
     List<MedicationKnowledgeSchedule?>? schedule,
     MedicationKnowledgeMaxDispense? maxDispense,
@@ -3107,7 +3107,7 @@ abstract class MedicationKnowledgeSubstitution
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? type,
+    required CodeableConcept type,
     Boolean? allowed,
     @JsonKey(name: '_allowed') Element? allowedElement,
   }) = _MedicationKnowledgeSubstitution;
@@ -3169,7 +3169,7 @@ abstract class MedicationKnowledgeSchedule
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? schedule,
+    required CodeableConcept schedule,
   }) = _MedicationKnowledgeSchedule;
 
   /// Produces a Yaml formatted String version of the object
@@ -3230,7 +3230,7 @@ abstract class MedicationKnowledgeMaxDispense
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Quantity? quantity,
+    required Quantity quantity,
     FhirDuration? period,
   }) = _MedicationKnowledgeMaxDispense;
 
@@ -3554,7 +3554,7 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
     Reference? reportedReference,
     CodeableConcept? medicationCodeableConcept,
     Reference? medicationReference,
-    required Reference? subject,
+    required Reference subject,
     Reference? encounter,
     List<Reference?>? supportingInformation,
     FhirDateTime? authoredOn,
@@ -4020,7 +4020,7 @@ abstract class MedicationStatement
     CodeableConcept? category,
     CodeableConcept? medicationCodeableConcept,
     Reference? medicationReference,
-    required Reference? subject,
+    required Reference subject,
     Reference? context,
     FhirDateTime? effectiveDateTime,
     @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,

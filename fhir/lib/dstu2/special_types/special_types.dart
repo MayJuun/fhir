@@ -79,7 +79,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
   factory ElementDefinition({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    required String? path,
+    required String path,
     List<Code?>? representation,
     @JsonKey(name: '_representation') Element? representationElement,
     String? name,
@@ -447,7 +447,7 @@ abstract class Narrative implements _$Narrative {
     @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
         required NarrativeStatus status,
     @JsonKey(name: '_status') Element? statusElement,
-    required String? div,
+    required String div,
   }) = _Narrative;
 
   /// Produces a Yaml formatted String version of the object
@@ -507,11 +507,11 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
   factory ElementDefinitionBase({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    required String? path,
+    required String path,
     @JsonKey(name: '_path') Element? pathElement,
-    required Integer? min,
+    required Integer min,
     @JsonKey(name: '_min') Element? minElement,
-    required String? max,
+    required String max,
     @JsonKey(name: '_max') Element? maxElement,
   }) = _ElementDefinitionBase;
 
@@ -594,16 +594,16 @@ abstract class ElementDefinitionConstraint
   factory ElementDefinitionConstraint({
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    required Id? key,
+    required Id key,
     @JsonKey(name: '_key') Element? keyElement,
     String? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
     @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
         required ConstraintSeverity severity,
     @JsonKey(name: '_severity') Element? severityElement,
-    required String? human,
+    required String human,
     @JsonKey(name: '_human') Element? humanElement,
-    required String? xpath,
+    required String xpath,
     @JsonKey(name: '_xpath') Element? xpathElement,
   }) = _ElementDefinitionConstraint;
 
@@ -665,11 +665,11 @@ abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-    required Id? identity,
+    required Id identity,
     @JsonKey(name: '_identity') Element? identityElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
-    required String? map,
+    required String map,
     @JsonKey(name: '_map') Element? mapElement,
   }) = _ElementDefinitionMapping;
 

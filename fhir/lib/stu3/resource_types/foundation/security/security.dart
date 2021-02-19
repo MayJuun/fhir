@@ -28,7 +28,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
     List<Resource?>? contained,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Coding? type,
+    required Coding type,
     List<Coding?>? subtype,
     AuditEventAction? action,
     @JsonKey(name: '_action') Element? actionElement,
@@ -39,8 +39,8 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
     String? outcomeDesc,
     @JsonKey(name: '_outcomeDesc') Element? outcomeDescElement,
     List<CodeableConcept?>? purposeOfEvent,
-    required List<AuditEventAgent?>? agent,
-    required AuditEventSource? source,
+    required List<AuditEventAgent> agent,
+    required AuditEventSource source,
     List<AuditEventEntity?>? entity,
   }) = _AuditEvent;
 
@@ -132,7 +132,7 @@ abstract class AuditEventSource implements _$AuditEventSource {
   factory AuditEventSource({
     String? site,
     @JsonKey(name: '_site') Element? siteElement,
-    required Identifier? identifier,
+    required Identifier identifier,
     List<Coding?>? type,
   }) = _AuditEventSource;
 
@@ -237,7 +237,7 @@ abstract class Consent with Resource implements _$Consent {
     ConsentStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept?>? category,
-    required Reference? patient,
+    required Reference patient,
     Period? period,
     FhirDateTime? dateTime,
     @JsonKey(name: '_dateTime') Element? dateTimeElement,
@@ -280,7 +280,7 @@ abstract class ConsentActor implements _$ConsentActor {
   ConsentActor._();
   factory ConsentActor({
     required CodeableConcept role,
-    required Reference? reference,
+    required Reference reference,
   }) = _ConsentActor;
 
   /// Produces a Yaml formatted String version of the object
@@ -333,7 +333,7 @@ abstract class ConsentData implements _$ConsentData {
   factory ConsentData({
     ConsentDataMeaning? meaning,
     @JsonKey(name: '_meaning') Element? meaningElement,
-    required Reference? reference,
+    required Reference reference,
   }) = _ConsentData;
 
   /// Produces a Yaml formatted String version of the object
@@ -392,7 +392,7 @@ abstract class ConsentActor1 implements _$ConsentActor1 {
   ConsentActor1._();
   factory ConsentActor1({
     required CodeableConcept role,
-    required Reference? reference,
+    required Reference reference,
   }) = _ConsentActor1;
 
   /// Produces a Yaml formatted String version of the object
@@ -418,7 +418,7 @@ abstract class ConsentData1 implements _$ConsentData1 {
   factory ConsentData1({
     ConsentData1Meaning? meaning,
     @JsonKey(name: '_meaning') Element? meaningElement,
-    required Reference? reference,
+    required Reference reference,
   }) = _ConsentData1;
 
   /// Produces a Yaml formatted String version of the object
@@ -455,7 +455,7 @@ abstract class Provenance with Resource implements _$Provenance {
     List<Resource?>? contained,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required List<Reference?>? target,
+    required List<Reference> target,
     Period? period,
     String? recorded,
     @JsonKey(name: '_recorded') Element? recordedElement,
@@ -464,7 +464,7 @@ abstract class Provenance with Resource implements _$Provenance {
     Reference? location,
     List<Coding?>? reason,
     Coding? activity,
-    required List<ProvenanceAgent?>? agent,
+    required List<ProvenanceAgent> agent,
     List<ProvenanceEntity?>? entity,
     List<Signature?>? signature,
   }) = _Provenance;

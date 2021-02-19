@@ -247,7 +247,7 @@ abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
   PlanDefinitionGoal._();
   factory PlanDefinitionGoal({
     CodeableConcept? category,
-    required CodeableConcept? description,
+    required CodeableConcept description,
     CodeableConcept? priority,
     CodeableConcept? start,
     List<CodeableConcept?>? addresses,

@@ -1017,7 +1017,7 @@ abstract class CapabilityStatementOperation
     List<FhirExtension?>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    required Canonical? definition,
+    required Canonical definition,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
   }) = _CapabilityStatementOperation;
@@ -1241,7 +1241,7 @@ abstract class CapabilityStatementEndpoint
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Coding? protocol,
+    required Coding protocol,
     FhirUrl? address,
     @JsonKey(name: '_address') Element? addressElement,
   }) = _CapabilityStatementEndpoint;
@@ -1312,7 +1312,7 @@ abstract class CapabilityStatementSupportedMessage
     @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
         CapabilityStatementSupportedMessageMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
-    required Canonical? definition,
+    required Canonical definition,
   }) = _CapabilityStatementSupportedMessage;
 
   /// Produces a Yaml formatted String version of the object
@@ -1391,7 +1391,7 @@ abstract class CapabilityStatementDocument
     @JsonKey(name: '_mode') Element? modeElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
-    required Canonical? profile,
+    required Canonical profile,
   }) = _CapabilityStatementDocument;
 
   /// Produces a Yaml formatted String version of the object
@@ -3262,7 +3262,7 @@ abstract class ImplementationGuideDependsOn
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Canonical? uri,
+    required Canonical uri,
     Id? packageId,
     @JsonKey(name: '_packageId') Element? packageIdElement,
     String? version,
@@ -3333,7 +3333,7 @@ abstract class ImplementationGuideGlobal
     List<FhirExtension?>? modifierExtension,
     Code? type,
     @JsonKey(name: '_type') Element? typeElement,
-    required Canonical? profile,
+    required Canonical profile,
   }) = _ImplementationGuideGlobal;
 
   /// Produces a Yaml formatted String version of the object
@@ -3408,7 +3408,7 @@ abstract class ImplementationGuideDefinition
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     List<ImplementationGuideGrouping?>? grouping,
-    required List<ImplementationGuideResource?>? resource,
+    required List<ImplementationGuideResource> resource,
     ImplementationGuidePage? page,
     List<ImplementationGuideParameter?>? parameter,
     List<ImplementationGuideTemplate?>? template,
@@ -3577,7 +3577,7 @@ abstract class ImplementationGuideResource
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Reference? reference,
+    required Reference reference,
     List<ImplementationGuideResourceFhirVersion?>? fhirVersion,
     @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
     String? name,
@@ -3903,7 +3903,7 @@ abstract class ImplementationGuideManifest
     List<FhirExtension?>? modifierExtension,
     FhirUrl? rendering,
     @JsonKey(name: '_rendering') Element? renderingElement,
-    required List<ImplementationGuideResource1?>? resource,
+    required List<ImplementationGuideResource1> resource,
     List<ImplementationGuidePage1?>? page,
     List<String?>? image,
     @JsonKey(name: '_image') List<Element?>? imageElement,
@@ -3986,7 +3986,7 @@ abstract class ImplementationGuideResource1
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Reference? reference,
+    required Reference reference,
     Boolean? exampleBoolean,
     @JsonKey(name: '_exampleBoolean') Element? exampleBooleanElement,
     Canonical? exampleCanonical,
@@ -4468,7 +4468,7 @@ abstract class MessageDefinitionAllowedResponse
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Canonical? message,
+    required Canonical message,
     Markdown? situation,
     @JsonKey(name: '_situation') Element? situationElement,
   }) = _MessageDefinitionAllowedResponse;
@@ -4938,7 +4938,7 @@ abstract class OperationDefinitionBinding
     @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
         OperationDefinitionBindingStrength? strength,
     @JsonKey(name: '_strength') Element? strengthElement,
-    required Canonical? valueSet,
+    required Canonical valueSet,
   }) = _OperationDefinitionBinding;
 
   /// Produces a Yaml formatted String version of the object
@@ -5425,7 +5425,7 @@ abstract class SearchParameterComponent implements _$SearchParameterComponent {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Canonical? definition,
+    required Canonical definition,
     String? expression,
     @JsonKey(name: '_expression') Element? expressionElement,
   }) = _SearchParameterComponent;
@@ -5933,7 +5933,7 @@ abstract class StructureDefinitionSnapshot
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required List<ElementDefinition?>? element,
+    required List<ElementDefinition> element,
   }) = _StructureDefinitionSnapshot;
 
   /// Produces a Yaml formatted String version of the object
@@ -5993,7 +5993,7 @@ abstract class StructureDefinitionDifferential
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required List<ElementDefinition?>? element,
+    required List<ElementDefinition> element,
   }) = _StructureDefinitionDifferential;
 
   /// Produces a Yaml formatted String version of the object
@@ -6212,7 +6212,7 @@ abstract class StructureMap with Resource implements _$StructureMap {
     @JsonKey(name: '_copyright') Element? copyrightElement,
     List<StructureMapStructure?>? structure,
     @JsonKey(name: 'import') List<Canonical?>? import_,
-    required List<StructureMapGroup?>? group,
+    required List<StructureMapGroup> group,
   }) = _StructureMap;
 
   /// Produces a Yaml formatted String version of the object
@@ -6281,7 +6281,7 @@ abstract class StructureMapStructure implements _$StructureMapStructure {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Canonical? url,
+    required Canonical url,
     @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown)
         StructureMapStructureMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
@@ -6374,8 +6374,8 @@ abstract class StructureMapGroup implements _$StructureMapGroup {
     @JsonKey(name: '_typeMode') Element? typeModeElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
-    required List<StructureMapInput?>? input,
-    required List<StructureMapRule?>? rule,
+    required List<StructureMapInput> input,
+    required List<StructureMapRule> rule,
   }) = _StructureMapGroup;
 
   /// Produces a Yaml formatted String version of the object
@@ -6525,7 +6525,7 @@ abstract class StructureMapRule implements _$StructureMapRule {
     List<FhirExtension?>? modifierExtension,
     Id? name,
     @JsonKey(name: '_name') Element? nameElement,
-    required List<StructureMapSource?>? source,
+    required List<StructureMapSource> source,
     List<StructureMapTarget?>? target,
     List<StructureMapRule?>? rule,
     List<StructureMapDependent?>? dependent,

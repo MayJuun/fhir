@@ -30,12 +30,12 @@ abstract class StructureDefinition
     List<Resource?>? contained,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required FhirUri? url,
+    required FhirUri url,
     @JsonKey(name: '_url') Element? urlElement,
     List<Identifier?>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
-    required String? name,
+    required String name,
     @JsonKey(name: '_name') Element? nameElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
@@ -63,7 +63,7 @@ abstract class StructureDefinition
         required StructureDefinitionKind kind,
     @JsonKey(name: '_kind') Element? kindElement,
     Code? constrainedType,
-    @JsonKey(name: 'abstract', required: true) required Boolean? abstract_,
+    @JsonKey(name: 'abstract') required Boolean abstract_,
     @JsonKey(name: '_abstract') Element? abstractElement,
     @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
         StructureDefinitionContextType? contextType,
@@ -127,7 +127,7 @@ abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-    required Id? identity,
+    required Id identity,
     @JsonKey(name: '_identity') Element? identityElement,
     FhirUri? uri,
     @JsonKey(name: '_uri') Element? uriElement,
@@ -162,7 +162,7 @@ abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required List<ElementDefinition?>? element,
+    required List<ElementDefinition> element,
   }) = _StructureDefinitionSnapshot;
 
   /// Produces a Yaml formatted String version of the object
@@ -191,7 +191,7 @@ abstract class StructureDefinitionDifferential
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required List<ElementDefinition?>? element,
+    required List<ElementDefinition> element,
   }) = _StructureDefinitionDifferential;
 
   /// Produces a Yaml formatted String version of the object
@@ -244,7 +244,7 @@ abstract class DataElement with Resource implements _$DataElement {
     @JsonKey(unknownEnumValue: DataElementStringency.unknown)
         DataElementStringency? stringency,
     List<DataElementMapping?>? mapping,
-    required List<ElementDefinition?>? element,
+    required List<ElementDefinition> element,
   }) = _DataElement;
 
   /// Produces a Yaml formatted String version of the object
@@ -300,7 +300,7 @@ abstract class DataElementMapping with _$DataElementMapping {
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-    required Id? identity,
+    required Id identity,
     @JsonKey(name: '_identity') Element? identityElement,
     FhirUri? uri,
     @JsonKey(name: '_uri') Element? uriElement,

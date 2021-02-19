@@ -75,7 +75,7 @@ abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
   factory EncounterStatusHistory({
     EncounterStatusHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    required Period? period,
+    required Period period,
   }) = _EncounterStatusHistory;
 
   /// Produces a Yaml formatted String version of the object
@@ -100,7 +100,7 @@ abstract class EncounterClassHistory implements _$EncounterClassHistory {
   EncounterClassHistory._();
   factory EncounterClassHistory({
     @JsonKey(name: 'class') required Coding class_,
-    required Period? period,
+    required Period period,
   }) = _EncounterClassHistory;
 
   /// Produces a Yaml formatted String version of the object
@@ -256,7 +256,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
     List<EpisodeOfCareStatusHistory?>? statusHistory,
     List<CodeableConcept?>? type,
     List<EpisodeOfCareDiagnosis?>? diagnosis,
-    required Reference? patient,
+    required Reference patient,
     Reference? managingOrganization,
     Period? period,
     List<Reference?>? referralRequest,
@@ -289,7 +289,7 @@ abstract class EpisodeOfCareStatusHistory
   factory EpisodeOfCareStatusHistory({
     EpisodeOfCareStatusHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    required Period? period,
+    required Period period,
   }) = _EpisodeOfCareStatusHistory;
 
   /// Produces a Yaml formatted String version of the object
@@ -358,8 +358,8 @@ abstract class Flag with Resource implements _$Flag {
     FlagStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? category,
-    required CodeableConcept? code,
-    required Reference? subject,
+    required CodeableConcept code,
+    required Reference subject,
     Period? period,
     Reference? encounter,
     Reference? author,
@@ -411,7 +411,7 @@ abstract class Library with Resource implements _$Library {
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
-    required CodeableConcept? type,
+    required CodeableConcept type,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
@@ -518,7 +518,7 @@ abstract class ListEntry implements _$ListEntry {
     @JsonKey(name: '_deleted') Element? deletedElement,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
-    required Reference? item,
+    required Reference item,
   }) = _ListEntry;
 
   /// Produces a Yaml formatted String version of the object

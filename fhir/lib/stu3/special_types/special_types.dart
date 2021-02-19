@@ -17,7 +17,7 @@ abstract class Narrative implements _$Narrative {
   factory Narrative({
     NarrativeStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    required String? div,
+    required String div,
   }) = _Narrative;
 
   /// Produces a Yaml formatted String version of the object

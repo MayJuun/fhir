@@ -494,7 +494,7 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
     CodeableConcept? code,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    required Expression? criteria,
+    required Expression criteria,
   }) = _MeasurePopulation;
 
   /// Produces a Yaml formatted String version of the object
@@ -641,7 +641,7 @@ abstract class MeasureComponent implements _$MeasureComponent {
     CodeableConcept? code,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    required Expression? criteria,
+    required Expression criteria,
   }) = _MeasureComponent;
 
   /// Produces a Yaml formatted String version of the object
@@ -719,7 +719,7 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
     List<CodeableConcept?>? usage,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    required Expression? criteria,
+    required Expression criteria,
   }) = _MeasureSupplementalData;
 
   /// Produces a Yaml formatted String version of the object
@@ -863,12 +863,12 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
     @JsonKey(unknownEnumValue: MeasureReportType.unknown)
         MeasureReportType? type,
     @JsonKey(name: '_type') Element? typeElement,
-    required Canonical? measure,
+    required Canonical measure,
     Reference? subject,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? reporter,
-    required Period? period,
+    required Period period,
     CodeableConcept? improvementNotation,
     List<MeasureReportGroup?>? group,
     List<Reference?>? evaluatedResource,
@@ -1202,8 +1202,8 @@ abstract class MeasureReportComponent implements _$MeasureReportComponent {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? code,
-    required CodeableConcept? value,
+    required CodeableConcept code,
+    required CodeableConcept value,
   }) = _MeasureReportComponent;
 
   /// Produces a Yaml formatted String version of the object
@@ -1417,7 +1417,7 @@ abstract class TestReport with Resource implements _$TestReport {
     @JsonKey(unknownEnumValue: TestReportStatus.unknown)
         TestReportStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    required Reference? testScript,
+    required Reference testScript,
     @JsonKey(unknownEnumValue: TestReportResult.unknown)
         TestReportResult? result,
     @JsonKey(name: '_result') Element? resultElement,
@@ -1558,7 +1558,7 @@ abstract class TestReportSetup implements _$TestReportSetup {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required List<TestReportAction?>? action,
+    required List<TestReportAction> action,
   }) = _TestReportSetup;
 
   /// Produces a Yaml formatted String version of the object
@@ -1832,7 +1832,7 @@ abstract class TestReportTest implements _$TestReportTest {
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    required List<TestReportAction1?>? action,
+    required List<TestReportAction1> action,
   }) = _TestReportTest;
 
   /// Produces a Yaml formatted String version of the object
@@ -1948,7 +1948,7 @@ abstract class TestReportTeardown implements _$TestReportTeardown {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required List<TestReportAction2?>? action,
+    required List<TestReportAction2> action,
   }) = _TestReportTeardown;
 
   /// Produces a Yaml formatted String version of the object
@@ -2004,7 +2004,7 @@ abstract class TestReportAction2 implements _$TestReportAction2 {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required TestReportOperation? operation,
+    required TestReportOperation operation,
   }) = _TestReportAction2;
 
   /// Produces a Yaml formatted String version of the object
@@ -2305,7 +2305,7 @@ abstract class TestScriptOrigin implements _$TestScriptOrigin {
     List<FhirExtension?>? modifierExtension,
     Integer? index,
     @JsonKey(name: '_index') Element? indexElement,
-    required Coding? profile,
+    required Coding profile,
   }) = _TestScriptOrigin;
 
   /// Produces a Yaml formatted String version of the object
@@ -2369,7 +2369,7 @@ abstract class TestScriptDestination implements _$TestScriptDestination {
     List<FhirExtension?>? modifierExtension,
     Integer? index,
     @JsonKey(name: '_index') Element? indexElement,
-    required Coding? profile,
+    required Coding profile,
   }) = _TestScriptDestination;
 
   /// Produces a Yaml formatted String version of the object
@@ -2430,7 +2430,7 @@ abstract class TestScriptMetadata implements _$TestScriptMetadata {
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     List<TestScriptLink?>? link,
-    required List<TestScriptCapability?>? capability,
+    required List<TestScriptCapability> capability,
   }) = _TestScriptMetadata;
 
   /// Produces a Yaml formatted String version of the object
@@ -2597,7 +2597,7 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
     @JsonKey(name: '_destination') Element? destinationElement,
     List<FhirUri?>? link,
     @JsonKey(name: '_link') List<Element?>? linkElement,
-    required Canonical? capabilities,
+    required Canonical capabilities,
   }) = _TestScriptCapability;
 
   /// Produces a Yaml formatted String version of the object
@@ -2841,7 +2841,7 @@ abstract class TestScriptSetup implements _$TestScriptSetup {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required List<TestScriptAction?>? action,
+    required List<TestScriptAction> action,
   }) = _TestScriptSetup;
 
   /// Produces a Yaml formatted String version of the object
@@ -3418,7 +3418,7 @@ abstract class TestScriptTest implements _$TestScriptTest {
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    required List<TestScriptAction1?>? action,
+    required List<TestScriptAction1> action,
   }) = _TestScriptTest;
 
   /// Produces a Yaml formatted String version of the object
@@ -3536,7 +3536,7 @@ abstract class TestScriptTeardown implements _$TestScriptTeardown {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required List<TestScriptAction2?>? action,
+    required List<TestScriptAction2> action,
   }) = _TestScriptTeardown;
 
   /// Produces a Yaml formatted String version of the object
@@ -3593,7 +3593,7 @@ abstract class TestScriptAction2 implements _$TestScriptAction2 {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required TestScriptOperation? operation,
+    required TestScriptOperation operation,
   }) = _TestScriptAction2;
 
   /// Produces a Yaml formatted String version of the object

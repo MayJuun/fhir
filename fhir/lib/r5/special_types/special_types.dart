@@ -19,7 +19,7 @@ abstract class Narrative implements _$Narrative {
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     @JsonKey(unknownEnumValue: NarrativeStatus.unknown) NarrativeStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    required String? div,
+    required String div,
   }) = _Narrative;
 
   /// Produces a Yaml formatted String version of the object
@@ -285,7 +285,7 @@ abstract class StatisticVariable implements _$StatisticVariable {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Reference? variableDefinition,
+    required Reference variableDefinition,
     Code? handling,
     @JsonKey(name: '_handling') Element? handlingElement,
     List<CodeableConcept?>? valueCategory,
@@ -323,7 +323,7 @@ abstract class OrderedDistribution implements _$OrderedDistribution {
     Integer? numberOfIntervals,
     @JsonKey(name: '_numberOfIntervals') Element? numberOfIntervalsElement,
     Quantity? bottomOfFirstInterval,
-    required List<OrderedDistributionInterval?>? interval,
+    required List<OrderedDistributionInterval> interval,
     Quantity? topOfInterval,
   }) = _OrderedDistribution;
 

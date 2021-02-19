@@ -187,9 +187,9 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
     Reference? target,
     Reference? provider,
     Reference? organization,
-    required Reference? subject,
-    required Reference? coverage,
-    required Coding? relationship,
+    required Reference subject,
+    required Reference coverage,
+    required Coding relationship,
   }) = _EnrollmentRequest;
 
   /// Produces a Yaml formatted String version of the object

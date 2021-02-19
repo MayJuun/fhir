@@ -121,7 +121,7 @@ abstract class BodyStructure with Resource implements _$BodyStructure {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<Attachment?>? image,
-    required Reference? patient,
+    required Reference patient,
   }) = _BodyStructure;
 
   /// Produces a Yaml formatted String version of the object
@@ -300,7 +300,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
         DiagnosticReportStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept?>? category,
-    required CodeableConcept? code,
+    required CodeableConcept code,
     Reference? subject,
     Reference? encounter,
     FhirDateTime? effectiveDateTime,
@@ -385,7 +385,7 @@ abstract class DiagnosticReportMedia implements _$DiagnosticReportMedia {
     List<FhirExtension?>? modifierExtension,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-    required Reference? link,
+    required Reference link,
   }) = _DiagnosticReportMedia;
 
   /// Produces a Yaml formatted String version of the object
@@ -561,7 +561,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
         ImagingStudyStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Coding?>? modality,
-    required Reference? subject,
+    required Reference subject,
     Reference? encounter,
     FhirDateTime? started,
     @JsonKey(name: '_started') Element? startedElement,
@@ -693,7 +693,7 @@ abstract class ImagingStudySeries implements _$ImagingStudySeries {
     @JsonKey(name: '_uid') Element? uidElement,
     UnsignedInt? number,
     @JsonKey(name: '_number') Element? numberElement,
-    required Coding? modality,
+    required Coding modality,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     UnsignedInt? numberOfInstances,
@@ -769,7 +769,7 @@ abstract class ImagingStudyPerformer implements _$ImagingStudyPerformer {
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     CodeableConcept? function,
-    required Reference? actor,
+    required Reference actor,
   }) = _ImagingStudyPerformer;
 
   /// Produces a Yaml formatted String version of the object
@@ -843,7 +843,7 @@ abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
     List<FhirExtension?>? modifierExtension,
     Id? uid,
     @JsonKey(name: '_uid') Element? uidElement,
-    required Coding? sopClass,
+    required Coding sopClass,
     UnsignedInt? number,
     @JsonKey(name: '_number') Element? numberElement,
     String? title,
@@ -1051,7 +1051,7 @@ abstract class Media with Resource implements _$Media {
     @JsonKey(name: '_frames') Element? framesElement,
     Decimal? duration,
     @JsonKey(name: '_duration') Element? durationElement,
-    required Attachment? content,
+    required Attachment content,
     List<Annotation?>? note,
   }) = _Media;
 
@@ -2276,7 +2276,7 @@ abstract class Observation with Resource implements _$Observation {
         ObservationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept?>? category,
-    required CodeableConcept? code,
+    required CodeableConcept code,
     Reference? subject,
     List<Reference?>? focus,
     Reference? encounter,
@@ -2516,7 +2516,7 @@ abstract class ObservationComponent implements _$ObservationComponent {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? code,
+    required CodeableConcept code,
     Quantity? valueQuantity,
     CodeableConcept? valueCodeableConcept,
     String? valueString,

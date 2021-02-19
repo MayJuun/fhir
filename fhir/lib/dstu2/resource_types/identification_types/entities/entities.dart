@@ -70,9 +70,9 @@ abstract class LocationPosition with _$LocationPosition {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Decimal? longitude,
+    required Decimal longitude,
     @JsonKey(name: '_longitude') Element? longitudeElement,
-    required Decimal? latitude,
+    required Decimal latitude,
     @JsonKey(name: '_latitude') Element? latitudeElement,
     Decimal? altitude,
     @JsonKey(name: '_altitude') Element? altitudeElement,
@@ -114,7 +114,7 @@ abstract class Substance with Resource implements _$Substance {
     List<FhirExtension?>? modifierExtension,
     List<Identifier?>? identifier,
     List<CodeableConcept?>? category,
-    required CodeableConcept? code,
+    required CodeableConcept code,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<SubstanceInstance?>? instance,
@@ -176,7 +176,7 @@ abstract class SubstanceIngredient with _$SubstanceIngredient {
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     Ratio? quantity,
-    required Reference? substance,
+    required Reference substance,
   }) = _SubstanceIngredient;
 
   /// Produces a Yaml formatted String version of the object
@@ -251,7 +251,7 @@ abstract class PersonLink with _$PersonLink {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Reference? target,
+    required Reference target,
     @JsonKey(unknownEnumValue: LinkAssurance.unknown) LinkAssurance? assurance,
     @JsonKey(name: '_assurance') Element? assuranceElement,
   }) = _PersonLink;
@@ -336,7 +336,7 @@ abstract class ContractActor with _$ContractActor {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Reference? entity,
+    required Reference entity,
     List<CodeableConcept?>? role,
   }) = _ContractActor;
 
@@ -403,9 +403,9 @@ abstract class ContractSigner with _$ContractSigner {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Coding? type,
-    required Reference? party,
-    required String? signature,
+    required Coding type,
+    required Reference party,
+    required String signature,
   }) = _ContractSigner;
 
   /// Produces a Yaml formatted String version of the object
@@ -472,7 +472,7 @@ abstract class ContractTermActor with _$ContractTermActor {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Reference? entity,
+    required Reference entity,
     List<CodeableConcept?>? role,
   }) = _ContractTermActor;
 

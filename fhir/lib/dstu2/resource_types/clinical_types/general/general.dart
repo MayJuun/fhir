@@ -35,9 +35,9 @@ abstract class AllergyIntolerance
     FhirDateTime? recordedDate,
     @JsonKey(name: '_recordedDate') Element? recordedDateElement,
     Reference? recorder,
-    required Reference? patient,
+    required Reference patient,
     Reference? reporter,
-    required CodeableConcept? substance,
+    required CodeableConcept substance,
     @JsonKey(unknownEnumValue: AllergyIntoleranceStatus.unknown)
         AllergyIntoleranceStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -85,7 +85,7 @@ abstract class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
     @JsonKey(unknownEnumValue: ReactionCertainty.unknown)
         ReactionCertainty? certainty,
     @JsonKey(name: '_certainty') Element? certaintyElement,
-    required List<CodeableConcept?>? manifestation,
+    required List<CodeableConcept> manifestation,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     FhirDateTime? onset,
@@ -133,12 +133,12 @@ abstract class Condition with Resource implements _$Condition {
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     List<Identifier?>? identifier,
-    required Reference? patient,
+    required Reference patient,
     Reference? encounter,
     Reference? asserter,
     Date? dateRecorded,
     @JsonKey(name: '_dateRecorded') Element? dateRecordedElement,
-    required CodeableConcept? code,
+    required CodeableConcept code,
     CodeableConcept? category,
     @JsonKey(unknownEnumValue: ConditionClinicalStatus.unknown)
         ConditionClinicalStatus? clinicalStatus,
@@ -259,12 +259,12 @@ abstract class Procedure with Resource implements _$Procedure {
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     List<Identifier?>? identifier,
-    required Reference? subject,
+    required Reference subject,
     @JsonKey(unknownEnumValue: ProcedureStatus.unknown)
         required ProcedureStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? category,
-    required CodeableConcept? code,
+    required CodeableConcept code,
     Boolean? notPerformed,
     List<CodeableConcept?>? reasonNotPerformed,
     List<CodeableConcept?>? bodySite,
@@ -340,7 +340,7 @@ abstract class ProcedureFocalDevice with _$ProcedureFocalDevice {
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     CodeableConcept? action,
-    required Reference? manipulated,
+    required Reference manipulated,
   }) = _ProcedureFocalDevice;
 
   /// Produces a Yaml formatted String version of the object
@@ -379,7 +379,7 @@ abstract class ClinicalImpression
     List<Resource?>? contained,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Reference? patient,
+    required Reference patient,
     Reference? assessor,
     @JsonKey(unknownEnumValue: ClinicalImpressionStatus.unknown)
         required ClinicalImpressionStatus status,
@@ -430,7 +430,7 @@ abstract class ClinicalImpressionInvestigations
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? code,
+    required CodeableConcept code,
     List<Reference?>? item,
   }) = _ClinicalImpressionInvestigations;
 
@@ -461,7 +461,7 @@ abstract class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? item,
+    required CodeableConcept item,
     String? cause,
   }) = _ClinicalImpressionFinding;
 
@@ -490,7 +490,7 @@ abstract class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? item,
+    required CodeableConcept item,
     String? reason,
   }) = _ClinicalImpressionRuledOut;
 
@@ -532,7 +532,7 @@ abstract class FamilyMemberHistory
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     List<Identifier?>? identifier,
-    required Reference? patient,
+    required Reference patient,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     @JsonKey(required: true, unknownEnumValue: FamilyMemberHistoryStatus.unknown)
@@ -540,7 +540,7 @@ abstract class FamilyMemberHistory
     @JsonKey(name: '_status') Element? statusElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    required CodeableConcept? relationship,
+    required CodeableConcept relationship,
     @JsonKey(unknownEnumValue: FamilyMemberHistoryGender.unknown)
         FamilyMemberHistoryGender? gender,
     Period? bornPeriod,
@@ -589,7 +589,7 @@ abstract class FamilyMemberHistoryCondition
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? code,
+    required CodeableConcept code,
     CodeableConcept? outcome,
     Quantity? onsetQuantity,
     Range? onsetRange,
@@ -671,7 +671,7 @@ abstract class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? outcome,
+    required CodeableConcept outcome,
     Decimal? probabilityDecimal,
     @JsonKey(name: '_probabilityDecimal') Element? probabilityDecimalElement,
     Range? probabilityRange,
@@ -759,7 +759,7 @@ abstract class DetectedIssueMitigation with _$DetectedIssueMitigation {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? action,
+    required CodeableConcept action,
     FhirDateTime? date,
     Reference? author,
   }) = _DetectedIssueMitigation;

@@ -47,8 +47,7 @@ abstract class Appointment with Resource implements _$Appointment {
     List<Reference?>? slot,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-    @JsonKey(required: true)
-        required List<AppointmentParticipant?>? participant,
+    required List<AppointmentParticipant> participant,
   }) = _Appointment;
 
   /// Produces a Yaml formatted String version of the object
@@ -122,7 +121,7 @@ abstract class AppointmentResponse
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     List<Identifier?>? identifier,
-    required Reference? appointment,
+    required Reference appointment,
     Instant? start,
     @JsonKey(name: '_start') Element? startElement,
     Instant? end,
@@ -172,7 +171,7 @@ abstract class Schedule with Resource implements _$Schedule {
     List<FhirExtension?>? modifierExtension,
     List<Identifier?>? identifier,
     List<CodeableConcept?>? type,
-    required Reference? actor,
+    required Reference actor,
     Period? planningHorizon,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
@@ -214,12 +213,12 @@ abstract class Slot with Resource implements _$Slot {
     List<FhirExtension?>? modifierExtension,
     List<Identifier?>? identifier,
     CodeableConcept? type,
-    required Reference? schedule,
+    required Reference schedule,
     @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
         required SlotFreeBusyType freeBusyType,
-    required Instant? start,
+    required Instant start,
     @JsonKey(name: '_start') Element? startElement,
-    required Instant? end,
+    required Instant end,
     @JsonKey(name: '_end') Element? endElement,
     Boolean? overbooked,
     @JsonKey(name: '_overbooked') Element? overbookedElement,

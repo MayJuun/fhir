@@ -264,10 +264,10 @@ abstract class EffectEvidenceSynthesis
     List<RelatedArtifact?>? relatedArtifact,
     CodeableConcept? synthesisType,
     CodeableConcept? studyType,
-    required Reference? population,
-    required Reference? exposure,
-    required Reference? exposureAlternative,
-    required Reference? outcome,
+    required Reference population,
+    required Reference exposure,
+    required Reference exposureAlternative,
+    required Reference outcome,
     EffectEvidenceSynthesisSampleSize? sampleSize,
     List<EffectEvidenceSynthesisResultsByExposure?>? resultsByExposure,
     List<EffectEvidenceSynthesisEffectEstimate?>? effectEstimate,
@@ -429,7 +429,7 @@ abstract class EffectEvidenceSynthesisResultsByExposure
         EffectEvidenceSynthesisResultsByExposureExposureState? exposureState,
     @JsonKey(name: '_exposureState') Element? exposureStateElement,
     CodeableConcept? variantState,
-    required Reference? riskEvidenceSynthesis,
+    required Reference riskEvidenceSynthesis,
   }) = _EffectEvidenceSynthesisResultsByExposure;
 
   /// Produces a Yaml formatted String version of the object
@@ -1004,7 +1004,7 @@ abstract class Evidence with Resource implements _$Evidence {
     List<ContactDetail?>? reviewer,
     List<ContactDetail?>? endorser,
     List<RelatedArtifact?>? relatedArtifact,
-    required Reference? exposureBackground,
+    required Reference exposureBackground,
     List<Reference?>? exposureVariant,
     List<Reference?>? outcome,
   }) = _Evidence;
@@ -1278,7 +1278,7 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
     @JsonKey(unknownEnumValue: EvidenceVariableType.unknown)
         EvidenceVariableType? type,
     @JsonKey(name: '_type') Element? typeElement,
-    required List<EvidenceVariableCharacteristic?>? characteristic,
+    required List<EvidenceVariableCharacteristic> characteristic,
   }) = _EvidenceVariable;
 
   /// Produces a Yaml formatted String version of the object
@@ -1740,7 +1740,7 @@ abstract class ResearchDefinition
     List<ContactDetail?>? endorser,
     List<RelatedArtifact?>? relatedArtifact,
     @JsonKey(name: 'library') List<Canonical?>? library_,
-    required Reference? population,
+    required Reference population,
     Reference? exposure,
     Reference? exposureAlternative,
     Reference? outcome,
@@ -2071,7 +2071,7 @@ abstract class ResearchElementDefinition
     @JsonKey(unknownEnumValue: ResearchElementDefinitionVariableType.unknown)
         ResearchElementDefinitionVariableType? variableType,
     @JsonKey(name: '_variableType') Element? variableTypeElement,
-    required List<ResearchElementDefinitionCharacteristic?>? characteristic,
+    required List<ResearchElementDefinitionCharacteristic> characteristic,
   }) = _ResearchElementDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -2528,9 +2528,9 @@ abstract class RiskEvidenceSynthesis
     List<RelatedArtifact?>? relatedArtifact,
     CodeableConcept? synthesisType,
     CodeableConcept? studyType,
-    required Reference? population,
+    required Reference population,
     Reference? exposure,
-    required Reference? outcome,
+    required Reference outcome,
     RiskEvidenceSynthesisSampleSize? sampleSize,
     RiskEvidenceSynthesisRiskEstimate? riskEstimate,
     List<RiskEvidenceSynthesisCertainty?>? certainty,

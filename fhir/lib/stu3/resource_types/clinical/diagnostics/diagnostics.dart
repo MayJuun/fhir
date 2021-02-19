@@ -36,7 +36,7 @@ abstract class BodySite with Resource implements _$BodySite {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<Attachment?>? image,
-    required Reference? patient,
+    required Reference patient,
   }) = _BodySite;
 
   /// Produces a Yaml formatted String version of the object
@@ -78,7 +78,7 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
     DiagnosticReportStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? category,
-    required CodeableConcept? code,
+    required CodeableConcept code,
     Reference? subject,
     Reference? context,
     FhirDateTime? effectiveDateTime,
@@ -120,7 +120,7 @@ abstract class DiagnosticReportPerformer
   DiagnosticReportPerformer._();
   factory DiagnosticReportPerformer({
     CodeableConcept? role,
-    required Reference? actor,
+    required Reference actor,
   }) = _DiagnosticReportPerformer;
 
   /// Produces a Yaml formatted String version of the object
@@ -147,7 +147,7 @@ abstract class DiagnosticReportImage implements _$DiagnosticReportImage {
   factory DiagnosticReportImage({
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-    required Reference? link,
+    required Reference link,
   }) = _DiagnosticReportImage;
 
   /// Produces a Yaml formatted String version of the object
@@ -185,13 +185,13 @@ abstract class ImagingManifest with Resource implements _$ImagingManifest {
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     Identifier? identifier,
-    required Reference? patient,
+    required Reference patient,
     Time? authoringTime,
     @JsonKey(name: '_authoringTime') Element? authoringTimeElement,
     Reference? author,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    required List<ImagingManifestStudy?>? study,
+    required List<ImagingManifestStudy> study,
   }) = _ImagingManifest;
 
   /// Produces a Yaml formatted String version of the object
@@ -219,7 +219,7 @@ abstract class ImagingManifestStudy implements _$ImagingManifestStudy {
     @JsonKey(name: '_uid') Element? uidElement,
     Reference? imagingStudy,
     List<Reference?>? endpoint,
-    required List<ImagingManifestSeries?>? series,
+    required List<ImagingManifestSeries> series,
   }) = _ImagingManifestStudy;
 
   /// Produces a Yaml formatted String version of the object
@@ -246,7 +246,7 @@ abstract class ImagingManifestSeries implements _$ImagingManifestSeries {
     Id? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     List<Reference?>? endpoint,
-    required List<ImagingManifestInstance?>? instance,
+    required List<ImagingManifestInstance> instance,
   }) = _ImagingManifestSeries;
 
   /// Produces a Yaml formatted String version of the object
@@ -317,7 +317,7 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
     ImagingStudyAvailability? availability,
     @JsonKey(name: '_availability') Element? availabilityElement,
     List<Coding?>? modalityList,
-    required Reference? patient,
+    required Reference patient,
     Reference? context,
     String? started,
     @JsonKey(name: '_started') Element? startedElement,
@@ -362,7 +362,7 @@ abstract class ImagingStudySeries implements _$ImagingStudySeries {
     @JsonKey(name: '_uid') Element? uidElement,
     Decimal? number,
     @JsonKey(name: '_number') Element? numberElement,
-    required Coding? modality,
+    required Coding modality,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Decimal? numberOfInstances,
@@ -448,7 +448,7 @@ abstract class Observation with Resource implements _$Observation {
     ObservationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept?>? category,
-    required CodeableConcept? code,
+    required CodeableConcept code,
     Reference? subject,
     Reference? context,
     FhirDateTime? effectiveDateTime,
@@ -540,7 +540,7 @@ abstract class ObservationRelated implements _$ObservationRelated {
   factory ObservationRelated({
     ObservationRelatedType? type,
     @JsonKey(name: '_type') Element? typeElement,
-    required Reference? target,
+    required Reference target,
   }) = _ObservationRelated;
 
   /// Produces a Yaml formatted String version of the object
@@ -961,7 +961,7 @@ abstract class Specimen with Resource implements _$Specimen {
     SpecimenStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
-    required Reference? subject,
+    required Reference subject,
     Time? receivedTime,
     @JsonKey(name: '_receivedTime') Element? receivedTimeElement,
     List<Reference?>? parent,

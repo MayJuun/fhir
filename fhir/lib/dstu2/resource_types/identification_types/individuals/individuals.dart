@@ -117,7 +117,7 @@ abstract class PatientAnimal with _$PatientAnimal {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? species,
+    required CodeableConcept species,
     CodeableConcept? breed,
     CodeableConcept? genderStatus,
   }) = _PatientAnimal;
@@ -146,7 +146,7 @@ abstract class PatientCommunication with _$PatientCommunication {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required CodeableConcept? language,
+    required CodeableConcept language,
     Boolean? preferred,
     @JsonKey(name: '_preferred') Element? preferredElement,
   }) = _PatientCommunication;
@@ -175,7 +175,7 @@ abstract class PatientLink with _$PatientLink {
     Id? id,
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
-    required Reference? other,
+    required Reference other,
     @JsonKey(unknownEnumValue: LinkType.unknown) required LinkType type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _PatientLink;
@@ -291,7 +291,7 @@ abstract class PractitionerQualification with _$PractitionerQualification {
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     List<Identifier?>? identifier,
-    required CodeableConcept? code,
+    required CodeableConcept code,
     Period? period,
     Reference? issuer,
   }) = _PractitionerQualification;
@@ -332,7 +332,7 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
     @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     List<FhirExtension?>? modifierExtension,
     List<Identifier?>? identifier,
-    required Reference? patient,
+    required Reference patient,
     CodeableConcept? relationship,
     HumanName? name,
     List<ContactPoint?>? telecom,

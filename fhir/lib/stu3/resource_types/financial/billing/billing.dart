@@ -136,7 +136,7 @@ abstract class ClaimCareTeam implements _$ClaimCareTeam {
   factory ClaimCareTeam({
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
-    required Reference? provider,
+    required Reference provider,
     Boolean? responsible,
     @JsonKey(name: '_responsible') Element? responsibleElement,
     CodeableConcept? role,
@@ -166,7 +166,7 @@ abstract class ClaimInformation implements _$ClaimInformation {
   factory ClaimInformation({
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
-    required CodeableConcept? category,
+    required CodeableConcept category,
     CodeableConcept? code,
     Date? timingDate,
     @JsonKey(name: '_timingDate') Element? timingDateElement,
@@ -262,7 +262,7 @@ abstract class ClaimInsurance implements _$ClaimInsurance {
     @JsonKey(name: '_sequence') Element? sequenceElement,
     Boolean? focal,
     @JsonKey(name: '_focal') Element? focalElement,
-    required Reference? coverage,
+    required Reference coverage,
     String? businessArrangement,
     @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
     List<String?>? preAuthRef,
@@ -698,7 +698,7 @@ abstract class ClaimResponseError implements _$ClaimResponseError {
     Id? subdetailSequenceLinkId,
     @JsonKey(name: '_subdetailSequenceLinkId')
         Element? subdetailSequenceLinkIdElement,
-    required CodeableConcept? code,
+    required CodeableConcept code,
   }) = _ClaimResponseError;
 
   /// Produces a Yaml formatted String version of the object
@@ -786,7 +786,7 @@ abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
     @JsonKey(name: '_sequence') Element? sequenceElement,
     Boolean? focal,
     @JsonKey(name: '_focal') Element? focalElement,
-    required Reference? coverage,
+    required Reference coverage,
     String? businessArrangement,
     @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
     List<String?>? preAuthRef,

@@ -138,8 +138,8 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
     ChargeItemStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Reference?>? partOf,
-    required CodeableConcept? code,
-    required Reference? subject,
+    required CodeableConcept code,
+    required Reference subject,
     Reference? context,
     FhirDateTime? occurrenceDateTime,
     @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
@@ -187,7 +187,7 @@ abstract class ChargeItemParticipant implements _$ChargeItemParticipant {
   ChargeItemParticipant._();
   factory ChargeItemParticipant({
     CodeableConcept? role,
-    required Reference? actor,
+    required Reference actor,
   }) = _ChargeItemParticipant;
 
   /// Produces a Yaml formatted String version of the object
@@ -299,8 +299,8 @@ abstract class ContractSigner implements _$ContractSigner {
   ContractSigner._();
   factory ContractSigner({
     required Coding type,
-    required Reference? party,
-    required List<Signature?>? signature,
+    required Reference party,
+    required List<Signature> signature,
   }) = _ContractSigner;
 
   /// Produces a Yaml formatted String version of the object
@@ -671,7 +671,7 @@ abstract class ExplanationOfBenefitInformation
   factory ExplanationOfBenefitInformation({
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
-    required CodeableConcept? category,
+    required CodeableConcept category,
     CodeableConcept? code,
     Date? timingDate,
     @JsonKey(name: '_timingDate') Element? timingDateElement,
@@ -711,7 +711,7 @@ abstract class ExplanationOfBenefitCareTeam
   factory ExplanationOfBenefitCareTeam({
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
-    required Reference? provider,
+    required Reference provider,
     Boolean? responsible,
     @JsonKey(name: '_responsible') Element? responsibleElement,
     CodeableConcept? role,
@@ -954,7 +954,7 @@ abstract class ExplanationOfBenefitDetail
   factory ExplanationOfBenefitDetail({
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
-    required CodeableConcept? type,
+    required CodeableConcept type,
     CodeableConcept? revenue,
     CodeableConcept? category,
     CodeableConcept? service,
@@ -997,7 +997,7 @@ abstract class ExplanationOfBenefitSubDetail
   factory ExplanationOfBenefitSubDetail({
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
-    required CodeableConcept? type,
+    required CodeableConcept type,
     CodeableConcept? revenue,
     CodeableConcept? category,
     CodeableConcept? service,
