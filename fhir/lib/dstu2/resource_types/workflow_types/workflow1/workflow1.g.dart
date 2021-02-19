@@ -59,9 +59,8 @@ _$_Order _$_$_OrderFromJson(Map<String, dynamic> json) {
     when: json['when'] == null
         ? null
         : OrderWhen.fromJson(json['when'] as Map<String, dynamic>),
-    detail: (json['detail'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+    detail: (json['detail'] as List<dynamic>)
+        .map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -98,7 +97,7 @@ Map<String, dynamic> _$_$_OrderToJson(_$_Order instance) {
       'reasonCodeableConcept', instance.reasonCodeableConcept?.toJson());
   writeNotNull('reasonReference', instance.reasonReference?.toJson());
   writeNotNull('when', instance.when?.toJson());
-  writeNotNull('detail', instance.detail?.map((e) => e?.toJson()).toList());
+  val['detail'] = instance.detail.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -304,9 +303,7 @@ _$_OrderResponse _$_$_OrderResponseFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
-    request: json['request'] == null
-        ? null
-        : Reference.fromJson(json['request'] as Map<String, dynamic>),
+    request: Reference.fromJson(json['request'] as Map<String, dynamic>),
     date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     who: json['who'] == null
         ? null
@@ -349,7 +346,7 @@ Map<String, dynamic> _$_$_OrderResponseToJson(_$_OrderResponse instance) {
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
-  writeNotNull('request', instance.request?.toJson());
+  val['request'] = instance.request.toJson();
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('who', instance.who?.toJson());
   val['orderStatus'] = _$OrderResponseOrderStatusEnumMap[instance.orderStatus];
@@ -640,9 +637,7 @@ _$_DeviceUseRequest _$_$_DeviceUseRequestFromJson(Map<String, dynamic> json) {
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    device: json['device'] == null
-        ? null
-        : Reference.fromJson(json['device'] as Map<String, dynamic>),
+    device: Reference.fromJson(json['device'] as Map<String, dynamic>),
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
@@ -667,9 +662,7 @@ _$_DeviceUseRequest _$_$_DeviceUseRequestFromJson(Map<String, dynamic> json) {
     recordedOn: json['recordedOn'] == null
         ? null
         : FhirDateTime.fromJson(json['recordedOn']),
-    subject: json['subject'] == null
-        ? null
-        : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+    subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
     timingTiming: json['timingTiming'] == null
         ? null
         : Timing.fromJson(json['timingTiming'] as Map<String, dynamic>),
@@ -717,7 +710,7 @@ Map<String, dynamic> _$_$_DeviceUseRequestToJson(_$_DeviceUseRequest instance) {
   writeNotNull('bodySiteReference', instance.bodySiteReference?.toJson());
   writeNotNull('status', _$DeviceUseRequestStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('device', instance.device?.toJson());
+  val['device'] = instance.device.toJson();
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
@@ -728,7 +721,7 @@ Map<String, dynamic> _$_$_DeviceUseRequestToJson(_$_DeviceUseRequest instance) {
       'prnReason', instance.prnReason?.map((e) => e?.toJson()).toList());
   writeNotNull('orderedOn', instance.orderedOn?.toJson());
   writeNotNull('recordedOn', instance.recordedOn?.toJson());
-  writeNotNull('subject', instance.subject?.toJson());
+  val['subject'] = instance.subject.toJson();
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
   writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
   writeNotNull('timingDateTime', instance.timingDateTime?.toJson());
@@ -806,9 +799,7 @@ _$_DeviceUseStatement _$_$_DeviceUseStatementFromJson(
     whenUsed: json['whenUsed'] == null
         ? null
         : Period.fromJson(json['whenUsed'] as Map<String, dynamic>),
-    device: json['device'] == null
-        ? null
-        : Reference.fromJson(json['device'] as Map<String, dynamic>),
+    device: Reference.fromJson(json['device'] as Map<String, dynamic>),
     identifier: (json['identifier'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
@@ -825,9 +816,7 @@ _$_DeviceUseStatement _$_$_DeviceUseStatementFromJson(
     recordedOnElement: json['_recordedOn'] == null
         ? null
         : Element.fromJson(json['_recordedOn'] as Map<String, dynamic>),
-    subject: json['subject'] == null
-        ? null
-        : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+    subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
     timingTiming: json['timingTiming'] == null
         ? null
         : Timing.fromJson(json['timingTiming'] as Map<String, dynamic>),
@@ -872,7 +861,7 @@ Map<String, dynamic> _$_$_DeviceUseStatementToJson(
       'bodySiteCodeableConcept', instance.bodySiteCodeableConcept?.toJson());
   writeNotNull('bodySiteReference', instance.bodySiteReference?.toJson());
   writeNotNull('whenUsed', instance.whenUsed?.toJson());
-  writeNotNull('device', instance.device?.toJson());
+  val['device'] = instance.device.toJson();
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
   writeNotNull(
@@ -880,7 +869,7 @@ Map<String, dynamic> _$_$_DeviceUseStatementToJson(
   writeNotNull('notes', instance.notes);
   writeNotNull('recordedOn', instance.recordedOn?.toJson());
   writeNotNull('_recordedOn', instance.recordedOnElement?.toJson());
-  writeNotNull('subject', instance.subject?.toJson());
+  val['subject'] = instance.subject.toJson();
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
   writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
   writeNotNull('timingDateTime', instance.timingDateTime?.toJson());

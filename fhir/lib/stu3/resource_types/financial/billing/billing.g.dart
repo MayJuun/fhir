@@ -445,9 +445,7 @@ _$_ClaimCareTeam _$_$_ClaimCareTeamFromJson(Map<String, dynamic> json) {
     sequenceElement: json['_sequence'] == null
         ? null
         : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
-    provider: json['provider'] == null
-        ? null
-        : Reference.fromJson(json['provider'] as Map<String, dynamic>),
+    provider: Reference.fromJson(json['provider'] as Map<String, dynamic>),
     responsible: json['responsible'] == null
         ? null
         : Boolean.fromJson(json['responsible']),
@@ -475,7 +473,7 @@ Map<String, dynamic> _$_$_ClaimCareTeamToJson(_$_ClaimCareTeam instance) {
 
   writeNotNull('sequence', instance.sequence?.toJson());
   writeNotNull('_sequence', instance.sequenceElement?.toJson());
-  writeNotNull('provider', instance.provider?.toJson());
+  val['provider'] = instance.provider.toJson();
   writeNotNull('responsible', instance.responsible?.toJson());
   writeNotNull('_responsible', instance.responsibleElement?.toJson());
   writeNotNull('role', instance.role?.toJson());
@@ -490,9 +488,8 @@ _$_ClaimInformation _$_$_ClaimInformationFromJson(Map<String, dynamic> json) {
     sequenceElement: json['_sequence'] == null
         ? null
         : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
-    category: json['category'] == null
-        ? null
-        : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
+    category:
+        CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
     code: json['code'] == null
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -534,7 +531,7 @@ Map<String, dynamic> _$_$_ClaimInformationToJson(_$_ClaimInformation instance) {
 
   writeNotNull('sequence', instance.sequence?.toJson());
   writeNotNull('_sequence', instance.sequenceElement?.toJson());
-  writeNotNull('category', instance.category?.toJson());
+  val['category'] = instance.category.toJson();
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('timingDate', instance.timingDate?.toJson());
   writeNotNull('_timingDate', instance.timingDateElement?.toJson());
@@ -645,9 +642,7 @@ _$_ClaimInsurance _$_$_ClaimInsuranceFromJson(Map<String, dynamic> json) {
     focalElement: json['_focal'] == null
         ? null
         : Element.fromJson(json['_focal'] as Map<String, dynamic>),
-    coverage: json['coverage'] == null
-        ? null
-        : Reference.fromJson(json['coverage'] as Map<String, dynamic>),
+    coverage: Reference.fromJson(json['coverage'] as Map<String, dynamic>),
     businessArrangement: json['businessArrangement'] as String?,
     businessArrangementElement: json['_businessArrangement'] == null
         ? null
@@ -679,7 +674,7 @@ Map<String, dynamic> _$_$_ClaimInsuranceToJson(_$_ClaimInsurance instance) {
   writeNotNull('_sequence', instance.sequenceElement?.toJson());
   writeNotNull('focal', instance.focal?.toJson());
   writeNotNull('_focal', instance.focalElement?.toJson());
-  writeNotNull('coverage', instance.coverage?.toJson());
+  val['coverage'] = instance.coverage.toJson();
   writeNotNull('businessArrangement', instance.businessArrangement);
   writeNotNull(
       '_businessArrangement', instance.businessArrangementElement?.toJson());
@@ -1562,9 +1557,7 @@ _$_ClaimResponseError _$_$_ClaimResponseErrorFromJson(
         ? null
         : Element.fromJson(
             json['_subdetailSequenceLinkId'] as Map<String, dynamic>),
-    code: json['code'] == null
-        ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
   );
 }
 
@@ -1587,7 +1580,7 @@ Map<String, dynamic> _$_$_ClaimResponseErrorToJson(
       'subdetailSequenceLinkId', instance.subdetailSequenceLinkId?.toJson());
   writeNotNull('_subdetailSequenceLinkId',
       instance.subdetailSequenceLinkIdElement?.toJson());
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   return val;
 }
 
@@ -1688,9 +1681,7 @@ _$_ClaimResponseInsurance _$_$_ClaimResponseInsuranceFromJson(
     focalElement: json['_focal'] == null
         ? null
         : Element.fromJson(json['_focal'] as Map<String, dynamic>),
-    coverage: json['coverage'] == null
-        ? null
-        : Reference.fromJson(json['coverage'] as Map<String, dynamic>),
+    coverage: Reference.fromJson(json['coverage'] as Map<String, dynamic>),
     businessArrangement: json['businessArrangement'] as String?,
     businessArrangementElement: json['_businessArrangement'] == null
         ? null
@@ -1723,7 +1714,7 @@ Map<String, dynamic> _$_$_ClaimResponseInsuranceToJson(
   writeNotNull('_sequence', instance.sequenceElement?.toJson());
   writeNotNull('focal', instance.focal?.toJson());
   writeNotNull('_focal', instance.focalElement?.toJson());
-  writeNotNull('coverage', instance.coverage?.toJson());
+  val['coverage'] = instance.coverage.toJson();
   writeNotNull('businessArrangement', instance.businessArrangement);
   writeNotNull(
       '_businessArrangement', instance.businessArrangementElement?.toJson());

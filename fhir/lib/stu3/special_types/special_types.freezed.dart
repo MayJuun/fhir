@@ -19,7 +19,7 @@ class _$NarrativeTearOff {
   _Narrative call(
       {NarrativeStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
-      required String? div}) {
+      required String div}) {
     return _Narrative(
       status: status,
       statusElement: statusElement,
@@ -40,7 +40,7 @@ mixin _$Narrative {
   NarrativeStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  String? get div;
+  String get div;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -54,7 +54,7 @@ abstract class $NarrativeCopyWith<$Res> {
   $Res call(
       {NarrativeStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
-      String? div});
+      String div});
 
   $ElementCopyWith<$Res>? get statusElement;
 }
@@ -78,7 +78,7 @@ class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      div: div == freezed ? _value.div : div as String?,
+      div: div == freezed ? _value.div : div as String,
     ));
   }
 
@@ -103,7 +103,7 @@ abstract class _$NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
   $Res call(
       {NarrativeStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
-      String? div});
+      String div});
 
   @override
   $ElementCopyWith<$Res>? get statusElement;
@@ -129,7 +129,7 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      div: div == freezed ? _value.div : div as String?,
+      div: div == freezed ? _value.div : div as String,
     ));
   }
 }
@@ -153,7 +153,7 @@ class _$_Narrative extends _Narrative {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final String? div;
+  final String div;
 
   @override
   String toString() {
@@ -196,7 +196,7 @@ abstract class _Narrative extends Narrative {
   factory _Narrative(
       {NarrativeStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
-      required String? div}) = _$_Narrative;
+      required String div}) = _$_Narrative;
 
   factory _Narrative.fromJson(Map<String, dynamic> json) =
       _$_Narrative.fromJson;
@@ -207,7 +207,7 @@ abstract class _Narrative extends Narrative {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  String? get div;
+  String get div;
   @override
   @JsonKey(ignore: true)
   _$NarrativeCopyWith<_Narrative> get copyWith;

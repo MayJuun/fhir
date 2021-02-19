@@ -820,7 +820,7 @@ class _$ProcessRequestItemTearOff {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Integer? sequenceLinkId}) {
+      required Integer sequenceLinkId}) {
     return _ProcessRequestItem(
       id: id,
       extension_: extension_,
@@ -843,7 +843,7 @@ mixin _$ProcessRequestItem {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  Integer? get sequenceLinkId;
+  Integer get sequenceLinkId;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -859,7 +859,7 @@ abstract class $ProcessRequestItemCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Integer? sequenceLinkId});
+      Integer sequenceLinkId});
 }
 
 /// @nodoc
@@ -888,7 +888,7 @@ class _$ProcessRequestItemCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       sequenceLinkId: sequenceLinkId == freezed
           ? _value.sequenceLinkId
-          : sequenceLinkId as Integer?,
+          : sequenceLinkId as Integer,
     ));
   }
 }
@@ -904,7 +904,7 @@ abstract class _$ProcessRequestItemCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Integer? sequenceLinkId});
+      Integer sequenceLinkId});
 }
 
 /// @nodoc
@@ -935,7 +935,7 @@ class __$ProcessRequestItemCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       sequenceLinkId: sequenceLinkId == freezed
           ? _value.sequenceLinkId
-          : sequenceLinkId as Integer?,
+          : sequenceLinkId as Integer,
     ));
   }
 }
@@ -962,7 +962,7 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final Integer? sequenceLinkId;
+  final Integer sequenceLinkId;
 
   @override
   String toString() {
@@ -1011,7 +1011,7 @@ abstract class _ProcessRequestItem extends ProcessRequestItem {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Integer? sequenceLinkId}) = _$_ProcessRequestItem;
+      required Integer sequenceLinkId}) = _$_ProcessRequestItem;
 
   factory _ProcessRequestItem.fromJson(Map<String, dynamic> json) =
       _$_ProcessRequestItem.fromJson;
@@ -1024,7 +1024,7 @@ abstract class _ProcessRequestItem extends ProcessRequestItem {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  Integer? get sequenceLinkId;
+  Integer get sequenceLinkId;
   @override
   @JsonKey(ignore: true)
   _$ProcessRequestItemCopyWith<_ProcessRequestItem> get copyWith;

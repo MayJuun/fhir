@@ -41,18 +41,14 @@ _$_MessageHeader _$_$_MessageHeaderFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    timestamp:
-        json['timestamp'] == null ? null : Instant.fromJson(json['timestamp']),
-    event: json['event'] == null
-        ? null
-        : Coding.fromJson(json['event'] as Map<String, dynamic>),
+    timestamp: Instant.fromJson(json['timestamp']),
+    event: Coding.fromJson(json['event'] as Map<String, dynamic>),
     response: json['response'] == null
         ? null
         : MessageHeaderResponse.fromJson(
             json['response'] as Map<String, dynamic>),
-    source: json['source'] == null
-        ? null
-        : MessageHeaderSource.fromJson(json['source'] as Map<String, dynamic>),
+    source:
+        MessageHeaderSource.fromJson(json['source'] as Map<String, dynamic>),
     destination: (json['destination'] as List<dynamic>?)
         ?.map((e) => e == null
             ? null
@@ -104,10 +100,10 @@ Map<String, dynamic> _$_$_MessageHeaderToJson(_$_MessageHeader instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('timestamp', instance.timestamp?.toJson());
-  writeNotNull('event', instance.event?.toJson());
+  val['timestamp'] = instance.timestamp.toJson();
+  val['event'] = instance.event.toJson();
   writeNotNull('response', instance.response?.toJson());
-  writeNotNull('source', instance.source?.toJson());
+  val['source'] = instance.source.toJson();
   writeNotNull(
       'destination', instance.destination?.map((e) => e?.toJson()).toList());
   writeNotNull('enterer', instance.enterer?.toJson());
@@ -257,8 +253,7 @@ _$_MessageHeaderResponse _$_$_MessageHeaderResponseFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    identifier:
-        json['identifier'] == null ? null : Id.fromJson(json['identifier']),
+    identifier: Id.fromJson(json['identifier']),
     identifierElement: json['_identifier'] == null
         ? null
         : Element.fromJson(json['_identifier'] as Map<String, dynamic>),
@@ -288,7 +283,7 @@ Map<String, dynamic> _$_$_MessageHeaderResponseToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('identifier', instance.identifier?.toJson());
+  val['identifier'] = instance.identifier.toJson();
   writeNotNull('_identifier', instance.identifierElement?.toJson());
   val['code'] = _$ResponseCodeEnumMap[instance.code];
   writeNotNull('_code', instance.codeElement?.toJson());
@@ -332,8 +327,7 @@ _$_MessageHeaderSource _$_$_MessageHeaderSourceFromJson(
     contact: json['contact'] == null
         ? null
         : ContactPoint.fromJson(json['contact'] as Map<String, dynamic>),
-    endpoint:
-        json['endpoint'] == null ? null : FhirUri.fromJson(json['endpoint']),
+    endpoint: FhirUri.fromJson(json['endpoint']),
     endpointElement: json['_endpoint'] == null
         ? null
         : Element.fromJson(json['_endpoint'] as Map<String, dynamic>),
@@ -362,7 +356,7 @@ Map<String, dynamic> _$_$_MessageHeaderSourceToJson(
   writeNotNull('version', instance.version);
   writeNotNull('_version', instance.versionElement?.toJson());
   writeNotNull('contact', instance.contact?.toJson());
-  writeNotNull('endpoint', instance.endpoint?.toJson());
+  val['endpoint'] = instance.endpoint.toJson();
   writeNotNull('_endpoint', instance.endpointElement?.toJson());
   return val;
 }
@@ -388,8 +382,7 @@ _$_MessageHeaderDestination _$_$_MessageHeaderDestinationFromJson(
     target: json['target'] == null
         ? null
         : Reference.fromJson(json['target'] as Map<String, dynamic>),
-    endpoint:
-        json['endpoint'] == null ? null : FhirUri.fromJson(json['endpoint']),
+    endpoint: FhirUri.fromJson(json['endpoint']),
     endpointElement: json['_endpoint'] == null
         ? null
         : Element.fromJson(json['_endpoint'] as Map<String, dynamic>),
@@ -414,7 +407,7 @@ Map<String, dynamic> _$_$_MessageHeaderDestinationToJson(
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('target', instance.target?.toJson());
-  writeNotNull('endpoint', instance.endpoint?.toJson());
+  val['endpoint'] = instance.endpoint.toJson();
   writeNotNull('_endpoint', instance.endpointElement?.toJson());
   return val;
 }
@@ -457,10 +450,8 @@ _$_OperationOutcome _$_$_OperationOutcomeFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    issue: (json['issue'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : OperationOutcomeIssue.fromJson(e as Map<String, dynamic>))
+    issue: (json['issue'] as List<dynamic>)
+        .map((e) => OperationOutcomeIssue.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -490,7 +481,7 @@ Map<String, dynamic> _$_$_OperationOutcomeToJson(_$_OperationOutcome instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('issue', instance.issue?.map((e) => e?.toJson()).toList());
+  val['issue'] = instance.issue.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -510,7 +501,7 @@ _$_OperationOutcomeIssue _$_$_OperationOutcomeIssueFromJson(
         .toList(),
     severity: _$enumDecode(_$IssueSeverityEnumMap, json['severity'],
         unknownValue: IssueSeverity.unknown),
-    code: json['code'] == null ? null : Code.fromJson(json['code']),
+    code: Code.fromJson(json['code']),
     details: json['details'] == null
         ? null
         : CodeableConcept.fromJson(json['details'] as Map<String, dynamic>),
@@ -536,7 +527,7 @@ Map<String, dynamic> _$_$_OperationOutcomeIssueToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   val['severity'] = _$IssueSeverityEnumMap[instance.severity];
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   writeNotNull('details', instance.details?.toJson());
   writeNotNull('diagnostics', instance.diagnostics);
   writeNotNull('location', instance.location);
@@ -636,7 +627,7 @@ _$_ParametersParameter _$_$_ParametersParameterFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    name: json['name'] as String?,
+    name: json['name'] as String,
     nameElement: json['_name'] == null
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
@@ -762,7 +753,7 @@ Map<String, dynamic> _$_$_ParametersParameterToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('name', instance.name);
+  val['name'] = instance.name;
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('valueInteger', instance.valueInteger?.toJson());
   writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
@@ -838,7 +829,7 @@ _$_Subscription _$_$_SubscriptionFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    criteria: json['criteria'] as String?,
+    criteria: json['criteria'] as String,
     criteriaElement: json['_criteria'] == null
         ? null
         : Element.fromJson(json['_criteria'] as Map<String, dynamic>),
@@ -846,7 +837,7 @@ _$_Subscription _$_$_SubscriptionFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
         .toList(),
-    reason: json['reason'] as String?,
+    reason: json['reason'] as String,
     reasonElement: json['_reason'] == null
         ? null
         : Element.fromJson(json['_reason'] as Map<String, dynamic>),
@@ -859,9 +850,8 @@ _$_Subscription _$_$_SubscriptionFromJson(Map<String, dynamic> json) {
     errorElement: json['_error'] == null
         ? null
         : Element.fromJson(json['_error'] as Map<String, dynamic>),
-    channel: json['channel'] == null
-        ? null
-        : SubscriptionChannel.fromJson(json['channel'] as Map<String, dynamic>),
+    channel:
+        SubscriptionChannel.fromJson(json['channel'] as Map<String, dynamic>),
     end: json['end'] == null ? null : Instant.fromJson(json['end']),
     endElement: json['_end'] == null
         ? null
@@ -897,16 +887,16 @@ Map<String, dynamic> _$_$_SubscriptionToJson(_$_Subscription instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('criteria', instance.criteria);
+  val['criteria'] = instance.criteria;
   writeNotNull('_criteria', instance.criteriaElement?.toJson());
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson()).toList());
-  writeNotNull('reason', instance.reason);
+  val['reason'] = instance.reason;
   writeNotNull('_reason', instance.reasonElement?.toJson());
   val['status'] = _$SubscriptionStatusEnumMap[instance.status];
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('error', instance.error);
   writeNotNull('_error', instance.errorElement?.toJson());
-  writeNotNull('channel', instance.channel?.toJson());
+  val['channel'] = instance.channel.toJson();
   writeNotNull('end', instance.end?.toJson());
   writeNotNull('_end', instance.endElement?.toJson());
   writeNotNull('tag', instance.tag?.map((e) => e?.toJson()).toList());
@@ -945,7 +935,7 @@ _$_SubscriptionChannel _$_$_SubscriptionChannelFromJson(
     endpointElement: json['_endpoint'] == null
         ? null
         : Element.fromJson(json['_endpoint'] as Map<String, dynamic>),
-    payload: json['payload'] as String?,
+    payload: json['payload'] as String,
     payloadElement: json['_payload'] == null
         ? null
         : Element.fromJson(json['_payload'] as Map<String, dynamic>),
@@ -976,7 +966,7 @@ Map<String, dynamic> _$_$_SubscriptionChannelToJson(
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('endpoint', instance.endpoint?.toJson());
   writeNotNull('_endpoint', instance.endpointElement?.toJson());
-  writeNotNull('payload', instance.payload);
+  val['payload'] = instance.payload;
   writeNotNull('_payload', instance.payloadElement?.toJson());
   writeNotNull('header', instance.header);
   writeNotNull(

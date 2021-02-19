@@ -3542,13 +3542,13 @@ class _$MeasureReportTearOff {
       MeasureReportType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      required Reference? measure,
+      required Reference measure,
       Reference? patient,
       Date? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? reportingOrganization,
-      required Period? period,
+      required Period period,
       List<MeasureReportGroup?>? group,
       Reference? evaluatedResources}) {
     return _MeasureReport(
@@ -3611,13 +3611,13 @@ mixin _$MeasureReport {
   MeasureReportType? get type;
   @JsonKey(name: '_type')
   Element? get typeElement;
-  Reference? get measure;
+  Reference get measure;
   Reference? get patient;
   Date? get date;
   @JsonKey(name: '_date')
   Element? get dateElement;
   Reference? get reportingOrganization;
-  Period? get period;
+  Period get period;
   List<MeasureReportGroup?>? get group;
   Reference? get evaluatedResources;
 
@@ -3654,13 +3654,13 @@ abstract class $MeasureReportCopyWith<$Res> {
       MeasureReportType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Reference? measure,
+      Reference measure,
       Reference? patient,
       Date? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? reportingOrganization,
-      Period? period,
+      Period period,
       List<MeasureReportGroup?>? group,
       Reference? evaluatedResources});
 
@@ -3671,11 +3671,11 @@ abstract class $MeasureReportCopyWith<$Res> {
   $IdentifierCopyWith<$Res>? get identifier;
   $ElementCopyWith<$Res>? get statusElement;
   $ElementCopyWith<$Res>? get typeElement;
-  $ReferenceCopyWith<$Res>? get measure;
+  $ReferenceCopyWith<$Res> get measure;
   $ReferenceCopyWith<$Res>? get patient;
   $ElementCopyWith<$Res>? get dateElement;
   $ReferenceCopyWith<$Res>? get reportingOrganization;
-  $PeriodCopyWith<$Res>? get period;
+  $PeriodCopyWith<$Res> get period;
   $ReferenceCopyWith<$Res>? get evaluatedResources;
 }
 
@@ -3751,7 +3751,7 @@ class _$MeasureReportCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as MeasureReportType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      measure: measure == freezed ? _value.measure : measure as Reference?,
+      measure: measure == freezed ? _value.measure : measure as Reference,
       patient: patient == freezed ? _value.patient : patient as Reference?,
       date: date == freezed ? _value.date : date as Date?,
       dateElement:
@@ -3759,7 +3759,7 @@ class _$MeasureReportCopyWithImpl<$Res>
       reportingOrganization: reportingOrganization == freezed
           ? _value.reportingOrganization
           : reportingOrganization as Reference?,
-      period: period == freezed ? _value.period : period as Period?,
+      period: period == freezed ? _value.period : period as Period,
       group:
           group == freezed ? _value.group : group as List<MeasureReportGroup?>?,
       evaluatedResources: evaluatedResources == freezed
@@ -3846,12 +3846,8 @@ class _$MeasureReportCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get measure {
-    if (_value.measure == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.measure!, (value) {
+  $ReferenceCopyWith<$Res> get measure {
+    return $ReferenceCopyWith<$Res>(_value.measure, (value) {
       return _then(_value.copyWith(measure: value));
     });
   }
@@ -3890,12 +3886,8 @@ class _$MeasureReportCopyWithImpl<$Res>
   }
 
   @override
-  $PeriodCopyWith<$Res>? get period {
-    if (_value.period == null) {
-      return null;
-    }
-
-    return $PeriodCopyWith<$Res>(_value.period!, (value) {
+  $PeriodCopyWith<$Res> get period {
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
       return _then(_value.copyWith(period: value));
     });
   }
@@ -3942,13 +3934,13 @@ abstract class _$MeasureReportCopyWith<$Res>
       MeasureReportType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Reference? measure,
+      Reference measure,
       Reference? patient,
       Date? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? reportingOrganization,
-      Period? period,
+      Period period,
       List<MeasureReportGroup?>? group,
       Reference? evaluatedResources});
 
@@ -3967,7 +3959,7 @@ abstract class _$MeasureReportCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get typeElement;
   @override
-  $ReferenceCopyWith<$Res>? get measure;
+  $ReferenceCopyWith<$Res> get measure;
   @override
   $ReferenceCopyWith<$Res>? get patient;
   @override
@@ -3975,7 +3967,7 @@ abstract class _$MeasureReportCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get reportingOrganization;
   @override
-  $PeriodCopyWith<$Res>? get period;
+  $PeriodCopyWith<$Res> get period;
   @override
   $ReferenceCopyWith<$Res>? get evaluatedResources;
 }
@@ -4054,7 +4046,7 @@ class __$MeasureReportCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as MeasureReportType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      measure: measure == freezed ? _value.measure : measure as Reference?,
+      measure: measure == freezed ? _value.measure : measure as Reference,
       patient: patient == freezed ? _value.patient : patient as Reference?,
       date: date == freezed ? _value.date : date as Date?,
       dateElement:
@@ -4062,7 +4054,7 @@ class __$MeasureReportCopyWithImpl<$Res>
       reportingOrganization: reportingOrganization == freezed
           ? _value.reportingOrganization
           : reportingOrganization as Reference?,
-      period: period == freezed ? _value.period : period as Period?,
+      period: period == freezed ? _value.period : period as Period,
       group:
           group == freezed ? _value.group : group as List<MeasureReportGroup?>?,
       evaluatedResources: evaluatedResources == freezed
@@ -4152,7 +4144,7 @@ class _$_MeasureReport extends _MeasureReport {
   @JsonKey(name: '_type')
   final Element? typeElement;
   @override
-  final Reference? measure;
+  final Reference measure;
   @override
   final Reference? patient;
   @override
@@ -4163,7 +4155,7 @@ class _$_MeasureReport extends _MeasureReport {
   @override
   final Reference? reportingOrganization;
   @override
-  final Period? period;
+  final Period period;
   @override
   final List<MeasureReportGroup?>? group;
   @override
@@ -4308,13 +4300,13 @@ abstract class _MeasureReport extends MeasureReport {
       MeasureReportType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      required Reference? measure,
+      required Reference measure,
       Reference? patient,
       Date? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       Reference? reportingOrganization,
-      required Period? period,
+      required Period period,
       List<MeasureReportGroup?>? group,
       Reference? evaluatedResources}) = _$_MeasureReport;
 
@@ -4360,7 +4352,7 @@ abstract class _MeasureReport extends MeasureReport {
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
-  Reference? get measure;
+  Reference get measure;
   @override
   Reference? get patient;
   @override
@@ -4371,7 +4363,7 @@ abstract class _MeasureReport extends MeasureReport {
   @override
   Reference? get reportingOrganization;
   @override
-  Period? get period;
+  Period get period;
   @override
   List<MeasureReportGroup?>? get group;
   @override

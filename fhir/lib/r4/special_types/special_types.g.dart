@@ -19,7 +19,7 @@ _$_Narrative _$_$_NarrativeFromJson(Map<String, dynamic> json) {
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    div: json['div'] as String?,
+    div: json['div'] as String,
   );
 }
 
@@ -37,7 +37,7 @@ Map<String, dynamic> _$_$_NarrativeToJson(_$_Narrative instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('status', _$NarrativeStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('div', instance.div);
+  val['div'] = instance.div;
   return val;
 }
 

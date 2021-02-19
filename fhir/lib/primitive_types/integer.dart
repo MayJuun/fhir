@@ -9,19 +9,10 @@ class Integer {
   factory Integer(dynamic inValue) {
     assert(inValue != null);
     if (inValue is int) {
-      return Integer._(
-        inValue.toString(),
-        inValue,
-        true,
-        false,
-      );
+      return Integer._(inValue.toString(), inValue, true, false);
     } else if (inValue is String) {
       return Integer._(
-        inValue,
-        int.tryParse(inValue),
-        int.tryParse(inValue) != null,
-        true,
-      );
+          inValue, int.tryParse(inValue), int.tryParse(inValue) != null, true);
     }
     throw ArgumentError('Integer cannot be constructed from $inValue.');
   }

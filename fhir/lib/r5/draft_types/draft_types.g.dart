@@ -228,9 +228,7 @@ _$_MarketingStatus _$_$_MarketingStatusFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['jurisdiction'] as Map<String, dynamic>),
-    status: json['status'] == null
-        ? null
-        : CodeableConcept.fromJson(json['status'] as Map<String, dynamic>),
+    status: CodeableConcept.fromJson(json['status'] as Map<String, dynamic>),
     dateRange: json['dateRange'] == null
         ? null
         : Period.fromJson(json['dateRange'] as Map<String, dynamic>),
@@ -259,7 +257,7 @@ Map<String, dynamic> _$_$_MarketingStatusToJson(_$_MarketingStatus instance) {
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull('country', instance.country?.toJson());
   writeNotNull('jurisdiction', instance.jurisdiction?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  val['status'] = instance.status.toJson();
   writeNotNull('dateRange', instance.dateRange?.toJson());
   writeNotNull('restoreDate', instance.restoreDate?.toJson());
   writeNotNull('_restoreDate', instance.restoreDateElement?.toJson());
@@ -1886,10 +1884,8 @@ _$_CitationKeywordList _$_$_CitationKeywordListFromJson(
     ownerElement: json['_owner'] == null
         ? null
         : Element.fromJson(json['_owner'] as Map<String, dynamic>),
-    keyword: (json['keyword'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CitationKeyword.fromJson(e as Map<String, dynamic>))
+    keyword: (json['keyword'] as List<dynamic>)
+        .map((e) => CitationKeyword.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1911,7 +1907,7 @@ Map<String, dynamic> _$_$_CitationKeywordListToJson(
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull('owner', instance.owner);
   writeNotNull('_owner', instance.ownerElement?.toJson());
-  writeNotNull('keyword', instance.keyword?.map((e) => e?.toJson()).toList());
+  val['keyword'] = instance.keyword.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -2297,10 +2293,8 @@ _$_EvidenceReport _$_$_EvidenceReportFromJson(Map<String, dynamic> json) {
             ? null
             : RelatedArtifact.fromJson(e as Map<String, dynamic>))
         .toList(),
-    subject: json['subject'] == null
-        ? null
-        : EvidenceReportSubject.fromJson(
-            json['subject'] as Map<String, dynamic>),
+    subject:
+        EvidenceReportSubject.fromJson(json['subject'] as Map<String, dynamic>),
     author: (json['author'] as List<dynamic>?)
         ?.map((e) => e == null
             ? null
@@ -2399,7 +2393,7 @@ Map<String, dynamic> _$_$_EvidenceReportToJson(_$_EvidenceReport instance) {
   writeNotNull('note', instance.note?.map((e) => e?.toJson()).toList());
   writeNotNull('relatedArtifact',
       instance.relatedArtifact?.map((e) => e?.toJson()).toList());
-  writeNotNull('subject', instance.subject?.toJson());
+  val['subject'] = instance.subject.toJson();
   writeNotNull('author', instance.author?.map((e) => e?.toJson()).toList());
   writeNotNull('editor', instance.editor?.map((e) => e?.toJson()).toList());
   writeNotNull('reviewer', instance.reviewer?.map((e) => e?.toJson()).toList());
@@ -2478,9 +2472,7 @@ _$_EvidenceReportCharacteristic _$_$_EvidenceReportCharacteristicFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    code: json['code'] == null
-        ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     valueReference: json['valueReference'] == null
         ? null
         : Reference.fromJson(json['valueReference'] as Map<String, dynamic>),
@@ -2525,7 +2517,7 @@ Map<String, dynamic> _$_$_EvidenceReportCharacteristicToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   writeNotNull('valueReference', instance.valueReference?.toJson());
   writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
   writeNotNull('valueBoolean', instance.valueBoolean?.toJson());

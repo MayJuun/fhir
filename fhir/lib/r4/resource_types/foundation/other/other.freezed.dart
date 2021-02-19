@@ -33,7 +33,7 @@ class _$BasicTearOff {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       Reference? subject,
       Date? created,
       @JsonKey(name: '_created')
@@ -86,7 +86,7 @@ mixin _$Basic {
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
   List<Identifier?>? get identifier;
-  CodeableConcept? get code;
+  CodeableConcept get code;
   Reference? get subject;
   Date? get created;
   @JsonKey(name: '_created')
@@ -119,7 +119,7 @@ abstract class $BasicCopyWith<$Res> {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      CodeableConcept? code,
+      CodeableConcept code,
       Reference? subject,
       Date? created,
       @JsonKey(name: '_created')
@@ -130,7 +130,7 @@ abstract class $BasicCopyWith<$Res> {
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res>? get subject;
   $ElementCopyWith<$Res>? get createdElement;
   $ReferenceCopyWith<$Res>? get author;
@@ -193,7 +193,7 @@ class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       created: created == freezed ? _value.created : created as Date?,
       createdElement: createdElement == freezed
@@ -248,12 +248,8 @@ class _$BasicCopyWithImpl<$Res> implements $BasicCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
@@ -314,7 +310,7 @@ abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      CodeableConcept? code,
+      CodeableConcept code,
       Reference? subject,
       Date? created,
       @JsonKey(name: '_created')
@@ -330,7 +326,7 @@ abstract class _$BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   @override
   $ReferenceCopyWith<$Res>? get subject;
   @override
@@ -397,7 +393,7 @@ class __$BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       created: created == freezed ? _value.created : created as Date?,
       createdElement: createdElement == freezed
@@ -469,7 +465,7 @@ class _$_Basic extends _Basic {
   @override
   final List<Identifier?>? identifier;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
   final Reference? subject;
   @override
@@ -588,7 +584,7 @@ abstract class _Basic extends Basic {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       Reference? subject,
       Date? created,
       @JsonKey(name: '_created')
@@ -626,7 +622,7 @@ abstract class _Basic extends Basic {
   @override
   List<Identifier?>? get identifier;
   @override
-  CodeableConcept? get code;
+  CodeableConcept get code;
   @override
   Reference? get subject;
   @override
@@ -3908,7 +3904,7 @@ class _$LinkageTearOff {
       @JsonKey(name: '_active')
           Element? activeElement,
       Reference? author,
-      required List<LinkageItem?>? item}) {
+      required List<LinkageItem> item}) {
     return _Linkage(
       resourceType: resourceType,
       id: id,
@@ -3957,7 +3953,7 @@ mixin _$Linkage {
   @JsonKey(name: '_active')
   Element? get activeElement;
   Reference? get author;
-  List<LinkageItem?>? get item;
+  List<LinkageItem> get item;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -3988,7 +3984,7 @@ abstract class $LinkageCopyWith<$Res> {
       @JsonKey(name: '_active')
           Element? activeElement,
       Reference? author,
-      List<LinkageItem?>? item});
+      List<LinkageItem> item});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -4055,7 +4051,7 @@ class _$LinkageCopyWithImpl<$Res> implements $LinkageCopyWith<$Res> {
           ? _value.activeElement
           : activeElement as Element?,
       author: author == freezed ? _value.author : author as Reference?,
-      item: item == freezed ? _value.item : item as List<LinkageItem?>?,
+      item: item == freezed ? _value.item : item as List<LinkageItem>,
     ));
   }
 
@@ -4151,7 +4147,7 @@ abstract class _$LinkageCopyWith<$Res> implements $LinkageCopyWith<$Res> {
       @JsonKey(name: '_active')
           Element? activeElement,
       Reference? author,
-      List<LinkageItem?>? item});
+      List<LinkageItem> item});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -4225,7 +4221,7 @@ class __$LinkageCopyWithImpl<$Res> extends _$LinkageCopyWithImpl<$Res>
           ? _value.activeElement
           : activeElement as Element?,
       author: author == freezed ? _value.author : author as Reference?,
-      item: item == freezed ? _value.item : item as List<LinkageItem?>?,
+      item: item == freezed ? _value.item : item as List<LinkageItem>,
     ));
   }
 }
@@ -4294,7 +4290,7 @@ class _$_Linkage extends _Linkage {
   @override
   final Reference? author;
   @override
-  final List<LinkageItem?>? item;
+  final List<LinkageItem> item;
 
   @override
   String toString() {
@@ -4398,7 +4394,7 @@ abstract class _Linkage extends Linkage {
       @JsonKey(name: '_active')
           Element? activeElement,
       Reference? author,
-      required List<LinkageItem?>? item}) = _$_Linkage;
+      required List<LinkageItem> item}) = _$_Linkage;
 
   factory _Linkage.fromJson(Map<String, dynamic> json) = _$_Linkage.fromJson;
 
@@ -4436,7 +4432,7 @@ abstract class _Linkage extends Linkage {
   @override
   Reference? get author;
   @override
-  List<LinkageItem?>? get item;
+  List<LinkageItem> get item;
   @override
   @JsonKey(ignore: true)
   _$LinkageCopyWith<_Linkage> get copyWith;
@@ -4456,7 +4452,7 @@ class _$LinkageItemTearOff {
       List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
       @JsonKey(name: '_type') Element? typeElement,
-      required Reference? resource}) {
+      required Reference resource}) {
     return _LinkageItem(
       id: id,
       extension_: extension_,
@@ -4485,7 +4481,7 @@ mixin _$LinkageItem {
   LinkageItemType? get type;
   @JsonKey(name: '_type')
   Element? get typeElement;
-  Reference? get resource;
+  Reference get resource;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4503,10 +4499,10 @@ abstract class $LinkageItemCopyWith<$Res> {
       List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Reference? resource});
+      Reference resource});
 
   $ElementCopyWith<$Res>? get typeElement;
-  $ReferenceCopyWith<$Res>? get resource;
+  $ReferenceCopyWith<$Res> get resource;
 }
 
 /// @nodoc
@@ -4537,7 +4533,7 @@ class _$LinkageItemCopyWithImpl<$Res> implements $LinkageItemCopyWith<$Res> {
       type: type == freezed ? _value.type : type as LinkageItemType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      resource: resource == freezed ? _value.resource : resource as Reference?,
+      resource: resource == freezed ? _value.resource : resource as Reference,
     ));
   }
 
@@ -4553,12 +4549,8 @@ class _$LinkageItemCopyWithImpl<$Res> implements $LinkageItemCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get resource {
-    if (_value.resource == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.resource!, (value) {
+  $ReferenceCopyWith<$Res> get resource {
+    return $ReferenceCopyWith<$Res>(_value.resource, (value) {
       return _then(_value.copyWith(resource: value));
     });
   }
@@ -4577,12 +4569,12 @@ abstract class _$LinkageItemCopyWith<$Res>
       List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Reference? resource});
+      Reference resource});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
   @override
-  $ReferenceCopyWith<$Res>? get resource;
+  $ReferenceCopyWith<$Res> get resource;
 }
 
 /// @nodoc
@@ -4615,7 +4607,7 @@ class __$LinkageItemCopyWithImpl<$Res> extends _$LinkageItemCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as LinkageItemType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      resource: resource == freezed ? _value.resource : resource as Reference?,
+      resource: resource == freezed ? _value.resource : resource as Reference,
     ));
   }
 }
@@ -4650,7 +4642,7 @@ class _$_LinkageItem extends _LinkageItem {
   @JsonKey(name: '_type')
   final Element? typeElement;
   @override
-  final Reference? resource;
+  final Reference resource;
 
   @override
   String toString() {
@@ -4708,7 +4700,7 @@ abstract class _LinkageItem extends LinkageItem {
       List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
       @JsonKey(name: '_type') Element? typeElement,
-      required Reference? resource}) = _$_LinkageItem;
+      required Reference resource}) = _$_LinkageItem;
 
   factory _LinkageItem.fromJson(Map<String, dynamic> json) =
       _$_LinkageItem.fromJson;
@@ -4727,7 +4719,7 @@ abstract class _LinkageItem extends LinkageItem {
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
-  Reference? get resource;
+  Reference get resource;
   @override
   @JsonKey(ignore: true)
   _$LinkageItemCopyWith<_LinkageItem> get copyWith;
@@ -4765,7 +4757,7 @@ class _$MessageHeaderTearOff {
       Reference? sender,
       Reference? enterer,
       Reference? author,
-      required MessageHeaderSource? source,
+      required MessageHeaderSource source,
       Reference? responsible,
       CodeableConcept? reason,
       MessageHeaderResponse? response,
@@ -4832,7 +4824,7 @@ mixin _$MessageHeader {
   Reference? get sender;
   Reference? get enterer;
   Reference? get author;
-  MessageHeaderSource? get source;
+  MessageHeaderSource get source;
   Reference? get responsible;
   CodeableConcept? get reason;
   MessageHeaderResponse? get response;
@@ -4873,7 +4865,7 @@ abstract class $MessageHeaderCopyWith<$Res> {
       Reference? sender,
       Reference? enterer,
       Reference? author,
-      MessageHeaderSource? source,
+      MessageHeaderSource source,
       Reference? responsible,
       CodeableConcept? reason,
       MessageHeaderResponse? response,
@@ -4889,7 +4881,7 @@ abstract class $MessageHeaderCopyWith<$Res> {
   $ReferenceCopyWith<$Res>? get sender;
   $ReferenceCopyWith<$Res>? get enterer;
   $ReferenceCopyWith<$Res>? get author;
-  $MessageHeaderSourceCopyWith<$Res>? get source;
+  $MessageHeaderSourceCopyWith<$Res> get source;
   $ReferenceCopyWith<$Res>? get responsible;
   $CodeableConceptCopyWith<$Res>? get reason;
   $MessageHeaderResponseCopyWith<$Res>? get response;
@@ -4969,8 +4961,7 @@ class _$MessageHeaderCopyWithImpl<$Res>
       sender: sender == freezed ? _value.sender : sender as Reference?,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference?,
       author: author == freezed ? _value.author : author as Reference?,
-      source:
-          source == freezed ? _value.source : source as MessageHeaderSource?,
+      source: source == freezed ? _value.source : source as MessageHeaderSource,
       responsible: responsible == freezed
           ? _value.responsible
           : responsible as Reference?,
@@ -5084,12 +5075,8 @@ class _$MessageHeaderCopyWithImpl<$Res>
   }
 
   @override
-  $MessageHeaderSourceCopyWith<$Res>? get source {
-    if (_value.source == null) {
-      return null;
-    }
-
-    return $MessageHeaderSourceCopyWith<$Res>(_value.source!, (value) {
+  $MessageHeaderSourceCopyWith<$Res> get source {
+    return $MessageHeaderSourceCopyWith<$Res>(_value.source, (value) {
       return _then(_value.copyWith(source: value));
     });
   }
@@ -5159,7 +5146,7 @@ abstract class _$MessageHeaderCopyWith<$Res>
       Reference? sender,
       Reference? enterer,
       Reference? author,
-      MessageHeaderSource? source,
+      MessageHeaderSource source,
       Reference? responsible,
       CodeableConcept? reason,
       MessageHeaderResponse? response,
@@ -5185,7 +5172,7 @@ abstract class _$MessageHeaderCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get author;
   @override
-  $MessageHeaderSourceCopyWith<$Res>? get source;
+  $MessageHeaderSourceCopyWith<$Res> get source;
   @override
   $ReferenceCopyWith<$Res>? get responsible;
   @override
@@ -5270,8 +5257,7 @@ class __$MessageHeaderCopyWithImpl<$Res>
       sender: sender == freezed ? _value.sender : sender as Reference?,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference?,
       author: author == freezed ? _value.author : author as Reference?,
-      source:
-          source == freezed ? _value.source : source as MessageHeaderSource?,
+      source: source == freezed ? _value.source : source as MessageHeaderSource,
       responsible: responsible == freezed
           ? _value.responsible
           : responsible as Reference?,
@@ -5367,7 +5353,7 @@ class _$_MessageHeader extends _MessageHeader {
   @override
   final Reference? author;
   @override
-  final MessageHeaderSource? source;
+  final MessageHeaderSource source;
   @override
   final Reference? responsible;
   @override
@@ -5519,7 +5505,7 @@ abstract class _MessageHeader extends MessageHeader {
       Reference? sender,
       Reference? enterer,
       Reference? author,
-      required MessageHeaderSource? source,
+      required MessageHeaderSource source,
       Reference? responsible,
       CodeableConcept? reason,
       MessageHeaderResponse? response,
@@ -5571,7 +5557,7 @@ abstract class _MessageHeader extends MessageHeader {
   @override
   Reference? get author;
   @override
-  MessageHeaderSource? get source;
+  MessageHeaderSource get source;
   @override
   Reference? get responsible;
   @override
@@ -6833,7 +6819,7 @@ class _$OperationOutcomeTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required List<OperationOutcomeIssue?>? issue}) {
+      required List<OperationOutcomeIssue> issue}) {
     return _OperationOutcome(
       resourceType: resourceType,
       id: id,
@@ -6875,7 +6861,7 @@ mixin _$OperationOutcome {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  List<OperationOutcomeIssue?>? get issue;
+  List<OperationOutcomeIssue> get issue;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -6903,7 +6889,7 @@ abstract class $OperationOutcomeCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      List<OperationOutcomeIssue?>? issue});
+      List<OperationOutcomeIssue> issue});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -6963,7 +6949,7 @@ class _$OperationOutcomeCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       issue: issue == freezed
           ? _value.issue
-          : issue as List<OperationOutcomeIssue?>?,
+          : issue as List<OperationOutcomeIssue>,
     ));
   }
 
@@ -7035,7 +7021,7 @@ abstract class _$OperationOutcomeCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      List<OperationOutcomeIssue?>? issue});
+      List<OperationOutcomeIssue> issue});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -7101,7 +7087,7 @@ class __$OperationOutcomeCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       issue: issue == freezed
           ? _value.issue
-          : issue as List<OperationOutcomeIssue?>?,
+          : issue as List<OperationOutcomeIssue>,
     ));
   }
 }
@@ -7159,7 +7145,7 @@ class _$_OperationOutcome extends _OperationOutcome {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final List<OperationOutcomeIssue?>? issue;
+  final List<OperationOutcomeIssue> issue;
 
   @override
   String toString() {
@@ -7249,7 +7235,7 @@ abstract class _OperationOutcome extends OperationOutcome {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required List<OperationOutcomeIssue?>? issue}) = _$_OperationOutcome;
+      required List<OperationOutcomeIssue> issue}) = _$_OperationOutcome;
 
   factory _OperationOutcome.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcome.fromJson;
@@ -7281,7 +7267,7 @@ abstract class _OperationOutcome extends OperationOutcome {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  List<OperationOutcomeIssue?>? get issue;
+  List<OperationOutcomeIssue> get issue;
   @override
   @JsonKey(ignore: true)
   _$OperationOutcomeCopyWith<_OperationOutcome> get copyWith;
@@ -10755,7 +10741,7 @@ class _$SubscriptionTearOff {
       String? error,
       @JsonKey(name: '_error')
           Element? errorElement,
-      required SubscriptionChannel? channel}) {
+      required SubscriptionChannel channel}) {
     return _Subscription(
       resourceType: resourceType,
       id: id,
@@ -10825,7 +10811,7 @@ mixin _$Subscription {
   String? get error;
   @JsonKey(name: '_error')
   Element? get errorElement;
-  SubscriptionChannel? get channel;
+  SubscriptionChannel get channel;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -10870,7 +10856,7 @@ abstract class $SubscriptionCopyWith<$Res> {
       String? error,
       @JsonKey(name: '_error')
           Element? errorElement,
-      SubscriptionChannel? channel});
+      SubscriptionChannel channel});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -10881,7 +10867,7 @@ abstract class $SubscriptionCopyWith<$Res> {
   $ElementCopyWith<$Res>? get reasonElement;
   $ElementCopyWith<$Res>? get criteriaElement;
   $ElementCopyWith<$Res>? get errorElement;
-  $SubscriptionChannelCopyWith<$Res>? get channel;
+  $SubscriptionChannelCopyWith<$Res> get channel;
 }
 
 /// @nodoc
@@ -10966,7 +10952,7 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
           ? _value.errorElement
           : errorElement as Element?,
       channel:
-          channel == freezed ? _value.channel : channel as SubscriptionChannel?,
+          channel == freezed ? _value.channel : channel as SubscriptionChannel,
     ));
   }
 
@@ -11070,12 +11056,8 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
   }
 
   @override
-  $SubscriptionChannelCopyWith<$Res>? get channel {
-    if (_value.channel == null) {
-      return null;
-    }
-
-    return $SubscriptionChannelCopyWith<$Res>(_value.channel!, (value) {
+  $SubscriptionChannelCopyWith<$Res> get channel {
+    return $SubscriptionChannelCopyWith<$Res>(_value.channel, (value) {
       return _then(_value.copyWith(channel: value));
     });
   }
@@ -11121,7 +11103,7 @@ abstract class _$SubscriptionCopyWith<$Res>
       String? error,
       @JsonKey(name: '_error')
           Element? errorElement,
-      SubscriptionChannel? channel});
+      SubscriptionChannel channel});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -11142,7 +11124,7 @@ abstract class _$SubscriptionCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get errorElement;
   @override
-  $SubscriptionChannelCopyWith<$Res>? get channel;
+  $SubscriptionChannelCopyWith<$Res> get channel;
 }
 
 /// @nodoc
@@ -11229,7 +11211,7 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
           ? _value.errorElement
           : errorElement as Element?,
       channel:
-          channel == freezed ? _value.channel : channel as SubscriptionChannel?,
+          channel == freezed ? _value.channel : channel as SubscriptionChannel,
     ));
   }
 }
@@ -11332,7 +11314,7 @@ class _$_Subscription extends _Subscription {
   @JsonKey(name: '_error')
   final Element? errorElement;
   @override
-  final SubscriptionChannel? channel;
+  final SubscriptionChannel channel;
 
   @override
   String toString() {
@@ -11479,7 +11461,7 @@ abstract class _Subscription extends Subscription {
       String? error,
       @JsonKey(name: '_error')
           Element? errorElement,
-      required SubscriptionChannel? channel}) = _$_Subscription;
+      required SubscriptionChannel channel}) = _$_Subscription;
 
   factory _Subscription.fromJson(Map<String, dynamic> json) =
       _$_Subscription.fromJson;
@@ -11539,7 +11521,7 @@ abstract class _Subscription extends Subscription {
   @JsonKey(name: '_error')
   Element? get errorElement;
   @override
-  SubscriptionChannel? get channel;
+  SubscriptionChannel get channel;
   @override
   @JsonKey(ignore: true)
   _$SubscriptionCopyWith<_Subscription> get copyWith;

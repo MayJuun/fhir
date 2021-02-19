@@ -5147,7 +5147,7 @@ class _$ConceptMapGroupTearOff {
       @JsonKey(name: '_target') Element? targetElement,
       String? targetVersion,
       @JsonKey(name: '_targetVersion') Element? targetVersionElement,
-      required List<ConceptMapElement?>? element,
+      required List<ConceptMapElement> element,
       ConceptMapUnmapped? unmapped}) {
     return _ConceptMapGroup(
       source: source,
@@ -5185,7 +5185,7 @@ mixin _$ConceptMapGroup {
   String? get targetVersion;
   @JsonKey(name: '_targetVersion')
   Element? get targetVersionElement;
-  List<ConceptMapElement?>? get element;
+  List<ConceptMapElement> get element;
   ConceptMapUnmapped? get unmapped;
 
   Map<String, dynamic> toJson();
@@ -5207,7 +5207,7 @@ abstract class $ConceptMapGroupCopyWith<$Res> {
       @JsonKey(name: '_target') Element? targetElement,
       String? targetVersion,
       @JsonKey(name: '_targetVersion') Element? targetVersionElement,
-      List<ConceptMapElement?>? element,
+      List<ConceptMapElement> element,
       ConceptMapUnmapped? unmapped});
 
   $ElementCopyWith<$Res>? get sourceElement;
@@ -5262,7 +5262,7 @@ class _$ConceptMapGroupCopyWithImpl<$Res>
           : targetVersionElement as Element?,
       element: element == freezed
           ? _value.element
-          : element as List<ConceptMapElement?>?,
+          : element as List<ConceptMapElement>,
       unmapped: unmapped == freezed
           ? _value.unmapped
           : unmapped as ConceptMapUnmapped?,
@@ -5341,7 +5341,7 @@ abstract class _$ConceptMapGroupCopyWith<$Res>
       @JsonKey(name: '_target') Element? targetElement,
       String? targetVersion,
       @JsonKey(name: '_targetVersion') Element? targetVersionElement,
-      List<ConceptMapElement?>? element,
+      List<ConceptMapElement> element,
       ConceptMapUnmapped? unmapped});
 
   @override
@@ -5403,7 +5403,7 @@ class __$ConceptMapGroupCopyWithImpl<$Res>
           : targetVersionElement as Element?,
       element: element == freezed
           ? _value.element
-          : element as List<ConceptMapElement?>?,
+          : element as List<ConceptMapElement>,
       unmapped: unmapped == freezed
           ? _value.unmapped
           : unmapped as ConceptMapUnmapped?,
@@ -5452,7 +5452,7 @@ class _$_ConceptMapGroup extends _ConceptMapGroup {
   @JsonKey(name: '_targetVersion')
   final Element? targetVersionElement;
   @override
-  final List<ConceptMapElement?>? element;
+  final List<ConceptMapElement> element;
   @override
   final ConceptMapUnmapped? unmapped;
 
@@ -5531,7 +5531,7 @@ abstract class _ConceptMapGroup extends ConceptMapGroup {
       @JsonKey(name: '_target') Element? targetElement,
       String? targetVersion,
       @JsonKey(name: '_targetVersion') Element? targetVersionElement,
-      required List<ConceptMapElement?>? element,
+      required List<ConceptMapElement> element,
       ConceptMapUnmapped? unmapped}) = _$_ConceptMapGroup;
 
   factory _ConceptMapGroup.fromJson(Map<String, dynamic> json) =
@@ -5558,7 +5558,7 @@ abstract class _ConceptMapGroup extends ConceptMapGroup {
   @JsonKey(name: '_targetVersion')
   Element? get targetVersionElement;
   @override
-  List<ConceptMapElement?>? get element;
+  List<ConceptMapElement> get element;
   @override
   ConceptMapUnmapped? get unmapped;
   @override
@@ -10267,7 +10267,7 @@ class _$NamingSystemTearOff {
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      required List<NamingSystemUniqueId?>? uniqueId,
+      required List<NamingSystemUniqueId> uniqueId,
       Reference? replacedBy}) {
     return _NamingSystem(
       resourceType: resourceType,
@@ -10359,7 +10359,7 @@ mixin _$NamingSystem {
   String? get usage;
   @JsonKey(name: '_usage')
   Element? get usageElement;
-  List<NamingSystemUniqueId?>? get uniqueId;
+  List<NamingSystemUniqueId> get uniqueId;
   Reference? get replacedBy;
 
   Map<String, dynamic> toJson();
@@ -10416,7 +10416,7 @@ abstract class $NamingSystemCopyWith<$Res> {
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      List<NamingSystemUniqueId?>? uniqueId,
+      List<NamingSystemUniqueId> uniqueId,
       Reference? replacedBy});
 
   $MetaCopyWith<$Res>? get meta;
@@ -10548,7 +10548,7 @@ class _$NamingSystemCopyWithImpl<$Res> implements $NamingSystemCopyWith<$Res> {
           : usageElement as Element?,
       uniqueId: uniqueId == freezed
           ? _value.uniqueId
-          : uniqueId as List<NamingSystemUniqueId?>?,
+          : uniqueId as List<NamingSystemUniqueId>,
       replacedBy:
           replacedBy == freezed ? _value.replacedBy : replacedBy as Reference?,
     ));
@@ -10760,7 +10760,7 @@ abstract class _$NamingSystemCopyWith<$Res>
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      List<NamingSystemUniqueId?>? uniqueId,
+      List<NamingSystemUniqueId> uniqueId,
       Reference? replacedBy});
 
   @override
@@ -10908,7 +10908,7 @@ class __$NamingSystemCopyWithImpl<$Res> extends _$NamingSystemCopyWithImpl<$Res>
           : usageElement as Element?,
       uniqueId: uniqueId == freezed
           ? _value.uniqueId
-          : uniqueId as List<NamingSystemUniqueId?>?,
+          : uniqueId as List<NamingSystemUniqueId>,
       replacedBy:
           replacedBy == freezed ? _value.replacedBy : replacedBy as Reference?,
     ));
@@ -11045,7 +11045,7 @@ class _$_NamingSystem extends _NamingSystem {
   @JsonKey(name: '_usage')
   final Element? usageElement;
   @override
-  final List<NamingSystemUniqueId?>? uniqueId;
+  final List<NamingSystemUniqueId> uniqueId;
   @override
   final Reference? replacedBy;
 
@@ -11230,7 +11230,7 @@ abstract class _NamingSystem extends NamingSystem {
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      required List<NamingSystemUniqueId?>? uniqueId,
+      required List<NamingSystemUniqueId> uniqueId,
       Reference? replacedBy}) = _$_NamingSystem;
 
   factory _NamingSystem.fromJson(Map<String, dynamic> json) =
@@ -11311,7 +11311,7 @@ abstract class _NamingSystem extends NamingSystem {
   @JsonKey(name: '_usage')
   Element? get usageElement;
   @override
-  List<NamingSystemUniqueId?>? get uniqueId;
+  List<NamingSystemUniqueId> get uniqueId;
   @override
   Reference? get replacedBy;
   @override
@@ -13142,7 +13142,7 @@ class _$ValueSetComposeTearOff {
       @JsonKey(name: '_lockedDate') Element? lockedDateElement,
       Boolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
-      required List<ValueSetInclude?>? include,
+      required List<ValueSetInclude> include,
       List<ValueSetInclude?>? exclude}) {
     return _ValueSetCompose(
       lockedDate: lockedDate,
@@ -13170,7 +13170,7 @@ mixin _$ValueSetCompose {
   Boolean? get inactive;
   @JsonKey(name: '_inactive')
   Element? get inactiveElement;
-  List<ValueSetInclude?>? get include;
+  List<ValueSetInclude> get include;
   List<ValueSetInclude?>? get exclude;
 
   Map<String, dynamic> toJson();
@@ -13188,7 +13188,7 @@ abstract class $ValueSetComposeCopyWith<$Res> {
       @JsonKey(name: '_lockedDate') Element? lockedDateElement,
       Boolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
-      List<ValueSetInclude?>? include,
+      List<ValueSetInclude> include,
       List<ValueSetInclude?>? exclude});
 
   $ElementCopyWith<$Res>? get lockedDateElement;
@@ -13225,7 +13225,7 @@ class _$ValueSetComposeCopyWithImpl<$Res>
           : inactiveElement as Element?,
       include: include == freezed
           ? _value.include
-          : include as List<ValueSetInclude?>?,
+          : include as List<ValueSetInclude>,
       exclude: exclude == freezed
           ? _value.exclude
           : exclude as List<ValueSetInclude?>?,
@@ -13267,7 +13267,7 @@ abstract class _$ValueSetComposeCopyWith<$Res>
       @JsonKey(name: '_lockedDate') Element? lockedDateElement,
       Boolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
-      List<ValueSetInclude?>? include,
+      List<ValueSetInclude> include,
       List<ValueSetInclude?>? exclude});
 
   @override
@@ -13308,7 +13308,7 @@ class __$ValueSetComposeCopyWithImpl<$Res>
           : inactiveElement as Element?,
       include: include == freezed
           ? _value.include
-          : include as List<ValueSetInclude?>?,
+          : include as List<ValueSetInclude>,
       exclude: exclude == freezed
           ? _value.exclude
           : exclude as List<ValueSetInclude?>?,
@@ -13343,7 +13343,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
   @JsonKey(name: '_inactive')
   final Element? inactiveElement;
   @override
-  final List<ValueSetInclude?>? include;
+  final List<ValueSetInclude> include;
   @override
   final List<ValueSetInclude?>? exclude;
 
@@ -13403,7 +13403,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
       @JsonKey(name: '_lockedDate') Element? lockedDateElement,
       Boolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement,
-      required List<ValueSetInclude?>? include,
+      required List<ValueSetInclude> include,
       List<ValueSetInclude?>? exclude}) = _$_ValueSetCompose;
 
   factory _ValueSetCompose.fromJson(Map<String, dynamic> json) =
@@ -13420,7 +13420,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
   @JsonKey(name: '_inactive')
   Element? get inactiveElement;
   @override
-  List<ValueSetInclude?>? get include;
+  List<ValueSetInclude> get include;
   @override
   List<ValueSetInclude?>? get exclude;
   @override

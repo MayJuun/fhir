@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:string_validator/string_validator.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
@@ -7,9 +6,10 @@ class Base64Binary {
   const Base64Binary._(
       this._valueString, this._valueBase64Binary, this._isValid);
 
-  factory Base64Binary(String inValue) => isBase64(inValue)
-      ? Base64Binary._(inValue, inValue, true)
-      : Base64Binary._(inValue, null, false);
+  factory Base64Binary(String inValue) =>
+      RegExp(r'^(\s*([0-9a-zA-Z\+\=]){4}\s*)+$').hasMatch(inValue)
+          ? Base64Binary._(inValue, inValue, true)
+          : Base64Binary._(inValue, null, false);
 
   factory Base64Binary.fromJson(dynamic json) => Base64Binary(json);
 

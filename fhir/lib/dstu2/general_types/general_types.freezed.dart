@@ -2494,7 +2494,7 @@ class _$AnnotationTearOff {
       @JsonKey(name: '_authorString') Element? authorStringElement,
       FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement,
-      required String? text,
+      required String text,
       @JsonKey(name: '_text') Element? textElement}) {
     return _Annotation(
       id: id,
@@ -2532,7 +2532,7 @@ mixin _$Annotation {
   FhirDateTime? get time;
   @JsonKey(name: '_time')
   Element? get timeElement;
-  String? get text;
+  String get text;
   @JsonKey(name: '_text')
   Element? get textElement;
 
@@ -2555,7 +2555,7 @@ abstract class $AnnotationCopyWith<$Res> {
       @JsonKey(name: '_authorString') Element? authorStringElement,
       FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement,
-      String? text,
+      String text,
       @JsonKey(name: '_text') Element? textElement});
 
   $ReferenceCopyWith<$Res>? get authorReference;
@@ -2605,7 +2605,7 @@ class _$AnnotationCopyWithImpl<$Res> implements $AnnotationCopyWith<$Res> {
       time: time == freezed ? _value.time : time as FhirDateTime?,
       timeElement:
           timeElement == freezed ? _value.timeElement : timeElement as Element?,
-      text: text == freezed ? _value.text : text as String?,
+      text: text == freezed ? _value.text : text as String,
       textElement:
           textElement == freezed ? _value.textElement : textElement as Element?,
     ));
@@ -2671,7 +2671,7 @@ abstract class _$AnnotationCopyWith<$Res> implements $AnnotationCopyWith<$Res> {
       @JsonKey(name: '_authorString') Element? authorStringElement,
       FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement,
-      String? text,
+      String text,
       @JsonKey(name: '_text') Element? textElement});
 
   @override
@@ -2727,7 +2727,7 @@ class __$AnnotationCopyWithImpl<$Res> extends _$AnnotationCopyWithImpl<$Res>
       time: time == freezed ? _value.time : time as FhirDateTime?,
       timeElement:
           timeElement == freezed ? _value.timeElement : timeElement as Element?,
-      text: text == freezed ? _value.text : text as String?,
+      text: text == freezed ? _value.text : text as String,
       textElement:
           textElement == freezed ? _value.textElement : textElement as Element?,
     ));
@@ -2775,7 +2775,7 @@ class _$_Annotation extends _Annotation {
   @JsonKey(name: '_time')
   final Element? timeElement;
   @override
-  final String? text;
+  final String text;
   @override
   @JsonKey(name: '_text')
   final Element? textElement;
@@ -2854,7 +2854,7 @@ abstract class _Annotation extends Annotation {
       @JsonKey(name: '_authorString') Element? authorStringElement,
       FhirDateTime? time,
       @JsonKey(name: '_time') Element? timeElement,
-      required String? text,
+      required String text,
       @JsonKey(name: '_text') Element? textElement}) = _$_Annotation;
 
   factory _Annotation.fromJson(Map<String, dynamic> json) =
@@ -2881,7 +2881,7 @@ abstract class _Annotation extends Annotation {
   @JsonKey(name: '_time')
   Element? get timeElement;
   @override
-  String? get text;
+  String get text;
   @override
   @JsonKey(name: '_text')
   Element? get textElement;
@@ -2901,8 +2901,8 @@ class _$SampledDataTearOff {
   _SampledData call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      required Quantity? origin,
-      required Decimal? period,
+      required Quantity origin,
+      required Decimal period,
       @JsonKey(name: '_period') Element? periodElement,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
@@ -2910,9 +2910,9 @@ class _$SampledDataTearOff {
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
       Decimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
-      required PositiveInt? dimensions,
+      required PositiveInt dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
-      required String? data,
+      required String data,
       @JsonKey(name: '_data') Element? dataElement}) {
     return _SampledData(
       id: id,
@@ -2946,8 +2946,8 @@ mixin _$SampledData {
   Id? get id;
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
-  Quantity? get origin;
-  Decimal? get period;
+  Quantity get origin;
+  Decimal get period;
   @JsonKey(name: '_period')
   Element? get periodElement;
   Decimal? get factor;
@@ -2959,10 +2959,10 @@ mixin _$SampledData {
   Decimal? get upperLimit;
   @JsonKey(name: '_upperLimit')
   Element? get upperLimitElement;
-  PositiveInt? get dimensions;
+  PositiveInt get dimensions;
   @JsonKey(name: '_dimensions')
   Element? get dimensionsElement;
-  String? get data;
+  String get data;
   @JsonKey(name: '_data')
   Element? get dataElement;
 
@@ -2979,8 +2979,8 @@ abstract class $SampledDataCopyWith<$Res> {
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      Quantity? origin,
-      Decimal? period,
+      Quantity origin,
+      Decimal period,
       @JsonKey(name: '_period') Element? periodElement,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
@@ -2988,12 +2988,12 @@ abstract class $SampledDataCopyWith<$Res> {
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
       Decimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
-      PositiveInt? dimensions,
+      PositiveInt dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
-      String? data,
+      String data,
       @JsonKey(name: '_data') Element? dataElement});
 
-  $QuantityCopyWith<$Res>? get origin;
+  $QuantityCopyWith<$Res> get origin;
   $ElementCopyWith<$Res>? get periodElement;
   $ElementCopyWith<$Res>? get factorElement;
   $ElementCopyWith<$Res>? get lowerLimitElement;
@@ -3033,8 +3033,8 @@ class _$SampledDataCopyWithImpl<$Res> implements $SampledDataCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      origin: origin == freezed ? _value.origin : origin as Quantity?,
-      period: period == freezed ? _value.period : period as Decimal?,
+      origin: origin == freezed ? _value.origin : origin as Quantity,
+      period: period == freezed ? _value.period : period as Decimal,
       periodElement: periodElement == freezed
           ? _value.periodElement
           : periodElement as Element?,
@@ -3052,25 +3052,20 @@ class _$SampledDataCopyWithImpl<$Res> implements $SampledDataCopyWith<$Res> {
       upperLimitElement: upperLimitElement == freezed
           ? _value.upperLimitElement
           : upperLimitElement as Element?,
-      dimensions: dimensions == freezed
-          ? _value.dimensions
-          : dimensions as PositiveInt?,
+      dimensions:
+          dimensions == freezed ? _value.dimensions : dimensions as PositiveInt,
       dimensionsElement: dimensionsElement == freezed
           ? _value.dimensionsElement
           : dimensionsElement as Element?,
-      data: data == freezed ? _value.data : data as String?,
+      data: data == freezed ? _value.data : data as String,
       dataElement:
           dataElement == freezed ? _value.dataElement : dataElement as Element?,
     ));
   }
 
   @override
-  $QuantityCopyWith<$Res>? get origin {
-    if (_value.origin == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.origin!, (value) {
+  $QuantityCopyWith<$Res> get origin {
+    return $QuantityCopyWith<$Res>(_value.origin, (value) {
       return _then(_value.copyWith(origin: value));
     });
   }
@@ -3152,8 +3147,8 @@ abstract class _$SampledDataCopyWith<$Res>
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      Quantity? origin,
-      Decimal? period,
+      Quantity origin,
+      Decimal period,
       @JsonKey(name: '_period') Element? periodElement,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
@@ -3161,13 +3156,13 @@ abstract class _$SampledDataCopyWith<$Res>
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
       Decimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
-      PositiveInt? dimensions,
+      PositiveInt dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
-      String? data,
+      String data,
       @JsonKey(name: '_data') Element? dataElement});
 
   @override
-  $QuantityCopyWith<$Res>? get origin;
+  $QuantityCopyWith<$Res> get origin;
   @override
   $ElementCopyWith<$Res>? get periodElement;
   @override
@@ -3215,8 +3210,8 @@ class __$SampledDataCopyWithImpl<$Res> extends _$SampledDataCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      origin: origin == freezed ? _value.origin : origin as Quantity?,
-      period: period == freezed ? _value.period : period as Decimal?,
+      origin: origin == freezed ? _value.origin : origin as Quantity,
+      period: period == freezed ? _value.period : period as Decimal,
       periodElement: periodElement == freezed
           ? _value.periodElement
           : periodElement as Element?,
@@ -3234,13 +3229,12 @@ class __$SampledDataCopyWithImpl<$Res> extends _$SampledDataCopyWithImpl<$Res>
       upperLimitElement: upperLimitElement == freezed
           ? _value.upperLimitElement
           : upperLimitElement as Element?,
-      dimensions: dimensions == freezed
-          ? _value.dimensions
-          : dimensions as PositiveInt?,
+      dimensions:
+          dimensions == freezed ? _value.dimensions : dimensions as PositiveInt,
       dimensionsElement: dimensionsElement == freezed
           ? _value.dimensionsElement
           : dimensionsElement as Element?,
-      data: data == freezed ? _value.data : data as String?,
+      data: data == freezed ? _value.data : data as String,
       dataElement:
           dataElement == freezed ? _value.dataElement : dataElement as Element?,
     ));
@@ -3278,9 +3272,9 @@ class _$_SampledData extends _SampledData {
   @JsonKey(name: 'extension')
   final List<FhirExtension?>? extension_;
   @override
-  final Quantity? origin;
+  final Quantity origin;
   @override
-  final Decimal? period;
+  final Decimal period;
   @override
   @JsonKey(name: '_period')
   final Element? periodElement;
@@ -3300,12 +3294,12 @@ class _$_SampledData extends _SampledData {
   @JsonKey(name: '_upperLimit')
   final Element? upperLimitElement;
   @override
-  final PositiveInt? dimensions;
+  final PositiveInt dimensions;
   @override
   @JsonKey(name: '_dimensions')
   final Element? dimensionsElement;
   @override
-  final String? data;
+  final String data;
   @override
   @JsonKey(name: '_data')
   final Element? dataElement;
@@ -3396,8 +3390,8 @@ abstract class _SampledData extends SampledData {
   factory _SampledData(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      required Quantity? origin,
-      required Decimal? period,
+      required Quantity origin,
+      required Decimal period,
       @JsonKey(name: '_period') Element? periodElement,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
@@ -3405,9 +3399,9 @@ abstract class _SampledData extends SampledData {
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
       Decimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
-      required PositiveInt? dimensions,
+      required PositiveInt dimensions,
       @JsonKey(name: '_dimensions') Element? dimensionsElement,
-      required String? data,
+      required String data,
       @JsonKey(name: '_data') Element? dataElement}) = _$_SampledData;
 
   factory _SampledData.fromJson(Map<String, dynamic> json) =
@@ -3419,9 +3413,9 @@ abstract class _SampledData extends SampledData {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   @override
-  Quantity? get origin;
+  Quantity get origin;
   @override
-  Decimal? get period;
+  Decimal get period;
   @override
   @JsonKey(name: '_period')
   Element? get periodElement;
@@ -3441,12 +3435,12 @@ abstract class _SampledData extends SampledData {
   @JsonKey(name: '_upperLimit')
   Element? get upperLimitElement;
   @override
-  PositiveInt? get dimensions;
+  PositiveInt get dimensions;
   @override
   @JsonKey(name: '_dimensions')
   Element? get dimensionsElement;
   @override
-  String? get data;
+  String get data;
   @override
   @JsonKey(name: '_data')
   Element? get dataElement;
@@ -4217,13 +4211,13 @@ class _$SignatureTearOff {
   _Signature call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      required List<Coding?>? type,
-      required Instant? when,
+      required List<Coding> type,
+      required Instant when,
       @JsonKey(name: '_when') Element? whenElement,
       FhirUri? whoUri,
       Reference? whoReference,
-      required Code? contentType,
-      required Base64Binary? blob,
+      required Code contentType,
+      required Base64Binary blob,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
       @JsonKey(name: '_sigFormat') Element? sigFormatElement,
       @JsonKey(name: '_data') Element? dataElement,
@@ -4258,14 +4252,14 @@ mixin _$Signature {
   Id? get id;
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
-  List<Coding?>? get type;
-  Instant? get when;
+  List<Coding> get type;
+  Instant get when;
   @JsonKey(name: '_when')
   Element? get whenElement;
   FhirUri? get whoUri;
   Reference? get whoReference;
-  Code? get contentType;
-  Base64Binary? get blob;
+  Code get contentType;
+  Base64Binary get blob;
   @JsonKey(name: '_targetFormat')
   Element? get targetFormatElement;
   @JsonKey(name: '_sigFormat')
@@ -4287,13 +4281,13 @@ abstract class $SignatureCopyWith<$Res> {
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<Coding?>? type,
-      Instant? when,
+      List<Coding> type,
+      Instant when,
       @JsonKey(name: '_when') Element? whenElement,
       FhirUri? whoUri,
       Reference? whoReference,
-      Code? contentType,
-      Base64Binary? blob,
+      Code contentType,
+      Base64Binary blob,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
       @JsonKey(name: '_sigFormat') Element? sigFormatElement,
       @JsonKey(name: '_data') Element? dataElement,
@@ -4336,8 +4330,8 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as List<Coding?>?,
-      when: when == freezed ? _value.when : when as Instant?,
+      type: type == freezed ? _value.type : type as List<Coding>,
+      when: when == freezed ? _value.when : when as Instant,
       whenElement:
           whenElement == freezed ? _value.whenElement : whenElement as Element?,
       whoUri: whoUri == freezed ? _value.whoUri : whoUri as FhirUri?,
@@ -4345,8 +4339,8 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
           ? _value.whoReference
           : whoReference as Reference?,
       contentType:
-          contentType == freezed ? _value.contentType : contentType as Code?,
-      blob: blob == freezed ? _value.blob : blob as Base64Binary?,
+          contentType == freezed ? _value.contentType : contentType as Code,
+      blob: blob == freezed ? _value.blob : blob as Base64Binary,
       targetFormatElement: targetFormatElement == freezed
           ? _value.targetFormatElement
           : targetFormatElement as Element?,
@@ -4437,13 +4431,13 @@ abstract class _$SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<Coding?>? type,
-      Instant? when,
+      List<Coding> type,
+      Instant when,
       @JsonKey(name: '_when') Element? whenElement,
       FhirUri? whoUri,
       Reference? whoReference,
-      Code? contentType,
-      Base64Binary? blob,
+      Code contentType,
+      Base64Binary blob,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
       @JsonKey(name: '_sigFormat') Element? sigFormatElement,
       @JsonKey(name: '_data') Element? dataElement,
@@ -4493,8 +4487,8 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as List<Coding?>?,
-      when: when == freezed ? _value.when : when as Instant?,
+      type: type == freezed ? _value.type : type as List<Coding>,
+      when: when == freezed ? _value.when : when as Instant,
       whenElement:
           whenElement == freezed ? _value.whenElement : whenElement as Element?,
       whoUri: whoUri == freezed ? _value.whoUri : whoUri as FhirUri?,
@@ -4502,8 +4496,8 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
           ? _value.whoReference
           : whoReference as Reference?,
       contentType:
-          contentType == freezed ? _value.contentType : contentType as Code?,
-      blob: blob == freezed ? _value.blob : blob as Base64Binary?,
+          contentType == freezed ? _value.contentType : contentType as Code,
+      blob: blob == freezed ? _value.blob : blob as Base64Binary,
       targetFormatElement: targetFormatElement == freezed
           ? _value.targetFormatElement
           : targetFormatElement as Element?,
@@ -4548,9 +4542,9 @@ class _$_Signature extends _Signature {
   @JsonKey(name: 'extension')
   final List<FhirExtension?>? extension_;
   @override
-  final List<Coding?>? type;
+  final List<Coding> type;
   @override
-  final Instant? when;
+  final Instant when;
   @override
   @JsonKey(name: '_when')
   final Element? whenElement;
@@ -4559,9 +4553,9 @@ class _$_Signature extends _Signature {
   @override
   final Reference? whoReference;
   @override
-  final Code? contentType;
+  final Code contentType;
   @override
-  final Base64Binary? blob;
+  final Base64Binary blob;
   @override
   @JsonKey(name: '_targetFormat')
   final Element? targetFormatElement;
@@ -4653,13 +4647,13 @@ abstract class _Signature extends Signature {
   factory _Signature(
           {Id? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          required List<Coding?>? type,
-          required Instant? when,
+          required List<Coding> type,
+          required Instant when,
           @JsonKey(name: '_when') Element? whenElement,
           FhirUri? whoUri,
           Reference? whoReference,
-          required Code? contentType,
-          required Base64Binary? blob,
+          required Code contentType,
+          required Base64Binary blob,
           @JsonKey(name: '_targetFormat') Element? targetFormatElement,
           @JsonKey(name: '_sigFormat') Element? sigFormatElement,
           @JsonKey(name: '_data') Element? dataElement,
@@ -4675,9 +4669,9 @@ abstract class _Signature extends Signature {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   @override
-  List<Coding?>? get type;
+  List<Coding> get type;
   @override
-  Instant? get when;
+  Instant get when;
   @override
   @JsonKey(name: '_when')
   Element? get whenElement;
@@ -4686,9 +4680,9 @@ abstract class _Signature extends Signature {
   @override
   Reference? get whoReference;
   @override
-  Code? get contentType;
+  Code get contentType;
   @override
-  Base64Binary? get blob;
+  Base64Binary get blob;
   @override
   @JsonKey(name: '_targetFormat')
   Element? get targetFormatElement;

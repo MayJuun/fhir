@@ -269,9 +269,7 @@ _$_ProcessRequestItem _$_$_ProcessRequestItemFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    sequenceLinkId: json['sequenceLinkId'] == null
-        ? null
-        : Integer.fromJson(json['sequenceLinkId']),
+    sequenceLinkId: Integer.fromJson(json['sequenceLinkId']),
   );
 }
 
@@ -290,7 +288,7 @@ Map<String, dynamic> _$_$_ProcessRequestItemToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('sequenceLinkId', instance.sequenceLinkId?.toJson());
+  val['sequenceLinkId'] = instance.sequenceLinkId.toJson();
   return val;
 }
 

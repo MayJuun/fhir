@@ -1368,8 +1368,8 @@ class _$ResearchSubjectTearOff {
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? period,
-      required Reference? study,
-      required Reference? individual,
+      required Reference study,
+      required Reference individual,
       String? assignedArm,
       @JsonKey(name: '_assignedArm')
           Element? assignedArmElement,
@@ -1433,8 +1433,8 @@ mixin _$ResearchSubject {
   @JsonKey(name: '_status')
   Element? get statusElement;
   Period? get period;
-  Reference? get study;
-  Reference? get individual;
+  Reference get study;
+  Reference get individual;
   String? get assignedArm;
   @JsonKey(name: '_assignedArm')
   Element? get assignedArmElement;
@@ -1474,8 +1474,8 @@ abstract class $ResearchSubjectCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? period,
-      Reference? study,
-      Reference? individual,
+      Reference study,
+      Reference individual,
       String? assignedArm,
       @JsonKey(name: '_assignedArm')
           Element? assignedArmElement,
@@ -1491,8 +1491,8 @@ abstract class $ResearchSubjectCopyWith<$Res> {
   $IdentifierCopyWith<$Res>? get identifier;
   $ElementCopyWith<$Res>? get statusElement;
   $PeriodCopyWith<$Res>? get period;
-  $ReferenceCopyWith<$Res>? get study;
-  $ReferenceCopyWith<$Res>? get individual;
+  $ReferenceCopyWith<$Res> get study;
+  $ReferenceCopyWith<$Res> get individual;
   $ElementCopyWith<$Res>? get assignedArmElement;
   $ElementCopyWith<$Res>? get actualArmElement;
   $ReferenceCopyWith<$Res>? get consent;
@@ -1566,9 +1566,9 @@ class _$ResearchSubjectCopyWithImpl<$Res>
           ? _value.statusElement
           : statusElement as Element?,
       period: period == freezed ? _value.period : period as Period?,
-      study: study == freezed ? _value.study : study as Reference?,
+      study: study == freezed ? _value.study : study as Reference,
       individual:
-          individual == freezed ? _value.individual : individual as Reference?,
+          individual == freezed ? _value.individual : individual as Reference,
       assignedArm:
           assignedArm == freezed ? _value.assignedArm : assignedArm as String?,
       assignedArmElement: assignedArmElement == freezed
@@ -1660,23 +1660,15 @@ class _$ResearchSubjectCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get study {
-    if (_value.study == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.study!, (value) {
+  $ReferenceCopyWith<$Res> get study {
+    return $ReferenceCopyWith<$Res>(_value.study, (value) {
       return _then(_value.copyWith(study: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get individual {
-    if (_value.individual == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.individual!, (value) {
+  $ReferenceCopyWith<$Res> get individual {
+    return $ReferenceCopyWith<$Res>(_value.individual, (value) {
       return _then(_value.copyWith(individual: value));
     });
   }
@@ -1743,8 +1735,8 @@ abstract class _$ResearchSubjectCopyWith<$Res>
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? period,
-      Reference? study,
-      Reference? individual,
+      Reference study,
+      Reference individual,
       String? assignedArm,
       @JsonKey(name: '_assignedArm')
           Element? assignedArmElement,
@@ -1768,9 +1760,9 @@ abstract class _$ResearchSubjectCopyWith<$Res>
   @override
   $PeriodCopyWith<$Res>? get period;
   @override
-  $ReferenceCopyWith<$Res>? get study;
+  $ReferenceCopyWith<$Res> get study;
   @override
-  $ReferenceCopyWith<$Res>? get individual;
+  $ReferenceCopyWith<$Res> get individual;
   @override
   $ElementCopyWith<$Res>? get assignedArmElement;
   @override
@@ -1849,9 +1841,9 @@ class __$ResearchSubjectCopyWithImpl<$Res>
           ? _value.statusElement
           : statusElement as Element?,
       period: period == freezed ? _value.period : period as Period?,
-      study: study == freezed ? _value.study : study as Reference?,
+      study: study == freezed ? _value.study : study as Reference,
       individual:
-          individual == freezed ? _value.individual : individual as Reference?,
+          individual == freezed ? _value.individual : individual as Reference,
       assignedArm:
           assignedArm == freezed ? _value.assignedArm : assignedArm as String?,
       assignedArmElement: assignedArmElement == freezed
@@ -1941,9 +1933,9 @@ class _$_ResearchSubject extends _ResearchSubject {
   @override
   final Period? period;
   @override
-  final Reference? study;
+  final Reference study;
   @override
-  final Reference? individual;
+  final Reference individual;
   @override
   final String? assignedArm;
   @override
@@ -2087,8 +2079,8 @@ abstract class _ResearchSubject extends ResearchSubject {
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? period,
-      required Reference? study,
-      required Reference? individual,
+      required Reference study,
+      required Reference individual,
       String? assignedArm,
       @JsonKey(name: '_assignedArm')
           Element? assignedArmElement,
@@ -2136,9 +2128,9 @@ abstract class _ResearchSubject extends ResearchSubject {
   @override
   Period? get period;
   @override
-  Reference? get study;
+  Reference get study;
   @override
-  Reference? get individual;
+  Reference get individual;
   @override
   String? get assignedArm;
   @override

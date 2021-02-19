@@ -86,7 +86,7 @@ class _$EvidenceTearOff {
       @JsonKey(name: '_assertion')
           Element? assertionElement,
       Annotation? note,
-      required List<EvidenceVariableDefinition?>? variableDefinition,
+      required List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
       List<Statistic?>? statistic,
@@ -232,7 +232,7 @@ mixin _$Evidence {
   Element? get assertionElement; // ToDo
 //  List<Annotation> note,
   Annotation? get note;
-  List<EvidenceVariableDefinition?>? get variableDefinition;
+  List<EvidenceVariableDefinition> get variableDefinition;
   CodeableConcept? get synthesisType;
   CodeableConcept? get studyType;
   List<Statistic?>? get statistic;
@@ -318,7 +318,7 @@ abstract class $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_assertion')
           Element? assertionElement,
       Annotation? note,
-      List<EvidenceVariableDefinition?>? variableDefinition,
+      List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
       List<Statistic?>? statistic,
@@ -535,7 +535,7 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
       note: note == freezed ? _value.note : note as Annotation?,
       variableDefinition: variableDefinition == freezed
           ? _value.variableDefinition
-          : variableDefinition as List<EvidenceVariableDefinition?>?,
+          : variableDefinition as List<EvidenceVariableDefinition>,
       synthesisType: synthesisType == freezed
           ? _value.synthesisType
           : synthesisType as CodeableConcept?,
@@ -872,7 +872,7 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_assertion')
           Element? assertionElement,
       Annotation? note,
-      List<EvidenceVariableDefinition?>? variableDefinition,
+      List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
       List<Statistic?>? statistic,
@@ -1112,7 +1112,7 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
       note: note == freezed ? _value.note : note as Annotation?,
       variableDefinition: variableDefinition == freezed
           ? _value.variableDefinition
-          : variableDefinition as List<EvidenceVariableDefinition?>?,
+          : variableDefinition as List<EvidenceVariableDefinition>,
       synthesisType: synthesisType == freezed
           ? _value.synthesisType
           : synthesisType as CodeableConcept?,
@@ -1338,7 +1338,7 @@ class _$_Evidence extends _Evidence {
 //  List<Annotation> note,
   final Annotation? note;
   @override
-  final List<EvidenceVariableDefinition?>? variableDefinition;
+  final List<EvidenceVariableDefinition> variableDefinition;
   @override
   final CodeableConcept? synthesisType;
   @override
@@ -1603,7 +1603,7 @@ abstract class _Evidence extends Evidence {
       @JsonKey(name: '_assertion')
           Element? assertionElement,
       Annotation? note,
-      required List<EvidenceVariableDefinition?>? variableDefinition,
+      required List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
       List<Statistic?>? statistic,
@@ -1733,7 +1733,7 @@ abstract class _Evidence extends Evidence {
 //  List<Annotation> note,
   Annotation? get note;
   @override
-  List<EvidenceVariableDefinition?>? get variableDefinition;
+  List<EvidenceVariableDefinition> get variableDefinition;
   @override
   CodeableConcept? get synthesisType;
   @override
@@ -1765,7 +1765,7 @@ class _$EvidenceVariableDefinitionTearOff {
       Markdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Annotation?>? note,
-      required CodeableConcept? variableRole,
+      required CodeableConcept variableRole,
       Reference? observed,
       Reference? intended,
       CodeableConcept? directnessMatch}) {
@@ -1801,7 +1801,7 @@ mixin _$EvidenceVariableDefinition {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   List<Annotation?>? get note;
-  CodeableConcept? get variableRole;
+  CodeableConcept get variableRole;
   Reference? get observed;
   Reference? get intended;
   CodeableConcept? get directnessMatch;
@@ -1823,13 +1823,13 @@ abstract class $EvidenceVariableDefinitionCopyWith<$Res> {
       Markdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Annotation?>? note,
-      CodeableConcept? variableRole,
+      CodeableConcept variableRole,
       Reference? observed,
       Reference? intended,
       CodeableConcept? directnessMatch});
 
   $ElementCopyWith<$Res>? get descriptionElement;
-  $CodeableConceptCopyWith<$Res>? get variableRole;
+  $CodeableConceptCopyWith<$Res> get variableRole;
   $ReferenceCopyWith<$Res>? get observed;
   $ReferenceCopyWith<$Res>? get intended;
   $CodeableConceptCopyWith<$Res>? get directnessMatch;
@@ -1874,7 +1874,7 @@ class _$EvidenceVariableDefinitionCopyWithImpl<$Res>
       note: note == freezed ? _value.note : note as List<Annotation?>?,
       variableRole: variableRole == freezed
           ? _value.variableRole
-          : variableRole as CodeableConcept?,
+          : variableRole as CodeableConcept,
       observed: observed == freezed ? _value.observed : observed as Reference?,
       intended: intended == freezed ? _value.intended : intended as Reference?,
       directnessMatch: directnessMatch == freezed
@@ -1895,12 +1895,8 @@ class _$EvidenceVariableDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get variableRole {
-    if (_value.variableRole == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.variableRole!, (value) {
+  $CodeableConceptCopyWith<$Res> get variableRole {
+    return $CodeableConceptCopyWith<$Res>(_value.variableRole, (value) {
       return _then(_value.copyWith(variableRole: value));
     });
   }
@@ -1954,7 +1950,7 @@ abstract class _$EvidenceVariableDefinitionCopyWith<$Res>
       Markdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Annotation?>? note,
-      CodeableConcept? variableRole,
+      CodeableConcept variableRole,
       Reference? observed,
       Reference? intended,
       CodeableConcept? directnessMatch});
@@ -1962,7 +1958,7 @@ abstract class _$EvidenceVariableDefinitionCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get variableRole;
+  $CodeableConceptCopyWith<$Res> get variableRole;
   @override
   $ReferenceCopyWith<$Res>? get observed;
   @override
@@ -2013,7 +2009,7 @@ class __$EvidenceVariableDefinitionCopyWithImpl<$Res>
       note: note == freezed ? _value.note : note as List<Annotation?>?,
       variableRole: variableRole == freezed
           ? _value.variableRole
-          : variableRole as CodeableConcept?,
+          : variableRole as CodeableConcept,
       observed: observed == freezed ? _value.observed : observed as Reference?,
       intended: intended == freezed ? _value.intended : intended as Reference?,
       directnessMatch: directnessMatch == freezed
@@ -2058,7 +2054,7 @@ class _$_EvidenceVariableDefinition extends _EvidenceVariableDefinition {
   @override
   final List<Annotation?>? note;
   @override
-  final CodeableConcept? variableRole;
+  final CodeableConcept variableRole;
   @override
   final Reference? observed;
   @override
@@ -2140,7 +2136,7 @@ abstract class _EvidenceVariableDefinition extends EvidenceVariableDefinition {
       Markdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Annotation?>? note,
-      required CodeableConcept? variableRole,
+      required CodeableConcept variableRole,
       Reference? observed,
       Reference? intended,
       CodeableConcept? directnessMatch}) = _$_EvidenceVariableDefinition;
@@ -2163,7 +2159,7 @@ abstract class _EvidenceVariableDefinition extends EvidenceVariableDefinition {
   @override
   List<Annotation?>? get note;
   @override
-  CodeableConcept? get variableRole;
+  CodeableConcept get variableRole;
   @override
   Reference? get observed;
   @override

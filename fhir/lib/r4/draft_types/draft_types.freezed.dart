@@ -391,8 +391,8 @@ class _$ProductShelfLifeTearOff {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
-      required CodeableConcept? type,
-      required Quantity? period,
+      required CodeableConcept type,
+      required Quantity period,
       List<CodeableConcept?>? specialPrecautionsForStorage}) {
     return _ProductShelfLife(
       id: id,
@@ -420,8 +420,8 @@ mixin _$ProductShelfLife {
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
   Identifier? get identifier;
-  CodeableConcept? get type;
-  Quantity? get period;
+  CodeableConcept get type;
+  Quantity get period;
   List<CodeableConcept?>? get specialPrecautionsForStorage;
 
   Map<String, dynamic> toJson();
@@ -439,13 +439,13 @@ abstract class $ProductShelfLifeCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
-      CodeableConcept? type,
-      Quantity? period,
+      CodeableConcept type,
+      Quantity period,
       List<CodeableConcept?>? specialPrecautionsForStorage});
 
   $IdentifierCopyWith<$Res>? get identifier;
-  $CodeableConceptCopyWith<$Res>? get type;
-  $QuantityCopyWith<$Res>? get period;
+  $CodeableConceptCopyWith<$Res> get type;
+  $QuantityCopyWith<$Res> get period;
 }
 
 /// @nodoc
@@ -477,8 +477,8 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      period: period == freezed ? _value.period : period as Quantity?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
+      period: period == freezed ? _value.period : period as Quantity,
       specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
           ? _value.specialPrecautionsForStorage
           : specialPrecautionsForStorage as List<CodeableConcept?>?,
@@ -497,23 +497,15 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res>? get period {
-    if (_value.period == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.period!, (value) {
+  $QuantityCopyWith<$Res> get period {
+    return $QuantityCopyWith<$Res>(_value.period, (value) {
       return _then(_value.copyWith(period: value));
     });
   }
@@ -531,16 +523,16 @@ abstract class _$ProductShelfLifeCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
-      CodeableConcept? type,
-      Quantity? period,
+      CodeableConcept type,
+      Quantity period,
       List<CodeableConcept?>? specialPrecautionsForStorage});
 
   @override
   $IdentifierCopyWith<$Res>? get identifier;
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
-  $QuantityCopyWith<$Res>? get period;
+  $QuantityCopyWith<$Res> get period;
 }
 
 /// @nodoc
@@ -574,8 +566,8 @@ class __$ProductShelfLifeCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      period: period == freezed ? _value.period : period as Quantity?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
+      period: period == freezed ? _value.period : period as Quantity,
       specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
           ? _value.specialPrecautionsForStorage
           : specialPrecautionsForStorage as List<CodeableConcept?>?,
@@ -610,9 +602,9 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   @override
   final Identifier? identifier;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
-  final Quantity? period;
+  final Quantity period;
   @override
   final List<CodeableConcept?>? specialPrecautionsForStorage;
 
@@ -676,8 +668,8 @@ abstract class _ProductShelfLife extends ProductShelfLife {
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
           Identifier? identifier,
-          required CodeableConcept? type,
-          required Quantity? period,
+          required CodeableConcept type,
+          required Quantity period,
           List<CodeableConcept?>? specialPrecautionsForStorage}) =
       _$_ProductShelfLife;
 
@@ -694,9 +686,9 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   @override
   Identifier? get identifier;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
-  Quantity? get period;
+  Quantity get period;
   @override
   List<CodeableConcept?>? get specialPrecautionsForStorage;
   @override
@@ -1318,10 +1310,10 @@ class _$MarketingStatusTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? country,
+      required CodeableConcept country,
       CodeableConcept? jurisdiction,
-      required CodeableConcept? status,
-      required Period? dateRange,
+      required CodeableConcept status,
+      required Period dateRange,
       FhirDateTime? restoreDate,
       @JsonKey(name: '_restoreDate') Element? restoreDateElement}) {
     return _MarketingStatus(
@@ -1351,10 +1343,10 @@ mixin _$MarketingStatus {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get country;
+  CodeableConcept get country;
   CodeableConcept? get jurisdiction;
-  CodeableConcept? get status;
-  Period? get dateRange;
+  CodeableConcept get status;
+  Period get dateRange;
   FhirDateTime? get restoreDate;
   @JsonKey(name: '_restoreDate')
   Element? get restoreDateElement;
@@ -1373,17 +1365,17 @@ abstract class $MarketingStatusCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? country,
+      CodeableConcept country,
       CodeableConcept? jurisdiction,
-      CodeableConcept? status,
-      Period? dateRange,
+      CodeableConcept status,
+      Period dateRange,
       FhirDateTime? restoreDate,
       @JsonKey(name: '_restoreDate') Element? restoreDateElement});
 
-  $CodeableConceptCopyWith<$Res>? get country;
+  $CodeableConceptCopyWith<$Res> get country;
   $CodeableConceptCopyWith<$Res>? get jurisdiction;
-  $CodeableConceptCopyWith<$Res>? get status;
-  $PeriodCopyWith<$Res>? get dateRange;
+  $CodeableConceptCopyWith<$Res> get status;
+  $PeriodCopyWith<$Res> get dateRange;
   $ElementCopyWith<$Res>? get restoreDateElement;
 }
 
@@ -1416,13 +1408,12 @@ class _$MarketingStatusCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      country:
-          country == freezed ? _value.country : country as CodeableConcept?,
+      country: country == freezed ? _value.country : country as CodeableConcept,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
           : jurisdiction as CodeableConcept?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
-      dateRange: dateRange == freezed ? _value.dateRange : dateRange as Period?,
+      status: status == freezed ? _value.status : status as CodeableConcept,
+      dateRange: dateRange == freezed ? _value.dateRange : dateRange as Period,
       restoreDate: restoreDate == freezed
           ? _value.restoreDate
           : restoreDate as FhirDateTime?,
@@ -1433,12 +1424,8 @@ class _$MarketingStatusCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get country {
-    if (_value.country == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.country!, (value) {
+  $CodeableConceptCopyWith<$Res> get country {
+    return $CodeableConceptCopyWith<$Res>(_value.country, (value) {
       return _then(_value.copyWith(country: value));
     });
   }
@@ -1455,23 +1442,15 @@ class _$MarketingStatusCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get status {
-    if (_value.status == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.status!, (value) {
+  $CodeableConceptCopyWith<$Res> get status {
+    return $CodeableConceptCopyWith<$Res>(_value.status, (value) {
       return _then(_value.copyWith(status: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res>? get dateRange {
-    if (_value.dateRange == null) {
-      return null;
-    }
-
-    return $PeriodCopyWith<$Res>(_value.dateRange!, (value) {
+  $PeriodCopyWith<$Res> get dateRange {
+    return $PeriodCopyWith<$Res>(_value.dateRange, (value) {
       return _then(_value.copyWith(dateRange: value));
     });
   }
@@ -1499,21 +1478,21 @@ abstract class _$MarketingStatusCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? country,
+      CodeableConcept country,
       CodeableConcept? jurisdiction,
-      CodeableConcept? status,
-      Period? dateRange,
+      CodeableConcept status,
+      Period dateRange,
       FhirDateTime? restoreDate,
       @JsonKey(name: '_restoreDate') Element? restoreDateElement});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get country;
+  $CodeableConceptCopyWith<$Res> get country;
   @override
   $CodeableConceptCopyWith<$Res>? get jurisdiction;
   @override
-  $CodeableConceptCopyWith<$Res>? get status;
+  $CodeableConceptCopyWith<$Res> get status;
   @override
-  $PeriodCopyWith<$Res>? get dateRange;
+  $PeriodCopyWith<$Res> get dateRange;
   @override
   $ElementCopyWith<$Res>? get restoreDateElement;
 }
@@ -1549,13 +1528,12 @@ class __$MarketingStatusCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      country:
-          country == freezed ? _value.country : country as CodeableConcept?,
+      country: country == freezed ? _value.country : country as CodeableConcept,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
           : jurisdiction as CodeableConcept?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
-      dateRange: dateRange == freezed ? _value.dateRange : dateRange as Period?,
+      status: status == freezed ? _value.status : status as CodeableConcept,
+      dateRange: dateRange == freezed ? _value.dateRange : dateRange as Period,
       restoreDate: restoreDate == freezed
           ? _value.restoreDate
           : restoreDate as FhirDateTime?,
@@ -1593,13 +1571,13 @@ class _$_MarketingStatus extends _MarketingStatus {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? country;
+  final CodeableConcept country;
   @override
   final CodeableConcept? jurisdiction;
   @override
-  final CodeableConcept? status;
+  final CodeableConcept status;
   @override
-  final Period? dateRange;
+  final Period dateRange;
   @override
   final FhirDateTime? restoreDate;
   @override
@@ -1672,10 +1650,10 @@ abstract class _MarketingStatus extends MarketingStatus {
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required CodeableConcept? country,
+          required CodeableConcept country,
           CodeableConcept? jurisdiction,
-          required CodeableConcept? status,
-          required Period? dateRange,
+          required CodeableConcept status,
+          required Period dateRange,
           FhirDateTime? restoreDate,
           @JsonKey(name: '_restoreDate') Element? restoreDateElement}) =
       _$_MarketingStatus;
@@ -1691,13 +1669,13 @@ abstract class _MarketingStatus extends MarketingStatus {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get country;
+  CodeableConcept get country;
   @override
   CodeableConcept? get jurisdiction;
   @override
-  CodeableConcept? get status;
+  CodeableConcept get status;
   @override
-  Period? get dateRange;
+  Period get dateRange;
   @override
   FhirDateTime? get restoreDate;
   @override

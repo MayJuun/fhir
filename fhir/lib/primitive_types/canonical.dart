@@ -14,7 +14,7 @@ class Canonical {
         final Uri? tempUri = Uri.tryParse(inValue);
         return Canonical._(inValue, tempUri, tempUri == null);
       }
-      Canonical._(inValue, null, false);
+      return Canonical._(inValue, null, false);
     }
 
     throw ArgumentError('Canonical cannot be constructed from $inValue.');

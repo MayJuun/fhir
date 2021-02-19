@@ -971,7 +971,7 @@ class _$CarePlanTearOff {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      required Reference? subject,
+      required Reference subject,
       Reference? context,
       Period? period,
       List<Reference?>? author,
@@ -1063,7 +1063,7 @@ mixin _$CarePlan {
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  Reference? get subject;
+  Reference get subject;
   Reference? get context;
   Period? get period;
   List<Reference?>? get author;
@@ -1117,7 +1117,7 @@ abstract class $CarePlanCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Reference? subject,
+      Reference subject,
       Reference? context,
       Period? period,
       List<Reference?>? author,
@@ -1136,7 +1136,7 @@ abstract class $CarePlanCopyWith<$Res> {
   $ElementCopyWith<$Res>? get intentElement;
   $ElementCopyWith<$Res>? get titleElement;
   $ElementCopyWith<$Res>? get descriptionElement;
-  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res>? get context;
   $PeriodCopyWith<$Res>? get period;
 }
@@ -1244,7 +1244,7 @@ class _$CarePlanCopyWithImpl<$Res> implements $CarePlanCopyWith<$Res> {
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference?,
       period: period == freezed ? _value.period : period as Period?,
       author: author == freezed ? _value.author : author as List<Reference?>?,
@@ -1353,12 +1353,8 @@ class _$CarePlanCopyWithImpl<$Res> implements $CarePlanCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get subject {
-    if (_value.subject == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
+  $ReferenceCopyWith<$Res> get subject {
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
       return _then(_value.copyWith(subject: value));
     });
   }
@@ -1425,7 +1421,7 @@ abstract class _$CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Reference? subject,
+      Reference subject,
       Reference? context,
       Period? period,
       List<Reference?>? author,
@@ -1453,7 +1449,7 @@ abstract class _$CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
   @override
-  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res> get subject;
   @override
   $ReferenceCopyWith<$Res>? get context;
   @override
@@ -1564,7 +1560,7 @@ class __$CarePlanCopyWithImpl<$Res> extends _$CarePlanCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference?,
       period: period == freezed ? _value.period : period as Period?,
       author: author == freezed ? _value.author : author as List<Reference?>?,
@@ -1697,7 +1693,7 @@ class _$_CarePlan extends _CarePlan {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final Reference? subject;
+  final Reference subject;
   @override
   final Reference? context;
   @override
@@ -1892,7 +1888,7 @@ abstract class _CarePlan extends CarePlan {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      required Reference? subject,
+      required Reference subject,
       Reference? context,
       Period? period,
       List<Reference?>? author,
@@ -1964,7 +1960,7 @@ abstract class _CarePlan extends CarePlan {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  Reference? get subject;
+  Reference get subject;
   @override
   Reference? get context;
   @override
@@ -4257,7 +4253,7 @@ class _$GoalTearOff {
           Element? statusElement,
       List<CodeableConcept?>? category,
       CodeableConcept? priority,
-      required CodeableConcept? description,
+      required CodeableConcept description,
       Reference? subject,
       Date? startDate,
       @JsonKey(name: '_startDate')
@@ -4341,7 +4337,7 @@ mixin _$Goal {
   Element? get statusElement;
   List<CodeableConcept?>? get category;
   CodeableConcept? get priority;
-  CodeableConcept? get description;
+  CodeableConcept get description;
   Reference? get subject;
   Date? get startDate;
   @JsonKey(name: '_startDate')
@@ -4391,7 +4387,7 @@ abstract class $GoalCopyWith<$Res> {
           Element? statusElement,
       List<CodeableConcept?>? category,
       CodeableConcept? priority,
-      CodeableConcept? description,
+      CodeableConcept description,
       Reference? subject,
       Date? startDate,
       @JsonKey(name: '_startDate')
@@ -4416,7 +4412,7 @@ abstract class $GoalCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get statusElement;
   $CodeableConceptCopyWith<$Res>? get priority;
-  $CodeableConceptCopyWith<$Res>? get description;
+  $CodeableConceptCopyWith<$Res> get description;
   $ReferenceCopyWith<$Res>? get subject;
   $ElementCopyWith<$Res>? get startDateElement;
   $CodeableConceptCopyWith<$Res>? get startCodeableConcept;
@@ -4508,7 +4504,7 @@ class _$GoalCopyWithImpl<$Res> implements $GoalCopyWith<$Res> {
           priority == freezed ? _value.priority : priority as CodeableConcept?,
       description: description == freezed
           ? _value.description
-          : description as CodeableConcept?,
+          : description as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       startDate: startDate == freezed ? _value.startDate : startDate as Date?,
       startDateElement: startDateElement == freezed
@@ -4612,12 +4608,8 @@ class _$GoalCopyWithImpl<$Res> implements $GoalCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get description {
-    if (_value.description == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.description!, (value) {
+  $CodeableConceptCopyWith<$Res> get description {
+    return $CodeableConceptCopyWith<$Res>(_value.description, (value) {
       return _then(_value.copyWith(description: value));
     });
   }
@@ -4728,7 +4720,7 @@ abstract class _$GoalCopyWith<$Res> implements $GoalCopyWith<$Res> {
           Element? statusElement,
       List<CodeableConcept?>? category,
       CodeableConcept? priority,
-      CodeableConcept? description,
+      CodeableConcept description,
       Reference? subject,
       Date? startDate,
       @JsonKey(name: '_startDate')
@@ -4760,7 +4752,7 @@ abstract class _$GoalCopyWith<$Res> implements $GoalCopyWith<$Res> {
   @override
   $CodeableConceptCopyWith<$Res>? get priority;
   @override
-  $CodeableConceptCopyWith<$Res>? get description;
+  $CodeableConceptCopyWith<$Res> get description;
   @override
   $ReferenceCopyWith<$Res>? get subject;
   @override
@@ -4860,7 +4852,7 @@ class __$GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res>
           priority == freezed ? _value.priority : priority as CodeableConcept?,
       description: description == freezed
           ? _value.description
-          : description as CodeableConcept?,
+          : description as CodeableConcept,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       startDate: startDate == freezed ? _value.startDate : startDate as Date?,
       startDateElement: startDateElement == freezed
@@ -4985,7 +4977,7 @@ class _$_Goal extends _Goal {
   @override
   final CodeableConcept? priority;
   @override
-  final CodeableConcept? description;
+  final CodeableConcept description;
   @override
   final Reference? subject;
   @override
@@ -5172,7 +5164,7 @@ abstract class _Goal extends Goal {
           Element? statusElement,
       List<CodeableConcept?>? category,
       CodeableConcept? priority,
-      required CodeableConcept? description,
+      required CodeableConcept description,
       Reference? subject,
       Date? startDate,
       @JsonKey(name: '_startDate')
@@ -5231,7 +5223,7 @@ abstract class _Goal extends Goal {
   @override
   CodeableConcept? get priority;
   @override
-  CodeableConcept? get description;
+  CodeableConcept get description;
   @override
   Reference? get subject;
   @override
@@ -5668,7 +5660,7 @@ class _$NutritionOrderTearOff {
       NutritionOrderStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      required Reference? patient,
+      required Reference patient,
       Reference? encounter,
       FhirDateTime? dateTime,
       @JsonKey(name: '_dateTime')
@@ -5738,7 +5730,7 @@ mixin _$NutritionOrder {
   NutritionOrderStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  Reference? get patient;
+  Reference get patient;
   Reference? get encounter;
   FhirDateTime? get dateTime;
   @JsonKey(name: '_dateTime')
@@ -5781,7 +5773,7 @@ abstract class $NutritionOrderCopyWith<$Res> {
       NutritionOrderStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Reference? patient,
+      Reference patient,
       Reference? encounter,
       FhirDateTime? dateTime,
       @JsonKey(name: '_dateTime')
@@ -5799,7 +5791,7 @@ abstract class $NutritionOrderCopyWith<$Res> {
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get statusElement;
-  $ReferenceCopyWith<$Res>? get patient;
+  $ReferenceCopyWith<$Res> get patient;
   $ReferenceCopyWith<$Res>? get encounter;
   $ElementCopyWith<$Res>? get dateTimeElement;
   $ReferenceCopyWith<$Res>? get orderer;
@@ -5878,7 +5870,7 @@ class _$NutritionOrderCopyWithImpl<$Res>
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      patient: patient == freezed ? _value.patient : patient as Reference?,
+      patient: patient == freezed ? _value.patient : patient as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference?,
       dateTime:
@@ -5964,12 +5956,8 @@ class _$NutritionOrderCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get patient {
-    if (_value.patient == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.patient!, (value) {
+  $ReferenceCopyWith<$Res> get patient {
+    return $ReferenceCopyWith<$Res>(_value.patient, (value) {
       return _then(_value.copyWith(patient: value));
     });
   }
@@ -6058,7 +6046,7 @@ abstract class _$NutritionOrderCopyWith<$Res>
       NutritionOrderStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Reference? patient,
+      Reference patient,
       Reference? encounter,
       FhirDateTime? dateTime,
       @JsonKey(name: '_dateTime')
@@ -6082,7 +6070,7 @@ abstract class _$NutritionOrderCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $ReferenceCopyWith<$Res>? get patient;
+  $ReferenceCopyWith<$Res> get patient;
   @override
   $ReferenceCopyWith<$Res>? get encounter;
   @override
@@ -6168,7 +6156,7 @@ class __$NutritionOrderCopyWithImpl<$Res>
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      patient: patient == freezed ? _value.patient : patient as Reference?,
+      patient: patient == freezed ? _value.patient : patient as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference?,
       dateTime:
@@ -6274,7 +6262,7 @@ class _$_NutritionOrder extends _NutritionOrder {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Reference? patient;
+  final Reference patient;
   @override
   final Reference? encounter;
   @override
@@ -6437,7 +6425,7 @@ abstract class _NutritionOrder extends NutritionOrder {
       NutritionOrderStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      required Reference? patient,
+      required Reference patient,
       Reference? encounter,
       FhirDateTime? dateTime,
       @JsonKey(name: '_dateTime')
@@ -6487,7 +6475,7 @@ abstract class _NutritionOrder extends NutritionOrder {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Reference? get patient;
+  Reference get patient;
   @override
   Reference? get encounter;
   @override
@@ -8441,8 +8429,8 @@ class _$ProcedureRequestTearOff {
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       List<CodeableConcept?>? category,
-      required CodeableConcept? code,
-      required Reference? subject,
+      required CodeableConcept code,
+      required Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -8560,8 +8548,8 @@ mixin _$ProcedureRequest {
   @JsonKey(name: '_doNotPerform')
   Element? get doNotPerformElement;
   List<CodeableConcept?>? get category;
-  CodeableConcept? get code;
-  Reference? get subject;
+  CodeableConcept get code;
+  Reference get subject;
   Reference? get context;
   FhirDateTime? get occurrenceDateTime;
   @JsonKey(name: '_occurrenceDateTime')
@@ -8630,8 +8618,8 @@ abstract class $ProcedureRequestCopyWith<$Res> {
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       List<CodeableConcept?>? category,
-      CodeableConcept? code,
-      Reference? subject,
+      CodeableConcept code,
+      Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -8665,8 +8653,8 @@ abstract class $ProcedureRequestCopyWith<$Res> {
   $ElementCopyWith<$Res>? get intentElement;
   $ElementCopyWith<$Res>? get priorityElement;
   $ElementCopyWith<$Res>? get doNotPerformElement;
-  $CodeableConceptCopyWith<$Res>? get code;
-  $ReferenceCopyWith<$Res>? get subject;
+  $CodeableConceptCopyWith<$Res> get code;
+  $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res>? get context;
   $ElementCopyWith<$Res>? get occurrenceDateTimeElement;
   $PeriodCopyWith<$Res>? get occurrencePeriod;
@@ -8798,8 +8786,8 @@ class _$ProcedureRequestCopyWithImpl<$Res>
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference?,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
@@ -8956,23 +8944,15 @@ class _$ProcedureRequestCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get subject {
-    if (_value.subject == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
+  $ReferenceCopyWith<$Res> get subject {
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
       return _then(_value.copyWith(subject: value));
     });
   }
@@ -9130,8 +9110,8 @@ abstract class _$ProcedureRequestCopyWith<$Res>
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       List<CodeableConcept?>? category,
-      CodeableConcept? code,
-      Reference? subject,
+      CodeableConcept code,
+      Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -9175,9 +9155,9 @@ abstract class _$ProcedureRequestCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get doNotPerformElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   @override
-  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res> get subject;
   @override
   $ReferenceCopyWith<$Res>? get context;
   @override
@@ -9321,8 +9301,8 @@ class __$ProcedureRequestCopyWithImpl<$Res>
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference?,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
@@ -9507,9 +9487,9 @@ class _$_ProcedureRequest extends _ProcedureRequest {
   @override
   final List<CodeableConcept?>? category;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
-  final Reference? subject;
+  final Reference subject;
   @override
   final Reference? context;
   @override
@@ -9753,8 +9733,8 @@ abstract class _ProcedureRequest extends ProcedureRequest {
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
       List<CodeableConcept?>? category,
-      required CodeableConcept? code,
-      required Reference? subject,
+      required CodeableConcept code,
+      required Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -9841,9 +9821,9 @@ abstract class _ProcedureRequest extends ProcedureRequest {
   @override
   List<CodeableConcept?>? get category;
   @override
-  CodeableConcept? get code;
+  CodeableConcept get code;
   @override
-  Reference? get subject;
+  Reference get subject;
   @override
   Reference? get context;
   @override
@@ -10126,7 +10106,7 @@ class _$ReferralRequestTearOff {
       @JsonKey(name: '_priority')
           Element? priorityElement,
       List<CodeableConcept?>? serviceRequested,
-      required Reference? subject,
+      required Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -10232,7 +10212,7 @@ mixin _$ReferralRequest {
   @JsonKey(name: '_priority')
   Element? get priorityElement;
   List<CodeableConcept?>? get serviceRequested;
-  Reference? get subject;
+  Reference get subject;
   Reference? get context;
   FhirDateTime? get occurrenceDateTime;
   @JsonKey(name: '_occurrenceDateTime')
@@ -10295,7 +10275,7 @@ abstract class $ReferralRequestCopyWith<$Res> {
       @JsonKey(name: '_priority')
           Element? priorityElement,
       List<CodeableConcept?>? serviceRequested,
-      Reference? subject,
+      Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -10325,7 +10305,7 @@ abstract class $ReferralRequestCopyWith<$Res> {
   $ElementCopyWith<$Res>? get intentElement;
   $CodeableConceptCopyWith<$Res>? get type;
   $ElementCopyWith<$Res>? get priorityElement;
-  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res>? get context;
   $ElementCopyWith<$Res>? get occurrenceDateTimeElement;
   $PeriodCopyWith<$Res>? get occurrencePeriod;
@@ -10443,7 +10423,7 @@ class _$ReferralRequestCopyWithImpl<$Res>
       serviceRequested: serviceRequested == freezed
           ? _value.serviceRequested
           : serviceRequested as List<CodeableConcept?>?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference?,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
@@ -10589,12 +10569,8 @@ class _$ReferralRequestCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get subject {
-    if (_value.subject == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
+  $ReferenceCopyWith<$Res> get subject {
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
       return _then(_value.copyWith(subject: value));
     });
   }
@@ -10716,7 +10692,7 @@ abstract class _$ReferralRequestCopyWith<$Res>
       @JsonKey(name: '_priority')
           Element? priorityElement,
       List<CodeableConcept?>? serviceRequested,
-      Reference? subject,
+      Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -10756,7 +10732,7 @@ abstract class _$ReferralRequestCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get priorityElement;
   @override
-  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res> get subject;
   @override
   $ReferenceCopyWith<$Res>? get context;
   @override
@@ -10883,7 +10859,7 @@ class __$ReferralRequestCopyWithImpl<$Res>
       serviceRequested: serviceRequested == freezed
           ? _value.serviceRequested
           : serviceRequested as List<CodeableConcept?>?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference?,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
@@ -11047,7 +11023,7 @@ class _$_ReferralRequest extends _ReferralRequest {
   @override
   final List<CodeableConcept?>? serviceRequested;
   @override
-  final Reference? subject;
+  final Reference subject;
   @override
   final Reference? context;
   @override
@@ -11269,7 +11245,7 @@ abstract class _ReferralRequest extends ReferralRequest {
       @JsonKey(name: '_priority')
           Element? priorityElement,
       List<CodeableConcept?>? serviceRequested,
-      required Reference? subject,
+      required Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -11349,7 +11325,7 @@ abstract class _ReferralRequest extends ReferralRequest {
   @override
   List<CodeableConcept?>? get serviceRequested;
   @override
-  Reference? get subject;
+  Reference get subject;
   @override
   Reference? get context;
   @override

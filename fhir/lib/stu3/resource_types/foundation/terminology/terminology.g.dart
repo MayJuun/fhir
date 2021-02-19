@@ -877,10 +877,8 @@ _$_ConceptMapGroup _$_$_ConceptMapGroupFromJson(Map<String, dynamic> json) {
     targetVersionElement: json['_targetVersion'] == null
         ? null
         : Element.fromJson(json['_targetVersion'] as Map<String, dynamic>),
-    element: (json['element'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ConceptMapElement.fromJson(e as Map<String, dynamic>))
+    element: (json['element'] as List<dynamic>)
+        .map((e) => ConceptMapElement.fromJson(e as Map<String, dynamic>))
         .toList(),
     unmapped: json['unmapped'] == null
         ? null
@@ -905,7 +903,7 @@ Map<String, dynamic> _$_$_ConceptMapGroupToJson(_$_ConceptMapGroup instance) {
   writeNotNull('_target', instance.targetElement?.toJson());
   writeNotNull('targetVersion', instance.targetVersion);
   writeNotNull('_targetVersion', instance.targetVersionElement?.toJson());
-  writeNotNull('element', instance.element?.map((e) => e?.toJson()).toList());
+  val['element'] = instance.element.map((e) => e.toJson()).toList();
   writeNotNull('unmapped', instance.unmapped?.toJson());
   return val;
 }
@@ -1640,10 +1638,8 @@ _$_NamingSystem _$_$_NamingSystemFromJson(Map<String, dynamic> json) {
     usageElement: json['_usage'] == null
         ? null
         : Element.fromJson(json['_usage'] as Map<String, dynamic>),
-    uniqueId: (json['uniqueId'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : NamingSystemUniqueId.fromJson(e as Map<String, dynamic>))
+    uniqueId: (json['uniqueId'] as List<dynamic>)
+        .map((e) => NamingSystemUniqueId.fromJson(e as Map<String, dynamic>))
         .toList(),
     replacedBy: json['replacedBy'] == null
         ? null
@@ -1697,7 +1693,7 @@ Map<String, dynamic> _$_$_NamingSystemToJson(_$_NamingSystem instance) {
       'jurisdiction', instance.jurisdiction?.map((e) => e?.toJson()).toList());
   writeNotNull('usage', instance.usage);
   writeNotNull('_usage', instance.usageElement?.toJson());
-  writeNotNull('uniqueId', instance.uniqueId?.map((e) => e?.toJson()).toList());
+  val['uniqueId'] = instance.uniqueId.map((e) => e.toJson()).toList();
   writeNotNull('replacedBy', instance.replacedBy?.toJson());
   return val;
 }
@@ -1972,10 +1968,8 @@ _$_ValueSetCompose _$_$_ValueSetComposeFromJson(Map<String, dynamic> json) {
     inactiveElement: json['_inactive'] == null
         ? null
         : Element.fromJson(json['_inactive'] as Map<String, dynamic>),
-    include: (json['include'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ValueSetInclude.fromJson(e as Map<String, dynamic>))
+    include: (json['include'] as List<dynamic>)
+        .map((e) => ValueSetInclude.fromJson(e as Map<String, dynamic>))
         .toList(),
     exclude: (json['exclude'] as List<dynamic>?)
         ?.map((e) => e == null
@@ -1998,7 +1992,7 @@ Map<String, dynamic> _$_$_ValueSetComposeToJson(_$_ValueSetCompose instance) {
   writeNotNull('_lockedDate', instance.lockedDateElement?.toJson());
   writeNotNull('inactive', instance.inactive?.toJson());
   writeNotNull('_inactive', instance.inactiveElement?.toJson());
-  writeNotNull('include', instance.include?.map((e) => e?.toJson()).toList());
+  val['include'] = instance.include.map((e) => e.toJson()).toList();
   writeNotNull('exclude', instance.exclude?.map((e) => e?.toJson()).toList());
   return val;
 }

@@ -683,11 +683,9 @@ _$_CapabilityStatementResource _$_$_CapabilityStatementResourceFromJson(
     documentationElement: json['_documentation'] == null
         ? null
         : Element.fromJson(json['_documentation'] as Map<String, dynamic>),
-    interaction: (json['interaction'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CapabilityStatementInteraction.fromJson(
-                e as Map<String, dynamic>))
+    interaction: (json['interaction'] as List<dynamic>)
+        .map((e) =>
+            CapabilityStatementInteraction.fromJson(e as Map<String, dynamic>))
         .toList(),
     versioning: _$enumDecodeNullable(
         _$CapabilityStatementResourceVersioningEnumMap, json['versioning']),
@@ -776,8 +774,7 @@ Map<String, dynamic> _$_$_CapabilityStatementResourceToJson(
   writeNotNull('profile', instance.profile?.toJson());
   writeNotNull('documentation', instance.documentation);
   writeNotNull('_documentation', instance.documentationElement?.toJson());
-  writeNotNull(
-      'interaction', instance.interaction?.map((e) => e?.toJson()).toList());
+  val['interaction'] = instance.interaction.map((e) => e.toJson()).toList();
   writeNotNull('versioning',
       _$CapabilityStatementResourceVersioningEnumMap[instance.versioning]);
   writeNotNull('_versioning', instance.versioningElement?.toJson());
@@ -1002,9 +999,7 @@ _$_CapabilityStatementOperation _$_$_CapabilityStatementOperationFromJson(
     nameElement: json['_name'] == null
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
-    definition: json['definition'] == null
-        ? null
-        : Reference.fromJson(json['definition'] as Map<String, dynamic>),
+    definition: Reference.fromJson(json['definition'] as Map<String, dynamic>),
   );
 }
 
@@ -1020,7 +1015,7 @@ Map<String, dynamic> _$_$_CapabilityStatementOperationToJson(
 
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('definition', instance.definition?.toJson());
+  val['definition'] = instance.definition.toJson();
   return val;
 }
 
@@ -1114,9 +1109,7 @@ _$_CapabilityStatementSupportedMessage
     modeElement: json['_mode'] == null
         ? null
         : Element.fromJson(json['_mode'] as Map<String, dynamic>),
-    definition: json['definition'] == null
-        ? null
-        : Reference.fromJson(json['definition'] as Map<String, dynamic>),
+    definition: Reference.fromJson(json['definition'] as Map<String, dynamic>),
   );
 }
 
@@ -1133,7 +1126,7 @@ Map<String, dynamic> _$_$_CapabilityStatementSupportedMessageToJson(
   writeNotNull(
       'mode', _$CapabilityStatementSupportedMessageModeEnumMap[instance.mode]);
   writeNotNull('_mode', instance.modeElement?.toJson());
-  writeNotNull('definition', instance.definition?.toJson());
+  val['definition'] = instance.definition.toJson();
   return val;
 }
 
@@ -1161,12 +1154,8 @@ _$_CapabilityStatementEvent _$_$_CapabilityStatementEventFromJson(
     focusElement: json['_focus'] == null
         ? null
         : Element.fromJson(json['_focus'] as Map<String, dynamic>),
-    request: json['request'] == null
-        ? null
-        : Reference.fromJson(json['request'] as Map<String, dynamic>),
-    response: json['response'] == null
-        ? null
-        : Reference.fromJson(json['response'] as Map<String, dynamic>),
+    request: Reference.fromJson(json['request'] as Map<String, dynamic>),
+    response: Reference.fromJson(json['response'] as Map<String, dynamic>),
     documentation: json['documentation'] as String?,
     documentationElement: json['_documentation'] == null
         ? null
@@ -1193,8 +1182,8 @@ Map<String, dynamic> _$_$_CapabilityStatementEventToJson(
   writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('focus', instance.focus);
   writeNotNull('_focus', instance.focusElement?.toJson());
-  writeNotNull('request', instance.request?.toJson());
-  writeNotNull('response', instance.response?.toJson());
+  val['request'] = instance.request.toJson();
+  val['response'] = instance.response.toJson();
   writeNotNull('documentation', instance.documentation);
   writeNotNull('_documentation', instance.documentationElement?.toJson());
   return val;
@@ -1225,9 +1214,7 @@ _$_CapabilityStatementDocument _$_$_CapabilityStatementDocumentFromJson(
     documentationElement: json['_documentation'] == null
         ? null
         : Element.fromJson(json['_documentation'] as Map<String, dynamic>),
-    profile: json['profile'] == null
-        ? null
-        : Reference.fromJson(json['profile'] as Map<String, dynamic>),
+    profile: Reference.fromJson(json['profile'] as Map<String, dynamic>),
   );
 }
 
@@ -1245,7 +1232,7 @@ Map<String, dynamic> _$_$_CapabilityStatementDocumentToJson(
   writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('documentation', instance.documentation);
   writeNotNull('_documentation', instance.documentationElement?.toJson());
-  writeNotNull('profile', instance.profile?.toJson());
+  val['profile'] = instance.profile.toJson();
   return val;
 }
 
@@ -1573,10 +1560,8 @@ _$_DataElement _$_$_DataElementFromJson(Map<String, dynamic> json) {
             ? null
             : DataElementMapping.fromJson(e as Map<String, dynamic>))
         .toList(),
-    element: (json['element'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ElementDefinition.fromJson(e as Map<String, dynamic>))
+    element: (json['element'] as List<dynamic>)
+        .map((e) => ElementDefinition.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1634,7 +1619,7 @@ Map<String, dynamic> _$_$_DataElementToJson(_$_DataElement instance) {
       'stringency', _$DataElementStringencyEnumMap[instance.stringency]);
   writeNotNull('_stringency', instance.stringencyElement?.toJson());
   writeNotNull('mapping', instance.mapping?.map((e) => e?.toJson()).toList());
-  writeNotNull('element', instance.element?.map((e) => e?.toJson()).toList());
+  val['element'] = instance.element.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -1887,10 +1872,8 @@ _$_GraphDefinitionLink _$_$_GraphDefinitionLinkFromJson(
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    target: (json['target'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : GraphDefinitionTarget.fromJson(e as Map<String, dynamic>))
+    target: (json['target'] as List<dynamic>)
+        .map((e) => GraphDefinitionTarget.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1915,7 +1898,7 @@ Map<String, dynamic> _$_$_GraphDefinitionLinkToJson(
   writeNotNull('_max', instance.maxElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('target', instance.target?.map((e) => e?.toJson()).toList());
+  val['target'] = instance.target.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -2254,10 +2237,9 @@ _$_ImplementationGuidePackage _$_$_ImplementationGuidePackageFromJson(
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    resource: (json['resource'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ImplementationGuideResource.fromJson(e as Map<String, dynamic>))
+    resource: (json['resource'] as List<dynamic>)
+        .map((e) =>
+            ImplementationGuideResource.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -2276,7 +2258,7 @@ Map<String, dynamic> _$_$_ImplementationGuidePackageToJson(
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('resource', instance.resource?.map((e) => e?.toJson()).toList());
+  val['resource'] = instance.resource.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -2344,9 +2326,7 @@ _$_ImplementationGuideGlobal _$_$_ImplementationGuideGlobalFromJson(
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    profile: json['profile'] == null
-        ? null
-        : Reference.fromJson(json['profile'] as Map<String, dynamic>),
+    profile: Reference.fromJson(json['profile'] as Map<String, dynamic>),
   );
 }
 
@@ -2362,7 +2342,7 @@ Map<String, dynamic> _$_$_ImplementationGuideGlobalToJson(
 
   writeNotNull('type', instance.type);
   writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('profile', instance.profile?.toJson());
+  val['profile'] = instance.profile.toJson();
   return val;
 }
 
@@ -2554,9 +2534,7 @@ _$_MessageDefinition _$_$_MessageDefinitionFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
-    event: json['event'] == null
-        ? null
-        : Coding.fromJson(json['event'] as Map<String, dynamic>),
+    event: Coding.fromJson(json['event'] as Map<String, dynamic>),
     category: json['category'] as String?,
     categoryElement: json['_category'] == null
         ? null
@@ -2637,7 +2615,7 @@ Map<String, dynamic> _$_$_MessageDefinitionToJson(
   writeNotNull('base', instance.base?.toJson());
   writeNotNull('parent', instance.parent?.map((e) => e?.toJson()).toList());
   writeNotNull('replaces', instance.replaces?.map((e) => e?.toJson()).toList());
-  writeNotNull('event', instance.event?.toJson());
+  val['event'] = instance.event.toJson();
   writeNotNull('category', instance.category);
   writeNotNull('_category', instance.categoryElement?.toJson());
   writeNotNull('focus', instance.focus?.map((e) => e?.toJson()).toList());
@@ -3916,10 +3894,8 @@ _$_StructureMap _$_$_StructureMapFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
-    group: (json['group'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : StructureMapGroup.fromJson(e as Map<String, dynamic>))
+    group: (json['group'] as List<dynamic>)
+        .map((e) => StructureMapGroup.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -3982,7 +3958,7 @@ Map<String, dynamic> _$_$_StructureMapToJson(_$_StructureMap instance) {
   writeNotNull('import', instance.import_);
   writeNotNull(
       '_import', instance.importElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('group', instance.group?.map((e) => e?.toJson()).toList());
+  val['group'] = instance.group.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -4064,15 +4040,11 @@ _$_StructureMapGroup _$_$_StructureMapGroupFromJson(Map<String, dynamic> json) {
     documentationElement: json['_documentation'] == null
         ? null
         : Element.fromJson(json['_documentation'] as Map<String, dynamic>),
-    input: (json['input'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : StructureMapInput.fromJson(e as Map<String, dynamic>))
+    input: (json['input'] as List<dynamic>)
+        .map((e) => StructureMapInput.fromJson(e as Map<String, dynamic>))
         .toList(),
-    rule: (json['rule'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : StructureMapRule.fromJson(e as Map<String, dynamic>))
+    rule: (json['rule'] as List<dynamic>)
+        .map((e) => StructureMapRule.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -4096,8 +4068,8 @@ Map<String, dynamic> _$_$_StructureMapGroupToJson(
   writeNotNull('_typeMode', instance.typeModeElement?.toJson());
   writeNotNull('documentation', instance.documentation);
   writeNotNull('_documentation', instance.documentationElement?.toJson());
-  writeNotNull('input', instance.input?.map((e) => e?.toJson()).toList());
-  writeNotNull('rule', instance.rule?.map((e) => e?.toJson()).toList());
+  val['input'] = instance.input.map((e) => e.toJson()).toList();
+  val['rule'] = instance.rule.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -4162,10 +4134,8 @@ _$_StructureMapRule _$_$_StructureMapRuleFromJson(Map<String, dynamic> json) {
     nameElement: json['_name'] == null
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
-    source: (json['source'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : StructureMapSource.fromJson(e as Map<String, dynamic>))
+    source: (json['source'] as List<dynamic>)
+        .map((e) => StructureMapSource.fromJson(e as Map<String, dynamic>))
         .toList(),
     target: (json['target'] as List<dynamic>?)
         ?.map((e) => e == null
@@ -4200,7 +4170,7 @@ Map<String, dynamic> _$_$_StructureMapRuleToJson(_$_StructureMapRule instance) {
 
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('source', instance.source?.map((e) => e?.toJson()).toList());
+  val['source'] = instance.source.map((e) => e.toJson()).toList();
   writeNotNull('target', instance.target?.map((e) => e?.toJson()).toList());
   writeNotNull('rule', instance.rule?.map((e) => e?.toJson()).toList());
   writeNotNull(

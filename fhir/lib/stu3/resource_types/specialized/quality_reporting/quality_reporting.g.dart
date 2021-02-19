@@ -681,9 +681,7 @@ _$_MeasureReport _$_$_MeasureReportFromJson(Map<String, dynamic> json) {
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    measure: json['measure'] == null
-        ? null
-        : Reference.fromJson(json['measure'] as Map<String, dynamic>),
+    measure: Reference.fromJson(json['measure'] as Map<String, dynamic>),
     patient: json['patient'] == null
         ? null
         : Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -695,9 +693,7 @@ _$_MeasureReport _$_$_MeasureReportFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(
             json['reportingOrganization'] as Map<String, dynamic>),
-    period: json['period'] == null
-        ? null
-        : Period.fromJson(json['period'] as Map<String, dynamic>),
+    period: Period.fromJson(json['period'] as Map<String, dynamic>),
     group: (json['group'] as List<dynamic>?)
         ?.map((e) => e == null
             ? null
@@ -739,13 +735,13 @@ Map<String, dynamic> _$_$_MeasureReportToJson(_$_MeasureReport instance) {
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('type', _$MeasureReportTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('measure', instance.measure?.toJson());
+  val['measure'] = instance.measure.toJson();
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull(
       'reportingOrganization', instance.reportingOrganization?.toJson());
-  writeNotNull('period', instance.period?.toJson());
+  val['period'] = instance.period.toJson();
   writeNotNull('group', instance.group?.map((e) => e?.toJson()).toList());
   writeNotNull('evaluatedResources', instance.evaluatedResources?.toJson());
   return val;

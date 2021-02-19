@@ -1111,7 +1111,7 @@ class _$HealthcareServiceTearOff {
       Reference? providedBy,
       CodeableConcept? serviceCategory,
       List<HealthcareServiceServiceType?>? serviceType,
-      required Reference? location,
+      required Reference location,
       String? serviceName,
       String? comment,
       @JsonKey(name: '_comment')
@@ -1207,7 +1207,7 @@ mixin _$HealthcareService {
   Reference? get providedBy;
   CodeableConcept? get serviceCategory;
   List<HealthcareServiceServiceType?>? get serviceType;
-  Reference? get location;
+  Reference get location;
   String? get serviceName;
   String? get comment;
   @JsonKey(name: '_comment')
@@ -1264,7 +1264,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
       Reference? providedBy,
       CodeableConcept? serviceCategory,
       List<HealthcareServiceServiceType?>? serviceType,
-      Reference? location,
+      Reference location,
       String? serviceName,
       String? comment,
       @JsonKey(name: '_comment')
@@ -1297,7 +1297,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $ReferenceCopyWith<$Res>? get providedBy;
   $CodeableConceptCopyWith<$Res>? get serviceCategory;
-  $ReferenceCopyWith<$Res>? get location;
+  $ReferenceCopyWith<$Res> get location;
   $ElementCopyWith<$Res>? get commentElement;
   $ElementCopyWith<$Res>? get extraDetailsElement;
   $AttachmentCopyWith<$Res>? get photo;
@@ -1392,7 +1392,7 @@ class _$HealthcareServiceCopyWithImpl<$Res>
       serviceType: serviceType == freezed
           ? _value.serviceType
           : serviceType as List<HealthcareServiceServiceType?>?,
-      location: location == freezed ? _value.location : location as Reference?,
+      location: location == freezed ? _value.location : location as Reference,
       serviceName:
           serviceName == freezed ? _value.serviceName : serviceName as String?,
       comment: comment == freezed ? _value.comment : comment as String?,
@@ -1518,12 +1518,8 @@ class _$HealthcareServiceCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get location {
-    if (_value.location == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.location!, (value) {
+  $ReferenceCopyWith<$Res> get location {
+    return $ReferenceCopyWith<$Res>(_value.location, (value) {
       return _then(_value.copyWith(location: value));
     });
   }
@@ -1623,7 +1619,7 @@ abstract class _$HealthcareServiceCopyWith<$Res>
       Reference? providedBy,
       CodeableConcept? serviceCategory,
       List<HealthcareServiceServiceType?>? serviceType,
-      Reference? location,
+      Reference location,
       String? serviceName,
       String? comment,
       @JsonKey(name: '_comment')
@@ -1663,7 +1659,7 @@ abstract class _$HealthcareServiceCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get serviceCategory;
   @override
-  $ReferenceCopyWith<$Res>? get location;
+  $ReferenceCopyWith<$Res> get location;
   @override
   $ElementCopyWith<$Res>? get commentElement;
   @override
@@ -1766,7 +1762,7 @@ class __$HealthcareServiceCopyWithImpl<$Res>
       serviceType: serviceType == freezed
           ? _value.serviceType
           : serviceType as List<HealthcareServiceServiceType?>?,
-      location: location == freezed ? _value.location : location as Reference?,
+      location: location == freezed ? _value.location : location as Reference,
       serviceName:
           serviceName == freezed ? _value.serviceName : serviceName as String?,
       comment: comment == freezed ? _value.comment : comment as String?,
@@ -1916,7 +1912,7 @@ class _$_HealthcareService extends _HealthcareService {
   @override
   final List<HealthcareServiceServiceType?>? serviceType;
   @override
-  final Reference? location;
+  final Reference location;
   @override
   final String? serviceName;
   @override
@@ -2129,7 +2125,7 @@ abstract class _HealthcareService extends HealthcareService {
       Reference? providedBy,
       CodeableConcept? serviceCategory,
       List<HealthcareServiceServiceType?>? serviceType,
-      required Reference? location,
+      required Reference location,
       String? serviceName,
       String? comment,
       @JsonKey(name: '_comment')
@@ -2194,7 +2190,7 @@ abstract class _HealthcareService extends HealthcareService {
   @override
   List<HealthcareServiceServiceType?>? get serviceType;
   @override
-  Reference? get location;
+  Reference get location;
   @override
   String? get serviceName;
   @override
@@ -2259,7 +2255,7 @@ class _$HealthcareServiceServiceTypeTearOff {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       List<CodeableConcept?>? specialty}) {
     return _HealthcareServiceServiceType(
       id: id,
@@ -2284,7 +2280,7 @@ mixin _$HealthcareServiceServiceType {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   List<CodeableConcept?>? get specialty;
 
   Map<String, dynamic> toJson();
@@ -2303,10 +2299,10 @@ abstract class $HealthcareServiceServiceTypeCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       List<CodeableConcept?>? specialty});
 
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 /// @nodoc
@@ -2334,7 +2330,7 @@ class _$HealthcareServiceServiceTypeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       specialty: specialty == freezed
           ? _value.specialty
           : specialty as List<CodeableConcept?>?,
@@ -2342,12 +2338,8 @@ class _$HealthcareServiceServiceTypeCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -2365,11 +2357,11 @@ abstract class _$HealthcareServiceServiceTypeCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       List<CodeableConcept?>? specialty});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 /// @nodoc
@@ -2401,7 +2393,7 @@ class __$HealthcareServiceServiceTypeCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       specialty: specialty == freezed
           ? _value.specialty
           : specialty as List<CodeableConcept?>?,
@@ -2432,7 +2424,7 @@ class _$_HealthcareServiceServiceType extends _HealthcareServiceServiceType {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final List<CodeableConcept?>? specialty;
 
@@ -2488,7 +2480,7 @@ abstract class _HealthcareServiceServiceType
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       List<CodeableConcept?>? specialty}) = _$_HealthcareServiceServiceType;
 
   factory _HealthcareServiceServiceType.fromJson(Map<String, dynamic> json) =
@@ -2502,7 +2494,7 @@ abstract class _HealthcareServiceServiceType
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   List<CodeableConcept?>? get specialty;
   @override
@@ -2993,7 +2985,7 @@ class _$HealthcareServiceNotAvailableTearOff {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required String? description,
+      required String description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Period? during}) {
     return _HealthcareServiceNotAvailable(
@@ -3020,7 +3012,7 @@ mixin _$HealthcareServiceNotAvailable {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  String? get description;
+  String get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   Period? get during;
@@ -3041,7 +3033,7 @@ abstract class $HealthcareServiceNotAvailableCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      String? description,
+      String description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Period? during});
 
@@ -3076,7 +3068,7 @@ class _$HealthcareServiceNotAvailableCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
       description:
-          description == freezed ? _value.description : description as String?,
+          description == freezed ? _value.description : description as String,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element?,
@@ -3119,7 +3111,7 @@ abstract class _$HealthcareServiceNotAvailableCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      String? description,
+      String description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Period? during});
 
@@ -3160,7 +3152,7 @@ class __$HealthcareServiceNotAvailableCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
       description:
-          description == freezed ? _value.description : description as String?,
+          description == freezed ? _value.description : description as String,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element?,
@@ -3194,7 +3186,7 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final String? description;
+  final String description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
@@ -3257,7 +3249,7 @@ abstract class _HealthcareServiceNotAvailable
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required String? description,
+      required String description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Period? during}) = _$_HealthcareServiceNotAvailable;
 
@@ -3272,7 +3264,7 @@ abstract class _HealthcareServiceNotAvailable
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  String? get description;
+  String get description;
   @override
   @JsonKey(name: '_description')
   Element? get descriptionElement;
@@ -3313,7 +3305,7 @@ class _$GroupTearOff {
           required GroupType type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      required Boolean? actual,
+      required Boolean actual,
       @JsonKey(name: '_actual')
           Element? actualElement,
       CodeableConcept? code,
@@ -3382,7 +3374,7 @@ mixin _$Group {
   GroupType get type;
   @JsonKey(name: '_type')
   Element? get typeElement;
-  Boolean? get actual;
+  Boolean get actual;
   @JsonKey(name: '_actual')
   Element? get actualElement;
   CodeableConcept? get code;
@@ -3425,7 +3417,7 @@ abstract class $GroupCopyWith<$Res> {
           GroupType type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Boolean? actual,
+      Boolean actual,
       @JsonKey(name: '_actual')
           Element? actualElement,
       CodeableConcept? code,
@@ -3515,7 +3507,7 @@ class _$GroupCopyWithImpl<$Res> implements $GroupCopyWith<$Res> {
       type: type == freezed ? _value.type : type as GroupType,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      actual: actual == freezed ? _value.actual : actual as Boolean?,
+      actual: actual == freezed ? _value.actual : actual as Boolean,
       actualElement: actualElement == freezed
           ? _value.actualElement
           : actualElement as Element?,
@@ -3661,7 +3653,7 @@ abstract class _$GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
           GroupType type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Boolean? actual,
+      Boolean actual,
       @JsonKey(name: '_actual')
           Element? actualElement,
       CodeableConcept? code,
@@ -3761,7 +3753,7 @@ class __$GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as GroupType,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      actual: actual == freezed ? _value.actual : actual as Boolean?,
+      actual: actual == freezed ? _value.actual : actual as Boolean,
       actualElement: actualElement == freezed
           ? _value.actualElement
           : actualElement as Element?,
@@ -3859,7 +3851,7 @@ class _$_Group extends _Group {
   @JsonKey(name: '_type')
   final Element? typeElement;
   @override
-  final Boolean? actual;
+  final Boolean actual;
   @override
   @JsonKey(name: '_actual')
   final Element? actualElement;
@@ -4013,7 +4005,7 @@ abstract class _Group extends Group {
           required GroupType type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      required Boolean? actual,
+      required Boolean actual,
       @JsonKey(name: '_actual')
           Element? actualElement,
       CodeableConcept? code,
@@ -4063,7 +4055,7 @@ abstract class _Group extends Group {
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
-  Boolean? get actual;
+  Boolean get actual;
   @override
   @JsonKey(name: '_actual')
   Element? get actualElement;
@@ -4100,13 +4092,13 @@ class _$GroupCharacteristicTearOff {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       CodeableConcept? valueCodeableConcept,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Quantity? valueQuantity,
       Range? valueRange,
-      required Boolean? exclude,
+      required Boolean exclude,
       Period? period}) {
     return _GroupCharacteristic(
       id: id,
@@ -4137,14 +4129,14 @@ mixin _$GroupCharacteristic {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get code;
+  CodeableConcept get code;
   CodeableConcept? get valueCodeableConcept;
   Boolean? get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement;
   Quantity? get valueQuantity;
   Range? get valueRange;
-  Boolean? get exclude;
+  Boolean get exclude;
   Period? get period;
 
   Map<String, dynamic> toJson();
@@ -4161,16 +4153,16 @@ abstract class $GroupCharacteristicCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? code,
+      CodeableConcept code,
       CodeableConcept? valueCodeableConcept,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Quantity? valueQuantity,
       Range? valueRange,
-      Boolean? exclude,
+      Boolean exclude,
       Period? period});
 
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   $ElementCopyWith<$Res>? get valueBooleanElement;
   $QuantityCopyWith<$Res>? get valueQuantity;
@@ -4209,7 +4201,7 @@ class _$GroupCharacteristicCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
           : valueCodeableConcept as CodeableConcept?,
@@ -4224,18 +4216,14 @@ class _$GroupCharacteristicCopyWithImpl<$Res>
           : valueQuantity as Quantity?,
       valueRange:
           valueRange == freezed ? _value.valueRange : valueRange as Range?,
-      exclude: exclude == freezed ? _value.exclude : exclude as Boolean?,
+      exclude: exclude == freezed ? _value.exclude : exclude as Boolean,
       period: period == freezed ? _value.period : period as Period?,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
@@ -4308,17 +4296,17 @@ abstract class _$GroupCharacteristicCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? code,
+      CodeableConcept code,
       CodeableConcept? valueCodeableConcept,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Quantity? valueQuantity,
       Range? valueRange,
-      Boolean? exclude,
+      Boolean exclude,
       Period? period});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   @override
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   @override
@@ -4364,7 +4352,7 @@ class __$GroupCharacteristicCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
           : valueCodeableConcept as CodeableConcept?,
@@ -4379,7 +4367,7 @@ class __$GroupCharacteristicCopyWithImpl<$Res>
           : valueQuantity as Quantity?,
       valueRange:
           valueRange == freezed ? _value.valueRange : valueRange as Range?,
-      exclude: exclude == freezed ? _value.exclude : exclude as Boolean?,
+      exclude: exclude == freezed ? _value.exclude : exclude as Boolean,
       period: period == freezed ? _value.period : period as Period?,
     ));
   }
@@ -4414,7 +4402,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
   final CodeableConcept? valueCodeableConcept;
   @override
@@ -4427,7 +4415,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
   @override
   final Range? valueRange;
   @override
-  final Boolean? exclude;
+  final Boolean exclude;
   @override
   final Period? period;
 
@@ -4505,13 +4493,13 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       CodeableConcept? valueCodeableConcept,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Quantity? valueQuantity,
       Range? valueRange,
-      required Boolean? exclude,
+      required Boolean exclude,
       Period? period}) = _$_GroupCharacteristic;
 
   factory _GroupCharacteristic.fromJson(Map<String, dynamic> json) =
@@ -4525,7 +4513,7 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get code;
+  CodeableConcept get code;
   @override
   CodeableConcept? get valueCodeableConcept;
   @override
@@ -4538,7 +4526,7 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
   @override
   Range? get valueRange;
   @override
-  Boolean? get exclude;
+  Boolean get exclude;
   @override
   Period? get period;
   @override
@@ -4558,7 +4546,7 @@ class _$GroupMemberTearOff {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Reference? entity,
+      required Reference entity,
       Period? period,
       Boolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement}) {
@@ -4587,7 +4575,7 @@ mixin _$GroupMember {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  Reference? get entity;
+  Reference get entity;
   Period? get period;
   Boolean? get inactive;
   @JsonKey(name: '_inactive')
@@ -4607,12 +4595,12 @@ abstract class $GroupMemberCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Reference? entity,
+      Reference entity,
       Period? period,
       Boolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement});
 
-  $ReferenceCopyWith<$Res>? get entity;
+  $ReferenceCopyWith<$Res> get entity;
   $PeriodCopyWith<$Res>? get period;
   $ElementCopyWith<$Res>? get inactiveElement;
 }
@@ -4643,7 +4631,7 @@ class _$GroupMemberCopyWithImpl<$Res> implements $GroupMemberCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      entity: entity == freezed ? _value.entity : entity as Reference?,
+      entity: entity == freezed ? _value.entity : entity as Reference,
       period: period == freezed ? _value.period : period as Period?,
       inactive: inactive == freezed ? _value.inactive : inactive as Boolean?,
       inactiveElement: inactiveElement == freezed
@@ -4653,12 +4641,8 @@ class _$GroupMemberCopyWithImpl<$Res> implements $GroupMemberCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get entity {
-    if (_value.entity == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.entity!, (value) {
+  $ReferenceCopyWith<$Res> get entity {
+    return $ReferenceCopyWith<$Res>(_value.entity, (value) {
       return _then(_value.copyWith(entity: value));
     });
   }
@@ -4697,13 +4681,13 @@ abstract class _$GroupMemberCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Reference? entity,
+      Reference entity,
       Period? period,
       Boolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement});
 
   @override
-  $ReferenceCopyWith<$Res>? get entity;
+  $ReferenceCopyWith<$Res> get entity;
   @override
   $PeriodCopyWith<$Res>? get period;
   @override
@@ -4738,7 +4722,7 @@ class __$GroupMemberCopyWithImpl<$Res> extends _$GroupMemberCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      entity: entity == freezed ? _value.entity : entity as Reference?,
+      entity: entity == freezed ? _value.entity : entity as Reference,
       period: period == freezed ? _value.period : period as Period?,
       inactive: inactive == freezed ? _value.inactive : inactive as Boolean?,
       inactiveElement: inactiveElement == freezed
@@ -4773,7 +4757,7 @@ class _$_GroupMember extends _GroupMember {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final Reference? entity;
+  final Reference entity;
   @override
   final Period? period;
   @override
@@ -4839,7 +4823,7 @@ abstract class _GroupMember extends GroupMember {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Reference? entity,
+      required Reference entity,
       Period? period,
       Boolean? inactive,
       @JsonKey(name: '_inactive') Element? inactiveElement}) = _$_GroupMember;
@@ -4855,7 +4839,7 @@ abstract class _GroupMember extends GroupMember {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  Reference? get entity;
+  Reference get entity;
   @override
   Period? get period;
   @override

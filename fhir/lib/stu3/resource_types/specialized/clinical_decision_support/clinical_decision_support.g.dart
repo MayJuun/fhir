@@ -49,9 +49,7 @@ _$_GuidanceResponse _$_$_GuidanceResponseFromJson(Map<String, dynamic> json) {
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    module: json['module'] == null
-        ? null
-        : Reference.fromJson(json['module'] as Map<String, dynamic>),
+    module: Reference.fromJson(json['module'] as Map<String, dynamic>),
     status:
         _$enumDecodeNullable(_$GuidanceResponseStatusEnumMap, json['status']),
     statusElement: json['_status'] == null
@@ -128,7 +126,7 @@ Map<String, dynamic> _$_$_GuidanceResponseToJson(_$_GuidanceResponse instance) {
   writeNotNull('requestId', instance.requestId?.toJson());
   writeNotNull('_requestId', instance.requestIdElement?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('module', instance.module?.toJson());
+  val['module'] = instance.module.toJson();
   writeNotNull('status', _$GuidanceResponseStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('subject', instance.subject?.toJson());

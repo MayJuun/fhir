@@ -556,15 +556,9 @@ _$_EnrollmentRequest _$_$_EnrollmentRequestFromJson(Map<String, dynamic> json) {
     organization: json['organization'] == null
         ? null
         : Reference.fromJson(json['organization'] as Map<String, dynamic>),
-    subject: json['subject'] == null
-        ? null
-        : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    coverage: json['coverage'] == null
-        ? null
-        : Reference.fromJson(json['coverage'] as Map<String, dynamic>),
-    relationship: json['relationship'] == null
-        ? null
-        : Coding.fromJson(json['relationship'] as Map<String, dynamic>),
+    subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
+    coverage: Reference.fromJson(json['coverage'] as Map<String, dynamic>),
+    relationship: Coding.fromJson(json['relationship'] as Map<String, dynamic>),
   );
 }
 
@@ -602,9 +596,9 @@ Map<String, dynamic> _$_$_EnrollmentRequestToJson(
   writeNotNull('target', instance.target?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
   writeNotNull('organization', instance.organization?.toJson());
-  writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('coverage', instance.coverage?.toJson());
-  writeNotNull('relationship', instance.relationship?.toJson());
+  val['subject'] = instance.subject.toJson();
+  val['coverage'] = instance.coverage.toJson();
+  val['relationship'] = instance.relationship.toJson();
   return val;
 }
 

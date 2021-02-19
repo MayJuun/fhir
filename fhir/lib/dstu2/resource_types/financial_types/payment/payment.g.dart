@@ -71,9 +71,8 @@ _$_PaymentNotice _$_$_PaymentNoticeFromJson(Map<String, dynamic> json) {
     response: json['response'] == null
         ? null
         : Reference.fromJson(json['response'] as Map<String, dynamic>),
-    paymentStatus: json['paymentStatus'] == null
-        ? null
-        : Coding.fromJson(json['paymentStatus'] as Map<String, dynamic>),
+    paymentStatus:
+        Coding.fromJson(json['paymentStatus'] as Map<String, dynamic>),
   );
 }
 
@@ -112,7 +111,7 @@ Map<String, dynamic> _$_$_PaymentNoticeToJson(_$_PaymentNotice instance) {
   writeNotNull('organization', instance.organization?.toJson());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('response', instance.response?.toJson());
-  writeNotNull('paymentStatus', instance.paymentStatus?.toJson());
+  val['paymentStatus'] = instance.paymentStatus.toJson();
   return val;
 }
 
@@ -325,9 +324,7 @@ _$_PaymentReconciliation _$_$_PaymentReconciliationFromJson(
     form: json['form'] == null
         ? null
         : Coding.fromJson(json['form'] as Map<String, dynamic>),
-    total: json['total'] == null
-        ? null
-        : Quantity.fromJson(json['total'] as Map<String, dynamic>),
+    total: Quantity.fromJson(json['total'] as Map<String, dynamic>),
     note: (json['note'] as List<dynamic>?)
         ?.map((e) => e == null
             ? null
@@ -379,7 +376,7 @@ Map<String, dynamic> _$_$_PaymentReconciliationToJson(
   writeNotNull('requestOrganization', instance.requestOrganization?.toJson());
   writeNotNull('detail', instance.detail?.map((e) => e?.toJson()).toList());
   writeNotNull('form', instance.form?.toJson());
-  writeNotNull('total', instance.total?.toJson());
+  val['total'] = instance.total.toJson();
   writeNotNull('note', instance.note?.map((e) => e?.toJson()).toList());
   return val;
 }
@@ -415,9 +412,7 @@ _$_PaymentReconciliationDetail _$_$_PaymentReconciliationDetailFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    type: json['type'] == null
-        ? null
-        : Coding.fromJson(json['type'] as Map<String, dynamic>),
+    type: Coding.fromJson(json['type'] as Map<String, dynamic>),
     request: json['request'] == null
         ? null
         : Reference.fromJson(json['request'] as Map<String, dynamic>),
@@ -455,7 +450,7 @@ Map<String, dynamic> _$_$_PaymentReconciliationDetailToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
+  val['type'] = instance.type.toJson();
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('responce', instance.responce?.toJson());
   writeNotNull('submitter', instance.submitter?.toJson());

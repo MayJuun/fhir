@@ -158,10 +158,9 @@ _$_Evidence _$_$_EvidenceFromJson(Map<String, dynamic> json) {
     note: json['note'] == null
         ? null
         : Annotation.fromJson(json['note'] as Map<String, dynamic>),
-    variableDefinition: (json['variableDefinition'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : EvidenceVariableDefinition.fromJson(e as Map<String, dynamic>))
+    variableDefinition: (json['variableDefinition'] as List<dynamic>)
+        .map((e) =>
+            EvidenceVariableDefinition.fromJson(e as Map<String, dynamic>))
         .toList(),
     synthesisType: json['synthesisType'] == null
         ? null
@@ -254,8 +253,8 @@ Map<String, dynamic> _$_$_EvidenceToJson(_$_Evidence instance) {
   writeNotNull('assertion', instance.assertion?.toJson());
   writeNotNull('_assertion', instance.assertionElement?.toJson());
   writeNotNull('note', instance.note?.toJson());
-  writeNotNull('variableDefinition',
-      instance.variableDefinition?.map((e) => e?.toJson()).toList());
+  val['variableDefinition'] =
+      instance.variableDefinition.map((e) => e.toJson()).toList();
   writeNotNull('synthesisType', instance.synthesisType?.toJson());
   writeNotNull('studyType', instance.studyType?.toJson());
   writeNotNull(
@@ -484,10 +483,8 @@ _$_EvidenceVariableDefinition _$_$_EvidenceVariableDefinitionFromJson(
         ?.map((e) =>
             e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
         .toList(),
-    variableRole: json['variableRole'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['variableRole'] as Map<String, dynamic>),
+    variableRole:
+        CodeableConcept.fromJson(json['variableRole'] as Map<String, dynamic>),
     observed: json['observed'] == null
         ? null
         : Reference.fromJson(json['observed'] as Map<String, dynamic>),
@@ -519,7 +516,7 @@ Map<String, dynamic> _$_$_EvidenceVariableDefinitionToJson(
   writeNotNull('description', instance.description?.toJson());
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('note', instance.note?.map((e) => e?.toJson()).toList());
-  writeNotNull('variableRole', instance.variableRole?.toJson());
+  val['variableRole'] = instance.variableRole.toJson();
   writeNotNull('observed', instance.observed?.toJson());
   writeNotNull('intended', instance.intended?.toJson());
   writeNotNull('directnessMatch', instance.directnessMatch?.toJson());

@@ -876,9 +876,7 @@ _$_SampledData _$_$_SampledDataFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    origin: json['origin'] == null
-        ? null
-        : Quantity.fromJson(json['origin'] as Map<String, dynamic>),
+    origin: Quantity.fromJson(json['origin'] as Map<String, dynamic>),
     period: json['period'] == null ? null : Decimal.fromJson(json['period']),
     periodElement: json['_period'] == null
         ? null
@@ -924,7 +922,7 @@ Map<String, dynamic> _$_$_SampledDataToJson(_$_SampledData instance) {
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
-  writeNotNull('origin', instance.origin?.toJson());
+  val['origin'] = instance.origin.toJson();
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('_period', instance.periodElement?.toJson());
   writeNotNull('factor', instance.factor?.toJson());
@@ -948,17 +946,14 @@ _$_Signature _$_$_SignatureFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    type: (json['type'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
+    type: (json['type'] as List<dynamic>)
+        .map((e) => Coding.fromJson(e as Map<String, dynamic>))
         .toList(),
     when: json['when'] == null ? null : Instant.fromJson(json['when']),
     whenElement: json['_when'] == null
         ? null
         : Element.fromJson(json['_when'] as Map<String, dynamic>),
-    who: json['who'] == null
-        ? null
-        : Reference.fromJson(json['who'] as Map<String, dynamic>),
+    who: Reference.fromJson(json['who'] as Map<String, dynamic>),
     onBehalfOf: json['onBehalfOf'] == null
         ? null
         : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
@@ -992,10 +987,10 @@ Map<String, dynamic> _$_$_SignatureToJson(_$_Signature instance) {
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
-  writeNotNull('type', instance.type?.map((e) => e?.toJson()).toList());
+  val['type'] = instance.type.map((e) => e.toJson()).toList();
   writeNotNull('when', instance.when?.toJson());
   writeNotNull('_when', instance.whenElement?.toJson());
-  writeNotNull('who', instance.who?.toJson());
+  val['who'] = instance.who.toJson();
   writeNotNull('onBehalfOf', instance.onBehalfOf?.toJson());
   writeNotNull('targetFormat', instance.targetFormat?.toJson());
   writeNotNull('_targetFormat', instance.targetFormatElement?.toJson());

@@ -44,17 +44,15 @@ _$_Composition _$_$_CompositionFromJson(Map<String, dynamic> json) {
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+    date: FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     class_: json['class'] == null
         ? null
         : CodeableConcept.fromJson(json['class'] as Map<String, dynamic>),
-    title: json['title'] as String?,
+    title: json['title'] as String,
     titleElement: json['_title'] == null
         ? null
         : Element.fromJson(json['_title'] as Map<String, dynamic>),
@@ -69,12 +67,9 @@ _$_Composition _$_$_CompositionFromJson(Map<String, dynamic> json) {
     confidentialityElement: json['_confidentiality'] == null
         ? null
         : Element.fromJson(json['_confidentiality'] as Map<String, dynamic>),
-    subject: json['subject'] == null
-        ? null
-        : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    author: (json['author'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+    subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
+    author: (json['author'] as List<dynamic>)
+        .map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     attester: (json['attester'] as List<dynamic>?)
         ?.map((e) => e == null
@@ -125,18 +120,18 @@ Map<String, dynamic> _$_$_CompositionToJson(_$_Composition instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('date', instance.date?.toJson());
+  val['date'] = instance.date.toJson();
   writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull('type', instance.type?.toJson());
+  val['type'] = instance.type.toJson();
   writeNotNull('class', instance.class_?.toJson());
-  writeNotNull('title', instance.title);
+  val['title'] = instance.title;
   writeNotNull('_title', instance.titleElement?.toJson());
   val['status'] = _$CompositionStatusEnumMap[instance.status];
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('confidentiality', instance.confidentiality?.toJson());
   writeNotNull('_confidentiality', instance.confidentialityElement?.toJson());
-  writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('author', instance.author?.map((e) => e?.toJson()).toList());
+  val['subject'] = instance.subject.toJson();
+  val['author'] = instance.author.map((e) => e.toJson()).toList();
   writeNotNull('attester', instance.attester?.map((e) => e?.toJson()).toList());
   writeNotNull('custodian', instance.custodian?.toJson());
   writeNotNull('event', instance.event?.map((e) => e?.toJson()).toList());
@@ -291,8 +286,8 @@ _$_CompositionAttester _$_$_CompositionAttesterFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    mode: (json['mode'] as List<dynamic>?)
-        ?.map((e) => _$enumDecodeNullable(_$AttesterModeEnumMap, e))
+    mode: (json['mode'] as List<dynamic>)
+        .map((e) => _$enumDecode(_$AttesterModeEnumMap, e))
         .toList(),
     modeElement: json['_mode'] == null
         ? null
@@ -322,24 +317,12 @@ Map<String, dynamic> _$_$_CompositionAttesterToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull(
-      'mode', instance.mode?.map((e) => _$AttesterModeEnumMap[e]).toList());
+  val['mode'] = instance.mode.map((e) => _$AttesterModeEnumMap[e]).toList();
   writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('time', instance.time?.toJson());
   writeNotNull('_time', instance.timeElement?.toJson());
   writeNotNull('party', instance.party?.toJson());
   return val;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$AttesterModeEnumMap = {
@@ -477,6 +460,17 @@ Map<String, dynamic> _$_$_CompositionSectionToJson(
   return val;
 }
 
+K? _$enumDecodeNullable<K, V>(
+  Map<K, V> enumValues,
+  dynamic source, {
+  K? unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
+}
+
 const _$SectionModeEnumMap = {
   SectionMode.working: 'working',
   SectionMode.snapshot: 'snapshot',
@@ -558,10 +552,8 @@ _$_DocumentManifest _$_$_DocumentManifestFromJson(Map<String, dynamic> json) {
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    content: (json['content'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : DocumentManifestContent.fromJson(e as Map<String, dynamic>))
+    content: (json['content'] as List<dynamic>)
+        .map((e) => DocumentManifestContent.fromJson(e as Map<String, dynamic>))
         .toList(),
     related: (json['related'] as List<dynamic>?)
         ?.map((e) => e == null
@@ -611,7 +603,7 @@ Map<String, dynamic> _$_$_DocumentManifestToJson(_$_DocumentManifest instance) {
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('content', instance.content?.map((e) => e?.toJson()).toList());
+  val['content'] = instance.content.map((e) => e.toJson()).toList();
   writeNotNull('related', instance.related?.map((e) => e?.toJson()).toList());
   return val;
 }
@@ -754,9 +746,7 @@ _$_DocumentReference _$_$_DocumentReferenceFromJson(Map<String, dynamic> json) {
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     class_: json['class'] == null
         ? null
         : CodeableConcept.fromJson(json['class'] as Map<String, dynamic>),
@@ -772,7 +762,7 @@ _$_DocumentReference _$_$_DocumentReferenceFromJson(Map<String, dynamic> json) {
         : Reference.fromJson(json['authenticator'] as Map<String, dynamic>),
     created:
         json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
-    indexed: json['indexed'] == null ? null : Instant.fromJson(json['indexed']),
+    indexed: Instant.fromJson(json['indexed']),
     status: _$enumDecode(_$DocumentReferenceStatusEnumMap, json['status'],
         unknownValue: DocumentReferenceStatus.unknown),
     statusElement: json['_status'] == null
@@ -798,10 +788,9 @@ _$_DocumentReference _$_$_DocumentReferenceFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
-    content: (json['content'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : DocumentReferenceContent.fromJson(e as Map<String, dynamic>))
+    content: (json['content'] as List<dynamic>)
+        .map(
+            (e) => DocumentReferenceContent.fromJson(e as Map<String, dynamic>))
         .toList(),
     context: json['context'] == null
         ? null
@@ -839,13 +828,13 @@ Map<String, dynamic> _$_$_DocumentReferenceToJson(
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
   writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('type', instance.type?.toJson());
+  val['type'] = instance.type.toJson();
   writeNotNull('class', instance.class_?.toJson());
   writeNotNull('author', instance.author?.map((e) => e?.toJson()).toList());
   writeNotNull('custodian', instance.custodian?.toJson());
   writeNotNull('authenticator', instance.authenticator?.toJson());
   writeNotNull('created', instance.created?.toJson());
-  writeNotNull('indexed', instance.indexed?.toJson());
+  val['indexed'] = instance.indexed.toJson();
   val['status'] = _$DocumentReferenceStatusEnumMap[instance.status];
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('docStatus', instance.docStatus?.toJson());
@@ -856,7 +845,7 @@ Map<String, dynamic> _$_$_DocumentReferenceToJson(
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('securityLabel',
       instance.securityLabel?.map((e) => e?.toJson()).toList());
-  writeNotNull('content', instance.content?.map((e) => e?.toJson()).toList());
+  val['content'] = instance.content.map((e) => e.toJson()).toList();
   writeNotNull('context', instance.context?.toJson());
   return val;
 }
@@ -887,9 +876,7 @@ _$_DocumentReferenceRelatesTo _$_$_DocumentReferenceRelatesToFromJson(
     codeElement: json['_code'] == null
         ? null
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
-    target: json['target'] == null
-        ? null
-        : Reference.fromJson(json['target'] as Map<String, dynamic>),
+    target: Reference.fromJson(json['target'] as Map<String, dynamic>),
   );
 }
 
@@ -910,7 +897,7 @@ Map<String, dynamic> _$_$_DocumentReferenceRelatesToToJson(
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   val['code'] = _$RelatesToCodeEnumMap[instance.code];
   writeNotNull('_code', instance.codeElement?.toJson());
-  writeNotNull('target', instance.target?.toJson());
+  val['target'] = instance.target.toJson();
   return val;
 }
 
@@ -936,9 +923,7 @@ _$_DocumentReferenceContent _$_$_DocumentReferenceContentFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    attachment: json['attachment'] == null
-        ? null
-        : Attachment.fromJson(json['attachment'] as Map<String, dynamic>),
+    attachment: Attachment.fromJson(json['attachment'] as Map<String, dynamic>),
     format: (json['format'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
@@ -961,7 +946,7 @@ Map<String, dynamic> _$_$_DocumentReferenceContentToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('attachment', instance.attachment?.toJson());
+  val['attachment'] = instance.attachment.toJson();
   writeNotNull('format', instance.format?.map((e) => e?.toJson()).toList());
   return val;
 }
@@ -1248,9 +1233,7 @@ _$_ListEntry _$_$_ListEntryFromJson(Map<String, dynamic> json) {
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
-    item: json['item'] == null
-        ? null
-        : Reference.fromJson(json['item'] as Map<String, dynamic>),
+    item: Reference.fromJson(json['item'] as Map<String, dynamic>),
   );
 }
 
@@ -1274,6 +1257,6 @@ Map<String, dynamic> _$_$_ListEntryToJson(_$_ListEntry instance) {
   writeNotNull('_deleted', instance.deletedElement?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull('item', instance.item?.toJson());
+  val['item'] = instance.item.toJson();
   return val;
 }

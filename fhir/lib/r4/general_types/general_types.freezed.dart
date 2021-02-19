@@ -5730,7 +5730,7 @@ class _$SampledDataTearOff {
   _SampledData call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      required Quantity? origin,
+      required Quantity origin,
       Decimal? period,
       @JsonKey(name: '_period') Element? periodElement,
       Decimal? factor,
@@ -5775,7 +5775,7 @@ mixin _$SampledData {
   String? get id;
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
-  Quantity? get origin;
+  Quantity get origin;
   Decimal? get period;
   @JsonKey(name: '_period')
   Element? get periodElement;
@@ -5808,7 +5808,7 @@ abstract class $SampledDataCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      Quantity? origin,
+      Quantity origin,
       Decimal? period,
       @JsonKey(name: '_period') Element? periodElement,
       Decimal? factor,
@@ -5822,7 +5822,7 @@ abstract class $SampledDataCopyWith<$Res> {
       String? data,
       @JsonKey(name: '_data') Element? dataElement});
 
-  $QuantityCopyWith<$Res>? get origin;
+  $QuantityCopyWith<$Res> get origin;
   $ElementCopyWith<$Res>? get periodElement;
   $ElementCopyWith<$Res>? get factorElement;
   $ElementCopyWith<$Res>? get lowerLimitElement;
@@ -5862,7 +5862,7 @@ class _$SampledDataCopyWithImpl<$Res> implements $SampledDataCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      origin: origin == freezed ? _value.origin : origin as Quantity?,
+      origin: origin == freezed ? _value.origin : origin as Quantity,
       period: period == freezed ? _value.period : period as Decimal?,
       periodElement: periodElement == freezed
           ? _value.periodElement
@@ -5894,12 +5894,8 @@ class _$SampledDataCopyWithImpl<$Res> implements $SampledDataCopyWith<$Res> {
   }
 
   @override
-  $QuantityCopyWith<$Res>? get origin {
-    if (_value.origin == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.origin!, (value) {
+  $QuantityCopyWith<$Res> get origin {
+    return $QuantityCopyWith<$Res>(_value.origin, (value) {
       return _then(_value.copyWith(origin: value));
     });
   }
@@ -5981,7 +5977,7 @@ abstract class _$SampledDataCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      Quantity? origin,
+      Quantity origin,
       Decimal? period,
       @JsonKey(name: '_period') Element? periodElement,
       Decimal? factor,
@@ -5996,7 +5992,7 @@ abstract class _$SampledDataCopyWith<$Res>
       @JsonKey(name: '_data') Element? dataElement});
 
   @override
-  $QuantityCopyWith<$Res>? get origin;
+  $QuantityCopyWith<$Res> get origin;
   @override
   $ElementCopyWith<$Res>? get periodElement;
   @override
@@ -6044,7 +6040,7 @@ class __$SampledDataCopyWithImpl<$Res> extends _$SampledDataCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      origin: origin == freezed ? _value.origin : origin as Quantity?,
+      origin: origin == freezed ? _value.origin : origin as Quantity,
       period: period == freezed ? _value.period : period as Decimal?,
       periodElement: periodElement == freezed
           ? _value.periodElement
@@ -6107,7 +6103,7 @@ class _$_SampledData extends _SampledData {
   @JsonKey(name: 'extension')
   final List<FhirExtension?>? extension_;
   @override
-  final Quantity? origin;
+  final Quantity origin;
   @override
   final Decimal? period;
   @override
@@ -6225,7 +6221,7 @@ abstract class _SampledData extends SampledData {
   factory _SampledData(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      required Quantity? origin,
+      required Quantity origin,
       Decimal? period,
       @JsonKey(name: '_period') Element? periodElement,
       Decimal? factor,
@@ -6248,7 +6244,7 @@ abstract class _SampledData extends SampledData {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   @override
-  Quantity? get origin;
+  Quantity get origin;
   @override
   Decimal? get period;
   @override
@@ -6295,10 +6291,10 @@ class _$SignatureTearOff {
   _Signature call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      required List<Coding?>? type,
+      required List<Coding> type,
       Instant? when,
       @JsonKey(name: '_when') Element? whenElement,
-      required Reference? who,
+      required Reference who,
       Reference? onBehalfOf,
       Code? targetFormat,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
@@ -6336,11 +6332,11 @@ mixin _$Signature {
   String? get id;
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
-  List<Coding?>? get type;
+  List<Coding> get type;
   Instant? get when;
   @JsonKey(name: '_when')
   Element? get whenElement;
-  Reference? get who;
+  Reference get who;
   Reference? get onBehalfOf;
   Code? get targetFormat;
   @JsonKey(name: '_targetFormat')
@@ -6364,10 +6360,10 @@ abstract class $SignatureCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<Coding?>? type,
+      List<Coding> type,
       Instant? when,
       @JsonKey(name: '_when') Element? whenElement,
-      Reference? who,
+      Reference who,
       Reference? onBehalfOf,
       Code? targetFormat,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
@@ -6377,7 +6373,7 @@ abstract class $SignatureCopyWith<$Res> {
       @JsonKey(name: '_data') Element? dataElement});
 
   $ElementCopyWith<$Res>? get whenElement;
-  $ReferenceCopyWith<$Res>? get who;
+  $ReferenceCopyWith<$Res> get who;
   $ReferenceCopyWith<$Res>? get onBehalfOf;
   $ElementCopyWith<$Res>? get targetFormatElement;
   $ElementCopyWith<$Res>? get sigFormatElement;
@@ -6413,11 +6409,11 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as List<Coding?>?,
+      type: type == freezed ? _value.type : type as List<Coding>,
       when: when == freezed ? _value.when : when as Instant?,
       whenElement:
           whenElement == freezed ? _value.whenElement : whenElement as Element?,
-      who: who == freezed ? _value.who : who as Reference?,
+      who: who == freezed ? _value.who : who as Reference,
       onBehalfOf:
           onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference?,
       targetFormat:
@@ -6447,12 +6443,8 @@ class _$SignatureCopyWithImpl<$Res> implements $SignatureCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get who {
-    if (_value.who == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.who!, (value) {
+  $ReferenceCopyWith<$Res> get who {
+    return $ReferenceCopyWith<$Res>(_value.who, (value) {
       return _then(_value.copyWith(who: value));
     });
   }
@@ -6511,10 +6503,10 @@ abstract class _$SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<Coding?>? type,
+      List<Coding> type,
       Instant? when,
       @JsonKey(name: '_when') Element? whenElement,
-      Reference? who,
+      Reference who,
       Reference? onBehalfOf,
       Code? targetFormat,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
@@ -6526,7 +6518,7 @@ abstract class _$SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res>? get whenElement;
   @override
-  $ReferenceCopyWith<$Res>? get who;
+  $ReferenceCopyWith<$Res> get who;
   @override
   $ReferenceCopyWith<$Res>? get onBehalfOf;
   @override
@@ -6567,11 +6559,11 @@ class __$SignatureCopyWithImpl<$Res> extends _$SignatureCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as List<Coding?>?,
+      type: type == freezed ? _value.type : type as List<Coding>,
       when: when == freezed ? _value.when : when as Instant?,
       whenElement:
           whenElement == freezed ? _value.whenElement : whenElement as Element?,
-      who: who == freezed ? _value.who : who as Reference?,
+      who: who == freezed ? _value.who : who as Reference,
       onBehalfOf:
           onBehalfOf == freezed ? _value.onBehalfOf : onBehalfOf as Reference?,
       targetFormat:
@@ -6619,14 +6611,14 @@ class _$_Signature extends _Signature {
   @JsonKey(name: 'extension')
   final List<FhirExtension?>? extension_;
   @override
-  final List<Coding?>? type;
+  final List<Coding> type;
   @override
   final Instant? when;
   @override
   @JsonKey(name: '_when')
   final Element? whenElement;
   @override
-  final Reference? who;
+  final Reference who;
   @override
   final Reference? onBehalfOf;
   @override
@@ -6723,10 +6715,10 @@ abstract class _Signature extends Signature {
   factory _Signature(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      required List<Coding?>? type,
+      required List<Coding> type,
       Instant? when,
       @JsonKey(name: '_when') Element? whenElement,
-      required Reference? who,
+      required Reference who,
       Reference? onBehalfOf,
       Code? targetFormat,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
@@ -6744,14 +6736,14 @@ abstract class _Signature extends Signature {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   @override
-  List<Coding?>? get type;
+  List<Coding> get type;
   @override
   Instant? get when;
   @override
   @JsonKey(name: '_when')
   Element? get whenElement;
   @override
-  Reference? get who;
+  Reference get who;
   @override
   Reference? get onBehalfOf;
   @override

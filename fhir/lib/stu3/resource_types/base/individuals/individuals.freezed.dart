@@ -5598,7 +5598,7 @@ class _$PractitionerQualificationTearOff {
 
   _PractitionerQualification call(
       {List<Identifier?>? identifier,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       Period? period,
       Reference? issuer}) {
     return _PractitionerQualification(
@@ -5620,7 +5620,7 @@ const $PractitionerQualification = _$PractitionerQualificationTearOff();
 /// @nodoc
 mixin _$PractitionerQualification {
   List<Identifier?>? get identifier;
-  CodeableConcept? get code;
+  CodeableConcept get code;
   Period? get period;
   Reference? get issuer;
 
@@ -5636,11 +5636,11 @@ abstract class $PractitionerQualificationCopyWith<$Res> {
       _$PractitionerQualificationCopyWithImpl<$Res>;
   $Res call(
       {List<Identifier?>? identifier,
-      CodeableConcept? code,
+      CodeableConcept code,
       Period? period,
       Reference? issuer});
 
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   $PeriodCopyWith<$Res>? get period;
   $ReferenceCopyWith<$Res>? get issuer;
 }
@@ -5665,19 +5665,15 @@ class _$PractitionerQualificationCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       period: period == freezed ? _value.period : period as Period?,
       issuer: issuer == freezed ? _value.issuer : issuer as Reference?,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
@@ -5714,12 +5710,12 @@ abstract class _$PractitionerQualificationCopyWith<$Res>
   @override
   $Res call(
       {List<Identifier?>? identifier,
-      CodeableConcept? code,
+      CodeableConcept code,
       Period? period,
       Reference? issuer});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   @override
   $PeriodCopyWith<$Res>? get period;
   @override
@@ -5749,7 +5745,7 @@ class __$PractitionerQualificationCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       period: period == freezed ? _value.period : period as Period?,
       issuer: issuer == freezed ? _value.issuer : issuer as Reference?,
     ));
@@ -5770,7 +5766,7 @@ class _$_PractitionerQualification extends _PractitionerQualification {
   @override
   final List<Identifier?>? identifier;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
   final Period? period;
   @override
@@ -5821,7 +5817,7 @@ abstract class _PractitionerQualification extends PractitionerQualification {
   _PractitionerQualification._() : super._();
   factory _PractitionerQualification(
       {List<Identifier?>? identifier,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       Period? period,
       Reference? issuer}) = _$_PractitionerQualification;
 
@@ -5831,7 +5827,7 @@ abstract class _PractitionerQualification extends PractitionerQualification {
   @override
   List<Identifier?>? get identifier;
   @override
-  CodeableConcept? get code;
+  CodeableConcept get code;
   @override
   Period? get period;
   @override
@@ -7374,7 +7370,7 @@ class _$RelatedPersonTearOff {
       Boolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
-      required Reference? patient,
+      required Reference patient,
       CodeableConcept? relationship,
       List<HumanName?>? name,
       List<ContactPoint?>? telecom,
@@ -7445,7 +7441,7 @@ mixin _$RelatedPerson {
   Boolean? get active;
   @JsonKey(name: '_active')
   Element? get activeElement;
-  Reference? get patient;
+  Reference get patient;
   CodeableConcept? get relationship;
   List<HumanName?>? get name;
   List<ContactPoint?>? get telecom;
@@ -7489,7 +7485,7 @@ abstract class $RelatedPersonCopyWith<$Res> {
       Boolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
-      Reference? patient,
+      Reference patient,
       CodeableConcept? relationship,
       List<HumanName?>? name,
       List<ContactPoint?>? telecom,
@@ -7508,7 +7504,7 @@ abstract class $RelatedPersonCopyWith<$Res> {
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get activeElement;
-  $ReferenceCopyWith<$Res>? get patient;
+  $ReferenceCopyWith<$Res> get patient;
   $CodeableConceptCopyWith<$Res>? get relationship;
   $ElementCopyWith<$Res>? get genderElement;
   $ElementCopyWith<$Res>? get birthDateElement;
@@ -7585,7 +7581,7 @@ class _$RelatedPersonCopyWithImpl<$Res>
       activeElement: activeElement == freezed
           ? _value.activeElement
           : activeElement as Element?,
-      patient: patient == freezed ? _value.patient : patient as Reference?,
+      patient: patient == freezed ? _value.patient : patient as Reference,
       relationship: relationship == freezed
           ? _value.relationship
           : relationship as CodeableConcept?,
@@ -7663,12 +7659,8 @@ class _$RelatedPersonCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get patient {
-    if (_value.patient == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.patient!, (value) {
+  $ReferenceCopyWith<$Res> get patient {
+    return $ReferenceCopyWith<$Res>(_value.patient, (value) {
       return _then(_value.copyWith(patient: value));
     });
   }
@@ -7745,7 +7737,7 @@ abstract class _$RelatedPersonCopyWith<$Res>
       Boolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
-      Reference? patient,
+      Reference patient,
       CodeableConcept? relationship,
       List<HumanName?>? name,
       List<ContactPoint?>? telecom,
@@ -7770,7 +7762,7 @@ abstract class _$RelatedPersonCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get activeElement;
   @override
-  $ReferenceCopyWith<$Res>? get patient;
+  $ReferenceCopyWith<$Res> get patient;
   @override
   $CodeableConceptCopyWith<$Res>? get relationship;
   @override
@@ -7853,7 +7845,7 @@ class __$RelatedPersonCopyWithImpl<$Res>
       activeElement: activeElement == freezed
           ? _value.activeElement
           : activeElement as Element?,
-      patient: patient == freezed ? _value.patient : patient as Reference?,
+      patient: patient == freezed ? _value.patient : patient as Reference,
       relationship: relationship == freezed
           ? _value.relationship
           : relationship as CodeableConcept?,
@@ -7952,7 +7944,7 @@ class _$_RelatedPerson extends _RelatedPerson {
   @JsonKey(name: '_active')
   final Element? activeElement;
   @override
-  final Reference? patient;
+  final Reference patient;
   @override
   final CodeableConcept? relationship;
   @override
@@ -8116,7 +8108,7 @@ abstract class _RelatedPerson extends RelatedPerson {
       Boolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
-      required Reference? patient,
+      required Reference patient,
       CodeableConcept? relationship,
       List<HumanName?>? name,
       List<ContactPoint?>? telecom,
@@ -8167,7 +8159,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   @JsonKey(name: '_active')
   Element? get activeElement;
   @override
-  Reference? get patient;
+  Reference get patient;
   @override
   CodeableConcept? get relationship;
   @override

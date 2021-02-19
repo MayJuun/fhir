@@ -4272,7 +4272,7 @@ class _$PlanDefinitionGoalTearOff {
 
   _PlanDefinitionGoal call(
       {CodeableConcept? category,
-      required CodeableConcept? description,
+      required CodeableConcept description,
       CodeableConcept? priority,
       CodeableConcept? start,
       List<CodeableConcept?>? addresses,
@@ -4300,7 +4300,7 @@ const $PlanDefinitionGoal = _$PlanDefinitionGoalTearOff();
 /// @nodoc
 mixin _$PlanDefinitionGoal {
   CodeableConcept? get category;
-  CodeableConcept? get description;
+  CodeableConcept get description;
   CodeableConcept? get priority;
   CodeableConcept? get start;
   List<CodeableConcept?>? get addresses;
@@ -4319,7 +4319,7 @@ abstract class $PlanDefinitionGoalCopyWith<$Res> {
       _$PlanDefinitionGoalCopyWithImpl<$Res>;
   $Res call(
       {CodeableConcept? category,
-      CodeableConcept? description,
+      CodeableConcept description,
       CodeableConcept? priority,
       CodeableConcept? start,
       List<CodeableConcept?>? addresses,
@@ -4327,7 +4327,7 @@ abstract class $PlanDefinitionGoalCopyWith<$Res> {
       List<PlanDefinitionTarget?>? target});
 
   $CodeableConceptCopyWith<$Res>? get category;
-  $CodeableConceptCopyWith<$Res>? get description;
+  $CodeableConceptCopyWith<$Res> get description;
   $CodeableConceptCopyWith<$Res>? get priority;
   $CodeableConceptCopyWith<$Res>? get start;
 }
@@ -4356,7 +4356,7 @@ class _$PlanDefinitionGoalCopyWithImpl<$Res>
           category == freezed ? _value.category : category as CodeableConcept?,
       description: description == freezed
           ? _value.description
-          : description as CodeableConcept?,
+          : description as CodeableConcept,
       priority:
           priority == freezed ? _value.priority : priority as CodeableConcept?,
       start: start == freezed ? _value.start : start as CodeableConcept?,
@@ -4384,12 +4384,8 @@ class _$PlanDefinitionGoalCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get description {
-    if (_value.description == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.description!, (value) {
+  $CodeableConceptCopyWith<$Res> get description {
+    return $CodeableConceptCopyWith<$Res>(_value.description, (value) {
       return _then(_value.copyWith(description: value));
     });
   }
@@ -4426,7 +4422,7 @@ abstract class _$PlanDefinitionGoalCopyWith<$Res>
   @override
   $Res call(
       {CodeableConcept? category,
-      CodeableConcept? description,
+      CodeableConcept description,
       CodeableConcept? priority,
       CodeableConcept? start,
       List<CodeableConcept?>? addresses,
@@ -4436,7 +4432,7 @@ abstract class _$PlanDefinitionGoalCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get category;
   @override
-  $CodeableConceptCopyWith<$Res>? get description;
+  $CodeableConceptCopyWith<$Res> get description;
   @override
   $CodeableConceptCopyWith<$Res>? get priority;
   @override
@@ -4469,7 +4465,7 @@ class __$PlanDefinitionGoalCopyWithImpl<$Res>
           category == freezed ? _value.category : category as CodeableConcept?,
       description: description == freezed
           ? _value.description
-          : description as CodeableConcept?,
+          : description as CodeableConcept,
       priority:
           priority == freezed ? _value.priority : priority as CodeableConcept?,
       start: start == freezed ? _value.start : start as CodeableConcept?,
@@ -4506,7 +4502,7 @@ class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
   @override
   final CodeableConcept? category;
   @override
-  final CodeableConcept? description;
+  final CodeableConcept description;
   @override
   final CodeableConcept? priority;
   @override
@@ -4574,7 +4570,7 @@ abstract class _PlanDefinitionGoal extends PlanDefinitionGoal {
   _PlanDefinitionGoal._() : super._();
   factory _PlanDefinitionGoal(
       {CodeableConcept? category,
-      required CodeableConcept? description,
+      required CodeableConcept description,
       CodeableConcept? priority,
       CodeableConcept? start,
       List<CodeableConcept?>? addresses,
@@ -4587,7 +4583,7 @@ abstract class _PlanDefinitionGoal extends PlanDefinitionGoal {
   @override
   CodeableConcept? get category;
   @override
-  CodeableConcept? get description;
+  CodeableConcept get description;
   @override
   CodeableConcept? get priority;
   @override

@@ -33,14 +33,14 @@ class _$StructureDefinitionTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required FhirUri? url,
+      required FhirUri url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier?>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
-      required String? name,
+      required String name,
       @JsonKey(name: '_name')
           Element? nameElement,
       String? display,
@@ -78,8 +78,8 @@ class _$StructureDefinitionTearOff {
       @JsonKey(name: '_kind')
           Element? kindElement,
       Code? constrainedType,
-      @JsonKey(name: 'abstract', required: true)
-          required Boolean? abstract_,
+      @JsonKey(name: 'abstract')
+          required Boolean abstract_,
       @JsonKey(name: '_abstract')
           Element? abstractElement,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
@@ -166,14 +166,14 @@ mixin _$StructureDefinition {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  FhirUri? get url;
+  FhirUri get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
   List<Identifier?>? get identifier;
   String? get version;
   @JsonKey(name: '_version')
   Element? get versionElement;
-  String? get name;
+  String get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
   String? get display;
@@ -211,8 +211,8 @@ mixin _$StructureDefinition {
   @JsonKey(name: '_kind')
   Element? get kindElement;
   Code? get constrainedType;
-  @JsonKey(name: 'abstract', required: true)
-  Boolean? get abstract_;
+  @JsonKey(name: 'abstract')
+  Boolean get abstract_;
   @JsonKey(name: '_abstract')
   Element? get abstractElement;
   @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
@@ -248,14 +248,14 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      FhirUri? url,
+      FhirUri url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier?>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
-      String? name,
+      String name,
       @JsonKey(name: '_name')
           Element? nameElement,
       String? display,
@@ -293,8 +293,8 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @JsonKey(name: '_kind')
           Element? kindElement,
       Code? constrainedType,
-      @JsonKey(name: 'abstract', required: true)
-          Boolean? abstract_,
+      @JsonKey(name: 'abstract')
+          Boolean abstract_,
       @JsonKey(name: '_abstract')
           Element? abstractElement,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
@@ -412,7 +412,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
+      url: url == freezed ? _value.url : url as FhirUri,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
@@ -422,7 +422,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       versionElement: versionElement == freezed
           ? _value.versionElement
           : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
+      name: name == freezed ? _value.name : name as String,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
       display: display == freezed ? _value.display : display as String?,
@@ -481,8 +481,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       constrainedType: constrainedType == freezed
           ? _value.constrainedType
           : constrainedType as Code?,
-      abstract_:
-          abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean?,
+      abstract_: abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean,
       abstractElement: abstractElement == freezed
           ? _value.abstractElement
           : abstractElement as Element?,
@@ -735,14 +734,14 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      FhirUri? url,
+      FhirUri url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier?>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
-      String? name,
+      String name,
       @JsonKey(name: '_name')
           Element? nameElement,
       String? display,
@@ -780,8 +779,8 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       @JsonKey(name: '_kind')
           Element? kindElement,
       Code? constrainedType,
-      @JsonKey(name: 'abstract', required: true)
-          Boolean? abstract_,
+      @JsonKey(name: 'abstract')
+          Boolean abstract_,
       @JsonKey(name: '_abstract')
           Element? abstractElement,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
@@ -920,7 +919,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      url: url == freezed ? _value.url : url as FhirUri?,
+      url: url == freezed ? _value.url : url as FhirUri,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
@@ -930,7 +929,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       versionElement: versionElement == freezed
           ? _value.versionElement
           : versionElement as Element?,
-      name: name == freezed ? _value.name : name as String?,
+      name: name == freezed ? _value.name : name as String,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
       display: display == freezed ? _value.display : display as String?,
@@ -989,8 +988,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       constrainedType: constrainedType == freezed
           ? _value.constrainedType
           : constrainedType as Code?,
-      abstract_:
-          abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean?,
+      abstract_: abstract_ == freezed ? _value.abstract_ : abstract_ as Boolean,
       abstractElement: abstractElement == freezed
           ? _value.abstractElement
           : abstractElement as Element?,
@@ -1074,7 +1072,7 @@ class _$_StructureDefinition extends _StructureDefinition {
       @JsonKey(name: '_kind')
           this.kindElement,
       this.constrainedType,
-      @JsonKey(name: 'abstract', required: true)
+      @JsonKey(name: 'abstract')
           required this.abstract_,
       @JsonKey(name: '_abstract')
           this.abstractElement,
@@ -1116,7 +1114,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final FhirUri? url;
+  final FhirUri url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
@@ -1128,7 +1126,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   @JsonKey(name: '_version')
   final Element? versionElement;
   @override
-  final String? name;
+  final String name;
   @override
   @JsonKey(name: '_name')
   final Element? nameElement;
@@ -1192,8 +1190,8 @@ class _$_StructureDefinition extends _StructureDefinition {
   @override
   final Code? constrainedType;
   @override
-  @JsonKey(name: 'abstract', required: true)
-  final Boolean? abstract_;
+  @JsonKey(name: 'abstract')
+  final Boolean abstract_;
   @override
   @JsonKey(name: '_abstract')
   final Element? abstractElement;
@@ -1395,14 +1393,14 @@ abstract class _StructureDefinition extends StructureDefinition {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required FhirUri? url,
+      required FhirUri url,
       @JsonKey(name: '_url')
           Element? urlElement,
       List<Identifier?>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
-      required String? name,
+      required String name,
       @JsonKey(name: '_name')
           Element? nameElement,
       String? display,
@@ -1440,8 +1438,8 @@ abstract class _StructureDefinition extends StructureDefinition {
       @JsonKey(name: '_kind')
           Element? kindElement,
       Code? constrainedType,
-      @JsonKey(name: 'abstract', required: true)
-          required Boolean? abstract_,
+      @JsonKey(name: 'abstract')
+          required Boolean abstract_,
       @JsonKey(name: '_abstract')
           Element? abstractElement,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
@@ -1481,7 +1479,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  FhirUri? get url;
+  FhirUri get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -1493,7 +1491,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   @JsonKey(name: '_version')
   Element? get versionElement;
   @override
-  String? get name;
+  String get name;
   @override
   @JsonKey(name: '_name')
   Element? get nameElement;
@@ -1557,8 +1555,8 @@ abstract class _StructureDefinition extends StructureDefinition {
   @override
   Code? get constrainedType;
   @override
-  @JsonKey(name: 'abstract', required: true)
-  Boolean? get abstract_;
+  @JsonKey(name: 'abstract')
+  Boolean get abstract_;
   @override
   @JsonKey(name: '_abstract')
   Element? get abstractElement;
@@ -1834,7 +1832,7 @@ class _$StructureDefinitionMappingTearOff {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-      required Id? identity,
+      required Id identity,
       @JsonKey(name: '_identity') Element? identityElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
@@ -1874,7 +1872,7 @@ mixin _$StructureDefinitionMapping {
   List<FhirExtension?>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
   List<String?>? get fhirComments;
-  Id? get identity;
+  Id get identity;
   @JsonKey(name: '_identity')
   Element? get identityElement;
   FhirUri? get uri;
@@ -1902,7 +1900,7 @@ abstract class $StructureDefinitionMappingCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-      Id? identity,
+      Id identity,
       @JsonKey(name: '_identity') Element? identityElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
@@ -1952,7 +1950,7 @@ class _$StructureDefinitionMappingCopyWithImpl<$Res>
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
           : fhirComments as List<String?>?,
-      identity: identity == freezed ? _value.identity : identity as Id?,
+      identity: identity == freezed ? _value.identity : identity as Id,
       identityElement: identityElement == freezed
           ? _value.identityElement
           : identityElement as Element?,
@@ -2027,7 +2025,7 @@ abstract class _$StructureDefinitionMappingCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-      Id? identity,
+      Id identity,
       @JsonKey(name: '_identity') Element? identityElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
@@ -2084,7 +2082,7 @@ class __$StructureDefinitionMappingCopyWithImpl<$Res>
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
           : fhirComments as List<String?>?,
-      identity: identity == freezed ? _value.identity : identity as Id?,
+      identity: identity == freezed ? _value.identity : identity as Id,
       identityElement: identityElement == freezed
           ? _value.identityElement
           : identityElement as Element?,
@@ -2135,7 +2133,7 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
   @JsonKey(name: 'fhir_comments')
   final List<String?>? fhirComments;
   @override
-  final Id? identity;
+  final Id identity;
   @override
   @JsonKey(name: '_identity')
   final Element? identityElement;
@@ -2234,7 +2232,7 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
           @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-          required Id? identity,
+          required Id identity,
           @JsonKey(name: '_identity') Element? identityElement,
           FhirUri? uri,
           @JsonKey(name: '_uri') Element? uriElement,
@@ -2258,7 +2256,7 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
   @JsonKey(name: 'fhir_comments')
   List<String?>? get fhirComments;
   @override
-  Id? get identity;
+  Id get identity;
   @override
   @JsonKey(name: '_identity')
   Element? get identityElement;
@@ -2296,7 +2294,7 @@ class _$StructureDefinitionSnapshotTearOff {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required List<ElementDefinition?>? element}) {
+      required List<ElementDefinition> element}) {
     return _StructureDefinitionSnapshot(
       id: id,
       extension_: extension_,
@@ -2319,7 +2317,7 @@ mixin _$StructureDefinitionSnapshot {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  List<ElementDefinition?>? get element;
+  List<ElementDefinition> get element;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2337,7 +2335,7 @@ abstract class $StructureDefinitionSnapshotCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      List<ElementDefinition?>? element});
+      List<ElementDefinition> element});
 }
 
 /// @nodoc
@@ -2366,7 +2364,7 @@ class _$StructureDefinitionSnapshotCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       element: element == freezed
           ? _value.element
-          : element as List<ElementDefinition?>?,
+          : element as List<ElementDefinition>,
     ));
   }
 }
@@ -2383,7 +2381,7 @@ abstract class _$StructureDefinitionSnapshotCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      List<ElementDefinition?>? element});
+      List<ElementDefinition> element});
 }
 
 /// @nodoc
@@ -2416,7 +2414,7 @@ class __$StructureDefinitionSnapshotCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       element: element == freezed
           ? _value.element
-          : element as List<ElementDefinition?>?,
+          : element as List<ElementDefinition>,
     ));
   }
 }
@@ -2443,7 +2441,7 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final List<ElementDefinition?>? element;
+  final List<ElementDefinition> element;
 
   @override
   String toString() {
@@ -2493,7 +2491,7 @@ abstract class _StructureDefinitionSnapshot
           {Id? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required List<ElementDefinition?>? element}) =
+          required List<ElementDefinition> element}) =
       _$_StructureDefinitionSnapshot;
 
   factory _StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =
@@ -2507,7 +2505,7 @@ abstract class _StructureDefinitionSnapshot
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  List<ElementDefinition?>? get element;
+  List<ElementDefinition> get element;
   @override
   @JsonKey(ignore: true)
   _$StructureDefinitionSnapshotCopyWith<_StructureDefinitionSnapshot>
@@ -2527,7 +2525,7 @@ class _$StructureDefinitionDifferentialTearOff {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required List<ElementDefinition?>? element}) {
+      required List<ElementDefinition> element}) {
     return _StructureDefinitionDifferential(
       id: id,
       extension_: extension_,
@@ -2551,7 +2549,7 @@ mixin _$StructureDefinitionDifferential {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  List<ElementDefinition?>? get element;
+  List<ElementDefinition> get element;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2569,7 +2567,7 @@ abstract class $StructureDefinitionDifferentialCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      List<ElementDefinition?>? element});
+      List<ElementDefinition> element});
 }
 
 /// @nodoc
@@ -2598,7 +2596,7 @@ class _$StructureDefinitionDifferentialCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       element: element == freezed
           ? _value.element
-          : element as List<ElementDefinition?>?,
+          : element as List<ElementDefinition>,
     ));
   }
 }
@@ -2615,7 +2613,7 @@ abstract class _$StructureDefinitionDifferentialCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      List<ElementDefinition?>? element});
+      List<ElementDefinition> element});
 }
 
 /// @nodoc
@@ -2648,7 +2646,7 @@ class __$StructureDefinitionDifferentialCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       element: element == freezed
           ? _value.element
-          : element as List<ElementDefinition?>?,
+          : element as List<ElementDefinition>,
     ));
   }
 }
@@ -2677,7 +2675,7 @@ class _$_StructureDefinitionDifferential
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final List<ElementDefinition?>? element;
+  final List<ElementDefinition> element;
 
   @override
   String toString() {
@@ -2727,7 +2725,7 @@ abstract class _StructureDefinitionDifferential
           {Id? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required List<ElementDefinition?>? element}) =
+          required List<ElementDefinition> element}) =
       _$_StructureDefinitionDifferential;
 
   factory _StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =
@@ -2741,7 +2739,7 @@ abstract class _StructureDefinitionDifferential
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  List<ElementDefinition?>? get element;
+  List<ElementDefinition> get element;
   @override
   @JsonKey(ignore: true)
   _$StructureDefinitionDifferentialCopyWith<_StructureDefinitionDifferential>
@@ -2783,7 +2781,7 @@ class _$DataElementTearOff {
       @JsonKey(unknownEnumValue: DataElementStringency.unknown)
           DataElementStringency? stringency,
       List<DataElementMapping?>? mapping,
-      required List<ElementDefinition?>? element}) {
+      required List<ElementDefinition> element}) {
     return _DataElement(
       resourceType: resourceType,
       id: id,
@@ -2847,7 +2845,7 @@ mixin _$DataElement {
   @JsonKey(unknownEnumValue: DataElementStringency.unknown)
   DataElementStringency? get stringency;
   List<DataElementMapping?>? get mapping;
-  List<ElementDefinition?>? get element;
+  List<ElementDefinition> get element;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2886,7 +2884,7 @@ abstract class $DataElementCopyWith<$Res> {
       @JsonKey(unknownEnumValue: DataElementStringency.unknown)
           DataElementStringency? stringency,
       List<DataElementMapping?>? mapping,
-      List<ElementDefinition?>? element});
+      List<ElementDefinition> element});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -2973,7 +2971,7 @@ class _$DataElementCopyWithImpl<$Res> implements $DataElementCopyWith<$Res> {
           : mapping as List<DataElementMapping?>?,
       element: element == freezed
           ? _value.element
-          : element as List<ElementDefinition?>?,
+          : element as List<ElementDefinition>,
     ));
   }
 
@@ -3034,7 +3032,7 @@ abstract class _$DataElementCopyWith<$Res>
       @JsonKey(unknownEnumValue: DataElementStringency.unknown)
           DataElementStringency? stringency,
       List<DataElementMapping?>? mapping,
-      List<ElementDefinition?>? element});
+      List<ElementDefinition> element});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -3125,7 +3123,7 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
           : mapping as List<DataElementMapping?>?,
       element: element == freezed
           ? _value.element
-          : element as List<ElementDefinition?>?,
+          : element as List<ElementDefinition>,
     ));
   }
 }
@@ -3216,7 +3214,7 @@ class _$_DataElement extends _DataElement {
   @override
   final List<DataElementMapping?>? mapping;
   @override
-  final List<ElementDefinition?>? element;
+  final List<ElementDefinition> element;
 
   @override
   String toString() {
@@ -3357,7 +3355,7 @@ abstract class _DataElement extends DataElement {
       @JsonKey(unknownEnumValue: DataElementStringency.unknown)
           DataElementStringency? stringency,
       List<DataElementMapping?>? mapping,
-      required List<ElementDefinition?>? element}) = _$_DataElement;
+      required List<ElementDefinition> element}) = _$_DataElement;
 
   factory _DataElement.fromJson(Map<String, dynamic> json) =
       _$_DataElement.fromJson;
@@ -3411,7 +3409,7 @@ abstract class _DataElement extends DataElement {
   @override
   List<DataElementMapping?>? get mapping;
   @override
-  List<ElementDefinition?>? get element;
+  List<ElementDefinition> get element;
   @override
   @JsonKey(ignore: true)
   _$DataElementCopyWith<_DataElement> get copyWith;
@@ -3667,7 +3665,7 @@ class _$DataElementMappingTearOff {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-      required Id? identity,
+      required Id identity,
       @JsonKey(name: '_identity') Element? identityElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
@@ -3707,7 +3705,7 @@ mixin _$DataElementMapping {
   List<FhirExtension?>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
   List<String?>? get fhirComments;
-  Id? get identity;
+  Id get identity;
   @JsonKey(name: '_identity')
   Element? get identityElement;
   FhirUri? get uri;
@@ -3735,7 +3733,7 @@ abstract class $DataElementMappingCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-      Id? identity,
+      Id identity,
       @JsonKey(name: '_identity') Element? identityElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
@@ -3785,7 +3783,7 @@ class _$DataElementMappingCopyWithImpl<$Res>
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
           : fhirComments as List<String?>?,
-      identity: identity == freezed ? _value.identity : identity as Id?,
+      identity: identity == freezed ? _value.identity : identity as Id,
       identityElement: identityElement == freezed
           ? _value.identityElement
           : identityElement as Element?,
@@ -3859,7 +3857,7 @@ abstract class _$DataElementMappingCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-      Id? identity,
+      Id identity,
       @JsonKey(name: '_identity') Element? identityElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
@@ -3915,7 +3913,7 @@ class __$DataElementMappingCopyWithImpl<$Res>
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
           : fhirComments as List<String?>?,
-      identity: identity == freezed ? _value.identity : identity as Id?,
+      identity: identity == freezed ? _value.identity : identity as Id,
       identityElement: identityElement == freezed
           ? _value.identityElement
           : identityElement as Element?,
@@ -3966,7 +3964,7 @@ class _$_DataElementMapping extends _DataElementMapping {
   @JsonKey(name: 'fhir_comments')
   final List<String?>? fhirComments;
   @override
-  final Id? identity;
+  final Id identity;
   @override
   @JsonKey(name: '_identity')
   final Element? identityElement;
@@ -4064,7 +4062,7 @@ abstract class _DataElementMapping extends DataElementMapping {
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
           @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-          required Id? identity,
+          required Id identity,
           @JsonKey(name: '_identity') Element? identityElement,
           FhirUri? uri,
           @JsonKey(name: '_uri') Element? uriElement,
@@ -4088,7 +4086,7 @@ abstract class _DataElementMapping extends DataElementMapping {
   @JsonKey(name: 'fhir_comments')
   List<String?>? get fhirComments;
   @override
-  Id? get identity;
+  Id get identity;
   @override
   @JsonKey(name: '_identity')
   Element? get identityElement;

@@ -430,12 +430,8 @@ _$_ResearchSubject _$_$_ResearchSubjectFromJson(Map<String, dynamic> json) {
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
-    study: json['study'] == null
-        ? null
-        : Reference.fromJson(json['study'] as Map<String, dynamic>),
-    individual: json['individual'] == null
-        ? null
-        : Reference.fromJson(json['individual'] as Map<String, dynamic>),
+    study: Reference.fromJson(json['study'] as Map<String, dynamic>),
+    individual: Reference.fromJson(json['individual'] as Map<String, dynamic>),
     assignedArm: json['assignedArm'] as String?,
     assignedArmElement: json['_assignedArm'] == null
         ? null
@@ -478,8 +474,8 @@ Map<String, dynamic> _$_$_ResearchSubjectToJson(_$_ResearchSubject instance) {
   writeNotNull('status', _$ResearchSubjectStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('period', instance.period?.toJson());
-  writeNotNull('study', instance.study?.toJson());
-  writeNotNull('individual', instance.individual?.toJson());
+  val['study'] = instance.study.toJson();
+  val['individual'] = instance.individual.toJson();
   writeNotNull('assignedArm', instance.assignedArm);
   writeNotNull('_assignedArm', instance.assignedArmElement?.toJson());
   writeNotNull('actualArm', instance.actualArm);

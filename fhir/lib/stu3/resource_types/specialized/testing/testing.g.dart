@@ -52,9 +52,7 @@ _$_TestReport _$_$_TestReportFromJson(Map<String, dynamic> json) {
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    testScript: json['testScript'] == null
-        ? null
-        : Reference.fromJson(json['testScript'] as Map<String, dynamic>),
+    testScript: Reference.fromJson(json['testScript'] as Map<String, dynamic>),
     result: _$enumDecodeNullable(_$TestReportResultEnumMap, json['result']),
     resultElement: json['_result'] == null
         ? null
@@ -119,7 +117,7 @@ Map<String, dynamic> _$_$_TestReportToJson(_$_TestReport instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('status', _$TestReportStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('testScript', instance.testScript?.toJson());
+  val['testScript'] = instance.testScript.toJson();
   writeNotNull('result', _$TestReportResultEnumMap[instance.result]);
   writeNotNull('_result', instance.resultElement?.toJson());
   writeNotNull('score', instance.score?.toJson());
@@ -495,10 +493,8 @@ _$_TestReportTest _$_$_TestReportTestFromJson(Map<String, dynamic> json) {
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    action: (json['action'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : TestReportAction1.fromJson(e as Map<String, dynamic>))
+    action: (json['action'] as List<dynamic>)
+        .map((e) => TestReportAction1.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -516,7 +512,7 @@ Map<String, dynamic> _$_$_TestReportTestToJson(_$_TestReportTest instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('action', instance.action?.map((e) => e?.toJson()).toList());
+  val['action'] = instance.action.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -804,9 +800,7 @@ _$_TestScriptOrigin _$_$_TestScriptOriginFromJson(Map<String, dynamic> json) {
     indexElement: json['_index'] == null
         ? null
         : Element.fromJson(json['_index'] as Map<String, dynamic>),
-    profile: json['profile'] == null
-        ? null
-        : Coding.fromJson(json['profile'] as Map<String, dynamic>),
+    profile: Coding.fromJson(json['profile'] as Map<String, dynamic>),
   );
 }
 
@@ -821,7 +815,7 @@ Map<String, dynamic> _$_$_TestScriptOriginToJson(_$_TestScriptOrigin instance) {
 
   writeNotNull('index', instance.index?.toJson());
   writeNotNull('_index', instance.indexElement?.toJson());
-  writeNotNull('profile', instance.profile?.toJson());
+  val['profile'] = instance.profile.toJson();
   return val;
 }
 
@@ -832,9 +826,7 @@ _$_TestScriptDestination _$_$_TestScriptDestinationFromJson(
     indexElement: json['_index'] == null
         ? null
         : Element.fromJson(json['_index'] as Map<String, dynamic>),
-    profile: json['profile'] == null
-        ? null
-        : Coding.fromJson(json['profile'] as Map<String, dynamic>),
+    profile: Coding.fromJson(json['profile'] as Map<String, dynamic>),
   );
 }
 
@@ -850,7 +842,7 @@ Map<String, dynamic> _$_$_TestScriptDestinationToJson(
 
   writeNotNull('index', instance.index?.toJson());
   writeNotNull('_index', instance.indexElement?.toJson());
-  writeNotNull('profile', instance.profile?.toJson());
+  val['profile'] = instance.profile.toJson();
   return val;
 }
 
@@ -862,10 +854,8 @@ _$_TestScriptMetadata _$_$_TestScriptMetadataFromJson(
             ? null
             : TestScriptLink.fromJson(e as Map<String, dynamic>))
         .toList(),
-    capability: (json['capability'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : TestScriptCapability.fromJson(e as Map<String, dynamic>))
+    capability: (json['capability'] as List<dynamic>)
+        .map((e) => TestScriptCapability.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -881,8 +871,7 @@ Map<String, dynamic> _$_$_TestScriptMetadataToJson(
   }
 
   writeNotNull('link', instance.link?.map((e) => e?.toJson()).toList());
-  writeNotNull(
-      'capability', instance.capability?.map((e) => e?.toJson()).toList());
+  val['capability'] = instance.capability.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -950,9 +939,8 @@ _$_TestScriptCapability _$_$_TestScriptCapabilityFromJson(
         ?.map((e) =>
             e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
-    capabilities: json['capabilities'] == null
-        ? null
-        : Reference.fromJson(json['capabilities'] as Map<String, dynamic>),
+    capabilities:
+        Reference.fromJson(json['capabilities'] as Map<String, dynamic>),
   );
 }
 
@@ -979,7 +967,7 @@ Map<String, dynamic> _$_$_TestScriptCapabilityToJson(
   writeNotNull('_destination', instance.destinationElement?.toJson());
   writeNotNull('link', instance.link);
   writeNotNull('_link', instance.linkElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('capabilities', instance.capabilities?.toJson());
+  val['capabilities'] = instance.capabilities.toJson();
   return val;
 }
 
@@ -1146,29 +1134,18 @@ Map<String, dynamic> _$_$_TestScriptParamToJson(_$_TestScriptParam instance) {
 _$_TestScriptRuleset _$_$_TestScriptRulesetFromJson(Map<String, dynamic> json) {
   return _$_TestScriptRuleset(
     resource: Reference.fromJson(json['resource'] as Map<String, dynamic>),
-    rule: (json['rule'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : TestScriptRule1.fromJson(e as Map<String, dynamic>))
+    rule: (json['rule'] as List<dynamic>)
+        .map((e) => TestScriptRule1.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
 
 Map<String, dynamic> _$_$_TestScriptRulesetToJson(
-    _$_TestScriptRuleset instance) {
-  final val = <String, dynamic>{
-    'resource': instance.resource.toJson(),
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('rule', instance.rule?.map((e) => e?.toJson()).toList());
-  return val;
-}
+        _$_TestScriptRuleset instance) =>
+    <String, dynamic>{
+      'resource': instance.resource.toJson(),
+      'rule': instance.rule.map((e) => e.toJson()).toList(),
+    };
 
 _$_TestScriptRule1 _$_$_TestScriptRule1FromJson(Map<String, dynamic> json) {
   return _$_TestScriptRule1(
@@ -1829,10 +1806,8 @@ _$_TestScriptTest _$_$_TestScriptTestFromJson(Map<String, dynamic> json) {
     descriptionElement: json['_description'] == null
         ? null
         : Element.fromJson(json['_description'] as Map<String, dynamic>),
-    action: (json['action'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : TestScriptAction1.fromJson(e as Map<String, dynamic>))
+    action: (json['action'] as List<dynamic>)
+        .map((e) => TestScriptAction1.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1850,7 +1825,7 @@ Map<String, dynamic> _$_$_TestScriptTestToJson(_$_TestScriptTest instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('action', instance.action?.map((e) => e?.toJson()).toList());
+  val['action'] = instance.action.map((e) => e.toJson()).toList();
   return val;
 }
 

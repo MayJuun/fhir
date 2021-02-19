@@ -987,9 +987,8 @@ _$_DeviceSpecialization _$_$_DeviceSpecializationFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    systemType: json['systemType'] == null
-        ? null
-        : CodeableConcept.fromJson(json['systemType'] as Map<String, dynamic>),
+    systemType:
+        CodeableConcept.fromJson(json['systemType'] as Map<String, dynamic>),
     version: json['version'] as String?,
     versionElement: json['_version'] == null
         ? null
@@ -1012,7 +1011,7 @@ Map<String, dynamic> _$_$_DeviceSpecializationToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('systemType', instance.systemType?.toJson());
+  val['systemType'] = instance.systemType.toJson();
   writeNotNull('version', instance.version);
   writeNotNull('_version', instance.versionElement?.toJson());
   return val;
@@ -1078,9 +1077,7 @@ _$_DeviceProperty _$_$_DevicePropertyFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     valueQuantity: (json['valueQuantity'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Quantity.fromJson(e as Map<String, dynamic>))
@@ -1107,7 +1104,7 @@ Map<String, dynamic> _$_$_DevicePropertyToJson(_$_DeviceProperty instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
+  val['type'] = instance.type.toJson();
   writeNotNull('valueQuantity',
       instance.valueQuantity?.map((e) => e?.toJson()).toList());
   writeNotNull(
@@ -1244,9 +1241,7 @@ _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     unit: json['unit'] == null
         ? null
         : CodeableConcept.fromJson(json['unit'] as Map<String, dynamic>),
@@ -1310,7 +1305,7 @@ Map<String, dynamic> _$_$_DeviceMetricToJson(_$_DeviceMetric instance) {
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
+  val['type'] = instance.type.toJson();
   writeNotNull('unit', instance.unit?.toJson());
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('parent', instance.parent?.toJson());
@@ -1676,9 +1671,7 @@ _$_NutritionProductProductCharacteristic
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     valueCodeableConcept: json['valueCodeableConcept'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -1723,7 +1716,7 @@ Map<String, dynamic> _$_$_NutritionProductProductCharacteristicToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
+  val['type'] = instance.type.toJson();
   writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
   writeNotNull('valueString', instance.valueString);
   writeNotNull('_valueString', instance.valueStringElement?.toJson());
@@ -1850,9 +1843,7 @@ _$_Substance _$_$_SubstanceFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
-    code: json['code'] == null
-        ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     description: json['description'] as String?,
     descriptionElement: json['_description'] == null
         ? null
@@ -1899,7 +1890,7 @@ Map<String, dynamic> _$_$_SubstanceToJson(_$_Substance instance) {
   writeNotNull('status', _$SubstanceStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e?.toJson()).toList());
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('instance', instance.instance?.map((e) => e?.toJson()).toList());

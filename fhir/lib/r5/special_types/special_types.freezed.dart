@@ -24,7 +24,7 @@ class _$NarrativeTearOff {
           NarrativeStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      required String? div}) {
+      required String div}) {
     return _Narrative(
       id: id,
       extension_: extension_,
@@ -51,7 +51,7 @@ mixin _$Narrative {
   NarrativeStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  String? get div;
+  String get div;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -70,7 +70,7 @@ abstract class $NarrativeCopyWith<$Res> {
           NarrativeStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      String? div});
+      String div});
 
   $ElementCopyWith<$Res>? get statusElement;
 }
@@ -100,7 +100,7 @@ class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      div: div == freezed ? _value.div : div as String?,
+      div: div == freezed ? _value.div : div as String,
     ));
   }
 
@@ -130,7 +130,7 @@ abstract class _$NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
           NarrativeStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      String? div});
+      String div});
 
   @override
   $ElementCopyWith<$Res>? get statusElement;
@@ -162,7 +162,7 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      div: div == freezed ? _value.div : div as String?,
+      div: div == freezed ? _value.div : div as String,
     ));
   }
 }
@@ -194,7 +194,7 @@ class _$_Narrative extends _Narrative {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final String? div;
+  final String div;
 
   @override
   String toString() {
@@ -249,7 +249,7 @@ abstract class _Narrative extends Narrative {
           NarrativeStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      required String? div}) = _$_Narrative;
+      required String div}) = _$_Narrative;
 
   factory _Narrative.fromJson(Map<String, dynamic> json) =
       _$_Narrative.fromJson;
@@ -266,7 +266,7 @@ abstract class _Narrative extends Narrative {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  String? get div;
+  String get div;
   @override
   @JsonKey(ignore: true)
   _$NarrativeCopyWith<_Narrative> get copyWith;
@@ -3243,7 +3243,7 @@ class _$StatisticVariableTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Reference? variableDefinition,
+      required Reference variableDefinition,
       Code? handling,
       @JsonKey(name: '_handling') Element? handlingElement,
       List<CodeableConcept?>? valueCategory,
@@ -3276,7 +3276,7 @@ mixin _$StatisticVariable {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  Reference? get variableDefinition;
+  Reference get variableDefinition;
   Code? get handling;
   @JsonKey(name: '_handling')
   Element? get handlingElement;
@@ -3298,14 +3298,14 @@ abstract class $StatisticVariableCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Reference? variableDefinition,
+      Reference variableDefinition,
       Code? handling,
       @JsonKey(name: '_handling') Element? handlingElement,
       List<CodeableConcept?>? valueCategory,
       List<Quantity?>? valueQuantity,
       List<Range?>? valueRange});
 
-  $ReferenceCopyWith<$Res>? get variableDefinition;
+  $ReferenceCopyWith<$Res> get variableDefinition;
   $ElementCopyWith<$Res>? get handlingElement;
 }
 
@@ -3340,7 +3340,7 @@ class _$StatisticVariableCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       variableDefinition: variableDefinition == freezed
           ? _value.variableDefinition
-          : variableDefinition as Reference?,
+          : variableDefinition as Reference,
       handling: handling == freezed ? _value.handling : handling as Code?,
       handlingElement: handlingElement == freezed
           ? _value.handlingElement
@@ -3358,12 +3358,8 @@ class _$StatisticVariableCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get variableDefinition {
-    if (_value.variableDefinition == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.variableDefinition!, (value) {
+  $ReferenceCopyWith<$Res> get variableDefinition {
+    return $ReferenceCopyWith<$Res>(_value.variableDefinition, (value) {
       return _then(_value.copyWith(variableDefinition: value));
     });
   }
@@ -3391,7 +3387,7 @@ abstract class _$StatisticVariableCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Reference? variableDefinition,
+      Reference variableDefinition,
       Code? handling,
       @JsonKey(name: '_handling') Element? handlingElement,
       List<CodeableConcept?>? valueCategory,
@@ -3399,7 +3395,7 @@ abstract class _$StatisticVariableCopyWith<$Res>
       List<Range?>? valueRange});
 
   @override
-  $ReferenceCopyWith<$Res>? get variableDefinition;
+  $ReferenceCopyWith<$Res> get variableDefinition;
   @override
   $ElementCopyWith<$Res>? get handlingElement;
 }
@@ -3437,7 +3433,7 @@ class __$StatisticVariableCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       variableDefinition: variableDefinition == freezed
           ? _value.variableDefinition
-          : variableDefinition as Reference?,
+          : variableDefinition as Reference,
       handling: handling == freezed ? _value.handling : handling as Code?,
       handlingElement: handlingElement == freezed
           ? _value.handlingElement
@@ -3482,7 +3478,7 @@ class _$_StatisticVariable extends _StatisticVariable {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final Reference? variableDefinition;
+  final Reference variableDefinition;
   @override
   final Code? handling;
   @override
@@ -3562,7 +3558,7 @@ abstract class _StatisticVariable extends StatisticVariable {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Reference? variableDefinition,
+      required Reference variableDefinition,
       Code? handling,
       @JsonKey(name: '_handling') Element? handlingElement,
       List<CodeableConcept?>? valueCategory,
@@ -3580,7 +3576,7 @@ abstract class _StatisticVariable extends StatisticVariable {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  Reference? get variableDefinition;
+  Reference get variableDefinition;
   @override
   Code? get handling;
   @override
@@ -3615,7 +3611,7 @@ class _$OrderedDistributionTearOff {
       Integer? numberOfIntervals,
       @JsonKey(name: '_numberOfIntervals') Element? numberOfIntervalsElement,
       Quantity? bottomOfFirstInterval,
-      required List<OrderedDistributionInterval?>? interval,
+      required List<OrderedDistributionInterval> interval,
       Quantity? topOfInterval}) {
     return _OrderedDistribution(
       id: id,
@@ -3654,7 +3650,7 @@ mixin _$OrderedDistribution {
   @JsonKey(name: '_numberOfIntervals')
   Element? get numberOfIntervalsElement;
   Quantity? get bottomOfFirstInterval;
-  List<OrderedDistributionInterval?>? get interval;
+  List<OrderedDistributionInterval> get interval;
   Quantity? get topOfInterval;
 
   Map<String, dynamic> toJson();
@@ -3677,7 +3673,7 @@ abstract class $OrderedDistributionCopyWith<$Res> {
       Integer? numberOfIntervals,
       @JsonKey(name: '_numberOfIntervals') Element? numberOfIntervalsElement,
       Quantity? bottomOfFirstInterval,
-      List<OrderedDistributionInterval?>? interval,
+      List<OrderedDistributionInterval> interval,
       Quantity? topOfInterval});
 
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -3734,7 +3730,7 @@ class _$OrderedDistributionCopyWithImpl<$Res>
           : bottomOfFirstInterval as Quantity?,
       interval: interval == freezed
           ? _value.interval
-          : interval as List<OrderedDistributionInterval?>?,
+          : interval as List<OrderedDistributionInterval>,
       topOfInterval: topOfInterval == freezed
           ? _value.topOfInterval
           : topOfInterval as Quantity?,
@@ -3803,7 +3799,7 @@ abstract class _$OrderedDistributionCopyWith<$Res>
       Integer? numberOfIntervals,
       @JsonKey(name: '_numberOfIntervals') Element? numberOfIntervalsElement,
       Quantity? bottomOfFirstInterval,
-      List<OrderedDistributionInterval?>? interval,
+      List<OrderedDistributionInterval> interval,
       Quantity? topOfInterval});
 
   @override
@@ -3866,7 +3862,7 @@ class __$OrderedDistributionCopyWithImpl<$Res>
           : bottomOfFirstInterval as Quantity?,
       interval: interval == freezed
           ? _value.interval
-          : interval as List<OrderedDistributionInterval?>?,
+          : interval as List<OrderedDistributionInterval>,
       topOfInterval: topOfInterval == freezed
           ? _value.topOfInterval
           : topOfInterval as Quantity?,
@@ -3917,7 +3913,7 @@ class _$_OrderedDistribution extends _OrderedDistribution {
   @override
   final Quantity? bottomOfFirstInterval;
   @override
-  final List<OrderedDistributionInterval?>? interval;
+  final List<OrderedDistributionInterval> interval;
   @override
   final Quantity? topOfInterval;
 
@@ -4004,7 +4000,7 @@ abstract class _OrderedDistribution extends OrderedDistribution {
       Integer? numberOfIntervals,
       @JsonKey(name: '_numberOfIntervals') Element? numberOfIntervalsElement,
       Quantity? bottomOfFirstInterval,
-      required List<OrderedDistributionInterval?>? interval,
+      required List<OrderedDistributionInterval> interval,
       Quantity? topOfInterval}) = _$_OrderedDistribution;
 
   factory _OrderedDistribution.fromJson(Map<String, dynamic> json) =
@@ -4032,7 +4028,7 @@ abstract class _OrderedDistribution extends OrderedDistribution {
   @override
   Quantity? get bottomOfFirstInterval;
   @override
-  List<OrderedDistributionInterval?>? get interval;
+  List<OrderedDistributionInterval> get interval;
   @override
   Quantity? get topOfInterval;
   @override

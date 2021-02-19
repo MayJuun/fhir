@@ -18,20 +18,8 @@ class Decimal {
       );
     } else if (inValue is String) {
       return double.tryParse(inValue) != null
-          ? Decimal._(
-              inValue,
-              double.parse(inValue),
-              true,
-              false,
-              true,
-            )
-          : Decimal._(
-              inValue,
-              null,
-              false,
-              false,
-              true,
-            );
+          ? Decimal._(inValue, double.parse(inValue), true, false, true)
+          : Decimal._(inValue, null, false, false, true);
     }
     throw ArgumentError('Decimal cannot be constructed from $inValue.');
   }

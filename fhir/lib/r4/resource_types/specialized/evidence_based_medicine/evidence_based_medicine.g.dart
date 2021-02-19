@@ -157,19 +157,11 @@ _$_EffectEvidenceSynthesis _$_$_EffectEvidenceSynthesisFromJson(
     studyType: json['studyType'] == null
         ? null
         : CodeableConcept.fromJson(json['studyType'] as Map<String, dynamic>),
-    population: json['population'] == null
-        ? null
-        : Reference.fromJson(json['population'] as Map<String, dynamic>),
-    exposure: json['exposure'] == null
-        ? null
-        : Reference.fromJson(json['exposure'] as Map<String, dynamic>),
-    exposureAlternative: json['exposureAlternative'] == null
-        ? null
-        : Reference.fromJson(
-            json['exposureAlternative'] as Map<String, dynamic>),
-    outcome: json['outcome'] == null
-        ? null
-        : Reference.fromJson(json['outcome'] as Map<String, dynamic>),
+    population: Reference.fromJson(json['population'] as Map<String, dynamic>),
+    exposure: Reference.fromJson(json['exposure'] as Map<String, dynamic>),
+    exposureAlternative:
+        Reference.fromJson(json['exposureAlternative'] as Map<String, dynamic>),
+    outcome: Reference.fromJson(json['outcome'] as Map<String, dynamic>),
     sampleSize: json['sampleSize'] == null
         ? null
         : EffectEvidenceSynthesisSampleSize.fromJson(
@@ -261,10 +253,10 @@ Map<String, dynamic> _$_$_EffectEvidenceSynthesisToJson(
       instance.relatedArtifact?.map((e) => e?.toJson()).toList());
   writeNotNull('synthesisType', instance.synthesisType?.toJson());
   writeNotNull('studyType', instance.studyType?.toJson());
-  writeNotNull('population', instance.population?.toJson());
-  writeNotNull('exposure', instance.exposure?.toJson());
-  writeNotNull('exposureAlternative', instance.exposureAlternative?.toJson());
-  writeNotNull('outcome', instance.outcome?.toJson());
+  val['population'] = instance.population.toJson();
+  val['exposure'] = instance.exposure.toJson();
+  val['exposureAlternative'] = instance.exposureAlternative.toJson();
+  val['outcome'] = instance.outcome.toJson();
   writeNotNull('sampleSize', instance.sampleSize?.toJson());
   writeNotNull('resultsByExposure',
       instance.resultsByExposure?.map((e) => e?.toJson()).toList());
@@ -561,10 +553,8 @@ _$_EffectEvidenceSynthesisResultsByExposure
         ? null
         : CodeableConcept.fromJson(
             json['variantState'] as Map<String, dynamic>),
-    riskEvidenceSynthesis: json['riskEvidenceSynthesis'] == null
-        ? null
-        : Reference.fromJson(
-            json['riskEvidenceSynthesis'] as Map<String, dynamic>),
+    riskEvidenceSynthesis: Reference.fromJson(
+        json['riskEvidenceSynthesis'] as Map<String, dynamic>),
   );
 }
 
@@ -591,8 +581,7 @@ Map<String, dynamic> _$_$_EffectEvidenceSynthesisResultsByExposureToJson(
           instance.exposureState]);
   writeNotNull('_exposureState', instance.exposureStateElement?.toJson());
   writeNotNull('variantState', instance.variantState?.toJson());
-  writeNotNull(
-      'riskEvidenceSynthesis', instance.riskEvidenceSynthesis?.toJson());
+  val['riskEvidenceSynthesis'] = instance.riskEvidenceSynthesis.toJson();
   return val;
 }
 
@@ -986,10 +975,8 @@ _$_Evidence _$_$_EvidenceFromJson(Map<String, dynamic> json) {
             ? null
             : RelatedArtifact.fromJson(e as Map<String, dynamic>))
         .toList(),
-    exposureBackground: json['exposureBackground'] == null
-        ? null
-        : Reference.fromJson(
-            json['exposureBackground'] as Map<String, dynamic>),
+    exposureBackground:
+        Reference.fromJson(json['exposureBackground'] as Map<String, dynamic>),
     exposureVariant: (json['exposureVariant'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -1067,7 +1054,7 @@ Map<String, dynamic> _$_$_EvidenceToJson(_$_Evidence instance) {
   writeNotNull('endorser', instance.endorser?.map((e) => e?.toJson()).toList());
   writeNotNull('relatedArtifact',
       instance.relatedArtifact?.map((e) => e?.toJson()).toList());
-  writeNotNull('exposureBackground', instance.exposureBackground?.toJson());
+  val['exposureBackground'] = instance.exposureBackground.toJson();
   writeNotNull('exposureVariant',
       instance.exposureVariant?.map((e) => e?.toJson()).toList());
   writeNotNull('outcome', instance.outcome?.map((e) => e?.toJson()).toList());
@@ -1237,11 +1224,9 @@ _$_EvidenceVariable _$_$_EvidenceVariableFromJson(Map<String, dynamic> json) {
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    characteristic: (json['characteristic'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : EvidenceVariableCharacteristic.fromJson(
-                e as Map<String, dynamic>))
+    characteristic: (json['characteristic'] as List<dynamic>)
+        .map((e) =>
+            EvidenceVariableCharacteristic.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1314,8 +1299,8 @@ Map<String, dynamic> _$_$_EvidenceVariableToJson(_$_EvidenceVariable instance) {
       instance.relatedArtifact?.map((e) => e?.toJson()).toList());
   writeNotNull('type', _$EvidenceVariableTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('characteristic',
-      instance.characteristic?.map((e) => e?.toJson()).toList());
+  val['characteristic'] =
+      instance.characteristic.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -1660,9 +1645,7 @@ _$_ResearchDefinition _$_$_ResearchDefinitionFromJson(
     library_: (json['library'] as List<dynamic>?)
         ?.map((e) => e == null ? null : Canonical.fromJson(e))
         .toList(),
-    population: json['population'] == null
-        ? null
-        : Reference.fromJson(json['population'] as Map<String, dynamic>),
+    population: Reference.fromJson(json['population'] as Map<String, dynamic>),
     exposure: json['exposure'] == null
         ? null
         : Reference.fromJson(json['exposure'] as Map<String, dynamic>),
@@ -1755,7 +1738,7 @@ Map<String, dynamic> _$_$_ResearchDefinitionToJson(
   writeNotNull('relatedArtifact',
       instance.relatedArtifact?.map((e) => e?.toJson()).toList());
   writeNotNull('library', instance.library_?.map((e) => e?.toJson()).toList());
-  writeNotNull('population', instance.population?.toJson());
+  val['population'] = instance.population.toJson();
   writeNotNull('exposure', instance.exposure?.toJson());
   writeNotNull('exposureAlternative', instance.exposureAlternative?.toJson());
   writeNotNull('outcome', instance.outcome?.toJson());
@@ -1960,11 +1943,9 @@ _$_ResearchElementDefinition _$_$_ResearchElementDefinitionFromJson(
     variableTypeElement: json['_variableType'] == null
         ? null
         : Element.fromJson(json['_variableType'] as Map<String, dynamic>),
-    characteristic: (json['characteristic'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ResearchElementDefinitionCharacteristic.fromJson(
-                e as Map<String, dynamic>))
+    characteristic: (json['characteristic'] as List<dynamic>)
+        .map((e) => ResearchElementDefinitionCharacteristic.fromJson(
+            e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -2054,8 +2035,8 @@ Map<String, dynamic> _$_$_ResearchElementDefinitionToJson(
   writeNotNull('variableType',
       _$ResearchElementDefinitionVariableTypeEnumMap[instance.variableType]);
   writeNotNull('_variableType', instance.variableTypeElement?.toJson());
-  writeNotNull('characteristic',
-      instance.characteristic?.map((e) => e?.toJson()).toList());
+  val['characteristic'] =
+      instance.characteristic.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -2468,15 +2449,11 @@ _$_RiskEvidenceSynthesis _$_$_RiskEvidenceSynthesisFromJson(
     studyType: json['studyType'] == null
         ? null
         : CodeableConcept.fromJson(json['studyType'] as Map<String, dynamic>),
-    population: json['population'] == null
-        ? null
-        : Reference.fromJson(json['population'] as Map<String, dynamic>),
+    population: Reference.fromJson(json['population'] as Map<String, dynamic>),
     exposure: json['exposure'] == null
         ? null
         : Reference.fromJson(json['exposure'] as Map<String, dynamic>),
-    outcome: json['outcome'] == null
-        ? null
-        : Reference.fromJson(json['outcome'] as Map<String, dynamic>),
+    outcome: Reference.fromJson(json['outcome'] as Map<String, dynamic>),
     sampleSize: json['sampleSize'] == null
         ? null
         : RiskEvidenceSynthesisSampleSize.fromJson(
@@ -2559,9 +2536,9 @@ Map<String, dynamic> _$_$_RiskEvidenceSynthesisToJson(
       instance.relatedArtifact?.map((e) => e?.toJson()).toList());
   writeNotNull('synthesisType', instance.synthesisType?.toJson());
   writeNotNull('studyType', instance.studyType?.toJson());
-  writeNotNull('population', instance.population?.toJson());
+  val['population'] = instance.population.toJson();
   writeNotNull('exposure', instance.exposure?.toJson());
-  writeNotNull('outcome', instance.outcome?.toJson());
+  val['outcome'] = instance.outcome.toJson();
   writeNotNull('sampleSize', instance.sampleSize?.toJson());
   writeNotNull('riskEstimate', instance.riskEstimate?.toJson());
   writeNotNull(

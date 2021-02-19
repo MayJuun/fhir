@@ -1,18 +1,15 @@
 import 'dart:convert';
-import 'package:string_validator/string_validator.dart';
 import 'package:yaml/yaml.dart';
 // import 'package:flutter/foundation.dart';
 
 class Uuid {
   const Uuid._(this._valueString, this._valueUri, this._isValid);
 
-  factory Uuid(dynamic inValue) {
-    assert(inValue != null);
-    if (inValue is String) {
-      return Uuid._(inValue, isUUID(inValue) ? inValue : null, isUUID(inValue));
-    }
-    throw ArgumentError('Uuid cannot be constructed from $inValue.');
-  }
+  factory Uuid(String inValue) =>
+      RegExp(r'^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}‌​\}?$')
+              .hasMatch(inValue)
+          ? Uuid._(inValue, inValue, true)
+          : Uuid._(inValue, null, false);
 
   factory Uuid.fromJson(dynamic json) => Uuid(json);
 

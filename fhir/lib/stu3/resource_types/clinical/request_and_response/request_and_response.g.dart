@@ -661,9 +661,7 @@ _$_DeviceRequest _$_$_DeviceRequestFromJson(Map<String, dynamic> json) {
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    intent: json['intent'] == null
-        ? null
-        : CodeableConcept.fromJson(json['intent'] as Map<String, dynamic>),
+    intent: CodeableConcept.fromJson(json['intent'] as Map<String, dynamic>),
     priority: json['priority'] as String?,
     priorityElement: json['_priority'] == null
         ? null
@@ -675,9 +673,7 @@ _$_DeviceRequest _$_$_DeviceRequestFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['codeCodeableConcept'] as Map<String, dynamic>),
-    subject: json['subject'] == null
-        ? null
-        : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+    subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
     context: json['context'] == null
         ? null
         : Reference.fromJson(json['context'] as Map<String, dynamic>),
@@ -766,12 +762,12 @@ Map<String, dynamic> _$_$_DeviceRequestToJson(_$_DeviceRequest instance) {
   writeNotNull('groupIdentifier', instance.groupIdentifier?.toJson());
   writeNotNull('status', instance.status);
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('intent', instance.intent?.toJson());
+  val['intent'] = instance.intent.toJson();
   writeNotNull('priority', instance.priority);
   writeNotNull('_priority', instance.priorityElement?.toJson());
   writeNotNull('codeReference', instance.codeReference?.toJson());
   writeNotNull('codeCodeableConcept', instance.codeCodeableConcept?.toJson());
-  writeNotNull('subject', instance.subject?.toJson());
+  val['subject'] = instance.subject.toJson();
   writeNotNull('context', instance.context?.toJson());
   writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
   writeNotNull(
@@ -866,9 +862,7 @@ _$_DeviceUseStatement _$_$_DeviceUseStatementFromJson(
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    subject: json['subject'] == null
-        ? null
-        : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+    subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
     whenUsed: json['whenUsed'] == null
         ? null
         : Period.fromJson(json['whenUsed'] as Map<String, dynamic>),
@@ -891,9 +885,7 @@ _$_DeviceUseStatement _$_$_DeviceUseStatementFromJson(
     source: json['source'] == null
         ? null
         : Reference.fromJson(json['source'] as Map<String, dynamic>),
-    device: json['device'] == null
-        ? null
-        : Reference.fromJson(json['device'] as Map<String, dynamic>),
+    device: Reference.fromJson(json['device'] as Map<String, dynamic>),
     indication: (json['indication'] as List<dynamic>?)
         ?.map((e) => e == null
             ? null
@@ -938,7 +930,7 @@ Map<String, dynamic> _$_$_DeviceUseStatementToJson(
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
   writeNotNull('status', _$DeviceUseStatementStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('subject', instance.subject?.toJson());
+  val['subject'] = instance.subject.toJson();
   writeNotNull('whenUsed', instance.whenUsed?.toJson());
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
   writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
@@ -947,7 +939,7 @@ Map<String, dynamic> _$_$_DeviceUseStatementToJson(
   writeNotNull('recordedOn', instance.recordedOn);
   writeNotNull('_recordedOn', instance.recordedOnElement?.toJson());
   writeNotNull('source', instance.source?.toJson());
-  writeNotNull('device', instance.device?.toJson());
+  val['device'] = instance.device.toJson();
   writeNotNull(
       'indication', instance.indication?.map((e) => e?.toJson()).toList());
   writeNotNull('bodySite', instance.bodySite?.toJson());

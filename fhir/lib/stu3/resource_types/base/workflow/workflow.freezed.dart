@@ -66,7 +66,7 @@ class _$AppointmentTearOff {
       @JsonKey(name: '_comment')
           Element? commentElement,
       List<Reference?>? incomingReferral,
-      required List<AppointmentParticipant?>? participant,
+      required List<AppointmentParticipant> participant,
       List<Period?>? requestedPeriod}) {
     return _Appointment(
       resourceType: resourceType,
@@ -170,7 +170,7 @@ mixin _$Appointment {
   @JsonKey(name: '_comment')
   Element? get commentElement;
   List<Reference?>? get incomingReferral;
-  List<AppointmentParticipant?>? get participant;
+  List<AppointmentParticipant> get participant;
   List<Period?>? get requestedPeriod;
 
   Map<String, dynamic> toJson();
@@ -233,7 +233,7 @@ abstract class $AppointmentCopyWith<$Res> {
       @JsonKey(name: '_comment')
           Element? commentElement,
       List<Reference?>? incomingReferral,
-      List<AppointmentParticipant?>? participant,
+      List<AppointmentParticipant> participant,
       List<Period?>? requestedPeriod});
 
   $MetaCopyWith<$Res>? get meta;
@@ -391,7 +391,7 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
           : incomingReferral as List<Reference?>?,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<AppointmentParticipant?>?,
+          : participant as List<AppointmentParticipant>,
       requestedPeriod: requestedPeriod == freezed
           ? _value.requestedPeriod
           : requestedPeriod as List<Period?>?,
@@ -610,7 +610,7 @@ abstract class _$AppointmentCopyWith<$Res>
       @JsonKey(name: '_comment')
           Element? commentElement,
       List<Reference?>? incomingReferral,
-      List<AppointmentParticipant?>? participant,
+      List<AppointmentParticipant> participant,
       List<Period?>? requestedPeriod});
 
   @override
@@ -784,7 +784,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           : incomingReferral as List<Reference?>?,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<AppointmentParticipant?>?,
+          : participant as List<AppointmentParticipant>,
       requestedPeriod: requestedPeriod == freezed
           ? _value.requestedPeriod
           : requestedPeriod as List<Period?>?,
@@ -940,7 +940,7 @@ class _$_Appointment extends _Appointment {
   @override
   final List<Reference?>? incomingReferral;
   @override
-  final List<AppointmentParticipant?>? participant;
+  final List<AppointmentParticipant> participant;
   @override
   final List<Period?>? requestedPeriod;
 
@@ -1143,7 +1143,7 @@ abstract class _Appointment extends Appointment {
       @JsonKey(name: '_comment')
           Element? commentElement,
       List<Reference?>? incomingReferral,
-      required List<AppointmentParticipant?>? participant,
+      required List<AppointmentParticipant> participant,
       List<Period?>? requestedPeriod}) = _$_Appointment;
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
@@ -1236,7 +1236,7 @@ abstract class _Appointment extends Appointment {
   @override
   List<Reference?>? get incomingReferral;
   @override
-  List<AppointmentParticipant?>? get participant;
+  List<AppointmentParticipant> get participant;
   @override
   List<Period?>? get requestedPeriod;
   @override
@@ -1584,7 +1584,7 @@ class _$AppointmentResponseTearOff {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      required Reference? appointment,
+      required Reference appointment,
       String? start,
       @JsonKey(name: '_start')
           Element? startElement,
@@ -1652,7 +1652,7 @@ mixin _$AppointmentResponse {
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
   List<Identifier?>? get identifier;
-  Reference? get appointment;
+  Reference get appointment;
   String? get start;
   @JsonKey(name: '_start')
   Element? get startElement;
@@ -1695,7 +1695,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      Reference? appointment,
+      Reference appointment,
       String? start,
       @JsonKey(name: '_start')
           Element? startElement,
@@ -1715,7 +1715,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
-  $ReferenceCopyWith<$Res>? get appointment;
+  $ReferenceCopyWith<$Res> get appointment;
   $ElementCopyWith<$Res>? get startElement;
   $ElementCopyWith<$Res>? get endElement;
   $ReferenceCopyWith<$Res>? get actor;
@@ -1789,7 +1789,7 @@ class _$AppointmentResponseCopyWithImpl<$Res>
           : identifier as List<Identifier?>?,
       appointment: appointment == freezed
           ? _value.appointment
-          : appointment as Reference?,
+          : appointment as Reference,
       start: start == freezed ? _value.start : start as String?,
       startElement: startElement == freezed
           ? _value.startElement
@@ -1859,12 +1859,8 @@ class _$AppointmentResponseCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get appointment {
-    if (_value.appointment == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.appointment!, (value) {
+  $ReferenceCopyWith<$Res> get appointment {
+    return $ReferenceCopyWith<$Res>(_value.appointment, (value) {
       return _then(_value.copyWith(appointment: value));
     });
   }
@@ -1949,7 +1945,7 @@ abstract class _$AppointmentResponseCopyWith<$Res>
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      Reference? appointment,
+      Reference appointment,
       String? start,
       @JsonKey(name: '_start')
           Element? startElement,
@@ -1974,7 +1970,7 @@ abstract class _$AppointmentResponseCopyWith<$Res>
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
-  $ReferenceCopyWith<$Res>? get appointment;
+  $ReferenceCopyWith<$Res> get appointment;
   @override
   $ElementCopyWith<$Res>? get startElement;
   @override
@@ -2055,7 +2051,7 @@ class __$AppointmentResponseCopyWithImpl<$Res>
           : identifier as List<Identifier?>?,
       appointment: appointment == freezed
           ? _value.appointment
-          : appointment as Reference?,
+          : appointment as Reference,
       start: start == freezed ? _value.start : start as String?,
       startElement: startElement == freezed
           ? _value.startElement
@@ -2151,7 +2147,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   @override
   final List<Identifier?>? identifier;
   @override
-  final Reference? appointment;
+  final Reference appointment;
   @override
   final String? start;
   @override
@@ -2311,7 +2307,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      required Reference? appointment,
+      required Reference appointment,
       String? start,
       @JsonKey(name: '_start')
           Element? startElement,
@@ -2359,7 +2355,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @override
   List<Identifier?>? get identifier;
   @override
-  Reference? get appointment;
+  Reference get appointment;
   @override
   String? get start;
   @override
@@ -7749,7 +7745,7 @@ class _$ScheduleTearOff {
       CodeableConcept? serviceCategory,
       List<CodeableConcept?>? serviceType,
       List<CodeableConcept?>? specialty,
-      required List<Reference?>? actor,
+      required List<Reference> actor,
       Period? planningHorizon,
       String? comment,
       @JsonKey(name: '_comment')
@@ -7811,7 +7807,7 @@ mixin _$Schedule {
   CodeableConcept? get serviceCategory;
   List<CodeableConcept?>? get serviceType;
   List<CodeableConcept?>? get specialty;
-  List<Reference?>? get actor;
+  List<Reference> get actor;
   Period? get planningHorizon;
   String? get comment;
   @JsonKey(name: '_comment')
@@ -7849,7 +7845,7 @@ abstract class $ScheduleCopyWith<$Res> {
       CodeableConcept? serviceCategory,
       List<CodeableConcept?>? serviceType,
       List<CodeableConcept?>? specialty,
-      List<Reference?>? actor,
+      List<Reference> actor,
       Period? planningHorizon,
       String? comment,
       @JsonKey(name: '_comment')
@@ -7939,7 +7935,7 @@ class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
       specialty: specialty == freezed
           ? _value.specialty
           : specialty as List<CodeableConcept?>?,
-      actor: actor == freezed ? _value.actor : actor as List<Reference?>?,
+      actor: actor == freezed ? _value.actor : actor as List<Reference>,
       planningHorizon: planningHorizon == freezed
           ? _value.planningHorizon
           : planningHorizon as Period?,
@@ -8067,7 +8063,7 @@ abstract class _$ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
       CodeableConcept? serviceCategory,
       List<CodeableConcept?>? serviceType,
       List<CodeableConcept?>? specialty,
-      List<Reference?>? actor,
+      List<Reference> actor,
       Period? planningHorizon,
       String? comment,
       @JsonKey(name: '_comment')
@@ -8166,7 +8162,7 @@ class __$ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
       specialty: specialty == freezed
           ? _value.specialty
           : specialty as List<CodeableConcept?>?,
-      actor: actor == freezed ? _value.actor : actor as List<Reference?>?,
+      actor: actor == freezed ? _value.actor : actor as List<Reference>,
       planningHorizon: planningHorizon == freezed
           ? _value.planningHorizon
           : planningHorizon as Period?,
@@ -8255,7 +8251,7 @@ class _$_Schedule extends _Schedule {
   @override
   final List<CodeableConcept?>? specialty;
   @override
-  final List<Reference?>? actor;
+  final List<Reference> actor;
   @override
   final Period? planningHorizon;
   @override
@@ -8394,7 +8390,7 @@ abstract class _Schedule extends Schedule {
       CodeableConcept? serviceCategory,
       List<CodeableConcept?>? serviceType,
       List<CodeableConcept?>? specialty,
-      required List<Reference?>? actor,
+      required List<Reference> actor,
       Period? planningHorizon,
       String? comment,
       @JsonKey(name: '_comment')
@@ -8442,7 +8438,7 @@ abstract class _Schedule extends Schedule {
   @override
   List<CodeableConcept?>? get specialty;
   @override
-  List<Reference?>? get actor;
+  List<Reference> get actor;
   @override
   Period? get planningHorizon;
   @override
@@ -8484,7 +8480,7 @@ class _$SlotTearOff {
       List<CodeableConcept?>? serviceType,
       List<CodeableConcept?>? specialty,
       CodeableConcept? appointmentType,
-      required Reference? schedule,
+      required Reference schedule,
       SlotStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -8561,7 +8557,7 @@ mixin _$Slot {
   List<CodeableConcept?>? get serviceType;
   List<CodeableConcept?>? get specialty;
   CodeableConcept? get appointmentType;
-  Reference? get schedule;
+  Reference get schedule;
   SlotStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -8608,7 +8604,7 @@ abstract class $SlotCopyWith<$Res> {
       List<CodeableConcept?>? serviceType,
       List<CodeableConcept?>? specialty,
       CodeableConcept? appointmentType,
-      Reference? schedule,
+      Reference schedule,
       SlotStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -8631,7 +8627,7 @@ abstract class $SlotCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $CodeableConceptCopyWith<$Res>? get serviceCategory;
   $CodeableConceptCopyWith<$Res>? get appointmentType;
-  $ReferenceCopyWith<$Res>? get schedule;
+  $ReferenceCopyWith<$Res> get schedule;
   $ElementCopyWith<$Res>? get statusElement;
   $ElementCopyWith<$Res>? get startElement;
   $ElementCopyWith<$Res>? get endElement;
@@ -8718,7 +8714,7 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
       appointmentType: appointmentType == freezed
           ? _value.appointmentType
           : appointmentType as CodeableConcept?,
-      schedule: schedule == freezed ? _value.schedule : schedule as Reference?,
+      schedule: schedule == freezed ? _value.schedule : schedule as Reference,
       status: status == freezed ? _value.status : status as SlotStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -8809,12 +8805,8 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get schedule {
-    if (_value.schedule == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.schedule!, (value) {
+  $ReferenceCopyWith<$Res> get schedule {
+    return $ReferenceCopyWith<$Res>(_value.schedule, (value) {
       return _then(_value.copyWith(schedule: value));
     });
   }
@@ -8901,7 +8893,7 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       List<CodeableConcept?>? serviceType,
       List<CodeableConcept?>? specialty,
       CodeableConcept? appointmentType,
-      Reference? schedule,
+      Reference schedule,
       SlotStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -8931,7 +8923,7 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   @override
   $CodeableConceptCopyWith<$Res>? get appointmentType;
   @override
-  $ReferenceCopyWith<$Res>? get schedule;
+  $ReferenceCopyWith<$Res> get schedule;
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
@@ -9024,7 +9016,7 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
       appointmentType: appointmentType == freezed
           ? _value.appointmentType
           : appointmentType as CodeableConcept?,
-      schedule: schedule == freezed ? _value.schedule : schedule as Reference?,
+      schedule: schedule == freezed ? _value.schedule : schedule as Reference,
       status: status == freezed ? _value.status : status as SlotStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -9132,7 +9124,7 @@ class _$_Slot extends _Slot {
   @override
   final CodeableConcept? appointmentType;
   @override
-  final Reference? schedule;
+  final Reference schedule;
   @override
   final SlotStatus? status;
   @override
@@ -9305,7 +9297,7 @@ abstract class _Slot extends Slot {
       List<CodeableConcept?>? serviceType,
       List<CodeableConcept?>? specialty,
       CodeableConcept? appointmentType,
-      required Reference? schedule,
+      required Reference schedule,
       SlotStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -9361,7 +9353,7 @@ abstract class _Slot extends Slot {
   @override
   CodeableConcept? get appointmentType;
   @override
-  Reference? get schedule;
+  Reference get schedule;
   @override
   SlotStatus? get status;
   @override

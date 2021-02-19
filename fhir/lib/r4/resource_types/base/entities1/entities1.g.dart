@@ -50,9 +50,8 @@ _$_Endpoint _$_$_EndpointFromJson(Map<String, dynamic> json) {
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    connectionType: json['connectionType'] == null
-        ? null
-        : Coding.fromJson(json['connectionType'] as Map<String, dynamic>),
+    connectionType:
+        Coding.fromJson(json['connectionType'] as Map<String, dynamic>),
     name: json['name'] as String?,
     nameElement: json['_name'] == null
         ? null
@@ -68,10 +67,8 @@ _$_Endpoint _$_$_EndpointFromJson(Map<String, dynamic> json) {
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
-    payloadType: (json['payloadType'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+    payloadType: (json['payloadType'] as List<dynamic>)
+        .map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     payloadMimeType: (json['payloadMimeType'] as List<dynamic>?)
         ?.map((e) => e == null ? null : Code.fromJson(e))
@@ -121,14 +118,13 @@ Map<String, dynamic> _$_$_EndpointToJson(_$_Endpoint instance) {
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
   writeNotNull('status', _$EndpointStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('connectionType', instance.connectionType?.toJson());
+  val['connectionType'] = instance.connectionType.toJson();
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson()).toList());
   writeNotNull('period', instance.period?.toJson());
-  writeNotNull(
-      'payloadType', instance.payloadType?.map((e) => e?.toJson()).toList());
+  val['payloadType'] = instance.payloadType.map((e) => e.toJson()).toList();
   writeNotNull('payloadMimeType',
       instance.payloadMimeType?.map((e) => e?.toJson()).toList());
   writeNotNull('_payloadMimeType',

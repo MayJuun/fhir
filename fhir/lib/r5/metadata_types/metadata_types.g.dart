@@ -626,9 +626,7 @@ _$_UsageContext _$_$_UsageContextFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    code: json['code'] == null
-        ? null
-        : Coding.fromJson(json['code'] as Map<String, dynamic>),
+    code: Coding.fromJson(json['code'] as Map<String, dynamic>),
     valueCodeableConcept: json['valueCodeableConcept'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -657,7 +655,7 @@ Map<String, dynamic> _$_$_UsageContextToJson(_$_UsageContext instance) {
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
   writeNotNull('valueRange', instance.valueRange?.toJson());

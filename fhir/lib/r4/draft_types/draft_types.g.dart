@@ -78,12 +78,8 @@ _$_ProductShelfLife _$_$_ProductShelfLifeFromJson(Map<String, dynamic> json) {
     identifier: json['identifier'] == null
         ? null
         : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    period: json['period'] == null
-        ? null
-        : Quantity.fromJson(json['period'] as Map<String, dynamic>),
+    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    period: Quantity.fromJson(json['period'] as Map<String, dynamic>),
     specialPrecautionsForStorage:
         (json['specialPrecautionsForStorage'] as List<dynamic>?)
             ?.map((e) => e == null
@@ -108,8 +104,8 @@ Map<String, dynamic> _$_$_ProductShelfLifeToJson(_$_ProductShelfLife instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('period', instance.period?.toJson());
+  val['type'] = instance.type.toJson();
+  val['period'] = instance.period.toJson();
   writeNotNull('specialPrecautionsForStorage',
       instance.specialPrecautionsForStorage?.map((e) => e?.toJson()).toList());
   return val;
@@ -219,19 +215,13 @@ _$_MarketingStatus _$_$_MarketingStatusFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    country: json['country'] == null
-        ? null
-        : CodeableConcept.fromJson(json['country'] as Map<String, dynamic>),
+    country: CodeableConcept.fromJson(json['country'] as Map<String, dynamic>),
     jurisdiction: json['jurisdiction'] == null
         ? null
         : CodeableConcept.fromJson(
             json['jurisdiction'] as Map<String, dynamic>),
-    status: json['status'] == null
-        ? null
-        : CodeableConcept.fromJson(json['status'] as Map<String, dynamic>),
-    dateRange: json['dateRange'] == null
-        ? null
-        : Period.fromJson(json['dateRange'] as Map<String, dynamic>),
+    status: CodeableConcept.fromJson(json['status'] as Map<String, dynamic>),
+    dateRange: Period.fromJson(json['dateRange'] as Map<String, dynamic>),
     restoreDate: json['restoreDate'] == null
         ? null
         : FhirDateTime.fromJson(json['restoreDate']),
@@ -255,10 +245,10 @@ Map<String, dynamic> _$_$_MarketingStatusToJson(_$_MarketingStatus instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('country', instance.country?.toJson());
+  val['country'] = instance.country.toJson();
   writeNotNull('jurisdiction', instance.jurisdiction?.toJson());
-  writeNotNull('status', instance.status?.toJson());
-  writeNotNull('dateRange', instance.dateRange?.toJson());
+  val['status'] = instance.status.toJson();
+  val['dateRange'] = instance.dateRange.toJson();
   writeNotNull('restoreDate', instance.restoreDate?.toJson());
   writeNotNull('_restoreDate', instance.restoreDateElement?.toJson());
   return val;

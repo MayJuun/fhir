@@ -83,9 +83,7 @@ _$_Media _$_$_MediaFromJson(Map<String, dynamic> json) {
     durationElement: json['_duration'] == null
         ? null
         : Element.fromJson(json['_duration'] as Map<String, dynamic>),
-    content: json['content'] == null
-        ? null
-        : Attachment.fromJson(json['content'] as Map<String, dynamic>),
+    content: Attachment.fromJson(json['content'] as Map<String, dynamic>),
   );
 }
 
@@ -130,7 +128,7 @@ Map<String, dynamic> _$_$_MediaToJson(_$_Media instance) {
   writeNotNull('_frames', instance.framesElement?.toJson());
   writeNotNull('duration', instance.duration?.toJson());
   writeNotNull('_duration', instance.durationElement?.toJson());
-  writeNotNull('content', instance.content?.toJson());
+  val['content'] = instance.content.toJson();
   return val;
 }
 
@@ -459,11 +457,11 @@ _$_BundleLink _$_$_BundleLinkFromJson(Map<String, dynamic> json) {
     fhirComments: (json['fhir_comments'] as List<dynamic>?)
         ?.map((e) => e as String?)
         .toList(),
-    relation: json['relation'] as String?,
+    relation: json['relation'] as String,
     relationElement: json['_relation'] == null
         ? null
         : Element.fromJson(json['_relation'] as Map<String, dynamic>),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
+    url: FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -485,9 +483,9 @@ Map<String, dynamic> _$_$_BundleLinkToJson(_$_BundleLink instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
-  writeNotNull('relation', instance.relation);
+  val['relation'] = instance.relation;
   writeNotNull('_relation', instance.relationElement?.toJson());
-  writeNotNull('url', instance.url?.toJson());
+  val['url'] = instance.url.toJson();
   writeNotNull('_url', instance.urlElement?.toJson());
   return val;
 }
@@ -648,7 +646,7 @@ _$_BundleEntryRequest _$_$_BundleEntryRequestFromJson(
     methodElement: json['_method'] == null
         ? null
         : Element.fromJson(json['_method'] as Map<String, dynamic>),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
+    url: FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
@@ -691,7 +689,7 @@ Map<String, dynamic> _$_$_BundleEntryRequestToJson(
   writeNotNull('fhir_comments', instance.fhirComments);
   val['method'] = _$RequestMethodEnumMap[instance.method];
   writeNotNull('_method', instance.methodElement?.toJson());
-  writeNotNull('url', instance.url?.toJson());
+  val['url'] = instance.url.toJson();
   writeNotNull('_url', instance.urlElement?.toJson());
   writeNotNull('ifNoneMatch', instance.ifNoneMatch);
   writeNotNull('_ifNoneMatch', instance.ifNoneMatchElement?.toJson());
@@ -729,7 +727,7 @@ _$_BundleEntryResponse _$_$_BundleEntryResponseFromJson(
     fhirComments: (json['fhir_comments'] as List<dynamic>?)
         ?.map((e) => e as String?)
         .toList(),
-    status: json['status'] as String?,
+    status: json['status'] as String,
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -767,7 +765,7 @@ Map<String, dynamic> _$_$_BundleEntryResponseToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
-  writeNotNull('status', instance.status);
+  val['status'] = instance.status;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('_location', instance.locationElement?.toJson());
@@ -817,9 +815,7 @@ _$_Basic _$_$_BasicFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
-    code: json['code'] == null
-        ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     subject: json['subject'] == null
         ? null
         : Reference.fromJson(json['subject'] as Map<String, dynamic>),
@@ -859,7 +855,7 @@ Map<String, dynamic> _$_$_BasicToJson(_$_Basic instance) {
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('author', instance.author?.toJson());
   writeNotNull('created', instance.created?.toJson());

@@ -19,7 +19,7 @@ _$_Narrative _$_$_NarrativeFromJson(Map<String, dynamic> json) {
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    div: json['div'] as String?,
+    div: json['div'] as String,
   );
 }
 
@@ -37,7 +37,7 @@ Map<String, dynamic> _$_$_NarrativeToJson(_$_Narrative instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('status', _$NarrativeStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('div', instance.div);
+  val['div'] = instance.div;
   return val;
 }
 
@@ -535,10 +535,8 @@ _$_StatisticVariable _$_$_StatisticVariableFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    variableDefinition: json['variableDefinition'] == null
-        ? null
-        : Reference.fromJson(
-            json['variableDefinition'] as Map<String, dynamic>),
+    variableDefinition:
+        Reference.fromJson(json['variableDefinition'] as Map<String, dynamic>),
     handling: json['handling'] == null ? null : Code.fromJson(json['handling']),
     handlingElement: json['_handling'] == null
         ? null
@@ -574,7 +572,7 @@ Map<String, dynamic> _$_$_StatisticVariableToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('variableDefinition', instance.variableDefinition?.toJson());
+  val['variableDefinition'] = instance.variableDefinition.toJson();
   writeNotNull('handling', instance.handling?.toJson());
   writeNotNull('_handling', instance.handlingElement?.toJson());
   writeNotNull('valueCategory',
@@ -618,10 +616,9 @@ _$_OrderedDistribution _$_$_OrderedDistributionFromJson(
         ? null
         : Quantity.fromJson(
             json['bottomOfFirstInterval'] as Map<String, dynamic>),
-    interval: (json['interval'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : OrderedDistributionInterval.fromJson(e as Map<String, dynamic>))
+    interval: (json['interval'] as List<dynamic>)
+        .map((e) =>
+            OrderedDistributionInterval.fromJson(e as Map<String, dynamic>))
         .toList(),
     topOfInterval: json['topOfInterval'] == null
         ? null
@@ -652,7 +649,7 @@ Map<String, dynamic> _$_$_OrderedDistributionToJson(
       '_numberOfIntervals', instance.numberOfIntervalsElement?.toJson());
   writeNotNull(
       'bottomOfFirstInterval', instance.bottomOfFirstInterval?.toJson());
-  writeNotNull('interval', instance.interval?.map((e) => e?.toJson()).toList());
+  val['interval'] = instance.interval.map((e) => e.toJson()).toList();
   writeNotNull('topOfInterval', instance.topOfInterval?.toJson());
   return val;
 }

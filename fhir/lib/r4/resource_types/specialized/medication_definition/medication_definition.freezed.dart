@@ -50,7 +50,7 @@ class _$MedicinalProductTearOff {
       List<Reference?>? masterFile,
       List<Reference?>? contact,
       List<Reference?>? clinicalTrial,
-      required List<MedicinalProductName?>? name,
+      required List<MedicinalProductName> name,
       List<Identifier?>? crossReference,
       List<MedicinalProductManufacturingBusinessOperation?>?
           manufacturingBusinessOperation,
@@ -134,7 +134,7 @@ mixin _$MedicinalProduct {
   List<Reference?>? get masterFile;
   List<Reference?>? get contact;
   List<Reference?>? get clinicalTrial;
-  List<MedicinalProductName?>? get name;
+  List<MedicinalProductName> get name;
   List<Identifier?>? get crossReference;
   List<MedicinalProductManufacturingBusinessOperation?>?
       get manufacturingBusinessOperation;
@@ -184,7 +184,7 @@ abstract class $MedicinalProductCopyWith<$Res> {
       List<Reference?>? masterFile,
       List<Reference?>? contact,
       List<Reference?>? clinicalTrial,
-      List<MedicinalProductName?>? name,
+      List<MedicinalProductName> name,
       List<Identifier?>? crossReference,
       List<MedicinalProductManufacturingBusinessOperation?>?
           manufacturingBusinessOperation,
@@ -318,8 +318,7 @@ class _$MedicinalProductCopyWithImpl<$Res>
       clinicalTrial: clinicalTrial == freezed
           ? _value.clinicalTrial
           : clinicalTrial as List<Reference?>?,
-      name:
-          name == freezed ? _value.name : name as List<MedicinalProductName?>?,
+      name: name == freezed ? _value.name : name as List<MedicinalProductName>,
       crossReference: crossReference == freezed
           ? _value.crossReference
           : crossReference as List<Identifier?>?,
@@ -488,7 +487,7 @@ abstract class _$MedicinalProductCopyWith<$Res>
       List<Reference?>? masterFile,
       List<Reference?>? contact,
       List<Reference?>? clinicalTrial,
-      List<MedicinalProductName?>? name,
+      List<MedicinalProductName> name,
       List<Identifier?>? crossReference,
       List<MedicinalProductManufacturingBusinessOperation?>?
           manufacturingBusinessOperation,
@@ -634,8 +633,7 @@ class __$MedicinalProductCopyWithImpl<$Res>
       clinicalTrial: clinicalTrial == freezed
           ? _value.clinicalTrial
           : clinicalTrial as List<Reference?>?,
-      name:
-          name == freezed ? _value.name : name as List<MedicinalProductName?>?,
+      name: name == freezed ? _value.name : name as List<MedicinalProductName>,
       crossReference: crossReference == freezed
           ? _value.crossReference
           : crossReference as List<Identifier?>?,
@@ -759,7 +757,7 @@ class _$_MedicinalProduct extends _MedicinalProduct {
   @override
   final List<Reference?>? clinicalTrial;
   @override
-  final List<MedicinalProductName?>? name;
+  final List<MedicinalProductName> name;
   @override
   final List<Identifier?>? crossReference;
   @override
@@ -932,7 +930,7 @@ abstract class _MedicinalProduct extends MedicinalProduct {
           List<Reference?>? masterFile,
           List<Reference?>? contact,
           List<Reference?>? clinicalTrial,
-          required List<MedicinalProductName?>? name,
+          required List<MedicinalProductName> name,
           List<Identifier?>? crossReference,
           List<MedicinalProductManufacturingBusinessOperation?>?
               manufacturingBusinessOperation,
@@ -1004,7 +1002,7 @@ abstract class _MedicinalProduct extends MedicinalProduct {
   @override
   List<Reference?>? get clinicalTrial;
   @override
-  List<MedicinalProductName?>? get name;
+  List<MedicinalProductName> get name;
   @override
   List<Identifier?>? get crossReference;
   @override
@@ -1342,7 +1340,7 @@ class _$MedicinalProductNamePartTearOff {
       List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'part') String? part_,
       @JsonKey(name: '_part') Element? partElement,
-      required Coding? type}) {
+      required Coding type}) {
     return _MedicinalProductNamePart(
       id: id,
       extension_: extension_,
@@ -1371,7 +1369,7 @@ mixin _$MedicinalProductNamePart {
   String? get part_;
   @JsonKey(name: '_part')
   Element? get partElement;
-  Coding? get type;
+  Coding get type;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1389,10 +1387,10 @@ abstract class $MedicinalProductNamePartCopyWith<$Res> {
       List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'part') String? part_,
       @JsonKey(name: '_part') Element? partElement,
-      Coding? type});
+      Coding type});
 
   $ElementCopyWith<$Res>? get partElement;
-  $CodingCopyWith<$Res>? get type;
+  $CodingCopyWith<$Res> get type;
 }
 
 /// @nodoc
@@ -1424,7 +1422,7 @@ class _$MedicinalProductNamePartCopyWithImpl<$Res>
       part_: part_ == freezed ? _value.part_ : part_ as String?,
       partElement:
           partElement == freezed ? _value.partElement : partElement as Element?,
-      type: type == freezed ? _value.type : type as Coding?,
+      type: type == freezed ? _value.type : type as Coding,
     ));
   }
 
@@ -1440,12 +1438,8 @@ class _$MedicinalProductNamePartCopyWithImpl<$Res>
   }
 
   @override
-  $CodingCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodingCopyWith<$Res>(_value.type!, (value) {
+  $CodingCopyWith<$Res> get type {
+    return $CodingCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -1464,12 +1458,12 @@ abstract class _$MedicinalProductNamePartCopyWith<$Res>
       List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'part') String? part_,
       @JsonKey(name: '_part') Element? partElement,
-      Coding? type});
+      Coding type});
 
   @override
   $ElementCopyWith<$Res>? get partElement;
   @override
-  $CodingCopyWith<$Res>? get type;
+  $CodingCopyWith<$Res> get type;
 }
 
 /// @nodoc
@@ -1504,7 +1498,7 @@ class __$MedicinalProductNamePartCopyWithImpl<$Res>
       part_: part_ == freezed ? _value.part_ : part_ as String?,
       partElement:
           partElement == freezed ? _value.partElement : partElement as Element?,
-      type: type == freezed ? _value.type : type as Coding?,
+      type: type == freezed ? _value.type : type as Coding,
     ));
   }
 }
@@ -1539,7 +1533,7 @@ class _$_MedicinalProductNamePart extends _MedicinalProductNamePart {
   @JsonKey(name: '_part')
   final Element? partElement;
   @override
-  final Coding? type;
+  final Coding type;
 
   @override
   String toString() {
@@ -1597,7 +1591,7 @@ abstract class _MedicinalProductNamePart extends MedicinalProductNamePart {
       List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'part') String? part_,
       @JsonKey(name: '_part') Element? partElement,
-      required Coding? type}) = _$_MedicinalProductNamePart;
+      required Coding type}) = _$_MedicinalProductNamePart;
 
   factory _MedicinalProductNamePart.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductNamePart.fromJson;
@@ -1616,7 +1610,7 @@ abstract class _MedicinalProductNamePart extends MedicinalProductNamePart {
   @JsonKey(name: '_part')
   Element? get partElement;
   @override
-  Coding? get type;
+  Coding get type;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductNamePartCopyWith<_MedicinalProductNamePart> get copyWith;
@@ -1635,9 +1629,9 @@ class _$MedicinalProductCountryLanguageTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? country,
+      required CodeableConcept country,
       CodeableConcept? jurisdiction,
-      required CodeableConcept? language}) {
+      required CodeableConcept language}) {
     return _MedicinalProductCountryLanguage(
       id: id,
       extension_: extension_,
@@ -1663,9 +1657,9 @@ mixin _$MedicinalProductCountryLanguage {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get country;
+  CodeableConcept get country;
   CodeableConcept? get jurisdiction;
-  CodeableConcept? get language;
+  CodeableConcept get language;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1683,13 +1677,13 @@ abstract class $MedicinalProductCountryLanguageCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? country,
+      CodeableConcept country,
       CodeableConcept? jurisdiction,
-      CodeableConcept? language});
+      CodeableConcept language});
 
-  $CodeableConceptCopyWith<$Res>? get country;
+  $CodeableConceptCopyWith<$Res> get country;
   $CodeableConceptCopyWith<$Res>? get jurisdiction;
-  $CodeableConceptCopyWith<$Res>? get language;
+  $CodeableConceptCopyWith<$Res> get language;
 }
 
 /// @nodoc
@@ -1718,23 +1712,18 @@ class _$MedicinalProductCountryLanguageCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      country:
-          country == freezed ? _value.country : country as CodeableConcept?,
+      country: country == freezed ? _value.country : country as CodeableConcept,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
           : jurisdiction as CodeableConcept?,
       language:
-          language == freezed ? _value.language : language as CodeableConcept?,
+          language == freezed ? _value.language : language as CodeableConcept,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get country {
-    if (_value.country == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.country!, (value) {
+  $CodeableConceptCopyWith<$Res> get country {
+    return $CodeableConceptCopyWith<$Res>(_value.country, (value) {
       return _then(_value.copyWith(country: value));
     });
   }
@@ -1751,12 +1740,8 @@ class _$MedicinalProductCountryLanguageCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get language {
-    if (_value.language == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.language!, (value) {
+  $CodeableConceptCopyWith<$Res> get language {
+    return $CodeableConceptCopyWith<$Res>(_value.language, (value) {
       return _then(_value.copyWith(language: value));
     });
   }
@@ -1774,16 +1759,16 @@ abstract class _$MedicinalProductCountryLanguageCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? country,
+      CodeableConcept country,
       CodeableConcept? jurisdiction,
-      CodeableConcept? language});
+      CodeableConcept language});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get country;
+  $CodeableConceptCopyWith<$Res> get country;
   @override
   $CodeableConceptCopyWith<$Res>? get jurisdiction;
   @override
-  $CodeableConceptCopyWith<$Res>? get language;
+  $CodeableConceptCopyWith<$Res> get language;
 }
 
 /// @nodoc
@@ -1816,13 +1801,12 @@ class __$MedicinalProductCountryLanguageCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      country:
-          country == freezed ? _value.country : country as CodeableConcept?,
+      country: country == freezed ? _value.country : country as CodeableConcept,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
           : jurisdiction as CodeableConcept?,
       language:
-          language == freezed ? _value.language : language as CodeableConcept?,
+          language == freezed ? _value.language : language as CodeableConcept,
     ));
   }
 }
@@ -1853,11 +1837,11 @@ class _$_MedicinalProductCountryLanguage
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? country;
+  final CodeableConcept country;
   @override
   final CodeableConcept? jurisdiction;
   @override
-  final CodeableConcept? language;
+  final CodeableConcept language;
 
   @override
   String toString() {
@@ -1916,9 +1900,9 @@ abstract class _MedicinalProductCountryLanguage
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? country,
+      required CodeableConcept country,
       CodeableConcept? jurisdiction,
-      required CodeableConcept? language}) = _$_MedicinalProductCountryLanguage;
+      required CodeableConcept language}) = _$_MedicinalProductCountryLanguage;
 
   factory _MedicinalProductCountryLanguage.fromJson(Map<String, dynamic> json) =
       _$_MedicinalProductCountryLanguage.fromJson;
@@ -1931,11 +1915,11 @@ abstract class _MedicinalProductCountryLanguage
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get country;
+  CodeableConcept get country;
   @override
   CodeableConcept? get jurisdiction;
   @override
-  CodeableConcept? get language;
+  CodeableConcept get language;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductCountryLanguageCopyWith<_MedicinalProductCountryLanguage>
@@ -4436,7 +4420,7 @@ class _$MedicinalProductAuthorizationProcedureTearOff {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       Period? datePeriod,
       FhirDateTime? dateDateTime,
       @JsonKey(name: '_dateDateTime') Element? dateDateTimeElement,
@@ -4470,7 +4454,7 @@ mixin _$MedicinalProductAuthorizationProcedure {
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
   Identifier? get identifier;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   Period? get datePeriod;
   FhirDateTime? get dateDateTime;
   @JsonKey(name: '_dateDateTime')
@@ -4494,14 +4478,14 @@ abstract class $MedicinalProductAuthorizationProcedureCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
-      CodeableConcept? type,
+      CodeableConcept type,
       Period? datePeriod,
       FhirDateTime? dateDateTime,
       @JsonKey(name: '_dateDateTime') Element? dateDateTimeElement,
       List<MedicinalProductAuthorizationProcedure?>? application});
 
   $IdentifierCopyWith<$Res>? get identifier;
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   $PeriodCopyWith<$Res>? get datePeriod;
   $ElementCopyWith<$Res>? get dateDateTimeElement;
 }
@@ -4537,7 +4521,7 @@ class _$MedicinalProductAuthorizationProcedureCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       datePeriod:
           datePeriod == freezed ? _value.datePeriod : datePeriod as Period?,
       dateDateTime: dateDateTime == freezed
@@ -4564,12 +4548,8 @@ class _$MedicinalProductAuthorizationProcedureCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -4610,7 +4590,7 @@ abstract class _$MedicinalProductAuthorizationProcedureCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
-      CodeableConcept? type,
+      CodeableConcept type,
       Period? datePeriod,
       FhirDateTime? dateDateTime,
       @JsonKey(name: '_dateDateTime') Element? dateDateTimeElement,
@@ -4619,7 +4599,7 @@ abstract class _$MedicinalProductAuthorizationProcedureCopyWith<$Res>
   @override
   $IdentifierCopyWith<$Res>? get identifier;
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $PeriodCopyWith<$Res>? get datePeriod;
   @override
@@ -4662,7 +4642,7 @@ class __$MedicinalProductAuthorizationProcedureCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       datePeriod:
           datePeriod == freezed ? _value.datePeriod : datePeriod as Period?,
       dateDateTime: dateDateTime == freezed
@@ -4709,7 +4689,7 @@ class _$_MedicinalProductAuthorizationProcedure
   @override
   final Identifier? identifier;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final Period? datePeriod;
   @override
@@ -4790,7 +4770,7 @@ abstract class _MedicinalProductAuthorizationProcedure
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
           Identifier? identifier,
-          required CodeableConcept? type,
+          required CodeableConcept type,
           Period? datePeriod,
           FhirDateTime? dateDateTime,
           @JsonKey(name: '_dateDateTime') Element? dateDateTimeElement,
@@ -4811,7 +4791,7 @@ abstract class _MedicinalProductAuthorizationProcedure
   @override
   Identifier? get identifier;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   Period? get datePeriod;
   @override
@@ -5497,7 +5477,7 @@ class _$MedicinalProductContraindicationOtherTherapyTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? therapyRelationshipType,
+      required CodeableConcept therapyRelationshipType,
       CodeableConcept? medicationCodeableConcept,
       Reference? medicationReference}) {
     return _MedicinalProductContraindicationOtherTherapy(
@@ -5526,7 +5506,7 @@ mixin _$MedicinalProductContraindicationOtherTherapy {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get therapyRelationshipType;
+  CodeableConcept get therapyRelationshipType;
   CodeableConcept? get medicationCodeableConcept;
   Reference? get medicationReference;
 
@@ -5546,11 +5526,11 @@ abstract class $MedicinalProductContraindicationOtherTherapyCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? therapyRelationshipType,
+      CodeableConcept therapyRelationshipType,
       CodeableConcept? medicationCodeableConcept,
       Reference? medicationReference});
 
-  $CodeableConceptCopyWith<$Res>? get therapyRelationshipType;
+  $CodeableConceptCopyWith<$Res> get therapyRelationshipType;
   $CodeableConceptCopyWith<$Res>? get medicationCodeableConcept;
   $ReferenceCopyWith<$Res>? get medicationReference;
 }
@@ -5584,7 +5564,7 @@ class _$MedicinalProductContraindicationOtherTherapyCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       therapyRelationshipType: therapyRelationshipType == freezed
           ? _value.therapyRelationshipType
-          : therapyRelationshipType as CodeableConcept?,
+          : therapyRelationshipType as CodeableConcept,
       medicationCodeableConcept: medicationCodeableConcept == freezed
           ? _value.medicationCodeableConcept
           : medicationCodeableConcept as CodeableConcept?,
@@ -5595,12 +5575,8 @@ class _$MedicinalProductContraindicationOtherTherapyCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get therapyRelationshipType {
-    if (_value.therapyRelationshipType == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.therapyRelationshipType!,
+  $CodeableConceptCopyWith<$Res> get therapyRelationshipType {
+    return $CodeableConceptCopyWith<$Res>(_value.therapyRelationshipType,
         (value) {
       return _then(_value.copyWith(therapyRelationshipType: value));
     });
@@ -5642,12 +5618,12 @@ abstract class _$MedicinalProductContraindicationOtherTherapyCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? therapyRelationshipType,
+      CodeableConcept therapyRelationshipType,
       CodeableConcept? medicationCodeableConcept,
       Reference? medicationReference});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get therapyRelationshipType;
+  $CodeableConceptCopyWith<$Res> get therapyRelationshipType;
   @override
   $CodeableConceptCopyWith<$Res>? get medicationCodeableConcept;
   @override
@@ -5687,7 +5663,7 @@ class __$MedicinalProductContraindicationOtherTherapyCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       therapyRelationshipType: therapyRelationshipType == freezed
           ? _value.therapyRelationshipType
-          : therapyRelationshipType as CodeableConcept?,
+          : therapyRelationshipType as CodeableConcept,
       medicationCodeableConcept: medicationCodeableConcept == freezed
           ? _value.medicationCodeableConcept
           : medicationCodeableConcept as CodeableConcept?,
@@ -5724,7 +5700,7 @@ class _$_MedicinalProductContraindicationOtherTherapy
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? therapyRelationshipType;
+  final CodeableConcept therapyRelationshipType;
   @override
   final CodeableConcept? medicationCodeableConcept;
   @override
@@ -5792,7 +5768,7 @@ abstract class _MedicinalProductContraindicationOtherTherapy
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required CodeableConcept? therapyRelationshipType,
+          required CodeableConcept therapyRelationshipType,
           CodeableConcept? medicationCodeableConcept,
           Reference? medicationReference}) =
       _$_MedicinalProductContraindicationOtherTherapy;
@@ -5809,7 +5785,7 @@ abstract class _MedicinalProductContraindicationOtherTherapy
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get therapyRelationshipType;
+  CodeableConcept get therapyRelationshipType;
   @override
   CodeableConcept? get medicationCodeableConcept;
   @override
@@ -6555,7 +6531,7 @@ class _$MedicinalProductIndicationOtherTherapyTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? therapyRelationshipType,
+      required CodeableConcept therapyRelationshipType,
       CodeableConcept? medicationCodeableConcept,
       Reference? medicationReference}) {
     return _MedicinalProductIndicationOtherTherapy(
@@ -6583,7 +6559,7 @@ mixin _$MedicinalProductIndicationOtherTherapy {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get therapyRelationshipType;
+  CodeableConcept get therapyRelationshipType;
   CodeableConcept? get medicationCodeableConcept;
   Reference? get medicationReference;
 
@@ -6603,11 +6579,11 @@ abstract class $MedicinalProductIndicationOtherTherapyCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? therapyRelationshipType,
+      CodeableConcept therapyRelationshipType,
       CodeableConcept? medicationCodeableConcept,
       Reference? medicationReference});
 
-  $CodeableConceptCopyWith<$Res>? get therapyRelationshipType;
+  $CodeableConceptCopyWith<$Res> get therapyRelationshipType;
   $CodeableConceptCopyWith<$Res>? get medicationCodeableConcept;
   $ReferenceCopyWith<$Res>? get medicationReference;
 }
@@ -6640,7 +6616,7 @@ class _$MedicinalProductIndicationOtherTherapyCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       therapyRelationshipType: therapyRelationshipType == freezed
           ? _value.therapyRelationshipType
-          : therapyRelationshipType as CodeableConcept?,
+          : therapyRelationshipType as CodeableConcept,
       medicationCodeableConcept: medicationCodeableConcept == freezed
           ? _value.medicationCodeableConcept
           : medicationCodeableConcept as CodeableConcept?,
@@ -6651,12 +6627,8 @@ class _$MedicinalProductIndicationOtherTherapyCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get therapyRelationshipType {
-    if (_value.therapyRelationshipType == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.therapyRelationshipType!,
+  $CodeableConceptCopyWith<$Res> get therapyRelationshipType {
+    return $CodeableConceptCopyWith<$Res>(_value.therapyRelationshipType,
         (value) {
       return _then(_value.copyWith(therapyRelationshipType: value));
     });
@@ -6698,12 +6670,12 @@ abstract class _$MedicinalProductIndicationOtherTherapyCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? therapyRelationshipType,
+      CodeableConcept therapyRelationshipType,
       CodeableConcept? medicationCodeableConcept,
       Reference? medicationReference});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get therapyRelationshipType;
+  $CodeableConceptCopyWith<$Res> get therapyRelationshipType;
   @override
   $CodeableConceptCopyWith<$Res>? get medicationCodeableConcept;
   @override
@@ -6743,7 +6715,7 @@ class __$MedicinalProductIndicationOtherTherapyCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       therapyRelationshipType: therapyRelationshipType == freezed
           ? _value.therapyRelationshipType
-          : therapyRelationshipType as CodeableConcept?,
+          : therapyRelationshipType as CodeableConcept,
       medicationCodeableConcept: medicationCodeableConcept == freezed
           ? _value.medicationCodeableConcept
           : medicationCodeableConcept as CodeableConcept?,
@@ -6780,7 +6752,7 @@ class _$_MedicinalProductIndicationOtherTherapy
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? therapyRelationshipType;
+  final CodeableConcept therapyRelationshipType;
   @override
   final CodeableConcept? medicationCodeableConcept;
   @override
@@ -6847,7 +6819,7 @@ abstract class _MedicinalProductIndicationOtherTherapy
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required CodeableConcept? therapyRelationshipType,
+          required CodeableConcept therapyRelationshipType,
           CodeableConcept? medicationCodeableConcept,
           Reference? medicationReference}) =
       _$_MedicinalProductIndicationOtherTherapy;
@@ -6864,7 +6836,7 @@ abstract class _MedicinalProductIndicationOtherTherapy
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get therapyRelationshipType;
+  CodeableConcept get therapyRelationshipType;
   @override
   CodeableConcept? get medicationCodeableConcept;
   @override
@@ -6902,7 +6874,7 @@ class _$MedicinalProductIngredientTearOff {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
-      required CodeableConcept? role,
+      required CodeableConcept role,
       Boolean? allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator')
           Element? allergenicIndicatorElement,
@@ -6957,7 +6929,7 @@ mixin _$MedicinalProductIngredient {
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
   Identifier? get identifier;
-  CodeableConcept? get role;
+  CodeableConcept get role;
   Boolean? get allergenicIndicator;
   @JsonKey(name: '_allergenicIndicator')
   Element? get allergenicIndicatorElement;
@@ -6992,7 +6964,7 @@ abstract class $MedicinalProductIngredientCopyWith<$Res> {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
-      CodeableConcept? role,
+      CodeableConcept role,
       Boolean? allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator')
           Element? allergenicIndicatorElement,
@@ -7005,7 +6977,7 @@ abstract class $MedicinalProductIngredientCopyWith<$Res> {
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $IdentifierCopyWith<$Res>? get identifier;
-  $CodeableConceptCopyWith<$Res>? get role;
+  $CodeableConceptCopyWith<$Res> get role;
   $ElementCopyWith<$Res>? get allergenicIndicatorElement;
   $MedicinalProductIngredientSubstanceCopyWith<$Res>? get substance;
 }
@@ -7068,7 +7040,7 @@ class _$MedicinalProductIngredientCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
-      role: role == freezed ? _value.role : role as CodeableConcept?,
+      role: role == freezed ? _value.role : role as CodeableConcept,
       allergenicIndicator: allergenicIndicator == freezed
           ? _value.allergenicIndicator
           : allergenicIndicator as Boolean?,
@@ -7144,12 +7116,8 @@ class _$MedicinalProductIngredientCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get role {
-    if (_value.role == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.role!, (value) {
+  $CodeableConceptCopyWith<$Res> get role {
+    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
       return _then(_value.copyWith(role: value));
     });
   }
@@ -7203,7 +7171,7 @@ abstract class _$MedicinalProductIngredientCopyWith<$Res>
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
-      CodeableConcept? role,
+      CodeableConcept role,
       Boolean? allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator')
           Element? allergenicIndicatorElement,
@@ -7222,7 +7190,7 @@ abstract class _$MedicinalProductIngredientCopyWith<$Res>
   @override
   $IdentifierCopyWith<$Res>? get identifier;
   @override
-  $CodeableConceptCopyWith<$Res>? get role;
+  $CodeableConceptCopyWith<$Res> get role;
   @override
   $ElementCopyWith<$Res>? get allergenicIndicatorElement;
   @override
@@ -7290,7 +7258,7 @@ class __$MedicinalProductIngredientCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
-      role: role == freezed ? _value.role : role as CodeableConcept?,
+      role: role == freezed ? _value.role : role as CodeableConcept,
       allergenicIndicator: allergenicIndicator == freezed
           ? _value.allergenicIndicator
           : allergenicIndicator as Boolean?,
@@ -7373,7 +7341,7 @@ class _$_MedicinalProductIngredient extends _MedicinalProductIngredient {
   @override
   final Identifier? identifier;
   @override
-  final CodeableConcept? role;
+  final CodeableConcept role;
   @override
   final Boolean? allergenicIndicator;
   @override
@@ -7502,7 +7470,7 @@ abstract class _MedicinalProductIngredient extends MedicinalProductIngredient {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
-      required CodeableConcept? role,
+      required CodeableConcept role,
       Boolean? allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator')
           Element? allergenicIndicatorElement,
@@ -7543,7 +7511,7 @@ abstract class _MedicinalProductIngredient extends MedicinalProductIngredient {
   @override
   Identifier? get identifier;
   @override
-  CodeableConcept? get role;
+  CodeableConcept get role;
   @override
   Boolean? get allergenicIndicator;
   @override
@@ -7575,8 +7543,8 @@ class _$MedicinalProductIngredientSpecifiedSubstanceTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? code,
-      required CodeableConcept? group,
+      required CodeableConcept code,
+      required CodeableConcept group,
       CodeableConcept? confidentiality,
       List<MedicinalProductIngredientStrength?>? strength}) {
     return _MedicinalProductIngredientSpecifiedSubstance(
@@ -7606,8 +7574,8 @@ mixin _$MedicinalProductIngredientSpecifiedSubstance {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get code;
-  CodeableConcept? get group;
+  CodeableConcept get code;
+  CodeableConcept get group;
   CodeableConcept? get confidentiality;
   List<MedicinalProductIngredientStrength?>? get strength;
 
@@ -7627,13 +7595,13 @@ abstract class $MedicinalProductIngredientSpecifiedSubstanceCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? code,
-      CodeableConcept? group,
+      CodeableConcept code,
+      CodeableConcept group,
       CodeableConcept? confidentiality,
       List<MedicinalProductIngredientStrength?>? strength});
 
-  $CodeableConceptCopyWith<$Res>? get code;
-  $CodeableConceptCopyWith<$Res>? get group;
+  $CodeableConceptCopyWith<$Res> get code;
+  $CodeableConceptCopyWith<$Res> get group;
   $CodeableConceptCopyWith<$Res>? get confidentiality;
 }
 
@@ -7665,8 +7633,8 @@ class _$MedicinalProductIngredientSpecifiedSubstanceCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      group: group == freezed ? _value.group : group as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      group: group == freezed ? _value.group : group as CodeableConcept,
       confidentiality: confidentiality == freezed
           ? _value.confidentiality
           : confidentiality as CodeableConcept?,
@@ -7677,23 +7645,15 @@ class _$MedicinalProductIngredientSpecifiedSubstanceCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get group {
-    if (_value.group == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.group!, (value) {
+  $CodeableConceptCopyWith<$Res> get group {
+    return $CodeableConceptCopyWith<$Res>(_value.group, (value) {
       return _then(_value.copyWith(group: value));
     });
   }
@@ -7722,15 +7682,15 @@ abstract class _$MedicinalProductIngredientSpecifiedSubstanceCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? code,
-      CodeableConcept? group,
+      CodeableConcept code,
+      CodeableConcept group,
       CodeableConcept? confidentiality,
       List<MedicinalProductIngredientStrength?>? strength});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   @override
-  $CodeableConceptCopyWith<$Res>? get group;
+  $CodeableConceptCopyWith<$Res> get group;
   @override
   $CodeableConceptCopyWith<$Res>? get confidentiality;
 }
@@ -7767,8 +7727,8 @@ class __$MedicinalProductIngredientSpecifiedSubstanceCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      group: group == freezed ? _value.group : group as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      group: group == freezed ? _value.group : group as CodeableConcept,
       confidentiality: confidentiality == freezed
           ? _value.confidentiality
           : confidentiality as CodeableConcept?,
@@ -7806,9 +7766,9 @@ class _$_MedicinalProductIngredientSpecifiedSubstance
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
-  final CodeableConcept? group;
+  final CodeableConcept group;
   @override
   final CodeableConcept? confidentiality;
   @override
@@ -7875,8 +7835,8 @@ abstract class _MedicinalProductIngredientSpecifiedSubstance
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required CodeableConcept? code,
-          required CodeableConcept? group,
+          required CodeableConcept code,
+          required CodeableConcept group,
           CodeableConcept? confidentiality,
           List<MedicinalProductIngredientStrength?>? strength}) =
       _$_MedicinalProductIngredientSpecifiedSubstance;
@@ -7893,9 +7853,9 @@ abstract class _MedicinalProductIngredientSpecifiedSubstance
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get code;
+  CodeableConcept get code;
   @override
-  CodeableConcept? get group;
+  CodeableConcept get group;
   @override
   CodeableConcept? get confidentiality;
   @override
@@ -7919,7 +7879,7 @@ class _$MedicinalProductIngredientStrengthTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Ratio? presentation,
+      required Ratio presentation,
       Ratio? presentationLowLimit,
       Ratio? concentration,
       Ratio? concentrationLowLimit,
@@ -7957,7 +7917,7 @@ mixin _$MedicinalProductIngredientStrength {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  Ratio? get presentation;
+  Ratio get presentation;
   Ratio? get presentationLowLimit;
   Ratio? get concentration;
   Ratio? get concentrationLowLimit;
@@ -7983,7 +7943,7 @@ abstract class $MedicinalProductIngredientStrengthCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Ratio? presentation,
+      Ratio presentation,
       Ratio? presentationLowLimit,
       Ratio? concentration,
       Ratio? concentrationLowLimit,
@@ -7992,7 +7952,7 @@ abstract class $MedicinalProductIngredientStrengthCopyWith<$Res> {
       List<CodeableConcept?>? country,
       List<MedicinalProductIngredientReferenceStrength?>? referenceStrength});
 
-  $RatioCopyWith<$Res>? get presentation;
+  $RatioCopyWith<$Res> get presentation;
   $RatioCopyWith<$Res>? get presentationLowLimit;
   $RatioCopyWith<$Res>? get concentration;
   $RatioCopyWith<$Res>? get concentrationLowLimit;
@@ -8030,9 +7990,8 @@ class _$MedicinalProductIngredientStrengthCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      presentation: presentation == freezed
-          ? _value.presentation
-          : presentation as Ratio?,
+      presentation:
+          presentation == freezed ? _value.presentation : presentation as Ratio,
       presentationLowLimit: presentationLowLimit == freezed
           ? _value.presentationLowLimit
           : presentationLowLimit as Ratio?,
@@ -8059,12 +8018,8 @@ class _$MedicinalProductIngredientStrengthCopyWithImpl<$Res>
   }
 
   @override
-  $RatioCopyWith<$Res>? get presentation {
-    if (_value.presentation == null) {
-      return null;
-    }
-
-    return $RatioCopyWith<$Res>(_value.presentation!, (value) {
+  $RatioCopyWith<$Res> get presentation {
+    return $RatioCopyWith<$Res>(_value.presentation, (value) {
       return _then(_value.copyWith(presentation: value));
     });
   }
@@ -8126,7 +8081,7 @@ abstract class _$MedicinalProductIngredientStrengthCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Ratio? presentation,
+      Ratio presentation,
       Ratio? presentationLowLimit,
       Ratio? concentration,
       Ratio? concentrationLowLimit,
@@ -8136,7 +8091,7 @@ abstract class _$MedicinalProductIngredientStrengthCopyWith<$Res>
       List<MedicinalProductIngredientReferenceStrength?>? referenceStrength});
 
   @override
-  $RatioCopyWith<$Res>? get presentation;
+  $RatioCopyWith<$Res> get presentation;
   @override
   $RatioCopyWith<$Res>? get presentationLowLimit;
   @override
@@ -8182,9 +8137,8 @@ class __$MedicinalProductIngredientStrengthCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      presentation: presentation == freezed
-          ? _value.presentation
-          : presentation as Ratio?,
+      presentation:
+          presentation == freezed ? _value.presentation : presentation as Ratio,
       presentationLowLimit: presentationLowLimit == freezed
           ? _value.presentationLowLimit
           : presentationLowLimit as Ratio?,
@@ -8242,7 +8196,7 @@ class _$_MedicinalProductIngredientStrength
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final Ratio? presentation;
+  final Ratio presentation;
   @override
   final Ratio? presentationLowLimit;
   @override
@@ -8338,7 +8292,7 @@ abstract class _MedicinalProductIngredientStrength
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Ratio? presentation,
+      required Ratio presentation,
       Ratio? presentationLowLimit,
       Ratio? concentration,
       Ratio? concentrationLowLimit,
@@ -8360,7 +8314,7 @@ abstract class _MedicinalProductIngredientStrength
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  Ratio? get presentation;
+  Ratio get presentation;
   @override
   Ratio? get presentationLowLimit;
   @override
@@ -8397,7 +8351,7 @@ class _$MedicinalProductIngredientReferenceStrengthTearOff {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       CodeableConcept? substance,
-      required Ratio? strength,
+      required Ratio strength,
       Ratio? strengthLowLimit,
       String? measurementPoint,
       @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
@@ -8432,7 +8386,7 @@ mixin _$MedicinalProductIngredientReferenceStrength {
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get substance;
-  Ratio? get strength;
+  Ratio get strength;
   Ratio? get strengthLowLimit;
   String? get measurementPoint;
   @JsonKey(name: '_measurementPoint')
@@ -8456,14 +8410,14 @@ abstract class $MedicinalProductIngredientReferenceStrengthCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       CodeableConcept? substance,
-      Ratio? strength,
+      Ratio strength,
       Ratio? strengthLowLimit,
       String? measurementPoint,
       @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
       List<CodeableConcept?>? country});
 
   $CodeableConceptCopyWith<$Res>? get substance;
-  $RatioCopyWith<$Res>? get strength;
+  $RatioCopyWith<$Res> get strength;
   $RatioCopyWith<$Res>? get strengthLowLimit;
   $ElementCopyWith<$Res>? get measurementPointElement;
 }
@@ -8501,7 +8455,7 @@ class _$MedicinalProductIngredientReferenceStrengthCopyWithImpl<$Res>
       substance: substance == freezed
           ? _value.substance
           : substance as CodeableConcept?,
-      strength: strength == freezed ? _value.strength : strength as Ratio?,
+      strength: strength == freezed ? _value.strength : strength as Ratio,
       strengthLowLimit: strengthLowLimit == freezed
           ? _value.strengthLowLimit
           : strengthLowLimit as Ratio?,
@@ -8529,12 +8483,8 @@ class _$MedicinalProductIngredientReferenceStrengthCopyWithImpl<$Res>
   }
 
   @override
-  $RatioCopyWith<$Res>? get strength {
-    if (_value.strength == null) {
-      return null;
-    }
-
-    return $RatioCopyWith<$Res>(_value.strength!, (value) {
+  $RatioCopyWith<$Res> get strength {
+    return $RatioCopyWith<$Res>(_value.strength, (value) {
       return _then(_value.copyWith(strength: value));
     });
   }
@@ -8575,7 +8525,7 @@ abstract class _$MedicinalProductIngredientReferenceStrengthCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       CodeableConcept? substance,
-      Ratio? strength,
+      Ratio strength,
       Ratio? strengthLowLimit,
       String? measurementPoint,
       @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
@@ -8584,7 +8534,7 @@ abstract class _$MedicinalProductIngredientReferenceStrengthCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get substance;
   @override
-  $RatioCopyWith<$Res>? get strength;
+  $RatioCopyWith<$Res> get strength;
   @override
   $RatioCopyWith<$Res>? get strengthLowLimit;
   @override
@@ -8628,7 +8578,7 @@ class __$MedicinalProductIngredientReferenceStrengthCopyWithImpl<$Res>
       substance: substance == freezed
           ? _value.substance
           : substance as CodeableConcept?,
-      strength: strength == freezed ? _value.strength : strength as Ratio?,
+      strength: strength == freezed ? _value.strength : strength as Ratio,
       strengthLowLimit: strengthLowLimit == freezed
           ? _value.strengthLowLimit
           : strengthLowLimit as Ratio?,
@@ -8676,7 +8626,7 @@ class _$_MedicinalProductIngredientReferenceStrength
   @override
   final CodeableConcept? substance;
   @override
-  final Ratio? strength;
+  final Ratio strength;
   @override
   final Ratio? strengthLowLimit;
   @override
@@ -8759,7 +8709,7 @@ abstract class _MedicinalProductIngredientReferenceStrength
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
           CodeableConcept? substance,
-          required Ratio? strength,
+          required Ratio strength,
           Ratio? strengthLowLimit,
           String? measurementPoint,
           @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
@@ -8780,7 +8730,7 @@ abstract class _MedicinalProductIngredientReferenceStrength
   @override
   CodeableConcept? get substance;
   @override
-  Ratio? get strength;
+  Ratio get strength;
   @override
   Ratio? get strengthLowLimit;
   @override
@@ -8809,7 +8759,7 @@ class _$MedicinalProductIngredientSubstanceTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       List<MedicinalProductIngredientStrength?>? strength}) {
     return _MedicinalProductIngredientSubstance(
       id: id,
@@ -8835,7 +8785,7 @@ mixin _$MedicinalProductIngredientSubstance {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get code;
+  CodeableConcept get code;
   List<MedicinalProductIngredientStrength?>? get strength;
 
   Map<String, dynamic> toJson();
@@ -8854,10 +8804,10 @@ abstract class $MedicinalProductIngredientSubstanceCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? code,
+      CodeableConcept code,
       List<MedicinalProductIngredientStrength?>? strength});
 
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 /// @nodoc
@@ -8885,7 +8835,7 @@ class _$MedicinalProductIngredientSubstanceCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       strength: strength == freezed
           ? _value.strength
           : strength as List<MedicinalProductIngredientStrength?>?,
@@ -8893,12 +8843,8 @@ class _$MedicinalProductIngredientSubstanceCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
@@ -8916,11 +8862,11 @@ abstract class _$MedicinalProductIngredientSubstanceCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? code,
+      CodeableConcept code,
       List<MedicinalProductIngredientStrength?>? strength});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 /// @nodoc
@@ -8952,7 +8898,7 @@ class __$MedicinalProductIngredientSubstanceCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       strength: strength == freezed
           ? _value.strength
           : strength as List<MedicinalProductIngredientStrength?>?,
@@ -8985,7 +8931,7 @@ class _$_MedicinalProductIngredientSubstance
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
   final List<MedicinalProductIngredientStrength?>? strength;
 
@@ -9042,7 +8988,7 @@ abstract class _MedicinalProductIngredientSubstance
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required CodeableConcept? code,
+          required CodeableConcept code,
           List<MedicinalProductIngredientStrength?>? strength}) =
       _$_MedicinalProductIngredientSubstance;
 
@@ -9058,7 +9004,7 @@ abstract class _MedicinalProductIngredientSubstance
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get code;
+  CodeableConcept get code;
   @override
   List<MedicinalProductIngredientStrength?>? get strength;
   @override
@@ -10099,9 +10045,9 @@ class _$MedicinalProductManufacturedTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? manufacturedDoseForm,
+      required CodeableConcept manufacturedDoseForm,
       CodeableConcept? unitOfPresentation,
-      required Quantity? quantity,
+      required Quantity quantity,
       List<Reference?>? manufacturer,
       List<Reference?>? ingredient,
       ProdCharacteristic? physicalCharacteristics,
@@ -10153,9 +10099,9 @@ mixin _$MedicinalProductManufactured {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get manufacturedDoseForm;
+  CodeableConcept get manufacturedDoseForm;
   CodeableConcept? get unitOfPresentation;
-  Quantity? get quantity;
+  Quantity get quantity;
   List<Reference?>? get manufacturer;
   List<Reference?>? get ingredient;
   ProdCharacteristic? get physicalCharacteristics;
@@ -10189,9 +10135,9 @@ abstract class $MedicinalProductManufacturedCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? manufacturedDoseForm,
+      CodeableConcept manufacturedDoseForm,
       CodeableConcept? unitOfPresentation,
-      Quantity? quantity,
+      Quantity quantity,
       List<Reference?>? manufacturer,
       List<Reference?>? ingredient,
       ProdCharacteristic? physicalCharacteristics,
@@ -10201,9 +10147,9 @@ abstract class $MedicinalProductManufacturedCopyWith<$Res> {
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
-  $CodeableConceptCopyWith<$Res>? get manufacturedDoseForm;
+  $CodeableConceptCopyWith<$Res> get manufacturedDoseForm;
   $CodeableConceptCopyWith<$Res>? get unitOfPresentation;
-  $QuantityCopyWith<$Res>? get quantity;
+  $QuantityCopyWith<$Res> get quantity;
   $ProdCharacteristicCopyWith<$Res>? get physicalCharacteristics;
 }
 
@@ -10265,11 +10211,11 @@ class _$MedicinalProductManufacturedCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       manufacturedDoseForm: manufacturedDoseForm == freezed
           ? _value.manufacturedDoseForm
-          : manufacturedDoseForm as CodeableConcept?,
+          : manufacturedDoseForm as CodeableConcept,
       unitOfPresentation: unitOfPresentation == freezed
           ? _value.unitOfPresentation
           : unitOfPresentation as CodeableConcept?,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
+      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
           : manufacturer as List<Reference?>?,
@@ -10330,13 +10276,8 @@ class _$MedicinalProductManufacturedCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get manufacturedDoseForm {
-    if (_value.manufacturedDoseForm == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.manufacturedDoseForm!,
-        (value) {
+  $CodeableConceptCopyWith<$Res> get manufacturedDoseForm {
+    return $CodeableConceptCopyWith<$Res>(_value.manufacturedDoseForm, (value) {
       return _then(_value.copyWith(manufacturedDoseForm: value));
     });
   }
@@ -10353,12 +10294,8 @@ class _$MedicinalProductManufacturedCopyWithImpl<$Res>
   }
 
   @override
-  $QuantityCopyWith<$Res>? get quantity {
-    if (_value.quantity == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.quantity!, (value) {
+  $QuantityCopyWith<$Res> get quantity {
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
       return _then(_value.copyWith(quantity: value));
     });
   }
@@ -10400,9 +10337,9 @@ abstract class _$MedicinalProductManufacturedCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? manufacturedDoseForm,
+      CodeableConcept manufacturedDoseForm,
       CodeableConcept? unitOfPresentation,
-      Quantity? quantity,
+      Quantity quantity,
       List<Reference?>? manufacturer,
       List<Reference?>? ingredient,
       ProdCharacteristic? physicalCharacteristics,
@@ -10417,11 +10354,11 @@ abstract class _$MedicinalProductManufacturedCopyWith<$Res>
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
-  $CodeableConceptCopyWith<$Res>? get manufacturedDoseForm;
+  $CodeableConceptCopyWith<$Res> get manufacturedDoseForm;
   @override
   $CodeableConceptCopyWith<$Res>? get unitOfPresentation;
   @override
-  $QuantityCopyWith<$Res>? get quantity;
+  $QuantityCopyWith<$Res> get quantity;
   @override
   $ProdCharacteristicCopyWith<$Res>? get physicalCharacteristics;
 }
@@ -10488,11 +10425,11 @@ class __$MedicinalProductManufacturedCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       manufacturedDoseForm: manufacturedDoseForm == freezed
           ? _value.manufacturedDoseForm
-          : manufacturedDoseForm as CodeableConcept?,
+          : manufacturedDoseForm as CodeableConcept,
       unitOfPresentation: unitOfPresentation == freezed
           ? _value.unitOfPresentation
           : unitOfPresentation as CodeableConcept?,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
+      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
           : manufacturer as List<Reference?>?,
@@ -10568,11 +10505,11 @@ class _$_MedicinalProductManufactured extends _MedicinalProductManufactured {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? manufacturedDoseForm;
+  final CodeableConcept manufacturedDoseForm;
   @override
   final CodeableConcept? unitOfPresentation;
   @override
-  final Quantity? quantity;
+  final Quantity quantity;
   @override
   final List<Reference?>? manufacturer;
   @override
@@ -10698,9 +10635,9 @@ abstract class _MedicinalProductManufactured
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? manufacturedDoseForm,
+      required CodeableConcept manufacturedDoseForm,
       CodeableConcept? unitOfPresentation,
-      required Quantity? quantity,
+      required Quantity quantity,
       List<Reference?>? manufacturer,
       List<Reference?>? ingredient,
       ProdCharacteristic? physicalCharacteristics,
@@ -10737,11 +10674,11 @@ abstract class _MedicinalProductManufactured
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get manufacturedDoseForm;
+  CodeableConcept get manufacturedDoseForm;
   @override
   CodeableConcept? get unitOfPresentation;
   @override
-  Quantity? get quantity;
+  Quantity get quantity;
   @override
   List<Reference?>? get manufacturer;
   @override
@@ -10791,7 +10728,7 @@ class _$MedicinalProductPackagedTearOff {
       Reference? marketingAuthorization,
       List<Reference?>? manufacturer,
       List<MedicinalProductPackagedBatchIdentifier?>? batchIdentifier,
-      required List<MedicinalProductPackagedPackageItem?>? packageItem}) {
+      required List<MedicinalProductPackagedPackageItem> packageItem}) {
     return _MedicinalProductPackaged(
       resourceType: resourceType,
       id: id,
@@ -10852,7 +10789,7 @@ mixin _$MedicinalProductPackaged {
   Reference? get marketingAuthorization;
   List<Reference?>? get manufacturer;
   List<MedicinalProductPackagedBatchIdentifier?>? get batchIdentifier;
-  List<MedicinalProductPackagedPackageItem?>? get packageItem;
+  List<MedicinalProductPackagedPackageItem> get packageItem;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -10890,7 +10827,7 @@ abstract class $MedicinalProductPackagedCopyWith<$Res> {
       Reference? marketingAuthorization,
       List<Reference?>? manufacturer,
       List<MedicinalProductPackagedBatchIdentifier?>? batchIdentifier,
-      List<MedicinalProductPackagedPackageItem?>? packageItem});
+      List<MedicinalProductPackagedPackageItem> packageItem});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -10987,7 +10924,7 @@ class _$MedicinalProductPackagedCopyWithImpl<$Res>
           : batchIdentifier as List<MedicinalProductPackagedBatchIdentifier?>?,
       packageItem: packageItem == freezed
           ? _value.packageItem
-          : packageItem as List<MedicinalProductPackagedPackageItem?>?,
+          : packageItem as List<MedicinalProductPackagedPackageItem>,
     ));
   }
 
@@ -11102,7 +11039,7 @@ abstract class _$MedicinalProductPackagedCopyWith<$Res>
       Reference? marketingAuthorization,
       List<Reference?>? manufacturer,
       List<MedicinalProductPackagedBatchIdentifier?>? batchIdentifier,
-      List<MedicinalProductPackagedPackageItem?>? packageItem});
+      List<MedicinalProductPackagedPackageItem> packageItem});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -11209,7 +11146,7 @@ class __$MedicinalProductPackagedCopyWithImpl<$Res>
           : batchIdentifier as List<MedicinalProductPackagedBatchIdentifier?>?,
       packageItem: packageItem == freezed
           ? _value.packageItem
-          : packageItem as List<MedicinalProductPackagedPackageItem?>?,
+          : packageItem as List<MedicinalProductPackagedPackageItem>,
     ));
   }
 }
@@ -11296,7 +11233,7 @@ class _$_MedicinalProductPackaged extends _MedicinalProductPackaged {
   @override
   final List<MedicinalProductPackagedBatchIdentifier?>? batchIdentifier;
   @override
-  final List<MedicinalProductPackagedPackageItem?>? packageItem;
+  final List<MedicinalProductPackagedPackageItem> packageItem;
 
   @override
   String toString() {
@@ -11434,7 +11371,7 @@ abstract class _MedicinalProductPackaged extends MedicinalProductPackaged {
           Reference? marketingAuthorization,
           List<Reference?>? manufacturer,
           List<MedicinalProductPackagedBatchIdentifier?>? batchIdentifier,
-          required List<MedicinalProductPackagedPackageItem?>? packageItem}) =
+          required List<MedicinalProductPackagedPackageItem> packageItem}) =
       _$_MedicinalProductPackaged;
 
   factory _MedicinalProductPackaged.fromJson(Map<String, dynamic> json) =
@@ -11486,7 +11423,7 @@ abstract class _MedicinalProductPackaged extends MedicinalProductPackaged {
   @override
   List<MedicinalProductPackagedBatchIdentifier?>? get batchIdentifier;
   @override
-  List<MedicinalProductPackagedPackageItem?>? get packageItem;
+  List<MedicinalProductPackagedPackageItem> get packageItem;
   @override
   @JsonKey(ignore: true)
   _$MedicinalProductPackagedCopyWith<_MedicinalProductPackaged> get copyWith;
@@ -11506,7 +11443,7 @@ class _$MedicinalProductPackagedBatchIdentifierTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Identifier? outerPackaging,
+      required Identifier outerPackaging,
       Identifier? immediatePackaging}) {
     return _MedicinalProductPackagedBatchIdentifier(
       id: id,
@@ -11532,7 +11469,7 @@ mixin _$MedicinalProductPackagedBatchIdentifier {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  Identifier? get outerPackaging;
+  Identifier get outerPackaging;
   Identifier? get immediatePackaging;
 
   Map<String, dynamic> toJson();
@@ -11551,10 +11488,10 @@ abstract class $MedicinalProductPackagedBatchIdentifierCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Identifier? outerPackaging,
+      Identifier outerPackaging,
       Identifier? immediatePackaging});
 
-  $IdentifierCopyWith<$Res>? get outerPackaging;
+  $IdentifierCopyWith<$Res> get outerPackaging;
   $IdentifierCopyWith<$Res>? get immediatePackaging;
 }
 
@@ -11586,7 +11523,7 @@ class _$MedicinalProductPackagedBatchIdentifierCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       outerPackaging: outerPackaging == freezed
           ? _value.outerPackaging
-          : outerPackaging as Identifier?,
+          : outerPackaging as Identifier,
       immediatePackaging: immediatePackaging == freezed
           ? _value.immediatePackaging
           : immediatePackaging as Identifier?,
@@ -11594,12 +11531,8 @@ class _$MedicinalProductPackagedBatchIdentifierCopyWithImpl<$Res>
   }
 
   @override
-  $IdentifierCopyWith<$Res>? get outerPackaging {
-    if (_value.outerPackaging == null) {
-      return null;
-    }
-
-    return $IdentifierCopyWith<$Res>(_value.outerPackaging!, (value) {
+  $IdentifierCopyWith<$Res> get outerPackaging {
+    return $IdentifierCopyWith<$Res>(_value.outerPackaging, (value) {
       return _then(_value.copyWith(outerPackaging: value));
     });
   }
@@ -11628,11 +11561,11 @@ abstract class _$MedicinalProductPackagedBatchIdentifierCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Identifier? outerPackaging,
+      Identifier outerPackaging,
       Identifier? immediatePackaging});
 
   @override
-  $IdentifierCopyWith<$Res>? get outerPackaging;
+  $IdentifierCopyWith<$Res> get outerPackaging;
   @override
   $IdentifierCopyWith<$Res>? get immediatePackaging;
 }
@@ -11669,7 +11602,7 @@ class __$MedicinalProductPackagedBatchIdentifierCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       outerPackaging: outerPackaging == freezed
           ? _value.outerPackaging
-          : outerPackaging as Identifier?,
+          : outerPackaging as Identifier,
       immediatePackaging: immediatePackaging == freezed
           ? _value.immediatePackaging
           : immediatePackaging as Identifier?,
@@ -11702,7 +11635,7 @@ class _$_MedicinalProductPackagedBatchIdentifier
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final Identifier? outerPackaging;
+  final Identifier outerPackaging;
   @override
   final Identifier? immediatePackaging;
 
@@ -11760,7 +11693,7 @@ abstract class _MedicinalProductPackagedBatchIdentifier
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required Identifier? outerPackaging,
+          required Identifier outerPackaging,
           Identifier? immediatePackaging}) =
       _$_MedicinalProductPackagedBatchIdentifier;
 
@@ -11776,7 +11709,7 @@ abstract class _MedicinalProductPackagedBatchIdentifier
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  Identifier? get outerPackaging;
+  Identifier get outerPackaging;
   @override
   Identifier? get immediatePackaging;
   @override
@@ -11799,8 +11732,8 @@ class _$MedicinalProductPackagedPackageItemTearOff {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      required CodeableConcept? type,
-      required Quantity? quantity,
+      required CodeableConcept type,
+      required Quantity quantity,
       List<CodeableConcept?>? material,
       List<CodeableConcept?>? alternateMaterial,
       List<Reference?>? device,
@@ -11845,8 +11778,8 @@ mixin _$MedicinalProductPackagedPackageItem {
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
   List<Identifier?>? get identifier;
-  CodeableConcept? get type;
-  Quantity? get quantity;
+  CodeableConcept get type;
+  Quantity get quantity;
   List<CodeableConcept?>? get material;
   List<CodeableConcept?>? get alternateMaterial;
   List<Reference?>? get device;
@@ -11874,8 +11807,8 @@ abstract class $MedicinalProductPackagedPackageItemCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      CodeableConcept? type,
-      Quantity? quantity,
+      CodeableConcept type,
+      Quantity quantity,
       List<CodeableConcept?>? material,
       List<CodeableConcept?>? alternateMaterial,
       List<Reference?>? device,
@@ -11886,8 +11819,8 @@ abstract class $MedicinalProductPackagedPackageItemCopyWith<$Res> {
       List<ProductShelfLife?>? shelfLifeStorage,
       List<Reference?>? manufacturer});
 
-  $CodeableConceptCopyWith<$Res>? get type;
-  $QuantityCopyWith<$Res>? get quantity;
+  $CodeableConceptCopyWith<$Res> get type;
+  $QuantityCopyWith<$Res> get quantity;
   $ProdCharacteristicCopyWith<$Res>? get physicalCharacteristics;
 }
 
@@ -11929,8 +11862,8 @@ class _$MedicinalProductPackagedPackageItemCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
+      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       material: material == freezed
           ? _value.material
           : material as List<CodeableConcept?>?,
@@ -11960,23 +11893,15 @@ class _$MedicinalProductPackagedPackageItemCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res>? get quantity {
-    if (_value.quantity == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.quantity!, (value) {
+  $QuantityCopyWith<$Res> get quantity {
+    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
       return _then(_value.copyWith(quantity: value));
     });
   }
@@ -12007,8 +11932,8 @@ abstract class _$MedicinalProductPackagedPackageItemCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      CodeableConcept? type,
-      Quantity? quantity,
+      CodeableConcept type,
+      Quantity quantity,
       List<CodeableConcept?>? material,
       List<CodeableConcept?>? alternateMaterial,
       List<Reference?>? device,
@@ -12020,9 +11945,9 @@ abstract class _$MedicinalProductPackagedPackageItemCopyWith<$Res>
       List<Reference?>? manufacturer});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
-  $QuantityCopyWith<$Res>? get quantity;
+  $QuantityCopyWith<$Res> get quantity;
   @override
   $ProdCharacteristicCopyWith<$Res>? get physicalCharacteristics;
 }
@@ -12069,8 +11994,8 @@ class __$MedicinalProductPackagedPackageItemCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
+      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
       material: material == freezed
           ? _value.material
           : material as List<CodeableConcept?>?,
@@ -12137,9 +12062,9 @@ class _$_MedicinalProductPackagedPackageItem
   @override
   final List<Identifier?>? identifier;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
-  final Quantity? quantity;
+  final Quantity quantity;
   @override
   final List<CodeableConcept?>? material;
   @override
@@ -12253,8 +12178,8 @@ abstract class _MedicinalProductPackagedPackageItem
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      required CodeableConcept? type,
-      required Quantity? quantity,
+      required CodeableConcept type,
+      required Quantity quantity,
       List<CodeableConcept?>? material,
       List<CodeableConcept?>? alternateMaterial,
       List<Reference?>? device,
@@ -12279,9 +12204,9 @@ abstract class _MedicinalProductPackagedPackageItem
   @override
   List<Identifier?>? get identifier;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
-  Quantity? get quantity;
+  Quantity get quantity;
   @override
   List<CodeableConcept?>? get material;
   @override
@@ -12333,7 +12258,7 @@ class _$MedicinalProductPharmaceuticalTearOff {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      required CodeableConcept? administrableDoseForm,
+      required CodeableConcept administrableDoseForm,
       CodeableConcept? unitOfPresentation,
       List<Reference?>? ingredient,
       List<Reference?>? device,
@@ -12389,7 +12314,7 @@ mixin _$MedicinalProductPharmaceutical {
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
   List<Identifier?>? get identifier;
-  CodeableConcept? get administrableDoseForm;
+  CodeableConcept get administrableDoseForm;
   CodeableConcept? get unitOfPresentation;
   List<Reference?>? get ingredient;
   List<Reference?>? get device;
@@ -12426,7 +12351,7 @@ abstract class $MedicinalProductPharmaceuticalCopyWith<$Res> {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      CodeableConcept? administrableDoseForm,
+      CodeableConcept administrableDoseForm,
       CodeableConcept? unitOfPresentation,
       List<Reference?>? ingredient,
       List<Reference?>? device,
@@ -12438,7 +12363,7 @@ abstract class $MedicinalProductPharmaceuticalCopyWith<$Res> {
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
-  $CodeableConceptCopyWith<$Res>? get administrableDoseForm;
+  $CodeableConceptCopyWith<$Res> get administrableDoseForm;
   $CodeableConceptCopyWith<$Res>? get unitOfPresentation;
 }
 
@@ -12503,7 +12428,7 @@ class _$MedicinalProductPharmaceuticalCopyWithImpl<$Res>
           : identifier as List<Identifier?>?,
       administrableDoseForm: administrableDoseForm == freezed
           ? _value.administrableDoseForm
-          : administrableDoseForm as CodeableConcept?,
+          : administrableDoseForm as CodeableConcept,
       unitOfPresentation: unitOfPresentation == freezed
           ? _value.unitOfPresentation
           : unitOfPresentation as CodeableConcept?,
@@ -12567,12 +12492,8 @@ class _$MedicinalProductPharmaceuticalCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get administrableDoseForm {
-    if (_value.administrableDoseForm == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.administrableDoseForm!,
+  $CodeableConceptCopyWith<$Res> get administrableDoseForm {
+    return $CodeableConceptCopyWith<$Res>(_value.administrableDoseForm,
         (value) {
       return _then(_value.copyWith(administrableDoseForm: value));
     });
@@ -12615,7 +12536,7 @@ abstract class _$MedicinalProductPharmaceuticalCopyWith<$Res>
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      CodeableConcept? administrableDoseForm,
+      CodeableConcept administrableDoseForm,
       CodeableConcept? unitOfPresentation,
       List<Reference?>? ingredient,
       List<Reference?>? device,
@@ -12632,7 +12553,7 @@ abstract class _$MedicinalProductPharmaceuticalCopyWith<$Res>
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
-  $CodeableConceptCopyWith<$Res>? get administrableDoseForm;
+  $CodeableConceptCopyWith<$Res> get administrableDoseForm;
   @override
   $CodeableConceptCopyWith<$Res>? get unitOfPresentation;
 }
@@ -12702,7 +12623,7 @@ class __$MedicinalProductPharmaceuticalCopyWithImpl<$Res>
           : identifier as List<Identifier?>?,
       administrableDoseForm: administrableDoseForm == freezed
           ? _value.administrableDoseForm
-          : administrableDoseForm as CodeableConcept?,
+          : administrableDoseForm as CodeableConcept,
       unitOfPresentation: unitOfPresentation == freezed
           ? _value.unitOfPresentation
           : unitOfPresentation as CodeableConcept?,
@@ -12785,7 +12706,7 @@ class _$_MedicinalProductPharmaceutical
   @override
   final List<Identifier?>? identifier;
   @override
-  final CodeableConcept? administrableDoseForm;
+  final CodeableConcept administrableDoseForm;
   @override
   final CodeableConcept? unitOfPresentation;
   @override
@@ -12913,7 +12834,7 @@ abstract class _MedicinalProductPharmaceutical
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      required CodeableConcept? administrableDoseForm,
+      required CodeableConcept administrableDoseForm,
       CodeableConcept? unitOfPresentation,
       List<Reference?>? ingredient,
       List<Reference?>? device,
@@ -12953,7 +12874,7 @@ abstract class _MedicinalProductPharmaceutical
   @override
   List<Identifier?>? get identifier;
   @override
-  CodeableConcept? get administrableDoseForm;
+  CodeableConcept get administrableDoseForm;
   @override
   CodeableConcept? get unitOfPresentation;
   @override
@@ -12985,7 +12906,7 @@ class _$MedicinalProductPharmaceuticalCharacteristicsTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       CodeableConcept? status}) {
     return _MedicinalProductPharmaceuticalCharacteristics(
       id: id,
@@ -13012,7 +12933,7 @@ mixin _$MedicinalProductPharmaceuticalCharacteristics {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get code;
+  CodeableConcept get code;
   CodeableConcept? get status;
 
   Map<String, dynamic> toJson();
@@ -13031,10 +12952,10 @@ abstract class $MedicinalProductPharmaceuticalCharacteristicsCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? code,
+      CodeableConcept code,
       CodeableConcept? status});
 
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   $CodeableConceptCopyWith<$Res>? get status;
 }
 
@@ -13064,18 +12985,14 @@ class _$MedicinalProductPharmaceuticalCharacteristicsCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       status: status == freezed ? _value.status : status as CodeableConcept?,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
@@ -13104,11 +13021,11 @@ abstract class _$MedicinalProductPharmaceuticalCharacteristicsCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? code,
+      CodeableConcept code,
       CodeableConcept? status});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   @override
   $CodeableConceptCopyWith<$Res>? get status;
 }
@@ -13143,7 +13060,7 @@ class __$MedicinalProductPharmaceuticalCharacteristicsCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       status: status == freezed ? _value.status : status as CodeableConcept?,
     ));
   }
@@ -13174,7 +13091,7 @@ class _$_MedicinalProductPharmaceuticalCharacteristics
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
   final CodeableConcept? status;
 
@@ -13231,7 +13148,7 @@ abstract class _MedicinalProductPharmaceuticalCharacteristics
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required CodeableConcept? code,
+          required CodeableConcept code,
           CodeableConcept? status}) =
       _$_MedicinalProductPharmaceuticalCharacteristics;
 
@@ -13247,7 +13164,7 @@ abstract class _MedicinalProductPharmaceuticalCharacteristics
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get code;
+  CodeableConcept get code;
   @override
   CodeableConcept? get status;
   @override
@@ -13270,7 +13187,7 @@ class _$MedicinalProductPharmaceuticalRouteOfAdministrationTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       Quantity? firstDose,
       Quantity? maxSingleDose,
       Quantity? maxDosePerDay,
@@ -13307,7 +13224,7 @@ mixin _$MedicinalProductPharmaceuticalRouteOfAdministration {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get code;
+  CodeableConcept get code;
   Quantity? get firstDose;
   Quantity? get maxSingleDose;
   Quantity? get maxDosePerDay;
@@ -13333,7 +13250,7 @@ abstract class $MedicinalProductPharmaceuticalRouteOfAdministrationCopyWith<
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? code,
+      CodeableConcept code,
       Quantity? firstDose,
       Quantity? maxSingleDose,
       Quantity? maxDosePerDay,
@@ -13341,7 +13258,7 @@ abstract class $MedicinalProductPharmaceuticalRouteOfAdministrationCopyWith<
       FhirDuration? maxTreatmentPeriod,
       List<MedicinalProductPharmaceuticalTargetSpecies?>? targetSpecies});
 
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   $QuantityCopyWith<$Res>? get firstDose;
   $QuantityCopyWith<$Res>? get maxSingleDose;
   $QuantityCopyWith<$Res>? get maxDosePerDay;
@@ -13382,7 +13299,7 @@ class _$MedicinalProductPharmaceuticalRouteOfAdministrationCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       firstDose:
           firstDose == freezed ? _value.firstDose : firstDose as Quantity?,
       maxSingleDose: maxSingleDose == freezed
@@ -13405,12 +13322,8 @@ class _$MedicinalProductPharmaceuticalRouteOfAdministrationCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
@@ -13486,7 +13399,7 @@ abstract class _$MedicinalProductPharmaceuticalRouteOfAdministrationCopyWith<
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? code,
+      CodeableConcept code,
       Quantity? firstDose,
       Quantity? maxSingleDose,
       Quantity? maxDosePerDay,
@@ -13495,7 +13408,7 @@ abstract class _$MedicinalProductPharmaceuticalRouteOfAdministrationCopyWith<
       List<MedicinalProductPharmaceuticalTargetSpecies?>? targetSpecies});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   @override
   $QuantityCopyWith<$Res>? get firstDose;
   @override
@@ -13547,7 +13460,7 @@ class __$MedicinalProductPharmaceuticalRouteOfAdministrationCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       firstDose:
           firstDose == freezed ? _value.firstDose : firstDose as Quantity?,
       maxSingleDose: maxSingleDose == freezed
@@ -13600,7 +13513,7 @@ class _$_MedicinalProductPharmaceuticalRouteOfAdministration
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
   final Quantity? firstDose;
   @override
@@ -13691,7 +13604,7 @@ abstract class _MedicinalProductPharmaceuticalRouteOfAdministration
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required CodeableConcept? code,
+          required CodeableConcept code,
           Quantity? firstDose,
           Quantity? maxSingleDose,
           Quantity? maxDosePerDay,
@@ -13712,7 +13625,7 @@ abstract class _MedicinalProductPharmaceuticalRouteOfAdministration
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get code;
+  CodeableConcept get code;
   @override
   Quantity? get firstDose;
   @override
@@ -13745,7 +13658,7 @@ class _$MedicinalProductPharmaceuticalTargetSpeciesTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       List<MedicinalProductPharmaceuticalWithdrawalPeriod?>?
           withdrawalPeriod}) {
     return _MedicinalProductPharmaceuticalTargetSpecies(
@@ -13773,7 +13686,7 @@ mixin _$MedicinalProductPharmaceuticalTargetSpecies {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get code;
+  CodeableConcept get code;
   List<MedicinalProductPharmaceuticalWithdrawalPeriod?>? get withdrawalPeriod;
 
   Map<String, dynamic> toJson();
@@ -13792,10 +13705,10 @@ abstract class $MedicinalProductPharmaceuticalTargetSpeciesCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? code,
+      CodeableConcept code,
       List<MedicinalProductPharmaceuticalWithdrawalPeriod?>? withdrawalPeriod});
 
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 /// @nodoc
@@ -13824,7 +13737,7 @@ class _$MedicinalProductPharmaceuticalTargetSpeciesCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       withdrawalPeriod: withdrawalPeriod == freezed
           ? _value.withdrawalPeriod
           : withdrawalPeriod
@@ -13833,12 +13746,8 @@ class _$MedicinalProductPharmaceuticalTargetSpeciesCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
@@ -13856,11 +13765,11 @@ abstract class _$MedicinalProductPharmaceuticalTargetSpeciesCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? code,
+      CodeableConcept code,
       List<MedicinalProductPharmaceuticalWithdrawalPeriod?>? withdrawalPeriod});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
 }
 
 /// @nodoc
@@ -13893,7 +13802,7 @@ class __$MedicinalProductPharmaceuticalTargetSpeciesCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       withdrawalPeriod: withdrawalPeriod == freezed
           ? _value.withdrawalPeriod
           : withdrawalPeriod
@@ -13927,7 +13836,7 @@ class _$_MedicinalProductPharmaceuticalTargetSpecies
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
   final List<MedicinalProductPharmaceuticalWithdrawalPeriod?>? withdrawalPeriod;
 
@@ -13985,7 +13894,7 @@ abstract class _MedicinalProductPharmaceuticalTargetSpecies
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       List<MedicinalProductPharmaceuticalWithdrawalPeriod?>?
           withdrawalPeriod}) = _$_MedicinalProductPharmaceuticalTargetSpecies;
 
@@ -14001,7 +13910,7 @@ abstract class _MedicinalProductPharmaceuticalTargetSpecies
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get code;
+  CodeableConcept get code;
   @override
   List<MedicinalProductPharmaceuticalWithdrawalPeriod?>? get withdrawalPeriod;
   @override
@@ -14025,8 +13934,8 @@ class _$MedicinalProductPharmaceuticalWithdrawalPeriodTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? tissue,
-      required Quantity? value,
+      required CodeableConcept tissue,
+      required Quantity value,
       String? supportingInformation,
       @JsonKey(name: '_supportingInformation')
           Element? supportingInformationElement}) {
@@ -14057,8 +13966,8 @@ mixin _$MedicinalProductPharmaceuticalWithdrawalPeriod {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get tissue;
-  Quantity? get value;
+  CodeableConcept get tissue;
+  Quantity get value;
   String? get supportingInformation;
   @JsonKey(name: '_supportingInformation')
   Element? get supportingInformationElement;
@@ -14080,14 +13989,14 @@ abstract class $MedicinalProductPharmaceuticalWithdrawalPeriodCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? tissue,
-      Quantity? value,
+      CodeableConcept tissue,
+      Quantity value,
       String? supportingInformation,
       @JsonKey(name: '_supportingInformation')
           Element? supportingInformationElement});
 
-  $CodeableConceptCopyWith<$Res>? get tissue;
-  $QuantityCopyWith<$Res>? get value;
+  $CodeableConceptCopyWith<$Res> get tissue;
+  $QuantityCopyWith<$Res> get value;
   $ElementCopyWith<$Res>? get supportingInformationElement;
 }
 
@@ -14119,8 +14028,8 @@ class _$MedicinalProductPharmaceuticalWithdrawalPeriodCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      tissue: tissue == freezed ? _value.tissue : tissue as CodeableConcept?,
-      value: value == freezed ? _value.value : value as Quantity?,
+      tissue: tissue == freezed ? _value.tissue : tissue as CodeableConcept,
+      value: value == freezed ? _value.value : value as Quantity,
       supportingInformation: supportingInformation == freezed
           ? _value.supportingInformation
           : supportingInformation as String?,
@@ -14131,23 +14040,15 @@ class _$MedicinalProductPharmaceuticalWithdrawalPeriodCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get tissue {
-    if (_value.tissue == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.tissue!, (value) {
+  $CodeableConceptCopyWith<$Res> get tissue {
+    return $CodeableConceptCopyWith<$Res>(_value.tissue, (value) {
       return _then(_value.copyWith(tissue: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res>? get value {
-    if (_value.value == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.value!, (value) {
+  $QuantityCopyWith<$Res> get value {
+    return $QuantityCopyWith<$Res>(_value.value, (value) {
       return _then(_value.copyWith(value: value));
     });
   }
@@ -14178,16 +14079,16 @@ abstract class _$MedicinalProductPharmaceuticalWithdrawalPeriodCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? tissue,
-      Quantity? value,
+      CodeableConcept tissue,
+      Quantity value,
       String? supportingInformation,
       @JsonKey(name: '_supportingInformation')
           Element? supportingInformationElement});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get tissue;
+  $CodeableConceptCopyWith<$Res> get tissue;
   @override
-  $QuantityCopyWith<$Res>? get value;
+  $QuantityCopyWith<$Res> get value;
   @override
   $ElementCopyWith<$Res>? get supportingInformationElement;
 }
@@ -14224,8 +14125,8 @@ class __$MedicinalProductPharmaceuticalWithdrawalPeriodCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      tissue: tissue == freezed ? _value.tissue : tissue as CodeableConcept?,
-      value: value == freezed ? _value.value : value as Quantity?,
+      tissue: tissue == freezed ? _value.tissue : tissue as CodeableConcept,
+      value: value == freezed ? _value.value : value as Quantity,
       supportingInformation: supportingInformation == freezed
           ? _value.supportingInformation
           : supportingInformation as String?,
@@ -14265,9 +14166,9 @@ class _$_MedicinalProductPharmaceuticalWithdrawalPeriod
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? tissue;
+  final CodeableConcept tissue;
   @override
-  final Quantity? value;
+  final Quantity value;
   @override
   final String? supportingInformation;
   @override
@@ -14339,8 +14240,8 @@ abstract class _MedicinalProductPharmaceuticalWithdrawalPeriod
           @JsonKey(name: 'extension')
               List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required CodeableConcept? tissue,
-          required Quantity? value,
+          required CodeableConcept tissue,
+          required Quantity value,
           String? supportingInformation,
           @JsonKey(name: '_supportingInformation')
               Element? supportingInformationElement}) =
@@ -14358,9 +14259,9 @@ abstract class _MedicinalProductPharmaceuticalWithdrawalPeriod
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get tissue;
+  CodeableConcept get tissue;
   @override
-  Quantity? get value;
+  Quantity get value;
   @override
   String? get supportingInformation;
   @override

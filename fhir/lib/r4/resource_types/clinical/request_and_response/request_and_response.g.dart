@@ -761,9 +761,7 @@ _$_DeviceRequest _$_$_DeviceRequestFromJson(Map<String, dynamic> json) {
             ? null
             : DeviceRequestParameter.fromJson(e as Map<String, dynamic>))
         .toList(),
-    subject: json['subject'] == null
-        ? null
-        : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+    subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
@@ -869,7 +867,7 @@ Map<String, dynamic> _$_$_DeviceRequestToJson(_$_DeviceRequest instance) {
   writeNotNull('codeCodeableConcept', instance.codeCodeableConcept?.toJson());
   writeNotNull(
       'parameter', instance.parameter?.map((e) => e?.toJson()).toList());
-  writeNotNull('subject', instance.subject?.toJson());
+  val['subject'] = instance.subject.toJson();
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
   writeNotNull(
@@ -1005,9 +1003,7 @@ _$_DeviceUseStatement _$_$_DeviceUseStatementFromJson(
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    subject: json['subject'] == null
-        ? null
-        : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+    subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
     derivedFrom: (json['derivedFrom'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
@@ -1033,9 +1029,7 @@ _$_DeviceUseStatement _$_$_DeviceUseStatementFromJson(
     source: json['source'] == null
         ? null
         : Reference.fromJson(json['source'] as Map<String, dynamic>),
-    device: json['device'] == null
-        ? null
-        : Reference.fromJson(json['device'] as Map<String, dynamic>),
+    device: Reference.fromJson(json['device'] as Map<String, dynamic>),
     reasonCode: (json['reasonCode'] as List<dynamic>?)
         ?.map((e) => e == null
             ? null
@@ -1085,7 +1079,7 @@ Map<String, dynamic> _$_$_DeviceUseStatementToJson(
   writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson()).toList());
   writeNotNull('status', _$DeviceUseStatementStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('subject', instance.subject?.toJson());
+  val['subject'] = instance.subject.toJson();
   writeNotNull(
       'derivedFrom', instance.derivedFrom?.map((e) => e?.toJson()).toList());
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
@@ -1095,7 +1089,7 @@ Map<String, dynamic> _$_$_DeviceUseStatementToJson(
   writeNotNull('recordedOn', instance.recordedOn?.toJson());
   writeNotNull('_recordedOn', instance.recordedOnElement?.toJson());
   writeNotNull('source', instance.source?.toJson());
-  writeNotNull('device', instance.device?.toJson());
+  val['device'] = instance.device.toJson();
   writeNotNull(
       'reasonCode', instance.reasonCode?.map((e) => e?.toJson()).toList());
   writeNotNull('reasonReference',
@@ -1546,9 +1540,7 @@ _$_SupplyRequest _$_$_SupplyRequestFromJson(Map<String, dynamic> json) {
     itemReference: json['itemReference'] == null
         ? null
         : Reference.fromJson(json['itemReference'] as Map<String, dynamic>),
-    quantity: json['quantity'] == null
-        ? null
-        : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
+    quantity: Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
     parameter: (json['parameter'] as List<dynamic>?)
         ?.map((e) => e == null
             ? null
@@ -1630,7 +1622,7 @@ Map<String, dynamic> _$_$_SupplyRequestToJson(_$_SupplyRequest instance) {
   writeNotNull('_priority', instance.priorityElement?.toJson());
   writeNotNull('itemCodeableConcept', instance.itemCodeableConcept?.toJson());
   writeNotNull('itemReference', instance.itemReference?.toJson());
-  writeNotNull('quantity', instance.quantity?.toJson());
+  val['quantity'] = instance.quantity.toJson();
   writeNotNull(
       'parameter', instance.parameter?.map((e) => e?.toJson()).toList());
   writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());

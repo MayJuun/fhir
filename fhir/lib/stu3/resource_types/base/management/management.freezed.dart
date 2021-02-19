@@ -1080,7 +1080,7 @@ class _$EncounterStatusHistoryTearOff {
   _EncounterStatusHistory call(
       {EncounterStatusHistoryStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
-      required Period? period}) {
+      required Period period}) {
     return _EncounterStatusHistory(
       status: status,
       statusElement: statusElement,
@@ -1101,7 +1101,7 @@ mixin _$EncounterStatusHistory {
   EncounterStatusHistoryStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  Period? get period;
+  Period get period;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1116,10 +1116,10 @@ abstract class $EncounterStatusHistoryCopyWith<$Res> {
   $Res call(
       {EncounterStatusHistoryStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
-      Period? period});
+      Period period});
 
   $ElementCopyWith<$Res>? get statusElement;
-  $PeriodCopyWith<$Res>? get period;
+  $PeriodCopyWith<$Res> get period;
 }
 
 /// @nodoc
@@ -1144,7 +1144,7 @@ class _$EncounterStatusHistoryCopyWithImpl<$Res>
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      period: period == freezed ? _value.period : period as Period?,
+      period: period == freezed ? _value.period : period as Period,
     ));
   }
 
@@ -1160,12 +1160,8 @@ class _$EncounterStatusHistoryCopyWithImpl<$Res>
   }
 
   @override
-  $PeriodCopyWith<$Res>? get period {
-    if (_value.period == null) {
-      return null;
-    }
-
-    return $PeriodCopyWith<$Res>(_value.period!, (value) {
+  $PeriodCopyWith<$Res> get period {
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
       return _then(_value.copyWith(period: value));
     });
   }
@@ -1181,12 +1177,12 @@ abstract class _$EncounterStatusHistoryCopyWith<$Res>
   $Res call(
       {EncounterStatusHistoryStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
-      Period? period});
+      Period period});
 
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $PeriodCopyWith<$Res>? get period;
+  $PeriodCopyWith<$Res> get period;
 }
 
 /// @nodoc
@@ -1213,7 +1209,7 @@ class __$EncounterStatusHistoryCopyWithImpl<$Res>
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      period: period == freezed ? _value.period : period as Period?,
+      period: period == freezed ? _value.period : period as Period,
     ));
   }
 }
@@ -1237,7 +1233,7 @@ class _$_EncounterStatusHistory extends _EncounterStatusHistory {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Period? period;
+  final Period period;
 
   @override
   String toString() {
@@ -1281,7 +1277,7 @@ abstract class _EncounterStatusHistory extends EncounterStatusHistory {
   factory _EncounterStatusHistory(
       {EncounterStatusHistoryStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
-      required Period? period}) = _$_EncounterStatusHistory;
+      required Period period}) = _$_EncounterStatusHistory;
 
   factory _EncounterStatusHistory.fromJson(Map<String, dynamic> json) =
       _$_EncounterStatusHistory.fromJson;
@@ -1292,7 +1288,7 @@ abstract class _EncounterStatusHistory extends EncounterStatusHistory {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Period? get period;
+  Period get period;
   @override
   @JsonKey(ignore: true)
   _$EncounterStatusHistoryCopyWith<_EncounterStatusHistory> get copyWith;
@@ -1309,7 +1305,7 @@ class _$EncounterClassHistoryTearOff {
 
   _EncounterClassHistory call(
       {@JsonKey(name: 'class') required Coding class_,
-      required Period? period}) {
+      required Period period}) {
     return _EncounterClassHistory(
       class_: class_,
       period: period,
@@ -1328,7 +1324,7 @@ const $EncounterClassHistory = _$EncounterClassHistoryTearOff();
 mixin _$EncounterClassHistory {
   @JsonKey(name: 'class')
   Coding get class_;
-  Period? get period;
+  Period get period;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1340,10 +1336,10 @@ abstract class $EncounterClassHistoryCopyWith<$Res> {
   factory $EncounterClassHistoryCopyWith(EncounterClassHistory value,
           $Res Function(EncounterClassHistory) then) =
       _$EncounterClassHistoryCopyWithImpl<$Res>;
-  $Res call({@JsonKey(name: 'class') Coding class_, Period? period});
+  $Res call({@JsonKey(name: 'class') Coding class_, Period period});
 
   $CodingCopyWith<$Res> get class_;
-  $PeriodCopyWith<$Res>? get period;
+  $PeriodCopyWith<$Res> get period;
 }
 
 /// @nodoc
@@ -1362,7 +1358,7 @@ class _$EncounterClassHistoryCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       class_: class_ == freezed ? _value.class_ : class_ as Coding,
-      period: period == freezed ? _value.period : period as Period?,
+      period: period == freezed ? _value.period : period as Period,
     ));
   }
 
@@ -1374,12 +1370,8 @@ class _$EncounterClassHistoryCopyWithImpl<$Res>
   }
 
   @override
-  $PeriodCopyWith<$Res>? get period {
-    if (_value.period == null) {
-      return null;
-    }
-
-    return $PeriodCopyWith<$Res>(_value.period!, (value) {
+  $PeriodCopyWith<$Res> get period {
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
       return _then(_value.copyWith(period: value));
     });
   }
@@ -1392,12 +1384,12 @@ abstract class _$EncounterClassHistoryCopyWith<$Res>
           $Res Function(_EncounterClassHistory) then) =
       __$EncounterClassHistoryCopyWithImpl<$Res>;
   @override
-  $Res call({@JsonKey(name: 'class') Coding class_, Period? period});
+  $Res call({@JsonKey(name: 'class') Coding class_, Period period});
 
   @override
   $CodingCopyWith<$Res> get class_;
   @override
-  $PeriodCopyWith<$Res>? get period;
+  $PeriodCopyWith<$Res> get period;
 }
 
 /// @nodoc
@@ -1418,7 +1410,7 @@ class __$EncounterClassHistoryCopyWithImpl<$Res>
   }) {
     return _then(_EncounterClassHistory(
       class_: class_ == freezed ? _value.class_ : class_ as Coding,
-      period: period == freezed ? _value.period : period as Period?,
+      period: period == freezed ? _value.period : period as Period,
     ));
   }
 }
@@ -1438,7 +1430,7 @@ class _$_EncounterClassHistory extends _EncounterClassHistory {
   @JsonKey(name: 'class')
   final Coding class_;
   @override
-  final Period? period;
+  final Period period;
 
   @override
   String toString() {
@@ -1477,7 +1469,7 @@ abstract class _EncounterClassHistory extends EncounterClassHistory {
   _EncounterClassHistory._() : super._();
   factory _EncounterClassHistory(
       {@JsonKey(name: 'class') required Coding class_,
-      required Period? period}) = _$_EncounterClassHistory;
+      required Period period}) = _$_EncounterClassHistory;
 
   factory _EncounterClassHistory.fromJson(Map<String, dynamic> json) =
       _$_EncounterClassHistory.fromJson;
@@ -1486,7 +1478,7 @@ abstract class _EncounterClassHistory extends EncounterClassHistory {
   @JsonKey(name: 'class')
   Coding get class_;
   @override
-  Period? get period;
+  Period get period;
   @override
   @JsonKey(ignore: true)
   _$EncounterClassHistoryCopyWith<_EncounterClassHistory> get copyWith;
@@ -2668,7 +2660,7 @@ class _$EpisodeOfCareTearOff {
       List<EpisodeOfCareStatusHistory?>? statusHistory,
       List<CodeableConcept?>? type,
       List<EpisodeOfCareDiagnosis?>? diagnosis,
-      required Reference? patient,
+      required Reference patient,
       Reference? managingOrganization,
       Period? period,
       List<Reference?>? referralRequest,
@@ -2735,7 +2727,7 @@ mixin _$EpisodeOfCare {
   List<EpisodeOfCareStatusHistory?>? get statusHistory;
   List<CodeableConcept?>? get type;
   List<EpisodeOfCareDiagnosis?>? get diagnosis;
-  Reference? get patient;
+  Reference get patient;
   Reference? get managingOrganization;
   Period? get period;
   List<Reference?>? get referralRequest;
@@ -2776,7 +2768,7 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
       List<EpisodeOfCareStatusHistory?>? statusHistory,
       List<CodeableConcept?>? type,
       List<EpisodeOfCareDiagnosis?>? diagnosis,
-      Reference? patient,
+      Reference patient,
       Reference? managingOrganization,
       Period? period,
       List<Reference?>? referralRequest,
@@ -2789,7 +2781,7 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get statusElement;
-  $ReferenceCopyWith<$Res>? get patient;
+  $ReferenceCopyWith<$Res> get patient;
   $ReferenceCopyWith<$Res>? get managingOrganization;
   $PeriodCopyWith<$Res>? get period;
   $ReferenceCopyWith<$Res>? get careManager;
@@ -2872,7 +2864,7 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
       diagnosis: diagnosis == freezed
           ? _value.diagnosis
           : diagnosis as List<EpisodeOfCareDiagnosis?>?,
-      patient: patient == freezed ? _value.patient : patient as Reference?,
+      patient: patient == freezed ? _value.patient : patient as Reference,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as Reference?,
@@ -2945,12 +2937,8 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get patient {
-    if (_value.patient == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.patient!, (value) {
+  $ReferenceCopyWith<$Res> get patient {
+    return $ReferenceCopyWith<$Res>(_value.patient, (value) {
       return _then(_value.copyWith(patient: value));
     });
   }
@@ -3019,7 +3007,7 @@ abstract class _$EpisodeOfCareCopyWith<$Res>
       List<EpisodeOfCareStatusHistory?>? statusHistory,
       List<CodeableConcept?>? type,
       List<EpisodeOfCareDiagnosis?>? diagnosis,
-      Reference? patient,
+      Reference patient,
       Reference? managingOrganization,
       Period? period,
       List<Reference?>? referralRequest,
@@ -3038,7 +3026,7 @@ abstract class _$EpisodeOfCareCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $ReferenceCopyWith<$Res>? get patient;
+  $ReferenceCopyWith<$Res> get patient;
   @override
   $ReferenceCopyWith<$Res>? get managingOrganization;
   @override
@@ -3126,7 +3114,7 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
       diagnosis: diagnosis == freezed
           ? _value.diagnosis
           : diagnosis as List<EpisodeOfCareDiagnosis?>?,
-      patient: patient == freezed ? _value.patient : patient as Reference?,
+      patient: patient == freezed ? _value.patient : patient as Reference,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
           : managingOrganization as Reference?,
@@ -3223,7 +3211,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   @override
   final List<EpisodeOfCareDiagnosis?>? diagnosis;
   @override
-  final Reference? patient;
+  final Reference patient;
   @override
   final Reference? managingOrganization;
   @override
@@ -3376,7 +3364,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
       List<EpisodeOfCareStatusHistory?>? statusHistory,
       List<CodeableConcept?>? type,
       List<EpisodeOfCareDiagnosis?>? diagnosis,
-      required Reference? patient,
+      required Reference patient,
       Reference? managingOrganization,
       Period? period,
       List<Reference?>? referralRequest,
@@ -3427,7 +3415,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   @override
   List<EpisodeOfCareDiagnosis?>? get diagnosis;
   @override
-  Reference? get patient;
+  Reference get patient;
   @override
   Reference? get managingOrganization;
   @override
@@ -3457,7 +3445,7 @@ class _$EpisodeOfCareStatusHistoryTearOff {
   _EpisodeOfCareStatusHistory call(
       {EpisodeOfCareStatusHistoryStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
-      required Period? period}) {
+      required Period period}) {
     return _EpisodeOfCareStatusHistory(
       status: status,
       statusElement: statusElement,
@@ -3478,7 +3466,7 @@ mixin _$EpisodeOfCareStatusHistory {
   EpisodeOfCareStatusHistoryStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  Period? get period;
+  Period get period;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -3493,10 +3481,10 @@ abstract class $EpisodeOfCareStatusHistoryCopyWith<$Res> {
   $Res call(
       {EpisodeOfCareStatusHistoryStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
-      Period? period});
+      Period period});
 
   $ElementCopyWith<$Res>? get statusElement;
-  $PeriodCopyWith<$Res>? get period;
+  $PeriodCopyWith<$Res> get period;
 }
 
 /// @nodoc
@@ -3521,7 +3509,7 @@ class _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      period: period == freezed ? _value.period : period as Period?,
+      period: period == freezed ? _value.period : period as Period,
     ));
   }
 
@@ -3537,12 +3525,8 @@ class _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
   }
 
   @override
-  $PeriodCopyWith<$Res>? get period {
-    if (_value.period == null) {
-      return null;
-    }
-
-    return $PeriodCopyWith<$Res>(_value.period!, (value) {
+  $PeriodCopyWith<$Res> get period {
+    return $PeriodCopyWith<$Res>(_value.period, (value) {
       return _then(_value.copyWith(period: value));
     });
   }
@@ -3559,12 +3543,12 @@ abstract class _$EpisodeOfCareStatusHistoryCopyWith<$Res>
   $Res call(
       {EpisodeOfCareStatusHistoryStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
-      Period? period});
+      Period period});
 
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $PeriodCopyWith<$Res>? get period;
+  $PeriodCopyWith<$Res> get period;
 }
 
 /// @nodoc
@@ -3592,7 +3576,7 @@ class __$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      period: period == freezed ? _value.period : period as Period?,
+      period: period == freezed ? _value.period : period as Period,
     ));
   }
 }
@@ -3616,7 +3600,7 @@ class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Period? period;
+  final Period period;
 
   @override
   String toString() {
@@ -3660,7 +3644,7 @@ abstract class _EpisodeOfCareStatusHistory extends EpisodeOfCareStatusHistory {
   factory _EpisodeOfCareStatusHistory(
       {EpisodeOfCareStatusHistoryStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
-      required Period? period}) = _$_EpisodeOfCareStatusHistory;
+      required Period period}) = _$_EpisodeOfCareStatusHistory;
 
   factory _EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =
       _$_EpisodeOfCareStatusHistory.fromJson;
@@ -3671,7 +3655,7 @@ abstract class _EpisodeOfCareStatusHistory extends EpisodeOfCareStatusHistory {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Period? get period;
+  Period get period;
   @override
   @JsonKey(ignore: true)
   _$EpisodeOfCareStatusHistoryCopyWith<_EpisodeOfCareStatusHistory>
@@ -3963,8 +3947,8 @@ class _$FlagTearOff {
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? category,
-      required CodeableConcept? code,
-      required Reference? subject,
+      required CodeableConcept code,
+      required Reference subject,
       Period? period,
       Reference? encounter,
       Reference? author}) {
@@ -4022,8 +4006,8 @@ mixin _$Flag {
   @JsonKey(name: '_status')
   Element? get statusElement;
   CodeableConcept? get category;
-  CodeableConcept? get code;
-  Reference? get subject;
+  CodeableConcept get code;
+  Reference get subject;
   Period? get period;
   Reference? get encounter;
   Reference? get author;
@@ -4058,8 +4042,8 @@ abstract class $FlagCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? category,
-      CodeableConcept? code,
-      Reference? subject,
+      CodeableConcept code,
+      Reference subject,
       Period? period,
       Reference? encounter,
       Reference? author});
@@ -4070,8 +4054,8 @@ abstract class $FlagCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get statusElement;
   $CodeableConceptCopyWith<$Res>? get category;
-  $CodeableConceptCopyWith<$Res>? get code;
-  $ReferenceCopyWith<$Res>? get subject;
+  $CodeableConceptCopyWith<$Res> get code;
+  $ReferenceCopyWith<$Res> get subject;
   $PeriodCopyWith<$Res>? get period;
   $ReferenceCopyWith<$Res>? get encounter;
   $ReferenceCopyWith<$Res>? get author;
@@ -4143,8 +4127,8 @@ class _$FlagCopyWithImpl<$Res> implements $FlagCopyWith<$Res> {
           : statusElement as Element?,
       category:
           category == freezed ? _value.category : category as CodeableConcept?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       period: period == freezed ? _value.period : period as Period?,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference?,
@@ -4219,23 +4203,15 @@ class _$FlagCopyWithImpl<$Res> implements $FlagCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get subject {
-    if (_value.subject == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
+  $ReferenceCopyWith<$Res> get subject {
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
       return _then(_value.copyWith(subject: value));
     });
   }
@@ -4300,8 +4276,8 @@ abstract class _$FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? category,
-      CodeableConcept? code,
-      Reference? subject,
+      CodeableConcept code,
+      Reference subject,
       Period? period,
       Reference? encounter,
       Reference? author});
@@ -4319,9 +4295,9 @@ abstract class _$FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
   @override
   $CodeableConceptCopyWith<$Res>? get category;
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   @override
-  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res> get subject;
   @override
   $PeriodCopyWith<$Res>? get period;
   @override
@@ -4397,8 +4373,8 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
           : statusElement as Element?,
       category:
           category == freezed ? _value.category : category as CodeableConcept?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       period: period == freezed ? _value.period : period as Period?,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference?,
@@ -4478,9 +4454,9 @@ class _$_Flag extends _Flag {
   @override
   final CodeableConcept? category;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
-  final Reference? subject;
+  final Reference subject;
   @override
   final Period? period;
   @override
@@ -4610,8 +4586,8 @@ abstract class _Flag extends Flag {
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? category,
-      required CodeableConcept? code,
-      required Reference? subject,
+      required CodeableConcept code,
+      required Reference subject,
       Period? period,
       Reference? encounter,
       Reference? author}) = _$_Flag;
@@ -4654,9 +4630,9 @@ abstract class _Flag extends Flag {
   @override
   CodeableConcept? get category;
   @override
-  CodeableConcept? get code;
+  CodeableConcept get code;
   @override
-  Reference? get subject;
+  Reference get subject;
   @override
   Period? get period;
   @override
@@ -4711,7 +4687,7 @@ class _$LibraryTearOff {
       Boolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       Date? date,
       @JsonKey(name: '_date')
           Element? dateElement,
@@ -4845,7 +4821,7 @@ mixin _$Library {
   Boolean? get experimental;
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   Date? get date;
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -4925,7 +4901,7 @@ abstract class $LibraryCopyWith<$Res> {
       Boolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      CodeableConcept? type,
+      CodeableConcept type,
       Date? date,
       @JsonKey(name: '_date')
           Element? dateElement,
@@ -4971,7 +4947,7 @@ abstract class $LibraryCopyWith<$Res> {
   $ElementCopyWith<$Res>? get titleElement;
   $ElementCopyWith<$Res>? get statusElement;
   $ElementCopyWith<$Res>? get experimentalElement;
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   $ElementCopyWith<$Res>? get dateElement;
   $ElementCopyWith<$Res>? get publisherElement;
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -5098,7 +5074,7 @@ class _$LibraryCopyWithImpl<$Res> implements $LibraryCopyWith<$Res> {
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       date: date == freezed ? _value.date : date as Date?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
@@ -5275,12 +5251,8 @@ class _$LibraryCopyWithImpl<$Res> implements $LibraryCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -5425,7 +5397,7 @@ abstract class _$LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
       Boolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      CodeableConcept? type,
+      CodeableConcept type,
       Date? date,
       @JsonKey(name: '_date')
           Element? dateElement,
@@ -5482,7 +5454,7 @@ abstract class _$LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res>? get experimentalElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $ElementCopyWith<$Res>? get dateElement;
   @override
@@ -5619,7 +5591,7 @@ class __$LibraryCopyWithImpl<$Res> extends _$LibraryCopyWithImpl<$Res>
       experimentalElement: experimentalElement == freezed
           ? _value.experimentalElement
           : experimentalElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       date: date == freezed ? _value.date : date as Date?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
@@ -5824,7 +5796,7 @@ class _$_Library extends _Library {
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final Date? date;
   @override
@@ -6094,7 +6066,7 @@ abstract class _Library extends Library {
       Boolean? experimental,
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       Date? date,
       @JsonKey(name: '_date')
           Element? dateElement,
@@ -6191,7 +6163,7 @@ abstract class _Library extends Library {
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   Date? get date;
   @override
@@ -7231,7 +7203,7 @@ class _$ListEntryTearOff {
       @JsonKey(name: '_deleted') Element? deletedElement,
       Date? date,
       @JsonKey(name: '_date') Element? dateElement,
-      required Reference? item}) {
+      required Reference item}) {
     return _ListEntry(
       flag: flag,
       deleted: deleted,
@@ -7259,7 +7231,7 @@ mixin _$ListEntry {
   Date? get date;
   @JsonKey(name: '_date')
   Element? get dateElement;
-  Reference? get item;
+  Reference get item;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -7276,12 +7248,12 @@ abstract class $ListEntryCopyWith<$Res> {
       @JsonKey(name: '_deleted') Element? deletedElement,
       Date? date,
       @JsonKey(name: '_date') Element? dateElement,
-      Reference? item});
+      Reference item});
 
   $CodeableConceptCopyWith<$Res>? get flag;
   $ElementCopyWith<$Res>? get deletedElement;
   $ElementCopyWith<$Res>? get dateElement;
-  $ReferenceCopyWith<$Res>? get item;
+  $ReferenceCopyWith<$Res> get item;
 }
 
 /// @nodoc
@@ -7310,7 +7282,7 @@ class _$ListEntryCopyWithImpl<$Res> implements $ListEntryCopyWith<$Res> {
       date: date == freezed ? _value.date : date as Date?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      item: item == freezed ? _value.item : item as Reference?,
+      item: item == freezed ? _value.item : item as Reference,
     ));
   }
 
@@ -7348,12 +7320,8 @@ class _$ListEntryCopyWithImpl<$Res> implements $ListEntryCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get item {
-    if (_value.item == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.item!, (value) {
+  $ReferenceCopyWith<$Res> get item {
+    return $ReferenceCopyWith<$Res>(_value.item, (value) {
       return _then(_value.copyWith(item: value));
     });
   }
@@ -7371,7 +7339,7 @@ abstract class _$ListEntryCopyWith<$Res> implements $ListEntryCopyWith<$Res> {
       @JsonKey(name: '_deleted') Element? deletedElement,
       Date? date,
       @JsonKey(name: '_date') Element? dateElement,
-      Reference? item});
+      Reference item});
 
   @override
   $CodeableConceptCopyWith<$Res>? get flag;
@@ -7380,7 +7348,7 @@ abstract class _$ListEntryCopyWith<$Res> implements $ListEntryCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res>? get dateElement;
   @override
-  $ReferenceCopyWith<$Res>? get item;
+  $ReferenceCopyWith<$Res> get item;
 }
 
 /// @nodoc
@@ -7410,7 +7378,7 @@ class __$ListEntryCopyWithImpl<$Res> extends _$ListEntryCopyWithImpl<$Res>
       date: date == freezed ? _value.date : date as Date?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      item: item == freezed ? _value.item : item as Reference?,
+      item: item == freezed ? _value.item : item as Reference,
     ));
   }
 }
@@ -7444,7 +7412,7 @@ class _$_ListEntry extends _ListEntry {
   @JsonKey(name: '_date')
   final Element? dateElement;
   @override
-  final Reference? item;
+  final Reference item;
 
   @override
   String toString() {
@@ -7501,7 +7469,7 @@ abstract class _ListEntry extends ListEntry {
       @JsonKey(name: '_deleted') Element? deletedElement,
       Date? date,
       @JsonKey(name: '_date') Element? dateElement,
-      required Reference? item}) = _$_ListEntry;
+      required Reference item}) = _$_ListEntry;
 
   factory _ListEntry.fromJson(Map<String, dynamic> json) =
       _$_ListEntry.fromJson;
@@ -7519,7 +7487,7 @@ abstract class _ListEntry extends ListEntry {
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
-  Reference? get item;
+  Reference get item;
   @override
   @JsonKey(ignore: true)
   _$ListEntryCopyWith<_ListEntry> get copyWith;

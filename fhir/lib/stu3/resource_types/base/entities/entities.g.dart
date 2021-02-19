@@ -433,12 +433,8 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    identifier: json['identifier'] == null
-        ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    identifier: Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     lastSystemChange: json['lastSystemChange'] as String?,
     lastSystemChangeElement: json['_lastSystemChange'] == null
         ? null
@@ -502,8 +498,8 @@ Map<String, dynamic> _$_$_DeviceComponentToJson(_$_DeviceComponent instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('type', instance.type?.toJson());
+  val['identifier'] = instance.identifier.toJson();
+  val['type'] = instance.type.toJson();
   writeNotNull('lastSystemChange', instance.lastSystemChange);
   writeNotNull('_lastSystemChange', instance.lastSystemChangeElement?.toJson());
   writeNotNull('source', instance.source?.toJson());
@@ -607,12 +603,8 @@ _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    identifier: json['identifier'] == null
-        ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    identifier: Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     unit: json['unit'] == null
         ? null
         : CodeableConcept.fromJson(json['unit'] as Map<String, dynamic>),
@@ -671,8 +663,8 @@ Map<String, dynamic> _$_$_DeviceMetricToJson(_$_DeviceMetric instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('type', instance.type?.toJson());
+  val['identifier'] = instance.identifier.toJson();
+  val['type'] = instance.type.toJson();
   writeNotNull('unit', instance.unit?.toJson());
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('parent', instance.parent?.toJson());
@@ -816,9 +808,8 @@ _$_Endpoint _$_$_EndpointFromJson(Map<String, dynamic> json) {
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    connectionType: json['connectionType'] == null
-        ? null
-        : Coding.fromJson(json['connectionType'] as Map<String, dynamic>),
+    connectionType:
+        Coding.fromJson(json['connectionType'] as Map<String, dynamic>),
     name: json['name'] as String?,
     nameElement: json['_name'] == null
         ? null
@@ -834,10 +825,8 @@ _$_Endpoint _$_$_EndpointFromJson(Map<String, dynamic> json) {
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
-    payloadType: (json['payloadType'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+    payloadType: (json['payloadType'] as List<dynamic>)
+        .map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     payloadMimeType: (json['payloadMimeType'] as List<dynamic>?)
         ?.map((e) => e as String?)
@@ -887,14 +876,13 @@ Map<String, dynamic> _$_$_EndpointToJson(_$_Endpoint instance) {
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
   writeNotNull('status', _$EndpointStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('connectionType', instance.connectionType?.toJson());
+  val['connectionType'] = instance.connectionType.toJson();
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson()).toList());
   writeNotNull('period', instance.period?.toJson());
-  writeNotNull(
-      'payloadType', instance.payloadType?.map((e) => e?.toJson()).toList());
+  val['payloadType'] = instance.payloadType.map((e) => e.toJson()).toList();
   writeNotNull('payloadMimeType', instance.payloadMimeType);
   writeNotNull('_payloadMimeType',
       instance.payloadMimeTypeElement?.map((e) => e?.toJson()).toList());
@@ -1629,9 +1617,7 @@ _$_Substance _$_$_SubstanceFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
-    code: json['code'] == null
-        ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     description: json['description'] as String?,
     descriptionElement: json['_description'] == null
         ? null
@@ -1678,7 +1664,7 @@ Map<String, dynamic> _$_$_SubstanceToJson(_$_Substance instance) {
   writeNotNull('status', _$SubstanceStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e?.toJson()).toList());
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('instance', instance.instance?.map((e) => e?.toJson()).toList());

@@ -115,7 +115,7 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    path: json['path'] as String?,
+    path: json['path'] as String,
     representation: (json['representation'] as List<dynamic>?)
         ?.map((e) => e == null ? null : Code.fromJson(e))
         .toList(),
@@ -1138,7 +1138,7 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
-  writeNotNull('path', instance.path);
+  val['path'] = instance.path;
   writeNotNull('representation',
       instance.representation?.map((e) => e?.toJson()).toList());
   writeNotNull('_representation', instance.representationElement?.toJson());
@@ -1534,7 +1534,7 @@ _$_Narrative _$_$_NarrativeFromJson(Map<String, dynamic> json) {
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    div: json['div'] as String?,
+    div: json['div'] as String,
   );
 }
 
@@ -1553,7 +1553,7 @@ Map<String, dynamic> _$_$_NarrativeToJson(_$_Narrative instance) {
   writeNotNull('fhir_comments', instance.fhirComments);
   val['status'] = _$NarrativeStatusEnumMap[instance.status];
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('div', instance.div);
+  val['div'] = instance.div;
   return val;
 }
 
@@ -1658,15 +1658,15 @@ _$_ElementDefinitionBase _$_$_ElementDefinitionBaseFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    path: json['path'] as String?,
+    path: json['path'] as String,
     pathElement: json['_path'] == null
         ? null
         : Element.fromJson(json['_path'] as Map<String, dynamic>),
-    min: json['min'] == null ? null : Integer.fromJson(json['min']),
+    min: Integer.fromJson(json['min']),
     minElement: json['_min'] == null
         ? null
         : Element.fromJson(json['_min'] as Map<String, dynamic>),
-    max: json['max'] as String?,
+    max: json['max'] as String,
     maxElement: json['_max'] == null
         ? null
         : Element.fromJson(json['_max'] as Map<String, dynamic>),
@@ -1686,11 +1686,11 @@ Map<String, dynamic> _$_$_ElementDefinitionBaseToJson(
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
-  writeNotNull('path', instance.path);
+  val['path'] = instance.path;
   writeNotNull('_path', instance.pathElement?.toJson());
-  writeNotNull('min', instance.min?.toJson());
+  val['min'] = instance.min.toJson();
   writeNotNull('_min', instance.minElement?.toJson());
-  writeNotNull('max', instance.max);
+  val['max'] = instance.max;
   writeNotNull('_max', instance.maxElement?.toJson());
   return val;
 }
@@ -1798,7 +1798,7 @@ _$_ElementDefinitionConstraint _$_$_ElementDefinitionConstraintFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    key: json['key'] == null ? null : Id.fromJson(json['key']),
+    key: Id.fromJson(json['key']),
     keyElement: json['_key'] == null
         ? null
         : Element.fromJson(json['_key'] as Map<String, dynamic>),
@@ -1811,11 +1811,11 @@ _$_ElementDefinitionConstraint _$_$_ElementDefinitionConstraintFromJson(
     severityElement: json['_severity'] == null
         ? null
         : Element.fromJson(json['_severity'] as Map<String, dynamic>),
-    human: json['human'] as String?,
+    human: json['human'] as String,
     humanElement: json['_human'] == null
         ? null
         : Element.fromJson(json['_human'] as Map<String, dynamic>),
-    xpath: json['xpath'] as String?,
+    xpath: json['xpath'] as String,
     xpathElement: json['_xpath'] == null
         ? null
         : Element.fromJson(json['_xpath'] as Map<String, dynamic>),
@@ -1835,15 +1835,15 @@ Map<String, dynamic> _$_$_ElementDefinitionConstraintToJson(
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
-  writeNotNull('key', instance.key?.toJson());
+  val['key'] = instance.key.toJson();
   writeNotNull('_key', instance.keyElement?.toJson());
   writeNotNull('requirements', instance.requirements);
   writeNotNull('_requirements', instance.requirementsElement?.toJson());
   val['severity'] = _$ConstraintSeverityEnumMap[instance.severity];
   writeNotNull('_severity', instance.severityElement?.toJson());
-  writeNotNull('human', instance.human);
+  val['human'] = instance.human;
   writeNotNull('_human', instance.humanElement?.toJson());
-  writeNotNull('xpath', instance.xpath);
+  val['xpath'] = instance.xpath;
   writeNotNull('_xpath', instance.xpathElement?.toJson());
   return val;
 }
@@ -1926,7 +1926,7 @@ _$_ElementDefinitionMapping _$_$_ElementDefinitionMappingFromJson(
     fhirComments: (json['fhir_comments'] as List<dynamic>?)
         ?.map((e) => e as String?)
         .toList(),
-    identity: json['identity'] == null ? null : Id.fromJson(json['identity']),
+    identity: Id.fromJson(json['identity']),
     identityElement: json['_identity'] == null
         ? null
         : Element.fromJson(json['_identity'] as Map<String, dynamic>),
@@ -1934,7 +1934,7 @@ _$_ElementDefinitionMapping _$_$_ElementDefinitionMappingFromJson(
     languageElement: json['_language'] == null
         ? null
         : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    map: json['map'] as String?,
+    map: json['map'] as String,
     mapElement: json['_map'] == null
         ? null
         : Element.fromJson(json['_map'] as Map<String, dynamic>),
@@ -1955,11 +1955,11 @@ Map<String, dynamic> _$_$_ElementDefinitionMappingToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
-  writeNotNull('identity', instance.identity?.toJson());
+  val['identity'] = instance.identity.toJson();
   writeNotNull('_identity', instance.identityElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('map', instance.map);
+  val['map'] = instance.map;
   writeNotNull('_map', instance.mapElement?.toJson());
   return val;
 }

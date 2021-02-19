@@ -1417,8 +1417,8 @@ class _$ChargeItemTearOff {
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference?>? partOf,
-      required CodeableConcept? code,
-      required Reference? subject,
+      required CodeableConcept code,
+      required Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -1525,8 +1525,8 @@ mixin _$ChargeItem {
   @JsonKey(name: '_status')
   Element? get statusElement;
   List<Reference?>? get partOf;
-  CodeableConcept? get code;
-  Reference? get subject;
+  CodeableConcept get code;
+  Reference get subject;
   Reference? get context;
   FhirDateTime? get occurrenceDateTime;
   @JsonKey(name: '_occurrenceDateTime')
@@ -1589,8 +1589,8 @@ abstract class $ChargeItemCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference?>? partOf,
-      CodeableConcept? code,
-      Reference? subject,
+      CodeableConcept code,
+      Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -1625,8 +1625,8 @@ abstract class $ChargeItemCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $IdentifierCopyWith<$Res>? get identifier;
   $ElementCopyWith<$Res>? get statusElement;
-  $CodeableConceptCopyWith<$Res>? get code;
-  $ReferenceCopyWith<$Res>? get subject;
+  $CodeableConceptCopyWith<$Res> get code;
+  $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res>? get context;
   $ElementCopyWith<$Res>? get occurrenceDateTimeElement;
   $PeriodCopyWith<$Res>? get occurrencePeriod;
@@ -1733,8 +1733,8 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
           ? _value.statusElement
           : statusElement as Element?,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference?,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
@@ -1862,23 +1862,15 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get subject {
-    if (_value.subject == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
+  $ReferenceCopyWith<$Res> get subject {
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
       return _then(_value.copyWith(subject: value));
     });
   }
@@ -2046,8 +2038,8 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference?>? partOf,
-      CodeableConcept? code,
-      Reference? subject,
+      CodeableConcept code,
+      Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -2089,9 +2081,9 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   @override
-  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res> get subject;
   @override
   $ReferenceCopyWith<$Res>? get context;
   @override
@@ -2212,8 +2204,8 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
           ? _value.statusElement
           : statusElement as Element?,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference?,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
@@ -2378,9 +2370,9 @@ class _$_ChargeItem extends _ChargeItem {
   @override
   final List<Reference?>? partOf;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
-  final Reference? subject;
+  final Reference subject;
   @override
   final Reference? context;
   @override
@@ -2610,8 +2602,8 @@ abstract class _ChargeItem extends ChargeItem {
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference?>? partOf,
-      required CodeableConcept? code,
-      required Reference? subject,
+      required CodeableConcept code,
+      required Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -2684,9 +2676,9 @@ abstract class _ChargeItem extends ChargeItem {
   @override
   List<Reference?>? get partOf;
   @override
-  CodeableConcept? get code;
+  CodeableConcept get code;
   @override
-  Reference? get subject;
+  Reference get subject;
   @override
   Reference? get context;
   @override
@@ -2752,7 +2744,7 @@ class _$ChargeItemParticipantTearOff {
   const _$ChargeItemParticipantTearOff();
 
   _ChargeItemParticipant call(
-      {CodeableConcept? role, required Reference? actor}) {
+      {CodeableConcept? role, required Reference actor}) {
     return _ChargeItemParticipant(
       role: role,
       actor: actor,
@@ -2770,7 +2762,7 @@ const $ChargeItemParticipant = _$ChargeItemParticipantTearOff();
 /// @nodoc
 mixin _$ChargeItemParticipant {
   CodeableConcept? get role;
-  Reference? get actor;
+  Reference get actor;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2782,10 +2774,10 @@ abstract class $ChargeItemParticipantCopyWith<$Res> {
   factory $ChargeItemParticipantCopyWith(ChargeItemParticipant value,
           $Res Function(ChargeItemParticipant) then) =
       _$ChargeItemParticipantCopyWithImpl<$Res>;
-  $Res call({CodeableConcept? role, Reference? actor});
+  $Res call({CodeableConcept? role, Reference actor});
 
   $CodeableConceptCopyWith<$Res>? get role;
-  $ReferenceCopyWith<$Res>? get actor;
+  $ReferenceCopyWith<$Res> get actor;
 }
 
 /// @nodoc
@@ -2804,7 +2796,7 @@ class _$ChargeItemParticipantCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       role: role == freezed ? _value.role : role as CodeableConcept?,
-      actor: actor == freezed ? _value.actor : actor as Reference?,
+      actor: actor == freezed ? _value.actor : actor as Reference,
     ));
   }
 
@@ -2820,12 +2812,8 @@ class _$ChargeItemParticipantCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get actor {
-    if (_value.actor == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.actor!, (value) {
+  $ReferenceCopyWith<$Res> get actor {
+    return $ReferenceCopyWith<$Res>(_value.actor, (value) {
       return _then(_value.copyWith(actor: value));
     });
   }
@@ -2838,12 +2826,12 @@ abstract class _$ChargeItemParticipantCopyWith<$Res>
           $Res Function(_ChargeItemParticipant) then) =
       __$ChargeItemParticipantCopyWithImpl<$Res>;
   @override
-  $Res call({CodeableConcept? role, Reference? actor});
+  $Res call({CodeableConcept? role, Reference actor});
 
   @override
   $CodeableConceptCopyWith<$Res>? get role;
   @override
-  $ReferenceCopyWith<$Res>? get actor;
+  $ReferenceCopyWith<$Res> get actor;
 }
 
 /// @nodoc
@@ -2864,7 +2852,7 @@ class __$ChargeItemParticipantCopyWithImpl<$Res>
   }) {
     return _then(_ChargeItemParticipant(
       role: role == freezed ? _value.role : role as CodeableConcept?,
-      actor: actor == freezed ? _value.actor : actor as Reference?,
+      actor: actor == freezed ? _value.actor : actor as Reference,
     ));
   }
 }
@@ -2881,7 +2869,7 @@ class _$_ChargeItemParticipant extends _ChargeItemParticipant {
   @override
   final CodeableConcept? role;
   @override
-  final Reference? actor;
+  final Reference actor;
 
   @override
   String toString() {
@@ -2920,7 +2908,7 @@ abstract class _ChargeItemParticipant extends ChargeItemParticipant {
   _ChargeItemParticipant._() : super._();
   factory _ChargeItemParticipant(
       {CodeableConcept? role,
-      required Reference? actor}) = _$_ChargeItemParticipant;
+      required Reference actor}) = _$_ChargeItemParticipant;
 
   factory _ChargeItemParticipant.fromJson(Map<String, dynamic> json) =
       _$_ChargeItemParticipant.fromJson;
@@ -2928,7 +2916,7 @@ abstract class _ChargeItemParticipant extends ChargeItemParticipant {
   @override
   CodeableConcept? get role;
   @override
-  Reference? get actor;
+  Reference get actor;
   @override
   @JsonKey(ignore: true)
   _$ChargeItemParticipantCopyWith<_ChargeItemParticipant> get copyWith;
@@ -4229,8 +4217,8 @@ class _$ContractSignerTearOff {
 
   _ContractSigner call(
       {required Coding type,
-      required Reference? party,
-      required List<Signature?>? signature}) {
+      required Reference party,
+      required List<Signature> signature}) {
     return _ContractSigner(
       type: type,
       party: party,
@@ -4249,8 +4237,8 @@ const $ContractSigner = _$ContractSignerTearOff();
 /// @nodoc
 mixin _$ContractSigner {
   Coding get type;
-  Reference? get party;
-  List<Signature?>? get signature;
+  Reference get party;
+  List<Signature> get signature;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4262,10 +4250,10 @@ abstract class $ContractSignerCopyWith<$Res> {
   factory $ContractSignerCopyWith(
           ContractSigner value, $Res Function(ContractSigner) then) =
       _$ContractSignerCopyWithImpl<$Res>;
-  $Res call({Coding type, Reference? party, List<Signature?>? signature});
+  $Res call({Coding type, Reference party, List<Signature> signature});
 
   $CodingCopyWith<$Res> get type;
-  $ReferenceCopyWith<$Res>? get party;
+  $ReferenceCopyWith<$Res> get party;
 }
 
 /// @nodoc
@@ -4285,10 +4273,10 @@ class _$ContractSignerCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       type: type == freezed ? _value.type : type as Coding,
-      party: party == freezed ? _value.party : party as Reference?,
+      party: party == freezed ? _value.party : party as Reference,
       signature: signature == freezed
           ? _value.signature
-          : signature as List<Signature?>?,
+          : signature as List<Signature>,
     ));
   }
 
@@ -4300,12 +4288,8 @@ class _$ContractSignerCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get party {
-    if (_value.party == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.party!, (value) {
+  $ReferenceCopyWith<$Res> get party {
+    return $ReferenceCopyWith<$Res>(_value.party, (value) {
       return _then(_value.copyWith(party: value));
     });
   }
@@ -4318,12 +4302,12 @@ abstract class _$ContractSignerCopyWith<$Res>
           _ContractSigner value, $Res Function(_ContractSigner) then) =
       __$ContractSignerCopyWithImpl<$Res>;
   @override
-  $Res call({Coding type, Reference? party, List<Signature?>? signature});
+  $Res call({Coding type, Reference party, List<Signature> signature});
 
   @override
   $CodingCopyWith<$Res> get type;
   @override
-  $ReferenceCopyWith<$Res>? get party;
+  $ReferenceCopyWith<$Res> get party;
 }
 
 /// @nodoc
@@ -4345,10 +4329,10 @@ class __$ContractSignerCopyWithImpl<$Res>
   }) {
     return _then(_ContractSigner(
       type: type == freezed ? _value.type : type as Coding,
-      party: party == freezed ? _value.party : party as Reference?,
+      party: party == freezed ? _value.party : party as Reference,
       signature: signature == freezed
           ? _value.signature
-          : signature as List<Signature?>?,
+          : signature as List<Signature>,
     ));
   }
 }
@@ -4367,9 +4351,9 @@ class _$_ContractSigner extends _ContractSigner {
   @override
   final Coding type;
   @override
-  final Reference? party;
+  final Reference party;
   @override
-  final List<Signature?>? signature;
+  final List<Signature> signature;
 
   @override
   String toString() {
@@ -4411,8 +4395,8 @@ abstract class _ContractSigner extends ContractSigner {
   _ContractSigner._() : super._();
   factory _ContractSigner(
       {required Coding type,
-      required Reference? party,
-      required List<Signature?>? signature}) = _$_ContractSigner;
+      required Reference party,
+      required List<Signature> signature}) = _$_ContractSigner;
 
   factory _ContractSigner.fromJson(Map<String, dynamic> json) =
       _$_ContractSigner.fromJson;
@@ -4420,9 +4404,9 @@ abstract class _ContractSigner extends ContractSigner {
   @override
   Coding get type;
   @override
-  Reference? get party;
+  Reference get party;
   @override
-  List<Signature?>? get signature;
+  List<Signature> get signature;
   @override
   @JsonKey(ignore: true)
   _$ContractSignerCopyWith<_ContractSigner> get copyWith;
@@ -8970,7 +8954,7 @@ class _$ExplanationOfBenefitInformationTearOff {
   _ExplanationOfBenefitInformation call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      required CodeableConcept? category,
+      required CodeableConcept category,
       CodeableConcept? code,
       Date? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
@@ -9012,7 +8996,7 @@ mixin _$ExplanationOfBenefitInformation {
   Decimal? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
-  CodeableConcept? get category;
+  CodeableConcept get category;
   CodeableConcept? get code;
   Date? get timingDate;
   @JsonKey(name: '_timingDate')
@@ -9041,7 +9025,7 @@ abstract class $ExplanationOfBenefitInformationCopyWith<$Res> {
   $Res call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      CodeableConcept? category,
+      CodeableConcept category,
       CodeableConcept? code,
       Date? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
@@ -9054,7 +9038,7 @@ abstract class $ExplanationOfBenefitInformationCopyWith<$Res> {
       Coding? reason});
 
   $ElementCopyWith<$Res>? get sequenceElement;
-  $CodeableConceptCopyWith<$Res>? get category;
+  $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res>? get code;
   $ElementCopyWith<$Res>? get timingDateElement;
   $PeriodCopyWith<$Res>? get timingPeriod;
@@ -9096,7 +9080,7 @@ class _$ExplanationOfBenefitInformationCopyWithImpl<$Res>
           ? _value.sequenceElement
           : sequenceElement as Element?,
       category:
-          category == freezed ? _value.category : category as CodeableConcept?,
+          category == freezed ? _value.category : category as CodeableConcept,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       timingDate:
           timingDate == freezed ? _value.timingDate : timingDate as Date?,
@@ -9136,12 +9120,8 @@ class _$ExplanationOfBenefitInformationCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get category {
-    if (_value.category == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.category!, (value) {
+  $CodeableConceptCopyWith<$Res> get category {
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
       return _then(_value.copyWith(category: value));
     });
   }
@@ -9246,7 +9226,7 @@ abstract class _$ExplanationOfBenefitInformationCopyWith<$Res>
   $Res call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      CodeableConcept? category,
+      CodeableConcept category,
       CodeableConcept? code,
       Date? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
@@ -9261,7 +9241,7 @@ abstract class _$ExplanationOfBenefitInformationCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get sequenceElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get category;
+  $CodeableConceptCopyWith<$Res> get category;
   @override
   $CodeableConceptCopyWith<$Res>? get code;
   @override
@@ -9315,7 +9295,7 @@ class __$ExplanationOfBenefitInformationCopyWithImpl<$Res>
           ? _value.sequenceElement
           : sequenceElement as Element?,
       category:
-          category == freezed ? _value.category : category as CodeableConcept?,
+          category == freezed ? _value.category : category as CodeableConcept,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       timingDate:
           timingDate == freezed ? _value.timingDate : timingDate as Date?,
@@ -9375,7 +9355,7 @@ class _$_ExplanationOfBenefitInformation
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
   @override
-  final CodeableConcept? category;
+  final CodeableConcept category;
   @override
   final CodeableConcept? code;
   @override
@@ -9482,7 +9462,7 @@ abstract class _ExplanationOfBenefitInformation
   factory _ExplanationOfBenefitInformation(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      required CodeableConcept? category,
+      required CodeableConcept category,
       CodeableConcept? code,
       Date? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
@@ -9503,7 +9483,7 @@ abstract class _ExplanationOfBenefitInformation
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
-  CodeableConcept? get category;
+  CodeableConcept get category;
   @override
   CodeableConcept? get code;
   @override
@@ -9544,7 +9524,7 @@ class _$ExplanationOfBenefitCareTeamTearOff {
   _ExplanationOfBenefitCareTeam call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      required Reference? provider,
+      required Reference provider,
       Boolean? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
@@ -9573,7 +9553,7 @@ mixin _$ExplanationOfBenefitCareTeam {
   Decimal? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
-  Reference? get provider;
+  Reference get provider;
   Boolean? get responsible;
   @JsonKey(name: '_responsible')
   Element? get responsibleElement;
@@ -9595,14 +9575,14 @@ abstract class $ExplanationOfBenefitCareTeamCopyWith<$Res> {
   $Res call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      Reference? provider,
+      Reference provider,
       Boolean? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
       CodeableConcept? qualification});
 
   $ElementCopyWith<$Res>? get sequenceElement;
-  $ReferenceCopyWith<$Res>? get provider;
+  $ReferenceCopyWith<$Res> get provider;
   $ElementCopyWith<$Res>? get responsibleElement;
   $CodeableConceptCopyWith<$Res>? get role;
   $CodeableConceptCopyWith<$Res>? get qualification;
@@ -9632,7 +9612,7 @@ class _$ExplanationOfBenefitCareTeamCopyWithImpl<$Res>
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
           : sequenceElement as Element?,
-      provider: provider == freezed ? _value.provider : provider as Reference?,
+      provider: provider == freezed ? _value.provider : provider as Reference,
       responsible:
           responsible == freezed ? _value.responsible : responsible as Boolean?,
       responsibleElement: responsibleElement == freezed
@@ -9657,12 +9637,8 @@ class _$ExplanationOfBenefitCareTeamCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get provider {
-    if (_value.provider == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.provider!, (value) {
+  $ReferenceCopyWith<$Res> get provider {
+    return $ReferenceCopyWith<$Res>(_value.provider, (value) {
       return _then(_value.copyWith(provider: value));
     });
   }
@@ -9712,7 +9688,7 @@ abstract class _$ExplanationOfBenefitCareTeamCopyWith<$Res>
   $Res call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      Reference? provider,
+      Reference provider,
       Boolean? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
@@ -9721,7 +9697,7 @@ abstract class _$ExplanationOfBenefitCareTeamCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get sequenceElement;
   @override
-  $ReferenceCopyWith<$Res>? get provider;
+  $ReferenceCopyWith<$Res> get provider;
   @override
   $ElementCopyWith<$Res>? get responsibleElement;
   @override
@@ -9758,7 +9734,7 @@ class __$ExplanationOfBenefitCareTeamCopyWithImpl<$Res>
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
           : sequenceElement as Element?,
-      provider: provider == freezed ? _value.provider : provider as Reference?,
+      provider: provider == freezed ? _value.provider : provider as Reference,
       responsible:
           responsible == freezed ? _value.responsible : responsible as Boolean?,
       responsibleElement: responsibleElement == freezed
@@ -9795,7 +9771,7 @@ class _$_ExplanationOfBenefitCareTeam extends _ExplanationOfBenefitCareTeam {
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
   @override
-  final Reference? provider;
+  final Reference provider;
   @override
   final Boolean? responsible;
   @override
@@ -9866,7 +9842,7 @@ abstract class _ExplanationOfBenefitCareTeam
   factory _ExplanationOfBenefitCareTeam(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      required Reference? provider,
+      required Reference provider,
       Boolean? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
@@ -9881,7 +9857,7 @@ abstract class _ExplanationOfBenefitCareTeam
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
-  Reference? get provider;
+  Reference get provider;
   @override
   Boolean? get responsible;
   @override
@@ -12520,7 +12496,7 @@ class _$ExplanationOfBenefitDetailTearOff {
   _ExplanationOfBenefitDetail call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       CodeableConcept? revenue,
       CodeableConcept? category,
       CodeableConcept? service,
@@ -12571,7 +12547,7 @@ mixin _$ExplanationOfBenefitDetail {
   Decimal? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   CodeableConcept? get revenue;
   CodeableConcept? get category;
   CodeableConcept? get service;
@@ -12603,7 +12579,7 @@ abstract class $ExplanationOfBenefitDetailCopyWith<$Res> {
   $Res call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      CodeableConcept? type,
+      CodeableConcept type,
       CodeableConcept? revenue,
       CodeableConcept? category,
       CodeableConcept? service,
@@ -12621,7 +12597,7 @@ abstract class $ExplanationOfBenefitDetailCopyWith<$Res> {
       List<ExplanationOfBenefitSubDetail?>? subDetail});
 
   $ElementCopyWith<$Res>? get sequenceElement;
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res>? get revenue;
   $CodeableConceptCopyWith<$Res>? get category;
   $CodeableConceptCopyWith<$Res>? get service;
@@ -12666,7 +12642,7 @@ class _$ExplanationOfBenefitDetailCopyWithImpl<$Res>
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
           : sequenceElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       revenue:
           revenue == freezed ? _value.revenue : revenue as CodeableConcept?,
       category:
@@ -12714,12 +12690,8 @@ class _$ExplanationOfBenefitDetailCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -12813,7 +12785,7 @@ abstract class _$ExplanationOfBenefitDetailCopyWith<$Res>
   $Res call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      CodeableConcept? type,
+      CodeableConcept type,
       CodeableConcept? revenue,
       CodeableConcept? category,
       CodeableConcept? service,
@@ -12833,7 +12805,7 @@ abstract class _$ExplanationOfBenefitDetailCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get sequenceElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $CodeableConceptCopyWith<$Res>? get revenue;
   @override
@@ -12888,7 +12860,7 @@ class __$ExplanationOfBenefitDetailCopyWithImpl<$Res>
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
           : sequenceElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       revenue:
           revenue == freezed ? _value.revenue : revenue as CodeableConcept?,
       category:
@@ -12959,7 +12931,7 @@ class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final CodeableConcept? revenue;
   @override
@@ -13093,7 +13065,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
   factory _ExplanationOfBenefitDetail(
           {Decimal? sequence,
           @JsonKey(name: '_sequence') Element? sequenceElement,
-          required CodeableConcept? type,
+          required CodeableConcept type,
           CodeableConcept? revenue,
           CodeableConcept? category,
           CodeableConcept? service,
@@ -13120,7 +13092,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   CodeableConcept? get revenue;
   @override
@@ -13171,7 +13143,7 @@ class _$ExplanationOfBenefitSubDetailTearOff {
   _ExplanationOfBenefitSubDetail call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       CodeableConcept? revenue,
       CodeableConcept? category,
       CodeableConcept? service,
@@ -13220,7 +13192,7 @@ mixin _$ExplanationOfBenefitSubDetail {
   Decimal? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   CodeableConcept? get revenue;
   CodeableConcept? get category;
   CodeableConcept? get service;
@@ -13253,7 +13225,7 @@ abstract class $ExplanationOfBenefitSubDetailCopyWith<$Res> {
   $Res call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      CodeableConcept? type,
+      CodeableConcept type,
       CodeableConcept? revenue,
       CodeableConcept? category,
       CodeableConcept? service,
@@ -13270,7 +13242,7 @@ abstract class $ExplanationOfBenefitSubDetailCopyWith<$Res> {
       List<ExplanationOfBenefitAdjudication?>? adjudication});
 
   $ElementCopyWith<$Res>? get sequenceElement;
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res>? get revenue;
   $CodeableConceptCopyWith<$Res>? get category;
   $CodeableConceptCopyWith<$Res>? get service;
@@ -13314,7 +13286,7 @@ class _$ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
           : sequenceElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       revenue:
           revenue == freezed ? _value.revenue : revenue as CodeableConcept?,
       category:
@@ -13359,12 +13331,8 @@ class _$ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -13458,7 +13426,7 @@ abstract class _$ExplanationOfBenefitSubDetailCopyWith<$Res>
   $Res call(
       {Decimal? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      CodeableConcept? type,
+      CodeableConcept type,
       CodeableConcept? revenue,
       CodeableConcept? category,
       CodeableConcept? service,
@@ -13477,7 +13445,7 @@ abstract class _$ExplanationOfBenefitSubDetailCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get sequenceElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $CodeableConceptCopyWith<$Res>? get revenue;
   @override
@@ -13532,7 +13500,7 @@ class __$ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
           : sequenceElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       revenue:
           revenue == freezed ? _value.revenue : revenue as CodeableConcept?,
       category:
@@ -13600,7 +13568,7 @@ class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final CodeableConcept? revenue;
   @override
@@ -13729,7 +13697,7 @@ abstract class _ExplanationOfBenefitSubDetail
   factory _ExplanationOfBenefitSubDetail(
           {Decimal? sequence,
           @JsonKey(name: '_sequence') Element? sequenceElement,
-          required CodeableConcept? type,
+          required CodeableConcept type,
           CodeableConcept? revenue,
           CodeableConcept? category,
           CodeableConcept? service,
@@ -13755,7 +13723,7 @@ abstract class _ExplanationOfBenefitSubDetail
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   CodeableConcept? get revenue;
   @override

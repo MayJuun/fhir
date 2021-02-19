@@ -768,9 +768,8 @@ _$_PlanDefinitionGoal _$_$_PlanDefinitionGoalFromJson(
     category: json['category'] == null
         ? null
         : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-    description: json['description'] == null
-        ? null
-        : CodeableConcept.fromJson(json['description'] as Map<String, dynamic>),
+    description:
+        CodeableConcept.fromJson(json['description'] as Map<String, dynamic>),
     priority: json['priority'] == null
         ? null
         : CodeableConcept.fromJson(json['priority'] as Map<String, dynamic>),
@@ -806,7 +805,7 @@ Map<String, dynamic> _$_$_PlanDefinitionGoalToJson(
   }
 
   writeNotNull('category', instance.category?.toJson());
-  writeNotNull('description', instance.description?.toJson());
+  val['description'] = instance.description.toJson();
   writeNotNull('priority', instance.priority?.toJson());
   writeNotNull('start', instance.start?.toJson());
   writeNotNull(

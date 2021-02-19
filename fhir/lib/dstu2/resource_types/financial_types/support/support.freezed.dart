@@ -2609,9 +2609,9 @@ class _$EnrollmentRequestTearOff {
       Reference? target,
       Reference? provider,
       Reference? organization,
-      required Reference? subject,
-      required Reference? coverage,
-      required Coding? relationship}) {
+      required Reference subject,
+      required Reference coverage,
+      required Coding relationship}) {
     return _EnrollmentRequest(
       resourceType: resourceType,
       id: id,
@@ -2672,9 +2672,9 @@ mixin _$EnrollmentRequest {
   Reference? get target;
   Reference? get provider;
   Reference? get organization;
-  Reference? get subject;
-  Reference? get coverage;
-  Coding? get relationship;
+  Reference get subject;
+  Reference get coverage;
+  Coding get relationship;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2711,9 +2711,9 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
       Reference? target,
       Reference? provider,
       Reference? organization,
-      Reference? subject,
-      Reference? coverage,
-      Coding? relationship});
+      Reference subject,
+      Reference coverage,
+      Coding relationship});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -2725,9 +2725,9 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
   $ReferenceCopyWith<$Res>? get target;
   $ReferenceCopyWith<$Res>? get provider;
   $ReferenceCopyWith<$Res>? get organization;
-  $ReferenceCopyWith<$Res>? get subject;
-  $ReferenceCopyWith<$Res>? get coverage;
-  $CodingCopyWith<$Res>? get relationship;
+  $ReferenceCopyWith<$Res> get subject;
+  $ReferenceCopyWith<$Res> get coverage;
+  $CodingCopyWith<$Res> get relationship;
 }
 
 /// @nodoc
@@ -2806,11 +2806,11 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
       organization: organization == freezed
           ? _value.organization
           : organization as Reference?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
-      coverage: coverage == freezed ? _value.coverage : coverage as Reference?,
+      subject: subject == freezed ? _value.subject : subject as Reference,
+      coverage: coverage == freezed ? _value.coverage : coverage as Reference,
       relationship: relationship == freezed
           ? _value.relationship
-          : relationship as Coding?,
+          : relationship as Coding,
     ));
   }
 
@@ -2925,34 +2925,22 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get subject {
-    if (_value.subject == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
+  $ReferenceCopyWith<$Res> get subject {
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
       return _then(_value.copyWith(subject: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get coverage {
-    if (_value.coverage == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.coverage!, (value) {
+  $ReferenceCopyWith<$Res> get coverage {
+    return $ReferenceCopyWith<$Res>(_value.coverage, (value) {
       return _then(_value.copyWith(coverage: value));
     });
   }
 
   @override
-  $CodingCopyWith<$Res>? get relationship {
-    if (_value.relationship == null) {
-      return null;
-    }
-
-    return $CodingCopyWith<$Res>(_value.relationship!, (value) {
+  $CodingCopyWith<$Res> get relationship {
+    return $CodingCopyWith<$Res>(_value.relationship, (value) {
       return _then(_value.copyWith(relationship: value));
     });
   }
@@ -2990,9 +2978,9 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
       Reference? target,
       Reference? provider,
       Reference? organization,
-      Reference? subject,
-      Reference? coverage,
-      Coding? relationship});
+      Reference subject,
+      Reference coverage,
+      Coding relationship});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -3015,11 +3003,11 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get organization;
   @override
-  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res> get subject;
   @override
-  $ReferenceCopyWith<$Res>? get coverage;
+  $ReferenceCopyWith<$Res> get coverage;
   @override
-  $CodingCopyWith<$Res>? get relationship;
+  $CodingCopyWith<$Res> get relationship;
 }
 
 /// @nodoc
@@ -3100,11 +3088,11 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
       organization: organization == freezed
           ? _value.organization
           : organization as Reference?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
-      coverage: coverage == freezed ? _value.coverage : coverage as Reference?,
+      subject: subject == freezed ? _value.subject : subject as Reference,
+      coverage: coverage == freezed ? _value.coverage : coverage as Reference,
       relationship: relationship == freezed
           ? _value.relationship
-          : relationship as Coding?,
+          : relationship as Coding,
     ));
   }
 }
@@ -3190,11 +3178,11 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   @override
   final Reference? organization;
   @override
-  final Reference? subject;
+  final Reference subject;
   @override
-  final Reference? coverage;
+  final Reference coverage;
   @override
-  final Coding? relationship;
+  final Coding relationship;
 
   @override
   String toString() {
@@ -3333,9 +3321,9 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       Reference? target,
       Reference? provider,
       Reference? organization,
-      required Reference? subject,
-      required Reference? coverage,
-      required Coding? relationship}) = _$_EnrollmentRequest;
+      required Reference subject,
+      required Reference coverage,
+      required Coding relationship}) = _$_EnrollmentRequest;
 
   factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentRequest.fromJson;
@@ -3384,11 +3372,11 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   @override
   Reference? get organization;
   @override
-  Reference? get subject;
+  Reference get subject;
   @override
-  Reference? get coverage;
+  Reference get coverage;
   @override
-  Coding? get relationship;
+  Coding get relationship;
   @override
   @JsonKey(ignore: true)
   _$EnrollmentRequestCopyWith<_EnrollmentRequest> get copyWith;

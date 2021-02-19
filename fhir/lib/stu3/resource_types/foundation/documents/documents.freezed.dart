@@ -36,15 +36,15 @@ class _$CompositionTearOff {
       CompositionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       @JsonKey(name: 'class')
           CodeableConcept? class_,
-      required Reference? subject,
+      required Reference subject,
       Reference? encounter,
       Date? date,
       @JsonKey(name: '_date')
           Element? dateElement,
-      required List<Reference?>? author,
+      required List<Reference> author,
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
@@ -119,15 +119,15 @@ mixin _$Composition {
   CompositionStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @JsonKey(name: 'class')
   CodeableConcept? get class_;
-  Reference? get subject;
+  Reference get subject;
   Reference? get encounter;
   Date? get date;
   @JsonKey(name: '_date')
   Element? get dateElement;
-  List<Reference?>? get author;
+  List<Reference> get author;
   String? get title;
   @JsonKey(name: '_title')
   Element? get titleElement;
@@ -170,15 +170,15 @@ abstract class $CompositionCopyWith<$Res> {
       CompositionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      CodeableConcept? type,
+      CodeableConcept type,
       @JsonKey(name: 'class')
           CodeableConcept? class_,
-      Reference? subject,
+      Reference subject,
       Reference? encounter,
       Date? date,
       @JsonKey(name: '_date')
           Element? dateElement,
-      List<Reference?>? author,
+      List<Reference> author,
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
@@ -197,9 +197,9 @@ abstract class $CompositionCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $IdentifierCopyWith<$Res>? get identifier;
   $ElementCopyWith<$Res>? get statusElement;
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res>? get class_;
-  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res>? get encounter;
   $ElementCopyWith<$Res>? get dateElement;
   $ElementCopyWith<$Res>? get titleElement;
@@ -280,15 +280,15 @@ class _$CompositionCopyWithImpl<$Res> implements $CompositionCopyWith<$Res> {
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       class_: class_ == freezed ? _value.class_ : class_ as CodeableConcept?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference?,
       date: date == freezed ? _value.date : date as Date?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      author: author == freezed ? _value.author : author as List<Reference?>?,
+      author: author == freezed ? _value.author : author as List<Reference>,
       title: title == freezed ? _value.title : title as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
@@ -382,12 +382,8 @@ class _$CompositionCopyWithImpl<$Res> implements $CompositionCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -404,12 +400,8 @@ class _$CompositionCopyWithImpl<$Res> implements $CompositionCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get subject {
-    if (_value.subject == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
+  $ReferenceCopyWith<$Res> get subject {
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
       return _then(_value.copyWith(subject: value));
     });
   }
@@ -497,15 +489,15 @@ abstract class _$CompositionCopyWith<$Res>
       CompositionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      CodeableConcept? type,
+      CodeableConcept type,
       @JsonKey(name: 'class')
           CodeableConcept? class_,
-      Reference? subject,
+      Reference subject,
       Reference? encounter,
       Date? date,
       @JsonKey(name: '_date')
           Element? dateElement,
-      List<Reference?>? author,
+      List<Reference> author,
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
@@ -531,11 +523,11 @@ abstract class _$CompositionCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $CodeableConceptCopyWith<$Res>? get class_;
   @override
-  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res> get subject;
   @override
   $ReferenceCopyWith<$Res>? get encounter;
   @override
@@ -623,15 +615,15 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       class_: class_ == freezed ? _value.class_ : class_ as CodeableConcept?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference?,
       date: date == freezed ? _value.date : date as Date?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
-      author: author == freezed ? _value.author : author as List<Reference?>?,
+      author: author == freezed ? _value.author : author as List<Reference>,
       title: title == freezed ? _value.title : title as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
@@ -742,12 +734,12 @@ class _$_Composition extends _Composition {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   @JsonKey(name: 'class')
   final CodeableConcept? class_;
   @override
-  final Reference? subject;
+  final Reference subject;
   @override
   final Reference? encounter;
   @override
@@ -756,7 +748,7 @@ class _$_Composition extends _Composition {
   @JsonKey(name: '_date')
   final Element? dateElement;
   @override
-  final List<Reference?>? author;
+  final List<Reference> author;
   @override
   final String? title;
   @override
@@ -928,15 +920,15 @@ abstract class _Composition extends Composition {
       CompositionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       @JsonKey(name: 'class')
           CodeableConcept? class_,
-      required Reference? subject,
+      required Reference subject,
       Reference? encounter,
       Date? date,
       @JsonKey(name: '_date')
           Element? dateElement,
-      required List<Reference?>? author,
+      required List<Reference> author,
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
@@ -986,12 +978,12 @@ abstract class _Composition extends Composition {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   @JsonKey(name: 'class')
   CodeableConcept? get class_;
   @override
-  Reference? get subject;
+  Reference get subject;
   @override
   Reference? get encounter;
   @override
@@ -1000,7 +992,7 @@ abstract class _Composition extends Composition {
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
-  List<Reference?>? get author;
+  List<Reference> get author;
   @override
   String? get title;
   @override
@@ -2224,7 +2216,7 @@ class _$DocumentManifestTearOff {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      required List<DocumentManifestContent?>? content,
+      required List<DocumentManifestContent> content,
       List<DocumentManifestRelated?>? related}) {
     return _DocumentManifest(
       resourceType: resourceType,
@@ -2300,7 +2292,7 @@ mixin _$DocumentManifest {
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<DocumentManifestContent?>? get content;
+  List<DocumentManifestContent> get content;
   List<DocumentManifestRelated?>? get related;
 
   Map<String, dynamic> toJson();
@@ -2347,7 +2339,7 @@ abstract class $DocumentManifestCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<DocumentManifestContent?>? content,
+      List<DocumentManifestContent> content,
       List<DocumentManifestRelated?>? related});
 
   $MetaCopyWith<$Res>? get meta;
@@ -2460,7 +2452,7 @@ class _$DocumentManifestCopyWithImpl<$Res>
           : descriptionElement as Element?,
       content: content == freezed
           ? _value.content
-          : content as List<DocumentManifestContent?>?,
+          : content as List<DocumentManifestContent>,
       related: related == freezed
           ? _value.related
           : related as List<DocumentManifestRelated?>?,
@@ -2630,7 +2622,7 @@ abstract class _$DocumentManifestCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<DocumentManifestContent?>? content,
+      List<DocumentManifestContent> content,
       List<DocumentManifestRelated?>? related});
 
   @override
@@ -2756,7 +2748,7 @@ class __$DocumentManifestCopyWithImpl<$Res>
           : descriptionElement as Element?,
       content: content == freezed
           ? _value.content
-          : content as List<DocumentManifestContent?>?,
+          : content as List<DocumentManifestContent>,
       related: related == freezed
           ? _value.related
           : related as List<DocumentManifestRelated?>?,
@@ -2868,7 +2860,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<DocumentManifestContent?>? content;
+  final List<DocumentManifestContent> content;
   @override
   final List<DocumentManifestRelated?>? related;
 
@@ -3031,7 +3023,7 @@ abstract class _DocumentManifest extends DocumentManifest {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      required List<DocumentManifestContent?>? content,
+      required List<DocumentManifestContent> content,
       List<DocumentManifestRelated?>? related}) = _$_DocumentManifest;
 
   factory _DocumentManifest.fromJson(Map<String, dynamic> json) =
@@ -3096,7 +3088,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<DocumentManifestContent?>? get content;
+  List<DocumentManifestContent> get content;
   @override
   List<DocumentManifestRelated?>? get related;
   @override
@@ -3531,7 +3523,7 @@ class _$DocumentReferenceTearOff {
       String? docStatus,
       @JsonKey(name: '_docStatus')
           Element? docStatusElement,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       @JsonKey(name: 'class')
           CodeableConcept? class_,
       Reference? subject,
@@ -3549,7 +3541,7 @@ class _$DocumentReferenceTearOff {
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<CodeableConcept?>? securityLabel,
-      required List<DocumentReferenceContent?>? content,
+      required List<DocumentReferenceContent> content,
       DocumentReferenceContext? context}) {
     return _DocumentReference(
       resourceType: resourceType,
@@ -3621,7 +3613,7 @@ mixin _$DocumentReference {
   String? get docStatus;
   @JsonKey(name: '_docStatus')
   Element? get docStatusElement;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @JsonKey(name: 'class')
   CodeableConcept? get class_;
   Reference? get subject;
@@ -3639,7 +3631,7 @@ mixin _$DocumentReference {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   List<CodeableConcept?>? get securityLabel;
-  List<DocumentReferenceContent?>? get content;
+  List<DocumentReferenceContent> get content;
   DocumentReferenceContext? get context;
 
   Map<String, dynamic> toJson();
@@ -3676,7 +3668,7 @@ abstract class $DocumentReferenceCopyWith<$Res> {
       String? docStatus,
       @JsonKey(name: '_docStatus')
           Element? docStatusElement,
-      CodeableConcept? type,
+      CodeableConcept type,
       @JsonKey(name: 'class')
           CodeableConcept? class_,
       Reference? subject,
@@ -3694,7 +3686,7 @@ abstract class $DocumentReferenceCopyWith<$Res> {
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<CodeableConcept?>? securityLabel,
-      List<DocumentReferenceContent?>? content,
+      List<DocumentReferenceContent> content,
       DocumentReferenceContext? context});
 
   $MetaCopyWith<$Res>? get meta;
@@ -3704,7 +3696,7 @@ abstract class $DocumentReferenceCopyWith<$Res> {
   $IdentifierCopyWith<$Res>? get masterIdentifier;
   $ElementCopyWith<$Res>? get statusElement;
   $ElementCopyWith<$Res>? get docStatusElement;
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res>? get class_;
   $ReferenceCopyWith<$Res>? get subject;
   $ElementCopyWith<$Res>? get createdElement;
@@ -3802,7 +3794,7 @@ class _$DocumentReferenceCopyWithImpl<$Res>
       docStatusElement: docStatusElement == freezed
           ? _value.docStatusElement
           : docStatusElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       class_: class_ == freezed ? _value.class_ : class_ as CodeableConcept?,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       created: created == freezed ? _value.created : created as String?,
@@ -3832,7 +3824,7 @@ class _$DocumentReferenceCopyWithImpl<$Res>
           : securityLabel as List<CodeableConcept?>?,
       content: content == freezed
           ? _value.content
-          : content as List<DocumentReferenceContent?>?,
+          : content as List<DocumentReferenceContent>,
       context: context == freezed
           ? _value.context
           : context as DocumentReferenceContext?,
@@ -3917,12 +3909,8 @@ class _$DocumentReferenceCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -4047,7 +4035,7 @@ abstract class _$DocumentReferenceCopyWith<$Res>
       String? docStatus,
       @JsonKey(name: '_docStatus')
           Element? docStatusElement,
-      CodeableConcept? type,
+      CodeableConcept type,
       @JsonKey(name: 'class')
           CodeableConcept? class_,
       Reference? subject,
@@ -4065,7 +4053,7 @@ abstract class _$DocumentReferenceCopyWith<$Res>
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<CodeableConcept?>? securityLabel,
-      List<DocumentReferenceContent?>? content,
+      List<DocumentReferenceContent> content,
       DocumentReferenceContext? context});
 
   @override
@@ -4083,7 +4071,7 @@ abstract class _$DocumentReferenceCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get docStatusElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $CodeableConceptCopyWith<$Res>? get class_;
   @override
@@ -4191,7 +4179,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
       docStatusElement: docStatusElement == freezed
           ? _value.docStatusElement
           : docStatusElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       class_: class_ == freezed ? _value.class_ : class_ as CodeableConcept?,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       created: created == freezed ? _value.created : created as String?,
@@ -4221,7 +4209,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
           : securityLabel as List<CodeableConcept?>?,
       content: content == freezed
           ? _value.content
-          : content as List<DocumentReferenceContent?>?,
+          : content as List<DocumentReferenceContent>,
       context: context == freezed
           ? _value.context
           : context as DocumentReferenceContext?,
@@ -4323,7 +4311,7 @@ class _$_DocumentReference extends _DocumentReference {
   @JsonKey(name: '_docStatus')
   final Element? docStatusElement;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   @JsonKey(name: 'class')
   final CodeableConcept? class_;
@@ -4355,7 +4343,7 @@ class _$_DocumentReference extends _DocumentReference {
   @override
   final List<CodeableConcept?>? securityLabel;
   @override
-  final List<DocumentReferenceContent?>? content;
+  final List<DocumentReferenceContent> content;
   @override
   final DocumentReferenceContext? context;
 
@@ -4520,7 +4508,7 @@ abstract class _DocumentReference extends DocumentReference {
       String? docStatus,
       @JsonKey(name: '_docStatus')
           Element? docStatusElement,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       @JsonKey(name: 'class')
           CodeableConcept? class_,
       Reference? subject,
@@ -4538,7 +4526,7 @@ abstract class _DocumentReference extends DocumentReference {
       @JsonKey(name: '_description')
           Element? descriptionElement,
       List<CodeableConcept?>? securityLabel,
-      required List<DocumentReferenceContent?>? content,
+      required List<DocumentReferenceContent> content,
       DocumentReferenceContext? context}) = _$_DocumentReference;
 
   factory _DocumentReference.fromJson(Map<String, dynamic> json) =
@@ -4585,7 +4573,7 @@ abstract class _DocumentReference extends DocumentReference {
   @JsonKey(name: '_docStatus')
   Element? get docStatusElement;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   @JsonKey(name: 'class')
   CodeableConcept? get class_;
@@ -4617,7 +4605,7 @@ abstract class _DocumentReference extends DocumentReference {
   @override
   List<CodeableConcept?>? get securityLabel;
   @override
-  List<DocumentReferenceContent?>? get content;
+  List<DocumentReferenceContent> get content;
   @override
   DocumentReferenceContext? get context;
   @override
@@ -4637,7 +4625,7 @@ class _$DocumentReferenceRelatesToTearOff {
   _DocumentReferenceRelatesTo call(
       {DocumentReferenceRelatesToCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      required Reference? target}) {
+      required Reference target}) {
     return _DocumentReferenceRelatesTo(
       code: code,
       codeElement: codeElement,
@@ -4658,7 +4646,7 @@ mixin _$DocumentReferenceRelatesTo {
   DocumentReferenceRelatesToCode? get code;
   @JsonKey(name: '_code')
   Element? get codeElement;
-  Reference? get target;
+  Reference get target;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4673,10 +4661,10 @@ abstract class $DocumentReferenceRelatesToCopyWith<$Res> {
   $Res call(
       {DocumentReferenceRelatesToCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Reference? target});
+      Reference target});
 
   $ElementCopyWith<$Res>? get codeElement;
-  $ReferenceCopyWith<$Res>? get target;
+  $ReferenceCopyWith<$Res> get target;
 }
 
 /// @nodoc
@@ -4700,7 +4688,7 @@ class _$DocumentReferenceRelatesToCopyWithImpl<$Res>
           : code as DocumentReferenceRelatesToCode?,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      target: target == freezed ? _value.target : target as Reference?,
+      target: target == freezed ? _value.target : target as Reference,
     ));
   }
 
@@ -4716,12 +4704,8 @@ class _$DocumentReferenceRelatesToCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get target {
-    if (_value.target == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.target!, (value) {
+  $ReferenceCopyWith<$Res> get target {
+    return $ReferenceCopyWith<$Res>(_value.target, (value) {
       return _then(_value.copyWith(target: value));
     });
   }
@@ -4738,12 +4722,12 @@ abstract class _$DocumentReferenceRelatesToCopyWith<$Res>
   $Res call(
       {DocumentReferenceRelatesToCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      Reference? target});
+      Reference target});
 
   @override
   $ElementCopyWith<$Res>? get codeElement;
   @override
-  $ReferenceCopyWith<$Res>? get target;
+  $ReferenceCopyWith<$Res> get target;
 }
 
 /// @nodoc
@@ -4770,7 +4754,7 @@ class __$DocumentReferenceRelatesToCopyWithImpl<$Res>
           : code as DocumentReferenceRelatesToCode?,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element?,
-      target: target == freezed ? _value.target : target as Reference?,
+      target: target == freezed ? _value.target : target as Reference,
     ));
   }
 }
@@ -4794,7 +4778,7 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
   @JsonKey(name: '_code')
   final Element? codeElement;
   @override
-  final Reference? target;
+  final Reference target;
 
   @override
   String toString() {
@@ -4838,7 +4822,7 @@ abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
   factory _DocumentReferenceRelatesTo(
       {DocumentReferenceRelatesToCode? code,
       @JsonKey(name: '_code') Element? codeElement,
-      required Reference? target}) = _$_DocumentReferenceRelatesTo;
+      required Reference target}) = _$_DocumentReferenceRelatesTo;
 
   factory _DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =
       _$_DocumentReferenceRelatesTo.fromJson;
@@ -4849,7 +4833,7 @@ abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
   @JsonKey(name: '_code')
   Element? get codeElement;
   @override
-  Reference? get target;
+  Reference get target;
   @override
   @JsonKey(ignore: true)
   _$DocumentReferenceRelatesToCopyWith<_DocumentReferenceRelatesTo>

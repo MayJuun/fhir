@@ -52,7 +52,7 @@ _$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
             ? null
             : ConformanceContact.fromJson(e as Map<String, dynamic>))
         .toList(),
-    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+    date: FhirDateTime.fromJson(json['date']),
     description: json['description'] as String?,
     requirements: json['requirements'] as String?,
     copyright: json['copyright'] as String?,
@@ -66,8 +66,7 @@ _$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
         ? null
         : ConformanceImplementation.fromJson(
             json['implementation'] as Map<String, dynamic>),
-    fhirVersion:
-        json['fhirVersion'] == null ? null : Id.fromJson(json['fhirVersion']),
+    fhirVersion: Id.fromJson(json['fhirVersion']),
     fhirVersionElement: json['_fhirVersion'] == null
         ? null
         : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
@@ -77,8 +76,8 @@ _$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
     acceptUnknownElement: json['_acceptUnknown'] == null
         ? null
         : Element.fromJson(json['_acceptUnknown'] as Map<String, dynamic>),
-    format: (json['format'] as List<dynamic>?)
-        ?.map((e) => _$enumDecodeNullable(_$ConformanceFormatEnumMap, e))
+    format: (json['format'] as List<dynamic>)
+        .map((e) => _$enumDecode(_$ConformanceFormatEnumMap, e))
         .toList(),
     profile: (json['profile'] as List<dynamic>?)
         ?.map((e) =>
@@ -132,20 +131,20 @@ Map<String, dynamic> _$_$_ConformanceToJson(_$_Conformance instance) {
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson()).toList());
-  writeNotNull('date', instance.date?.toJson());
+  val['date'] = instance.date.toJson();
   writeNotNull('description', instance.description);
   writeNotNull('requirements', instance.requirements);
   writeNotNull('copyright', instance.copyright);
   val['kind'] = _$ConformanceKindEnumMap[instance.kind];
   writeNotNull('software', instance.software?.toJson());
   writeNotNull('implementation', instance.implementation?.toJson());
-  writeNotNull('fhirVersion', instance.fhirVersion?.toJson());
+  val['fhirVersion'] = instance.fhirVersion.toJson();
   writeNotNull('_fhirVersion', instance.fhirVersionElement?.toJson());
   val['acceptUnknown'] =
       _$ConformanceAcceptUnknownEnumMap[instance.acceptUnknown];
   writeNotNull('_acceptUnknown', instance.acceptUnknownElement?.toJson());
-  writeNotNull('format',
-      instance.format?.map((e) => _$ConformanceFormatEnumMap[e]).toList());
+  val['format'] =
+      instance.format.map((e) => _$ConformanceFormatEnumMap[e]).toList();
   writeNotNull('profile', instance.profile?.map((e) => e?.toJson()).toList());
   writeNotNull('rest', instance.rest?.map((e) => e?.toJson()).toList());
   writeNotNull(
@@ -369,7 +368,7 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
             ? null
             : ConformanceContact.fromJson(e as Map<String, dynamic>))
         .toList(),
-    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+    date: FhirDateTime.fromJson(json['date']),
     description: json['description'] as String?,
     requirements: json['requirements'] as String?,
     copyright: json['copyright'] as String?,
@@ -383,8 +382,7 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
         ? null
         : ConformanceImplementation.fromJson(
             json['implementation'] as Map<String, dynamic>),
-    fhirVersion:
-        json['fhirVersion'] == null ? null : Id.fromJson(json['fhirVersion']),
+    fhirVersion: Id.fromJson(json['fhirVersion']),
     fhirVersionElement: json['_fhirVersion'] == null
         ? null
         : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
@@ -394,8 +392,8 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
     acceptUnknownElement: json['_acceptUnknown'] == null
         ? null
         : Element.fromJson(json['_acceptUnknown'] as Map<String, dynamic>),
-    format: (json['format'] as List<dynamic>?)
-        ?.map((e) => _$enumDecodeNullable(_$ConformanceFormatEnumMap, e))
+    format: (json['format'] as List<dynamic>)
+        .map((e) => _$enumDecode(_$ConformanceFormatEnumMap, e))
         .toList(),
     profile: (json['profile'] as List<dynamic>?)
         ?.map((e) =>
@@ -450,20 +448,20 @@ Map<String, dynamic> _$_$_CapabilityStatementToJson(
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('contact', instance.contact?.map((e) => e?.toJson()).toList());
-  writeNotNull('date', instance.date?.toJson());
+  val['date'] = instance.date.toJson();
   writeNotNull('description', instance.description);
   writeNotNull('requirements', instance.requirements);
   writeNotNull('copyright', instance.copyright);
   val['kind'] = _$ConformanceKindEnumMap[instance.kind];
   writeNotNull('software', instance.software?.toJson());
   writeNotNull('implementation', instance.implementation?.toJson());
-  writeNotNull('fhirVersion', instance.fhirVersion?.toJson());
+  val['fhirVersion'] = instance.fhirVersion.toJson();
   writeNotNull('_fhirVersion', instance.fhirVersionElement?.toJson());
   val['acceptUnknown'] =
       _$ConformanceAcceptUnknownEnumMap[instance.acceptUnknown];
   writeNotNull('_acceptUnknown', instance.acceptUnknownElement?.toJson());
-  writeNotNull('format',
-      instance.format?.map((e) => _$ConformanceFormatEnumMap[e]).toList());
+  val['format'] =
+      instance.format.map((e) => _$ConformanceFormatEnumMap[e]).toList();
   writeNotNull('profile', instance.profile?.map((e) => e?.toJson()).toList());
   writeNotNull('rest', instance.rest?.map((e) => e?.toJson()).toList());
   writeNotNull(
@@ -528,7 +526,7 @@ _$_ConformanceSoftware _$_$_ConformanceSoftwareFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    name: json['name'] as String?,
+    name: json['name'] as String,
     version: json['version'] as String?,
     releaseDate: json['releaseDate'] == null
         ? null
@@ -551,7 +549,7 @@ Map<String, dynamic> _$_$_ConformanceSoftwareToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('name', instance.name);
+  val['name'] = instance.name;
   writeNotNull('version', instance.version);
   writeNotNull('releaseDate', instance.releaseDate?.toJson());
   return val;
@@ -571,7 +569,7 @@ _$_ConformanceImplementation _$_$_ConformanceImplementationFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    description: json['description'] as String?,
+    description: json['description'] as String,
     url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
   );
 }
@@ -591,7 +589,7 @@ Map<String, dynamic> _$_$_ConformanceImplementationToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('description', instance.description);
+  val['description'] = instance.description;
   writeNotNull('url', instance.url?.toJson());
   return val;
 }
@@ -622,10 +620,8 @@ _$_ConformanceRest _$_$_ConformanceRestFromJson(Map<String, dynamic> json) {
         ? null
         : ConformanceRestSecurity.fromJson(
             json['security'] as Map<String, dynamic>),
-    resource: (json['resource'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ConformanceRestResource.fromJson(e as Map<String, dynamic>))
+    resource: (json['resource'] as List<dynamic>)
+        .map((e) => ConformanceRestResource.fromJson(e as Map<String, dynamic>))
         .toList(),
     interaction: (json['interaction'] as List<dynamic>?)
         ?.map((e) => e == null
@@ -671,7 +667,7 @@ Map<String, dynamic> _$_$_ConformanceRestToJson(_$_ConformanceRest instance) {
   writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('documentation', instance.documentation);
   writeNotNull('security', instance.security?.toJson());
-  writeNotNull('resource', instance.resource?.map((e) => e?.toJson()).toList());
+  val['resource'] = instance.resource.map((e) => e.toJson()).toList();
   writeNotNull(
       'interaction', instance.interaction?.map((e) => e?.toJson()).toList());
   writeNotNull('transactionMode',
@@ -725,10 +721,9 @@ _$_ConformanceMessaging _$_$_ConformanceMessagingFromJson(
         ? null
         : UnsignedInt.fromJson(json['reliableCache']),
     documentation: json['documentation'] as String?,
-    event: (json['event'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ConformanceMessagingEvent.fromJson(e as Map<String, dynamic>))
+    event: (json['event'] as List<dynamic>)
+        .map((e) =>
+            ConformanceMessagingEvent.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -752,7 +747,7 @@ Map<String, dynamic> _$_$_ConformanceMessagingToJson(
   writeNotNull('endpoint', instance.endpoint?.map((e) => e?.toJson()).toList());
   writeNotNull('reliableCache', instance.reliableCache?.toJson());
   writeNotNull('documentation', instance.documentation);
-  writeNotNull('event', instance.event?.map((e) => e?.toJson()).toList());
+  val['event'] = instance.event.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -776,9 +771,7 @@ _$_ConformanceDocument _$_$_ConformanceDocumentFromJson(
     mode: _$enumDecode(_$DocumentModeEnumMap, json['mode'],
         unknownValue: DocumentMode.unknown),
     documentation: json['documentation'] as String?,
-    profile: json['profile'] == null
-        ? null
-        : Reference.fromJson(json['profile'] as Map<String, dynamic>),
+    profile: Reference.fromJson(json['profile'] as Map<String, dynamic>),
   );
 }
 
@@ -800,7 +793,7 @@ Map<String, dynamic> _$_$_ConformanceDocumentToJson(
   writeNotNull('fhir_comments', instance.fhirComments);
   val['mode'] = _$DocumentModeEnumMap[instance.mode];
   writeNotNull('documentation', instance.documentation);
-  writeNotNull('profile', instance.profile?.toJson());
+  val['profile'] = instance.profile.toJson();
   return val;
 }
 
@@ -885,7 +878,7 @@ _$_ConformanceRestResource _$_$_ConformanceRestResourceFromJson(
     fhirComments: (json['fhir_comments'] as List<dynamic>?)
         ?.map((e) => e as String?)
         .toList(),
-    type: json['type'] == null ? null : Code.fromJson(json['type']),
+    type: Code.fromJson(json['type']),
     typeElement: json['_type'] == null
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -954,7 +947,7 @@ Map<String, dynamic> _$_$_ConformanceRestResourceToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
-  writeNotNull('type', instance.type?.toJson());
+  val['type'] = instance.type.toJson();
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('profile', instance.profile?.toJson());
   val['interaction'] = instance.interaction.map((e) => e.toJson()).toList();
@@ -1061,10 +1054,8 @@ _$_ConformanceRestOperation _$_$_ConformanceRestOperationFromJson(
     fhirComments: (json['fhir_comments'] as List<dynamic>?)
         ?.map((e) => e as String?)
         .toList(),
-    name: json['name'] as String?,
-    definition: json['definition'] == null
-        ? null
-        : Reference.fromJson(json['definition'] as Map<String, dynamic>),
+    name: json['name'] as String,
+    definition: Reference.fromJson(json['definition'] as Map<String, dynamic>),
   );
 }
 
@@ -1084,8 +1075,8 @@ Map<String, dynamic> _$_$_ConformanceRestOperationToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
-  writeNotNull('name', instance.name);
-  writeNotNull('definition', instance.definition?.toJson());
+  val['name'] = instance.name;
+  val['definition'] = instance.definition.toJson();
   return val;
 }
 
@@ -1103,10 +1094,8 @@ _$_ConformanceMessagingEndpoint _$_$_ConformanceMessagingEndpointFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    protocol: json['protocol'] == null
-        ? null
-        : Coding.fromJson(json['protocol'] as Map<String, dynamic>),
-    address: json['address'] == null ? null : FhirUri.fromJson(json['address']),
+    protocol: Coding.fromJson(json['protocol'] as Map<String, dynamic>),
+    address: FhirUri.fromJson(json['address']),
     addressElement: json['_address'] == null
         ? null
         : Element.fromJson(json['_address'] as Map<String, dynamic>),
@@ -1128,8 +1117,8 @@ Map<String, dynamic> _$_$_ConformanceMessagingEndpointToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('protocol', instance.protocol?.toJson());
-  writeNotNull('address', instance.address?.toJson());
+  val['protocol'] = instance.protocol.toJson();
+  val['address'] = instance.address.toJson();
   writeNotNull('_address', instance.addressElement?.toJson());
   return val;
 }
@@ -1148,9 +1137,7 @@ _$_ConformanceMessagingEvent _$_$_ConformanceMessagingEventFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    code: json['code'] == null
-        ? null
-        : Coding.fromJson(json['code'] as Map<String, dynamic>),
+    code: Coding.fromJson(json['code'] as Map<String, dynamic>),
     category: _$enumDecodeNullable(_$EventCategoryEnumMap, json['category'],
         unknownValue: EventCategory.unknown),
     mode: _$enumDecode(_$EventModeEnumMap, json['mode'],
@@ -1158,13 +1145,9 @@ _$_ConformanceMessagingEvent _$_$_ConformanceMessagingEventFromJson(
     modeElement: json['_mode'] == null
         ? null
         : Element.fromJson(json['_mode'] as Map<String, dynamic>),
-    focus: json['focus'] == null ? null : Code.fromJson(json['focus']),
-    request: json['request'] == null
-        ? null
-        : Reference.fromJson(json['request'] as Map<String, dynamic>),
-    response: json['response'] == null
-        ? null
-        : Reference.fromJson(json['response'] as Map<String, dynamic>),
+    focus: Code.fromJson(json['focus']),
+    request: Reference.fromJson(json['request'] as Map<String, dynamic>),
+    response: Reference.fromJson(json['response'] as Map<String, dynamic>),
     documentation: json['documentation'] as String?,
   );
 }
@@ -1184,13 +1167,13 @@ Map<String, dynamic> _$_$_ConformanceMessagingEventToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   writeNotNull('category', _$EventCategoryEnumMap[instance.category]);
   val['mode'] = _$EventModeEnumMap[instance.mode];
   writeNotNull('_mode', instance.modeElement?.toJson());
-  writeNotNull('focus', instance.focus?.toJson());
-  writeNotNull('request', instance.request?.toJson());
-  writeNotNull('response', instance.response?.toJson());
+  val['focus'] = instance.focus.toJson();
+  val['request'] = instance.request.toJson();
+  val['response'] = instance.response.toJson();
   writeNotNull('documentation', instance.documentation);
   return val;
 }
@@ -1315,7 +1298,7 @@ _$_ConformanceResourceSearchParam _$_$_ConformanceResourceSearchParamFromJson(
     fhirComments: (json['fhir_comments'] as List<dynamic>?)
         ?.map((e) => e as String?)
         .toList(),
-    name: json['name'] as String?,
+    name: json['name'] as String,
     definition: json['definition'] == null
         ? null
         : FhirUri.fromJson(json['definition']),
@@ -1348,7 +1331,7 @@ Map<String, dynamic> _$_$_ConformanceResourceSearchParamToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
-  writeNotNull('name', instance.name);
+  val['name'] = instance.name;
   writeNotNull('definition', instance.definition?.toJson());
   val['type'] = _$SearchParamTypeEnumMap[instance.type];
   writeNotNull('documentation', instance.documentation);
@@ -1418,7 +1401,7 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
         .toList(),
     url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     version: json['version'] as String?,
-    name: json['name'] as String?,
+    name: json['name'] as String,
     status: _$enumDecode(_$OperationDefinitionStatusEnumMap, json['status'],
         unknownValue: OperationDefinitionStatus.unknown),
     kind: _$enumDecode(_$OperationDefinitionKindEnumMap, json['kind'],
@@ -1438,17 +1421,16 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
     idempotent: json['idempotent'] == null
         ? null
         : Boolean.fromJson(json['idempotent']),
-    code: json['code'] == null ? null : Code.fromJson(json['code']),
+    code: Code.fromJson(json['code']),
     notes: json['notes'] as String?,
     base: json['base'] == null
         ? null
         : Reference.fromJson(json['base'] as Map<String, dynamic>),
-    system: json['system'] == null ? null : Boolean.fromJson(json['system']),
+    system: Boolean.fromJson(json['system']),
     type: (json['type'] as List<dynamic>?)
         ?.map((e) => e == null ? null : Code.fromJson(e))
         .toList(),
-    instance:
-        json['instance'] == null ? null : Boolean.fromJson(json['instance']),
+    instance: Boolean.fromJson(json['instance']),
     parameter: (json['parameter'] as List<dynamic>?)
         ?.map((e) => e == null
             ? null
@@ -1482,7 +1464,7 @@ Map<String, dynamic> _$_$_OperationDefinitionToJson(
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('version', instance.version);
-  writeNotNull('name', instance.name);
+  val['name'] = instance.name;
   val['status'] = _$OperationDefinitionStatusEnumMap[instance.status];
   val['kind'] = _$OperationDefinitionKindEnumMap[instance.kind];
   writeNotNull('experimental', instance.experimental?.toJson());
@@ -1492,12 +1474,12 @@ Map<String, dynamic> _$_$_OperationDefinitionToJson(
   writeNotNull('description', instance.description);
   writeNotNull('requirements', instance.requirements);
   writeNotNull('idempotent', instance.idempotent?.toJson());
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   writeNotNull('notes', instance.notes);
   writeNotNull('base', instance.base?.toJson());
-  writeNotNull('system', instance.system?.toJson());
+  val['system'] = instance.system.toJson();
   writeNotNull('type', instance.type?.map((e) => e?.toJson()).toList());
-  writeNotNull('instance', instance.instance?.toJson());
+  val['instance'] = instance.instance.toJson();
   writeNotNull(
       'parameter', instance.parameter?.map((e) => e?.toJson()).toList());
   return val;
@@ -1575,11 +1557,11 @@ _$_OperationDefinitionParameter _$_$_OperationDefinitionParameterFromJson(
     fhirComments: (json['fhir_comments'] as List<dynamic>?)
         ?.map((e) => e as String?)
         .toList(),
-    name: json['name'] == null ? null : Code.fromJson(json['name']),
+    name: Code.fromJson(json['name']),
     use: _$enumDecode(_$ParameterUseEnumMap, json['use'],
         unknownValue: ParameterUse.unknown),
-    min: json['min'] == null ? null : Integer.fromJson(json['min']),
-    max: json['max'] as String?,
+    min: Integer.fromJson(json['min']),
+    max: json['max'] as String,
     documentation: json['documentation'] as String?,
     type: json['type'] == null ? null : Code.fromJson(json['type']),
     profile: json['profile'] == null
@@ -1613,10 +1595,10 @@ Map<String, dynamic> _$_$_OperationDefinitionParameterToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
-  writeNotNull('name', instance.name?.toJson());
+  val['name'] = instance.name.toJson();
   val['use'] = _$ParameterUseEnumMap[instance.use];
-  writeNotNull('min', instance.min?.toJson());
-  writeNotNull('max', instance.max);
+  val['min'] = instance.min.toJson();
+  val['max'] = instance.max;
   writeNotNull('documentation', instance.documentation);
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('profile', instance.profile?.toJson());
@@ -1718,8 +1700,8 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
-    name: json['name'] as String?,
+    url: FhirUri.fromJson(json['url']),
+    name: json['name'] as String,
     status: _$enumDecodeNullable(_$SearchParameterStatusEnumMap, json['status'],
         unknownValue: SearchParameterStatus.unknown),
     experimental: json['experimental'] == null
@@ -1736,7 +1718,7 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
     requirementsElement: json['_requirements'] == null
         ? null
         : Element.fromJson(json['_requirements'] as Map<String, dynamic>),
-    code: json['code'] == null ? null : Code.fromJson(json['code']),
+    code: Code.fromJson(json['code']),
     base: json['base'] == null ? null : Code.fromJson(json['base']),
     type: _$enumDecode(_$SearchParameterTypeEnumMap, json['type'],
         unknownValue: SearchParameterType.unknown),
@@ -1773,8 +1755,8 @@ Map<String, dynamic> _$_$_SearchParameterToJson(_$_SearchParameter instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('url', instance.url?.toJson());
-  writeNotNull('name', instance.name);
+  val['url'] = instance.url.toJson();
+  val['name'] = instance.name;
   writeNotNull('status', _$SearchParameterStatusEnumMap[instance.status]);
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('publisher', instance.publisher);
@@ -1782,7 +1764,7 @@ Map<String, dynamic> _$_$_SearchParameterToJson(_$_SearchParameter instance) {
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('requirements', instance.requirements);
   writeNotNull('_requirements', instance.requirementsElement?.toJson());
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   writeNotNull('base', instance.base?.toJson());
   val['type'] = _$SearchParameterTypeEnumMap[instance.type];
   writeNotNull('description', instance.description);

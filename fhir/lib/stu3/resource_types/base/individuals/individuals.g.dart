@@ -1016,9 +1016,7 @@ _$_PractitionerQualification _$_$_PractitionerQualificationFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
-    code: json['code'] == null
-        ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -1040,7 +1038,7 @@ Map<String, dynamic> _$_$_PractitionerQualificationToJson(
 
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('issuer', instance.issuer?.toJson());
   return val;
@@ -1315,9 +1313,7 @@ _$_RelatedPerson _$_$_RelatedPersonFromJson(Map<String, dynamic> json) {
     activeElement: json['_active'] == null
         ? null
         : Element.fromJson(json['_active'] as Map<String, dynamic>),
-    patient: json['patient'] == null
-        ? null
-        : Reference.fromJson(json['patient'] as Map<String, dynamic>),
+    patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
     relationship: json['relationship'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -1381,7 +1377,7 @@ Map<String, dynamic> _$_$_RelatedPersonToJson(_$_RelatedPerson instance) {
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
   writeNotNull('active', instance.active?.toJson());
   writeNotNull('_active', instance.activeElement?.toJson());
-  writeNotNull('patient', instance.patient?.toJson());
+  val['patient'] = instance.patient.toJson();
   writeNotNull('relationship', instance.relationship?.toJson());
   writeNotNull('name', instance.name?.map((e) => e?.toJson()).toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson()).toList());

@@ -3383,7 +3383,7 @@ class _$CapabilityStatementResourceTearOff {
       String? documentation,
       @JsonKey(name: '_documentation')
           Element? documentationElement,
-      required List<CapabilityStatementInteraction?>? interaction,
+      required List<CapabilityStatementInteraction> interaction,
       CapabilityStatementResourceVersioning? versioning,
       @JsonKey(name: '_versioning')
           Element? versioningElement,
@@ -3463,7 +3463,7 @@ mixin _$CapabilityStatementResource {
   String? get documentation;
   @JsonKey(name: '_documentation')
   Element? get documentationElement;
-  List<CapabilityStatementInteraction?>? get interaction;
+  List<CapabilityStatementInteraction> get interaction;
   CapabilityStatementResourceVersioning? get versioning;
   @JsonKey(name: '_versioning')
   Element? get versioningElement;
@@ -3516,7 +3516,7 @@ abstract class $CapabilityStatementResourceCopyWith<$Res> {
       String? documentation,
       @JsonKey(name: '_documentation')
           Element? documentationElement,
-      List<CapabilityStatementInteraction?>? interaction,
+      List<CapabilityStatementInteraction> interaction,
       CapabilityStatementResourceVersioning? versioning,
       @JsonKey(name: '_versioning')
           Element? versioningElement,
@@ -3613,7 +3613,7 @@ class _$CapabilityStatementResourceCopyWithImpl<$Res>
           : documentationElement as Element?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction?>?,
+          : interaction as List<CapabilityStatementInteraction>,
       versioning: versioning == freezed
           ? _value.versioning
           : versioning as CapabilityStatementResourceVersioning?,
@@ -3807,7 +3807,7 @@ abstract class _$CapabilityStatementResourceCopyWith<$Res>
       String? documentation,
       @JsonKey(name: '_documentation')
           Element? documentationElement,
-      List<CapabilityStatementInteraction?>? interaction,
+      List<CapabilityStatementInteraction> interaction,
       CapabilityStatementResourceVersioning? versioning,
       @JsonKey(name: '_versioning')
           Element? versioningElement,
@@ -3918,7 +3918,7 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
           : documentationElement as Element?,
       interaction: interaction == freezed
           ? _value.interaction
-          : interaction as List<CapabilityStatementInteraction?>?,
+          : interaction as List<CapabilityStatementInteraction>,
       versioning: versioning == freezed
           ? _value.versioning
           : versioning as CapabilityStatementResourceVersioning?,
@@ -4036,7 +4036,7 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   @JsonKey(name: '_documentation')
   final Element? documentationElement;
   @override
-  final List<CapabilityStatementInteraction?>? interaction;
+  final List<CapabilityStatementInteraction> interaction;
   @override
   final CapabilityStatementResourceVersioning? versioning;
   @override
@@ -4221,7 +4221,7 @@ abstract class _CapabilityStatementResource
           String? documentation,
           @JsonKey(name: '_documentation')
               Element? documentationElement,
-          required List<CapabilityStatementInteraction?>? interaction,
+          required List<CapabilityStatementInteraction> interaction,
           CapabilityStatementResourceVersioning? versioning,
           @JsonKey(name: '_versioning')
               Element? versioningElement,
@@ -4271,7 +4271,7 @@ abstract class _CapabilityStatementResource
   @JsonKey(name: '_documentation')
   Element? get documentationElement;
   @override
-  List<CapabilityStatementInteraction?>? get interaction;
+  List<CapabilityStatementInteraction> get interaction;
   @override
   CapabilityStatementResourceVersioning? get versioning;
   @override
@@ -5269,7 +5269,7 @@ class _$CapabilityStatementOperationTearOff {
   _CapabilityStatementOperation call(
       {String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      required Reference? definition}) {
+      required Reference definition}) {
     return _CapabilityStatementOperation(
       name: name,
       nameElement: nameElement,
@@ -5290,7 +5290,7 @@ mixin _$CapabilityStatementOperation {
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
-  Reference? get definition;
+  Reference get definition;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -5307,10 +5307,10 @@ abstract class $CapabilityStatementOperationCopyWith<$Res> {
   $Res call(
       {String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Reference? definition});
+      Reference definition});
 
   $ElementCopyWith<$Res>? get nameElement;
-  $ReferenceCopyWith<$Res>? get definition;
+  $ReferenceCopyWith<$Res> get definition;
 }
 
 /// @nodoc
@@ -5333,7 +5333,7 @@ class _$CapabilityStatementOperationCopyWithImpl<$Res>
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
       definition:
-          definition == freezed ? _value.definition : definition as Reference?,
+          definition == freezed ? _value.definition : definition as Reference,
     ));
   }
 
@@ -5349,12 +5349,8 @@ class _$CapabilityStatementOperationCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get definition {
-    if (_value.definition == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.definition!, (value) {
+  $ReferenceCopyWith<$Res> get definition {
+    return $ReferenceCopyWith<$Res>(_value.definition, (value) {
       return _then(_value.copyWith(definition: value));
     });
   }
@@ -5371,12 +5367,12 @@ abstract class _$CapabilityStatementOperationCopyWith<$Res>
   $Res call(
       {String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      Reference? definition});
+      Reference definition});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
   @override
-  $ReferenceCopyWith<$Res>? get definition;
+  $ReferenceCopyWith<$Res> get definition;
 }
 
 /// @nodoc
@@ -5403,7 +5399,7 @@ class __$CapabilityStatementOperationCopyWithImpl<$Res>
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
       definition:
-          definition == freezed ? _value.definition : definition as Reference?,
+          definition == freezed ? _value.definition : definition as Reference,
     ));
   }
 }
@@ -5427,7 +5423,7 @@ class _$_CapabilityStatementOperation extends _CapabilityStatementOperation {
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
-  final Reference? definition;
+  final Reference definition;
 
   @override
   String toString() {
@@ -5473,7 +5469,7 @@ abstract class _CapabilityStatementOperation
   factory _CapabilityStatementOperation(
       {String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      required Reference? definition}) = _$_CapabilityStatementOperation;
+      required Reference definition}) = _$_CapabilityStatementOperation;
 
   factory _CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementOperation.fromJson;
@@ -5484,7 +5480,7 @@ abstract class _CapabilityStatementOperation
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
-  Reference? get definition;
+  Reference get definition;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementOperationCopyWith<_CapabilityStatementOperation>
@@ -6073,7 +6069,7 @@ class _$CapabilityStatementSupportedMessageTearOff {
   _CapabilityStatementSupportedMessage call(
       {CapabilityStatementSupportedMessageMode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      required Reference? definition}) {
+      required Reference definition}) {
     return _CapabilityStatementSupportedMessage(
       mode: mode,
       modeElement: modeElement,
@@ -6095,7 +6091,7 @@ mixin _$CapabilityStatementSupportedMessage {
   CapabilityStatementSupportedMessageMode? get mode;
   @JsonKey(name: '_mode')
   Element? get modeElement;
-  Reference? get definition;
+  Reference get definition;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -6112,10 +6108,10 @@ abstract class $CapabilityStatementSupportedMessageCopyWith<$Res> {
   $Res call(
       {CapabilityStatementSupportedMessageMode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      Reference? definition});
+      Reference definition});
 
   $ElementCopyWith<$Res>? get modeElement;
-  $ReferenceCopyWith<$Res>? get definition;
+  $ReferenceCopyWith<$Res> get definition;
 }
 
 /// @nodoc
@@ -6140,7 +6136,7 @@ class _$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
       modeElement:
           modeElement == freezed ? _value.modeElement : modeElement as Element?,
       definition:
-          definition == freezed ? _value.definition : definition as Reference?,
+          definition == freezed ? _value.definition : definition as Reference,
     ));
   }
 
@@ -6156,12 +6152,8 @@ class _$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get definition {
-    if (_value.definition == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.definition!, (value) {
+  $ReferenceCopyWith<$Res> get definition {
+    return $ReferenceCopyWith<$Res>(_value.definition, (value) {
       return _then(_value.copyWith(definition: value));
     });
   }
@@ -6178,12 +6170,12 @@ abstract class _$CapabilityStatementSupportedMessageCopyWith<$Res>
   $Res call(
       {CapabilityStatementSupportedMessageMode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      Reference? definition});
+      Reference definition});
 
   @override
   $ElementCopyWith<$Res>? get modeElement;
   @override
-  $ReferenceCopyWith<$Res>? get definition;
+  $ReferenceCopyWith<$Res> get definition;
 }
 
 /// @nodoc
@@ -6212,7 +6204,7 @@ class __$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
       modeElement:
           modeElement == freezed ? _value.modeElement : modeElement as Element?,
       definition:
-          definition == freezed ? _value.definition : definition as Reference?,
+          definition == freezed ? _value.definition : definition as Reference,
     ));
   }
 }
@@ -6238,7 +6230,7 @@ class _$_CapabilityStatementSupportedMessage
   @JsonKey(name: '_mode')
   final Element? modeElement;
   @override
-  final Reference? definition;
+  final Reference definition;
 
   @override
   String toString() {
@@ -6285,7 +6277,7 @@ abstract class _CapabilityStatementSupportedMessage
   factory _CapabilityStatementSupportedMessage(
       {CapabilityStatementSupportedMessageMode? mode,
       @JsonKey(name: '_mode') Element? modeElement,
-      required Reference? definition}) = _$_CapabilityStatementSupportedMessage;
+      required Reference definition}) = _$_CapabilityStatementSupportedMessage;
 
   factory _CapabilityStatementSupportedMessage.fromJson(
           Map<String, dynamic> json) =
@@ -6297,7 +6289,7 @@ abstract class _CapabilityStatementSupportedMessage
   @JsonKey(name: '_mode')
   Element? get modeElement;
   @override
-  Reference? get definition;
+  Reference get definition;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementSupportedMessageCopyWith<
@@ -6321,8 +6313,8 @@ class _$CapabilityStatementEventTearOff {
       @JsonKey(name: '_mode') Element? modeElement,
       String? focus,
       @JsonKey(name: '_focus') Element? focusElement,
-      required Reference? request,
-      required Reference? response,
+      required Reference request,
+      required Reference response,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement}) {
     return _CapabilityStatementEvent(
@@ -6360,8 +6352,8 @@ mixin _$CapabilityStatementEvent {
   String? get focus;
   @JsonKey(name: '_focus')
   Element? get focusElement;
-  Reference? get request;
-  Reference? get response;
+  Reference get request;
+  Reference get response;
   String? get documentation;
   @JsonKey(name: '_documentation')
   Element? get documentationElement;
@@ -6384,8 +6376,8 @@ abstract class $CapabilityStatementEventCopyWith<$Res> {
       @JsonKey(name: '_mode') Element? modeElement,
       String? focus,
       @JsonKey(name: '_focus') Element? focusElement,
-      Reference? request,
-      Reference? response,
+      Reference request,
+      Reference response,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
 
@@ -6393,8 +6385,8 @@ abstract class $CapabilityStatementEventCopyWith<$Res> {
   $ElementCopyWith<$Res>? get categoryElement;
   $ElementCopyWith<$Res>? get modeElement;
   $ElementCopyWith<$Res>? get focusElement;
-  $ReferenceCopyWith<$Res>? get request;
-  $ReferenceCopyWith<$Res>? get response;
+  $ReferenceCopyWith<$Res> get request;
+  $ReferenceCopyWith<$Res> get response;
   $ElementCopyWith<$Res>? get documentationElement;
 }
 
@@ -6437,8 +6429,8 @@ class _$CapabilityStatementEventCopyWithImpl<$Res>
       focusElement: focusElement == freezed
           ? _value.focusElement
           : focusElement as Element?,
-      request: request == freezed ? _value.request : request as Reference?,
-      response: response == freezed ? _value.response : response as Reference?,
+      request: request == freezed ? _value.request : request as Reference,
+      response: response == freezed ? _value.response : response as Reference,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String?,
@@ -6489,23 +6481,15 @@ class _$CapabilityStatementEventCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get request {
-    if (_value.request == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.request!, (value) {
+  $ReferenceCopyWith<$Res> get request {
+    return $ReferenceCopyWith<$Res>(_value.request, (value) {
       return _then(_value.copyWith(request: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get response {
-    if (_value.response == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.response!, (value) {
+  $ReferenceCopyWith<$Res> get response {
+    return $ReferenceCopyWith<$Res>(_value.response, (value) {
       return _then(_value.copyWith(response: value));
     });
   }
@@ -6537,8 +6521,8 @@ abstract class _$CapabilityStatementEventCopyWith<$Res>
       @JsonKey(name: '_mode') Element? modeElement,
       String? focus,
       @JsonKey(name: '_focus') Element? focusElement,
-      Reference? request,
-      Reference? response,
+      Reference request,
+      Reference response,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
 
@@ -6551,9 +6535,9 @@ abstract class _$CapabilityStatementEventCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get focusElement;
   @override
-  $ReferenceCopyWith<$Res>? get request;
+  $ReferenceCopyWith<$Res> get request;
   @override
-  $ReferenceCopyWith<$Res>? get response;
+  $ReferenceCopyWith<$Res> get response;
   @override
   $ElementCopyWith<$Res>? get documentationElement;
 }
@@ -6600,8 +6584,8 @@ class __$CapabilityStatementEventCopyWithImpl<$Res>
       focusElement: focusElement == freezed
           ? _value.focusElement
           : focusElement as Element?,
-      request: request == freezed ? _value.request : request as Reference?,
-      response: response == freezed ? _value.response : response as Reference?,
+      request: request == freezed ? _value.request : request as Reference,
+      response: response == freezed ? _value.response : response as Reference,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String?,
@@ -6651,9 +6635,9 @@ class _$_CapabilityStatementEvent extends _CapabilityStatementEvent {
   @JsonKey(name: '_focus')
   final Element? focusElement;
   @override
-  final Reference? request;
+  final Reference request;
   @override
-  final Reference? response;
+  final Reference response;
   @override
   final String? documentation;
   @override
@@ -6738,8 +6722,8 @@ abstract class _CapabilityStatementEvent extends CapabilityStatementEvent {
           @JsonKey(name: '_mode') Element? modeElement,
           String? focus,
           @JsonKey(name: '_focus') Element? focusElement,
-          required Reference? request,
-          required Reference? response,
+          required Reference request,
+          required Reference response,
           String? documentation,
           @JsonKey(name: '_documentation') Element? documentationElement}) =
       _$_CapabilityStatementEvent;
@@ -6765,9 +6749,9 @@ abstract class _CapabilityStatementEvent extends CapabilityStatementEvent {
   @JsonKey(name: '_focus')
   Element? get focusElement;
   @override
-  Reference? get request;
+  Reference get request;
   @override
-  Reference? get response;
+  Reference get response;
   @override
   String? get documentation;
   @override
@@ -6792,7 +6776,7 @@ class _$CapabilityStatementDocumentTearOff {
       @JsonKey(name: '_mode') Element? modeElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      required Reference? profile}) {
+      required Reference profile}) {
     return _CapabilityStatementDocument(
       mode: mode,
       modeElement: modeElement,
@@ -6818,7 +6802,7 @@ mixin _$CapabilityStatementDocument {
   String? get documentation;
   @JsonKey(name: '_documentation')
   Element? get documentationElement;
-  Reference? get profile;
+  Reference get profile;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -6837,11 +6821,11 @@ abstract class $CapabilityStatementDocumentCopyWith<$Res> {
       @JsonKey(name: '_mode') Element? modeElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Reference? profile});
+      Reference profile});
 
   $ElementCopyWith<$Res>? get modeElement;
   $ElementCopyWith<$Res>? get documentationElement;
-  $ReferenceCopyWith<$Res>? get profile;
+  $ReferenceCopyWith<$Res> get profile;
 }
 
 /// @nodoc
@@ -6873,7 +6857,7 @@ class _$CapabilityStatementDocumentCopyWithImpl<$Res>
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
           : documentationElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Reference?,
+      profile: profile == freezed ? _value.profile : profile as Reference,
     ));
   }
 
@@ -6900,12 +6884,8 @@ class _$CapabilityStatementDocumentCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get profile {
-    if (_value.profile == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.profile!, (value) {
+  $ReferenceCopyWith<$Res> get profile {
+    return $ReferenceCopyWith<$Res>(_value.profile, (value) {
       return _then(_value.copyWith(profile: value));
     });
   }
@@ -6924,14 +6904,14 @@ abstract class _$CapabilityStatementDocumentCopyWith<$Res>
       @JsonKey(name: '_mode') Element? modeElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      Reference? profile});
+      Reference profile});
 
   @override
   $ElementCopyWith<$Res>? get modeElement;
   @override
   $ElementCopyWith<$Res>? get documentationElement;
   @override
-  $ReferenceCopyWith<$Res>? get profile;
+  $ReferenceCopyWith<$Res> get profile;
 }
 
 /// @nodoc
@@ -6967,7 +6947,7 @@ class __$CapabilityStatementDocumentCopyWithImpl<$Res>
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
           : documentationElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Reference?,
+      profile: profile == freezed ? _value.profile : profile as Reference,
     ));
   }
 }
@@ -6998,7 +6978,7 @@ class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
   @JsonKey(name: '_documentation')
   final Element? documentationElement;
   @override
-  final Reference? profile;
+  final Reference profile;
 
   @override
   String toString() {
@@ -7053,7 +7033,7 @@ abstract class _CapabilityStatementDocument
       @JsonKey(name: '_mode') Element? modeElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      required Reference? profile}) = _$_CapabilityStatementDocument;
+      required Reference profile}) = _$_CapabilityStatementDocument;
 
   factory _CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatementDocument.fromJson;
@@ -7069,7 +7049,7 @@ abstract class _CapabilityStatementDocument
   @JsonKey(name: '_documentation')
   Element? get documentationElement;
   @override
-  Reference? get profile;
+  Reference get profile;
   @override
   @JsonKey(ignore: true)
   _$CapabilityStatementDocumentCopyWith<_CapabilityStatementDocument>
@@ -8673,7 +8653,7 @@ class _$DataElementTearOff {
       @JsonKey(name: '_stringency')
           Element? stringencyElement,
       List<DataElementMapping?>? mapping,
-      required List<ElementDefinition?>? element}) {
+      required List<ElementDefinition> element}) {
     return _DataElement(
       resourceType: resourceType,
       id: id,
@@ -8775,7 +8755,7 @@ mixin _$DataElement {
   @JsonKey(name: '_stringency')
   Element? get stringencyElement;
   List<DataElementMapping?>? get mapping;
-  List<ElementDefinition?>? get element;
+  List<ElementDefinition> get element;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -8838,7 +8818,7 @@ abstract class $DataElementCopyWith<$Res> {
       @JsonKey(name: '_stringency')
           Element? stringencyElement,
       List<DataElementMapping?>? mapping,
-      List<ElementDefinition?>? element});
+      List<ElementDefinition> element});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -8988,7 +8968,7 @@ class _$DataElementCopyWithImpl<$Res> implements $DataElementCopyWith<$Res> {
           : mapping as List<DataElementMapping?>?,
       element: element == freezed
           ? _value.element
-          : element as List<ElementDefinition?>?,
+          : element as List<ElementDefinition>,
     ));
   }
 
@@ -9205,7 +9185,7 @@ abstract class _$DataElementCopyWith<$Res>
       @JsonKey(name: '_stringency')
           Element? stringencyElement,
       List<DataElementMapping?>? mapping,
-      List<ElementDefinition?>? element});
+      List<ElementDefinition> element});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -9371,7 +9351,7 @@ class __$DataElementCopyWithImpl<$Res> extends _$DataElementCopyWithImpl<$Res>
           : mapping as List<DataElementMapping?>?,
       element: element == freezed
           ? _value.element
-          : element as List<ElementDefinition?>?,
+          : element as List<ElementDefinition>,
     ));
   }
 }
@@ -9524,7 +9504,7 @@ class _$_DataElement extends _DataElement {
   @override
   final List<DataElementMapping?>? mapping;
   @override
-  final List<ElementDefinition?>? element;
+  final List<ElementDefinition> element;
 
   @override
   String toString() {
@@ -9722,7 +9702,7 @@ abstract class _DataElement extends DataElement {
       @JsonKey(name: '_stringency')
           Element? stringencyElement,
       List<DataElementMapping?>? mapping,
-      required List<ElementDefinition?>? element}) = _$_DataElement;
+      required List<ElementDefinition> element}) = _$_DataElement;
 
   factory _DataElement.fromJson(Map<String, dynamic> json) =
       _$_DataElement.fromJson;
@@ -9814,7 +9794,7 @@ abstract class _DataElement extends DataElement {
   @override
   List<DataElementMapping?>? get mapping;
   @override
-  List<ElementDefinition?>? get element;
+  List<ElementDefinition> get element;
   @override
   @JsonKey(ignore: true)
   _$DataElementCopyWith<_DataElement> get copyWith;
@@ -11426,7 +11406,7 @@ class _$GraphDefinitionLinkTearOff {
       @JsonKey(name: '_max') Element? maxElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      required List<GraphDefinitionTarget?>? target}) {
+      required List<GraphDefinitionTarget> target}) {
     return _GraphDefinitionLink(
       path: path,
       pathElement: pathElement,
@@ -11467,7 +11447,7 @@ mixin _$GraphDefinitionLink {
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<GraphDefinitionTarget?>? get target;
+  List<GraphDefinitionTarget> get target;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -11490,7 +11470,7 @@ abstract class $GraphDefinitionLinkCopyWith<$Res> {
       @JsonKey(name: '_max') Element? maxElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<GraphDefinitionTarget?>? target});
+      List<GraphDefinitionTarget> target});
 
   $ElementCopyWith<$Res>? get pathElement;
   $ElementCopyWith<$Res>? get sliceNameElement;
@@ -11543,7 +11523,7 @@ class _$GraphDefinitionLinkCopyWithImpl<$Res>
           : descriptionElement as Element?,
       target: target == freezed
           ? _value.target
-          : target as List<GraphDefinitionTarget?>?,
+          : target as List<GraphDefinitionTarget>,
     ));
   }
 
@@ -11621,7 +11601,7 @@ abstract class _$GraphDefinitionLinkCopyWith<$Res>
       @JsonKey(name: '_max') Element? maxElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<GraphDefinitionTarget?>? target});
+      List<GraphDefinitionTarget> target});
 
   @override
   $ElementCopyWith<$Res>? get pathElement;
@@ -11681,7 +11661,7 @@ class __$GraphDefinitionLinkCopyWithImpl<$Res>
           : descriptionElement as Element?,
       target: target == freezed
           ? _value.target
-          : target as List<GraphDefinitionTarget?>?,
+          : target as List<GraphDefinitionTarget>,
     ));
   }
 }
@@ -11733,7 +11713,7 @@ class _$_GraphDefinitionLink extends _GraphDefinitionLink {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<GraphDefinitionTarget?>? target;
+  final List<GraphDefinitionTarget> target;
 
   @override
   String toString() {
@@ -11815,7 +11795,7 @@ abstract class _GraphDefinitionLink extends GraphDefinitionLink {
       @JsonKey(name: '_max') Element? maxElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      required List<GraphDefinitionTarget?>? target}) = _$_GraphDefinitionLink;
+      required List<GraphDefinitionTarget> target}) = _$_GraphDefinitionLink;
 
   factory _GraphDefinitionLink.fromJson(Map<String, dynamic> json) =
       _$_GraphDefinitionLink.fromJson;
@@ -11846,7 +11826,7 @@ abstract class _GraphDefinitionLink extends GraphDefinitionLink {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<GraphDefinitionTarget?>? get target;
+  List<GraphDefinitionTarget> get target;
   @override
   @JsonKey(ignore: true)
   _$GraphDefinitionLinkCopyWith<_GraphDefinitionLink> get copyWith;
@@ -14087,7 +14067,7 @@ class _$ImplementationGuidePackageTearOff {
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      required List<ImplementationGuideResource?>? resource}) {
+      required List<ImplementationGuideResource> resource}) {
     return _ImplementationGuidePackage(
       name: name,
       nameElement: nameElement,
@@ -14113,7 +14093,7 @@ mixin _$ImplementationGuidePackage {
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<ImplementationGuideResource?>? get resource;
+  List<ImplementationGuideResource> get resource;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -14130,7 +14110,7 @@ abstract class $ImplementationGuidePackageCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<ImplementationGuideResource?>? resource});
+      List<ImplementationGuideResource> resource});
 
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -14164,7 +14144,7 @@ class _$ImplementationGuidePackageCopyWithImpl<$Res>
           : descriptionElement as Element?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<ImplementationGuideResource?>?,
+          : resource as List<ImplementationGuideResource>,
     ));
   }
 
@@ -14204,7 +14184,7 @@ abstract class _$ImplementationGuidePackageCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<ImplementationGuideResource?>? resource});
+      List<ImplementationGuideResource> resource});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -14243,7 +14223,7 @@ class __$ImplementationGuidePackageCopyWithImpl<$Res>
           : descriptionElement as Element?,
       resource: resource == freezed
           ? _value.resource
-          : resource as List<ImplementationGuideResource?>?,
+          : resource as List<ImplementationGuideResource>,
     ));
   }
 }
@@ -14274,7 +14254,7 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<ImplementationGuideResource?>? resource;
+  final List<ImplementationGuideResource> resource;
 
   @override
   String toString() {
@@ -14329,7 +14309,7 @@ abstract class _ImplementationGuidePackage extends ImplementationGuidePackage {
           @JsonKey(name: '_name') Element? nameElement,
           String? description,
           @JsonKey(name: '_description') Element? descriptionElement,
-          required List<ImplementationGuideResource?>? resource}) =
+          required List<ImplementationGuideResource> resource}) =
       _$_ImplementationGuidePackage;
 
   factory _ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =
@@ -14346,7 +14326,7 @@ abstract class _ImplementationGuidePackage extends ImplementationGuidePackage {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<ImplementationGuideResource?>? get resource;
+  List<ImplementationGuideResource> get resource;
   @override
   @JsonKey(ignore: true)
   _$ImplementationGuidePackageCopyWith<_ImplementationGuidePackage>
@@ -14874,7 +14854,7 @@ class _$ImplementationGuideGlobalTearOff {
   _ImplementationGuideGlobal call(
       {String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      required Reference? profile}) {
+      required Reference profile}) {
     return _ImplementationGuideGlobal(
       type: type,
       typeElement: typeElement,
@@ -14895,7 +14875,7 @@ mixin _$ImplementationGuideGlobal {
   String? get type;
   @JsonKey(name: '_type')
   Element? get typeElement;
-  Reference? get profile;
+  Reference get profile;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -14910,10 +14890,10 @@ abstract class $ImplementationGuideGlobalCopyWith<$Res> {
   $Res call(
       {String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Reference? profile});
+      Reference profile});
 
   $ElementCopyWith<$Res>? get typeElement;
-  $ReferenceCopyWith<$Res>? get profile;
+  $ReferenceCopyWith<$Res> get profile;
 }
 
 /// @nodoc
@@ -14935,7 +14915,7 @@ class _$ImplementationGuideGlobalCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as String?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Reference?,
+      profile: profile == freezed ? _value.profile : profile as Reference,
     ));
   }
 
@@ -14951,12 +14931,8 @@ class _$ImplementationGuideGlobalCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get profile {
-    if (_value.profile == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.profile!, (value) {
+  $ReferenceCopyWith<$Res> get profile {
+    return $ReferenceCopyWith<$Res>(_value.profile, (value) {
       return _then(_value.copyWith(profile: value));
     });
   }
@@ -14972,12 +14948,12 @@ abstract class _$ImplementationGuideGlobalCopyWith<$Res>
   $Res call(
       {String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      Reference? profile});
+      Reference profile});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
   @override
-  $ReferenceCopyWith<$Res>? get profile;
+  $ReferenceCopyWith<$Res> get profile;
 }
 
 /// @nodoc
@@ -15002,7 +14978,7 @@ class __$ImplementationGuideGlobalCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as String?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Reference?,
+      profile: profile == freezed ? _value.profile : profile as Reference,
     ));
   }
 }
@@ -15026,7 +15002,7 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
   @JsonKey(name: '_type')
   final Element? typeElement;
   @override
-  final Reference? profile;
+  final Reference profile;
 
   @override
   String toString() {
@@ -15071,7 +15047,7 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
   factory _ImplementationGuideGlobal(
       {String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      required Reference? profile}) = _$_ImplementationGuideGlobal;
+      required Reference profile}) = _$_ImplementationGuideGlobal;
 
   factory _ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideGlobal.fromJson;
@@ -15082,7 +15058,7 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
-  Reference? get profile;
+  Reference get profile;
   @override
   @JsonKey(ignore: true)
   _$ImplementationGuideGlobalCopyWith<_ImplementationGuideGlobal> get copyWith;
@@ -15632,7 +15608,7 @@ class _$MessageDefinitionTearOff {
       Reference? base,
       List<Reference?>? parent,
       List<Reference?>? replaces,
-      required Coding? event,
+      required Coding event,
       String? category,
       @JsonKey(name: '_category')
           Element? categoryElement,
@@ -15757,7 +15733,7 @@ mixin _$MessageDefinition {
   Reference? get base;
   List<Reference?>? get parent;
   List<Reference?>? get replaces;
-  Coding? get event;
+  Coding get event;
   String? get category;
   @JsonKey(name: '_category')
   Element? get categoryElement;
@@ -15833,7 +15809,7 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       Reference? base,
       List<Reference?>? parent,
       List<Reference?>? replaces,
-      Coding? event,
+      Coding event,
       String? category,
       @JsonKey(name: '_category')
           Element? categoryElement,
@@ -15860,7 +15836,7 @@ abstract class $MessageDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res>? get purposeElement;
   $ElementCopyWith<$Res>? get copyrightElement;
   $ReferenceCopyWith<$Res>? get base;
-  $CodingCopyWith<$Res>? get event;
+  $CodingCopyWith<$Res> get event;
   $ElementCopyWith<$Res>? get categoryElement;
   $ElementCopyWith<$Res>? get responseRequiredElement;
 }
@@ -16011,7 +15987,7 @@ class _$MessageDefinitionCopyWithImpl<$Res>
       parent: parent == freezed ? _value.parent : parent as List<Reference?>?,
       replaces:
           replaces == freezed ? _value.replaces : replaces as List<Reference?>?,
-      event: event == freezed ? _value.event : event as Coding?,
+      event: event == freezed ? _value.event : event as Coding,
       category: category == freezed ? _value.category : category as String?,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
@@ -16219,12 +16195,8 @@ class _$MessageDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $CodingCopyWith<$Res>? get event {
-    if (_value.event == null) {
-      return null;
-    }
-
-    return $CodingCopyWith<$Res>(_value.event!, (value) {
+  $CodingCopyWith<$Res> get event {
+    return $CodingCopyWith<$Res>(_value.event, (value) {
       return _then(_value.copyWith(event: value));
     });
   }
@@ -16315,7 +16287,7 @@ abstract class _$MessageDefinitionCopyWith<$Res>
       Reference? base,
       List<Reference?>? parent,
       List<Reference?>? replaces,
-      Coding? event,
+      Coding event,
       String? category,
       @JsonKey(name: '_category')
           Element? categoryElement,
@@ -16360,7 +16332,7 @@ abstract class _$MessageDefinitionCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get base;
   @override
-  $CodingCopyWith<$Res>? get event;
+  $CodingCopyWith<$Res> get event;
   @override
   $ElementCopyWith<$Res>? get categoryElement;
   @override
@@ -16515,7 +16487,7 @@ class __$MessageDefinitionCopyWithImpl<$Res>
       parent: parent == freezed ? _value.parent : parent as List<Reference?>?,
       replaces:
           replaces == freezed ? _value.replaces : replaces as List<Reference?>?,
-      event: event == freezed ? _value.event : event as Coding?,
+      event: event == freezed ? _value.event : event as Coding,
       category: category == freezed ? _value.category : category as String?,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
@@ -16706,7 +16678,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   @override
   final List<Reference?>? replaces;
   @override
-  final Coding? event;
+  final Coding event;
   @override
   final String? category;
   @override
@@ -16943,7 +16915,7 @@ abstract class _MessageDefinition extends MessageDefinition {
           Reference? base,
           List<Reference?>? parent,
           List<Reference?>? replaces,
-          required Coding? event,
+          required Coding event,
           String? category,
           @JsonKey(name: '_category')
               Element? categoryElement,
@@ -17053,7 +17025,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   @override
   List<Reference?>? get replaces;
   @override
-  Coding? get event;
+  Coding get event;
   @override
   String? get category;
   @override
@@ -25065,7 +25037,7 @@ class _$StructureMapTearOff {
           List<String?>? import_,
       @JsonKey(name: '_import')
           List<Element?>? importElement,
-      required List<StructureMapGroup?>? group}) {
+      required List<StructureMapGroup> group}) {
     return _StructureMap(
       resourceType: resourceType,
       id: id,
@@ -25178,7 +25150,7 @@ mixin _$StructureMap {
   List<String?>? get import_;
   @JsonKey(name: '_import')
   List<Element?>? get importElement;
-  List<StructureMapGroup?>? get group;
+  List<StructureMapGroup> get group;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -25248,7 +25220,7 @@ abstract class $StructureMapCopyWith<$Res> {
           List<String?>? import_,
       @JsonKey(name: '_import')
           List<Element?>? importElement,
-      List<StructureMapGroup?>? group});
+      List<StructureMapGroup> group});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -25408,8 +25380,7 @@ class _$StructureMapCopyWithImpl<$Res> implements $StructureMapCopyWith<$Res> {
       importElement: importElement == freezed
           ? _value.importElement
           : importElement as List<Element?>?,
-      group:
-          group == freezed ? _value.group : group as List<StructureMapGroup?>?,
+      group: group == freezed ? _value.group : group as List<StructureMapGroup>,
     ));
   }
 
@@ -25644,7 +25615,7 @@ abstract class _$StructureMapCopyWith<$Res>
           List<String?>? import_,
       @JsonKey(name: '_import')
           List<Element?>? importElement,
-      List<StructureMapGroup?>? group});
+      List<StructureMapGroup> group});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -25821,8 +25792,7 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
       importElement: importElement == freezed
           ? _value.importElement
           : importElement as List<Element?>?,
-      group:
-          group == freezed ? _value.group : group as List<StructureMapGroup?>?,
+      group: group == freezed ? _value.group : group as List<StructureMapGroup>,
     ));
   }
 }
@@ -25993,7 +25963,7 @@ class _$_StructureMap extends _StructureMap {
   @JsonKey(name: '_import')
   final List<Element?>? importElement;
   @override
-  final List<StructureMapGroup?>? group;
+  final List<StructureMapGroup> group;
 
   @override
   String toString() {
@@ -26206,7 +26176,7 @@ abstract class _StructureMap extends StructureMap {
           List<String?>? import_,
       @JsonKey(name: '_import')
           List<Element?>? importElement,
-      required List<StructureMapGroup?>? group}) = _$_StructureMap;
+      required List<StructureMapGroup> group}) = _$_StructureMap;
 
   factory _StructureMap.fromJson(Map<String, dynamic> json) =
       _$_StructureMap.fromJson;
@@ -26309,7 +26279,7 @@ abstract class _StructureMap extends StructureMap {
   @JsonKey(name: '_import')
   List<Element?>? get importElement;
   @override
-  List<StructureMapGroup?>? get group;
+  List<StructureMapGroup> get group;
   @override
   @JsonKey(ignore: true)
   _$StructureMapCopyWith<_StructureMap> get copyWith;
@@ -26702,8 +26672,8 @@ class _$StructureMapGroupTearOff {
       @JsonKey(name: '_typeMode') Element? typeModeElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      required List<StructureMapInput?>? input,
-      required List<StructureMapRule?>? rule}) {
+      required List<StructureMapInput> input,
+      required List<StructureMapRule> rule}) {
     return _StructureMapGroup(
       name: name,
       nameElement: nameElement,
@@ -26741,8 +26711,8 @@ mixin _$StructureMapGroup {
   String? get documentation;
   @JsonKey(name: '_documentation')
   Element? get documentationElement;
-  List<StructureMapInput?>? get input;
-  List<StructureMapRule?>? get rule;
+  List<StructureMapInput> get input;
+  List<StructureMapRule> get rule;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -26763,8 +26733,8 @@ abstract class $StructureMapGroupCopyWith<$Res> {
       @JsonKey(name: '_typeMode') Element? typeModeElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      List<StructureMapInput?>? input,
-      List<StructureMapRule?>? rule});
+      List<StructureMapInput> input,
+      List<StructureMapRule> rule});
 
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get extendsElement;
@@ -26814,9 +26784,8 @@ class _$StructureMapGroupCopyWithImpl<$Res>
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
           : documentationElement as Element?,
-      input:
-          input == freezed ? _value.input : input as List<StructureMapInput?>?,
-      rule: rule == freezed ? _value.rule : rule as List<StructureMapRule?>?,
+      input: input == freezed ? _value.input : input as List<StructureMapInput>,
+      rule: rule == freezed ? _value.rule : rule as List<StructureMapRule>,
     ));
   }
 
@@ -26881,8 +26850,8 @@ abstract class _$StructureMapGroupCopyWith<$Res>
       @JsonKey(name: '_typeMode') Element? typeModeElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      List<StructureMapInput?>? input,
-      List<StructureMapRule?>? rule});
+      List<StructureMapInput> input,
+      List<StructureMapRule> rule});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -26938,9 +26907,8 @@ class __$StructureMapGroupCopyWithImpl<$Res>
       documentationElement: documentationElement == freezed
           ? _value.documentationElement
           : documentationElement as Element?,
-      input:
-          input == freezed ? _value.input : input as List<StructureMapInput?>?,
-      rule: rule == freezed ? _value.rule : rule as List<StructureMapRule?>?,
+      input: input == freezed ? _value.input : input as List<StructureMapInput>,
+      rule: rule == freezed ? _value.rule : rule as List<StructureMapRule>,
     ));
   }
 }
@@ -26987,9 +26955,9 @@ class _$_StructureMapGroup extends _StructureMapGroup {
   @JsonKey(name: '_documentation')
   final Element? documentationElement;
   @override
-  final List<StructureMapInput?>? input;
+  final List<StructureMapInput> input;
   @override
-  final List<StructureMapRule?>? rule;
+  final List<StructureMapRule> rule;
 
   @override
   String toString() {
@@ -27065,8 +27033,8 @@ abstract class _StructureMapGroup extends StructureMapGroup {
       @JsonKey(name: '_typeMode') Element? typeModeElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement,
-      required List<StructureMapInput?>? input,
-      required List<StructureMapRule?>? rule}) = _$_StructureMapGroup;
+      required List<StructureMapInput> input,
+      required List<StructureMapRule> rule}) = _$_StructureMapGroup;
 
   factory _StructureMapGroup.fromJson(Map<String, dynamic> json) =
       _$_StructureMapGroup.fromJson;
@@ -27093,9 +27061,9 @@ abstract class _StructureMapGroup extends StructureMapGroup {
   @JsonKey(name: '_documentation')
   Element? get documentationElement;
   @override
-  List<StructureMapInput?>? get input;
+  List<StructureMapInput> get input;
   @override
-  List<StructureMapRule?>? get rule;
+  List<StructureMapRule> get rule;
   @override
   @JsonKey(ignore: true)
   _$StructureMapGroupCopyWith<_StructureMapGroup> get copyWith;
@@ -27478,7 +27446,7 @@ class _$StructureMapRuleTearOff {
   _StructureMapRule call(
       {String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      required List<StructureMapSource?>? source,
+      required List<StructureMapSource> source,
       List<StructureMapTarget?>? target,
       List<StructureMapRule?>? rule,
       List<StructureMapDependent?>? dependent,
@@ -27509,7 +27477,7 @@ mixin _$StructureMapRule {
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
-  List<StructureMapSource?>? get source;
+  List<StructureMapSource> get source;
   List<StructureMapTarget?>? get target;
   List<StructureMapRule?>? get rule;
   List<StructureMapDependent?>? get dependent;
@@ -27530,7 +27498,7 @@ abstract class $StructureMapRuleCopyWith<$Res> {
   $Res call(
       {String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<StructureMapSource?>? source,
+      List<StructureMapSource> source,
       List<StructureMapTarget?>? target,
       List<StructureMapRule?>? rule,
       List<StructureMapDependent?>? dependent,
@@ -27567,7 +27535,7 @@ class _$StructureMapRuleCopyWithImpl<$Res>
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
       source: source == freezed
           ? _value.source
-          : source as List<StructureMapSource?>?,
+          : source as List<StructureMapSource>,
       target: target == freezed
           ? _value.target
           : target as List<StructureMapTarget?>?,
@@ -27617,7 +27585,7 @@ abstract class _$StructureMapRuleCopyWith<$Res>
   $Res call(
       {String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<StructureMapSource?>? source,
+      List<StructureMapSource> source,
       List<StructureMapTarget?>? target,
       List<StructureMapRule?>? rule,
       List<StructureMapDependent?>? dependent,
@@ -27658,7 +27626,7 @@ class __$StructureMapRuleCopyWithImpl<$Res>
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
       source: source == freezed
           ? _value.source
-          : source as List<StructureMapSource?>?,
+          : source as List<StructureMapSource>,
       target: target == freezed
           ? _value.target
           : target as List<StructureMapTarget?>?,
@@ -27700,7 +27668,7 @@ class _$_StructureMapRule extends _StructureMapRule {
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
-  final List<StructureMapSource?>? source;
+  final List<StructureMapSource> source;
   @override
   final List<StructureMapTarget?>? target;
   @override
@@ -27772,7 +27740,7 @@ abstract class _StructureMapRule extends StructureMapRule {
   factory _StructureMapRule(
           {String? name,
           @JsonKey(name: '_name') Element? nameElement,
-          required List<StructureMapSource?>? source,
+          required List<StructureMapSource> source,
           List<StructureMapTarget?>? target,
           List<StructureMapRule?>? rule,
           List<StructureMapDependent?>? dependent,
@@ -27789,7 +27757,7 @@ abstract class _StructureMapRule extends StructureMapRule {
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
-  List<StructureMapSource?>? get source;
+  List<StructureMapSource> get source;
   @override
   List<StructureMapTarget?>? get target;
   @override

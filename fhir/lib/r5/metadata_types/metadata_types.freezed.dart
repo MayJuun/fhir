@@ -3904,7 +3904,7 @@ class _$UsageContextTearOff {
   _UsageContext call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      required Coding? code,
+      required Coding code,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
       Range? valueRange,
@@ -3933,7 +3933,7 @@ mixin _$UsageContext {
   String? get id;
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
-  Coding? get code;
+  Coding get code;
   CodeableConcept? get valueCodeableConcept;
   Quantity? get valueQuantity;
   Range? get valueRange;
@@ -3952,13 +3952,13 @@ abstract class $UsageContextCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      Coding? code,
+      Coding code,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
       Range? valueRange,
       Reference? valueReference});
 
-  $CodingCopyWith<$Res>? get code;
+  $CodingCopyWith<$Res> get code;
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   $QuantityCopyWith<$Res>? get valueQuantity;
   $RangeCopyWith<$Res>? get valueRange;
@@ -3988,7 +3988,7 @@ class _$UsageContextCopyWithImpl<$Res> implements $UsageContextCopyWith<$Res> {
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as Coding?,
+      code: code == freezed ? _value.code : code as Coding,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
           : valueCodeableConcept as CodeableConcept?,
@@ -4004,12 +4004,8 @@ class _$UsageContextCopyWithImpl<$Res> implements $UsageContextCopyWith<$Res> {
   }
 
   @override
-  $CodingCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodingCopyWith<$Res>(_value.code!, (value) {
+  $CodingCopyWith<$Res> get code {
+    return $CodingCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
@@ -4070,14 +4066,14 @@ abstract class _$UsageContextCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      Coding? code,
+      Coding code,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
       Range? valueRange,
       Reference? valueReference});
 
   @override
-  $CodingCopyWith<$Res>? get code;
+  $CodingCopyWith<$Res> get code;
   @override
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   @override
@@ -4113,7 +4109,7 @@ class __$UsageContextCopyWithImpl<$Res> extends _$UsageContextCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as Coding?,
+      code: code == freezed ? _value.code : code as Coding,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
           : valueCodeableConcept as CodeableConcept?,
@@ -4152,7 +4148,7 @@ class _$_UsageContext extends _UsageContext {
   @JsonKey(name: 'extension')
   final List<FhirExtension?>? extension_;
   @override
-  final Coding? code;
+  final Coding code;
   @override
   final CodeableConcept? valueCodeableConcept;
   @override
@@ -4219,7 +4215,7 @@ abstract class _UsageContext extends UsageContext {
   factory _UsageContext(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      required Coding? code,
+      required Coding code,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
       Range? valueRange,
@@ -4234,7 +4230,7 @@ abstract class _UsageContext extends UsageContext {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   @override
-  Coding? get code;
+  Coding get code;
   @override
   CodeableConcept? get valueCodeableConcept;
   @override

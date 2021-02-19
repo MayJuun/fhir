@@ -45,9 +45,7 @@ _$_Device _$_$_DeviceFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     note: (json['note'] as List<dynamic>?)
         ?.map((e) =>
             e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
@@ -125,7 +123,7 @@ Map<String, dynamic> _$_$_DeviceToJson(_$_Device instance) {
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
+  val['type'] = instance.type.toJson();
   writeNotNull('note', instance.note?.map((e) => e?.toJson()).toList());
   writeNotNull('status', _$DeviceStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
@@ -323,15 +321,9 @@ _$_DeviceComponent _$_$_DeviceComponentFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    identifier: json['identifier'] == null
-        ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    lastSystemChange: json['lastSystemChange'] == null
-        ? null
-        : Instant.fromJson(json['lastSystemChange']),
+    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    identifier: Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    lastSystemChange: Instant.fromJson(json['lastSystemChange']),
     source: json['source'] == null
         ? null
         : Reference.fromJson(json['source'] as Map<String, dynamic>),
@@ -387,9 +379,9 @@ Map<String, dynamic> _$_$_DeviceComponentToJson(_$_DeviceComponent instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('lastSystemChange', instance.lastSystemChange?.toJson());
+  val['type'] = instance.type.toJson();
+  val['identifier'] = instance.identifier.toJson();
+  val['lastSystemChange'] = instance.lastSystemChange.toJson();
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('parent', instance.parent?.toJson());
   writeNotNull('operationalStatus',
@@ -501,12 +493,8 @@ _$_DeviceMetric _$_$_DeviceMetricFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    identifier: json['identifier'] == null
-        ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    identifier: Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     unit: json['unit'] == null
         ? null
         : CodeableConcept.fromJson(json['unit'] as Map<String, dynamic>),
@@ -567,8 +555,8 @@ Map<String, dynamic> _$_$_DeviceMetricToJson(_$_DeviceMetric instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('identifier', instance.identifier?.toJson());
+  val['type'] = instance.type.toJson();
+  val['identifier'] = instance.identifier.toJson();
   writeNotNull('unit', instance.unit?.toJson());
   writeNotNull('source', instance.source?.toJson());
   writeNotNull('parent', instance.parent?.toJson());

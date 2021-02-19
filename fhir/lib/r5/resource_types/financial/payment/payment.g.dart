@@ -63,9 +63,7 @@ _$_PaymentNotice _$_$_PaymentNoticeFromJson(Map<String, dynamic> json) {
     provider: json['provider'] == null
         ? null
         : Reference.fromJson(json['provider'] as Map<String, dynamic>),
-    payment: json['payment'] == null
-        ? null
-        : Reference.fromJson(json['payment'] as Map<String, dynamic>),
+    payment: Reference.fromJson(json['payment'] as Map<String, dynamic>),
     paymentDate:
         json['paymentDate'] == null ? null : Date.fromJson(json['paymentDate']),
     paymentDateElement: json['_paymentDate'] == null
@@ -74,12 +72,8 @@ _$_PaymentNotice _$_$_PaymentNoticeFromJson(Map<String, dynamic> json) {
     payee: json['payee'] == null
         ? null
         : Reference.fromJson(json['payee'] as Map<String, dynamic>),
-    recipient: json['recipient'] == null
-        ? null
-        : Reference.fromJson(json['recipient'] as Map<String, dynamic>),
-    amount: json['amount'] == null
-        ? null
-        : Money.fromJson(json['amount'] as Map<String, dynamic>),
+    recipient: Reference.fromJson(json['recipient'] as Map<String, dynamic>),
+    amount: Money.fromJson(json['amount'] as Map<String, dynamic>),
     paymentStatus: json['paymentStatus'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -120,12 +114,12 @@ Map<String, dynamic> _$_$_PaymentNoticeToJson(_$_PaymentNotice instance) {
   writeNotNull('created', instance.created?.toJson());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
-  writeNotNull('payment', instance.payment?.toJson());
+  val['payment'] = instance.payment.toJson();
   writeNotNull('paymentDate', instance.paymentDate?.toJson());
   writeNotNull('_paymentDate', instance.paymentDateElement?.toJson());
   writeNotNull('payee', instance.payee?.toJson());
-  writeNotNull('recipient', instance.recipient?.toJson());
-  writeNotNull('amount', instance.amount?.toJson());
+  val['recipient'] = instance.recipient.toJson();
+  val['amount'] = instance.amount.toJson();
   writeNotNull('paymentStatus', instance.paymentStatus?.toJson());
   return val;
 }
@@ -381,9 +375,8 @@ _$_PaymentReconciliation _$_$_PaymentReconciliationFromJson(
     paymentDateElement: json['_paymentDate'] == null
         ? null
         : Element.fromJson(json['_paymentDate'] as Map<String, dynamic>),
-    paymentAmount: json['paymentAmount'] == null
-        ? null
-        : Money.fromJson(json['paymentAmount'] as Map<String, dynamic>),
+    paymentAmount:
+        Money.fromJson(json['paymentAmount'] as Map<String, dynamic>),
     paymentIdentifier: json['paymentIdentifier'] == null
         ? null
         : Identifier.fromJson(
@@ -447,7 +440,7 @@ Map<String, dynamic> _$_$_PaymentReconciliationToJson(
   writeNotNull('_disposition', instance.dispositionElement?.toJson());
   writeNotNull('paymentDate', instance.paymentDate?.toJson());
   writeNotNull('_paymentDate', instance.paymentDateElement?.toJson());
-  writeNotNull('paymentAmount', instance.paymentAmount?.toJson());
+  val['paymentAmount'] = instance.paymentAmount.toJson();
   writeNotNull('paymentIdentifier', instance.paymentIdentifier?.toJson());
   writeNotNull('detail', instance.detail?.map((e) => e?.toJson()).toList());
   writeNotNull('formCode', instance.formCode?.toJson());
@@ -495,9 +488,7 @@ _$_PaymentReconciliationDetail _$_$_PaymentReconciliationDetailFromJson(
     predecessor: json['predecessor'] == null
         ? null
         : Identifier.fromJson(json['predecessor'] as Map<String, dynamic>),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     request: json['request'] == null
         ? null
         : Reference.fromJson(json['request'] as Map<String, dynamic>),
@@ -540,7 +531,7 @@ Map<String, dynamic> _$_$_PaymentReconciliationDetailToJson(
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull('identifier', instance.identifier?.toJson());
   writeNotNull('predecessor', instance.predecessor?.toJson());
-  writeNotNull('type', instance.type?.toJson());
+  val['type'] = instance.type.toJson();
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('submitter', instance.submitter?.toJson());
   writeNotNull('response', instance.response?.toJson());

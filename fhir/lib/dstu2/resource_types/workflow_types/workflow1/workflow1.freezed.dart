@@ -36,7 +36,7 @@ class _$OrderTearOff {
       CodeableConcept? reasonCodeableConcept,
       Reference? reasonReference,
       OrderWhen? when,
-      required List<Reference?>? detail}) {
+      required List<Reference> detail}) {
     return _Order(
       resourceType: resourceType,
       id: id,
@@ -88,7 +88,7 @@ mixin _$Order {
   CodeableConcept? get reasonCodeableConcept;
   Reference? get reasonReference;
   OrderWhen? get when;
-  List<Reference?>? get detail;
+  List<Reference> get detail;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -119,7 +119,7 @@ abstract class $OrderCopyWith<$Res> {
       CodeableConcept? reasonCodeableConcept,
       Reference? reasonReference,
       OrderWhen? when,
-      List<Reference?>? detail});
+      List<Reference> detail});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -194,7 +194,7 @@ class _$OrderCopyWithImpl<$Res> implements $OrderCopyWith<$Res> {
           ? _value.reasonReference
           : reasonReference as Reference?,
       when: when == freezed ? _value.when : when as OrderWhen?,
-      detail: detail == freezed ? _value.detail : detail as List<Reference?>?,
+      detail: detail == freezed ? _value.detail : detail as List<Reference>,
     ));
   }
 
@@ -313,7 +313,7 @@ abstract class _$OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
       CodeableConcept? reasonCodeableConcept,
       Reference? reasonReference,
       OrderWhen? when,
-      List<Reference?>? detail});
+      List<Reference> detail});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -397,7 +397,7 @@ class __$OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res>
           ? _value.reasonReference
           : reasonReference as Reference?,
       when: when == freezed ? _value.when : when as OrderWhen?,
-      detail: detail == freezed ? _value.detail : detail as List<Reference?>?,
+      detail: detail == freezed ? _value.detail : detail as List<Reference>,
     ));
   }
 }
@@ -469,7 +469,7 @@ class _$_Order extends _Order {
   @override
   final OrderWhen? when;
   @override
-  final List<Reference?>? detail;
+  final List<Reference> detail;
 
   @override
   String toString() {
@@ -583,7 +583,7 @@ abstract class _Order extends Order {
       CodeableConcept? reasonCodeableConcept,
       Reference? reasonReference,
       OrderWhen? when,
-      required List<Reference?>? detail}) = _$_Order;
+      required List<Reference> detail}) = _$_Order;
 
   factory _Order.fromJson(Map<String, dynamic> json) = _$_Order.fromJson;
 
@@ -624,7 +624,7 @@ abstract class _Order extends Order {
   @override
   OrderWhen? get when;
   @override
-  List<Reference?>? get detail;
+  List<Reference> get detail;
   @override
   @JsonKey(ignore: true)
   _$OrderCopyWith<_Order> get copyWith;
@@ -938,7 +938,7 @@ class _$OrderResponseTearOff {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      required Reference? request,
+      required Reference request,
       FhirDateTime? date,
       Reference? who,
       @JsonKey(unknownEnumValue: OrderResponseOrderStatus.unknown)
@@ -990,7 +990,7 @@ mixin _$OrderResponse {
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
   List<Identifier?>? get identifier;
-  Reference? get request;
+  Reference get request;
   FhirDateTime? get date;
   Reference? get who;
   @JsonKey(unknownEnumValue: OrderResponseOrderStatus.unknown)
@@ -1023,7 +1023,7 @@ abstract class $OrderResponseCopyWith<$Res> {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      Reference? request,
+      Reference request,
       FhirDateTime? date,
       Reference? who,
       @JsonKey(unknownEnumValue: OrderResponseOrderStatus.unknown)
@@ -1035,7 +1035,7 @@ abstract class $OrderResponseCopyWith<$Res> {
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
-  $ReferenceCopyWith<$Res>? get request;
+  $ReferenceCopyWith<$Res> get request;
   $ReferenceCopyWith<$Res>? get who;
   $ElementCopyWith<$Res>? get orderStatusElement;
 }
@@ -1092,7 +1092,7 @@ class _$OrderResponseCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>?,
-      request: request == freezed ? _value.request : request as Reference?,
+      request: request == freezed ? _value.request : request as Reference,
       date: date == freezed ? _value.date : date as FhirDateTime?,
       who: who == freezed ? _value.who : who as Reference?,
       orderStatus: orderStatus == freezed
@@ -1132,12 +1132,8 @@ class _$OrderResponseCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get request {
-    if (_value.request == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.request!, (value) {
+  $ReferenceCopyWith<$Res> get request {
+    return $ReferenceCopyWith<$Res>(_value.request, (value) {
       return _then(_value.copyWith(request: value));
     });
   }
@@ -1185,7 +1181,7 @@ abstract class _$OrderResponseCopyWith<$Res>
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      Reference? request,
+      Reference request,
       FhirDateTime? date,
       Reference? who,
       @JsonKey(unknownEnumValue: OrderResponseOrderStatus.unknown)
@@ -1200,7 +1196,7 @@ abstract class _$OrderResponseCopyWith<$Res>
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
-  $ReferenceCopyWith<$Res>? get request;
+  $ReferenceCopyWith<$Res> get request;
   @override
   $ReferenceCopyWith<$Res>? get who;
   @override
@@ -1261,7 +1257,7 @@ class __$OrderResponseCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>?,
-      request: request == freezed ? _value.request : request as Reference?,
+      request: request == freezed ? _value.request : request as Reference,
       date: date == freezed ? _value.date : date as FhirDateTime?,
       who: who == freezed ? _value.who : who as Reference?,
       orderStatus: orderStatus == freezed
@@ -1333,7 +1329,7 @@ class _$_OrderResponse extends _OrderResponse {
   @override
   final List<Identifier?>? identifier;
   @override
-  final Reference? request;
+  final Reference request;
   @override
   final FhirDateTime? date;
   @override
@@ -1453,7 +1449,7 @@ abstract class _OrderResponse extends OrderResponse {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      required Reference? request,
+      required Reference request,
       FhirDateTime? date,
       Reference? who,
       @JsonKey(unknownEnumValue: OrderResponseOrderStatus.unknown)
@@ -1489,7 +1485,7 @@ abstract class _OrderResponse extends OrderResponse {
   @override
   List<Identifier?>? get identifier;
   @override
-  Reference? get request;
+  Reference get request;
   @override
   FhirDateTime? get date;
   @override
@@ -2869,7 +2865,7 @@ class _$DeviceUseRequestTearOff {
           DeviceUseRequestStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      required Reference? device,
+      required Reference device,
       Reference? encounter,
       List<Identifier?>? identifier,
       List<CodeableConcept?>? indication,
@@ -2877,7 +2873,7 @@ class _$DeviceUseRequestTearOff {
       List<CodeableConcept?>? prnReason,
       FhirDateTime? orderedOn,
       FhirDateTime? recordedOn,
-      required Reference? subject,
+      required Reference subject,
       Timing? timingTiming,
       Period? timingPeriod,
       FhirDateTime? timingDateTime,
@@ -2949,7 +2945,7 @@ mixin _$DeviceUseRequest {
   DeviceUseRequestStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  Reference? get device;
+  Reference get device;
   Reference? get encounter;
   List<Identifier?>? get identifier;
   List<CodeableConcept?>? get indication;
@@ -2957,7 +2953,7 @@ mixin _$DeviceUseRequest {
   List<CodeableConcept?>? get prnReason;
   FhirDateTime? get orderedOn;
   FhirDateTime? get recordedOn;
-  Reference? get subject;
+  Reference get subject;
   Timing? get timingTiming;
   Period? get timingPeriod;
   FhirDateTime? get timingDateTime;
@@ -2998,7 +2994,7 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
           DeviceUseRequestStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Reference? device,
+      Reference device,
       Reference? encounter,
       List<Identifier?>? identifier,
       List<CodeableConcept?>? indication,
@@ -3006,7 +3002,7 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
       List<CodeableConcept?>? prnReason,
       FhirDateTime? orderedOn,
       FhirDateTime? recordedOn,
-      Reference? subject,
+      Reference subject,
       Timing? timingTiming,
       Period? timingPeriod,
       FhirDateTime? timingDateTime,
@@ -3022,9 +3018,9 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res>? get bodySiteCodeableConcept;
   $ReferenceCopyWith<$Res>? get bodySiteReference;
   $ElementCopyWith<$Res>? get statusElement;
-  $ReferenceCopyWith<$Res>? get device;
+  $ReferenceCopyWith<$Res> get device;
   $ReferenceCopyWith<$Res>? get encounter;
-  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res> get subject;
   $TimingCopyWith<$Res>? get timingTiming;
   $PeriodCopyWith<$Res>? get timingPeriod;
   $ElementCopyWith<$Res>? get priorityElement;
@@ -3108,7 +3104,7 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      device: device == freezed ? _value.device : device as Reference?,
+      device: device == freezed ? _value.device : device as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference?,
       identifier: identifier == freezed
@@ -3126,7 +3122,7 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
       recordedOn: recordedOn == freezed
           ? _value.recordedOn
           : recordedOn as FhirDateTime?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       timingTiming: timingTiming == freezed
           ? _value.timingTiming
           : timingTiming as Timing?,
@@ -3224,12 +3220,8 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get device {
-    if (_value.device == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.device!, (value) {
+  $ReferenceCopyWith<$Res> get device {
+    return $ReferenceCopyWith<$Res>(_value.device, (value) {
       return _then(_value.copyWith(device: value));
     });
   }
@@ -3246,12 +3238,8 @@ class _$DeviceUseRequestCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get subject {
-    if (_value.subject == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
+  $ReferenceCopyWith<$Res> get subject {
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
       return _then(_value.copyWith(subject: value));
     });
   }
@@ -3319,7 +3307,7 @@ abstract class _$DeviceUseRequestCopyWith<$Res>
           DeviceUseRequestStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Reference? device,
+      Reference device,
       Reference? encounter,
       List<Identifier?>? identifier,
       List<CodeableConcept?>? indication,
@@ -3327,7 +3315,7 @@ abstract class _$DeviceUseRequestCopyWith<$Res>
       List<CodeableConcept?>? prnReason,
       FhirDateTime? orderedOn,
       FhirDateTime? recordedOn,
-      Reference? subject,
+      Reference subject,
       Timing? timingTiming,
       Period? timingPeriod,
       FhirDateTime? timingDateTime,
@@ -3351,11 +3339,11 @@ abstract class _$DeviceUseRequestCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $ReferenceCopyWith<$Res>? get device;
+  $ReferenceCopyWith<$Res> get device;
   @override
   $ReferenceCopyWith<$Res>? get encounter;
   @override
-  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res> get subject;
   @override
   $TimingCopyWith<$Res>? get timingTiming;
   @override
@@ -3444,7 +3432,7 @@ class __$DeviceUseRequestCopyWithImpl<$Res>
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      device: device == freezed ? _value.device : device as Reference?,
+      device: device == freezed ? _value.device : device as Reference,
       encounter:
           encounter == freezed ? _value.encounter : encounter as Reference?,
       identifier: identifier == freezed
@@ -3462,7 +3450,7 @@ class __$DeviceUseRequestCopyWithImpl<$Res>
       recordedOn: recordedOn == freezed
           ? _value.recordedOn
           : recordedOn as FhirDateTime?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       timingTiming: timingTiming == freezed
           ? _value.timingTiming
           : timingTiming as Timing?,
@@ -3566,7 +3554,7 @@ class _$_DeviceUseRequest extends _DeviceUseRequest {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Reference? device;
+  final Reference device;
   @override
   final Reference? encounter;
   @override
@@ -3582,7 +3570,7 @@ class _$_DeviceUseRequest extends _DeviceUseRequest {
   @override
   final FhirDateTime? recordedOn;
   @override
-  final Reference? subject;
+  final Reference subject;
   @override
   final Timing? timingTiming;
   @override
@@ -3742,7 +3730,7 @@ abstract class _DeviceUseRequest extends DeviceUseRequest {
           DeviceUseRequestStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      required Reference? device,
+      required Reference device,
       Reference? encounter,
       List<Identifier?>? identifier,
       List<CodeableConcept?>? indication,
@@ -3750,7 +3738,7 @@ abstract class _DeviceUseRequest extends DeviceUseRequest {
       List<CodeableConcept?>? prnReason,
       FhirDateTime? orderedOn,
       FhirDateTime? recordedOn,
-      required Reference? subject,
+      required Reference subject,
       Timing? timingTiming,
       Period? timingPeriod,
       FhirDateTime? timingDateTime,
@@ -3799,7 +3787,7 @@ abstract class _DeviceUseRequest extends DeviceUseRequest {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Reference? get device;
+  Reference get device;
   @override
   Reference? get encounter;
   @override
@@ -3815,7 +3803,7 @@ abstract class _DeviceUseRequest extends DeviceUseRequest {
   @override
   FhirDateTime? get recordedOn;
   @override
-  Reference? get subject;
+  Reference get subject;
   @override
   Timing? get timingTiming;
   @override
@@ -3860,14 +3848,14 @@ class _$DeviceUseStatementTearOff {
       CodeableConcept? bodySiteCodeableConcept,
       Reference? bodySiteReference,
       Period? whenUsed,
-      required Reference? device,
+      required Reference device,
       List<Identifier?>? identifier,
       List<CodeableConcept?>? indication,
       List<String?>? notes,
       FhirDateTime? recordedOn,
       @JsonKey(name: '_recordedOn')
           Element? recordedOnElement,
-      required Reference? subject,
+      required Reference subject,
       Timing? timingTiming,
       Period? timingPeriod,
       FhirDateTime? timingDateTime,
@@ -3930,14 +3918,14 @@ mixin _$DeviceUseStatement {
   CodeableConcept? get bodySiteCodeableConcept;
   Reference? get bodySiteReference;
   Period? get whenUsed;
-  Reference? get device;
+  Reference get device;
   List<Identifier?>? get identifier;
   List<CodeableConcept?>? get indication;
   List<String?>? get notes;
   FhirDateTime? get recordedOn;
   @JsonKey(name: '_recordedOn')
   Element? get recordedOnElement;
-  Reference? get subject;
+  Reference get subject;
   Timing? get timingTiming;
   Period? get timingPeriod;
   FhirDateTime? get timingDateTime;
@@ -3973,14 +3961,14 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       CodeableConcept? bodySiteCodeableConcept,
       Reference? bodySiteReference,
       Period? whenUsed,
-      Reference? device,
+      Reference device,
       List<Identifier?>? identifier,
       List<CodeableConcept?>? indication,
       List<String?>? notes,
       FhirDateTime? recordedOn,
       @JsonKey(name: '_recordedOn')
           Element? recordedOnElement,
-      Reference? subject,
+      Reference subject,
       Timing? timingTiming,
       Period? timingPeriod,
       FhirDateTime? timingDateTime,
@@ -3994,9 +3982,9 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res>? get bodySiteCodeableConcept;
   $ReferenceCopyWith<$Res>? get bodySiteReference;
   $PeriodCopyWith<$Res>? get whenUsed;
-  $ReferenceCopyWith<$Res>? get device;
+  $ReferenceCopyWith<$Res> get device;
   $ElementCopyWith<$Res>? get recordedOnElement;
-  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res> get subject;
   $TimingCopyWith<$Res>? get timingTiming;
   $PeriodCopyWith<$Res>? get timingPeriod;
   $ElementCopyWith<$Res>? get timingDateTimeElement;
@@ -4072,7 +4060,7 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
           ? _value.bodySiteReference
           : bodySiteReference as Reference?,
       whenUsed: whenUsed == freezed ? _value.whenUsed : whenUsed as Period?,
-      device: device == freezed ? _value.device : device as Reference?,
+      device: device == freezed ? _value.device : device as Reference,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>?,
@@ -4086,7 +4074,7 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
       recordedOnElement: recordedOnElement == freezed
           ? _value.recordedOnElement
           : recordedOnElement as Element?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       timingTiming: timingTiming == freezed
           ? _value.timingTiming
           : timingTiming as Timing?,
@@ -4181,12 +4169,8 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get device {
-    if (_value.device == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.device!, (value) {
+  $ReferenceCopyWith<$Res> get device {
+    return $ReferenceCopyWith<$Res>(_value.device, (value) {
       return _then(_value.copyWith(device: value));
     });
   }
@@ -4203,12 +4187,8 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get subject {
-    if (_value.subject == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
+  $ReferenceCopyWith<$Res> get subject {
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
       return _then(_value.copyWith(subject: value));
     });
   }
@@ -4273,14 +4253,14 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
       CodeableConcept? bodySiteCodeableConcept,
       Reference? bodySiteReference,
       Period? whenUsed,
-      Reference? device,
+      Reference device,
       List<Identifier?>? identifier,
       List<CodeableConcept?>? indication,
       List<String?>? notes,
       FhirDateTime? recordedOn,
       @JsonKey(name: '_recordedOn')
           Element? recordedOnElement,
-      Reference? subject,
+      Reference subject,
       Timing? timingTiming,
       Period? timingPeriod,
       FhirDateTime? timingDateTime,
@@ -4302,11 +4282,11 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
   @override
   $PeriodCopyWith<$Res>? get whenUsed;
   @override
-  $ReferenceCopyWith<$Res>? get device;
+  $ReferenceCopyWith<$Res> get device;
   @override
   $ElementCopyWith<$Res>? get recordedOnElement;
   @override
-  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res> get subject;
   @override
   $TimingCopyWith<$Res>? get timingTiming;
   @override
@@ -4387,7 +4367,7 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
           ? _value.bodySiteReference
           : bodySiteReference as Reference?,
       whenUsed: whenUsed == freezed ? _value.whenUsed : whenUsed as Period?,
-      device: device == freezed ? _value.device : device as Reference?,
+      device: device == freezed ? _value.device : device as Reference,
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>?,
@@ -4401,7 +4381,7 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
       recordedOnElement: recordedOnElement == freezed
           ? _value.recordedOnElement
           : recordedOnElement as Element?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       timingTiming: timingTiming == freezed
           ? _value.timingTiming
           : timingTiming as Timing?,
@@ -4492,7 +4472,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   @override
   final Period? whenUsed;
   @override
-  final Reference? device;
+  final Reference device;
   @override
   final List<Identifier?>? identifier;
   @override
@@ -4505,7 +4485,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   @JsonKey(name: '_recordedOn')
   final Element? recordedOnElement;
   @override
-  final Reference? subject;
+  final Reference subject;
   @override
   final Timing? timingTiming;
   @override
@@ -4651,14 +4631,14 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
       CodeableConcept? bodySiteCodeableConcept,
       Reference? bodySiteReference,
       Period? whenUsed,
-      required Reference? device,
+      required Reference device,
       List<Identifier?>? identifier,
       List<CodeableConcept?>? indication,
       List<String?>? notes,
       FhirDateTime? recordedOn,
       @JsonKey(name: '_recordedOn')
           Element? recordedOnElement,
-      required Reference? subject,
+      required Reference subject,
       Timing? timingTiming,
       Period? timingPeriod,
       FhirDateTime? timingDateTime,
@@ -4701,7 +4681,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   @override
   Period? get whenUsed;
   @override
-  Reference? get device;
+  Reference get device;
   @override
   List<Identifier?>? get identifier;
   @override
@@ -4714,7 +4694,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   @JsonKey(name: '_recordedOn')
   Element? get recordedOnElement;
   @override
-  Reference? get subject;
+  Reference get subject;
   @override
   Timing? get timingTiming;
   @override

@@ -42,13 +42,13 @@ class _$PaymentNoticeTearOff {
       @JsonKey(name: '_created')
           Element? createdElement,
       Reference? provider,
-      required Reference? payment,
+      required Reference payment,
       Date? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
       Reference? payee,
-      required Reference? recipient,
-      required Money? amount,
+      required Reference recipient,
+      required Money amount,
       CodeableConcept? paymentStatus}) {
     return _PaymentNotice(
       resourceType: resourceType,
@@ -115,13 +115,13 @@ mixin _$PaymentNotice {
   @JsonKey(name: '_created')
   Element? get createdElement;
   Reference? get provider;
-  Reference? get payment;
+  Reference get payment;
   Date? get paymentDate;
   @JsonKey(name: '_paymentDate')
   Element? get paymentDateElement;
   Reference? get payee;
-  Reference? get recipient;
-  Money? get amount;
+  Reference get recipient;
+  Money get amount;
   CodeableConcept? get paymentStatus;
 
   Map<String, dynamic> toJson();
@@ -160,13 +160,13 @@ abstract class $PaymentNoticeCopyWith<$Res> {
       @JsonKey(name: '_created')
           Element? createdElement,
       Reference? provider,
-      Reference? payment,
+      Reference payment,
       Date? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
       Reference? payee,
-      Reference? recipient,
-      Money? amount,
+      Reference recipient,
+      Money amount,
       CodeableConcept? paymentStatus});
 
   $MetaCopyWith<$Res>? get meta;
@@ -178,11 +178,11 @@ abstract class $PaymentNoticeCopyWith<$Res> {
   $ReferenceCopyWith<$Res>? get response;
   $ElementCopyWith<$Res>? get createdElement;
   $ReferenceCopyWith<$Res>? get provider;
-  $ReferenceCopyWith<$Res>? get payment;
+  $ReferenceCopyWith<$Res> get payment;
   $ElementCopyWith<$Res>? get paymentDateElement;
   $ReferenceCopyWith<$Res>? get payee;
-  $ReferenceCopyWith<$Res>? get recipient;
-  $MoneyCopyWith<$Res>? get amount;
+  $ReferenceCopyWith<$Res> get recipient;
+  $MoneyCopyWith<$Res> get amount;
   $CodeableConceptCopyWith<$Res>? get paymentStatus;
 }
 
@@ -264,7 +264,7 @@ class _$PaymentNoticeCopyWithImpl<$Res>
           ? _value.createdElement
           : createdElement as Element?,
       provider: provider == freezed ? _value.provider : provider as Reference?,
-      payment: payment == freezed ? _value.payment : payment as Reference?,
+      payment: payment == freezed ? _value.payment : payment as Reference,
       paymentDate:
           paymentDate == freezed ? _value.paymentDate : paymentDate as Date?,
       paymentDateElement: paymentDateElement == freezed
@@ -272,8 +272,8 @@ class _$PaymentNoticeCopyWithImpl<$Res>
           : paymentDateElement as Element?,
       payee: payee == freezed ? _value.payee : payee as Reference?,
       recipient:
-          recipient == freezed ? _value.recipient : recipient as Reference?,
-      amount: amount == freezed ? _value.amount : amount as Money?,
+          recipient == freezed ? _value.recipient : recipient as Reference,
+      amount: amount == freezed ? _value.amount : amount as Money,
       paymentStatus: paymentStatus == freezed
           ? _value.paymentStatus
           : paymentStatus as CodeableConcept?,
@@ -380,12 +380,8 @@ class _$PaymentNoticeCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get payment {
-    if (_value.payment == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.payment!, (value) {
+  $ReferenceCopyWith<$Res> get payment {
+    return $ReferenceCopyWith<$Res>(_value.payment, (value) {
       return _then(_value.copyWith(payment: value));
     });
   }
@@ -413,23 +409,15 @@ class _$PaymentNoticeCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get recipient {
-    if (_value.recipient == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.recipient!, (value) {
+  $ReferenceCopyWith<$Res> get recipient {
+    return $ReferenceCopyWith<$Res>(_value.recipient, (value) {
       return _then(_value.copyWith(recipient: value));
     });
   }
 
   @override
-  $MoneyCopyWith<$Res>? get amount {
-    if (_value.amount == null) {
-      return null;
-    }
-
-    return $MoneyCopyWith<$Res>(_value.amount!, (value) {
+  $MoneyCopyWith<$Res> get amount {
+    return $MoneyCopyWith<$Res>(_value.amount, (value) {
       return _then(_value.copyWith(amount: value));
     });
   }
@@ -479,13 +467,13 @@ abstract class _$PaymentNoticeCopyWith<$Res>
       @JsonKey(name: '_created')
           Element? createdElement,
       Reference? provider,
-      Reference? payment,
+      Reference payment,
       Date? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
       Reference? payee,
-      Reference? recipient,
-      Money? amount,
+      Reference recipient,
+      Money amount,
       CodeableConcept? paymentStatus});
 
   @override
@@ -507,15 +495,15 @@ abstract class _$PaymentNoticeCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get provider;
   @override
-  $ReferenceCopyWith<$Res>? get payment;
+  $ReferenceCopyWith<$Res> get payment;
   @override
   $ElementCopyWith<$Res>? get paymentDateElement;
   @override
   $ReferenceCopyWith<$Res>? get payee;
   @override
-  $ReferenceCopyWith<$Res>? get recipient;
+  $ReferenceCopyWith<$Res> get recipient;
   @override
-  $MoneyCopyWith<$Res>? get amount;
+  $MoneyCopyWith<$Res> get amount;
   @override
   $CodeableConceptCopyWith<$Res>? get paymentStatus;
 }
@@ -600,7 +588,7 @@ class __$PaymentNoticeCopyWithImpl<$Res>
           ? _value.createdElement
           : createdElement as Element?,
       provider: provider == freezed ? _value.provider : provider as Reference?,
-      payment: payment == freezed ? _value.payment : payment as Reference?,
+      payment: payment == freezed ? _value.payment : payment as Reference,
       paymentDate:
           paymentDate == freezed ? _value.paymentDate : paymentDate as Date?,
       paymentDateElement: paymentDateElement == freezed
@@ -608,8 +596,8 @@ class __$PaymentNoticeCopyWithImpl<$Res>
           : paymentDateElement as Element?,
       payee: payee == freezed ? _value.payee : payee as Reference?,
       recipient:
-          recipient == freezed ? _value.recipient : recipient as Reference?,
-      amount: amount == freezed ? _value.amount : amount as Money?,
+          recipient == freezed ? _value.recipient : recipient as Reference,
+      amount: amount == freezed ? _value.amount : amount as Money,
       paymentStatus: paymentStatus == freezed
           ? _value.paymentStatus
           : paymentStatus as CodeableConcept?,
@@ -705,7 +693,7 @@ class _$_PaymentNotice extends _PaymentNotice {
   @override
   final Reference? provider;
   @override
-  final Reference? payment;
+  final Reference payment;
   @override
   final Date? paymentDate;
   @override
@@ -714,9 +702,9 @@ class _$_PaymentNotice extends _PaymentNotice {
   @override
   final Reference? payee;
   @override
-  final Reference? recipient;
+  final Reference recipient;
   @override
-  final Money? amount;
+  final Money amount;
   @override
   final CodeableConcept? paymentStatus;
 
@@ -869,13 +857,13 @@ abstract class _PaymentNotice extends PaymentNotice {
       @JsonKey(name: '_created')
           Element? createdElement,
       Reference? provider,
-      required Reference? payment,
+      required Reference payment,
       Date? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
       Reference? payee,
-      required Reference? recipient,
-      required Money? amount,
+      required Reference recipient,
+      required Money amount,
       CodeableConcept? paymentStatus}) = _$_PaymentNotice;
 
   factory _PaymentNotice.fromJson(Map<String, dynamic> json) =
@@ -926,7 +914,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
   Reference? get provider;
   @override
-  Reference? get payment;
+  Reference get payment;
   @override
   Date? get paymentDate;
   @override
@@ -935,9 +923,9 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
   Reference? get payee;
   @override
-  Reference? get recipient;
+  Reference get recipient;
   @override
-  Money? get amount;
+  Money get amount;
   @override
   CodeableConcept? get paymentStatus;
   @override
@@ -991,7 +979,7 @@ class _$PaymentReconciliationTearOff {
       Date? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
-      required Money? paymentAmount,
+      required Money paymentAmount,
       Identifier? paymentIdentifier,
       List<PaymentReconciliationDetail?>? detail,
       CodeableConcept? formCode,
@@ -1077,7 +1065,7 @@ mixin _$PaymentReconciliation {
   Date? get paymentDate;
   @JsonKey(name: '_paymentDate')
   Element? get paymentDateElement;
-  Money? get paymentAmount;
+  Money get paymentAmount;
   Identifier? get paymentIdentifier;
   List<PaymentReconciliationDetail?>? get detail;
   CodeableConcept? get formCode;
@@ -1130,7 +1118,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
       Date? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
-      Money? paymentAmount,
+      Money paymentAmount,
       Identifier? paymentIdentifier,
       List<PaymentReconciliationDetail?>? detail,
       CodeableConcept? formCode,
@@ -1149,7 +1137,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
   $ElementCopyWith<$Res>? get outcomeElement;
   $ElementCopyWith<$Res>? get dispositionElement;
   $ElementCopyWith<$Res>? get paymentDateElement;
-  $MoneyCopyWith<$Res>? get paymentAmount;
+  $MoneyCopyWith<$Res> get paymentAmount;
   $IdentifierCopyWith<$Res>? get paymentIdentifier;
   $CodeableConceptCopyWith<$Res>? get formCode;
 }
@@ -1259,7 +1247,7 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
           : paymentDateElement as Element?,
       paymentAmount: paymentAmount == freezed
           ? _value.paymentAmount
-          : paymentAmount as Money?,
+          : paymentAmount as Money,
       paymentIdentifier: paymentIdentifier == freezed
           ? _value.paymentIdentifier
           : paymentIdentifier as Identifier?,
@@ -1418,12 +1406,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
   }
 
   @override
-  $MoneyCopyWith<$Res>? get paymentAmount {
-    if (_value.paymentAmount == null) {
-      return null;
-    }
-
-    return $MoneyCopyWith<$Res>(_value.paymentAmount!, (value) {
+  $MoneyCopyWith<$Res> get paymentAmount {
+    return $MoneyCopyWith<$Res>(_value.paymentAmount, (value) {
       return _then(_value.copyWith(paymentAmount: value));
     });
   }
@@ -1495,7 +1479,7 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
       Date? paymentDate,
       @JsonKey(name: '_paymentDate')
           Element? paymentDateElement,
-      Money? paymentAmount,
+      Money paymentAmount,
       Identifier? paymentIdentifier,
       List<PaymentReconciliationDetail?>? detail,
       CodeableConcept? formCode,
@@ -1528,7 +1512,7 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get paymentDateElement;
   @override
-  $MoneyCopyWith<$Res>? get paymentAmount;
+  $MoneyCopyWith<$Res> get paymentAmount;
   @override
   $IdentifierCopyWith<$Res>? get paymentIdentifier;
   @override
@@ -1642,7 +1626,7 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
           : paymentDateElement as Element?,
       paymentAmount: paymentAmount == freezed
           ? _value.paymentAmount
-          : paymentAmount as Money?,
+          : paymentAmount as Money,
       paymentIdentifier: paymentIdentifier == freezed
           ? _value.paymentIdentifier
           : paymentIdentifier as Identifier?,
@@ -1772,7 +1756,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   @JsonKey(name: '_paymentDate')
   final Element? paymentDateElement;
   @override
-  final Money? paymentAmount;
+  final Money paymentAmount;
   @override
   final Identifier? paymentIdentifier;
   @override
@@ -1953,7 +1937,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
           Date? paymentDate,
           @JsonKey(name: '_paymentDate')
               Element? paymentDateElement,
-          required Money? paymentAmount,
+          required Money paymentAmount,
           Identifier? paymentIdentifier,
           List<PaymentReconciliationDetail?>? detail,
           CodeableConcept? formCode,
@@ -2026,7 +2010,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @JsonKey(name: '_paymentDate')
   Element? get paymentDateElement;
   @override
-  Money? get paymentAmount;
+  Money get paymentAmount;
   @override
   Identifier? get paymentIdentifier;
   @override
@@ -2055,7 +2039,7 @@ class _$PaymentReconciliationDetailTearOff {
       List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       Identifier? predecessor,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       Reference? request,
       Reference? submitter,
       Reference? response,
@@ -2098,7 +2082,7 @@ mixin _$PaymentReconciliationDetail {
   List<FhirExtension?>? get modifierExtension;
   Identifier? get identifier;
   Identifier? get predecessor;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   Reference? get request;
   Reference? get submitter;
   Reference? get response;
@@ -2127,7 +2111,7 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res> {
       List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       Identifier? predecessor,
-      CodeableConcept? type,
+      CodeableConcept type,
       Reference? request,
       Reference? submitter,
       Reference? response,
@@ -2139,7 +2123,7 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res> {
 
   $IdentifierCopyWith<$Res>? get identifier;
   $IdentifierCopyWith<$Res>? get predecessor;
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res>? get request;
   $ReferenceCopyWith<$Res>? get submitter;
   $ReferenceCopyWith<$Res>? get response;
@@ -2188,7 +2172,7 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
       predecessor: predecessor == freezed
           ? _value.predecessor
           : predecessor as Identifier?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       request: request == freezed ? _value.request : request as Reference?,
       submitter:
           submitter == freezed ? _value.submitter : submitter as Reference?,
@@ -2227,12 +2211,8 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -2329,7 +2309,7 @@ abstract class _$PaymentReconciliationDetailCopyWith<$Res>
       List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       Identifier? predecessor,
-      CodeableConcept? type,
+      CodeableConcept type,
       Reference? request,
       Reference? submitter,
       Reference? response,
@@ -2344,7 +2324,7 @@ abstract class _$PaymentReconciliationDetailCopyWith<$Res>
   @override
   $IdentifierCopyWith<$Res>? get predecessor;
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $ReferenceCopyWith<$Res>? get request;
   @override
@@ -2404,7 +2384,7 @@ class __$PaymentReconciliationDetailCopyWithImpl<$Res>
       predecessor: predecessor == freezed
           ? _value.predecessor
           : predecessor as Identifier?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       request: request == freezed ? _value.request : request as Reference?,
       submitter:
           submitter == freezed ? _value.submitter : submitter as Reference?,
@@ -2457,7 +2437,7 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
   @override
   final Identifier? predecessor;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final Reference? request;
   @override
@@ -2563,7 +2543,7 @@ abstract class _PaymentReconciliationDetail
       List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       Identifier? predecessor,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       Reference? request,
       Reference? submitter,
       Reference? response,
@@ -2588,7 +2568,7 @@ abstract class _PaymentReconciliationDetail
   @override
   Identifier? get predecessor;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   Reference? get request;
   @override

@@ -1353,7 +1353,7 @@ class _$MarketingStatusTearOff {
       List<FhirExtension?>? modifierExtension,
       CodeableConcept? country,
       CodeableConcept? jurisdiction,
-      required CodeableConcept? status,
+      required CodeableConcept status,
       Period? dateRange,
       FhirDateTime? restoreDate,
       @JsonKey(name: '_restoreDate') Element? restoreDateElement}) {
@@ -1386,7 +1386,7 @@ mixin _$MarketingStatus {
   List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get country;
   CodeableConcept? get jurisdiction;
-  CodeableConcept? get status;
+  CodeableConcept get status;
   Period? get dateRange;
   FhirDateTime? get restoreDate;
   @JsonKey(name: '_restoreDate')
@@ -1408,14 +1408,14 @@ abstract class $MarketingStatusCopyWith<$Res> {
       List<FhirExtension?>? modifierExtension,
       CodeableConcept? country,
       CodeableConcept? jurisdiction,
-      CodeableConcept? status,
+      CodeableConcept status,
       Period? dateRange,
       FhirDateTime? restoreDate,
       @JsonKey(name: '_restoreDate') Element? restoreDateElement});
 
   $CodeableConceptCopyWith<$Res>? get country;
   $CodeableConceptCopyWith<$Res>? get jurisdiction;
-  $CodeableConceptCopyWith<$Res>? get status;
+  $CodeableConceptCopyWith<$Res> get status;
   $PeriodCopyWith<$Res>? get dateRange;
   $ElementCopyWith<$Res>? get restoreDateElement;
 }
@@ -1454,7 +1454,7 @@ class _$MarketingStatusCopyWithImpl<$Res>
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
           : jurisdiction as CodeableConcept?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
+      status: status == freezed ? _value.status : status as CodeableConcept,
       dateRange: dateRange == freezed ? _value.dateRange : dateRange as Period?,
       restoreDate: restoreDate == freezed
           ? _value.restoreDate
@@ -1488,12 +1488,8 @@ class _$MarketingStatusCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get status {
-    if (_value.status == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.status!, (value) {
+  $CodeableConceptCopyWith<$Res> get status {
+    return $CodeableConceptCopyWith<$Res>(_value.status, (value) {
       return _then(_value.copyWith(status: value));
     });
   }
@@ -1534,7 +1530,7 @@ abstract class _$MarketingStatusCopyWith<$Res>
       List<FhirExtension?>? modifierExtension,
       CodeableConcept? country,
       CodeableConcept? jurisdiction,
-      CodeableConcept? status,
+      CodeableConcept status,
       Period? dateRange,
       FhirDateTime? restoreDate,
       @JsonKey(name: '_restoreDate') Element? restoreDateElement});
@@ -1544,7 +1540,7 @@ abstract class _$MarketingStatusCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get jurisdiction;
   @override
-  $CodeableConceptCopyWith<$Res>? get status;
+  $CodeableConceptCopyWith<$Res> get status;
   @override
   $PeriodCopyWith<$Res>? get dateRange;
   @override
@@ -1587,7 +1583,7 @@ class __$MarketingStatusCopyWithImpl<$Res>
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
           : jurisdiction as CodeableConcept?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
+      status: status == freezed ? _value.status : status as CodeableConcept,
       dateRange: dateRange == freezed ? _value.dateRange : dateRange as Period?,
       restoreDate: restoreDate == freezed
           ? _value.restoreDate
@@ -1630,7 +1626,7 @@ class _$_MarketingStatus extends _MarketingStatus {
   @override
   final CodeableConcept? jurisdiction;
   @override
-  final CodeableConcept? status;
+  final CodeableConcept status;
   @override
   final Period? dateRange;
   @override
@@ -1707,7 +1703,7 @@ abstract class _MarketingStatus extends MarketingStatus {
           List<FhirExtension?>? modifierExtension,
           CodeableConcept? country,
           CodeableConcept? jurisdiction,
-          required CodeableConcept? status,
+          required CodeableConcept status,
           Period? dateRange,
           FhirDateTime? restoreDate,
           @JsonKey(name: '_restoreDate') Element? restoreDateElement}) =
@@ -1728,7 +1724,7 @@ abstract class _MarketingStatus extends MarketingStatus {
   @override
   CodeableConcept? get jurisdiction;
   @override
-  CodeableConcept? get status;
+  CodeableConcept get status;
   @override
   Period? get dateRange;
   @override
@@ -12285,7 +12281,7 @@ class _$CitationKeywordListTearOff {
       List<FhirExtension?>? modifierExtension,
       String? owner,
       @JsonKey(name: '_owner') Element? ownerElement,
-      required List<CitationKeyword?>? keyword}) {
+      required List<CitationKeyword> keyword}) {
     return _CitationKeywordList(
       id: id,
       extension_: extension_,
@@ -12313,7 +12309,7 @@ mixin _$CitationKeywordList {
   String? get owner;
   @JsonKey(name: '_owner')
   Element? get ownerElement;
-  List<CitationKeyword?>? get keyword;
+  List<CitationKeyword> get keyword;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -12331,7 +12327,7 @@ abstract class $CitationKeywordListCopyWith<$Res> {
       List<FhirExtension?>? modifierExtension,
       String? owner,
       @JsonKey(name: '_owner') Element? ownerElement,
-      List<CitationKeyword?>? keyword});
+      List<CitationKeyword> keyword});
 
   $ElementCopyWith<$Res>? get ownerElement;
 }
@@ -12368,7 +12364,7 @@ class _$CitationKeywordListCopyWithImpl<$Res>
           : ownerElement as Element?,
       keyword: keyword == freezed
           ? _value.keyword
-          : keyword as List<CitationKeyword?>?,
+          : keyword as List<CitationKeyword>,
     ));
   }
 
@@ -12397,7 +12393,7 @@ abstract class _$CitationKeywordListCopyWith<$Res>
       List<FhirExtension?>? modifierExtension,
       String? owner,
       @JsonKey(name: '_owner') Element? ownerElement,
-      List<CitationKeyword?>? keyword});
+      List<CitationKeyword> keyword});
 
   @override
   $ElementCopyWith<$Res>? get ownerElement;
@@ -12437,7 +12433,7 @@ class __$CitationKeywordListCopyWithImpl<$Res>
           : ownerElement as Element?,
       keyword: keyword == freezed
           ? _value.keyword
-          : keyword as List<CitationKeyword?>?,
+          : keyword as List<CitationKeyword>,
     ));
   }
 }
@@ -12471,7 +12467,7 @@ class _$_CitationKeywordList extends _CitationKeywordList {
   @JsonKey(name: '_owner')
   final Element? ownerElement;
   @override
-  final List<CitationKeyword?>? keyword;
+  final List<CitationKeyword> keyword;
 
   @override
   String toString() {
@@ -12529,7 +12525,7 @@ abstract class _CitationKeywordList extends CitationKeywordList {
       List<FhirExtension?>? modifierExtension,
       String? owner,
       @JsonKey(name: '_owner') Element? ownerElement,
-      required List<CitationKeyword?>? keyword}) = _$_CitationKeywordList;
+      required List<CitationKeyword> keyword}) = _$_CitationKeywordList;
 
   factory _CitationKeywordList.fromJson(Map<String, dynamic> json) =
       _$_CitationKeywordList.fromJson;
@@ -12547,7 +12543,7 @@ abstract class _CitationKeywordList extends CitationKeywordList {
   @JsonKey(name: '_owner')
   Element? get ownerElement;
   @override
-  List<CitationKeyword?>? get keyword;
+  List<CitationKeyword> get keyword;
   @override
   @JsonKey(ignore: true)
   _$CitationKeywordListCopyWith<_CitationKeywordList> get copyWith;
@@ -14229,7 +14225,7 @@ class _$EvidenceReportTearOff {
       CodeableConcept? type,
       List<Annotation?>? note,
       List<RelatedArtifact?>? relatedArtifact,
-      required EvidenceReportSubject? subject,
+      required EvidenceReportSubject subject,
       List<ContactDetail?>? author,
       List<ContactDetail?>? editor,
       List<ContactDetail?>? reviewer,
@@ -14368,7 +14364,7 @@ mixin _$EvidenceReport {
   CodeableConcept? get type;
   List<Annotation?>? get note;
   List<RelatedArtifact?>? get relatedArtifact;
-  EvidenceReportSubject? get subject;
+  EvidenceReportSubject get subject;
   List<ContactDetail?>? get author;
   List<ContactDetail?>? get editor;
   List<ContactDetail?>? get reviewer;
@@ -14451,7 +14447,7 @@ abstract class $EvidenceReportCopyWith<$Res> {
       CodeableConcept? type,
       List<Annotation?>? note,
       List<RelatedArtifact?>? relatedArtifact,
-      EvidenceReportSubject? subject,
+      EvidenceReportSubject subject,
       List<ContactDetail?>? author,
       List<ContactDetail?>? editor,
       List<ContactDetail?>? reviewer,
@@ -14479,7 +14475,7 @@ abstract class $EvidenceReportCopyWith<$Res> {
   $PeriodCopyWith<$Res>? get effectivePeriod;
   $ReferenceCopyWith<$Res>? get citeAs;
   $CodeableConceptCopyWith<$Res>? get type;
-  $EvidenceReportSubjectCopyWith<$Res>? get subject;
+  $EvidenceReportSubjectCopyWith<$Res> get subject;
 }
 
 /// @nodoc
@@ -14658,7 +14654,7 @@ class _$EvidenceReportCopyWithImpl<$Res>
           : relatedArtifact as List<RelatedArtifact?>?,
       subject: subject == freezed
           ? _value.subject
-          : subject as EvidenceReportSubject?,
+          : subject as EvidenceReportSubject,
       author:
           author == freezed ? _value.author : author as List<ContactDetail?>?,
       editor:
@@ -14899,12 +14895,8 @@ class _$EvidenceReportCopyWithImpl<$Res>
   }
 
   @override
-  $EvidenceReportSubjectCopyWith<$Res>? get subject {
-    if (_value.subject == null) {
-      return null;
-    }
-
-    return $EvidenceReportSubjectCopyWith<$Res>(_value.subject!, (value) {
+  $EvidenceReportSubjectCopyWith<$Res> get subject {
+    return $EvidenceReportSubjectCopyWith<$Res>(_value.subject, (value) {
       return _then(_value.copyWith(subject: value));
     });
   }
@@ -14982,7 +14974,7 @@ abstract class _$EvidenceReportCopyWith<$Res>
       CodeableConcept? type,
       List<Annotation?>? note,
       List<RelatedArtifact?>? relatedArtifact,
-      EvidenceReportSubject? subject,
+      EvidenceReportSubject subject,
       List<ContactDetail?>? author,
       List<ContactDetail?>? editor,
       List<ContactDetail?>? reviewer,
@@ -15031,7 +15023,7 @@ abstract class _$EvidenceReportCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get type;
   @override
-  $EvidenceReportSubjectCopyWith<$Res>? get subject;
+  $EvidenceReportSubjectCopyWith<$Res> get subject;
 }
 
 /// @nodoc
@@ -15212,7 +15204,7 @@ class __$EvidenceReportCopyWithImpl<$Res>
           : relatedArtifact as List<RelatedArtifact?>?,
       subject: subject == freezed
           ? _value.subject
-          : subject as EvidenceReportSubject?,
+          : subject as EvidenceReportSubject,
       author:
           author == freezed ? _value.author : author as List<ContactDetail?>?,
       editor:
@@ -15410,7 +15402,7 @@ class _$_EvidenceReport extends _EvidenceReport {
   @override
   final List<RelatedArtifact?>? relatedArtifact;
   @override
-  final EvidenceReportSubject? subject;
+  final EvidenceReportSubject subject;
   @override
   final List<ContactDetail?>? author;
   @override
@@ -15668,7 +15660,7 @@ abstract class _EvidenceReport extends EvidenceReport {
       CodeableConcept? type,
       List<Annotation?>? note,
       List<RelatedArtifact?>? relatedArtifact,
-      required EvidenceReportSubject? subject,
+      required EvidenceReportSubject subject,
       List<ContactDetail?>? author,
       List<ContactDetail?>? editor,
       List<ContactDetail?>? reviewer,
@@ -15791,7 +15783,7 @@ abstract class _EvidenceReport extends EvidenceReport {
   @override
   List<RelatedArtifact?>? get relatedArtifact;
   @override
-  EvidenceReportSubject? get subject;
+  EvidenceReportSubject get subject;
   @override
   List<ContactDetail?>? get author;
   @override
@@ -16064,7 +16056,7 @@ class _$EvidenceReportCharacteristicTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       Reference? valueReference,
       CodeableConcept? valueCodeableConcept,
       Boolean? valueBoolean,
@@ -16105,7 +16097,7 @@ mixin _$EvidenceReportCharacteristic {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get code;
+  CodeableConcept get code;
   Reference? get valueReference;
   CodeableConcept? get valueCodeableConcept;
   Boolean? get valueBoolean;
@@ -16134,7 +16126,7 @@ abstract class $EvidenceReportCharacteristicCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? code,
+      CodeableConcept code,
       Reference? valueReference,
       CodeableConcept? valueCodeableConcept,
       Boolean? valueBoolean,
@@ -16145,7 +16137,7 @@ abstract class $EvidenceReportCharacteristicCopyWith<$Res> {
       @JsonKey(name: '_exclude') Element? excludeElement,
       Period? period});
 
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res>? get valueReference;
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   $ElementCopyWith<$Res>? get valueBooleanElement;
@@ -16188,7 +16180,7 @@ class _$EvidenceReportCharacteristicCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       valueReference: valueReference == freezed
           ? _value.valueReference
           : valueReference as Reference?,
@@ -16215,12 +16207,8 @@ class _$EvidenceReportCharacteristicCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
@@ -16316,7 +16304,7 @@ abstract class _$EvidenceReportCharacteristicCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? code,
+      CodeableConcept code,
       Reference? valueReference,
       CodeableConcept? valueCodeableConcept,
       Boolean? valueBoolean,
@@ -16328,7 +16316,7 @@ abstract class _$EvidenceReportCharacteristicCopyWith<$Res>
       Period? period});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   @override
   $ReferenceCopyWith<$Res>? get valueReference;
   @override
@@ -16382,7 +16370,7 @@ class __$EvidenceReportCharacteristicCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       valueReference: valueReference == freezed
           ? _value.valueReference
           : valueReference as Reference?,
@@ -16440,7 +16428,7 @@ class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
   final Reference? valueReference;
   @override
@@ -16545,7 +16533,7 @@ abstract class _EvidenceReportCharacteristic
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       Reference? valueReference,
       CodeableConcept? valueCodeableConcept,
       Boolean? valueBoolean,
@@ -16567,7 +16555,7 @@ abstract class _EvidenceReportCharacteristic
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get code;
+  CodeableConcept get code;
   @override
   Reference? get valueReference;
   @override

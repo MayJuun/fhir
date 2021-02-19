@@ -39,7 +39,7 @@ class _$TestReportTearOff {
       TestReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      required Reference? testScript,
+      required Reference testScript,
       TestReportResult? result,
       @JsonKey(name: '_result')
           Element? resultElement,
@@ -121,7 +121,7 @@ mixin _$TestReport {
   TestReportStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  Reference? get testScript;
+  Reference get testScript;
   TestReportResult? get result;
   @JsonKey(name: '_result')
   Element? get resultElement;
@@ -172,7 +172,7 @@ abstract class $TestReportCopyWith<$Res> {
       TestReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Reference? testScript,
+      Reference testScript,
       TestReportResult? result,
       @JsonKey(name: '_result')
           Element? resultElement,
@@ -197,7 +197,7 @@ abstract class $TestReportCopyWith<$Res> {
   $IdentifierCopyWith<$Res>? get identifier;
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get statusElement;
-  $ReferenceCopyWith<$Res>? get testScript;
+  $ReferenceCopyWith<$Res> get testScript;
   $ElementCopyWith<$Res>? get resultElement;
   $ElementCopyWith<$Res>? get scoreElement;
   $ElementCopyWith<$Res>? get testerElement;
@@ -282,7 +282,7 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
           ? _value.statusElement
           : statusElement as Element?,
       testScript:
-          testScript == freezed ? _value.testScript : testScript as Reference?,
+          testScript == freezed ? _value.testScript : testScript as Reference,
       result: result == freezed ? _value.result : result as TestReportResult?,
       resultElement: resultElement == freezed
           ? _value.resultElement
@@ -388,12 +388,8 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get testScript {
-    if (_value.testScript == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.testScript!, (value) {
+  $ReferenceCopyWith<$Res> get testScript {
+    return $ReferenceCopyWith<$Res>(_value.testScript, (value) {
       return _then(_value.copyWith(testScript: value));
     });
   }
@@ -494,7 +490,7 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
       TestReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Reference? testScript,
+      Reference testScript,
       TestReportResult? result,
       @JsonKey(name: '_result')
           Element? resultElement,
@@ -527,7 +523,7 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $ReferenceCopyWith<$Res>? get testScript;
+  $ReferenceCopyWith<$Res> get testScript;
   @override
   $ElementCopyWith<$Res>? get resultElement;
   @override
@@ -620,7 +616,7 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
           ? _value.statusElement
           : statusElement as Element?,
       testScript:
-          testScript == freezed ? _value.testScript : testScript as Reference?,
+          testScript == freezed ? _value.testScript : testScript as Reference,
       result: result == freezed ? _value.result : result as TestReportResult?,
       resultElement: resultElement == freezed
           ? _value.resultElement
@@ -737,7 +733,7 @@ class _$_TestReport extends _TestReport {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Reference? testScript;
+  final Reference testScript;
   @override
   final TestReportResult? result;
   @override
@@ -919,7 +915,7 @@ abstract class _TestReport extends TestReport {
       TestReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      required Reference? testScript,
+      required Reference testScript,
       TestReportResult? result,
       @JsonKey(name: '_result')
           Element? resultElement,
@@ -979,7 +975,7 @@ abstract class _TestReport extends TestReport {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Reference? get testScript;
+  Reference get testScript;
   @override
   TestReportResult? get result;
   @override
@@ -2313,7 +2309,7 @@ class _$TestReportTestTearOff {
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      required List<TestReportAction1?>? action}) {
+      required List<TestReportAction1> action}) {
     return _TestReportTest(
       name: name,
       nameElement: nameElement,
@@ -2339,7 +2335,7 @@ mixin _$TestReportTest {
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<TestReportAction1?>? get action;
+  List<TestReportAction1> get action;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2356,7 +2352,7 @@ abstract class $TestReportTestCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<TestReportAction1?>? action});
+      List<TestReportAction1> action});
 
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -2388,9 +2384,8 @@ class _$TestReportTestCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element?,
-      action: action == freezed
-          ? _value.action
-          : action as List<TestReportAction1?>?,
+      action:
+          action == freezed ? _value.action : action as List<TestReportAction1>,
     ));
   }
 
@@ -2429,7 +2424,7 @@ abstract class _$TestReportTestCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<TestReportAction1?>? action});
+      List<TestReportAction1> action});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -2465,9 +2460,8 @@ class __$TestReportTestCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element?,
-      action: action == freezed
-          ? _value.action
-          : action as List<TestReportAction1?>?,
+      action:
+          action == freezed ? _value.action : action as List<TestReportAction1>,
     ));
   }
 }
@@ -2498,7 +2492,7 @@ class _$_TestReportTest extends _TestReportTest {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<TestReportAction1?>? action;
+  final List<TestReportAction1> action;
 
   @override
   String toString() {
@@ -2551,7 +2545,7 @@ abstract class _TestReportTest extends TestReportTest {
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      required List<TestReportAction1?>? action}) = _$_TestReportTest;
+      required List<TestReportAction1> action}) = _$_TestReportTest;
 
   factory _TestReportTest.fromJson(Map<String, dynamic> json) =
       _$_TestReportTest.fromJson;
@@ -2567,7 +2561,7 @@ abstract class _TestReportTest extends TestReportTest {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<TestReportAction1?>? get action;
+  List<TestReportAction1> get action;
   @override
   @JsonKey(ignore: true)
   _$TestReportTestCopyWith<_TestReportTest> get copyWith;
@@ -4590,7 +4584,7 @@ class _$TestScriptOriginTearOff {
   _TestScriptOrigin call(
       {Decimal? index,
       @JsonKey(name: '_index') Element? indexElement,
-      required Coding? profile}) {
+      required Coding profile}) {
     return _TestScriptOrigin(
       index: index,
       indexElement: indexElement,
@@ -4611,7 +4605,7 @@ mixin _$TestScriptOrigin {
   Decimal? get index;
   @JsonKey(name: '_index')
   Element? get indexElement;
-  Coding? get profile;
+  Coding get profile;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4626,10 +4620,10 @@ abstract class $TestScriptOriginCopyWith<$Res> {
   $Res call(
       {Decimal? index,
       @JsonKey(name: '_index') Element? indexElement,
-      Coding? profile});
+      Coding profile});
 
   $ElementCopyWith<$Res>? get indexElement;
-  $CodingCopyWith<$Res>? get profile;
+  $CodingCopyWith<$Res> get profile;
 }
 
 /// @nodoc
@@ -4652,7 +4646,7 @@ class _$TestScriptOriginCopyWithImpl<$Res>
       indexElement: indexElement == freezed
           ? _value.indexElement
           : indexElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Coding?,
+      profile: profile == freezed ? _value.profile : profile as Coding,
     ));
   }
 
@@ -4668,12 +4662,8 @@ class _$TestScriptOriginCopyWithImpl<$Res>
   }
 
   @override
-  $CodingCopyWith<$Res>? get profile {
-    if (_value.profile == null) {
-      return null;
-    }
-
-    return $CodingCopyWith<$Res>(_value.profile!, (value) {
+  $CodingCopyWith<$Res> get profile {
+    return $CodingCopyWith<$Res>(_value.profile, (value) {
       return _then(_value.copyWith(profile: value));
     });
   }
@@ -4689,12 +4679,12 @@ abstract class _$TestScriptOriginCopyWith<$Res>
   $Res call(
       {Decimal? index,
       @JsonKey(name: '_index') Element? indexElement,
-      Coding? profile});
+      Coding profile});
 
   @override
   $ElementCopyWith<$Res>? get indexElement;
   @override
-  $CodingCopyWith<$Res>? get profile;
+  $CodingCopyWith<$Res> get profile;
 }
 
 /// @nodoc
@@ -4719,7 +4709,7 @@ class __$TestScriptOriginCopyWithImpl<$Res>
       indexElement: indexElement == freezed
           ? _value.indexElement
           : indexElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Coding?,
+      profile: profile == freezed ? _value.profile : profile as Coding,
     ));
   }
 }
@@ -4743,7 +4733,7 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
   @JsonKey(name: '_index')
   final Element? indexElement;
   @override
-  final Coding? profile;
+  final Coding profile;
 
   @override
   String toString() {
@@ -4786,7 +4776,7 @@ abstract class _TestScriptOrigin extends TestScriptOrigin {
   factory _TestScriptOrigin(
       {Decimal? index,
       @JsonKey(name: '_index') Element? indexElement,
-      required Coding? profile}) = _$_TestScriptOrigin;
+      required Coding profile}) = _$_TestScriptOrigin;
 
   factory _TestScriptOrigin.fromJson(Map<String, dynamic> json) =
       _$_TestScriptOrigin.fromJson;
@@ -4797,7 +4787,7 @@ abstract class _TestScriptOrigin extends TestScriptOrigin {
   @JsonKey(name: '_index')
   Element? get indexElement;
   @override
-  Coding? get profile;
+  Coding get profile;
   @override
   @JsonKey(ignore: true)
   _$TestScriptOriginCopyWith<_TestScriptOrigin> get copyWith;
@@ -4815,7 +4805,7 @@ class _$TestScriptDestinationTearOff {
   _TestScriptDestination call(
       {Decimal? index,
       @JsonKey(name: '_index') Element? indexElement,
-      required Coding? profile}) {
+      required Coding profile}) {
     return _TestScriptDestination(
       index: index,
       indexElement: indexElement,
@@ -4836,7 +4826,7 @@ mixin _$TestScriptDestination {
   Decimal? get index;
   @JsonKey(name: '_index')
   Element? get indexElement;
-  Coding? get profile;
+  Coding get profile;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4851,10 +4841,10 @@ abstract class $TestScriptDestinationCopyWith<$Res> {
   $Res call(
       {Decimal? index,
       @JsonKey(name: '_index') Element? indexElement,
-      Coding? profile});
+      Coding profile});
 
   $ElementCopyWith<$Res>? get indexElement;
-  $CodingCopyWith<$Res>? get profile;
+  $CodingCopyWith<$Res> get profile;
 }
 
 /// @nodoc
@@ -4877,7 +4867,7 @@ class _$TestScriptDestinationCopyWithImpl<$Res>
       indexElement: indexElement == freezed
           ? _value.indexElement
           : indexElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Coding?,
+      profile: profile == freezed ? _value.profile : profile as Coding,
     ));
   }
 
@@ -4893,12 +4883,8 @@ class _$TestScriptDestinationCopyWithImpl<$Res>
   }
 
   @override
-  $CodingCopyWith<$Res>? get profile {
-    if (_value.profile == null) {
-      return null;
-    }
-
-    return $CodingCopyWith<$Res>(_value.profile!, (value) {
+  $CodingCopyWith<$Res> get profile {
+    return $CodingCopyWith<$Res>(_value.profile, (value) {
       return _then(_value.copyWith(profile: value));
     });
   }
@@ -4914,12 +4900,12 @@ abstract class _$TestScriptDestinationCopyWith<$Res>
   $Res call(
       {Decimal? index,
       @JsonKey(name: '_index') Element? indexElement,
-      Coding? profile});
+      Coding profile});
 
   @override
   $ElementCopyWith<$Res>? get indexElement;
   @override
-  $CodingCopyWith<$Res>? get profile;
+  $CodingCopyWith<$Res> get profile;
 }
 
 /// @nodoc
@@ -4944,7 +4930,7 @@ class __$TestScriptDestinationCopyWithImpl<$Res>
       indexElement: indexElement == freezed
           ? _value.indexElement
           : indexElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as Coding?,
+      profile: profile == freezed ? _value.profile : profile as Coding,
     ));
   }
 }
@@ -4968,7 +4954,7 @@ class _$_TestScriptDestination extends _TestScriptDestination {
   @JsonKey(name: '_index')
   final Element? indexElement;
   @override
-  final Coding? profile;
+  final Coding profile;
 
   @override
   String toString() {
@@ -5012,7 +4998,7 @@ abstract class _TestScriptDestination extends TestScriptDestination {
   factory _TestScriptDestination(
       {Decimal? index,
       @JsonKey(name: '_index') Element? indexElement,
-      required Coding? profile}) = _$_TestScriptDestination;
+      required Coding profile}) = _$_TestScriptDestination;
 
   factory _TestScriptDestination.fromJson(Map<String, dynamic> json) =
       _$_TestScriptDestination.fromJson;
@@ -5023,7 +5009,7 @@ abstract class _TestScriptDestination extends TestScriptDestination {
   @JsonKey(name: '_index')
   Element? get indexElement;
   @override
-  Coding? get profile;
+  Coding get profile;
   @override
   @JsonKey(ignore: true)
   _$TestScriptDestinationCopyWith<_TestScriptDestination> get copyWith;
@@ -5039,7 +5025,7 @@ class _$TestScriptMetadataTearOff {
 
   _TestScriptMetadata call(
       {List<TestScriptLink?>? link,
-      required List<TestScriptCapability?>? capability}) {
+      required List<TestScriptCapability> capability}) {
     return _TestScriptMetadata(
       link: link,
       capability: capability,
@@ -5057,7 +5043,7 @@ const $TestScriptMetadata = _$TestScriptMetadataTearOff();
 /// @nodoc
 mixin _$TestScriptMetadata {
   List<TestScriptLink?>? get link;
-  List<TestScriptCapability?>? get capability;
+  List<TestScriptCapability> get capability;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -5070,7 +5056,7 @@ abstract class $TestScriptMetadataCopyWith<$Res> {
           TestScriptMetadata value, $Res Function(TestScriptMetadata) then) =
       _$TestScriptMetadataCopyWithImpl<$Res>;
   $Res call(
-      {List<TestScriptLink?>? link, List<TestScriptCapability?>? capability});
+      {List<TestScriptLink?>? link, List<TestScriptCapability> capability});
 }
 
 /// @nodoc
@@ -5091,7 +5077,7 @@ class _$TestScriptMetadataCopyWithImpl<$Res>
       link: link == freezed ? _value.link : link as List<TestScriptLink?>?,
       capability: capability == freezed
           ? _value.capability
-          : capability as List<TestScriptCapability?>?,
+          : capability as List<TestScriptCapability>,
     ));
   }
 }
@@ -5104,7 +5090,7 @@ abstract class _$TestScriptMetadataCopyWith<$Res>
       __$TestScriptMetadataCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<TestScriptLink?>? link, List<TestScriptCapability?>? capability});
+      {List<TestScriptLink?>? link, List<TestScriptCapability> capability});
 }
 
 /// @nodoc
@@ -5127,7 +5113,7 @@ class __$TestScriptMetadataCopyWithImpl<$Res>
       link: link == freezed ? _value.link : link as List<TestScriptLink?>?,
       capability: capability == freezed
           ? _value.capability
-          : capability as List<TestScriptCapability?>?,
+          : capability as List<TestScriptCapability>,
     ));
   }
 }
@@ -5144,7 +5130,7 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
   @override
   final List<TestScriptLink?>? link;
   @override
-  final List<TestScriptCapability?>? capability;
+  final List<TestScriptCapability> capability;
 
   @override
   String toString() {
@@ -5182,9 +5168,8 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
 abstract class _TestScriptMetadata extends TestScriptMetadata {
   _TestScriptMetadata._() : super._();
   factory _TestScriptMetadata(
-          {List<TestScriptLink?>? link,
-          required List<TestScriptCapability?>? capability}) =
-      _$_TestScriptMetadata;
+      {List<TestScriptLink?>? link,
+      required List<TestScriptCapability> capability}) = _$_TestScriptMetadata;
 
   factory _TestScriptMetadata.fromJson(Map<String, dynamic> json) =
       _$_TestScriptMetadata.fromJson;
@@ -5192,7 +5177,7 @@ abstract class _TestScriptMetadata extends TestScriptMetadata {
   @override
   List<TestScriptLink?>? get link;
   @override
-  List<TestScriptCapability?>? get capability;
+  List<TestScriptCapability> get capability;
   @override
   @JsonKey(ignore: true)
   _$TestScriptMetadataCopyWith<_TestScriptMetadata> get copyWith;
@@ -5471,7 +5456,7 @@ class _$TestScriptCapabilityTearOff {
       @JsonKey(name: '_destination') Element? destinationElement,
       List<String?>? link,
       @JsonKey(name: '_link') List<Element?>? linkElement,
-      required Reference? capabilities}) {
+      required Reference capabilities}) {
     return _TestScriptCapability(
       required_: required_,
       requiredElement: requiredElement,
@@ -5518,7 +5503,7 @@ mixin _$TestScriptCapability {
   List<String?>? get link;
   @JsonKey(name: '_link')
   List<Element?>? get linkElement;
-  Reference? get capabilities;
+  Reference get capabilities;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -5543,13 +5528,13 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       @JsonKey(name: '_destination') Element? destinationElement,
       List<String?>? link,
       @JsonKey(name: '_link') List<Element?>? linkElement,
-      Reference? capabilities});
+      Reference capabilities});
 
   $ElementCopyWith<$Res>? get requiredElement;
   $ElementCopyWith<$Res>? get validatedElement;
   $ElementCopyWith<$Res>? get descriptionElement;
   $ElementCopyWith<$Res>? get destinationElement;
-  $ReferenceCopyWith<$Res>? get capabilities;
+  $ReferenceCopyWith<$Res> get capabilities;
 }
 
 /// @nodoc
@@ -5608,7 +5593,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
           : linkElement as List<Element?>?,
       capabilities: capabilities == freezed
           ? _value.capabilities
-          : capabilities as Reference?,
+          : capabilities as Reference,
     ));
   }
 
@@ -5657,12 +5642,8 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get capabilities {
-    if (_value.capabilities == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.capabilities!, (value) {
+  $ReferenceCopyWith<$Res> get capabilities {
+    return $ReferenceCopyWith<$Res>(_value.capabilities, (value) {
       return _then(_value.copyWith(capabilities: value));
     });
   }
@@ -5688,7 +5669,7 @@ abstract class _$TestScriptCapabilityCopyWith<$Res>
       @JsonKey(name: '_destination') Element? destinationElement,
       List<String?>? link,
       @JsonKey(name: '_link') List<Element?>? linkElement,
-      Reference? capabilities});
+      Reference capabilities});
 
   @override
   $ElementCopyWith<$Res>? get requiredElement;
@@ -5699,7 +5680,7 @@ abstract class _$TestScriptCapabilityCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get destinationElement;
   @override
-  $ReferenceCopyWith<$Res>? get capabilities;
+  $ReferenceCopyWith<$Res> get capabilities;
 }
 
 /// @nodoc
@@ -5760,7 +5741,7 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
           : linkElement as List<Element?>?,
       capabilities: capabilities == freezed
           ? _value.capabilities
-          : capabilities as Reference?,
+          : capabilities as Reference,
     ));
   }
 }
@@ -5820,7 +5801,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   @JsonKey(name: '_link')
   final List<Element?>? linkElement;
   @override
-  final Reference? capabilities;
+  final Reference capabilities;
 
   @override
   String toString() {
@@ -5914,7 +5895,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
       @JsonKey(name: '_destination') Element? destinationElement,
       List<String?>? link,
       @JsonKey(name: '_link') List<Element?>? linkElement,
-      required Reference? capabilities}) = _$_TestScriptCapability;
+      required Reference capabilities}) = _$_TestScriptCapability;
 
   factory _TestScriptCapability.fromJson(Map<String, dynamic> json) =
       _$_TestScriptCapability.fromJson;
@@ -5951,7 +5932,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   @JsonKey(name: '_link')
   List<Element?>? get linkElement;
   @override
-  Reference? get capabilities;
+  Reference get capabilities;
   @override
   @JsonKey(ignore: true)
   _$TestScriptCapabilityCopyWith<_TestScriptCapability> get copyWith;
@@ -7284,7 +7265,7 @@ class _$TestScriptRulesetTearOff {
   const _$TestScriptRulesetTearOff();
 
   _TestScriptRuleset call(
-      {required Reference resource, required List<TestScriptRule1?>? rule}) {
+      {required Reference resource, required List<TestScriptRule1> rule}) {
     return _TestScriptRuleset(
       resource: resource,
       rule: rule,
@@ -7302,7 +7283,7 @@ const $TestScriptRuleset = _$TestScriptRulesetTearOff();
 /// @nodoc
 mixin _$TestScriptRuleset {
   Reference get resource;
-  List<TestScriptRule1?>? get rule;
+  List<TestScriptRule1> get rule;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -7314,7 +7295,7 @@ abstract class $TestScriptRulesetCopyWith<$Res> {
   factory $TestScriptRulesetCopyWith(
           TestScriptRuleset value, $Res Function(TestScriptRuleset) then) =
       _$TestScriptRulesetCopyWithImpl<$Res>;
-  $Res call({Reference resource, List<TestScriptRule1?>? rule});
+  $Res call({Reference resource, List<TestScriptRule1> rule});
 
   $ReferenceCopyWith<$Res> get resource;
 }
@@ -7335,7 +7316,7 @@ class _$TestScriptRulesetCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       resource: resource == freezed ? _value.resource : resource as Reference,
-      rule: rule == freezed ? _value.rule : rule as List<TestScriptRule1?>?,
+      rule: rule == freezed ? _value.rule : rule as List<TestScriptRule1>,
     ));
   }
 
@@ -7354,7 +7335,7 @@ abstract class _$TestScriptRulesetCopyWith<$Res>
           _TestScriptRuleset value, $Res Function(_TestScriptRuleset) then) =
       __$TestScriptRulesetCopyWithImpl<$Res>;
   @override
-  $Res call({Reference resource, List<TestScriptRule1?>? rule});
+  $Res call({Reference resource, List<TestScriptRule1> rule});
 
   @override
   $ReferenceCopyWith<$Res> get resource;
@@ -7378,7 +7359,7 @@ class __$TestScriptRulesetCopyWithImpl<$Res>
   }) {
     return _then(_TestScriptRuleset(
       resource: resource == freezed ? _value.resource : resource as Reference,
-      rule: rule == freezed ? _value.rule : rule as List<TestScriptRule1?>?,
+      rule: rule == freezed ? _value.rule : rule as List<TestScriptRule1>,
     ));
   }
 }
@@ -7396,7 +7377,7 @@ class _$_TestScriptRuleset extends _TestScriptRuleset {
   @override
   final Reference resource;
   @override
-  final List<TestScriptRule1?>? rule;
+  final List<TestScriptRule1> rule;
 
   @override
   String toString() {
@@ -7435,7 +7416,7 @@ abstract class _TestScriptRuleset extends TestScriptRuleset {
   _TestScriptRuleset._() : super._();
   factory _TestScriptRuleset(
       {required Reference resource,
-      required List<TestScriptRule1?>? rule}) = _$_TestScriptRuleset;
+      required List<TestScriptRule1> rule}) = _$_TestScriptRuleset;
 
   factory _TestScriptRuleset.fromJson(Map<String, dynamic> json) =
       _$_TestScriptRuleset.fromJson;
@@ -7443,7 +7424,7 @@ abstract class _TestScriptRuleset extends TestScriptRuleset {
   @override
   Reference get resource;
   @override
-  List<TestScriptRule1?>? get rule;
+  List<TestScriptRule1> get rule;
   @override
   @JsonKey(ignore: true)
   _$TestScriptRulesetCopyWith<_TestScriptRuleset> get copyWith;
@@ -12277,7 +12258,7 @@ class _$TestScriptTestTearOff {
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      required List<TestScriptAction1?>? action}) {
+      required List<TestScriptAction1> action}) {
     return _TestScriptTest(
       name: name,
       nameElement: nameElement,
@@ -12303,7 +12284,7 @@ mixin _$TestScriptTest {
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<TestScriptAction1?>? get action;
+  List<TestScriptAction1> get action;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -12320,7 +12301,7 @@ abstract class $TestScriptTestCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<TestScriptAction1?>? action});
+      List<TestScriptAction1> action});
 
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -12352,9 +12333,8 @@ class _$TestScriptTestCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element?,
-      action: action == freezed
-          ? _value.action
-          : action as List<TestScriptAction1?>?,
+      action:
+          action == freezed ? _value.action : action as List<TestScriptAction1>,
     ));
   }
 
@@ -12393,7 +12373,7 @@ abstract class _$TestScriptTestCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<TestScriptAction1?>? action});
+      List<TestScriptAction1> action});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -12429,9 +12409,8 @@ class __$TestScriptTestCopyWithImpl<$Res>
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element?,
-      action: action == freezed
-          ? _value.action
-          : action as List<TestScriptAction1?>?,
+      action:
+          action == freezed ? _value.action : action as List<TestScriptAction1>,
     ));
   }
 }
@@ -12462,7 +12441,7 @@ class _$_TestScriptTest extends _TestScriptTest {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<TestScriptAction1?>? action;
+  final List<TestScriptAction1> action;
 
   @override
   String toString() {
@@ -12515,7 +12494,7 @@ abstract class _TestScriptTest extends TestScriptTest {
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      required List<TestScriptAction1?>? action}) = _$_TestScriptTest;
+      required List<TestScriptAction1> action}) = _$_TestScriptTest;
 
   factory _TestScriptTest.fromJson(Map<String, dynamic> json) =
       _$_TestScriptTest.fromJson;
@@ -12531,7 +12510,7 @@ abstract class _TestScriptTest extends TestScriptTest {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<TestScriptAction1?>? get action;
+  List<TestScriptAction1> get action;
   @override
   @JsonKey(ignore: true)
   _$TestScriptTestCopyWith<_TestScriptTest> get copyWith;

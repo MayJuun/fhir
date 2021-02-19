@@ -983,9 +983,9 @@ class _$LocationPositionTearOff {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Decimal? longitude,
+      required Decimal longitude,
       @JsonKey(name: '_longitude') Element? longitudeElement,
-      required Decimal? latitude,
+      required Decimal latitude,
       @JsonKey(name: '_latitude') Element? latitudeElement,
       Decimal? altitude,
       @JsonKey(name: '_altitude') Element? altitudeElement}) {
@@ -1016,10 +1016,10 @@ mixin _$LocationPosition {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  Decimal? get longitude;
+  Decimal get longitude;
   @JsonKey(name: '_longitude')
   Element? get longitudeElement;
-  Decimal? get latitude;
+  Decimal get latitude;
   @JsonKey(name: '_latitude')
   Element? get latitudeElement;
   Decimal? get altitude;
@@ -1040,9 +1040,9 @@ abstract class $LocationPositionCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Decimal? longitude,
+      Decimal longitude,
       @JsonKey(name: '_longitude') Element? longitudeElement,
-      Decimal? latitude,
+      Decimal latitude,
       @JsonKey(name: '_latitude') Element? latitudeElement,
       Decimal? altitude,
       @JsonKey(name: '_altitude') Element? altitudeElement});
@@ -1081,12 +1081,11 @@ class _$LocationPositionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      longitude:
-          longitude == freezed ? _value.longitude : longitude as Decimal?,
+      longitude: longitude == freezed ? _value.longitude : longitude as Decimal,
       longitudeElement: longitudeElement == freezed
           ? _value.longitudeElement
           : longitudeElement as Element?,
-      latitude: latitude == freezed ? _value.latitude : latitude as Decimal?,
+      latitude: latitude == freezed ? _value.latitude : latitude as Decimal,
       latitudeElement: latitudeElement == freezed
           ? _value.latitudeElement
           : latitudeElement as Element?,
@@ -1142,9 +1141,9 @@ abstract class _$LocationPositionCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Decimal? longitude,
+      Decimal longitude,
       @JsonKey(name: '_longitude') Element? longitudeElement,
-      Decimal? latitude,
+      Decimal latitude,
       @JsonKey(name: '_latitude') Element? latitudeElement,
       Decimal? altitude,
       @JsonKey(name: '_altitude') Element? altitudeElement});
@@ -1188,12 +1187,11 @@ class __$LocationPositionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      longitude:
-          longitude == freezed ? _value.longitude : longitude as Decimal?,
+      longitude: longitude == freezed ? _value.longitude : longitude as Decimal,
       longitudeElement: longitudeElement == freezed
           ? _value.longitudeElement
           : longitudeElement as Element?,
-      latitude: latitude == freezed ? _value.latitude : latitude as Decimal?,
+      latitude: latitude == freezed ? _value.latitude : latitude as Decimal,
       latitudeElement: latitudeElement == freezed
           ? _value.latitudeElement
           : latitudeElement as Element?,
@@ -1232,12 +1230,12 @@ class _$_LocationPosition extends _LocationPosition {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final Decimal? longitude;
+  final Decimal longitude;
   @override
   @JsonKey(name: '_longitude')
   final Element? longitudeElement;
   @override
-  final Decimal? latitude;
+  final Decimal latitude;
   @override
   @JsonKey(name: '_latitude')
   final Element? latitudeElement;
@@ -1314,9 +1312,9 @@ abstract class _LocationPosition extends LocationPosition {
           {Id? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required Decimal? longitude,
+          required Decimal longitude,
           @JsonKey(name: '_longitude') Element? longitudeElement,
-          required Decimal? latitude,
+          required Decimal latitude,
           @JsonKey(name: '_latitude') Element? latitudeElement,
           Decimal? altitude,
           @JsonKey(name: '_altitude') Element? altitudeElement}) =
@@ -1333,12 +1331,12 @@ abstract class _LocationPosition extends LocationPosition {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  Decimal? get longitude;
+  Decimal get longitude;
   @override
   @JsonKey(name: '_longitude')
   Element? get longitudeElement;
   @override
-  Decimal? get latitude;
+  Decimal get latitude;
   @override
   @JsonKey(name: '_latitude')
   Element? get latitudeElement;
@@ -1378,7 +1376,7 @@ class _$SubstanceTearOff {
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
       List<CodeableConcept?>? category,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -1433,7 +1431,7 @@ mixin _$Substance {
   List<FhirExtension?>? get modifierExtension;
   List<Identifier?>? get identifier;
   List<CodeableConcept?>? get category;
-  CodeableConcept? get code;
+  CodeableConcept get code;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
@@ -1467,7 +1465,7 @@ abstract class $SubstanceCopyWith<$Res> {
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
       List<CodeableConcept?>? category,
-      CodeableConcept? code,
+      CodeableConcept code,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -1478,7 +1476,7 @@ abstract class $SubstanceCopyWith<$Res> {
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   $ElementCopyWith<$Res>? get descriptionElement;
 }
 
@@ -1543,7 +1541,7 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -1603,12 +1601,8 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
@@ -1649,7 +1643,7 @@ abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
       List<CodeableConcept?>? category,
-      CodeableConcept? code,
+      CodeableConcept code,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -1665,7 +1659,7 @@ abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
 }
@@ -1732,7 +1726,7 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -1812,7 +1806,7 @@ class _$_Substance extends _Substance {
   @override
   final List<CodeableConcept?>? category;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
   final String? description;
   @override
@@ -1937,7 +1931,7 @@ abstract class _Substance extends Substance {
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
       List<CodeableConcept?>? category,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -1978,7 +1972,7 @@ abstract class _Substance extends Substance {
   @override
   List<CodeableConcept?>? get category;
   @override
-  CodeableConcept? get code;
+  CodeableConcept get code;
   @override
   String? get description;
   @override
@@ -2333,7 +2327,7 @@ class _$SubstanceIngredientTearOff {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Ratio? quantity,
-      required Reference? substance}) {
+      required Reference substance}) {
     return _SubstanceIngredient(
       id: id,
       extension_: extension_,
@@ -2358,7 +2352,7 @@ mixin _$SubstanceIngredient {
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
   Ratio? get quantity;
-  Reference? get substance;
+  Reference get substance;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2375,10 +2369,10 @@ abstract class $SubstanceIngredientCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Ratio? quantity,
-      Reference? substance});
+      Reference substance});
 
   $RatioCopyWith<$Res>? get quantity;
-  $ReferenceCopyWith<$Res>? get substance;
+  $ReferenceCopyWith<$Res> get substance;
 }
 
 /// @nodoc
@@ -2408,7 +2402,7 @@ class _$SubstanceIngredientCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Ratio?,
       substance:
-          substance == freezed ? _value.substance : substance as Reference?,
+          substance == freezed ? _value.substance : substance as Reference,
     ));
   }
 
@@ -2424,12 +2418,8 @@ class _$SubstanceIngredientCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get substance {
-    if (_value.substance == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.substance!, (value) {
+  $ReferenceCopyWith<$Res> get substance {
+    return $ReferenceCopyWith<$Res>(_value.substance, (value) {
       return _then(_value.copyWith(substance: value));
     });
   }
@@ -2447,12 +2437,12 @@ abstract class _$SubstanceIngredientCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Ratio? quantity,
-      Reference? substance});
+      Reference substance});
 
   @override
   $RatioCopyWith<$Res>? get quantity;
   @override
-  $ReferenceCopyWith<$Res>? get substance;
+  $ReferenceCopyWith<$Res> get substance;
 }
 
 /// @nodoc
@@ -2484,7 +2474,7 @@ class __$SubstanceIngredientCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Ratio?,
       substance:
-          substance == freezed ? _value.substance : substance as Reference?,
+          substance == freezed ? _value.substance : substance as Reference,
     ));
   }
 }
@@ -2514,7 +2504,7 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
   @override
   final Ratio? quantity;
   @override
-  final Reference? substance;
+  final Reference substance;
 
   @override
   String toString() {
@@ -2569,7 +2559,7 @@ abstract class _SubstanceIngredient extends SubstanceIngredient {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       Ratio? quantity,
-      required Reference? substance}) = _$_SubstanceIngredient;
+      required Reference substance}) = _$_SubstanceIngredient;
 
   factory _SubstanceIngredient.fromJson(Map<String, dynamic> json) =
       _$_SubstanceIngredient.fromJson;
@@ -2584,7 +2574,7 @@ abstract class _SubstanceIngredient extends SubstanceIngredient {
   @override
   Ratio? get quantity;
   @override
-  Reference? get substance;
+  Reference get substance;
   @override
   @JsonKey(ignore: true)
   _$SubstanceIngredientCopyWith<_SubstanceIngredient> get copyWith;
@@ -3418,7 +3408,7 @@ class _$PersonLinkTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Reference? target,
+      required Reference target,
       @JsonKey(unknownEnumValue: LinkAssurance.unknown)
           LinkAssurance? assurance,
       @JsonKey(name: '_assurance')
@@ -3447,7 +3437,7 @@ mixin _$PersonLink {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  Reference? get target;
+  Reference get target;
   @JsonKey(unknownEnumValue: LinkAssurance.unknown)
   LinkAssurance? get assurance;
   @JsonKey(name: '_assurance')
@@ -3468,13 +3458,13 @@ abstract class $PersonLinkCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Reference? target,
+      Reference target,
       @JsonKey(unknownEnumValue: LinkAssurance.unknown)
           LinkAssurance? assurance,
       @JsonKey(name: '_assurance')
           Element? assuranceElement});
 
-  $ReferenceCopyWith<$Res>? get target;
+  $ReferenceCopyWith<$Res> get target;
   $ElementCopyWith<$Res>? get assuranceElement;
 }
 
@@ -3503,7 +3493,7 @@ class _$PersonLinkCopyWithImpl<$Res> implements $PersonLinkCopyWith<$Res> {
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      target: target == freezed ? _value.target : target as Reference?,
+      target: target == freezed ? _value.target : target as Reference,
       assurance:
           assurance == freezed ? _value.assurance : assurance as LinkAssurance?,
       assuranceElement: assuranceElement == freezed
@@ -3513,12 +3503,8 @@ class _$PersonLinkCopyWithImpl<$Res> implements $PersonLinkCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get target {
-    if (_value.target == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.target!, (value) {
+  $ReferenceCopyWith<$Res> get target {
+    return $ReferenceCopyWith<$Res>(_value.target, (value) {
       return _then(_value.copyWith(target: value));
     });
   }
@@ -3546,14 +3532,14 @@ abstract class _$PersonLinkCopyWith<$Res> implements $PersonLinkCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Reference? target,
+      Reference target,
       @JsonKey(unknownEnumValue: LinkAssurance.unknown)
           LinkAssurance? assurance,
       @JsonKey(name: '_assurance')
           Element? assuranceElement});
 
   @override
-  $ReferenceCopyWith<$Res>? get target;
+  $ReferenceCopyWith<$Res> get target;
   @override
   $ElementCopyWith<$Res>? get assuranceElement;
 }
@@ -3585,7 +3571,7 @@ class __$PersonLinkCopyWithImpl<$Res> extends _$PersonLinkCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      target: target == freezed ? _value.target : target as Reference?,
+      target: target == freezed ? _value.target : target as Reference,
       assurance:
           assurance == freezed ? _value.assurance : assurance as LinkAssurance?,
       assuranceElement: assuranceElement == freezed
@@ -3619,7 +3605,7 @@ class _$_PersonLink extends _PersonLink {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final Reference? target;
+  final Reference target;
   @override
   @JsonKey(unknownEnumValue: LinkAssurance.unknown)
   final LinkAssurance? assurance;
@@ -3682,7 +3668,7 @@ abstract class _PersonLink extends PersonLink {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Reference? target,
+      required Reference target,
       @JsonKey(unknownEnumValue: LinkAssurance.unknown)
           LinkAssurance? assurance,
       @JsonKey(name: '_assurance')
@@ -3699,7 +3685,7 @@ abstract class _PersonLink extends PersonLink {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  Reference? get target;
+  Reference get target;
   @override
   @JsonKey(unknownEnumValue: LinkAssurance.unknown)
   LinkAssurance? get assurance;
@@ -4668,7 +4654,7 @@ class _$ContractActorTearOff {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Reference? entity,
+      required Reference entity,
       List<CodeableConcept?>? role}) {
     return _ContractActor(
       id: id,
@@ -4693,7 +4679,7 @@ mixin _$ContractActor {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  Reference? get entity;
+  Reference get entity;
   List<CodeableConcept?>? get role;
 
   Map<String, dynamic> toJson();
@@ -4710,10 +4696,10 @@ abstract class $ContractActorCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Reference? entity,
+      Reference entity,
       List<CodeableConcept?>? role});
 
-  $ReferenceCopyWith<$Res>? get entity;
+  $ReferenceCopyWith<$Res> get entity;
 }
 
 /// @nodoc
@@ -4741,18 +4727,14 @@ class _$ContractActorCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      entity: entity == freezed ? _value.entity : entity as Reference?,
+      entity: entity == freezed ? _value.entity : entity as Reference,
       role: role == freezed ? _value.role : role as List<CodeableConcept?>?,
     ));
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get entity {
-    if (_value.entity == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.entity!, (value) {
+  $ReferenceCopyWith<$Res> get entity {
+    return $ReferenceCopyWith<$Res>(_value.entity, (value) {
       return _then(_value.copyWith(entity: value));
     });
   }
@@ -4769,11 +4751,11 @@ abstract class _$ContractActorCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Reference? entity,
+      Reference entity,
       List<CodeableConcept?>? role});
 
   @override
-  $ReferenceCopyWith<$Res>? get entity;
+  $ReferenceCopyWith<$Res> get entity;
 }
 
 /// @nodoc
@@ -4803,7 +4785,7 @@ class __$ContractActorCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      entity: entity == freezed ? _value.entity : entity as Reference?,
+      entity: entity == freezed ? _value.entity : entity as Reference,
       role: role == freezed ? _value.role : role as List<CodeableConcept?>?,
     ));
   }
@@ -4832,7 +4814,7 @@ class _$_ContractActor extends _ContractActor {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final Reference? entity;
+  final Reference entity;
   @override
   final List<CodeableConcept?>? role;
 
@@ -4885,7 +4867,7 @@ abstract class _ContractActor extends ContractActor {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Reference? entity,
+      required Reference entity,
       List<CodeableConcept?>? role}) = _$_ContractActor;
 
   factory _ContractActor.fromJson(Map<String, dynamic> json) =
@@ -4899,7 +4881,7 @@ abstract class _ContractActor extends ContractActor {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  Reference? get entity;
+  Reference get entity;
   @override
   List<CodeableConcept?>? get role;
   @override
@@ -5534,9 +5516,9 @@ class _$ContractSignerTearOff {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Coding? type,
-      required Reference? party,
-      required String? signature}) {
+      required Coding type,
+      required Reference party,
+      required String signature}) {
     return _ContractSigner(
       id: id,
       extension_: extension_,
@@ -5561,9 +5543,9 @@ mixin _$ContractSigner {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  Coding? get type;
-  Reference? get party;
-  String? get signature;
+  Coding get type;
+  Reference get party;
+  String get signature;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -5579,12 +5561,12 @@ abstract class $ContractSignerCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Coding? type,
-      Reference? party,
-      String? signature});
+      Coding type,
+      Reference party,
+      String signature});
 
-  $CodingCopyWith<$Res>? get type;
-  $ReferenceCopyWith<$Res>? get party;
+  $CodingCopyWith<$Res> get type;
+  $ReferenceCopyWith<$Res> get party;
 }
 
 /// @nodoc
@@ -5613,30 +5595,22 @@ class _$ContractSignerCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as Coding?,
-      party: party == freezed ? _value.party : party as Reference?,
-      signature: signature == freezed ? _value.signature : signature as String?,
+      type: type == freezed ? _value.type : type as Coding,
+      party: party == freezed ? _value.party : party as Reference,
+      signature: signature == freezed ? _value.signature : signature as String,
     ));
   }
 
   @override
-  $CodingCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodingCopyWith<$Res>(_value.type!, (value) {
+  $CodingCopyWith<$Res> get type {
+    return $CodingCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get party {
-    if (_value.party == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.party!, (value) {
+  $ReferenceCopyWith<$Res> get party {
+    return $ReferenceCopyWith<$Res>(_value.party, (value) {
       return _then(_value.copyWith(party: value));
     });
   }
@@ -5653,14 +5627,14 @@ abstract class _$ContractSignerCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Coding? type,
-      Reference? party,
-      String? signature});
+      Coding type,
+      Reference party,
+      String signature});
 
   @override
-  $CodingCopyWith<$Res>? get type;
+  $CodingCopyWith<$Res> get type;
   @override
-  $ReferenceCopyWith<$Res>? get party;
+  $ReferenceCopyWith<$Res> get party;
 }
 
 /// @nodoc
@@ -5691,9 +5665,9 @@ class __$ContractSignerCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as Coding?,
-      party: party == freezed ? _value.party : party as Reference?,
-      signature: signature == freezed ? _value.signature : signature as String?,
+      type: type == freezed ? _value.type : type as Coding,
+      party: party == freezed ? _value.party : party as Reference,
+      signature: signature == freezed ? _value.signature : signature as String,
     ));
   }
 }
@@ -5722,11 +5696,11 @@ class _$_ContractSigner extends _ContractSigner {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final Coding? type;
+  final Coding type;
   @override
-  final Reference? party;
+  final Reference party;
   @override
-  final String? signature;
+  final String signature;
 
   @override
   String toString() {
@@ -5781,9 +5755,9 @@ abstract class _ContractSigner extends ContractSigner {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Coding? type,
-      required Reference? party,
-      required String? signature}) = _$_ContractSigner;
+      required Coding type,
+      required Reference party,
+      required String signature}) = _$_ContractSigner;
 
   factory _ContractSigner.fromJson(Map<String, dynamic> json) =
       _$_ContractSigner.fromJson;
@@ -5796,11 +5770,11 @@ abstract class _ContractSigner extends ContractSigner {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  Coding? get type;
+  Coding get type;
   @override
-  Reference? get party;
+  Reference get party;
   @override
-  String? get signature;
+  String get signature;
   @override
   @JsonKey(ignore: true)
   _$ContractSignerCopyWith<_ContractSigner> get copyWith;
@@ -6403,7 +6377,7 @@ class _$ContractTermActorTearOff {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Reference? entity,
+      required Reference entity,
       List<CodeableConcept?>? role}) {
     return _ContractTermActor(
       id: id,
@@ -6428,7 +6402,7 @@ mixin _$ContractTermActor {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  Reference? get entity;
+  Reference get entity;
   List<CodeableConcept?>? get role;
 
   Map<String, dynamic> toJson();
@@ -6445,10 +6419,10 @@ abstract class $ContractTermActorCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Reference? entity,
+      Reference entity,
       List<CodeableConcept?>? role});
 
-  $ReferenceCopyWith<$Res>? get entity;
+  $ReferenceCopyWith<$Res> get entity;
 }
 
 /// @nodoc
@@ -6476,18 +6450,14 @@ class _$ContractTermActorCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      entity: entity == freezed ? _value.entity : entity as Reference?,
+      entity: entity == freezed ? _value.entity : entity as Reference,
       role: role == freezed ? _value.role : role as List<CodeableConcept?>?,
     ));
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get entity {
-    if (_value.entity == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.entity!, (value) {
+  $ReferenceCopyWith<$Res> get entity {
+    return $ReferenceCopyWith<$Res>(_value.entity, (value) {
       return _then(_value.copyWith(entity: value));
     });
   }
@@ -6504,11 +6474,11 @@ abstract class _$ContractTermActorCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Reference? entity,
+      Reference entity,
       List<CodeableConcept?>? role});
 
   @override
-  $ReferenceCopyWith<$Res>? get entity;
+  $ReferenceCopyWith<$Res> get entity;
 }
 
 /// @nodoc
@@ -6538,7 +6508,7 @@ class __$ContractTermActorCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      entity: entity == freezed ? _value.entity : entity as Reference?,
+      entity: entity == freezed ? _value.entity : entity as Reference,
       role: role == freezed ? _value.role : role as List<CodeableConcept?>?,
     ));
   }
@@ -6567,7 +6537,7 @@ class _$_ContractTermActor extends _ContractTermActor {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final Reference? entity;
+  final Reference entity;
   @override
   final List<CodeableConcept?>? role;
 
@@ -6620,7 +6590,7 @@ abstract class _ContractTermActor extends ContractTermActor {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Reference? entity,
+      required Reference entity,
       List<CodeableConcept?>? role}) = _$_ContractTermActor;
 
   factory _ContractTermActor.fromJson(Map<String, dynamic> json) =
@@ -6634,7 +6604,7 @@ abstract class _ContractTermActor extends ContractTermActor {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  Reference? get entity;
+  Reference get entity;
   @override
   List<CodeableConcept?>? get role;
   @override

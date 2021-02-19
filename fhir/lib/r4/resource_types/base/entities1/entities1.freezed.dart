@@ -37,14 +37,14 @@ class _$EndpointTearOff {
           EndpointStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      required Coding? connectionType,
+      required Coding connectionType,
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
       Reference? managingOrganization,
       List<ContactPoint?>? contact,
       Period? period,
-      required List<CodeableConcept?>? payloadType,
+      required List<CodeableConcept> payloadType,
       List<Code?>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
           List<Element?>? payloadMimeTypeElement,
@@ -115,14 +115,14 @@ mixin _$Endpoint {
   EndpointStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  Coding? get connectionType;
+  Coding get connectionType;
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
   Reference? get managingOrganization;
   List<ContactPoint?>? get contact;
   Period? get period;
-  List<CodeableConcept?>? get payloadType;
+  List<CodeableConcept> get payloadType;
   List<Code?>? get payloadMimeType;
   @JsonKey(name: '_payloadMimeType')
   List<Element?>? get payloadMimeTypeElement;
@@ -163,14 +163,14 @@ abstract class $EndpointCopyWith<$Res> {
           EndpointStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Coding? connectionType,
+      Coding connectionType,
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
       Reference? managingOrganization,
       List<ContactPoint?>? contact,
       Period? period,
-      List<CodeableConcept?>? payloadType,
+      List<CodeableConcept> payloadType,
       List<Code?>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
           List<Element?>? payloadMimeTypeElement,
@@ -186,7 +186,7 @@ abstract class $EndpointCopyWith<$Res> {
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get statusElement;
-  $CodingCopyWith<$Res>? get connectionType;
+  $CodingCopyWith<$Res> get connectionType;
   $ElementCopyWith<$Res>? get nameElement;
   $ReferenceCopyWith<$Res>? get managingOrganization;
   $PeriodCopyWith<$Res>? get period;
@@ -266,7 +266,7 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
           : statusElement as Element?,
       connectionType: connectionType == freezed
           ? _value.connectionType
-          : connectionType as Coding?,
+          : connectionType as Coding,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -278,7 +278,7 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
       period: period == freezed ? _value.period : period as Period?,
       payloadType: payloadType == freezed
           ? _value.payloadType
-          : payloadType as List<CodeableConcept?>?,
+          : payloadType as List<CodeableConcept>,
       payloadMimeType: payloadMimeType == freezed
           ? _value.payloadMimeType
           : payloadMimeType as List<Code?>?,
@@ -352,12 +352,8 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
   }
 
   @override
-  $CodingCopyWith<$Res>? get connectionType {
-    if (_value.connectionType == null) {
-      return null;
-    }
-
-    return $CodingCopyWith<$Res>(_value.connectionType!, (value) {
+  $CodingCopyWith<$Res> get connectionType {
+    return $CodingCopyWith<$Res>(_value.connectionType, (value) {
       return _then(_value.copyWith(connectionType: value));
     });
   }
@@ -433,14 +429,14 @@ abstract class _$EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
           EndpointStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Coding? connectionType,
+      Coding connectionType,
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
       Reference? managingOrganization,
       List<ContactPoint?>? contact,
       Period? period,
-      List<CodeableConcept?>? payloadType,
+      List<CodeableConcept> payloadType,
       List<Code?>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
           List<Element?>? payloadMimeTypeElement,
@@ -462,7 +458,7 @@ abstract class _$EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $CodingCopyWith<$Res>? get connectionType;
+  $CodingCopyWith<$Res> get connectionType;
   @override
   $ElementCopyWith<$Res>? get nameElement;
   @override
@@ -547,7 +543,7 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
           : statusElement as Element?,
       connectionType: connectionType == freezed
           ? _value.connectionType
-          : connectionType as Coding?,
+          : connectionType as Coding,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -559,7 +555,7 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
       period: period == freezed ? _value.period : period as Period?,
       payloadType: payloadType == freezed
           ? _value.payloadType
-          : payloadType as List<CodeableConcept?>?,
+          : payloadType as List<CodeableConcept>,
       payloadMimeType: payloadMimeType == freezed
           ? _value.payloadMimeType
           : payloadMimeType as List<Code?>?,
@@ -660,7 +656,7 @@ class _$_Endpoint extends _Endpoint {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Coding? connectionType;
+  final Coding connectionType;
   @override
   final String? name;
   @override
@@ -673,7 +669,7 @@ class _$_Endpoint extends _Endpoint {
   @override
   final Period? period;
   @override
-  final List<CodeableConcept?>? payloadType;
+  final List<CodeableConcept> payloadType;
   @override
   final List<Code?>? payloadMimeType;
   @override
@@ -835,14 +831,14 @@ abstract class _Endpoint extends Endpoint {
           EndpointStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      required Coding? connectionType,
+      required Coding connectionType,
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
       Reference? managingOrganization,
       List<ContactPoint?>? contact,
       Period? period,
-      required List<CodeableConcept?>? payloadType,
+      required List<CodeableConcept> payloadType,
       List<Code?>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
           List<Element?>? payloadMimeTypeElement,
@@ -890,7 +886,7 @@ abstract class _Endpoint extends Endpoint {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Coding? get connectionType;
+  Coding get connectionType;
   @override
   String? get name;
   @override
@@ -903,7 +899,7 @@ abstract class _Endpoint extends Endpoint {
   @override
   Period? get period;
   @override
-  List<CodeableConcept?>? get payloadType;
+  List<CodeableConcept> get payloadType;
   @override
   List<Code?>? get payloadMimeType;
   @override

@@ -712,7 +712,7 @@ class _$ElementDefinitionTearOff {
       {Id? id,
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
-      required String? path,
+      required String path,
       List<Code?>? representation,
       @JsonKey(name: '_representation')
           Element? representationElement,
@@ -1505,7 +1505,7 @@ mixin _$ElementDefinition {
   Id? get id;
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
-  String? get path;
+  String get path;
   List<Code?>? get representation;
   @JsonKey(name: '_representation')
   Element? get representationElement;
@@ -1962,7 +1962,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
-      String? path,
+      String path,
       List<Code?>? representation,
       @JsonKey(name: '_representation')
           Element? representationElement,
@@ -2973,7 +2973,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      path: path == freezed ? _value.path : path as String?,
+      path: path == freezed ? _value.path : path as String,
       representation: representation == freezed
           ? _value.representation
           : representation as List<Code?>?,
@@ -6281,7 +6281,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
-      String? path,
+      String path,
       List<Code?>? representation,
       @JsonKey(name: '_representation')
           Element? representationElement,
@@ -7509,7 +7509,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      path: path == freezed ? _value.path : path as String?,
+      path: path == freezed ? _value.path : path as String,
       representation: representation == freezed
           ? _value.representation
           : representation as List<Code?>?,
@@ -8892,7 +8892,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: 'extension')
   final List<FhirExtension?>? extension_;
   @override
-  final String? path;
+  final String path;
   @override
   final List<Code?>? representation;
   @override
@@ -10409,7 +10409,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       {Id? id,
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
-      required String? path,
+      required String path,
       List<Code?>? representation,
       @JsonKey(name: '_representation')
           Element? representationElement,
@@ -10861,7 +10861,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   @override
-  String? get path;
+  String get path;
   @override
   List<Code?>? get representation;
   @override
@@ -11657,7 +11657,7 @@ class _$NarrativeTearOff {
           required NarrativeStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      required String? div}) {
+      required String div}) {
     return _Narrative(
       id: id,
       extension_: extension_,
@@ -11687,7 +11687,7 @@ mixin _$Narrative {
   NarrativeStatus get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  String? get div;
+  String get div;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -11708,7 +11708,7 @@ abstract class $NarrativeCopyWith<$Res> {
           NarrativeStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      String? div});
+      String div});
 
   $ElementCopyWith<$Res>? get statusElement;
 }
@@ -11742,7 +11742,7 @@ class _$NarrativeCopyWithImpl<$Res> implements $NarrativeCopyWith<$Res> {
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      div: div == freezed ? _value.div : div as String?,
+      div: div == freezed ? _value.div : div as String,
     ));
   }
 
@@ -11774,7 +11774,7 @@ abstract class _$NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
           NarrativeStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      String? div});
+      String div});
 
   @override
   $ElementCopyWith<$Res>? get statusElement;
@@ -11810,7 +11810,7 @@ class __$NarrativeCopyWithImpl<$Res> extends _$NarrativeCopyWithImpl<$Res>
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      div: div == freezed ? _value.div : div as String?,
+      div: div == freezed ? _value.div : div as String,
     ));
   }
 }
@@ -11846,7 +11846,7 @@ class _$_Narrative extends _Narrative {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final String? div;
+  final String div;
 
   @override
   String toString() {
@@ -11907,7 +11907,7 @@ abstract class _Narrative extends Narrative {
           required NarrativeStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      required String? div}) = _$_Narrative;
+      required String div}) = _$_Narrative;
 
   factory _Narrative.fromJson(Map<String, dynamic> json) =
       _$_Narrative.fromJson;
@@ -11927,7 +11927,7 @@ abstract class _Narrative extends Narrative {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  String? get div;
+  String get div;
   @override
   @JsonKey(ignore: true)
   _$NarrativeCopyWith<_Narrative> get copyWith;
@@ -12340,11 +12340,11 @@ class _$ElementDefinitionBaseTearOff {
   _ElementDefinitionBase call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      required String? path,
+      required String path,
       @JsonKey(name: '_path') Element? pathElement,
-      required Integer? min,
+      required Integer min,
       @JsonKey(name: '_min') Element? minElement,
-      required String? max,
+      required String max,
       @JsonKey(name: '_max') Element? maxElement}) {
     return _ElementDefinitionBase(
       id: id,
@@ -12371,13 +12371,13 @@ mixin _$ElementDefinitionBase {
   Id? get id;
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
-  String? get path;
+  String get path;
   @JsonKey(name: '_path')
   Element? get pathElement;
-  Integer? get min;
+  Integer get min;
   @JsonKey(name: '_min')
   Element? get minElement;
-  String? get max;
+  String get max;
   @JsonKey(name: '_max')
   Element? get maxElement;
 
@@ -12394,11 +12394,11 @@ abstract class $ElementDefinitionBaseCopyWith<$Res> {
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      String? path,
+      String path,
       @JsonKey(name: '_path') Element? pathElement,
-      Integer? min,
+      Integer min,
       @JsonKey(name: '_min') Element? minElement,
-      String? max,
+      String max,
       @JsonKey(name: '_max') Element? maxElement});
 
   $ElementCopyWith<$Res>? get pathElement;
@@ -12431,13 +12431,13 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      path: path == freezed ? _value.path : path as String?,
+      path: path == freezed ? _value.path : path as String,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element?,
-      min: min == freezed ? _value.min : min as Integer?,
+      min: min == freezed ? _value.min : min as Integer,
       minElement:
           minElement == freezed ? _value.minElement : minElement as Element?,
-      max: max == freezed ? _value.max : max as String?,
+      max: max == freezed ? _value.max : max as String,
       maxElement:
           maxElement == freezed ? _value.maxElement : maxElement as Element?,
     ));
@@ -12487,11 +12487,11 @@ abstract class _$ElementDefinitionBaseCopyWith<$Res>
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      String? path,
+      String path,
       @JsonKey(name: '_path') Element? pathElement,
-      Integer? min,
+      Integer min,
       @JsonKey(name: '_min') Element? minElement,
-      String? max,
+      String max,
       @JsonKey(name: '_max') Element? maxElement});
 
   @override
@@ -12529,13 +12529,13 @@ class __$ElementDefinitionBaseCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      path: path == freezed ? _value.path : path as String?,
+      path: path == freezed ? _value.path : path as String,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element?,
-      min: min == freezed ? _value.min : min as Integer?,
+      min: min == freezed ? _value.min : min as Integer,
       minElement:
           minElement == freezed ? _value.minElement : minElement as Element?,
-      max: max == freezed ? _value.max : max as String?,
+      max: max == freezed ? _value.max : max as String,
       maxElement:
           maxElement == freezed ? _value.maxElement : maxElement as Element?,
     ));
@@ -12566,17 +12566,17 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
   @JsonKey(name: 'extension')
   final List<FhirExtension?>? extension_;
   @override
-  final String? path;
+  final String path;
   @override
   @JsonKey(name: '_path')
   final Element? pathElement;
   @override
-  final Integer? min;
+  final Integer min;
   @override
   @JsonKey(name: '_min')
   final Element? minElement;
   @override
-  final String? max;
+  final String max;
   @override
   @JsonKey(name: '_max')
   final Element? maxElement;
@@ -12641,11 +12641,11 @@ abstract class _ElementDefinitionBase extends ElementDefinitionBase {
   factory _ElementDefinitionBase(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      required String? path,
+      required String path,
       @JsonKey(name: '_path') Element? pathElement,
-      required Integer? min,
+      required Integer min,
       @JsonKey(name: '_min') Element? minElement,
-      required String? max,
+      required String max,
       @JsonKey(name: '_max') Element? maxElement}) = _$_ElementDefinitionBase;
 
   factory _ElementDefinitionBase.fromJson(Map<String, dynamic> json) =
@@ -12657,17 +12657,17 @@ abstract class _ElementDefinitionBase extends ElementDefinitionBase {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   @override
-  String? get path;
+  String get path;
   @override
   @JsonKey(name: '_path')
   Element? get pathElement;
   @override
-  Integer? get min;
+  Integer get min;
   @override
   @JsonKey(name: '_min')
   Element? get minElement;
   @override
-  String? get max;
+  String get max;
   @override
   @JsonKey(name: '_max')
   Element? get maxElement;
@@ -13191,7 +13191,7 @@ class _$ElementDefinitionConstraintTearOff {
       {Id? id,
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
-      required Id? key,
+      required Id key,
       @JsonKey(name: '_key')
           Element? keyElement,
       String? requirements,
@@ -13201,10 +13201,10 @@ class _$ElementDefinitionConstraintTearOff {
           required ConstraintSeverity severity,
       @JsonKey(name: '_severity')
           Element? severityElement,
-      required String? human,
+      required String human,
       @JsonKey(name: '_human')
           Element? humanElement,
-      required String? xpath,
+      required String xpath,
       @JsonKey(name: '_xpath')
           Element? xpathElement}) {
     return _ElementDefinitionConstraint(
@@ -13236,7 +13236,7 @@ mixin _$ElementDefinitionConstraint {
   Id? get id;
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
-  Id? get key;
+  Id get key;
   @JsonKey(name: '_key')
   Element? get keyElement;
   String? get requirements;
@@ -13246,10 +13246,10 @@ mixin _$ElementDefinitionConstraint {
   ConstraintSeverity get severity;
   @JsonKey(name: '_severity')
   Element? get severityElement;
-  String? get human;
+  String get human;
   @JsonKey(name: '_human')
   Element? get humanElement;
-  String? get xpath;
+  String get xpath;
   @JsonKey(name: '_xpath')
   Element? get xpathElement;
 
@@ -13269,7 +13269,7 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
-      Id? key,
+      Id key,
       @JsonKey(name: '_key')
           Element? keyElement,
       String? requirements,
@@ -13279,10 +13279,10 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
           ConstraintSeverity severity,
       @JsonKey(name: '_severity')
           Element? severityElement,
-      String? human,
+      String human,
       @JsonKey(name: '_human')
           Element? humanElement,
-      String? xpath,
+      String xpath,
       @JsonKey(name: '_xpath')
           Element? xpathElement});
 
@@ -13322,7 +13322,7 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      key: key == freezed ? _value.key : key as Id?,
+      key: key == freezed ? _value.key : key as Id,
       keyElement:
           keyElement == freezed ? _value.keyElement : keyElement as Element?,
       requirements: requirements == freezed
@@ -13337,11 +13337,11 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res>
       severityElement: severityElement == freezed
           ? _value.severityElement
           : severityElement as Element?,
-      human: human == freezed ? _value.human : human as String?,
+      human: human == freezed ? _value.human : human as String,
       humanElement: humanElement == freezed
           ? _value.humanElement
           : humanElement as Element?,
-      xpath: xpath == freezed ? _value.xpath : xpath as String?,
+      xpath: xpath == freezed ? _value.xpath : xpath as String,
       xpathElement: xpathElement == freezed
           ? _value.xpathElement
           : xpathElement as Element?,
@@ -13416,7 +13416,7 @@ abstract class _$ElementDefinitionConstraintCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
-      Id? key,
+      Id key,
       @JsonKey(name: '_key')
           Element? keyElement,
       String? requirements,
@@ -13426,10 +13426,10 @@ abstract class _$ElementDefinitionConstraintCopyWith<$Res>
           ConstraintSeverity severity,
       @JsonKey(name: '_severity')
           Element? severityElement,
-      String? human,
+      String human,
       @JsonKey(name: '_human')
           Element? humanElement,
-      String? xpath,
+      String xpath,
       @JsonKey(name: '_xpath')
           Element? xpathElement});
 
@@ -13478,7 +13478,7 @@ class __$ElementDefinitionConstraintCopyWithImpl<$Res>
       extension_: extension_ == freezed
           ? _value.extension_
           : extension_ as List<FhirExtension?>?,
-      key: key == freezed ? _value.key : key as Id?,
+      key: key == freezed ? _value.key : key as Id,
       keyElement:
           keyElement == freezed ? _value.keyElement : keyElement as Element?,
       requirements: requirements == freezed
@@ -13493,11 +13493,11 @@ class __$ElementDefinitionConstraintCopyWithImpl<$Res>
       severityElement: severityElement == freezed
           ? _value.severityElement
           : severityElement as Element?,
-      human: human == freezed ? _value.human : human as String?,
+      human: human == freezed ? _value.human : human as String,
       humanElement: humanElement == freezed
           ? _value.humanElement
           : humanElement as Element?,
-      xpath: xpath == freezed ? _value.xpath : xpath as String?,
+      xpath: xpath == freezed ? _value.xpath : xpath as String,
       xpathElement: xpathElement == freezed
           ? _value.xpathElement
           : xpathElement as Element?,
@@ -13540,7 +13540,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   @JsonKey(name: 'extension')
   final List<FhirExtension?>? extension_;
   @override
-  final Id? key;
+  final Id key;
   @override
   @JsonKey(name: '_key')
   final Element? keyElement;
@@ -13556,12 +13556,12 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   @JsonKey(name: '_severity')
   final Element? severityElement;
   @override
-  final String? human;
+  final String human;
   @override
   @JsonKey(name: '_human')
   final Element? humanElement;
   @override
-  final String? xpath;
+  final String xpath;
   @override
   @JsonKey(name: '_xpath')
   final Element? xpathElement;
@@ -13644,7 +13644,7 @@ abstract class _ElementDefinitionConstraint
       {Id? id,
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
-      required Id? key,
+      required Id key,
       @JsonKey(name: '_key')
           Element? keyElement,
       String? requirements,
@@ -13654,10 +13654,10 @@ abstract class _ElementDefinitionConstraint
           required ConstraintSeverity severity,
       @JsonKey(name: '_severity')
           Element? severityElement,
-      required String? human,
+      required String human,
       @JsonKey(name: '_human')
           Element? humanElement,
-      required String? xpath,
+      required String xpath,
       @JsonKey(name: '_xpath')
           Element? xpathElement}) = _$_ElementDefinitionConstraint;
 
@@ -13670,7 +13670,7 @@ abstract class _ElementDefinitionConstraint
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   @override
-  Id? get key;
+  Id get key;
   @override
   @JsonKey(name: '_key')
   Element? get keyElement;
@@ -13686,12 +13686,12 @@ abstract class _ElementDefinitionConstraint
   @JsonKey(name: '_severity')
   Element? get severityElement;
   @override
-  String? get human;
+  String get human;
   @override
   @JsonKey(name: '_human')
   Element? get humanElement;
   @override
-  String? get xpath;
+  String get xpath;
   @override
   @JsonKey(name: '_xpath')
   Element? get xpathElement;
@@ -14106,11 +14106,11 @@ class _$ElementDefinitionMappingTearOff {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-      required Id? identity,
+      required Id identity,
       @JsonKey(name: '_identity') Element? identityElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
-      required String? map,
+      required String map,
       @JsonKey(name: '_map') Element? mapElement}) {
     return _ElementDefinitionMapping(
       id: id,
@@ -14140,13 +14140,13 @@ mixin _$ElementDefinitionMapping {
   List<FhirExtension?>? get extension_;
   @JsonKey(name: 'fhir_comments')
   List<String?>? get fhirComments;
-  Id? get identity;
+  Id get identity;
   @JsonKey(name: '_identity')
   Element? get identityElement;
   Code? get language;
   @JsonKey(name: '_language')
   Element? get languageElement;
-  String? get map;
+  String get map;
   @JsonKey(name: '_map')
   Element? get mapElement;
 
@@ -14164,11 +14164,11 @@ abstract class $ElementDefinitionMappingCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-      Id? identity,
+      Id identity,
       @JsonKey(name: '_identity') Element? identityElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
-      String? map,
+      String map,
       @JsonKey(name: '_map') Element? mapElement});
 
   $ElementCopyWith<$Res>? get identityElement;
@@ -14205,7 +14205,7 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res>
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
           : fhirComments as List<String?>?,
-      identity: identity == freezed ? _value.identity : identity as Id?,
+      identity: identity == freezed ? _value.identity : identity as Id,
       identityElement: identityElement == freezed
           ? _value.identityElement
           : identityElement as Element?,
@@ -14213,7 +14213,7 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res>
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element?,
-      map: map == freezed ? _value.map : map as String?,
+      map: map == freezed ? _value.map : map as String,
       mapElement:
           mapElement == freezed ? _value.mapElement : mapElement as Element?,
     ));
@@ -14264,11 +14264,11 @@ abstract class _$ElementDefinitionMappingCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-      Id? identity,
+      Id identity,
       @JsonKey(name: '_identity') Element? identityElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
-      String? map,
+      String map,
       @JsonKey(name: '_map') Element? mapElement});
 
   @override
@@ -14311,7 +14311,7 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
           : fhirComments as List<String?>?,
-      identity: identity == freezed ? _value.identity : identity as Id?,
+      identity: identity == freezed ? _value.identity : identity as Id,
       identityElement: identityElement == freezed
           ? _value.identityElement
           : identityElement as Element?,
@@ -14319,7 +14319,7 @@ class __$ElementDefinitionMappingCopyWithImpl<$Res>
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement as Element?,
-      map: map == freezed ? _value.map : map as String?,
+      map: map == freezed ? _value.map : map as String,
       mapElement:
           mapElement == freezed ? _value.mapElement : mapElement as Element?,
     ));
@@ -14354,7 +14354,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
   @JsonKey(name: 'fhir_comments')
   final List<String?>? fhirComments;
   @override
-  final Id? identity;
+  final Id identity;
   @override
   @JsonKey(name: '_identity')
   final Element? identityElement;
@@ -14364,7 +14364,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
-  final String? map;
+  final String map;
   @override
   @JsonKey(name: '_map')
   final Element? mapElement;
@@ -14436,11 +14436,11 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
           {Id? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
-          required Id? identity,
+          required Id identity,
           @JsonKey(name: '_identity') Element? identityElement,
           Code? language,
           @JsonKey(name: '_language') Element? languageElement,
-          required String? map,
+          required String map,
           @JsonKey(name: '_map') Element? mapElement}) =
       _$_ElementDefinitionMapping;
 
@@ -14456,7 +14456,7 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
   @JsonKey(name: 'fhir_comments')
   List<String?>? get fhirComments;
   @override
-  Id? get identity;
+  Id get identity;
   @override
   @JsonKey(name: '_identity')
   Element? get identityElement;
@@ -14466,7 +14466,7 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
-  String? get map;
+  String get map;
   @override
   @JsonKey(name: '_map')
   Element? get mapElement;

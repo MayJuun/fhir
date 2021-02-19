@@ -43,7 +43,7 @@ class _$PaymentNoticeTearOff {
       Reference? organization,
       Reference? request,
       Reference? response,
-      required Coding? paymentStatus}) {
+      required Coding paymentStatus}) {
     return _PaymentNotice(
       resourceType: resourceType,
       id: id,
@@ -106,7 +106,7 @@ mixin _$PaymentNotice {
   Reference? get organization;
   Reference? get request;
   Reference? get response;
-  Coding? get paymentStatus;
+  Coding get paymentStatus;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -145,7 +145,7 @@ abstract class $PaymentNoticeCopyWith<$Res> {
       Reference? organization,
       Reference? request,
       Reference? response,
-      Coding? paymentStatus});
+      Coding paymentStatus});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -159,7 +159,7 @@ abstract class $PaymentNoticeCopyWith<$Res> {
   $ReferenceCopyWith<$Res>? get organization;
   $ReferenceCopyWith<$Res>? get request;
   $ReferenceCopyWith<$Res>? get response;
-  $CodingCopyWith<$Res>? get paymentStatus;
+  $CodingCopyWith<$Res> get paymentStatus;
 }
 
 /// @nodoc
@@ -242,7 +242,7 @@ class _$PaymentNoticeCopyWithImpl<$Res>
       response: response == freezed ? _value.response : response as Reference?,
       paymentStatus: paymentStatus == freezed
           ? _value.paymentStatus
-          : paymentStatus as Coding?,
+          : paymentStatus as Coding,
     ));
   }
 
@@ -379,12 +379,8 @@ class _$PaymentNoticeCopyWithImpl<$Res>
   }
 
   @override
-  $CodingCopyWith<$Res>? get paymentStatus {
-    if (_value.paymentStatus == null) {
-      return null;
-    }
-
-    return $CodingCopyWith<$Res>(_value.paymentStatus!, (value) {
+  $CodingCopyWith<$Res> get paymentStatus {
+    return $CodingCopyWith<$Res>(_value.paymentStatus, (value) {
       return _then(_value.copyWith(paymentStatus: value));
     });
   }
@@ -424,7 +420,7 @@ abstract class _$PaymentNoticeCopyWith<$Res>
       Reference? organization,
       Reference? request,
       Reference? response,
-      Coding? paymentStatus});
+      Coding paymentStatus});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -451,7 +447,7 @@ abstract class _$PaymentNoticeCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get response;
   @override
-  $CodingCopyWith<$Res>? get paymentStatus;
+  $CodingCopyWith<$Res> get paymentStatus;
 }
 
 /// @nodoc
@@ -536,7 +532,7 @@ class __$PaymentNoticeCopyWithImpl<$Res>
       response: response == freezed ? _value.response : response as Reference?,
       paymentStatus: paymentStatus == freezed
           ? _value.paymentStatus
-          : paymentStatus as Coding?,
+          : paymentStatus as Coding,
     ));
   }
 }
@@ -626,7 +622,7 @@ class _$_PaymentNotice extends _PaymentNotice {
   @override
   final Reference? response;
   @override
-  final Coding? paymentStatus;
+  final Coding paymentStatus;
 
   @override
   String toString() {
@@ -767,7 +763,7 @@ abstract class _PaymentNotice extends PaymentNotice {
       Reference? organization,
       Reference? request,
       Reference? response,
-      required Coding? paymentStatus}) = _$_PaymentNotice;
+      required Coding paymentStatus}) = _$_PaymentNotice;
 
   factory _PaymentNotice.fromJson(Map<String, dynamic> json) =
       _$_PaymentNotice.fromJson;
@@ -820,7 +816,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
   Reference? get response;
   @override
-  Coding? get paymentStatus;
+  Coding get paymentStatus;
   @override
   @JsonKey(ignore: true)
   _$PaymentNoticeCopyWith<_PaymentNotice> get copyWith;
@@ -872,7 +868,7 @@ class _$PaymentReconciliationTearOff {
       Reference? requestOrganization,
       List<PaymentReconciliationDetail?>? detail,
       Coding? form,
-      required Quantity? total,
+      required Quantity total,
       List<PaymentReconciliationNote?>? note}) {
     return _PaymentReconciliation(
       resourceType: resourceType,
@@ -952,7 +948,7 @@ mixin _$PaymentReconciliation {
   Reference? get requestOrganization;
   List<PaymentReconciliationDetail?>? get detail;
   Coding? get form;
-  Quantity? get total;
+  Quantity get total;
   List<PaymentReconciliationNote?>? get note;
 
   Map<String, dynamic> toJson();
@@ -1001,7 +997,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
       Reference? requestOrganization,
       List<PaymentReconciliationDetail?>? detail,
       Coding? form,
-      Quantity? total,
+      Quantity total,
       List<PaymentReconciliationNote?>? note});
 
   $MetaCopyWith<$Res>? get meta;
@@ -1019,7 +1015,7 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
   $ReferenceCopyWith<$Res>? get requestProvider;
   $ReferenceCopyWith<$Res>? get requestOrganization;
   $CodingCopyWith<$Res>? get form;
-  $QuantityCopyWith<$Res>? get total;
+  $QuantityCopyWith<$Res> get total;
 }
 
 /// @nodoc
@@ -1126,7 +1122,7 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
           ? _value.detail
           : detail as List<PaymentReconciliationDetail?>?,
       form: form == freezed ? _value.form : form as Coding?,
-      total: total == freezed ? _value.total : total as Quantity?,
+      total: total == freezed ? _value.total : total as Quantity,
       note: note == freezed
           ? _value.note
           : note as List<PaymentReconciliationNote?>?,
@@ -1299,12 +1295,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
   }
 
   @override
-  $QuantityCopyWith<$Res>? get total {
-    if (_value.total == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.total!, (value) {
+  $QuantityCopyWith<$Res> get total {
+    return $QuantityCopyWith<$Res>(_value.total, (value) {
       return _then(_value.copyWith(total: value));
     });
   }
@@ -1353,7 +1345,7 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
       Reference? requestOrganization,
       List<PaymentReconciliationDetail?>? detail,
       Coding? form,
-      Quantity? total,
+      Quantity total,
       List<PaymentReconciliationNote?>? note});
 
   @override
@@ -1387,7 +1379,7 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
   @override
   $CodingCopyWith<$Res>? get form;
   @override
-  $QuantityCopyWith<$Res>? get total;
+  $QuantityCopyWith<$Res> get total;
 }
 
 /// @nodoc
@@ -1496,7 +1488,7 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
           ? _value.detail
           : detail as List<PaymentReconciliationDetail?>?,
       form: form == freezed ? _value.form : form as Coding?,
-      total: total == freezed ? _value.total : total as Quantity?,
+      total: total == freezed ? _value.total : total as Quantity,
       note: note == freezed
           ? _value.note
           : note as List<PaymentReconciliationNote?>?,
@@ -1614,7 +1606,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   @override
   final Coding? form;
   @override
-  final Quantity? total;
+  final Quantity total;
   @override
   final List<PaymentReconciliationNote?>? note;
 
@@ -1784,7 +1776,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
       Reference? requestOrganization,
       List<PaymentReconciliationDetail?>? detail,
       Coding? form,
-      required Quantity? total,
+      required Quantity total,
       List<PaymentReconciliationNote?>? note}) = _$_PaymentReconciliation;
 
   factory _PaymentReconciliation.fromJson(Map<String, dynamic> json) =
@@ -1853,7 +1845,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
   Coding? get form;
   @override
-  Quantity? get total;
+  Quantity get total;
   @override
   List<PaymentReconciliationNote?>? get note;
   @override
@@ -1874,7 +1866,7 @@ class _$PaymentReconciliationDetailTearOff {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Coding? type,
+      required Coding type,
       Reference? request,
       Reference? responce,
       Reference? submitter,
@@ -1911,7 +1903,7 @@ mixin _$PaymentReconciliationDetail {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  Coding? get type;
+  Coding get type;
   Reference? get request;
   Reference? get responce;
   Reference? get submitter;
@@ -1937,7 +1929,7 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res> {
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Coding? type,
+      Coding type,
       Reference? request,
       Reference? responce,
       Reference? submitter,
@@ -1946,7 +1938,7 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res> {
       @JsonKey(name: '_date') Element? dateElement,
       Quantity? amount});
 
-  $CodingCopyWith<$Res>? get type;
+  $CodingCopyWith<$Res> get type;
   $ReferenceCopyWith<$Res>? get request;
   $ReferenceCopyWith<$Res>? get responce;
   $ReferenceCopyWith<$Res>? get submitter;
@@ -1986,7 +1978,7 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as Coding?,
+      type: type == freezed ? _value.type : type as Coding,
       request: request == freezed ? _value.request : request as Reference?,
       responce: responce == freezed ? _value.responce : responce as Reference?,
       submitter:
@@ -2000,12 +1992,8 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
   }
 
   @override
-  $CodingCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodingCopyWith<$Res>(_value.type!, (value) {
+  $CodingCopyWith<$Res> get type {
+    return $CodingCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -2089,7 +2077,7 @@ abstract class _$PaymentReconciliationDetailCopyWith<$Res>
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Coding? type,
+      Coding type,
       Reference? request,
       Reference? responce,
       Reference? submitter,
@@ -2099,7 +2087,7 @@ abstract class _$PaymentReconciliationDetailCopyWith<$Res>
       Quantity? amount});
 
   @override
-  $CodingCopyWith<$Res>? get type;
+  $CodingCopyWith<$Res> get type;
   @override
   $ReferenceCopyWith<$Res>? get request;
   @override
@@ -2149,7 +2137,7 @@ class __$PaymentReconciliationDetailCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as Coding?,
+      type: type == freezed ? _value.type : type as Coding,
       request: request == freezed ? _value.request : request as Reference?,
       responce: responce == freezed ? _value.responce : responce as Reference?,
       submitter:
@@ -2192,7 +2180,7 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final Coding? type;
+  final Coding type;
   @override
   final Reference? request;
   @override
@@ -2282,7 +2270,7 @@ abstract class _PaymentReconciliationDetail
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Coding? type,
+      required Coding type,
       Reference? request,
       Reference? responce,
       Reference? submitter,
@@ -2302,7 +2290,7 @@ abstract class _PaymentReconciliationDetail
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  Coding? get type;
+  Coding get type;
   @override
   Reference? get request;
   @override

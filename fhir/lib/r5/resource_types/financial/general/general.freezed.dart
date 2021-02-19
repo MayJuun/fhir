@@ -890,7 +890,7 @@ class _$AccountCoverageTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Reference? coverage,
+      required Reference coverage,
       PositiveInt? priority,
       @JsonKey(name: '_priority') Element? priorityElement}) {
     return _AccountCoverage(
@@ -917,7 +917,7 @@ mixin _$AccountCoverage {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  Reference? get coverage;
+  Reference get coverage;
   PositiveInt? get priority;
   @JsonKey(name: '_priority')
   Element? get priorityElement;
@@ -936,11 +936,11 @@ abstract class $AccountCoverageCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Reference? coverage,
+      Reference coverage,
       PositiveInt? priority,
       @JsonKey(name: '_priority') Element? priorityElement});
 
-  $ReferenceCopyWith<$Res>? get coverage;
+  $ReferenceCopyWith<$Res> get coverage;
   $ElementCopyWith<$Res>? get priorityElement;
 }
 
@@ -970,7 +970,7 @@ class _$AccountCoverageCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      coverage: coverage == freezed ? _value.coverage : coverage as Reference?,
+      coverage: coverage == freezed ? _value.coverage : coverage as Reference,
       priority:
           priority == freezed ? _value.priority : priority as PositiveInt?,
       priorityElement: priorityElement == freezed
@@ -980,12 +980,8 @@ class _$AccountCoverageCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get coverage {
-    if (_value.coverage == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.coverage!, (value) {
+  $ReferenceCopyWith<$Res> get coverage {
+    return $ReferenceCopyWith<$Res>(_value.coverage, (value) {
       return _then(_value.copyWith(coverage: value));
     });
   }
@@ -1013,12 +1009,12 @@ abstract class _$AccountCoverageCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Reference? coverage,
+      Reference coverage,
       PositiveInt? priority,
       @JsonKey(name: '_priority') Element? priorityElement});
 
   @override
-  $ReferenceCopyWith<$Res>? get coverage;
+  $ReferenceCopyWith<$Res> get coverage;
   @override
   $ElementCopyWith<$Res>? get priorityElement;
 }
@@ -1051,7 +1047,7 @@ class __$AccountCoverageCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      coverage: coverage == freezed ? _value.coverage : coverage as Reference?,
+      coverage: coverage == freezed ? _value.coverage : coverage as Reference,
       priority:
           priority == freezed ? _value.priority : priority as PositiveInt?,
       priorityElement: priorityElement == freezed
@@ -1085,7 +1081,7 @@ class _$_AccountCoverage extends _AccountCoverage {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final Reference? coverage;
+  final Reference coverage;
   @override
   final PositiveInt? priority;
   @override
@@ -1147,7 +1143,7 @@ abstract class _AccountCoverage extends AccountCoverage {
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required Reference? coverage,
+          required Reference coverage,
           PositiveInt? priority,
           @JsonKey(name: '_priority') Element? priorityElement}) =
       _$_AccountCoverage;
@@ -1163,7 +1159,7 @@ abstract class _AccountCoverage extends AccountCoverage {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  Reference? get coverage;
+  Reference get coverage;
   @override
   PositiveInt? get priority;
   @override
@@ -1186,7 +1182,7 @@ class _$AccountGuarantorTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Reference? party,
+      required Reference party,
       Boolean? onHold,
       @JsonKey(name: '_onHold') Element? onHoldElement,
       Period? period}) {
@@ -1215,7 +1211,7 @@ mixin _$AccountGuarantor {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  Reference? get party;
+  Reference get party;
   Boolean? get onHold;
   @JsonKey(name: '_onHold')
   Element? get onHoldElement;
@@ -1235,12 +1231,12 @@ abstract class $AccountGuarantorCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Reference? party,
+      Reference party,
       Boolean? onHold,
       @JsonKey(name: '_onHold') Element? onHoldElement,
       Period? period});
 
-  $ReferenceCopyWith<$Res>? get party;
+  $ReferenceCopyWith<$Res> get party;
   $ElementCopyWith<$Res>? get onHoldElement;
   $PeriodCopyWith<$Res>? get period;
 }
@@ -1272,7 +1268,7 @@ class _$AccountGuarantorCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      party: party == freezed ? _value.party : party as Reference?,
+      party: party == freezed ? _value.party : party as Reference,
       onHold: onHold == freezed ? _value.onHold : onHold as Boolean?,
       onHoldElement: onHoldElement == freezed
           ? _value.onHoldElement
@@ -1282,12 +1278,8 @@ class _$AccountGuarantorCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get party {
-    if (_value.party == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.party!, (value) {
+  $ReferenceCopyWith<$Res> get party {
+    return $ReferenceCopyWith<$Res>(_value.party, (value) {
       return _then(_value.copyWith(party: value));
     });
   }
@@ -1326,13 +1318,13 @@ abstract class _$AccountGuarantorCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Reference? party,
+      Reference party,
       Boolean? onHold,
       @JsonKey(name: '_onHold') Element? onHoldElement,
       Period? period});
 
   @override
-  $ReferenceCopyWith<$Res>? get party;
+  $ReferenceCopyWith<$Res> get party;
   @override
   $ElementCopyWith<$Res>? get onHoldElement;
   @override
@@ -1368,7 +1360,7 @@ class __$AccountGuarantorCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      party: party == freezed ? _value.party : party as Reference?,
+      party: party == freezed ? _value.party : party as Reference,
       onHold: onHold == freezed ? _value.onHold : onHold as Boolean?,
       onHoldElement: onHoldElement == freezed
           ? _value.onHoldElement
@@ -1403,7 +1395,7 @@ class _$_AccountGuarantor extends _AccountGuarantor {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final Reference? party;
+  final Reference party;
   @override
   final Boolean? onHold;
   @override
@@ -1468,7 +1460,7 @@ abstract class _AccountGuarantor extends AccountGuarantor {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Reference? party,
+      required Reference party,
       Boolean? onHold,
       @JsonKey(name: '_onHold') Element? onHoldElement,
       Period? period}) = _$_AccountGuarantor;
@@ -1484,7 +1476,7 @@ abstract class _AccountGuarantor extends AccountGuarantor {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  Reference? get party;
+  Reference get party;
   @override
   Boolean? get onHold;
   @override
@@ -1531,8 +1523,8 @@ class _$ChargeItemTearOff {
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference?>? partOf,
-      required CodeableConcept? code,
-      required Reference? subject,
+      required CodeableConcept code,
+      required Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -1648,8 +1640,8 @@ mixin _$ChargeItem {
   @JsonKey(name: '_status')
   Element? get statusElement;
   List<Reference?>? get partOf;
-  CodeableConcept? get code;
-  Reference? get subject;
+  CodeableConcept get code;
+  Reference get subject;
   Reference? get context;
   FhirDateTime? get occurrenceDateTime;
   @JsonKey(name: '_occurrenceDateTime')
@@ -1717,8 +1709,8 @@ abstract class $ChargeItemCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference?>? partOf,
-      CodeableConcept? code,
-      Reference? subject,
+      CodeableConcept code,
+      Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -1755,8 +1747,8 @@ abstract class $ChargeItemCopyWith<$Res> {
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get statusElement;
-  $CodeableConceptCopyWith<$Res>? get code;
-  $ReferenceCopyWith<$Res>? get subject;
+  $CodeableConceptCopyWith<$Res> get code;
+  $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res>? get context;
   $ElementCopyWith<$Res>? get occurrenceDateTimeElement;
   $PeriodCopyWith<$Res>? get occurrencePeriod;
@@ -1874,8 +1866,8 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
           ? _value.statusElement
           : statusElement as Element?,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference?,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
@@ -2001,23 +1993,15 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get subject {
-    if (_value.subject == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
+  $ReferenceCopyWith<$Res> get subject {
+    return $ReferenceCopyWith<$Res>(_value.subject, (value) {
       return _then(_value.copyWith(subject: value));
     });
   }
@@ -2221,8 +2205,8 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference?>? partOf,
-      CodeableConcept? code,
-      Reference? subject,
+      CodeableConcept code,
+      Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -2265,9 +2249,9 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   @override
-  $ReferenceCopyWith<$Res>? get subject;
+  $ReferenceCopyWith<$Res> get subject;
   @override
   $ReferenceCopyWith<$Res>? get context;
   @override
@@ -2402,8 +2386,8 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
           ? _value.statusElement
           : statusElement as Element?,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
-      subject: subject == freezed ? _value.subject : subject as Reference?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
+      subject: subject == freezed ? _value.subject : subject as Reference,
       context: context == freezed ? _value.context : context as Reference?,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
@@ -2585,9 +2569,9 @@ class _$_ChargeItem extends _ChargeItem {
   @override
   final List<Reference?>? partOf;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
-  final Reference? subject;
+  final Reference subject;
   @override
   final Reference? context;
   @override
@@ -2833,8 +2817,8 @@ abstract class _ChargeItem extends ChargeItem {
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference?>? partOf,
-      required CodeableConcept? code,
-      required Reference? subject,
+      required CodeableConcept code,
+      required Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
@@ -2913,9 +2897,9 @@ abstract class _ChargeItem extends ChargeItem {
   @override
   List<Reference?>? get partOf;
   @override
-  CodeableConcept? get code;
+  CodeableConcept get code;
   @override
-  Reference? get subject;
+  Reference get subject;
   @override
   Reference? get context;
   @override
@@ -2990,7 +2974,7 @@ class _$ChargeItemPerformerTearOff {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       CodeableConcept? function,
-      required Reference? actor}) {
+      required Reference actor}) {
     return _ChargeItemPerformer(
       id: id,
       extension_: extension_,
@@ -3015,7 +2999,7 @@ mixin _$ChargeItemPerformer {
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get function;
-  Reference? get actor;
+  Reference get actor;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -3032,10 +3016,10 @@ abstract class $ChargeItemPerformerCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       CodeableConcept? function,
-      Reference? actor});
+      Reference actor});
 
   $CodeableConceptCopyWith<$Res>? get function;
-  $ReferenceCopyWith<$Res>? get actor;
+  $ReferenceCopyWith<$Res> get actor;
 }
 
 /// @nodoc
@@ -3065,7 +3049,7 @@ class _$ChargeItemPerformerCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       function:
           function == freezed ? _value.function : function as CodeableConcept?,
-      actor: actor == freezed ? _value.actor : actor as Reference?,
+      actor: actor == freezed ? _value.actor : actor as Reference,
     ));
   }
 
@@ -3081,12 +3065,8 @@ class _$ChargeItemPerformerCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get actor {
-    if (_value.actor == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.actor!, (value) {
+  $ReferenceCopyWith<$Res> get actor {
+    return $ReferenceCopyWith<$Res>(_value.actor, (value) {
       return _then(_value.copyWith(actor: value));
     });
   }
@@ -3104,12 +3084,12 @@ abstract class _$ChargeItemPerformerCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       CodeableConcept? function,
-      Reference? actor});
+      Reference actor});
 
   @override
   $CodeableConceptCopyWith<$Res>? get function;
   @override
-  $ReferenceCopyWith<$Res>? get actor;
+  $ReferenceCopyWith<$Res> get actor;
 }
 
 /// @nodoc
@@ -3141,7 +3121,7 @@ class __$ChargeItemPerformerCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       function:
           function == freezed ? _value.function : function as CodeableConcept?,
-      actor: actor == freezed ? _value.actor : actor as Reference?,
+      actor: actor == freezed ? _value.actor : actor as Reference,
     ));
   }
 }
@@ -3171,7 +3151,7 @@ class _$_ChargeItemPerformer extends _ChargeItemPerformer {
   @override
   final CodeableConcept? function;
   @override
-  final Reference? actor;
+  final Reference actor;
 
   @override
   String toString() {
@@ -3225,7 +3205,7 @@ abstract class _ChargeItemPerformer extends ChargeItemPerformer {
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       CodeableConcept? function,
-      required Reference? actor}) = _$_ChargeItemPerformer;
+      required Reference actor}) = _$_ChargeItemPerformer;
 
   factory _ChargeItemPerformer.fromJson(Map<String, dynamic> json) =
       _$_ChargeItemPerformer.fromJson;
@@ -3240,7 +3220,7 @@ abstract class _ChargeItemPerformer extends ChargeItemPerformer {
   @override
   CodeableConcept? get function;
   @override
-  Reference? get actor;
+  Reference get actor;
   @override
   @JsonKey(ignore: true)
   _$ChargeItemPerformerCopyWith<_ChargeItemPerformer> get copyWith;
@@ -7578,7 +7558,7 @@ class _$ContractContentDefinitionTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       CodeableConcept? subType,
       Reference? publisher,
       FhirDateTime? publicationDate,
@@ -7617,7 +7597,7 @@ mixin _$ContractContentDefinition {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   CodeableConcept? get subType;
   Reference? get publisher;
   FhirDateTime? get publicationDate;
@@ -7644,7 +7624,7 @@ abstract class $ContractContentDefinitionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       CodeableConcept? subType,
       Reference? publisher,
       FhirDateTime? publicationDate,
@@ -7654,7 +7634,7 @@ abstract class $ContractContentDefinitionCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright') Element? copyrightElement});
 
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res>? get subType;
   $ReferenceCopyWith<$Res>? get publisher;
   $ElementCopyWith<$Res>? get publicationDateElement;
@@ -7694,7 +7674,7 @@ class _$ContractContentDefinitionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       subType:
           subType == freezed ? _value.subType : subType as CodeableConcept?,
       publisher:
@@ -7720,12 +7700,8 @@ class _$ContractContentDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -7797,7 +7773,7 @@ abstract class _$ContractContentDefinitionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       CodeableConcept? subType,
       Reference? publisher,
       FhirDateTime? publicationDate,
@@ -7808,7 +7784,7 @@ abstract class _$ContractContentDefinitionCopyWith<$Res>
       @JsonKey(name: '_copyright') Element? copyrightElement});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $CodeableConceptCopyWith<$Res>? get subType;
   @override
@@ -7856,7 +7832,7 @@ class __$ContractContentDefinitionCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       subType:
           subType == freezed ? _value.subType : subType as CodeableConcept?,
       publisher:
@@ -7912,7 +7888,7 @@ class _$_ContractContentDefinition extends _ContractContentDefinition {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final CodeableConcept? subType;
   @override
@@ -8016,7 +7992,7 @@ abstract class _ContractContentDefinition extends ContractContentDefinition {
       @JsonKey(name: 'extension')
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       CodeableConcept? subType,
       Reference? publisher,
       FhirDateTime? publicationDate,
@@ -8040,7 +8016,7 @@ abstract class _ContractContentDefinition extends ContractContentDefinition {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   CodeableConcept? get subType;
   @override
@@ -8088,7 +8064,7 @@ class _$ContractTermTearOff {
       String? text,
       @JsonKey(name: '_text') Element? textElement,
       List<ContractSecurityLabel?>? securityLabel,
-      required ContractOffer? offer,
+      required ContractOffer offer,
       List<ContractAsset?>? asset,
       List<ContractAction?>? action,
       List<ContractTerm?>? group}) {
@@ -8141,7 +8117,7 @@ mixin _$ContractTerm {
   @JsonKey(name: '_text')
   Element? get textElement;
   List<ContractSecurityLabel?>? get securityLabel;
-  ContractOffer? get offer;
+  ContractOffer get offer;
   List<ContractAsset?>? get asset;
   List<ContractAction?>? get action;
   List<ContractTerm?>? get group;
@@ -8171,7 +8147,7 @@ abstract class $ContractTermCopyWith<$Res> {
       String? text,
       @JsonKey(name: '_text') Element? textElement,
       List<ContractSecurityLabel?>? securityLabel,
-      ContractOffer? offer,
+      ContractOffer offer,
       List<ContractAsset?>? asset,
       List<ContractAction?>? action,
       List<ContractTerm?>? group});
@@ -8184,7 +8160,7 @@ abstract class $ContractTermCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res>? get type;
   $CodeableConceptCopyWith<$Res>? get subType;
   $ElementCopyWith<$Res>? get textElement;
-  $ContractOfferCopyWith<$Res>? get offer;
+  $ContractOfferCopyWith<$Res> get offer;
 }
 
 /// @nodoc
@@ -8246,7 +8222,7 @@ class _$ContractTermCopyWithImpl<$Res> implements $ContractTermCopyWith<$Res> {
       securityLabel: securityLabel == freezed
           ? _value.securityLabel
           : securityLabel as List<ContractSecurityLabel?>?,
-      offer: offer == freezed ? _value.offer : offer as ContractOffer?,
+      offer: offer == freezed ? _value.offer : offer as ContractOffer,
       asset: asset == freezed ? _value.asset : asset as List<ContractAsset?>?,
       action:
           action == freezed ? _value.action : action as List<ContractAction?>?,
@@ -8344,12 +8320,8 @@ class _$ContractTermCopyWithImpl<$Res> implements $ContractTermCopyWith<$Res> {
   }
 
   @override
-  $ContractOfferCopyWith<$Res>? get offer {
-    if (_value.offer == null) {
-      return null;
-    }
-
-    return $ContractOfferCopyWith<$Res>(_value.offer!, (value) {
+  $ContractOfferCopyWith<$Res> get offer {
+    return $ContractOfferCopyWith<$Res>(_value.offer, (value) {
       return _then(_value.copyWith(offer: value));
     });
   }
@@ -8377,7 +8349,7 @@ abstract class _$ContractTermCopyWith<$Res>
       String? text,
       @JsonKey(name: '_text') Element? textElement,
       List<ContractSecurityLabel?>? securityLabel,
-      ContractOffer? offer,
+      ContractOffer offer,
       List<ContractAsset?>? asset,
       List<ContractAction?>? action,
       List<ContractTerm?>? group});
@@ -8399,7 +8371,7 @@ abstract class _$ContractTermCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get textElement;
   @override
-  $ContractOfferCopyWith<$Res>? get offer;
+  $ContractOfferCopyWith<$Res> get offer;
 }
 
 /// @nodoc
@@ -8463,7 +8435,7 @@ class __$ContractTermCopyWithImpl<$Res> extends _$ContractTermCopyWithImpl<$Res>
       securityLabel: securityLabel == freezed
           ? _value.securityLabel
           : securityLabel as List<ContractSecurityLabel?>?,
-      offer: offer == freezed ? _value.offer : offer as ContractOffer?,
+      offer: offer == freezed ? _value.offer : offer as ContractOffer,
       asset: asset == freezed ? _value.asset : asset as List<ContractAsset?>?,
       action:
           action == freezed ? _value.action : action as List<ContractAction?>?,
@@ -8532,7 +8504,7 @@ class _$_ContractTerm extends _ContractTerm {
   @override
   final List<ContractSecurityLabel?>? securityLabel;
   @override
-  final ContractOffer? offer;
+  final ContractOffer offer;
   @override
   final List<ContractAsset?>? asset;
   @override
@@ -8647,7 +8619,7 @@ abstract class _ContractTerm extends ContractTerm {
       String? text,
       @JsonKey(name: '_text') Element? textElement,
       List<ContractSecurityLabel?>? securityLabel,
-      required ContractOffer? offer,
+      required ContractOffer offer,
       List<ContractAsset?>? asset,
       List<ContractAction?>? action,
       List<ContractTerm?>? group}) = _$_ContractTerm;
@@ -8687,7 +8659,7 @@ abstract class _ContractTerm extends ContractTerm {
   @override
   List<ContractSecurityLabel?>? get securityLabel;
   @override
-  ContractOffer? get offer;
+  ContractOffer get offer;
   @override
   List<ContractAsset?>? get asset;
   @override
@@ -8714,7 +8686,7 @@ class _$ContractSecurityLabelTearOff {
       List<FhirExtension?>? modifierExtension,
       List<UnsignedInt?>? number,
       @JsonKey(name: '_number') List<Element?>? numberElement,
-      required Coding? classification,
+      required Coding classification,
       List<Coding?>? category,
       List<Coding?>? control}) {
     return _ContractSecurityLabel(
@@ -8746,7 +8718,7 @@ mixin _$ContractSecurityLabel {
   List<UnsignedInt?>? get number;
   @JsonKey(name: '_number')
   List<Element?>? get numberElement;
-  Coding? get classification;
+  Coding get classification;
   List<Coding?>? get category;
   List<Coding?>? get control;
 
@@ -8766,11 +8738,11 @@ abstract class $ContractSecurityLabelCopyWith<$Res> {
       List<FhirExtension?>? modifierExtension,
       List<UnsignedInt?>? number,
       @JsonKey(name: '_number') List<Element?>? numberElement,
-      Coding? classification,
+      Coding classification,
       List<Coding?>? category,
       List<Coding?>? control});
 
-  $CodingCopyWith<$Res>? get classification;
+  $CodingCopyWith<$Res> get classification;
 }
 
 /// @nodoc
@@ -8807,7 +8779,7 @@ class _$ContractSecurityLabelCopyWithImpl<$Res>
           : numberElement as List<Element?>?,
       classification: classification == freezed
           ? _value.classification
-          : classification as Coding?,
+          : classification as Coding,
       category:
           category == freezed ? _value.category : category as List<Coding?>?,
       control: control == freezed ? _value.control : control as List<Coding?>?,
@@ -8815,12 +8787,8 @@ class _$ContractSecurityLabelCopyWithImpl<$Res>
   }
 
   @override
-  $CodingCopyWith<$Res>? get classification {
-    if (_value.classification == null) {
-      return null;
-    }
-
-    return $CodingCopyWith<$Res>(_value.classification!, (value) {
+  $CodingCopyWith<$Res> get classification {
+    return $CodingCopyWith<$Res>(_value.classification, (value) {
       return _then(_value.copyWith(classification: value));
     });
   }
@@ -8839,12 +8807,12 @@ abstract class _$ContractSecurityLabelCopyWith<$Res>
       List<FhirExtension?>? modifierExtension,
       List<UnsignedInt?>? number,
       @JsonKey(name: '_number') List<Element?>? numberElement,
-      Coding? classification,
+      Coding classification,
       List<Coding?>? category,
       List<Coding?>? control});
 
   @override
-  $CodingCopyWith<$Res>? get classification;
+  $CodingCopyWith<$Res> get classification;
 }
 
 /// @nodoc
@@ -8883,7 +8851,7 @@ class __$ContractSecurityLabelCopyWithImpl<$Res>
           : numberElement as List<Element?>?,
       classification: classification == freezed
           ? _value.classification
-          : classification as Coding?,
+          : classification as Coding,
       category:
           category == freezed ? _value.category : category as List<Coding?>?,
       control: control == freezed ? _value.control : control as List<Coding?>?,
@@ -8922,7 +8890,7 @@ class _$_ContractSecurityLabel extends _ContractSecurityLabel {
   @JsonKey(name: '_number')
   final List<Element?>? numberElement;
   @override
-  final Coding? classification;
+  final Coding classification;
   @override
   final List<Coding?>? category;
   @override
@@ -8992,7 +8960,7 @@ abstract class _ContractSecurityLabel extends ContractSecurityLabel {
       List<FhirExtension?>? modifierExtension,
       List<UnsignedInt?>? number,
       @JsonKey(name: '_number') List<Element?>? numberElement,
-      required Coding? classification,
+      required Coding classification,
       List<Coding?>? category,
       List<Coding?>? control}) = _$_ContractSecurityLabel;
 
@@ -9012,7 +8980,7 @@ abstract class _ContractSecurityLabel extends ContractSecurityLabel {
   @JsonKey(name: '_number')
   List<Element?>? get numberElement;
   @override
-  Coding? get classification;
+  Coding get classification;
   @override
   List<Coding?>? get category;
   @override
@@ -9585,8 +9553,8 @@ class _$ContractPartyTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required List<Reference?>? reference,
-      required CodeableConcept? role}) {
+      required List<Reference> reference,
+      required CodeableConcept role}) {
     return _ContractParty(
       id: id,
       extension_: extension_,
@@ -9610,8 +9578,8 @@ mixin _$ContractParty {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  List<Reference?>? get reference;
-  CodeableConcept? get role;
+  List<Reference> get reference;
+  CodeableConcept get role;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -9627,10 +9595,10 @@ abstract class $ContractPartyCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      List<Reference?>? reference,
-      CodeableConcept? role});
+      List<Reference> reference,
+      CodeableConcept role});
 
-  $CodeableConceptCopyWith<$Res>? get role;
+  $CodeableConceptCopyWith<$Res> get role;
 }
 
 /// @nodoc
@@ -9660,18 +9628,14 @@ class _$ContractPartyCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       reference: reference == freezed
           ? _value.reference
-          : reference as List<Reference?>?,
-      role: role == freezed ? _value.role : role as CodeableConcept?,
+          : reference as List<Reference>,
+      role: role == freezed ? _value.role : role as CodeableConcept,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get role {
-    if (_value.role == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.role!, (value) {
+  $CodeableConceptCopyWith<$Res> get role {
+    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
       return _then(_value.copyWith(role: value));
     });
   }
@@ -9688,11 +9652,11 @@ abstract class _$ContractPartyCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      List<Reference?>? reference,
-      CodeableConcept? role});
+      List<Reference> reference,
+      CodeableConcept role});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get role;
+  $CodeableConceptCopyWith<$Res> get role;
 }
 
 /// @nodoc
@@ -9724,8 +9688,8 @@ class __$ContractPartyCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       reference: reference == freezed
           ? _value.reference
-          : reference as List<Reference?>?,
-      role: role == freezed ? _value.role : role as CodeableConcept?,
+          : reference as List<Reference>,
+      role: role == freezed ? _value.role : role as CodeableConcept,
     ));
   }
 }
@@ -9753,9 +9717,9 @@ class _$_ContractParty extends _ContractParty {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Reference?>? reference;
+  final List<Reference> reference;
   @override
-  final CodeableConcept? role;
+  final CodeableConcept role;
 
   @override
   String toString() {
@@ -9807,8 +9771,8 @@ abstract class _ContractParty extends ContractParty {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required List<Reference?>? reference,
-      required CodeableConcept? role}) = _$_ContractParty;
+      required List<Reference> reference,
+      required CodeableConcept role}) = _$_ContractParty;
 
   factory _ContractParty.fromJson(Map<String, dynamic> json) =
       _$_ContractParty.fromJson;
@@ -9821,9 +9785,9 @@ abstract class _ContractParty extends ContractParty {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  List<Reference?>? get reference;
+  List<Reference> get reference;
   @override
-  CodeableConcept? get role;
+  CodeableConcept get role;
   @override
   @JsonKey(ignore: true)
   _$ContractPartyCopyWith<_ContractParty> get copyWith;
@@ -12587,13 +12551,13 @@ class _$ContractActionTearOff {
       Boolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       List<ContractSubject?>? subject,
-      required CodeableConcept? intent,
+      required CodeableConcept intent,
       List<String?>? linkId,
       @JsonKey(name: '_linkId')
           List<Element?>? linkIdElement,
-      required CodeableConcept? status,
+      required CodeableConcept status,
       Reference? context,
       List<String?>? contextLinkId,
       @JsonKey(name: '_contextLinkId')
@@ -12674,13 +12638,13 @@ mixin _$ContractAction {
   Boolean? get doNotPerform;
   @JsonKey(name: '_doNotPerform')
   Element? get doNotPerformElement;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   List<ContractSubject?>? get subject;
-  CodeableConcept? get intent;
+  CodeableConcept get intent;
   List<String?>? get linkId;
   @JsonKey(name: '_linkId')
   List<Element?>? get linkIdElement;
-  CodeableConcept? get status;
+  CodeableConcept get status;
   Reference? get context;
   List<String?>? get contextLinkId;
   @JsonKey(name: '_contextLinkId')
@@ -12727,13 +12691,13 @@ abstract class $ContractActionCopyWith<$Res> {
       Boolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
-      CodeableConcept? type,
+      CodeableConcept type,
       List<ContractSubject?>? subject,
-      CodeableConcept? intent,
+      CodeableConcept intent,
       List<String?>? linkId,
       @JsonKey(name: '_linkId')
           List<Element?>? linkIdElement,
-      CodeableConcept? status,
+      CodeableConcept status,
       Reference? context,
       List<String?>? contextLinkId,
       @JsonKey(name: '_contextLinkId')
@@ -12763,9 +12727,9 @@ abstract class $ContractActionCopyWith<$Res> {
           List<Element?>? securityLabelNumberElement});
 
   $ElementCopyWith<$Res>? get doNotPerformElement;
-  $CodeableConceptCopyWith<$Res>? get type;
-  $CodeableConceptCopyWith<$Res>? get intent;
-  $CodeableConceptCopyWith<$Res>? get status;
+  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res> get intent;
+  $CodeableConceptCopyWith<$Res> get status;
   $ReferenceCopyWith<$Res>? get context;
   $ElementCopyWith<$Res>? get occurrenceDateTimeElement;
   $PeriodCopyWith<$Res>? get occurrencePeriod;
@@ -12832,16 +12796,16 @@ class _$ContractActionCopyWithImpl<$Res>
       doNotPerformElement: doNotPerformElement == freezed
           ? _value.doNotPerformElement
           : doNotPerformElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       subject: subject == freezed
           ? _value.subject
           : subject as List<ContractSubject?>?,
-      intent: intent == freezed ? _value.intent : intent as CodeableConcept?,
+      intent: intent == freezed ? _value.intent : intent as CodeableConcept,
       linkId: linkId == freezed ? _value.linkId : linkId as List<String?>?,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
           : linkIdElement as List<Element?>?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
+      status: status == freezed ? _value.status : status as CodeableConcept,
       context: context == freezed ? _value.context : context as Reference?,
       contextLinkId: contextLinkId == freezed
           ? _value.contextLinkId
@@ -12915,34 +12879,22 @@ class _$ContractActionCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get intent {
-    if (_value.intent == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.intent!, (value) {
+  $CodeableConceptCopyWith<$Res> get intent {
+    return $CodeableConceptCopyWith<$Res>(_value.intent, (value) {
       return _then(_value.copyWith(intent: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get status {
-    if (_value.status == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.status!, (value) {
+  $CodeableConceptCopyWith<$Res> get status {
+    return $CodeableConceptCopyWith<$Res>(_value.status, (value) {
       return _then(_value.copyWith(status: value));
     });
   }
@@ -13029,13 +12981,13 @@ abstract class _$ContractActionCopyWith<$Res>
       Boolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
-      CodeableConcept? type,
+      CodeableConcept type,
       List<ContractSubject?>? subject,
-      CodeableConcept? intent,
+      CodeableConcept intent,
       List<String?>? linkId,
       @JsonKey(name: '_linkId')
           List<Element?>? linkIdElement,
-      CodeableConcept? status,
+      CodeableConcept status,
       Reference? context,
       List<String?>? contextLinkId,
       @JsonKey(name: '_contextLinkId')
@@ -13067,11 +13019,11 @@ abstract class _$ContractActionCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get doNotPerformElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
-  $CodeableConceptCopyWith<$Res>? get intent;
+  $CodeableConceptCopyWith<$Res> get intent;
   @override
-  $CodeableConceptCopyWith<$Res>? get status;
+  $CodeableConceptCopyWith<$Res> get status;
   @override
   $ReferenceCopyWith<$Res>? get context;
   @override
@@ -13146,16 +13098,16 @@ class __$ContractActionCopyWithImpl<$Res>
       doNotPerformElement: doNotPerformElement == freezed
           ? _value.doNotPerformElement
           : doNotPerformElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       subject: subject == freezed
           ? _value.subject
           : subject as List<ContractSubject?>?,
-      intent: intent == freezed ? _value.intent : intent as CodeableConcept?,
+      intent: intent == freezed ? _value.intent : intent as CodeableConcept,
       linkId: linkId == freezed ? _value.linkId : linkId as List<String?>?,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
           : linkIdElement as List<Element?>?,
-      status: status == freezed ? _value.status : status as CodeableConcept?,
+      status: status == freezed ? _value.status : status as CodeableConcept,
       context: context == freezed ? _value.context : context as Reference?,
       contextLinkId: contextLinkId == freezed
           ? _value.contextLinkId
@@ -13273,18 +13225,18 @@ class _$_ContractAction extends _ContractAction {
   @JsonKey(name: '_doNotPerform')
   final Element? doNotPerformElement;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final List<ContractSubject?>? subject;
   @override
-  final CodeableConcept? intent;
+  final CodeableConcept intent;
   @override
   final List<String?>? linkId;
   @override
   @JsonKey(name: '_linkId')
   final List<Element?>? linkIdElement;
   @override
-  final CodeableConcept? status;
+  final CodeableConcept status;
   @override
   final Reference? context;
   @override
@@ -13474,13 +13426,13 @@ abstract class _ContractAction extends ContractAction {
       Boolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       List<ContractSubject?>? subject,
-      required CodeableConcept? intent,
+      required CodeableConcept intent,
       List<String?>? linkId,
       @JsonKey(name: '_linkId')
           List<Element?>? linkIdElement,
-      required CodeableConcept? status,
+      required CodeableConcept status,
       Reference? context,
       List<String?>? contextLinkId,
       @JsonKey(name: '_contextLinkId')
@@ -13525,18 +13477,18 @@ abstract class _ContractAction extends ContractAction {
   @JsonKey(name: '_doNotPerform')
   Element? get doNotPerformElement;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   List<ContractSubject?>? get subject;
   @override
-  CodeableConcept? get intent;
+  CodeableConcept get intent;
   @override
   List<String?>? get linkId;
   @override
   @JsonKey(name: '_linkId')
   List<Element?>? get linkIdElement;
   @override
-  CodeableConcept? get status;
+  CodeableConcept get status;
   @override
   Reference? get context;
   @override
@@ -13602,7 +13554,7 @@ class _$ContractSubjectTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required List<Reference?>? reference,
+      required List<Reference> reference,
       CodeableConcept? role}) {
     return _ContractSubject(
       id: id,
@@ -13627,7 +13579,7 @@ mixin _$ContractSubject {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  List<Reference?>? get reference;
+  List<Reference> get reference;
   CodeableConcept? get role;
 
   Map<String, dynamic> toJson();
@@ -13644,7 +13596,7 @@ abstract class $ContractSubjectCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      List<Reference?>? reference,
+      List<Reference> reference,
       CodeableConcept? role});
 
   $CodeableConceptCopyWith<$Res>? get role;
@@ -13677,7 +13629,7 @@ class _$ContractSubjectCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       reference: reference == freezed
           ? _value.reference
-          : reference as List<Reference?>?,
+          : reference as List<Reference>,
       role: role == freezed ? _value.role : role as CodeableConcept?,
     ));
   }
@@ -13705,7 +13657,7 @@ abstract class _$ContractSubjectCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      List<Reference?>? reference,
+      List<Reference> reference,
       CodeableConcept? role});
 
   @override
@@ -13741,7 +13693,7 @@ class __$ContractSubjectCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       reference: reference == freezed
           ? _value.reference
-          : reference as List<Reference?>?,
+          : reference as List<Reference>,
       role: role == freezed ? _value.role : role as CodeableConcept?,
     ));
   }
@@ -13770,7 +13722,7 @@ class _$_ContractSubject extends _ContractSubject {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Reference?>? reference;
+  final List<Reference> reference;
   @override
   final CodeableConcept? role;
 
@@ -13824,7 +13776,7 @@ abstract class _ContractSubject extends ContractSubject {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required List<Reference?>? reference,
+      required List<Reference> reference,
       CodeableConcept? role}) = _$_ContractSubject;
 
   factory _ContractSubject.fromJson(Map<String, dynamic> json) =
@@ -13838,7 +13790,7 @@ abstract class _ContractSubject extends ContractSubject {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  List<Reference?>? get reference;
+  List<Reference> get reference;
   @override
   CodeableConcept? get role;
   @override
@@ -13858,9 +13810,9 @@ class _$ContractSignerTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Coding? type,
-      required Reference? party,
-      required List<Signature?>? signature}) {
+      required Coding type,
+      required Reference party,
+      required List<Signature> signature}) {
     return _ContractSigner(
       id: id,
       extension_: extension_,
@@ -13885,9 +13837,9 @@ mixin _$ContractSigner {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  Coding? get type;
-  Reference? get party;
-  List<Signature?>? get signature;
+  Coding get type;
+  Reference get party;
+  List<Signature> get signature;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -13903,12 +13855,12 @@ abstract class $ContractSignerCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Coding? type,
-      Reference? party,
-      List<Signature?>? signature});
+      Coding type,
+      Reference party,
+      List<Signature> signature});
 
-  $CodingCopyWith<$Res>? get type;
-  $ReferenceCopyWith<$Res>? get party;
+  $CodingCopyWith<$Res> get type;
+  $ReferenceCopyWith<$Res> get party;
 }
 
 /// @nodoc
@@ -13937,32 +13889,24 @@ class _$ContractSignerCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as Coding?,
-      party: party == freezed ? _value.party : party as Reference?,
+      type: type == freezed ? _value.type : type as Coding,
+      party: party == freezed ? _value.party : party as Reference,
       signature: signature == freezed
           ? _value.signature
-          : signature as List<Signature?>?,
+          : signature as List<Signature>,
     ));
   }
 
   @override
-  $CodingCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodingCopyWith<$Res>(_value.type!, (value) {
+  $CodingCopyWith<$Res> get type {
+    return $CodingCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get party {
-    if (_value.party == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.party!, (value) {
+  $ReferenceCopyWith<$Res> get party {
+    return $ReferenceCopyWith<$Res>(_value.party, (value) {
       return _then(_value.copyWith(party: value));
     });
   }
@@ -13979,14 +13923,14 @@ abstract class _$ContractSignerCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      Coding? type,
-      Reference? party,
-      List<Signature?>? signature});
+      Coding type,
+      Reference party,
+      List<Signature> signature});
 
   @override
-  $CodingCopyWith<$Res>? get type;
+  $CodingCopyWith<$Res> get type;
   @override
-  $ReferenceCopyWith<$Res>? get party;
+  $ReferenceCopyWith<$Res> get party;
 }
 
 /// @nodoc
@@ -14017,11 +13961,11 @@ class __$ContractSignerCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as Coding?,
-      party: party == freezed ? _value.party : party as Reference?,
+      type: type == freezed ? _value.type : type as Coding,
+      party: party == freezed ? _value.party : party as Reference,
       signature: signature == freezed
           ? _value.signature
-          : signature as List<Signature?>?,
+          : signature as List<Signature>,
     ));
   }
 }
@@ -14050,11 +13994,11 @@ class _$_ContractSigner extends _ContractSigner {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final Coding? type;
+  final Coding type;
   @override
-  final Reference? party;
+  final Reference party;
   @override
-  final List<Signature?>? signature;
+  final List<Signature> signature;
 
   @override
   String toString() {
@@ -14109,9 +14053,9 @@ abstract class _ContractSigner extends ContractSigner {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required Coding? type,
-      required Reference? party,
-      required List<Signature?>? signature}) = _$_ContractSigner;
+      required Coding type,
+      required Reference party,
+      required List<Signature> signature}) = _$_ContractSigner;
 
   factory _ContractSigner.fromJson(Map<String, dynamic> json) =
       _$_ContractSigner.fromJson;
@@ -14124,11 +14068,11 @@ abstract class _ContractSigner extends ContractSigner {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  Coding? get type;
+  Coding get type;
   @override
-  Reference? get party;
+  Reference get party;
   @override
-  List<Signature?>? get signature;
+  List<Signature> get signature;
   @override
   @JsonKey(ignore: true)
   _$ContractSignerCopyWith<_ContractSigner> get copyWith;
@@ -14986,19 +14930,19 @@ class _$ExplanationOfBenefitTearOff {
           ExplanationOfBenefitStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       CodeableConcept? subType,
       Code? use,
       @JsonKey(name: '_use')
           Element? useElement,
-      required Reference? patient,
+      required Reference patient,
       Period? billablePeriod,
       FhirDateTime? created,
       @JsonKey(name: '_created')
           Element? createdElement,
       Reference? enterer,
-      required Reference? insurer,
-      required Reference? provider,
+      required Reference insurer,
+      required Reference provider,
       CodeableConcept? priority,
       CodeableConcept? fundsReserveRequested,
       CodeableConcept? fundsReserve,
@@ -15027,7 +14971,7 @@ class _$ExplanationOfBenefitTearOff {
       PositiveInt? precedence,
       @JsonKey(name: '_precedence')
           Element? precedenceElement,
-      required List<ExplanationOfBenefitInsurance?>? insurance,
+      required List<ExplanationOfBenefitInsurance> insurance,
       ExplanationOfBenefitAccident? accident,
       List<ExplanationOfBenefitItem?>? item,
       List<ExplanationOfBenefitAddItem?>? addItem,
@@ -15134,19 +15078,19 @@ mixin _$ExplanationOfBenefit {
   ExplanationOfBenefitStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   CodeableConcept? get subType;
   Code? get use;
   @JsonKey(name: '_use')
   Element? get useElement;
-  Reference? get patient;
+  Reference get patient;
   Period? get billablePeriod;
   FhirDateTime? get created;
   @JsonKey(name: '_created')
   Element? get createdElement;
   Reference? get enterer;
-  Reference? get insurer;
-  Reference? get provider;
+  Reference get insurer;
+  Reference get provider;
   CodeableConcept? get priority;
   CodeableConcept? get fundsReserveRequested;
   CodeableConcept? get fundsReserve;
@@ -15175,7 +15119,7 @@ mixin _$ExplanationOfBenefit {
   PositiveInt? get precedence;
   @JsonKey(name: '_precedence')
   Element? get precedenceElement;
-  List<ExplanationOfBenefitInsurance?>? get insurance;
+  List<ExplanationOfBenefitInsurance> get insurance;
   ExplanationOfBenefitAccident? get accident;
   List<ExplanationOfBenefitItem?>? get item;
   List<ExplanationOfBenefitAddItem?>? get addItem;
@@ -15219,19 +15163,19 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
           ExplanationOfBenefitStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      CodeableConcept? type,
+      CodeableConcept type,
       CodeableConcept? subType,
       Code? use,
       @JsonKey(name: '_use')
           Element? useElement,
-      Reference? patient,
+      Reference patient,
       Period? billablePeriod,
       FhirDateTime? created,
       @JsonKey(name: '_created')
           Element? createdElement,
       Reference? enterer,
-      Reference? insurer,
-      Reference? provider,
+      Reference insurer,
+      Reference provider,
       CodeableConcept? priority,
       CodeableConcept? fundsReserveRequested,
       CodeableConcept? fundsReserve,
@@ -15260,7 +15204,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
       PositiveInt? precedence,
       @JsonKey(name: '_precedence')
           Element? precedenceElement,
-      List<ExplanationOfBenefitInsurance?>? insurance,
+      List<ExplanationOfBenefitInsurance> insurance,
       ExplanationOfBenefitAccident? accident,
       List<ExplanationOfBenefitItem?>? item,
       List<ExplanationOfBenefitAddItem?>? addItem,
@@ -15278,15 +15222,15 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get statusElement;
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res>? get subType;
   $ElementCopyWith<$Res>? get useElement;
-  $ReferenceCopyWith<$Res>? get patient;
+  $ReferenceCopyWith<$Res> get patient;
   $PeriodCopyWith<$Res>? get billablePeriod;
   $ElementCopyWith<$Res>? get createdElement;
   $ReferenceCopyWith<$Res>? get enterer;
-  $ReferenceCopyWith<$Res>? get insurer;
-  $ReferenceCopyWith<$Res>? get provider;
+  $ReferenceCopyWith<$Res> get insurer;
+  $ReferenceCopyWith<$Res> get provider;
   $CodeableConceptCopyWith<$Res>? get priority;
   $CodeableConceptCopyWith<$Res>? get fundsReserveRequested;
   $CodeableConceptCopyWith<$Res>? get fundsReserve;
@@ -15415,13 +15359,13 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       subType:
           subType == freezed ? _value.subType : subType as CodeableConcept?,
       use: use == freezed ? _value.use : use as Code?,
       useElement:
           useElement == freezed ? _value.useElement : useElement as Element?,
-      patient: patient == freezed ? _value.patient : patient as Reference?,
+      patient: patient == freezed ? _value.patient : patient as Reference,
       billablePeriod: billablePeriod == freezed
           ? _value.billablePeriod
           : billablePeriod as Period?,
@@ -15430,8 +15374,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
           ? _value.createdElement
           : createdElement as Element?,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference?,
-      insurer: insurer == freezed ? _value.insurer : insurer as Reference?,
-      provider: provider == freezed ? _value.provider : provider as Reference?,
+      insurer: insurer == freezed ? _value.insurer : insurer as Reference,
+      provider: provider == freezed ? _value.provider : provider as Reference,
       priority:
           priority == freezed ? _value.priority : priority as CodeableConcept?,
       fundsReserveRequested: fundsReserveRequested == freezed
@@ -15495,7 +15439,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
           : precedenceElement as Element?,
       insurance: insurance == freezed
           ? _value.insurance
-          : insurance as List<ExplanationOfBenefitInsurance?>?,
+          : insurance as List<ExplanationOfBenefitInsurance>,
       accident: accident == freezed
           ? _value.accident
           : accident as ExplanationOfBenefitAccident?,
@@ -15585,12 +15529,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -15618,12 +15558,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get patient {
-    if (_value.patient == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.patient!, (value) {
+  $ReferenceCopyWith<$Res> get patient {
+    return $ReferenceCopyWith<$Res>(_value.patient, (value) {
       return _then(_value.copyWith(patient: value));
     });
   }
@@ -15662,23 +15598,15 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get insurer {
-    if (_value.insurer == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.insurer!, (value) {
+  $ReferenceCopyWith<$Res> get insurer {
+    return $ReferenceCopyWith<$Res>(_value.insurer, (value) {
       return _then(_value.copyWith(insurer: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get provider {
-    if (_value.provider == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.provider!, (value) {
+  $ReferenceCopyWith<$Res> get provider {
+    return $ReferenceCopyWith<$Res>(_value.provider, (value) {
       return _then(_value.copyWith(provider: value));
     });
   }
@@ -15912,19 +15840,19 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
           ExplanationOfBenefitStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      CodeableConcept? type,
+      CodeableConcept type,
       CodeableConcept? subType,
       Code? use,
       @JsonKey(name: '_use')
           Element? useElement,
-      Reference? patient,
+      Reference patient,
       Period? billablePeriod,
       FhirDateTime? created,
       @JsonKey(name: '_created')
           Element? createdElement,
       Reference? enterer,
-      Reference? insurer,
-      Reference? provider,
+      Reference insurer,
+      Reference provider,
       CodeableConcept? priority,
       CodeableConcept? fundsReserveRequested,
       CodeableConcept? fundsReserve,
@@ -15953,7 +15881,7 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
       PositiveInt? precedence,
       @JsonKey(name: '_precedence')
           Element? precedenceElement,
-      List<ExplanationOfBenefitInsurance?>? insurance,
+      List<ExplanationOfBenefitInsurance> insurance,
       ExplanationOfBenefitAccident? accident,
       List<ExplanationOfBenefitItem?>? item,
       List<ExplanationOfBenefitAddItem?>? addItem,
@@ -15977,13 +15905,13 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $CodeableConceptCopyWith<$Res>? get subType;
   @override
   $ElementCopyWith<$Res>? get useElement;
   @override
-  $ReferenceCopyWith<$Res>? get patient;
+  $ReferenceCopyWith<$Res> get patient;
   @override
   $PeriodCopyWith<$Res>? get billablePeriod;
   @override
@@ -15991,9 +15919,9 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get enterer;
   @override
-  $ReferenceCopyWith<$Res>? get insurer;
+  $ReferenceCopyWith<$Res> get insurer;
   @override
-  $ReferenceCopyWith<$Res>? get provider;
+  $ReferenceCopyWith<$Res> get provider;
   @override
   $CodeableConceptCopyWith<$Res>? get priority;
   @override
@@ -16142,13 +16070,13 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       subType:
           subType == freezed ? _value.subType : subType as CodeableConcept?,
       use: use == freezed ? _value.use : use as Code?,
       useElement:
           useElement == freezed ? _value.useElement : useElement as Element?,
-      patient: patient == freezed ? _value.patient : patient as Reference?,
+      patient: patient == freezed ? _value.patient : patient as Reference,
       billablePeriod: billablePeriod == freezed
           ? _value.billablePeriod
           : billablePeriod as Period?,
@@ -16157,8 +16085,8 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
           ? _value.createdElement
           : createdElement as Element?,
       enterer: enterer == freezed ? _value.enterer : enterer as Reference?,
-      insurer: insurer == freezed ? _value.insurer : insurer as Reference?,
-      provider: provider == freezed ? _value.provider : provider as Reference?,
+      insurer: insurer == freezed ? _value.insurer : insurer as Reference,
+      provider: provider == freezed ? _value.provider : provider as Reference,
       priority:
           priority == freezed ? _value.priority : priority as CodeableConcept?,
       fundsReserveRequested: fundsReserveRequested == freezed
@@ -16222,7 +16150,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
           : precedenceElement as Element?,
       insurance: insurance == freezed
           ? _value.insurance
-          : insurance as List<ExplanationOfBenefitInsurance?>?,
+          : insurance as List<ExplanationOfBenefitInsurance>,
       accident: accident == freezed
           ? _value.accident
           : accident as ExplanationOfBenefitAccident?,
@@ -16375,7 +16303,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final CodeableConcept? subType;
   @override
@@ -16384,7 +16312,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   @JsonKey(name: '_use')
   final Element? useElement;
   @override
-  final Reference? patient;
+  final Reference patient;
   @override
   final Period? billablePeriod;
   @override
@@ -16395,9 +16323,9 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   @override
   final Reference? enterer;
   @override
-  final Reference? insurer;
+  final Reference insurer;
   @override
-  final Reference? provider;
+  final Reference provider;
   @override
   final CodeableConcept? priority;
   @override
@@ -16451,7 +16379,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   @JsonKey(name: '_precedence')
   final Element? precedenceElement;
   @override
-  final List<ExplanationOfBenefitInsurance?>? insurance;
+  final List<ExplanationOfBenefitInsurance> insurance;
   @override
   final ExplanationOfBenefitAccident? accident;
   @override
@@ -16690,19 +16618,19 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
               ExplanationOfBenefitStatus? status,
           @JsonKey(name: '_status')
               Element? statusElement,
-          required CodeableConcept? type,
+          required CodeableConcept type,
           CodeableConcept? subType,
           Code? use,
           @JsonKey(name: '_use')
               Element? useElement,
-          required Reference? patient,
+          required Reference patient,
           Period? billablePeriod,
           FhirDateTime? created,
           @JsonKey(name: '_created')
               Element? createdElement,
           Reference? enterer,
-          required Reference? insurer,
-          required Reference? provider,
+          required Reference insurer,
+          required Reference provider,
           CodeableConcept? priority,
           CodeableConcept? fundsReserveRequested,
           CodeableConcept? fundsReserve,
@@ -16731,7 +16659,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
           PositiveInt? precedence,
           @JsonKey(name: '_precedence')
               Element? precedenceElement,
-          required List<ExplanationOfBenefitInsurance?>? insurance,
+          required List<ExplanationOfBenefitInsurance> insurance,
           ExplanationOfBenefitAccident? accident,
           List<ExplanationOfBenefitItem?>? item,
           List<ExplanationOfBenefitAddItem?>? addItem,
@@ -16783,7 +16711,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   CodeableConcept? get subType;
   @override
@@ -16792,7 +16720,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @JsonKey(name: '_use')
   Element? get useElement;
   @override
-  Reference? get patient;
+  Reference get patient;
   @override
   Period? get billablePeriod;
   @override
@@ -16803,9 +16731,9 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @override
   Reference? get enterer;
   @override
-  Reference? get insurer;
+  Reference get insurer;
   @override
-  Reference? get provider;
+  Reference get provider;
   @override
   CodeableConcept? get priority;
   @override
@@ -16859,7 +16787,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @JsonKey(name: '_precedence')
   Element? get precedenceElement;
   @override
-  List<ExplanationOfBenefitInsurance?>? get insurance;
+  List<ExplanationOfBenefitInsurance> get insurance;
   @override
   ExplanationOfBenefitAccident? get accident;
   @override
@@ -17485,7 +17413,7 @@ class _$ExplanationOfBenefitCareTeamTearOff {
       List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      required Reference? provider,
+      required Reference provider,
       Boolean? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
@@ -17521,7 +17449,7 @@ mixin _$ExplanationOfBenefitCareTeam {
   PositiveInt? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
-  Reference? get provider;
+  Reference get provider;
   Boolean? get responsible;
   @JsonKey(name: '_responsible')
   Element? get responsibleElement;
@@ -17546,14 +17474,14 @@ abstract class $ExplanationOfBenefitCareTeamCopyWith<$Res> {
       List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      Reference? provider,
+      Reference provider,
       Boolean? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
       CodeableConcept? qualification});
 
   $ElementCopyWith<$Res>? get sequenceElement;
-  $ReferenceCopyWith<$Res>? get provider;
+  $ReferenceCopyWith<$Res> get provider;
   $ElementCopyWith<$Res>? get responsibleElement;
   $CodeableConceptCopyWith<$Res>? get role;
   $CodeableConceptCopyWith<$Res>? get qualification;
@@ -17594,7 +17522,7 @@ class _$ExplanationOfBenefitCareTeamCopyWithImpl<$Res>
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
           : sequenceElement as Element?,
-      provider: provider == freezed ? _value.provider : provider as Reference?,
+      provider: provider == freezed ? _value.provider : provider as Reference,
       responsible:
           responsible == freezed ? _value.responsible : responsible as Boolean?,
       responsibleElement: responsibleElement == freezed
@@ -17619,12 +17547,8 @@ class _$ExplanationOfBenefitCareTeamCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get provider {
-    if (_value.provider == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.provider!, (value) {
+  $ReferenceCopyWith<$Res> get provider {
+    return $ReferenceCopyWith<$Res>(_value.provider, (value) {
       return _then(_value.copyWith(provider: value));
     });
   }
@@ -17677,7 +17601,7 @@ abstract class _$ExplanationOfBenefitCareTeamCopyWith<$Res>
       List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      Reference? provider,
+      Reference provider,
       Boolean? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
@@ -17686,7 +17610,7 @@ abstract class _$ExplanationOfBenefitCareTeamCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get sequenceElement;
   @override
-  $ReferenceCopyWith<$Res>? get provider;
+  $ReferenceCopyWith<$Res> get provider;
   @override
   $ElementCopyWith<$Res>? get responsibleElement;
   @override
@@ -17734,7 +17658,7 @@ class __$ExplanationOfBenefitCareTeamCopyWithImpl<$Res>
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
           : sequenceElement as Element?,
-      provider: provider == freezed ? _value.provider : provider as Reference?,
+      provider: provider == freezed ? _value.provider : provider as Reference,
       responsible:
           responsible == freezed ? _value.responsible : responsible as Boolean?,
       responsibleElement: responsibleElement == freezed
@@ -17781,7 +17705,7 @@ class _$_ExplanationOfBenefitCareTeam extends _ExplanationOfBenefitCareTeam {
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
   @override
-  final Reference? provider;
+  final Reference provider;
   @override
   final Boolean? responsible;
   @override
@@ -17866,7 +17790,7 @@ abstract class _ExplanationOfBenefitCareTeam
       List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      required Reference? provider,
+      required Reference provider,
       Boolean? responsible,
       @JsonKey(name: '_responsible') Element? responsibleElement,
       CodeableConcept? role,
@@ -17888,7 +17812,7 @@ abstract class _ExplanationOfBenefitCareTeam
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
-  Reference? get provider;
+  Reference get provider;
   @override
   Boolean? get responsible;
   @override
@@ -17919,7 +17843,7 @@ class _$ExplanationOfBenefitSupportingInfoTearOff {
       List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      required CodeableConcept? category,
+      required CodeableConcept category,
       CodeableConcept? code,
       Date? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
@@ -17972,7 +17896,7 @@ mixin _$ExplanationOfBenefitSupportingInfo {
   PositiveInt? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
-  CodeableConcept? get category;
+  CodeableConcept get category;
   CodeableConcept? get code;
   Date? get timingDate;
   @JsonKey(name: '_timingDate')
@@ -18007,7 +17931,7 @@ abstract class $ExplanationOfBenefitSupportingInfoCopyWith<$Res> {
       List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      CodeableConcept? category,
+      CodeableConcept category,
       CodeableConcept? code,
       Date? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
@@ -18022,7 +17946,7 @@ abstract class $ExplanationOfBenefitSupportingInfoCopyWith<$Res> {
       Coding? reason});
 
   $ElementCopyWith<$Res>? get sequenceElement;
-  $CodeableConceptCopyWith<$Res>? get category;
+  $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res>? get code;
   $ElementCopyWith<$Res>? get timingDateElement;
   $PeriodCopyWith<$Res>? get timingPeriod;
@@ -18078,7 +18002,7 @@ class _$ExplanationOfBenefitSupportingInfoCopyWithImpl<$Res>
           ? _value.sequenceElement
           : sequenceElement as Element?,
       category:
-          category == freezed ? _value.category : category as CodeableConcept?,
+          category == freezed ? _value.category : category as CodeableConcept,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       timingDate:
           timingDate == freezed ? _value.timingDate : timingDate as Date?,
@@ -18124,12 +18048,8 @@ class _$ExplanationOfBenefitSupportingInfoCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get category {
-    if (_value.category == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.category!, (value) {
+  $CodeableConceptCopyWith<$Res> get category {
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
       return _then(_value.copyWith(category: value));
     });
   }
@@ -18248,7 +18168,7 @@ abstract class _$ExplanationOfBenefitSupportingInfoCopyWith<$Res>
       List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      CodeableConcept? category,
+      CodeableConcept category,
       CodeableConcept? code,
       Date? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
@@ -18265,7 +18185,7 @@ abstract class _$ExplanationOfBenefitSupportingInfoCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get sequenceElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get category;
+  $CodeableConceptCopyWith<$Res> get category;
   @override
   $CodeableConceptCopyWith<$Res>? get code;
   @override
@@ -18334,7 +18254,7 @@ class __$ExplanationOfBenefitSupportingInfoCopyWithImpl<$Res>
           ? _value.sequenceElement
           : sequenceElement as Element?,
       category:
-          category == freezed ? _value.category : category as CodeableConcept?,
+          category == freezed ? _value.category : category as CodeableConcept,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       timingDate:
           timingDate == freezed ? _value.timingDate : timingDate as Date?,
@@ -18412,7 +18332,7 @@ class _$_ExplanationOfBenefitSupportingInfo
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
   @override
-  final CodeableConcept? category;
+  final CodeableConcept category;
   @override
   final CodeableConcept? code;
   @override
@@ -18547,7 +18467,7 @@ abstract class _ExplanationOfBenefitSupportingInfo
       List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      required CodeableConcept? category,
+      required CodeableConcept category,
       CodeableConcept? code,
       Date? timingDate,
       @JsonKey(name: '_timingDate') Element? timingDateElement,
@@ -18578,7 +18498,7 @@ abstract class _ExplanationOfBenefitSupportingInfo
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
-  CodeableConcept? get category;
+  CodeableConcept get category;
   @override
   CodeableConcept? get code;
   @override
@@ -19509,7 +19429,7 @@ class _$ExplanationOfBenefitInsuranceTearOff {
       List<FhirExtension?>? modifierExtension,
       Boolean? focal,
       @JsonKey(name: '_focal') Element? focalElement,
-      required Reference? coverage,
+      required Reference coverage,
       List<String?>? preAuthRef,
       @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement}) {
     return _ExplanationOfBenefitInsurance(
@@ -19541,7 +19461,7 @@ mixin _$ExplanationOfBenefitInsurance {
   Boolean? get focal;
   @JsonKey(name: '_focal')
   Element? get focalElement;
-  Reference? get coverage;
+  Reference get coverage;
   List<String?>? get preAuthRef;
   @JsonKey(name: '_preAuthRef')
   List<Element?>? get preAuthRefElement;
@@ -19564,12 +19484,12 @@ abstract class $ExplanationOfBenefitInsuranceCopyWith<$Res> {
       List<FhirExtension?>? modifierExtension,
       Boolean? focal,
       @JsonKey(name: '_focal') Element? focalElement,
-      Reference? coverage,
+      Reference coverage,
       List<String?>? preAuthRef,
       @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement});
 
   $ElementCopyWith<$Res>? get focalElement;
-  $ReferenceCopyWith<$Res>? get coverage;
+  $ReferenceCopyWith<$Res> get coverage;
 }
 
 /// @nodoc
@@ -19604,7 +19524,7 @@ class _$ExplanationOfBenefitInsuranceCopyWithImpl<$Res>
       focalElement: focalElement == freezed
           ? _value.focalElement
           : focalElement as Element?,
-      coverage: coverage == freezed ? _value.coverage : coverage as Reference?,
+      coverage: coverage == freezed ? _value.coverage : coverage as Reference,
       preAuthRef: preAuthRef == freezed
           ? _value.preAuthRef
           : preAuthRef as List<String?>?,
@@ -19626,12 +19546,8 @@ class _$ExplanationOfBenefitInsuranceCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get coverage {
-    if (_value.coverage == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.coverage!, (value) {
+  $ReferenceCopyWith<$Res> get coverage {
+    return $ReferenceCopyWith<$Res>(_value.coverage, (value) {
       return _then(_value.copyWith(coverage: value));
     });
   }
@@ -19651,14 +19567,14 @@ abstract class _$ExplanationOfBenefitInsuranceCopyWith<$Res>
       List<FhirExtension?>? modifierExtension,
       Boolean? focal,
       @JsonKey(name: '_focal') Element? focalElement,
-      Reference? coverage,
+      Reference coverage,
       List<String?>? preAuthRef,
       @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement});
 
   @override
   $ElementCopyWith<$Res>? get focalElement;
   @override
-  $ReferenceCopyWith<$Res>? get coverage;
+  $ReferenceCopyWith<$Res> get coverage;
 }
 
 /// @nodoc
@@ -19697,7 +19613,7 @@ class __$ExplanationOfBenefitInsuranceCopyWithImpl<$Res>
       focalElement: focalElement == freezed
           ? _value.focalElement
           : focalElement as Element?,
-      coverage: coverage == freezed ? _value.coverage : coverage as Reference?,
+      coverage: coverage == freezed ? _value.coverage : coverage as Reference,
       preAuthRef: preAuthRef == freezed
           ? _value.preAuthRef
           : preAuthRef as List<String?>?,
@@ -19740,7 +19656,7 @@ class _$_ExplanationOfBenefitInsurance extends _ExplanationOfBenefitInsurance {
   @JsonKey(name: '_focal')
   final Element? focalElement;
   @override
-  final Reference? coverage;
+  final Reference coverage;
   @override
   final List<String?>? preAuthRef;
   @override
@@ -19813,7 +19729,7 @@ abstract class _ExplanationOfBenefitInsurance
           List<FhirExtension?>? modifierExtension,
           Boolean? focal,
           @JsonKey(name: '_focal') Element? focalElement,
-          required Reference? coverage,
+          required Reference coverage,
           List<String?>? preAuthRef,
           @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement}) =
       _$_ExplanationOfBenefitInsurance;
@@ -19834,7 +19750,7 @@ abstract class _ExplanationOfBenefitInsurance
   @JsonKey(name: '_focal')
   Element? get focalElement;
   @override
-  Reference? get coverage;
+  Reference get coverage;
   @override
   List<String?>? get preAuthRef;
   @override
@@ -20249,7 +20165,7 @@ class _$ExplanationOfBenefitItemTearOff {
           List<Element?>? informationSequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
-      required CodeableConcept? productOrService,
+      required CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       List<CodeableConcept?>? programCode,
       Date? servicedDate,
@@ -20346,7 +20262,7 @@ mixin _$ExplanationOfBenefitItem {
   List<Element?>? get informationSequenceElement;
   CodeableConcept? get revenue;
   CodeableConcept? get category;
-  CodeableConcept? get productOrService;
+  CodeableConcept get productOrService;
   List<CodeableConcept?>? get modifier;
   List<CodeableConcept?>? get programCode;
   Date? get servicedDate;
@@ -20404,7 +20320,7 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
           List<Element?>? informationSequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
-      CodeableConcept? productOrService,
+      CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       List<CodeableConcept?>? programCode,
       Date? servicedDate,
@@ -20433,7 +20349,7 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
   $ElementCopyWith<$Res>? get sequenceElement;
   $CodeableConceptCopyWith<$Res>? get revenue;
   $CodeableConceptCopyWith<$Res>? get category;
-  $CodeableConceptCopyWith<$Res>? get productOrService;
+  $CodeableConceptCopyWith<$Res> get productOrService;
   $ElementCopyWith<$Res>? get servicedDateElement;
   $PeriodCopyWith<$Res>? get servicedPeriod;
   $CodeableConceptCopyWith<$Res>? get locationCodeableConcept;
@@ -20538,7 +20454,7 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res>
           category == freezed ? _value.category : category as CodeableConcept?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept?,
+          : productOrService as CodeableConcept,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<CodeableConcept?>?,
@@ -20627,12 +20543,8 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get productOrService {
-    if (_value.productOrService == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.productOrService!, (value) {
+  $CodeableConceptCopyWith<$Res> get productOrService {
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
       return _then(_value.copyWith(productOrService: value));
     });
   }
@@ -20778,7 +20690,7 @@ abstract class _$ExplanationOfBenefitItemCopyWith<$Res>
           List<Element?>? informationSequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
-      CodeableConcept? productOrService,
+      CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       List<CodeableConcept?>? programCode,
       Date? servicedDate,
@@ -20811,7 +20723,7 @@ abstract class _$ExplanationOfBenefitItemCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get category;
   @override
-  $CodeableConceptCopyWith<$Res>? get productOrService;
+  $CodeableConceptCopyWith<$Res> get productOrService;
   @override
   $ElementCopyWith<$Res>? get servicedDateElement;
   @override
@@ -20929,7 +20841,7 @@ class __$ExplanationOfBenefitItemCopyWithImpl<$Res>
           category == freezed ? _value.category : category as CodeableConcept?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept?,
+          : productOrService as CodeableConcept,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<CodeableConcept?>?,
@@ -21069,7 +20981,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
   @override
   final CodeableConcept? category;
   @override
-  final CodeableConcept? productOrService;
+  final CodeableConcept productOrService;
   @override
   final List<CodeableConcept?>? modifier;
   @override
@@ -21272,7 +21184,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
           List<Element?>? informationSequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
-      required CodeableConcept? productOrService,
+      required CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       List<CodeableConcept?>? programCode,
       Date? servicedDate,
@@ -21338,7 +21250,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   @override
   CodeableConcept? get category;
   @override
-  CodeableConcept? get productOrService;
+  CodeableConcept get productOrService;
   @override
   List<CodeableConcept?>? get modifier;
   @override
@@ -21402,7 +21314,7 @@ class _$ExplanationOfBenefitAdjudicationTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? category,
+      required CodeableConcept category,
       CodeableConcept? reason,
       Money? amount,
       Decimal? value,
@@ -21434,7 +21346,7 @@ mixin _$ExplanationOfBenefitAdjudication {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get category;
+  CodeableConcept get category;
   CodeableConcept? get reason;
   Money? get amount;
   Decimal? get value;
@@ -21457,13 +21369,13 @@ abstract class $ExplanationOfBenefitAdjudicationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? category,
+      CodeableConcept category,
       CodeableConcept? reason,
       Money? amount,
       Decimal? value,
       @JsonKey(name: '_value') Element? valueElement});
 
-  $CodeableConceptCopyWith<$Res>? get category;
+  $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res>? get reason;
   $MoneyCopyWith<$Res>? get amount;
   $ElementCopyWith<$Res>? get valueElement;
@@ -21498,7 +21410,7 @@ class _$ExplanationOfBenefitAdjudicationCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
       category:
-          category == freezed ? _value.category : category as CodeableConcept?,
+          category == freezed ? _value.category : category as CodeableConcept,
       reason: reason == freezed ? _value.reason : reason as CodeableConcept?,
       amount: amount == freezed ? _value.amount : amount as Money?,
       value: value == freezed ? _value.value : value as Decimal?,
@@ -21509,12 +21421,8 @@ class _$ExplanationOfBenefitAdjudicationCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get category {
-    if (_value.category == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.category!, (value) {
+  $CodeableConceptCopyWith<$Res> get category {
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
       return _then(_value.copyWith(category: value));
     });
   }
@@ -21565,14 +21473,14 @@ abstract class _$ExplanationOfBenefitAdjudicationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? category,
+      CodeableConcept category,
       CodeableConcept? reason,
       Money? amount,
       Decimal? value,
       @JsonKey(name: '_value') Element? valueElement});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get category;
+  $CodeableConceptCopyWith<$Res> get category;
   @override
   $CodeableConceptCopyWith<$Res>? get reason;
   @override
@@ -21614,7 +21522,7 @@ class __$ExplanationOfBenefitAdjudicationCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
       category:
-          category == freezed ? _value.category : category as CodeableConcept?,
+          category == freezed ? _value.category : category as CodeableConcept,
       reason: reason == freezed ? _value.reason : reason as CodeableConcept?,
       amount: amount == freezed ? _value.amount : amount as Money?,
       value: value == freezed ? _value.value : value as Decimal?,
@@ -21653,7 +21561,7 @@ class _$_ExplanationOfBenefitAdjudication
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? category;
+  final CodeableConcept category;
   @override
   final CodeableConcept? reason;
   @override
@@ -21726,7 +21634,7 @@ abstract class _ExplanationOfBenefitAdjudication
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required CodeableConcept? category,
+          required CodeableConcept category,
           CodeableConcept? reason,
           Money? amount,
           Decimal? value,
@@ -21744,7 +21652,7 @@ abstract class _ExplanationOfBenefitAdjudication
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get category;
+  CodeableConcept get category;
   @override
   CodeableConcept? get reason;
   @override
@@ -21777,7 +21685,7 @@ class _$ExplanationOfBenefitDetailTearOff {
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
-      required CodeableConcept? productOrService,
+      required CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       List<CodeableConcept?>? programCode,
       Quantity? quantity,
@@ -21833,7 +21741,7 @@ mixin _$ExplanationOfBenefitDetail {
   Element? get sequenceElement;
   CodeableConcept? get revenue;
   CodeableConcept? get category;
-  CodeableConcept? get productOrService;
+  CodeableConcept get productOrService;
   List<CodeableConcept?>? get modifier;
   List<CodeableConcept?>? get programCode;
   Quantity? get quantity;
@@ -21867,7 +21775,7 @@ abstract class $ExplanationOfBenefitDetailCopyWith<$Res> {
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
-      CodeableConcept? productOrService,
+      CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       List<CodeableConcept?>? programCode,
       Quantity? quantity,
@@ -21884,7 +21792,7 @@ abstract class $ExplanationOfBenefitDetailCopyWith<$Res> {
   $ElementCopyWith<$Res>? get sequenceElement;
   $CodeableConceptCopyWith<$Res>? get revenue;
   $CodeableConceptCopyWith<$Res>? get category;
-  $CodeableConceptCopyWith<$Res>? get productOrService;
+  $CodeableConceptCopyWith<$Res> get productOrService;
   $QuantityCopyWith<$Res>? get quantity;
   $MoneyCopyWith<$Res>? get unitPrice;
   $ElementCopyWith<$Res>? get factorElement;
@@ -21942,7 +21850,7 @@ class _$ExplanationOfBenefitDetailCopyWithImpl<$Res>
           category == freezed ? _value.category : category as CodeableConcept?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept?,
+          : productOrService as CodeableConcept,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<CodeableConcept?>?,
@@ -22006,12 +21914,8 @@ class _$ExplanationOfBenefitDetailCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get productOrService {
-    if (_value.productOrService == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.productOrService!, (value) {
+  $CodeableConceptCopyWith<$Res> get productOrService {
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
       return _then(_value.copyWith(productOrService: value));
     });
   }
@@ -22077,7 +21981,7 @@ abstract class _$ExplanationOfBenefitDetailCopyWith<$Res>
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
-      CodeableConcept? productOrService,
+      CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       List<CodeableConcept?>? programCode,
       Quantity? quantity,
@@ -22098,7 +22002,7 @@ abstract class _$ExplanationOfBenefitDetailCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get category;
   @override
-  $CodeableConceptCopyWith<$Res>? get productOrService;
+  $CodeableConceptCopyWith<$Res> get productOrService;
   @override
   $QuantityCopyWith<$Res>? get quantity;
   @override
@@ -22163,7 +22067,7 @@ class __$ExplanationOfBenefitDetailCopyWithImpl<$Res>
           category == freezed ? _value.category : category as CodeableConcept?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept?,
+          : productOrService as CodeableConcept,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<CodeableConcept?>?,
@@ -22241,7 +22145,7 @@ class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
   @override
   final CodeableConcept? category;
   @override
-  final CodeableConcept? productOrService;
+  final CodeableConcept productOrService;
   @override
   final List<CodeableConcept?>? modifier;
   @override
@@ -22382,7 +22286,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
           @JsonKey(name: '_sequence') Element? sequenceElement,
           CodeableConcept? revenue,
           CodeableConcept? category,
-          required CodeableConcept? productOrService,
+          required CodeableConcept productOrService,
           List<CodeableConcept?>? modifier,
           List<CodeableConcept?>? programCode,
           Quantity? quantity,
@@ -22417,7 +22321,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
   @override
   CodeableConcept? get category;
   @override
-  CodeableConcept? get productOrService;
+  CodeableConcept get productOrService;
   @override
   List<CodeableConcept?>? get modifier;
   @override
@@ -22467,7 +22371,7 @@ class _$ExplanationOfBenefitSubDetailTearOff {
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
-      required CodeableConcept? productOrService,
+      required CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       List<CodeableConcept?>? programCode,
       Quantity? quantity,
@@ -22521,7 +22425,7 @@ mixin _$ExplanationOfBenefitSubDetail {
   Element? get sequenceElement;
   CodeableConcept? get revenue;
   CodeableConcept? get category;
-  CodeableConcept? get productOrService;
+  CodeableConcept get productOrService;
   List<CodeableConcept?>? get modifier;
   List<CodeableConcept?>? get programCode;
   Quantity? get quantity;
@@ -22556,7 +22460,7 @@ abstract class $ExplanationOfBenefitSubDetailCopyWith<$Res> {
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
-      CodeableConcept? productOrService,
+      CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       List<CodeableConcept?>? programCode,
       Quantity? quantity,
@@ -22572,7 +22476,7 @@ abstract class $ExplanationOfBenefitSubDetailCopyWith<$Res> {
   $ElementCopyWith<$Res>? get sequenceElement;
   $CodeableConceptCopyWith<$Res>? get revenue;
   $CodeableConceptCopyWith<$Res>? get category;
-  $CodeableConceptCopyWith<$Res>? get productOrService;
+  $CodeableConceptCopyWith<$Res> get productOrService;
   $QuantityCopyWith<$Res>? get quantity;
   $MoneyCopyWith<$Res>? get unitPrice;
   $ElementCopyWith<$Res>? get factorElement;
@@ -22629,7 +22533,7 @@ class _$ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
           category == freezed ? _value.category : category as CodeableConcept?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept?,
+          : productOrService as CodeableConcept,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<CodeableConcept?>?,
@@ -22690,12 +22594,8 @@ class _$ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get productOrService {
-    if (_value.productOrService == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.productOrService!, (value) {
+  $CodeableConceptCopyWith<$Res> get productOrService {
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
       return _then(_value.copyWith(productOrService: value));
     });
   }
@@ -22761,7 +22661,7 @@ abstract class _$ExplanationOfBenefitSubDetailCopyWith<$Res>
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
-      CodeableConcept? productOrService,
+      CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       List<CodeableConcept?>? programCode,
       Quantity? quantity,
@@ -22781,7 +22681,7 @@ abstract class _$ExplanationOfBenefitSubDetailCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get category;
   @override
-  $CodeableConceptCopyWith<$Res>? get productOrService;
+  $CodeableConceptCopyWith<$Res> get productOrService;
   @override
   $QuantityCopyWith<$Res>? get quantity;
   @override
@@ -22846,7 +22746,7 @@ class __$ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
           category == freezed ? _value.category : category as CodeableConcept?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept?,
+          : productOrService as CodeableConcept,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<CodeableConcept?>?,
@@ -22921,7 +22821,7 @@ class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
   @override
   final CodeableConcept? category;
   @override
-  final CodeableConcept? productOrService;
+  final CodeableConcept productOrService;
   @override
   final List<CodeableConcept?>? modifier;
   @override
@@ -23057,7 +22957,7 @@ abstract class _ExplanationOfBenefitSubDetail
           @JsonKey(name: '_sequence') Element? sequenceElement,
           CodeableConcept? revenue,
           CodeableConcept? category,
-          required CodeableConcept? productOrService,
+          required CodeableConcept productOrService,
           List<CodeableConcept?>? modifier,
           List<CodeableConcept?>? programCode,
           Quantity? quantity,
@@ -23091,7 +22991,7 @@ abstract class _ExplanationOfBenefitSubDetail
   @override
   CodeableConcept? get category;
   @override
-  CodeableConcept? get productOrService;
+  CodeableConcept get productOrService;
   @override
   List<CodeableConcept?>? get modifier;
   @override
@@ -23146,7 +23046,7 @@ class _$ExplanationOfBenefitAddItemTearOff {
       @JsonKey(name: '_subDetailSequence')
           List<Element?>? subDetailSequenceElement,
       List<Reference?>? provider,
-      required CodeableConcept? productOrService,
+      required CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       List<CodeableConcept?>? programCode,
       Date? servicedDate,
@@ -23227,7 +23127,7 @@ mixin _$ExplanationOfBenefitAddItem {
   @JsonKey(name: '_subDetailSequence')
   List<Element?>? get subDetailSequenceElement;
   List<Reference?>? get provider;
-  CodeableConcept? get productOrService;
+  CodeableConcept get productOrService;
   List<CodeableConcept?>? get modifier;
   List<CodeableConcept?>? get programCode;
   Date? get servicedDate;
@@ -23278,7 +23178,7 @@ abstract class $ExplanationOfBenefitAddItemCopyWith<$Res> {
       @JsonKey(name: '_subDetailSequence')
           List<Element?>? subDetailSequenceElement,
       List<Reference?>? provider,
-      CodeableConcept? productOrService,
+      CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       List<CodeableConcept?>? programCode,
       Date? servicedDate,
@@ -23302,7 +23202,7 @@ abstract class $ExplanationOfBenefitAddItemCopyWith<$Res> {
       List<ExplanationOfBenefitAdjudication?>? adjudication,
       List<ExplanationOfBenefitDetail1?>? detail});
 
-  $CodeableConceptCopyWith<$Res>? get productOrService;
+  $CodeableConceptCopyWith<$Res> get productOrService;
   $ElementCopyWith<$Res>? get servicedDateElement;
   $PeriodCopyWith<$Res>? get servicedPeriod;
   $CodeableConceptCopyWith<$Res>? get locationCodeableConcept;
@@ -23387,7 +23287,7 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
           provider == freezed ? _value.provider : provider as List<Reference?>?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept?,
+          : productOrService as CodeableConcept,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<CodeableConcept?>?,
@@ -23439,12 +23339,8 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get productOrService {
-    if (_value.productOrService == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.productOrService!, (value) {
+  $CodeableConceptCopyWith<$Res> get productOrService {
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
       return _then(_value.copyWith(productOrService: value));
     });
   }
@@ -23584,7 +23480,7 @@ abstract class _$ExplanationOfBenefitAddItemCopyWith<$Res>
       @JsonKey(name: '_subDetailSequence')
           List<Element?>? subDetailSequenceElement,
       List<Reference?>? provider,
-      CodeableConcept? productOrService,
+      CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       List<CodeableConcept?>? programCode,
       Date? servicedDate,
@@ -23609,7 +23505,7 @@ abstract class _$ExplanationOfBenefitAddItemCopyWith<$Res>
       List<ExplanationOfBenefitDetail1?>? detail});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get productOrService;
+  $CodeableConceptCopyWith<$Res> get productOrService;
   @override
   $ElementCopyWith<$Res>? get servicedDateElement;
   @override
@@ -23708,7 +23604,7 @@ class __$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
           provider == freezed ? _value.provider : provider as List<Reference?>?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept?,
+          : productOrService as CodeableConcept,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<CodeableConcept?>?,
@@ -23825,7 +23721,7 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
   @override
   final List<Reference?>? provider;
   @override
-  final CodeableConcept? productOrService;
+  final CodeableConcept productOrService;
   @override
   final List<CodeableConcept?>? modifier;
   @override
@@ -24010,7 +23906,7 @@ abstract class _ExplanationOfBenefitAddItem
           @JsonKey(name: '_subDetailSequence')
               List<Element?>? subDetailSequenceElement,
           List<Reference?>? provider,
-          required CodeableConcept? productOrService,
+          required CodeableConcept productOrService,
           List<CodeableConcept?>? modifier,
           List<CodeableConcept?>? programCode,
           Date? servicedDate,
@@ -24063,7 +23959,7 @@ abstract class _ExplanationOfBenefitAddItem
   @override
   List<Reference?>? get provider;
   @override
-  CodeableConcept? get productOrService;
+  CodeableConcept get productOrService;
   @override
   List<CodeableConcept?>? get modifier;
   @override
@@ -24124,7 +24020,7 @@ class _$ExplanationOfBenefitDetail1TearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? productOrService,
+      required CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       Quantity? quantity,
       Money? unitPrice,
@@ -24167,7 +24063,7 @@ mixin _$ExplanationOfBenefitDetail1 {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get productOrService;
+  CodeableConcept get productOrService;
   List<CodeableConcept?>? get modifier;
   Quantity? get quantity;
   Money? get unitPrice;
@@ -24197,7 +24093,7 @@ abstract class $ExplanationOfBenefitDetail1CopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? productOrService,
+      CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       Quantity? quantity,
       Money? unitPrice,
@@ -24209,7 +24105,7 @@ abstract class $ExplanationOfBenefitDetail1CopyWith<$Res> {
       List<ExplanationOfBenefitAdjudication?>? adjudication,
       List<ExplanationOfBenefitSubDetail1?>? subDetail});
 
-  $CodeableConceptCopyWith<$Res>? get productOrService;
+  $CodeableConceptCopyWith<$Res> get productOrService;
   $QuantityCopyWith<$Res>? get quantity;
   $MoneyCopyWith<$Res>? get unitPrice;
   $ElementCopyWith<$Res>? get factorElement;
@@ -24252,7 +24148,7 @@ class _$ExplanationOfBenefitDetail1CopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept?,
+          : productOrService as CodeableConcept,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<CodeableConcept?>?,
@@ -24279,12 +24175,8 @@ class _$ExplanationOfBenefitDetail1CopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get productOrService {
-    if (_value.productOrService == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.productOrService!, (value) {
+  $CodeableConceptCopyWith<$Res> get productOrService {
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
       return _then(_value.copyWith(productOrService: value));
     });
   }
@@ -24346,7 +24238,7 @@ abstract class _$ExplanationOfBenefitDetail1CopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? productOrService,
+      CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       Quantity? quantity,
       Money? unitPrice,
@@ -24359,7 +24251,7 @@ abstract class _$ExplanationOfBenefitDetail1CopyWith<$Res>
       List<ExplanationOfBenefitSubDetail1?>? subDetail});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get productOrService;
+  $CodeableConceptCopyWith<$Res> get productOrService;
   @override
   $QuantityCopyWith<$Res>? get quantity;
   @override
@@ -24410,7 +24302,7 @@ class __$ExplanationOfBenefitDetail1CopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept?,
+          : productOrService as CodeableConcept,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<CodeableConcept?>?,
@@ -24469,7 +24361,7 @@ class _$_ExplanationOfBenefitDetail1 extends _ExplanationOfBenefitDetail1 {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? productOrService;
+  final CodeableConcept productOrService;
   @override
   final List<CodeableConcept?>? modifier;
   @override
@@ -24580,7 +24472,7 @@ abstract class _ExplanationOfBenefitDetail1
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required CodeableConcept? productOrService,
+          required CodeableConcept productOrService,
           List<CodeableConcept?>? modifier,
           Quantity? quantity,
           Money? unitPrice,
@@ -24604,7 +24496,7 @@ abstract class _ExplanationOfBenefitDetail1
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get productOrService;
+  CodeableConcept get productOrService;
   @override
   List<CodeableConcept?>? get modifier;
   @override
@@ -24646,7 +24538,7 @@ class _$ExplanationOfBenefitSubDetail1TearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? productOrService,
+      required CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       Quantity? quantity,
       Money? unitPrice,
@@ -24688,7 +24580,7 @@ mixin _$ExplanationOfBenefitSubDetail1 {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get productOrService;
+  CodeableConcept get productOrService;
   List<CodeableConcept?>? get modifier;
   Quantity? get quantity;
   Money? get unitPrice;
@@ -24717,7 +24609,7 @@ abstract class $ExplanationOfBenefitSubDetail1CopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? productOrService,
+      CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       Quantity? quantity,
       Money? unitPrice,
@@ -24728,7 +24620,7 @@ abstract class $ExplanationOfBenefitSubDetail1CopyWith<$Res> {
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication?>? adjudication});
 
-  $CodeableConceptCopyWith<$Res>? get productOrService;
+  $CodeableConceptCopyWith<$Res> get productOrService;
   $QuantityCopyWith<$Res>? get quantity;
   $MoneyCopyWith<$Res>? get unitPrice;
   $ElementCopyWith<$Res>? get factorElement;
@@ -24770,7 +24662,7 @@ class _$ExplanationOfBenefitSubDetail1CopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept?,
+          : productOrService as CodeableConcept,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<CodeableConcept?>?,
@@ -24794,12 +24686,8 @@ class _$ExplanationOfBenefitSubDetail1CopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get productOrService {
-    if (_value.productOrService == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.productOrService!, (value) {
+  $CodeableConceptCopyWith<$Res> get productOrService {
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
       return _then(_value.copyWith(productOrService: value));
     });
   }
@@ -24861,7 +24749,7 @@ abstract class _$ExplanationOfBenefitSubDetail1CopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? productOrService,
+      CodeableConcept productOrService,
       List<CodeableConcept?>? modifier,
       Quantity? quantity,
       Money? unitPrice,
@@ -24873,7 +24761,7 @@ abstract class _$ExplanationOfBenefitSubDetail1CopyWith<$Res>
       List<ExplanationOfBenefitAdjudication?>? adjudication});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get productOrService;
+  $CodeableConceptCopyWith<$Res> get productOrService;
   @override
   $QuantityCopyWith<$Res>? get quantity;
   @override
@@ -24923,7 +24811,7 @@ class __$ExplanationOfBenefitSubDetail1CopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept?,
+          : productOrService as CodeableConcept,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<CodeableConcept?>?,
@@ -24980,7 +24868,7 @@ class _$_ExplanationOfBenefitSubDetail1
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? productOrService;
+  final CodeableConcept productOrService;
   @override
   final List<CodeableConcept?>? modifier;
   @override
@@ -25085,7 +24973,7 @@ abstract class _ExplanationOfBenefitSubDetail1
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required CodeableConcept? productOrService,
+          required CodeableConcept productOrService,
           List<CodeableConcept?>? modifier,
           Quantity? quantity,
           Money? unitPrice,
@@ -25108,7 +24996,7 @@ abstract class _ExplanationOfBenefitSubDetail1
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get productOrService;
+  CodeableConcept get productOrService;
   @override
   List<CodeableConcept?>? get modifier;
   @override
@@ -25148,8 +25036,8 @@ class _$ExplanationOfBenefitTotalTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? category,
-      required Money? amount}) {
+      required CodeableConcept category,
+      required Money amount}) {
     return _ExplanationOfBenefitTotal(
       id: id,
       extension_: extension_,
@@ -25173,8 +25061,8 @@ mixin _$ExplanationOfBenefitTotal {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get category;
-  Money? get amount;
+  CodeableConcept get category;
+  Money get amount;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -25190,11 +25078,11 @@ abstract class $ExplanationOfBenefitTotalCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? category,
-      Money? amount});
+      CodeableConcept category,
+      Money amount});
 
-  $CodeableConceptCopyWith<$Res>? get category;
-  $MoneyCopyWith<$Res>? get amount;
+  $CodeableConceptCopyWith<$Res> get category;
+  $MoneyCopyWith<$Res> get amount;
 }
 
 /// @nodoc
@@ -25223,29 +25111,21 @@ class _$ExplanationOfBenefitTotalCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
       category:
-          category == freezed ? _value.category : category as CodeableConcept?,
-      amount: amount == freezed ? _value.amount : amount as Money?,
+          category == freezed ? _value.category : category as CodeableConcept,
+      amount: amount == freezed ? _value.amount : amount as Money,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get category {
-    if (_value.category == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.category!, (value) {
+  $CodeableConceptCopyWith<$Res> get category {
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
       return _then(_value.copyWith(category: value));
     });
   }
 
   @override
-  $MoneyCopyWith<$Res>? get amount {
-    if (_value.amount == null) {
-      return null;
-    }
-
-    return $MoneyCopyWith<$Res>(_value.amount!, (value) {
+  $MoneyCopyWith<$Res> get amount {
+    return $MoneyCopyWith<$Res>(_value.amount, (value) {
       return _then(_value.copyWith(amount: value));
     });
   }
@@ -25262,13 +25142,13 @@ abstract class _$ExplanationOfBenefitTotalCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? category,
-      Money? amount});
+      CodeableConcept category,
+      Money amount});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get category;
+  $CodeableConceptCopyWith<$Res> get category;
   @override
-  $MoneyCopyWith<$Res>? get amount;
+  $MoneyCopyWith<$Res> get amount;
 }
 
 /// @nodoc
@@ -25300,8 +25180,8 @@ class __$ExplanationOfBenefitTotalCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
       category:
-          category == freezed ? _value.category : category as CodeableConcept?,
-      amount: amount == freezed ? _value.amount : amount as Money?,
+          category == freezed ? _value.category : category as CodeableConcept,
+      amount: amount == freezed ? _value.amount : amount as Money,
     ));
   }
 }
@@ -25329,9 +25209,9 @@ class _$_ExplanationOfBenefitTotal extends _ExplanationOfBenefitTotal {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? category;
+  final CodeableConcept category;
   @override
-  final Money? amount;
+  final Money amount;
 
   @override
   String toString() {
@@ -25385,8 +25265,8 @@ abstract class _ExplanationOfBenefitTotal extends ExplanationOfBenefitTotal {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? category,
-      required Money? amount}) = _$_ExplanationOfBenefitTotal;
+      required CodeableConcept category,
+      required Money amount}) = _$_ExplanationOfBenefitTotal;
 
   factory _ExplanationOfBenefitTotal.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefitTotal.fromJson;
@@ -25399,9 +25279,9 @@ abstract class _ExplanationOfBenefitTotal extends ExplanationOfBenefitTotal {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get category;
+  CodeableConcept get category;
   @override
-  Money? get amount;
+  Money get amount;
   @override
   @JsonKey(ignore: true)
   _$ExplanationOfBenefitTotalCopyWith<_ExplanationOfBenefitTotal> get copyWith;
@@ -26307,7 +26187,7 @@ class _$ExplanationOfBenefitBenefitBalanceTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? category,
+      required CodeableConcept category,
       Boolean? excluded,
       @JsonKey(name: '_excluded') Element? excludedElement,
       String? name,
@@ -26351,7 +26231,7 @@ mixin _$ExplanationOfBenefitBenefitBalance {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get category;
+  CodeableConcept get category;
   Boolean? get excluded;
   @JsonKey(name: '_excluded')
   Element? get excludedElement;
@@ -26382,7 +26262,7 @@ abstract class $ExplanationOfBenefitBenefitBalanceCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? category,
+      CodeableConcept category,
       Boolean? excluded,
       @JsonKey(name: '_excluded') Element? excludedElement,
       String? name,
@@ -26394,7 +26274,7 @@ abstract class $ExplanationOfBenefitBenefitBalanceCopyWith<$Res> {
       CodeableConcept? term,
       List<ExplanationOfBenefitFinancial?>? financial});
 
-  $CodeableConceptCopyWith<$Res>? get category;
+  $CodeableConceptCopyWith<$Res> get category;
   $ElementCopyWith<$Res>? get excludedElement;
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -26438,7 +26318,7 @@ class _$ExplanationOfBenefitBenefitBalanceCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
       category:
-          category == freezed ? _value.category : category as CodeableConcept?,
+          category == freezed ? _value.category : category as CodeableConcept,
       excluded: excluded == freezed ? _value.excluded : excluded as Boolean?,
       excludedElement: excludedElement == freezed
           ? _value.excludedElement
@@ -26462,12 +26342,8 @@ class _$ExplanationOfBenefitBenefitBalanceCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get category {
-    if (_value.category == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.category!, (value) {
+  $CodeableConceptCopyWith<$Res> get category {
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
       return _then(_value.copyWith(category: value));
     });
   }
@@ -26551,7 +26427,7 @@ abstract class _$ExplanationOfBenefitBenefitBalanceCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? category,
+      CodeableConcept category,
       Boolean? excluded,
       @JsonKey(name: '_excluded') Element? excludedElement,
       String? name,
@@ -26564,7 +26440,7 @@ abstract class _$ExplanationOfBenefitBenefitBalanceCopyWith<$Res>
       List<ExplanationOfBenefitFinancial?>? financial});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get category;
+  $CodeableConceptCopyWith<$Res> get category;
   @override
   $ElementCopyWith<$Res>? get excludedElement;
   @override
@@ -26618,7 +26494,7 @@ class __$ExplanationOfBenefitBenefitBalanceCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
       category:
-          category == freezed ? _value.category : category as CodeableConcept?,
+          category == freezed ? _value.category : category as CodeableConcept,
       excluded: excluded == freezed ? _value.excluded : excluded as Boolean?,
       excludedElement: excludedElement == freezed
           ? _value.excludedElement
@@ -26676,7 +26552,7 @@ class _$_ExplanationOfBenefitBenefitBalance
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? category;
+  final CodeableConcept category;
   @override
   final Boolean? excluded;
   @override
@@ -26788,7 +26664,7 @@ abstract class _ExplanationOfBenefitBenefitBalance
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required CodeableConcept? category,
+          required CodeableConcept category,
           Boolean? excluded,
           @JsonKey(name: '_excluded') Element? excludedElement,
           String? name,
@@ -26813,7 +26689,7 @@ abstract class _ExplanationOfBenefitBenefitBalance
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get category;
+  CodeableConcept get category;
   @override
   Boolean? get excluded;
   @override
@@ -26856,7 +26732,7 @@ class _$ExplanationOfBenefitFinancialTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       UnsignedInt? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
       String? allowedString,
@@ -26895,7 +26771,7 @@ mixin _$ExplanationOfBenefitFinancial {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   UnsignedInt? get allowedUnsignedInt;
   @JsonKey(name: '_allowedUnsignedInt')
   Element? get allowedUnsignedIntElement;
@@ -26924,7 +26800,7 @@ abstract class $ExplanationOfBenefitFinancialCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       UnsignedInt? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
       String? allowedString,
@@ -26934,7 +26810,7 @@ abstract class $ExplanationOfBenefitFinancialCopyWith<$Res> {
       @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
       Money? usedMoney});
 
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   $ElementCopyWith<$Res>? get allowedUnsignedIntElement;
   $ElementCopyWith<$Res>? get allowedStringElement;
   $MoneyCopyWith<$Res>? get allowedMoney;
@@ -26974,7 +26850,7 @@ class _$ExplanationOfBenefitFinancialCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       allowedUnsignedInt: allowedUnsignedInt == freezed
           ? _value.allowedUnsignedInt
           : allowedUnsignedInt as UnsignedInt?,
@@ -27001,12 +26877,8 @@ class _$ExplanationOfBenefitFinancialCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -27079,7 +26951,7 @@ abstract class _$ExplanationOfBenefitFinancialCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       UnsignedInt? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
       String? allowedString,
@@ -27090,7 +26962,7 @@ abstract class _$ExplanationOfBenefitFinancialCopyWith<$Res>
       Money? usedMoney});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $ElementCopyWith<$Res>? get allowedUnsignedIntElement;
   @override
@@ -27139,7 +27011,7 @@ class __$ExplanationOfBenefitFinancialCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       allowedUnsignedInt: allowedUnsignedInt == freezed
           ? _value.allowedUnsignedInt
           : allowedUnsignedInt as UnsignedInt?,
@@ -27197,7 +27069,7 @@ class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final UnsignedInt? allowedUnsignedInt;
   @override
@@ -27300,7 +27172,7 @@ abstract class _ExplanationOfBenefitFinancial
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       UnsignedInt? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
       String? allowedString,
@@ -27321,7 +27193,7 @@ abstract class _ExplanationOfBenefitFinancial
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   UnsignedInt? get allowedUnsignedInt;
   @override
@@ -28589,9 +28461,9 @@ class _$InsurancePlanCoverageTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       List<Reference?>? network,
-      required List<InsurancePlanBenefit?>? benefit}) {
+      required List<InsurancePlanBenefit> benefit}) {
     return _InsurancePlanCoverage(
       id: id,
       extension_: extension_,
@@ -28616,9 +28488,9 @@ mixin _$InsurancePlanCoverage {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   List<Reference?>? get network;
-  List<InsurancePlanBenefit?>? get benefit;
+  List<InsurancePlanBenefit> get benefit;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -28634,11 +28506,11 @@ abstract class $InsurancePlanCoverageCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       List<Reference?>? network,
-      List<InsurancePlanBenefit?>? benefit});
+      List<InsurancePlanBenefit> benefit});
 
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 /// @nodoc
@@ -28667,22 +28539,18 @@ class _$InsurancePlanCoverageCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       network:
           network == freezed ? _value.network : network as List<Reference?>?,
       benefit: benefit == freezed
           ? _value.benefit
-          : benefit as List<InsurancePlanBenefit?>?,
+          : benefit as List<InsurancePlanBenefit>,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -28699,12 +28567,12 @@ abstract class _$InsurancePlanCoverageCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       List<Reference?>? network,
-      List<InsurancePlanBenefit?>? benefit});
+      List<InsurancePlanBenefit> benefit});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 /// @nodoc
@@ -28735,12 +28603,12 @@ class __$InsurancePlanCoverageCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       network:
           network == freezed ? _value.network : network as List<Reference?>?,
       benefit: benefit == freezed
           ? _value.benefit
-          : benefit as List<InsurancePlanBenefit?>?,
+          : benefit as List<InsurancePlanBenefit>,
     ));
   }
 }
@@ -28769,11 +28637,11 @@ class _$_InsurancePlanCoverage extends _InsurancePlanCoverage {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final List<Reference?>? network;
   @override
-  final List<InsurancePlanBenefit?>? benefit;
+  final List<InsurancePlanBenefit> benefit;
 
   @override
   String toString() {
@@ -28826,13 +28694,12 @@ class _$_InsurancePlanCoverage extends _InsurancePlanCoverage {
 abstract class _InsurancePlanCoverage extends InsurancePlanCoverage {
   _InsurancePlanCoverage._() : super._();
   factory _InsurancePlanCoverage(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
-          required CodeableConcept? type,
-          List<Reference?>? network,
-          required List<InsurancePlanBenefit?>? benefit}) =
-      _$_InsurancePlanCoverage;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      required CodeableConcept type,
+      List<Reference?>? network,
+      required List<InsurancePlanBenefit> benefit}) = _$_InsurancePlanCoverage;
 
   factory _InsurancePlanCoverage.fromJson(Map<String, dynamic> json) =
       _$_InsurancePlanCoverage.fromJson;
@@ -28845,11 +28712,11 @@ abstract class _InsurancePlanCoverage extends InsurancePlanCoverage {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   List<Reference?>? get network;
   @override
-  List<InsurancePlanBenefit?>? get benefit;
+  List<InsurancePlanBenefit> get benefit;
   @override
   @JsonKey(ignore: true)
   _$InsurancePlanCoverageCopyWith<_InsurancePlanCoverage> get copyWith;
@@ -28867,7 +28734,7 @@ class _$InsurancePlanBenefitTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       String? requirement,
       @JsonKey(name: '_requirement') Element? requirementElement,
       List<InsurancePlanLimit?>? limit}) {
@@ -28896,7 +28763,7 @@ mixin _$InsurancePlanBenefit {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   String? get requirement;
   @JsonKey(name: '_requirement')
   Element? get requirementElement;
@@ -28916,12 +28783,12 @@ abstract class $InsurancePlanBenefitCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       String? requirement,
       @JsonKey(name: '_requirement') Element? requirementElement,
       List<InsurancePlanLimit?>? limit});
 
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   $ElementCopyWith<$Res>? get requirementElement;
 }
 
@@ -28952,7 +28819,7 @@ class _$InsurancePlanBenefitCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       requirement:
           requirement == freezed ? _value.requirement : requirement as String?,
       requirementElement: requirementElement == freezed
@@ -28964,12 +28831,8 @@ class _$InsurancePlanBenefitCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -28997,13 +28860,13 @@ abstract class _$InsurancePlanBenefitCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       String? requirement,
       @JsonKey(name: '_requirement') Element? requirementElement,
       List<InsurancePlanLimit?>? limit});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $ElementCopyWith<$Res>? get requirementElement;
 }
@@ -29037,7 +28900,7 @@ class __$InsurancePlanBenefitCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       requirement:
           requirement == freezed ? _value.requirement : requirement as String?,
       requirementElement: requirementElement == freezed
@@ -29074,7 +28937,7 @@ class _$_InsurancePlanBenefit extends _InsurancePlanBenefit {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final String? requirement;
   @override
@@ -29141,7 +29004,7 @@ abstract class _InsurancePlanBenefit extends InsurancePlanBenefit {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       String? requirement,
       @JsonKey(name: '_requirement') Element? requirementElement,
       List<InsurancePlanLimit?>? limit}) = _$_InsurancePlanBenefit;
@@ -29157,7 +29020,7 @@ abstract class _InsurancePlanBenefit extends InsurancePlanBenefit {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   String? get requirement;
   @override
@@ -30183,7 +30046,7 @@ class _$InsurancePlanSpecificCostTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? category,
+      required CodeableConcept category,
       List<InsurancePlanBenefit1?>? benefit}) {
     return _InsurancePlanSpecificCost(
       id: id,
@@ -30208,7 +30071,7 @@ mixin _$InsurancePlanSpecificCost {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get category;
+  CodeableConcept get category;
   List<InsurancePlanBenefit1?>? get benefit;
 
   Map<String, dynamic> toJson();
@@ -30225,10 +30088,10 @@ abstract class $InsurancePlanSpecificCostCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? category,
+      CodeableConcept category,
       List<InsurancePlanBenefit1?>? benefit});
 
-  $CodeableConceptCopyWith<$Res>? get category;
+  $CodeableConceptCopyWith<$Res> get category;
 }
 
 /// @nodoc
@@ -30257,7 +30120,7 @@ class _$InsurancePlanSpecificCostCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
       category:
-          category == freezed ? _value.category : category as CodeableConcept?,
+          category == freezed ? _value.category : category as CodeableConcept,
       benefit: benefit == freezed
           ? _value.benefit
           : benefit as List<InsurancePlanBenefit1?>?,
@@ -30265,12 +30128,8 @@ class _$InsurancePlanSpecificCostCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get category {
-    if (_value.category == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.category!, (value) {
+  $CodeableConceptCopyWith<$Res> get category {
+    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
       return _then(_value.copyWith(category: value));
     });
   }
@@ -30287,11 +30146,11 @@ abstract class _$InsurancePlanSpecificCostCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? category,
+      CodeableConcept category,
       List<InsurancePlanBenefit1?>? benefit});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get category;
+  $CodeableConceptCopyWith<$Res> get category;
 }
 
 /// @nodoc
@@ -30323,7 +30182,7 @@ class __$InsurancePlanSpecificCostCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
       category:
-          category == freezed ? _value.category : category as CodeableConcept?,
+          category == freezed ? _value.category : category as CodeableConcept,
       benefit: benefit == freezed
           ? _value.benefit
           : benefit as List<InsurancePlanBenefit1?>?,
@@ -30354,7 +30213,7 @@ class _$_InsurancePlanSpecificCost extends _InsurancePlanSpecificCost {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? category;
+  final CodeableConcept category;
   @override
   final List<InsurancePlanBenefit1?>? benefit;
 
@@ -30410,7 +30269,7 @@ abstract class _InsurancePlanSpecificCost extends InsurancePlanSpecificCost {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? category,
+      required CodeableConcept category,
       List<InsurancePlanBenefit1?>? benefit}) = _$_InsurancePlanSpecificCost;
 
   factory _InsurancePlanSpecificCost.fromJson(Map<String, dynamic> json) =
@@ -30424,7 +30283,7 @@ abstract class _InsurancePlanSpecificCost extends InsurancePlanSpecificCost {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get category;
+  CodeableConcept get category;
   @override
   List<InsurancePlanBenefit1?>? get benefit;
   @override
@@ -30445,7 +30304,7 @@ class _$InsurancePlanBenefit1TearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       List<InsurancePlanCost?>? cost}) {
     return _InsurancePlanBenefit1(
       id: id,
@@ -30470,7 +30329,7 @@ mixin _$InsurancePlanBenefit1 {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   List<InsurancePlanCost?>? get cost;
 
   Map<String, dynamic> toJson();
@@ -30487,10 +30346,10 @@ abstract class $InsurancePlanBenefit1CopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       List<InsurancePlanCost?>? cost});
 
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 /// @nodoc
@@ -30518,18 +30377,14 @@ class _$InsurancePlanBenefit1CopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       cost: cost == freezed ? _value.cost : cost as List<InsurancePlanCost?>?,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -30546,11 +30401,11 @@ abstract class _$InsurancePlanBenefit1CopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       List<InsurancePlanCost?>? cost});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 /// @nodoc
@@ -30580,7 +30435,7 @@ class __$InsurancePlanBenefit1CopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       cost: cost == freezed ? _value.cost : cost as List<InsurancePlanCost?>?,
     ));
   }
@@ -30609,7 +30464,7 @@ class _$_InsurancePlanBenefit1 extends _InsurancePlanBenefit1 {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final List<InsurancePlanCost?>? cost;
 
@@ -30663,7 +30518,7 @@ abstract class _InsurancePlanBenefit1 extends InsurancePlanBenefit1 {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       List<InsurancePlanCost?>? cost}) = _$_InsurancePlanBenefit1;
 
   factory _InsurancePlanBenefit1.fromJson(Map<String, dynamic> json) =
@@ -30677,7 +30532,7 @@ abstract class _InsurancePlanBenefit1 extends InsurancePlanBenefit1 {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   List<InsurancePlanCost?>? get cost;
   @override
@@ -30697,7 +30552,7 @@ class _$InsurancePlanCostTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       CodeableConcept? applicability,
       List<CodeableConcept?>? qualifiers,
       Quantity? value}) {
@@ -30726,7 +30581,7 @@ mixin _$InsurancePlanCost {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   CodeableConcept? get applicability;
   List<CodeableConcept?>? get qualifiers;
   Quantity? get value;
@@ -30745,12 +30600,12 @@ abstract class $InsurancePlanCostCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       CodeableConcept? applicability,
       List<CodeableConcept?>? qualifiers,
       Quantity? value});
 
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res>? get applicability;
   $QuantityCopyWith<$Res>? get value;
 }
@@ -30782,7 +30637,7 @@ class _$InsurancePlanCostCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       applicability: applicability == freezed
           ? _value.applicability
           : applicability as CodeableConcept?,
@@ -30794,12 +30649,8 @@ class _$InsurancePlanCostCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -30838,13 +30689,13 @@ abstract class _$InsurancePlanCostCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       CodeableConcept? applicability,
       List<CodeableConcept?>? qualifiers,
       Quantity? value});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $CodeableConceptCopyWith<$Res>? get applicability;
   @override
@@ -30880,7 +30731,7 @@ class __$InsurancePlanCostCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       applicability: applicability == freezed
           ? _value.applicability
           : applicability as CodeableConcept?,
@@ -30917,7 +30768,7 @@ class _$_InsurancePlanCost extends _InsurancePlanCost {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final CodeableConcept? applicability;
   @override
@@ -30982,7 +30833,7 @@ abstract class _InsurancePlanCost extends InsurancePlanCost {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       CodeableConcept? applicability,
       List<CodeableConcept?>? qualifiers,
       Quantity? value}) = _$_InsurancePlanCost;
@@ -30998,7 +30849,7 @@ abstract class _InsurancePlanCost extends InsurancePlanCost {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   CodeableConcept? get applicability;
   @override

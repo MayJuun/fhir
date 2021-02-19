@@ -295,13 +295,11 @@ _$_LocationPosition _$_$_LocationPositionFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    longitude:
-        json['longitude'] == null ? null : Decimal.fromJson(json['longitude']),
+    longitude: Decimal.fromJson(json['longitude']),
     longitudeElement: json['_longitude'] == null
         ? null
         : Element.fromJson(json['_longitude'] as Map<String, dynamic>),
-    latitude:
-        json['latitude'] == null ? null : Decimal.fromJson(json['latitude']),
+    latitude: Decimal.fromJson(json['latitude']),
     latitudeElement: json['_latitude'] == null
         ? null
         : Element.fromJson(json['_latitude'] as Map<String, dynamic>),
@@ -327,9 +325,9 @@ Map<String, dynamic> _$_$_LocationPositionToJson(_$_LocationPosition instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('longitude', instance.longitude?.toJson());
+  val['longitude'] = instance.longitude.toJson();
   writeNotNull('_longitude', instance.longitudeElement?.toJson());
-  writeNotNull('latitude', instance.latitude?.toJson());
+  val['latitude'] = instance.latitude.toJson();
   writeNotNull('_latitude', instance.latitudeElement?.toJson());
   writeNotNull('altitude', instance.altitude?.toJson());
   writeNotNull('_altitude', instance.altitudeElement?.toJson());
@@ -380,9 +378,7 @@ _$_Substance _$_$_SubstanceFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
-    code: json['code'] == null
-        ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     description: json['description'] as String?,
     descriptionElement: json['_description'] == null
         ? null
@@ -427,7 +423,7 @@ Map<String, dynamic> _$_$_SubstanceToJson(_$_Substance instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
   writeNotNull('category', instance.category?.map((e) => e?.toJson()).toList());
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('instance', instance.instance?.map((e) => e?.toJson()).toList());
@@ -502,9 +498,7 @@ _$_SubstanceIngredient _$_$_SubstanceIngredientFromJson(
     quantity: json['quantity'] == null
         ? null
         : Ratio.fromJson(json['quantity'] as Map<String, dynamic>),
-    substance: json['substance'] == null
-        ? null
-        : Reference.fromJson(json['substance'] as Map<String, dynamic>),
+    substance: Reference.fromJson(json['substance'] as Map<String, dynamic>),
   );
 }
 
@@ -524,7 +518,7 @@ Map<String, dynamic> _$_$_SubstanceIngredientToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull('quantity', instance.quantity?.toJson());
-  writeNotNull('substance', instance.substance?.toJson());
+  val['substance'] = instance.substance.toJson();
   return val;
 }
 
@@ -668,9 +662,7 @@ _$_PersonLink _$_$_PersonLinkFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    target: json['target'] == null
-        ? null
-        : Reference.fromJson(json['target'] as Map<String, dynamic>),
+    target: Reference.fromJson(json['target'] as Map<String, dynamic>),
     assurance: _$enumDecodeNullable(_$LinkAssuranceEnumMap, json['assurance'],
         unknownValue: LinkAssurance.unknown),
     assuranceElement: json['_assurance'] == null
@@ -693,7 +685,7 @@ Map<String, dynamic> _$_$_PersonLinkToJson(_$_PersonLink instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('target', instance.target?.toJson());
+  val['target'] = instance.target.toJson();
   writeNotNull('assurance', _$LinkAssuranceEnumMap[instance.assurance]);
   writeNotNull('_assurance', instance.assuranceElement?.toJson());
   return val;
@@ -889,9 +881,7 @@ _$_ContractActor _$_$_ContractActorFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    entity: json['entity'] == null
-        ? null
-        : Reference.fromJson(json['entity'] as Map<String, dynamic>),
+    entity: Reference.fromJson(json['entity'] as Map<String, dynamic>),
     role: (json['role'] as List<dynamic>?)
         ?.map((e) => e == null
             ? null
@@ -914,7 +904,7 @@ Map<String, dynamic> _$_$_ContractActorToJson(_$_ContractActor instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('entity', instance.entity?.toJson());
+  val['entity'] = instance.entity.toJson();
   writeNotNull('role', instance.role?.map((e) => e?.toJson()).toList());
   return val;
 }
@@ -1020,13 +1010,9 @@ _$_ContractSigner _$_$_ContractSignerFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    type: json['type'] == null
-        ? null
-        : Coding.fromJson(json['type'] as Map<String, dynamic>),
-    party: json['party'] == null
-        ? null
-        : Reference.fromJson(json['party'] as Map<String, dynamic>),
-    signature: json['signature'] as String?,
+    type: Coding.fromJson(json['type'] as Map<String, dynamic>),
+    party: Reference.fromJson(json['party'] as Map<String, dynamic>),
+    signature: json['signature'] as String,
   );
 }
 
@@ -1044,9 +1030,9 @@ Map<String, dynamic> _$_$_ContractSignerToJson(_$_ContractSigner instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('party', instance.party?.toJson());
-  writeNotNull('signature', instance.signature);
+  val['type'] = instance.type.toJson();
+  val['party'] = instance.party.toJson();
+  val['signature'] = instance.signature;
   return val;
 }
 
@@ -1160,9 +1146,7 @@ _$_ContractTermActor _$_$_ContractTermActorFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    entity: json['entity'] == null
-        ? null
-        : Reference.fromJson(json['entity'] as Map<String, dynamic>),
+    entity: Reference.fromJson(json['entity'] as Map<String, dynamic>),
     role: (json['role'] as List<dynamic>?)
         ?.map((e) => e == null
             ? null
@@ -1186,7 +1170,7 @@ Map<String, dynamic> _$_$_ContractTermActorToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('entity', instance.entity?.toJson());
+  val['entity'] = instance.entity.toJson();
   writeNotNull('role', instance.role?.map((e) => e?.toJson()).toList());
   return val;
 }

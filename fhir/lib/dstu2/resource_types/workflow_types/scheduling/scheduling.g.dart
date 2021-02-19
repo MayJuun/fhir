@@ -7,7 +7,6 @@ part of 'scheduling.dart';
 // **************************************************************************
 
 _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['participant']);
   return _$_Appointment(
     resourceType: _$enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType'],
         unknownValue: Dstu2ResourceType.Appointment),
@@ -89,10 +88,8 @@ _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
     commentElement: json['_comment'] == null
         ? null
         : Element.fromJson(json['_comment'] as Map<String, dynamic>),
-    participant: (json['participant'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : AppointmentParticipant.fromJson(e as Map<String, dynamic>))
+    participant: (json['participant'] as List<dynamic>)
+        .map((e) => AppointmentParticipant.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -140,8 +137,7 @@ Map<String, dynamic> _$_$_AppointmentToJson(_$_Appointment instance) {
   writeNotNull('slot', instance.slot?.map((e) => e?.toJson()).toList());
   writeNotNull('comment', instance.comment);
   writeNotNull('_comment', instance.commentElement?.toJson());
-  writeNotNull(
-      'participant', instance.participant?.map((e) => e?.toJson()).toList());
+  val['participant'] = instance.participant.map((e) => e.toJson()).toList();
   return val;
 }
 
@@ -407,9 +403,8 @@ _$_AppointmentResponse _$_$_AppointmentResponseFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
-    appointment: json['appointment'] == null
-        ? null
-        : Reference.fromJson(json['appointment'] as Map<String, dynamic>),
+    appointment:
+        Reference.fromJson(json['appointment'] as Map<String, dynamic>),
     start: json['start'] == null ? null : Instant.fromJson(json['start']),
     startElement: json['_start'] == null
         ? null
@@ -467,7 +462,7 @@ Map<String, dynamic> _$_$_AppointmentResponseToJson(
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
-  writeNotNull('appointment', instance.appointment?.toJson());
+  val['appointment'] = instance.appointment.toJson();
   writeNotNull('start', instance.start?.toJson());
   writeNotNull('_start', instance.startElement?.toJson());
   writeNotNull('end', instance.end?.toJson());
@@ -538,9 +533,7 @@ _$_Schedule _$_$_ScheduleFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
-    actor: json['actor'] == null
-        ? null
-        : Reference.fromJson(json['actor'] as Map<String, dynamic>),
+    actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
     planningHorizon: json['planningHorizon'] == null
         ? null
         : Period.fromJson(json['planningHorizon'] as Map<String, dynamic>),
@@ -578,7 +571,7 @@ Map<String, dynamic> _$_$_ScheduleToJson(_$_Schedule instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
   writeNotNull('type', instance.type?.map((e) => e?.toJson()).toList());
-  writeNotNull('actor', instance.actor?.toJson());
+  val['actor'] = instance.actor.toJson();
   writeNotNull('planningHorizon', instance.planningHorizon?.toJson());
   writeNotNull('comment', instance.comment);
   writeNotNull('_comment', instance.commentElement?.toJson());
@@ -627,16 +620,14 @@ _$_Slot _$_$_SlotFromJson(Map<String, dynamic> json) {
     type: json['type'] == null
         ? null
         : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    schedule: json['schedule'] == null
-        ? null
-        : Reference.fromJson(json['schedule'] as Map<String, dynamic>),
+    schedule: Reference.fromJson(json['schedule'] as Map<String, dynamic>),
     freeBusyType: _$enumDecode(_$SlotFreeBusyTypeEnumMap, json['freeBusyType'],
         unknownValue: SlotFreeBusyType.unknown),
-    start: json['start'] == null ? null : Instant.fromJson(json['start']),
+    start: Instant.fromJson(json['start']),
     startElement: json['_start'] == null
         ? null
         : Element.fromJson(json['_start'] as Map<String, dynamic>),
-    end: json['end'] == null ? null : Instant.fromJson(json['end']),
+    end: Instant.fromJson(json['end']),
     endElement: json['_end'] == null
         ? null
         : Element.fromJson(json['_end'] as Map<String, dynamic>),
@@ -680,11 +671,11 @@ Map<String, dynamic> _$_$_SlotToJson(_$_Slot instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
   writeNotNull('type', instance.type?.toJson());
-  writeNotNull('schedule', instance.schedule?.toJson());
+  val['schedule'] = instance.schedule.toJson();
   val['freeBusyType'] = _$SlotFreeBusyTypeEnumMap[instance.freeBusyType];
-  writeNotNull('start', instance.start?.toJson());
+  val['start'] = instance.start.toJson();
   writeNotNull('_start', instance.startElement?.toJson());
-  writeNotNull('end', instance.end?.toJson());
+  val['end'] = instance.end.toJson();
   writeNotNull('_end', instance.endElement?.toJson());
   writeNotNull('overbooked', instance.overbooked?.toJson());
   writeNotNull('_overbooked', instance.overbookedElement?.toJson());

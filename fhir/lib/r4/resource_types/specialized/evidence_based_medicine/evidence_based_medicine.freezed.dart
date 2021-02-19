@@ -81,10 +81,10 @@ class _$EffectEvidenceSynthesisTearOff {
       List<RelatedArtifact?>? relatedArtifact,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
-      required Reference? population,
-      required Reference? exposure,
-      required Reference? exposureAlternative,
-      required Reference? outcome,
+      required Reference population,
+      required Reference exposure,
+      required Reference exposureAlternative,
+      required Reference outcome,
       EffectEvidenceSynthesisSampleSize? sampleSize,
       List<EffectEvidenceSynthesisResultsByExposure?>? resultsByExposure,
       List<EffectEvidenceSynthesisEffectEstimate?>? effectEstimate,
@@ -221,10 +221,10 @@ mixin _$EffectEvidenceSynthesis {
   List<RelatedArtifact?>? get relatedArtifact;
   CodeableConcept? get synthesisType;
   CodeableConcept? get studyType;
-  Reference? get population;
-  Reference? get exposure;
-  Reference? get exposureAlternative;
-  Reference? get outcome;
+  Reference get population;
+  Reference get exposure;
+  Reference get exposureAlternative;
+  Reference get outcome;
   EffectEvidenceSynthesisSampleSize? get sampleSize;
   List<EffectEvidenceSynthesisResultsByExposure?>? get resultsByExposure;
   List<EffectEvidenceSynthesisEffectEstimate?>? get effectEstimate;
@@ -304,10 +304,10 @@ abstract class $EffectEvidenceSynthesisCopyWith<$Res> {
       List<RelatedArtifact?>? relatedArtifact,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
-      Reference? population,
-      Reference? exposure,
-      Reference? exposureAlternative,
-      Reference? outcome,
+      Reference population,
+      Reference exposure,
+      Reference exposureAlternative,
+      Reference outcome,
       EffectEvidenceSynthesisSampleSize? sampleSize,
       List<EffectEvidenceSynthesisResultsByExposure?>? resultsByExposure,
       List<EffectEvidenceSynthesisEffectEstimate?>? effectEstimate,
@@ -331,10 +331,10 @@ abstract class $EffectEvidenceSynthesisCopyWith<$Res> {
   $PeriodCopyWith<$Res>? get effectivePeriod;
   $CodeableConceptCopyWith<$Res>? get synthesisType;
   $CodeableConceptCopyWith<$Res>? get studyType;
-  $ReferenceCopyWith<$Res>? get population;
-  $ReferenceCopyWith<$Res>? get exposure;
-  $ReferenceCopyWith<$Res>? get exposureAlternative;
-  $ReferenceCopyWith<$Res>? get outcome;
+  $ReferenceCopyWith<$Res> get population;
+  $ReferenceCopyWith<$Res> get exposure;
+  $ReferenceCopyWith<$Res> get exposureAlternative;
+  $ReferenceCopyWith<$Res> get outcome;
   $EffectEvidenceSynthesisSampleSizeCopyWith<$Res>? get sampleSize;
 }
 
@@ -517,12 +517,12 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
           ? _value.studyType
           : studyType as CodeableConcept?,
       population:
-          population == freezed ? _value.population : population as Reference?,
-      exposure: exposure == freezed ? _value.exposure : exposure as Reference?,
+          population == freezed ? _value.population : population as Reference,
+      exposure: exposure == freezed ? _value.exposure : exposure as Reference,
       exposureAlternative: exposureAlternative == freezed
           ? _value.exposureAlternative
-          : exposureAlternative as Reference?,
-      outcome: outcome == freezed ? _value.outcome : outcome as Reference?,
+          : exposureAlternative as Reference,
+      outcome: outcome == freezed ? _value.outcome : outcome as Reference,
       sampleSize: sampleSize == freezed
           ? _value.sampleSize
           : sampleSize as EffectEvidenceSynthesisSampleSize?,
@@ -738,45 +738,29 @@ class _$EffectEvidenceSynthesisCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get population {
-    if (_value.population == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.population!, (value) {
+  $ReferenceCopyWith<$Res> get population {
+    return $ReferenceCopyWith<$Res>(_value.population, (value) {
       return _then(_value.copyWith(population: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get exposure {
-    if (_value.exposure == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.exposure!, (value) {
+  $ReferenceCopyWith<$Res> get exposure {
+    return $ReferenceCopyWith<$Res>(_value.exposure, (value) {
       return _then(_value.copyWith(exposure: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get exposureAlternative {
-    if (_value.exposureAlternative == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.exposureAlternative!, (value) {
+  $ReferenceCopyWith<$Res> get exposureAlternative {
+    return $ReferenceCopyWith<$Res>(_value.exposureAlternative, (value) {
       return _then(_value.copyWith(exposureAlternative: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get outcome {
-    if (_value.outcome == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.outcome!, (value) {
+  $ReferenceCopyWith<$Res> get outcome {
+    return $ReferenceCopyWith<$Res>(_value.outcome, (value) {
       return _then(_value.copyWith(outcome: value));
     });
   }
@@ -865,10 +849,10 @@ abstract class _$EffectEvidenceSynthesisCopyWith<$Res>
       List<RelatedArtifact?>? relatedArtifact,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
-      Reference? population,
-      Reference? exposure,
-      Reference? exposureAlternative,
-      Reference? outcome,
+      Reference population,
+      Reference exposure,
+      Reference exposureAlternative,
+      Reference outcome,
       EffectEvidenceSynthesisSampleSize? sampleSize,
       List<EffectEvidenceSynthesisResultsByExposure?>? resultsByExposure,
       List<EffectEvidenceSynthesisEffectEstimate?>? effectEstimate,
@@ -911,13 +895,13 @@ abstract class _$EffectEvidenceSynthesisCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get studyType;
   @override
-  $ReferenceCopyWith<$Res>? get population;
+  $ReferenceCopyWith<$Res> get population;
   @override
-  $ReferenceCopyWith<$Res>? get exposure;
+  $ReferenceCopyWith<$Res> get exposure;
   @override
-  $ReferenceCopyWith<$Res>? get exposureAlternative;
+  $ReferenceCopyWith<$Res> get exposureAlternative;
   @override
-  $ReferenceCopyWith<$Res>? get outcome;
+  $ReferenceCopyWith<$Res> get outcome;
   @override
   $EffectEvidenceSynthesisSampleSizeCopyWith<$Res>? get sampleSize;
 }
@@ -1104,12 +1088,12 @@ class __$EffectEvidenceSynthesisCopyWithImpl<$Res>
           ? _value.studyType
           : studyType as CodeableConcept?,
       population:
-          population == freezed ? _value.population : population as Reference?,
-      exposure: exposure == freezed ? _value.exposure : exposure as Reference?,
+          population == freezed ? _value.population : population as Reference,
+      exposure: exposure == freezed ? _value.exposure : exposure as Reference,
       exposureAlternative: exposureAlternative == freezed
           ? _value.exposureAlternative
-          : exposureAlternative as Reference?,
-      outcome: outcome == freezed ? _value.outcome : outcome as Reference?,
+          : exposureAlternative as Reference,
+      outcome: outcome == freezed ? _value.outcome : outcome as Reference,
       sampleSize: sampleSize == freezed
           ? _value.sampleSize
           : sampleSize as EffectEvidenceSynthesisSampleSize?,
@@ -1319,13 +1303,13 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   @override
   final CodeableConcept? studyType;
   @override
-  final Reference? population;
+  final Reference population;
   @override
-  final Reference? exposure;
+  final Reference exposure;
   @override
-  final Reference? exposureAlternative;
+  final Reference exposureAlternative;
   @override
-  final Reference? outcome;
+  final Reference outcome;
   @override
   final EffectEvidenceSynthesisSampleSize? sampleSize;
   @override
@@ -1581,10 +1565,10 @@ abstract class _EffectEvidenceSynthesis extends EffectEvidenceSynthesis {
           List<RelatedArtifact?>? relatedArtifact,
           CodeableConcept? synthesisType,
           CodeableConcept? studyType,
-          required Reference? population,
-          required Reference? exposure,
-          required Reference? exposureAlternative,
-          required Reference? outcome,
+          required Reference population,
+          required Reference exposure,
+          required Reference exposureAlternative,
+          required Reference outcome,
           EffectEvidenceSynthesisSampleSize? sampleSize,
           List<EffectEvidenceSynthesisResultsByExposure?>? resultsByExposure,
           List<EffectEvidenceSynthesisEffectEstimate?>? effectEstimate,
@@ -1705,13 +1689,13 @@ abstract class _EffectEvidenceSynthesis extends EffectEvidenceSynthesis {
   @override
   CodeableConcept? get studyType;
   @override
-  Reference? get population;
+  Reference get population;
   @override
-  Reference? get exposure;
+  Reference get exposure;
   @override
-  Reference? get exposureAlternative;
+  Reference get exposureAlternative;
   @override
-  Reference? get outcome;
+  Reference get outcome;
   @override
   EffectEvidenceSynthesisSampleSize? get sampleSize;
   @override
@@ -2171,7 +2155,7 @@ class _$EffectEvidenceSynthesisResultsByExposureTearOff {
       @JsonKey(name: '_exposureState')
           Element? exposureStateElement,
       CodeableConcept? variantState,
-      required Reference? riskEvidenceSynthesis}) {
+      required Reference riskEvidenceSynthesis}) {
     return _EffectEvidenceSynthesisResultsByExposure(
       id: id,
       extension_: extension_,
@@ -2210,7 +2194,7 @@ mixin _$EffectEvidenceSynthesisResultsByExposure {
   @JsonKey(name: '_exposureState')
   Element? get exposureStateElement;
   CodeableConcept? get variantState;
-  Reference? get riskEvidenceSynthesis;
+  Reference get riskEvidenceSynthesis;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2239,12 +2223,12 @@ abstract class $EffectEvidenceSynthesisResultsByExposureCopyWith<$Res> {
       @JsonKey(name: '_exposureState')
           Element? exposureStateElement,
       CodeableConcept? variantState,
-      Reference? riskEvidenceSynthesis});
+      Reference riskEvidenceSynthesis});
 
   $ElementCopyWith<$Res>? get descriptionElement;
   $ElementCopyWith<$Res>? get exposureStateElement;
   $CodeableConceptCopyWith<$Res>? get variantState;
-  $ReferenceCopyWith<$Res>? get riskEvidenceSynthesis;
+  $ReferenceCopyWith<$Res> get riskEvidenceSynthesis;
 }
 
 /// @nodoc
@@ -2294,7 +2278,7 @@ class _$EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>
           : variantState as CodeableConcept?,
       riskEvidenceSynthesis: riskEvidenceSynthesis == freezed
           ? _value.riskEvidenceSynthesis
-          : riskEvidenceSynthesis as Reference?,
+          : riskEvidenceSynthesis as Reference,
     ));
   }
 
@@ -2332,12 +2316,8 @@ class _$EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get riskEvidenceSynthesis {
-    if (_value.riskEvidenceSynthesis == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.riskEvidenceSynthesis!, (value) {
+  $ReferenceCopyWith<$Res> get riskEvidenceSynthesis {
+    return $ReferenceCopyWith<$Res>(_value.riskEvidenceSynthesis, (value) {
       return _then(_value.copyWith(riskEvidenceSynthesis: value));
     });
   }
@@ -2366,7 +2346,7 @@ abstract class _$EffectEvidenceSynthesisResultsByExposureCopyWith<$Res>
       @JsonKey(name: '_exposureState')
           Element? exposureStateElement,
       CodeableConcept? variantState,
-      Reference? riskEvidenceSynthesis});
+      Reference riskEvidenceSynthesis});
 
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -2375,7 +2355,7 @@ abstract class _$EffectEvidenceSynthesisResultsByExposureCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get variantState;
   @override
-  $ReferenceCopyWith<$Res>? get riskEvidenceSynthesis;
+  $ReferenceCopyWith<$Res> get riskEvidenceSynthesis;
 }
 
 /// @nodoc
@@ -2429,7 +2409,7 @@ class __$EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>
           : variantState as CodeableConcept?,
       riskEvidenceSynthesis: riskEvidenceSynthesis == freezed
           ? _value.riskEvidenceSynthesis
-          : riskEvidenceSynthesis as Reference?,
+          : riskEvidenceSynthesis as Reference,
     ));
   }
 }
@@ -2484,7 +2464,7 @@ class _$_EffectEvidenceSynthesisResultsByExposure
   @override
   final CodeableConcept? variantState;
   @override
-  final Reference? riskEvidenceSynthesis;
+  final Reference riskEvidenceSynthesis;
 
   @override
   String toString() {
@@ -2567,7 +2547,7 @@ abstract class _EffectEvidenceSynthesisResultsByExposure
       @JsonKey(name: '_exposureState')
           Element? exposureStateElement,
       CodeableConcept? variantState,
-      required Reference?
+      required Reference
           riskEvidenceSynthesis}) = _$_EffectEvidenceSynthesisResultsByExposure;
 
   factory _EffectEvidenceSynthesisResultsByExposure.fromJson(
@@ -2597,7 +2577,7 @@ abstract class _EffectEvidenceSynthesisResultsByExposure
   @override
   CodeableConcept? get variantState;
   @override
-  Reference? get riskEvidenceSynthesis;
+  Reference get riskEvidenceSynthesis;
   @override
   @JsonKey(ignore: true)
   _$EffectEvidenceSynthesisResultsByExposureCopyWith<
@@ -4140,7 +4120,7 @@ class _$EvidenceTearOff {
       List<ContactDetail?>? reviewer,
       List<ContactDetail?>? endorser,
       List<RelatedArtifact?>? relatedArtifact,
-      required Reference? exposureBackground,
+      required Reference exposureBackground,
       List<Reference?>? exposureVariant,
       List<Reference?>? outcome}) {
     return _Evidence(
@@ -4276,7 +4256,7 @@ mixin _$Evidence {
   List<ContactDetail?>? get reviewer;
   List<ContactDetail?>? get endorser;
   List<RelatedArtifact?>? get relatedArtifact;
-  Reference? get exposureBackground;
+  Reference get exposureBackground;
   List<Reference?>? get exposureVariant;
   List<Reference?>? get outcome;
 
@@ -4357,7 +4337,7 @@ abstract class $EvidenceCopyWith<$Res> {
       List<ContactDetail?>? reviewer,
       List<ContactDetail?>? endorser,
       List<RelatedArtifact?>? relatedArtifact,
-      Reference? exposureBackground,
+      Reference exposureBackground,
       List<Reference?>? exposureVariant,
       List<Reference?>? outcome});
 
@@ -4379,7 +4359,7 @@ abstract class $EvidenceCopyWith<$Res> {
   $ElementCopyWith<$Res>? get approvalDateElement;
   $ElementCopyWith<$Res>? get lastReviewDateElement;
   $PeriodCopyWith<$Res>? get effectivePeriod;
-  $ReferenceCopyWith<$Res>? get exposureBackground;
+  $ReferenceCopyWith<$Res> get exposureBackground;
 }
 
 /// @nodoc
@@ -4559,7 +4539,7 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
           : relatedArtifact as List<RelatedArtifact?>?,
       exposureBackground: exposureBackground == freezed
           ? _value.exposureBackground
-          : exposureBackground as Reference?,
+          : exposureBackground as Reference,
       exposureVariant: exposureVariant == freezed
           ? _value.exposureVariant
           : exposureVariant as List<Reference?>?,
@@ -4767,12 +4747,8 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get exposureBackground {
-    if (_value.exposureBackground == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.exposureBackground!, (value) {
+  $ReferenceCopyWith<$Res> get exposureBackground {
+    return $ReferenceCopyWith<$Res>(_value.exposureBackground, (value) {
       return _then(_value.copyWith(exposureBackground: value));
     });
   }
@@ -4851,7 +4827,7 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       List<ContactDetail?>? reviewer,
       List<ContactDetail?>? endorser,
       List<RelatedArtifact?>? relatedArtifact,
-      Reference? exposureBackground,
+      Reference exposureBackground,
       List<Reference?>? exposureVariant,
       List<Reference?>? outcome});
 
@@ -4892,7 +4868,7 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
   @override
   $PeriodCopyWith<$Res>? get effectivePeriod;
   @override
-  $ReferenceCopyWith<$Res>? get exposureBackground;
+  $ReferenceCopyWith<$Res> get exposureBackground;
 }
 
 /// @nodoc
@@ -5073,7 +5049,7 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
           : relatedArtifact as List<RelatedArtifact?>?,
       exposureBackground: exposureBackground == freezed
           ? _value.exposureBackground
-          : exposureBackground as Reference?,
+          : exposureBackground as Reference,
       exposureVariant: exposureVariant == freezed
           ? _value.exposureVariant
           : exposureVariant as List<Reference?>?,
@@ -5280,7 +5256,7 @@ class _$_Evidence extends _Evidence {
   @override
   final List<RelatedArtifact?>? relatedArtifact;
   @override
-  final Reference? exposureBackground;
+  final Reference exposureBackground;
   @override
   final List<Reference?>? exposureVariant;
   @override
@@ -5529,7 +5505,7 @@ abstract class _Evidence extends Evidence {
       List<ContactDetail?>? reviewer,
       List<ContactDetail?>? endorser,
       List<RelatedArtifact?>? relatedArtifact,
-      required Reference? exposureBackground,
+      required Reference exposureBackground,
       List<Reference?>? exposureVariant,
       List<Reference?>? outcome}) = _$_Evidence;
 
@@ -5652,7 +5628,7 @@ abstract class _Evidence extends Evidence {
   @override
   List<RelatedArtifact?>? get relatedArtifact;
   @override
-  Reference? get exposureBackground;
+  Reference get exposureBackground;
   @override
   List<Reference?>? get exposureVariant;
   @override
@@ -5742,7 +5718,7 @@ class _$EvidenceVariableTearOff {
           EvidenceVariableType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      required List<EvidenceVariableCharacteristic?>? characteristic}) {
+      required List<EvidenceVariableCharacteristic> characteristic}) {
     return _EvidenceVariable(
       resourceType: resourceType,
       id: id,
@@ -5880,7 +5856,7 @@ mixin _$EvidenceVariable {
   EvidenceVariableType? get type;
   @JsonKey(name: '_type')
   Element? get typeElement;
-  List<EvidenceVariableCharacteristic?>? get characteristic;
+  List<EvidenceVariableCharacteristic> get characteristic;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -5964,7 +5940,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
           EvidenceVariableType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      List<EvidenceVariableCharacteristic?>? characteristic});
+      List<EvidenceVariableCharacteristic> characteristic});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -6169,7 +6145,7 @@ class _$EvidenceVariableCopyWithImpl<$Res>
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
       characteristic: characteristic == freezed
           ? _value.characteristic
-          : characteristic as List<EvidenceVariableCharacteristic?>?,
+          : characteristic as List<EvidenceVariableCharacteristic>,
     ));
   }
 
@@ -6462,7 +6438,7 @@ abstract class _$EvidenceVariableCopyWith<$Res>
           EvidenceVariableType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      List<EvidenceVariableCharacteristic?>? characteristic});
+      List<EvidenceVariableCharacteristic> characteristic});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -6688,7 +6664,7 @@ class __$EvidenceVariableCopyWithImpl<$Res>
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
       characteristic: characteristic == freezed
           ? _value.characteristic
-          : characteristic as List<EvidenceVariableCharacteristic?>?,
+          : characteristic as List<EvidenceVariableCharacteristic>,
     ));
   }
 }
@@ -6898,7 +6874,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @JsonKey(name: '_type')
   final Element? typeElement;
   @override
-  final List<EvidenceVariableCharacteristic?>? characteristic;
+  final List<EvidenceVariableCharacteristic> characteristic;
 
   @override
   String toString() {
@@ -7147,7 +7123,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
               EvidenceVariableType? type,
           @JsonKey(name: '_type')
               Element? typeElement,
-          required List<EvidenceVariableCharacteristic?>? characteristic}) =
+          required List<EvidenceVariableCharacteristic> characteristic}) =
       _$_EvidenceVariable;
 
   factory _EvidenceVariable.fromJson(Map<String, dynamic> json) =
@@ -7276,7 +7252,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
-  List<EvidenceVariableCharacteristic?>? get characteristic;
+  List<EvidenceVariableCharacteristic> get characteristic;
   @override
   @JsonKey(ignore: true)
   _$EvidenceVariableCopyWith<_EvidenceVariable> get copyWith;
@@ -8292,7 +8268,7 @@ class _$ResearchDefinitionTearOff {
       List<RelatedArtifact?>? relatedArtifact,
       @JsonKey(name: 'library')
           List<Canonical?>? library_,
-      required Reference? population,
+      required Reference population,
       Reference? exposure,
       Reference? exposureAlternative,
       Reference? outcome}) {
@@ -8455,7 +8431,7 @@ mixin _$ResearchDefinition {
   List<RelatedArtifact?>? get relatedArtifact;
   @JsonKey(name: 'library')
   List<Canonical?>? get library_;
-  Reference? get population;
+  Reference get population;
   Reference? get exposure;
   Reference? get exposureAlternative;
   Reference? get outcome;
@@ -8553,7 +8529,7 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
       List<RelatedArtifact?>? relatedArtifact,
       @JsonKey(name: 'library')
           List<Canonical?>? library_,
-      Reference? population,
+      Reference population,
       Reference? exposure,
       Reference? exposureAlternative,
       Reference? outcome});
@@ -8581,7 +8557,7 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
   $ElementCopyWith<$Res>? get approvalDateElement;
   $ElementCopyWith<$Res>? get lastReviewDateElement;
   $PeriodCopyWith<$Res>? get effectivePeriod;
-  $ReferenceCopyWith<$Res>? get population;
+  $ReferenceCopyWith<$Res> get population;
   $ReferenceCopyWith<$Res>? get exposure;
   $ReferenceCopyWith<$Res>? get exposureAlternative;
   $ReferenceCopyWith<$Res>? get outcome;
@@ -8802,7 +8778,7 @@ class _$ResearchDefinitionCopyWithImpl<$Res>
       library_:
           library_ == freezed ? _value.library_ : library_ as List<Canonical?>?,
       population:
-          population == freezed ? _value.population : population as Reference?,
+          population == freezed ? _value.population : population as Reference,
       exposure: exposure == freezed ? _value.exposure : exposure as Reference?,
       exposureAlternative: exposureAlternative == freezed
           ? _value.exposureAlternative
@@ -9066,12 +9042,8 @@ class _$ResearchDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get population {
-    if (_value.population == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.population!, (value) {
+  $ReferenceCopyWith<$Res> get population {
+    return $ReferenceCopyWith<$Res>(_value.population, (value) {
       return _then(_value.copyWith(population: value));
     });
   }
@@ -9200,7 +9172,7 @@ abstract class _$ResearchDefinitionCopyWith<$Res>
       List<RelatedArtifact?>? relatedArtifact,
       @JsonKey(name: 'library')
           List<Canonical?>? library_,
-      Reference? population,
+      Reference population,
       Reference? exposure,
       Reference? exposureAlternative,
       Reference? outcome});
@@ -9252,7 +9224,7 @@ abstract class _$ResearchDefinitionCopyWith<$Res>
   @override
   $PeriodCopyWith<$Res>? get effectivePeriod;
   @override
-  $ReferenceCopyWith<$Res>? get population;
+  $ReferenceCopyWith<$Res> get population;
   @override
   $ReferenceCopyWith<$Res>? get exposure;
   @override
@@ -9478,7 +9450,7 @@ class __$ResearchDefinitionCopyWithImpl<$Res>
       library_:
           library_ == freezed ? _value.library_ : library_ as List<Canonical?>?,
       population:
-          population == freezed ? _value.population : population as Reference?,
+          population == freezed ? _value.population : population as Reference,
       exposure: exposure == freezed ? _value.exposure : exposure as Reference?,
       exposureAlternative: exposureAlternative == freezed
           ? _value.exposureAlternative
@@ -9726,7 +9698,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   @JsonKey(name: 'library')
   final List<Canonical?>? library_;
   @override
-  final Reference? population;
+  final Reference population;
   @override
   final Reference? exposure;
   @override
@@ -10014,7 +9986,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
       List<RelatedArtifact?>? relatedArtifact,
       @JsonKey(name: 'library')
           List<Canonical?>? library_,
-      required Reference? population,
+      required Reference population,
       Reference? exposure,
       Reference? exposureAlternative,
       Reference? outcome}) = _$_ResearchDefinition;
@@ -10164,7 +10136,7 @@ abstract class _ResearchDefinition extends ResearchDefinition {
   @JsonKey(name: 'library')
   List<Canonical?>? get library_;
   @override
-  Reference? get population;
+  Reference get population;
   @override
   Reference? get exposure;
   @override
@@ -10277,8 +10249,7 @@ class _$ResearchElementDefinitionTearOff {
           ResearchElementDefinitionVariableType? variableType,
       @JsonKey(name: '_variableType')
           Element? variableTypeElement,
-      required List<ResearchElementDefinitionCharacteristic?>?
-          characteristic}) {
+      required List<ResearchElementDefinitionCharacteristic> characteristic}) {
     return _ResearchElementDefinition(
       resourceType: resourceType,
       id: id,
@@ -10447,7 +10418,7 @@ mixin _$ResearchElementDefinition {
   ResearchElementDefinitionVariableType? get variableType;
   @JsonKey(name: '_variableType')
   Element? get variableTypeElement;
-  List<ResearchElementDefinitionCharacteristic?>? get characteristic;
+  List<ResearchElementDefinitionCharacteristic> get characteristic;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -10550,7 +10521,7 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
           ResearchElementDefinitionVariableType? variableType,
       @JsonKey(name: '_variableType')
           Element? variableTypeElement,
-      List<ResearchElementDefinitionCharacteristic?>? characteristic});
+      List<ResearchElementDefinitionCharacteristic> characteristic});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -10807,7 +10778,7 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res>
           : variableTypeElement as Element?,
       characteristic: characteristic == freezed
           ? _value.characteristic
-          : characteristic as List<ResearchElementDefinitionCharacteristic?>?,
+          : characteristic as List<ResearchElementDefinitionCharacteristic>,
     ));
   }
 
@@ -11186,7 +11157,7 @@ abstract class _$ResearchElementDefinitionCopyWith<$Res>
           ResearchElementDefinitionVariableType? variableType,
       @JsonKey(name: '_variableType')
           Element? variableTypeElement,
-      List<ResearchElementDefinitionCharacteristic?>? characteristic});
+      List<ResearchElementDefinitionCharacteristic> characteristic});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -11471,7 +11442,7 @@ class __$ResearchElementDefinitionCopyWithImpl<$Res>
           : variableTypeElement as Element?,
       characteristic: characteristic == freezed
           ? _value.characteristic
-          : characteristic as List<ResearchElementDefinitionCharacteristic?>?,
+          : characteristic as List<ResearchElementDefinitionCharacteristic>,
     ));
   }
 }
@@ -11731,7 +11702,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   @JsonKey(name: '_variableType')
   final Element? variableTypeElement;
   @override
-  final List<ResearchElementDefinitionCharacteristic?>? characteristic;
+  final List<ResearchElementDefinitionCharacteristic> characteristic;
 
   @override
   String toString() {
@@ -12025,7 +11996,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
           ResearchElementDefinitionVariableType? variableType,
       @JsonKey(name: '_variableType')
           Element? variableTypeElement,
-      required List<ResearchElementDefinitionCharacteristic?>?
+      required List<ResearchElementDefinitionCharacteristic>
           characteristic}) = _$_ResearchElementDefinition;
 
   factory _ResearchElementDefinition.fromJson(Map<String, dynamic> json) =
@@ -12185,7 +12156,7 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   @JsonKey(name: '_variableType')
   Element? get variableTypeElement;
   @override
-  List<ResearchElementDefinitionCharacteristic?>? get characteristic;
+  List<ResearchElementDefinitionCharacteristic> get characteristic;
   @override
   @JsonKey(ignore: true)
   _$ResearchElementDefinitionCopyWith<_ResearchElementDefinition> get copyWith;
@@ -13575,9 +13546,9 @@ class _$RiskEvidenceSynthesisTearOff {
       List<RelatedArtifact?>? relatedArtifact,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
-      required Reference? population,
+      required Reference population,
       Reference? exposure,
-      required Reference? outcome,
+      required Reference outcome,
       RiskEvidenceSynthesisSampleSize? sampleSize,
       RiskEvidenceSynthesisRiskEstimate? riskEstimate,
       List<RiskEvidenceSynthesisCertainty?>? certainty}) {
@@ -13711,9 +13682,9 @@ mixin _$RiskEvidenceSynthesis {
   List<RelatedArtifact?>? get relatedArtifact;
   CodeableConcept? get synthesisType;
   CodeableConcept? get studyType;
-  Reference? get population;
+  Reference get population;
   Reference? get exposure;
-  Reference? get outcome;
+  Reference get outcome;
   RiskEvidenceSynthesisSampleSize? get sampleSize;
   RiskEvidenceSynthesisRiskEstimate? get riskEstimate;
   List<RiskEvidenceSynthesisCertainty?>? get certainty;
@@ -13792,9 +13763,9 @@ abstract class $RiskEvidenceSynthesisCopyWith<$Res> {
       List<RelatedArtifact?>? relatedArtifact,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
-      Reference? population,
+      Reference population,
       Reference? exposure,
-      Reference? outcome,
+      Reference outcome,
       RiskEvidenceSynthesisSampleSize? sampleSize,
       RiskEvidenceSynthesisRiskEstimate? riskEstimate,
       List<RiskEvidenceSynthesisCertainty?>? certainty});
@@ -13817,9 +13788,9 @@ abstract class $RiskEvidenceSynthesisCopyWith<$Res> {
   $PeriodCopyWith<$Res>? get effectivePeriod;
   $CodeableConceptCopyWith<$Res>? get synthesisType;
   $CodeableConceptCopyWith<$Res>? get studyType;
-  $ReferenceCopyWith<$Res>? get population;
+  $ReferenceCopyWith<$Res> get population;
   $ReferenceCopyWith<$Res>? get exposure;
-  $ReferenceCopyWith<$Res>? get outcome;
+  $ReferenceCopyWith<$Res> get outcome;
   $RiskEvidenceSynthesisSampleSizeCopyWith<$Res>? get sampleSize;
   $RiskEvidenceSynthesisRiskEstimateCopyWith<$Res>? get riskEstimate;
 }
@@ -14001,9 +13972,9 @@ class _$RiskEvidenceSynthesisCopyWithImpl<$Res>
           ? _value.studyType
           : studyType as CodeableConcept?,
       population:
-          population == freezed ? _value.population : population as Reference?,
+          population == freezed ? _value.population : population as Reference,
       exposure: exposure == freezed ? _value.exposure : exposure as Reference?,
-      outcome: outcome == freezed ? _value.outcome : outcome as Reference?,
+      outcome: outcome == freezed ? _value.outcome : outcome as Reference,
       sampleSize: sampleSize == freezed
           ? _value.sampleSize
           : sampleSize as RiskEvidenceSynthesisSampleSize?,
@@ -14215,12 +14186,8 @@ class _$RiskEvidenceSynthesisCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get population {
-    if (_value.population == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.population!, (value) {
+  $ReferenceCopyWith<$Res> get population {
+    return $ReferenceCopyWith<$Res>(_value.population, (value) {
       return _then(_value.copyWith(population: value));
     });
   }
@@ -14237,12 +14204,8 @@ class _$RiskEvidenceSynthesisCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get outcome {
-    if (_value.outcome == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.outcome!, (value) {
+  $ReferenceCopyWith<$Res> get outcome {
+    return $ReferenceCopyWith<$Res>(_value.outcome, (value) {
       return _then(_value.copyWith(outcome: value));
     });
   }
@@ -14343,9 +14306,9 @@ abstract class _$RiskEvidenceSynthesisCopyWith<$Res>
       List<RelatedArtifact?>? relatedArtifact,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
-      Reference? population,
+      Reference population,
       Reference? exposure,
-      Reference? outcome,
+      Reference outcome,
       RiskEvidenceSynthesisSampleSize? sampleSize,
       RiskEvidenceSynthesisRiskEstimate? riskEstimate,
       List<RiskEvidenceSynthesisCertainty?>? certainty});
@@ -14387,11 +14350,11 @@ abstract class _$RiskEvidenceSynthesisCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get studyType;
   @override
-  $ReferenceCopyWith<$Res>? get population;
+  $ReferenceCopyWith<$Res> get population;
   @override
   $ReferenceCopyWith<$Res>? get exposure;
   @override
-  $ReferenceCopyWith<$Res>? get outcome;
+  $ReferenceCopyWith<$Res> get outcome;
   @override
   $RiskEvidenceSynthesisSampleSizeCopyWith<$Res>? get sampleSize;
   @override
@@ -14577,9 +14540,9 @@ class __$RiskEvidenceSynthesisCopyWithImpl<$Res>
           ? _value.studyType
           : studyType as CodeableConcept?,
       population:
-          population == freezed ? _value.population : population as Reference?,
+          population == freezed ? _value.population : population as Reference,
       exposure: exposure == freezed ? _value.exposure : exposure as Reference?,
-      outcome: outcome == freezed ? _value.outcome : outcome as Reference?,
+      outcome: outcome == freezed ? _value.outcome : outcome as Reference,
       sampleSize: sampleSize == freezed
           ? _value.sampleSize
           : sampleSize as RiskEvidenceSynthesisSampleSize?,
@@ -14783,11 +14746,11 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
   @override
   final CodeableConcept? studyType;
   @override
-  final Reference? population;
+  final Reference population;
   @override
   final Reference? exposure;
   @override
-  final Reference? outcome;
+  final Reference outcome;
   @override
   final RiskEvidenceSynthesisSampleSize? sampleSize;
   @override
@@ -15037,9 +15000,9 @@ abstract class _RiskEvidenceSynthesis extends RiskEvidenceSynthesis {
           List<RelatedArtifact?>? relatedArtifact,
           CodeableConcept? synthesisType,
           CodeableConcept? studyType,
-          required Reference? population,
+          required Reference population,
           Reference? exposure,
-          required Reference? outcome,
+          required Reference outcome,
           RiskEvidenceSynthesisSampleSize? sampleSize,
           RiskEvidenceSynthesisRiskEstimate? riskEstimate,
           List<RiskEvidenceSynthesisCertainty?>? certainty}) =
@@ -15159,11 +15122,11 @@ abstract class _RiskEvidenceSynthesis extends RiskEvidenceSynthesis {
   @override
   CodeableConcept? get studyType;
   @override
-  Reference? get population;
+  Reference get population;
   @override
   Reference? get exposure;
   @override
-  Reference? get outcome;
+  Reference get outcome;
   @override
   RiskEvidenceSynthesisSampleSize? get sampleSize;
   @override

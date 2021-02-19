@@ -347,9 +347,7 @@ _$_EncounterStatusHistory _$_$_EncounterStatusHistoryFromJson(
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    period: json['period'] == null
-        ? null
-        : Period.fromJson(json['period'] as Map<String, dynamic>),
+    period: Period.fromJson(json['period'] as Map<String, dynamic>),
   );
 }
 
@@ -370,7 +368,7 @@ Map<String, dynamic> _$_$_EncounterStatusHistoryToJson(
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   val['status'] = _$EncounterHistoryStatusEnumMap[instance.status];
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('period', instance.period?.toJson());
+  val['period'] = instance.period.toJson();
   return val;
 }
 
@@ -545,9 +543,7 @@ _$_EncounterLocation _$_$_EncounterLocationFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    location: json['location'] == null
-        ? null
-        : Reference.fromJson(json['location'] as Map<String, dynamic>),
+    location: Reference.fromJson(json['location'] as Map<String, dynamic>),
     status: _$enumDecodeNullable(
         _$EncounterLocationStatusEnumMap, json['status'],
         unknownValue: EncounterLocationStatus.unknown),
@@ -575,7 +571,7 @@ Map<String, dynamic> _$_$_EncounterLocationToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('location', instance.location?.toJson());
+  val['location'] = instance.location.toJson();
   writeNotNull('status', _$EncounterLocationStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('period', instance.period?.toJson());
@@ -648,9 +644,7 @@ _$_EpisodeOfCare _$_$_EpisodeOfCareFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
-    patient: json['patient'] == null
-        ? null
-        : Reference.fromJson(json['patient'] as Map<String, dynamic>),
+    patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
     managingOrganization: json['managingOrganization'] == null
         ? null
         : Reference.fromJson(
@@ -706,7 +700,7 @@ Map<String, dynamic> _$_$_EpisodeOfCareToJson(_$_EpisodeOfCare instance) {
   writeNotNull('type', instance.type?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'condition', instance.condition?.map((e) => e?.toJson()).toList());
-  writeNotNull('patient', instance.patient?.toJson());
+  val['patient'] = instance.patient.toJson();
   writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('referralRequest',
@@ -746,9 +740,7 @@ _$_EpisodeOfCareStatusHistory _$_$_EpisodeOfCareStatusHistoryFromJson(
     statusElement: json['_status'] == null
         ? null
         : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    period: json['period'] == null
-        ? null
-        : Period.fromJson(json['period'] as Map<String, dynamic>),
+    period: Period.fromJson(json['period'] as Map<String, dynamic>),
   );
 }
 
@@ -769,7 +761,7 @@ Map<String, dynamic> _$_$_EpisodeOfCareStatusHistoryToJson(
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   val['status'] = _$EpisodeOfCareHistoryStatusEnumMap[instance.status];
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('period', instance.period?.toJson());
+  val['period'] = instance.period.toJson();
   return val;
 }
 
@@ -1077,18 +1069,14 @@ _$_Flag _$_$_FlagFromJson(Map<String, dynamic> json) {
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
-    subject: json['subject'] == null
-        ? null
-        : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+    subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
     encounter: json['encounter'] == null
         ? null
         : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
     author: json['author'] == null
         ? null
         : Reference.fromJson(json['author'] as Map<String, dynamic>),
-    code: json['code'] == null
-        ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
   );
 }
 
@@ -1122,10 +1110,10 @@ Map<String, dynamic> _$_$_FlagToJson(_$_Flag instance) {
   val['status'] = _$FlagStatusEnumMap[instance.status];
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('period', instance.period?.toJson());
-  writeNotNull('subject', instance.subject?.toJson());
+  val['subject'] = instance.subject.toJson();
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull('author', instance.author?.toJson());
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   return val;
 }
 

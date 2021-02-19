@@ -5148,7 +5148,7 @@ class _$DeviceSpecializationTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? systemType,
+      required CodeableConcept systemType,
       String? version,
       @JsonKey(name: '_version') Element? versionElement}) {
     return _DeviceSpecialization(
@@ -5175,7 +5175,7 @@ mixin _$DeviceSpecialization {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get systemType;
+  CodeableConcept get systemType;
   String? get version;
   @JsonKey(name: '_version')
   Element? get versionElement;
@@ -5194,11 +5194,11 @@ abstract class $DeviceSpecializationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? systemType,
+      CodeableConcept systemType,
       String? version,
       @JsonKey(name: '_version') Element? versionElement});
 
-  $CodeableConceptCopyWith<$Res>? get systemType;
+  $CodeableConceptCopyWith<$Res> get systemType;
   $ElementCopyWith<$Res>? get versionElement;
 }
 
@@ -5230,7 +5230,7 @@ class _$DeviceSpecializationCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       systemType: systemType == freezed
           ? _value.systemType
-          : systemType as CodeableConcept?,
+          : systemType as CodeableConcept,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -5239,12 +5239,8 @@ class _$DeviceSpecializationCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get systemType {
-    if (_value.systemType == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.systemType!, (value) {
+  $CodeableConceptCopyWith<$Res> get systemType {
+    return $CodeableConceptCopyWith<$Res>(_value.systemType, (value) {
       return _then(_value.copyWith(systemType: value));
     });
   }
@@ -5272,12 +5268,12 @@ abstract class _$DeviceSpecializationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? systemType,
+      CodeableConcept systemType,
       String? version,
       @JsonKey(name: '_version') Element? versionElement});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get systemType;
+  $CodeableConceptCopyWith<$Res> get systemType;
   @override
   $ElementCopyWith<$Res>? get versionElement;
 }
@@ -5312,7 +5308,7 @@ class __$DeviceSpecializationCopyWithImpl<$Res>
           : modifierExtension as List<FhirExtension?>?,
       systemType: systemType == freezed
           ? _value.systemType
-          : systemType as CodeableConcept?,
+          : systemType as CodeableConcept,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -5345,7 +5341,7 @@ class _$_DeviceSpecialization extends _DeviceSpecialization {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? systemType;
+  final CodeableConcept systemType;
   @override
   final String? version;
   @override
@@ -5408,7 +5404,7 @@ abstract class _DeviceSpecialization extends DeviceSpecialization {
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required CodeableConcept? systemType,
+          required CodeableConcept systemType,
           String? version,
           @JsonKey(name: '_version') Element? versionElement}) =
       _$_DeviceSpecialization;
@@ -5424,7 +5420,7 @@ abstract class _DeviceSpecialization extends DeviceSpecialization {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get systemType;
+  CodeableConcept get systemType;
   @override
   String? get version;
   @override
@@ -5773,7 +5769,7 @@ class _$DevicePropertyTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       List<Quantity?>? valueQuantity,
       List<CodeableConcept?>? valueCode}) {
     return _DeviceProperty(
@@ -5800,7 +5796,7 @@ mixin _$DeviceProperty {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   List<Quantity?>? get valueQuantity;
   List<CodeableConcept?>? get valueCode;
 
@@ -5818,11 +5814,11 @@ abstract class $DevicePropertyCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       List<Quantity?>? valueQuantity,
       List<CodeableConcept?>? valueCode});
 
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 /// @nodoc
@@ -5851,7 +5847,7 @@ class _$DevicePropertyCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
           : valueQuantity as List<Quantity?>?,
@@ -5862,12 +5858,8 @@ class _$DevicePropertyCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -5884,12 +5876,12 @@ abstract class _$DevicePropertyCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       List<Quantity?>? valueQuantity,
       List<CodeableConcept?>? valueCode});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
 }
 
 /// @nodoc
@@ -5920,7 +5912,7 @@ class __$DevicePropertyCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
           : valueQuantity as List<Quantity?>?,
@@ -5955,7 +5947,7 @@ class _$_DeviceProperty extends _DeviceProperty {
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final List<Quantity?>? valueQuantity;
   @override
@@ -6015,7 +6007,7 @@ abstract class _DeviceProperty extends DeviceProperty {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       List<Quantity?>? valueQuantity,
       List<CodeableConcept?>? valueCode}) = _$_DeviceProperty;
 
@@ -6030,7 +6022,7 @@ abstract class _DeviceProperty extends DeviceProperty {
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   List<Quantity?>? get valueQuantity;
   @override
@@ -6577,7 +6569,7 @@ class _$DeviceMetricTearOff {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       CodeableConcept? unit,
       Reference? source,
       Reference? parent,
@@ -6649,7 +6641,7 @@ mixin _$DeviceMetric {
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
   List<Identifier?>? get identifier;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   CodeableConcept? get unit;
   Reference? get source;
   Reference? get parent;
@@ -6695,7 +6687,7 @@ abstract class $DeviceMetricCopyWith<$Res> {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      CodeableConcept? type,
+      CodeableConcept type,
       CodeableConcept? unit,
       Reference? source,
       Reference? parent,
@@ -6718,7 +6710,7 @@ abstract class $DeviceMetricCopyWith<$Res> {
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res>? get unit;
   $ReferenceCopyWith<$Res>? get source;
   $ReferenceCopyWith<$Res>? get parent;
@@ -6792,7 +6784,7 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       unit: unit == freezed ? _value.unit : unit as CodeableConcept?,
       source: source == freezed ? _value.source : source as Reference?,
       parent: parent == freezed ? _value.parent : parent as Reference?,
@@ -6866,12 +6858,8 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -6978,7 +6966,7 @@ abstract class _$DeviceMetricCopyWith<$Res>
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      CodeableConcept? type,
+      CodeableConcept type,
       CodeableConcept? unit,
       Reference? source,
       Reference? parent,
@@ -7006,7 +6994,7 @@ abstract class _$DeviceMetricCopyWith<$Res>
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $CodeableConceptCopyWith<$Res>? get unit;
   @override
@@ -7089,7 +7077,7 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier as List<Identifier?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       unit: unit == freezed ? _value.unit : unit as CodeableConcept?,
       source: source == freezed ? _value.source : source as Reference?,
       parent: parent == freezed ? _value.parent : parent as Reference?,
@@ -7192,7 +7180,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   @override
   final List<Identifier?>? identifier;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final CodeableConcept? unit;
   @override
@@ -7356,7 +7344,7 @@ abstract class _DeviceMetric extends DeviceMetric {
           List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
       List<Identifier?>? identifier,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       CodeableConcept? unit,
       Reference? source,
       Reference? parent,
@@ -7407,7 +7395,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   @override
   List<Identifier?>? get identifier;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   CodeableConcept? get unit;
   @override
@@ -9220,7 +9208,7 @@ class _$NutritionProductProductCharacteristicTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      required CodeableConcept? type,
+      required CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -9262,7 +9250,7 @@ mixin _$NutritionProductProductCharacteristic {
   @JsonKey(name: 'extension')
   List<FhirExtension?>? get extension_;
   List<FhirExtension?>? get modifierExtension;
-  CodeableConcept? get type;
+  CodeableConcept get type;
   CodeableConcept? get valueCodeableConcept;
   String? get valueString;
   @JsonKey(name: '_valueString')
@@ -9292,7 +9280,7 @@ abstract class $NutritionProductProductCharacteristicCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -9303,7 +9291,7 @@ abstract class $NutritionProductProductCharacteristicCopyWith<$Res> {
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement});
 
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   $ElementCopyWith<$Res>? get valueStringElement;
   $QuantityCopyWith<$Res>? get valueQuantity;
@@ -9345,7 +9333,7 @@ class _$NutritionProductProductCharacteristicCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
           : valueCodeableConcept as CodeableConcept?,
@@ -9376,12 +9364,8 @@ class _$NutritionProductProductCharacteristicCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
@@ -9466,7 +9450,7 @@ abstract class _$NutritionProductProductCharacteristicCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       List<FhirExtension?>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept type,
       CodeableConcept? valueCodeableConcept,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -9478,7 +9462,7 @@ abstract class _$NutritionProductProductCharacteristicCopyWith<$Res>
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   @override
@@ -9531,7 +9515,7 @@ class __$NutritionProductProductCharacteristicCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension?>?,
-      type: type == freezed ? _value.type : type as CodeableConcept?,
+      type: type == freezed ? _value.type : type as CodeableConcept,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
           : valueCodeableConcept as CodeableConcept?,
@@ -9595,7 +9579,7 @@ class _$_NutritionProductProductCharacteristic
   @override
   final List<FhirExtension?>? modifierExtension;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept type;
   @override
   final CodeableConcept? valueCodeableConcept;
   @override
@@ -9706,7 +9690,7 @@ abstract class _NutritionProductProductCharacteristic
           @JsonKey(name: 'extension')
               List<FhirExtension?>? extension_,
           List<FhirExtension?>? modifierExtension,
-          required CodeableConcept? type,
+          required CodeableConcept type,
           CodeableConcept? valueCodeableConcept,
           String? valueString,
           @JsonKey(name: '_valueString')
@@ -9733,7 +9717,7 @@ abstract class _NutritionProductProductCharacteristic
   @override
   List<FhirExtension?>? get modifierExtension;
   @override
-  CodeableConcept? get type;
+  CodeableConcept get type;
   @override
   CodeableConcept? get valueCodeableConcept;
   @override
@@ -10227,7 +10211,7 @@ class _$SubstanceTearOff {
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept?>? category,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -10288,7 +10272,7 @@ mixin _$Substance {
   @JsonKey(name: '_status')
   Element? get statusElement;
   List<CodeableConcept?>? get category;
-  CodeableConcept? get code;
+  CodeableConcept get code;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
@@ -10326,7 +10310,7 @@ abstract class $SubstanceCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept?>? category,
-      CodeableConcept? code,
+      CodeableConcept code,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -10338,7 +10322,7 @@ abstract class $SubstanceCopyWith<$Res> {
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get statusElement;
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   $ElementCopyWith<$Res>? get descriptionElement;
 }
 
@@ -10409,7 +10393,7 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -10480,12 +10464,8 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get code {
-    if (_value.code == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+  $CodeableConceptCopyWith<$Res> get code {
+    return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
   }
@@ -10530,7 +10510,7 @@ abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept?>? category,
-      CodeableConcept? code,
+      CodeableConcept code,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -10548,7 +10528,7 @@ abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get code;
+  $CodeableConceptCopyWith<$Res> get code;
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
 }
@@ -10621,7 +10601,7 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
       category: category == freezed
           ? _value.category
           : category as List<CodeableConcept?>?,
-      code: code == freezed ? _value.code : code as CodeableConcept?,
+      code: code == freezed ? _value.code : code as CodeableConcept,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -10711,7 +10691,7 @@ class _$_Substance extends _Substance {
   @override
   final List<CodeableConcept?>? category;
   @override
-  final CodeableConcept? code;
+  final CodeableConcept code;
   @override
   final String? description;
   @override
@@ -10847,7 +10827,7 @@ abstract class _Substance extends Substance {
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept?>? category,
-      required CodeableConcept? code,
+      required CodeableConcept code,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -10894,7 +10874,7 @@ abstract class _Substance extends Substance {
   @override
   List<CodeableConcept?>? get category;
   @override
-  CodeableConcept? get code;
+  CodeableConcept get code;
   @override
   String? get description;
   @override

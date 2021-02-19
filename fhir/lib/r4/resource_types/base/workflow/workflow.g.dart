@@ -131,10 +131,8 @@ _$_Appointment _$_$_AppointmentFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
-    participant: (json['participant'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : AppointmentParticipant.fromJson(e as Map<String, dynamic>))
+    participant: (json['participant'] as List<dynamic>)
+        .map((e) => AppointmentParticipant.fromJson(e as Map<String, dynamic>))
         .toList(),
     requestedPeriod: (json['requestedPeriod'] as List<dynamic>?)
         ?.map((e) =>
@@ -204,8 +202,7 @@ Map<String, dynamic> _$_$_AppointmentToJson(_$_Appointment instance) {
   writeNotNull(
       '_patientInstruction', instance.patientInstructionElement?.toJson());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson()).toList());
-  writeNotNull(
-      'participant', instance.participant?.map((e) => e?.toJson()).toList());
+  val['participant'] = instance.participant.map((e) => e.toJson()).toList();
   writeNotNull('requestedPeriod',
       instance.requestedPeriod?.map((e) => e?.toJson()).toList());
   return val;
@@ -536,9 +533,8 @@ _$_AppointmentResponse _$_$_AppointmentResponseFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
-    appointment: json['appointment'] == null
-        ? null
-        : Reference.fromJson(json['appointment'] as Map<String, dynamic>),
+    appointment:
+        Reference.fromJson(json['appointment'] as Map<String, dynamic>),
     start: json['start'] == null ? null : Instant.fromJson(json['start']),
     startElement: json['_start'] == null
         ? null
@@ -595,7 +591,7 @@ Map<String, dynamic> _$_$_AppointmentResponseToJson(
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
-  writeNotNull('appointment', instance.appointment?.toJson());
+  val['appointment'] = instance.appointment.toJson();
   writeNotNull('start', instance.start?.toJson());
   writeNotNull('_start', instance.startElement?.toJson());
   writeNotNull('end', instance.end?.toJson());
@@ -669,9 +665,8 @@ _$_Schedule _$_$_ScheduleFromJson(Map<String, dynamic> json) {
             ? null
             : CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
-    actor: (json['actor'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+    actor: (json['actor'] as List<dynamic>)
+        .map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     planningHorizon: json['planningHorizon'] == null
         ? null
@@ -717,7 +712,7 @@ Map<String, dynamic> _$_$_ScheduleToJson(_$_Schedule instance) {
       'serviceType', instance.serviceType?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'specialty', instance.specialty?.map((e) => e?.toJson()).toList());
-  writeNotNull('actor', instance.actor?.map((e) => e?.toJson()).toList());
+  val['actor'] = instance.actor.map((e) => e.toJson()).toList();
   writeNotNull('planningHorizon', instance.planningHorizon?.toJson());
   writeNotNull('comment', instance.comment);
   writeNotNull('_comment', instance.commentElement?.toJson());
@@ -782,9 +777,7 @@ _$_Slot _$_$_SlotFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(
             json['appointmentType'] as Map<String, dynamic>),
-    schedule: json['schedule'] == null
-        ? null
-        : Reference.fromJson(json['schedule'] as Map<String, dynamic>),
+    schedule: Reference.fromJson(json['schedule'] as Map<String, dynamic>),
     status: _$enumDecodeNullable(_$SlotStatusEnumMap, json['status'],
         unknownValue: SlotStatus.unknown),
     statusElement: json['_status'] == null
@@ -844,7 +837,7 @@ Map<String, dynamic> _$_$_SlotToJson(_$_Slot instance) {
   writeNotNull(
       'specialty', instance.specialty?.map((e) => e?.toJson()).toList());
   writeNotNull('appointmentType', instance.appointmentType?.toJson());
-  writeNotNull('schedule', instance.schedule?.toJson());
+  val['schedule'] = instance.schedule.toJson();
   writeNotNull('status', _$SlotStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('start', instance.start?.toJson());
@@ -1187,9 +1180,7 @@ _$_TaskInput _$_$_TaskInputFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     valueBase64Binary: json['valueBase64Binary'] == null
         ? null
         : Base64Binary.fromJson(json['valueBase64Binary']),
@@ -1412,7 +1403,7 @@ Map<String, dynamic> _$_$_TaskInputToJson(_$_TaskInput instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
+  val['type'] = instance.type.toJson();
   writeNotNull('valueBase64Binary', instance.valueBase64Binary?.toJson());
   writeNotNull(
       '_valueBase64Binary', instance.valueBase64BinaryElement?.toJson());
@@ -1501,9 +1492,7 @@ _$_TaskOutput _$_$_TaskOutputFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    type: json['type'] == null
-        ? null
-        : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     valueBase64Binary: json['valueBase64Binary'] == null
         ? null
         : Base64Binary.fromJson(json['valueBase64Binary']),
@@ -1726,7 +1715,7 @@ Map<String, dynamic> _$_$_TaskOutputToJson(_$_TaskOutput instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
+  val['type'] = instance.type.toJson();
   writeNotNull('valueBase64Binary', instance.valueBase64Binary?.toJson());
   writeNotNull(
       '_valueBase64Binary', instance.valueBase64BinaryElement?.toJson());
@@ -2128,9 +2117,8 @@ _$_VerificationResultValidator _$_$_VerificationResultValidatorFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    organization: json['organization'] == null
-        ? null
-        : Reference.fromJson(json['organization'] as Map<String, dynamic>),
+    organization:
+        Reference.fromJson(json['organization'] as Map<String, dynamic>),
     identityCertificate: json['identityCertificate'] as String?,
     identityCertificateElement: json['_identityCertificate'] == null
         ? null
@@ -2158,7 +2146,7 @@ Map<String, dynamic> _$_$_VerificationResultValidatorToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('organization', instance.organization?.toJson());
+  val['organization'] = instance.organization.toJson();
   writeNotNull('identityCertificate', instance.identityCertificate);
   writeNotNull(
       '_identityCertificate', instance.identityCertificateElement?.toJson());

@@ -36,7 +36,7 @@ class _$GuidanceResponseTearOff {
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
       Identifier? identifier,
-      required Reference? module,
+      required Reference module,
       GuidanceResponseStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -115,7 +115,7 @@ mixin _$GuidanceResponse {
   @JsonKey(name: '_requestId')
   Element? get requestIdElement;
   Identifier? get identifier;
-  Reference? get module;
+  Reference get module;
   GuidanceResponseStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -163,7 +163,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
       Identifier? identifier,
-      Reference? module,
+      Reference module,
       GuidanceResponseStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -187,7 +187,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get requestIdElement;
   $IdentifierCopyWith<$Res>? get identifier;
-  $ReferenceCopyWith<$Res>? get module;
+  $ReferenceCopyWith<$Res> get module;
   $ElementCopyWith<$Res>? get statusElement;
   $ReferenceCopyWith<$Res>? get subject;
   $ReferenceCopyWith<$Res>? get context;
@@ -272,7 +272,7 @@ class _$GuidanceResponseCopyWithImpl<$Res>
           : requestIdElement as Element?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
-      module: module == freezed ? _value.module : module as Reference?,
+      module: module == freezed ? _value.module : module as Reference,
       status:
           status == freezed ? _value.status : status as GuidanceResponseStatus?,
       statusElement: statusElement == freezed
@@ -375,12 +375,8 @@ class _$GuidanceResponseCopyWithImpl<$Res>
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get module {
-    if (_value.module == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.module!, (value) {
+  $ReferenceCopyWith<$Res> get module {
+    return $ReferenceCopyWith<$Res>(_value.module, (value) {
       return _then(_value.copyWith(module: value));
     });
   }
@@ -513,7 +509,7 @@ abstract class _$GuidanceResponseCopyWith<$Res>
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
       Identifier? identifier,
-      Reference? module,
+      Reference module,
       GuidanceResponseStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -544,7 +540,7 @@ abstract class _$GuidanceResponseCopyWith<$Res>
   @override
   $IdentifierCopyWith<$Res>? get identifier;
   @override
-  $ReferenceCopyWith<$Res>? get module;
+  $ReferenceCopyWith<$Res> get module;
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
@@ -640,7 +636,7 @@ class __$GuidanceResponseCopyWithImpl<$Res>
           : requestIdElement as Element?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
-      module: module == freezed ? _value.module : module as Reference?,
+      module: module == freezed ? _value.module : module as Reference,
       status:
           status == freezed ? _value.status : status as GuidanceResponseStatus?,
       statusElement: statusElement == freezed
@@ -757,7 +753,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   @override
   final Identifier? identifier;
   @override
-  final Reference? module;
+  final Reference module;
   @override
   final GuidanceResponseStatus? status;
   @override
@@ -937,7 +933,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
       Identifier? identifier,
-      required Reference? module,
+      required Reference module,
       GuidanceResponseStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -992,7 +988,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @override
   Identifier? get identifier;
   @override
-  Reference? get module;
+  Reference get module;
   @override
   GuidanceResponseStatus? get status;
   @override

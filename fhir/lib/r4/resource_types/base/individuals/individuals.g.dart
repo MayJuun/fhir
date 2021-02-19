@@ -343,9 +343,7 @@ _$_GroupCharacteristic _$_$_GroupCharacteristicFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    code: json['code'] == null
-        ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     valueCodeableConcept: json['valueCodeableConcept'] == null
         ? null
         : CodeableConcept.fromJson(
@@ -390,7 +388,7 @@ Map<String, dynamic> _$_$_GroupCharacteristicToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
   writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
@@ -416,9 +414,7 @@ _$_GroupMember _$_$_GroupMemberFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    entity: json['entity'] == null
-        ? null
-        : Reference.fromJson(json['entity'] as Map<String, dynamic>),
+    entity: Reference.fromJson(json['entity'] as Map<String, dynamic>),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -444,7 +440,7 @@ Map<String, dynamic> _$_$_GroupMemberToJson(_$_GroupMember instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('entity', instance.entity?.toJson());
+  val['entity'] = instance.entity.toJson();
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('inactive', instance.inactive?.toJson());
   writeNotNull('_inactive', instance.inactiveElement?.toJson());
@@ -728,9 +724,8 @@ _$_PatientCommunication _$_$_PatientCommunicationFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    language: json['language'] == null
-        ? null
-        : CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
+    language:
+        CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
     preferred:
         json['preferred'] == null ? null : Boolean.fromJson(json['preferred']),
     preferredElement: json['_preferred'] == null
@@ -754,7 +749,7 @@ Map<String, dynamic> _$_$_PatientCommunicationToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('language', instance.language?.toJson());
+  val['language'] = instance.language.toJson();
   writeNotNull('preferred', instance.preferred?.toJson());
   writeNotNull('_preferred', instance.preferredElement?.toJson());
   return val;
@@ -773,9 +768,7 @@ _$_PatientLink _$_$_PatientLinkFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    other: json['other'] == null
-        ? null
-        : Reference.fromJson(json['other'] as Map<String, dynamic>),
+    other: Reference.fromJson(json['other'] as Map<String, dynamic>),
     type: _$enumDecodeNullable(_$PatientLinkTypeEnumMap, json['type'],
         unknownValue: PatientLinkType.unknown),
     typeElement: json['_type'] == null
@@ -798,7 +791,7 @@ Map<String, dynamic> _$_$_PatientLinkToJson(_$_PatientLink instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('other', instance.other?.toJson());
+  val['other'] = instance.other.toJson();
   writeNotNull('type', _$PatientLinkTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
   return val;
@@ -952,9 +945,7 @@ _$_PersonLink _$_$_PersonLinkFromJson(Map<String, dynamic> json) {
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    target: json['target'] == null
-        ? null
-        : Reference.fromJson(json['target'] as Map<String, dynamic>),
+    target: Reference.fromJson(json['target'] as Map<String, dynamic>),
     assurance: _$enumDecodeNullable(
         _$PersonLinkAssuranceEnumMap, json['assurance'],
         unknownValue: PersonLinkAssurance.unknown),
@@ -978,7 +969,7 @@ Map<String, dynamic> _$_$_PersonLinkToJson(_$_PersonLink instance) {
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('target', instance.target?.toJson());
+  val['target'] = instance.target.toJson();
   writeNotNull('assurance', _$PersonLinkAssuranceEnumMap[instance.assurance]);
   writeNotNull('_assurance', instance.assuranceElement?.toJson());
   return val;
@@ -1142,9 +1133,7 @@ _$_PractitionerQualification _$_$_PractitionerQualificationFromJson(
         ?.map((e) =>
             e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
-    code: json['code'] == null
-        ? null
-        : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+    code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     period: json['period'] == null
         ? null
         : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -1171,7 +1160,7 @@ Map<String, dynamic> _$_$_PractitionerQualificationToJson(
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('issuer', instance.issuer?.toJson());
   return val;
@@ -1479,9 +1468,7 @@ _$_RelatedPerson _$_$_RelatedPersonFromJson(Map<String, dynamic> json) {
     activeElement: json['_active'] == null
         ? null
         : Element.fromJson(json['_active'] as Map<String, dynamic>),
-    patient: json['patient'] == null
-        ? null
-        : Reference.fromJson(json['patient'] as Map<String, dynamic>),
+    patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
     relationship: (json['relationship'] as List<dynamic>?)
         ?.map((e) => e == null
             ? null
@@ -1552,7 +1539,7 @@ Map<String, dynamic> _$_$_RelatedPersonToJson(_$_RelatedPerson instance) {
       'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
   writeNotNull('active', instance.active?.toJson());
   writeNotNull('_active', instance.activeElement?.toJson());
-  writeNotNull('patient', instance.patient?.toJson());
+  val['patient'] = instance.patient.toJson();
   writeNotNull(
       'relationship', instance.relationship?.map((e) => e?.toJson()).toList());
   writeNotNull('name', instance.name?.map((e) => e?.toJson()).toList());
@@ -1590,9 +1577,8 @@ _$_RelatedPersonCommunication _$_$_RelatedPersonCommunicationFromJson(
             ? null
             : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    language: json['language'] == null
-        ? null
-        : CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
+    language:
+        CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
     preferred:
         json['preferred'] == null ? null : Boolean.fromJson(json['preferred']),
     preferredElement: json['_preferred'] == null
@@ -1616,7 +1602,7 @@ Map<String, dynamic> _$_$_RelatedPersonCommunicationToJson(
       'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('language', instance.language?.toJson());
+  val['language'] = instance.language.toJson();
   writeNotNull('preferred', instance.preferred?.toJson());
   writeNotNull('_preferred', instance.preferredElement?.toJson());
   return val;
