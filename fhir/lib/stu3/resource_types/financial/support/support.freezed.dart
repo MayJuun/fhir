@@ -30,9 +30,9 @@ class _$CoverageTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -45,7 +45,7 @@ class _$CoverageTearOff {
       Reference? beneficiary,
       CodeableConcept? relationship,
       Period? period,
-      List<Reference>? payor,
+      List<Reference?>? payor,
       CoverageGrouping? grouping,
       String? dependent,
       @JsonKey(name: '_dependent')
@@ -59,7 +59,7 @@ class _$CoverageTearOff {
       String? network,
       @JsonKey(name: '_network')
           Element? networkElement,
-      List<Reference>? contract}) {
+      List<Reference?>? contract}) {
     return _Coverage(
       resourceType: resourceType,
       id: id,
@@ -120,9 +120,9 @@ mixin _$Coverage {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   String? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -135,7 +135,7 @@ mixin _$Coverage {
   Reference? get beneficiary;
   CodeableConcept? get relationship;
   Period? get period;
-  List<Reference>? get payor;
+  List<Reference?>? get payor;
   CoverageGrouping? get grouping;
   String? get dependent;
   @JsonKey(name: '_dependent')
@@ -149,7 +149,7 @@ mixin _$Coverage {
   String? get network;
   @JsonKey(name: '_network')
   Element? get networkElement;
-  List<Reference>? get contract;
+  List<Reference?>? get contract;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -174,9 +174,9 @@ abstract class $CoverageCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -189,7 +189,7 @@ abstract class $CoverageCopyWith<$Res> {
       Reference? beneficiary,
       CodeableConcept? relationship,
       Period? period,
-      List<Reference>? payor,
+      List<Reference?>? payor,
       CoverageGrouping? grouping,
       String? dependent,
       @JsonKey(name: '_dependent')
@@ -203,7 +203,7 @@ abstract class $CoverageCopyWith<$Res> {
       String? network,
       @JsonKey(name: '_network')
           Element? networkElement,
-      List<Reference>? contract});
+      List<Reference?>? contract});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -290,13 +290,13 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as String?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -320,7 +320,7 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
           ? _value.relationship
           : relationship as CodeableConcept?,
       period: period == freezed ? _value.period : period as Period?,
-      payor: payor == freezed ? _value.payor : payor as List<Reference>?,
+      payor: payor == freezed ? _value.payor : payor as List<Reference?>?,
       grouping:
           grouping == freezed ? _value.grouping : grouping as CoverageGrouping?,
       dependent: dependent == freezed ? _value.dependent : dependent as String?,
@@ -340,7 +340,7 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
           ? _value.networkElement
           : networkElement as Element?,
       contract:
-          contract == freezed ? _value.contract : contract as List<Reference>?,
+          contract == freezed ? _value.contract : contract as List<Reference?>?,
     ));
   }
 
@@ -551,9 +551,9 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -566,7 +566,7 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       Reference? beneficiary,
       CodeableConcept? relationship,
       Period? period,
-      List<Reference>? payor,
+      List<Reference?>? payor,
       CoverageGrouping? grouping,
       String? dependent,
       @JsonKey(name: '_dependent')
@@ -580,7 +580,7 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       String? network,
       @JsonKey(name: '_network')
           Element? networkElement,
-      List<Reference>? contract});
+      List<Reference?>? contract});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -685,13 +685,13 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as String?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -715,7 +715,7 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
           ? _value.relationship
           : relationship as CodeableConcept?,
       period: period == freezed ? _value.period : period as Period?,
-      payor: payor == freezed ? _value.payor : payor as List<Reference>?,
+      payor: payor == freezed ? _value.payor : payor as List<Reference?>?,
       grouping:
           grouping == freezed ? _value.grouping : grouping as CoverageGrouping?,
       dependent: dependent == freezed ? _value.dependent : dependent as String?,
@@ -735,7 +735,7 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
           ? _value.networkElement
           : networkElement as Element?,
       contract:
-          contract == freezed ? _value.contract : contract as List<Reference>?,
+          contract == freezed ? _value.contract : contract as List<Reference?>?,
     ));
   }
 }
@@ -816,11 +816,11 @@ class _$_Coverage extends _Coverage {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final String? status;
   @override
@@ -844,7 +844,7 @@ class _$_Coverage extends _Coverage {
   @override
   final Period? period;
   @override
-  final List<Reference>? payor;
+  final List<Reference?>? payor;
   @override
   final CoverageGrouping? grouping;
   @override
@@ -868,7 +868,7 @@ class _$_Coverage extends _Coverage {
   @JsonKey(name: '_network')
   final Element? networkElement;
   @override
-  final List<Reference>? contract;
+  final List<Reference?>? contract;
 
   @override
   String toString() {
@@ -1021,9 +1021,9 @@ abstract class _Coverage extends Coverage {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -1036,7 +1036,7 @@ abstract class _Coverage extends Coverage {
       Reference? beneficiary,
       CodeableConcept? relationship,
       Period? period,
-      List<Reference>? payor,
+      List<Reference?>? payor,
       CoverageGrouping? grouping,
       String? dependent,
       @JsonKey(name: '_dependent')
@@ -1050,7 +1050,7 @@ abstract class _Coverage extends Coverage {
       String? network,
       @JsonKey(name: '_network')
           Element? networkElement,
-      List<Reference>? contract}) = _$_Coverage;
+      List<Reference?>? contract}) = _$_Coverage;
 
   factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
 
@@ -1077,11 +1077,11 @@ abstract class _Coverage extends Coverage {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   String? get status;
   @override
@@ -1105,7 +1105,7 @@ abstract class _Coverage extends Coverage {
   @override
   Period? get period;
   @override
-  List<Reference>? get payor;
+  List<Reference?>? get payor;
   @override
   CoverageGrouping? get grouping;
   @override
@@ -1129,7 +1129,7 @@ abstract class _Coverage extends Coverage {
   @JsonKey(name: '_network')
   Element? get networkElement;
   @override
-  List<Reference>? get contract;
+  List<Reference?>? get contract;
   @override
   @JsonKey(ignore: true)
   _$CoverageCopyWith<_Coverage> get copyWith;
@@ -2017,9 +2017,9 @@ class _$EligibilityRequestTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -2101,9 +2101,9 @@ mixin _$EligibilityRequest {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   String? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -2152,9 +2152,9 @@ abstract class $EligibilityRequestCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -2265,13 +2265,13 @@ class _$EligibilityRequestCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as String?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -2545,9 +2545,9 @@ abstract class _$EligibilityRequestCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -2679,13 +2679,13 @@ class __$EligibilityRequestCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as String?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -2801,11 +2801,11 @@ class _$_EligibilityRequest extends _EligibilityRequest {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final String? status;
   @override
@@ -2996,9 +2996,9 @@ abstract class _EligibilityRequest extends EligibilityRequest {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -3049,11 +3049,11 @@ abstract class _EligibilityRequest extends EligibilityRequest {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   String? get status;
   @override
@@ -3123,9 +3123,9 @@ class _$EligibilityResponseTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -3143,9 +3143,9 @@ class _$EligibilityResponseTearOff {
       Boolean? inforce,
       @JsonKey(name: '_inforce')
           Element? inforceElement,
-      List<EligibilityResponseInsurance>? insurance,
+      List<EligibilityResponseInsurance?>? insurance,
       CodeableConcept? form,
-      List<EligibilityResponseError>? error}) {
+      List<EligibilityResponseError?>? error}) {
     return _EligibilityResponse(
       resourceType: resourceType,
       id: id,
@@ -3201,9 +3201,9 @@ mixin _$EligibilityResponse {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   String? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -3221,9 +3221,9 @@ mixin _$EligibilityResponse {
   Boolean? get inforce;
   @JsonKey(name: '_inforce')
   Element? get inforceElement;
-  List<EligibilityResponseInsurance>? get insurance;
+  List<EligibilityResponseInsurance?>? get insurance;
   CodeableConcept? get form;
-  List<EligibilityResponseError>? get error;
+  List<EligibilityResponseError?>? get error;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -3249,9 +3249,9 @@ abstract class $EligibilityResponseCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -3269,9 +3269,9 @@ abstract class $EligibilityResponseCopyWith<$Res> {
       Boolean? inforce,
       @JsonKey(name: '_inforce')
           Element? inforceElement,
-      List<EligibilityResponseInsurance>? insurance,
+      List<EligibilityResponseInsurance?>? insurance,
       CodeableConcept? form,
-      List<EligibilityResponseError>? error});
+      List<EligibilityResponseError?>? error});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -3351,13 +3351,13 @@ class _$EligibilityResponseCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as String?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -3387,11 +3387,11 @@ class _$EligibilityResponseCopyWithImpl<$Res>
           : inforceElement as Element?,
       insurance: insurance == freezed
           ? _value.insurance
-          : insurance as List<EligibilityResponseInsurance>?,
+          : insurance as List<EligibilityResponseInsurance?>?,
       form: form == freezed ? _value.form : form as CodeableConcept?,
       error: error == freezed
           ? _value.error
-          : error as List<EligibilityResponseError>?,
+          : error as List<EligibilityResponseError?>?,
     ));
   }
 
@@ -3571,9 +3571,9 @@ abstract class _$EligibilityResponseCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -3591,9 +3591,9 @@ abstract class _$EligibilityResponseCopyWith<$Res>
       Boolean? inforce,
       @JsonKey(name: '_inforce')
           Element? inforceElement,
-      List<EligibilityResponseInsurance>? insurance,
+      List<EligibilityResponseInsurance?>? insurance,
       CodeableConcept? form,
-      List<EligibilityResponseError>? error});
+      List<EligibilityResponseError?>? error});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -3689,13 +3689,13 @@ class __$EligibilityResponseCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as String?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -3725,11 +3725,11 @@ class __$EligibilityResponseCopyWithImpl<$Res>
           : inforceElement as Element?,
       insurance: insurance == freezed
           ? _value.insurance
-          : insurance as List<EligibilityResponseInsurance>?,
+          : insurance as List<EligibilityResponseInsurance?>?,
       form: form == freezed ? _value.form : form as CodeableConcept?,
       error: error == freezed
           ? _value.error
-          : error as List<EligibilityResponseError>?,
+          : error as List<EligibilityResponseError?>?,
     ));
   }
 }
@@ -3803,11 +3803,11 @@ class _$_EligibilityResponse extends _EligibilityResponse {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final String? status;
   @override
@@ -3839,11 +3839,11 @@ class _$_EligibilityResponse extends _EligibilityResponse {
   @JsonKey(name: '_inforce')
   final Element? inforceElement;
   @override
-  final List<EligibilityResponseInsurance>? insurance;
+  final List<EligibilityResponseInsurance?>? insurance;
   @override
   final CodeableConcept? form;
   @override
-  final List<EligibilityResponseError>? error;
+  final List<EligibilityResponseError?>? error;
 
   @override
   String toString() {
@@ -3987,9 +3987,9 @@ abstract class _EligibilityResponse extends EligibilityResponse {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -4007,9 +4007,9 @@ abstract class _EligibilityResponse extends EligibilityResponse {
       Boolean? inforce,
       @JsonKey(name: '_inforce')
           Element? inforceElement,
-      List<EligibilityResponseInsurance>? insurance,
+      List<EligibilityResponseInsurance?>? insurance,
       CodeableConcept? form,
-      List<EligibilityResponseError>? error}) = _$_EligibilityResponse;
+      List<EligibilityResponseError?>? error}) = _$_EligibilityResponse;
 
   factory _EligibilityResponse.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponse.fromJson;
@@ -4037,11 +4037,11 @@ abstract class _EligibilityResponse extends EligibilityResponse {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   String? get status;
   @override
@@ -4073,11 +4073,11 @@ abstract class _EligibilityResponse extends EligibilityResponse {
   @JsonKey(name: '_inforce')
   Element? get inforceElement;
   @override
-  List<EligibilityResponseInsurance>? get insurance;
+  List<EligibilityResponseInsurance?>? get insurance;
   @override
   CodeableConcept? get form;
   @override
-  List<EligibilityResponseError>? get error;
+  List<EligibilityResponseError?>? get error;
   @override
   @JsonKey(ignore: true)
   _$EligibilityResponseCopyWith<_EligibilityResponse> get copyWith;
@@ -4095,7 +4095,7 @@ class _$EligibilityResponseInsuranceTearOff {
   _EligibilityResponseInsurance call(
       {Reference? coverage,
       Reference? contract,
-      List<EligibilityResponseBenefitBalance>? benefitBalance}) {
+      List<EligibilityResponseBenefitBalance?>? benefitBalance}) {
     return _EligibilityResponseInsurance(
       coverage: coverage,
       contract: contract,
@@ -4115,7 +4115,7 @@ const $EligibilityResponseInsurance = _$EligibilityResponseInsuranceTearOff();
 mixin _$EligibilityResponseInsurance {
   Reference? get coverage;
   Reference? get contract;
-  List<EligibilityResponseBenefitBalance>? get benefitBalance;
+  List<EligibilityResponseBenefitBalance?>? get benefitBalance;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4132,7 +4132,7 @@ abstract class $EligibilityResponseInsuranceCopyWith<$Res> {
   $Res call(
       {Reference? coverage,
       Reference? contract,
-      List<EligibilityResponseBenefitBalance>? benefitBalance});
+      List<EligibilityResponseBenefitBalance?>? benefitBalance});
 
   $ReferenceCopyWith<$Res>? get coverage;
   $ReferenceCopyWith<$Res>? get contract;
@@ -4158,7 +4158,7 @@ class _$EligibilityResponseInsuranceCopyWithImpl<$Res>
       contract: contract == freezed ? _value.contract : contract as Reference?,
       benefitBalance: benefitBalance == freezed
           ? _value.benefitBalance
-          : benefitBalance as List<EligibilityResponseBenefitBalance>?,
+          : benefitBalance as List<EligibilityResponseBenefitBalance?>?,
     ));
   }
 
@@ -4196,7 +4196,7 @@ abstract class _$EligibilityResponseInsuranceCopyWith<$Res>
   $Res call(
       {Reference? coverage,
       Reference? contract,
-      List<EligibilityResponseBenefitBalance>? benefitBalance});
+      List<EligibilityResponseBenefitBalance?>? benefitBalance});
 
   @override
   $ReferenceCopyWith<$Res>? get coverage;
@@ -4228,7 +4228,7 @@ class __$EligibilityResponseInsuranceCopyWithImpl<$Res>
       contract: contract == freezed ? _value.contract : contract as Reference?,
       benefitBalance: benefitBalance == freezed
           ? _value.benefitBalance
-          : benefitBalance as List<EligibilityResponseBenefitBalance>?,
+          : benefitBalance as List<EligibilityResponseBenefitBalance?>?,
     ));
   }
 }
@@ -4249,7 +4249,7 @@ class _$_EligibilityResponseInsurance extends _EligibilityResponseInsurance {
   @override
   final Reference? contract;
   @override
-  final List<EligibilityResponseBenefitBalance>? benefitBalance;
+  final List<EligibilityResponseBenefitBalance?>? benefitBalance;
 
   @override
   String toString() {
@@ -4296,7 +4296,7 @@ abstract class _EligibilityResponseInsurance
   factory _EligibilityResponseInsurance(
           {Reference? coverage,
           Reference? contract,
-          List<EligibilityResponseBenefitBalance>? benefitBalance}) =
+          List<EligibilityResponseBenefitBalance?>? benefitBalance}) =
       _$_EligibilityResponseInsurance;
 
   factory _EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =
@@ -4307,7 +4307,7 @@ abstract class _EligibilityResponseInsurance
   @override
   Reference? get contract;
   @override
-  List<EligibilityResponseBenefitBalance>? get benefitBalance;
+  List<EligibilityResponseBenefitBalance?>? get benefitBalance;
   @override
   @JsonKey(ignore: true)
   _$EligibilityResponseInsuranceCopyWith<_EligibilityResponseInsurance>
@@ -4335,7 +4335,7 @@ class _$EligibilityResponseBenefitBalanceTearOff {
       CodeableConcept? network,
       CodeableConcept? unit,
       CodeableConcept? term,
-      List<EligibilityResponseFinancial>? financial}) {
+      List<EligibilityResponseFinancial?>? financial}) {
     return _EligibilityResponseBenefitBalance(
       category: category,
       subCategory: subCategory,
@@ -4377,7 +4377,7 @@ mixin _$EligibilityResponseBenefitBalance {
   CodeableConcept? get network;
   CodeableConcept? get unit;
   CodeableConcept? get term;
-  List<EligibilityResponseFinancial>? get financial;
+  List<EligibilityResponseFinancial?>? get financial;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4403,7 +4403,7 @@ abstract class $EligibilityResponseBenefitBalanceCopyWith<$Res> {
       CodeableConcept? network,
       CodeableConcept? unit,
       CodeableConcept? term,
-      List<EligibilityResponseFinancial>? financial});
+      List<EligibilityResponseFinancial?>? financial});
 
   $CodeableConceptCopyWith<$Res> get category;
   $CodeableConceptCopyWith<$Res>? get subCategory;
@@ -4463,7 +4463,7 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
       term: term == freezed ? _value.term : term as CodeableConcept?,
       financial: financial == freezed
           ? _value.financial
-          : financial as List<EligibilityResponseFinancial>?,
+          : financial as List<EligibilityResponseFinancial?>?,
     ));
   }
 
@@ -4572,7 +4572,7 @@ abstract class _$EligibilityResponseBenefitBalanceCopyWith<$Res>
       CodeableConcept? network,
       CodeableConcept? unit,
       CodeableConcept? term,
-      List<EligibilityResponseFinancial>? financial});
+      List<EligibilityResponseFinancial?>? financial});
 
   @override
   $CodeableConceptCopyWith<$Res> get category;
@@ -4644,7 +4644,7 @@ class __$EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
       term: term == freezed ? _value.term : term as CodeableConcept?,
       financial: financial == freezed
           ? _value.financial
-          : financial as List<EligibilityResponseFinancial>?,
+          : financial as List<EligibilityResponseFinancial?>?,
     ));
   }
 }
@@ -4699,7 +4699,7 @@ class _$_EligibilityResponseBenefitBalance
   @override
   final CodeableConcept? term;
   @override
-  final List<EligibilityResponseFinancial>? financial;
+  final List<EligibilityResponseFinancial?>? financial;
 
   @override
   String toString() {
@@ -4789,7 +4789,7 @@ abstract class _EligibilityResponseBenefitBalance
           CodeableConcept? network,
           CodeableConcept? unit,
           CodeableConcept? term,
-          List<EligibilityResponseFinancial>? financial}) =
+          List<EligibilityResponseFinancial?>? financial}) =
       _$_EligibilityResponseBenefitBalance;
 
   factory _EligibilityResponseBenefitBalance.fromJson(
@@ -4822,7 +4822,7 @@ abstract class _EligibilityResponseBenefitBalance
   @override
   CodeableConcept? get term;
   @override
-  List<EligibilityResponseFinancial>? get financial;
+  List<EligibilityResponseFinancial?>? get financial;
   @override
   @JsonKey(ignore: true)
   _$EligibilityResponseBenefitBalanceCopyWith<
@@ -5442,9 +5442,9 @@ class _$EnrollmentRequestTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -5504,9 +5504,9 @@ mixin _$EnrollmentRequest {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   String? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -5543,9 +5543,9 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -5626,13 +5626,13 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as String?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -5794,9 +5794,9 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -5890,13 +5890,13 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as String?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -5976,11 +5976,11 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final String? status;
   @override
@@ -6124,9 +6124,9 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -6165,11 +6165,11 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   String? get status;
   @override
@@ -6217,9 +6217,9 @@ class _$EnrollmentResponseTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -6284,9 +6284,9 @@ mixin _$EnrollmentResponse {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   String? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -6326,9 +6326,9 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -6415,13 +6415,13 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as String?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -6604,9 +6604,9 @@ abstract class _$EnrollmentResponseCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -6707,13 +6707,13 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as String?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -6806,11 +6806,11 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final String? status;
   @override
@@ -6967,9 +6967,9 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -7011,11 +7011,11 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   String? get status;
   @override

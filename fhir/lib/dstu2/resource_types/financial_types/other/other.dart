@@ -28,9 +28,9 @@ abstract class ExplanationOfBenefit
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     Reference? request,
     @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
         ExplanationOfBenefitOutcome? outcome,

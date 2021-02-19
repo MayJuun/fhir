@@ -26,21 +26,21 @@ abstract class Account with Resource implements _$Account {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    List<Reference>? subject,
+    List<Reference?>? subject,
     Period? servicePeriod,
-    List<AccountCoverage>? coverage,
+    List<AccountCoverage?>? coverage,
     Reference? owner,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<AccountGuarantor>? guarantor,
+    List<AccountGuarantor?>? guarantor,
     Reference? partOf,
   }) = _Account;
 
@@ -66,8 +66,8 @@ abstract class AccountCoverage implements _$AccountCoverage {
   AccountCoverage._();
   factory AccountCoverage({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Reference? coverage,
     PositiveInt? priority,
     @JsonKey(name: '_priority') Element? priorityElement,
@@ -95,8 +95,8 @@ abstract class AccountGuarantor implements _$AccountGuarantor {
   AccountGuarantor._();
   factory AccountGuarantor({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Reference? party,
     Boolean? onHold,
     @JsonKey(name: '_onHold') Element? onHoldElement,
@@ -135,16 +135,16 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    List<FhirUri>? definitionUri,
-    @JsonKey(name: '_definitionUri') List<Element>? definitionUriElement,
-    List<Canonical>? definitionCanonical,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
+    List<FhirUri?>? definitionUri,
+    @JsonKey(name: '_definitionUri') List<Element?>? definitionUriElement,
+    List<Canonical?>? definitionCanonical,
     @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
         ChargeItemStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    List<Reference>? partOf,
+    List<Reference?>? partOf,
     required CodeableConcept? code,
     required Reference? subject,
     Reference? context,
@@ -152,12 +152,12 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
     @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
     Period? occurrencePeriod,
     Timing? occurrenceTiming,
-    List<ChargeItemPerformer>? performer,
+    List<ChargeItemPerformer?>? performer,
     Reference? performingOrganization,
     Reference? requestingOrganization,
     Reference? costCenter,
     Quantity? quantity,
-    List<CodeableConcept>? bodysite,
+    List<CodeableConcept?>? bodysite,
     Decimal? factorOverride,
     @JsonKey(name: '_factorOverride') Element? factorOverrideElement,
     Money? priceOverride,
@@ -166,13 +166,13 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
     Reference? enterer,
     FhirDateTime? enteredDate,
     @JsonKey(name: '_enteredDate') Element? enteredDateElement,
-    List<CodeableConcept>? reason,
-    List<Reference>? service,
+    List<CodeableConcept?>? reason,
+    List<Reference?>? service,
     Reference? productReference,
     CodeableConcept? productCodeableConcept,
-    List<Reference>? account,
-    List<Annotation>? note,
-    List<Reference>? supportingInformation,
+    List<Reference?>? account,
+    List<Annotation?>? note,
+    List<Reference?>? supportingInformation,
   }) = _ChargeItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -197,8 +197,8 @@ abstract class ChargeItemPerformer implements _$ChargeItemPerformer {
   ChargeItemPerformer._();
   factory ChargeItemPerformer({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? function,
     required Reference? actor,
   }) = _ChargeItemPerformer;
@@ -237,11 +237,11 @@ abstract class ChargeItemDefinition
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier>? identifier,
+    List<Identifier?>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -257,11 +257,11 @@ abstract class ChargeItemDefinition
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
+    List<ContactDetail?>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
+    List<UsageContext?>? useContext,
+    List<CodeableConcept?>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -271,14 +271,14 @@ abstract class ChargeItemDefinition
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
-    List<FhirUri>? derivedFromUri,
-    @JsonKey(name: '_derivedFromUri') List<Element>? derivedFromUriElement,
-    List<Canonical>? partOf,
-    List<Canonical>? replaces,
+    List<FhirUri?>? derivedFromUri,
+    @JsonKey(name: '_derivedFromUri') List<Element?>? derivedFromUriElement,
+    List<Canonical?>? partOf,
+    List<Canonical?>? replaces,
     CodeableConcept? code,
-    List<Reference>? instance,
-    List<ChargeItemDefinitionApplicability>? applicability,
-    List<ChargeItemDefinitionPropertyGroup>? propertyGroup,
+    List<Reference?>? instance,
+    List<ChargeItemDefinitionApplicability?>? applicability,
+    List<ChargeItemDefinitionPropertyGroup?>? propertyGroup,
   }) = _ChargeItemDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -304,8 +304,8 @@ abstract class ChargeItemDefinitionApplicability
   ChargeItemDefinitionApplicability._();
   factory ChargeItemDefinitionApplicability({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     String? language,
@@ -340,10 +340,10 @@ abstract class ChargeItemDefinitionPropertyGroup
   ChargeItemDefinitionPropertyGroup._();
   factory ChargeItemDefinitionPropertyGroup({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<ChargeItemDefinitionApplicability>? applicability,
-    List<ChargeItemDefinitionPriceComponent>? priceComponent,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<ChargeItemDefinitionApplicability?>? applicability,
+    List<ChargeItemDefinitionPriceComponent?>? priceComponent,
   }) = _ChargeItemDefinitionPropertyGroup;
 
   /// Produces a Yaml formatted String version of the object
@@ -372,8 +372,8 @@ abstract class ChargeItemDefinitionPriceComponent
   ChargeItemDefinitionPriceComponent._();
   factory ChargeItemDefinitionPriceComponent({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? code,
@@ -417,9 +417,9 @@ abstract class Contract with Resource implements _$Contract {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     String? version,
@@ -435,32 +435,32 @@ abstract class Contract with Resource implements _$Contract {
     @JsonKey(name: '_issued') Element? issuedElement,
     Period? applies,
     CodeableConcept? expirationType,
-    List<Reference>? subject,
-    List<Reference>? authority,
-    List<Reference>? domain,
-    List<Reference>? site,
+    List<Reference?>? subject,
+    List<Reference?>? authority,
+    List<Reference?>? domain,
+    List<Reference?>? site,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     String? subtitle,
     @JsonKey(name: '_subtitle') Element? subtitleElement,
-    List<String>? alias,
-    @JsonKey(name: '_alias') List<Element>? aliasElement,
+    List<String?>? alias,
+    @JsonKey(name: '_alias') List<Element?>? aliasElement,
     Reference? author,
     CodeableConcept? scope,
     CodeableConcept? topicCodeableConcept,
     Reference? topicReference,
     CodeableConcept? type,
-    List<CodeableConcept>? subType,
+    List<CodeableConcept?>? subType,
     ContractContentDefinition? contentDefinition,
-    List<ContractTerm>? term,
-    List<Reference>? supportingInfo,
-    List<Reference>? relevantHistory,
-    List<ContractSigner>? signer,
-    List<ContractFriendly>? friendly,
-    List<ContractLegal>? legal,
-    List<ContractRule>? rule,
+    List<ContractTerm?>? term,
+    List<Reference?>? supportingInfo,
+    List<Reference?>? relevantHistory,
+    List<ContractSigner?>? signer,
+    List<ContractFriendly?>? friendly,
+    List<ContractLegal?>? legal,
+    List<ContractRule?>? rule,
     Attachment? legallyBindingAttachment,
     Reference? legallyBindingReference,
   }) = _Contract;
@@ -488,8 +488,8 @@ abstract class ContractContentDefinition
   ContractContentDefinition._();
   factory ContractContentDefinition({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? type,
     CodeableConcept? subType,
     Reference? publisher,
@@ -524,8 +524,8 @@ abstract class ContractTerm implements _$ContractTerm {
   ContractTerm._();
   factory ContractTerm({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Identifier? identifier,
     FhirDateTime? issued,
     @JsonKey(name: '_issued') Element? issuedElement,
@@ -536,11 +536,11 @@ abstract class ContractTerm implements _$ContractTerm {
     CodeableConcept? subType,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-    List<ContractSecurityLabel>? securityLabel,
+    List<ContractSecurityLabel?>? securityLabel,
     required ContractOffer? offer,
-    List<ContractAsset>? asset,
-    List<ContractAction>? action,
-    List<ContractTerm>? group,
+    List<ContractAsset?>? asset,
+    List<ContractAction?>? action,
+    List<ContractTerm?>? group,
   }) = _ContractTerm;
 
   /// Produces a Yaml formatted String version of the object
@@ -565,13 +565,13 @@ abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
   ContractSecurityLabel._();
   factory ContractSecurityLabel({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<UnsignedInt>? number,
-    @JsonKey(name: '_number') List<Element>? numberElement,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<UnsignedInt?>? number,
+    @JsonKey(name: '_number') List<Element?>? numberElement,
     required Coding? classification,
-    List<Coding>? category,
-    List<Coding>? control,
+    List<Coding?>? category,
+    List<Coding?>? control,
   }) = _ContractSecurityLabel;
 
   /// Produces a Yaml formatted String version of the object
@@ -596,22 +596,22 @@ abstract class ContractOffer implements _$ContractOffer {
   ContractOffer._();
   factory ContractOffer({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    List<ContractParty>? party,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
+    List<ContractParty?>? party,
     Reference? topic,
     CodeableConcept? type,
     CodeableConcept? decision,
-    List<CodeableConcept>? decisionMode,
-    List<ContractAnswer>? answer,
+    List<CodeableConcept?>? decisionMode,
+    List<ContractAnswer?>? answer,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-    List<String>? linkId,
-    @JsonKey(name: '_linkId') List<Element>? linkIdElement,
-    List<UnsignedInt>? securityLabelNumber,
+    List<String?>? linkId,
+    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
+    List<UnsignedInt?>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
-        List<Element>? securityLabelNumberElement,
+        List<Element?>? securityLabelNumberElement,
   }) = _ContractOffer;
 
   /// Produces a Yaml formatted String version of the object
@@ -636,9 +636,9 @@ abstract class ContractParty implements _$ContractParty {
   ContractParty._();
   factory ContractParty({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required List<Reference>? reference,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    required List<Reference?>? reference,
     required CodeableConcept? role,
   }) = _ContractParty;
 
@@ -664,8 +664,8 @@ abstract class ContractAnswer implements _$ContractAnswer {
   ContractAnswer._();
   factory ContractAnswer({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     Decimal? valueDecimal,
@@ -710,28 +710,28 @@ abstract class ContractAsset implements _$ContractAsset {
   ContractAsset._();
   factory ContractAsset({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? scope,
-    List<CodeableConcept>? type,
-    List<Reference>? typeReference,
-    List<CodeableConcept>? subtype,
+    List<CodeableConcept?>? type,
+    List<Reference?>? typeReference,
+    List<CodeableConcept?>? subtype,
     Coding? relationship,
-    List<ContractContext>? context,
+    List<ContractContext?>? context,
     String? condition,
     @JsonKey(name: '_condition') Element? conditionElement,
-    List<CodeableConcept>? periodType,
-    List<Period>? period,
-    List<Period>? usePeriod,
+    List<CodeableConcept?>? periodType,
+    List<Period?>? period,
+    List<Period?>? usePeriod,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-    List<String>? linkId,
-    @JsonKey(name: '_linkId') List<Element>? linkIdElement,
-    List<ContractAnswer>? answer,
-    List<UnsignedInt>? securityLabelNumber,
+    List<String?>? linkId,
+    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
+    List<ContractAnswer?>? answer,
+    List<UnsignedInt?>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
-        List<Element>? securityLabelNumberElement,
-    List<ContractValuedItem>? valuedItem,
+        List<Element?>? securityLabelNumberElement,
+    List<ContractValuedItem?>? valuedItem,
   }) = _ContractAsset;
 
   /// Produces a Yaml formatted String version of the object
@@ -756,10 +756,10 @@ abstract class ContractContext implements _$ContractContext {
   ContractContext._();
   factory ContractContext({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Reference? reference,
-    List<CodeableConcept>? code,
+    List<CodeableConcept?>? code,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
   }) = _ContractContext;
@@ -786,8 +786,8 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
   ContractValuedItem._();
   factory ContractValuedItem({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? entityCodeableConcept,
     Reference? entityReference,
     Identifier? identifier,
@@ -806,11 +806,11 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
     @JsonKey(name: '_paymentDate') Element? paymentDateElement,
     Reference? responsible,
     Reference? recipient,
-    List<String>? linkId,
-    @JsonKey(name: '_linkId') List<Element>? linkIdElement,
-    List<UnsignedInt>? securityLabelNumber,
+    List<String?>? linkId,
+    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
+    List<UnsignedInt?>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
-        List<Element>? securityLabelNumberElement,
+        List<Element?>? securityLabelNumberElement,
   }) = _ContractValuedItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -835,38 +835,38 @@ abstract class ContractAction implements _$ContractAction {
   ContractAction._();
   factory ContractAction({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Boolean? doNotPerform,
     @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
     required CodeableConcept? type,
-    List<ContractSubject>? subject,
+    List<ContractSubject?>? subject,
     required CodeableConcept? intent,
-    List<String>? linkId,
-    @JsonKey(name: '_linkId') List<Element>? linkIdElement,
+    List<String?>? linkId,
+    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
     required CodeableConcept? status,
     Reference? context,
-    List<String>? contextLinkId,
-    @JsonKey(name: '_contextLinkId') List<Element>? contextLinkIdElement,
+    List<String?>? contextLinkId,
+    @JsonKey(name: '_contextLinkId') List<Element?>? contextLinkIdElement,
     FhirDateTime? occurrenceDateTime,
     @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
     Period? occurrencePeriod,
     Timing? occurrenceTiming,
-    List<Reference>? requester,
-    List<String>? requesterLinkId,
-    @JsonKey(name: '_requesterLinkId') List<Element>? requesterLinkIdElement,
-    List<CodeableConcept>? performerType,
+    List<Reference?>? requester,
+    List<String?>? requesterLinkId,
+    @JsonKey(name: '_requesterLinkId') List<Element?>? requesterLinkIdElement,
+    List<CodeableConcept?>? performerType,
     CodeableConcept? performerRole,
     Reference? performer,
-    List<String>? performerLinkId,
-    @JsonKey(name: '_performerLinkId') List<Element>? performerLinkIdElement,
-    List<CodeableReference>? reason,
-    List<String>? reasonLinkId,
-    @JsonKey(name: '_reasonLinkId') List<Element>? reasonLinkIdElement,
-    List<Annotation>? note,
-    List<UnsignedInt>? securityLabelNumber,
+    List<String?>? performerLinkId,
+    @JsonKey(name: '_performerLinkId') List<Element?>? performerLinkIdElement,
+    List<CodeableReference?>? reason,
+    List<String?>? reasonLinkId,
+    @JsonKey(name: '_reasonLinkId') List<Element?>? reasonLinkIdElement,
+    List<Annotation?>? note,
+    List<UnsignedInt?>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
-        List<Element>? securityLabelNumberElement,
+        List<Element?>? securityLabelNumberElement,
   }) = _ContractAction;
 
   /// Produces a Yaml formatted String version of the object
@@ -891,9 +891,9 @@ abstract class ContractSubject implements _$ContractSubject {
   ContractSubject._();
   factory ContractSubject({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required List<Reference>? reference,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    required List<Reference?>? reference,
     CodeableConcept? role,
   }) = _ContractSubject;
 
@@ -919,11 +919,11 @@ abstract class ContractSigner implements _$ContractSigner {
   ContractSigner._();
   factory ContractSigner({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Coding? type,
     required Reference? party,
-    required List<Signature>? signature,
+    required List<Signature?>? signature,
   }) = _ContractSigner;
 
   /// Produces a Yaml formatted String version of the object
@@ -948,8 +948,8 @@ abstract class ContractFriendly implements _$ContractFriendly {
   ContractFriendly._();
   factory ContractFriendly({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Attachment? contentAttachment,
     Reference? contentReference,
   }) = _ContractFriendly;
@@ -976,8 +976,8 @@ abstract class ContractLegal implements _$ContractLegal {
   ContractLegal._();
   factory ContractLegal({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Attachment? contentAttachment,
     Reference? contentReference,
   }) = _ContractLegal;
@@ -1004,8 +1004,8 @@ abstract class ContractRule implements _$ContractRule {
   ContractRule._();
   factory ContractRule({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Attachment? contentAttachment,
     Reference? contentReference,
   }) = _ContractRule;
@@ -1044,9 +1044,9 @@ abstract class ExplanationOfBenefit
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
         ExplanationOfBenefitStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -1064,7 +1064,7 @@ abstract class ExplanationOfBenefit
     CodeableConcept? priority,
     CodeableConcept? fundsReserveRequested,
     CodeableConcept? fundsReserve,
-    List<ExplanationOfBenefitRelated>? related,
+    List<ExplanationOfBenefitRelated?>? related,
     Reference? prescription,
     Reference? originalPrescription,
     ExplanationOfBenefitPayee? payee,
@@ -1076,27 +1076,27 @@ abstract class ExplanationOfBenefit
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,
-    List<String>? preAuthRef,
-    @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement,
-    List<Period>? preAuthRefPeriod,
-    List<ExplanationOfBenefitCareTeam>? careTeam,
-    List<ExplanationOfBenefitSupportingInfo>? supportingInfo,
-    List<ExplanationOfBenefitDiagnosis>? diagnosis,
-    List<ExplanationOfBenefitProcedure>? procedure,
+    List<String?>? preAuthRef,
+    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
+    List<Period?>? preAuthRefPeriod,
+    List<ExplanationOfBenefitCareTeam?>? careTeam,
+    List<ExplanationOfBenefitSupportingInfo?>? supportingInfo,
+    List<ExplanationOfBenefitDiagnosis?>? diagnosis,
+    List<ExplanationOfBenefitProcedure?>? procedure,
     PositiveInt? precedence,
     @JsonKey(name: '_precedence') Element? precedenceElement,
-    required List<ExplanationOfBenefitInsurance>? insurance,
+    required List<ExplanationOfBenefitInsurance?>? insurance,
     ExplanationOfBenefitAccident? accident,
-    List<ExplanationOfBenefitItem>? item,
-    List<ExplanationOfBenefitAddItem>? addItem,
-    List<ExplanationOfBenefitAdjudication>? adjudication,
-    List<ExplanationOfBenefitTotal>? total,
+    List<ExplanationOfBenefitItem?>? item,
+    List<ExplanationOfBenefitAddItem?>? addItem,
+    List<ExplanationOfBenefitAdjudication?>? adjudication,
+    List<ExplanationOfBenefitTotal?>? total,
     ExplanationOfBenefitPayment? payment,
     CodeableConcept? formCode,
     Attachment? form,
-    List<ExplanationOfBenefitProcessNote>? processNote,
+    List<ExplanationOfBenefitProcessNote?>? processNote,
     Period? benefitPeriod,
-    List<ExplanationOfBenefitBenefitBalance>? benefitBalance,
+    List<ExplanationOfBenefitBenefitBalance?>? benefitBalance,
   }) = _ExplanationOfBenefit;
 
   /// Produces a Yaml formatted String version of the object
@@ -1122,8 +1122,8 @@ abstract class ExplanationOfBenefitRelated
   ExplanationOfBenefitRelated._();
   factory ExplanationOfBenefitRelated({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Reference? claim,
     CodeableConcept? relationship,
     Identifier? reference,
@@ -1153,8 +1153,8 @@ abstract class ExplanationOfBenefitPayee
   ExplanationOfBenefitPayee._();
   factory ExplanationOfBenefitPayee({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? type,
     Reference? party,
   }) = _ExplanationOfBenefitPayee;
@@ -1183,8 +1183,8 @@ abstract class ExplanationOfBenefitCareTeam
   ExplanationOfBenefitCareTeam._();
   factory ExplanationOfBenefitCareTeam({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     PositiveInt? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required Reference? provider,
@@ -1218,8 +1218,8 @@ abstract class ExplanationOfBenefitSupportingInfo
   ExplanationOfBenefitSupportingInfo._();
   factory ExplanationOfBenefitSupportingInfo({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     PositiveInt? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required CodeableConcept? category,
@@ -1263,13 +1263,13 @@ abstract class ExplanationOfBenefitDiagnosis
   ExplanationOfBenefitDiagnosis._();
   factory ExplanationOfBenefitDiagnosis({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     PositiveInt? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? diagnosisCodeableConcept,
     Reference? diagnosisReference,
-    List<CodeableConcept>? type,
+    List<CodeableConcept?>? type,
     CodeableConcept? onAdmission,
     CodeableConcept? packageCode,
   }) = _ExplanationOfBenefitDiagnosis;
@@ -1298,16 +1298,16 @@ abstract class ExplanationOfBenefitProcedure
   ExplanationOfBenefitProcedure._();
   factory ExplanationOfBenefitProcedure({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     PositiveInt? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
-    List<CodeableConcept>? type,
+    List<CodeableConcept?>? type,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? procedureCodeableConcept,
     Reference? procedureReference,
-    List<Reference>? udi,
+    List<Reference?>? udi,
   }) = _ExplanationOfBenefitProcedure;
 
   /// Produces a Yaml formatted String version of the object
@@ -1334,13 +1334,13 @@ abstract class ExplanationOfBenefitInsurance
   ExplanationOfBenefitInsurance._();
   factory ExplanationOfBenefitInsurance({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Boolean? focal,
     @JsonKey(name: '_focal') Element? focalElement,
     required Reference? coverage,
-    List<String>? preAuthRef,
-    @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement,
+    List<String?>? preAuthRef,
+    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
   }) = _ExplanationOfBenefitInsurance;
 
   /// Produces a Yaml formatted String version of the object
@@ -1367,8 +1367,8 @@ abstract class ExplanationOfBenefitAccident
   ExplanationOfBenefitAccident._();
   factory ExplanationOfBenefitAccident({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Date? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? type,
@@ -1399,26 +1399,26 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
   ExplanationOfBenefitItem._();
   factory ExplanationOfBenefitItem({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     PositiveInt? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
-    List<PositiveInt>? careTeamSequence,
-    @JsonKey(name: '_careTeamSequence') List<Element>? careTeamSequenceElement,
-    List<PositiveInt>? diagnosisSequence,
+    List<PositiveInt?>? careTeamSequence,
+    @JsonKey(name: '_careTeamSequence') List<Element?>? careTeamSequenceElement,
+    List<PositiveInt?>? diagnosisSequence,
     @JsonKey(name: '_diagnosisSequence')
-        List<Element>? diagnosisSequenceElement,
-    List<PositiveInt>? procedureSequence,
+        List<Element?>? diagnosisSequenceElement,
+    List<PositiveInt?>? procedureSequence,
     @JsonKey(name: '_procedureSequence')
-        List<Element>? procedureSequenceElement,
-    List<PositiveInt>? informationSequence,
+        List<Element?>? procedureSequenceElement,
+    List<PositiveInt?>? informationSequence,
     @JsonKey(name: '_informationSequence')
-        List<Element>? informationSequenceElement,
+        List<Element?>? informationSequenceElement,
     CodeableConcept? revenue,
     CodeableConcept? category,
     required CodeableConcept? productOrService,
-    List<CodeableConcept>? modifier,
-    List<CodeableConcept>? programCode,
+    List<CodeableConcept?>? modifier,
+    List<CodeableConcept?>? programCode,
     Date? servicedDate,
     @JsonKey(name: '_servicedDate') Element? servicedDateElement,
     Period? servicedPeriod,
@@ -1430,14 +1430,14 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
     Decimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
-    List<Reference>? udi,
+    List<Reference?>? udi,
     CodeableConcept? bodySite,
-    List<CodeableConcept>? subSite,
-    List<Reference>? encounter,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-    List<ExplanationOfBenefitAdjudication>? adjudication,
-    List<ExplanationOfBenefitDetail>? detail,
+    List<CodeableConcept?>? subSite,
+    List<Reference?>? encounter,
+    List<PositiveInt?>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    List<ExplanationOfBenefitAdjudication?>? adjudication,
+    List<ExplanationOfBenefitDetail?>? detail,
   }) = _ExplanationOfBenefitItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -1464,8 +1464,8 @@ abstract class ExplanationOfBenefitAdjudication
   ExplanationOfBenefitAdjudication._();
   factory ExplanationOfBenefitAdjudication({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? category,
     CodeableConcept? reason,
     Money? amount,
@@ -1499,25 +1499,25 @@ abstract class ExplanationOfBenefitDetail
   ExplanationOfBenefitDetail._();
   factory ExplanationOfBenefitDetail({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     PositiveInt? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? revenue,
     CodeableConcept? category,
     required CodeableConcept? productOrService,
-    List<CodeableConcept>? modifier,
-    List<CodeableConcept>? programCode,
+    List<CodeableConcept?>? modifier,
+    List<CodeableConcept?>? programCode,
     Quantity? quantity,
     Money? unitPrice,
     Decimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
-    List<Reference>? udi,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-    List<ExplanationOfBenefitAdjudication>? adjudication,
-    List<ExplanationOfBenefitSubDetail>? subDetail,
+    List<Reference?>? udi,
+    List<PositiveInt?>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    List<ExplanationOfBenefitAdjudication?>? adjudication,
+    List<ExplanationOfBenefitSubDetail?>? subDetail,
   }) = _ExplanationOfBenefitDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -1544,24 +1544,24 @@ abstract class ExplanationOfBenefitSubDetail
   ExplanationOfBenefitSubDetail._();
   factory ExplanationOfBenefitSubDetail({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     PositiveInt? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? revenue,
     CodeableConcept? category,
     required CodeableConcept? productOrService,
-    List<CodeableConcept>? modifier,
-    List<CodeableConcept>? programCode,
+    List<CodeableConcept?>? modifier,
+    List<CodeableConcept?>? programCode,
     Quantity? quantity,
     Money? unitPrice,
     Decimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
-    List<Reference>? udi,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-    List<ExplanationOfBenefitAdjudication>? adjudication,
+    List<Reference?>? udi,
+    List<PositiveInt?>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    List<ExplanationOfBenefitAdjudication?>? adjudication,
   }) = _ExplanationOfBenefitSubDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -1588,19 +1588,19 @@ abstract class ExplanationOfBenefitAddItem
   ExplanationOfBenefitAddItem._();
   factory ExplanationOfBenefitAddItem({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<PositiveInt>? itemSequence,
-    @JsonKey(name: '_itemSequence') List<Element>? itemSequenceElement,
-    List<PositiveInt>? detailSequence,
-    @JsonKey(name: '_detailSequence') List<Element>? detailSequenceElement,
-    List<PositiveInt>? subDetailSequence,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<PositiveInt?>? itemSequence,
+    @JsonKey(name: '_itemSequence') List<Element?>? itemSequenceElement,
+    List<PositiveInt?>? detailSequence,
+    @JsonKey(name: '_detailSequence') List<Element?>? detailSequenceElement,
+    List<PositiveInt?>? subDetailSequence,
     @JsonKey(name: '_subDetailSequence')
-        List<Element>? subDetailSequenceElement,
-    List<Reference>? provider,
+        List<Element?>? subDetailSequenceElement,
+    List<Reference?>? provider,
     required CodeableConcept? productOrService,
-    List<CodeableConcept>? modifier,
-    List<CodeableConcept>? programCode,
+    List<CodeableConcept?>? modifier,
+    List<CodeableConcept?>? programCode,
     Date? servicedDate,
     @JsonKey(name: '_servicedDate') Element? servicedDateElement,
     Period? servicedPeriod,
@@ -1613,11 +1613,11 @@ abstract class ExplanationOfBenefitAddItem
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
     CodeableConcept? bodySite,
-    List<CodeableConcept>? subSite,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-    List<ExplanationOfBenefitAdjudication>? adjudication,
-    List<ExplanationOfBenefitDetail1>? detail,
+    List<CodeableConcept?>? subSite,
+    List<PositiveInt?>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    List<ExplanationOfBenefitAdjudication?>? adjudication,
+    List<ExplanationOfBenefitDetail1?>? detail,
   }) = _ExplanationOfBenefitAddItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -1644,19 +1644,19 @@ abstract class ExplanationOfBenefitDetail1
   ExplanationOfBenefitDetail1._();
   factory ExplanationOfBenefitDetail1({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? productOrService,
-    List<CodeableConcept>? modifier,
+    List<CodeableConcept?>? modifier,
     Quantity? quantity,
     Money? unitPrice,
     Decimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-    List<ExplanationOfBenefitAdjudication>? adjudication,
-    List<ExplanationOfBenefitSubDetail1>? subDetail,
+    List<PositiveInt?>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    List<ExplanationOfBenefitAdjudication?>? adjudication,
+    List<ExplanationOfBenefitSubDetail1?>? subDetail,
   }) = _ExplanationOfBenefitDetail1;
 
   /// Produces a Yaml formatted String version of the object
@@ -1683,18 +1683,18 @@ abstract class ExplanationOfBenefitSubDetail1
   ExplanationOfBenefitSubDetail1._();
   factory ExplanationOfBenefitSubDetail1({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? productOrService,
-    List<CodeableConcept>? modifier,
+    List<CodeableConcept?>? modifier,
     Quantity? quantity,
     Money? unitPrice,
     Decimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-    List<ExplanationOfBenefitAdjudication>? adjudication,
+    List<PositiveInt?>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    List<ExplanationOfBenefitAdjudication?>? adjudication,
   }) = _ExplanationOfBenefitSubDetail1;
 
   /// Produces a Yaml formatted String version of the object
@@ -1723,8 +1723,8 @@ abstract class ExplanationOfBenefitTotal
   ExplanationOfBenefitTotal._();
   factory ExplanationOfBenefitTotal({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? category,
     required Money? amount,
   }) = _ExplanationOfBenefitTotal;
@@ -1753,8 +1753,8 @@ abstract class ExplanationOfBenefitPayment
   ExplanationOfBenefitPayment._();
   factory ExplanationOfBenefitPayment({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? type,
     Money? adjustment,
     CodeableConcept? adjustmentReason,
@@ -1788,8 +1788,8 @@ abstract class ExplanationOfBenefitProcessNote
   ExplanationOfBenefitProcessNote._();
   factory ExplanationOfBenefitProcessNote({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     PositiveInt? number,
     @JsonKey(name: '_number') Element? numberElement,
     @JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown)
@@ -1826,8 +1826,8 @@ abstract class ExplanationOfBenefitBenefitBalance
   ExplanationOfBenefitBenefitBalance._();
   factory ExplanationOfBenefitBenefitBalance({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? category,
     Boolean? excluded,
     @JsonKey(name: '_excluded') Element? excludedElement,
@@ -1838,7 +1838,7 @@ abstract class ExplanationOfBenefitBenefitBalance
     CodeableConcept? network,
     CodeableConcept? unit,
     CodeableConcept? term,
-    List<ExplanationOfBenefitFinancial>? financial,
+    List<ExplanationOfBenefitFinancial?>? financial,
   }) = _ExplanationOfBenefitBenefitBalance;
 
   /// Produces a Yaml formatted String version of the object
@@ -1867,8 +1867,8 @@ abstract class ExplanationOfBenefitFinancial
   ExplanationOfBenefitFinancial._();
   factory ExplanationOfBenefitFinancial({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? type,
     UnsignedInt? allowedUnsignedInt,
     @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
@@ -1913,26 +1913,26 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
         InsurancePlanStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    List<CodeableConcept>? type,
+    List<CodeableConcept?>? type,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    List<String>? alias,
-    @JsonKey(name: '_alias') List<Element>? aliasElement,
+    List<String?>? alias,
+    @JsonKey(name: '_alias') List<Element?>? aliasElement,
     Period? period,
     Reference? ownedBy,
     Reference? administeredBy,
-    List<Reference>? coverageArea,
-    List<InsurancePlanContact>? contact,
-    List<Reference>? endpoint,
-    List<Reference>? network,
-    List<InsurancePlanCoverage>? coverage,
-    List<InsurancePlanPlan>? plan,
+    List<Reference?>? coverageArea,
+    List<InsurancePlanContact?>? contact,
+    List<Reference?>? endpoint,
+    List<Reference?>? network,
+    List<InsurancePlanCoverage?>? coverage,
+    List<InsurancePlanPlan?>? plan,
   }) = _InsurancePlan;
 
   /// Produces a Yaml formatted String version of the object
@@ -1957,11 +1957,11 @@ abstract class InsurancePlanContact implements _$InsurancePlanContact {
   InsurancePlanContact._();
   factory InsurancePlanContact({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? purpose,
     HumanName? name,
-    List<ContactPoint>? telecom,
+    List<ContactPoint?>? telecom,
     Address? address,
   }) = _InsurancePlanContact;
 
@@ -1987,11 +1987,11 @@ abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage {
   InsurancePlanCoverage._();
   factory InsurancePlanCoverage({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? type,
-    List<Reference>? network,
-    required List<InsurancePlanBenefit>? benefit,
+    List<Reference?>? network,
+    required List<InsurancePlanBenefit?>? benefit,
   }) = _InsurancePlanCoverage;
 
   /// Produces a Yaml formatted String version of the object
@@ -2016,12 +2016,12 @@ abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit {
   InsurancePlanBenefit._();
   factory InsurancePlanBenefit({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? type,
     String? requirement,
     @JsonKey(name: '_requirement') Element? requirementElement,
-    List<InsurancePlanLimit>? limit,
+    List<InsurancePlanLimit?>? limit,
   }) = _InsurancePlanBenefit;
 
   /// Produces a Yaml formatted String version of the object
@@ -2046,8 +2046,8 @@ abstract class InsurancePlanLimit implements _$InsurancePlanLimit {
   InsurancePlanLimit._();
   factory InsurancePlanLimit({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Quantity? value,
     CodeableConcept? code,
   }) = _InsurancePlanLimit;
@@ -2074,14 +2074,14 @@ abstract class InsurancePlanPlan implements _$InsurancePlanPlan {
   InsurancePlanPlan._();
   factory InsurancePlanPlan({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     CodeableConcept? type,
-    List<Reference>? coverageArea,
-    List<Reference>? network,
-    List<InsurancePlanGeneralCost>? generalCost,
-    List<InsurancePlanSpecificCost>? specificCost,
+    List<Reference?>? coverageArea,
+    List<Reference?>? network,
+    List<InsurancePlanGeneralCost?>? generalCost,
+    List<InsurancePlanSpecificCost?>? specificCost,
   }) = _InsurancePlanPlan;
 
   /// Produces a Yaml formatted String version of the object
@@ -2106,8 +2106,8 @@ abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost {
   InsurancePlanGeneralCost._();
   factory InsurancePlanGeneralCost({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? type,
     PositiveInt? groupSize,
     @JsonKey(name: '_groupSize') Element? groupSizeElement,
@@ -2140,10 +2140,10 @@ abstract class InsurancePlanSpecificCost
   InsurancePlanSpecificCost._();
   factory InsurancePlanSpecificCost({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? category,
-    List<InsurancePlanBenefit1>? benefit,
+    List<InsurancePlanBenefit1?>? benefit,
   }) = _InsurancePlanSpecificCost;
 
   /// Produces a Yaml formatted String version of the object
@@ -2169,10 +2169,10 @@ abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1 {
   InsurancePlanBenefit1._();
   factory InsurancePlanBenefit1({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? type,
-    List<InsurancePlanCost>? cost,
+    List<InsurancePlanCost?>? cost,
   }) = _InsurancePlanBenefit1;
 
   /// Produces a Yaml formatted String version of the object
@@ -2197,11 +2197,11 @@ abstract class InsurancePlanCost implements _$InsurancePlanCost {
   InsurancePlanCost._();
   factory InsurancePlanCost({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? type,
     CodeableConcept? applicability,
-    List<CodeableConcept>? qualifiers,
+    List<CodeableConcept?>? qualifiers,
     Quantity? value,
   }) = _InsurancePlanCost;
 

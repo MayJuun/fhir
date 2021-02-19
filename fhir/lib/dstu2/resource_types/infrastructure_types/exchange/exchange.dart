@@ -26,19 +26,19 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Instant? timestamp,
     required Coding? event,
     MessageHeaderResponse? response,
     required MessageHeaderSource? source,
-    List<MessageHeaderDestination>? destination,
+    List<MessageHeaderDestination?>? destination,
     Reference? enterer,
     Reference? author,
     Reference? receiver,
     Reference? responsible,
     CodeableConcept? reason,
-    List<Reference>? data,
+    List<Reference?>? data,
   }) = _MessageHeader;
 
   /// Produces a Yaml formatted String version of the object
@@ -63,8 +63,8 @@ abstract class MessageHeaderResponse with _$MessageHeaderResponse {
   MessageHeaderResponse._();
   factory MessageHeaderResponse({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Id? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
     @JsonKey(unknownEnumValue: ResponseCode.unknown) required ResponseCode code,
@@ -94,8 +94,8 @@ abstract class MessageHeaderSource with _$MessageHeaderSource {
   MessageHeaderSource._();
   factory MessageHeaderSource({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? software,
@@ -129,8 +129,8 @@ abstract class MessageHeaderDestination with _$MessageHeaderDestination {
   MessageHeaderDestination._();
   factory MessageHeaderDestination({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Reference? target,
@@ -172,9 +172,9 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required List<OperationOutcomeIssue>? issue,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    required List<OperationOutcomeIssue?>? issue,
   }) = _OperationOutcome;
 
   /// Produces a Yaml formatted String version of the object
@@ -199,14 +199,14 @@ abstract class OperationOutcomeIssue with _$OperationOutcomeIssue {
   OperationOutcomeIssue._();
   factory OperationOutcomeIssue({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: IssueSeverity.unknown)
         required IssueSeverity severity,
     required Code? code,
     CodeableConcept? details,
     String? diagnostics,
-    List<String>? location,
+    List<String?>? location,
   }) = _OperationOutcomeIssue;
 
   /// Produces a Yaml formatted String version of the object
@@ -239,7 +239,7 @@ abstract class Parameters with Resource implements _$Parameters {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
-    List<ParametersParameter>? parameter,
+    List<ParametersParameter?>? parameter,
   }) = _Parameters;
 
   /// Produces a Yaml formatted String version of the object
@@ -264,8 +264,8 @@ abstract class ParametersParameter with _$ParametersParameter {
   ParametersParameter._();
   factory ParametersParameter({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Integer? valueInteger,
@@ -302,7 +302,7 @@ abstract class ParametersParameter with _$ParametersParameter {
     Schedule? valueSchedule,
     Reference? valueReference,
     Resource? resource,
-    @JsonKey(name: 'part') List<ParametersParameter>? part_,
+    @JsonKey(name: 'part') List<ParametersParameter?>? part_,
   }) = _ParametersParameter;
 
   /// Produces a Yaml formatted String version of the object
@@ -337,11 +337,11 @@ abstract class Subscription with Resource implements _$Subscription {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required String? criteria,
     @JsonKey(name: '_criteria') Element? criteriaElement,
-    List<ContactPoint>? contact,
+    List<ContactPoint?>? contact,
     required String? reason,
     @JsonKey(name: '_reason') Element? reasonElement,
     @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
@@ -352,7 +352,7 @@ abstract class Subscription with Resource implements _$Subscription {
     required SubscriptionChannel? channel,
     Instant? end,
     @JsonKey(name: '_end') Element? endElement,
-    List<Coding>? tag,
+    List<Coding?>? tag,
   }) = _Subscription;
 
   /// Produces a Yaml formatted String version of the object
@@ -377,8 +377,8 @@ abstract class SubscriptionChannel with _$SubscriptionChannel {
   SubscriptionChannel._();
   factory SubscriptionChannel({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: ChannelType.unknown) required ChannelType type,
     @JsonKey(name: '_type') Element? typeElement,
     FhirUri? endpoint,
@@ -386,7 +386,7 @@ abstract class SubscriptionChannel with _$SubscriptionChannel {
     required String? payload,
     @JsonKey(name: '_payload') Element? payloadElement,
     String? header,
-    @JsonKey(name: '_header') List<Element>? headerElement,
+    @JsonKey(name: '_header') List<Element?>? headerElement,
   }) = _SubscriptionChannel;
 
   /// Produces a Yaml formatted String version of the object

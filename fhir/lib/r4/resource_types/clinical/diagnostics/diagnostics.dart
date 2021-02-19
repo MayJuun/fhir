@@ -110,17 +110,17 @@ abstract class BodyStructure with Resource implements _$BodyStructure {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     CodeableConcept? morphology,
     CodeableConcept? location,
-    List<CodeableConcept>? locationQualifier,
+    List<CodeableConcept?>? locationQualifier,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<Attachment>? image,
+    List<Attachment?>? image,
     required Reference? patient,
   }) = _BodyStructure;
 
@@ -292,14 +292,14 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    List<Reference>? basedOn,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
+    List<Reference?>? basedOn,
     @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
         DiagnosticReportStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    List<CodeableConcept>? category,
+    List<CodeableConcept?>? category,
     required CodeableConcept? code,
     Reference? subject,
     Reference? encounter,
@@ -308,16 +308,16 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
     Period? effectivePeriod,
     Instant? issued,
     @JsonKey(name: '_issued') Element? issuedElement,
-    List<Reference>? performer,
-    List<Reference>? resultsInterpreter,
-    List<Reference>? specimen,
-    List<Reference>? result,
-    List<Reference>? imagingStudy,
-    List<DiagnosticReportMedia>? media,
+    List<Reference?>? performer,
+    List<Reference?>? resultsInterpreter,
+    List<Reference?>? specimen,
+    List<Reference?>? result,
+    List<Reference?>? imagingStudy,
+    List<DiagnosticReportMedia?>? media,
     String? conclusion,
     @JsonKey(name: '_conclusion') Element? conclusionElement,
-    List<CodeableConcept>? conclusionCode,
-    List<Attachment>? presentedForm,
+    List<CodeableConcept?>? conclusionCode,
+    List<Attachment?>? presentedForm,
   }) = _DiagnosticReport;
 
   /// Produces a Yaml formatted String version of the object
@@ -381,8 +381,8 @@ abstract class DiagnosticReportMedia implements _$DiagnosticReportMedia {
   /// [link]: Reference to the image source.
   factory DiagnosticReportMedia({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
     required Reference? link,
@@ -554,34 +554,34 @@ abstract class ImagingStudy with Resource implements _$ImagingStudy {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     @JsonKey(unknownEnumValue: ImagingStudyStatus.unknown)
         ImagingStudyStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    List<Coding>? modality,
+    List<Coding?>? modality,
     required Reference? subject,
     Reference? encounter,
     FhirDateTime? started,
     @JsonKey(name: '_started') Element? startedElement,
-    List<Reference>? basedOn,
+    List<Reference?>? basedOn,
     Reference? referrer,
-    List<Reference>? interpreter,
-    List<Reference>? endpoint,
+    List<Reference?>? interpreter,
+    List<Reference?>? endpoint,
     UnsignedInt? numberOfSeries,
     @JsonKey(name: '_numberOfSeries') Element? numberOfSeriesElement,
     UnsignedInt? numberOfInstances,
     @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
     Reference? procedureReference,
-    List<CodeableConcept>? procedureCode,
+    List<CodeableConcept?>? procedureCode,
     Reference? location,
-    List<CodeableConcept>? reasonCode,
-    List<Reference>? reasonReference,
-    List<Annotation>? note,
+    List<CodeableConcept?>? reasonCode,
+    List<Reference?>? reasonReference,
+    List<Annotation?>? note,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<ImagingStudySeries>? series,
+    List<ImagingStudySeries?>? series,
   }) = _ImagingStudy;
 
   /// Produces a Yaml formatted String version of the object
@@ -687,8 +687,8 @@ abstract class ImagingStudySeries implements _$ImagingStudySeries {
   ///  presentation state.
   factory ImagingStudySeries({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Id? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     UnsignedInt? number,
@@ -698,14 +698,14 @@ abstract class ImagingStudySeries implements _$ImagingStudySeries {
     @JsonKey(name: '_description') Element? descriptionElement,
     UnsignedInt? numberOfInstances,
     @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
-    List<Reference>? endpoint,
+    List<Reference?>? endpoint,
     Coding? bodySite,
     Coding? laterality,
-    List<Reference>? specimen,
+    List<Reference?>? specimen,
     FhirDateTime? started,
     @JsonKey(name: '_started') Element? startedElement,
-    List<ImagingStudyPerformer>? performer,
-    List<ImagingStudyInstance>? instance,
+    List<ImagingStudyPerformer?>? performer,
+    List<ImagingStudyInstance?>? instance,
   }) = _ImagingStudySeries;
 
   /// Produces a Yaml formatted String version of the object
@@ -766,8 +766,8 @@ abstract class ImagingStudyPerformer implements _$ImagingStudyPerformer {
   /// [actor]: Indicates who or what performed the series.
   factory ImagingStudyPerformer({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? function,
     required Reference? actor,
   }) = _ImagingStudyPerformer;
@@ -839,8 +839,8 @@ abstract class ImagingStudyInstance implements _$ImagingStudyInstance {
   /// [_title]: Extensions for title
   factory ImagingStudyInstance({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Id? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     required Coding? sopClass,
@@ -1020,11 +1020,11 @@ abstract class Media with Resource implements _$Media {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    List<Reference>? basedOn,
-    List<Reference>? partOf,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
+    List<Reference?>? basedOn,
+    List<Reference?>? partOf,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
@@ -1038,7 +1038,7 @@ abstract class Media with Resource implements _$Media {
     Instant? issued,
     @JsonKey(name: '_issued') Element? issuedElement,
     @JsonKey(name: 'operator') Reference? operator_,
-    List<CodeableConcept>? reasonCode,
+    List<CodeableConcept?>? reasonCode,
     CodeableConcept? bodySite,
     String? deviceName,
     @JsonKey(name: '_deviceName') Element? deviceNameElement,
@@ -1052,7 +1052,7 @@ abstract class Media with Resource implements _$Media {
     Decimal? duration,
     @JsonKey(name: '_duration') Element? durationElement,
     required Attachment? content,
-    List<Annotation>? note,
+    List<Annotation?>? note,
   }) = _Media;
 
   /// Produces a Yaml formatted String version of the object
@@ -1200,9 +1200,9 @@ abstract class MolecularSequence with Resource implements _$MolecularSequence {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     @JsonKey(unknownEnumValue: MolecularSequenceType.unknown)
         MolecularSequenceType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -1214,15 +1214,15 @@ abstract class MolecularSequence with Resource implements _$MolecularSequence {
     Reference? performer,
     Quantity? quantity,
     MolecularSequenceReferenceSeq? referenceSeq,
-    List<MolecularSequenceVariant>? variant,
+    List<MolecularSequenceVariant?>? variant,
     String? observedSeq,
     @JsonKey(name: '_observedSeq') Element? observedSeqElement,
-    List<MolecularSequenceQuality>? quality,
+    List<MolecularSequenceQuality?>? quality,
     Integer? readCoverage,
     @JsonKey(name: '_readCoverage') Element? readCoverageElement,
-    List<MolecularSequenceRepository>? repository,
-    List<Reference>? pointer,
-    List<MolecularSequenceStructureVariant>? structureVariant,
+    List<MolecularSequenceRepository?>? repository,
+    List<Reference?>? pointer,
+    List<MolecularSequenceStructureVariant?>? structureVariant,
   }) = _MolecularSequence;
 
   /// Produces a Yaml formatted String version of the object
@@ -1324,8 +1324,8 @@ abstract class MolecularSequenceReferenceSeq
   /// [_windowEnd]: Extensions for windowEnd
   factory MolecularSequenceReferenceSeq({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? chromosome,
     String? genomeBuild,
     @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
@@ -1436,8 +1436,8 @@ abstract class MolecularSequenceVariant implements _$MolecularSequenceVariant {
   ///  information.
   factory MolecularSequenceVariant({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Integer? start,
     @JsonKey(name: '_start') Element? startElement,
     Integer? end,
@@ -1576,8 +1576,8 @@ abstract class MolecularSequenceQuality implements _$MolecularSequenceQuality {
   ///  sensitivity/specificity tradeoff.
   factory MolecularSequenceQuality({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: MolecularSequenceQualityType.unknown)
         MolecularSequenceQualityType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -1691,22 +1691,22 @@ abstract class MolecularSequenceRoc implements _$MolecularSequenceRoc {
   /// [_fMeasure]: Extensions for fMeasure
   factory MolecularSequenceRoc({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Integer>? score,
-    @JsonKey(name: '_score') List<Element>? scoreElement,
-    List<Integer>? numTP,
-    @JsonKey(name: '_numTP') List<Element>? numTPElement,
-    List<Integer>? numFP,
-    @JsonKey(name: '_numFP') List<Element>? numFPElement,
-    List<Integer>? numFN,
-    @JsonKey(name: '_numFN') List<Element>? numFNElement,
-    List<Decimal>? precision,
-    @JsonKey(name: '_precision') List<Element>? precisionElement,
-    List<Decimal>? sensitivity,
-    @JsonKey(name: '_sensitivity') List<Element>? sensitivityElement,
-    List<Decimal>? fMeasure,
-    @JsonKey(name: '_fMeasure') List<Element>? fMeasureElement,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Integer?>? score,
+    @JsonKey(name: '_score') List<Element?>? scoreElement,
+    List<Integer?>? numTP,
+    @JsonKey(name: '_numTP') List<Element?>? numTPElement,
+    List<Integer?>? numFP,
+    @JsonKey(name: '_numFP') List<Element?>? numFPElement,
+    List<Integer?>? numFN,
+    @JsonKey(name: '_numFN') List<Element?>? numFNElement,
+    List<Decimal?>? precision,
+    @JsonKey(name: '_precision') List<Element?>? precisionElement,
+    List<Decimal?>? sensitivity,
+    @JsonKey(name: '_sensitivity') List<Element?>? sensitivityElement,
+    List<Decimal?>? fMeasure,
+    @JsonKey(name: '_fMeasure') List<Element?>? fMeasureElement,
   }) = _MolecularSequenceRoc;
 
   /// Produces a Yaml formatted String version of the object
@@ -1789,8 +1789,8 @@ abstract class MolecularSequenceRepository
   /// [_readsetId]: Extensions for readsetId
   factory MolecularSequenceRepository({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: MolecularSequenceRepositoryType.unknown)
         MolecularSequenceRepositoryType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -1873,8 +1873,8 @@ abstract class MolecularSequenceStructureVariant
   /// [inner]: Structural variant inner.
   factory MolecularSequenceStructureVariant({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? variantType,
     Boolean? exact,
     @JsonKey(name: '_exact') Element? exactElement,
@@ -1947,8 +1947,8 @@ abstract class MolecularSequenceOuter implements _$MolecularSequenceOuter {
   /// [_end]: Extensions for end
   factory MolecularSequenceOuter({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Integer? start,
     @JsonKey(name: '_start') Element? startElement,
     Integer? end,
@@ -2015,8 +2015,8 @@ abstract class MolecularSequenceInner implements _$MolecularSequenceInner {
   /// [_end]: Extensions for end
   factory MolecularSequenceInner({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Integer? start,
     @JsonKey(name: '_start') Element? startElement,
     Integer? end,
@@ -2267,18 +2267,18 @@ abstract class Observation with Resource implements _$Observation {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    List<Reference>? basedOn,
-    List<Reference>? partOf,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
+    List<Reference?>? basedOn,
+    List<Reference?>? partOf,
     @JsonKey(unknownEnumValue: ObservationStatus.unknown)
         ObservationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    List<CodeableConcept>? category,
+    List<CodeableConcept?>? category,
     required CodeableConcept? code,
     Reference? subject,
-    List<Reference>? focus,
+    List<Reference?>? focus,
     Reference? encounter,
     FhirDateTime? effectiveDateTime,
     @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
@@ -2288,7 +2288,7 @@ abstract class Observation with Resource implements _$Observation {
     @JsonKey(name: '_effectiveInstant') Element? effectiveInstantElement,
     Instant? issued,
     @JsonKey(name: '_issued') Element? issuedElement,
-    List<Reference>? performer,
+    List<Reference?>? performer,
     Quantity? valueQuantity,
     CodeableConcept? valueCodeableConcept,
     String? valueString,
@@ -2306,16 +2306,16 @@ abstract class Observation with Resource implements _$Observation {
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
     Period? valuePeriod,
     CodeableConcept? dataAbsentReason,
-    List<CodeableConcept>? interpretation,
-    List<Annotation>? note,
+    List<CodeableConcept?>? interpretation,
+    List<Annotation?>? note,
     CodeableConcept? bodySite,
     CodeableConcept? method,
     Reference? specimen,
     Reference? device,
-    List<ObservationReferenceRange>? referenceRange,
-    List<Reference>? hasMember,
-    List<Reference>? derivedFrom,
-    List<ObservationComponent>? component,
+    List<ObservationReferenceRange?>? referenceRange,
+    List<Reference?>? hasMember,
+    List<Reference?>? derivedFrom,
+    List<ObservationComponent?>? component,
   }) = _Observation;
 
   /// Produces a Yaml formatted String version of the object
@@ -2398,12 +2398,12 @@ abstract class ObservationReferenceRange
   /// [_text]: Extensions for text
   factory ObservationReferenceRange({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Quantity? low,
     Quantity? high,
     CodeableConcept? type,
-    List<CodeableConcept>? appliesTo,
+    List<CodeableConcept?>? appliesTo,
     Range? age,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -2514,8 +2514,8 @@ abstract class ObservationComponent implements _$ObservationComponent {
   ///  a normal or recommended range.
   factory ObservationComponent({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? code,
     Quantity? valueQuantity,
     CodeableConcept? valueCodeableConcept,
@@ -2534,8 +2534,8 @@ abstract class ObservationComponent implements _$ObservationComponent {
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
     Period? valuePeriod,
     CodeableConcept? dataAbsentReason,
-    List<CodeableConcept>? interpretation,
-    List<ObservationReferenceRange>? referenceRange,
+    List<CodeableConcept?>? interpretation,
+    List<ObservationReferenceRange?>? referenceRange,
   }) = _ObservationComponent;
 
   /// Produces a Yaml formatted String version of the object
@@ -2669,11 +2669,11 @@ abstract class QuestionnaireResponse
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Identifier? identifier,
-    List<Reference>? basedOn,
-    List<Reference>? partOf,
+    List<Reference?>? basedOn,
+    List<Reference?>? partOf,
     Canonical? questionnaire,
     @JsonKey(unknownEnumValue: QuestionnaireResponseStatus.unknown)
         QuestionnaireResponseStatus? status,
@@ -2684,7 +2684,7 @@ abstract class QuestionnaireResponse
     @JsonKey(name: '_authored') Element? authoredElement,
     Reference? author,
     Reference? source,
-    List<QuestionnaireResponseItem>? item,
+    List<QuestionnaireResponseItem?>? item,
   }) = _QuestionnaireResponse;
 
   /// Produces a Yaml formatted String version of the object
@@ -2758,16 +2758,16 @@ abstract class QuestionnaireResponseItem
   /// [item]: Questions or sub-groups nested beneath a question or group.
   factory QuestionnaireResponseItem({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? linkId,
     @JsonKey(name: '_linkId') Element? linkIdElement,
     FhirUri? definition,
     @JsonKey(name: '_definition') Element? definitionElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-    List<QuestionnaireResponseAnswer>? answer,
-    List<QuestionnaireResponseItem>? item,
+    List<QuestionnaireResponseAnswer?>? answer,
+    List<QuestionnaireResponseItem?>? item,
   }) = _QuestionnaireResponseItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -2878,8 +2878,8 @@ abstract class QuestionnaireResponseAnswer
   ///  answer.
   factory QuestionnaireResponseAnswer({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     Decimal? valueDecimal,
@@ -2900,7 +2900,7 @@ abstract class QuestionnaireResponseAnswer
     Coding? valueCoding,
     Quantity? valueQuantity,
     Reference? valueReference,
-    List<QuestionnaireResponseItem>? item,
+    List<QuestionnaireResponseItem?>? item,
   }) = _QuestionnaireResponseAnswer;
 
   /// Produces a Yaml formatted String version of the object
@@ -3032,9 +3032,9 @@ abstract class Specimen with Resource implements _$Specimen {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     Identifier? accessionIdentifier,
     @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -3042,13 +3042,13 @@ abstract class Specimen with Resource implements _$Specimen {
     Reference? subject,
     FhirDateTime? receivedTime,
     @JsonKey(name: '_receivedTime') Element? receivedTimeElement,
-    List<Reference>? parent,
-    List<Reference>? request,
+    List<Reference?>? parent,
+    List<Reference?>? request,
     SpecimenCollection? collection,
-    List<SpecimenProcessing>? processing,
-    List<SpecimenContainer>? container,
-    List<CodeableConcept>? condition,
-    List<Annotation>? note,
+    List<SpecimenProcessing?>? processing,
+    List<SpecimenContainer?>? container,
+    List<CodeableConcept?>? condition,
+    List<Annotation?>? note,
   }) = _Specimen;
 
   /// Produces a Yaml formatted String version of the object
@@ -3129,8 +3129,8 @@ abstract class SpecimenCollection implements _$SpecimenCollection {
   ///  drink, or both, for a period of time prior to sample collection.
   factory SpecimenCollection({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Reference? collector,
     FhirDateTime? collectedDateTime,
     @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
@@ -3210,12 +3210,12 @@ abstract class SpecimenProcessing implements _$SpecimenProcessing {
   ///  the sample was in formalin.
   factory SpecimenProcessing({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     CodeableConcept? procedure,
-    List<Reference>? additive,
+    List<Reference?>? additive,
     FhirDateTime? timeDateTime,
     @JsonKey(name: '_timeDateTime') Element? timeDateTimeElement,
     Period? timePeriod,
@@ -3293,9 +3293,9 @@ abstract class SpecimenContainer implements _$SpecimenContainer {
   ///  the specimen. Examples: Formalin, Citrate, EDTA.
   factory SpecimenContainer({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     CodeableConcept? type,

@@ -30,9 +30,9 @@ class _$ClaimTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -52,19 +52,19 @@ class _$ClaimTearOff {
       required Reference? provider,
       required CodeableConcept? priority,
       CodeableConcept? fundsReserve,
-      List<ClaimRelated>? related,
+      List<ClaimRelated?>? related,
       Reference? prescription,
       Reference? originalPrescription,
       ClaimPayee? payee,
       Reference? referral,
       Reference? facility,
-      List<ClaimCareTeam>? careTeam,
-      List<ClaimSupportingInfo>? supportingInfo,
-      List<ClaimDiagnosis>? diagnosis,
-      List<ClaimProcedure>? procedure,
-      required List<ClaimInsurance>? insurance,
+      List<ClaimCareTeam?>? careTeam,
+      List<ClaimSupportingInfo?>? supportingInfo,
+      List<ClaimDiagnosis?>? diagnosis,
+      List<ClaimProcedure?>? procedure,
+      required List<ClaimInsurance?>? insurance,
       ClaimAccident? accident,
-      List<ClaimItem>? item,
+      List<ClaimItem?>? item,
       Money? total}) {
     return _Claim(
       resourceType: resourceType,
@@ -134,9 +134,9 @@ mixin _$Claim {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   Code? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -156,19 +156,19 @@ mixin _$Claim {
   Reference? get provider;
   CodeableConcept? get priority;
   CodeableConcept? get fundsReserve;
-  List<ClaimRelated>? get related;
+  List<ClaimRelated?>? get related;
   Reference? get prescription;
   Reference? get originalPrescription;
   ClaimPayee? get payee;
   Reference? get referral;
   Reference? get facility;
-  List<ClaimCareTeam>? get careTeam;
-  List<ClaimSupportingInfo>? get supportingInfo;
-  List<ClaimDiagnosis>? get diagnosis;
-  List<ClaimProcedure>? get procedure;
-  List<ClaimInsurance>? get insurance;
+  List<ClaimCareTeam?>? get careTeam;
+  List<ClaimSupportingInfo?>? get supportingInfo;
+  List<ClaimDiagnosis?>? get diagnosis;
+  List<ClaimProcedure?>? get procedure;
+  List<ClaimInsurance?>? get insurance;
   ClaimAccident? get accident;
-  List<ClaimItem>? get item;
+  List<ClaimItem?>? get item;
   Money? get total;
 
   Map<String, dynamic> toJson();
@@ -194,9 +194,9 @@ abstract class $ClaimCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -216,19 +216,19 @@ abstract class $ClaimCopyWith<$Res> {
       Reference? provider,
       CodeableConcept? priority,
       CodeableConcept? fundsReserve,
-      List<ClaimRelated>? related,
+      List<ClaimRelated?>? related,
       Reference? prescription,
       Reference? originalPrescription,
       ClaimPayee? payee,
       Reference? referral,
       Reference? facility,
-      List<ClaimCareTeam>? careTeam,
-      List<ClaimSupportingInfo>? supportingInfo,
-      List<ClaimDiagnosis>? diagnosis,
-      List<ClaimProcedure>? procedure,
-      List<ClaimInsurance>? insurance,
+      List<ClaimCareTeam?>? careTeam,
+      List<ClaimSupportingInfo?>? supportingInfo,
+      List<ClaimDiagnosis?>? diagnosis,
+      List<ClaimProcedure?>? procedure,
+      List<ClaimInsurance?>? insurance,
       ClaimAccident? accident,
-      List<ClaimItem>? item,
+      List<ClaimItem?>? item,
       Money? total});
 
   $MetaCopyWith<$Res>? get meta;
@@ -330,13 +330,13 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -364,7 +364,7 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
           ? _value.fundsReserve
           : fundsReserve as CodeableConcept?,
       related:
-          related == freezed ? _value.related : related as List<ClaimRelated>?,
+          related == freezed ? _value.related : related as List<ClaimRelated?>?,
       prescription: prescription == freezed
           ? _value.prescription
           : prescription as Reference?,
@@ -376,22 +376,22 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
       facility: facility == freezed ? _value.facility : facility as Reference?,
       careTeam: careTeam == freezed
           ? _value.careTeam
-          : careTeam as List<ClaimCareTeam>?,
+          : careTeam as List<ClaimCareTeam?>?,
       supportingInfo: supportingInfo == freezed
           ? _value.supportingInfo
-          : supportingInfo as List<ClaimSupportingInfo>?,
+          : supportingInfo as List<ClaimSupportingInfo?>?,
       diagnosis: diagnosis == freezed
           ? _value.diagnosis
-          : diagnosis as List<ClaimDiagnosis>?,
+          : diagnosis as List<ClaimDiagnosis?>?,
       procedure: procedure == freezed
           ? _value.procedure
-          : procedure as List<ClaimProcedure>?,
+          : procedure as List<ClaimProcedure?>?,
       insurance: insurance == freezed
           ? _value.insurance
-          : insurance as List<ClaimInsurance>?,
+          : insurance as List<ClaimInsurance?>?,
       accident:
           accident == freezed ? _value.accident : accident as ClaimAccident?,
-      item: item == freezed ? _value.item : item as List<ClaimItem>?,
+      item: item == freezed ? _value.item : item as List<ClaimItem?>?,
       total: total == freezed ? _value.total : total as Money?,
     ));
   }
@@ -669,9 +669,9 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -691,19 +691,19 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
       Reference? provider,
       CodeableConcept? priority,
       CodeableConcept? fundsReserve,
-      List<ClaimRelated>? related,
+      List<ClaimRelated?>? related,
       Reference? prescription,
       Reference? originalPrescription,
       ClaimPayee? payee,
       Reference? referral,
       Reference? facility,
-      List<ClaimCareTeam>? careTeam,
-      List<ClaimSupportingInfo>? supportingInfo,
-      List<ClaimDiagnosis>? diagnosis,
-      List<ClaimProcedure>? procedure,
-      List<ClaimInsurance>? insurance,
+      List<ClaimCareTeam?>? careTeam,
+      List<ClaimSupportingInfo?>? supportingInfo,
+      List<ClaimDiagnosis?>? diagnosis,
+      List<ClaimProcedure?>? procedure,
+      List<ClaimInsurance?>? insurance,
       ClaimAccident? accident,
-      List<ClaimItem>? item,
+      List<ClaimItem?>? item,
       Money? total});
 
   @override
@@ -829,13 +829,13 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -863,7 +863,7 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
           ? _value.fundsReserve
           : fundsReserve as CodeableConcept?,
       related:
-          related == freezed ? _value.related : related as List<ClaimRelated>?,
+          related == freezed ? _value.related : related as List<ClaimRelated?>?,
       prescription: prescription == freezed
           ? _value.prescription
           : prescription as Reference?,
@@ -875,22 +875,22 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
       facility: facility == freezed ? _value.facility : facility as Reference?,
       careTeam: careTeam == freezed
           ? _value.careTeam
-          : careTeam as List<ClaimCareTeam>?,
+          : careTeam as List<ClaimCareTeam?>?,
       supportingInfo: supportingInfo == freezed
           ? _value.supportingInfo
-          : supportingInfo as List<ClaimSupportingInfo>?,
+          : supportingInfo as List<ClaimSupportingInfo?>?,
       diagnosis: diagnosis == freezed
           ? _value.diagnosis
-          : diagnosis as List<ClaimDiagnosis>?,
+          : diagnosis as List<ClaimDiagnosis?>?,
       procedure: procedure == freezed
           ? _value.procedure
-          : procedure as List<ClaimProcedure>?,
+          : procedure as List<ClaimProcedure?>?,
       insurance: insurance == freezed
           ? _value.insurance
-          : insurance as List<ClaimInsurance>?,
+          : insurance as List<ClaimInsurance?>?,
       accident:
           accident == freezed ? _value.accident : accident as ClaimAccident?,
-      item: item == freezed ? _value.item : item as List<ClaimItem>?,
+      item: item == freezed ? _value.item : item as List<ClaimItem?>?,
       total: total == freezed ? _value.total : total as Money?,
     ));
   }
@@ -978,11 +978,11 @@ class _$_Claim extends _Claim {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final Code? status;
   @override
@@ -1018,7 +1018,7 @@ class _$_Claim extends _Claim {
   @override
   final CodeableConcept? fundsReserve;
   @override
-  final List<ClaimRelated>? related;
+  final List<ClaimRelated?>? related;
   @override
   final Reference? prescription;
   @override
@@ -1030,19 +1030,19 @@ class _$_Claim extends _Claim {
   @override
   final Reference? facility;
   @override
-  final List<ClaimCareTeam>? careTeam;
+  final List<ClaimCareTeam?>? careTeam;
   @override
-  final List<ClaimSupportingInfo>? supportingInfo;
+  final List<ClaimSupportingInfo?>? supportingInfo;
   @override
-  final List<ClaimDiagnosis>? diagnosis;
+  final List<ClaimDiagnosis?>? diagnosis;
   @override
-  final List<ClaimProcedure>? procedure;
+  final List<ClaimProcedure?>? procedure;
   @override
-  final List<ClaimInsurance>? insurance;
+  final List<ClaimInsurance?>? insurance;
   @override
   final ClaimAccident? accident;
   @override
-  final List<ClaimItem>? item;
+  final List<ClaimItem?>? item;
   @override
   final Money? total;
 
@@ -1213,9 +1213,9 @@ abstract class _Claim extends Claim {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -1235,19 +1235,19 @@ abstract class _Claim extends Claim {
       required Reference? provider,
       required CodeableConcept? priority,
       CodeableConcept? fundsReserve,
-      List<ClaimRelated>? related,
+      List<ClaimRelated?>? related,
       Reference? prescription,
       Reference? originalPrescription,
       ClaimPayee? payee,
       Reference? referral,
       Reference? facility,
-      List<ClaimCareTeam>? careTeam,
-      List<ClaimSupportingInfo>? supportingInfo,
-      List<ClaimDiagnosis>? diagnosis,
-      List<ClaimProcedure>? procedure,
-      required List<ClaimInsurance>? insurance,
+      List<ClaimCareTeam?>? careTeam,
+      List<ClaimSupportingInfo?>? supportingInfo,
+      List<ClaimDiagnosis?>? diagnosis,
+      List<ClaimProcedure?>? procedure,
+      required List<ClaimInsurance?>? insurance,
       ClaimAccident? accident,
-      List<ClaimItem>? item,
+      List<ClaimItem?>? item,
       Money? total}) = _$_Claim;
 
   factory _Claim.fromJson(Map<String, dynamic> json) = _$_Claim.fromJson;
@@ -1275,11 +1275,11 @@ abstract class _Claim extends Claim {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   Code? get status;
   @override
@@ -1315,7 +1315,7 @@ abstract class _Claim extends Claim {
   @override
   CodeableConcept? get fundsReserve;
   @override
-  List<ClaimRelated>? get related;
+  List<ClaimRelated?>? get related;
   @override
   Reference? get prescription;
   @override
@@ -1327,19 +1327,19 @@ abstract class _Claim extends Claim {
   @override
   Reference? get facility;
   @override
-  List<ClaimCareTeam>? get careTeam;
+  List<ClaimCareTeam?>? get careTeam;
   @override
-  List<ClaimSupportingInfo>? get supportingInfo;
+  List<ClaimSupportingInfo?>? get supportingInfo;
   @override
-  List<ClaimDiagnosis>? get diagnosis;
+  List<ClaimDiagnosis?>? get diagnosis;
   @override
-  List<ClaimProcedure>? get procedure;
+  List<ClaimProcedure?>? get procedure;
   @override
-  List<ClaimInsurance>? get insurance;
+  List<ClaimInsurance?>? get insurance;
   @override
   ClaimAccident? get accident;
   @override
-  List<ClaimItem>? get item;
+  List<ClaimItem?>? get item;
   @override
   Money? get total;
   @override
@@ -1357,8 +1357,8 @@ class _$ClaimRelatedTearOff {
 
   _ClaimRelated call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? claim,
       CodeableConcept? relationship,
       Identifier? reference}) {
@@ -1384,8 +1384,8 @@ const $ClaimRelated = _$ClaimRelatedTearOff();
 mixin _$ClaimRelated {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Reference? get claim;
   CodeableConcept? get relationship;
   Identifier? get reference;
@@ -1402,8 +1402,8 @@ abstract class $ClaimRelatedCopyWith<$Res> {
       _$ClaimRelatedCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? claim,
       CodeableConcept? relationship,
       Identifier? reference});
@@ -1434,10 +1434,10 @@ class _$ClaimRelatedCopyWithImpl<$Res> implements $ClaimRelatedCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       claim: claim == freezed ? _value.claim : claim as Reference?,
       relationship: relationship == freezed
           ? _value.relationship
@@ -1490,8 +1490,8 @@ abstract class _$ClaimRelatedCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? claim,
       CodeableConcept? relationship,
       Identifier? reference});
@@ -1527,10 +1527,10 @@ class __$ClaimRelatedCopyWithImpl<$Res> extends _$ClaimRelatedCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       claim: claim == freezed ? _value.claim : claim as Reference?,
       relationship: relationship == freezed
           ? _value.relationship
@@ -1561,9 +1561,9 @@ class _$_ClaimRelated extends _ClaimRelated {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Reference? claim;
   @override
@@ -1623,8 +1623,8 @@ abstract class _ClaimRelated extends ClaimRelated {
   _ClaimRelated._() : super._();
   factory _ClaimRelated(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? claim,
       CodeableConcept? relationship,
       Identifier? reference}) = _$_ClaimRelated;
@@ -1636,9 +1636,9 @@ abstract class _ClaimRelated extends ClaimRelated {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Reference? get claim;
   @override
@@ -1660,8 +1660,8 @@ class _$ClaimPayeeTearOff {
 
   _ClaimPayee call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? type,
       Reference? party}) {
     return _ClaimPayee(
@@ -1685,8 +1685,8 @@ const $ClaimPayee = _$ClaimPayeeTearOff();
 mixin _$ClaimPayee {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get type;
   Reference? get party;
 
@@ -1702,8 +1702,8 @@ abstract class $ClaimPayeeCopyWith<$Res> {
       _$ClaimPayeeCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
       Reference? party});
 
@@ -1731,10 +1731,10 @@ class _$ClaimPayeeCopyWithImpl<$Res> implements $ClaimPayeeCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       party: party == freezed ? _value.party : party as Reference?,
     ));
@@ -1771,8 +1771,8 @@ abstract class _$ClaimPayeeCopyWith<$Res> implements $ClaimPayeeCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
       Reference? party});
 
@@ -1804,10 +1804,10 @@ class __$ClaimPayeeCopyWithImpl<$Res> extends _$ClaimPayeeCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       party: party == freezed ? _value.party : party as Reference?,
     ));
@@ -1833,9 +1833,9 @@ class _$_ClaimPayee extends _ClaimPayee {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? type;
   @override
@@ -1888,8 +1888,8 @@ abstract class _ClaimPayee extends ClaimPayee {
   _ClaimPayee._() : super._();
   factory _ClaimPayee(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? type,
       Reference? party}) = _$_ClaimPayee;
 
@@ -1900,9 +1900,9 @@ abstract class _ClaimPayee extends ClaimPayee {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get type;
   @override
@@ -1922,8 +1922,8 @@ class _$ClaimCareTeamTearOff {
 
   _ClaimCareTeam call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       required Reference? provider,
@@ -1957,8 +1957,8 @@ const $ClaimCareTeam = _$ClaimCareTeamTearOff();
 mixin _$ClaimCareTeam {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   PositiveInt? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -1981,8 +1981,8 @@ abstract class $ClaimCareTeamCopyWith<$Res> {
       _$ClaimCareTeamCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference? provider,
@@ -2024,10 +2024,10 @@ class _$ClaimCareTeamCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -2111,8 +2111,8 @@ abstract class _$ClaimCareTeamCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference? provider,
@@ -2161,10 +2161,10 @@ class __$ClaimCareTeamCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -2208,9 +2208,9 @@ class _$_ClaimCareTeam extends _ClaimCareTeam {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final PositiveInt? sequence;
   @override
@@ -2296,8 +2296,8 @@ abstract class _ClaimCareTeam extends ClaimCareTeam {
   _ClaimCareTeam._() : super._();
   factory _ClaimCareTeam(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       required Reference? provider,
@@ -2313,9 +2313,9 @@ abstract class _ClaimCareTeam extends ClaimCareTeam {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   PositiveInt? get sequence;
   @override
@@ -2347,8 +2347,8 @@ class _$ClaimSupportingInfoTearOff {
 
   _ClaimSupportingInfo call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       required CodeableConcept? category,
@@ -2398,8 +2398,8 @@ const $ClaimSupportingInfo = _$ClaimSupportingInfoTearOff();
 mixin _$ClaimSupportingInfo {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   PositiveInt? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -2432,8 +2432,8 @@ abstract class $ClaimSupportingInfoCopyWith<$Res> {
       _$ClaimSupportingInfoCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? category,
@@ -2497,10 +2497,10 @@ class _$ClaimSupportingInfoCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -2672,8 +2672,8 @@ abstract class _$ClaimSupportingInfoCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? category,
@@ -2750,10 +2750,10 @@ class __$ClaimSupportingInfoCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -2827,9 +2827,9 @@ class _$_ClaimSupportingInfo extends _ClaimSupportingInfo {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final PositiveInt? sequence;
   @override
@@ -2965,8 +2965,8 @@ abstract class _ClaimSupportingInfo extends ClaimSupportingInfo {
   _ClaimSupportingInfo._() : super._();
   factory _ClaimSupportingInfo(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       required CodeableConcept? category,
@@ -2990,9 +2990,9 @@ abstract class _ClaimSupportingInfo extends ClaimSupportingInfo {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   PositiveInt? get sequence;
   @override
@@ -3042,13 +3042,13 @@ class _$ClaimDiagnosisTearOff {
 
   _ClaimDiagnosis call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? diagnosisCodeableConcept,
       Reference? diagnosisReference,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       CodeableConcept? onAdmission,
       CodeableConcept? packageCode}) {
     return _ClaimDiagnosis(
@@ -3077,14 +3077,14 @@ const $ClaimDiagnosis = _$ClaimDiagnosisTearOff();
 mixin _$ClaimDiagnosis {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   PositiveInt? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   CodeableConcept? get diagnosisCodeableConcept;
   Reference? get diagnosisReference;
-  List<CodeableConcept>? get type;
+  List<CodeableConcept?>? get type;
   CodeableConcept? get onAdmission;
   CodeableConcept? get packageCode;
 
@@ -3100,13 +3100,13 @@ abstract class $ClaimDiagnosisCopyWith<$Res> {
       _$ClaimDiagnosisCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? diagnosisCodeableConcept,
       Reference? diagnosisReference,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       CodeableConcept? onAdmission,
       CodeableConcept? packageCode});
 
@@ -3143,10 +3143,10 @@ class _$ClaimDiagnosisCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -3158,7 +3158,7 @@ class _$ClaimDiagnosisCopyWithImpl<$Res>
       diagnosisReference: diagnosisReference == freezed
           ? _value.diagnosisReference
           : diagnosisReference as Reference?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
       onAdmission: onAdmission == freezed
           ? _value.onAdmission
           : onAdmission as CodeableConcept?,
@@ -3234,13 +3234,13 @@ abstract class _$ClaimDiagnosisCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? diagnosisCodeableConcept,
       Reference? diagnosisReference,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       CodeableConcept? onAdmission,
       CodeableConcept? packageCode});
 
@@ -3284,10 +3284,10 @@ class __$ClaimDiagnosisCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -3299,7 +3299,7 @@ class __$ClaimDiagnosisCopyWithImpl<$Res>
       diagnosisReference: diagnosisReference == freezed
           ? _value.diagnosisReference
           : diagnosisReference as Reference?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
       onAdmission: onAdmission == freezed
           ? _value.onAdmission
           : onAdmission as CodeableConcept?,
@@ -3334,9 +3334,9 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final PositiveInt? sequence;
   @override
@@ -3347,7 +3347,7 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
   @override
   final Reference? diagnosisReference;
   @override
-  final List<CodeableConcept>? type;
+  final List<CodeableConcept?>? type;
   @override
   final CodeableConcept? onAdmission;
   @override
@@ -3423,13 +3423,13 @@ abstract class _ClaimDiagnosis extends ClaimDiagnosis {
   _ClaimDiagnosis._() : super._();
   factory _ClaimDiagnosis(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? diagnosisCodeableConcept,
       Reference? diagnosisReference,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       CodeableConcept? onAdmission,
       CodeableConcept? packageCode}) = _$_ClaimDiagnosis;
 
@@ -3440,9 +3440,9 @@ abstract class _ClaimDiagnosis extends ClaimDiagnosis {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   PositiveInt? get sequence;
   @override
@@ -3453,7 +3453,7 @@ abstract class _ClaimDiagnosis extends ClaimDiagnosis {
   @override
   Reference? get diagnosisReference;
   @override
-  List<CodeableConcept>? get type;
+  List<CodeableConcept?>? get type;
   @override
   CodeableConcept? get onAdmission;
   @override
@@ -3473,16 +3473,16 @@ class _$ClaimProcedureTearOff {
 
   _ClaimProcedure call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? procedureCodeableConcept,
       Reference? procedureReference,
-      List<Reference>? udi}) {
+      List<Reference?>? udi}) {
     return _ClaimProcedure(
       id: id,
       extension_: extension_,
@@ -3510,18 +3510,18 @@ const $ClaimProcedure = _$ClaimProcedureTearOff();
 mixin _$ClaimProcedure {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   PositiveInt? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
-  List<CodeableConcept>? get type;
+  List<CodeableConcept?>? get type;
   FhirDateTime? get date;
   @JsonKey(name: '_date')
   Element? get dateElement;
   CodeableConcept? get procedureCodeableConcept;
   Reference? get procedureReference;
-  List<Reference>? get udi;
+  List<Reference?>? get udi;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -3535,16 +3535,16 @@ abstract class $ClaimProcedureCopyWith<$Res> {
       _$ClaimProcedureCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? procedureCodeableConcept,
       Reference? procedureReference,
-      List<Reference>? udi});
+      List<Reference?>? udi});
 
   $ElementCopyWith<$Res>? get sequenceElement;
   $ElementCopyWith<$Res>? get dateElement;
@@ -3579,16 +3579,16 @@ class _$ClaimProcedureCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
           : sequenceElement as Element?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
       date: date == freezed ? _value.date : date as FhirDateTime?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
@@ -3598,7 +3598,7 @@ class _$ClaimProcedureCopyWithImpl<$Res>
       procedureReference: procedureReference == freezed
           ? _value.procedureReference
           : procedureReference as Reference?,
-      udi: udi == freezed ? _value.udi : udi as List<Reference>?,
+      udi: udi == freezed ? _value.udi : udi as List<Reference?>?,
     ));
   }
 
@@ -3657,16 +3657,16 @@ abstract class _$ClaimProcedureCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? procedureCodeableConcept,
       Reference? procedureReference,
-      List<Reference>? udi});
+      List<Reference?>? udi});
 
   @override
   $ElementCopyWith<$Res>? get sequenceElement;
@@ -3707,16 +3707,16 @@ class __$ClaimProcedureCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
           : sequenceElement as Element?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
       date: date == freezed ? _value.date : date as FhirDateTime?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
@@ -3726,7 +3726,7 @@ class __$ClaimProcedureCopyWithImpl<$Res>
       procedureReference: procedureReference == freezed
           ? _value.procedureReference
           : procedureReference as Reference?,
-      udi: udi == freezed ? _value.udi : udi as List<Reference>?,
+      udi: udi == freezed ? _value.udi : udi as List<Reference?>?,
     ));
   }
 }
@@ -3756,16 +3756,16 @@ class _$_ClaimProcedure extends _ClaimProcedure {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final PositiveInt? sequence;
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
   @override
-  final List<CodeableConcept>? type;
+  final List<CodeableConcept?>? type;
   @override
   final FhirDateTime? date;
   @override
@@ -3776,7 +3776,7 @@ class _$_ClaimProcedure extends _ClaimProcedure {
   @override
   final Reference? procedureReference;
   @override
-  final List<Reference>? udi;
+  final List<Reference?>? udi;
 
   @override
   String toString() {
@@ -3850,16 +3850,16 @@ abstract class _ClaimProcedure extends ClaimProcedure {
   _ClaimProcedure._() : super._();
   factory _ClaimProcedure(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       FhirDateTime? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? procedureCodeableConcept,
       Reference? procedureReference,
-      List<Reference>? udi}) = _$_ClaimProcedure;
+      List<Reference?>? udi}) = _$_ClaimProcedure;
 
   factory _ClaimProcedure.fromJson(Map<String, dynamic> json) =
       _$_ClaimProcedure.fromJson;
@@ -3868,16 +3868,16 @@ abstract class _ClaimProcedure extends ClaimProcedure {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   PositiveInt? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
-  List<CodeableConcept>? get type;
+  List<CodeableConcept?>? get type;
   @override
   FhirDateTime? get date;
   @override
@@ -3888,7 +3888,7 @@ abstract class _ClaimProcedure extends ClaimProcedure {
   @override
   Reference? get procedureReference;
   @override
-  List<Reference>? get udi;
+  List<Reference?>? get udi;
   @override
   @JsonKey(ignore: true)
   _$ClaimProcedureCopyWith<_ClaimProcedure> get copyWith;
@@ -3905,8 +3905,8 @@ class _$ClaimInsuranceTearOff {
   _ClaimInsurance call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
@@ -3918,9 +3918,9 @@ class _$ClaimInsuranceTearOff {
       String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
           Element? businessArrangementElement,
-      List<String>? preAuthRef,
+      List<String?>? preAuthRef,
       @JsonKey(name: '_preAuthRef')
-          List<Element>? preAuthRefElement,
+          List<Element?>? preAuthRefElement,
       Reference? claimResponse}) {
     return _ClaimInsurance(
       id: id,
@@ -3952,8 +3952,8 @@ const $ClaimInsurance = _$ClaimInsuranceTearOff();
 mixin _$ClaimInsurance {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   PositiveInt? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -3965,9 +3965,9 @@ mixin _$ClaimInsurance {
   String? get businessArrangement;
   @JsonKey(name: '_businessArrangement')
   Element? get businessArrangementElement;
-  List<String>? get preAuthRef;
+  List<String?>? get preAuthRef;
   @JsonKey(name: '_preAuthRef')
-  List<Element>? get preAuthRefElement;
+  List<Element?>? get preAuthRefElement;
   Reference? get claimResponse;
 
   Map<String, dynamic> toJson();
@@ -3983,8 +3983,8 @@ abstract class $ClaimInsuranceCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
@@ -3996,9 +3996,9 @@ abstract class $ClaimInsuranceCopyWith<$Res> {
       String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
           Element? businessArrangementElement,
-      List<String>? preAuthRef,
+      List<String?>? preAuthRef,
       @JsonKey(name: '_preAuthRef')
-          List<Element>? preAuthRefElement,
+          List<Element?>? preAuthRefElement,
       Reference? claimResponse});
 
   $ElementCopyWith<$Res>? get sequenceElement;
@@ -4039,10 +4039,10 @@ class _$ClaimInsuranceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -4063,10 +4063,10 @@ class _$ClaimInsuranceCopyWithImpl<$Res>
           : businessArrangementElement as Element?,
       preAuthRef: preAuthRef == freezed
           ? _value.preAuthRef
-          : preAuthRef as List<String>?,
+          : preAuthRef as List<String?>?,
       preAuthRefElement: preAuthRefElement == freezed
           ? _value.preAuthRefElement
-          : preAuthRefElement as List<Element>?,
+          : preAuthRefElement as List<Element?>?,
       claimResponse: claimResponse == freezed
           ? _value.claimResponse
           : claimResponse as Reference?,
@@ -4150,8 +4150,8 @@ abstract class _$ClaimInsuranceCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
@@ -4163,9 +4163,9 @@ abstract class _$ClaimInsuranceCopyWith<$Res>
       String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
           Element? businessArrangementElement,
-      List<String>? preAuthRef,
+      List<String?>? preAuthRef,
       @JsonKey(name: '_preAuthRef')
-          List<Element>? preAuthRefElement,
+          List<Element?>? preAuthRefElement,
       Reference? claimResponse});
 
   @override
@@ -4214,10 +4214,10 @@ class __$ClaimInsuranceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -4238,10 +4238,10 @@ class __$ClaimInsuranceCopyWithImpl<$Res>
           : businessArrangementElement as Element?,
       preAuthRef: preAuthRef == freezed
           ? _value.preAuthRef
-          : preAuthRef as List<String>?,
+          : preAuthRef as List<String?>?,
       preAuthRefElement: preAuthRefElement == freezed
           ? _value.preAuthRefElement
-          : preAuthRefElement as List<Element>?,
+          : preAuthRefElement as List<Element?>?,
       claimResponse: claimResponse == freezed
           ? _value.claimResponse
           : claimResponse as Reference?,
@@ -4277,9 +4277,9 @@ class _$_ClaimInsurance extends _ClaimInsurance {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final PositiveInt? sequence;
   @override
@@ -4300,10 +4300,10 @@ class _$_ClaimInsurance extends _ClaimInsurance {
   @JsonKey(name: '_businessArrangement')
   final Element? businessArrangementElement;
   @override
-  final List<String>? preAuthRef;
+  final List<String?>? preAuthRef;
   @override
   @JsonKey(name: '_preAuthRef')
-  final List<Element>? preAuthRefElement;
+  final List<Element?>? preAuthRefElement;
   @override
   final Reference? claimResponse;
 
@@ -4394,8 +4394,8 @@ abstract class _ClaimInsurance extends ClaimInsurance {
   factory _ClaimInsurance(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
@@ -4407,9 +4407,9 @@ abstract class _ClaimInsurance extends ClaimInsurance {
       String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
           Element? businessArrangementElement,
-      List<String>? preAuthRef,
+      List<String?>? preAuthRef,
       @JsonKey(name: '_preAuthRef')
-          List<Element>? preAuthRefElement,
+          List<Element?>? preAuthRefElement,
       Reference? claimResponse}) = _$_ClaimInsurance;
 
   factory _ClaimInsurance.fromJson(Map<String, dynamic> json) =
@@ -4419,9 +4419,9 @@ abstract class _ClaimInsurance extends ClaimInsurance {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   PositiveInt? get sequence;
   @override
@@ -4442,10 +4442,10 @@ abstract class _ClaimInsurance extends ClaimInsurance {
   @JsonKey(name: '_businessArrangement')
   Element? get businessArrangementElement;
   @override
-  List<String>? get preAuthRef;
+  List<String?>? get preAuthRef;
   @override
   @JsonKey(name: '_preAuthRef')
-  List<Element>? get preAuthRefElement;
+  List<Element?>? get preAuthRefElement;
   @override
   Reference? get claimResponse;
   @override
@@ -4463,8 +4463,8 @@ class _$ClaimAccidentTearOff {
 
   _ClaimAccident call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Date? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? type,
@@ -4494,8 +4494,8 @@ const $ClaimAccident = _$ClaimAccidentTearOff();
 mixin _$ClaimAccident {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Date? get date;
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -4515,8 +4515,8 @@ abstract class $ClaimAccidentCopyWith<$Res> {
       _$ClaimAccidentCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Date? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? type,
@@ -4553,10 +4553,10 @@ class _$ClaimAccidentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       date: date == freezed ? _value.date : date as Date?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
@@ -4624,8 +4624,8 @@ abstract class _$ClaimAccidentCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Date? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? type,
@@ -4668,10 +4668,10 @@ class __$ClaimAccidentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       date: date == freezed ? _value.date : date as Date?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
@@ -4708,9 +4708,9 @@ class _$_ClaimAccident extends _ClaimAccident {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Date? date;
   @override
@@ -4782,8 +4782,8 @@ abstract class _ClaimAccident extends ClaimAccident {
   _ClaimAccident._() : super._();
   factory _ClaimAccident(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Date? date,
       @JsonKey(name: '_date') Element? dateElement,
       CodeableConcept? type,
@@ -4797,9 +4797,9 @@ abstract class _ClaimAccident extends ClaimAccident {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Date? get date;
   @override
@@ -4827,28 +4827,28 @@ class _$ClaimItemTearOff {
   _ClaimItem call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      List<PositiveInt>? careTeamSequence,
+      List<PositiveInt?>? careTeamSequence,
       @JsonKey(name: '_careTeamSequence')
-          List<Element>? careTeamSequenceElement,
-      List<PositiveInt>? diagnosisSequence,
+          List<Element?>? careTeamSequenceElement,
+      List<PositiveInt?>? diagnosisSequence,
       @JsonKey(name: '_diagnosisSequence')
-          List<Element>? diagnosisSequenceElement,
-      List<PositiveInt>? procedureSequence,
+          List<Element?>? diagnosisSequenceElement,
+      List<PositiveInt?>? procedureSequence,
       @JsonKey(name: '_procedureSequence')
-          List<Element>? procedureSequenceElement,
-      List<PositiveInt>? informationSequence,
+          List<Element?>? procedureSequenceElement,
+      List<PositiveInt?>? informationSequence,
       @JsonKey(name: '_informationSequence')
-          List<Element>? informationSequenceElement,
+          List<Element?>? informationSequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
       required CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
@@ -4862,11 +4862,11 @@ class _$ClaimItemTearOff {
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? net,
-      List<Reference>? udi,
+      List<Reference?>? udi,
       CodeableConcept? bodySite,
-      List<CodeableConcept>? subSite,
-      List<Reference>? encounter,
-      List<ClaimDetail>? detail}) {
+      List<CodeableConcept?>? subSite,
+      List<Reference?>? encounter,
+      List<ClaimDetail?>? detail}) {
     return _ClaimItem(
       id: id,
       extension_: extension_,
@@ -4917,28 +4917,28 @@ const $ClaimItem = _$ClaimItemTearOff();
 mixin _$ClaimItem {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   PositiveInt? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
-  List<PositiveInt>? get careTeamSequence;
+  List<PositiveInt?>? get careTeamSequence;
   @JsonKey(name: '_careTeamSequence')
-  List<Element>? get careTeamSequenceElement;
-  List<PositiveInt>? get diagnosisSequence;
+  List<Element?>? get careTeamSequenceElement;
+  List<PositiveInt?>? get diagnosisSequence;
   @JsonKey(name: '_diagnosisSequence')
-  List<Element>? get diagnosisSequenceElement;
-  List<PositiveInt>? get procedureSequence;
+  List<Element?>? get diagnosisSequenceElement;
+  List<PositiveInt?>? get procedureSequence;
   @JsonKey(name: '_procedureSequence')
-  List<Element>? get procedureSequenceElement;
-  List<PositiveInt>? get informationSequence;
+  List<Element?>? get procedureSequenceElement;
+  List<PositiveInt?>? get informationSequence;
   @JsonKey(name: '_informationSequence')
-  List<Element>? get informationSequenceElement;
+  List<Element?>? get informationSequenceElement;
   CodeableConcept? get revenue;
   CodeableConcept? get category;
   CodeableConcept? get productOrService;
-  List<CodeableConcept>? get modifier;
-  List<CodeableConcept>? get programCode;
+  List<CodeableConcept?>? get modifier;
+  List<CodeableConcept?>? get programCode;
   Date? get servicedDate;
   @JsonKey(name: '_servicedDate')
   Element? get servicedDateElement;
@@ -4952,11 +4952,11 @@ mixin _$ClaimItem {
   @JsonKey(name: '_factor')
   Element? get factorElement;
   Money? get net;
-  List<Reference>? get udi;
+  List<Reference?>? get udi;
   CodeableConcept? get bodySite;
-  List<CodeableConcept>? get subSite;
-  List<Reference>? get encounter;
-  List<ClaimDetail>? get detail;
+  List<CodeableConcept?>? get subSite;
+  List<Reference?>? get encounter;
+  List<ClaimDetail?>? get detail;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4970,28 +4970,28 @@ abstract class $ClaimItemCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      List<PositiveInt>? careTeamSequence,
+      List<PositiveInt?>? careTeamSequence,
       @JsonKey(name: '_careTeamSequence')
-          List<Element>? careTeamSequenceElement,
-      List<PositiveInt>? diagnosisSequence,
+          List<Element?>? careTeamSequenceElement,
+      List<PositiveInt?>? diagnosisSequence,
       @JsonKey(name: '_diagnosisSequence')
-          List<Element>? diagnosisSequenceElement,
-      List<PositiveInt>? procedureSequence,
+          List<Element?>? diagnosisSequenceElement,
+      List<PositiveInt?>? procedureSequence,
       @JsonKey(name: '_procedureSequence')
-          List<Element>? procedureSequenceElement,
-      List<PositiveInt>? informationSequence,
+          List<Element?>? procedureSequenceElement,
+      List<PositiveInt?>? informationSequence,
       @JsonKey(name: '_informationSequence')
-          List<Element>? informationSequenceElement,
+          List<Element?>? informationSequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
       CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
@@ -5005,11 +5005,11 @@ abstract class $ClaimItemCopyWith<$Res> {
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? net,
-      List<Reference>? udi,
+      List<Reference?>? udi,
       CodeableConcept? bodySite,
-      List<CodeableConcept>? subSite,
-      List<Reference>? encounter,
-      List<ClaimDetail>? detail});
+      List<CodeableConcept?>? subSite,
+      List<Reference?>? encounter,
+      List<ClaimDetail?>? detail});
 
   $ElementCopyWith<$Res>? get sequenceElement;
   $CodeableConceptCopyWith<$Res>? get revenue;
@@ -5076,10 +5076,10 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -5087,28 +5087,28 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
           : sequenceElement as Element?,
       careTeamSequence: careTeamSequence == freezed
           ? _value.careTeamSequence
-          : careTeamSequence as List<PositiveInt>?,
+          : careTeamSequence as List<PositiveInt?>?,
       careTeamSequenceElement: careTeamSequenceElement == freezed
           ? _value.careTeamSequenceElement
-          : careTeamSequenceElement as List<Element>?,
+          : careTeamSequenceElement as List<Element?>?,
       diagnosisSequence: diagnosisSequence == freezed
           ? _value.diagnosisSequence
-          : diagnosisSequence as List<PositiveInt>?,
+          : diagnosisSequence as List<PositiveInt?>?,
       diagnosisSequenceElement: diagnosisSequenceElement == freezed
           ? _value.diagnosisSequenceElement
-          : diagnosisSequenceElement as List<Element>?,
+          : diagnosisSequenceElement as List<Element?>?,
       procedureSequence: procedureSequence == freezed
           ? _value.procedureSequence
-          : procedureSequence as List<PositiveInt>?,
+          : procedureSequence as List<PositiveInt?>?,
       procedureSequenceElement: procedureSequenceElement == freezed
           ? _value.procedureSequenceElement
-          : procedureSequenceElement as List<Element>?,
+          : procedureSequenceElement as List<Element?>?,
       informationSequence: informationSequence == freezed
           ? _value.informationSequence
-          : informationSequence as List<PositiveInt>?,
+          : informationSequence as List<PositiveInt?>?,
       informationSequenceElement: informationSequenceElement == freezed
           ? _value.informationSequenceElement
-          : informationSequenceElement as List<Element>?,
+          : informationSequenceElement as List<Element?>?,
       revenue:
           revenue == freezed ? _value.revenue : revenue as CodeableConcept?,
       category:
@@ -5118,10 +5118,10 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
           : productOrService as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>?,
+          : modifier as List<CodeableConcept?>?,
       programCode: programCode == freezed
           ? _value.programCode
-          : programCode as List<CodeableConcept>?,
+          : programCode as List<CodeableConcept?>?,
       servicedDate:
           servicedDate == freezed ? _value.servicedDate : servicedDate as Date?,
       servicedDateElement: servicedDateElement == freezed
@@ -5146,16 +5146,16 @@ class _$ClaimItemCopyWithImpl<$Res> implements $ClaimItemCopyWith<$Res> {
           ? _value.factorElement
           : factorElement as Element?,
       net: net == freezed ? _value.net : net as Money?,
-      udi: udi == freezed ? _value.udi : udi as List<Reference>?,
+      udi: udi == freezed ? _value.udi : udi as List<Reference?>?,
       bodySite:
           bodySite == freezed ? _value.bodySite : bodySite as CodeableConcept?,
       subSite: subSite == freezed
           ? _value.subSite
-          : subSite as List<CodeableConcept>?,
+          : subSite as List<CodeableConcept?>?,
       encounter: encounter == freezed
           ? _value.encounter
-          : encounter as List<Reference>?,
-      detail: detail == freezed ? _value.detail : detail as List<ClaimDetail>?,
+          : encounter as List<Reference?>?,
+      detail: detail == freezed ? _value.detail : detail as List<ClaimDetail?>?,
     ));
   }
 
@@ -5324,28 +5324,28 @@ abstract class _$ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      List<PositiveInt>? careTeamSequence,
+      List<PositiveInt?>? careTeamSequence,
       @JsonKey(name: '_careTeamSequence')
-          List<Element>? careTeamSequenceElement,
-      List<PositiveInt>? diagnosisSequence,
+          List<Element?>? careTeamSequenceElement,
+      List<PositiveInt?>? diagnosisSequence,
       @JsonKey(name: '_diagnosisSequence')
-          List<Element>? diagnosisSequenceElement,
-      List<PositiveInt>? procedureSequence,
+          List<Element?>? diagnosisSequenceElement,
+      List<PositiveInt?>? procedureSequence,
       @JsonKey(name: '_procedureSequence')
-          List<Element>? procedureSequenceElement,
-      List<PositiveInt>? informationSequence,
+          List<Element?>? procedureSequenceElement,
+      List<PositiveInt?>? informationSequence,
       @JsonKey(name: '_informationSequence')
-          List<Element>? informationSequenceElement,
+          List<Element?>? informationSequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
       CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
@@ -5359,11 +5359,11 @@ abstract class _$ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? net,
-      List<Reference>? udi,
+      List<Reference?>? udi,
       CodeableConcept? bodySite,
-      List<CodeableConcept>? subSite,
-      List<Reference>? encounter,
-      List<ClaimDetail>? detail});
+      List<CodeableConcept?>? subSite,
+      List<Reference?>? encounter,
+      List<ClaimDetail?>? detail});
 
   @override
   $ElementCopyWith<$Res>? get sequenceElement;
@@ -5445,10 +5445,10 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -5456,28 +5456,28 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
           : sequenceElement as Element?,
       careTeamSequence: careTeamSequence == freezed
           ? _value.careTeamSequence
-          : careTeamSequence as List<PositiveInt>?,
+          : careTeamSequence as List<PositiveInt?>?,
       careTeamSequenceElement: careTeamSequenceElement == freezed
           ? _value.careTeamSequenceElement
-          : careTeamSequenceElement as List<Element>?,
+          : careTeamSequenceElement as List<Element?>?,
       diagnosisSequence: diagnosisSequence == freezed
           ? _value.diagnosisSequence
-          : diagnosisSequence as List<PositiveInt>?,
+          : diagnosisSequence as List<PositiveInt?>?,
       diagnosisSequenceElement: diagnosisSequenceElement == freezed
           ? _value.diagnosisSequenceElement
-          : diagnosisSequenceElement as List<Element>?,
+          : diagnosisSequenceElement as List<Element?>?,
       procedureSequence: procedureSequence == freezed
           ? _value.procedureSequence
-          : procedureSequence as List<PositiveInt>?,
+          : procedureSequence as List<PositiveInt?>?,
       procedureSequenceElement: procedureSequenceElement == freezed
           ? _value.procedureSequenceElement
-          : procedureSequenceElement as List<Element>?,
+          : procedureSequenceElement as List<Element?>?,
       informationSequence: informationSequence == freezed
           ? _value.informationSequence
-          : informationSequence as List<PositiveInt>?,
+          : informationSequence as List<PositiveInt?>?,
       informationSequenceElement: informationSequenceElement == freezed
           ? _value.informationSequenceElement
-          : informationSequenceElement as List<Element>?,
+          : informationSequenceElement as List<Element?>?,
       revenue:
           revenue == freezed ? _value.revenue : revenue as CodeableConcept?,
       category:
@@ -5487,10 +5487,10 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
           : productOrService as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>?,
+          : modifier as List<CodeableConcept?>?,
       programCode: programCode == freezed
           ? _value.programCode
-          : programCode as List<CodeableConcept>?,
+          : programCode as List<CodeableConcept?>?,
       servicedDate:
           servicedDate == freezed ? _value.servicedDate : servicedDate as Date?,
       servicedDateElement: servicedDateElement == freezed
@@ -5515,16 +5515,16 @@ class __$ClaimItemCopyWithImpl<$Res> extends _$ClaimItemCopyWithImpl<$Res>
           ? _value.factorElement
           : factorElement as Element?,
       net: net == freezed ? _value.net : net as Money?,
-      udi: udi == freezed ? _value.udi : udi as List<Reference>?,
+      udi: udi == freezed ? _value.udi : udi as List<Reference?>?,
       bodySite:
           bodySite == freezed ? _value.bodySite : bodySite as CodeableConcept?,
       subSite: subSite == freezed
           ? _value.subSite
-          : subSite as List<CodeableConcept>?,
+          : subSite as List<CodeableConcept?>?,
       encounter: encounter == freezed
           ? _value.encounter
-          : encounter as List<Reference>?,
-      detail: detail == freezed ? _value.detail : detail as List<ClaimDetail>?,
+          : encounter as List<Reference?>?,
+      detail: detail == freezed ? _value.detail : detail as List<ClaimDetail?>?,
     ));
   }
 }
@@ -5577,34 +5577,34 @@ class _$_ClaimItem extends _ClaimItem {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final PositiveInt? sequence;
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
   @override
-  final List<PositiveInt>? careTeamSequence;
+  final List<PositiveInt?>? careTeamSequence;
   @override
   @JsonKey(name: '_careTeamSequence')
-  final List<Element>? careTeamSequenceElement;
+  final List<Element?>? careTeamSequenceElement;
   @override
-  final List<PositiveInt>? diagnosisSequence;
+  final List<PositiveInt?>? diagnosisSequence;
   @override
   @JsonKey(name: '_diagnosisSequence')
-  final List<Element>? diagnosisSequenceElement;
+  final List<Element?>? diagnosisSequenceElement;
   @override
-  final List<PositiveInt>? procedureSequence;
+  final List<PositiveInt?>? procedureSequence;
   @override
   @JsonKey(name: '_procedureSequence')
-  final List<Element>? procedureSequenceElement;
+  final List<Element?>? procedureSequenceElement;
   @override
-  final List<PositiveInt>? informationSequence;
+  final List<PositiveInt?>? informationSequence;
   @override
   @JsonKey(name: '_informationSequence')
-  final List<Element>? informationSequenceElement;
+  final List<Element?>? informationSequenceElement;
   @override
   final CodeableConcept? revenue;
   @override
@@ -5612,9 +5612,9 @@ class _$_ClaimItem extends _ClaimItem {
   @override
   final CodeableConcept? productOrService;
   @override
-  final List<CodeableConcept>? modifier;
+  final List<CodeableConcept?>? modifier;
   @override
-  final List<CodeableConcept>? programCode;
+  final List<CodeableConcept?>? programCode;
   @override
   final Date? servicedDate;
   @override
@@ -5640,15 +5640,15 @@ class _$_ClaimItem extends _ClaimItem {
   @override
   final Money? net;
   @override
-  final List<Reference>? udi;
+  final List<Reference?>? udi;
   @override
   final CodeableConcept? bodySite;
   @override
-  final List<CodeableConcept>? subSite;
+  final List<CodeableConcept?>? subSite;
   @override
-  final List<Reference>? encounter;
+  final List<Reference?>? encounter;
   @override
-  final List<ClaimDetail>? detail;
+  final List<ClaimDetail?>? detail;
 
   @override
   String toString() {
@@ -5780,28 +5780,28 @@ abstract class _ClaimItem extends ClaimItem {
   factory _ClaimItem(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      List<PositiveInt>? careTeamSequence,
+      List<PositiveInt?>? careTeamSequence,
       @JsonKey(name: '_careTeamSequence')
-          List<Element>? careTeamSequenceElement,
-      List<PositiveInt>? diagnosisSequence,
+          List<Element?>? careTeamSequenceElement,
+      List<PositiveInt?>? diagnosisSequence,
       @JsonKey(name: '_diagnosisSequence')
-          List<Element>? diagnosisSequenceElement,
-      List<PositiveInt>? procedureSequence,
+          List<Element?>? diagnosisSequenceElement,
+      List<PositiveInt?>? procedureSequence,
       @JsonKey(name: '_procedureSequence')
-          List<Element>? procedureSequenceElement,
-      List<PositiveInt>? informationSequence,
+          List<Element?>? procedureSequenceElement,
+      List<PositiveInt?>? informationSequence,
       @JsonKey(name: '_informationSequence')
-          List<Element>? informationSequenceElement,
+          List<Element?>? informationSequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
       required CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
@@ -5815,11 +5815,11 @@ abstract class _ClaimItem extends ClaimItem {
       @JsonKey(name: '_factor')
           Element? factorElement,
       Money? net,
-      List<Reference>? udi,
+      List<Reference?>? udi,
       CodeableConcept? bodySite,
-      List<CodeableConcept>? subSite,
-      List<Reference>? encounter,
-      List<ClaimDetail>? detail}) = _$_ClaimItem;
+      List<CodeableConcept?>? subSite,
+      List<Reference?>? encounter,
+      List<ClaimDetail?>? detail}) = _$_ClaimItem;
 
   factory _ClaimItem.fromJson(Map<String, dynamic> json) =
       _$_ClaimItem.fromJson;
@@ -5828,34 +5828,34 @@ abstract class _ClaimItem extends ClaimItem {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   PositiveInt? get sequence;
   @override
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
-  List<PositiveInt>? get careTeamSequence;
+  List<PositiveInt?>? get careTeamSequence;
   @override
   @JsonKey(name: '_careTeamSequence')
-  List<Element>? get careTeamSequenceElement;
+  List<Element?>? get careTeamSequenceElement;
   @override
-  List<PositiveInt>? get diagnosisSequence;
+  List<PositiveInt?>? get diagnosisSequence;
   @override
   @JsonKey(name: '_diagnosisSequence')
-  List<Element>? get diagnosisSequenceElement;
+  List<Element?>? get diagnosisSequenceElement;
   @override
-  List<PositiveInt>? get procedureSequence;
+  List<PositiveInt?>? get procedureSequence;
   @override
   @JsonKey(name: '_procedureSequence')
-  List<Element>? get procedureSequenceElement;
+  List<Element?>? get procedureSequenceElement;
   @override
-  List<PositiveInt>? get informationSequence;
+  List<PositiveInt?>? get informationSequence;
   @override
   @JsonKey(name: '_informationSequence')
-  List<Element>? get informationSequenceElement;
+  List<Element?>? get informationSequenceElement;
   @override
   CodeableConcept? get revenue;
   @override
@@ -5863,9 +5863,9 @@ abstract class _ClaimItem extends ClaimItem {
   @override
   CodeableConcept? get productOrService;
   @override
-  List<CodeableConcept>? get modifier;
+  List<CodeableConcept?>? get modifier;
   @override
-  List<CodeableConcept>? get programCode;
+  List<CodeableConcept?>? get programCode;
   @override
   Date? get servicedDate;
   @override
@@ -5891,15 +5891,15 @@ abstract class _ClaimItem extends ClaimItem {
   @override
   Money? get net;
   @override
-  List<Reference>? get udi;
+  List<Reference?>? get udi;
   @override
   CodeableConcept? get bodySite;
   @override
-  List<CodeableConcept>? get subSite;
+  List<CodeableConcept?>? get subSite;
   @override
-  List<Reference>? get encounter;
+  List<Reference?>? get encounter;
   @override
-  List<ClaimDetail>? get detail;
+  List<ClaimDetail?>? get detail;
   @override
   @JsonKey(ignore: true)
   _$ClaimItemCopyWith<_ClaimItem> get copyWith;
@@ -5915,22 +5915,22 @@ class _$ClaimDetailTearOff {
 
   _ClaimDetail call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
       required CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Quantity? quantity,
       Money? unitPrice,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<Reference>? udi,
-      List<ClaimSubDetail>? subDetail}) {
+      List<Reference?>? udi,
+      List<ClaimSubDetail?>? subDetail}) {
     return _ClaimDetail(
       id: id,
       extension_: extension_,
@@ -5964,24 +5964,24 @@ const $ClaimDetail = _$ClaimDetailTearOff();
 mixin _$ClaimDetail {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   PositiveInt? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   CodeableConcept? get revenue;
   CodeableConcept? get category;
   CodeableConcept? get productOrService;
-  List<CodeableConcept>? get modifier;
-  List<CodeableConcept>? get programCode;
+  List<CodeableConcept?>? get modifier;
+  List<CodeableConcept?>? get programCode;
   Quantity? get quantity;
   Money? get unitPrice;
   Decimal? get factor;
   @JsonKey(name: '_factor')
   Element? get factorElement;
   Money? get net;
-  List<Reference>? get udi;
-  List<ClaimSubDetail>? get subDetail;
+  List<Reference?>? get udi;
+  List<ClaimSubDetail?>? get subDetail;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -5995,22 +5995,22 @@ abstract class $ClaimDetailCopyWith<$Res> {
       _$ClaimDetailCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
       CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Quantity? quantity,
       Money? unitPrice,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<Reference>? udi,
-      List<ClaimSubDetail>? subDetail});
+      List<Reference?>? udi,
+      List<ClaimSubDetail?>? subDetail});
 
   $ElementCopyWith<$Res>? get sequenceElement;
   $CodeableConceptCopyWith<$Res>? get revenue;
@@ -6054,10 +6054,10 @@ class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -6072,10 +6072,10 @@ class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
           : productOrService as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>?,
+          : modifier as List<CodeableConcept?>?,
       programCode: programCode == freezed
           ? _value.programCode
-          : programCode as List<CodeableConcept>?,
+          : programCode as List<CodeableConcept?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money?,
       factor: factor == freezed ? _value.factor : factor as Decimal?,
@@ -6083,10 +6083,10 @@ class _$ClaimDetailCopyWithImpl<$Res> implements $ClaimDetailCopyWith<$Res> {
           ? _value.factorElement
           : factorElement as Element?,
       net: net == freezed ? _value.net : net as Money?,
-      udi: udi == freezed ? _value.udi : udi as List<Reference>?,
+      udi: udi == freezed ? _value.udi : udi as List<Reference?>?,
       subDetail: subDetail == freezed
           ? _value.subDetail
-          : subDetail as List<ClaimSubDetail>?,
+          : subDetail as List<ClaimSubDetail?>?,
     ));
   }
 
@@ -6188,22 +6188,22 @@ abstract class _$ClaimDetailCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
       CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Quantity? quantity,
       Money? unitPrice,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<Reference>? udi,
-      List<ClaimSubDetail>? subDetail});
+      List<Reference?>? udi,
+      List<ClaimSubDetail?>? subDetail});
 
   @override
   $ElementCopyWith<$Res>? get sequenceElement;
@@ -6257,10 +6257,10 @@ class __$ClaimDetailCopyWithImpl<$Res> extends _$ClaimDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -6275,10 +6275,10 @@ class __$ClaimDetailCopyWithImpl<$Res> extends _$ClaimDetailCopyWithImpl<$Res>
           : productOrService as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>?,
+          : modifier as List<CodeableConcept?>?,
       programCode: programCode == freezed
           ? _value.programCode
-          : programCode as List<CodeableConcept>?,
+          : programCode as List<CodeableConcept?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money?,
       factor: factor == freezed ? _value.factor : factor as Decimal?,
@@ -6286,10 +6286,10 @@ class __$ClaimDetailCopyWithImpl<$Res> extends _$ClaimDetailCopyWithImpl<$Res>
           ? _value.factorElement
           : factorElement as Element?,
       net: net == freezed ? _value.net : net as Money?,
-      udi: udi == freezed ? _value.udi : udi as List<Reference>?,
+      udi: udi == freezed ? _value.udi : udi as List<Reference?>?,
       subDetail: subDetail == freezed
           ? _value.subDetail
-          : subDetail as List<ClaimSubDetail>?,
+          : subDetail as List<ClaimSubDetail?>?,
     ));
   }
 }
@@ -6325,9 +6325,9 @@ class _$_ClaimDetail extends _ClaimDetail {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final PositiveInt? sequence;
   @override
@@ -6340,9 +6340,9 @@ class _$_ClaimDetail extends _ClaimDetail {
   @override
   final CodeableConcept? productOrService;
   @override
-  final List<CodeableConcept>? modifier;
+  final List<CodeableConcept?>? modifier;
   @override
-  final List<CodeableConcept>? programCode;
+  final List<CodeableConcept?>? programCode;
   @override
   final Quantity? quantity;
   @override
@@ -6355,9 +6355,9 @@ class _$_ClaimDetail extends _ClaimDetail {
   @override
   final Money? net;
   @override
-  final List<Reference>? udi;
+  final List<Reference?>? udi;
   @override
-  final List<ClaimSubDetail>? subDetail;
+  final List<ClaimSubDetail?>? subDetail;
 
   @override
   String toString() {
@@ -6453,22 +6453,22 @@ abstract class _ClaimDetail extends ClaimDetail {
   _ClaimDetail._() : super._();
   factory _ClaimDetail(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
       required CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Quantity? quantity,
       Money? unitPrice,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<Reference>? udi,
-      List<ClaimSubDetail>? subDetail}) = _$_ClaimDetail;
+      List<Reference?>? udi,
+      List<ClaimSubDetail?>? subDetail}) = _$_ClaimDetail;
 
   factory _ClaimDetail.fromJson(Map<String, dynamic> json) =
       _$_ClaimDetail.fromJson;
@@ -6477,9 +6477,9 @@ abstract class _ClaimDetail extends ClaimDetail {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   PositiveInt? get sequence;
   @override
@@ -6492,9 +6492,9 @@ abstract class _ClaimDetail extends ClaimDetail {
   @override
   CodeableConcept? get productOrService;
   @override
-  List<CodeableConcept>? get modifier;
+  List<CodeableConcept?>? get modifier;
   @override
-  List<CodeableConcept>? get programCode;
+  List<CodeableConcept?>? get programCode;
   @override
   Quantity? get quantity;
   @override
@@ -6507,9 +6507,9 @@ abstract class _ClaimDetail extends ClaimDetail {
   @override
   Money? get net;
   @override
-  List<Reference>? get udi;
+  List<Reference?>? get udi;
   @override
-  List<ClaimSubDetail>? get subDetail;
+  List<ClaimSubDetail?>? get subDetail;
   @override
   @JsonKey(ignore: true)
   _$ClaimDetailCopyWith<_ClaimDetail> get copyWith;
@@ -6525,21 +6525,21 @@ class _$ClaimSubDetailTearOff {
 
   _ClaimSubDetail call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
       required CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Quantity? quantity,
       Money? unitPrice,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<Reference>? udi}) {
+      List<Reference?>? udi}) {
     return _ClaimSubDetail(
       id: id,
       extension_: extension_,
@@ -6572,23 +6572,23 @@ const $ClaimSubDetail = _$ClaimSubDetailTearOff();
 mixin _$ClaimSubDetail {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   PositiveInt? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   CodeableConcept? get revenue;
   CodeableConcept? get category;
   CodeableConcept? get productOrService;
-  List<CodeableConcept>? get modifier;
-  List<CodeableConcept>? get programCode;
+  List<CodeableConcept?>? get modifier;
+  List<CodeableConcept?>? get programCode;
   Quantity? get quantity;
   Money? get unitPrice;
   Decimal? get factor;
   @JsonKey(name: '_factor')
   Element? get factorElement;
   Money? get net;
-  List<Reference>? get udi;
+  List<Reference?>? get udi;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -6602,21 +6602,21 @@ abstract class $ClaimSubDetailCopyWith<$Res> {
       _$ClaimSubDetailCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
       CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Quantity? quantity,
       Money? unitPrice,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<Reference>? udi});
+      List<Reference?>? udi});
 
   $ElementCopyWith<$Res>? get sequenceElement;
   $CodeableConceptCopyWith<$Res>? get revenue;
@@ -6660,10 +6660,10 @@ class _$ClaimSubDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -6678,10 +6678,10 @@ class _$ClaimSubDetailCopyWithImpl<$Res>
           : productOrService as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>?,
+          : modifier as List<CodeableConcept?>?,
       programCode: programCode == freezed
           ? _value.programCode
-          : programCode as List<CodeableConcept>?,
+          : programCode as List<CodeableConcept?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money?,
       factor: factor == freezed ? _value.factor : factor as Decimal?,
@@ -6689,7 +6689,7 @@ class _$ClaimSubDetailCopyWithImpl<$Res>
           ? _value.factorElement
           : factorElement as Element?,
       net: net == freezed ? _value.net : net as Money?,
-      udi: udi == freezed ? _value.udi : udi as List<Reference>?,
+      udi: udi == freezed ? _value.udi : udi as List<Reference?>?,
     ));
   }
 
@@ -6791,21 +6791,21 @@ abstract class _$ClaimSubDetailCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
       CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Quantity? quantity,
       Money? unitPrice,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<Reference>? udi});
+      List<Reference?>? udi});
 
   @override
   $ElementCopyWith<$Res>? get sequenceElement;
@@ -6859,10 +6859,10 @@ class __$ClaimSubDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -6877,10 +6877,10 @@ class __$ClaimSubDetailCopyWithImpl<$Res>
           : productOrService as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>?,
+          : modifier as List<CodeableConcept?>?,
       programCode: programCode == freezed
           ? _value.programCode
-          : programCode as List<CodeableConcept>?,
+          : programCode as List<CodeableConcept?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money?,
       factor: factor == freezed ? _value.factor : factor as Decimal?,
@@ -6888,7 +6888,7 @@ class __$ClaimSubDetailCopyWithImpl<$Res>
           ? _value.factorElement
           : factorElement as Element?,
       net: net == freezed ? _value.net : net as Money?,
-      udi: udi == freezed ? _value.udi : udi as List<Reference>?,
+      udi: udi == freezed ? _value.udi : udi as List<Reference?>?,
     ));
   }
 }
@@ -6923,9 +6923,9 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final PositiveInt? sequence;
   @override
@@ -6938,9 +6938,9 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
   @override
   final CodeableConcept? productOrService;
   @override
-  final List<CodeableConcept>? modifier;
+  final List<CodeableConcept?>? modifier;
   @override
-  final List<CodeableConcept>? programCode;
+  final List<CodeableConcept?>? programCode;
   @override
   final Quantity? quantity;
   @override
@@ -6953,7 +6953,7 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
   @override
   final Money? net;
   @override
-  final List<Reference>? udi;
+  final List<Reference?>? udi;
 
   @override
   String toString() {
@@ -7045,21 +7045,21 @@ abstract class _ClaimSubDetail extends ClaimSubDetail {
   _ClaimSubDetail._() : super._();
   factory _ClaimSubDetail(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
       required CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Quantity? quantity,
       Money? unitPrice,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<Reference>? udi}) = _$_ClaimSubDetail;
+      List<Reference?>? udi}) = _$_ClaimSubDetail;
 
   factory _ClaimSubDetail.fromJson(Map<String, dynamic> json) =
       _$_ClaimSubDetail.fromJson;
@@ -7068,9 +7068,9 @@ abstract class _ClaimSubDetail extends ClaimSubDetail {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   PositiveInt? get sequence;
   @override
@@ -7083,9 +7083,9 @@ abstract class _ClaimSubDetail extends ClaimSubDetail {
   @override
   CodeableConcept? get productOrService;
   @override
-  List<CodeableConcept>? get modifier;
+  List<CodeableConcept?>? get modifier;
   @override
-  List<CodeableConcept>? get programCode;
+  List<CodeableConcept?>? get programCode;
   @override
   Quantity? get quantity;
   @override
@@ -7098,7 +7098,7 @@ abstract class _ClaimSubDetail extends ClaimSubDetail {
   @override
   Money? get net;
   @override
-  List<Reference>? get udi;
+  List<Reference?>? get udi;
   @override
   @JsonKey(ignore: true)
   _$ClaimSubDetailCopyWith<_ClaimSubDetail> get copyWith;
@@ -7126,9 +7126,9 @@ class _$ClaimResponseTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -7155,18 +7155,18 @@ class _$ClaimResponseTearOff {
           Element? preAuthRefElement,
       Period? preAuthPeriod,
       CodeableConcept? payeeType,
-      List<ClaimResponseItem>? item,
-      List<ClaimResponseAddItem>? addItem,
-      List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseTotal>? total,
+      List<ClaimResponseItem?>? item,
+      List<ClaimResponseAddItem?>? addItem,
+      List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseTotal?>? total,
       ClaimResponsePayment? payment,
       CodeableConcept? fundsReserve,
       CodeableConcept? formCode,
       Attachment? form,
-      List<ClaimResponseProcessNote>? processNote,
-      List<Reference>? communicationRequest,
-      List<ClaimResponseInsurance>? insurance,
-      List<ClaimResponseError>? error}) {
+      List<ClaimResponseProcessNote?>? processNote,
+      List<Reference?>? communicationRequest,
+      List<ClaimResponseInsurance?>? insurance,
+      List<ClaimResponseError?>? error}) {
     return _ClaimResponse(
       resourceType: resourceType,
       id: id,
@@ -7238,9 +7238,9 @@ mixin _$ClaimResponse {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   Code? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -7267,18 +7267,18 @@ mixin _$ClaimResponse {
   Element? get preAuthRefElement;
   Period? get preAuthPeriod;
   CodeableConcept? get payeeType;
-  List<ClaimResponseItem>? get item;
-  List<ClaimResponseAddItem>? get addItem;
-  List<ClaimResponseAdjudication>? get adjudication;
-  List<ClaimResponseTotal>? get total;
+  List<ClaimResponseItem?>? get item;
+  List<ClaimResponseAddItem?>? get addItem;
+  List<ClaimResponseAdjudication?>? get adjudication;
+  List<ClaimResponseTotal?>? get total;
   ClaimResponsePayment? get payment;
   CodeableConcept? get fundsReserve;
   CodeableConcept? get formCode;
   Attachment? get form;
-  List<ClaimResponseProcessNote>? get processNote;
-  List<Reference>? get communicationRequest;
-  List<ClaimResponseInsurance>? get insurance;
-  List<ClaimResponseError>? get error;
+  List<ClaimResponseProcessNote?>? get processNote;
+  List<Reference?>? get communicationRequest;
+  List<ClaimResponseInsurance?>? get insurance;
+  List<ClaimResponseError?>? get error;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -7304,9 +7304,9 @@ abstract class $ClaimResponseCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -7333,18 +7333,18 @@ abstract class $ClaimResponseCopyWith<$Res> {
           Element? preAuthRefElement,
       Period? preAuthPeriod,
       CodeableConcept? payeeType,
-      List<ClaimResponseItem>? item,
-      List<ClaimResponseAddItem>? addItem,
-      List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseTotal>? total,
+      List<ClaimResponseItem?>? item,
+      List<ClaimResponseAddItem?>? addItem,
+      List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseTotal?>? total,
       ClaimResponsePayment? payment,
       CodeableConcept? fundsReserve,
       CodeableConcept? formCode,
       Attachment? form,
-      List<ClaimResponseProcessNote>? processNote,
-      List<Reference>? communicationRequest,
-      List<ClaimResponseInsurance>? insurance,
-      List<ClaimResponseError>? error});
+      List<ClaimResponseProcessNote?>? processNote,
+      List<Reference?>? communicationRequest,
+      List<ClaimResponseInsurance?>? insurance,
+      List<ClaimResponseError?>? error});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -7448,13 +7448,13 @@ class _$ClaimResponseCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -7494,15 +7494,15 @@ class _$ClaimResponseCopyWithImpl<$Res>
       payeeType: payeeType == freezed
           ? _value.payeeType
           : payeeType as CodeableConcept?,
-      item: item == freezed ? _value.item : item as List<ClaimResponseItem>?,
+      item: item == freezed ? _value.item : item as List<ClaimResponseItem?>?,
       addItem: addItem == freezed
           ? _value.addItem
-          : addItem as List<ClaimResponseAddItem>?,
+          : addItem as List<ClaimResponseAddItem?>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>?,
+          : adjudication as List<ClaimResponseAdjudication?>?,
       total:
-          total == freezed ? _value.total : total as List<ClaimResponseTotal>?,
+          total == freezed ? _value.total : total as List<ClaimResponseTotal?>?,
       payment: payment == freezed
           ? _value.payment
           : payment as ClaimResponsePayment?,
@@ -7514,15 +7514,15 @@ class _$ClaimResponseCopyWithImpl<$Res>
       form: form == freezed ? _value.form : form as Attachment?,
       processNote: processNote == freezed
           ? _value.processNote
-          : processNote as List<ClaimResponseProcessNote>?,
+          : processNote as List<ClaimResponseProcessNote?>?,
       communicationRequest: communicationRequest == freezed
           ? _value.communicationRequest
-          : communicationRequest as List<Reference>?,
+          : communicationRequest as List<Reference?>?,
       insurance: insurance == freezed
           ? _value.insurance
-          : insurance as List<ClaimResponseInsurance>?,
+          : insurance as List<ClaimResponseInsurance?>?,
       error:
-          error == freezed ? _value.error : error as List<ClaimResponseError>?,
+          error == freezed ? _value.error : error as List<ClaimResponseError?>?,
     ));
   }
 
@@ -7790,9 +7790,9 @@ abstract class _$ClaimResponseCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -7819,18 +7819,18 @@ abstract class _$ClaimResponseCopyWith<$Res>
           Element? preAuthRefElement,
       Period? preAuthPeriod,
       CodeableConcept? payeeType,
-      List<ClaimResponseItem>? item,
-      List<ClaimResponseAddItem>? addItem,
-      List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseTotal>? total,
+      List<ClaimResponseItem?>? item,
+      List<ClaimResponseAddItem?>? addItem,
+      List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseTotal?>? total,
       ClaimResponsePayment? payment,
       CodeableConcept? fundsReserve,
       CodeableConcept? formCode,
       Attachment? form,
-      List<ClaimResponseProcessNote>? processNote,
-      List<Reference>? communicationRequest,
-      List<ClaimResponseInsurance>? insurance,
-      List<ClaimResponseError>? error});
+      List<ClaimResponseProcessNote?>? processNote,
+      List<Reference?>? communicationRequest,
+      List<ClaimResponseInsurance?>? insurance,
+      List<ClaimResponseError?>? error});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -7958,13 +7958,13 @@ class __$ClaimResponseCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -8004,15 +8004,15 @@ class __$ClaimResponseCopyWithImpl<$Res>
       payeeType: payeeType == freezed
           ? _value.payeeType
           : payeeType as CodeableConcept?,
-      item: item == freezed ? _value.item : item as List<ClaimResponseItem>?,
+      item: item == freezed ? _value.item : item as List<ClaimResponseItem?>?,
       addItem: addItem == freezed
           ? _value.addItem
-          : addItem as List<ClaimResponseAddItem>?,
+          : addItem as List<ClaimResponseAddItem?>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>?,
+          : adjudication as List<ClaimResponseAdjudication?>?,
       total:
-          total == freezed ? _value.total : total as List<ClaimResponseTotal>?,
+          total == freezed ? _value.total : total as List<ClaimResponseTotal?>?,
       payment: payment == freezed
           ? _value.payment
           : payment as ClaimResponsePayment?,
@@ -8024,15 +8024,15 @@ class __$ClaimResponseCopyWithImpl<$Res>
       form: form == freezed ? _value.form : form as Attachment?,
       processNote: processNote == freezed
           ? _value.processNote
-          : processNote as List<ClaimResponseProcessNote>?,
+          : processNote as List<ClaimResponseProcessNote?>?,
       communicationRequest: communicationRequest == freezed
           ? _value.communicationRequest
-          : communicationRequest as List<Reference>?,
+          : communicationRequest as List<Reference?>?,
       insurance: insurance == freezed
           ? _value.insurance
-          : insurance as List<ClaimResponseInsurance>?,
+          : insurance as List<ClaimResponseInsurance?>?,
       error:
-          error == freezed ? _value.error : error as List<ClaimResponseError>?,
+          error == freezed ? _value.error : error as List<ClaimResponseError?>?,
     ));
   }
 }
@@ -8124,11 +8124,11 @@ class _$_ClaimResponse extends _ClaimResponse {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final Code? status;
   @override
@@ -8176,13 +8176,13 @@ class _$_ClaimResponse extends _ClaimResponse {
   @override
   final CodeableConcept? payeeType;
   @override
-  final List<ClaimResponseItem>? item;
+  final List<ClaimResponseItem?>? item;
   @override
-  final List<ClaimResponseAddItem>? addItem;
+  final List<ClaimResponseAddItem?>? addItem;
   @override
-  final List<ClaimResponseAdjudication>? adjudication;
+  final List<ClaimResponseAdjudication?>? adjudication;
   @override
-  final List<ClaimResponseTotal>? total;
+  final List<ClaimResponseTotal?>? total;
   @override
   final ClaimResponsePayment? payment;
   @override
@@ -8192,13 +8192,13 @@ class _$_ClaimResponse extends _ClaimResponse {
   @override
   final Attachment? form;
   @override
-  final List<ClaimResponseProcessNote>? processNote;
+  final List<ClaimResponseProcessNote?>? processNote;
   @override
-  final List<Reference>? communicationRequest;
+  final List<Reference?>? communicationRequest;
   @override
-  final List<ClaimResponseInsurance>? insurance;
+  final List<ClaimResponseInsurance?>? insurance;
   @override
-  final List<ClaimResponseError>? error;
+  final List<ClaimResponseError?>? error;
 
   @override
   String toString() {
@@ -8373,9 +8373,9 @@ abstract class _ClaimResponse extends ClaimResponse {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -8402,18 +8402,18 @@ abstract class _ClaimResponse extends ClaimResponse {
           Element? preAuthRefElement,
       Period? preAuthPeriod,
       CodeableConcept? payeeType,
-      List<ClaimResponseItem>? item,
-      List<ClaimResponseAddItem>? addItem,
-      List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseTotal>? total,
+      List<ClaimResponseItem?>? item,
+      List<ClaimResponseAddItem?>? addItem,
+      List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseTotal?>? total,
       ClaimResponsePayment? payment,
       CodeableConcept? fundsReserve,
       CodeableConcept? formCode,
       Attachment? form,
-      List<ClaimResponseProcessNote>? processNote,
-      List<Reference>? communicationRequest,
-      List<ClaimResponseInsurance>? insurance,
-      List<ClaimResponseError>? error}) = _$_ClaimResponse;
+      List<ClaimResponseProcessNote?>? processNote,
+      List<Reference?>? communicationRequest,
+      List<ClaimResponseInsurance?>? insurance,
+      List<ClaimResponseError?>? error}) = _$_ClaimResponse;
 
   factory _ClaimResponse.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponse.fromJson;
@@ -8441,11 +8441,11 @@ abstract class _ClaimResponse extends ClaimResponse {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   Code? get status;
   @override
@@ -8493,13 +8493,13 @@ abstract class _ClaimResponse extends ClaimResponse {
   @override
   CodeableConcept? get payeeType;
   @override
-  List<ClaimResponseItem>? get item;
+  List<ClaimResponseItem?>? get item;
   @override
-  List<ClaimResponseAddItem>? get addItem;
+  List<ClaimResponseAddItem?>? get addItem;
   @override
-  List<ClaimResponseAdjudication>? get adjudication;
+  List<ClaimResponseAdjudication?>? get adjudication;
   @override
-  List<ClaimResponseTotal>? get total;
+  List<ClaimResponseTotal?>? get total;
   @override
   ClaimResponsePayment? get payment;
   @override
@@ -8509,13 +8509,13 @@ abstract class _ClaimResponse extends ClaimResponse {
   @override
   Attachment? get form;
   @override
-  List<ClaimResponseProcessNote>? get processNote;
+  List<ClaimResponseProcessNote?>? get processNote;
   @override
-  List<Reference>? get communicationRequest;
+  List<Reference?>? get communicationRequest;
   @override
-  List<ClaimResponseInsurance>? get insurance;
+  List<ClaimResponseInsurance?>? get insurance;
   @override
-  List<ClaimResponseError>? get error;
+  List<ClaimResponseError?>? get error;
   @override
   @JsonKey(ignore: true)
   _$ClaimResponseCopyWith<_ClaimResponse> get copyWith;
@@ -8531,14 +8531,14 @@ class _$ClaimResponseItemTearOff {
 
   _ClaimResponseItem call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? itemSequence,
       @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      required List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseDetail>? detail}) {
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      required List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseDetail?>? detail}) {
     return _ClaimResponseItem(
       id: id,
       extension_: extension_,
@@ -8564,16 +8564,16 @@ const $ClaimResponseItem = _$ClaimResponseItemTearOff();
 mixin _$ClaimResponseItem {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   PositiveInt? get itemSequence;
   @JsonKey(name: '_itemSequence')
   Element? get itemSequenceElement;
-  List<PositiveInt>? get noteNumber;
+  List<PositiveInt?>? get noteNumber;
   @JsonKey(name: '_noteNumber')
-  List<Element>? get noteNumberElement;
-  List<ClaimResponseAdjudication>? get adjudication;
-  List<ClaimResponseDetail>? get detail;
+  List<Element?>? get noteNumberElement;
+  List<ClaimResponseAdjudication?>? get adjudication;
+  List<ClaimResponseDetail?>? get detail;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -8587,14 +8587,14 @@ abstract class $ClaimResponseItemCopyWith<$Res> {
       _$ClaimResponseItemCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? itemSequence,
       @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseDetail>? detail});
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseDetail?>? detail});
 
   $ElementCopyWith<$Res>? get itemSequenceElement;
 }
@@ -8624,10 +8624,10 @@ class _$ClaimResponseItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       itemSequence: itemSequence == freezed
           ? _value.itemSequence
           : itemSequence as PositiveInt?,
@@ -8636,16 +8636,16 @@ class _$ClaimResponseItemCopyWithImpl<$Res>
           : itemSequenceElement as Element?,
       noteNumber: noteNumber == freezed
           ? _value.noteNumber
-          : noteNumber as List<PositiveInt>?,
+          : noteNumber as List<PositiveInt?>?,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as List<Element>?,
+          : noteNumberElement as List<Element?>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>?,
+          : adjudication as List<ClaimResponseAdjudication?>?,
       detail: detail == freezed
           ? _value.detail
-          : detail as List<ClaimResponseDetail>?,
+          : detail as List<ClaimResponseDetail?>?,
     ));
   }
 
@@ -8670,14 +8670,14 @@ abstract class _$ClaimResponseItemCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? itemSequence,
       @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseDetail>? detail});
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseDetail?>? detail});
 
   @override
   $ElementCopyWith<$Res>? get itemSequenceElement;
@@ -8710,10 +8710,10 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       itemSequence: itemSequence == freezed
           ? _value.itemSequence
           : itemSequence as PositiveInt?,
@@ -8722,16 +8722,16 @@ class __$ClaimResponseItemCopyWithImpl<$Res>
           : itemSequenceElement as Element?,
       noteNumber: noteNumber == freezed
           ? _value.noteNumber
-          : noteNumber as List<PositiveInt>?,
+          : noteNumber as List<PositiveInt?>?,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as List<Element>?,
+          : noteNumberElement as List<Element?>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>?,
+          : adjudication as List<ClaimResponseAdjudication?>?,
       detail: detail == freezed
           ? _value.detail
-          : detail as List<ClaimResponseDetail>?,
+          : detail as List<ClaimResponseDetail?>?,
     ));
   }
 }
@@ -8759,23 +8759,23 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final PositiveInt? itemSequence;
   @override
   @JsonKey(name: '_itemSequence')
   final Element? itemSequenceElement;
   @override
-  final List<PositiveInt>? noteNumber;
+  final List<PositiveInt?>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final List<Element>? noteNumberElement;
+  final List<Element?>? noteNumberElement;
   @override
-  final List<ClaimResponseAdjudication>? adjudication;
+  final List<ClaimResponseAdjudication?>? adjudication;
   @override
-  final List<ClaimResponseDetail>? detail;
+  final List<ClaimResponseDetail?>? detail;
 
   @override
   String toString() {
@@ -8841,14 +8841,14 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
   _ClaimResponseItem._() : super._();
   factory _ClaimResponseItem(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? itemSequence,
       @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      required List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseDetail>? detail}) = _$_ClaimResponseItem;
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      required List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseDetail?>? detail}) = _$_ClaimResponseItem;
 
   factory _ClaimResponseItem.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseItem.fromJson;
@@ -8857,23 +8857,23 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   PositiveInt? get itemSequence;
   @override
   @JsonKey(name: '_itemSequence')
   Element? get itemSequenceElement;
   @override
-  List<PositiveInt>? get noteNumber;
+  List<PositiveInt?>? get noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element>? get noteNumberElement;
+  List<Element?>? get noteNumberElement;
   @override
-  List<ClaimResponseAdjudication>? get adjudication;
+  List<ClaimResponseAdjudication?>? get adjudication;
   @override
-  List<ClaimResponseDetail>? get detail;
+  List<ClaimResponseDetail?>? get detail;
   @override
   @JsonKey(ignore: true)
   _$ClaimResponseItemCopyWith<_ClaimResponseItem> get copyWith;
@@ -8890,8 +8890,8 @@ class _$ClaimResponseAdjudicationTearOff {
 
   _ClaimResponseAdjudication call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? category,
       CodeableConcept? reason,
       Money? amount,
@@ -8921,8 +8921,8 @@ const $ClaimResponseAdjudication = _$ClaimResponseAdjudicationTearOff();
 mixin _$ClaimResponseAdjudication {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get category;
   CodeableConcept? get reason;
   Money? get amount;
@@ -8942,8 +8942,8 @@ abstract class $ClaimResponseAdjudicationCopyWith<$Res> {
       _$ClaimResponseAdjudicationCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? category,
       CodeableConcept? reason,
       Money? amount,
@@ -8980,10 +8980,10 @@ class _$ClaimResponseAdjudicationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       category:
           category == freezed ? _value.category : category as CodeableConcept?,
       reason: reason == freezed ? _value.reason : reason as CodeableConcept?,
@@ -9049,8 +9049,8 @@ abstract class _$ClaimResponseAdjudicationCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? category,
       CodeableConcept? reason,
       Money? amount,
@@ -9094,10 +9094,10 @@ class __$ClaimResponseAdjudicationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       category:
           category == freezed ? _value.category : category as CodeableConcept?,
       reason: reason == freezed ? _value.reason : reason as CodeableConcept?,
@@ -9132,9 +9132,9 @@ class _$_ClaimResponseAdjudication extends _ClaimResponseAdjudication {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? category;
   @override
@@ -9207,8 +9207,8 @@ abstract class _ClaimResponseAdjudication extends ClaimResponseAdjudication {
   _ClaimResponseAdjudication._() : super._();
   factory _ClaimResponseAdjudication(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+          List<FhirExtension?>? modifierExtension,
           required CodeableConcept? category,
           CodeableConcept? reason,
           Money? amount,
@@ -9223,9 +9223,9 @@ abstract class _ClaimResponseAdjudication extends ClaimResponseAdjudication {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get category;
   @override
@@ -9252,14 +9252,14 @@ class _$ClaimResponseDetailTearOff {
 
   _ClaimResponseDetail call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? detailSequence,
       @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      required List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseSubDetail>? subDetail}) {
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      required List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseSubDetail?>? subDetail}) {
     return _ClaimResponseDetail(
       id: id,
       extension_: extension_,
@@ -9285,16 +9285,16 @@ const $ClaimResponseDetail = _$ClaimResponseDetailTearOff();
 mixin _$ClaimResponseDetail {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   PositiveInt? get detailSequence;
   @JsonKey(name: '_detailSequence')
   Element? get detailSequenceElement;
-  List<PositiveInt>? get noteNumber;
+  List<PositiveInt?>? get noteNumber;
   @JsonKey(name: '_noteNumber')
-  List<Element>? get noteNumberElement;
-  List<ClaimResponseAdjudication>? get adjudication;
-  List<ClaimResponseSubDetail>? get subDetail;
+  List<Element?>? get noteNumberElement;
+  List<ClaimResponseAdjudication?>? get adjudication;
+  List<ClaimResponseSubDetail?>? get subDetail;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -9308,14 +9308,14 @@ abstract class $ClaimResponseDetailCopyWith<$Res> {
       _$ClaimResponseDetailCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? detailSequence,
       @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseSubDetail>? subDetail});
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseSubDetail?>? subDetail});
 
   $ElementCopyWith<$Res>? get detailSequenceElement;
 }
@@ -9345,10 +9345,10 @@ class _$ClaimResponseDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       detailSequence: detailSequence == freezed
           ? _value.detailSequence
           : detailSequence as PositiveInt?,
@@ -9357,16 +9357,16 @@ class _$ClaimResponseDetailCopyWithImpl<$Res>
           : detailSequenceElement as Element?,
       noteNumber: noteNumber == freezed
           ? _value.noteNumber
-          : noteNumber as List<PositiveInt>?,
+          : noteNumber as List<PositiveInt?>?,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as List<Element>?,
+          : noteNumberElement as List<Element?>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>?,
+          : adjudication as List<ClaimResponseAdjudication?>?,
       subDetail: subDetail == freezed
           ? _value.subDetail
-          : subDetail as List<ClaimResponseSubDetail>?,
+          : subDetail as List<ClaimResponseSubDetail?>?,
     ));
   }
 
@@ -9391,14 +9391,14 @@ abstract class _$ClaimResponseDetailCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? detailSequence,
       @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseSubDetail>? subDetail});
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseSubDetail?>? subDetail});
 
   @override
   $ElementCopyWith<$Res>? get detailSequenceElement;
@@ -9431,10 +9431,10 @@ class __$ClaimResponseDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       detailSequence: detailSequence == freezed
           ? _value.detailSequence
           : detailSequence as PositiveInt?,
@@ -9443,16 +9443,16 @@ class __$ClaimResponseDetailCopyWithImpl<$Res>
           : detailSequenceElement as Element?,
       noteNumber: noteNumber == freezed
           ? _value.noteNumber
-          : noteNumber as List<PositiveInt>?,
+          : noteNumber as List<PositiveInt?>?,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as List<Element>?,
+          : noteNumberElement as List<Element?>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>?,
+          : adjudication as List<ClaimResponseAdjudication?>?,
       subDetail: subDetail == freezed
           ? _value.subDetail
-          : subDetail as List<ClaimResponseSubDetail>?,
+          : subDetail as List<ClaimResponseSubDetail?>?,
     ));
   }
 }
@@ -9480,23 +9480,23 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final PositiveInt? detailSequence;
   @override
   @JsonKey(name: '_detailSequence')
   final Element? detailSequenceElement;
   @override
-  final List<PositiveInt>? noteNumber;
+  final List<PositiveInt?>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final List<Element>? noteNumberElement;
+  final List<Element?>? noteNumberElement;
   @override
-  final List<ClaimResponseAdjudication>? adjudication;
+  final List<ClaimResponseAdjudication?>? adjudication;
   @override
-  final List<ClaimResponseSubDetail>? subDetail;
+  final List<ClaimResponseSubDetail?>? subDetail;
 
   @override
   String toString() {
@@ -9564,14 +9564,14 @@ abstract class _ClaimResponseDetail extends ClaimResponseDetail {
   _ClaimResponseDetail._() : super._();
   factory _ClaimResponseDetail(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? detailSequence,
       @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      required List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseSubDetail>? subDetail}) = _$_ClaimResponseDetail;
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      required List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseSubDetail?>? subDetail}) = _$_ClaimResponseDetail;
 
   factory _ClaimResponseDetail.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseDetail.fromJson;
@@ -9580,23 +9580,23 @@ abstract class _ClaimResponseDetail extends ClaimResponseDetail {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   PositiveInt? get detailSequence;
   @override
   @JsonKey(name: '_detailSequence')
   Element? get detailSequenceElement;
   @override
-  List<PositiveInt>? get noteNumber;
+  List<PositiveInt?>? get noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element>? get noteNumberElement;
+  List<Element?>? get noteNumberElement;
   @override
-  List<ClaimResponseAdjudication>? get adjudication;
+  List<ClaimResponseAdjudication?>? get adjudication;
   @override
-  List<ClaimResponseSubDetail>? get subDetail;
+  List<ClaimResponseSubDetail?>? get subDetail;
   @override
   @JsonKey(ignore: true)
   _$ClaimResponseDetailCopyWith<_ClaimResponseDetail> get copyWith;
@@ -9613,13 +9613,13 @@ class _$ClaimResponseSubDetailTearOff {
 
   _ClaimResponseSubDetail call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? subDetailSequence,
       @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      List<ClaimResponseAdjudication>? adjudication}) {
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      List<ClaimResponseAdjudication?>? adjudication}) {
     return _ClaimResponseSubDetail(
       id: id,
       extension_: extension_,
@@ -9644,15 +9644,15 @@ const $ClaimResponseSubDetail = _$ClaimResponseSubDetailTearOff();
 mixin _$ClaimResponseSubDetail {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   PositiveInt? get subDetailSequence;
   @JsonKey(name: '_subDetailSequence')
   Element? get subDetailSequenceElement;
-  List<PositiveInt>? get noteNumber;
+  List<PositiveInt?>? get noteNumber;
   @JsonKey(name: '_noteNumber')
-  List<Element>? get noteNumberElement;
-  List<ClaimResponseAdjudication>? get adjudication;
+  List<Element?>? get noteNumberElement;
+  List<ClaimResponseAdjudication?>? get adjudication;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -9666,13 +9666,13 @@ abstract class $ClaimResponseSubDetailCopyWith<$Res> {
       _$ClaimResponseSubDetailCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? subDetailSequence,
       @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      List<ClaimResponseAdjudication>? adjudication});
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      List<ClaimResponseAdjudication?>? adjudication});
 
   $ElementCopyWith<$Res>? get subDetailSequenceElement;
 }
@@ -9701,10 +9701,10 @@ class _$ClaimResponseSubDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       subDetailSequence: subDetailSequence == freezed
           ? _value.subDetailSequence
           : subDetailSequence as PositiveInt?,
@@ -9713,13 +9713,13 @@ class _$ClaimResponseSubDetailCopyWithImpl<$Res>
           : subDetailSequenceElement as Element?,
       noteNumber: noteNumber == freezed
           ? _value.noteNumber
-          : noteNumber as List<PositiveInt>?,
+          : noteNumber as List<PositiveInt?>?,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as List<Element>?,
+          : noteNumberElement as List<Element?>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>?,
+          : adjudication as List<ClaimResponseAdjudication?>?,
     ));
   }
 
@@ -9744,13 +9744,13 @@ abstract class _$ClaimResponseSubDetailCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? subDetailSequence,
       @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      List<ClaimResponseAdjudication>? adjudication});
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      List<ClaimResponseAdjudication?>? adjudication});
 
   @override
   $ElementCopyWith<$Res>? get subDetailSequenceElement;
@@ -9782,10 +9782,10 @@ class __$ClaimResponseSubDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       subDetailSequence: subDetailSequence == freezed
           ? _value.subDetailSequence
           : subDetailSequence as PositiveInt?,
@@ -9794,13 +9794,13 @@ class __$ClaimResponseSubDetailCopyWithImpl<$Res>
           : subDetailSequenceElement as Element?,
       noteNumber: noteNumber == freezed
           ? _value.noteNumber
-          : noteNumber as List<PositiveInt>?,
+          : noteNumber as List<PositiveInt?>?,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as List<Element>?,
+          : noteNumberElement as List<Element?>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>?,
+          : adjudication as List<ClaimResponseAdjudication?>?,
     ));
   }
 }
@@ -9827,21 +9827,21 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final PositiveInt? subDetailSequence;
   @override
   @JsonKey(name: '_subDetailSequence')
   final Element? subDetailSequenceElement;
   @override
-  final List<PositiveInt>? noteNumber;
+  final List<PositiveInt?>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final List<Element>? noteNumberElement;
+  final List<Element?>? noteNumberElement;
   @override
-  final List<ClaimResponseAdjudication>? adjudication;
+  final List<ClaimResponseAdjudication?>? adjudication;
 
   @override
   String toString() {
@@ -9907,13 +9907,13 @@ abstract class _ClaimResponseSubDetail extends ClaimResponseSubDetail {
   _ClaimResponseSubDetail._() : super._();
   factory _ClaimResponseSubDetail(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? subDetailSequence,
       @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      List<ClaimResponseAdjudication>?
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      List<ClaimResponseAdjudication?>?
           adjudication}) = _$_ClaimResponseSubDetail;
 
   factory _ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =
@@ -9923,21 +9923,21 @@ abstract class _ClaimResponseSubDetail extends ClaimResponseSubDetail {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   PositiveInt? get subDetailSequence;
   @override
   @JsonKey(name: '_subDetailSequence')
   Element? get subDetailSequenceElement;
   @override
-  List<PositiveInt>? get noteNumber;
+  List<PositiveInt?>? get noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element>? get noteNumberElement;
+  List<Element?>? get noteNumberElement;
   @override
-  List<ClaimResponseAdjudication>? get adjudication;
+  List<ClaimResponseAdjudication?>? get adjudication;
   @override
   @JsonKey(ignore: true)
   _$ClaimResponseSubDetailCopyWith<_ClaimResponseSubDetail> get copyWith;
@@ -9954,21 +9954,21 @@ class _$ClaimResponseAddItemTearOff {
   _ClaimResponseAddItem call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<PositiveInt>? itemSequence,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<PositiveInt?>? itemSequence,
       @JsonKey(name: '_itemSequence')
-          List<Element>? itemSequenceElement,
-      List<PositiveInt>? detailSequence,
+          List<Element?>? itemSequenceElement,
+      List<PositiveInt?>? detailSequence,
       @JsonKey(name: '_detailSequence')
-          List<Element>? detailSequenceElement,
-      List<PositiveInt>? subdetailSequence,
+          List<Element?>? detailSequenceElement,
+      List<PositiveInt?>? subdetailSequence,
       @JsonKey(name: '_subdetailSequence')
-          List<Element>? subdetailSequenceElement,
-      List<Reference>? provider,
+          List<Element?>? subdetailSequenceElement,
+      List<Reference?>? provider,
       required CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
@@ -9983,12 +9983,12 @@ class _$ClaimResponseAddItemTearOff {
           Element? factorElement,
       Money? net,
       CodeableConcept? bodySite,
-      List<CodeableConcept>? subSite,
-      List<PositiveInt>? noteNumber,
+      List<CodeableConcept?>? subSite,
+      List<PositiveInt?>? noteNumber,
       @JsonKey(name: '_noteNumber')
-          List<Element>? noteNumberElement,
-      required List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseDetail1>? detail}) {
+          List<Element?>? noteNumberElement,
+      required List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseDetail1?>? detail}) {
     return _ClaimResponseAddItem(
       id: id,
       extension_: extension_,
@@ -10035,21 +10035,21 @@ const $ClaimResponseAddItem = _$ClaimResponseAddItemTearOff();
 mixin _$ClaimResponseAddItem {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<PositiveInt>? get itemSequence;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<PositiveInt?>? get itemSequence;
   @JsonKey(name: '_itemSequence')
-  List<Element>? get itemSequenceElement;
-  List<PositiveInt>? get detailSequence;
+  List<Element?>? get itemSequenceElement;
+  List<PositiveInt?>? get detailSequence;
   @JsonKey(name: '_detailSequence')
-  List<Element>? get detailSequenceElement;
-  List<PositiveInt>? get subdetailSequence;
+  List<Element?>? get detailSequenceElement;
+  List<PositiveInt?>? get subdetailSequence;
   @JsonKey(name: '_subdetailSequence')
-  List<Element>? get subdetailSequenceElement;
-  List<Reference>? get provider;
+  List<Element?>? get subdetailSequenceElement;
+  List<Reference?>? get provider;
   CodeableConcept? get productOrService;
-  List<CodeableConcept>? get modifier;
-  List<CodeableConcept>? get programCode;
+  List<CodeableConcept?>? get modifier;
+  List<CodeableConcept?>? get programCode;
   Date? get servicedDate;
   @JsonKey(name: '_servicedDate')
   Element? get servicedDateElement;
@@ -10064,12 +10064,12 @@ mixin _$ClaimResponseAddItem {
   Element? get factorElement;
   Money? get net;
   CodeableConcept? get bodySite;
-  List<CodeableConcept>? get subSite;
-  List<PositiveInt>? get noteNumber;
+  List<CodeableConcept?>? get subSite;
+  List<PositiveInt?>? get noteNumber;
   @JsonKey(name: '_noteNumber')
-  List<Element>? get noteNumberElement;
-  List<ClaimResponseAdjudication>? get adjudication;
-  List<ClaimResponseDetail1>? get detail;
+  List<Element?>? get noteNumberElement;
+  List<ClaimResponseAdjudication?>? get adjudication;
+  List<ClaimResponseDetail1?>? get detail;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -10084,21 +10084,21 @@ abstract class $ClaimResponseAddItemCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<PositiveInt>? itemSequence,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<PositiveInt?>? itemSequence,
       @JsonKey(name: '_itemSequence')
-          List<Element>? itemSequenceElement,
-      List<PositiveInt>? detailSequence,
+          List<Element?>? itemSequenceElement,
+      List<PositiveInt?>? detailSequence,
       @JsonKey(name: '_detailSequence')
-          List<Element>? detailSequenceElement,
-      List<PositiveInt>? subdetailSequence,
+          List<Element?>? detailSequenceElement,
+      List<PositiveInt?>? subdetailSequence,
       @JsonKey(name: '_subdetailSequence')
-          List<Element>? subdetailSequenceElement,
-      List<Reference>? provider,
+          List<Element?>? subdetailSequenceElement,
+      List<Reference?>? provider,
       CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
@@ -10113,12 +10113,12 @@ abstract class $ClaimResponseAddItemCopyWith<$Res> {
           Element? factorElement,
       Money? net,
       CodeableConcept? bodySite,
-      List<CodeableConcept>? subSite,
-      List<PositiveInt>? noteNumber,
+      List<CodeableConcept?>? subSite,
+      List<PositiveInt?>? noteNumber,
       @JsonKey(name: '_noteNumber')
-          List<Element>? noteNumberElement,
-      List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseDetail1>? detail});
+          List<Element?>? noteNumberElement,
+      List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseDetail1?>? detail});
 
   $CodeableConceptCopyWith<$Res>? get productOrService;
   $ElementCopyWith<$Res>? get servicedDateElement;
@@ -10179,39 +10179,39 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       itemSequence: itemSequence == freezed
           ? _value.itemSequence
-          : itemSequence as List<PositiveInt>?,
+          : itemSequence as List<PositiveInt?>?,
       itemSequenceElement: itemSequenceElement == freezed
           ? _value.itemSequenceElement
-          : itemSequenceElement as List<Element>?,
+          : itemSequenceElement as List<Element?>?,
       detailSequence: detailSequence == freezed
           ? _value.detailSequence
-          : detailSequence as List<PositiveInt>?,
+          : detailSequence as List<PositiveInt?>?,
       detailSequenceElement: detailSequenceElement == freezed
           ? _value.detailSequenceElement
-          : detailSequenceElement as List<Element>?,
+          : detailSequenceElement as List<Element?>?,
       subdetailSequence: subdetailSequence == freezed
           ? _value.subdetailSequence
-          : subdetailSequence as List<PositiveInt>?,
+          : subdetailSequence as List<PositiveInt?>?,
       subdetailSequenceElement: subdetailSequenceElement == freezed
           ? _value.subdetailSequenceElement
-          : subdetailSequenceElement as List<Element>?,
+          : subdetailSequenceElement as List<Element?>?,
       provider:
-          provider == freezed ? _value.provider : provider as List<Reference>?,
+          provider == freezed ? _value.provider : provider as List<Reference?>?,
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>?,
+          : modifier as List<CodeableConcept?>?,
       programCode: programCode == freezed
           ? _value.programCode
-          : programCode as List<CodeableConcept>?,
+          : programCode as List<CodeableConcept?>?,
       servicedDate:
           servicedDate == freezed ? _value.servicedDate : servicedDate as Date?,
       servicedDateElement: servicedDateElement == freezed
@@ -10240,19 +10240,19 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res>
           bodySite == freezed ? _value.bodySite : bodySite as CodeableConcept?,
       subSite: subSite == freezed
           ? _value.subSite
-          : subSite as List<CodeableConcept>?,
+          : subSite as List<CodeableConcept?>?,
       noteNumber: noteNumber == freezed
           ? _value.noteNumber
-          : noteNumber as List<PositiveInt>?,
+          : noteNumber as List<PositiveInt?>?,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as List<Element>?,
+          : noteNumberElement as List<Element?>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>?,
+          : adjudication as List<ClaimResponseAdjudication?>?,
       detail: detail == freezed
           ? _value.detail
-          : detail as List<ClaimResponseDetail1>?,
+          : detail as List<ClaimResponseDetail1?>?,
     ));
   }
 
@@ -10389,21 +10389,21 @@ abstract class _$ClaimResponseAddItemCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<PositiveInt>? itemSequence,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<PositiveInt?>? itemSequence,
       @JsonKey(name: '_itemSequence')
-          List<Element>? itemSequenceElement,
-      List<PositiveInt>? detailSequence,
+          List<Element?>? itemSequenceElement,
+      List<PositiveInt?>? detailSequence,
       @JsonKey(name: '_detailSequence')
-          List<Element>? detailSequenceElement,
-      List<PositiveInt>? subdetailSequence,
+          List<Element?>? detailSequenceElement,
+      List<PositiveInt?>? subdetailSequence,
       @JsonKey(name: '_subdetailSequence')
-          List<Element>? subdetailSequenceElement,
-      List<Reference>? provider,
+          List<Element?>? subdetailSequenceElement,
+      List<Reference?>? provider,
       CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
@@ -10418,12 +10418,12 @@ abstract class _$ClaimResponseAddItemCopyWith<$Res>
           Element? factorElement,
       Money? net,
       CodeableConcept? bodySite,
-      List<CodeableConcept>? subSite,
-      List<PositiveInt>? noteNumber,
+      List<CodeableConcept?>? subSite,
+      List<PositiveInt?>? noteNumber,
       @JsonKey(name: '_noteNumber')
-          List<Element>? noteNumberElement,
-      List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseDetail1>? detail});
+          List<Element?>? noteNumberElement,
+      List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseDetail1?>? detail});
 
   @override
   $CodeableConceptCopyWith<$Res>? get productOrService;
@@ -10497,39 +10497,39 @@ class __$ClaimResponseAddItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       itemSequence: itemSequence == freezed
           ? _value.itemSequence
-          : itemSequence as List<PositiveInt>?,
+          : itemSequence as List<PositiveInt?>?,
       itemSequenceElement: itemSequenceElement == freezed
           ? _value.itemSequenceElement
-          : itemSequenceElement as List<Element>?,
+          : itemSequenceElement as List<Element?>?,
       detailSequence: detailSequence == freezed
           ? _value.detailSequence
-          : detailSequence as List<PositiveInt>?,
+          : detailSequence as List<PositiveInt?>?,
       detailSequenceElement: detailSequenceElement == freezed
           ? _value.detailSequenceElement
-          : detailSequenceElement as List<Element>?,
+          : detailSequenceElement as List<Element?>?,
       subdetailSequence: subdetailSequence == freezed
           ? _value.subdetailSequence
-          : subdetailSequence as List<PositiveInt>?,
+          : subdetailSequence as List<PositiveInt?>?,
       subdetailSequenceElement: subdetailSequenceElement == freezed
           ? _value.subdetailSequenceElement
-          : subdetailSequenceElement as List<Element>?,
+          : subdetailSequenceElement as List<Element?>?,
       provider:
-          provider == freezed ? _value.provider : provider as List<Reference>?,
+          provider == freezed ? _value.provider : provider as List<Reference?>?,
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>?,
+          : modifier as List<CodeableConcept?>?,
       programCode: programCode == freezed
           ? _value.programCode
-          : programCode as List<CodeableConcept>?,
+          : programCode as List<CodeableConcept?>?,
       servicedDate:
           servicedDate == freezed ? _value.servicedDate : servicedDate as Date?,
       servicedDateElement: servicedDateElement == freezed
@@ -10558,19 +10558,19 @@ class __$ClaimResponseAddItemCopyWithImpl<$Res>
           bodySite == freezed ? _value.bodySite : bodySite as CodeableConcept?,
       subSite: subSite == freezed
           ? _value.subSite
-          : subSite as List<CodeableConcept>?,
+          : subSite as List<CodeableConcept?>?,
       noteNumber: noteNumber == freezed
           ? _value.noteNumber
-          : noteNumber as List<PositiveInt>?,
+          : noteNumber as List<PositiveInt?>?,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as List<Element>?,
+          : noteNumberElement as List<Element?>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>?,
+          : adjudication as List<ClaimResponseAdjudication?>?,
       detail: detail == freezed
           ? _value.detail
-          : detail as List<ClaimResponseDetail1>?,
+          : detail as List<ClaimResponseDetail1?>?,
     ));
   }
 }
@@ -10619,32 +10619,32 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<PositiveInt>? itemSequence;
+  final List<PositiveInt?>? itemSequence;
   @override
   @JsonKey(name: '_itemSequence')
-  final List<Element>? itemSequenceElement;
+  final List<Element?>? itemSequenceElement;
   @override
-  final List<PositiveInt>? detailSequence;
+  final List<PositiveInt?>? detailSequence;
   @override
   @JsonKey(name: '_detailSequence')
-  final List<Element>? detailSequenceElement;
+  final List<Element?>? detailSequenceElement;
   @override
-  final List<PositiveInt>? subdetailSequence;
+  final List<PositiveInt?>? subdetailSequence;
   @override
   @JsonKey(name: '_subdetailSequence')
-  final List<Element>? subdetailSequenceElement;
+  final List<Element?>? subdetailSequenceElement;
   @override
-  final List<Reference>? provider;
+  final List<Reference?>? provider;
   @override
   final CodeableConcept? productOrService;
   @override
-  final List<CodeableConcept>? modifier;
+  final List<CodeableConcept?>? modifier;
   @override
-  final List<CodeableConcept>? programCode;
+  final List<CodeableConcept?>? programCode;
   @override
   final Date? servicedDate;
   @override
@@ -10672,16 +10672,16 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   @override
   final CodeableConcept? bodySite;
   @override
-  final List<CodeableConcept>? subSite;
+  final List<CodeableConcept?>? subSite;
   @override
-  final List<PositiveInt>? noteNumber;
+  final List<PositiveInt?>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final List<Element>? noteNumberElement;
+  final List<Element?>? noteNumberElement;
   @override
-  final List<ClaimResponseAdjudication>? adjudication;
+  final List<ClaimResponseAdjudication?>? adjudication;
   @override
-  final List<ClaimResponseDetail1>? detail;
+  final List<ClaimResponseDetail1?>? detail;
 
   @override
   String toString() {
@@ -10812,21 +10812,21 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
   factory _ClaimResponseAddItem(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<PositiveInt>? itemSequence,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<PositiveInt?>? itemSequence,
       @JsonKey(name: '_itemSequence')
-          List<Element>? itemSequenceElement,
-      List<PositiveInt>? detailSequence,
+          List<Element?>? itemSequenceElement,
+      List<PositiveInt?>? detailSequence,
       @JsonKey(name: '_detailSequence')
-          List<Element>? detailSequenceElement,
-      List<PositiveInt>? subdetailSequence,
+          List<Element?>? detailSequenceElement,
+      List<PositiveInt?>? subdetailSequence,
       @JsonKey(name: '_subdetailSequence')
-          List<Element>? subdetailSequenceElement,
-      List<Reference>? provider,
+          List<Element?>? subdetailSequenceElement,
+      List<Reference?>? provider,
       required CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
-      List<CodeableConcept>? programCode,
+      List<CodeableConcept?>? modifier,
+      List<CodeableConcept?>? programCode,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
           Element? servicedDateElement,
@@ -10841,12 +10841,12 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
           Element? factorElement,
       Money? net,
       CodeableConcept? bodySite,
-      List<CodeableConcept>? subSite,
-      List<PositiveInt>? noteNumber,
+      List<CodeableConcept?>? subSite,
+      List<PositiveInt?>? noteNumber,
       @JsonKey(name: '_noteNumber')
-          List<Element>? noteNumberElement,
-      required List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseDetail1>? detail}) = _$_ClaimResponseAddItem;
+          List<Element?>? noteNumberElement,
+      required List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseDetail1?>? detail}) = _$_ClaimResponseAddItem;
 
   factory _ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseAddItem.fromJson;
@@ -10855,32 +10855,32 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<PositiveInt>? get itemSequence;
+  List<PositiveInt?>? get itemSequence;
   @override
   @JsonKey(name: '_itemSequence')
-  List<Element>? get itemSequenceElement;
+  List<Element?>? get itemSequenceElement;
   @override
-  List<PositiveInt>? get detailSequence;
+  List<PositiveInt?>? get detailSequence;
   @override
   @JsonKey(name: '_detailSequence')
-  List<Element>? get detailSequenceElement;
+  List<Element?>? get detailSequenceElement;
   @override
-  List<PositiveInt>? get subdetailSequence;
+  List<PositiveInt?>? get subdetailSequence;
   @override
   @JsonKey(name: '_subdetailSequence')
-  List<Element>? get subdetailSequenceElement;
+  List<Element?>? get subdetailSequenceElement;
   @override
-  List<Reference>? get provider;
+  List<Reference?>? get provider;
   @override
   CodeableConcept? get productOrService;
   @override
-  List<CodeableConcept>? get modifier;
+  List<CodeableConcept?>? get modifier;
   @override
-  List<CodeableConcept>? get programCode;
+  List<CodeableConcept?>? get programCode;
   @override
   Date? get servicedDate;
   @override
@@ -10908,16 +10908,16 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
   @override
   CodeableConcept? get bodySite;
   @override
-  List<CodeableConcept>? get subSite;
+  List<CodeableConcept?>? get subSite;
   @override
-  List<PositiveInt>? get noteNumber;
+  List<PositiveInt?>? get noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element>? get noteNumberElement;
+  List<Element?>? get noteNumberElement;
   @override
-  List<ClaimResponseAdjudication>? get adjudication;
+  List<ClaimResponseAdjudication?>? get adjudication;
   @override
-  List<ClaimResponseDetail1>? get detail;
+  List<ClaimResponseDetail1?>? get detail;
   @override
   @JsonKey(ignore: true)
   _$ClaimResponseAddItemCopyWith<_ClaimResponseAddItem> get copyWith;
@@ -10933,19 +10933,19 @@ class _$ClaimResponseDetail1TearOff {
 
   _ClaimResponseDetail1 call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
+      List<CodeableConcept?>? modifier,
       Quantity? quantity,
       Money? unitPrice,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      required List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseSubDetail1>? subDetail}) {
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      required List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseSubDetail1?>? subDetail}) {
     return _ClaimResponseDetail1(
       id: id,
       extension_: extension_,
@@ -10976,21 +10976,21 @@ const $ClaimResponseDetail1 = _$ClaimResponseDetail1TearOff();
 mixin _$ClaimResponseDetail1 {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get productOrService;
-  List<CodeableConcept>? get modifier;
+  List<CodeableConcept?>? get modifier;
   Quantity? get quantity;
   Money? get unitPrice;
   Decimal? get factor;
   @JsonKey(name: '_factor')
   Element? get factorElement;
   Money? get net;
-  List<PositiveInt>? get noteNumber;
+  List<PositiveInt?>? get noteNumber;
   @JsonKey(name: '_noteNumber')
-  List<Element>? get noteNumberElement;
-  List<ClaimResponseAdjudication>? get adjudication;
-  List<ClaimResponseSubDetail1>? get subDetail;
+  List<Element?>? get noteNumberElement;
+  List<ClaimResponseAdjudication?>? get adjudication;
+  List<ClaimResponseSubDetail1?>? get subDetail;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -11004,19 +11004,19 @@ abstract class $ClaimResponseDetail1CopyWith<$Res> {
       _$ClaimResponseDetail1CopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
+      List<CodeableConcept?>? modifier,
       Quantity? quantity,
       Money? unitPrice,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseSubDetail1>? subDetail});
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseSubDetail1?>? subDetail});
 
   $CodeableConceptCopyWith<$Res>? get productOrService;
   $QuantityCopyWith<$Res>? get quantity;
@@ -11055,16 +11055,16 @@ class _$ClaimResponseDetail1CopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>?,
+          : modifier as List<CodeableConcept?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money?,
       factor: factor == freezed ? _value.factor : factor as Decimal?,
@@ -11074,16 +11074,16 @@ class _$ClaimResponseDetail1CopyWithImpl<$Res>
       net: net == freezed ? _value.net : net as Money?,
       noteNumber: noteNumber == freezed
           ? _value.noteNumber
-          : noteNumber as List<PositiveInt>?,
+          : noteNumber as List<PositiveInt?>?,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as List<Element>?,
+          : noteNumberElement as List<Element?>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>?,
+          : adjudication as List<ClaimResponseAdjudication?>?,
       subDetail: subDetail == freezed
           ? _value.subDetail
-          : subDetail as List<ClaimResponseSubDetail1>?,
+          : subDetail as List<ClaimResponseSubDetail1?>?,
     ));
   }
 
@@ -11152,19 +11152,19 @@ abstract class _$ClaimResponseDetail1CopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
+      List<CodeableConcept?>? modifier,
       Quantity? quantity,
       Money? unitPrice,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseSubDetail1>? subDetail});
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseSubDetail1?>? subDetail});
 
   @override
   $CodeableConceptCopyWith<$Res>? get productOrService;
@@ -11210,16 +11210,16 @@ class __$ClaimResponseDetail1CopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>?,
+          : modifier as List<CodeableConcept?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money?,
       factor: factor == freezed ? _value.factor : factor as Decimal?,
@@ -11229,16 +11229,16 @@ class __$ClaimResponseDetail1CopyWithImpl<$Res>
       net: net == freezed ? _value.net : net as Money?,
       noteNumber: noteNumber == freezed
           ? _value.noteNumber
-          : noteNumber as List<PositiveInt>?,
+          : noteNumber as List<PositiveInt?>?,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as List<Element>?,
+          : noteNumberElement as List<Element?>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>?,
+          : adjudication as List<ClaimResponseAdjudication?>?,
       subDetail: subDetail == freezed
           ? _value.subDetail
-          : subDetail as List<ClaimResponseSubDetail1>?,
+          : subDetail as List<ClaimResponseSubDetail1?>?,
     ));
   }
 }
@@ -11271,13 +11271,13 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? productOrService;
   @override
-  final List<CodeableConcept>? modifier;
+  final List<CodeableConcept?>? modifier;
   @override
   final Quantity? quantity;
   @override
@@ -11290,14 +11290,14 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
   @override
   final Money? net;
   @override
-  final List<PositiveInt>? noteNumber;
+  final List<PositiveInt?>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final List<Element>? noteNumberElement;
+  final List<Element?>? noteNumberElement;
   @override
-  final List<ClaimResponseAdjudication>? adjudication;
+  final List<ClaimResponseAdjudication?>? adjudication;
   @override
-  final List<ClaimResponseSubDetail1>? subDetail;
+  final List<ClaimResponseSubDetail1?>? subDetail;
 
   @override
   String toString() {
@@ -11383,19 +11383,19 @@ abstract class _ClaimResponseDetail1 extends ClaimResponseDetail1 {
   _ClaimResponseDetail1._() : super._();
   factory _ClaimResponseDetail1(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
+      List<CodeableConcept?>? modifier,
       Quantity? quantity,
       Money? unitPrice,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      required List<ClaimResponseAdjudication>? adjudication,
-      List<ClaimResponseSubDetail1>? subDetail}) = _$_ClaimResponseDetail1;
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      required List<ClaimResponseAdjudication?>? adjudication,
+      List<ClaimResponseSubDetail1?>? subDetail}) = _$_ClaimResponseDetail1;
 
   factory _ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =
       _$_ClaimResponseDetail1.fromJson;
@@ -11404,13 +11404,13 @@ abstract class _ClaimResponseDetail1 extends ClaimResponseDetail1 {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get productOrService;
   @override
-  List<CodeableConcept>? get modifier;
+  List<CodeableConcept?>? get modifier;
   @override
   Quantity? get quantity;
   @override
@@ -11423,14 +11423,14 @@ abstract class _ClaimResponseDetail1 extends ClaimResponseDetail1 {
   @override
   Money? get net;
   @override
-  List<PositiveInt>? get noteNumber;
+  List<PositiveInt?>? get noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element>? get noteNumberElement;
+  List<Element?>? get noteNumberElement;
   @override
-  List<ClaimResponseAdjudication>? get adjudication;
+  List<ClaimResponseAdjudication?>? get adjudication;
   @override
-  List<ClaimResponseSubDetail1>? get subDetail;
+  List<ClaimResponseSubDetail1?>? get subDetail;
   @override
   @JsonKey(ignore: true)
   _$ClaimResponseDetail1CopyWith<_ClaimResponseDetail1> get copyWith;
@@ -11447,18 +11447,18 @@ class _$ClaimResponseSubDetail1TearOff {
 
   _ClaimResponseSubDetail1 call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
+      List<CodeableConcept?>? modifier,
       Quantity? quantity,
       Money? unitPrice,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      required List<ClaimResponseAdjudication>? adjudication}) {
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      required List<ClaimResponseAdjudication?>? adjudication}) {
     return _ClaimResponseSubDetail1(
       id: id,
       extension_: extension_,
@@ -11488,20 +11488,20 @@ const $ClaimResponseSubDetail1 = _$ClaimResponseSubDetail1TearOff();
 mixin _$ClaimResponseSubDetail1 {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get productOrService;
-  List<CodeableConcept>? get modifier;
+  List<CodeableConcept?>? get modifier;
   Quantity? get quantity;
   Money? get unitPrice;
   Decimal? get factor;
   @JsonKey(name: '_factor')
   Element? get factorElement;
   Money? get net;
-  List<PositiveInt>? get noteNumber;
+  List<PositiveInt?>? get noteNumber;
   @JsonKey(name: '_noteNumber')
-  List<Element>? get noteNumberElement;
-  List<ClaimResponseAdjudication>? get adjudication;
+  List<Element?>? get noteNumberElement;
+  List<ClaimResponseAdjudication?>? get adjudication;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -11515,18 +11515,18 @@ abstract class $ClaimResponseSubDetail1CopyWith<$Res> {
       _$ClaimResponseSubDetail1CopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
+      List<CodeableConcept?>? modifier,
       Quantity? quantity,
       Money? unitPrice,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      List<ClaimResponseAdjudication>? adjudication});
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      List<ClaimResponseAdjudication?>? adjudication});
 
   $CodeableConceptCopyWith<$Res>? get productOrService;
   $QuantityCopyWith<$Res>? get quantity;
@@ -11564,16 +11564,16 @@ class _$ClaimResponseSubDetail1CopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>?,
+          : modifier as List<CodeableConcept?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money?,
       factor: factor == freezed ? _value.factor : factor as Decimal?,
@@ -11583,13 +11583,13 @@ class _$ClaimResponseSubDetail1CopyWithImpl<$Res>
       net: net == freezed ? _value.net : net as Money?,
       noteNumber: noteNumber == freezed
           ? _value.noteNumber
-          : noteNumber as List<PositiveInt>?,
+          : noteNumber as List<PositiveInt?>?,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as List<Element>?,
+          : noteNumberElement as List<Element?>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>?,
+          : adjudication as List<ClaimResponseAdjudication?>?,
     ));
   }
 
@@ -11658,18 +11658,18 @@ abstract class _$ClaimResponseSubDetail1CopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? productOrService,
-      List<CodeableConcept>? modifier,
+      List<CodeableConcept?>? modifier,
       Quantity? quantity,
       Money? unitPrice,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
-      List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-      List<ClaimResponseAdjudication>? adjudication});
+      List<PositiveInt?>? noteNumber,
+      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      List<ClaimResponseAdjudication?>? adjudication});
 
   @override
   $CodeableConceptCopyWith<$Res>? get productOrService;
@@ -11715,16 +11715,16 @@ class __$ClaimResponseSubDetail1CopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       productOrService: productOrService == freezed
           ? _value.productOrService
           : productOrService as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>?,
+          : modifier as List<CodeableConcept?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
       unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money?,
       factor: factor == freezed ? _value.factor : factor as Decimal?,
@@ -11734,13 +11734,13 @@ class __$ClaimResponseSubDetail1CopyWithImpl<$Res>
       net: net == freezed ? _value.net : net as Money?,
       noteNumber: noteNumber == freezed
           ? _value.noteNumber
-          : noteNumber as List<PositiveInt>?,
+          : noteNumber as List<PositiveInt?>?,
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
-          : noteNumberElement as List<Element>?,
+          : noteNumberElement as List<Element?>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
-          : adjudication as List<ClaimResponseAdjudication>?,
+          : adjudication as List<ClaimResponseAdjudication?>?,
     ));
   }
 }
@@ -11772,13 +11772,13 @@ class _$_ClaimResponseSubDetail1 extends _ClaimResponseSubDetail1 {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? productOrService;
   @override
-  final List<CodeableConcept>? modifier;
+  final List<CodeableConcept?>? modifier;
   @override
   final Quantity? quantity;
   @override
@@ -11791,12 +11791,12 @@ class _$_ClaimResponseSubDetail1 extends _ClaimResponseSubDetail1 {
   @override
   final Money? net;
   @override
-  final List<PositiveInt>? noteNumber;
+  final List<PositiveInt?>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final List<Element>? noteNumberElement;
+  final List<Element?>? noteNumberElement;
   @override
-  final List<ClaimResponseAdjudication>? adjudication;
+  final List<ClaimResponseAdjudication?>? adjudication;
 
   @override
   String toString() {
@@ -11878,18 +11878,18 @@ abstract class _ClaimResponseSubDetail1 extends ClaimResponseSubDetail1 {
   _ClaimResponseSubDetail1._() : super._();
   factory _ClaimResponseSubDetail1(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+          List<FhirExtension?>? modifierExtension,
           required CodeableConcept? productOrService,
-          List<CodeableConcept>? modifier,
+          List<CodeableConcept?>? modifier,
           Quantity? quantity,
           Money? unitPrice,
           Decimal? factor,
           @JsonKey(name: '_factor') Element? factorElement,
           Money? net,
-          List<PositiveInt>? noteNumber,
-          @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
-          required List<ClaimResponseAdjudication>? adjudication}) =
+          List<PositiveInt?>? noteNumber,
+          @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+          required List<ClaimResponseAdjudication?>? adjudication}) =
       _$_ClaimResponseSubDetail1;
 
   factory _ClaimResponseSubDetail1.fromJson(Map<String, dynamic> json) =
@@ -11899,13 +11899,13 @@ abstract class _ClaimResponseSubDetail1 extends ClaimResponseSubDetail1 {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get productOrService;
   @override
-  List<CodeableConcept>? get modifier;
+  List<CodeableConcept?>? get modifier;
   @override
   Quantity? get quantity;
   @override
@@ -11918,12 +11918,12 @@ abstract class _ClaimResponseSubDetail1 extends ClaimResponseSubDetail1 {
   @override
   Money? get net;
   @override
-  List<PositiveInt>? get noteNumber;
+  List<PositiveInt?>? get noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element>? get noteNumberElement;
+  List<Element?>? get noteNumberElement;
   @override
-  List<ClaimResponseAdjudication>? get adjudication;
+  List<ClaimResponseAdjudication?>? get adjudication;
   @override
   @JsonKey(ignore: true)
   _$ClaimResponseSubDetail1CopyWith<_ClaimResponseSubDetail1> get copyWith;
@@ -11939,8 +11939,8 @@ class _$ClaimResponseTotalTearOff {
 
   _ClaimResponseTotal call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? category,
       required Money? amount}) {
     return _ClaimResponseTotal(
@@ -11964,8 +11964,8 @@ const $ClaimResponseTotal = _$ClaimResponseTotalTearOff();
 mixin _$ClaimResponseTotal {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get category;
   Money? get amount;
 
@@ -11981,8 +11981,8 @@ abstract class $ClaimResponseTotalCopyWith<$Res> {
       _$ClaimResponseTotalCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? category,
       Money? amount});
 
@@ -12011,10 +12011,10 @@ class _$ClaimResponseTotalCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       category:
           category == freezed ? _value.category : category as CodeableConcept?,
       amount: amount == freezed ? _value.amount : amount as Money?,
@@ -12053,8 +12053,8 @@ abstract class _$ClaimResponseTotalCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? category,
       Money? amount});
 
@@ -12087,10 +12087,10 @@ class __$ClaimResponseTotalCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       category:
           category == freezed ? _value.category : category as CodeableConcept?,
       amount: amount == freezed ? _value.amount : amount as Money?,
@@ -12117,9 +12117,9 @@ class _$_ClaimResponseTotal extends _ClaimResponseTotal {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? category;
   @override
@@ -12173,8 +12173,8 @@ abstract class _ClaimResponseTotal extends ClaimResponseTotal {
   _ClaimResponseTotal._() : super._();
   factory _ClaimResponseTotal(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? category,
       required Money? amount}) = _$_ClaimResponseTotal;
 
@@ -12185,9 +12185,9 @@ abstract class _ClaimResponseTotal extends ClaimResponseTotal {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get category;
   @override
@@ -12207,8 +12207,8 @@ class _$ClaimResponsePaymentTearOff {
 
   _ClaimResponsePayment call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? type,
       Money? adjustment,
       CodeableConcept? adjustmentReason,
@@ -12242,8 +12242,8 @@ const $ClaimResponsePayment = _$ClaimResponsePaymentTearOff();
 mixin _$ClaimResponsePayment {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get type;
   Money? get adjustment;
   CodeableConcept? get adjustmentReason;
@@ -12265,8 +12265,8 @@ abstract class $ClaimResponsePaymentCopyWith<$Res> {
       _$ClaimResponsePaymentCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
       Money? adjustment,
       CodeableConcept? adjustmentReason,
@@ -12309,10 +12309,10 @@ class _$ClaimResponsePaymentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       adjustment:
           adjustment == freezed ? _value.adjustment : adjustment as Money?,
@@ -12404,8 +12404,8 @@ abstract class _$ClaimResponsePaymentCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
       Money? adjustment,
       CodeableConcept? adjustmentReason,
@@ -12456,10 +12456,10 @@ class __$ClaimResponsePaymentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       adjustment:
           adjustment == freezed ? _value.adjustment : adjustment as Money?,
@@ -12500,9 +12500,9 @@ class _$_ClaimResponsePayment extends _ClaimResponsePayment {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? type;
   @override
@@ -12586,8 +12586,8 @@ abstract class _ClaimResponsePayment extends ClaimResponsePayment {
   _ClaimResponsePayment._() : super._();
   factory _ClaimResponsePayment(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? type,
       Money? adjustment,
       CodeableConcept? adjustmentReason,
@@ -12603,9 +12603,9 @@ abstract class _ClaimResponsePayment extends ClaimResponsePayment {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get type;
   @override
@@ -12638,8 +12638,8 @@ class _$ClaimResponseProcessNoteTearOff {
   _ClaimResponseProcessNote call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? number,
       @JsonKey(name: '_number')
           Element? numberElement,
@@ -12677,8 +12677,8 @@ const $ClaimResponseProcessNote = _$ClaimResponseProcessNoteTearOff();
 mixin _$ClaimResponseProcessNote {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   PositiveInt? get number;
   @JsonKey(name: '_number')
   Element? get numberElement;
@@ -12704,8 +12704,8 @@ abstract class $ClaimResponseProcessNoteCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? number,
       @JsonKey(name: '_number')
           Element? numberElement,
@@ -12750,10 +12750,10 @@ class _$ClaimResponseProcessNoteCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       number: number == freezed ? _value.number : number as PositiveInt?,
       numberElement: numberElement == freezed
           ? _value.numberElement
@@ -12825,8 +12825,8 @@ abstract class _$ClaimResponseProcessNoteCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? number,
       @JsonKey(name: '_number')
           Element? numberElement,
@@ -12878,10 +12878,10 @@ class __$ClaimResponseProcessNoteCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       number: number == freezed ? _value.number : number as PositiveInt?,
       numberElement: numberElement == freezed
           ? _value.numberElement
@@ -12928,9 +12928,9 @@ class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final PositiveInt? number;
   @override
@@ -13018,8 +13018,8 @@ abstract class _ClaimResponseProcessNote extends ClaimResponseProcessNote {
   factory _ClaimResponseProcessNote(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? number,
       @JsonKey(name: '_number')
           Element? numberElement,
@@ -13039,9 +13039,9 @@ abstract class _ClaimResponseProcessNote extends ClaimResponseProcessNote {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   PositiveInt? get number;
   @override
@@ -13077,8 +13077,8 @@ class _$ClaimResponseInsuranceTearOff {
   _ClaimResponseInsurance call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
@@ -13117,8 +13117,8 @@ const $ClaimResponseInsurance = _$ClaimResponseInsuranceTearOff();
 mixin _$ClaimResponseInsurance {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   PositiveInt? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
@@ -13144,8 +13144,8 @@ abstract class $ClaimResponseInsuranceCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
@@ -13192,10 +13192,10 @@ class _$ClaimResponseInsuranceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -13284,8 +13284,8 @@ abstract class _$ClaimResponseInsuranceCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
@@ -13339,10 +13339,10 @@ class __$ClaimResponseInsuranceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -13391,9 +13391,9 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final PositiveInt? sequence;
   @override
@@ -13490,8 +13490,8 @@ abstract class _ClaimResponseInsurance extends ClaimResponseInsurance {
   factory _ClaimResponseInsurance(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
@@ -13511,9 +13511,9 @@ abstract class _ClaimResponseInsurance extends ClaimResponseInsurance {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   PositiveInt? get sequence;
   @override
@@ -13548,8 +13548,8 @@ class _$ClaimResponseErrorTearOff {
 
   _ClaimResponseError call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? itemSequence,
       @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
       PositiveInt? detailSequence,
@@ -13583,8 +13583,8 @@ const $ClaimResponseError = _$ClaimResponseErrorTearOff();
 mixin _$ClaimResponseError {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   PositiveInt? get itemSequence;
   @JsonKey(name: '_itemSequence')
   Element? get itemSequenceElement;
@@ -13608,8 +13608,8 @@ abstract class $ClaimResponseErrorCopyWith<$Res> {
       _$ClaimResponseErrorCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? itemSequence,
       @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
       PositiveInt? detailSequence,
@@ -13650,10 +13650,10 @@ class _$ClaimResponseErrorCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       itemSequence: itemSequence == freezed
           ? _value.itemSequence
           : itemSequence as PositiveInt?,
@@ -13730,8 +13730,8 @@ abstract class _$ClaimResponseErrorCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? itemSequence,
       @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
       PositiveInt? detailSequence,
@@ -13778,10 +13778,10 @@ class __$ClaimResponseErrorCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       itemSequence: itemSequence == freezed
           ? _value.itemSequence
           : itemSequence as PositiveInt?,
@@ -13829,9 +13829,9 @@ class _$_ClaimResponseError extends _ClaimResponseError {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final PositiveInt? itemSequence;
   @override
@@ -13920,8 +13920,8 @@ abstract class _ClaimResponseError extends ClaimResponseError {
   _ClaimResponseError._() : super._();
   factory _ClaimResponseError(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? itemSequence,
       @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
       PositiveInt? detailSequence,
@@ -13937,9 +13937,9 @@ abstract class _ClaimResponseError extends ClaimResponseError {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   PositiveInt? get itemSequence;
   @override
@@ -13984,9 +13984,9 @@ class _$InvoiceTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
           InvoiceStatus? status,
       @JsonKey(name: '_status')
@@ -14000,17 +14000,17 @@ class _$InvoiceTearOff {
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
-      List<InvoiceParticipant>? participant,
+      List<InvoiceParticipant?>? participant,
       Reference? issuer,
       Reference? account,
-      List<InvoiceLineItem>? lineItem,
-      List<InvoicePriceComponent>? totalPriceComponent,
+      List<InvoiceLineItem?>? lineItem,
+      List<InvoicePriceComponent?>? totalPriceComponent,
       Money? totalNet,
       Money? totalGross,
       Markdown? paymentTerms,
       @JsonKey(name: '_paymentTerms')
           Element? paymentTermsElement,
-      List<Annotation>? note}) {
+      List<Annotation?>? note}) {
     return _Invoice(
       resourceType: resourceType,
       id: id,
@@ -14069,9 +14069,9 @@ mixin _$Invoice {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
   InvoiceStatus? get status;
   @JsonKey(name: '_status')
@@ -14085,17 +14085,17 @@ mixin _$Invoice {
   FhirDateTime? get date;
   @JsonKey(name: '_date')
   Element? get dateElement;
-  List<InvoiceParticipant>? get participant;
+  List<InvoiceParticipant?>? get participant;
   Reference? get issuer;
   Reference? get account;
-  List<InvoiceLineItem>? get lineItem;
-  List<InvoicePriceComponent>? get totalPriceComponent;
+  List<InvoiceLineItem?>? get lineItem;
+  List<InvoicePriceComponent?>? get totalPriceComponent;
   Money? get totalNet;
   Money? get totalGross;
   Markdown? get paymentTerms;
   @JsonKey(name: '_paymentTerms')
   Element? get paymentTermsElement;
-  List<Annotation>? get note;
+  List<Annotation?>? get note;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -14120,9 +14120,9 @@ abstract class $InvoiceCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
           InvoiceStatus? status,
       @JsonKey(name: '_status')
@@ -14136,17 +14136,17 @@ abstract class $InvoiceCopyWith<$Res> {
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
-      List<InvoiceParticipant>? participant,
+      List<InvoiceParticipant?>? participant,
       Reference? issuer,
       Reference? account,
-      List<InvoiceLineItem>? lineItem,
-      List<InvoicePriceComponent>? totalPriceComponent,
+      List<InvoiceLineItem?>? lineItem,
+      List<InvoicePriceComponent?>? totalPriceComponent,
       Money? totalNet,
       Money? totalGross,
       Markdown? paymentTerms,
       @JsonKey(name: '_paymentTerms')
           Element? paymentTermsElement,
-      List<Annotation>? note});
+      List<Annotation?>? note});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -14229,13 +14229,13 @@ class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as InvoiceStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -14255,15 +14255,15 @@ class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<InvoiceParticipant>?,
+          : participant as List<InvoiceParticipant?>?,
       issuer: issuer == freezed ? _value.issuer : issuer as Reference?,
       account: account == freezed ? _value.account : account as Reference?,
       lineItem: lineItem == freezed
           ? _value.lineItem
-          : lineItem as List<InvoiceLineItem>?,
+          : lineItem as List<InvoiceLineItem?>?,
       totalPriceComponent: totalPriceComponent == freezed
           ? _value.totalPriceComponent
-          : totalPriceComponent as List<InvoicePriceComponent>?,
+          : totalPriceComponent as List<InvoicePriceComponent?>?,
       totalNet: totalNet == freezed ? _value.totalNet : totalNet as Money?,
       totalGross:
           totalGross == freezed ? _value.totalGross : totalGross as Money?,
@@ -14273,7 +14273,7 @@ class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
       paymentTermsElement: paymentTermsElement == freezed
           ? _value.paymentTermsElement
           : paymentTermsElement as Element?,
-      note: note == freezed ? _value.note : note as List<Annotation>?,
+      note: note == freezed ? _value.note : note as List<Annotation?>?,
     ));
   }
 
@@ -14462,9 +14462,9 @@ abstract class _$InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
           InvoiceStatus? status,
       @JsonKey(name: '_status')
@@ -14478,17 +14478,17 @@ abstract class _$InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
-      List<InvoiceParticipant>? participant,
+      List<InvoiceParticipant?>? participant,
       Reference? issuer,
       Reference? account,
-      List<InvoiceLineItem>? lineItem,
-      List<InvoicePriceComponent>? totalPriceComponent,
+      List<InvoiceLineItem?>? lineItem,
+      List<InvoicePriceComponent?>? totalPriceComponent,
       Money? totalNet,
       Money? totalGross,
       Markdown? paymentTerms,
       @JsonKey(name: '_paymentTerms')
           Element? paymentTermsElement,
-      List<Annotation>? note});
+      List<Annotation?>? note});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -14587,13 +14587,13 @@ class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as InvoiceStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -14613,15 +14613,15 @@ class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<InvoiceParticipant>?,
+          : participant as List<InvoiceParticipant?>?,
       issuer: issuer == freezed ? _value.issuer : issuer as Reference?,
       account: account == freezed ? _value.account : account as Reference?,
       lineItem: lineItem == freezed
           ? _value.lineItem
-          : lineItem as List<InvoiceLineItem>?,
+          : lineItem as List<InvoiceLineItem?>?,
       totalPriceComponent: totalPriceComponent == freezed
           ? _value.totalPriceComponent
-          : totalPriceComponent as List<InvoicePriceComponent>?,
+          : totalPriceComponent as List<InvoicePriceComponent?>?,
       totalNet: totalNet == freezed ? _value.totalNet : totalNet as Money?,
       totalGross:
           totalGross == freezed ? _value.totalGross : totalGross as Money?,
@@ -14631,7 +14631,7 @@ class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
       paymentTermsElement: paymentTermsElement == freezed
           ? _value.paymentTermsElement
           : paymentTermsElement as Element?,
-      note: note == freezed ? _value.note : note as List<Annotation>?,
+      note: note == freezed ? _value.note : note as List<Annotation?>?,
     ));
   }
 }
@@ -14709,11 +14709,11 @@ class _$_Invoice extends _Invoice {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
   final InvoiceStatus? status;
@@ -14737,15 +14737,15 @@ class _$_Invoice extends _Invoice {
   @JsonKey(name: '_date')
   final Element? dateElement;
   @override
-  final List<InvoiceParticipant>? participant;
+  final List<InvoiceParticipant?>? participant;
   @override
   final Reference? issuer;
   @override
   final Reference? account;
   @override
-  final List<InvoiceLineItem>? lineItem;
+  final List<InvoiceLineItem?>? lineItem;
   @override
-  final List<InvoicePriceComponent>? totalPriceComponent;
+  final List<InvoicePriceComponent?>? totalPriceComponent;
   @override
   final Money? totalNet;
   @override
@@ -14756,7 +14756,7 @@ class _$_Invoice extends _Invoice {
   @JsonKey(name: '_paymentTerms')
   final Element? paymentTermsElement;
   @override
-  final List<Annotation>? note;
+  final List<Annotation?>? note;
 
   @override
   String toString() {
@@ -14904,9 +14904,9 @@ abstract class _Invoice extends Invoice {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
           InvoiceStatus? status,
       @JsonKey(name: '_status')
@@ -14920,17 +14920,17 @@ abstract class _Invoice extends Invoice {
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
-      List<InvoiceParticipant>? participant,
+      List<InvoiceParticipant?>? participant,
       Reference? issuer,
       Reference? account,
-      List<InvoiceLineItem>? lineItem,
-      List<InvoicePriceComponent>? totalPriceComponent,
+      List<InvoiceLineItem?>? lineItem,
+      List<InvoicePriceComponent?>? totalPriceComponent,
       Money? totalNet,
       Money? totalGross,
       Markdown? paymentTerms,
       @JsonKey(name: '_paymentTerms')
           Element? paymentTermsElement,
-      List<Annotation>? note}) = _$_Invoice;
+      List<Annotation?>? note}) = _$_Invoice;
 
   factory _Invoice.fromJson(Map<String, dynamic> json) = _$_Invoice.fromJson;
 
@@ -14957,11 +14957,11 @@ abstract class _Invoice extends Invoice {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
   InvoiceStatus? get status;
@@ -14985,15 +14985,15 @@ abstract class _Invoice extends Invoice {
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
-  List<InvoiceParticipant>? get participant;
+  List<InvoiceParticipant?>? get participant;
   @override
   Reference? get issuer;
   @override
   Reference? get account;
   @override
-  List<InvoiceLineItem>? get lineItem;
+  List<InvoiceLineItem?>? get lineItem;
   @override
-  List<InvoicePriceComponent>? get totalPriceComponent;
+  List<InvoicePriceComponent?>? get totalPriceComponent;
   @override
   Money? get totalNet;
   @override
@@ -15004,7 +15004,7 @@ abstract class _Invoice extends Invoice {
   @JsonKey(name: '_paymentTerms')
   Element? get paymentTermsElement;
   @override
-  List<Annotation>? get note;
+  List<Annotation?>? get note;
   @override
   @JsonKey(ignore: true)
   _$InvoiceCopyWith<_Invoice> get copyWith;
@@ -15020,8 +15020,8 @@ class _$InvoiceParticipantTearOff {
 
   _InvoiceParticipant call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? role,
       required Reference? actor}) {
     return _InvoiceParticipant(
@@ -15045,8 +15045,8 @@ const $InvoiceParticipant = _$InvoiceParticipantTearOff();
 mixin _$InvoiceParticipant {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get role;
   Reference? get actor;
 
@@ -15062,8 +15062,8 @@ abstract class $InvoiceParticipantCopyWith<$Res> {
       _$InvoiceParticipantCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? role,
       Reference? actor});
 
@@ -15092,10 +15092,10 @@ class _$InvoiceParticipantCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       role: role == freezed ? _value.role : role as CodeableConcept?,
       actor: actor == freezed ? _value.actor : actor as Reference?,
     ));
@@ -15133,8 +15133,8 @@ abstract class _$InvoiceParticipantCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? role,
       Reference? actor});
 
@@ -15167,10 +15167,10 @@ class __$InvoiceParticipantCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       role: role == freezed ? _value.role : role as CodeableConcept?,
       actor: actor == freezed ? _value.actor : actor as Reference?,
     ));
@@ -15196,9 +15196,9 @@ class _$_InvoiceParticipant extends _InvoiceParticipant {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? role;
   @override
@@ -15251,8 +15251,8 @@ abstract class _InvoiceParticipant extends InvoiceParticipant {
   _InvoiceParticipant._() : super._();
   factory _InvoiceParticipant(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? role,
       required Reference? actor}) = _$_InvoiceParticipant;
 
@@ -15263,9 +15263,9 @@ abstract class _InvoiceParticipant extends InvoiceParticipant {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get role;
   @override
@@ -15285,13 +15285,13 @@ class _$InvoiceLineItemTearOff {
 
   _InvoiceLineItem call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference? chargeItemReference,
       CodeableConcept? chargeItemCodeableConcept,
-      List<InvoicePriceComponent>? priceComponent}) {
+      List<InvoicePriceComponent?>? priceComponent}) {
     return _InvoiceLineItem(
       id: id,
       extension_: extension_,
@@ -15316,14 +15316,14 @@ const $InvoiceLineItem = _$InvoiceLineItemTearOff();
 mixin _$InvoiceLineItem {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   PositiveInt? get sequence;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   Reference? get chargeItemReference;
   CodeableConcept? get chargeItemCodeableConcept;
-  List<InvoicePriceComponent>? get priceComponent;
+  List<InvoicePriceComponent?>? get priceComponent;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -15337,13 +15337,13 @@ abstract class $InvoiceLineItemCopyWith<$Res> {
       _$InvoiceLineItemCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference? chargeItemReference,
       CodeableConcept? chargeItemCodeableConcept,
-      List<InvoicePriceComponent>? priceComponent});
+      List<InvoicePriceComponent?>? priceComponent});
 
   $ElementCopyWith<$Res>? get sequenceElement;
   $ReferenceCopyWith<$Res>? get chargeItemReference;
@@ -15374,10 +15374,10 @@ class _$InvoiceLineItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -15391,7 +15391,7 @@ class _$InvoiceLineItemCopyWithImpl<$Res>
           : chargeItemCodeableConcept as CodeableConcept?,
       priceComponent: priceComponent == freezed
           ? _value.priceComponent
-          : priceComponent as List<InvoicePriceComponent>?,
+          : priceComponent as List<InvoicePriceComponent?>?,
     ));
   }
 
@@ -15439,13 +15439,13 @@ abstract class _$InvoiceLineItemCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference? chargeItemReference,
       CodeableConcept? chargeItemCodeableConcept,
-      List<InvoicePriceComponent>? priceComponent});
+      List<InvoicePriceComponent?>? priceComponent});
 
   @override
   $ElementCopyWith<$Res>? get sequenceElement;
@@ -15481,10 +15481,10 @@ class __$InvoiceLineItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequence:
           sequence == freezed ? _value.sequence : sequence as PositiveInt?,
       sequenceElement: sequenceElement == freezed
@@ -15498,7 +15498,7 @@ class __$InvoiceLineItemCopyWithImpl<$Res>
           : chargeItemCodeableConcept as CodeableConcept?,
       priceComponent: priceComponent == freezed
           ? _value.priceComponent
-          : priceComponent as List<InvoicePriceComponent>?,
+          : priceComponent as List<InvoicePriceComponent?>?,
     ));
   }
 }
@@ -15525,9 +15525,9 @@ class _$_InvoiceLineItem extends _InvoiceLineItem {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final PositiveInt? sequence;
   @override
@@ -15538,7 +15538,7 @@ class _$_InvoiceLineItem extends _InvoiceLineItem {
   @override
   final CodeableConcept? chargeItemCodeableConcept;
   @override
-  final List<InvoicePriceComponent>? priceComponent;
+  final List<InvoicePriceComponent?>? priceComponent;
 
   @override
   String toString() {
@@ -15603,13 +15603,13 @@ abstract class _InvoiceLineItem extends InvoiceLineItem {
   _InvoiceLineItem._() : super._();
   factory _InvoiceLineItem(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       PositiveInt? sequence,
       @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference? chargeItemReference,
       CodeableConcept? chargeItemCodeableConcept,
-      List<InvoicePriceComponent>? priceComponent}) = _$_InvoiceLineItem;
+      List<InvoicePriceComponent?>? priceComponent}) = _$_InvoiceLineItem;
 
   factory _InvoiceLineItem.fromJson(Map<String, dynamic> json) =
       _$_InvoiceLineItem.fromJson;
@@ -15618,9 +15618,9 @@ abstract class _InvoiceLineItem extends InvoiceLineItem {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   PositiveInt? get sequence;
   @override
@@ -15631,7 +15631,7 @@ abstract class _InvoiceLineItem extends InvoiceLineItem {
   @override
   CodeableConcept? get chargeItemCodeableConcept;
   @override
-  List<InvoicePriceComponent>? get priceComponent;
+  List<InvoicePriceComponent?>? get priceComponent;
   @override
   @JsonKey(ignore: true)
   _$InvoiceLineItemCopyWith<_InvoiceLineItem> get copyWith;
@@ -15649,8 +15649,8 @@ class _$InvoicePriceComponentTearOff {
   _InvoicePriceComponent call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
           InvoicePriceComponentType? type,
       @JsonKey(name: '_type')
@@ -15685,8 +15685,8 @@ const $InvoicePriceComponent = _$InvoicePriceComponentTearOff();
 mixin _$InvoicePriceComponent {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
   InvoicePriceComponentType? get type;
   @JsonKey(name: '_type')
@@ -15710,8 +15710,8 @@ abstract class $InvoicePriceComponentCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
           InvoicePriceComponentType? type,
       @JsonKey(name: '_type')
@@ -15753,10 +15753,10 @@ class _$InvoicePriceComponentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as InvoicePriceComponentType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -15824,8 +15824,8 @@ abstract class _$InvoicePriceComponentCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
           InvoicePriceComponentType? type,
       @JsonKey(name: '_type')
@@ -15873,10 +15873,10 @@ class __$InvoicePriceComponentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as InvoicePriceComponentType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -15913,9 +15913,9 @@ class _$_InvoicePriceComponent extends _InvoicePriceComponent {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
   final InvoicePriceComponentType? type;
@@ -15995,8 +15995,8 @@ abstract class _InvoicePriceComponent extends InvoicePriceComponent {
   factory _InvoicePriceComponent(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
           InvoicePriceComponentType? type,
       @JsonKey(name: '_type')
@@ -16014,9 +16014,9 @@ abstract class _InvoicePriceComponent extends InvoicePriceComponent {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
   InvoicePriceComponentType? get type;

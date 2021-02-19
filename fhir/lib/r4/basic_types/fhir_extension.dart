@@ -247,7 +247,7 @@ abstract class FhirExtension implements _$FhirExtension {
   /// [div]: The actual narrative content, a stripped down version of XHTML.
   factory FhirExtension({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     Base64Binary? valueBase64Binary,

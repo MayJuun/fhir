@@ -32,10 +32,14 @@ _$_GuidanceResponse _$_$_GuidanceResponseFromJson(Map<String, dynamic> json) {
             e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => e == null
+            ? null
+            : FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     requestId:
         json['requestId'] == null ? null : Id.fromJson(json['requestId']),
@@ -76,10 +80,12 @@ _$_GuidanceResponse _$_$_GuidanceResponseFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['reasonReference'] as Map<String, dynamic>),
     note: (json['note'] as List<dynamic>?)
-        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
         .toList(),
     evaluationMessage: (json['evaluationMessage'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     outputParameters: json['outputParameters'] == null
         ? null
@@ -88,7 +94,9 @@ _$_GuidanceResponse _$_$_GuidanceResponseFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['result'] as Map<String, dynamic>),
     dataRequirement: (json['dataRequirement'] as List<dynamic>?)
-        ?.map((e) => DataRequirement.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => e == null
+            ? null
+            : DataRequirement.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -114,9 +122,9 @@ Map<String, dynamic> _$_$_GuidanceResponseToJson(_$_GuidanceResponse instance) {
   writeNotNull(
       'contained', instance.contained?.map((e) => e?.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
+      instance.modifierExtension?.map((e) => e?.toJson()).toList());
   writeNotNull('requestId', instance.requestId?.toJson());
   writeNotNull('_requestId', instance.requestIdElement?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
@@ -132,13 +140,13 @@ Map<String, dynamic> _$_$_GuidanceResponseToJson(_$_GuidanceResponse instance) {
   writeNotNull(
       'reasonCodeableConcept', instance.reasonCodeableConcept?.toJson());
   writeNotNull('reasonReference', instance.reasonReference?.toJson());
-  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
+  writeNotNull('note', instance.note?.map((e) => e?.toJson()).toList());
   writeNotNull('evaluationMessage',
-      instance.evaluationMessage?.map((e) => e.toJson()).toList());
+      instance.evaluationMessage?.map((e) => e?.toJson()).toList());
   writeNotNull('outputParameters', instance.outputParameters?.toJson());
   writeNotNull('result', instance.result?.toJson());
   writeNotNull('dataRequirement',
-      instance.dataRequirement?.map((e) => e.toJson()).toList());
+      instance.dataRequirement?.map((e) => e?.toJson()).toList());
   return val;
 }
 

@@ -18,7 +18,7 @@ class _$FhirExtensionTearOff {
 
   _FhirExtension call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       Base64Binary? valueBase64Binary,
@@ -183,7 +183,7 @@ const $FhirExtension = _$FhirExtensionTearOff();
 mixin _$FhirExtension {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   FhirUri? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -291,7 +291,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       _$FhirExtensionCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       Base64Binary? valueBase64Binary,
@@ -511,7 +511,7 @@ class _$FhirExtensionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
@@ -1289,7 +1289,7 @@ abstract class _$FhirExtensionCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       Base64Binary? valueBase64Binary,
@@ -1563,7 +1563,7 @@ class __$FhirExtensionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
@@ -1844,7 +1844,7 @@ class _$_FhirExtension extends _FhirExtension {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
   final FhirUri? url;
   @override
@@ -2226,7 +2226,7 @@ abstract class _FhirExtension extends FhirExtension {
   _FhirExtension._() : super._();
   factory _FhirExtension(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       Base64Binary? valueBase64Binary,
@@ -2308,7 +2308,7 @@ abstract class _FhirExtension extends FhirExtension {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
   FhirUri? get url;
   @override

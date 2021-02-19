@@ -31,9 +31,9 @@ class _$ExplanationOfBenefitTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
           ExplanationOfBenefitOutcome? outcome,
@@ -101,9 +101,9 @@ mixin _$ExplanationOfBenefit {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   Reference? get request;
   @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
   ExplanationOfBenefitOutcome? get outcome;
@@ -145,9 +145,9 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
           ExplanationOfBenefitOutcome? outcome,
@@ -238,13 +238,13 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       request: request == freezed ? _value.request : request as Reference?,
       outcome: outcome == freezed
           ? _value.outcome
@@ -442,9 +442,9 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
           ExplanationOfBenefitOutcome? outcome,
@@ -550,13 +550,13 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       request: request == freezed ? _value.request : request as Reference?,
       outcome: outcome == freezed
           ? _value.outcome
@@ -655,11 +655,11 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final Reference? request;
   @override
@@ -823,9 +823,9 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
           ExplanationOfBenefitOutcome? outcome,
@@ -869,11 +869,11 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   Reference? get request;
   @override

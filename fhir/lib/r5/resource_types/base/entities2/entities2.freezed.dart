@@ -33,9 +33,9 @@ class _$BiologicallyDerivedProductTearOff {
           Narrative? text,
           List<Resource?>? contained,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          List<Identifier>? identifier,
+              List<FhirExtension?>? extension_,
+          List<FhirExtension?>? modifierExtension,
+          List<Identifier?>? identifier,
           @JsonKey(
               unknownEnumValue:
                   BiologicallyDerivedProductProductCategory.unknown)
@@ -47,15 +47,15 @@ class _$BiologicallyDerivedProductTearOff {
               BiologicallyDerivedProductStatus? status,
           @JsonKey(name: '_status')
               Element? statusElement,
-          List<Reference>? request,
+          List<Reference?>? request,
           Integer? quantity,
           @JsonKey(name: '_quantity')
               Element? quantityElement,
-          List<Reference>? parent,
+          List<Reference?>? parent,
           BiologicallyDerivedProductCollection? collection,
-          List<BiologicallyDerivedProductProcessing>? processing,
+          List<BiologicallyDerivedProductProcessing?>? processing,
           BiologicallyDerivedProductManipulation? manipulation,
-          List<BiologicallyDerivedProductStorage>? storage}) {
+          List<BiologicallyDerivedProductStorage?>? storage}) {
     return _BiologicallyDerivedProduct(
       resourceType: resourceType,
       id: id,
@@ -108,9 +108,9 @@ mixin _$BiologicallyDerivedProduct {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown)
   BiologicallyDerivedProductProductCategory? get productCategory;
   @JsonKey(name: '_productCategory')
@@ -120,15 +120,15 @@ mixin _$BiologicallyDerivedProduct {
   BiologicallyDerivedProductStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  List<Reference>? get request;
+  List<Reference?>? get request;
   Integer? get quantity;
   @JsonKey(name: '_quantity')
   Element? get quantityElement;
-  List<Reference>? get parent;
+  List<Reference?>? get parent;
   BiologicallyDerivedProductCollection? get collection;
-  List<BiologicallyDerivedProductProcessing>? get processing;
+  List<BiologicallyDerivedProductProcessing?>? get processing;
   BiologicallyDerivedProductManipulation? get manipulation;
-  List<BiologicallyDerivedProductStorage>? get storage;
+  List<BiologicallyDerivedProductStorage?>? get storage;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -155,9 +155,9 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res> {
           Narrative? text,
           List<Resource?>? contained,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          List<Identifier>? identifier,
+              List<FhirExtension?>? extension_,
+          List<FhirExtension?>? modifierExtension,
+          List<Identifier?>? identifier,
           @JsonKey(
               unknownEnumValue:
                   BiologicallyDerivedProductProductCategory.unknown)
@@ -169,15 +169,15 @@ abstract class $BiologicallyDerivedProductCopyWith<$Res> {
               BiologicallyDerivedProductStatus? status,
           @JsonKey(name: '_status')
               Element? statusElement,
-          List<Reference>? request,
+          List<Reference?>? request,
           Integer? quantity,
           @JsonKey(name: '_quantity')
               Element? quantityElement,
-          List<Reference>? parent,
+          List<Reference?>? parent,
           BiologicallyDerivedProductCollection? collection,
-          List<BiologicallyDerivedProductProcessing>? processing,
+          List<BiologicallyDerivedProductProcessing?>? processing,
           BiologicallyDerivedProductManipulation? manipulation,
-          List<BiologicallyDerivedProductStorage>? storage});
+          List<BiologicallyDerivedProductStorage?>? storage});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -250,13 +250,13 @@ class _$BiologicallyDerivedProductCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       productCategory: productCategory == freezed
           ? _value.productCategory
           : productCategory as BiologicallyDerivedProductProductCategory?,
@@ -273,24 +273,24 @@ class _$BiologicallyDerivedProductCopyWithImpl<$Res>
           ? _value.statusElement
           : statusElement as Element?,
       request:
-          request == freezed ? _value.request : request as List<Reference>?,
+          request == freezed ? _value.request : request as List<Reference?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Integer?,
       quantityElement: quantityElement == freezed
           ? _value.quantityElement
           : quantityElement as Element?,
-      parent: parent == freezed ? _value.parent : parent as List<Reference>?,
+      parent: parent == freezed ? _value.parent : parent as List<Reference?>?,
       collection: collection == freezed
           ? _value.collection
           : collection as BiologicallyDerivedProductCollection?,
       processing: processing == freezed
           ? _value.processing
-          : processing as List<BiologicallyDerivedProductProcessing>?,
+          : processing as List<BiologicallyDerivedProductProcessing?>?,
       manipulation: manipulation == freezed
           ? _value.manipulation
           : manipulation as BiologicallyDerivedProductManipulation?,
       storage: storage == freezed
           ? _value.storage
-          : storage as List<BiologicallyDerivedProductStorage>?,
+          : storage as List<BiologicallyDerivedProductStorage?>?,
     ));
   }
 
@@ -430,9 +430,9 @@ abstract class _$BiologicallyDerivedProductCopyWith<$Res>
           Narrative? text,
           List<Resource?>? contained,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          List<Identifier>? identifier,
+              List<FhirExtension?>? extension_,
+          List<FhirExtension?>? modifierExtension,
+          List<Identifier?>? identifier,
           @JsonKey(
               unknownEnumValue:
                   BiologicallyDerivedProductProductCategory.unknown)
@@ -444,15 +444,15 @@ abstract class _$BiologicallyDerivedProductCopyWith<$Res>
               BiologicallyDerivedProductStatus? status,
           @JsonKey(name: '_status')
               Element? statusElement,
-          List<Reference>? request,
+          List<Reference?>? request,
           Integer? quantity,
           @JsonKey(name: '_quantity')
               Element? quantityElement,
-          List<Reference>? parent,
+          List<Reference?>? parent,
           BiologicallyDerivedProductCollection? collection,
-          List<BiologicallyDerivedProductProcessing>? processing,
+          List<BiologicallyDerivedProductProcessing?>? processing,
           BiologicallyDerivedProductManipulation? manipulation,
-          List<BiologicallyDerivedProductStorage>? storage});
+          List<BiologicallyDerivedProductStorage?>? storage});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -538,13 +538,13 @@ class __$BiologicallyDerivedProductCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       productCategory: productCategory == freezed
           ? _value.productCategory
           : productCategory as BiologicallyDerivedProductProductCategory?,
@@ -561,24 +561,24 @@ class __$BiologicallyDerivedProductCopyWithImpl<$Res>
           ? _value.statusElement
           : statusElement as Element?,
       request:
-          request == freezed ? _value.request : request as List<Reference>?,
+          request == freezed ? _value.request : request as List<Reference?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Integer?,
       quantityElement: quantityElement == freezed
           ? _value.quantityElement
           : quantityElement as Element?,
-      parent: parent == freezed ? _value.parent : parent as List<Reference>?,
+      parent: parent == freezed ? _value.parent : parent as List<Reference?>?,
       collection: collection == freezed
           ? _value.collection
           : collection as BiologicallyDerivedProductCollection?,
       processing: processing == freezed
           ? _value.processing
-          : processing as List<BiologicallyDerivedProductProcessing>?,
+          : processing as List<BiologicallyDerivedProductProcessing?>?,
       manipulation: manipulation == freezed
           ? _value.manipulation
           : manipulation as BiologicallyDerivedProductManipulation?,
       storage: storage == freezed
           ? _value.storage
-          : storage as List<BiologicallyDerivedProductStorage>?,
+          : storage as List<BiologicallyDerivedProductStorage?>?,
     ));
   }
 }
@@ -650,11 +650,11 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown)
   final BiologicallyDerivedProductProductCategory? productCategory;
@@ -670,22 +670,22 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final List<Reference>? request;
+  final List<Reference?>? request;
   @override
   final Integer? quantity;
   @override
   @JsonKey(name: '_quantity')
   final Element? quantityElement;
   @override
-  final List<Reference>? parent;
+  final List<Reference?>? parent;
   @override
   final BiologicallyDerivedProductCollection? collection;
   @override
-  final List<BiologicallyDerivedProductProcessing>? processing;
+  final List<BiologicallyDerivedProductProcessing?>? processing;
   @override
   final BiologicallyDerivedProductManipulation? manipulation;
   @override
-  final List<BiologicallyDerivedProductStorage>? storage;
+  final List<BiologicallyDerivedProductStorage?>? storage;
 
   @override
   String toString() {
@@ -822,9 +822,9 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown)
           BiologicallyDerivedProductProductCategory? productCategory,
       @JsonKey(name: '_productCategory')
@@ -834,15 +834,15 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
           BiologicallyDerivedProductStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<Reference>? request,
+      List<Reference?>? request,
       Integer? quantity,
       @JsonKey(name: '_quantity')
           Element? quantityElement,
-      List<Reference>? parent,
+      List<Reference?>? parent,
       BiologicallyDerivedProductCollection? collection,
-      List<BiologicallyDerivedProductProcessing>? processing,
+      List<BiologicallyDerivedProductProcessing?>? processing,
       BiologicallyDerivedProductManipulation? manipulation,
-      List<BiologicallyDerivedProductStorage>? storage}) = _$_BiologicallyDerivedProduct;
+      List<BiologicallyDerivedProductStorage?>? storage}) = _$_BiologicallyDerivedProduct;
 
   factory _BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json) =
       _$_BiologicallyDerivedProduct.fromJson;
@@ -870,11 +870,11 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown)
   BiologicallyDerivedProductProductCategory? get productCategory;
@@ -890,22 +890,22 @@ abstract class _BiologicallyDerivedProduct extends BiologicallyDerivedProduct {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  List<Reference>? get request;
+  List<Reference?>? get request;
   @override
   Integer? get quantity;
   @override
   @JsonKey(name: '_quantity')
   Element? get quantityElement;
   @override
-  List<Reference>? get parent;
+  List<Reference?>? get parent;
   @override
   BiologicallyDerivedProductCollection? get collection;
   @override
-  List<BiologicallyDerivedProductProcessing>? get processing;
+  List<BiologicallyDerivedProductProcessing?>? get processing;
   @override
   BiologicallyDerivedProductManipulation? get manipulation;
   @override
-  List<BiologicallyDerivedProductStorage>? get storage;
+  List<BiologicallyDerivedProductStorage?>? get storage;
   @override
   @JsonKey(ignore: true)
   _$BiologicallyDerivedProductCopyWith<_BiologicallyDerivedProduct>
@@ -923,8 +923,8 @@ class _$BiologicallyDerivedProductCollectionTearOff {
 
   _BiologicallyDerivedProductCollection call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? collector,
       Reference? source,
       FhirDateTime? collectedDateTime,
@@ -955,8 +955,8 @@ const $BiologicallyDerivedProductCollection =
 mixin _$BiologicallyDerivedProductCollection {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Reference? get collector;
   Reference? get source;
   FhirDateTime? get collectedDateTime;
@@ -978,8 +978,8 @@ abstract class $BiologicallyDerivedProductCollectionCopyWith<$Res> {
       _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? collector,
       Reference? source,
       FhirDateTime? collectedDateTime,
@@ -1016,10 +1016,10 @@ class _$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       collector:
           collector == freezed ? _value.collector : collector as Reference?,
       source: source == freezed ? _value.source : source as Reference?,
@@ -1090,8 +1090,8 @@ abstract class _$BiologicallyDerivedProductCollectionCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? collector,
       Reference? source,
       FhirDateTime? collectedDateTime,
@@ -1136,10 +1136,10 @@ class __$BiologicallyDerivedProductCollectionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       collector:
           collector == freezed ? _value.collector : collector as Reference?,
       source: source == freezed ? _value.source : source as Reference?,
@@ -1180,9 +1180,9 @@ class _$_BiologicallyDerivedProductCollection
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Reference? collector;
   @override
@@ -1260,8 +1260,8 @@ abstract class _BiologicallyDerivedProductCollection
   _BiologicallyDerivedProductCollection._() : super._();
   factory _BiologicallyDerivedProductCollection(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? collector,
       Reference? source,
       FhirDateTime? collectedDateTime,
@@ -1276,9 +1276,9 @@ abstract class _BiologicallyDerivedProductCollection
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Reference? get collector;
   @override
@@ -1307,8 +1307,8 @@ class _$BiologicallyDerivedProductProcessingTearOff {
 
   _BiologicallyDerivedProductProcessing call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       CodeableConcept? procedure,
@@ -1343,8 +1343,8 @@ const $BiologicallyDerivedProductProcessing =
 mixin _$BiologicallyDerivedProductProcessing {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
@@ -1369,8 +1369,8 @@ abstract class $BiologicallyDerivedProductProcessingCopyWith<$Res> {
       _$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       CodeableConcept? procedure,
@@ -1412,10 +1412,10 @@ class _$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -1502,8 +1502,8 @@ abstract class _$BiologicallyDerivedProductProcessingCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       CodeableConcept? procedure,
@@ -1554,10 +1554,10 @@ class __$BiologicallyDerivedProductProcessingCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -1605,9 +1605,9 @@ class _$_BiologicallyDerivedProductProcessing
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final String? description;
   @override
@@ -1697,8 +1697,8 @@ abstract class _BiologicallyDerivedProductProcessing
   _BiologicallyDerivedProductProcessing._() : super._();
   factory _BiologicallyDerivedProductProcessing(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       CodeableConcept? procedure,
@@ -1715,9 +1715,9 @@ abstract class _BiologicallyDerivedProductProcessing
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   String? get description;
   @override
@@ -1752,8 +1752,8 @@ class _$BiologicallyDerivedProductManipulationTearOff {
 
   _BiologicallyDerivedProductManipulation call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       FhirDateTime? timeDateTime,
@@ -1784,8 +1784,8 @@ const $BiologicallyDerivedProductManipulation =
 mixin _$BiologicallyDerivedProductManipulation {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
@@ -1808,8 +1808,8 @@ abstract class $BiologicallyDerivedProductManipulationCopyWith<$Res> {
       _$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       FhirDateTime? timeDateTime,
@@ -1845,10 +1845,10 @@ class _$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -1909,8 +1909,8 @@ abstract class _$BiologicallyDerivedProductManipulationCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       FhirDateTime? timeDateTime,
@@ -1954,10 +1954,10 @@ class __$BiologicallyDerivedProductManipulationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -1999,9 +1999,9 @@ class _$_BiologicallyDerivedProductManipulation
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final String? description;
   @override
@@ -2079,8 +2079,8 @@ abstract class _BiologicallyDerivedProductManipulation
   _BiologicallyDerivedProductManipulation._() : super._();
   factory _BiologicallyDerivedProductManipulation(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       FhirDateTime? timeDateTime,
@@ -2095,9 +2095,9 @@ abstract class _BiologicallyDerivedProductManipulation
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   String? get description;
   @override
@@ -2128,8 +2128,8 @@ class _$BiologicallyDerivedProductStorageTearOff {
   _BiologicallyDerivedProductStorage call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -2168,8 +2168,8 @@ const $BiologicallyDerivedProductStorage =
 mixin _$BiologicallyDerivedProductStorage {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
@@ -2197,8 +2197,8 @@ abstract class $BiologicallyDerivedProductStorageCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -2243,10 +2243,10 @@ class _$BiologicallyDerivedProductStorageCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -2323,8 +2323,8 @@ abstract class _$BiologicallyDerivedProductStorageCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -2377,10 +2377,10 @@ class __$BiologicallyDerivedProductStorageCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -2433,9 +2433,9 @@ class _$_BiologicallyDerivedProductStorage
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final String? description;
   @override
@@ -2527,8 +2527,8 @@ abstract class _BiologicallyDerivedProductStorage
   factory _BiologicallyDerivedProductStorage(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -2549,9 +2549,9 @@ abstract class _BiologicallyDerivedProductStorage
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   String? get description;
   @override
@@ -2598,19 +2598,19 @@ class _$DeviceTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? displayName,
       @JsonKey(name: '_displayName')
           Element? displayNameElement,
       Reference? definition,
-      List<DeviceUdiCarrier>? udiCarrier,
+      List<DeviceUdiCarrier?>? udiCarrier,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown)
           DeviceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? statusReason,
+      List<CodeableConcept?>? statusReason,
       String? distinctIdentifier,
       @JsonKey(name: '_distinctIdentifier')
           Element? distinctIdentifierElement,
@@ -2629,28 +2629,28 @@ class _$DeviceTearOff {
       String? serialNumber,
       @JsonKey(name: '_serialNumber')
           Element? serialNumberElement,
-      List<DeviceDeviceName>? deviceName,
+      List<DeviceDeviceName?>? deviceName,
       String? modelNumber,
       @JsonKey(name: '_modelNumber')
           Element? modelNumberElement,
       String? partNumber,
       @JsonKey(name: '_partNumber')
           Element? partNumberElement,
-      List<CodeableConcept>? type,
-      List<DeviceSpecialization>? specialization,
-      List<DeviceVersion>? version,
-      List<DeviceProperty>? property,
+      List<CodeableConcept?>? type,
+      List<DeviceSpecialization?>? specialization,
+      List<DeviceVersion?>? version,
+      List<DeviceProperty?>? property,
       Reference? patient,
       DeviceOperationalStatus? operationalStatus,
       DeviceAssociationStatus? associationStatus,
       Reference? owner,
-      List<ContactPoint>? contact,
+      List<ContactPoint?>? contact,
       Reference? location,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Annotation>? note,
-      List<CodeableConcept>? safety,
+      List<Annotation?>? note,
+      List<CodeableConcept?>? safety,
       Reference? parent}) {
     return _Device(
       resourceType: resourceType,
@@ -2730,19 +2730,19 @@ mixin _$Device {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   String? get displayName;
   @JsonKey(name: '_displayName')
   Element? get displayNameElement;
   Reference? get definition;
-  List<DeviceUdiCarrier>? get udiCarrier;
+  List<DeviceUdiCarrier?>? get udiCarrier;
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   DeviceStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  List<CodeableConcept>? get statusReason;
+  List<CodeableConcept?>? get statusReason;
   String? get distinctIdentifier;
   @JsonKey(name: '_distinctIdentifier')
   Element? get distinctIdentifierElement;
@@ -2761,28 +2761,28 @@ mixin _$Device {
   String? get serialNumber;
   @JsonKey(name: '_serialNumber')
   Element? get serialNumberElement;
-  List<DeviceDeviceName>? get deviceName;
+  List<DeviceDeviceName?>? get deviceName;
   String? get modelNumber;
   @JsonKey(name: '_modelNumber')
   Element? get modelNumberElement;
   String? get partNumber;
   @JsonKey(name: '_partNumber')
   Element? get partNumberElement;
-  List<CodeableConcept>? get type;
-  List<DeviceSpecialization>? get specialization;
-  List<DeviceVersion>? get version;
-  List<DeviceProperty>? get property;
+  List<CodeableConcept?>? get type;
+  List<DeviceSpecialization?>? get specialization;
+  List<DeviceVersion?>? get version;
+  List<DeviceProperty?>? get property;
   Reference? get patient;
   DeviceOperationalStatus? get operationalStatus;
   DeviceAssociationStatus? get associationStatus;
   Reference? get owner;
-  List<ContactPoint>? get contact;
+  List<ContactPoint?>? get contact;
   Reference? get location;
   FhirUri? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
-  List<Annotation>? get note;
-  List<CodeableConcept>? get safety;
+  List<Annotation?>? get note;
+  List<CodeableConcept?>? get safety;
   Reference? get parent;
 
   Map<String, dynamic> toJson();
@@ -2808,19 +2808,19 @@ abstract class $DeviceCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? displayName,
       @JsonKey(name: '_displayName')
           Element? displayNameElement,
       Reference? definition,
-      List<DeviceUdiCarrier>? udiCarrier,
+      List<DeviceUdiCarrier?>? udiCarrier,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown)
           DeviceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? statusReason,
+      List<CodeableConcept?>? statusReason,
       String? distinctIdentifier,
       @JsonKey(name: '_distinctIdentifier')
           Element? distinctIdentifierElement,
@@ -2839,28 +2839,28 @@ abstract class $DeviceCopyWith<$Res> {
       String? serialNumber,
       @JsonKey(name: '_serialNumber')
           Element? serialNumberElement,
-      List<DeviceDeviceName>? deviceName,
+      List<DeviceDeviceName?>? deviceName,
       String? modelNumber,
       @JsonKey(name: '_modelNumber')
           Element? modelNumberElement,
       String? partNumber,
       @JsonKey(name: '_partNumber')
           Element? partNumberElement,
-      List<CodeableConcept>? type,
-      List<DeviceSpecialization>? specialization,
-      List<DeviceVersion>? version,
-      List<DeviceProperty>? property,
+      List<CodeableConcept?>? type,
+      List<DeviceSpecialization?>? specialization,
+      List<DeviceVersion?>? version,
+      List<DeviceProperty?>? property,
       Reference? patient,
       DeviceOperationalStatus? operationalStatus,
       DeviceAssociationStatus? associationStatus,
       Reference? owner,
-      List<ContactPoint>? contact,
+      List<ContactPoint?>? contact,
       Reference? location,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Annotation>? note,
-      List<CodeableConcept>? safety,
+      List<Annotation?>? note,
+      List<CodeableConcept?>? safety,
       Reference? parent});
 
   $MetaCopyWith<$Res>? get meta;
@@ -2971,13 +2971,13 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       displayName:
           displayName == freezed ? _value.displayName : displayName as String?,
       displayNameElement: displayNameElement == freezed
@@ -2987,14 +2987,14 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
           definition == freezed ? _value.definition : definition as Reference?,
       udiCarrier: udiCarrier == freezed
           ? _value.udiCarrier
-          : udiCarrier as List<DeviceUdiCarrier>?,
+          : udiCarrier as List<DeviceUdiCarrier?>?,
       status: status == freezed ? _value.status : status as DeviceStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
       statusReason: statusReason == freezed
           ? _value.statusReason
-          : statusReason as List<CodeableConcept>?,
+          : statusReason as List<CodeableConcept?>?,
       distinctIdentifier: distinctIdentifier == freezed
           ? _value.distinctIdentifier
           : distinctIdentifier as String?,
@@ -3031,7 +3031,7 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
           : serialNumberElement as Element?,
       deviceName: deviceName == freezed
           ? _value.deviceName
-          : deviceName as List<DeviceDeviceName>?,
+          : deviceName as List<DeviceDeviceName?>?,
       modelNumber:
           modelNumber == freezed ? _value.modelNumber : modelNumber as String?,
       modelNumberElement: modelNumberElement == freezed
@@ -3042,15 +3042,16 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
       partNumberElement: partNumberElement == freezed
           ? _value.partNumberElement
           : partNumberElement as Element?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
       specialization: specialization == freezed
           ? _value.specialization
-          : specialization as List<DeviceSpecialization>?,
-      version:
-          version == freezed ? _value.version : version as List<DeviceVersion>?,
+          : specialization as List<DeviceSpecialization?>?,
+      version: version == freezed
+          ? _value.version
+          : version as List<DeviceVersion?>?,
       property: property == freezed
           ? _value.property
-          : property as List<DeviceProperty>?,
+          : property as List<DeviceProperty?>?,
       patient: patient == freezed ? _value.patient : patient as Reference?,
       operationalStatus: operationalStatus == freezed
           ? _value.operationalStatus
@@ -3060,14 +3061,14 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
           : associationStatus as DeviceAssociationStatus?,
       owner: owner == freezed ? _value.owner : owner as Reference?,
       contact:
-          contact == freezed ? _value.contact : contact as List<ContactPoint>?,
+          contact == freezed ? _value.contact : contact as List<ContactPoint?>?,
       location: location == freezed ? _value.location : location as Reference?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      note: note == freezed ? _value.note : note as List<Annotation>?,
+      note: note == freezed ? _value.note : note as List<Annotation?>?,
       safety:
-          safety == freezed ? _value.safety : safety as List<CodeableConcept>?,
+          safety == freezed ? _value.safety : safety as List<CodeableConcept?>?,
       parent: parent == freezed ? _value.parent : parent as Reference?,
     ));
   }
@@ -3336,19 +3337,19 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? displayName,
       @JsonKey(name: '_displayName')
           Element? displayNameElement,
       Reference? definition,
-      List<DeviceUdiCarrier>? udiCarrier,
+      List<DeviceUdiCarrier?>? udiCarrier,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown)
           DeviceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? statusReason,
+      List<CodeableConcept?>? statusReason,
       String? distinctIdentifier,
       @JsonKey(name: '_distinctIdentifier')
           Element? distinctIdentifierElement,
@@ -3367,28 +3368,28 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       String? serialNumber,
       @JsonKey(name: '_serialNumber')
           Element? serialNumberElement,
-      List<DeviceDeviceName>? deviceName,
+      List<DeviceDeviceName?>? deviceName,
       String? modelNumber,
       @JsonKey(name: '_modelNumber')
           Element? modelNumberElement,
       String? partNumber,
       @JsonKey(name: '_partNumber')
           Element? partNumberElement,
-      List<CodeableConcept>? type,
-      List<DeviceSpecialization>? specialization,
-      List<DeviceVersion>? version,
-      List<DeviceProperty>? property,
+      List<CodeableConcept?>? type,
+      List<DeviceSpecialization?>? specialization,
+      List<DeviceVersion?>? version,
+      List<DeviceProperty?>? property,
       Reference? patient,
       DeviceOperationalStatus? operationalStatus,
       DeviceAssociationStatus? associationStatus,
       Reference? owner,
-      List<ContactPoint>? contact,
+      List<ContactPoint?>? contact,
       Reference? location,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Annotation>? note,
-      List<CodeableConcept>? safety,
+      List<Annotation?>? note,
+      List<CodeableConcept?>? safety,
       Reference? parent});
 
   @override
@@ -3522,13 +3523,13 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       displayName:
           displayName == freezed ? _value.displayName : displayName as String?,
       displayNameElement: displayNameElement == freezed
@@ -3538,14 +3539,14 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
           definition == freezed ? _value.definition : definition as Reference?,
       udiCarrier: udiCarrier == freezed
           ? _value.udiCarrier
-          : udiCarrier as List<DeviceUdiCarrier>?,
+          : udiCarrier as List<DeviceUdiCarrier?>?,
       status: status == freezed ? _value.status : status as DeviceStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
       statusReason: statusReason == freezed
           ? _value.statusReason
-          : statusReason as List<CodeableConcept>?,
+          : statusReason as List<CodeableConcept?>?,
       distinctIdentifier: distinctIdentifier == freezed
           ? _value.distinctIdentifier
           : distinctIdentifier as String?,
@@ -3582,7 +3583,7 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
           : serialNumberElement as Element?,
       deviceName: deviceName == freezed
           ? _value.deviceName
-          : deviceName as List<DeviceDeviceName>?,
+          : deviceName as List<DeviceDeviceName?>?,
       modelNumber:
           modelNumber == freezed ? _value.modelNumber : modelNumber as String?,
       modelNumberElement: modelNumberElement == freezed
@@ -3593,15 +3594,16 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
       partNumberElement: partNumberElement == freezed
           ? _value.partNumberElement
           : partNumberElement as Element?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
       specialization: specialization == freezed
           ? _value.specialization
-          : specialization as List<DeviceSpecialization>?,
-      version:
-          version == freezed ? _value.version : version as List<DeviceVersion>?,
+          : specialization as List<DeviceSpecialization?>?,
+      version: version == freezed
+          ? _value.version
+          : version as List<DeviceVersion?>?,
       property: property == freezed
           ? _value.property
-          : property as List<DeviceProperty>?,
+          : property as List<DeviceProperty?>?,
       patient: patient == freezed ? _value.patient : patient as Reference?,
       operationalStatus: operationalStatus == freezed
           ? _value.operationalStatus
@@ -3611,14 +3613,14 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
           : associationStatus as DeviceAssociationStatus?,
       owner: owner == freezed ? _value.owner : owner as Reference?,
       contact:
-          contact == freezed ? _value.contact : contact as List<ContactPoint>?,
+          contact == freezed ? _value.contact : contact as List<ContactPoint?>?,
       location: location == freezed ? _value.location : location as Reference?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
-      note: note == freezed ? _value.note : note as List<Annotation>?,
+      note: note == freezed ? _value.note : note as List<Annotation?>?,
       safety:
-          safety == freezed ? _value.safety : safety as List<CodeableConcept>?,
+          safety == freezed ? _value.safety : safety as List<CodeableConcept?>?,
       parent: parent == freezed ? _value.parent : parent as Reference?,
     ));
   }
@@ -3724,11 +3726,11 @@ class _$_Device extends _Device {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final String? displayName;
   @override
@@ -3737,7 +3739,7 @@ class _$_Device extends _Device {
   @override
   final Reference? definition;
   @override
-  final List<DeviceUdiCarrier>? udiCarrier;
+  final List<DeviceUdiCarrier?>? udiCarrier;
   @override
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   final DeviceStatus? status;
@@ -3745,7 +3747,7 @@ class _$_Device extends _Device {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final List<CodeableConcept>? statusReason;
+  final List<CodeableConcept?>? statusReason;
   @override
   final String? distinctIdentifier;
   @override
@@ -3777,7 +3779,7 @@ class _$_Device extends _Device {
   @JsonKey(name: '_serialNumber')
   final Element? serialNumberElement;
   @override
-  final List<DeviceDeviceName>? deviceName;
+  final List<DeviceDeviceName?>? deviceName;
   @override
   final String? modelNumber;
   @override
@@ -3789,13 +3791,13 @@ class _$_Device extends _Device {
   @JsonKey(name: '_partNumber')
   final Element? partNumberElement;
   @override
-  final List<CodeableConcept>? type;
+  final List<CodeableConcept?>? type;
   @override
-  final List<DeviceSpecialization>? specialization;
+  final List<DeviceSpecialization?>? specialization;
   @override
-  final List<DeviceVersion>? version;
+  final List<DeviceVersion?>? version;
   @override
-  final List<DeviceProperty>? property;
+  final List<DeviceProperty?>? property;
   @override
   final Reference? patient;
   @override
@@ -3805,7 +3807,7 @@ class _$_Device extends _Device {
   @override
   final Reference? owner;
   @override
-  final List<ContactPoint>? contact;
+  final List<ContactPoint?>? contact;
   @override
   final Reference? location;
   @override
@@ -3814,9 +3816,9 @@ class _$_Device extends _Device {
   @JsonKey(name: '_url')
   final Element? urlElement;
   @override
-  final List<Annotation>? note;
+  final List<Annotation?>? note;
   @override
-  final List<CodeableConcept>? safety;
+  final List<CodeableConcept?>? safety;
   @override
   final Reference? parent;
 
@@ -4006,19 +4008,19 @@ abstract class _Device extends Device {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? displayName,
       @JsonKey(name: '_displayName')
           Element? displayNameElement,
       Reference? definition,
-      List<DeviceUdiCarrier>? udiCarrier,
+      List<DeviceUdiCarrier?>? udiCarrier,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown)
           DeviceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? statusReason,
+      List<CodeableConcept?>? statusReason,
       String? distinctIdentifier,
       @JsonKey(name: '_distinctIdentifier')
           Element? distinctIdentifierElement,
@@ -4037,28 +4039,28 @@ abstract class _Device extends Device {
       String? serialNumber,
       @JsonKey(name: '_serialNumber')
           Element? serialNumberElement,
-      List<DeviceDeviceName>? deviceName,
+      List<DeviceDeviceName?>? deviceName,
       String? modelNumber,
       @JsonKey(name: '_modelNumber')
           Element? modelNumberElement,
       String? partNumber,
       @JsonKey(name: '_partNumber')
           Element? partNumberElement,
-      List<CodeableConcept>? type,
-      List<DeviceSpecialization>? specialization,
-      List<DeviceVersion>? version,
-      List<DeviceProperty>? property,
+      List<CodeableConcept?>? type,
+      List<DeviceSpecialization?>? specialization,
+      List<DeviceVersion?>? version,
+      List<DeviceProperty?>? property,
       Reference? patient,
       DeviceOperationalStatus? operationalStatus,
       DeviceAssociationStatus? associationStatus,
       Reference? owner,
-      List<ContactPoint>? contact,
+      List<ContactPoint?>? contact,
       Reference? location,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Annotation>? note,
-      List<CodeableConcept>? safety,
+      List<Annotation?>? note,
+      List<CodeableConcept?>? safety,
       Reference? parent}) = _$_Device;
 
   factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
@@ -4086,11 +4088,11 @@ abstract class _Device extends Device {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   String? get displayName;
   @override
@@ -4099,7 +4101,7 @@ abstract class _Device extends Device {
   @override
   Reference? get definition;
   @override
-  List<DeviceUdiCarrier>? get udiCarrier;
+  List<DeviceUdiCarrier?>? get udiCarrier;
   @override
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   DeviceStatus? get status;
@@ -4107,7 +4109,7 @@ abstract class _Device extends Device {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  List<CodeableConcept>? get statusReason;
+  List<CodeableConcept?>? get statusReason;
   @override
   String? get distinctIdentifier;
   @override
@@ -4139,7 +4141,7 @@ abstract class _Device extends Device {
   @JsonKey(name: '_serialNumber')
   Element? get serialNumberElement;
   @override
-  List<DeviceDeviceName>? get deviceName;
+  List<DeviceDeviceName?>? get deviceName;
   @override
   String? get modelNumber;
   @override
@@ -4151,13 +4153,13 @@ abstract class _Device extends Device {
   @JsonKey(name: '_partNumber')
   Element? get partNumberElement;
   @override
-  List<CodeableConcept>? get type;
+  List<CodeableConcept?>? get type;
   @override
-  List<DeviceSpecialization>? get specialization;
+  List<DeviceSpecialization?>? get specialization;
   @override
-  List<DeviceVersion>? get version;
+  List<DeviceVersion?>? get version;
   @override
-  List<DeviceProperty>? get property;
+  List<DeviceProperty?>? get property;
   @override
   Reference? get patient;
   @override
@@ -4167,7 +4169,7 @@ abstract class _Device extends Device {
   @override
   Reference? get owner;
   @override
-  List<ContactPoint>? get contact;
+  List<ContactPoint?>? get contact;
   @override
   Reference? get location;
   @override
@@ -4176,9 +4178,9 @@ abstract class _Device extends Device {
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
-  List<Annotation>? get note;
+  List<Annotation?>? get note;
   @override
-  List<CodeableConcept>? get safety;
+  List<CodeableConcept?>? get safety;
   @override
   Reference? get parent;
   @override
@@ -4197,8 +4199,8 @@ class _$DeviceUdiCarrierTearOff {
   _DeviceUdiCarrier call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier')
           Element? deviceIdentifierElement,
@@ -4249,8 +4251,8 @@ const $DeviceUdiCarrier = _$DeviceUdiCarrierTearOff();
 mixin _$DeviceUdiCarrier {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   String? get deviceIdentifier;
   @JsonKey(name: '_deviceIdentifier')
   Element? get deviceIdentifierElement;
@@ -4284,8 +4286,8 @@ abstract class $DeviceUdiCarrierCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier')
           Element? deviceIdentifierElement,
@@ -4345,10 +4347,10 @@ class _$DeviceUdiCarrierCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       deviceIdentifier: deviceIdentifier == freezed
           ? _value.deviceIdentifier
           : deviceIdentifier as String?,
@@ -4462,8 +4464,8 @@ abstract class _$DeviceUdiCarrierCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier')
           Element? deviceIdentifierElement,
@@ -4531,10 +4533,10 @@ class __$DeviceUdiCarrierCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       deviceIdentifier: deviceIdentifier == freezed
           ? _value.deviceIdentifier
           : deviceIdentifier as String?,
@@ -4609,9 +4611,9 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final String? deviceIdentifier;
   @override
@@ -4734,8 +4736,8 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
   factory _DeviceUdiCarrier(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? deviceIdentifier,
       @JsonKey(name: '_deviceIdentifier')
           Element? deviceIdentifierElement,
@@ -4763,9 +4765,9 @@ abstract class _DeviceUdiCarrier extends DeviceUdiCarrier {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   String? get deviceIdentifier;
   @override
@@ -4813,8 +4815,8 @@ class _$DeviceDeviceNameTearOff {
   _DeviceDeviceName call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
@@ -4845,8 +4847,8 @@ const $DeviceDeviceName = _$DeviceDeviceNameTearOff();
 mixin _$DeviceDeviceName {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
@@ -4868,8 +4870,8 @@ abstract class $DeviceDeviceNameCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
@@ -4905,10 +4907,10 @@ class _$DeviceDeviceNameCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -4951,8 +4953,8 @@ abstract class _$DeviceDeviceNameCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
@@ -4992,10 +4994,10 @@ class __$DeviceDeviceNameCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -5027,9 +5029,9 @@ class _$_DeviceDeviceName extends _DeviceDeviceName {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final String? name;
   @override
@@ -5098,8 +5100,8 @@ abstract class _DeviceDeviceName extends DeviceDeviceName {
   factory _DeviceDeviceName(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
@@ -5115,9 +5117,9 @@ abstract class _DeviceDeviceName extends DeviceDeviceName {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   String? get name;
   @override
@@ -5144,8 +5146,8 @@ class _$DeviceSpecializationTearOff {
 
   _DeviceSpecialization call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? systemType,
       String? version,
       @JsonKey(name: '_version') Element? versionElement}) {
@@ -5171,8 +5173,8 @@ const $DeviceSpecialization = _$DeviceSpecializationTearOff();
 mixin _$DeviceSpecialization {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get systemType;
   String? get version;
   @JsonKey(name: '_version')
@@ -5190,8 +5192,8 @@ abstract class $DeviceSpecializationCopyWith<$Res> {
       _$DeviceSpecializationCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? systemType,
       String? version,
       @JsonKey(name: '_version') Element? versionElement});
@@ -5222,10 +5224,10 @@ class _$DeviceSpecializationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       systemType: systemType == freezed
           ? _value.systemType
           : systemType as CodeableConcept?,
@@ -5268,8 +5270,8 @@ abstract class _$DeviceSpecializationCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? systemType,
       String? version,
       @JsonKey(name: '_version') Element? versionElement});
@@ -5304,10 +5306,10 @@ class __$DeviceSpecializationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       systemType: systemType == freezed
           ? _value.systemType
           : systemType as CodeableConcept?,
@@ -5339,9 +5341,9 @@ class _$_DeviceSpecialization extends _DeviceSpecialization {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? systemType;
   @override
@@ -5404,8 +5406,8 @@ abstract class _DeviceSpecialization extends DeviceSpecialization {
   _DeviceSpecialization._() : super._();
   factory _DeviceSpecialization(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+          List<FhirExtension?>? modifierExtension,
           required CodeableConcept? systemType,
           String? version,
           @JsonKey(name: '_version') Element? versionElement}) =
@@ -5418,9 +5420,9 @@ abstract class _DeviceSpecialization extends DeviceSpecialization {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get systemType;
   @override
@@ -5443,8 +5445,8 @@ class _$DeviceVersionTearOff {
 
   _DeviceVersion call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
       Identifier? component,
       String? value,
@@ -5472,8 +5474,8 @@ const $DeviceVersion = _$DeviceVersionTearOff();
 mixin _$DeviceVersion {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get type;
   Identifier? get component;
   String? get value;
@@ -5492,8 +5494,8 @@ abstract class $DeviceVersionCopyWith<$Res> {
       _$DeviceVersionCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
       Identifier? component,
       String? value,
@@ -5527,10 +5529,10 @@ class _$DeviceVersionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       component:
           component == freezed ? _value.component : component as Identifier?,
@@ -5584,8 +5586,8 @@ abstract class _$DeviceVersionCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
       Identifier? component,
       String? value,
@@ -5624,10 +5626,10 @@ class __$DeviceVersionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       component:
           component == freezed ? _value.component : component as Identifier?,
@@ -5660,9 +5662,9 @@ class _$_DeviceVersion extends _DeviceVersion {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? type;
   @override
@@ -5728,8 +5730,8 @@ abstract class _DeviceVersion extends DeviceVersion {
   _DeviceVersion._() : super._();
   factory _DeviceVersion(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
       Identifier? component,
       String? value,
@@ -5742,9 +5744,9 @@ abstract class _DeviceVersion extends DeviceVersion {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get type;
   @override
@@ -5769,11 +5771,11 @@ class _$DevicePropertyTearOff {
 
   _DeviceProperty call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? type,
-      List<Quantity>? valueQuantity,
-      List<CodeableConcept>? valueCode}) {
+      List<Quantity?>? valueQuantity,
+      List<CodeableConcept?>? valueCode}) {
     return _DeviceProperty(
       id: id,
       extension_: extension_,
@@ -5796,11 +5798,11 @@ const $DeviceProperty = _$DevicePropertyTearOff();
 mixin _$DeviceProperty {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get type;
-  List<Quantity>? get valueQuantity;
-  List<CodeableConcept>? get valueCode;
+  List<Quantity?>? get valueQuantity;
+  List<CodeableConcept?>? get valueCode;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -5814,11 +5816,11 @@ abstract class $DevicePropertyCopyWith<$Res> {
       _$DevicePropertyCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
-      List<Quantity>? valueQuantity,
-      List<CodeableConcept>? valueCode});
+      List<Quantity?>? valueQuantity,
+      List<CodeableConcept?>? valueCode});
 
   $CodeableConceptCopyWith<$Res>? get type;
 }
@@ -5845,17 +5847,17 @@ class _$DevicePropertyCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as List<Quantity>?,
+          : valueQuantity as List<Quantity?>?,
       valueCode: valueCode == freezed
           ? _value.valueCode
-          : valueCode as List<CodeableConcept>?,
+          : valueCode as List<CodeableConcept?>?,
     ));
   }
 
@@ -5880,11 +5882,11 @@ abstract class _$DevicePropertyCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
-      List<Quantity>? valueQuantity,
-      List<CodeableConcept>? valueCode});
+      List<Quantity?>? valueQuantity,
+      List<CodeableConcept?>? valueCode});
 
   @override
   $CodeableConceptCopyWith<$Res>? get type;
@@ -5914,17 +5916,17 @@ class __$DevicePropertyCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as List<Quantity>?,
+          : valueQuantity as List<Quantity?>?,
       valueCode: valueCode == freezed
           ? _value.valueCode
-          : valueCode as List<CodeableConcept>?,
+          : valueCode as List<CodeableConcept?>?,
     ));
   }
 }
@@ -5949,15 +5951,15 @@ class _$_DeviceProperty extends _DeviceProperty {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? type;
   @override
-  final List<Quantity>? valueQuantity;
+  final List<Quantity?>? valueQuantity;
   @override
-  final List<CodeableConcept>? valueCode;
+  final List<CodeableConcept?>? valueCode;
 
   @override
   String toString() {
@@ -6011,11 +6013,11 @@ abstract class _DeviceProperty extends DeviceProperty {
   _DeviceProperty._() : super._();
   factory _DeviceProperty(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? type,
-      List<Quantity>? valueQuantity,
-      List<CodeableConcept>? valueCode}) = _$_DeviceProperty;
+      List<Quantity?>? valueQuantity,
+      List<CodeableConcept?>? valueCode}) = _$_DeviceProperty;
 
   factory _DeviceProperty.fromJson(Map<String, dynamic> json) =
       _$_DeviceProperty.fromJson;
@@ -6024,15 +6026,15 @@ abstract class _DeviceProperty extends DeviceProperty {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get type;
   @override
-  List<Quantity>? get valueQuantity;
+  List<Quantity?>? get valueQuantity;
   @override
-  List<CodeableConcept>? get valueCode;
+  List<CodeableConcept?>? get valueCode;
   @override
   @JsonKey(ignore: true)
   _$DevicePropertyCopyWith<_DeviceProperty> get copyWith;
@@ -6049,10 +6051,10 @@ class _$DeviceOperationalStatusTearOff {
 
   _DeviceOperationalStatus call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? value,
-      List<CodeableConcept>? reason}) {
+      List<CodeableConcept?>? reason}) {
     return _DeviceOperationalStatus(
       id: id,
       extension_: extension_,
@@ -6074,10 +6076,10 @@ const $DeviceOperationalStatus = _$DeviceOperationalStatusTearOff();
 mixin _$DeviceOperationalStatus {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get value;
-  List<CodeableConcept>? get reason;
+  List<CodeableConcept?>? get reason;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -6091,10 +6093,10 @@ abstract class $DeviceOperationalStatusCopyWith<$Res> {
       _$DeviceOperationalStatusCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? value,
-      List<CodeableConcept>? reason});
+      List<CodeableConcept?>? reason});
 
   $CodeableConceptCopyWith<$Res>? get value;
 }
@@ -6120,13 +6122,13 @@ class _$DeviceOperationalStatusCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       value: value == freezed ? _value.value : value as CodeableConcept?,
       reason:
-          reason == freezed ? _value.reason : reason as List<CodeableConcept>?,
+          reason == freezed ? _value.reason : reason as List<CodeableConcept?>?,
     ));
   }
 
@@ -6151,10 +6153,10 @@ abstract class _$DeviceOperationalStatusCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? value,
-      List<CodeableConcept>? reason});
+      List<CodeableConcept?>? reason});
 
   @override
   $CodeableConceptCopyWith<$Res>? get value;
@@ -6184,13 +6186,13 @@ class __$DeviceOperationalStatusCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       value: value == freezed ? _value.value : value as CodeableConcept?,
       reason:
-          reason == freezed ? _value.reason : reason as List<CodeableConcept>?,
+          reason == freezed ? _value.reason : reason as List<CodeableConcept?>?,
     ));
   }
 }
@@ -6214,13 +6216,13 @@ class _$_DeviceOperationalStatus extends _DeviceOperationalStatus {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? value;
   @override
-  final List<CodeableConcept>? reason;
+  final List<CodeableConcept?>? reason;
 
   @override
   String toString() {
@@ -6270,10 +6272,10 @@ abstract class _DeviceOperationalStatus extends DeviceOperationalStatus {
   _DeviceOperationalStatus._() : super._();
   factory _DeviceOperationalStatus(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? value,
-      List<CodeableConcept>? reason}) = _$_DeviceOperationalStatus;
+      List<CodeableConcept?>? reason}) = _$_DeviceOperationalStatus;
 
   factory _DeviceOperationalStatus.fromJson(Map<String, dynamic> json) =
       _$_DeviceOperationalStatus.fromJson;
@@ -6282,13 +6284,13 @@ abstract class _DeviceOperationalStatus extends DeviceOperationalStatus {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get value;
   @override
-  List<CodeableConcept>? get reason;
+  List<CodeableConcept?>? get reason;
   @override
   @JsonKey(ignore: true)
   _$DeviceOperationalStatusCopyWith<_DeviceOperationalStatus> get copyWith;
@@ -6305,10 +6307,10 @@ class _$DeviceAssociationStatusTearOff {
 
   _DeviceAssociationStatus call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? value,
-      List<CodeableConcept>? reason}) {
+      List<CodeableConcept?>? reason}) {
     return _DeviceAssociationStatus(
       id: id,
       extension_: extension_,
@@ -6330,10 +6332,10 @@ const $DeviceAssociationStatus = _$DeviceAssociationStatusTearOff();
 mixin _$DeviceAssociationStatus {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get value;
-  List<CodeableConcept>? get reason;
+  List<CodeableConcept?>? get reason;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -6347,10 +6349,10 @@ abstract class $DeviceAssociationStatusCopyWith<$Res> {
       _$DeviceAssociationStatusCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? value,
-      List<CodeableConcept>? reason});
+      List<CodeableConcept?>? reason});
 
   $CodeableConceptCopyWith<$Res>? get value;
 }
@@ -6376,13 +6378,13 @@ class _$DeviceAssociationStatusCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       value: value == freezed ? _value.value : value as CodeableConcept?,
       reason:
-          reason == freezed ? _value.reason : reason as List<CodeableConcept>?,
+          reason == freezed ? _value.reason : reason as List<CodeableConcept?>?,
     ));
   }
 
@@ -6407,10 +6409,10 @@ abstract class _$DeviceAssociationStatusCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? value,
-      List<CodeableConcept>? reason});
+      List<CodeableConcept?>? reason});
 
   @override
   $CodeableConceptCopyWith<$Res>? get value;
@@ -6440,13 +6442,13 @@ class __$DeviceAssociationStatusCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       value: value == freezed ? _value.value : value as CodeableConcept?,
       reason:
-          reason == freezed ? _value.reason : reason as List<CodeableConcept>?,
+          reason == freezed ? _value.reason : reason as List<CodeableConcept?>?,
     ));
   }
 }
@@ -6470,13 +6472,13 @@ class _$_DeviceAssociationStatus extends _DeviceAssociationStatus {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? value;
   @override
-  final List<CodeableConcept>? reason;
+  final List<CodeableConcept?>? reason;
 
   @override
   String toString() {
@@ -6526,10 +6528,10 @@ abstract class _DeviceAssociationStatus extends DeviceAssociationStatus {
   _DeviceAssociationStatus._() : super._();
   factory _DeviceAssociationStatus(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? value,
-      List<CodeableConcept>? reason}) = _$_DeviceAssociationStatus;
+      List<CodeableConcept?>? reason}) = _$_DeviceAssociationStatus;
 
   factory _DeviceAssociationStatus.fromJson(Map<String, dynamic> json) =
       _$_DeviceAssociationStatus.fromJson;
@@ -6538,13 +6540,13 @@ abstract class _DeviceAssociationStatus extends DeviceAssociationStatus {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get value;
   @override
-  List<CodeableConcept>? get reason;
+  List<CodeableConcept?>? get reason;
   @override
   @JsonKey(ignore: true)
   _$DeviceAssociationStatusCopyWith<_DeviceAssociationStatus> get copyWith;
@@ -6572,9 +6574,9 @@ class _$DeviceMetricTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       required CodeableConcept? type,
       CodeableConcept? unit,
       Reference? source,
@@ -6592,7 +6594,7 @@ class _$DeviceMetricTearOff {
       @JsonKey(name: '_category')
           Element? categoryElement,
       Timing? measurementPeriod,
-      List<DeviceMetricCalibration>? calibration}) {
+      List<DeviceMetricCalibration?>? calibration}) {
     return _DeviceMetric(
       resourceType: resourceType,
       id: id,
@@ -6644,9 +6646,9 @@ mixin _$DeviceMetric {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   CodeableConcept? get type;
   CodeableConcept? get unit;
   Reference? get source;
@@ -6664,7 +6666,7 @@ mixin _$DeviceMetric {
   @JsonKey(name: '_category')
   Element? get categoryElement;
   Timing? get measurementPeriod;
-  List<DeviceMetricCalibration>? get calibration;
+  List<DeviceMetricCalibration?>? get calibration;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -6690,9 +6692,9 @@ abstract class $DeviceMetricCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       CodeableConcept? type,
       CodeableConcept? unit,
       Reference? source,
@@ -6710,7 +6712,7 @@ abstract class $DeviceMetricCopyWith<$Res> {
       @JsonKey(name: '_category')
           Element? categoryElement,
       Timing? measurementPeriod,
-      List<DeviceMetricCalibration>? calibration});
+      List<DeviceMetricCalibration?>? calibration});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -6783,13 +6785,13 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       unit: unit == freezed ? _value.unit : unit as CodeableConcept?,
       source: source == freezed ? _value.source : source as Reference?,
@@ -6815,7 +6817,7 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
           : measurementPeriod as Timing?,
       calibration: calibration == freezed
           ? _value.calibration
-          : calibration as List<DeviceMetricCalibration>?,
+          : calibration as List<DeviceMetricCalibration?>?,
     ));
   }
 
@@ -6973,9 +6975,9 @@ abstract class _$DeviceMetricCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       CodeableConcept? type,
       CodeableConcept? unit,
       Reference? source,
@@ -6993,7 +6995,7 @@ abstract class _$DeviceMetricCopyWith<$Res>
       @JsonKey(name: '_category')
           Element? categoryElement,
       Timing? measurementPeriod,
-      List<DeviceMetricCalibration>? calibration});
+      List<DeviceMetricCalibration?>? calibration});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -7080,13 +7082,13 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       unit: unit == freezed ? _value.unit : unit as CodeableConcept?,
       source: source == freezed ? _value.source : source as Reference?,
@@ -7112,7 +7114,7 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
           : measurementPeriod as Timing?,
       calibration: calibration == freezed
           ? _value.calibration
-          : calibration as List<DeviceMetricCalibration>?,
+          : calibration as List<DeviceMetricCalibration?>?,
     ));
   }
 }
@@ -7184,11 +7186,11 @@ class _$_DeviceMetric extends _DeviceMetric {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final CodeableConcept? type;
   @override
@@ -7218,7 +7220,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   @override
   final Timing? measurementPeriod;
   @override
-  final List<DeviceMetricCalibration>? calibration;
+  final List<DeviceMetricCalibration?>? calibration;
 
   @override
   String toString() {
@@ -7351,9 +7353,9 @@ abstract class _DeviceMetric extends DeviceMetric {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       required CodeableConcept? type,
       CodeableConcept? unit,
       Reference? source,
@@ -7371,7 +7373,7 @@ abstract class _DeviceMetric extends DeviceMetric {
       @JsonKey(name: '_category')
           Element? categoryElement,
       Timing? measurementPeriod,
-      List<DeviceMetricCalibration>? calibration}) = _$_DeviceMetric;
+      List<DeviceMetricCalibration?>? calibration}) = _$_DeviceMetric;
 
   factory _DeviceMetric.fromJson(Map<String, dynamic> json) =
       _$_DeviceMetric.fromJson;
@@ -7399,11 +7401,11 @@ abstract class _DeviceMetric extends DeviceMetric {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   CodeableConcept? get type;
   @override
@@ -7433,7 +7435,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   @override
   Timing? get measurementPeriod;
   @override
-  List<DeviceMetricCalibration>? get calibration;
+  List<DeviceMetricCalibration?>? get calibration;
   @override
   @JsonKey(ignore: true)
   _$DeviceMetricCopyWith<_DeviceMetric> get copyWith;
@@ -7451,8 +7453,8 @@ class _$DeviceMetricCalibrationTearOff {
   _DeviceMetricCalibration call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
           DeviceMetricCalibrationType? type,
       @JsonKey(name: '_type')
@@ -7489,8 +7491,8 @@ const $DeviceMetricCalibration = _$DeviceMetricCalibrationTearOff();
 mixin _$DeviceMetricCalibration {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
   DeviceMetricCalibrationType? get type;
   @JsonKey(name: '_type')
@@ -7516,8 +7518,8 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
           DeviceMetricCalibrationType? type,
       @JsonKey(name: '_type')
@@ -7560,10 +7562,10 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type:
           type == freezed ? _value.type : type as DeviceMetricCalibrationType?,
       typeElement:
@@ -7624,8 +7626,8 @@ abstract class _$DeviceMetricCalibrationCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
           DeviceMetricCalibrationType? type,
       @JsonKey(name: '_type')
@@ -7674,10 +7676,10 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type:
           type == freezed ? _value.type : type as DeviceMetricCalibrationType?,
       typeElement:
@@ -7724,9 +7726,9 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
   final DeviceMetricCalibrationType? type;
@@ -7809,8 +7811,8 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   factory _DeviceMetricCalibration(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
           DeviceMetricCalibrationType? type,
       @JsonKey(name: '_type')
@@ -7830,9 +7832,9 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
   DeviceMetricCalibrationType? get type;
@@ -7877,21 +7879,21 @@ class _$NutritionProductTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
           NutritionProductStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? category,
+      List<CodeableConcept?>? category,
       CodeableConcept? code,
-      List<Reference>? manufacturer,
-      List<NutritionProductNutrient>? nutrient,
-      List<NutritionProductIngredient>? ingredient,
-      List<CodeableReference>? knownAllergen,
-      List<NutritionProductProductCharacteristic>? productCharacteristic,
+      List<Reference?>? manufacturer,
+      List<NutritionProductNutrient?>? nutrient,
+      List<NutritionProductIngredient?>? ingredient,
+      List<CodeableReference?>? knownAllergen,
+      List<NutritionProductProductCharacteristic?>? productCharacteristic,
       NutritionProductInstance? instance,
-      List<Annotation>? note}) {
+      List<Annotation?>? note}) {
     return _NutritionProduct(
       resourceType: resourceType,
       id: id,
@@ -7941,21 +7943,21 @@ mixin _$NutritionProduct {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
   NutritionProductStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  List<CodeableConcept>? get category;
+  List<CodeableConcept?>? get category;
   CodeableConcept? get code;
-  List<Reference>? get manufacturer;
-  List<NutritionProductNutrient>? get nutrient;
-  List<NutritionProductIngredient>? get ingredient;
-  List<CodeableReference>? get knownAllergen;
-  List<NutritionProductProductCharacteristic>? get productCharacteristic;
+  List<Reference?>? get manufacturer;
+  List<NutritionProductNutrient?>? get nutrient;
+  List<NutritionProductIngredient?>? get ingredient;
+  List<CodeableReference?>? get knownAllergen;
+  List<NutritionProductProductCharacteristic?>? get productCharacteristic;
   NutritionProductInstance? get instance;
-  List<Annotation>? get note;
+  List<Annotation?>? get note;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -7981,21 +7983,21 @@ abstract class $NutritionProductCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
           NutritionProductStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? category,
+      List<CodeableConcept?>? category,
       CodeableConcept? code,
-      List<Reference>? manufacturer,
-      List<NutritionProductNutrient>? nutrient,
-      List<NutritionProductIngredient>? ingredient,
-      List<CodeableReference>? knownAllergen,
-      List<NutritionProductProductCharacteristic>? productCharacteristic,
+      List<Reference?>? manufacturer,
+      List<NutritionProductNutrient?>? nutrient,
+      List<NutritionProductIngredient?>? ingredient,
+      List<CodeableReference?>? knownAllergen,
+      List<NutritionProductProductCharacteristic?>? productCharacteristic,
       NutritionProductInstance? instance,
-      List<Annotation>? note});
+      List<Annotation?>? note});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -8062,10 +8064,10 @@ class _$NutritionProductCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       status:
           status == freezed ? _value.status : status as NutritionProductStatus?,
       statusElement: statusElement == freezed
@@ -8073,28 +8075,28 @@ class _$NutritionProductCopyWithImpl<$Res>
           : statusElement as Element?,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept>?,
+          : category as List<CodeableConcept?>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as List<Reference>?,
+          : manufacturer as List<Reference?>?,
       nutrient: nutrient == freezed
           ? _value.nutrient
-          : nutrient as List<NutritionProductNutrient>?,
+          : nutrient as List<NutritionProductNutrient?>?,
       ingredient: ingredient == freezed
           ? _value.ingredient
-          : ingredient as List<NutritionProductIngredient>?,
+          : ingredient as List<NutritionProductIngredient?>?,
       knownAllergen: knownAllergen == freezed
           ? _value.knownAllergen
-          : knownAllergen as List<CodeableReference>?,
+          : knownAllergen as List<CodeableReference?>?,
       productCharacteristic: productCharacteristic == freezed
           ? _value.productCharacteristic
           : productCharacteristic
-              as List<NutritionProductProductCharacteristic>?,
+              as List<NutritionProductProductCharacteristic?>?,
       instance: instance == freezed
           ? _value.instance
           : instance as NutritionProductInstance?,
-      note: note == freezed ? _value.note : note as List<Annotation>?,
+      note: note == freezed ? _value.note : note as List<Annotation?>?,
     ));
   }
 
@@ -8197,21 +8199,21 @@ abstract class _$NutritionProductCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
           NutritionProductStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? category,
+      List<CodeableConcept?>? category,
       CodeableConcept? code,
-      List<Reference>? manufacturer,
-      List<NutritionProductNutrient>? nutrient,
-      List<NutritionProductIngredient>? ingredient,
-      List<CodeableReference>? knownAllergen,
-      List<NutritionProductProductCharacteristic>? productCharacteristic,
+      List<Reference?>? manufacturer,
+      List<NutritionProductNutrient?>? nutrient,
+      List<NutritionProductIngredient?>? ingredient,
+      List<CodeableReference?>? knownAllergen,
+      List<NutritionProductProductCharacteristic?>? productCharacteristic,
       NutritionProductInstance? instance,
-      List<Annotation>? note});
+      List<Annotation?>? note});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -8287,10 +8289,10 @@ class __$NutritionProductCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       status:
           status == freezed ? _value.status : status as NutritionProductStatus?,
       statusElement: statusElement == freezed
@@ -8298,28 +8300,28 @@ class __$NutritionProductCopyWithImpl<$Res>
           : statusElement as Element?,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept>?,
+          : category as List<CodeableConcept?>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       manufacturer: manufacturer == freezed
           ? _value.manufacturer
-          : manufacturer as List<Reference>?,
+          : manufacturer as List<Reference?>?,
       nutrient: nutrient == freezed
           ? _value.nutrient
-          : nutrient as List<NutritionProductNutrient>?,
+          : nutrient as List<NutritionProductNutrient?>?,
       ingredient: ingredient == freezed
           ? _value.ingredient
-          : ingredient as List<NutritionProductIngredient>?,
+          : ingredient as List<NutritionProductIngredient?>?,
       knownAllergen: knownAllergen == freezed
           ? _value.knownAllergen
-          : knownAllergen as List<CodeableReference>?,
+          : knownAllergen as List<CodeableReference?>?,
       productCharacteristic: productCharacteristic == freezed
           ? _value.productCharacteristic
           : productCharacteristic
-              as List<NutritionProductProductCharacteristic>?,
+              as List<NutritionProductProductCharacteristic?>?,
       instance: instance == freezed
           ? _value.instance
           : instance as NutritionProductInstance?,
-      note: note == freezed ? _value.note : note as List<Annotation>?,
+      note: note == freezed ? _value.note : note as List<Annotation?>?,
     ));
   }
 }
@@ -8385,9 +8387,9 @@ class _$_NutritionProduct extends _NutritionProduct {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
   final NutritionProductStatus? status;
@@ -8395,23 +8397,23 @@ class _$_NutritionProduct extends _NutritionProduct {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final List<CodeableConcept>? category;
+  final List<CodeableConcept?>? category;
   @override
   final CodeableConcept? code;
   @override
-  final List<Reference>? manufacturer;
+  final List<Reference?>? manufacturer;
   @override
-  final List<NutritionProductNutrient>? nutrient;
+  final List<NutritionProductNutrient?>? nutrient;
   @override
-  final List<NutritionProductIngredient>? ingredient;
+  final List<NutritionProductIngredient?>? ingredient;
   @override
-  final List<CodeableReference>? knownAllergen;
+  final List<CodeableReference?>? knownAllergen;
   @override
-  final List<NutritionProductProductCharacteristic>? productCharacteristic;
+  final List<NutritionProductProductCharacteristic?>? productCharacteristic;
   @override
   final NutritionProductInstance? instance;
   @override
-  final List<Annotation>? note;
+  final List<Annotation?>? note;
 
   @override
   String toString() {
@@ -8537,21 +8539,21 @@ abstract class _NutritionProduct extends NutritionProduct {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
           NutritionProductStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? category,
+      List<CodeableConcept?>? category,
       CodeableConcept? code,
-      List<Reference>? manufacturer,
-      List<NutritionProductNutrient>? nutrient,
-      List<NutritionProductIngredient>? ingredient,
-      List<CodeableReference>? knownAllergen,
-      List<NutritionProductProductCharacteristic>? productCharacteristic,
+      List<Reference?>? manufacturer,
+      List<NutritionProductNutrient?>? nutrient,
+      List<NutritionProductIngredient?>? ingredient,
+      List<CodeableReference?>? knownAllergen,
+      List<NutritionProductProductCharacteristic?>? productCharacteristic,
       NutritionProductInstance? instance,
-      List<Annotation>? note}) = _$_NutritionProduct;
+      List<Annotation?>? note}) = _$_NutritionProduct;
 
   factory _NutritionProduct.fromJson(Map<String, dynamic> json) =
       _$_NutritionProduct.fromJson;
@@ -8579,9 +8581,9 @@ abstract class _NutritionProduct extends NutritionProduct {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
   NutritionProductStatus? get status;
@@ -8589,23 +8591,23 @@ abstract class _NutritionProduct extends NutritionProduct {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  List<CodeableConcept>? get category;
+  List<CodeableConcept?>? get category;
   @override
   CodeableConcept? get code;
   @override
-  List<Reference>? get manufacturer;
+  List<Reference?>? get manufacturer;
   @override
-  List<NutritionProductNutrient>? get nutrient;
+  List<NutritionProductNutrient?>? get nutrient;
   @override
-  List<NutritionProductIngredient>? get ingredient;
+  List<NutritionProductIngredient?>? get ingredient;
   @override
-  List<CodeableReference>? get knownAllergen;
+  List<CodeableReference?>? get knownAllergen;
   @override
-  List<NutritionProductProductCharacteristic>? get productCharacteristic;
+  List<NutritionProductProductCharacteristic?>? get productCharacteristic;
   @override
   NutritionProductInstance? get instance;
   @override
-  List<Annotation>? get note;
+  List<Annotation?>? get note;
   @override
   @JsonKey(ignore: true)
   _$NutritionProductCopyWith<_NutritionProduct> get copyWith;
@@ -8622,11 +8624,11 @@ class _$NutritionProductNutrientTearOff {
 
   _NutritionProductNutrient call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? itemCodeableConcept,
       Reference? itemReference,
-      List<Ratio>? amount}) {
+      List<Ratio?>? amount}) {
     return _NutritionProductNutrient(
       id: id,
       extension_: extension_,
@@ -8649,11 +8651,11 @@ const $NutritionProductNutrient = _$NutritionProductNutrientTearOff();
 mixin _$NutritionProductNutrient {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get itemCodeableConcept;
   Reference? get itemReference;
-  List<Ratio>? get amount;
+  List<Ratio?>? get amount;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -8667,11 +8669,11 @@ abstract class $NutritionProductNutrientCopyWith<$Res> {
       _$NutritionProductNutrientCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? itemCodeableConcept,
       Reference? itemReference,
-      List<Ratio>? amount});
+      List<Ratio?>? amount});
 
   $CodeableConceptCopyWith<$Res>? get itemCodeableConcept;
   $ReferenceCopyWith<$Res>? get itemReference;
@@ -8699,17 +8701,17 @@ class _$NutritionProductNutrientCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       itemCodeableConcept: itemCodeableConcept == freezed
           ? _value.itemCodeableConcept
           : itemCodeableConcept as CodeableConcept?,
       itemReference: itemReference == freezed
           ? _value.itemReference
           : itemReference as Reference?,
-      amount: amount == freezed ? _value.amount : amount as List<Ratio>?,
+      amount: amount == freezed ? _value.amount : amount as List<Ratio?>?,
     ));
   }
 
@@ -8745,11 +8747,11 @@ abstract class _$NutritionProductNutrientCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? itemCodeableConcept,
       Reference? itemReference,
-      List<Ratio>? amount});
+      List<Ratio?>? amount});
 
   @override
   $CodeableConceptCopyWith<$Res>? get itemCodeableConcept;
@@ -8782,17 +8784,17 @@ class __$NutritionProductNutrientCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       itemCodeableConcept: itemCodeableConcept == freezed
           ? _value.itemCodeableConcept
           : itemCodeableConcept as CodeableConcept?,
       itemReference: itemReference == freezed
           ? _value.itemReference
           : itemReference as Reference?,
-      amount: amount == freezed ? _value.amount : amount as List<Ratio>?,
+      amount: amount == freezed ? _value.amount : amount as List<Ratio?>?,
     ));
   }
 }
@@ -8817,15 +8819,15 @@ class _$_NutritionProductNutrient extends _NutritionProductNutrient {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? itemCodeableConcept;
   @override
   final Reference? itemReference;
   @override
-  final List<Ratio>? amount;
+  final List<Ratio?>? amount;
 
   @override
   String toString() {
@@ -8880,11 +8882,11 @@ abstract class _NutritionProductNutrient extends NutritionProductNutrient {
   _NutritionProductNutrient._() : super._();
   factory _NutritionProductNutrient(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? itemCodeableConcept,
       Reference? itemReference,
-      List<Ratio>? amount}) = _$_NutritionProductNutrient;
+      List<Ratio?>? amount}) = _$_NutritionProductNutrient;
 
   factory _NutritionProductNutrient.fromJson(Map<String, dynamic> json) =
       _$_NutritionProductNutrient.fromJson;
@@ -8893,15 +8895,15 @@ abstract class _NutritionProductNutrient extends NutritionProductNutrient {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get itemCodeableConcept;
   @override
   Reference? get itemReference;
   @override
-  List<Ratio>? get amount;
+  List<Ratio?>? get amount;
   @override
   @JsonKey(ignore: true)
   _$NutritionProductNutrientCopyWith<_NutritionProductNutrient> get copyWith;
@@ -8918,11 +8920,11 @@ class _$NutritionProductIngredientTearOff {
 
   _NutritionProductIngredient call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? itemCodeableConcept,
       Reference? itemReference,
-      List<Ratio>? amount}) {
+      List<Ratio?>? amount}) {
     return _NutritionProductIngredient(
       id: id,
       extension_: extension_,
@@ -8945,11 +8947,11 @@ const $NutritionProductIngredient = _$NutritionProductIngredientTearOff();
 mixin _$NutritionProductIngredient {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get itemCodeableConcept;
   Reference? get itemReference;
-  List<Ratio>? get amount;
+  List<Ratio?>? get amount;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -8963,11 +8965,11 @@ abstract class $NutritionProductIngredientCopyWith<$Res> {
       _$NutritionProductIngredientCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? itemCodeableConcept,
       Reference? itemReference,
-      List<Ratio>? amount});
+      List<Ratio?>? amount});
 
   $CodeableConceptCopyWith<$Res>? get itemCodeableConcept;
   $ReferenceCopyWith<$Res>? get itemReference;
@@ -8995,17 +8997,17 @@ class _$NutritionProductIngredientCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       itemCodeableConcept: itemCodeableConcept == freezed
           ? _value.itemCodeableConcept
           : itemCodeableConcept as CodeableConcept?,
       itemReference: itemReference == freezed
           ? _value.itemReference
           : itemReference as Reference?,
-      amount: amount == freezed ? _value.amount : amount as List<Ratio>?,
+      amount: amount == freezed ? _value.amount : amount as List<Ratio?>?,
     ));
   }
 
@@ -9042,11 +9044,11 @@ abstract class _$NutritionProductIngredientCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? itemCodeableConcept,
       Reference? itemReference,
-      List<Ratio>? amount});
+      List<Ratio?>? amount});
 
   @override
   $CodeableConceptCopyWith<$Res>? get itemCodeableConcept;
@@ -9079,17 +9081,17 @@ class __$NutritionProductIngredientCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       itemCodeableConcept: itemCodeableConcept == freezed
           ? _value.itemCodeableConcept
           : itemCodeableConcept as CodeableConcept?,
       itemReference: itemReference == freezed
           ? _value.itemReference
           : itemReference as Reference?,
-      amount: amount == freezed ? _value.amount : amount as List<Ratio>?,
+      amount: amount == freezed ? _value.amount : amount as List<Ratio?>?,
     ));
   }
 }
@@ -9114,15 +9116,15 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? itemCodeableConcept;
   @override
   final Reference? itemReference;
   @override
-  final List<Ratio>? amount;
+  final List<Ratio?>? amount;
 
   @override
   String toString() {
@@ -9177,11 +9179,11 @@ abstract class _NutritionProductIngredient extends NutritionProductIngredient {
   _NutritionProductIngredient._() : super._();
   factory _NutritionProductIngredient(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? itemCodeableConcept,
       Reference? itemReference,
-      List<Ratio>? amount}) = _$_NutritionProductIngredient;
+      List<Ratio?>? amount}) = _$_NutritionProductIngredient;
 
   factory _NutritionProductIngredient.fromJson(Map<String, dynamic> json) =
       _$_NutritionProductIngredient.fromJson;
@@ -9190,15 +9192,15 @@ abstract class _NutritionProductIngredient extends NutritionProductIngredient {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get itemCodeableConcept;
   @override
   Reference? get itemReference;
   @override
-  List<Ratio>? get amount;
+  List<Ratio?>? get amount;
   @override
   @JsonKey(ignore: true)
   _$NutritionProductIngredientCopyWith<_NutritionProductIngredient>
@@ -9216,8 +9218,8 @@ class _$NutritionProductProductCharacteristicTearOff {
 
   _NutritionProductProductCharacteristic call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? type,
       CodeableConcept? valueCodeableConcept,
       String? valueString,
@@ -9258,8 +9260,8 @@ const $NutritionProductProductCharacteristic =
 mixin _$NutritionProductProductCharacteristic {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get type;
   CodeableConcept? get valueCodeableConcept;
   String? get valueString;
@@ -9288,8 +9290,8 @@ abstract class $NutritionProductProductCharacteristicCopyWith<$Res> {
       _$NutritionProductProductCharacteristicCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
       CodeableConcept? valueCodeableConcept,
       String? valueString,
@@ -9339,10 +9341,10 @@ class _$NutritionProductProductCharacteristicCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
@@ -9462,8 +9464,8 @@ abstract class _$NutritionProductProductCharacteristicCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
       CodeableConcept? valueCodeableConcept,
       String? valueString,
@@ -9525,10 +9527,10 @@ class __$NutritionProductProductCharacteristicCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
@@ -9589,9 +9591,9 @@ class _$_NutritionProductProductCharacteristic
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? type;
   @override
@@ -9702,8 +9704,8 @@ abstract class _NutritionProductProductCharacteristic
   factory _NutritionProductProductCharacteristic(
           {String? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
+              List<FhirExtension?>? extension_,
+          List<FhirExtension?>? modifierExtension,
           required CodeableConcept? type,
           CodeableConcept? valueCodeableConcept,
           String? valueString,
@@ -9727,9 +9729,9 @@ abstract class _NutritionProductProductCharacteristic
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get type;
   @override
@@ -9770,10 +9772,10 @@ class _$NutritionProductInstanceTearOff {
 
   _NutritionProductInstance call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Quantity? quantity,
-      List<Identifier>? identifier,
+      List<Identifier?>? identifier,
       String? lotNumber,
       @JsonKey(name: '_lotNumber') Element? lotNumberElement,
       FhirDateTime? expiry,
@@ -9807,10 +9809,10 @@ const $NutritionProductInstance = _$NutritionProductInstanceTearOff();
 mixin _$NutritionProductInstance {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Quantity? get quantity;
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   String? get lotNumber;
   @JsonKey(name: '_lotNumber')
   Element? get lotNumberElement;
@@ -9833,10 +9835,10 @@ abstract class $NutritionProductInstanceCopyWith<$Res> {
       _$NutritionProductInstanceCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Quantity? quantity,
-      List<Identifier>? identifier,
+      List<Identifier?>? identifier,
       String? lotNumber,
       @JsonKey(name: '_lotNumber') Element? lotNumberElement,
       FhirDateTime? expiry,
@@ -9877,14 +9879,14 @@ class _$NutritionProductInstanceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       lotNumber: lotNumber == freezed ? _value.lotNumber : lotNumber as String?,
       lotNumberElement: lotNumberElement == freezed
           ? _value.lotNumberElement
@@ -9954,10 +9956,10 @@ abstract class _$NutritionProductInstanceCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Quantity? quantity,
-      List<Identifier>? identifier,
+      List<Identifier?>? identifier,
       String? lotNumber,
       @JsonKey(name: '_lotNumber') Element? lotNumberElement,
       FhirDateTime? expiry,
@@ -10005,14 +10007,14 @@ class __$NutritionProductInstanceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       lotNumber: lotNumber == freezed ? _value.lotNumber : lotNumber as String?,
       lotNumberElement: lotNumberElement == freezed
           ? _value.lotNumberElement
@@ -10054,13 +10056,13 @@ class _$_NutritionProductInstance extends _NutritionProductInstance {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Quantity? quantity;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final String? lotNumber;
   @override
@@ -10149,10 +10151,10 @@ abstract class _NutritionProductInstance extends NutritionProductInstance {
   _NutritionProductInstance._() : super._();
   factory _NutritionProductInstance(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+          List<FhirExtension?>? modifierExtension,
           Quantity? quantity,
-          List<Identifier>? identifier,
+          List<Identifier?>? identifier,
           String? lotNumber,
           @JsonKey(name: '_lotNumber') Element? lotNumberElement,
           FhirDateTime? expiry,
@@ -10168,13 +10170,13 @@ abstract class _NutritionProductInstance extends NutritionProductInstance {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Quantity? get quantity;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   String? get lotNumber;
   @override
@@ -10217,20 +10219,20 @@ class _$SubstanceTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
           SubstanceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? category,
+      List<CodeableConcept?>? category,
       required CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<SubstanceInstance>? instance,
-      List<SubstanceIngredient>? ingredient}) {
+      List<SubstanceInstance?>? instance,
+      List<SubstanceIngredient?>? ingredient}) {
     return _Substance(
       resourceType: resourceType,
       id: id,
@@ -10278,20 +10280,20 @@ mixin _$Substance {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
   SubstanceStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  List<CodeableConcept>? get category;
+  List<CodeableConcept?>? get category;
   CodeableConcept? get code;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<SubstanceInstance>? get instance;
-  List<SubstanceIngredient>? get ingredient;
+  List<SubstanceInstance?>? get instance;
+  List<SubstanceIngredient?>? get ingredient;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -10316,20 +10318,20 @@ abstract class $SubstanceCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
           SubstanceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? category,
+      List<CodeableConcept?>? category,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<SubstanceInstance>? instance,
-      List<SubstanceIngredient>? ingredient});
+      List<SubstanceInstance?>? instance,
+      List<SubstanceIngredient?>? ingredient});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -10393,20 +10395,20 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as SubstanceStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept>?,
+          : category as List<CodeableConcept?>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -10415,10 +10417,10 @@ class _$SubstanceCopyWithImpl<$Res> implements $SubstanceCopyWith<$Res> {
           : descriptionElement as Element?,
       instance: instance == freezed
           ? _value.instance
-          : instance as List<SubstanceInstance>?,
+          : instance as List<SubstanceInstance?>?,
       ingredient: ingredient == freezed
           ? _value.ingredient
-          : ingredient as List<SubstanceIngredient>?,
+          : ingredient as List<SubstanceIngredient?>?,
     ));
   }
 
@@ -10520,20 +10522,20 @@ abstract class _$SubstanceCopyWith<$Res> implements $SubstanceCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
           SubstanceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? category,
+      List<CodeableConcept?>? category,
       CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<SubstanceInstance>? instance,
-      List<SubstanceIngredient>? ingredient});
+      List<SubstanceInstance?>? instance,
+      List<SubstanceIngredient?>? ingredient});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -10605,20 +10607,20 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as SubstanceStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept>?,
+          : category as List<CodeableConcept?>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -10627,10 +10629,10 @@ class __$SubstanceCopyWithImpl<$Res> extends _$SubstanceCopyWithImpl<$Res>
           : descriptionElement as Element?,
       instance: instance == freezed
           ? _value.instance
-          : instance as List<SubstanceInstance>?,
+          : instance as List<SubstanceInstance?>?,
       ingredient: ingredient == freezed
           ? _value.ingredient
-          : ingredient as List<SubstanceIngredient>?,
+          : ingredient as List<SubstanceIngredient?>?,
     ));
   }
 }
@@ -10695,11 +10697,11 @@ class _$_Substance extends _Substance {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
   final SubstanceStatus? status;
@@ -10707,7 +10709,7 @@ class _$_Substance extends _Substance {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final List<CodeableConcept>? category;
+  final List<CodeableConcept?>? category;
   @override
   final CodeableConcept? code;
   @override
@@ -10716,9 +10718,9 @@ class _$_Substance extends _Substance {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<SubstanceInstance>? instance;
+  final List<SubstanceInstance?>? instance;
   @override
-  final List<SubstanceIngredient>? ingredient;
+  final List<SubstanceIngredient?>? ingredient;
 
   @override
   String toString() {
@@ -10837,20 +10839,20 @@ abstract class _Substance extends Substance {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
           SubstanceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CodeableConcept>? category,
+      List<CodeableConcept?>? category,
       required CodeableConcept? code,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<SubstanceInstance>? instance,
-      List<SubstanceIngredient>? ingredient}) = _$_Substance;
+      List<SubstanceInstance?>? instance,
+      List<SubstanceIngredient?>? ingredient}) = _$_Substance;
 
   factory _Substance.fromJson(Map<String, dynamic> json) =
       _$_Substance.fromJson;
@@ -10878,11 +10880,11 @@ abstract class _Substance extends Substance {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   @JsonKey(unknownEnumValue: SubstanceStatus.unknown)
   SubstanceStatus? get status;
@@ -10890,7 +10892,7 @@ abstract class _Substance extends Substance {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  List<CodeableConcept>? get category;
+  List<CodeableConcept?>? get category;
   @override
   CodeableConcept? get code;
   @override
@@ -10899,9 +10901,9 @@ abstract class _Substance extends Substance {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<SubstanceInstance>? get instance;
+  List<SubstanceInstance?>? get instance;
   @override
-  List<SubstanceIngredient>? get ingredient;
+  List<SubstanceIngredient?>? get ingredient;
   @override
   @JsonKey(ignore: true)
   _$SubstanceCopyWith<_Substance> get copyWith;
@@ -10917,8 +10919,8 @@ class _$SubstanceInstanceTearOff {
 
   _SubstanceInstance call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       FhirDateTime? expiry,
       @JsonKey(name: '_expiry') Element? expiryElement,
@@ -10946,8 +10948,8 @@ const $SubstanceInstance = _$SubstanceInstanceTearOff();
 mixin _$SubstanceInstance {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Identifier? get identifier;
   FhirDateTime? get expiry;
   @JsonKey(name: '_expiry')
@@ -10966,8 +10968,8 @@ abstract class $SubstanceInstanceCopyWith<$Res> {
       _$SubstanceInstanceCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       FhirDateTime? expiry,
       @JsonKey(name: '_expiry') Element? expiryElement,
@@ -11001,10 +11003,10 @@ class _$SubstanceInstanceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       expiry: expiry == freezed ? _value.expiry : expiry as FhirDateTime?,
@@ -11058,8 +11060,8 @@ abstract class _$SubstanceInstanceCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       FhirDateTime? expiry,
       @JsonKey(name: '_expiry') Element? expiryElement,
@@ -11098,10 +11100,10 @@ class __$SubstanceInstanceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       expiry: expiry == freezed ? _value.expiry : expiry as FhirDateTime?,
@@ -11134,9 +11136,9 @@ class _$_SubstanceInstance extends _SubstanceInstance {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Identifier? identifier;
   @override
@@ -11203,8 +11205,8 @@ abstract class _SubstanceInstance extends SubstanceInstance {
   _SubstanceInstance._() : super._();
   factory _SubstanceInstance(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       FhirDateTime? expiry,
       @JsonKey(name: '_expiry') Element? expiryElement,
@@ -11217,9 +11219,9 @@ abstract class _SubstanceInstance extends SubstanceInstance {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Identifier? get identifier;
   @override
@@ -11244,8 +11246,8 @@ class _$SubstanceIngredientTearOff {
 
   _SubstanceIngredient call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Ratio? quantity,
       CodeableConcept? substanceCodeableConcept,
       Reference? substanceReference}) {
@@ -11271,8 +11273,8 @@ const $SubstanceIngredient = _$SubstanceIngredientTearOff();
 mixin _$SubstanceIngredient {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Ratio? get quantity;
   CodeableConcept? get substanceCodeableConcept;
   Reference? get substanceReference;
@@ -11289,8 +11291,8 @@ abstract class $SubstanceIngredientCopyWith<$Res> {
       _$SubstanceIngredientCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Ratio? quantity,
       CodeableConcept? substanceCodeableConcept,
       Reference? substanceReference});
@@ -11322,10 +11324,10 @@ class _$SubstanceIngredientCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Ratio?,
       substanceCodeableConcept: substanceCodeableConcept == freezed
           ? _value.substanceCodeableConcept
@@ -11380,8 +11382,8 @@ abstract class _$SubstanceIngredientCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Ratio? quantity,
       CodeableConcept? substanceCodeableConcept,
       Reference? substanceReference});
@@ -11418,10 +11420,10 @@ class __$SubstanceIngredientCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       quantity: quantity == freezed ? _value.quantity : quantity as Ratio?,
       substanceCodeableConcept: substanceCodeableConcept == freezed
           ? _value.substanceCodeableConcept
@@ -11453,9 +11455,9 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Ratio? quantity;
   @override
@@ -11519,8 +11521,8 @@ abstract class _SubstanceIngredient extends SubstanceIngredient {
   _SubstanceIngredient._() : super._();
   factory _SubstanceIngredient(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Ratio? quantity,
       CodeableConcept? substanceCodeableConcept,
       Reference? substanceReference}) = _$_SubstanceIngredient;
@@ -11532,9 +11534,9 @@ abstract class _SubstanceIngredient extends SubstanceIngredient {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Ratio? get quantity;
   @override

@@ -124,9 +124,9 @@ abstract class Group with Resource implements _$Group {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     @JsonKey(unknownEnumValue: GroupType.unknown) GroupType? type,
@@ -139,8 +139,8 @@ abstract class Group with Resource implements _$Group {
     UnsignedInt? quantity,
     @JsonKey(name: '_quantity') Element? quantityElement,
     Reference? managingEntity,
-    List<GroupCharacteristic>? characteristic,
-    List<GroupMember>? member,
+    List<GroupCharacteristic?>? characteristic,
+    List<GroupMember?>? member,
   }) = _Group;
 
   /// Produces a Yaml formatted String version of the object
@@ -220,8 +220,8 @@ abstract class GroupCharacteristic implements _$GroupCharacteristic {
   ///  patient had an operation during the month of June.
   factory GroupCharacteristic({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? code,
     CodeableConcept? valueCodeableConcept,
     Boolean? valueBoolean,
@@ -296,8 +296,8 @@ abstract class GroupMember implements _$GroupMember {
   /// [_inactive]: Extensions for inactive
   factory GroupMember({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Reference? entity,
     Period? period,
     Boolean? inactive,
@@ -457,13 +457,13 @@ abstract class Patient with Resource implements _$Patient {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
-    List<HumanName>? name,
-    List<ContactPoint>? telecom,
+    List<HumanName?>? name,
+    List<ContactPoint?>? telecom,
     @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
@@ -472,7 +472,7 @@ abstract class Patient with Resource implements _$Patient {
     @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
     FhirDateTime? deceasedDateTime,
     @JsonKey(name: '_deceasedDateTime') Element? deceasedDateTimeElement,
-    List<Address>? address,
+    List<Address?>? address,
     CodeableConcept? maritalStatus,
     Boolean? multipleBirthBoolean,
     @JsonKey(name: '_multipleBirthBoolean')
@@ -480,12 +480,12 @@ abstract class Patient with Resource implements _$Patient {
     Integer? multipleBirthInteger,
     @JsonKey(name: '_multipleBirthInteger')
         Element? multipleBirthIntegerElement,
-    List<Attachment>? photo,
-    List<PatientContact>? contact,
-    List<PatientCommunication>? communication,
-    List<Reference>? generalPractitioner,
+    List<Attachment?>? photo,
+    List<PatientContact?>? contact,
+    List<PatientCommunication?>? communication,
+    List<Reference?>? generalPractitioner,
     Reference? managingOrganization,
-    List<PatientLink>? link,
+    List<PatientLink?>? link,
   }) = _Patient;
 
   /// Produces a Yaml formatted String version of the object
@@ -558,11 +558,11 @@ abstract class PatientContact implements _$PatientContact {
   ///  valid to be contacted relating to this patient.
   factory PatientContact({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<CodeableConcept>? relationship,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<CodeableConcept?>? relationship,
     HumanName? name,
-    List<ContactPoint>? telecom,
+    List<ContactPoint?>? telecom,
     Address? address,
     @JsonKey(unknownEnumValue: PatientContactGender.unknown)
         PatientContactGender? gender,
@@ -631,8 +631,8 @@ abstract class PatientCommunication implements _$PatientCommunication {
   /// [_preferred]: Extensions for preferred
   factory PatientCommunication({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? language,
     Boolean? preferred,
     @JsonKey(name: '_preferred') Element? preferredElement,
@@ -694,8 +694,8 @@ abstract class PatientLink implements _$PatientLink {
   /// [_type]: Extensions for type
   factory PatientLink({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Reference? other,
     @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -818,21 +818,21 @@ abstract class Person with Resource implements _$Person {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    List<HumanName>? name,
-    List<ContactPoint>? telecom,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
+    List<HumanName?>? name,
+    List<ContactPoint?>? telecom,
     @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
-    List<Address>? address,
+    List<Address?>? address,
     Attachment? photo,
     Reference? managingOrganization,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
-    List<PersonLink>? link,
+    List<PersonLink?>? link,
   }) = _Person;
 
   /// Produces a Yaml formatted String version of the object
@@ -890,8 +890,8 @@ abstract class PersonLink implements _$PersonLink {
   /// [_assurance]: Extensions for assurance
   factory PersonLink({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Reference? target,
     @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
         PersonLinkAssurance? assurance,
@@ -1022,22 +1022,22 @@ abstract class Practitioner with Resource implements _$Practitioner {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
-    List<HumanName>? name,
-    List<ContactPoint>? telecom,
-    List<Address>? address,
+    List<HumanName?>? name,
+    List<ContactPoint?>? telecom,
+    List<Address?>? address,
     @JsonKey(unknownEnumValue: PractitionerGender.unknown)
         PractitionerGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
-    List<Attachment>? photo,
-    List<PractitionerQualification>? qualification,
-    List<CodeableConcept>? communication,
+    List<Attachment?>? photo,
+    List<PractitionerQualification?>? qualification,
+    List<CodeableConcept?>? communication,
   }) = _Practitioner;
 
   /// Produces a Yaml formatted String version of the object
@@ -1099,9 +1099,9 @@ abstract class PractitionerQualification
   /// [issuer]: Organization that regulates and issues the qualification.
   factory PractitionerQualification({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     required CodeableConcept? code,
     Period? period,
     Reference? issuer,
@@ -1239,25 +1239,25 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     Period? period,
     Reference? practitioner,
     Reference? organization,
-    List<CodeableConcept>? code,
-    List<CodeableConcept>? specialty,
-    List<Reference>? location,
-    List<Reference>? healthcareService,
-    List<ContactPoint>? telecom,
-    List<PractitionerRoleAvailableTime>? availableTime,
-    List<PractitionerRoleNotAvailable>? notAvailable,
+    List<CodeableConcept?>? code,
+    List<CodeableConcept?>? specialty,
+    List<Reference?>? location,
+    List<Reference?>? healthcareService,
+    List<ContactPoint?>? telecom,
+    List<PractitionerRoleAvailableTime?>? availableTime,
+    List<PractitionerRoleNotAvailable?>? notAvailable,
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
         Element? availabilityExceptionsElement,
-    List<Reference>? endpoint,
+    List<Reference?>? endpoint,
   }) = _PractitionerRole;
 
   /// Produces a Yaml formatted String version of the object
@@ -1331,10 +1331,10 @@ abstract class PractitionerRoleAvailableTime
   /// [_availableEndTime]: Extensions for availableEndTime
   factory PractitionerRoleAvailableTime({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Code>? daysOfWeek,
-    @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Code?>? daysOfWeek,
+    @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
     Boolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,
     Time? availableStartTime,
@@ -1403,8 +1403,8 @@ abstract class PractitionerRoleNotAvailable
   ///  from this date.
   factory PractitionerRoleNotAvailable({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Period? during,
@@ -1535,24 +1535,24 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     required Reference? patient,
-    List<CodeableConcept>? relationship,
-    List<HumanName>? name,
-    List<ContactPoint>? telecom,
+    List<CodeableConcept?>? relationship,
+    List<HumanName?>? name,
+    List<ContactPoint?>? telecom,
     @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
         RelatedPersonGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
-    List<Address>? address,
-    List<Attachment>? photo,
+    List<Address?>? address,
+    List<Attachment?>? photo,
     Period? period,
-    List<RelatedPersonCommunication>? communication,
+    List<RelatedPersonCommunication?>? communication,
   }) = _RelatedPerson;
 
   /// Produces a Yaml formatted String version of the object
@@ -1616,8 +1616,8 @@ abstract class RelatedPersonCommunication
   /// [_preferred]: Extensions for preferred
   factory RelatedPersonCommunication({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? language,
     Boolean? preferred,
     @JsonKey(name: '_preferred') Element? preferredElement,

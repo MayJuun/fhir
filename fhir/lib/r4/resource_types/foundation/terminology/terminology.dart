@@ -217,11 +217,11 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier>? identifier,
+    List<Identifier?>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -237,11 +237,11 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
+    List<ContactDetail?>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
+    List<UsageContext?>? useContext,
+    List<CodeableConcept?>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -262,9 +262,9 @@ abstract class CodeSystem with Resource implements _$CodeSystem {
     Canonical? supplements,
     UnsignedInt? count,
     @JsonKey(name: '_count') Element? countElement,
-    List<CodeSystemFilter>? filter,
-    List<CodeSystemProperty>? property,
-    List<CodeSystemConcept>? concept,
+    List<CodeSystemFilter?>? filter,
+    List<CodeSystemProperty?>? property,
+    List<CodeSystemConcept?>? concept,
   }) = _CodeSystem;
 
   /// Produces a Yaml formatted String version of the object
@@ -334,14 +334,14 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
   /// [_value]: Extensions for value
   factory CodeSystemFilter({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @JsonKey(name: 'operator') List<Code>? operator_,
-    @JsonKey(name: '_operator') List<Element>? operatorElement,
+    @JsonKey(name: 'operator') List<Code?>? operator_,
+    @JsonKey(name: '_operator') List<Element?>? operatorElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
   }) = _CodeSystemFilter;
@@ -419,8 +419,8 @@ abstract class CodeSystemProperty implements _$CodeSystemProperty {
   /// [_type]: Extensions for type
   factory CodeSystemProperty({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     FhirUri? uri,
@@ -509,17 +509,17 @@ abstract class CodeSystemConcept implements _$CodeSystemConcept {
   ///  (is-a/contains/categorizes) - see hierarchyMeaning.
   factory CodeSystemConcept({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
     String? definition,
     @JsonKey(name: '_definition') Element? definitionElement,
-    List<CodeSystemDesignation>? designation,
-    List<CodeSystemProperty1>? property,
-    List<CodeSystemConcept>? concept,
+    List<CodeSystemDesignation?>? designation,
+    List<CodeSystemProperty1?>? property,
+    List<CodeSystemConcept?>? concept,
   }) = _CodeSystemConcept;
 
   /// Produces a Yaml formatted String version of the object
@@ -582,8 +582,8 @@ abstract class CodeSystemDesignation implements _$CodeSystemDesignation {
   /// [_value]: Extensions for value
   factory CodeSystemDesignation({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
@@ -671,8 +671,8 @@ abstract class CodeSystemProperty1 implements _$CodeSystemProperty1 {
   /// [_valueDecimal]: Extensions for valueDecimal
   factory CodeSystemProperty1({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Code? valueCode,
@@ -891,8 +891,8 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     Identifier? identifier,
@@ -911,11 +911,11 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
+    List<ContactDetail?>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
+    List<UsageContext?>? useContext,
+    List<CodeableConcept?>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -928,7 +928,7 @@ abstract class ConceptMap with Resource implements _$ConceptMap {
     @JsonKey(name: '_targetUri') Element? targetUriElement,
     Canonical? targetCanonical,
     @JsonKey(name: '_targetCanonical') Element? targetCanonicalElement,
-    List<ConceptMapGroup>? group,
+    List<ConceptMapGroup?>? group,
   }) = _ConceptMap;
 
   /// Produces a Yaml formatted String version of the object
@@ -1009,8 +1009,8 @@ abstract class ConceptMapGroup implements _$ConceptMapGroup {
   ///  unmatched.
   factory ConceptMapGroup({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     FhirUri? source,
     @JsonKey(name: '_source') Element? sourceElement,
     String? sourceVersion,
@@ -1019,7 +1019,7 @@ abstract class ConceptMapGroup implements _$ConceptMapGroup {
     @JsonKey(name: '_target') Element? targetElement,
     String? targetVersion,
     @JsonKey(name: '_targetVersion') Element? targetVersionElement,
-    required List<ConceptMapElement>? element,
+    required List<ConceptMapElement?>? element,
     ConceptMapUnmapped? unmapped,
   }) = _ConceptMapGroup;
 
@@ -1084,13 +1084,13 @@ abstract class ConceptMapElement implements _$ConceptMapElement {
   /// [target]: A concept from the target value set that this concept maps to.
   factory ConceptMapElement({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
-    List<ConceptMapTarget>? target,
+    List<ConceptMapTarget?>? target,
   }) = _ConceptMapElement;
 
   /// Produces a Yaml formatted String version of the object
@@ -1174,8 +1174,8 @@ abstract class ConceptMapTarget implements _$ConceptMapTarget {
   ///  equivalence cannot be relied on.
   factory ConceptMapTarget({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
@@ -1185,8 +1185,8 @@ abstract class ConceptMapTarget implements _$ConceptMapTarget {
     @JsonKey(name: '_equivalence') Element? equivalenceElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-    List<ConceptMapDependsOn>? dependsOn,
-    List<ConceptMapDependsOn>? product,
+    List<ConceptMapDependsOn?>? dependsOn,
+    List<ConceptMapDependsOn?>? product,
   }) = _ConceptMapTarget;
 
   /// Produces a Yaml formatted String version of the object
@@ -1260,8 +1260,8 @@ abstract class ConceptMapDependsOn implements _$ConceptMapDependsOn {
   /// [_display]: Extensions for display
   factory ConceptMapDependsOn({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     FhirUri? property,
     @JsonKey(name: '_property') Element? propertyElement,
     Canonical? system,
@@ -1344,8 +1344,8 @@ abstract class ConceptMapUnmapped implements _$ConceptMapUnmapped {
   ///  matching mapping for the source concept.
   factory ConceptMapUnmapped({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
         ConceptMapUnmappedMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
@@ -1508,8 +1508,8 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
@@ -1521,17 +1521,17 @@ abstract class NamingSystem with Resource implements _$NamingSystem {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
+    List<ContactDetail?>? contact,
     String? responsible,
     @JsonKey(name: '_responsible') Element? responsibleElement,
     CodeableConcept? type,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
+    List<UsageContext?>? useContext,
+    List<CodeableConcept?>? jurisdiction,
     String? usage,
     @JsonKey(name: '_usage') Element? usageElement,
-    required List<NamingSystemUniqueId>? uniqueId,
+    required List<NamingSystemUniqueId?>? uniqueId,
   }) = _NamingSystem;
 
   /// Produces a Yaml formatted String version of the object
@@ -1608,8 +1608,8 @@ abstract class NamingSystemUniqueId implements _$NamingSystemUniqueId {
   ///  window, the identifier might be non-deterministic.
   factory NamingSystemUniqueId({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: NamingSystemUniqueIdType.unknown)
         NamingSystemUniqueIdType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -1833,8 +1833,8 @@ abstract class TerminologyCapabilities
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     String? version,
@@ -1852,11 +1852,11 @@ abstract class TerminologyCapabilities
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
+    List<ContactDetail?>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
+    List<UsageContext?>? useContext,
+    List<CodeableConcept?>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -1867,7 +1867,7 @@ abstract class TerminologyCapabilities
     TerminologyCapabilitiesImplementation? implementation,
     Boolean? lockedDate,
     @JsonKey(name: '_lockedDate') Element? lockedDateElement,
-    List<TerminologyCapabilitiesCodeSystem>? codeSystem,
+    List<TerminologyCapabilitiesCodeSystem?>? codeSystem,
     TerminologyCapabilitiesExpansion? expansion,
     @JsonKey(unknownEnumValue: TerminologyCapabilitiesCodeSearch.unknown)
         TerminologyCapabilitiesCodeSearch? codeSearch,
@@ -1939,8 +1939,8 @@ abstract class TerminologyCapabilitiesSoftware
   ///
   factory TerminologyCapabilitiesSoftware({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? version,
@@ -2011,8 +2011,8 @@ abstract class TerminologyCapabilitiesImplementation
   /// [_url]: Extensions for url
   factory TerminologyCapabilitiesImplementation({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     FhirUrl? url,
@@ -2084,10 +2084,10 @@ abstract class TerminologyCapabilitiesCodeSystem
   /// [_subsumption]: Extensions for subsumption
   factory TerminologyCapabilitiesCodeSystem({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Canonical? uri,
-    List<TerminologyCapabilitiesVersion>? version,
+    List<TerminologyCapabilitiesVersion?>? version,
     Boolean? subsumption,
     @JsonKey(name: '_subsumption') Element? subsumptionElement,
   }) = _TerminologyCapabilitiesCodeSystem;
@@ -2171,19 +2171,19 @@ abstract class TerminologyCapabilitiesVersion
   /// [_property]: Extensions for property
   factory TerminologyCapabilitiesVersion({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? code,
     @JsonKey(name: '_code') Element? codeElement,
     Boolean? isDefault,
     @JsonKey(name: '_isDefault') Element? isDefaultElement,
     Boolean? compositional,
     @JsonKey(name: '_compositional') Element? compositionalElement,
-    List<Code>? language,
-    @JsonKey(name: '_language') List<Element>? languageElement,
-    List<TerminologyCapabilitiesFilter>? filter,
-    List<Code>? property,
-    @JsonKey(name: '_property') List<Element>? propertyElement,
+    List<Code?>? language,
+    @JsonKey(name: '_language') List<Element?>? languageElement,
+    List<TerminologyCapabilitiesFilter?>? filter,
+    List<Code?>? property,
+    @JsonKey(name: '_property') List<Element?>? propertyElement,
   }) = _TerminologyCapabilitiesVersion;
 
   /// Produces a Yaml formatted String version of the object
@@ -2249,12 +2249,12 @@ abstract class TerminologyCapabilitiesFilter
   /// [_op]: Extensions for op
   factory TerminologyCapabilitiesFilter({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
-    List<Code>? op,
-    @JsonKey(name: '_op') List<Element>? opElement,
+    List<Code?>? op,
+    @JsonKey(name: '_op') List<Element?>? opElement,
   }) = _TerminologyCapabilitiesFilter;
 
   /// Produces a Yaml formatted String version of the object
@@ -2328,15 +2328,15 @@ abstract class TerminologyCapabilitiesExpansion
   /// [_textFilter]: Extensions for textFilter
   factory TerminologyCapabilitiesExpansion({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Boolean? hierarchical,
     @JsonKey(name: '_hierarchical') Element? hierarchicalElement,
     Boolean? paging,
     @JsonKey(name: '_paging') Element? pagingElement,
     Boolean? incomplete,
     @JsonKey(name: '_incomplete') Element? incompleteElement,
-    List<TerminologyCapabilitiesParameter>? parameter,
+    List<TerminologyCapabilitiesParameter?>? parameter,
     Markdown? textFilter,
     @JsonKey(name: '_textFilter') Element? textFilterElement,
   }) = _TerminologyCapabilitiesExpansion;
@@ -2404,8 +2404,8 @@ abstract class TerminologyCapabilitiesParameter
   /// [_documentation]: Extensions for documentation
   factory TerminologyCapabilitiesParameter({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Code? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? documentation,
@@ -2471,8 +2471,8 @@ abstract class TerminologyCapabilitiesValidateCode
   /// [_translations]: Extensions for translations
   factory TerminologyCapabilitiesValidateCode({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Boolean? translations,
     @JsonKey(name: '_translations') Element? translationsElement,
   }) = _TerminologyCapabilitiesValidateCode;
@@ -2536,8 +2536,8 @@ abstract class TerminologyCapabilitiesTranslation
   /// [_needsMap]: Extensions for needsMap
   factory TerminologyCapabilitiesTranslation({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Boolean? needsMap,
     @JsonKey(name: '_needsMap') Element? needsMapElement,
   }) = _TerminologyCapabilitiesTranslation;
@@ -2601,8 +2601,8 @@ abstract class TerminologyCapabilitiesClosure
   /// [_translation]: Extensions for translation
   factory TerminologyCapabilitiesClosure({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Boolean? translation,
     @JsonKey(name: '_translation') Element? translationElement,
   }) = _TerminologyCapabilitiesClosure;
@@ -2802,11 +2802,11 @@ abstract class ValueSet with Resource implements _$ValueSet {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier>? identifier,
+    List<Identifier?>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -2821,11 +2821,11 @@ abstract class ValueSet with Resource implements _$ValueSet {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
+    List<ContactDetail?>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
+    List<UsageContext?>? useContext,
+    List<CodeableConcept?>? jurisdiction,
     Boolean? immutable,
     @JsonKey(name: '_immutable') Element? immutableElement,
     Markdown? purpose,
@@ -2909,14 +2909,14 @@ abstract class ValueSetCompose implements _$ValueSetCompose {
   ///  system filters and/or other value sets.
   factory ValueSetCompose({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Date? lockedDate,
     @JsonKey(name: '_lockedDate') Element? lockedDateElement,
     Boolean? inactive,
     @JsonKey(name: '_inactive') Element? inactiveElement,
-    required List<ValueSetInclude>? include,
-    List<ValueSetInclude>? exclude,
+    required List<ValueSetInclude?>? include,
+    List<ValueSetInclude?>? exclude,
   }) = _ValueSetCompose;
 
   /// Produces a Yaml formatted String version of the object
@@ -2992,15 +2992,15 @@ abstract class ValueSetInclude implements _$ValueSetInclude {
   ///  union of the contents of all of the referenced value sets.
   factory ValueSetInclude({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     FhirUri? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
-    List<ValueSetConcept>? concept,
-    List<ValueSetFilter>? filter,
-    List<Canonical>? valueSet,
+    List<ValueSetConcept?>? concept,
+    List<ValueSetFilter?>? filter,
+    List<Canonical?>? valueSet,
   }) = _ValueSetInclude;
 
   /// Produces a Yaml formatted String version of the object
@@ -3068,13 +3068,13 @@ abstract class ValueSetConcept implements _$ValueSetConcept {
   ///  particular purposes, etc.
   factory ValueSetConcept({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
-    List<ValueSetDesignation>? designation,
+    List<ValueSetDesignation?>? designation,
   }) = _ValueSetConcept;
 
   /// Produces a Yaml formatted String version of the object
@@ -3138,8 +3138,8 @@ abstract class ValueSetDesignation implements _$ValueSetDesignation {
   /// [_value]: Extensions for value
   factory ValueSetDesignation({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Coding? use,
@@ -3216,8 +3216,8 @@ abstract class ValueSetFilter implements _$ValueSetFilter {
   /// [_value]: Extensions for value
   factory ValueSetFilter({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Code? property,
     @JsonKey(name: '_property') Element? propertyElement,
     @JsonKey(unknownEnumValue: ValueSetFilterOp.unknown) ValueSetFilterOp? op,
@@ -3310,8 +3310,8 @@ abstract class ValueSetExpansion implements _$ValueSetExpansion {
   /// [contains]: The codes that are contained in the value set expansion.
   factory ValueSetExpansion({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     FhirUri? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
     FhirDateTime? timestamp,
@@ -3320,8 +3320,8 @@ abstract class ValueSetExpansion implements _$ValueSetExpansion {
     @JsonKey(name: '_total') Element? totalElement,
     Integer? offset,
     @JsonKey(name: '_offset') Element? offsetElement,
-    List<ValueSetParameter>? parameter,
-    List<ValueSetContains>? contains,
+    List<ValueSetParameter?>? parameter,
+    List<ValueSetContains?>? contains,
   }) = _ValueSetExpansion;
 
   /// Produces a Yaml formatted String version of the object
@@ -3409,8 +3409,8 @@ abstract class ValueSetParameter implements _$ValueSetParameter {
   /// [_valueDateTime]: Extensions for valueDateTime
   factory ValueSetParameter({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? valueString,
@@ -3525,8 +3525,8 @@ abstract class ValueSetContains implements _$ValueSetContains {
   ///  hierarchy.
   factory ValueSetContains({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     FhirUri? system,
     @JsonKey(name: '_system') Element? systemElement,
     @JsonKey(name: 'abstract') Boolean? abstract_,
@@ -3539,8 +3539,8 @@ abstract class ValueSetContains implements _$ValueSetContains {
     @JsonKey(name: '_code') Element? codeElement,
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
-    List<ValueSetDesignation>? designation,
-    List<ValueSetContains>? contains,
+    List<ValueSetDesignation?>? designation,
+    List<ValueSetContains?>? contains,
   }) = _ValueSetContains;
 
   /// Produces a Yaml formatted String version of the object

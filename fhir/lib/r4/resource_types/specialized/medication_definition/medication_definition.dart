@@ -136,30 +136,30 @@ abstract class MedicinalProduct with Resource implements _$MedicinalProduct {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     CodeableConcept? type,
     Coding? domain,
     CodeableConcept? combinedPharmaceuticalDoseForm,
     CodeableConcept? legalStatusOfSupply,
     CodeableConcept? additionalMonitoringIndicator,
-    List<String>? specialMeasures,
-    @JsonKey(name: '_specialMeasures') List<Element>? specialMeasuresElement,
+    List<String?>? specialMeasures,
+    @JsonKey(name: '_specialMeasures') List<Element?>? specialMeasuresElement,
     CodeableConcept? paediatricUseIndicator,
-    List<CodeableConcept>? productClassification,
-    List<MarketingStatus>? marketingStatus,
-    List<Reference>? pharmaceuticalProduct,
-    List<Reference>? packagedMedicinalProduct,
-    List<Reference>? attachedDocument,
-    List<Reference>? masterFile,
-    List<Reference>? contact,
-    List<Reference>? clinicalTrial,
-    required List<MedicinalProductName>? name,
-    List<Identifier>? crossReference,
-    List<MedicinalProductManufacturingBusinessOperation>?
+    List<CodeableConcept?>? productClassification,
+    List<MarketingStatus?>? marketingStatus,
+    List<Reference?>? pharmaceuticalProduct,
+    List<Reference?>? packagedMedicinalProduct,
+    List<Reference?>? attachedDocument,
+    List<Reference?>? masterFile,
+    List<Reference?>? contact,
+    List<Reference?>? clinicalTrial,
+    required List<MedicinalProductName?>? name,
+    List<Identifier?>? crossReference,
+    List<MedicinalProductManufacturingBusinessOperation?>?
         manufacturingBusinessOperation,
-    List<MedicinalProductSpecialDesignation>? specialDesignation,
+    List<MedicinalProductSpecialDesignation?>? specialDesignation,
   }) = _MedicinalProduct;
 
   /// Produces a Yaml formatted String version of the object
@@ -219,12 +219,12 @@ abstract class MedicinalProductName implements _$MedicinalProductName {
   /// [countryLanguage]: Country where the name applies.
   factory MedicinalProductName({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? productName,
     @JsonKey(name: '_productName') Element? productNameElement,
-    List<MedicinalProductNamePart>? namePart,
-    List<MedicinalProductCountryLanguage>? countryLanguage,
+    List<MedicinalProductNamePart?>? namePart,
+    List<MedicinalProductCountryLanguage?>? countryLanguage,
   }) = _MedicinalProductName;
 
   /// Produces a Yaml formatted String version of the object
@@ -282,8 +282,8 @@ abstract class MedicinalProductNamePart implements _$MedicinalProductNamePart {
   /// [type]: Idenifying type for this part of the name (e.g. strength part).
   factory MedicinalProductNamePart({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(name: 'part') String? part_,
     @JsonKey(name: '_part') Element? partElement,
     required Coding? type,
@@ -347,8 +347,8 @@ abstract class MedicinalProductCountryLanguage
   /// [language]: Language code for this name.
   factory MedicinalProductCountryLanguage({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? country,
     CodeableConcept? jurisdiction,
     required CodeableConcept? language,
@@ -424,14 +424,14 @@ abstract class MedicinalProductManufacturingBusinessOperation
   /// [regulator]: A regulator which oversees the operation.
   factory MedicinalProductManufacturingBusinessOperation({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? operationType,
     Identifier? authorisationReferenceNumber,
     FhirDateTime? effectiveDate,
     @JsonKey(name: '_effectiveDate') Element? effectiveDateElement,
     CodeableConcept? confidentialityIndicator,
-    List<Reference>? manufacturer,
+    List<Reference?>? manufacturer,
     Reference? regulator,
   }) = _MedicinalProductManufacturingBusinessOperation;
 
@@ -510,9 +510,9 @@ abstract class MedicinalProductSpecialDesignation
   /// [species]: Animal species for which this applies.
   factory MedicinalProductSpecialDesignation({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     CodeableConcept? type,
     CodeableConcept? intendedUse,
     CodeableConcept? indicationCodeableConcept,
@@ -667,12 +667,12 @@ abstract class MedicinalProductAuthorization
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     Reference? subject,
-    List<CodeableConcept>? country,
-    List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept?>? country,
+    List<CodeableConcept?>? jurisdiction,
     CodeableConcept? status,
     FhirDateTime? statusDate,
     @JsonKey(name: '_statusDate') Element? statusDateElement,
@@ -687,7 +687,7 @@ abstract class MedicinalProductAuthorization
     @JsonKey(name: '_internationalBirthDate')
         Element? internationalBirthDateElement,
     CodeableConcept? legalBasis,
-    List<MedicinalProductAuthorizationJurisdictionalAuthorization>?
+    List<MedicinalProductAuthorizationJurisdictionalAuthorization?>?
         jurisdictionalAuthorization,
     Reference? holder,
     Reference? regulator,
@@ -756,11 +756,11 @@ abstract class MedicinalProductAuthorizationJurisdictionalAuthorization
   /// [validityPeriod]: The start and expected end date of the authorization.
   factory MedicinalProductAuthorizationJurisdictionalAuthorization({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     CodeableConcept? country,
-    List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept?>? jurisdiction,
     CodeableConcept? legalStatusOfSupply,
     Period? validityPeriod,
   }) = _MedicinalProductAuthorizationJurisdictionalAuthorization;
@@ -831,14 +831,14 @@ abstract class MedicinalProductAuthorizationProcedure
   /// [application]: Applcations submitted to obtain a marketing authorization.
   factory MedicinalProductAuthorizationProcedure({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Identifier? identifier,
     required CodeableConcept? type,
     Period? datePeriod,
     FhirDateTime? dateDateTime,
     @JsonKey(name: '_dateDateTime') Element? dateDateTimeElement,
-    List<MedicinalProductAuthorizationProcedure>? application,
+    List<MedicinalProductAuthorizationProcedure?>? application,
   }) = _MedicinalProductAuthorizationProcedure;
 
   /// Produces a Yaml formatted String version of the object
@@ -952,15 +952,15 @@ abstract class MedicinalProductContraindication
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Reference>? subject,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Reference?>? subject,
     CodeableConcept? disease,
     CodeableConcept? diseaseStatus,
-    List<CodeableConcept>? comorbidity,
-    List<Reference>? therapeuticIndication,
-    List<MedicinalProductContraindicationOtherTherapy>? otherTherapy,
-    List<Population>? population,
+    List<CodeableConcept?>? comorbidity,
+    List<Reference?>? therapeuticIndication,
+    List<MedicinalProductContraindicationOtherTherapy?>? otherTherapy,
+    List<Population?>? population,
   }) = _MedicinalProductContraindication;
 
   /// Produces a Yaml formatted String version of the object
@@ -1028,8 +1028,8 @@ abstract class MedicinalProductContraindicationOtherTherapy
   ///  indication or contraindication.
   factory MedicinalProductContraindicationOtherTherapy({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? therapyRelationshipType,
     CodeableConcept? medicationCodeableConcept,
     Reference? medicationReference,
@@ -1151,17 +1151,17 @@ abstract class MedicinalProductIndication
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Reference>? subject,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Reference?>? subject,
     CodeableConcept? diseaseSymptomProcedure,
     CodeableConcept? diseaseStatus,
-    List<CodeableConcept>? comorbidity,
+    List<CodeableConcept?>? comorbidity,
     CodeableConcept? intendedEffect,
     Quantity? duration,
-    List<MedicinalProductIndicationOtherTherapy>? otherTherapy,
-    List<Reference>? undesirableEffect,
-    List<Population>? population,
+    List<MedicinalProductIndicationOtherTherapy?>? otherTherapy,
+    List<Reference?>? undesirableEffect,
+    List<Population?>? population,
   }) = _MedicinalProductIndication;
 
   /// Produces a Yaml formatted String version of the object
@@ -1226,8 +1226,8 @@ abstract class MedicinalProductIndicationOtherTherapy
   ///  indication or contraindication.
   factory MedicinalProductIndicationOtherTherapy({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? therapyRelationshipType,
     CodeableConcept? medicationCodeableConcept,
     Reference? medicationReference,
@@ -1343,14 +1343,14 @@ abstract class MedicinalProductIngredient
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Identifier? identifier,
     required CodeableConcept? role,
     Boolean? allergenicIndicator,
     @JsonKey(name: '_allergenicIndicator') Element? allergenicIndicatorElement,
-    List<Reference>? manufacturer,
-    List<MedicinalProductIngredientSpecifiedSubstance>? specifiedSubstance,
+    List<Reference?>? manufacturer,
+    List<MedicinalProductIngredientSpecifiedSubstance?>? specifiedSubstance,
     MedicinalProductIngredientSubstance? substance,
   }) = _MedicinalProductIngredient;
 
@@ -1415,12 +1415,12 @@ abstract class MedicinalProductIngredientSpecifiedSubstance
   ///  the manufactured item or pharmaceutical product.
   factory MedicinalProductIngredientSpecifiedSubstance({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? code,
     required CodeableConcept? group,
     CodeableConcept? confidentiality,
-    List<MedicinalProductIngredientStrength>? strength,
+    List<MedicinalProductIngredientStrength?>? strength,
   }) = _MedicinalProductIngredientSpecifiedSubstance;
 
   /// Produces a Yaml formatted String version of the object
@@ -1500,16 +1500,16 @@ abstract class MedicinalProductIngredientStrength
   /// [referenceStrength]: Strength expressed in terms of a reference substance.
   factory MedicinalProductIngredientStrength({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Ratio? presentation,
     Ratio? presentationLowLimit,
     Ratio? concentration,
     Ratio? concentrationLowLimit,
     String? measurementPoint,
     @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
-    List<CodeableConcept>? country,
-    List<MedicinalProductIngredientReferenceStrength>? referenceStrength,
+    List<CodeableConcept?>? country,
+    List<MedicinalProductIngredientReferenceStrength?>? referenceStrength,
   }) = _MedicinalProductIngredientStrength;
 
   /// Produces a Yaml formatted String version of the object
@@ -1578,14 +1578,14 @@ abstract class MedicinalProductIngredientReferenceStrength
   /// [country]: The country or countries for which the strength range applies.
   factory MedicinalProductIngredientReferenceStrength({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? substance,
     required Ratio? strength,
     Ratio? strengthLowLimit,
     String? measurementPoint,
     @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
-    List<CodeableConcept>? country,
+    List<CodeableConcept?>? country,
   }) = _MedicinalProductIngredientReferenceStrength;
 
   /// Produces a Yaml formatted String version of the object
@@ -1646,10 +1646,10 @@ abstract class MedicinalProductIngredientSubstance
   ///  the manufactured item or pharmaceutical product.
   factory MedicinalProductIngredientSubstance({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? code,
-    List<MedicinalProductIngredientStrength>? strength,
+    List<MedicinalProductIngredientStrength?>? strength,
   }) = _MedicinalProductIngredientSubstance;
 
   /// Produces a Yaml formatted String version of the object
@@ -1764,12 +1764,12 @@ abstract class MedicinalProductInteraction
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Reference>? subject,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Reference?>? subject,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<MedicinalProductInteractionInteractant>? interactant,
+    List<MedicinalProductInteractionInteractant?>? interactant,
     CodeableConcept? type,
     CodeableConcept? effect,
     CodeableConcept? incidence,
@@ -1834,8 +1834,8 @@ abstract class MedicinalProductInteractionInteractant
   ///  that interacts.
   factory MedicinalProductInteractionInteractant({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Reference? itemReference,
     CodeableConcept? itemCodeableConcept,
   }) = _MedicinalProductInteractionInteractant;
@@ -1950,15 +1950,15 @@ abstract class MedicinalProductManufactured
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? manufacturedDoseForm,
     CodeableConcept? unitOfPresentation,
     required Quantity? quantity,
-    List<Reference>? manufacturer,
-    List<Reference>? ingredient,
+    List<Reference?>? manufacturer,
+    List<Reference?>? ingredient,
     ProdCharacteristic? physicalCharacteristics,
-    List<CodeableConcept>? otherCharacteristics,
+    List<CodeableConcept?>? otherCharacteristics,
   }) = _MedicinalProductManufactured;
 
   /// Produces a Yaml formatted String version of the object
@@ -2073,18 +2073,18 @@ abstract class MedicinalProductPackaged
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    List<Reference>? subject,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
+    List<Reference?>? subject,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     CodeableConcept? legalStatusOfSupply,
-    List<MarketingStatus>? marketingStatus,
+    List<MarketingStatus?>? marketingStatus,
     Reference? marketingAuthorization,
-    List<Reference>? manufacturer,
-    List<MedicinalProductPackagedBatchIdentifier>? batchIdentifier,
-    required List<MedicinalProductPackagedPackageItem>? packageItem,
+    List<Reference?>? manufacturer,
+    List<MedicinalProductPackagedBatchIdentifier?>? batchIdentifier,
+    required List<MedicinalProductPackagedPackageItem?>? packageItem,
   }) = _MedicinalProductPackaged;
 
   /// Produces a Yaml formatted String version of the object
@@ -2144,8 +2144,8 @@ abstract class MedicinalProductPackagedBatchIdentifier
   ///  not the outer packaging).
   factory MedicinalProductPackagedBatchIdentifier({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Identifier? outerPackaging,
     Identifier? immediatePackaging,
   }) = _MedicinalProductPackagedBatchIdentifier;
@@ -2229,20 +2229,20 @@ abstract class MedicinalProductPackagedPackageItem
   /// [manufacturer]: Manufacturer of this Package Item.
   factory MedicinalProductPackagedPackageItem({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     required CodeableConcept? type,
     required Quantity? quantity,
-    List<CodeableConcept>? material,
-    List<CodeableConcept>? alternateMaterial,
-    List<Reference>? device,
-    List<Reference>? manufacturedItem,
-    List<MedicinalProductPackagedPackageItem>? packageItem,
+    List<CodeableConcept?>? material,
+    List<CodeableConcept?>? alternateMaterial,
+    List<Reference?>? device,
+    List<Reference?>? manufacturedItem,
+    List<MedicinalProductPackagedPackageItem?>? packageItem,
     ProdCharacteristic? physicalCharacteristics,
-    List<CodeableConcept>? otherCharacteristics,
-    List<ProductShelfLife>? shelfLifeStorage,
-    List<Reference>? manufacturer,
+    List<CodeableConcept?>? otherCharacteristics,
+    List<ProductShelfLife?>? shelfLifeStorage,
+    List<Reference?>? manufacturer,
   }) = _MedicinalProductPackagedPackageItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -2354,14 +2354,14 @@ abstract class MedicinalProductPharmaceutical
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     required CodeableConcept? administrableDoseForm,
     CodeableConcept? unitOfPresentation,
-    List<Reference>? ingredient,
-    List<Reference>? device,
-    List<MedicinalProductPharmaceuticalCharacteristics>? characteristics,
+    List<Reference?>? ingredient,
+    List<Reference?>? device,
+    List<MedicinalProductPharmaceuticalCharacteristics?>? characteristics,
     required List<MedicinalProductPharmaceuticalRouteOfAdministration>
         routeOfAdministration,
   }) = _MedicinalProductPharmaceutical;
@@ -2423,8 +2423,8 @@ abstract class MedicinalProductPharmaceuticalCharacteristics
   /// [status]: The status of characteristic e.g. assigned or pending.
   factory MedicinalProductPharmaceuticalCharacteristics({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? code,
     CodeableConcept? status,
   }) = _MedicinalProductPharmaceuticalCharacteristics;
@@ -2507,15 +2507,15 @@ abstract class MedicinalProductPharmaceuticalRouteOfAdministration
   /// [targetSpecies]: A species for which this route applies.
   factory MedicinalProductPharmaceuticalRouteOfAdministration({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? code,
     Quantity? firstDose,
     Quantity? maxSingleDose,
     Quantity? maxDosePerDay,
     Ratio? maxDosePerTreatmentPeriod,
     FhirDuration? maxTreatmentPeriod,
-    List<MedicinalProductPharmaceuticalTargetSpecies>? targetSpecies,
+    List<MedicinalProductPharmaceuticalTargetSpecies?>? targetSpecies,
   }) = _MedicinalProductPharmaceuticalRouteOfAdministration;
 
   /// Produces a Yaml formatted String version of the object
@@ -2577,10 +2577,10 @@ abstract class MedicinalProductPharmaceuticalTargetSpecies
   ///  animal product is not appropriate.
   factory MedicinalProductPharmaceuticalTargetSpecies({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? code,
-    List<MedicinalProductPharmaceuticalWithdrawalPeriod>? withdrawalPeriod,
+    List<MedicinalProductPharmaceuticalWithdrawalPeriod?>? withdrawalPeriod,
   }) = _MedicinalProductPharmaceuticalTargetSpecies;
 
   /// Produces a Yaml formatted String version of the object
@@ -2645,8 +2645,8 @@ abstract class MedicinalProductPharmaceuticalWithdrawalPeriod
   /// [_supportingInformation]: Extensions for supportingInformation
   factory MedicinalProductPharmaceuticalWithdrawalPeriod({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? tissue,
     required Quantity? value,
     String? supportingInformation,
@@ -2758,13 +2758,13 @@ abstract class MedicinalProductUndesirableEffect
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Reference>? subject,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Reference?>? subject,
     CodeableConcept? symptomConditionEffect,
     CodeableConcept? classification,
     CodeableConcept? frequencyOfOccurrence,
-    List<Population>? population,
+    List<Population?>? population,
   }) = _MedicinalProductUndesirableEffect;
 
   /// Produces a Yaml formatted String version of the object
@@ -2887,15 +2887,15 @@ abstract class SubstanceNucleicAcid
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? sequenceType,
     Integer? numberOfSubunits,
     @JsonKey(name: '_numberOfSubunits') Element? numberOfSubunitsElement,
     String? areaOfHybridisation,
     @JsonKey(name: '_areaOfHybridisation') Element? areaOfHybridisationElement,
     CodeableConcept? oligoNucleotideType,
-    List<SubstanceNucleicAcidSubunit>? subunit,
+    List<SubstanceNucleicAcidSubunit?>? subunit,
   }) = _SubstanceNucleicAcid;
 
   /// Produces a Yaml formatted String version of the object
@@ -2983,8 +2983,8 @@ abstract class SubstanceNucleicAcidSubunit
   /// [sugar]: 5.3.6.8.1 Sugar ID (Mandatory).
   factory SubstanceNucleicAcidSubunit({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Integer? subunit,
     @JsonKey(name: '_subunit') Element? subunitElement,
     String? sequence,
@@ -2994,8 +2994,8 @@ abstract class SubstanceNucleicAcidSubunit
     Attachment? sequenceAttachment,
     CodeableConcept? fivePrime,
     CodeableConcept? threePrime,
-    List<SubstanceNucleicAcidLinkage>? linkage,
-    List<SubstanceNucleicAcidSugar>? sugar,
+    List<SubstanceNucleicAcidLinkage?>? linkage,
+    List<SubstanceNucleicAcidSugar?>? sugar,
   }) = _SubstanceNucleicAcidSubunit;
 
   /// Produces a Yaml formatted String version of the object
@@ -3072,8 +3072,8 @@ abstract class SubstanceNucleicAcidLinkage
   /// [_residueSite]: Extensions for residueSite
   factory SubstanceNucleicAcidLinkage({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? connectivity,
     @JsonKey(name: '_connectivity') Element? connectivityElement,
     Identifier? identifier,
@@ -3150,8 +3150,8 @@ abstract class SubstanceNucleicAcidSugar
   /// [_residueSite]: Extensions for residueSite
   factory SubstanceNucleicAcidSugar({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Identifier? identifier,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -3261,15 +3261,15 @@ abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(name: 'class') CodeableConcept? class_,
     CodeableConcept? geometry,
-    List<CodeableConcept>? copolymerConnectivity,
-    List<String>? modification,
-    @JsonKey(name: '_modification') List<Element>? modificationElement,
-    List<SubstancePolymerMonomerSet>? monomerSet,
-    List<SubstancePolymerRepeat>? repeat,
+    List<CodeableConcept?>? copolymerConnectivity,
+    List<String?>? modification,
+    @JsonKey(name: '_modification') List<Element?>? modificationElement,
+    List<SubstancePolymerMonomerSet?>? monomerSet,
+    List<SubstancePolymerRepeat?>? repeat,
   }) = _SubstancePolymer;
 
   /// Produces a Yaml formatted String version of the object
@@ -3325,10 +3325,10 @@ abstract class SubstancePolymerMonomerSet
   /// [startingMaterial]: Todo.
   factory SubstancePolymerMonomerSet({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? ratioType,
-    List<SubstancePolymerStartingMaterial>? startingMaterial,
+    List<SubstancePolymerStartingMaterial?>? startingMaterial,
   }) = _SubstancePolymerMonomerSet;
 
   /// Produces a Yaml formatted String version of the object
@@ -3391,8 +3391,8 @@ abstract class SubstancePolymerStartingMaterial
   /// [amount]: Todo.
   factory SubstancePolymerStartingMaterial({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? material,
     CodeableConcept? type,
     Boolean? isDefining,
@@ -3463,15 +3463,15 @@ abstract class SubstancePolymerRepeat implements _$SubstancePolymerRepeat {
   /// [repeatUnit]: Todo.
   factory SubstancePolymerRepeat({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Integer? numberOfUnits,
     @JsonKey(name: '_numberOfUnits') Element? numberOfUnitsElement,
     String? averageMolecularFormula,
     @JsonKey(name: '_averageMolecularFormula')
         Element? averageMolecularFormulaElement,
     CodeableConcept? repeatUnitAmountType,
-    List<SubstancePolymerRepeatUnit>? repeatUnit,
+    List<SubstancePolymerRepeatUnit?>? repeatUnit,
   }) = _SubstancePolymerRepeat;
 
   /// Produces a Yaml formatted String version of the object
@@ -3535,14 +3535,14 @@ abstract class SubstancePolymerRepeatUnit
   /// [structuralRepresentation]: Todo.
   factory SubstancePolymerRepeatUnit({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? orientationOfPolymerisation,
     String? repeatUnit,
     @JsonKey(name: '_repeatUnit') Element? repeatUnitElement,
     SubstanceAmount? amount,
-    List<SubstancePolymerDegreeOfPolymerisation>? degreeOfPolymerisation,
-    List<SubstancePolymerStructuralRepresentation>? structuralRepresentation,
+    List<SubstancePolymerDegreeOfPolymerisation?>? degreeOfPolymerisation,
+    List<SubstancePolymerStructuralRepresentation?>? structuralRepresentation,
   }) = _SubstancePolymerRepeatUnit;
 
   /// Produces a Yaml formatted String version of the object
@@ -3599,8 +3599,8 @@ abstract class SubstancePolymerDegreeOfPolymerisation
   /// [amount]: Todo.
   factory SubstancePolymerDegreeOfPolymerisation({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? degree,
     SubstanceAmount? amount,
   }) = _SubstancePolymerDegreeOfPolymerisation;
@@ -3665,8 +3665,8 @@ abstract class SubstancePolymerStructuralRepresentation
   /// [attachment]: Todo.
   factory SubstancePolymerStructuralRepresentation({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? type,
     String? representation,
     @JsonKey(name: '_representation') Element? representationElement,
@@ -3800,14 +3800,14 @@ abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? sequenceType,
     Integer? numberOfSubunits,
     @JsonKey(name: '_numberOfSubunits') Element? numberOfSubunitsElement,
-    List<String>? disulfideLinkage,
-    @JsonKey(name: '_disulfideLinkage') List<Element>? disulfideLinkageElement,
-    List<SubstanceProteinSubunit>? subunit,
+    List<String?>? disulfideLinkage,
+    @JsonKey(name: '_disulfideLinkage') List<Element?>? disulfideLinkageElement,
+    List<SubstanceProteinSubunit?>? subunit,
   }) = _SubstanceProtein;
 
   /// Produces a Yaml formatted String version of the object
@@ -3914,8 +3914,8 @@ abstract class SubstanceProteinSubunit implements _$SubstanceProteinSubunit {
   /// [_cTerminalModification]: Extensions for cTerminalModification
   factory SubstanceProteinSubunit({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Integer? subunit,
     @JsonKey(name: '_subunit') Element? subunitElement,
     String? sequence,
@@ -4034,14 +4034,14 @@ abstract class SubstanceReferenceInformation
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-    List<SubstanceReferenceInformationGene>? gene,
-    List<SubstanceReferenceInformationGeneElement>? geneElement,
-    List<SubstanceReferenceInformationClassification>? classification,
-    List<SubstanceReferenceInformationTarget>? target,
+    List<SubstanceReferenceInformationGene?>? gene,
+    List<SubstanceReferenceInformationGeneElement?>? geneElement,
+    List<SubstanceReferenceInformationClassification?>? classification,
+    List<SubstanceReferenceInformationTarget?>? target,
   }) = _SubstanceReferenceInformation;
 
   /// Produces a Yaml formatted String version of the object
@@ -4100,11 +4100,11 @@ abstract class SubstanceReferenceInformationGene
   /// [source]: Todo.
   factory SubstanceReferenceInformationGene({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? geneSequenceOrigin,
     CodeableConcept? gene,
-    List<Reference>? source,
+    List<Reference?>? source,
   }) = _SubstanceReferenceInformationGene;
 
   /// Produces a Yaml formatted String version of the object
@@ -4165,11 +4165,11 @@ abstract class SubstanceReferenceInformationGeneElement
   /// [source]: Todo.
   factory SubstanceReferenceInformationGeneElement({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? type,
     Identifier? element,
-    List<Reference>? source,
+    List<Reference?>? source,
   }) = _SubstanceReferenceInformationGeneElement;
 
   /// Produces a Yaml formatted String version of the object
@@ -4232,12 +4232,12 @@ abstract class SubstanceReferenceInformationClassification
   /// [source]: Todo.
   factory SubstanceReferenceInformationClassification({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? domain,
     CodeableConcept? classification,
-    List<CodeableConcept>? subtype,
-    List<Reference>? source,
+    List<CodeableConcept?>? subtype,
+    List<Reference?>? source,
   }) = _SubstanceReferenceInformationClassification;
 
   /// Produces a Yaml formatted String version of the object
@@ -4314,8 +4314,8 @@ abstract class SubstanceReferenceInformationTarget
   /// [source]: Todo.
   factory SubstanceReferenceInformationTarget({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Identifier? target,
     CodeableConcept? type,
     CodeableConcept? interaction,
@@ -4326,7 +4326,7 @@ abstract class SubstanceReferenceInformationTarget
     String? amountString,
     @JsonKey(name: '_amountString') Element? amountStringElement,
     CodeableConcept? amountType,
-    List<Reference>? source,
+    List<Reference?>? source,
   }) = _SubstanceReferenceInformationTarget;
 
   /// Produces a Yaml formatted String version of the object
@@ -4492,26 +4492,26 @@ abstract class SubstanceSourceMaterial
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? sourceMaterialClass,
     CodeableConcept? sourceMaterialType,
     CodeableConcept? sourceMaterialState,
     Identifier? organismId,
     String? organismName,
     @JsonKey(name: '_organismName') Element? organismNameElement,
-    List<Identifier>? parentSubstanceId,
-    List<String>? parentSubstanceName,
+    List<Identifier?>? parentSubstanceId,
+    List<String?>? parentSubstanceName,
     @JsonKey(name: '_parentSubstanceName')
-        List<Element>? parentSubstanceNameElement,
-    List<CodeableConcept>? countryOfOrigin,
-    List<String>? geographicalLocation,
+        List<Element?>? parentSubstanceNameElement,
+    List<CodeableConcept?>? countryOfOrigin,
+    List<String?>? geographicalLocation,
     @JsonKey(name: '_geographicalLocation')
-        List<Element>? geographicalLocationElement,
+        List<Element?>? geographicalLocationElement,
     CodeableConcept? developmentStage,
-    List<SubstanceSourceMaterialFractionDescription>? fractionDescription,
+    List<SubstanceSourceMaterialFractionDescription?>? fractionDescription,
     SubstanceSourceMaterialOrganism? organism,
-    List<SubstanceSourceMaterialPartDescription>? partDescription,
+    List<SubstanceSourceMaterialPartDescription?>? partDescription,
   }) = _SubstanceSourceMaterial;
 
   /// Produces a Yaml formatted String version of the object
@@ -4586,8 +4586,8 @@ abstract class SubstanceSourceMaterialFractionDescription
   ///  (liquid/dry) is described in Specified Substance Group 1.
   factory SubstanceSourceMaterialFractionDescription({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? fraction,
     @JsonKey(name: '_fraction') Element? fractionElement,
     CodeableConcept? materialType,
@@ -4685,8 +4685,8 @@ abstract class SubstanceSourceMaterialOrganism
   /// [organismGeneral]: 4.9.13.7.1 Kingdom (Conditional).
   factory SubstanceSourceMaterialOrganism({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? family,
     CodeableConcept? genus,
     CodeableConcept? species,
@@ -4694,7 +4694,7 @@ abstract class SubstanceSourceMaterialOrganism
     String? intraspecificDescription,
     @JsonKey(name: '_intraspecificDescription')
         Element? intraspecificDescriptionElement,
-    List<SubstanceSourceMaterialAuthor>? author,
+    List<SubstanceSourceMaterialAuthor?>? author,
     SubstanceSourceMaterialHybrid? hybrid,
     SubstanceSourceMaterialOrganismGeneral? organismGeneral,
   }) = _SubstanceSourceMaterialOrganism;
@@ -4778,8 +4778,8 @@ abstract class SubstanceSourceMaterialAuthor
   /// [_authorDescription]: Extensions for authorDescription
   factory SubstanceSourceMaterialAuthor({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? authorType,
     String? authorDescription,
     @JsonKey(name: '_authorDescription') Element? authorDescriptionElement,
@@ -4875,8 +4875,8 @@ abstract class SubstanceSourceMaterialHybrid
   /// [hybridType]: The hybrid type of an organism shall be specified.
   factory SubstanceSourceMaterialHybrid({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? maternalOrganismId,
     @JsonKey(name: '_maternalOrganismId') Element? maternalOrganismIdElement,
     String? maternalOrganismName,
@@ -4962,8 +4962,8 @@ abstract class SubstanceSourceMaterialOrganismGeneral
   /// [order]: The order of an organism shall be specified,.
   factory SubstanceSourceMaterialOrganismGeneral({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? kingdom,
     CodeableConcept? phylum,
     @JsonKey(name: 'class') CodeableConcept? class_,
@@ -5042,8 +5042,8 @@ abstract class SubstanceSourceMaterialPartDescription
   ///  alternative locations may apply.
   factory SubstanceSourceMaterialPartDescription({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(name: 'part') CodeableConcept? part_,
     CodeableConcept? partLocation,
   }) = _SubstanceSourceMaterialPartDescription;
@@ -5187,25 +5187,25 @@ abstract class SubstanceSpecification
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Identifier? identifier,
     CodeableConcept? type,
     CodeableConcept? status,
     CodeableConcept? domain,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<Reference>? source,
+    List<Reference?>? source,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-    List<SubstanceSpecificationMoiety>? moiety,
-    List<SubstanceSpecificationProperty>? property,
+    List<SubstanceSpecificationMoiety?>? moiety,
+    List<SubstanceSpecificationProperty?>? property,
     Reference? referenceInformation,
     SubstanceSpecificationStructure? structure,
-    List<SubstanceSpecificationCode>? code,
-    List<SubstanceSpecificationName>? name,
-    List<SubstanceSpecificationMolecularWeight>? molecularWeight,
-    List<SubstanceSpecificationRelationship>? relationship,
+    List<SubstanceSpecificationCode?>? code,
+    List<SubstanceSpecificationName?>? name,
+    List<SubstanceSpecificationMolecularWeight?>? molecularWeight,
+    List<SubstanceSpecificationRelationship?>? relationship,
     Reference? nucleicAcid,
     Reference? polymer,
     Reference? protein,
@@ -5284,8 +5284,8 @@ abstract class SubstanceSpecificationMoiety
   /// [_amountString]: Extensions for amountString
   factory SubstanceSpecificationMoiety({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? role,
     Identifier? identifier,
     String? name,
@@ -5372,8 +5372,8 @@ abstract class SubstanceSpecificationProperty
   /// [_amountString]: Extensions for amountString
   factory SubstanceSpecificationProperty({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? category,
     CodeableConcept? code,
     String? parameters,
@@ -5462,8 +5462,8 @@ abstract class SubstanceSpecificationStructure
   /// [representation]: Molecular structural representation.
   factory SubstanceSpecificationStructure({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? stereochemistry,
     CodeableConcept? opticalActivity,
     String? molecularFormula,
@@ -5471,10 +5471,10 @@ abstract class SubstanceSpecificationStructure
     String? molecularFormulaByMoiety,
     @JsonKey(name: '_molecularFormulaByMoiety')
         Element? molecularFormulaByMoietyElement,
-    List<SubstanceSpecificationIsotope>? isotope,
+    List<SubstanceSpecificationIsotope?>? isotope,
     SubstanceSpecificationMolecularWeight? molecularWeight,
-    List<Reference>? source,
-    List<SubstanceSpecificationRepresentation>? representation,
+    List<Reference?>? source,
+    List<SubstanceSpecificationRepresentation?>? representation,
   }) = _SubstanceSpecificationStructure;
 
   /// Produces a Yaml formatted String version of the object
@@ -5542,8 +5542,8 @@ abstract class SubstanceSpecificationIsotope
   ///  polymers or nucleic acids).
   factory SubstanceSpecificationIsotope({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Identifier? identifier,
     CodeableConcept? name,
     CodeableConcept? substitution,
@@ -5612,8 +5612,8 @@ abstract class SubstanceSpecificationMolecularWeight
   ///  captured in this field.
   factory SubstanceSpecificationMolecularWeight({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? method,
     CodeableConcept? type,
     Quantity? amount,
@@ -5681,8 +5681,8 @@ abstract class SubstanceSpecificationRepresentation
   /// [attachment]: An attached file with the structural representation.
   factory SubstanceSpecificationRepresentation({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? type,
     String? representation,
     @JsonKey(name: '_representation') Element? representationElement,
@@ -5757,15 +5757,15 @@ abstract class SubstanceSpecificationCode
   /// [source]: Supporting literature.
   factory SubstanceSpecificationCode({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? code,
     CodeableConcept? status,
     FhirDateTime? statusDate,
     @JsonKey(name: '_statusDate') Element? statusDateElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
-    List<Reference>? source,
+    List<Reference?>? source,
   }) = _SubstanceSpecificationCode;
 
   /// Produces a Yaml formatted String version of the object
@@ -5846,21 +5846,21 @@ abstract class SubstanceSpecificationName
   /// [source]: Supporting literature.
   factory SubstanceSpecificationName({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     CodeableConcept? type,
     CodeableConcept? status,
     Boolean? preferred,
     @JsonKey(name: '_preferred') Element? preferredElement,
-    List<CodeableConcept>? language,
-    List<CodeableConcept>? domain,
-    List<CodeableConcept>? jurisdiction,
-    List<SubstanceSpecificationName>? synonym,
-    List<SubstanceSpecificationName>? translation,
-    List<SubstanceSpecificationOfficial>? official,
-    List<Reference>? source,
+    List<CodeableConcept?>? language,
+    List<CodeableConcept?>? domain,
+    List<CodeableConcept?>? jurisdiction,
+    List<SubstanceSpecificationName?>? synonym,
+    List<SubstanceSpecificationName?>? translation,
+    List<SubstanceSpecificationOfficial?>? official,
+    List<Reference?>? source,
   }) = _SubstanceSpecificationName;
 
   /// Produces a Yaml formatted String version of the object
@@ -5922,8 +5922,8 @@ abstract class SubstanceSpecificationOfficial
   /// [_date]: Extensions for date
   factory SubstanceSpecificationOfficial({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? authority,
     CodeableConcept? status,
     FhirDateTime? date,
@@ -6023,8 +6023,8 @@ abstract class SubstanceSpecificationRelationship
   /// [source]: Supporting literature.
   factory SubstanceSpecificationRelationship({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Reference? substanceReference,
     CodeableConcept? substanceCodeableConcept,
     CodeableConcept? relationship,
@@ -6037,7 +6037,7 @@ abstract class SubstanceSpecificationRelationship
     @JsonKey(name: '_amountString') Element? amountStringElement,
     Ratio? amountRatioLowLimit,
     CodeableConcept? amountType,
-    List<Reference>? source,
+    List<Reference?>? source,
   }) = _SubstanceSpecificationRelationship;
 
   /// Produces a Yaml formatted String version of the object

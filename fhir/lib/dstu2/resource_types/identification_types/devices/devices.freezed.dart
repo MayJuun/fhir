@@ -30,11 +30,11 @@ class _$DeviceTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       required CodeableConcept? type,
-      List<Annotation>? note,
+      List<Annotation?>? note,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown)
           DeviceStatus? status,
       @JsonKey(name: '_status')
@@ -57,7 +57,7 @@ class _$DeviceTearOff {
       Reference? owner,
       Reference? location,
       Reference? patient,
-      List<ContactPoint>? contact,
+      List<ContactPoint?>? contact,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement}) {
@@ -121,11 +121,11 @@ mixin _$Device {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   CodeableConcept? get type;
-  List<Annotation>? get note;
+  List<Annotation?>? get note;
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   DeviceStatus? get status;
   @JsonKey(name: '_status')
@@ -148,7 +148,7 @@ mixin _$Device {
   Reference? get owner;
   Reference? get location;
   Reference? get patient;
-  List<ContactPoint>? get contact;
+  List<ContactPoint?>? get contact;
   FhirUri? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -176,11 +176,11 @@ abstract class $DeviceCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       CodeableConcept? type,
-      List<Annotation>? note,
+      List<Annotation?>? note,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown)
           DeviceStatus? status,
       @JsonKey(name: '_status')
@@ -203,7 +203,7 @@ abstract class $DeviceCopyWith<$Res> {
       Reference? owner,
       Reference? location,
       Reference? patient,
-      List<ContactPoint>? contact,
+      List<ContactPoint?>? contact,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement});
@@ -290,15 +290,15 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
-      note: note == freezed ? _value.note : note as List<Annotation>?,
+      note: note == freezed ? _value.note : note as List<Annotation?>?,
       status: status == freezed ? _value.status : status as DeviceStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -329,7 +329,7 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
       location: location == freezed ? _value.location : location as Reference?,
       patient: patient == freezed ? _value.patient : patient as Reference?,
       contact:
-          contact == freezed ? _value.contact : contact as List<ContactPoint>?,
+          contact == freezed ? _value.contact : contact as List<ContactPoint?>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
@@ -510,11 +510,11 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       CodeableConcept? type,
-      List<Annotation>? note,
+      List<Annotation?>? note,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown)
           DeviceStatus? status,
       @JsonKey(name: '_status')
@@ -537,7 +537,7 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       Reference? owner,
       Reference? location,
       Reference? patient,
-      List<ContactPoint>? contact,
+      List<ContactPoint?>? contact,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement});
@@ -639,15 +639,15 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
-      note: note == freezed ? _value.note : note as List<Annotation>?,
+      note: note == freezed ? _value.note : note as List<Annotation?>?,
       status: status == freezed ? _value.status : status as DeviceStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -678,7 +678,7 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
       location: location == freezed ? _value.location : location as Reference?,
       patient: patient == freezed ? _value.patient : patient as Reference?,
       contact:
-          contact == freezed ? _value.contact : contact as List<ContactPoint>?,
+          contact == freezed ? _value.contact : contact as List<ContactPoint?>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
@@ -763,15 +763,15 @@ class _$_Device extends _Device {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final CodeableConcept? type;
   @override
-  final List<Annotation>? note;
+  final List<Annotation?>? note;
   @override
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   final DeviceStatus? status;
@@ -811,7 +811,7 @@ class _$_Device extends _Device {
   @override
   final Reference? patient;
   @override
-  final List<ContactPoint>? contact;
+  final List<ContactPoint?>? contact;
   @override
   final FhirUri? url;
   @override
@@ -968,11 +968,11 @@ abstract class _Device extends Device {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       required CodeableConcept? type,
-      List<Annotation>? note,
+      List<Annotation?>? note,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown)
           DeviceStatus? status,
       @JsonKey(name: '_status')
@@ -995,7 +995,7 @@ abstract class _Device extends Device {
       Reference? owner,
       Reference? location,
       Reference? patient,
-      List<ContactPoint>? contact,
+      List<ContactPoint?>? contact,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement}) = _$_Device;
@@ -1025,15 +1025,15 @@ abstract class _Device extends Device {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   CodeableConcept? get type;
   @override
-  List<Annotation>? get note;
+  List<Annotation?>? get note;
   @override
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   DeviceStatus? get status;
@@ -1073,7 +1073,7 @@ abstract class _Device extends Device {
   @override
   Reference? get patient;
   @override
-  List<ContactPoint>? get contact;
+  List<ContactPoint?>? get contact;
   @override
   FhirUri? get url;
   @override
@@ -1104,18 +1104,18 @@ class _$DeviceComponentTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? type,
       required Identifier? identifier,
       required Instant? lastSystemChange,
       Reference? source,
       Reference? parent,
-      List<CodeableConcept>? operationalStatus,
+      List<CodeableConcept?>? operationalStatus,
       CodeableConcept? parameterGroup,
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple? measurementPrinciple,
-      List<DeviceComponentProductionSpecification>? productionSpecification,
+      List<DeviceComponentProductionSpecification?>? productionSpecification,
       CodeableConcept? languageCode}) {
     return _DeviceComponent(
       resourceType: resourceType,
@@ -1162,18 +1162,18 @@ mixin _$DeviceComponent {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get type;
   Identifier? get identifier;
   Instant? get lastSystemChange;
   Reference? get source;
   Reference? get parent;
-  List<CodeableConcept>? get operationalStatus;
+  List<CodeableConcept?>? get operationalStatus;
   CodeableConcept? get parameterGroup;
   @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
   DeviceComponentMeasurementPrinciple? get measurementPrinciple;
-  List<DeviceComponentProductionSpecification>? get productionSpecification;
+  List<DeviceComponentProductionSpecification?>? get productionSpecification;
   CodeableConcept? get languageCode;
 
   Map<String, dynamic> toJson();
@@ -1198,18 +1198,18 @@ abstract class $DeviceComponentCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
       Identifier? identifier,
       Instant? lastSystemChange,
       Reference? source,
       Reference? parent,
-      List<CodeableConcept>? operationalStatus,
+      List<CodeableConcept?>? operationalStatus,
       CodeableConcept? parameterGroup,
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple? measurementPrinciple,
-      List<DeviceComponentProductionSpecification>? productionSpecification,
+      List<DeviceComponentProductionSpecification?>? productionSpecification,
       CodeableConcept? languageCode});
 
   $ElementCopyWith<$Res>? get idElement;
@@ -1273,10 +1273,10 @@ class _$DeviceComponentCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
@@ -1287,7 +1287,7 @@ class _$DeviceComponentCopyWithImpl<$Res>
       parent: parent == freezed ? _value.parent : parent as Reference?,
       operationalStatus: operationalStatus == freezed
           ? _value.operationalStatus
-          : operationalStatus as List<CodeableConcept>?,
+          : operationalStatus as List<CodeableConcept?>?,
       parameterGroup: parameterGroup == freezed
           ? _value.parameterGroup
           : parameterGroup as CodeableConcept?,
@@ -1297,7 +1297,7 @@ class _$DeviceComponentCopyWithImpl<$Res>
       productionSpecification: productionSpecification == freezed
           ? _value.productionSpecification
           : productionSpecification
-              as List<DeviceComponentProductionSpecification>?,
+              as List<DeviceComponentProductionSpecification?>?,
       languageCode: languageCode == freezed
           ? _value.languageCode
           : languageCode as CodeableConcept?,
@@ -1423,18 +1423,18 @@ abstract class _$DeviceComponentCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
       Identifier? identifier,
       Instant? lastSystemChange,
       Reference? source,
       Reference? parent,
-      List<CodeableConcept>? operationalStatus,
+      List<CodeableConcept?>? operationalStatus,
       CodeableConcept? parameterGroup,
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple? measurementPrinciple,
-      List<DeviceComponentProductionSpecification>? productionSpecification,
+      List<DeviceComponentProductionSpecification?>? productionSpecification,
       CodeableConcept? languageCode});
 
   @override
@@ -1509,10 +1509,10 @@ class __$DeviceComponentCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
@@ -1523,7 +1523,7 @@ class __$DeviceComponentCopyWithImpl<$Res>
       parent: parent == freezed ? _value.parent : parent as Reference?,
       operationalStatus: operationalStatus == freezed
           ? _value.operationalStatus
-          : operationalStatus as List<CodeableConcept>?,
+          : operationalStatus as List<CodeableConcept?>?,
       parameterGroup: parameterGroup == freezed
           ? _value.parameterGroup
           : parameterGroup as CodeableConcept?,
@@ -1533,7 +1533,7 @@ class __$DeviceComponentCopyWithImpl<$Res>
       productionSpecification: productionSpecification == freezed
           ? _value.productionSpecification
           : productionSpecification
-              as List<DeviceComponentProductionSpecification>?,
+              as List<DeviceComponentProductionSpecification?>?,
       languageCode: languageCode == freezed
           ? _value.languageCode
           : languageCode as CodeableConcept?,
@@ -1595,9 +1595,9 @@ class _$_DeviceComponent extends _DeviceComponent {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? type;
   @override
@@ -1609,14 +1609,14 @@ class _$_DeviceComponent extends _DeviceComponent {
   @override
   final Reference? parent;
   @override
-  final List<CodeableConcept>? operationalStatus;
+  final List<CodeableConcept?>? operationalStatus;
   @override
   final CodeableConcept? parameterGroup;
   @override
   @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
   final DeviceComponentMeasurementPrinciple? measurementPrinciple;
   @override
-  final List<DeviceComponentProductionSpecification>? productionSpecification;
+  final List<DeviceComponentProductionSpecification?>? productionSpecification;
   @override
   final CodeableConcept? languageCode;
 
@@ -1735,18 +1735,18 @@ abstract class _DeviceComponent extends DeviceComponent {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? type,
       required Identifier? identifier,
       required Instant? lastSystemChange,
       Reference? source,
       Reference? parent,
-      List<CodeableConcept>? operationalStatus,
+      List<CodeableConcept?>? operationalStatus,
       CodeableConcept? parameterGroup,
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           DeviceComponentMeasurementPrinciple? measurementPrinciple,
-      List<DeviceComponentProductionSpecification>? productionSpecification,
+      List<DeviceComponentProductionSpecification?>? productionSpecification,
       CodeableConcept? languageCode}) = _$_DeviceComponent;
 
   factory _DeviceComponent.fromJson(Map<String, dynamic> json) =
@@ -1772,9 +1772,9 @@ abstract class _DeviceComponent extends DeviceComponent {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get type;
   @override
@@ -1786,14 +1786,14 @@ abstract class _DeviceComponent extends DeviceComponent {
   @override
   Reference? get parent;
   @override
-  List<CodeableConcept>? get operationalStatus;
+  List<CodeableConcept?>? get operationalStatus;
   @override
   CodeableConcept? get parameterGroup;
   @override
   @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
   DeviceComponentMeasurementPrinciple? get measurementPrinciple;
   @override
-  List<DeviceComponentProductionSpecification>? get productionSpecification;
+  List<DeviceComponentProductionSpecification?>? get productionSpecification;
   @override
   CodeableConcept? get languageCode;
   @override
@@ -1813,8 +1813,8 @@ class _$DeviceComponentProductionSpecificationTearOff {
 
   _DeviceComponentProductionSpecification call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? specType,
       Identifier? componentId,
       String? productionSpec}) {
@@ -1841,8 +1841,8 @@ const $DeviceComponentProductionSpecification =
 mixin _$DeviceComponentProductionSpecification {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get specType;
   Identifier? get componentId;
   String? get productionSpec;
@@ -1861,8 +1861,8 @@ abstract class $DeviceComponentProductionSpecificationCopyWith<$Res> {
       _$DeviceComponentProductionSpecificationCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? specType,
       Identifier? componentId,
       String? productionSpec});
@@ -1893,10 +1893,10 @@ class _$DeviceComponentProductionSpecificationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       specType:
           specType == freezed ? _value.specType : specType as CodeableConcept?,
       componentId: componentId == freezed
@@ -1941,8 +1941,8 @@ abstract class _$DeviceComponentProductionSpecificationCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? specType,
       Identifier? componentId,
       String? productionSpec});
@@ -1980,10 +1980,10 @@ class __$DeviceComponentProductionSpecificationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       specType:
           specType == freezed ? _value.specType : specType as CodeableConcept?,
       componentId: componentId == freezed
@@ -2018,9 +2018,9 @@ class _$_DeviceComponentProductionSpecification
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? specType;
   @override
@@ -2084,8 +2084,8 @@ abstract class _DeviceComponentProductionSpecification
   _DeviceComponentProductionSpecification._() : super._();
   factory _DeviceComponentProductionSpecification(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? specType,
       Identifier? componentId,
       String? productionSpec}) = _$_DeviceComponentProductionSpecification;
@@ -2098,9 +2098,9 @@ abstract class _DeviceComponentProductionSpecification
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get specType;
   @override
@@ -2135,8 +2135,8 @@ class _$DeviceMetricTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? type,
       required Identifier? identifier,
       CodeableConcept? unit,
@@ -2155,7 +2155,7 @@ class _$DeviceMetricTearOff {
       @JsonKey(name: '_category')
           Element? categoryElement,
       Timing? measurementPeriod,
-      List<DeviceMetricCalibration>? calibration}) {
+      List<DeviceMetricCalibration?>? calibration}) {
     return _DeviceMetric(
       resourceType: resourceType,
       id: id,
@@ -2207,8 +2207,8 @@ mixin _$DeviceMetric {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get type;
   Identifier? get identifier;
   CodeableConcept? get unit;
@@ -2227,7 +2227,7 @@ mixin _$DeviceMetric {
   @JsonKey(name: '_category')
   Element? get categoryElement;
   Timing? get measurementPeriod;
-  List<DeviceMetricCalibration>? get calibration;
+  List<DeviceMetricCalibration?>? get calibration;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2253,8 +2253,8 @@ abstract class $DeviceMetricCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
       Identifier? identifier,
       CodeableConcept? unit,
@@ -2273,7 +2273,7 @@ abstract class $DeviceMetricCopyWith<$Res> {
       @JsonKey(name: '_category')
           Element? categoryElement,
       Timing? measurementPeriod,
-      List<DeviceMetricCalibration>? calibration});
+      List<DeviceMetricCalibration?>? calibration});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -2347,10 +2347,10 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
@@ -2378,7 +2378,7 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
           : measurementPeriod as Timing?,
       calibration: calibration == freezed
           ? _value.calibration
-          : calibration as List<DeviceMetricCalibration>?,
+          : calibration as List<DeviceMetricCalibration?>?,
     ));
   }
 
@@ -2547,8 +2547,8 @@ abstract class _$DeviceMetricCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? type,
       Identifier? identifier,
       CodeableConcept? unit,
@@ -2567,7 +2567,7 @@ abstract class _$DeviceMetricCopyWith<$Res>
       @JsonKey(name: '_category')
           Element? categoryElement,
       Timing? measurementPeriod,
-      List<DeviceMetricCalibration>? calibration});
+      List<DeviceMetricCalibration?>? calibration});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -2656,10 +2656,10 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CodeableConcept?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
@@ -2687,7 +2687,7 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
           : measurementPeriod as Timing?,
       calibration: calibration == freezed
           ? _value.calibration
-          : calibration as List<DeviceMetricCalibration>?,
+          : calibration as List<DeviceMetricCalibration?>?,
     ));
   }
 }
@@ -2759,9 +2759,9 @@ class _$_DeviceMetric extends _DeviceMetric {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? type;
   @override
@@ -2793,7 +2793,7 @@ class _$_DeviceMetric extends _DeviceMetric {
   @override
   final Timing? measurementPeriod;
   @override
-  final List<DeviceMetricCalibration>? calibration;
+  final List<DeviceMetricCalibration?>? calibration;
 
   @override
   String toString() {
@@ -2926,8 +2926,8 @@ abstract class _DeviceMetric extends DeviceMetric {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required CodeableConcept? type,
       required Identifier? identifier,
       CodeableConcept? unit,
@@ -2946,7 +2946,7 @@ abstract class _DeviceMetric extends DeviceMetric {
       @JsonKey(name: '_category')
           Element? categoryElement,
       Timing? measurementPeriod,
-      List<DeviceMetricCalibration>? calibration}) = _$_DeviceMetric;
+      List<DeviceMetricCalibration?>? calibration}) = _$_DeviceMetric;
 
   factory _DeviceMetric.fromJson(Map<String, dynamic> json) =
       _$_DeviceMetric.fromJson;
@@ -2974,9 +2974,9 @@ abstract class _DeviceMetric extends DeviceMetric {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get type;
   @override
@@ -3008,7 +3008,7 @@ abstract class _DeviceMetric extends DeviceMetric {
   @override
   Timing? get measurementPeriod;
   @override
-  List<DeviceMetricCalibration>? get calibration;
+  List<DeviceMetricCalibration?>? get calibration;
   @override
   @JsonKey(ignore: true)
   _$DeviceMetricCopyWith<_DeviceMetric> get copyWith;
@@ -3026,8 +3026,8 @@ class _$DeviceMetricCalibrationTearOff {
   _DeviceMetricCalibration call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown)
           CalibrationType? type,
       @JsonKey(name: '_type')
@@ -3064,8 +3064,8 @@ const $DeviceMetricCalibration = _$DeviceMetricCalibrationTearOff();
 mixin _$DeviceMetricCalibration {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   @JsonKey(unknownEnumValue: CalibrationType.unknown)
   CalibrationType? get type;
   @JsonKey(name: '_type')
@@ -3091,8 +3091,8 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown)
           CalibrationType? type,
       @JsonKey(name: '_type')
@@ -3135,10 +3135,10 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CalibrationType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -3196,8 +3196,8 @@ abstract class _$DeviceMetricCalibrationCopyWith<$Res>
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown)
           CalibrationType? type,
       @JsonKey(name: '_type')
@@ -3246,10 +3246,10 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as CalibrationType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -3287,9 +3287,9 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: CalibrationType.unknown)
   final CalibrationType? type;
@@ -3372,8 +3372,8 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   factory _DeviceMetricCalibration(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown)
           CalibrationType? type,
       @JsonKey(name: '_type')
@@ -3393,9 +3393,9 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: CalibrationType.unknown)
   CalibrationType? get type;

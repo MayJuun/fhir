@@ -26,9 +26,9 @@ abstract class Location with Resource implements _$Location {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     String? name,
@@ -38,7 +38,7 @@ abstract class Location with Resource implements _$Location {
     @JsonKey(unknownEnumValue: LocationMode.unknown) LocationMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     CodeableConcept? type,
-    List<ContactPoint>? telecom,
+    List<ContactPoint?>? telecom,
     Address? address,
     CodeableConcept? physicalType,
     LocationPosition? position,
@@ -68,8 +68,8 @@ abstract class LocationPosition with _$LocationPosition {
   LocationPosition._();
   factory LocationPosition({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Decimal? longitude,
     @JsonKey(name: '_longitude') Element? longitudeElement,
     required Decimal? latitude,
@@ -110,15 +110,15 @@ abstract class Substance with Resource implements _$Substance {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    List<CodeableConcept>? category,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
+    List<CodeableConcept?>? category,
     required CodeableConcept? code,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<SubstanceInstance>? instance,
-    List<SubstanceIngredient>? ingredient,
+    List<SubstanceInstance?>? instance,
+    List<SubstanceIngredient?>? ingredient,
   }) = _Substance;
 
   /// Produces a Yaml formatted String version of the object
@@ -143,8 +143,8 @@ abstract class SubstanceInstance with _$SubstanceInstance {
   SubstanceInstance._();
   factory SubstanceInstance({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Identifier? identifier,
     FhirDateTime? expiry,
     @JsonKey(name: '_expiry') Element? expiryElement,
@@ -173,8 +173,8 @@ abstract class SubstanceIngredient with _$SubstanceIngredient {
   SubstanceIngredient._();
   factory SubstanceIngredient({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Ratio? quantity,
     required Reference? substance,
   }) = _SubstanceIngredient;
@@ -211,21 +211,21 @@ abstract class Person with Resource implements _$Person {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    List<HumanName>? name,
-    List<ContactPoint>? telecom,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
+    List<HumanName?>? name,
+    List<ContactPoint?>? telecom,
     @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Date? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
-    List<Address>? address,
+    List<Address?>? address,
     Attachment? photo,
     Reference? managingOrganization,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
-    List<PersonLink>? link,
+    List<PersonLink?>? link,
   }) = _Person;
 
   /// Produces a Yaml formatted String version of the object
@@ -249,8 +249,8 @@ abstract class PersonLink with _$PersonLink {
   PersonLink._();
   factory PersonLink({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Reference? target,
     @JsonKey(unknownEnumValue: LinkAssurance.unknown) LinkAssurance? assurance,
     @JsonKey(name: '_assurance') Element? assuranceElement,
@@ -288,28 +288,28 @@ abstract class Contract with Resource implements _$Contract {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Identifier? identifier,
     FhirDateTime? issued,
     @JsonKey(name: '_issued') Element? issuedElement,
     Period? applies,
-    List<Reference>? subject,
-    List<Reference>? authority,
-    List<Reference>? domain,
+    List<Reference?>? subject,
+    List<Reference?>? authority,
+    List<Reference?>? domain,
     CodeableConcept? type,
-    List<CodeableConcept>? subType,
-    List<CodeableConcept>? action,
-    List<CodeableConcept>? actionReason,
-    List<ContractActor>? actor,
-    List<ContractValuedItem>? valuedItem,
-    List<ContractSigner>? signer,
-    List<ContractTerm>? term,
+    List<CodeableConcept?>? subType,
+    List<CodeableConcept?>? action,
+    List<CodeableConcept?>? actionReason,
+    List<ContractActor?>? actor,
+    List<ContractValuedItem?>? valuedItem,
+    List<ContractSigner?>? signer,
+    List<ContractTerm?>? term,
     Attachment? bindingAttachment,
     Reference? bindingReference,
-    List<ContractFriendly>? friendly,
-    List<ContractLegal>? legal,
-    List<ContractRule>? rule,
+    List<ContractFriendly?>? friendly,
+    List<ContractLegal?>? legal,
+    List<ContractRule?>? rule,
   }) = _Contract;
 
   /// Produces a Yaml formatted String version of the object
@@ -334,10 +334,10 @@ abstract class ContractActor with _$ContractActor {
   ContractActor._();
   factory ContractActor({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Reference? entity,
-    List<CodeableConcept>? role,
+    List<CodeableConcept?>? role,
   }) = _ContractActor;
 
   /// Produces a Yaml formatted String version of the object
@@ -362,8 +362,8 @@ abstract class ContractValuedItem with _$ContractValuedItem {
   ContractValuedItem._();
   factory ContractValuedItem({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     CodeableConcept? entityCodeableConcept,
     Reference? entityReference,
     Identifier? identifier,
@@ -376,7 +376,7 @@ abstract class ContractValuedItem with _$ContractValuedItem {
     Decimal? points,
     @JsonKey(name: '_points') Element? pointsElement,
     Quantity? net,
-    List<Element>? securityLabelNumberElement,
+    List<Element?>? securityLabelNumberElement,
   }) = _ContractValuedItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -401,8 +401,8 @@ abstract class ContractSigner with _$ContractSigner {
   ContractSigner._();
   factory ContractSigner({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Coding? type,
     required Reference? party,
     required String? signature,
@@ -430,8 +430,8 @@ abstract class ContractTerm with _$ContractTerm {
   ContractTerm._();
   factory ContractTerm({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Identifier? identifier,
     FhirDateTime? issued,
     @JsonKey(name: '_issued') Element? issuedElement,
@@ -439,13 +439,13 @@ abstract class ContractTerm with _$ContractTerm {
     CodeableConcept? type,
     CodeableConcept? subType,
     Reference? subject,
-    List<CodeableConcept>? action,
-    List<CodeableConcept>? actionReason,
-    List<ContractTermActor>? actor,
+    List<CodeableConcept?>? action,
+    List<CodeableConcept?>? actionReason,
+    List<ContractTermActor?>? actor,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-    List<ContractValuedItem>? valuedItem,
-    List<ContractTerm>? group,
+    List<ContractValuedItem?>? valuedItem,
+    List<ContractTerm?>? group,
   }) = _ContractTerm;
 
   /// Produces a Yaml formatted String version of the object
@@ -470,10 +470,10 @@ abstract class ContractTermActor with _$ContractTermActor {
   ContractTermActor._();
   factory ContractTermActor({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Reference? entity,
-    List<CodeableConcept>? role,
+    List<CodeableConcept?>? role,
   }) = _ContractTermActor;
 
   /// Produces a Yaml formatted String version of the object
@@ -498,8 +498,8 @@ abstract class ContractFriendly with _$ContractFriendly {
   ContractFriendly._();
   factory ContractFriendly({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Attachment? contentAttachment,
     Reference? contactReference,
   }) = _ContractFriendly;
@@ -526,8 +526,8 @@ abstract class ContractLegal with _$ContractLegal {
   ContractLegal._();
   factory ContractLegal({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Attachment? contentAttachment,
     Reference? content,
   }) = _ContractLegal;
@@ -554,8 +554,8 @@ abstract class ContractRule with _$ContractRule {
   ContractRule._();
   factory ContractRule({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Attachment? contentAttachment,
     Reference? contentReference,
   }) = _ContractRule;

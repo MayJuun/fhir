@@ -30,31 +30,31 @@ class _$EncounterTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: EncounterStatus.unknown)
           required EncounterStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<EncounterStatusHistory>? statusHistory,
+      List<EncounterStatusHistory?>? statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
           EncounterClass? class_,
       @JsonKey(name: '_class')
           Element? classElement,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       CodeableConcept? priority,
       Reference? patient,
-      List<Reference>? episodeOfCare,
-      List<Reference>? incomingReferral,
-      List<EncounterParticipant>? participant,
+      List<Reference?>? episodeOfCare,
+      List<Reference?>? incomingReferral,
+      List<EncounterParticipant?>? participant,
       Reference? appointment,
       Period? period,
       Quantity? length,
-      List<CodeableConcept>? reason,
-      List<Reference>? indication,
+      List<CodeableConcept?>? reason,
+      List<Reference?>? indication,
       EncounterHospitalization? hospitalization,
-      List<EncounterLocation>? location,
+      List<EncounterLocation?>? location,
       Reference? serviceProvider,
       Reference? partOf}) {
     return _Encounter(
@@ -116,31 +116,31 @@ mixin _$Encounter {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   @JsonKey(unknownEnumValue: EncounterStatus.unknown)
   EncounterStatus get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  List<EncounterStatusHistory>? get statusHistory;
+  List<EncounterStatusHistory?>? get statusHistory;
   @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
   EncounterClass? get class_;
   @JsonKey(name: '_class')
   Element? get classElement;
-  List<CodeableConcept>? get type;
+  List<CodeableConcept?>? get type;
   CodeableConcept? get priority;
   Reference? get patient;
-  List<Reference>? get episodeOfCare;
-  List<Reference>? get incomingReferral;
-  List<EncounterParticipant>? get participant;
+  List<Reference?>? get episodeOfCare;
+  List<Reference?>? get incomingReferral;
+  List<EncounterParticipant?>? get participant;
   Reference? get appointment;
   Period? get period;
   Quantity? get length;
-  List<CodeableConcept>? get reason;
-  List<Reference>? get indication;
+  List<CodeableConcept?>? get reason;
+  List<Reference?>? get indication;
   EncounterHospitalization? get hospitalization;
-  List<EncounterLocation>? get location;
+  List<EncounterLocation?>? get location;
   Reference? get serviceProvider;
   Reference? get partOf;
 
@@ -167,31 +167,31 @@ abstract class $EncounterCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<EncounterStatusHistory>? statusHistory,
+      List<EncounterStatusHistory?>? statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
           EncounterClass? class_,
       @JsonKey(name: '_class')
           Element? classElement,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       CodeableConcept? priority,
       Reference? patient,
-      List<Reference>? episodeOfCare,
-      List<Reference>? incomingReferral,
-      List<EncounterParticipant>? participant,
+      List<Reference?>? episodeOfCare,
+      List<Reference?>? incomingReferral,
+      List<EncounterParticipant?>? participant,
       Reference? appointment,
       Period? period,
       Quantity? length,
-      List<CodeableConcept>? reason,
-      List<Reference>? indication,
+      List<CodeableConcept?>? reason,
+      List<Reference?>? indication,
       EncounterHospitalization? hospitalization,
-      List<EncounterLocation>? location,
+      List<EncounterLocation?>? location,
       Reference? serviceProvider,
       Reference? partOf});
 
@@ -276,53 +276,53 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as EncounterStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
-          : statusHistory as List<EncounterStatusHistory>?,
+          : statusHistory as List<EncounterStatusHistory?>?,
       class_: class_ == freezed ? _value.class_ : class_ as EncounterClass?,
       classElement: classElement == freezed
           ? _value.classElement
           : classElement as Element?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
       priority:
           priority == freezed ? _value.priority : priority as CodeableConcept?,
       patient: patient == freezed ? _value.patient : patient as Reference?,
       episodeOfCare: episodeOfCare == freezed
           ? _value.episodeOfCare
-          : episodeOfCare as List<Reference>?,
+          : episodeOfCare as List<Reference?>?,
       incomingReferral: incomingReferral == freezed
           ? _value.incomingReferral
-          : incomingReferral as List<Reference>?,
+          : incomingReferral as List<Reference?>?,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<EncounterParticipant>?,
+          : participant as List<EncounterParticipant?>?,
       appointment: appointment == freezed
           ? _value.appointment
           : appointment as Reference?,
       period: period == freezed ? _value.period : period as Period?,
       length: length == freezed ? _value.length : length as Quantity?,
       reason:
-          reason == freezed ? _value.reason : reason as List<CodeableConcept>?,
+          reason == freezed ? _value.reason : reason as List<CodeableConcept?>?,
       indication: indication == freezed
           ? _value.indication
-          : indication as List<Reference>?,
+          : indication as List<Reference?>?,
       hospitalization: hospitalization == freezed
           ? _value.hospitalization
           : hospitalization as EncounterHospitalization?,
       location: location == freezed
           ? _value.location
-          : location as List<EncounterLocation>?,
+          : location as List<EncounterLocation?>?,
       serviceProvider: serviceProvider == freezed
           ? _value.serviceProvider
           : serviceProvider as Reference?,
@@ -506,31 +506,31 @@ abstract class _$EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: EncounterStatus.unknown)
           EncounterStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<EncounterStatusHistory>? statusHistory,
+      List<EncounterStatusHistory?>? statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
           EncounterClass? class_,
       @JsonKey(name: '_class')
           Element? classElement,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       CodeableConcept? priority,
       Reference? patient,
-      List<Reference>? episodeOfCare,
-      List<Reference>? incomingReferral,
-      List<EncounterParticipant>? participant,
+      List<Reference?>? episodeOfCare,
+      List<Reference?>? incomingReferral,
+      List<EncounterParticipant?>? participant,
       Reference? appointment,
       Period? period,
       Quantity? length,
-      List<CodeableConcept>? reason,
-      List<Reference>? indication,
+      List<CodeableConcept?>? reason,
+      List<Reference?>? indication,
       EncounterHospitalization? hospitalization,
-      List<EncounterLocation>? location,
+      List<EncounterLocation?>? location,
       Reference? serviceProvider,
       Reference? partOf});
 
@@ -630,53 +630,53 @@ class __$EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as EncounterStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
-          : statusHistory as List<EncounterStatusHistory>?,
+          : statusHistory as List<EncounterStatusHistory?>?,
       class_: class_ == freezed ? _value.class_ : class_ as EncounterClass?,
       classElement: classElement == freezed
           ? _value.classElement
           : classElement as Element?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
       priority:
           priority == freezed ? _value.priority : priority as CodeableConcept?,
       patient: patient == freezed ? _value.patient : patient as Reference?,
       episodeOfCare: episodeOfCare == freezed
           ? _value.episodeOfCare
-          : episodeOfCare as List<Reference>?,
+          : episodeOfCare as List<Reference?>?,
       incomingReferral: incomingReferral == freezed
           ? _value.incomingReferral
-          : incomingReferral as List<Reference>?,
+          : incomingReferral as List<Reference?>?,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<EncounterParticipant>?,
+          : participant as List<EncounterParticipant?>?,
       appointment: appointment == freezed
           ? _value.appointment
           : appointment as Reference?,
       period: period == freezed ? _value.period : period as Period?,
       length: length == freezed ? _value.length : length as Quantity?,
       reason:
-          reason == freezed ? _value.reason : reason as List<CodeableConcept>?,
+          reason == freezed ? _value.reason : reason as List<CodeableConcept?>?,
       indication: indication == freezed
           ? _value.indication
-          : indication as List<Reference>?,
+          : indication as List<Reference?>?,
       hospitalization: hospitalization == freezed
           ? _value.hospitalization
           : hospitalization as EncounterHospitalization?,
       location: location == freezed
           ? _value.location
-          : location as List<EncounterLocation>?,
+          : location as List<EncounterLocation?>?,
       serviceProvider: serviceProvider == freezed
           ? _value.serviceProvider
           : serviceProvider as Reference?,
@@ -758,11 +758,11 @@ class _$_Encounter extends _Encounter {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   @JsonKey(unknownEnumValue: EncounterStatus.unknown)
   final EncounterStatus status;
@@ -770,7 +770,7 @@ class _$_Encounter extends _Encounter {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final List<EncounterStatusHistory>? statusHistory;
+  final List<EncounterStatusHistory?>? statusHistory;
   @override
   @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
   final EncounterClass? class_;
@@ -778,17 +778,17 @@ class _$_Encounter extends _Encounter {
   @JsonKey(name: '_class')
   final Element? classElement;
   @override
-  final List<CodeableConcept>? type;
+  final List<CodeableConcept?>? type;
   @override
   final CodeableConcept? priority;
   @override
   final Reference? patient;
   @override
-  final List<Reference>? episodeOfCare;
+  final List<Reference?>? episodeOfCare;
   @override
-  final List<Reference>? incomingReferral;
+  final List<Reference?>? incomingReferral;
   @override
-  final List<EncounterParticipant>? participant;
+  final List<EncounterParticipant?>? participant;
   @override
   final Reference? appointment;
   @override
@@ -796,13 +796,13 @@ class _$_Encounter extends _Encounter {
   @override
   final Quantity? length;
   @override
-  final List<CodeableConcept>? reason;
+  final List<CodeableConcept?>? reason;
   @override
-  final List<Reference>? indication;
+  final List<Reference?>? indication;
   @override
   final EncounterHospitalization? hospitalization;
   @override
-  final List<EncounterLocation>? location;
+  final List<EncounterLocation?>? location;
   @override
   final Reference? serviceProvider;
   @override
@@ -957,31 +957,31 @@ abstract class _Encounter extends Encounter {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: EncounterStatus.unknown)
           required EncounterStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<EncounterStatusHistory>? statusHistory,
+      List<EncounterStatusHistory?>? statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
           EncounterClass? class_,
       @JsonKey(name: '_class')
           Element? classElement,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       CodeableConcept? priority,
       Reference? patient,
-      List<Reference>? episodeOfCare,
-      List<Reference>? incomingReferral,
-      List<EncounterParticipant>? participant,
+      List<Reference?>? episodeOfCare,
+      List<Reference?>? incomingReferral,
+      List<EncounterParticipant?>? participant,
       Reference? appointment,
       Period? period,
       Quantity? length,
-      List<CodeableConcept>? reason,
-      List<Reference>? indication,
+      List<CodeableConcept?>? reason,
+      List<Reference?>? indication,
       EncounterHospitalization? hospitalization,
-      List<EncounterLocation>? location,
+      List<EncounterLocation?>? location,
       Reference? serviceProvider,
       Reference? partOf}) = _$_Encounter;
 
@@ -1011,11 +1011,11 @@ abstract class _Encounter extends Encounter {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   @JsonKey(unknownEnumValue: EncounterStatus.unknown)
   EncounterStatus get status;
@@ -1023,7 +1023,7 @@ abstract class _Encounter extends Encounter {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  List<EncounterStatusHistory>? get statusHistory;
+  List<EncounterStatusHistory?>? get statusHistory;
   @override
   @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
   EncounterClass? get class_;
@@ -1031,17 +1031,17 @@ abstract class _Encounter extends Encounter {
   @JsonKey(name: '_class')
   Element? get classElement;
   @override
-  List<CodeableConcept>? get type;
+  List<CodeableConcept?>? get type;
   @override
   CodeableConcept? get priority;
   @override
   Reference? get patient;
   @override
-  List<Reference>? get episodeOfCare;
+  List<Reference?>? get episodeOfCare;
   @override
-  List<Reference>? get incomingReferral;
+  List<Reference?>? get incomingReferral;
   @override
-  List<EncounterParticipant>? get participant;
+  List<EncounterParticipant?>? get participant;
   @override
   Reference? get appointment;
   @override
@@ -1049,13 +1049,13 @@ abstract class _Encounter extends Encounter {
   @override
   Quantity? get length;
   @override
-  List<CodeableConcept>? get reason;
+  List<CodeableConcept?>? get reason;
   @override
-  List<Reference>? get indication;
+  List<Reference?>? get indication;
   @override
   EncounterHospitalization? get hospitalization;
   @override
-  List<EncounterLocation>? get location;
+  List<EncounterLocation?>? get location;
   @override
   Reference? get serviceProvider;
   @override
@@ -1077,8 +1077,8 @@ class _$EncounterStatusHistoryTearOff {
   _EncounterStatusHistory call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
           required EncounterHistoryStatus status,
       @JsonKey(name: '_status')
@@ -1106,8 +1106,8 @@ const $EncounterStatusHistory = _$EncounterStatusHistoryTearOff();
 mixin _$EncounterStatusHistory {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
   EncounterHistoryStatus get status;
   @JsonKey(name: '_status')
@@ -1127,8 +1127,8 @@ abstract class $EncounterStatusHistoryCopyWith<$Res> {
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
           EncounterHistoryStatus status,
       @JsonKey(name: '_status')
@@ -1161,10 +1161,10 @@ class _$EncounterStatusHistoryCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       status:
           status == freezed ? _value.status : status as EncounterHistoryStatus,
       statusElement: statusElement == freezed
@@ -1207,8 +1207,8 @@ abstract class _$EncounterStatusHistoryCopyWith<$Res>
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
           EncounterHistoryStatus status,
       @JsonKey(name: '_status')
@@ -1245,10 +1245,10 @@ class __$EncounterStatusHistoryCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       status:
           status == freezed ? _value.status : status as EncounterHistoryStatus,
       statusElement: statusElement == freezed
@@ -1282,9 +1282,9 @@ class _$_EncounterStatusHistory extends _EncounterStatusHistory {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
   final EncounterHistoryStatus status;
@@ -1347,8 +1347,8 @@ abstract class _EncounterStatusHistory extends EncounterStatusHistory {
   factory _EncounterStatusHistory(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
           required EncounterHistoryStatus status,
       @JsonKey(name: '_status')
@@ -1362,9 +1362,9 @@ abstract class _EncounterStatusHistory extends EncounterStatusHistory {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
   EncounterHistoryStatus get status;
@@ -1388,9 +1388,9 @@ class _$EncounterParticipantTearOff {
 
   _EncounterParticipant call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? type,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<CodeableConcept?>? type,
       Period? period,
       Reference? individual}) {
     return _EncounterParticipant(
@@ -1415,9 +1415,9 @@ const $EncounterParticipant = _$EncounterParticipantTearOff();
 mixin _$EncounterParticipant {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<CodeableConcept>? get type;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<CodeableConcept?>? get type;
   Period? get period;
   Reference? get individual;
 
@@ -1433,9 +1433,9 @@ abstract class $EncounterParticipantCopyWith<$Res> {
       _$EncounterParticipantCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? type,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<CodeableConcept?>? type,
       Period? period,
       Reference? individual});
 
@@ -1465,11 +1465,11 @@ class _$EncounterParticipantCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+          : modifierExtension as List<FhirExtension?>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
       period: period == freezed ? _value.period : period as Period?,
       individual:
           individual == freezed ? _value.individual : individual as Reference?,
@@ -1508,9 +1508,9 @@ abstract class _$EncounterParticipantCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? type,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<CodeableConcept?>? type,
       Period? period,
       Reference? individual});
 
@@ -1544,11 +1544,11 @@ class __$EncounterParticipantCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+          : modifierExtension as List<FhirExtension?>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
       period: period == freezed ? _value.period : period as Period?,
       individual:
           individual == freezed ? _value.individual : individual as Reference?,
@@ -1576,11 +1576,11 @@ class _$_EncounterParticipant extends _EncounterParticipant {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<CodeableConcept>? type;
+  final List<CodeableConcept?>? type;
   @override
   final Period? period;
   @override
@@ -1638,9 +1638,9 @@ abstract class _EncounterParticipant extends EncounterParticipant {
   _EncounterParticipant._() : super._();
   factory _EncounterParticipant(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? type,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<CodeableConcept?>? type,
       Period? period,
       Reference? individual}) = _$_EncounterParticipant;
 
@@ -1651,11 +1651,11 @@ abstract class _EncounterParticipant extends EncounterParticipant {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<CodeableConcept>? get type;
+  List<CodeableConcept?>? get type;
   @override
   Period? get period;
   @override
@@ -1676,20 +1676,20 @@ class _$EncounterHospitalizationTearOff {
 
   _EncounterHospitalization call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      List<FhirExtension?>? modifierExtension,
       Identifier? preAdmissionIdentifier,
       Reference? origin,
       CodeableConcept? admitSource,
-      List<Reference>? admittingDiagnosis,
+      List<Reference?>? admittingDiagnosis,
       CodeableConcept? reAdmission,
-      List<CodeableConcept>? dietPreference,
-      List<CodeableConcept>? specialCourtesy,
-      List<CodeableConcept>? specialArrangement,
+      List<CodeableConcept?>? dietPreference,
+      List<CodeableConcept?>? specialCourtesy,
+      List<CodeableConcept?>? specialArrangement,
       Reference? destination,
       CodeableConcept? dischargeDisposition,
-      List<Reference>? dischargeDiagnosis}) {
+      List<Reference?>? dischargeDiagnosis}) {
     return _EncounterHospitalization(
       id: id,
       extension_: extension_,
@@ -1721,21 +1721,21 @@ const $EncounterHospitalization = _$EncounterHospitalizationTearOff();
 mixin _$EncounterHospitalization {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
-  List<FhirExtension>? get modifierExtension;
+  List<String?>? get fhirComments;
+  List<FhirExtension?>? get modifierExtension;
   Identifier? get preAdmissionIdentifier;
   Reference? get origin;
   CodeableConcept? get admitSource;
-  List<Reference>? get admittingDiagnosis;
+  List<Reference?>? get admittingDiagnosis;
   CodeableConcept? get reAdmission;
-  List<CodeableConcept>? get dietPreference;
-  List<CodeableConcept>? get specialCourtesy;
-  List<CodeableConcept>? get specialArrangement;
+  List<CodeableConcept?>? get dietPreference;
+  List<CodeableConcept?>? get specialCourtesy;
+  List<CodeableConcept?>? get specialArrangement;
   Reference? get destination;
   CodeableConcept? get dischargeDisposition;
-  List<Reference>? get dischargeDiagnosis;
+  List<Reference?>? get dischargeDiagnosis;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1749,20 +1749,20 @@ abstract class $EncounterHospitalizationCopyWith<$Res> {
       _$EncounterHospitalizationCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      List<FhirExtension?>? modifierExtension,
       Identifier? preAdmissionIdentifier,
       Reference? origin,
       CodeableConcept? admitSource,
-      List<Reference>? admittingDiagnosis,
+      List<Reference?>? admittingDiagnosis,
       CodeableConcept? reAdmission,
-      List<CodeableConcept>? dietPreference,
-      List<CodeableConcept>? specialCourtesy,
-      List<CodeableConcept>? specialArrangement,
+      List<CodeableConcept?>? dietPreference,
+      List<CodeableConcept?>? specialCourtesy,
+      List<CodeableConcept?>? specialArrangement,
       Reference? destination,
       CodeableConcept? dischargeDisposition,
-      List<Reference>? dischargeDiagnosis});
+      List<Reference?>? dischargeDiagnosis});
 
   $IdentifierCopyWith<$Res>? get preAdmissionIdentifier;
   $ReferenceCopyWith<$Res>? get origin;
@@ -1803,13 +1803,13 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
+          : fhirComments as List<String?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       preAdmissionIdentifier: preAdmissionIdentifier == freezed
           ? _value.preAdmissionIdentifier
           : preAdmissionIdentifier as Identifier?,
@@ -1819,19 +1819,19 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
           : admitSource as CodeableConcept?,
       admittingDiagnosis: admittingDiagnosis == freezed
           ? _value.admittingDiagnosis
-          : admittingDiagnosis as List<Reference>?,
+          : admittingDiagnosis as List<Reference?>?,
       reAdmission: reAdmission == freezed
           ? _value.reAdmission
           : reAdmission as CodeableConcept?,
       dietPreference: dietPreference == freezed
           ? _value.dietPreference
-          : dietPreference as List<CodeableConcept>?,
+          : dietPreference as List<CodeableConcept?>?,
       specialCourtesy: specialCourtesy == freezed
           ? _value.specialCourtesy
-          : specialCourtesy as List<CodeableConcept>?,
+          : specialCourtesy as List<CodeableConcept?>?,
       specialArrangement: specialArrangement == freezed
           ? _value.specialArrangement
-          : specialArrangement as List<CodeableConcept>?,
+          : specialArrangement as List<CodeableConcept?>?,
       destination: destination == freezed
           ? _value.destination
           : destination as Reference?,
@@ -1840,7 +1840,7 @@ class _$EncounterHospitalizationCopyWithImpl<$Res>
           : dischargeDisposition as CodeableConcept?,
       dischargeDiagnosis: dischargeDiagnosis == freezed
           ? _value.dischargeDiagnosis
-          : dischargeDiagnosis as List<Reference>?,
+          : dischargeDiagnosis as List<Reference?>?,
     ));
   }
 
@@ -1921,20 +1921,20 @@ abstract class _$EncounterHospitalizationCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      List<FhirExtension?>? modifierExtension,
       Identifier? preAdmissionIdentifier,
       Reference? origin,
       CodeableConcept? admitSource,
-      List<Reference>? admittingDiagnosis,
+      List<Reference?>? admittingDiagnosis,
       CodeableConcept? reAdmission,
-      List<CodeableConcept>? dietPreference,
-      List<CodeableConcept>? specialCourtesy,
-      List<CodeableConcept>? specialArrangement,
+      List<CodeableConcept?>? dietPreference,
+      List<CodeableConcept?>? specialCourtesy,
+      List<CodeableConcept?>? specialArrangement,
       Reference? destination,
       CodeableConcept? dischargeDisposition,
-      List<Reference>? dischargeDiagnosis});
+      List<Reference?>? dischargeDiagnosis});
 
   @override
   $IdentifierCopyWith<$Res>? get preAdmissionIdentifier;
@@ -1984,13 +1984,13 @@ class __$EncounterHospitalizationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
+          : fhirComments as List<String?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       preAdmissionIdentifier: preAdmissionIdentifier == freezed
           ? _value.preAdmissionIdentifier
           : preAdmissionIdentifier as Identifier?,
@@ -2000,19 +2000,19 @@ class __$EncounterHospitalizationCopyWithImpl<$Res>
           : admitSource as CodeableConcept?,
       admittingDiagnosis: admittingDiagnosis == freezed
           ? _value.admittingDiagnosis
-          : admittingDiagnosis as List<Reference>?,
+          : admittingDiagnosis as List<Reference?>?,
       reAdmission: reAdmission == freezed
           ? _value.reAdmission
           : reAdmission as CodeableConcept?,
       dietPreference: dietPreference == freezed
           ? _value.dietPreference
-          : dietPreference as List<CodeableConcept>?,
+          : dietPreference as List<CodeableConcept?>?,
       specialCourtesy: specialCourtesy == freezed
           ? _value.specialCourtesy
-          : specialCourtesy as List<CodeableConcept>?,
+          : specialCourtesy as List<CodeableConcept?>?,
       specialArrangement: specialArrangement == freezed
           ? _value.specialArrangement
-          : specialArrangement as List<CodeableConcept>?,
+          : specialArrangement as List<CodeableConcept?>?,
       destination: destination == freezed
           ? _value.destination
           : destination as Reference?,
@@ -2021,7 +2021,7 @@ class __$EncounterHospitalizationCopyWithImpl<$Res>
           : dischargeDisposition as CodeableConcept?,
       dischargeDiagnosis: dischargeDiagnosis == freezed
           ? _value.dischargeDiagnosis
-          : dischargeDiagnosis as List<Reference>?,
+          : dischargeDiagnosis as List<Reference?>?,
     ));
   }
 }
@@ -2055,12 +2055,12 @@ class _$_EncounterHospitalization extends _EncounterHospitalization {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  final List<String?>? fhirComments;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Identifier? preAdmissionIdentifier;
   @override
@@ -2068,21 +2068,21 @@ class _$_EncounterHospitalization extends _EncounterHospitalization {
   @override
   final CodeableConcept? admitSource;
   @override
-  final List<Reference>? admittingDiagnosis;
+  final List<Reference?>? admittingDiagnosis;
   @override
   final CodeableConcept? reAdmission;
   @override
-  final List<CodeableConcept>? dietPreference;
+  final List<CodeableConcept?>? dietPreference;
   @override
-  final List<CodeableConcept>? specialCourtesy;
+  final List<CodeableConcept?>? specialCourtesy;
   @override
-  final List<CodeableConcept>? specialArrangement;
+  final List<CodeableConcept?>? specialArrangement;
   @override
   final Reference? destination;
   @override
   final CodeableConcept? dischargeDisposition;
   @override
-  final List<Reference>? dischargeDiagnosis;
+  final List<Reference?>? dischargeDiagnosis;
 
   @override
   String toString() {
@@ -2173,20 +2173,20 @@ abstract class _EncounterHospitalization extends EncounterHospitalization {
   _EncounterHospitalization._() : super._();
   factory _EncounterHospitalization(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      List<FhirExtension?>? modifierExtension,
       Identifier? preAdmissionIdentifier,
       Reference? origin,
       CodeableConcept? admitSource,
-      List<Reference>? admittingDiagnosis,
+      List<Reference?>? admittingDiagnosis,
       CodeableConcept? reAdmission,
-      List<CodeableConcept>? dietPreference,
-      List<CodeableConcept>? specialCourtesy,
-      List<CodeableConcept>? specialArrangement,
+      List<CodeableConcept?>? dietPreference,
+      List<CodeableConcept?>? specialCourtesy,
+      List<CodeableConcept?>? specialArrangement,
       Reference? destination,
       CodeableConcept? dischargeDisposition,
-      List<Reference>? dischargeDiagnosis}) = _$_EncounterHospitalization;
+      List<Reference?>? dischargeDiagnosis}) = _$_EncounterHospitalization;
 
   factory _EncounterHospitalization.fromJson(Map<String, dynamic> json) =
       _$_EncounterHospitalization.fromJson;
@@ -2195,12 +2195,12 @@ abstract class _EncounterHospitalization extends EncounterHospitalization {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String?>? get fhirComments;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Identifier? get preAdmissionIdentifier;
   @override
@@ -2208,21 +2208,21 @@ abstract class _EncounterHospitalization extends EncounterHospitalization {
   @override
   CodeableConcept? get admitSource;
   @override
-  List<Reference>? get admittingDiagnosis;
+  List<Reference?>? get admittingDiagnosis;
   @override
   CodeableConcept? get reAdmission;
   @override
-  List<CodeableConcept>? get dietPreference;
+  List<CodeableConcept?>? get dietPreference;
   @override
-  List<CodeableConcept>? get specialCourtesy;
+  List<CodeableConcept?>? get specialCourtesy;
   @override
-  List<CodeableConcept>? get specialArrangement;
+  List<CodeableConcept?>? get specialArrangement;
   @override
   Reference? get destination;
   @override
   CodeableConcept? get dischargeDisposition;
   @override
-  List<Reference>? get dischargeDiagnosis;
+  List<Reference?>? get dischargeDiagnosis;
   @override
   @JsonKey(ignore: true)
   _$EncounterHospitalizationCopyWith<_EncounterHospitalization> get copyWith;
@@ -2239,8 +2239,8 @@ class _$EncounterLocationTearOff {
   _EncounterLocation call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required Reference? location,
       @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
           EncounterLocationStatus? status,
@@ -2270,8 +2270,8 @@ const $EncounterLocation = _$EncounterLocationTearOff();
 mixin _$EncounterLocation {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Reference? get location;
   @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
   EncounterLocationStatus? get status;
@@ -2292,8 +2292,8 @@ abstract class $EncounterLocationCopyWith<$Res> {
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? location,
       @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
           EncounterLocationStatus? status,
@@ -2329,10 +2329,10 @@ class _$EncounterLocationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       location: location == freezed ? _value.location : location as Reference?,
       status: status == freezed
           ? _value.status
@@ -2388,8 +2388,8 @@ abstract class _$EncounterLocationCopyWith<$Res>
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? location,
       @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
           EncounterLocationStatus? status,
@@ -2430,10 +2430,10 @@ class __$EncounterLocationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       location: location == freezed ? _value.location : location as Reference?,
       status: status == freezed
           ? _value.status
@@ -2467,9 +2467,9 @@ class _$_EncounterLocation extends _EncounterLocation {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Reference? location;
   @override
@@ -2537,8 +2537,8 @@ abstract class _EncounterLocation extends EncounterLocation {
   factory _EncounterLocation(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required Reference? location,
       @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
           EncounterLocationStatus? status,
@@ -2553,9 +2553,9 @@ abstract class _EncounterLocation extends EncounterLocation {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Reference? get location;
   @override
@@ -2593,22 +2593,22 @@ class _$EpisodeOfCareTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
           required EpisodeOfCareStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<EpisodeOfCareStatusHistory>? statusHistory,
-      List<CodeableConcept>? type,
-      List<Reference>? condition,
+      List<EpisodeOfCareStatusHistory?>? statusHistory,
+      List<CodeableConcept?>? type,
+      List<Reference?>? condition,
       required Reference? patient,
       Reference? managingOrganization,
       Period? period,
-      List<Reference>? referralRequest,
+      List<Reference?>? referralRequest,
       Reference? careManager,
-      List<EpisodeOfCareCareTeam>? careTeam}) {
+      List<EpisodeOfCareCareTeam?>? careTeam}) {
     return _EpisodeOfCare(
       resourceType: resourceType,
       id: id,
@@ -2659,22 +2659,22 @@ mixin _$EpisodeOfCare {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
   EpisodeOfCareStatus get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
-  List<EpisodeOfCareStatusHistory>? get statusHistory;
-  List<CodeableConcept>? get type;
-  List<Reference>? get condition;
+  List<EpisodeOfCareStatusHistory?>? get statusHistory;
+  List<CodeableConcept?>? get type;
+  List<Reference?>? get condition;
   Reference? get patient;
   Reference? get managingOrganization;
   Period? get period;
-  List<Reference>? get referralRequest;
+  List<Reference?>? get referralRequest;
   Reference? get careManager;
-  List<EpisodeOfCareCareTeam>? get careTeam;
+  List<EpisodeOfCareCareTeam?>? get careTeam;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2700,22 +2700,22 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
           EpisodeOfCareStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<EpisodeOfCareStatusHistory>? statusHistory,
-      List<CodeableConcept>? type,
-      List<Reference>? condition,
+      List<EpisodeOfCareStatusHistory?>? statusHistory,
+      List<CodeableConcept?>? type,
+      List<Reference?>? condition,
       Reference? patient,
       Reference? managingOrganization,
       Period? period,
-      List<Reference>? referralRequest,
+      List<Reference?>? referralRequest,
       Reference? careManager,
-      List<EpisodeOfCareCareTeam>? careTeam});
+      List<EpisodeOfCareCareTeam?>? careTeam});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -2785,24 +2785,24 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as EpisodeOfCareStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
-          : statusHistory as List<EpisodeOfCareStatusHistory>?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+          : statusHistory as List<EpisodeOfCareStatusHistory?>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
       condition: condition == freezed
           ? _value.condition
-          : condition as List<Reference>?,
+          : condition as List<Reference?>?,
       patient: patient == freezed ? _value.patient : patient as Reference?,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
@@ -2810,13 +2810,13 @@ class _$EpisodeOfCareCopyWithImpl<$Res>
       period: period == freezed ? _value.period : period as Period?,
       referralRequest: referralRequest == freezed
           ? _value.referralRequest
-          : referralRequest as List<Reference>?,
+          : referralRequest as List<Reference?>?,
       careManager: careManager == freezed
           ? _value.careManager
           : careManager as Reference?,
       careTeam: careTeam == freezed
           ? _value.careTeam
-          : careTeam as List<EpisodeOfCareCareTeam>?,
+          : careTeam as List<EpisodeOfCareCareTeam?>?,
     ));
   }
 
@@ -2941,22 +2941,22 @@ abstract class _$EpisodeOfCareCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
           EpisodeOfCareStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<EpisodeOfCareStatusHistory>? statusHistory,
-      List<CodeableConcept>? type,
-      List<Reference>? condition,
+      List<EpisodeOfCareStatusHistory?>? statusHistory,
+      List<CodeableConcept?>? type,
+      List<Reference?>? condition,
       Reference? patient,
       Reference? managingOrganization,
       Period? period,
-      List<Reference>? referralRequest,
+      List<Reference?>? referralRequest,
       Reference? careManager,
-      List<EpisodeOfCareCareTeam>? careTeam});
+      List<EpisodeOfCareCareTeam?>? careTeam});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -3037,24 +3037,24 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status: status == freezed ? _value.status : status as EpisodeOfCareStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement as Element?,
       statusHistory: statusHistory == freezed
           ? _value.statusHistory
-          : statusHistory as List<EpisodeOfCareStatusHistory>?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+          : statusHistory as List<EpisodeOfCareStatusHistory?>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
       condition: condition == freezed
           ? _value.condition
-          : condition as List<Reference>?,
+          : condition as List<Reference?>?,
       patient: patient == freezed ? _value.patient : patient as Reference?,
       managingOrganization: managingOrganization == freezed
           ? _value.managingOrganization
@@ -3062,13 +3062,13 @@ class __$EpisodeOfCareCopyWithImpl<$Res>
       period: period == freezed ? _value.period : period as Period?,
       referralRequest: referralRequest == freezed
           ? _value.referralRequest
-          : referralRequest as List<Reference>?,
+          : referralRequest as List<Reference?>?,
       careManager: careManager == freezed
           ? _value.careManager
           : careManager as Reference?,
       careTeam: careTeam == freezed
           ? _value.careTeam
-          : careTeam as List<EpisodeOfCareCareTeam>?,
+          : careTeam as List<EpisodeOfCareCareTeam?>?,
     ));
   }
 }
@@ -3135,11 +3135,11 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
   final EpisodeOfCareStatus status;
@@ -3147,11 +3147,11 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final List<EpisodeOfCareStatusHistory>? statusHistory;
+  final List<EpisodeOfCareStatusHistory?>? statusHistory;
   @override
-  final List<CodeableConcept>? type;
+  final List<CodeableConcept?>? type;
   @override
-  final List<Reference>? condition;
+  final List<Reference?>? condition;
   @override
   final Reference? patient;
   @override
@@ -3159,11 +3159,11 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   @override
   final Period? period;
   @override
-  final List<Reference>? referralRequest;
+  final List<Reference?>? referralRequest;
   @override
   final Reference? careManager;
   @override
-  final List<EpisodeOfCareCareTeam>? careTeam;
+  final List<EpisodeOfCareCareTeam?>? careTeam;
 
   @override
   String toString() {
@@ -3293,22 +3293,22 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
           required EpisodeOfCareStatus status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<EpisodeOfCareStatusHistory>? statusHistory,
-      List<CodeableConcept>? type,
-      List<Reference>? condition,
+      List<EpisodeOfCareStatusHistory?>? statusHistory,
+      List<CodeableConcept?>? type,
+      List<Reference?>? condition,
       required Reference? patient,
       Reference? managingOrganization,
       Period? period,
-      List<Reference>? referralRequest,
+      List<Reference?>? referralRequest,
       Reference? careManager,
-      List<EpisodeOfCareCareTeam>? careTeam}) = _$_EpisodeOfCare;
+      List<EpisodeOfCareCareTeam?>? careTeam}) = _$_EpisodeOfCare;
 
   factory _EpisodeOfCare.fromJson(Map<String, dynamic> json) =
       _$_EpisodeOfCare.fromJson;
@@ -3336,11 +3336,11 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
   EpisodeOfCareStatus get status;
@@ -3348,11 +3348,11 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  List<EpisodeOfCareStatusHistory>? get statusHistory;
+  List<EpisodeOfCareStatusHistory?>? get statusHistory;
   @override
-  List<CodeableConcept>? get type;
+  List<CodeableConcept?>? get type;
   @override
-  List<Reference>? get condition;
+  List<Reference?>? get condition;
   @override
   Reference? get patient;
   @override
@@ -3360,11 +3360,11 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   @override
   Period? get period;
   @override
-  List<Reference>? get referralRequest;
+  List<Reference?>? get referralRequest;
   @override
   Reference? get careManager;
   @override
-  List<EpisodeOfCareCareTeam>? get careTeam;
+  List<EpisodeOfCareCareTeam?>? get careTeam;
   @override
   @JsonKey(ignore: true)
   _$EpisodeOfCareCopyWith<_EpisodeOfCare> get copyWith;
@@ -3382,8 +3382,8 @@ class _$EpisodeOfCareStatusHistoryTearOff {
   _EpisodeOfCareStatusHistory call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
           required EpisodeOfCareHistoryStatus status,
       @JsonKey(name: '_status')
@@ -3411,8 +3411,8 @@ const $EpisodeOfCareStatusHistory = _$EpisodeOfCareStatusHistoryTearOff();
 mixin _$EpisodeOfCareStatusHistory {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
   EpisodeOfCareHistoryStatus get status;
   @JsonKey(name: '_status')
@@ -3432,8 +3432,8 @@ abstract class $EpisodeOfCareStatusHistoryCopyWith<$Res> {
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
           EpisodeOfCareHistoryStatus status,
       @JsonKey(name: '_status')
@@ -3466,10 +3466,10 @@ class _$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       status: status == freezed
           ? _value.status
           : status as EpisodeOfCareHistoryStatus,
@@ -3514,8 +3514,8 @@ abstract class _$EpisodeOfCareStatusHistoryCopyWith<$Res>
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
           EpisodeOfCareHistoryStatus status,
       @JsonKey(name: '_status')
@@ -3553,10 +3553,10 @@ class __$EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       status: status == freezed
           ? _value.status
           : status as EpisodeOfCareHistoryStatus,
@@ -3591,9 +3591,9 @@ class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
   final EpisodeOfCareHistoryStatus status;
@@ -3656,8 +3656,8 @@ abstract class _EpisodeOfCareStatusHistory extends EpisodeOfCareStatusHistory {
   factory _EpisodeOfCareStatusHistory(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
           required EpisodeOfCareHistoryStatus status,
       @JsonKey(name: '_status')
@@ -3671,9 +3671,9 @@ abstract class _EpisodeOfCareStatusHistory extends EpisodeOfCareStatusHistory {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
   EpisodeOfCareHistoryStatus get status;
@@ -3699,9 +3699,9 @@ class _$EpisodeOfCareCareTeamTearOff {
 
   _EpisodeOfCareCareTeam call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? role,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<CodeableConcept?>? role,
       Period? period,
       Reference? member}) {
     return _EpisodeOfCareCareTeam(
@@ -3726,9 +3726,9 @@ const $EpisodeOfCareCareTeam = _$EpisodeOfCareCareTeamTearOff();
 mixin _$EpisodeOfCareCareTeam {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<CodeableConcept>? get role;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<CodeableConcept?>? get role;
   Period? get period;
   Reference? get member;
 
@@ -3744,9 +3744,9 @@ abstract class $EpisodeOfCareCareTeamCopyWith<$Res> {
       _$EpisodeOfCareCareTeamCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? role,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<CodeableConcept?>? role,
       Period? period,
       Reference? member});
 
@@ -3776,11 +3776,11 @@ class _$EpisodeOfCareCareTeamCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      role: role == freezed ? _value.role : role as List<CodeableConcept>?,
+          : modifierExtension as List<FhirExtension?>?,
+      role: role == freezed ? _value.role : role as List<CodeableConcept?>?,
       period: period == freezed ? _value.period : period as Period?,
       member: member == freezed ? _value.member : member as Reference?,
     ));
@@ -3818,9 +3818,9 @@ abstract class _$EpisodeOfCareCareTeamCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? role,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<CodeableConcept?>? role,
       Period? period,
       Reference? member});
 
@@ -3854,11 +3854,11 @@ class __$EpisodeOfCareCareTeamCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      role: role == freezed ? _value.role : role as List<CodeableConcept>?,
+          : modifierExtension as List<FhirExtension?>?,
+      role: role == freezed ? _value.role : role as List<CodeableConcept?>?,
       period: period == freezed ? _value.period : period as Period?,
       member: member == freezed ? _value.member : member as Reference?,
     ));
@@ -3885,11 +3885,11 @@ class _$_EpisodeOfCareCareTeam extends _EpisodeOfCareCareTeam {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<CodeableConcept>? role;
+  final List<CodeableConcept?>? role;
   @override
   final Period? period;
   @override
@@ -3946,9 +3946,9 @@ abstract class _EpisodeOfCareCareTeam extends EpisodeOfCareCareTeam {
   _EpisodeOfCareCareTeam._() : super._();
   factory _EpisodeOfCareCareTeam(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<CodeableConcept>? role,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<CodeableConcept?>? role,
       Period? period,
       Reference? member}) = _$_EpisodeOfCareCareTeam;
 
@@ -3959,11 +3959,11 @@ abstract class _EpisodeOfCareCareTeam extends EpisodeOfCareCareTeam {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<CodeableConcept>? get role;
+  List<CodeableConcept?>? get role;
   @override
   Period? get period;
   @override
@@ -3995,14 +3995,14 @@ class _$CommunicationTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       CodeableConcept? category,
       Reference? sender,
-      List<Reference>? recipient,
-      List<CommunicationPayload>? payload,
-      List<CodeableConcept>? medium,
+      List<Reference?>? recipient,
+      List<CommunicationPayload?>? payload,
+      List<CodeableConcept?>? medium,
       @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
           CommunicationStatus? status,
       @JsonKey(name: '_status')
@@ -4014,7 +4014,7 @@ class _$CommunicationTearOff {
       FhirDateTime? received,
       @JsonKey(name: '_received')
           Element? receivedElement,
-      List<CodeableConcept>? reason,
+      List<CodeableConcept?>? reason,
       Reference? subject,
       Reference? requestDetail}) {
     return _Communication(
@@ -4071,14 +4071,14 @@ mixin _$Communication {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   CodeableConcept? get category;
   Reference? get sender;
-  List<Reference>? get recipient;
-  List<CommunicationPayload>? get payload;
-  List<CodeableConcept>? get medium;
+  List<Reference?>? get recipient;
+  List<CommunicationPayload?>? get payload;
+  List<CodeableConcept?>? get medium;
   @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
   CommunicationStatus? get status;
   @JsonKey(name: '_status')
@@ -4090,7 +4090,7 @@ mixin _$Communication {
   FhirDateTime? get received;
   @JsonKey(name: '_received')
   Element? get receivedElement;
-  List<CodeableConcept>? get reason;
+  List<CodeableConcept?>? get reason;
   Reference? get subject;
   Reference? get requestDetail;
 
@@ -4118,14 +4118,14 @@ abstract class $CommunicationCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       CodeableConcept? category,
       Reference? sender,
-      List<Reference>? recipient,
-      List<CommunicationPayload>? payload,
-      List<CodeableConcept>? medium,
+      List<Reference?>? recipient,
+      List<CommunicationPayload?>? payload,
+      List<CodeableConcept?>? medium,
       @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
           CommunicationStatus? status,
       @JsonKey(name: '_status')
@@ -4137,7 +4137,7 @@ abstract class $CommunicationCopyWith<$Res> {
       FhirDateTime? received,
       @JsonKey(name: '_received')
           Element? receivedElement,
-      List<CodeableConcept>? reason,
+      List<CodeableConcept?>? reason,
       Reference? subject,
       Reference? requestDetail});
 
@@ -4216,24 +4216,24 @@ class _$CommunicationCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       category:
           category == freezed ? _value.category : category as CodeableConcept?,
       sender: sender == freezed ? _value.sender : sender as Reference?,
       recipient: recipient == freezed
           ? _value.recipient
-          : recipient as List<Reference>?,
+          : recipient as List<Reference?>?,
       payload: payload == freezed
           ? _value.payload
-          : payload as List<CommunicationPayload>?,
+          : payload as List<CommunicationPayload?>?,
       medium:
-          medium == freezed ? _value.medium : medium as List<CodeableConcept>?,
+          medium == freezed ? _value.medium : medium as List<CodeableConcept?>?,
       status:
           status == freezed ? _value.status : status as CommunicationStatus?,
       statusElement: statusElement == freezed
@@ -4250,7 +4250,7 @@ class _$CommunicationCopyWithImpl<$Res>
           ? _value.receivedElement
           : receivedElement as Element?,
       reason:
-          reason == freezed ? _value.reason : reason as List<CodeableConcept>?,
+          reason == freezed ? _value.reason : reason as List<CodeableConcept?>?,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       requestDetail: requestDetail == freezed
           ? _value.requestDetail
@@ -4412,14 +4412,14 @@ abstract class _$CommunicationCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       CodeableConcept? category,
       Reference? sender,
-      List<Reference>? recipient,
-      List<CommunicationPayload>? payload,
-      List<CodeableConcept>? medium,
+      List<Reference?>? recipient,
+      List<CommunicationPayload?>? payload,
+      List<CodeableConcept?>? medium,
       @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
           CommunicationStatus? status,
       @JsonKey(name: '_status')
@@ -4431,7 +4431,7 @@ abstract class _$CommunicationCopyWith<$Res>
       FhirDateTime? received,
       @JsonKey(name: '_received')
           Element? receivedElement,
-      List<CodeableConcept>? reason,
+      List<CodeableConcept?>? reason,
       Reference? subject,
       Reference? requestDetail});
 
@@ -4524,24 +4524,24 @@ class __$CommunicationCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       category:
           category == freezed ? _value.category : category as CodeableConcept?,
       sender: sender == freezed ? _value.sender : sender as Reference?,
       recipient: recipient == freezed
           ? _value.recipient
-          : recipient as List<Reference>?,
+          : recipient as List<Reference?>?,
       payload: payload == freezed
           ? _value.payload
-          : payload as List<CommunicationPayload>?,
+          : payload as List<CommunicationPayload?>?,
       medium:
-          medium == freezed ? _value.medium : medium as List<CodeableConcept>?,
+          medium == freezed ? _value.medium : medium as List<CodeableConcept?>?,
       status:
           status == freezed ? _value.status : status as CommunicationStatus?,
       statusElement: statusElement == freezed
@@ -4558,7 +4558,7 @@ class __$CommunicationCopyWithImpl<$Res>
           ? _value.receivedElement
           : receivedElement as Element?,
       reason:
-          reason == freezed ? _value.reason : reason as List<CodeableConcept>?,
+          reason == freezed ? _value.reason : reason as List<CodeableConcept?>?,
       subject: subject == freezed ? _value.subject : subject as Reference?,
       requestDetail: requestDetail == freezed
           ? _value.requestDetail
@@ -4635,21 +4635,21 @@ class _$_Communication extends _Communication {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final CodeableConcept? category;
   @override
   final Reference? sender;
   @override
-  final List<Reference>? recipient;
+  final List<Reference?>? recipient;
   @override
-  final List<CommunicationPayload>? payload;
+  final List<CommunicationPayload?>? payload;
   @override
-  final List<CodeableConcept>? medium;
+  final List<CodeableConcept?>? medium;
   @override
   @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
   final CommunicationStatus? status;
@@ -4669,7 +4669,7 @@ class _$_Communication extends _Communication {
   @JsonKey(name: '_received')
   final Element? receivedElement;
   @override
-  final List<CodeableConcept>? reason;
+  final List<CodeableConcept?>? reason;
   @override
   final Reference? subject;
   @override
@@ -4814,14 +4814,14 @@ abstract class _Communication extends Communication {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       CodeableConcept? category,
       Reference? sender,
-      List<Reference>? recipient,
-      List<CommunicationPayload>? payload,
-      List<CodeableConcept>? medium,
+      List<Reference?>? recipient,
+      List<CommunicationPayload?>? payload,
+      List<CodeableConcept?>? medium,
       @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
           CommunicationStatus? status,
       @JsonKey(name: '_status')
@@ -4833,7 +4833,7 @@ abstract class _Communication extends Communication {
       FhirDateTime? received,
       @JsonKey(name: '_received')
           Element? receivedElement,
-      List<CodeableConcept>? reason,
+      List<CodeableConcept?>? reason,
       Reference? subject,
       Reference? requestDetail}) = _$_Communication;
 
@@ -4863,21 +4863,21 @@ abstract class _Communication extends Communication {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   CodeableConcept? get category;
   @override
   Reference? get sender;
   @override
-  List<Reference>? get recipient;
+  List<Reference?>? get recipient;
   @override
-  List<CommunicationPayload>? get payload;
+  List<CommunicationPayload?>? get payload;
   @override
-  List<CodeableConcept>? get medium;
+  List<CodeableConcept?>? get medium;
   @override
   @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
   CommunicationStatus? get status;
@@ -4897,7 +4897,7 @@ abstract class _Communication extends Communication {
   @JsonKey(name: '_received')
   Element? get receivedElement;
   @override
-  List<CodeableConcept>? get reason;
+  List<CodeableConcept?>? get reason;
   @override
   Reference? get subject;
   @override
@@ -4917,8 +4917,8 @@ class _$CommunicationPayloadTearOff {
 
   _CommunicationPayload call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? contentString,
       @JsonKey(name: '_contentString') Element? contentStringElement,
       Attachment? contentAttachment,
@@ -4946,8 +4946,8 @@ const $CommunicationPayload = _$CommunicationPayloadTearOff();
 mixin _$CommunicationPayload {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   String? get contentString;
   @JsonKey(name: '_contentString')
   Element? get contentStringElement;
@@ -4966,8 +4966,8 @@ abstract class $CommunicationPayloadCopyWith<$Res> {
       _$CommunicationPayloadCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? contentString,
       @JsonKey(name: '_contentString') Element? contentStringElement,
       Attachment? contentAttachment,
@@ -5001,10 +5001,10 @@ class _$CommunicationPayloadCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       contentString: contentString == freezed
           ? _value.contentString
           : contentString as String?,
@@ -5063,8 +5063,8 @@ abstract class _$CommunicationPayloadCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? contentString,
       @JsonKey(name: '_contentString') Element? contentStringElement,
       Attachment? contentAttachment,
@@ -5103,10 +5103,10 @@ class __$CommunicationPayloadCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       contentString: contentString == freezed
           ? _value.contentString
           : contentString as String?,
@@ -5144,9 +5144,9 @@ class _$_CommunicationPayload extends _CommunicationPayload {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final String? contentString;
   @override
@@ -5215,8 +5215,8 @@ abstract class _CommunicationPayload extends CommunicationPayload {
   _CommunicationPayload._() : super._();
   factory _CommunicationPayload(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? contentString,
       @JsonKey(name: '_contentString') Element? contentStringElement,
       Attachment? contentAttachment,
@@ -5229,9 +5229,9 @@ abstract class _CommunicationPayload extends CommunicationPayload {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   String? get contentString;
   @override
@@ -5268,9 +5268,9 @@ class _$FlagTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       CodeableConcept? category,
       @JsonKey(unknownEnumValue: FlagStatus.unknown)
           required FlagStatus status,
@@ -5328,9 +5328,9 @@ mixin _$Flag {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   CodeableConcept? get category;
   @JsonKey(unknownEnumValue: FlagStatus.unknown)
   FlagStatus get status;
@@ -5365,9 +5365,9 @@ abstract class $FlagCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       CodeableConcept? category,
       @JsonKey(unknownEnumValue: FlagStatus.unknown)
           FlagStatus status,
@@ -5445,13 +5445,13 @@ class _$FlagCopyWithImpl<$Res> implements $FlagCopyWith<$Res> {
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       category:
           category == freezed ? _value.category : category as CodeableConcept?,
       status: status == freezed ? _value.status : status as FlagStatus,
@@ -5608,9 +5608,9 @@ abstract class _$FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       CodeableConcept? category,
       @JsonKey(unknownEnumValue: FlagStatus.unknown)
           FlagStatus status,
@@ -5700,13 +5700,13 @@ class __$FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       category:
           category == freezed ? _value.category : category as CodeableConcept?,
       status: status == freezed ? _value.status : status as FlagStatus,
@@ -5782,11 +5782,11 @@ class _$_Flag extends _Flag {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final CodeableConcept? category;
   @override
@@ -5921,9 +5921,9 @@ abstract class _Flag extends Flag {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       CodeableConcept? category,
       @JsonKey(unknownEnumValue: FlagStatus.unknown)
           required FlagStatus status,
@@ -5960,11 +5960,11 @@ abstract class _Flag extends Flag {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   CodeableConcept? get category;
   @override

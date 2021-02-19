@@ -26,11 +26,11 @@ abstract class Media with Resource implements _$Media {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: MediaType.unknown) required MediaType type,
     CodeableConcept? subtype,
-    List<Identifier>? identifier,
+    List<Identifier?>? identifier,
     Reference? subject,
     @JsonKey(name: 'operator') Reference? operator_,
     CodeableConcept? view,
@@ -114,8 +114,8 @@ abstract class Bundle with Resource implements _$Bundle {
     @JsonKey(name: '_type') Element? typeElement,
     UnsignedInt? total,
     @JsonKey(name: '_total') Element? totalElement,
-    List<BundleLink>? link,
-    List<BundleEntry>? entry,
+    List<BundleLink?>? link,
+    List<BundleEntry?>? entry,
     Signature? signature,
   }) = _Bundle;
 
@@ -140,9 +140,9 @@ abstract class BundleLink with _$BundleLink {
   BundleLink._();
   factory BundleLink({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
     required String? relation,
     @JsonKey(name: '_relation') Element? relationElement,
     required FhirUri? url,
@@ -171,10 +171,10 @@ abstract class BundleEntry with _$BundleEntry {
   BundleEntry._();
   factory BundleEntry({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    List<BundleLink>? link,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+    List<BundleLink?>? link,
     FhirUri? fullUrl,
     @JsonKey(name: '_fullUrl') Element? fullUrlElement,
     Resource? resource,
@@ -205,9 +205,9 @@ abstract class BundleEntrySearch with _$BundleEntrySearch {
   BundleEntrySearch._();
   factory BundleEntrySearch({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
     @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Decimal? score,
@@ -236,9 +236,9 @@ abstract class BundleEntryRequest with _$BundleEntryRequest {
   BundleEntryRequest._();
   factory BundleEntryRequest({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
     @JsonKey(unknownEnumValue: RequestMethod.unknown)
         required RequestMethod method,
     @JsonKey(name: '_method') Element? methodElement,
@@ -276,9 +276,9 @@ abstract class BundleEntryResponse with _$BundleEntryResponse {
   BundleEntryResponse._();
   factory BundleEntryResponse({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
     required String? status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirUri? location,
@@ -321,9 +321,9 @@ abstract class Basic with Resource implements _$Basic {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     required CodeableConcept? code,
     Reference? subject,
     Reference? author,

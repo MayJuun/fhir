@@ -26,11 +26,11 @@ class _$ProcessRequestTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
           required ProcessRequestAction action,
-      List<Identifier>? identifier,
+      List<Identifier?>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
@@ -41,9 +41,9 @@ class _$ProcessRequestTearOff {
       Reference? response,
       Boolean? nullify,
       String? reference,
-      List<ProcessRequestItem>? item,
-      List<String>? include,
-      List<String>? exclude,
+      List<ProcessRequestItem?>? item,
+      List<String?>? include,
+      List<String?>? exclude,
       Period? period}) {
     return _ProcessRequest(
       resourceType: resourceType,
@@ -93,11 +93,11 @@ mixin _$ProcessRequest {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
   ProcessRequestAction get action;
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   Coding? get ruleset;
   Coding? get originalRuleset;
   FhirDateTime? get created;
@@ -108,9 +108,9 @@ mixin _$ProcessRequest {
   Reference? get response;
   Boolean? get nullify;
   String? get reference;
-  List<ProcessRequestItem>? get item;
-  List<String>? get include;
-  List<String>? get exclude;
+  List<ProcessRequestItem?>? get item;
+  List<String?>? get include;
+  List<String?>? get exclude;
   Period? get period;
 
   Map<String, dynamic> toJson();
@@ -133,11 +133,11 @@ abstract class $ProcessRequestCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
           ProcessRequestAction action,
-      List<Identifier>? identifier,
+      List<Identifier?>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
@@ -148,9 +148,9 @@ abstract class $ProcessRequestCopyWith<$Res> {
       Reference? response,
       Boolean? nullify,
       String? reference,
-      List<ProcessRequestItem>? item,
-      List<String>? include,
-      List<String>? exclude,
+      List<ProcessRequestItem?>? item,
+      List<String?>? include,
+      List<String?>? exclude,
       Period? period});
 
   $MetaCopyWith<$Res>? get meta;
@@ -218,15 +218,15 @@ class _$ProcessRequestCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       action:
           action == freezed ? _value.action : action as ProcessRequestAction,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       ruleset: ruleset == freezed ? _value.ruleset : ruleset as Coding?,
       originalRuleset: originalRuleset == freezed
           ? _value.originalRuleset
@@ -241,9 +241,9 @@ class _$ProcessRequestCopyWithImpl<$Res>
       response: response == freezed ? _value.response : response as Reference?,
       nullify: nullify == freezed ? _value.nullify : nullify as Boolean?,
       reference: reference == freezed ? _value.reference : reference as String?,
-      item: item == freezed ? _value.item : item as List<ProcessRequestItem>?,
-      include: include == freezed ? _value.include : include as List<String>?,
-      exclude: exclude == freezed ? _value.exclude : exclude as List<String>?,
+      item: item == freezed ? _value.item : item as List<ProcessRequestItem?>?,
+      include: include == freezed ? _value.include : include as List<String?>?,
+      exclude: exclude == freezed ? _value.exclude : exclude as List<String?>?,
       period: period == freezed ? _value.period : period as Period?,
     ));
   }
@@ -376,11 +376,11 @@ abstract class _$ProcessRequestCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
           ProcessRequestAction action,
-      List<Identifier>? identifier,
+      List<Identifier?>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
@@ -391,9 +391,9 @@ abstract class _$ProcessRequestCopyWith<$Res>
       Reference? response,
       Boolean? nullify,
       String? reference,
-      List<ProcessRequestItem>? item,
-      List<String>? include,
-      List<String>? exclude,
+      List<ProcessRequestItem?>? item,
+      List<String?>? include,
+      List<String?>? exclude,
       Period? period});
 
   @override
@@ -473,15 +473,15 @@ class __$ProcessRequestCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       action:
           action == freezed ? _value.action : action as ProcessRequestAction,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       ruleset: ruleset == freezed ? _value.ruleset : ruleset as Coding?,
       originalRuleset: originalRuleset == freezed
           ? _value.originalRuleset
@@ -496,9 +496,9 @@ class __$ProcessRequestCopyWithImpl<$Res>
       response: response == freezed ? _value.response : response as Reference?,
       nullify: nullify == freezed ? _value.nullify : nullify as Boolean?,
       reference: reference == freezed ? _value.reference : reference as String?,
-      item: item == freezed ? _value.item : item as List<ProcessRequestItem>?,
-      include: include == freezed ? _value.include : include as List<String>?,
-      exclude: exclude == freezed ? _value.exclude : exclude as List<String>?,
+      item: item == freezed ? _value.item : item as List<ProcessRequestItem?>?,
+      include: include == freezed ? _value.include : include as List<String?>?,
+      exclude: exclude == freezed ? _value.exclude : exclude as List<String?>?,
       period: period == freezed ? _value.period : period as Period?,
     ));
   }
@@ -559,14 +559,14 @@ class _$_ProcessRequest extends _ProcessRequest {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
   final ProcessRequestAction action;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final Coding? ruleset;
   @override
@@ -588,11 +588,11 @@ class _$_ProcessRequest extends _ProcessRequest {
   @override
   final String? reference;
   @override
-  final List<ProcessRequestItem>? item;
+  final List<ProcessRequestItem?>? item;
   @override
-  final List<String>? include;
+  final List<String?>? include;
   @override
-  final List<String>? exclude;
+  final List<String?>? exclude;
   @override
   final Period? period;
 
@@ -727,11 +727,11 @@ abstract class _ProcessRequest extends ProcessRequest {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
           required ProcessRequestAction action,
-      List<Identifier>? identifier,
+      List<Identifier?>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
@@ -742,9 +742,9 @@ abstract class _ProcessRequest extends ProcessRequest {
       Reference? response,
       Boolean? nullify,
       String? reference,
-      List<ProcessRequestItem>? item,
-      List<String>? include,
-      List<String>? exclude,
+      List<ProcessRequestItem?>? item,
+      List<String?>? include,
+      List<String?>? exclude,
       Period? period}) = _$_ProcessRequest;
 
   factory _ProcessRequest.fromJson(Map<String, dynamic> json) =
@@ -767,14 +767,14 @@ abstract class _ProcessRequest extends ProcessRequest {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
   ProcessRequestAction get action;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   Coding? get ruleset;
   @override
@@ -796,11 +796,11 @@ abstract class _ProcessRequest extends ProcessRequest {
   @override
   String? get reference;
   @override
-  List<ProcessRequestItem>? get item;
+  List<ProcessRequestItem?>? get item;
   @override
-  List<String>? get include;
+  List<String?>? get include;
   @override
-  List<String>? get exclude;
+  List<String?>? get exclude;
   @override
   Period? get period;
   @override
@@ -818,8 +818,8 @@ class _$ProcessRequestItemTearOff {
 
   _ProcessRequestItem call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required Integer? sequenceLinkId}) {
     return _ProcessRequestItem(
       id: id,
@@ -841,8 +841,8 @@ const $ProcessRequestItem = _$ProcessRequestItemTearOff();
 mixin _$ProcessRequestItem {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Integer? get sequenceLinkId;
 
   Map<String, dynamic> toJson();
@@ -857,8 +857,8 @@ abstract class $ProcessRequestItemCopyWith<$Res> {
       _$ProcessRequestItemCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Integer? sequenceLinkId});
 }
 
@@ -882,10 +882,10 @@ class _$ProcessRequestItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequenceLinkId: sequenceLinkId == freezed
           ? _value.sequenceLinkId
           : sequenceLinkId as Integer?,
@@ -902,8 +902,8 @@ abstract class _$ProcessRequestItemCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Integer? sequenceLinkId});
 }
 
@@ -929,10 +929,10 @@ class __$ProcessRequestItemCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       sequenceLinkId: sequenceLinkId == freezed
           ? _value.sequenceLinkId
           : sequenceLinkId as Integer?,
@@ -958,9 +958,9 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Integer? sequenceLinkId;
 
@@ -1009,8 +1009,8 @@ abstract class _ProcessRequestItem extends ProcessRequestItem {
   _ProcessRequestItem._() : super._();
   factory _ProcessRequestItem(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required Integer? sequenceLinkId}) = _$_ProcessRequestItem;
 
   factory _ProcessRequestItem.fromJson(Map<String, dynamic> json) =
@@ -1020,9 +1020,9 @@ abstract class _ProcessRequestItem extends ProcessRequestItem {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Integer? get sequenceLinkId;
   @override
@@ -1048,9 +1048,9 @@ class _$ProcessResponseTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       Coding? outcome,
       String? disposition,
@@ -1061,8 +1061,8 @@ class _$ProcessResponseTearOff {
       Reference? requestProvider,
       Reference? requestOrganization,
       Coding? form,
-      List<ProcessResponseNotes>? notes,
-      List<Coding>? error}) {
+      List<ProcessResponseNotes?>? notes,
+      List<Coding?>? error}) {
     return _ProcessResponse(
       resourceType: resourceType,
       id: id,
@@ -1108,9 +1108,9 @@ mixin _$ProcessResponse {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   Reference? get request;
   Coding? get outcome;
   String? get disposition;
@@ -1121,8 +1121,8 @@ mixin _$ProcessResponse {
   Reference? get requestProvider;
   Reference? get requestOrganization;
   Coding? get form;
-  List<ProcessResponseNotes>? get notes;
-  List<Coding>? get error;
+  List<ProcessResponseNotes?>? get notes;
+  List<Coding?>? get error;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1144,9 +1144,9 @@ abstract class $ProcessResponseCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       Coding? outcome,
       String? disposition,
@@ -1157,8 +1157,8 @@ abstract class $ProcessResponseCopyWith<$Res> {
       Reference? requestProvider,
       Reference? requestOrganization,
       Coding? form,
-      List<ProcessResponseNotes>? notes,
-      List<Coding>? error});
+      List<ProcessResponseNotes?>? notes,
+      List<Coding?>? error});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -1222,13 +1222,13 @@ class _$ProcessResponseCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       request: request == freezed ? _value.request : request as Reference?,
       outcome: outcome == freezed ? _value.outcome : outcome as Coding?,
       disposition:
@@ -1250,8 +1250,8 @@ class _$ProcessResponseCopyWithImpl<$Res>
       form: form == freezed ? _value.form : form as Coding?,
       notes: notes == freezed
           ? _value.notes
-          : notes as List<ProcessResponseNotes>?,
-      error: error == freezed ? _value.error : error as List<Coding>?,
+          : notes as List<ProcessResponseNotes?>?,
+      error: error == freezed ? _value.error : error as List<Coding?>?,
     ));
   }
 
@@ -1383,9 +1383,9 @@ abstract class _$ProcessResponseCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       Coding? outcome,
       String? disposition,
@@ -1396,8 +1396,8 @@ abstract class _$ProcessResponseCopyWith<$Res>
       Reference? requestProvider,
       Reference? requestOrganization,
       Coding? form,
-      List<ProcessResponseNotes>? notes,
-      List<Coding>? error});
+      List<ProcessResponseNotes?>? notes,
+      List<Coding?>? error});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -1473,13 +1473,13 @@ class __$ProcessResponseCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       request: request == freezed ? _value.request : request as Reference?,
       outcome: outcome == freezed ? _value.outcome : outcome as Coding?,
       disposition:
@@ -1501,8 +1501,8 @@ class __$ProcessResponseCopyWithImpl<$Res>
       form: form == freezed ? _value.form : form as Coding?,
       notes: notes == freezed
           ? _value.notes
-          : notes as List<ProcessResponseNotes>?,
-      error: error == freezed ? _value.error : error as List<Coding>?,
+          : notes as List<ProcessResponseNotes?>?,
+      error: error == freezed ? _value.error : error as List<Coding?>?,
     ));
   }
 }
@@ -1558,11 +1558,11 @@ class _$_ProcessResponse extends _ProcessResponse {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final Reference? request;
   @override
@@ -1584,9 +1584,9 @@ class _$_ProcessResponse extends _ProcessResponse {
   @override
   final Coding? form;
   @override
-  final List<ProcessResponseNotes>? notes;
+  final List<ProcessResponseNotes?>? notes;
   @override
-  final List<Coding>? error;
+  final List<Coding?>? error;
 
   @override
   String toString() {
@@ -1708,9 +1708,9 @@ abstract class _ProcessResponse extends ProcessResponse {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       Coding? outcome,
       String? disposition,
@@ -1721,8 +1721,8 @@ abstract class _ProcessResponse extends ProcessResponse {
       Reference? requestProvider,
       Reference? requestOrganization,
       Coding? form,
-      List<ProcessResponseNotes>? notes,
-      List<Coding>? error}) = _$_ProcessResponse;
+      List<ProcessResponseNotes?>? notes,
+      List<Coding?>? error}) = _$_ProcessResponse;
 
   factory _ProcessResponse.fromJson(Map<String, dynamic> json) =
       _$_ProcessResponse.fromJson;
@@ -1744,11 +1744,11 @@ abstract class _ProcessResponse extends ProcessResponse {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   Reference? get request;
   @override
@@ -1770,9 +1770,9 @@ abstract class _ProcessResponse extends ProcessResponse {
   @override
   Coding? get form;
   @override
-  List<ProcessResponseNotes>? get notes;
+  List<ProcessResponseNotes?>? get notes;
   @override
-  List<Coding>? get error;
+  List<Coding?>? get error;
   @override
   @JsonKey(ignore: true)
   _$ProcessResponseCopyWith<_ProcessResponse> get copyWith;
@@ -1788,8 +1788,8 @@ class _$ProcessResponseNotesTearOff {
 
   _ProcessResponseNotes call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Coding? type,
       String? text}) {
     return _ProcessResponseNotes(
@@ -1813,8 +1813,8 @@ const $ProcessResponseNotes = _$ProcessResponseNotesTearOff();
 mixin _$ProcessResponseNotes {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Coding? get type;
   String? get text;
 
@@ -1830,8 +1830,8 @@ abstract class $ProcessResponseNotesCopyWith<$Res> {
       _$ProcessResponseNotesCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Coding? type,
       String? text});
 
@@ -1859,10 +1859,10 @@ class _$ProcessResponseNotesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as Coding?,
       text: text == freezed ? _value.text : text as String?,
     ));
@@ -1889,8 +1889,8 @@ abstract class _$ProcessResponseNotesCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Coding? type,
       String? text});
 
@@ -1921,10 +1921,10 @@ class __$ProcessResponseNotesCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as Coding?,
       text: text == freezed ? _value.text : text as String?,
     ));
@@ -1950,9 +1950,9 @@ class _$_ProcessResponseNotes extends _ProcessResponseNotes {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Coding? type;
   @override
@@ -2006,8 +2006,8 @@ abstract class _ProcessResponseNotes extends ProcessResponseNotes {
   _ProcessResponseNotes._() : super._();
   factory _ProcessResponseNotes(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Coding? type,
       String? text}) = _$_ProcessResponseNotes;
 
@@ -2018,9 +2018,9 @@ abstract class _ProcessResponseNotes extends ProcessResponseNotes {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Coding? get type;
   @override
@@ -2052,8 +2052,8 @@ class _$SupplyRequestTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? patient,
       Reference? source,
       FhirDateTime? date,
@@ -2064,7 +2064,7 @@ class _$SupplyRequestTearOff {
           Element? statusElement,
       CodeableConcept? kind,
       Reference? orderedItem,
-      List<Reference>? supplier,
+      List<Reference?>? supplier,
       CodeableConcept? reasonCodeableConcept,
       Reference? reasonReference,
       SupplyRequestWhen? when}) {
@@ -2118,8 +2118,8 @@ mixin _$SupplyRequest {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Reference? get patient;
   Reference? get source;
   FhirDateTime? get date;
@@ -2130,7 +2130,7 @@ mixin _$SupplyRequest {
   Element? get statusElement;
   CodeableConcept? get kind;
   Reference? get orderedItem;
-  List<Reference>? get supplier;
+  List<Reference?>? get supplier;
   CodeableConcept? get reasonCodeableConcept;
   Reference? get reasonReference;
   SupplyRequestWhen? get when;
@@ -2159,8 +2159,8 @@ abstract class $SupplyRequestCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? patient,
       Reference? source,
       FhirDateTime? date,
@@ -2171,7 +2171,7 @@ abstract class $SupplyRequestCopyWith<$Res> {
           Element? statusElement,
       CodeableConcept? kind,
       Reference? orderedItem,
-      List<Reference>? supplier,
+      List<Reference?>? supplier,
       CodeableConcept? reasonCodeableConcept,
       Reference? reasonReference,
       SupplyRequestWhen? when});
@@ -2248,10 +2248,10 @@ class _$SupplyRequestCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       patient: patient == freezed ? _value.patient : patient as Reference?,
       source: source == freezed ? _value.source : source as Reference?,
       date: date == freezed ? _value.date : date as FhirDateTime?,
@@ -2267,7 +2267,7 @@ class _$SupplyRequestCopyWithImpl<$Res>
           ? _value.orderedItem
           : orderedItem as Reference?,
       supplier:
-          supplier == freezed ? _value.supplier : supplier as List<Reference>?,
+          supplier == freezed ? _value.supplier : supplier as List<Reference?>?,
       reasonCodeableConcept: reasonCodeableConcept == freezed
           ? _value.reasonCodeableConcept
           : reasonCodeableConcept as CodeableConcept?,
@@ -2444,8 +2444,8 @@ abstract class _$SupplyRequestCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? patient,
       Reference? source,
       FhirDateTime? date,
@@ -2456,7 +2456,7 @@ abstract class _$SupplyRequestCopyWith<$Res>
           Element? statusElement,
       CodeableConcept? kind,
       Reference? orderedItem,
-      List<Reference>? supplier,
+      List<Reference?>? supplier,
       CodeableConcept? reasonCodeableConcept,
       Reference? reasonReference,
       SupplyRequestWhen? when});
@@ -2548,10 +2548,10 @@ class __$SupplyRequestCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       patient: patient == freezed ? _value.patient : patient as Reference?,
       source: source == freezed ? _value.source : source as Reference?,
       date: date == freezed ? _value.date : date as FhirDateTime?,
@@ -2567,7 +2567,7 @@ class __$SupplyRequestCopyWithImpl<$Res>
           ? _value.orderedItem
           : orderedItem as Reference?,
       supplier:
-          supplier == freezed ? _value.supplier : supplier as List<Reference>?,
+          supplier == freezed ? _value.supplier : supplier as List<Reference?>?,
       reasonCodeableConcept: reasonCodeableConcept == freezed
           ? _value.reasonCodeableConcept
           : reasonCodeableConcept as CodeableConcept?,
@@ -2641,9 +2641,9 @@ class _$_SupplyRequest extends _SupplyRequest {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Reference? patient;
   @override
@@ -2663,7 +2663,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   @override
   final Reference? orderedItem;
   @override
-  final List<Reference>? supplier;
+  final List<Reference?>? supplier;
   @override
   final CodeableConcept? reasonCodeableConcept;
   @override
@@ -2797,8 +2797,8 @@ abstract class _SupplyRequest extends SupplyRequest {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? patient,
       Reference? source,
       FhirDateTime? date,
@@ -2809,7 +2809,7 @@ abstract class _SupplyRequest extends SupplyRequest {
           Element? statusElement,
       CodeableConcept? kind,
       Reference? orderedItem,
-      List<Reference>? supplier,
+      List<Reference?>? supplier,
       CodeableConcept? reasonCodeableConcept,
       Reference? reasonReference,
       SupplyRequestWhen? when}) = _$_SupplyRequest;
@@ -2840,9 +2840,9 @@ abstract class _SupplyRequest extends SupplyRequest {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Reference? get patient;
   @override
@@ -2862,7 +2862,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   @override
   Reference? get orderedItem;
   @override
-  List<Reference>? get supplier;
+  List<Reference?>? get supplier;
   @override
   CodeableConcept? get reasonCodeableConcept;
   @override
@@ -2884,8 +2884,8 @@ class _$SupplyRequestWhenTearOff {
 
   _SupplyRequestWhen call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? code,
       Timing? schedule}) {
     return _SupplyRequestWhen(
@@ -2909,8 +2909,8 @@ const $SupplyRequestWhen = _$SupplyRequestWhenTearOff();
 mixin _$SupplyRequestWhen {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   CodeableConcept? get code;
   Timing? get schedule;
 
@@ -2926,8 +2926,8 @@ abstract class $SupplyRequestWhenCopyWith<$Res> {
       _$SupplyRequestWhenCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? code,
       Timing? schedule});
 
@@ -2956,10 +2956,10 @@ class _$SupplyRequestWhenCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       schedule: schedule == freezed ? _value.schedule : schedule as Timing?,
     ));
@@ -2997,8 +2997,8 @@ abstract class _$SupplyRequestWhenCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? code,
       Timing? schedule});
 
@@ -3031,10 +3031,10 @@ class __$SupplyRequestWhenCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
       schedule: schedule == freezed ? _value.schedule : schedule as Timing?,
     ));
@@ -3060,9 +3060,9 @@ class _$_SupplyRequestWhen extends _SupplyRequestWhen {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final CodeableConcept? code;
   @override
@@ -3116,8 +3116,8 @@ abstract class _SupplyRequestWhen extends SupplyRequestWhen {
   _SupplyRequestWhen._() : super._();
   factory _SupplyRequestWhen(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       CodeableConcept? code,
       Timing? schedule}) = _$_SupplyRequestWhen;
 
@@ -3128,9 +3128,9 @@ abstract class _SupplyRequestWhen extends SupplyRequestWhen {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   CodeableConcept? get code;
   @override
@@ -3162,8 +3162,8 @@ class _$SupplyDeliveryTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
           SupplyDeliveryStatus? status,
@@ -3177,7 +3177,7 @@ class _$SupplyDeliveryTearOff {
       Period? whenPrepared,
       FhirDateTime? time,
       Reference? destination,
-      List<Reference>? receiver}) {
+      List<Reference?>? receiver}) {
     return _SupplyDelivery(
       resourceType: resourceType,
       id: id,
@@ -3228,8 +3228,8 @@ mixin _$SupplyDelivery {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Identifier? get identifier;
   @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
   SupplyDeliveryStatus? get status;
@@ -3243,7 +3243,7 @@ mixin _$SupplyDelivery {
   Period? get whenPrepared;
   FhirDateTime? get time;
   Reference? get destination;
-  List<Reference>? get receiver;
+  List<Reference?>? get receiver;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -3269,8 +3269,8 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
           SupplyDeliveryStatus? status,
@@ -3284,7 +3284,7 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
       Period? whenPrepared,
       FhirDateTime? time,
       Reference? destination,
-      List<Reference>? receiver});
+      List<Reference?>? receiver});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -3358,10 +3358,10 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       status:
@@ -3384,7 +3384,7 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
           ? _value.destination
           : destination as Reference?,
       receiver:
-          receiver == freezed ? _value.receiver : receiver as List<Reference>?,
+          receiver == freezed ? _value.receiver : receiver as List<Reference?>?,
     ));
   }
 
@@ -3553,8 +3553,8 @@ abstract class _$SupplyDeliveryCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
           SupplyDeliveryStatus? status,
@@ -3568,7 +3568,7 @@ abstract class _$SupplyDeliveryCopyWith<$Res>
       Period? whenPrepared,
       FhirDateTime? time,
       Reference? destination,
-      List<Reference>? receiver});
+      List<Reference?>? receiver});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -3657,10 +3657,10 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       status:
@@ -3683,7 +3683,7 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
           ? _value.destination
           : destination as Reference?,
       receiver:
-          receiver == freezed ? _value.receiver : receiver as List<Reference>?,
+          receiver == freezed ? _value.receiver : receiver as List<Reference?>?,
     ));
   }
 }
@@ -3750,9 +3750,9 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Identifier? identifier;
   @override
@@ -3778,7 +3778,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   @override
   final Reference? destination;
   @override
-  final List<Reference>? receiver;
+  final List<Reference?>? receiver;
 
   @override
   String toString() {
@@ -3908,8 +3908,8 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
           SupplyDeliveryStatus? status,
@@ -3923,7 +3923,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       Period? whenPrepared,
       FhirDateTime? time,
       Reference? destination,
-      List<Reference>? receiver}) = _$_SupplyDelivery;
+      List<Reference?>? receiver}) = _$_SupplyDelivery;
 
   factory _SupplyDelivery.fromJson(Map<String, dynamic> json) =
       _$_SupplyDelivery.fromJson;
@@ -3951,9 +3951,9 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Identifier? get identifier;
   @override
@@ -3979,7 +3979,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   @override
   Reference? get destination;
   @override
-  List<Reference>? get receiver;
+  List<Reference?>? get receiver;
   @override
   @JsonKey(ignore: true)
   _$SupplyDeliveryCopyWith<_SupplyDelivery> get copyWith;

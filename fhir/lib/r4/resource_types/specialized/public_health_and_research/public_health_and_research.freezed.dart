@@ -30,39 +30,39 @@ class _$ResearchStudyTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      List<Reference>? protocol,
-      List<Reference>? partOf,
+      List<Reference?>? protocol,
+      List<Reference?>? partOf,
       @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
           ResearchStudyStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
       CodeableConcept? phase,
-      List<CodeableConcept>? category,
-      List<CodeableConcept>? focus,
-      List<CodeableConcept>? condition,
-      List<ContactDetail>? contact,
-      List<RelatedArtifact>? relatedArtifact,
-      List<CodeableConcept>? keyword,
-      List<CodeableConcept>? location,
+      List<CodeableConcept?>? category,
+      List<CodeableConcept?>? focus,
+      List<CodeableConcept?>? condition,
+      List<ContactDetail?>? contact,
+      List<RelatedArtifact?>? relatedArtifact,
+      List<CodeableConcept?>? keyword,
+      List<CodeableConcept?>? location,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<Reference>? enrollment,
+      List<Reference?>? enrollment,
       Period? period,
       Reference? sponsor,
       Reference? principalInvestigator,
-      List<Reference>? site,
+      List<Reference?>? site,
       CodeableConcept? reasonStopped,
-      List<Annotation>? note,
-      List<ResearchStudyArm>? arm,
-      List<ResearchStudyObjective>? objective}) {
+      List<Annotation?>? note,
+      List<ResearchStudyArm?>? arm,
+      List<ResearchStudyObjective?>? objective}) {
     return _ResearchStudy(
       resourceType: resourceType,
       id: id,
@@ -128,39 +128,39 @@ mixin _$ResearchStudy {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   String? get title;
   @JsonKey(name: '_title')
   Element? get titleElement;
-  List<Reference>? get protocol;
-  List<Reference>? get partOf;
+  List<Reference?>? get protocol;
+  List<Reference?>? get partOf;
   @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
   ResearchStudyStatus? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
   CodeableConcept? get primaryPurposeType;
   CodeableConcept? get phase;
-  List<CodeableConcept>? get category;
-  List<CodeableConcept>? get focus;
-  List<CodeableConcept>? get condition;
-  List<ContactDetail>? get contact;
-  List<RelatedArtifact>? get relatedArtifact;
-  List<CodeableConcept>? get keyword;
-  List<CodeableConcept>? get location;
+  List<CodeableConcept?>? get category;
+  List<CodeableConcept?>? get focus;
+  List<CodeableConcept?>? get condition;
+  List<ContactDetail?>? get contact;
+  List<RelatedArtifact?>? get relatedArtifact;
+  List<CodeableConcept?>? get keyword;
+  List<CodeableConcept?>? get location;
   Markdown? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<Reference>? get enrollment;
+  List<Reference?>? get enrollment;
   Period? get period;
   Reference? get sponsor;
   Reference? get principalInvestigator;
-  List<Reference>? get site;
+  List<Reference?>? get site;
   CodeableConcept? get reasonStopped;
-  List<Annotation>? get note;
-  List<ResearchStudyArm>? get arm;
-  List<ResearchStudyObjective>? get objective;
+  List<Annotation?>? get note;
+  List<ResearchStudyArm?>? get arm;
+  List<ResearchStudyObjective?>? get objective;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -186,39 +186,39 @@ abstract class $ResearchStudyCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      List<Reference>? protocol,
-      List<Reference>? partOf,
+      List<Reference?>? protocol,
+      List<Reference?>? partOf,
       @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
           ResearchStudyStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
       CodeableConcept? phase,
-      List<CodeableConcept>? category,
-      List<CodeableConcept>? focus,
-      List<CodeableConcept>? condition,
-      List<ContactDetail>? contact,
-      List<RelatedArtifact>? relatedArtifact,
-      List<CodeableConcept>? keyword,
-      List<CodeableConcept>? location,
+      List<CodeableConcept?>? category,
+      List<CodeableConcept?>? focus,
+      List<CodeableConcept?>? condition,
+      List<ContactDetail?>? contact,
+      List<RelatedArtifact?>? relatedArtifact,
+      List<CodeableConcept?>? keyword,
+      List<CodeableConcept?>? location,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<Reference>? enrollment,
+      List<Reference?>? enrollment,
       Period? period,
       Reference? sponsor,
       Reference? principalInvestigator,
-      List<Reference>? site,
+      List<Reference?>? site,
       CodeableConcept? reasonStopped,
-      List<Annotation>? note,
-      List<ResearchStudyArm>? arm,
-      List<ResearchStudyObjective>? objective});
+      List<Annotation?>? note,
+      List<ResearchStudyArm?>? arm,
+      List<ResearchStudyObjective?>? objective});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -307,20 +307,20 @@ class _$ResearchStudyCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       title: title == freezed ? _value.title : title as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
           : titleElement as Element?,
       protocol:
-          protocol == freezed ? _value.protocol : protocol as List<Reference>?,
-      partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>?,
+          protocol == freezed ? _value.protocol : protocol as List<Reference?>?,
+      partOf: partOf == freezed ? _value.partOf : partOf as List<Reference?>?,
       status:
           status == freezed ? _value.status : status as ResearchStudyStatus?,
       statusElement: statusElement == freezed
@@ -332,22 +332,23 @@ class _$ResearchStudyCopyWithImpl<$Res>
       phase: phase == freezed ? _value.phase : phase as CodeableConcept?,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept>?,
-      focus: focus == freezed ? _value.focus : focus as List<CodeableConcept>?,
+          : category as List<CodeableConcept?>?,
+      focus: focus == freezed ? _value.focus : focus as List<CodeableConcept?>?,
       condition: condition == freezed
           ? _value.condition
-          : condition as List<CodeableConcept>?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : condition as List<CodeableConcept?>?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<ContactDetail?>?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact>?,
+          : relatedArtifact as List<RelatedArtifact?>?,
       keyword: keyword == freezed
           ? _value.keyword
-          : keyword as List<CodeableConcept>?,
+          : keyword as List<CodeableConcept?>?,
       location: location == freezed
           ? _value.location
-          : location as List<CodeableConcept>?,
+          : location as List<CodeableConcept?>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
@@ -356,21 +357,21 @@ class _$ResearchStudyCopyWithImpl<$Res>
           : descriptionElement as Element?,
       enrollment: enrollment == freezed
           ? _value.enrollment
-          : enrollment as List<Reference>?,
+          : enrollment as List<Reference?>?,
       period: period == freezed ? _value.period : period as Period?,
       sponsor: sponsor == freezed ? _value.sponsor : sponsor as Reference?,
       principalInvestigator: principalInvestigator == freezed
           ? _value.principalInvestigator
           : principalInvestigator as Reference?,
-      site: site == freezed ? _value.site : site as List<Reference>?,
+      site: site == freezed ? _value.site : site as List<Reference?>?,
       reasonStopped: reasonStopped == freezed
           ? _value.reasonStopped
           : reasonStopped as CodeableConcept?,
-      note: note == freezed ? _value.note : note as List<Annotation>?,
-      arm: arm == freezed ? _value.arm : arm as List<ResearchStudyArm>?,
+      note: note == freezed ? _value.note : note as List<Annotation?>?,
+      arm: arm == freezed ? _value.arm : arm as List<ResearchStudyArm?>?,
       objective: objective == freezed
           ? _value.objective
-          : objective as List<ResearchStudyObjective>?,
+          : objective as List<ResearchStudyObjective?>?,
     ));
   }
 
@@ -539,39 +540,39 @@ abstract class _$ResearchStudyCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      List<Reference>? protocol,
-      List<Reference>? partOf,
+      List<Reference?>? protocol,
+      List<Reference?>? partOf,
       @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
           ResearchStudyStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
       CodeableConcept? phase,
-      List<CodeableConcept>? category,
-      List<CodeableConcept>? focus,
-      List<CodeableConcept>? condition,
-      List<ContactDetail>? contact,
-      List<RelatedArtifact>? relatedArtifact,
-      List<CodeableConcept>? keyword,
-      List<CodeableConcept>? location,
+      List<CodeableConcept?>? category,
+      List<CodeableConcept?>? focus,
+      List<CodeableConcept?>? condition,
+      List<ContactDetail?>? contact,
+      List<RelatedArtifact?>? relatedArtifact,
+      List<CodeableConcept?>? keyword,
+      List<CodeableConcept?>? location,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<Reference>? enrollment,
+      List<Reference?>? enrollment,
       Period? period,
       Reference? sponsor,
       Reference? principalInvestigator,
-      List<Reference>? site,
+      List<Reference?>? site,
       CodeableConcept? reasonStopped,
-      List<Annotation>? note,
-      List<ResearchStudyArm>? arm,
-      List<ResearchStudyObjective>? objective});
+      List<Annotation?>? note,
+      List<ResearchStudyArm?>? arm,
+      List<ResearchStudyObjective?>? objective});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -675,20 +676,20 @@ class __$ResearchStudyCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       title: title == freezed ? _value.title : title as String?,
       titleElement: titleElement == freezed
           ? _value.titleElement
           : titleElement as Element?,
       protocol:
-          protocol == freezed ? _value.protocol : protocol as List<Reference>?,
-      partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>?,
+          protocol == freezed ? _value.protocol : protocol as List<Reference?>?,
+      partOf: partOf == freezed ? _value.partOf : partOf as List<Reference?>?,
       status:
           status == freezed ? _value.status : status as ResearchStudyStatus?,
       statusElement: statusElement == freezed
@@ -700,22 +701,23 @@ class __$ResearchStudyCopyWithImpl<$Res>
       phase: phase == freezed ? _value.phase : phase as CodeableConcept?,
       category: category == freezed
           ? _value.category
-          : category as List<CodeableConcept>?,
-      focus: focus == freezed ? _value.focus : focus as List<CodeableConcept>?,
+          : category as List<CodeableConcept?>?,
+      focus: focus == freezed ? _value.focus : focus as List<CodeableConcept?>?,
       condition: condition == freezed
           ? _value.condition
-          : condition as List<CodeableConcept>?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : condition as List<CodeableConcept?>?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<ContactDetail?>?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact>?,
+          : relatedArtifact as List<RelatedArtifact?>?,
       keyword: keyword == freezed
           ? _value.keyword
-          : keyword as List<CodeableConcept>?,
+          : keyword as List<CodeableConcept?>?,
       location: location == freezed
           ? _value.location
-          : location as List<CodeableConcept>?,
+          : location as List<CodeableConcept?>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
@@ -724,21 +726,21 @@ class __$ResearchStudyCopyWithImpl<$Res>
           : descriptionElement as Element?,
       enrollment: enrollment == freezed
           ? _value.enrollment
-          : enrollment as List<Reference>?,
+          : enrollment as List<Reference?>?,
       period: period == freezed ? _value.period : period as Period?,
       sponsor: sponsor == freezed ? _value.sponsor : sponsor as Reference?,
       principalInvestigator: principalInvestigator == freezed
           ? _value.principalInvestigator
           : principalInvestigator as Reference?,
-      site: site == freezed ? _value.site : site as List<Reference>?,
+      site: site == freezed ? _value.site : site as List<Reference?>?,
       reasonStopped: reasonStopped == freezed
           ? _value.reasonStopped
           : reasonStopped as CodeableConcept?,
-      note: note == freezed ? _value.note : note as List<Annotation>?,
-      arm: arm == freezed ? _value.arm : arm as List<ResearchStudyArm>?,
+      note: note == freezed ? _value.note : note as List<Annotation?>?,
+      arm: arm == freezed ? _value.arm : arm as List<ResearchStudyArm?>?,
       objective: objective == freezed
           ? _value.objective
-          : objective as List<ResearchStudyObjective>?,
+          : objective as List<ResearchStudyObjective?>?,
     ));
   }
 }
@@ -822,20 +824,20 @@ class _$_ResearchStudy extends _ResearchStudy {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final String? title;
   @override
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final List<Reference>? protocol;
+  final List<Reference?>? protocol;
   @override
-  final List<Reference>? partOf;
+  final List<Reference?>? partOf;
   @override
   @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
   final ResearchStudyStatus? status;
@@ -847,26 +849,26 @@ class _$_ResearchStudy extends _ResearchStudy {
   @override
   final CodeableConcept? phase;
   @override
-  final List<CodeableConcept>? category;
+  final List<CodeableConcept?>? category;
   @override
-  final List<CodeableConcept>? focus;
+  final List<CodeableConcept?>? focus;
   @override
-  final List<CodeableConcept>? condition;
+  final List<CodeableConcept?>? condition;
   @override
-  final List<ContactDetail>? contact;
+  final List<ContactDetail?>? contact;
   @override
-  final List<RelatedArtifact>? relatedArtifact;
+  final List<RelatedArtifact?>? relatedArtifact;
   @override
-  final List<CodeableConcept>? keyword;
+  final List<CodeableConcept?>? keyword;
   @override
-  final List<CodeableConcept>? location;
+  final List<CodeableConcept?>? location;
   @override
   final Markdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<Reference>? enrollment;
+  final List<Reference?>? enrollment;
   @override
   final Period? period;
   @override
@@ -874,15 +876,15 @@ class _$_ResearchStudy extends _ResearchStudy {
   @override
   final Reference? principalInvestigator;
   @override
-  final List<Reference>? site;
+  final List<Reference?>? site;
   @override
   final CodeableConcept? reasonStopped;
   @override
-  final List<Annotation>? note;
+  final List<Annotation?>? note;
   @override
-  final List<ResearchStudyArm>? arm;
+  final List<ResearchStudyArm?>? arm;
   @override
-  final List<ResearchStudyObjective>? objective;
+  final List<ResearchStudyObjective?>? objective;
 
   @override
   String toString() {
@@ -1045,39 +1047,39 @@ abstract class _ResearchStudy extends ResearchStudy {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      List<Reference>? protocol,
-      List<Reference>? partOf,
+      List<Reference?>? protocol,
+      List<Reference?>? partOf,
       @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
           ResearchStudyStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
       CodeableConcept? phase,
-      List<CodeableConcept>? category,
-      List<CodeableConcept>? focus,
-      List<CodeableConcept>? condition,
-      List<ContactDetail>? contact,
-      List<RelatedArtifact>? relatedArtifact,
-      List<CodeableConcept>? keyword,
-      List<CodeableConcept>? location,
+      List<CodeableConcept?>? category,
+      List<CodeableConcept?>? focus,
+      List<CodeableConcept?>? condition,
+      List<ContactDetail?>? contact,
+      List<RelatedArtifact?>? relatedArtifact,
+      List<CodeableConcept?>? keyword,
+      List<CodeableConcept?>? location,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<Reference>? enrollment,
+      List<Reference?>? enrollment,
       Period? period,
       Reference? sponsor,
       Reference? principalInvestigator,
-      List<Reference>? site,
+      List<Reference?>? site,
       CodeableConcept? reasonStopped,
-      List<Annotation>? note,
-      List<ResearchStudyArm>? arm,
-      List<ResearchStudyObjective>? objective}) = _$_ResearchStudy;
+      List<Annotation?>? note,
+      List<ResearchStudyArm?>? arm,
+      List<ResearchStudyObjective?>? objective}) = _$_ResearchStudy;
 
   factory _ResearchStudy.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudy.fromJson;
@@ -1105,20 +1107,20 @@ abstract class _ResearchStudy extends ResearchStudy {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   String? get title;
   @override
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
-  List<Reference>? get protocol;
+  List<Reference?>? get protocol;
   @override
-  List<Reference>? get partOf;
+  List<Reference?>? get partOf;
   @override
   @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
   ResearchStudyStatus? get status;
@@ -1130,26 +1132,26 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
   CodeableConcept? get phase;
   @override
-  List<CodeableConcept>? get category;
+  List<CodeableConcept?>? get category;
   @override
-  List<CodeableConcept>? get focus;
+  List<CodeableConcept?>? get focus;
   @override
-  List<CodeableConcept>? get condition;
+  List<CodeableConcept?>? get condition;
   @override
-  List<ContactDetail>? get contact;
+  List<ContactDetail?>? get contact;
   @override
-  List<RelatedArtifact>? get relatedArtifact;
+  List<RelatedArtifact?>? get relatedArtifact;
   @override
-  List<CodeableConcept>? get keyword;
+  List<CodeableConcept?>? get keyword;
   @override
-  List<CodeableConcept>? get location;
+  List<CodeableConcept?>? get location;
   @override
   Markdown? get description;
   @override
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<Reference>? get enrollment;
+  List<Reference?>? get enrollment;
   @override
   Period? get period;
   @override
@@ -1157,15 +1159,15 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
   Reference? get principalInvestigator;
   @override
-  List<Reference>? get site;
+  List<Reference?>? get site;
   @override
   CodeableConcept? get reasonStopped;
   @override
-  List<Annotation>? get note;
+  List<Annotation?>? get note;
   @override
-  List<ResearchStudyArm>? get arm;
+  List<ResearchStudyArm?>? get arm;
   @override
-  List<ResearchStudyObjective>? get objective;
+  List<ResearchStudyObjective?>? get objective;
   @override
   @JsonKey(ignore: true)
   _$ResearchStudyCopyWith<_ResearchStudy> get copyWith;
@@ -1181,8 +1183,8 @@ class _$ResearchStudyArmTearOff {
 
   _ResearchStudyArm call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type,
@@ -1212,8 +1214,8 @@ const $ResearchStudyArm = _$ResearchStudyArmTearOff();
 mixin _$ResearchStudyArm {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
@@ -1234,8 +1236,8 @@ abstract class $ResearchStudyArmCopyWith<$Res> {
       _$ResearchStudyArmCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type,
@@ -1271,10 +1273,10 @@ class _$ResearchStudyArmCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -1330,8 +1332,8 @@ abstract class _$ResearchStudyArmCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type,
@@ -1372,10 +1374,10 @@ class __$ResearchStudyArmCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -1411,9 +1413,9 @@ class _$_ResearchStudyArm extends _ResearchStudyArm {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final String? name;
   @override
@@ -1486,8 +1488,8 @@ abstract class _ResearchStudyArm extends ResearchStudyArm {
   _ResearchStudyArm._() : super._();
   factory _ResearchStudyArm(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+          List<FhirExtension?>? modifierExtension,
           String? name,
           @JsonKey(name: '_name') Element? nameElement,
           CodeableConcept? type,
@@ -1502,9 +1504,9 @@ abstract class _ResearchStudyArm extends ResearchStudyArm {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   String? get name;
   @override
@@ -1533,8 +1535,8 @@ class _$ResearchStudyObjectiveTearOff {
 
   _ResearchStudyObjective call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type}) {
@@ -1560,8 +1562,8 @@ const $ResearchStudyObjective = _$ResearchStudyObjectiveTearOff();
 mixin _$ResearchStudyObjective {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
@@ -1579,8 +1581,8 @@ abstract class $ResearchStudyObjectiveCopyWith<$Res> {
       _$ResearchStudyObjectiveCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type});
@@ -1611,10 +1613,10 @@ class _$ResearchStudyObjectiveCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -1654,8 +1656,8 @@ abstract class _$ResearchStudyObjectiveCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type});
@@ -1690,10 +1692,10 @@ class __$ResearchStudyObjectiveCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -1722,9 +1724,9 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final String? name;
   @override
@@ -1785,8 +1787,8 @@ abstract class _ResearchStudyObjective extends ResearchStudyObjective {
   _ResearchStudyObjective._() : super._();
   factory _ResearchStudyObjective(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type}) = _$_ResearchStudyObjective;
@@ -1798,9 +1800,9 @@ abstract class _ResearchStudyObjective extends ResearchStudyObjective {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   String? get name;
   @override
@@ -1835,9 +1837,9 @@ class _$ResearchSubjectTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
           ResearchSubjectStatus? status,
       @JsonKey(name: '_status')
@@ -1901,9 +1903,9 @@ mixin _$ResearchSubject {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
   ResearchSubjectStatus? get status;
   @JsonKey(name: '_status')
@@ -1943,9 +1945,9 @@ abstract class $ResearchSubjectCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
           ResearchSubjectStatus? status,
       @JsonKey(name: '_status')
@@ -2030,13 +2032,13 @@ class _$ResearchSubjectCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status:
           status == freezed ? _value.status : status as ResearchSubjectStatus?,
       statusElement: statusElement == freezed
@@ -2202,9 +2204,9 @@ abstract class _$ResearchSubjectCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
           ResearchSubjectStatus? status,
       @JsonKey(name: '_status')
@@ -2302,13 +2304,13 @@ class __$ResearchSubjectCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       status:
           status == freezed ? _value.status : status as ResearchSubjectStatus?,
       statusElement: statusElement == freezed
@@ -2395,11 +2397,11 @@ class _$_ResearchSubject extends _ResearchSubject {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
   final ResearchSubjectStatus? status;
@@ -2548,9 +2550,9 @@ abstract class _ResearchSubject extends ResearchSubject {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
           ResearchSubjectStatus? status,
       @JsonKey(name: '_status')
@@ -2592,11 +2594,11 @@ abstract class _ResearchSubject extends ResearchSubject {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
   ResearchSubjectStatus? get status;

@@ -508,10 +508,10 @@ class _$MetaTearOff {
       @JsonKey(name: '_versionId') Element? versionIdElement,
       Instant? lastUpdated,
       @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
-      List<FhirUri>? profile,
-      @JsonKey(name: '_profile') List<Element>? profileElement,
-      List<Coding>? security,
-      List<Coding>? tag}) {
+      List<FhirUri?>? profile,
+      @JsonKey(name: '_profile') List<Element?>? profileElement,
+      List<Coding?>? security,
+      List<Coding?>? tag}) {
     return _Meta(
       versionId: versionId,
       versionIdElement: versionIdElement,
@@ -540,11 +540,11 @@ mixin _$Meta {
   Instant? get lastUpdated;
   @JsonKey(name: '_lastUpdated')
   Element? get lastUpdatedElement;
-  List<FhirUri>? get profile;
+  List<FhirUri?>? get profile;
   @JsonKey(name: '_profile')
-  List<Element>? get profileElement;
-  List<Coding>? get security;
-  List<Coding>? get tag;
+  List<Element?>? get profileElement;
+  List<Coding?>? get security;
+  List<Coding?>? get tag;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -560,10 +560,10 @@ abstract class $MetaCopyWith<$Res> {
       @JsonKey(name: '_versionId') Element? versionIdElement,
       Instant? lastUpdated,
       @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
-      List<FhirUri>? profile,
-      @JsonKey(name: '_profile') List<Element>? profileElement,
-      List<Coding>? security,
-      List<Coding>? tag});
+      List<FhirUri?>? profile,
+      @JsonKey(name: '_profile') List<Element?>? profileElement,
+      List<Coding?>? security,
+      List<Coding?>? tag});
 
   $ElementCopyWith<$Res>? get versionIdElement;
   $ElementCopyWith<$Res>? get lastUpdatedElement;
@@ -598,13 +598,13 @@ class _$MetaCopyWithImpl<$Res> implements $MetaCopyWith<$Res> {
       lastUpdatedElement: lastUpdatedElement == freezed
           ? _value.lastUpdatedElement
           : lastUpdatedElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as List<FhirUri>?,
+      profile: profile == freezed ? _value.profile : profile as List<FhirUri?>?,
       profileElement: profileElement == freezed
           ? _value.profileElement
-          : profileElement as List<Element>?,
+          : profileElement as List<Element?>?,
       security:
-          security == freezed ? _value.security : security as List<Coding>?,
-      tag: tag == freezed ? _value.tag : tag as List<Coding>?,
+          security == freezed ? _value.security : security as List<Coding?>?,
+      tag: tag == freezed ? _value.tag : tag as List<Coding?>?,
     ));
   }
 
@@ -641,10 +641,10 @@ abstract class _$MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
       @JsonKey(name: '_versionId') Element? versionIdElement,
       Instant? lastUpdated,
       @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
-      List<FhirUri>? profile,
-      @JsonKey(name: '_profile') List<Element>? profileElement,
-      List<Coding>? security,
-      List<Coding>? tag});
+      List<FhirUri?>? profile,
+      @JsonKey(name: '_profile') List<Element?>? profileElement,
+      List<Coding?>? security,
+      List<Coding?>? tag});
 
   @override
   $ElementCopyWith<$Res>? get versionIdElement;
@@ -682,13 +682,13 @@ class __$MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res>
       lastUpdatedElement: lastUpdatedElement == freezed
           ? _value.lastUpdatedElement
           : lastUpdatedElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as List<FhirUri>?,
+      profile: profile == freezed ? _value.profile : profile as List<FhirUri?>?,
       profileElement: profileElement == freezed
           ? _value.profileElement
-          : profileElement as List<Element>?,
+          : profileElement as List<Element?>?,
       security:
-          security == freezed ? _value.security : security as List<Coding>?,
-      tag: tag == freezed ? _value.tag : tag as List<Coding>?,
+          security == freezed ? _value.security : security as List<Coding?>?,
+      tag: tag == freezed ? _value.tag : tag as List<Coding?>?,
     ));
   }
 }
@@ -722,14 +722,14 @@ class _$_Meta extends _Meta {
   @JsonKey(name: '_lastUpdated')
   final Element? lastUpdatedElement;
   @override
-  final List<FhirUri>? profile;
+  final List<FhirUri?>? profile;
   @override
   @JsonKey(name: '_profile')
-  final List<Element>? profileElement;
+  final List<Element?>? profileElement;
   @override
-  final List<Coding>? security;
+  final List<Coding?>? security;
   @override
-  final List<Coding>? tag;
+  final List<Coding?>? tag;
 
   @override
   String toString() {
@@ -795,10 +795,10 @@ abstract class _Meta extends Meta {
       @JsonKey(name: '_versionId') Element? versionIdElement,
       Instant? lastUpdated,
       @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
-      List<FhirUri>? profile,
-      @JsonKey(name: '_profile') List<Element>? profileElement,
-      List<Coding>? security,
-      List<Coding>? tag}) = _$_Meta;
+      List<FhirUri?>? profile,
+      @JsonKey(name: '_profile') List<Element?>? profileElement,
+      List<Coding?>? security,
+      List<Coding?>? tag}) = _$_Meta;
 
   factory _Meta.fromJson(Map<String, dynamic> json) = _$_Meta.fromJson;
 
@@ -813,14 +813,14 @@ abstract class _Meta extends Meta {
   @JsonKey(name: '_lastUpdated')
   Element? get lastUpdatedElement;
   @override
-  List<FhirUri>? get profile;
+  List<FhirUri?>? get profile;
   @override
   @JsonKey(name: '_profile')
-  List<Element>? get profileElement;
+  List<Element?>? get profileElement;
   @override
-  List<Coding>? get security;
+  List<Coding?>? get security;
   @override
-  List<Coding>? get tag;
+  List<Coding?>? get tag;
   @override
   @JsonKey(ignore: true)
   _$MetaCopyWith<_Meta> get copyWith;
@@ -837,20 +837,20 @@ class _$ElementDefinitionTearOff {
   _ElementDefinition call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+          List<FhirExtension?>? extension_,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      List<ElementDefinitionRepresentation>? representation,
+      List<ElementDefinitionRepresentation?>? representation,
       @JsonKey(name: '_representation')
-          List<Element>? representationElement,
+          List<Element?>? representationElement,
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
       String? label,
       @JsonKey(name: '_label')
           Element? labelElement,
-      List<Coding>? code,
+      List<Coding?>? code,
       ElementDefinitionSlicing? slicing,
       String? short,
       @JsonKey(name: '_short')
@@ -864,9 +864,9 @@ class _$ElementDefinitionTearOff {
       String? requirements,
       @JsonKey(name: '_requirements')
           Element? requirementsElement,
-      List<String>? alias,
+      List<String?>? alias,
       @JsonKey(name: '_alias')
-          List<Element>? aliasElement,
+          List<Element?>? aliasElement,
       Decimal? min,
       @JsonKey(name: '_min')
           Element? minElement,
@@ -877,7 +877,7 @@ class _$ElementDefinitionTearOff {
       String? contentReference,
       @JsonKey(name: '_contentReference')
           Element? contentReferenceElement,
-      List<ElementDefinitionType>? type,
+      List<ElementDefinitionType?>? type,
       Boolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element? defaultValueBooleanElement,
@@ -1145,7 +1145,7 @@ class _$ElementDefinitionTearOff {
       DataRequirement? patternDataRequirement,
       ParameterDefinition? patternParameterDefinition,
       TriggerDefinition? patternTriggerDefinition,
-      List<ElementDefinitionExample>? example,
+      List<ElementDefinitionExample?>? example,
       Date? minValueDate,
       @JsonKey(name: '_minValueDate')
           Element? minValueDateElement,
@@ -1199,10 +1199,10 @@ class _$ElementDefinitionTearOff {
       Decimal? maxLength,
       @JsonKey(name: '_maxLength')
           Element? maxLengthElement,
-      List<String>? condition,
+      List<String?>? condition,
       @JsonKey(name: '_condition')
-          List<Element>? conditionElement,
-      List<ElementDefinitionConstraint>? constraint,
+          List<Element?>? conditionElement,
+      List<ElementDefinitionConstraint?>? constraint,
       Boolean? mustSupport,
       @JsonKey(name: '_mustSupport')
           Element? mustSupportElement,
@@ -1213,7 +1213,7 @@ class _$ElementDefinitionTearOff {
       @JsonKey(name: '_isSummary')
           Element? isSummaryElement,
       ElementDefinitionBinding? binding,
-      List<ElementDefinitionMapping>? mapping}) {
+      List<ElementDefinitionMapping?>? mapping}) {
     return _ElementDefinition(
       id: id,
       extension_: extension_,
@@ -1522,20 +1522,20 @@ const $ElementDefinition = _$ElementDefinitionTearOff();
 mixin _$ElementDefinition {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   String? get path;
   @JsonKey(name: '_path')
   Element? get pathElement;
-  List<ElementDefinitionRepresentation>? get representation;
+  List<ElementDefinitionRepresentation?>? get representation;
   @JsonKey(name: '_representation')
-  List<Element>? get representationElement;
+  List<Element?>? get representationElement;
   String? get sliceName;
   @JsonKey(name: '_sliceName')
   Element? get sliceNameElement;
   String? get label;
   @JsonKey(name: '_label')
   Element? get labelElement;
-  List<Coding>? get code;
+  List<Coding?>? get code;
   ElementDefinitionSlicing? get slicing;
   String? get short;
   @JsonKey(name: '_short')
@@ -1549,9 +1549,9 @@ mixin _$ElementDefinition {
   String? get requirements;
   @JsonKey(name: '_requirements')
   Element? get requirementsElement;
-  List<String>? get alias;
+  List<String?>? get alias;
   @JsonKey(name: '_alias')
-  List<Element>? get aliasElement;
+  List<Element?>? get aliasElement;
   Decimal? get min;
   @JsonKey(name: '_min')
   Element? get minElement;
@@ -1562,7 +1562,7 @@ mixin _$ElementDefinition {
   String? get contentReference;
   @JsonKey(name: '_contentReference')
   Element? get contentReferenceElement;
-  List<ElementDefinitionType>? get type;
+  List<ElementDefinitionType?>? get type;
   Boolean? get defaultValueBoolean;
   @JsonKey(name: '_defaultValueBoolean')
   Element? get defaultValueBooleanElement;
@@ -1830,7 +1830,7 @@ mixin _$ElementDefinition {
   DataRequirement? get patternDataRequirement;
   ParameterDefinition? get patternParameterDefinition;
   TriggerDefinition? get patternTriggerDefinition;
-  List<ElementDefinitionExample>? get example;
+  List<ElementDefinitionExample?>? get example;
   Date? get minValueDate;
   @JsonKey(name: '_minValueDate')
   Element? get minValueDateElement;
@@ -1884,10 +1884,10 @@ mixin _$ElementDefinition {
   Decimal? get maxLength;
   @JsonKey(name: '_maxLength')
   Element? get maxLengthElement;
-  List<String>? get condition;
+  List<String?>? get condition;
   @JsonKey(name: '_condition')
-  List<Element>? get conditionElement;
-  List<ElementDefinitionConstraint>? get constraint;
+  List<Element?>? get conditionElement;
+  List<ElementDefinitionConstraint?>? get constraint;
   Boolean? get mustSupport;
   @JsonKey(name: '_mustSupport')
   Element? get mustSupportElement;
@@ -1898,7 +1898,7 @@ mixin _$ElementDefinition {
   @JsonKey(name: '_isSummary')
   Element? get isSummaryElement;
   ElementDefinitionBinding? get binding;
-  List<ElementDefinitionMapping>? get mapping;
+  List<ElementDefinitionMapping?>? get mapping;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1913,20 +1913,20 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+          List<FhirExtension?>? extension_,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      List<ElementDefinitionRepresentation>? representation,
+      List<ElementDefinitionRepresentation?>? representation,
       @JsonKey(name: '_representation')
-          List<Element>? representationElement,
+          List<Element?>? representationElement,
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
       String? label,
       @JsonKey(name: '_label')
           Element? labelElement,
-      List<Coding>? code,
+      List<Coding?>? code,
       ElementDefinitionSlicing? slicing,
       String? short,
       @JsonKey(name: '_short')
@@ -1940,9 +1940,9 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       String? requirements,
       @JsonKey(name: '_requirements')
           Element? requirementsElement,
-      List<String>? alias,
+      List<String?>? alias,
       @JsonKey(name: '_alias')
-          List<Element>? aliasElement,
+          List<Element?>? aliasElement,
       Decimal? min,
       @JsonKey(name: '_min')
           Element? minElement,
@@ -1953,7 +1953,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       String? contentReference,
       @JsonKey(name: '_contentReference')
           Element? contentReferenceElement,
-      List<ElementDefinitionType>? type,
+      List<ElementDefinitionType?>? type,
       Boolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element? defaultValueBooleanElement,
@@ -2221,7 +2221,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       DataRequirement? patternDataRequirement,
       ParameterDefinition? patternParameterDefinition,
       TriggerDefinition? patternTriggerDefinition,
-      List<ElementDefinitionExample>? example,
+      List<ElementDefinitionExample?>? example,
       Date? minValueDate,
       @JsonKey(name: '_minValueDate')
           Element? minValueDateElement,
@@ -2275,10 +2275,10 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Decimal? maxLength,
       @JsonKey(name: '_maxLength')
           Element? maxLengthElement,
-      List<String>? condition,
+      List<String?>? condition,
       @JsonKey(name: '_condition')
-          List<Element>? conditionElement,
-      List<ElementDefinitionConstraint>? constraint,
+          List<Element?>? conditionElement,
+      List<ElementDefinitionConstraint?>? constraint,
       Boolean? mustSupport,
       @JsonKey(name: '_mustSupport')
           Element? mustSupportElement,
@@ -2289,7 +2289,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       @JsonKey(name: '_isSummary')
           Element? isSummaryElement,
       ElementDefinitionBinding? binding,
-      List<ElementDefinitionMapping>? mapping});
+      List<ElementDefinitionMapping?>? mapping});
 
   $ElementCopyWith<$Res>? get pathElement;
   $ElementCopyWith<$Res>? get sliceNameElement;
@@ -2797,16 +2797,16 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       path: path == freezed ? _value.path : path as String?,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element?,
       representation: representation == freezed
           ? _value.representation
-          : representation as List<ElementDefinitionRepresentation>?,
+          : representation as List<ElementDefinitionRepresentation?>?,
       representationElement: representationElement == freezed
           ? _value.representationElement
-          : representationElement as List<Element>?,
+          : representationElement as List<Element?>?,
       sliceName: sliceName == freezed ? _value.sliceName : sliceName as String?,
       sliceNameElement: sliceNameElement == freezed
           ? _value.sliceNameElement
@@ -2815,7 +2815,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       labelElement: labelElement == freezed
           ? _value.labelElement
           : labelElement as Element?,
-      code: code == freezed ? _value.code : code as List<Coding>?,
+      code: code == freezed ? _value.code : code as List<Coding?>?,
       slicing: slicing == freezed
           ? _value.slicing
           : slicing as ElementDefinitionSlicing?,
@@ -2838,10 +2838,10 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       requirementsElement: requirementsElement == freezed
           ? _value.requirementsElement
           : requirementsElement as Element?,
-      alias: alias == freezed ? _value.alias : alias as List<String>?,
+      alias: alias == freezed ? _value.alias : alias as List<String?>?,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as List<Element>?,
+          : aliasElement as List<Element?>?,
       min: min == freezed ? _value.min : min as Decimal?,
       minElement:
           minElement == freezed ? _value.minElement : minElement as Element?,
@@ -2856,7 +2856,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.contentReferenceElement
           : contentReferenceElement as Element?,
       type:
-          type == freezed ? _value.type : type as List<ElementDefinitionType>?,
+          type == freezed ? _value.type : type as List<ElementDefinitionType?>?,
       defaultValueBoolean: defaultValueBoolean == freezed
           ? _value.defaultValueBoolean
           : defaultValueBoolean as Boolean?,
@@ -3466,7 +3466,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : patternTriggerDefinition as TriggerDefinition?,
       example: example == freezed
           ? _value.example
-          : example as List<ElementDefinitionExample>?,
+          : example as List<ElementDefinitionExample?>?,
       minValueDate:
           minValueDate == freezed ? _value.minValueDate : minValueDate as Date?,
       minValueDateElement: minValueDateElement == freezed
@@ -3571,13 +3571,13 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           ? _value.maxLengthElement
           : maxLengthElement as Element?,
       condition:
-          condition == freezed ? _value.condition : condition as List<String>?,
+          condition == freezed ? _value.condition : condition as List<String?>?,
       conditionElement: conditionElement == freezed
           ? _value.conditionElement
-          : conditionElement as List<Element>?,
+          : conditionElement as List<Element?>?,
       constraint: constraint == freezed
           ? _value.constraint
-          : constraint as List<ElementDefinitionConstraint>?,
+          : constraint as List<ElementDefinitionConstraint?>?,
       mustSupport:
           mustSupport == freezed ? _value.mustSupport : mustSupport as Boolean?,
       mustSupportElement: mustSupportElement == freezed
@@ -3598,7 +3598,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : binding as ElementDefinitionBinding?,
       mapping: mapping == freezed
           ? _value.mapping
-          : mapping as List<ElementDefinitionMapping>?,
+          : mapping as List<ElementDefinitionMapping?>?,
     ));
   }
 
@@ -5796,20 +5796,20 @@ abstract class _$ElementDefinitionCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+          List<FhirExtension?>? extension_,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      List<ElementDefinitionRepresentation>? representation,
+      List<ElementDefinitionRepresentation?>? representation,
       @JsonKey(name: '_representation')
-          List<Element>? representationElement,
+          List<Element?>? representationElement,
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
       String? label,
       @JsonKey(name: '_label')
           Element? labelElement,
-      List<Coding>? code,
+      List<Coding?>? code,
       ElementDefinitionSlicing? slicing,
       String? short,
       @JsonKey(name: '_short')
@@ -5823,9 +5823,9 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       String? requirements,
       @JsonKey(name: '_requirements')
           Element? requirementsElement,
-      List<String>? alias,
+      List<String?>? alias,
       @JsonKey(name: '_alias')
-          List<Element>? aliasElement,
+          List<Element?>? aliasElement,
       Decimal? min,
       @JsonKey(name: '_min')
           Element? minElement,
@@ -5836,7 +5836,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       String? contentReference,
       @JsonKey(name: '_contentReference')
           Element? contentReferenceElement,
-      List<ElementDefinitionType>? type,
+      List<ElementDefinitionType?>? type,
       Boolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element? defaultValueBooleanElement,
@@ -6104,7 +6104,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       DataRequirement? patternDataRequirement,
       ParameterDefinition? patternParameterDefinition,
       TriggerDefinition? patternTriggerDefinition,
-      List<ElementDefinitionExample>? example,
+      List<ElementDefinitionExample?>? example,
       Date? minValueDate,
       @JsonKey(name: '_minValueDate')
           Element? minValueDateElement,
@@ -6158,10 +6158,10 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       Decimal? maxLength,
       @JsonKey(name: '_maxLength')
           Element? maxLengthElement,
-      List<String>? condition,
+      List<String?>? condition,
       @JsonKey(name: '_condition')
-          List<Element>? conditionElement,
-      List<ElementDefinitionConstraint>? constraint,
+          List<Element?>? conditionElement,
+      List<ElementDefinitionConstraint?>? constraint,
       Boolean? mustSupport,
       @JsonKey(name: '_mustSupport')
           Element? mustSupportElement,
@@ -6172,7 +6172,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
       @JsonKey(name: '_isSummary')
           Element? isSummaryElement,
       ElementDefinitionBinding? binding,
-      List<ElementDefinitionMapping>? mapping});
+      List<ElementDefinitionMapping?>? mapping});
 
   @override
   $ElementCopyWith<$Res>? get pathElement;
@@ -6878,16 +6878,16 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       path: path == freezed ? _value.path : path as String?,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element?,
       representation: representation == freezed
           ? _value.representation
-          : representation as List<ElementDefinitionRepresentation>?,
+          : representation as List<ElementDefinitionRepresentation?>?,
       representationElement: representationElement == freezed
           ? _value.representationElement
-          : representationElement as List<Element>?,
+          : representationElement as List<Element?>?,
       sliceName: sliceName == freezed ? _value.sliceName : sliceName as String?,
       sliceNameElement: sliceNameElement == freezed
           ? _value.sliceNameElement
@@ -6896,7 +6896,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       labelElement: labelElement == freezed
           ? _value.labelElement
           : labelElement as Element?,
-      code: code == freezed ? _value.code : code as List<Coding>?,
+      code: code == freezed ? _value.code : code as List<Coding?>?,
       slicing: slicing == freezed
           ? _value.slicing
           : slicing as ElementDefinitionSlicing?,
@@ -6919,10 +6919,10 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       requirementsElement: requirementsElement == freezed
           ? _value.requirementsElement
           : requirementsElement as Element?,
-      alias: alias == freezed ? _value.alias : alias as List<String>?,
+      alias: alias == freezed ? _value.alias : alias as List<String?>?,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as List<Element>?,
+          : aliasElement as List<Element?>?,
       min: min == freezed ? _value.min : min as Decimal?,
       minElement:
           minElement == freezed ? _value.minElement : minElement as Element?,
@@ -6937,7 +6937,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           ? _value.contentReferenceElement
           : contentReferenceElement as Element?,
       type:
-          type == freezed ? _value.type : type as List<ElementDefinitionType>?,
+          type == freezed ? _value.type : type as List<ElementDefinitionType?>?,
       defaultValueBoolean: defaultValueBoolean == freezed
           ? _value.defaultValueBoolean
           : defaultValueBoolean as Boolean?,
@@ -7547,7 +7547,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : patternTriggerDefinition as TriggerDefinition?,
       example: example == freezed
           ? _value.example
-          : example as List<ElementDefinitionExample>?,
+          : example as List<ElementDefinitionExample?>?,
       minValueDate:
           minValueDate == freezed ? _value.minValueDate : minValueDate as Date?,
       minValueDateElement: minValueDateElement == freezed
@@ -7652,13 +7652,13 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           ? _value.maxLengthElement
           : maxLengthElement as Element?,
       condition:
-          condition == freezed ? _value.condition : condition as List<String>?,
+          condition == freezed ? _value.condition : condition as List<String?>?,
       conditionElement: conditionElement == freezed
           ? _value.conditionElement
-          : conditionElement as List<Element>?,
+          : conditionElement as List<Element?>?,
       constraint: constraint == freezed
           ? _value.constraint
-          : constraint as List<ElementDefinitionConstraint>?,
+          : constraint as List<ElementDefinitionConstraint?>?,
       mustSupport:
           mustSupport == freezed ? _value.mustSupport : mustSupport as Boolean?,
       mustSupportElement: mustSupportElement == freezed
@@ -7679,7 +7679,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : binding as ElementDefinitionBinding?,
       mapping: mapping == freezed
           ? _value.mapping
-          : mapping as List<ElementDefinitionMapping>?,
+          : mapping as List<ElementDefinitionMapping?>?,
     ));
   }
 }
@@ -8077,17 +8077,17 @@ class _$_ElementDefinition extends _ElementDefinition {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
   final String? path;
   @override
   @JsonKey(name: '_path')
   final Element? pathElement;
   @override
-  final List<ElementDefinitionRepresentation>? representation;
+  final List<ElementDefinitionRepresentation?>? representation;
   @override
   @JsonKey(name: '_representation')
-  final List<Element>? representationElement;
+  final List<Element?>? representationElement;
   @override
   final String? sliceName;
   @override
@@ -8099,7 +8099,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_label')
   final Element? labelElement;
   @override
-  final List<Coding>? code;
+  final List<Coding?>? code;
   @override
   final ElementDefinitionSlicing? slicing;
   @override
@@ -8123,10 +8123,10 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_requirements')
   final Element? requirementsElement;
   @override
-  final List<String>? alias;
+  final List<String?>? alias;
   @override
   @JsonKey(name: '_alias')
-  final List<Element>? aliasElement;
+  final List<Element?>? aliasElement;
   @override
   final Decimal? min;
   @override
@@ -8145,7 +8145,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_contentReference')
   final Element? contentReferenceElement;
   @override
-  final List<ElementDefinitionType>? type;
+  final List<ElementDefinitionType?>? type;
   @override
   final Boolean? defaultValueBoolean;
   @override
@@ -8628,7 +8628,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final TriggerDefinition? patternTriggerDefinition;
   @override
-  final List<ElementDefinitionExample>? example;
+  final List<ElementDefinitionExample?>? example;
   @override
   final Date? minValueDate;
   @override
@@ -8719,12 +8719,12 @@ class _$_ElementDefinition extends _ElementDefinition {
   @JsonKey(name: '_maxLength')
   final Element? maxLengthElement;
   @override
-  final List<String>? condition;
+  final List<String?>? condition;
   @override
   @JsonKey(name: '_condition')
-  final List<Element>? conditionElement;
+  final List<Element?>? conditionElement;
   @override
-  final List<ElementDefinitionConstraint>? constraint;
+  final List<ElementDefinitionConstraint?>? constraint;
   @override
   final Boolean? mustSupport;
   @override
@@ -8743,7 +8743,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   final ElementDefinitionBinding? binding;
   @override
-  final List<ElementDefinitionMapping>? mapping;
+  final List<ElementDefinitionMapping?>? mapping;
 
   @override
   String toString() {
@@ -9403,20 +9403,20 @@ abstract class _ElementDefinition extends ElementDefinition {
   factory _ElementDefinition(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+          List<FhirExtension?>? extension_,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      List<ElementDefinitionRepresentation>? representation,
+      List<ElementDefinitionRepresentation?>? representation,
       @JsonKey(name: '_representation')
-          List<Element>? representationElement,
+          List<Element?>? representationElement,
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
       String? label,
       @JsonKey(name: '_label')
           Element? labelElement,
-      List<Coding>? code,
+      List<Coding?>? code,
       ElementDefinitionSlicing? slicing,
       String? short,
       @JsonKey(name: '_short')
@@ -9430,9 +9430,9 @@ abstract class _ElementDefinition extends ElementDefinition {
       String? requirements,
       @JsonKey(name: '_requirements')
           Element? requirementsElement,
-      List<String>? alias,
+      List<String?>? alias,
       @JsonKey(name: '_alias')
-          List<Element>? aliasElement,
+          List<Element?>? aliasElement,
       Decimal? min,
       @JsonKey(name: '_min')
           Element? minElement,
@@ -9443,7 +9443,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       String? contentReference,
       @JsonKey(name: '_contentReference')
           Element? contentReferenceElement,
-      List<ElementDefinitionType>? type,
+      List<ElementDefinitionType?>? type,
       Boolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           Element? defaultValueBooleanElement,
@@ -9711,7 +9711,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       DataRequirement? patternDataRequirement,
       ParameterDefinition? patternParameterDefinition,
       TriggerDefinition? patternTriggerDefinition,
-      List<ElementDefinitionExample>? example,
+      List<ElementDefinitionExample?>? example,
       Date? minValueDate,
       @JsonKey(name: '_minValueDate')
           Element? minValueDateElement,
@@ -9765,10 +9765,10 @@ abstract class _ElementDefinition extends ElementDefinition {
       Decimal? maxLength,
       @JsonKey(name: '_maxLength')
           Element? maxLengthElement,
-      List<String>? condition,
+      List<String?>? condition,
       @JsonKey(name: '_condition')
-          List<Element>? conditionElement,
-      List<ElementDefinitionConstraint>? constraint,
+          List<Element?>? conditionElement,
+      List<ElementDefinitionConstraint?>? constraint,
       Boolean? mustSupport,
       @JsonKey(name: '_mustSupport')
           Element? mustSupportElement,
@@ -9779,7 +9779,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       @JsonKey(name: '_isSummary')
           Element? isSummaryElement,
       ElementDefinitionBinding? binding,
-      List<ElementDefinitionMapping>? mapping}) = _$_ElementDefinition;
+      List<ElementDefinitionMapping?>? mapping}) = _$_ElementDefinition;
 
   factory _ElementDefinition.fromJson(Map<String, dynamic> json) =
       _$_ElementDefinition.fromJson;
@@ -9788,17 +9788,17 @@ abstract class _ElementDefinition extends ElementDefinition {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
   String? get path;
   @override
   @JsonKey(name: '_path')
   Element? get pathElement;
   @override
-  List<ElementDefinitionRepresentation>? get representation;
+  List<ElementDefinitionRepresentation?>? get representation;
   @override
   @JsonKey(name: '_representation')
-  List<Element>? get representationElement;
+  List<Element?>? get representationElement;
   @override
   String? get sliceName;
   @override
@@ -9810,7 +9810,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_label')
   Element? get labelElement;
   @override
-  List<Coding>? get code;
+  List<Coding?>? get code;
   @override
   ElementDefinitionSlicing? get slicing;
   @override
@@ -9834,10 +9834,10 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_requirements')
   Element? get requirementsElement;
   @override
-  List<String>? get alias;
+  List<String?>? get alias;
   @override
   @JsonKey(name: '_alias')
-  List<Element>? get aliasElement;
+  List<Element?>? get aliasElement;
   @override
   Decimal? get min;
   @override
@@ -9856,7 +9856,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_contentReference')
   Element? get contentReferenceElement;
   @override
-  List<ElementDefinitionType>? get type;
+  List<ElementDefinitionType?>? get type;
   @override
   Boolean? get defaultValueBoolean;
   @override
@@ -10339,7 +10339,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   TriggerDefinition? get patternTriggerDefinition;
   @override
-  List<ElementDefinitionExample>? get example;
+  List<ElementDefinitionExample?>? get example;
   @override
   Date? get minValueDate;
   @override
@@ -10430,12 +10430,12 @@ abstract class _ElementDefinition extends ElementDefinition {
   @JsonKey(name: '_maxLength')
   Element? get maxLengthElement;
   @override
-  List<String>? get condition;
+  List<String?>? get condition;
   @override
   @JsonKey(name: '_condition')
-  List<Element>? get conditionElement;
+  List<Element?>? get conditionElement;
   @override
-  List<ElementDefinitionConstraint>? get constraint;
+  List<ElementDefinitionConstraint?>? get constraint;
   @override
   Boolean? get mustSupport;
   @override
@@ -10454,7 +10454,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
   ElementDefinitionBinding? get binding;
   @override
-  List<ElementDefinitionMapping>? get mapping;
+  List<ElementDefinitionMapping?>? get mapping;
   @override
   @JsonKey(ignore: true)
   _$ElementDefinitionCopyWith<_ElementDefinition> get copyWith;
@@ -10470,7 +10470,7 @@ class _$ElementDefinitionSlicingTearOff {
   const _$ElementDefinitionSlicingTearOff();
 
   _ElementDefinitionSlicing call(
-      {List<ElementDefinitionDiscriminator>? discriminator,
+      {List<ElementDefinitionDiscriminator?>? discriminator,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Boolean? ordered,
@@ -10498,7 +10498,7 @@ const $ElementDefinitionSlicing = _$ElementDefinitionSlicingTearOff();
 
 /// @nodoc
 mixin _$ElementDefinitionSlicing {
-  List<ElementDefinitionDiscriminator>? get discriminator;
+  List<ElementDefinitionDiscriminator?>? get discriminator;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
@@ -10520,7 +10520,7 @@ abstract class $ElementDefinitionSlicingCopyWith<$Res> {
           $Res Function(ElementDefinitionSlicing) then) =
       _$ElementDefinitionSlicingCopyWithImpl<$Res>;
   $Res call(
-      {List<ElementDefinitionDiscriminator>? discriminator,
+      {List<ElementDefinitionDiscriminator?>? discriminator,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Boolean? ordered,
@@ -10555,7 +10555,7 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res>
     return _then(_value.copyWith(
       discriminator: discriminator == freezed
           ? _value.discriminator
-          : discriminator as List<ElementDefinitionDiscriminator>?,
+          : discriminator as List<ElementDefinitionDiscriminator?>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -10616,7 +10616,7 @@ abstract class _$ElementDefinitionSlicingCopyWith<$Res>
       __$ElementDefinitionSlicingCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<ElementDefinitionDiscriminator>? discriminator,
+      {List<ElementDefinitionDiscriminator?>? discriminator,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Boolean? ordered,
@@ -10657,7 +10657,7 @@ class __$ElementDefinitionSlicingCopyWithImpl<$Res>
     return _then(_ElementDefinitionSlicing(
       discriminator: discriminator == freezed
           ? _value.discriminator
-          : discriminator as List<ElementDefinitionDiscriminator>?,
+          : discriminator as List<ElementDefinitionDiscriminator?>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -10695,7 +10695,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
       _$_$_ElementDefinitionSlicingFromJson(json);
 
   @override
-  final List<ElementDefinitionDiscriminator>? discriminator;
+  final List<ElementDefinitionDiscriminator?>? discriminator;
   @override
   final String? description;
   @override
@@ -10769,7 +10769,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
 abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
   _ElementDefinitionSlicing._() : super._();
   factory _ElementDefinitionSlicing(
-          {List<ElementDefinitionDiscriminator>? discriminator,
+          {List<ElementDefinitionDiscriminator?>? discriminator,
           String? description,
           @JsonKey(name: '_description') Element? descriptionElement,
           Boolean? ordered,
@@ -10782,7 +10782,7 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
       _$_ElementDefinitionSlicing.fromJson;
 
   @override
-  List<ElementDefinitionDiscriminator>? get discriminator;
+  List<ElementDefinitionDiscriminator?>? get discriminator;
   @override
   String? get description;
   @override
@@ -11380,15 +11380,15 @@ class _$ElementDefinitionTypeTearOff {
   const _$ElementDefinitionTypeTearOff();
 
   _ElementDefinitionType call(
-      {@JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      {@JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? profile,
       @JsonKey(name: '_profile') Element? profileElement,
       String? targetProfile,
       @JsonKey(name: '_targetProfile') Element? targetProfileElement,
-      List<ElementDefinitionTypeAggregation>? aggregation,
-      @JsonKey(name: '_aggregation') List<Element>? aggregationElement,
+      List<ElementDefinitionTypeAggregation?>? aggregation,
+      @JsonKey(name: '_aggregation') List<Element?>? aggregationElement,
       ElementDefinitionTypeVersioning? versioning,
       @JsonKey(name: '_versioning') Element? versioningElement}) {
     return _ElementDefinitionType(
@@ -11417,7 +11417,7 @@ const $ElementDefinitionType = _$ElementDefinitionTypeTearOff();
 /// @nodoc
 mixin _$ElementDefinitionType {
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   String? get code;
   @JsonKey(name: '_code')
   Element? get codeElement;
@@ -11427,9 +11427,9 @@ mixin _$ElementDefinitionType {
   String? get targetProfile;
   @JsonKey(name: '_targetProfile')
   Element? get targetProfileElement;
-  List<ElementDefinitionTypeAggregation>? get aggregation;
+  List<ElementDefinitionTypeAggregation?>? get aggregation;
   @JsonKey(name: '_aggregation')
-  List<Element>? get aggregationElement;
+  List<Element?>? get aggregationElement;
   ElementDefinitionTypeVersioning? get versioning;
   @JsonKey(name: '_versioning')
   Element? get versioningElement;
@@ -11445,15 +11445,15 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
           $Res Function(ElementDefinitionType) then) =
       _$ElementDefinitionTypeCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      {@JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? profile,
       @JsonKey(name: '_profile') Element? profileElement,
       String? targetProfile,
       @JsonKey(name: '_targetProfile') Element? targetProfileElement,
-      List<ElementDefinitionTypeAggregation>? aggregation,
-      @JsonKey(name: '_aggregation') List<Element>? aggregationElement,
+      List<ElementDefinitionTypeAggregation?>? aggregation,
+      @JsonKey(name: '_aggregation') List<Element?>? aggregationElement,
       ElementDefinitionTypeVersioning? versioning,
       @JsonKey(name: '_versioning') Element? versioningElement});
 
@@ -11489,7 +11489,7 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
     return _then(_value.copyWith(
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       code: code == freezed ? _value.code : code as String?,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element?,
@@ -11505,10 +11505,10 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
           : targetProfileElement as Element?,
       aggregation: aggregation == freezed
           ? _value.aggregation
-          : aggregation as List<ElementDefinitionTypeAggregation>?,
+          : aggregation as List<ElementDefinitionTypeAggregation?>?,
       aggregationElement: aggregationElement == freezed
           ? _value.aggregationElement
-          : aggregationElement as List<Element>?,
+          : aggregationElement as List<Element?>?,
       versioning: versioning == freezed
           ? _value.versioning
           : versioning as ElementDefinitionTypeVersioning?,
@@ -11571,15 +11571,15 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
       __$ElementDefinitionTypeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      {@JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       String? code,
       @JsonKey(name: '_code') Element? codeElement,
       String? profile,
       @JsonKey(name: '_profile') Element? profileElement,
       String? targetProfile,
       @JsonKey(name: '_targetProfile') Element? targetProfileElement,
-      List<ElementDefinitionTypeAggregation>? aggregation,
-      @JsonKey(name: '_aggregation') List<Element>? aggregationElement,
+      List<ElementDefinitionTypeAggregation?>? aggregation,
+      @JsonKey(name: '_aggregation') List<Element?>? aggregationElement,
       ElementDefinitionTypeVersioning? versioning,
       @JsonKey(name: '_versioning') Element? versioningElement});
 
@@ -11621,7 +11621,7 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
     return _then(_ElementDefinitionType(
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       code: code == freezed ? _value.code : code as String?,
       codeElement:
           codeElement == freezed ? _value.codeElement : codeElement as Element?,
@@ -11637,10 +11637,10 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
           : targetProfileElement as Element?,
       aggregation: aggregation == freezed
           ? _value.aggregation
-          : aggregation as List<ElementDefinitionTypeAggregation>?,
+          : aggregation as List<ElementDefinitionTypeAggregation?>?,
       aggregationElement: aggregationElement == freezed
           ? _value.aggregationElement
-          : aggregationElement as List<Element>?,
+          : aggregationElement as List<Element?>?,
       versioning: versioning == freezed
           ? _value.versioning
           : versioning as ElementDefinitionTypeVersioning?,
@@ -11674,7 +11674,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
 
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
   final String? code;
   @override
@@ -11691,10 +11691,10 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   @JsonKey(name: '_targetProfile')
   final Element? targetProfileElement;
   @override
-  final List<ElementDefinitionTypeAggregation>? aggregation;
+  final List<ElementDefinitionTypeAggregation?>? aggregation;
   @override
   @JsonKey(name: '_aggregation')
-  final List<Element>? aggregationElement;
+  final List<Element?>? aggregationElement;
   @override
   final ElementDefinitionTypeVersioning? versioning;
   @override
@@ -11774,15 +11774,15 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
 abstract class _ElementDefinitionType extends ElementDefinitionType {
   _ElementDefinitionType._() : super._();
   factory _ElementDefinitionType(
-          {@JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          {@JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           String? code,
           @JsonKey(name: '_code') Element? codeElement,
           String? profile,
           @JsonKey(name: '_profile') Element? profileElement,
           String? targetProfile,
           @JsonKey(name: '_targetProfile') Element? targetProfileElement,
-          List<ElementDefinitionTypeAggregation>? aggregation,
-          @JsonKey(name: '_aggregation') List<Element>? aggregationElement,
+          List<ElementDefinitionTypeAggregation?>? aggregation,
+          @JsonKey(name: '_aggregation') List<Element?>? aggregationElement,
           ElementDefinitionTypeVersioning? versioning,
           @JsonKey(name: '_versioning') Element? versioningElement}) =
       _$_ElementDefinitionType;
@@ -11792,7 +11792,7 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
 
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
   String? get code;
   @override
@@ -11809,10 +11809,10 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
   @JsonKey(name: '_targetProfile')
   Element? get targetProfileElement;
   @override
-  List<ElementDefinitionTypeAggregation>? get aggregation;
+  List<ElementDefinitionTypeAggregation?>? get aggregation;
   @override
   @JsonKey(name: '_aggregation')
-  List<Element>? get aggregationElement;
+  List<Element?>? get aggregationElement;
   @override
   ElementDefinitionTypeVersioning? get versioning;
   @override
@@ -14840,7 +14840,7 @@ class _$ElementDefinitionBindingTearOff {
   const _$ElementDefinitionBindingTearOff();
 
   _ElementDefinitionBinding call(
-      {@JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      {@JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       ElementDefinitionBindingStrength? strength,
       @JsonKey(name: '_strength') Element? strengthElement,
       String? description,
@@ -14871,7 +14871,7 @@ const $ElementDefinitionBinding = _$ElementDefinitionBindingTearOff();
 /// @nodoc
 mixin _$ElementDefinitionBinding {
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   ElementDefinitionBindingStrength? get strength;
   @JsonKey(name: '_strength')
   Element? get strengthElement;
@@ -14894,7 +14894,7 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
           $Res Function(ElementDefinitionBinding) then) =
       _$ElementDefinitionBindingCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      {@JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       ElementDefinitionBindingStrength? strength,
       @JsonKey(name: '_strength') Element? strengthElement,
       String? description,
@@ -14932,7 +14932,7 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res>
     return _then(_value.copyWith(
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       strength: strength == freezed
           ? _value.strength
           : strength as ElementDefinitionBindingStrength?,
@@ -15008,7 +15008,7 @@ abstract class _$ElementDefinitionBindingCopyWith<$Res>
       __$ElementDefinitionBindingCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      {@JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       ElementDefinitionBindingStrength? strength,
       @JsonKey(name: '_strength') Element? strengthElement,
       String? description,
@@ -15053,7 +15053,7 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
     return _then(_ElementDefinitionBinding(
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       strength: strength == freezed
           ? _value.strength
           : strength as ElementDefinitionBindingStrength?,
@@ -15097,7 +15097,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
 
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
   final ElementDefinitionBindingStrength? strength;
   @override
@@ -15178,7 +15178,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
 abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
   _ElementDefinitionBinding._() : super._();
   factory _ElementDefinitionBinding(
-      {@JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      {@JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       ElementDefinitionBindingStrength? strength,
       @JsonKey(name: '_strength') Element? strengthElement,
       String? description,
@@ -15192,7 +15192,7 @@ abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
 
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
   ElementDefinitionBindingStrength? get strength;
   @override
@@ -15599,7 +15599,7 @@ class _$DosageTearOff {
       @JsonKey(name: '_sequence') Element? sequenceElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
-      List<CodeableConcept>? additionalInstruction,
+      List<CodeableConcept?>? additionalInstruction,
       String? patientInstruction,
       @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
       Timing? timing,
@@ -15659,7 +15659,7 @@ mixin _$Dosage {
   String? get text;
   @JsonKey(name: '_text')
   Element? get textElement;
-  List<CodeableConcept>? get additionalInstruction;
+  List<CodeableConcept?>? get additionalInstruction;
   String? get patientInstruction;
   @JsonKey(name: '_patientInstruction')
   Element? get patientInstructionElement;
@@ -15694,7 +15694,7 @@ abstract class $DosageCopyWith<$Res> {
       @JsonKey(name: '_sequence') Element? sequenceElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
-      List<CodeableConcept>? additionalInstruction,
+      List<CodeableConcept?>? additionalInstruction,
       String? patientInstruction,
       @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
       Timing? timing,
@@ -15775,7 +15775,7 @@ class _$DosageCopyWithImpl<$Res> implements $DosageCopyWith<$Res> {
           textElement == freezed ? _value.textElement : textElement as Element?,
       additionalInstruction: additionalInstruction == freezed
           ? _value.additionalInstruction
-          : additionalInstruction as List<CodeableConcept>?,
+          : additionalInstruction as List<CodeableConcept?>?,
       patientInstruction: patientInstruction == freezed
           ? _value.patientInstruction
           : patientInstruction as String?,
@@ -16015,7 +16015,7 @@ abstract class _$DosageCopyWith<$Res> implements $DosageCopyWith<$Res> {
       @JsonKey(name: '_sequence') Element? sequenceElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
-      List<CodeableConcept>? additionalInstruction,
+      List<CodeableConcept?>? additionalInstruction,
       String? patientInstruction,
       @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
       Timing? timing,
@@ -16114,7 +16114,7 @@ class __$DosageCopyWithImpl<$Res> extends _$DosageCopyWithImpl<$Res>
           textElement == freezed ? _value.textElement : textElement as Element?,
       additionalInstruction: additionalInstruction == freezed
           ? _value.additionalInstruction
-          : additionalInstruction as List<CodeableConcept>?,
+          : additionalInstruction as List<CodeableConcept?>?,
       patientInstruction: patientInstruction == freezed
           ? _value.patientInstruction
           : patientInstruction as String?,
@@ -16199,7 +16199,7 @@ class _$_Dosage extends _Dosage {
   @JsonKey(name: '_text')
   final Element? textElement;
   @override
-  final List<CodeableConcept>? additionalInstruction;
+  final List<CodeableConcept?>? additionalInstruction;
   @override
   final String? patientInstruction;
   @override
@@ -16346,7 +16346,7 @@ abstract class _Dosage extends Dosage {
       @JsonKey(name: '_sequence') Element? sequenceElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
-      List<CodeableConcept>? additionalInstruction,
+      List<CodeableConcept?>? additionalInstruction,
       String? patientInstruction,
       @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
       Timing? timing,
@@ -16378,7 +16378,7 @@ abstract class _Dosage extends Dosage {
   @JsonKey(name: '_text')
   Element? get textElement;
   @override
-  List<CodeableConcept>? get additionalInstruction;
+  List<CodeableConcept?>? get additionalInstruction;
   @override
   String? get patientInstruction;
   @override

@@ -31,8 +31,8 @@ class _$ImplementationGuideTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
@@ -52,25 +52,25 @@ class _$ImplementationGuideTearOff {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ImplementationGuideContact>? contact,
+      List<ImplementationGuideContact?>? contact,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<CodeableConcept>? useContext,
+      List<CodeableConcept?>? useContext,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       Id? fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          List<Element>? fhirVersionElement,
-      List<ImplementationGuideDependency>? dependency,
+          List<Element?>? fhirVersionElement,
+      List<ImplementationGuideDependency?>? dependency,
       @JsonKey(required: true)
-          required List<ImplementationGuidePackage>? package,
-      List<ImplementationGuideGlobal>? global,
-      List<FhirUri>? binary,
+          required List<ImplementationGuidePackage?>? package,
+      List<ImplementationGuideGlobal?>? global,
+      List<FhirUri?>? binary,
       required ImplementationGuidePage? page}) {
     return _ImplementationGuide(
       resourceType: resourceType,
@@ -137,8 +137,8 @@ mixin _$ImplementationGuide {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   FhirUri? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -158,25 +158,25 @@ mixin _$ImplementationGuide {
   String? get publisher;
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
-  List<ImplementationGuideContact>? get contact;
+  List<ImplementationGuideContact?>? get contact;
   FhirDateTime? get date;
   @JsonKey(name: '_date')
   Element? get dateElement;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<CodeableConcept>? get useContext;
+  List<CodeableConcept?>? get useContext;
   String? get copyright;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   Id? get fhirVersion;
   @JsonKey(name: '_fhirVersion')
-  List<Element>? get fhirVersionElement;
-  List<ImplementationGuideDependency>? get dependency;
+  List<Element?>? get fhirVersionElement;
+  List<ImplementationGuideDependency?>? get dependency;
   @JsonKey(required: true)
-  List<ImplementationGuidePackage>? get package;
-  List<ImplementationGuideGlobal>? get global;
-  List<FhirUri>? get binary;
+  List<ImplementationGuidePackage?>? get package;
+  List<ImplementationGuideGlobal?>? get global;
+  List<FhirUri?>? get binary;
   ImplementationGuidePage? get page;
 
   Map<String, dynamic> toJson();
@@ -203,8 +203,8 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
@@ -224,25 +224,25 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ImplementationGuideContact>? contact,
+      List<ImplementationGuideContact?>? contact,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<CodeableConcept>? useContext,
+      List<CodeableConcept?>? useContext,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       Id? fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          List<Element>? fhirVersionElement,
-      List<ImplementationGuideDependency>? dependency,
+          List<Element?>? fhirVersionElement,
+      List<ImplementationGuideDependency?>? dependency,
       @JsonKey(required: true)
-          List<ImplementationGuidePackage>? package,
-      List<ImplementationGuideGlobal>? global,
-      List<FhirUri>? binary,
+          List<ImplementationGuidePackage?>? package,
+      List<ImplementationGuideGlobal?>? global,
+      List<FhirUri?>? binary,
       ImplementationGuidePage? page});
 
   $MetaCopyWith<$Res>? get meta;
@@ -333,10 +333,10 @@ class _$ImplementationGuideCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
@@ -365,7 +365,7 @@ class _$ImplementationGuideCopyWithImpl<$Res>
           : publisherElement as Element?,
       contact: contact == freezed
           ? _value.contact
-          : contact as List<ImplementationGuideContact>?,
+          : contact as List<ImplementationGuideContact?>?,
       date: date == freezed ? _value.date : date as FhirDateTime?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
@@ -376,7 +376,7 @@ class _$ImplementationGuideCopyWithImpl<$Res>
           : descriptionElement as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<CodeableConcept>?,
+          : useContext as List<CodeableConcept?>?,
       copyright: copyright == freezed ? _value.copyright : copyright as String?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
@@ -385,17 +385,17 @@ class _$ImplementationGuideCopyWithImpl<$Res>
           fhirVersion == freezed ? _value.fhirVersion : fhirVersion as Id?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as List<Element>?,
+          : fhirVersionElement as List<Element?>?,
       dependency: dependency == freezed
           ? _value.dependency
-          : dependency as List<ImplementationGuideDependency>?,
+          : dependency as List<ImplementationGuideDependency?>?,
       package: package == freezed
           ? _value.package
-          : package as List<ImplementationGuidePackage>?,
+          : package as List<ImplementationGuidePackage?>?,
       global: global == freezed
           ? _value.global
-          : global as List<ImplementationGuideGlobal>?,
-      binary: binary == freezed ? _value.binary : binary as List<FhirUri>?,
+          : global as List<ImplementationGuideGlobal?>?,
+      binary: binary == freezed ? _value.binary : binary as List<FhirUri?>?,
       page: page == freezed ? _value.page : page as ImplementationGuidePage?,
     ));
   }
@@ -576,8 +576,8 @@ abstract class _$ImplementationGuideCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
@@ -597,25 +597,25 @@ abstract class _$ImplementationGuideCopyWith<$Res>
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ImplementationGuideContact>? contact,
+      List<ImplementationGuideContact?>? contact,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<CodeableConcept>? useContext,
+      List<CodeableConcept?>? useContext,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       Id? fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          List<Element>? fhirVersionElement,
-      List<ImplementationGuideDependency>? dependency,
+          List<Element?>? fhirVersionElement,
+      List<ImplementationGuideDependency?>? dependency,
       @JsonKey(required: true)
-          List<ImplementationGuidePackage>? package,
-      List<ImplementationGuideGlobal>? global,
-      List<FhirUri>? binary,
+          List<ImplementationGuidePackage?>? package,
+      List<ImplementationGuideGlobal?>? global,
+      List<FhirUri?>? binary,
       ImplementationGuidePage? page});
 
   @override
@@ -722,10 +722,10 @@ class __$ImplementationGuideCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
@@ -754,7 +754,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
           : publisherElement as Element?,
       contact: contact == freezed
           ? _value.contact
-          : contact as List<ImplementationGuideContact>?,
+          : contact as List<ImplementationGuideContact?>?,
       date: date == freezed ? _value.date : date as FhirDateTime?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
@@ -765,7 +765,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
           : descriptionElement as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<CodeableConcept>?,
+          : useContext as List<CodeableConcept?>?,
       copyright: copyright == freezed ? _value.copyright : copyright as String?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
@@ -774,17 +774,17 @@ class __$ImplementationGuideCopyWithImpl<$Res>
           fhirVersion == freezed ? _value.fhirVersion : fhirVersion as Id?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as List<Element>?,
+          : fhirVersionElement as List<Element?>?,
       dependency: dependency == freezed
           ? _value.dependency
-          : dependency as List<ImplementationGuideDependency>?,
+          : dependency as List<ImplementationGuideDependency?>?,
       package: package == freezed
           ? _value.package
-          : package as List<ImplementationGuidePackage>?,
+          : package as List<ImplementationGuidePackage?>?,
       global: global == freezed
           ? _value.global
-          : global as List<ImplementationGuideGlobal>?,
-      binary: binary == freezed ? _value.binary : binary as List<FhirUri>?,
+          : global as List<ImplementationGuideGlobal?>?,
+      binary: binary == freezed ? _value.binary : binary as List<FhirUri?>?,
       page: page == freezed ? _value.page : page as ImplementationGuidePage?,
     ));
   }
@@ -877,9 +877,9 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final FhirUri? url;
   @override
@@ -912,7 +912,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
   @override
-  final List<ImplementationGuideContact>? contact;
+  final List<ImplementationGuideContact?>? contact;
   @override
   final FhirDateTime? date;
   @override
@@ -924,7 +924,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<CodeableConcept>? useContext;
+  final List<CodeableConcept?>? useContext;
   @override
   final String? copyright;
   @override
@@ -934,16 +934,16 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   final Id? fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
-  final List<Element>? fhirVersionElement;
+  final List<Element?>? fhirVersionElement;
   @override
-  final List<ImplementationGuideDependency>? dependency;
+  final List<ImplementationGuideDependency?>? dependency;
   @override
   @JsonKey(required: true)
-  final List<ImplementationGuidePackage>? package;
+  final List<ImplementationGuidePackage?>? package;
   @override
-  final List<ImplementationGuideGlobal>? global;
+  final List<ImplementationGuideGlobal?>? global;
   @override
-  final List<FhirUri>? binary;
+  final List<FhirUri?>? binary;
   @override
   final ImplementationGuidePage? page;
 
@@ -1109,8 +1109,8 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
@@ -1130,25 +1130,25 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ImplementationGuideContact>? contact,
+      List<ImplementationGuideContact?>? contact,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<CodeableConcept>? useContext,
+      List<CodeableConcept?>? useContext,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       Id? fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          List<Element>? fhirVersionElement,
-      List<ImplementationGuideDependency>? dependency,
+          List<Element?>? fhirVersionElement,
+      List<ImplementationGuideDependency?>? dependency,
       @JsonKey(required: true)
-          required List<ImplementationGuidePackage>? package,
-      List<ImplementationGuideGlobal>? global,
-      List<FhirUri>? binary,
+          required List<ImplementationGuidePackage?>? package,
+      List<ImplementationGuideGlobal?>? global,
+      List<FhirUri?>? binary,
       required ImplementationGuidePage? page}) = _$_ImplementationGuide;
 
   factory _ImplementationGuide.fromJson(Map<String, dynamic> json) =
@@ -1177,9 +1177,9 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   FhirUri? get url;
   @override
@@ -1212,7 +1212,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
-  List<ImplementationGuideContact>? get contact;
+  List<ImplementationGuideContact?>? get contact;
   @override
   FhirDateTime? get date;
   @override
@@ -1224,7 +1224,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<CodeableConcept>? get useContext;
+  List<CodeableConcept?>? get useContext;
   @override
   String? get copyright;
   @override
@@ -1234,16 +1234,16 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   Id? get fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
-  List<Element>? get fhirVersionElement;
+  List<Element?>? get fhirVersionElement;
   @override
-  List<ImplementationGuideDependency>? get dependency;
+  List<ImplementationGuideDependency?>? get dependency;
   @override
   @JsonKey(required: true)
-  List<ImplementationGuidePackage>? get package;
+  List<ImplementationGuidePackage?>? get package;
   @override
-  List<ImplementationGuideGlobal>? get global;
+  List<ImplementationGuideGlobal?>? get global;
   @override
-  List<FhirUri>? get binary;
+  List<FhirUri?>? get binary;
   @override
   ImplementationGuidePage? get page;
   @override
@@ -1262,10 +1262,10 @@ class _$ImplementationGuideContactTearOff {
 
   _ImplementationGuideContact call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
-      List<ContactPoint>? telecom}) {
+      List<ContactPoint?>? telecom}) {
     return _ImplementationGuideContact(
       id: id,
       extension_: extension_,
@@ -1287,10 +1287,10 @@ const $ImplementationGuideContact = _$ImplementationGuideContactTearOff();
 mixin _$ImplementationGuideContact {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   String? get name;
-  List<ContactPoint>? get telecom;
+  List<ContactPoint?>? get telecom;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1304,10 +1304,10 @@ abstract class $ImplementationGuideContactCopyWith<$Res> {
       _$ImplementationGuideContactCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
-      List<ContactPoint>? telecom});
+      List<ContactPoint?>? telecom});
 }
 
 /// @nodoc
@@ -1331,13 +1331,13 @@ class _$ImplementationGuideContactCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
     ));
   }
 }
@@ -1352,10 +1352,10 @@ abstract class _$ImplementationGuideContactCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
-      List<ContactPoint>? telecom});
+      List<ContactPoint?>? telecom});
 }
 
 /// @nodoc
@@ -1382,13 +1382,13 @@ class __$ImplementationGuideContactCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
     ));
   }
 }
@@ -1412,13 +1412,13 @@ class _$_ImplementationGuideContact extends _ImplementationGuideContact {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final String? name;
   @override
-  final List<ContactPoint>? telecom;
+  final List<ContactPoint?>? telecom;
 
   @override
   String toString() {
@@ -1468,10 +1468,10 @@ abstract class _ImplementationGuideContact extends ImplementationGuideContact {
   _ImplementationGuideContact._() : super._();
   factory _ImplementationGuideContact(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
-      List<ContactPoint>? telecom}) = _$_ImplementationGuideContact;
+      List<ContactPoint?>? telecom}) = _$_ImplementationGuideContact;
 
   factory _ImplementationGuideContact.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuideContact.fromJson;
@@ -1480,13 +1480,13 @@ abstract class _ImplementationGuideContact extends ImplementationGuideContact {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   String? get name;
   @override
-  List<ContactPoint>? get telecom;
+  List<ContactPoint?>? get telecom;
   @override
   @JsonKey(ignore: true)
   _$ImplementationGuideContactCopyWith<_ImplementationGuideContact>
@@ -1505,8 +1505,8 @@ class _$ImplementationGuideDependencyTearOff {
   _ImplementationGuideDependency call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: DependencyType.unknown)
           required DependencyType type,
       required FhirUri? uri,
@@ -1534,8 +1534,8 @@ const $ImplementationGuideDependency = _$ImplementationGuideDependencyTearOff();
 mixin _$ImplementationGuideDependency {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   @JsonKey(unknownEnumValue: DependencyType.unknown)
   DependencyType get type;
   FhirUri? get uri;
@@ -1556,8 +1556,8 @@ abstract class $ImplementationGuideDependencyCopyWith<$Res> {
       _$ImplementationGuideDependencyCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: DependencyType.unknown) DependencyType type,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement});
@@ -1587,10 +1587,10 @@ class _$ImplementationGuideDependencyCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as DependencyType,
       uri: uri == freezed ? _value.uri : uri as FhirUri?,
       uriElement:
@@ -1620,8 +1620,8 @@ abstract class _$ImplementationGuideDependencyCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: DependencyType.unknown) DependencyType type,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement});
@@ -1656,10 +1656,10 @@ class __$ImplementationGuideDependencyCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as DependencyType,
       uri: uri == freezed ? _value.uri : uri as FhirUri?,
       uriElement:
@@ -1689,9 +1689,9 @@ class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: DependencyType.unknown)
   final DependencyType type;
@@ -1755,8 +1755,8 @@ abstract class _ImplementationGuideDependency
   factory _ImplementationGuideDependency(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: DependencyType.unknown)
           required DependencyType type,
       required FhirUri? uri,
@@ -1770,9 +1770,9 @@ abstract class _ImplementationGuideDependency
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: DependencyType.unknown)
   DependencyType get type;
@@ -1799,8 +1799,8 @@ class _$ImplementationGuidePackageTearOff {
   _ImplementationGuidePackage call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required String? name,
       String? description,
       @JsonKey(required: true)
@@ -1827,8 +1827,8 @@ const $ImplementationGuidePackage = _$ImplementationGuidePackageTearOff();
 mixin _$ImplementationGuidePackage {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   String? get name;
   String? get description;
   @JsonKey(required: true)
@@ -1847,8 +1847,8 @@ abstract class $ImplementationGuidePackageCopyWith<$Res> {
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       String? description,
       @JsonKey(required: true)
@@ -1877,10 +1877,10 @@ class _$ImplementationGuidePackageCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -1902,8 +1902,8 @@ abstract class _$ImplementationGuidePackageCopyWith<$Res>
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       String? description,
       @JsonKey(required: true)
@@ -1935,10 +1935,10 @@ class __$ImplementationGuidePackageCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -1969,9 +1969,9 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final String? name;
   @override
@@ -2034,8 +2034,8 @@ abstract class _ImplementationGuidePackage extends ImplementationGuidePackage {
   factory _ImplementationGuidePackage(
           {Id? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
+              List<FhirExtension?>? extension_,
+          List<FhirExtension?>? modifierExtension,
           required String? name,
           String? description,
           @JsonKey(required: true)
@@ -2049,9 +2049,9 @@ abstract class _ImplementationGuidePackage extends ImplementationGuidePackage {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   String? get name;
   @override
@@ -2076,8 +2076,8 @@ class _$ImplementationGuideGlobalTearOff {
 
   _ImplementationGuideGlobal call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required Code? type,
       @JsonKey(name: '_type') Element? typeElement,
       required Reference? profile}) {
@@ -2103,8 +2103,8 @@ const $ImplementationGuideGlobal = _$ImplementationGuideGlobalTearOff();
 mixin _$ImplementationGuideGlobal {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Code? get type;
   @JsonKey(name: '_type')
   Element? get typeElement;
@@ -2122,8 +2122,8 @@ abstract class $ImplementationGuideGlobalCopyWith<$Res> {
       _$ImplementationGuideGlobalCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Code? type,
       @JsonKey(name: '_type') Element? typeElement,
       Reference? profile});
@@ -2154,10 +2154,10 @@ class _$ImplementationGuideGlobalCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as Code?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -2197,8 +2197,8 @@ abstract class _$ImplementationGuideGlobalCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Code? type,
       @JsonKey(name: '_type') Element? typeElement,
       Reference? profile});
@@ -2234,10 +2234,10 @@ class __$ImplementationGuideGlobalCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       type: type == freezed ? _value.type : type as Code?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -2266,9 +2266,9 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Code? type;
   @override
@@ -2330,8 +2330,8 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
   _ImplementationGuideGlobal._() : super._();
   factory _ImplementationGuideGlobal(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required Code? type,
       @JsonKey(name: '_type') Element? typeElement,
       required Reference? profile}) = _$_ImplementationGuideGlobal;
@@ -2343,9 +2343,9 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Code? get type;
   @override
@@ -2369,15 +2369,15 @@ class _$ImplementationGuidePageTearOff {
 
   _ImplementationGuidePage call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required FhirUri? source,
       required String? name,
       @JsonKey(unknownEnumValue: PageKind.unknown) required PageKind kind,
-      List<Code>? type,
-      List<String>? package,
+      List<Code?>? type,
+      List<String?>? package,
       Code? format,
-      List<ImplementationGuidePage>? page}) {
+      List<ImplementationGuidePage?>? page}) {
     return _ImplementationGuidePage(
       id: id,
       extension_: extension_,
@@ -2404,16 +2404,16 @@ const $ImplementationGuidePage = _$ImplementationGuidePageTearOff();
 mixin _$ImplementationGuidePage {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   FhirUri? get source;
   String? get name;
   @JsonKey(unknownEnumValue: PageKind.unknown)
   PageKind get kind;
-  List<Code>? get type;
-  List<String>? get package;
+  List<Code?>? get type;
+  List<String?>? get package;
   Code? get format;
-  List<ImplementationGuidePage>? get page;
+  List<ImplementationGuidePage?>? get page;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2427,15 +2427,15 @@ abstract class $ImplementationGuidePageCopyWith<$Res> {
       _$ImplementationGuidePageCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       FhirUri? source,
       String? name,
       @JsonKey(unknownEnumValue: PageKind.unknown) PageKind kind,
-      List<Code>? type,
-      List<String>? package,
+      List<Code?>? type,
+      List<String?>? package,
       Code? format,
-      List<ImplementationGuidePage>? page});
+      List<ImplementationGuidePage?>? page});
 }
 
 /// @nodoc
@@ -2464,19 +2464,19 @@ class _$ImplementationGuidePageCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       source: source == freezed ? _value.source : source as FhirUri?,
       name: name == freezed ? _value.name : name as String?,
       kind: kind == freezed ? _value.kind : kind as PageKind,
-      type: type == freezed ? _value.type : type as List<Code>?,
-      package: package == freezed ? _value.package : package as List<String>?,
+      type: type == freezed ? _value.type : type as List<Code?>?,
+      package: package == freezed ? _value.package : package as List<String?>?,
       format: format == freezed ? _value.format : format as Code?,
       page: page == freezed
           ? _value.page
-          : page as List<ImplementationGuidePage>?,
+          : page as List<ImplementationGuidePage?>?,
     ));
   }
 }
@@ -2490,15 +2490,15 @@ abstract class _$ImplementationGuidePageCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       FhirUri? source,
       String? name,
       @JsonKey(unknownEnumValue: PageKind.unknown) PageKind kind,
-      List<Code>? type,
-      List<String>? package,
+      List<Code?>? type,
+      List<String?>? package,
       Code? format,
-      List<ImplementationGuidePage>? page});
+      List<ImplementationGuidePage?>? page});
 }
 
 /// @nodoc
@@ -2530,19 +2530,19 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       source: source == freezed ? _value.source : source as FhirUri?,
       name: name == freezed ? _value.name : name as String?,
       kind: kind == freezed ? _value.kind : kind as PageKind,
-      type: type == freezed ? _value.type : type as List<Code>?,
-      package: package == freezed ? _value.package : package as List<String>?,
+      type: type == freezed ? _value.type : type as List<Code?>?,
+      package: package == freezed ? _value.package : package as List<String?>?,
       format: format == freezed ? _value.format : format as Code?,
       page: page == freezed
           ? _value.page
-          : page as List<ImplementationGuidePage>?,
+          : page as List<ImplementationGuidePage?>?,
     ));
   }
 }
@@ -2571,9 +2571,9 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final FhirUri? source;
   @override
@@ -2582,13 +2582,13 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   @JsonKey(unknownEnumValue: PageKind.unknown)
   final PageKind kind;
   @override
-  final List<Code>? type;
+  final List<Code?>? type;
   @override
-  final List<String>? package;
+  final List<String?>? package;
   @override
   final Code? format;
   @override
-  final List<ImplementationGuidePage>? page;
+  final List<ImplementationGuidePage?>? page;
 
   @override
   String toString() {
@@ -2654,15 +2654,15 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
   _ImplementationGuidePage._() : super._();
   factory _ImplementationGuidePage(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required FhirUri? source,
       required String? name,
       @JsonKey(unknownEnumValue: PageKind.unknown) required PageKind kind,
-      List<Code>? type,
-      List<String>? package,
+      List<Code?>? type,
+      List<String?>? package,
       Code? format,
-      List<ImplementationGuidePage>? page}) = _$_ImplementationGuidePage;
+      List<ImplementationGuidePage?>? page}) = _$_ImplementationGuidePage;
 
   factory _ImplementationGuidePage.fromJson(Map<String, dynamic> json) =
       _$_ImplementationGuidePage.fromJson;
@@ -2671,9 +2671,9 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   FhirUri? get source;
   @override
@@ -2682,13 +2682,13 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
   @JsonKey(unknownEnumValue: PageKind.unknown)
   PageKind get kind;
   @override
-  List<Code>? get type;
+  List<Code?>? get type;
   @override
-  List<String>? get package;
+  List<String?>? get package;
   @override
   Code? get format;
   @override
-  List<ImplementationGuidePage>? get page;
+  List<ImplementationGuidePage?>? get page;
   @override
   @JsonKey(ignore: true)
   _$ImplementationGuidePageCopyWith<_ImplementationGuidePage> get copyWith;
@@ -2706,8 +2706,8 @@ class _$ImplementationGuidePackageResourceTearOff {
   _ImplementationGuidePackageResource call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
           required ResourcePurpose purpose,
       String? name,
@@ -2746,8 +2746,8 @@ const $ImplementationGuidePackageResource =
 mixin _$ImplementationGuidePackageResource {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
   ResourcePurpose get purpose;
   String? get name;
@@ -2774,8 +2774,8 @@ abstract class $ImplementationGuidePackageResourceCopyWith<$Res> {
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
           ResourcePurpose purpose,
       String? name,
@@ -2819,10 +2819,10 @@ class _$ImplementationGuidePackageResourceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       purpose: purpose == freezed ? _value.purpose : purpose as ResourcePurpose,
       name: name == freezed ? _value.name : name as String?,
       description:
@@ -2886,8 +2886,8 @@ abstract class _$ImplementationGuidePackageResourceCopyWith<$Res>
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
           ResourcePurpose purpose,
       String? name,
@@ -2938,10 +2938,10 @@ class __$ImplementationGuidePackageResourceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       purpose: purpose == freezed ? _value.purpose : purpose as ResourcePurpose,
       name: name == freezed ? _value.name : name as String?,
       description:
@@ -2988,9 +2988,9 @@ class _$_ImplementationGuidePackageResource
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
   final ResourcePurpose purpose;
@@ -3086,8 +3086,8 @@ abstract class _ImplementationGuidePackageResource
   factory _ImplementationGuidePackageResource(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
           required ResourcePurpose purpose,
       String? name,
@@ -3107,9 +3107,9 @@ abstract class _ImplementationGuidePackageResource
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
   ResourcePurpose get purpose;
@@ -3156,8 +3156,8 @@ class _$TestScriptTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
@@ -3176,25 +3176,25 @@ class _$TestScriptTearOff {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<TestScriptContact>? contact,
+      List<TestScriptContact?>? contact,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<CodeableConcept>? useContext,
+      List<CodeableConcept?>? useContext,
       String? requirements,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       TestScriptMetadata? metadata,
       Boolean? multiserver,
-      List<TestScriptFixture>? fixture,
-      List<Reference>? profile,
-      List<TestScriptVariable>? variable,
+      List<TestScriptFixture?>? fixture,
+      List<Reference?>? profile,
+      List<TestScriptVariable?>? variable,
       TestScriptSetup? setup,
-      List<TestScriptTest>? test,
+      List<TestScriptTest?>? test,
       TestScriptTeardown? teardown}) {
     return _TestScript(
       resourceType: resourceType,
@@ -3263,8 +3263,8 @@ mixin _$TestScript {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   FhirUri? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -3283,25 +3283,25 @@ mixin _$TestScript {
   String? get publisher;
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
-  List<TestScriptContact>? get contact;
+  List<TestScriptContact?>? get contact;
   FhirDateTime? get date;
   @JsonKey(name: '_date')
   Element? get dateElement;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<CodeableConcept>? get useContext;
+  List<CodeableConcept?>? get useContext;
   String? get requirements;
   String? get copyright;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   TestScriptMetadata? get metadata;
   Boolean? get multiserver;
-  List<TestScriptFixture>? get fixture;
-  List<Reference>? get profile;
-  List<TestScriptVariable>? get variable;
+  List<TestScriptFixture?>? get fixture;
+  List<Reference?>? get profile;
+  List<TestScriptVariable?>? get variable;
   TestScriptSetup? get setup;
-  List<TestScriptTest>? get test;
+  List<TestScriptTest?>? get test;
   TestScriptTeardown? get teardown;
 
   Map<String, dynamic> toJson();
@@ -3328,8 +3328,8 @@ abstract class $TestScriptCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
@@ -3348,25 +3348,25 @@ abstract class $TestScriptCopyWith<$Res> {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<TestScriptContact>? contact,
+      List<TestScriptContact?>? contact,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<CodeableConcept>? useContext,
+      List<CodeableConcept?>? useContext,
       String? requirements,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       TestScriptMetadata? metadata,
       Boolean? multiserver,
-      List<TestScriptFixture>? fixture,
-      List<Reference>? profile,
-      List<TestScriptVariable>? variable,
+      List<TestScriptFixture?>? fixture,
+      List<Reference?>? profile,
+      List<TestScriptVariable?>? variable,
       TestScriptSetup? setup,
-      List<TestScriptTest>? test,
+      List<TestScriptTest?>? test,
       TestScriptTeardown? teardown});
 
   $MetaCopyWith<$Res>? get meta;
@@ -3460,10 +3460,10 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
@@ -3489,7 +3489,7 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
           : publisherElement as Element?,
       contact: contact == freezed
           ? _value.contact
-          : contact as List<TestScriptContact>?,
+          : contact as List<TestScriptContact?>?,
       date: date == freezed ? _value.date : date as FhirDateTime?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
@@ -3500,7 +3500,7 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
           : descriptionElement as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<CodeableConcept>?,
+          : useContext as List<CodeableConcept?>?,
       requirements: requirements == freezed
           ? _value.requirements
           : requirements as String?,
@@ -3515,14 +3515,14 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
           multiserver == freezed ? _value.multiserver : multiserver as Boolean?,
       fixture: fixture == freezed
           ? _value.fixture
-          : fixture as List<TestScriptFixture>?,
+          : fixture as List<TestScriptFixture?>?,
       profile:
-          profile == freezed ? _value.profile : profile as List<Reference>?,
+          profile == freezed ? _value.profile : profile as List<Reference?>?,
       variable: variable == freezed
           ? _value.variable
-          : variable as List<TestScriptVariable>?,
+          : variable as List<TestScriptVariable?>?,
       setup: setup == freezed ? _value.setup : setup as TestScriptSetup?,
-      test: test == freezed ? _value.test : test as List<TestScriptTest>?,
+      test: test == freezed ? _value.test : test as List<TestScriptTest?>?,
       teardown: teardown == freezed
           ? _value.teardown
           : teardown as TestScriptTeardown?,
@@ -3726,8 +3726,8 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
@@ -3746,25 +3746,25 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<TestScriptContact>? contact,
+      List<TestScriptContact?>? contact,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<CodeableConcept>? useContext,
+      List<CodeableConcept?>? useContext,
       String? requirements,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       TestScriptMetadata? metadata,
       Boolean? multiserver,
-      List<TestScriptFixture>? fixture,
-      List<Reference>? profile,
-      List<TestScriptVariable>? variable,
+      List<TestScriptFixture?>? fixture,
+      List<Reference?>? profile,
+      List<TestScriptVariable?>? variable,
       TestScriptSetup? setup,
-      List<TestScriptTest>? test,
+      List<TestScriptTest?>? test,
       TestScriptTeardown? teardown});
 
   @override
@@ -3876,10 +3876,10 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
@@ -3905,7 +3905,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : publisherElement as Element?,
       contact: contact == freezed
           ? _value.contact
-          : contact as List<TestScriptContact>?,
+          : contact as List<TestScriptContact?>?,
       date: date == freezed ? _value.date : date as FhirDateTime?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
@@ -3916,7 +3916,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           : descriptionElement as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<CodeableConcept>?,
+          : useContext as List<CodeableConcept?>?,
       requirements: requirements == freezed
           ? _value.requirements
           : requirements as String?,
@@ -3931,14 +3931,14 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
           multiserver == freezed ? _value.multiserver : multiserver as Boolean?,
       fixture: fixture == freezed
           ? _value.fixture
-          : fixture as List<TestScriptFixture>?,
+          : fixture as List<TestScriptFixture?>?,
       profile:
-          profile == freezed ? _value.profile : profile as List<Reference>?,
+          profile == freezed ? _value.profile : profile as List<Reference?>?,
       variable: variable == freezed
           ? _value.variable
-          : variable as List<TestScriptVariable>?,
+          : variable as List<TestScriptVariable?>?,
       setup: setup == freezed ? _value.setup : setup as TestScriptSetup?,
-      test: test == freezed ? _value.test : test as List<TestScriptTest>?,
+      test: test == freezed ? _value.test : test as List<TestScriptTest?>?,
       teardown: teardown == freezed
           ? _value.teardown
           : teardown as TestScriptTeardown?,
@@ -4032,9 +4032,9 @@ class _$_TestScript extends _TestScript {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final FhirUri? url;
   @override
@@ -4066,7 +4066,7 @@ class _$_TestScript extends _TestScript {
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
   @override
-  final List<TestScriptContact>? contact;
+  final List<TestScriptContact?>? contact;
   @override
   final FhirDateTime? date;
   @override
@@ -4078,7 +4078,7 @@ class _$_TestScript extends _TestScript {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<CodeableConcept>? useContext;
+  final List<CodeableConcept?>? useContext;
   @override
   final String? requirements;
   @override
@@ -4091,15 +4091,15 @@ class _$_TestScript extends _TestScript {
   @override
   final Boolean? multiserver;
   @override
-  final List<TestScriptFixture>? fixture;
+  final List<TestScriptFixture?>? fixture;
   @override
-  final List<Reference>? profile;
+  final List<Reference?>? profile;
   @override
-  final List<TestScriptVariable>? variable;
+  final List<TestScriptVariable?>? variable;
   @override
   final TestScriptSetup? setup;
   @override
-  final List<TestScriptTest>? test;
+  final List<TestScriptTest?>? test;
   @override
   final TestScriptTeardown? teardown;
 
@@ -4268,8 +4268,8 @@ abstract class _TestScript extends TestScript {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
@@ -4288,25 +4288,25 @@ abstract class _TestScript extends TestScript {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<TestScriptContact>? contact,
+      List<TestScriptContact?>? contact,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<CodeableConcept>? useContext,
+      List<CodeableConcept?>? useContext,
       String? requirements,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       TestScriptMetadata? metadata,
       Boolean? multiserver,
-      List<TestScriptFixture>? fixture,
-      List<Reference>? profile,
-      List<TestScriptVariable>? variable,
+      List<TestScriptFixture?>? fixture,
+      List<Reference?>? profile,
+      List<TestScriptVariable?>? variable,
       TestScriptSetup? setup,
-      List<TestScriptTest>? test,
+      List<TestScriptTest?>? test,
       TestScriptTeardown? teardown}) = _$_TestScript;
 
   factory _TestScript.fromJson(Map<String, dynamic> json) =
@@ -4335,9 +4335,9 @@ abstract class _TestScript extends TestScript {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   FhirUri? get url;
   @override
@@ -4369,7 +4369,7 @@ abstract class _TestScript extends TestScript {
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
-  List<TestScriptContact>? get contact;
+  List<TestScriptContact?>? get contact;
   @override
   FhirDateTime? get date;
   @override
@@ -4381,7 +4381,7 @@ abstract class _TestScript extends TestScript {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<CodeableConcept>? get useContext;
+  List<CodeableConcept?>? get useContext;
   @override
   String? get requirements;
   @override
@@ -4394,15 +4394,15 @@ abstract class _TestScript extends TestScript {
   @override
   Boolean? get multiserver;
   @override
-  List<TestScriptFixture>? get fixture;
+  List<TestScriptFixture?>? get fixture;
   @override
-  List<Reference>? get profile;
+  List<Reference?>? get profile;
   @override
-  List<TestScriptVariable>? get variable;
+  List<TestScriptVariable?>? get variable;
   @override
   TestScriptSetup? get setup;
   @override
-  List<TestScriptTest>? get test;
+  List<TestScriptTest?>? get test;
   @override
   TestScriptTeardown? get teardown;
   @override
@@ -4420,10 +4420,10 @@ class _$TestScriptContactTearOff {
 
   _TestScriptContact call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
-      List<ContactPoint>? telecom}) {
+      List<ContactPoint?>? telecom}) {
     return _TestScriptContact(
       id: id,
       extension_: extension_,
@@ -4445,10 +4445,10 @@ const $TestScriptContact = _$TestScriptContactTearOff();
 mixin _$TestScriptContact {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   String? get name;
-  List<ContactPoint>? get telecom;
+  List<ContactPoint?>? get telecom;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4462,10 +4462,10 @@ abstract class $TestScriptContactCopyWith<$Res> {
       _$TestScriptContactCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
-      List<ContactPoint>? telecom});
+      List<ContactPoint?>? telecom});
 }
 
 /// @nodoc
@@ -4489,13 +4489,13 @@ class _$TestScriptContactCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
     ));
   }
 }
@@ -4509,10 +4509,10 @@ abstract class _$TestScriptContactCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
-      List<ContactPoint>? telecom});
+      List<ContactPoint?>? telecom});
 }
 
 /// @nodoc
@@ -4538,13 +4538,13 @@ class __$TestScriptContactCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
     ));
   }
 }
@@ -4568,13 +4568,13 @@ class _$_TestScriptContact extends _TestScriptContact {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final String? name;
   @override
-  final List<ContactPoint>? telecom;
+  final List<ContactPoint?>? telecom;
 
   @override
   String toString() {
@@ -4623,10 +4623,10 @@ abstract class _TestScriptContact extends TestScriptContact {
   _TestScriptContact._() : super._();
   factory _TestScriptContact(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
-      List<ContactPoint>? telecom}) = _$_TestScriptContact;
+      List<ContactPoint?>? telecom}) = _$_TestScriptContact;
 
   factory _TestScriptContact.fromJson(Map<String, dynamic> json) =
       _$_TestScriptContact.fromJson;
@@ -4635,13 +4635,13 @@ abstract class _TestScriptContact extends TestScriptContact {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   String? get name;
   @override
-  List<ContactPoint>? get telecom;
+  List<ContactPoint?>? get telecom;
   @override
   @JsonKey(ignore: true)
   _$TestScriptContactCopyWith<_TestScriptContact> get copyWith;
@@ -4658,9 +4658,9 @@ class _$TestScriptMetadataTearOff {
   _TestScriptMetadata call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<TestScriptMetadataLink>? link,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<TestScriptMetadataLink?>? link,
       @JsonKey(required: true)
           required List<TestScriptMetadataCapability> capability}) {
     return _TestScriptMetadata(
@@ -4684,9 +4684,9 @@ const $TestScriptMetadata = _$TestScriptMetadataTearOff();
 mixin _$TestScriptMetadata {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<TestScriptMetadataLink>? get link;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<TestScriptMetadataLink?>? get link;
   @JsonKey(required: true)
   List<TestScriptMetadataCapability> get capability;
 
@@ -4702,9 +4702,9 @@ abstract class $TestScriptMetadataCopyWith<$Res> {
       _$TestScriptMetadataCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<TestScriptMetadataLink>? link,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<TestScriptMetadataLink?>? link,
       @JsonKey(required: true) List<TestScriptMetadataCapability> capability});
 }
 
@@ -4729,12 +4729,13 @@ class _$TestScriptMetadataCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      link:
-          link == freezed ? _value.link : link as List<TestScriptMetadataLink>?,
+          : modifierExtension as List<FhirExtension?>?,
+      link: link == freezed
+          ? _value.link
+          : link as List<TestScriptMetadataLink?>?,
       capability: capability == freezed
           ? _value.capability
           : capability as List<TestScriptMetadataCapability>,
@@ -4751,9 +4752,9 @@ abstract class _$TestScriptMetadataCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<TestScriptMetadataLink>? link,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<TestScriptMetadataLink?>? link,
       @JsonKey(required: true) List<TestScriptMetadataCapability> capability});
 }
 
@@ -4780,12 +4781,13 @@ class __$TestScriptMetadataCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
-      link:
-          link == freezed ? _value.link : link as List<TestScriptMetadataLink>?,
+          : modifierExtension as List<FhirExtension?>?,
+      link: link == freezed
+          ? _value.link
+          : link as List<TestScriptMetadataLink?>?,
       capability: capability == freezed
           ? _value.capability
           : capability as List<TestScriptMetadataCapability>,
@@ -4812,11 +4814,11 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<TestScriptMetadataLink>? link;
+  final List<TestScriptMetadataLink?>? link;
   @override
   @JsonKey(required: true)
   final List<TestScriptMetadataCapability> capability;
@@ -4870,9 +4872,9 @@ abstract class _TestScriptMetadata extends TestScriptMetadata {
   factory _TestScriptMetadata(
           {Id? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          List<TestScriptMetadataLink>? link,
+              List<FhirExtension?>? extension_,
+          List<FhirExtension?>? modifierExtension,
+          List<TestScriptMetadataLink?>? link,
           @JsonKey(required: true)
               required List<TestScriptMetadataCapability> capability}) =
       _$_TestScriptMetadata;
@@ -4884,11 +4886,11 @@ abstract class _TestScriptMetadata extends TestScriptMetadata {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<TestScriptMetadataLink>? get link;
+  List<TestScriptMetadataLink?>? get link;
   @override
   @JsonKey(required: true)
   List<TestScriptMetadataCapability> get capability;
@@ -4908,8 +4910,8 @@ class _$TestScriptMetadataLinkTearOff {
 
   _TestScriptMetadataLink call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       String? description,
@@ -4937,8 +4939,8 @@ const $TestScriptMetadataLink = _$TestScriptMetadataLinkTearOff();
 mixin _$TestScriptMetadataLink {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   FhirUri? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
@@ -4958,8 +4960,8 @@ abstract class $TestScriptMetadataLinkCopyWith<$Res> {
       _$TestScriptMetadataLinkCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       String? description,
@@ -4992,10 +4994,10 @@ class _$TestScriptMetadataLinkCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
@@ -5039,8 +5041,8 @@ abstract class _$TestScriptMetadataLinkCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
       String? description,
@@ -5077,10 +5079,10 @@ class __$TestScriptMetadataLinkCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
@@ -5114,9 +5116,9 @@ class _$_TestScriptMetadataLink extends _TestScriptMetadataLink {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final FhirUri? url;
   @override
@@ -5185,8 +5187,8 @@ abstract class _TestScriptMetadataLink extends TestScriptMetadataLink {
   _TestScriptMetadataLink._() : super._();
   factory _TestScriptMetadataLink(
           {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+          List<FhirExtension?>? modifierExtension,
           required FhirUri? url,
           @JsonKey(name: '_url') Element? urlElement,
           String? description,
@@ -5200,9 +5202,9 @@ abstract class _TestScriptMetadataLink extends TestScriptMetadataLink {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   FhirUri? get url;
   @override
@@ -5229,8 +5231,8 @@ class _$TestScriptMetadataCapabilityTearOff {
 
   _TestScriptMetadataCapability call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
       Boolean? validated,
@@ -5239,8 +5241,8 @@ class _$TestScriptMetadataCapabilityTearOff {
       @JsonKey(name: '_description') Element? descriptionElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
-      List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      List<FhirUri?>? link,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       required Reference? conformance}) {
     return _TestScriptMetadataCapability(
       id: id,
@@ -5272,8 +5274,8 @@ const $TestScriptMetadataCapability = _$TestScriptMetadataCapabilityTearOff();
 mixin _$TestScriptMetadataCapability {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   @JsonKey(name: 'required')
   Boolean? get required_;
   @JsonKey(name: '_required')
@@ -5287,9 +5289,9 @@ mixin _$TestScriptMetadataCapability {
   Integer? get destination;
   @JsonKey(name: '_destination')
   Element? get destinationElement;
-  List<FhirUri>? get link;
+  List<FhirUri?>? get link;
   @JsonKey(name: '_link')
-  List<Element>? get linkElement;
+  List<Element?>? get linkElement;
   Reference? get conformance;
 
   Map<String, dynamic> toJson();
@@ -5306,8 +5308,8 @@ abstract class $TestScriptMetadataCapabilityCopyWith<$Res> {
       _$TestScriptMetadataCapabilityCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
       Boolean? validated,
@@ -5316,8 +5318,8 @@ abstract class $TestScriptMetadataCapabilityCopyWith<$Res> {
       @JsonKey(name: '_description') Element? descriptionElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
-      List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      List<FhirUri?>? link,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       Reference? conformance});
 
   $ElementCopyWith<$Res>? get requiredElement;
@@ -5357,10 +5359,10 @@ class _$TestScriptMetadataCapabilityCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       required_:
           required_ == freezed ? _value.required_ : required_ as Boolean?,
       requiredElement: requiredElement == freezed
@@ -5381,10 +5383,10 @@ class _$TestScriptMetadataCapabilityCopyWithImpl<$Res>
       destinationElement: destinationElement == freezed
           ? _value.destinationElement
           : destinationElement as Element?,
-      link: link == freezed ? _value.link : link as List<FhirUri>?,
+      link: link == freezed ? _value.link : link as List<FhirUri?>?,
       linkElement: linkElement == freezed
           ? _value.linkElement
-          : linkElement as List<Element>?,
+          : linkElement as List<Element?>?,
       conformance: conformance == freezed
           ? _value.conformance
           : conformance as Reference?,
@@ -5457,8 +5459,8 @@ abstract class _$TestScriptMetadataCapabilityCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
       Boolean? validated,
@@ -5467,8 +5469,8 @@ abstract class _$TestScriptMetadataCapabilityCopyWith<$Res>
       @JsonKey(name: '_description') Element? descriptionElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
-      List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      List<FhirUri?>? link,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       Reference? conformance});
 
   @override
@@ -5517,10 +5519,10 @@ class __$TestScriptMetadataCapabilityCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       required_:
           required_ == freezed ? _value.required_ : required_ as Boolean?,
       requiredElement: requiredElement == freezed
@@ -5541,10 +5543,10 @@ class __$TestScriptMetadataCapabilityCopyWithImpl<$Res>
       destinationElement: destinationElement == freezed
           ? _value.destinationElement
           : destinationElement as Element?,
-      link: link == freezed ? _value.link : link as List<FhirUri>?,
+      link: link == freezed ? _value.link : link as List<FhirUri?>?,
       linkElement: linkElement == freezed
           ? _value.linkElement
-          : linkElement as List<Element>?,
+          : linkElement as List<Element?>?,
       conformance: conformance == freezed
           ? _value.conformance
           : conformance as Reference?,
@@ -5580,9 +5582,9 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   @JsonKey(name: 'required')
   final Boolean? required_;
@@ -5605,10 +5607,10 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
   @JsonKey(name: '_destination')
   final Element? destinationElement;
   @override
-  final List<FhirUri>? link;
+  final List<FhirUri?>? link;
   @override
   @JsonKey(name: '_link')
-  final List<Element>? linkElement;
+  final List<Element?>? linkElement;
   @override
   final Reference? conformance;
 
@@ -5698,8 +5700,8 @@ abstract class _TestScriptMetadataCapability
   _TestScriptMetadataCapability._() : super._();
   factory _TestScriptMetadataCapability(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
       Boolean? validated,
@@ -5708,8 +5710,8 @@ abstract class _TestScriptMetadataCapability
       @JsonKey(name: '_description') Element? descriptionElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
-      List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      List<FhirUri?>? link,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       required Reference? conformance}) = _$_TestScriptMetadataCapability;
 
   factory _TestScriptMetadataCapability.fromJson(Map<String, dynamic> json) =
@@ -5719,9 +5721,9 @@ abstract class _TestScriptMetadataCapability
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   @JsonKey(name: 'required')
   Boolean? get required_;
@@ -5744,10 +5746,10 @@ abstract class _TestScriptMetadataCapability
   @JsonKey(name: '_destination')
   Element? get destinationElement;
   @override
-  List<FhirUri>? get link;
+  List<FhirUri?>? get link;
   @override
   @JsonKey(name: '_link')
-  List<Element>? get linkElement;
+  List<Element?>? get linkElement;
   @override
   Reference? get conformance;
   @override
@@ -5766,8 +5768,8 @@ class _$TestScriptFixtureTearOff {
 
   _TestScriptFixture call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Boolean? autocreate,
       @JsonKey(name: '_autocreate') Element? autocreateElement,
       Boolean? autodelete,
@@ -5797,8 +5799,8 @@ const $TestScriptFixture = _$TestScriptFixtureTearOff();
 mixin _$TestScriptFixture {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Boolean? get autocreate;
   @JsonKey(name: '_autocreate')
   Element? get autocreateElement;
@@ -5819,8 +5821,8 @@ abstract class $TestScriptFixtureCopyWith<$Res> {
       _$TestScriptFixtureCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Boolean? autocreate,
       @JsonKey(name: '_autocreate') Element? autocreateElement,
       Boolean? autodelete,
@@ -5856,10 +5858,10 @@ class _$TestScriptFixtureCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       autocreate:
           autocreate == freezed ? _value.autocreate : autocreate as Boolean?,
       autocreateElement: autocreateElement == freezed
@@ -5917,8 +5919,8 @@ abstract class _$TestScriptFixtureCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Boolean? autocreate,
       @JsonKey(name: '_autocreate') Element? autocreateElement,
       Boolean? autodelete,
@@ -5959,10 +5961,10 @@ class __$TestScriptFixtureCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       autocreate:
           autocreate == freezed ? _value.autocreate : autocreate as Boolean?,
       autocreateElement: autocreateElement == freezed
@@ -6000,9 +6002,9 @@ class _$_TestScriptFixture extends _TestScriptFixture {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Boolean? autocreate;
   @override
@@ -6077,8 +6079,8 @@ abstract class _TestScriptFixture extends TestScriptFixture {
   _TestScriptFixture._() : super._();
   factory _TestScriptFixture(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Boolean? autocreate,
       @JsonKey(name: '_autocreate') Element? autocreateElement,
       Boolean? autodelete,
@@ -6092,9 +6094,9 @@ abstract class _TestScriptFixture extends TestScriptFixture {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Boolean? get autocreate;
   @override
@@ -6122,8 +6124,8 @@ class _$TestScriptVariableTearOff {
 
   _TestScriptVariable call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       required String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? headerField,
@@ -6159,8 +6161,8 @@ const $TestScriptVariable = _$TestScriptVariableTearOff();
 mixin _$TestScriptVariable {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
@@ -6186,8 +6188,8 @@ abstract class $TestScriptVariableCopyWith<$Res> {
       _$TestScriptVariableCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? headerField,
@@ -6230,10 +6232,10 @@ class _$TestScriptVariableCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -6306,8 +6308,8 @@ abstract class _$TestScriptVariableCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? headerField,
@@ -6356,10 +6358,10 @@ class __$TestScriptVariableCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -6404,9 +6406,9 @@ class _$_TestScriptVariable extends _TestScriptVariable {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final String? name;
   @override
@@ -6499,8 +6501,8 @@ abstract class _TestScriptVariable extends TestScriptVariable {
   _TestScriptVariable._() : super._();
   factory _TestScriptVariable(
           {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+          List<FhirExtension?>? modifierExtension,
           required String? name,
           @JsonKey(name: '_name') Element? nameElement,
           String? headerField,
@@ -6518,9 +6520,9 @@ abstract class _TestScriptVariable extends TestScriptVariable {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   String? get name;
   @override
@@ -6556,10 +6558,10 @@ class _$TestScriptSetupTearOff {
 
   _TestScriptSetup call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       TestScriptMetadata? metadata,
-      required List<TestScriptSetupAction>? action}) {
+      required List<TestScriptSetupAction?>? action}) {
     return _TestScriptSetup(
       id: id,
       extension_: extension_,
@@ -6581,10 +6583,10 @@ const $TestScriptSetup = _$TestScriptSetupTearOff();
 mixin _$TestScriptSetup {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   TestScriptMetadata? get metadata;
-  List<TestScriptSetupAction>? get action;
+  List<TestScriptSetupAction?>? get action;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -6598,10 +6600,10 @@ abstract class $TestScriptSetupCopyWith<$Res> {
       _$TestScriptSetupCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       TestScriptMetadata? metadata,
-      List<TestScriptSetupAction>? action});
+      List<TestScriptSetupAction?>? action});
 
   $TestScriptMetadataCopyWith<$Res>? get metadata;
 }
@@ -6627,16 +6629,16 @@ class _$TestScriptSetupCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       metadata: metadata == freezed
           ? _value.metadata
           : metadata as TestScriptMetadata?,
       action: action == freezed
           ? _value.action
-          : action as List<TestScriptSetupAction>?,
+          : action as List<TestScriptSetupAction?>?,
     ));
   }
 
@@ -6661,10 +6663,10 @@ abstract class _$TestScriptSetupCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       TestScriptMetadata? metadata,
-      List<TestScriptSetupAction>? action});
+      List<TestScriptSetupAction?>? action});
 
   @override
   $TestScriptMetadataCopyWith<$Res>? get metadata;
@@ -6693,16 +6695,16 @@ class __$TestScriptSetupCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       metadata: metadata == freezed
           ? _value.metadata
           : metadata as TestScriptMetadata?,
       action: action == freezed
           ? _value.action
-          : action as List<TestScriptSetupAction>?,
+          : action as List<TestScriptSetupAction?>?,
     ));
   }
 }
@@ -6726,13 +6728,13 @@ class _$_TestScriptSetup extends _TestScriptSetup {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final TestScriptMetadata? metadata;
   @override
-  final List<TestScriptSetupAction>? action;
+  final List<TestScriptSetupAction?>? action;
 
   @override
   String toString() {
@@ -6782,10 +6784,10 @@ abstract class _TestScriptSetup extends TestScriptSetup {
   _TestScriptSetup._() : super._();
   factory _TestScriptSetup(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       TestScriptMetadata? metadata,
-      required List<TestScriptSetupAction>? action}) = _$_TestScriptSetup;
+      required List<TestScriptSetupAction?>? action}) = _$_TestScriptSetup;
 
   factory _TestScriptSetup.fromJson(Map<String, dynamic> json) =
       _$_TestScriptSetup.fromJson;
@@ -6794,13 +6796,13 @@ abstract class _TestScriptSetup extends TestScriptSetup {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   TestScriptMetadata? get metadata;
   @override
-  List<TestScriptSetupAction>? get action;
+  List<TestScriptSetupAction?>? get action;
   @override
   @JsonKey(ignore: true)
   _$TestScriptSetupCopyWith<_TestScriptSetup> get copyWith;
@@ -6817,9 +6819,9 @@ class _$TestScriptSetupActionTearOff {
 
   _TestScriptSetupAction call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
       TestScriptActionOperation? operation,
       @JsonKey(name: 'assert') TestScriptActionAssert? assert_}) {
     return _TestScriptSetupAction(
@@ -6844,10 +6846,10 @@ const $TestScriptSetupAction = _$TestScriptSetupActionTearOff();
 mixin _$TestScriptSetupAction {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String?>? get fhirComments;
   TestScriptActionOperation? get operation;
   @JsonKey(name: 'assert')
   TestScriptActionAssert? get assert_;
@@ -6864,9 +6866,9 @@ abstract class $TestScriptSetupActionCopyWith<$Res> {
       _$TestScriptSetupActionCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
       TestScriptActionOperation? operation,
       @JsonKey(name: 'assert') TestScriptActionAssert? assert_});
 
@@ -6896,13 +6898,13 @@ class _$TestScriptSetupActionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
+          : fhirComments as List<String?>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestScriptActionOperation?,
@@ -6944,9 +6946,9 @@ abstract class _$TestScriptSetupActionCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
       TestScriptActionOperation? operation,
       @JsonKey(name: 'assert') TestScriptActionAssert? assert_});
 
@@ -6980,13 +6982,13 @@ class __$TestScriptSetupActionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
+          : fhirComments as List<String?>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestScriptActionOperation?,
@@ -7017,12 +7019,12 @@ class _$_TestScriptSetupAction extends _TestScriptSetupAction {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  final List<String?>? fhirComments;
   @override
   final TestScriptActionOperation? operation;
   @override
@@ -7082,9 +7084,9 @@ abstract class _TestScriptSetupAction extends TestScriptSetupAction {
   _TestScriptSetupAction._() : super._();
   factory _TestScriptSetupAction(
           {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+          List<FhirExtension?>? modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
           TestScriptActionOperation? operation,
           @JsonKey(name: 'assert') TestScriptActionAssert? assert_}) =
       _$_TestScriptSetupAction;
@@ -7096,12 +7098,12 @@ abstract class _TestScriptSetupAction extends TestScriptSetupAction {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String?>? get fhirComments;
   @override
   TestScriptActionOperation? get operation;
   @override
@@ -7124,10 +7126,10 @@ class _$TestScriptActionOperationTearOff {
   _TestScriptActionOperation call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+          List<String?>? fhirComments,
       Coding? type,
       Code? resource,
       @JsonKey(name: '_resource')
@@ -7155,7 +7157,7 @@ class _$TestScriptActionOperationTearOff {
       String? params,
       @JsonKey(name: '_params')
           Element? paramsElement,
-      List<TestScriptOperationRequestHeader>? requestHeader,
+      List<TestScriptOperationRequestHeader?>? requestHeader,
       Id? responseId,
       @JsonKey(name: '_responseId')
           Element? responseIdElement,
@@ -7214,10 +7216,10 @@ const $TestScriptActionOperation = _$TestScriptActionOperationTearOff();
 mixin _$TestScriptActionOperation {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String?>? get fhirComments;
   Coding? get type;
   Code? get resource;
   @JsonKey(name: '_resource')
@@ -7245,7 +7247,7 @@ mixin _$TestScriptActionOperation {
   String? get params;
   @JsonKey(name: '_params')
   Element? get paramsElement;
-  List<TestScriptOperationRequestHeader>? get requestHeader;
+  List<TestScriptOperationRequestHeader?>? get requestHeader;
   Id? get responseId;
   @JsonKey(name: '_responseId')
   Element? get responseIdElement;
@@ -7272,10 +7274,10 @@ abstract class $TestScriptActionOperationCopyWith<$Res> {
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+          List<String?>? fhirComments,
       Coding? type,
       Code? resource,
       @JsonKey(name: '_resource')
@@ -7303,7 +7305,7 @@ abstract class $TestScriptActionOperationCopyWith<$Res> {
       String? params,
       @JsonKey(name: '_params')
           Element? paramsElement,
-      List<TestScriptOperationRequestHeader>? requestHeader,
+      List<TestScriptOperationRequestHeader?>? requestHeader,
       Id? responseId,
       @JsonKey(name: '_responseId')
           Element? responseIdElement,
@@ -7378,13 +7380,13 @@ class _$TestScriptActionOperationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
+          : fhirComments as List<String?>?,
       type: type == freezed ? _value.type : type as Coding?,
       resource: resource == freezed ? _value.resource : resource as Code?,
       resourceElement: resourceElement == freezed
@@ -7426,7 +7428,7 @@ class _$TestScriptActionOperationCopyWithImpl<$Res>
           : paramsElement as Element?,
       requestHeader: requestHeader == freezed
           ? _value.requestHeader
-          : requestHeader as List<TestScriptOperationRequestHeader>?,
+          : requestHeader as List<TestScriptOperationRequestHeader?>?,
       responseId: responseId == freezed ? _value.responseId : responseId as Id?,
       responseIdElement: responseIdElement == freezed
           ? _value.responseIdElement
@@ -7599,10 +7601,10 @@ abstract class _$TestScriptActionOperationCopyWith<$Res>
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+          List<String?>? fhirComments,
       Coding? type,
       Code? resource,
       @JsonKey(name: '_resource')
@@ -7630,7 +7632,7 @@ abstract class _$TestScriptActionOperationCopyWith<$Res>
       String? params,
       @JsonKey(name: '_params')
           Element? paramsElement,
-      List<TestScriptOperationRequestHeader>? requestHeader,
+      List<TestScriptOperationRequestHeader?>? requestHeader,
       Id? responseId,
       @JsonKey(name: '_responseId')
           Element? responseIdElement,
@@ -7721,13 +7723,13 @@ class __$TestScriptActionOperationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
+          : fhirComments as List<String?>?,
       type: type == freezed ? _value.type : type as Coding?,
       resource: resource == freezed ? _value.resource : resource as Code?,
       resourceElement: resourceElement == freezed
@@ -7769,7 +7771,7 @@ class __$TestScriptActionOperationCopyWithImpl<$Res>
           : paramsElement as Element?,
       requestHeader: requestHeader == freezed
           ? _value.requestHeader
-          : requestHeader as List<TestScriptOperationRequestHeader>?,
+          : requestHeader as List<TestScriptOperationRequestHeader?>?,
       responseId: responseId == freezed ? _value.responseId : responseId as Id?,
       responseIdElement: responseIdElement == freezed
           ? _value.responseIdElement
@@ -7833,12 +7835,12 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  final List<String?>? fhirComments;
   @override
   final Coding? type;
   @override
@@ -7884,7 +7886,7 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
   @JsonKey(name: '_params')
   final Element? paramsElement;
   @override
-  final List<TestScriptOperationRequestHeader>? requestHeader;
+  final List<TestScriptOperationRequestHeader?>? requestHeader;
   @override
   final Id? responseId;
   @override
@@ -8041,10 +8043,10 @@ abstract class _TestScriptActionOperation extends TestScriptActionOperation {
   factory _TestScriptActionOperation(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+          List<String?>? fhirComments,
       Coding? type,
       Code? resource,
       @JsonKey(name: '_resource')
@@ -8072,7 +8074,7 @@ abstract class _TestScriptActionOperation extends TestScriptActionOperation {
       String? params,
       @JsonKey(name: '_params')
           Element? paramsElement,
-      List<TestScriptOperationRequestHeader>? requestHeader,
+      List<TestScriptOperationRequestHeader?>? requestHeader,
       Id? responseId,
       @JsonKey(name: '_responseId')
           Element? responseIdElement,
@@ -8093,12 +8095,12 @@ abstract class _TestScriptActionOperation extends TestScriptActionOperation {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String?>? get fhirComments;
   @override
   Coding? get type;
   @override
@@ -8144,7 +8146,7 @@ abstract class _TestScriptActionOperation extends TestScriptActionOperation {
   @JsonKey(name: '_params')
   Element? get paramsElement;
   @override
-  List<TestScriptOperationRequestHeader>? get requestHeader;
+  List<TestScriptOperationRequestHeader?>? get requestHeader;
   @override
   Id? get responseId;
   @override
@@ -8181,7 +8183,7 @@ class _$TestScriptOperationRequestHeaderTearOff {
 
   _TestScriptOperationRequestHeader call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       FhirExtension? modifierExtension,
       required String? field,
       @JsonKey(name: '_field') Element? fieldElement,
@@ -8211,7 +8213,7 @@ const $TestScriptOperationRequestHeader =
 mixin _$TestScriptOperationRequestHeader {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   FhirExtension? get modifierExtension;
   String? get field;
   @JsonKey(name: '_field')
@@ -8234,7 +8236,7 @@ abstract class $TestScriptOperationRequestHeaderCopyWith<$Res> {
       _$TestScriptOperationRequestHeaderCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       FhirExtension? modifierExtension,
       String? field,
       @JsonKey(name: '_field') Element? fieldElement,
@@ -8269,7 +8271,7 @@ class _$TestScriptOperationRequestHeaderCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension?,
@@ -8328,7 +8330,7 @@ abstract class _$TestScriptOperationRequestHeaderCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
       FhirExtension? modifierExtension,
       String? field,
       @JsonKey(name: '_field') Element? fieldElement,
@@ -8370,7 +8372,7 @@ class __$TestScriptOperationRequestHeaderCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as FhirExtension?,
@@ -8409,7 +8411,7 @@ class _$_TestScriptOperationRequestHeader
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
   final FhirExtension? modifierExtension;
   @override
@@ -8480,7 +8482,7 @@ abstract class _TestScriptOperationRequestHeader
   _TestScriptOperationRequestHeader._() : super._();
   factory _TestScriptOperationRequestHeader(
           {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
           FhirExtension? modifierExtension,
           required String? field,
           @JsonKey(name: '_field') Element? fieldElement,
@@ -8495,7 +8497,7 @@ abstract class _TestScriptOperationRequestHeader
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
   FhirExtension? get modifierExtension;
   @override
@@ -8526,8 +8528,8 @@ class _$TestScriptActionAssertTearOff {
   _TestScriptActionAssert call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? label,
       String? description,
       @JsonKey(name: '_description')
@@ -8638,8 +8640,8 @@ const $TestScriptActionAssert = _$TestScriptActionAssertTearOff();
 mixin _$TestScriptActionAssert {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   String? get label;
   String? get description;
   @JsonKey(name: '_description')
@@ -8710,8 +8712,8 @@ abstract class $TestScriptActionAssertCopyWith<$Res> {
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? label,
       String? description,
       @JsonKey(name: '_description')
@@ -8842,10 +8844,10 @@ class _$TestScriptActionAssertCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       label: label == freezed ? _value.label : label as String?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -9135,8 +9137,8 @@ abstract class _$TestScriptActionAssertCopyWith<$Res>
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? label,
       String? description,
       @JsonKey(name: '_description')
@@ -9286,10 +9288,10 @@ class __$TestScriptActionAssertCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       label: label == freezed ? _value.label : label as String?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -9456,9 +9458,9 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final String? label;
   @override
@@ -9695,8 +9697,8 @@ abstract class _TestScriptActionAssert extends TestScriptActionAssert {
   factory _TestScriptActionAssert(
       {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? label,
       String? description,
       @JsonKey(name: '_description')
@@ -9761,9 +9763,9 @@ abstract class _TestScriptActionAssert extends TestScriptActionAssert {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   String? get label;
   @override
@@ -9870,14 +9872,14 @@ class _$TestScriptTestTearOff {
 
   _TestScriptTest call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       TestScriptMetadata? metadata,
-      required List<TestScriptSetupAction>? action}) {
+      required List<TestScriptSetupAction?>? action}) {
     return _TestScriptTest(
       id: id,
       extension_: extension_,
@@ -9903,8 +9905,8 @@ const $TestScriptTest = _$TestScriptTestTearOff();
 mixin _$TestScriptTest {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
@@ -9912,7 +9914,7 @@ mixin _$TestScriptTest {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   TestScriptMetadata? get metadata;
-  List<TestScriptSetupAction>? get action;
+  List<TestScriptSetupAction?>? get action;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -9926,14 +9928,14 @@ abstract class $TestScriptTestCopyWith<$Res> {
       _$TestScriptTestCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       TestScriptMetadata? metadata,
-      List<TestScriptSetupAction>? action});
+      List<TestScriptSetupAction?>? action});
 
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -9965,10 +9967,10 @@ class _$TestScriptTestCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -9982,7 +9984,7 @@ class _$TestScriptTestCopyWithImpl<$Res>
           : metadata as TestScriptMetadata?,
       action: action == freezed
           ? _value.action
-          : action as List<TestScriptSetupAction>?,
+          : action as List<TestScriptSetupAction?>?,
     ));
   }
 
@@ -10029,14 +10031,14 @@ abstract class _$TestScriptTestCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       TestScriptMetadata? metadata,
-      List<TestScriptSetupAction>? action});
+      List<TestScriptSetupAction?>? action});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -10073,10 +10075,10 @@ class __$TestScriptTestCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -10090,7 +10092,7 @@ class __$TestScriptTestCopyWithImpl<$Res>
           : metadata as TestScriptMetadata?,
       action: action == freezed
           ? _value.action
-          : action as List<TestScriptSetupAction>?,
+          : action as List<TestScriptSetupAction?>?,
     ));
   }
 }
@@ -10118,9 +10120,9 @@ class _$_TestScriptTest extends _TestScriptTest {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final String? name;
   @override
@@ -10134,7 +10136,7 @@ class _$_TestScriptTest extends _TestScriptTest {
   @override
   final TestScriptMetadata? metadata;
   @override
-  final List<TestScriptSetupAction>? action;
+  final List<TestScriptSetupAction?>? action;
 
   @override
   String toString() {
@@ -10199,14 +10201,14 @@ abstract class _TestScriptTest extends TestScriptTest {
   _TestScriptTest._() : super._();
   factory _TestScriptTest(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       TestScriptMetadata? metadata,
-      required List<TestScriptSetupAction>? action}) = _$_TestScriptTest;
+      required List<TestScriptSetupAction?>? action}) = _$_TestScriptTest;
 
   factory _TestScriptTest.fromJson(Map<String, dynamic> json) =
       _$_TestScriptTest.fromJson;
@@ -10215,9 +10217,9 @@ abstract class _TestScriptTest extends TestScriptTest {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   String? get name;
   @override
@@ -10231,7 +10233,7 @@ abstract class _TestScriptTest extends TestScriptTest {
   @override
   TestScriptMetadata? get metadata;
   @override
-  List<TestScriptSetupAction>? get action;
+  List<TestScriptSetupAction?>? get action;
   @override
   @JsonKey(ignore: true)
   _$TestScriptTestCopyWith<_TestScriptTest> get copyWith;
@@ -10247,9 +10249,9 @@ class _$TestScriptTeardownTearOff {
 
   _TestScriptTeardown call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required List<TestScriptTeardownAction>? action}) {
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      required List<TestScriptTeardownAction?>? action}) {
     return _TestScriptTeardown(
       id: id,
       extension_: extension_,
@@ -10270,9 +10272,9 @@ const $TestScriptTeardown = _$TestScriptTeardownTearOff();
 mixin _$TestScriptTeardown {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<TestScriptTeardownAction>? get action;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<TestScriptTeardownAction?>? get action;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -10286,9 +10288,9 @@ abstract class $TestScriptTeardownCopyWith<$Res> {
       _$TestScriptTeardownCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<TestScriptTeardownAction>? action});
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<TestScriptTeardownAction?>? action});
 }
 
 /// @nodoc
@@ -10311,13 +10313,13 @@ class _$TestScriptTeardownCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       action: action == freezed
           ? _value.action
-          : action as List<TestScriptTeardownAction>?,
+          : action as List<TestScriptTeardownAction?>?,
     ));
   }
 }
@@ -10331,9 +10333,9 @@ abstract class _$TestScriptTeardownCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<TestScriptTeardownAction>? action});
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<TestScriptTeardownAction?>? action});
 }
 
 /// @nodoc
@@ -10358,13 +10360,13 @@ class __$TestScriptTeardownCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       action: action == freezed
           ? _value.action
-          : action as List<TestScriptTeardownAction>?,
+          : action as List<TestScriptTeardownAction?>?,
     ));
   }
 }
@@ -10387,11 +10389,11 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<TestScriptTeardownAction>? action;
+  final List<TestScriptTeardownAction?>? action;
 
   @override
   String toString() {
@@ -10436,10 +10438,11 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
 abstract class _TestScriptTeardown extends TestScriptTeardown {
   _TestScriptTeardown._() : super._();
   factory _TestScriptTeardown(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required List<TestScriptTeardownAction>? action}) = _$_TestScriptTeardown;
+          {Id? id,
+          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+          List<FhirExtension?>? modifierExtension,
+          required List<TestScriptTeardownAction?>? action}) =
+      _$_TestScriptTeardown;
 
   factory _TestScriptTeardown.fromJson(Map<String, dynamic> json) =
       _$_TestScriptTeardown.fromJson;
@@ -10448,11 +10451,11 @@ abstract class _TestScriptTeardown extends TestScriptTeardown {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<TestScriptTeardownAction>? get action;
+  List<TestScriptTeardownAction?>? get action;
   @override
   @JsonKey(ignore: true)
   _$TestScriptTeardownCopyWith<_TestScriptTeardown> get copyWith;
@@ -10469,9 +10472,9 @@ class _$TestScriptTeardownActionTearOff {
 
   _TestScriptTeardownAction call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
       TestScriptActionOperation? operation}) {
     return _TestScriptTeardownAction(
       id: id,
@@ -10494,10 +10497,10 @@ const $TestScriptTeardownAction = _$TestScriptTeardownActionTearOff();
 mixin _$TestScriptTeardownAction {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String?>? get fhirComments;
   TestScriptActionOperation? get operation;
 
   Map<String, dynamic> toJson();
@@ -10512,9 +10515,9 @@ abstract class $TestScriptTeardownActionCopyWith<$Res> {
       _$TestScriptTeardownActionCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
       TestScriptActionOperation? operation});
 
   $TestScriptActionOperationCopyWith<$Res>? get operation;
@@ -10541,13 +10544,13 @@ class _$TestScriptTeardownActionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
+          : fhirComments as List<String?>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestScriptActionOperation?,
@@ -10575,9 +10578,9 @@ abstract class _$TestScriptTeardownActionCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
       TestScriptActionOperation? operation});
 
   @override
@@ -10608,13 +10611,13 @@ class __$TestScriptTeardownActionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>?,
+          : fhirComments as List<String?>?,
       operation: operation == freezed
           ? _value.operation
           : operation as TestScriptActionOperation?,
@@ -10641,12 +10644,12 @@ class _$_TestScriptTeardownAction extends _TestScriptTeardownAction {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  final List<String?>? fhirComments;
   @override
   final TestScriptActionOperation? operation;
 
@@ -10700,9 +10703,9 @@ abstract class _TestScriptTeardownAction extends TestScriptTeardownAction {
   _TestScriptTeardownAction._() : super._();
   factory _TestScriptTeardownAction(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
       TestScriptActionOperation? operation}) = _$_TestScriptTeardownAction;
 
   factory _TestScriptTeardownAction.fromJson(Map<String, dynamic> json) =
@@ -10712,12 +10715,12 @@ abstract class _TestScriptTeardownAction extends TestScriptTeardownAction {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments;
+  List<String?>? get fhirComments;
   @override
   TestScriptActionOperation? get operation;
   @override

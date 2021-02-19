@@ -16,7 +16,7 @@ BackboneElement _$BackboneElementFromJson(Map<String, dynamic> json) {
 class _$BackboneElementTearOff {
   const _$BackboneElementTearOff();
 
-  _BackboneElement call({List<FhirExtension>? modifierExtension}) {
+  _BackboneElement call({List<FhirExtension?>? modifierExtension}) {
     return _BackboneElement(
       modifierExtension: modifierExtension,
     );
@@ -32,7 +32,7 @@ const $BackboneElement = _$BackboneElementTearOff();
 
 /// @nodoc
 mixin _$BackboneElement {
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -44,7 +44,7 @@ abstract class $BackboneElementCopyWith<$Res> {
   factory $BackboneElementCopyWith(
           BackboneElement value, $Res Function(BackboneElement) then) =
       _$BackboneElementCopyWithImpl<$Res>;
-  $Res call({List<FhirExtension>? modifierExtension});
+  $Res call({List<FhirExtension?>? modifierExtension});
 }
 
 /// @nodoc
@@ -63,7 +63,7 @@ class _$BackboneElementCopyWithImpl<$Res>
     return _then(_value.copyWith(
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
     ));
   }
 }
@@ -75,7 +75,7 @@ abstract class _$BackboneElementCopyWith<$Res>
           _BackboneElement value, $Res Function(_BackboneElement) then) =
       __$BackboneElementCopyWithImpl<$Res>;
   @override
-  $Res call({List<FhirExtension>? modifierExtension});
+  $Res call({List<FhirExtension?>? modifierExtension});
 }
 
 /// @nodoc
@@ -96,7 +96,7 @@ class __$BackboneElementCopyWithImpl<$Res>
     return _then(_BackboneElement(
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
     ));
   }
 }
@@ -111,7 +111,7 @@ class _$_BackboneElement extends _BackboneElement {
       _$_$_BackboneElementFromJson(json);
 
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
 
   @override
   String toString() {
@@ -145,14 +145,14 @@ class _$_BackboneElement extends _BackboneElement {
 
 abstract class _BackboneElement extends BackboneElement {
   _BackboneElement._() : super._();
-  factory _BackboneElement({List<FhirExtension>? modifierExtension}) =
+  factory _BackboneElement({List<FhirExtension?>? modifierExtension}) =
       _$_BackboneElement;
 
   factory _BackboneElement.fromJson(Map<String, dynamic> json) =
       _$_BackboneElement.fromJson;
 
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   @JsonKey(ignore: true)
   _$BackboneElementCopyWith<_BackboneElement> get copyWith;
@@ -1502,7 +1502,7 @@ class _$CodeableConceptTearOff {
   const _$CodeableConceptTearOff();
 
   _CodeableConcept call(
-      {List<Coding>? coding,
+      {List<Coding?>? coding,
       String? text,
       @JsonKey(name: '_text') Element? textElement}) {
     return _CodeableConcept(
@@ -1522,7 +1522,7 @@ const $CodeableConcept = _$CodeableConceptTearOff();
 
 /// @nodoc
 mixin _$CodeableConcept {
-  List<Coding>? get coding;
+  List<Coding?>? get coding;
   String? get text;
   @JsonKey(name: '_text')
   Element? get textElement;
@@ -1538,7 +1538,7 @@ abstract class $CodeableConceptCopyWith<$Res> {
           CodeableConcept value, $Res Function(CodeableConcept) then) =
       _$CodeableConceptCopyWithImpl<$Res>;
   $Res call(
-      {List<Coding>? coding,
+      {List<Coding?>? coding,
       String? text,
       @JsonKey(name: '_text') Element? textElement});
 
@@ -1561,7 +1561,7 @@ class _$CodeableConceptCopyWithImpl<$Res>
     Object? textElement = freezed,
   }) {
     return _then(_value.copyWith(
-      coding: coding == freezed ? _value.coding : coding as List<Coding>?,
+      coding: coding == freezed ? _value.coding : coding as List<Coding?>?,
       text: text == freezed ? _value.text : text as String?,
       textElement:
           textElement == freezed ? _value.textElement : textElement as Element?,
@@ -1588,7 +1588,7 @@ abstract class _$CodeableConceptCopyWith<$Res>
       __$CodeableConceptCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<Coding>? coding,
+      {List<Coding?>? coding,
       String? text,
       @JsonKey(name: '_text') Element? textElement});
 
@@ -1614,7 +1614,7 @@ class __$CodeableConceptCopyWithImpl<$Res>
     Object? textElement = freezed,
   }) {
     return _then(_CodeableConcept(
-      coding: coding == freezed ? _value.coding : coding as List<Coding>?,
+      coding: coding == freezed ? _value.coding : coding as List<Coding?>?,
       text: text == freezed ? _value.text : text as String?,
       textElement:
           textElement == freezed ? _value.textElement : textElement as Element?,
@@ -1634,7 +1634,7 @@ class _$_CodeableConcept extends _CodeableConcept {
       _$_$_CodeableConceptFromJson(json);
 
   @override
-  final List<Coding>? coding;
+  final List<Coding?>? coding;
   @override
   final String? text;
   @override
@@ -1680,7 +1680,7 @@ class _$_CodeableConcept extends _CodeableConcept {
 abstract class _CodeableConcept extends CodeableConcept {
   _CodeableConcept._() : super._();
   factory _CodeableConcept(
-      {List<Coding>? coding,
+      {List<Coding?>? coding,
       String? text,
       @JsonKey(name: '_text') Element? textElement}) = _$_CodeableConcept;
 
@@ -1688,7 +1688,7 @@ abstract class _CodeableConcept extends CodeableConcept {
       _$_CodeableConcept.fromJson;
 
   @override
-  List<Coding>? get coding;
+  List<Coding?>? get coding;
   @override
   String? get text;
   @override
@@ -6288,12 +6288,12 @@ class _$HumanNameTearOff {
       @JsonKey(name: '_text') Element? textElement,
       String? family,
       @JsonKey(name: '_family') Element? familyElement,
-      List<String>? given,
-      @JsonKey(name: '_given') List<Element>? givenElement,
-      List<String>? prefix,
-      @JsonKey(name: '_prefix') List<Element>? prefixElement,
-      List<String>? suffix,
-      @JsonKey(name: '_suffix') List<Element>? suffixElement,
+      List<String?>? given,
+      @JsonKey(name: '_given') List<Element?>? givenElement,
+      List<String?>? prefix,
+      @JsonKey(name: '_prefix') List<Element?>? prefixElement,
+      List<String?>? suffix,
+      @JsonKey(name: '_suffix') List<Element?>? suffixElement,
       Period? period}) {
     return _HumanName(
       use: use,
@@ -6331,15 +6331,15 @@ mixin _$HumanName {
   String? get family;
   @JsonKey(name: '_family')
   Element? get familyElement;
-  List<String>? get given;
+  List<String?>? get given;
   @JsonKey(name: '_given')
-  List<Element>? get givenElement;
-  List<String>? get prefix;
+  List<Element?>? get givenElement;
+  List<String?>? get prefix;
   @JsonKey(name: '_prefix')
-  List<Element>? get prefixElement;
-  List<String>? get suffix;
+  List<Element?>? get prefixElement;
+  List<String?>? get suffix;
   @JsonKey(name: '_suffix')
-  List<Element>? get suffixElement;
+  List<Element?>? get suffixElement;
   Period? get period;
 
   Map<String, dynamic> toJson();
@@ -6358,12 +6358,12 @@ abstract class $HumanNameCopyWith<$Res> {
       @JsonKey(name: '_text') Element? textElement,
       String? family,
       @JsonKey(name: '_family') Element? familyElement,
-      List<String>? given,
-      @JsonKey(name: '_given') List<Element>? givenElement,
-      List<String>? prefix,
-      @JsonKey(name: '_prefix') List<Element>? prefixElement,
-      List<String>? suffix,
-      @JsonKey(name: '_suffix') List<Element>? suffixElement,
+      List<String?>? given,
+      @JsonKey(name: '_given') List<Element?>? givenElement,
+      List<String?>? prefix,
+      @JsonKey(name: '_prefix') List<Element?>? prefixElement,
+      List<String?>? suffix,
+      @JsonKey(name: '_suffix') List<Element?>? suffixElement,
       Period? period});
 
   $ElementCopyWith<$Res>? get useElement;
@@ -6407,18 +6407,18 @@ class _$HumanNameCopyWithImpl<$Res> implements $HumanNameCopyWith<$Res> {
       familyElement: familyElement == freezed
           ? _value.familyElement
           : familyElement as Element?,
-      given: given == freezed ? _value.given : given as List<String>?,
+      given: given == freezed ? _value.given : given as List<String?>?,
       givenElement: givenElement == freezed
           ? _value.givenElement
-          : givenElement as List<Element>?,
-      prefix: prefix == freezed ? _value.prefix : prefix as List<String>?,
+          : givenElement as List<Element?>?,
+      prefix: prefix == freezed ? _value.prefix : prefix as List<String?>?,
       prefixElement: prefixElement == freezed
           ? _value.prefixElement
-          : prefixElement as List<Element>?,
-      suffix: suffix == freezed ? _value.suffix : suffix as List<String>?,
+          : prefixElement as List<Element?>?,
+      suffix: suffix == freezed ? _value.suffix : suffix as List<String?>?,
       suffixElement: suffixElement == freezed
           ? _value.suffixElement
-          : suffixElement as List<Element>?,
+          : suffixElement as List<Element?>?,
       period: period == freezed ? _value.period : period as Period?,
     ));
   }
@@ -6481,12 +6481,12 @@ abstract class _$HumanNameCopyWith<$Res> implements $HumanNameCopyWith<$Res> {
       @JsonKey(name: '_text') Element? textElement,
       String? family,
       @JsonKey(name: '_family') Element? familyElement,
-      List<String>? given,
-      @JsonKey(name: '_given') List<Element>? givenElement,
-      List<String>? prefix,
-      @JsonKey(name: '_prefix') List<Element>? prefixElement,
-      List<String>? suffix,
-      @JsonKey(name: '_suffix') List<Element>? suffixElement,
+      List<String?>? given,
+      @JsonKey(name: '_given') List<Element?>? givenElement,
+      List<String?>? prefix,
+      @JsonKey(name: '_prefix') List<Element?>? prefixElement,
+      List<String?>? suffix,
+      @JsonKey(name: '_suffix') List<Element?>? suffixElement,
       Period? period});
 
   @override
@@ -6535,18 +6535,18 @@ class __$HumanNameCopyWithImpl<$Res> extends _$HumanNameCopyWithImpl<$Res>
       familyElement: familyElement == freezed
           ? _value.familyElement
           : familyElement as Element?,
-      given: given == freezed ? _value.given : given as List<String>?,
+      given: given == freezed ? _value.given : given as List<String?>?,
       givenElement: givenElement == freezed
           ? _value.givenElement
-          : givenElement as List<Element>?,
-      prefix: prefix == freezed ? _value.prefix : prefix as List<String>?,
+          : givenElement as List<Element?>?,
+      prefix: prefix == freezed ? _value.prefix : prefix as List<String?>?,
       prefixElement: prefixElement == freezed
           ? _value.prefixElement
-          : prefixElement as List<Element>?,
-      suffix: suffix == freezed ? _value.suffix : suffix as List<String>?,
+          : prefixElement as List<Element?>?,
+      suffix: suffix == freezed ? _value.suffix : suffix as List<String?>?,
       suffixElement: suffixElement == freezed
           ? _value.suffixElement
-          : suffixElement as List<Element>?,
+          : suffixElement as List<Element?>?,
       period: period == freezed ? _value.period : period as Period?,
     ));
   }
@@ -6591,20 +6591,20 @@ class _$_HumanName extends _HumanName {
   @JsonKey(name: '_family')
   final Element? familyElement;
   @override
-  final List<String>? given;
+  final List<String?>? given;
   @override
   @JsonKey(name: '_given')
-  final List<Element>? givenElement;
+  final List<Element?>? givenElement;
   @override
-  final List<String>? prefix;
+  final List<String?>? prefix;
   @override
   @JsonKey(name: '_prefix')
-  final List<Element>? prefixElement;
+  final List<Element?>? prefixElement;
   @override
-  final List<String>? suffix;
+  final List<String?>? suffix;
   @override
   @JsonKey(name: '_suffix')
-  final List<Element>? suffixElement;
+  final List<Element?>? suffixElement;
   @override
   final Period? period;
 
@@ -6688,12 +6688,12 @@ abstract class _HumanName extends HumanName {
       @JsonKey(name: '_text') Element? textElement,
       String? family,
       @JsonKey(name: '_family') Element? familyElement,
-      List<String>? given,
-      @JsonKey(name: '_given') List<Element>? givenElement,
-      List<String>? prefix,
-      @JsonKey(name: '_prefix') List<Element>? prefixElement,
-      List<String>? suffix,
-      @JsonKey(name: '_suffix') List<Element>? suffixElement,
+      List<String?>? given,
+      @JsonKey(name: '_given') List<Element?>? givenElement,
+      List<String?>? prefix,
+      @JsonKey(name: '_prefix') List<Element?>? prefixElement,
+      List<String?>? suffix,
+      @JsonKey(name: '_suffix') List<Element?>? suffixElement,
       Period? period}) = _$_HumanName;
 
   factory _HumanName.fromJson(Map<String, dynamic> json) =
@@ -6715,20 +6715,20 @@ abstract class _HumanName extends HumanName {
   @JsonKey(name: '_family')
   Element? get familyElement;
   @override
-  List<String>? get given;
+  List<String?>? get given;
   @override
   @JsonKey(name: '_given')
-  List<Element>? get givenElement;
+  List<Element?>? get givenElement;
   @override
-  List<String>? get prefix;
+  List<String?>? get prefix;
   @override
   @JsonKey(name: '_prefix')
-  List<Element>? get prefixElement;
+  List<Element?>? get prefixElement;
   @override
-  List<String>? get suffix;
+  List<String?>? get suffix;
   @override
   @JsonKey(name: '_suffix')
-  List<Element>? get suffixElement;
+  List<Element?>? get suffixElement;
   @override
   Period? get period;
   @override
@@ -6751,8 +6751,8 @@ class _$AddressTearOff {
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
-      List<String>? line,
-      @JsonKey(name: '_line') List<Element>? lineElement,
+      List<String?>? line,
+      @JsonKey(name: '_line') List<Element?>? lineElement,
       String? city,
       @JsonKey(name: '_city') Element? cityElement,
       String? district,
@@ -6806,9 +6806,9 @@ mixin _$Address {
   String? get text;
   @JsonKey(name: '_text')
   Element? get textElement;
-  List<String>? get line;
+  List<String?>? get line;
   @JsonKey(name: '_line')
-  List<Element>? get lineElement;
+  List<Element?>? get lineElement;
   String? get city;
   @JsonKey(name: '_city')
   Element? get cityElement;
@@ -6842,8 +6842,8 @@ abstract class $AddressCopyWith<$Res> {
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
-      List<String>? line,
-      @JsonKey(name: '_line') List<Element>? lineElement,
+      List<String?>? line,
+      @JsonKey(name: '_line') List<Element?>? lineElement,
       String? city,
       @JsonKey(name: '_city') Element? cityElement,
       String? district,
@@ -6907,10 +6907,10 @@ class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
       text: text == freezed ? _value.text : text as String?,
       textElement:
           textElement == freezed ? _value.textElement : textElement as Element?,
-      line: line == freezed ? _value.line : line as List<String>?,
+      line: line == freezed ? _value.line : line as List<String?>?,
       lineElement: lineElement == freezed
           ? _value.lineElement
-          : lineElement as List<Element>?,
+          : lineElement as List<Element?>?,
       city: city == freezed ? _value.city : city as String?,
       cityElement:
           cityElement == freezed ? _value.cityElement : cityElement as Element?,
@@ -7047,8 +7047,8 @@ abstract class _$AddressCopyWith<$Res> implements $AddressCopyWith<$Res> {
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
-      List<String>? line,
-      @JsonKey(name: '_line') List<Element>? lineElement,
+      List<String?>? line,
+      @JsonKey(name: '_line') List<Element?>? lineElement,
       String? city,
       @JsonKey(name: '_city') Element? cityElement,
       String? district,
@@ -7122,10 +7122,10 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as String?,
       textElement:
           textElement == freezed ? _value.textElement : textElement as Element?,
-      line: line == freezed ? _value.line : line as List<String>?,
+      line: line == freezed ? _value.line : line as List<String?>?,
       lineElement: lineElement == freezed
           ? _value.lineElement
-          : lineElement as List<Element>?,
+          : lineElement as List<Element?>?,
       city: city == freezed ? _value.city : city as String?,
       cityElement:
           cityElement == freezed ? _value.cityElement : cityElement as Element?,
@@ -7196,10 +7196,10 @@ class _$_Address extends _Address {
   @JsonKey(name: '_text')
   final Element? textElement;
   @override
-  final List<String>? line;
+  final List<String?>? line;
   @override
   @JsonKey(name: '_line')
-  final List<Element>? lineElement;
+  final List<Element?>? lineElement;
   @override
   final String? city;
   @override
@@ -7332,8 +7332,8 @@ abstract class _Address extends Address {
       @JsonKey(name: '_type') Element? typeElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
-      List<String>? line,
-      @JsonKey(name: '_line') List<Element>? lineElement,
+      List<String?>? line,
+      @JsonKey(name: '_line') List<Element?>? lineElement,
       String? city,
       @JsonKey(name: '_city') Element? cityElement,
       String? district,
@@ -7364,10 +7364,10 @@ abstract class _Address extends Address {
   @JsonKey(name: '_text')
   Element? get textElement;
   @override
-  List<String>? get line;
+  List<String?>? get line;
   @override
   @JsonKey(name: '_line')
-  List<Element>? get lineElement;
+  List<Element?>? get lineElement;
   @override
   String? get city;
   @override
@@ -7801,8 +7801,8 @@ class _$TimingTearOff {
   const _$TimingTearOff();
 
   _Timing call(
-      {List<String>? event,
-      @JsonKey(name: '_event') List<Element>? eventElement,
+      {List<String?>? event,
+      @JsonKey(name: '_event') List<Element?>? eventElement,
       TimingRepeat? repeat,
       CodeableConcept? code}) {
     return _Timing(
@@ -7823,9 +7823,9 @@ const $Timing = _$TimingTearOff();
 
 /// @nodoc
 mixin _$Timing {
-  List<String>? get event;
+  List<String?>? get event;
   @JsonKey(name: '_event')
-  List<Element>? get eventElement;
+  List<Element?>? get eventElement;
   TimingRepeat? get repeat;
   CodeableConcept? get code;
 
@@ -7839,8 +7839,8 @@ abstract class $TimingCopyWith<$Res> {
   factory $TimingCopyWith(Timing value, $Res Function(Timing) then) =
       _$TimingCopyWithImpl<$Res>;
   $Res call(
-      {List<String>? event,
-      @JsonKey(name: '_event') List<Element>? eventElement,
+      {List<String?>? event,
+      @JsonKey(name: '_event') List<Element?>? eventElement,
       TimingRepeat? repeat,
       CodeableConcept? code});
 
@@ -7864,10 +7864,10 @@ class _$TimingCopyWithImpl<$Res> implements $TimingCopyWith<$Res> {
     Object? code = freezed,
   }) {
     return _then(_value.copyWith(
-      event: event == freezed ? _value.event : event as List<String>?,
+      event: event == freezed ? _value.event : event as List<String?>?,
       eventElement: eventElement == freezed
           ? _value.eventElement
-          : eventElement as List<Element>?,
+          : eventElement as List<Element?>?,
       repeat: repeat == freezed ? _value.repeat : repeat as TimingRepeat?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
     ));
@@ -7902,8 +7902,8 @@ abstract class _$TimingCopyWith<$Res> implements $TimingCopyWith<$Res> {
       __$TimingCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<String>? event,
-      @JsonKey(name: '_event') List<Element>? eventElement,
+      {List<String?>? event,
+      @JsonKey(name: '_event') List<Element?>? eventElement,
       TimingRepeat? repeat,
       CodeableConcept? code});
 
@@ -7930,10 +7930,10 @@ class __$TimingCopyWithImpl<$Res> extends _$TimingCopyWithImpl<$Res>
     Object? code = freezed,
   }) {
     return _then(_Timing(
-      event: event == freezed ? _value.event : event as List<String>?,
+      event: event == freezed ? _value.event : event as List<String?>?,
       eventElement: eventElement == freezed
           ? _value.eventElement
-          : eventElement as List<Element>?,
+          : eventElement as List<Element?>?,
       repeat: repeat == freezed ? _value.repeat : repeat as TimingRepeat?,
       code: code == freezed ? _value.code : code as CodeableConcept?,
     ));
@@ -7955,10 +7955,10 @@ class _$_Timing extends _Timing {
       _$_$_TimingFromJson(json);
 
   @override
-  final List<String>? event;
+  final List<String?>? event;
   @override
   @JsonKey(name: '_event')
-  final List<Element>? eventElement;
+  final List<Element?>? eventElement;
   @override
   final TimingRepeat? repeat;
   @override
@@ -8006,18 +8006,18 @@ class _$_Timing extends _Timing {
 abstract class _Timing extends Timing {
   _Timing._() : super._();
   factory _Timing(
-      {List<String>? event,
-      @JsonKey(name: '_event') List<Element>? eventElement,
+      {List<String?>? event,
+      @JsonKey(name: '_event') List<Element?>? eventElement,
       TimingRepeat? repeat,
       CodeableConcept? code}) = _$_Timing;
 
   factory _Timing.fromJson(Map<String, dynamic> json) = _$_Timing.fromJson;
 
   @override
-  List<String>? get event;
+  List<String?>? get event;
   @override
   @JsonKey(name: '_event')
-  List<Element>? get eventElement;
+  List<Element?>? get eventElement;
   @override
   TimingRepeat? get repeat;
   @override
@@ -8059,12 +8059,12 @@ class _$TimingRepeatTearOff {
       @JsonKey(name: '_periodMax') Element? periodMaxElement,
       TimingRepeatPeriodUnit? periodUnit,
       @JsonKey(name: '_periodUnit') Element? periodUnitElement,
-      List<String>? dayOfWeek,
-      @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,
-      List<Time>? timeOfDay,
-      @JsonKey(name: '_timeOfDay') List<Element>? timeOfDayElement,
-      List<TimingRepeatWhen>? when,
-      @JsonKey(name: '_when') List<Element>? whenElement,
+      List<String?>? dayOfWeek,
+      @JsonKey(name: '_dayOfWeek') List<Element?>? dayOfWeekElement,
+      List<Time?>? timeOfDay,
+      @JsonKey(name: '_timeOfDay') List<Element?>? timeOfDayElement,
+      List<TimingRepeatWhen?>? when,
+      @JsonKey(name: '_when') List<Element?>? whenElement,
       Decimal? offset,
       @JsonKey(name: '_offset') Element? offsetElement}) {
     return _TimingRepeat(
@@ -8145,15 +8145,15 @@ mixin _$TimingRepeat {
   TimingRepeatPeriodUnit? get periodUnit;
   @JsonKey(name: '_periodUnit')
   Element? get periodUnitElement;
-  List<String>? get dayOfWeek;
+  List<String?>? get dayOfWeek;
   @JsonKey(name: '_dayOfWeek')
-  List<Element>? get dayOfWeekElement;
-  List<Time>? get timeOfDay;
+  List<Element?>? get dayOfWeekElement;
+  List<Time?>? get timeOfDay;
   @JsonKey(name: '_timeOfDay')
-  List<Element>? get timeOfDayElement;
-  List<TimingRepeatWhen>? get when;
+  List<Element?>? get timeOfDayElement;
+  List<TimingRepeatWhen?>? get when;
   @JsonKey(name: '_when')
-  List<Element>? get whenElement;
+  List<Element?>? get whenElement;
   Decimal? get offset;
   @JsonKey(name: '_offset')
   Element? get offsetElement;
@@ -8192,12 +8192,12 @@ abstract class $TimingRepeatCopyWith<$Res> {
       @JsonKey(name: '_periodMax') Element? periodMaxElement,
       TimingRepeatPeriodUnit? periodUnit,
       @JsonKey(name: '_periodUnit') Element? periodUnitElement,
-      List<String>? dayOfWeek,
-      @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,
-      List<Time>? timeOfDay,
-      @JsonKey(name: '_timeOfDay') List<Element>? timeOfDayElement,
-      List<TimingRepeatWhen>? when,
-      @JsonKey(name: '_when') List<Element>? whenElement,
+      List<String?>? dayOfWeek,
+      @JsonKey(name: '_dayOfWeek') List<Element?>? dayOfWeekElement,
+      List<Time?>? timeOfDay,
+      @JsonKey(name: '_timeOfDay') List<Element?>? timeOfDayElement,
+      List<TimingRepeatWhen?>? when,
+      @JsonKey(name: '_when') List<Element?>? whenElement,
       Decimal? offset,
       @JsonKey(name: '_offset') Element? offsetElement});
 
@@ -8318,19 +8318,19 @@ class _$TimingRepeatCopyWithImpl<$Res> implements $TimingRepeatCopyWith<$Res> {
           ? _value.periodUnitElement
           : periodUnitElement as Element?,
       dayOfWeek:
-          dayOfWeek == freezed ? _value.dayOfWeek : dayOfWeek as List<String>?,
+          dayOfWeek == freezed ? _value.dayOfWeek : dayOfWeek as List<String?>?,
       dayOfWeekElement: dayOfWeekElement == freezed
           ? _value.dayOfWeekElement
-          : dayOfWeekElement as List<Element>?,
+          : dayOfWeekElement as List<Element?>?,
       timeOfDay:
-          timeOfDay == freezed ? _value.timeOfDay : timeOfDay as List<Time>?,
+          timeOfDay == freezed ? _value.timeOfDay : timeOfDay as List<Time?>?,
       timeOfDayElement: timeOfDayElement == freezed
           ? _value.timeOfDayElement
-          : timeOfDayElement as List<Element>?,
-      when: when == freezed ? _value.when : when as List<TimingRepeatWhen>?,
+          : timeOfDayElement as List<Element?>?,
+      when: when == freezed ? _value.when : when as List<TimingRepeatWhen?>?,
       whenElement: whenElement == freezed
           ? _value.whenElement
-          : whenElement as List<Element>?,
+          : whenElement as List<Element?>?,
       offset: offset == freezed ? _value.offset : offset as Decimal?,
       offsetElement: offsetElement == freezed
           ? _value.offsetElement
@@ -8524,12 +8524,12 @@ abstract class _$TimingRepeatCopyWith<$Res>
       @JsonKey(name: '_periodMax') Element? periodMaxElement,
       TimingRepeatPeriodUnit? periodUnit,
       @JsonKey(name: '_periodUnit') Element? periodUnitElement,
-      List<String>? dayOfWeek,
-      @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,
-      List<Time>? timeOfDay,
-      @JsonKey(name: '_timeOfDay') List<Element>? timeOfDayElement,
-      List<TimingRepeatWhen>? when,
-      @JsonKey(name: '_when') List<Element>? whenElement,
+      List<String?>? dayOfWeek,
+      @JsonKey(name: '_dayOfWeek') List<Element?>? dayOfWeekElement,
+      List<Time?>? timeOfDay,
+      @JsonKey(name: '_timeOfDay') List<Element?>? timeOfDayElement,
+      List<TimingRepeatWhen?>? when,
+      @JsonKey(name: '_when') List<Element?>? whenElement,
       Decimal? offset,
       @JsonKey(name: '_offset') Element? offsetElement});
 
@@ -8666,19 +8666,19 @@ class __$TimingRepeatCopyWithImpl<$Res> extends _$TimingRepeatCopyWithImpl<$Res>
           ? _value.periodUnitElement
           : periodUnitElement as Element?,
       dayOfWeek:
-          dayOfWeek == freezed ? _value.dayOfWeek : dayOfWeek as List<String>?,
+          dayOfWeek == freezed ? _value.dayOfWeek : dayOfWeek as List<String?>?,
       dayOfWeekElement: dayOfWeekElement == freezed
           ? _value.dayOfWeekElement
-          : dayOfWeekElement as List<Element>?,
+          : dayOfWeekElement as List<Element?>?,
       timeOfDay:
-          timeOfDay == freezed ? _value.timeOfDay : timeOfDay as List<Time>?,
+          timeOfDay == freezed ? _value.timeOfDay : timeOfDay as List<Time?>?,
       timeOfDayElement: timeOfDayElement == freezed
           ? _value.timeOfDayElement
-          : timeOfDayElement as List<Element>?,
-      when: when == freezed ? _value.when : when as List<TimingRepeatWhen>?,
+          : timeOfDayElement as List<Element?>?,
+      when: when == freezed ? _value.when : when as List<TimingRepeatWhen?>?,
       whenElement: whenElement == freezed
           ? _value.whenElement
-          : whenElement as List<Element>?,
+          : whenElement as List<Element?>?,
       offset: offset == freezed ? _value.offset : offset as Decimal?,
       offsetElement: offsetElement == freezed
           ? _value.offsetElement
@@ -8785,20 +8785,20 @@ class _$_TimingRepeat extends _TimingRepeat {
   @JsonKey(name: '_periodUnit')
   final Element? periodUnitElement;
   @override
-  final List<String>? dayOfWeek;
+  final List<String?>? dayOfWeek;
   @override
   @JsonKey(name: '_dayOfWeek')
-  final List<Element>? dayOfWeekElement;
+  final List<Element?>? dayOfWeekElement;
   @override
-  final List<Time>? timeOfDay;
+  final List<Time?>? timeOfDay;
   @override
   @JsonKey(name: '_timeOfDay')
-  final List<Element>? timeOfDayElement;
+  final List<Element?>? timeOfDayElement;
   @override
-  final List<TimingRepeatWhen>? when;
+  final List<TimingRepeatWhen?>? when;
   @override
   @JsonKey(name: '_when')
-  final List<Element>? whenElement;
+  final List<Element?>? whenElement;
   @override
   final Decimal? offset;
   @override
@@ -8962,12 +8962,12 @@ abstract class _TimingRepeat extends TimingRepeat {
       @JsonKey(name: '_periodMax') Element? periodMaxElement,
       TimingRepeatPeriodUnit? periodUnit,
       @JsonKey(name: '_periodUnit') Element? periodUnitElement,
-      List<String>? dayOfWeek,
-      @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,
-      List<Time>? timeOfDay,
-      @JsonKey(name: '_timeOfDay') List<Element>? timeOfDayElement,
-      List<TimingRepeatWhen>? when,
-      @JsonKey(name: '_when') List<Element>? whenElement,
+      List<String?>? dayOfWeek,
+      @JsonKey(name: '_dayOfWeek') List<Element?>? dayOfWeekElement,
+      List<Time?>? timeOfDay,
+      @JsonKey(name: '_timeOfDay') List<Element?>? timeOfDayElement,
+      List<TimingRepeatWhen?>? when,
+      @JsonKey(name: '_when') List<Element?>? whenElement,
       Decimal? offset,
       @JsonKey(name: '_offset') Element? offsetElement}) = _$_TimingRepeat;
 
@@ -9031,20 +9031,20 @@ abstract class _TimingRepeat extends TimingRepeat {
   @JsonKey(name: '_periodUnit')
   Element? get periodUnitElement;
   @override
-  List<String>? get dayOfWeek;
+  List<String?>? get dayOfWeek;
   @override
   @JsonKey(name: '_dayOfWeek')
-  List<Element>? get dayOfWeekElement;
+  List<Element?>? get dayOfWeekElement;
   @override
-  List<Time>? get timeOfDay;
+  List<Time?>? get timeOfDay;
   @override
   @JsonKey(name: '_timeOfDay')
-  List<Element>? get timeOfDayElement;
+  List<Element?>? get timeOfDayElement;
   @override
-  List<TimingRepeatWhen>? get when;
+  List<TimingRepeatWhen?>? get when;
   @override
   @JsonKey(name: '_when')
-  List<Element>? get whenElement;
+  List<Element?>? get whenElement;
   @override
   Decimal? get offset;
   @override

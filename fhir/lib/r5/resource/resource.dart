@@ -21,8 +21,8 @@ class Resource {
   Narrative? text;
   List<Resource?>? contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
+  List<FhirExtension?>? extension_;
+  List<FhirExtension?>? modifierExtension;
 
   /// produce a string of the [resourceType]
   String? resourceTypeString() =>
@@ -60,9 +60,9 @@ class Resource {
     writeNotNull('language', language?.toJson());
     writeNotNull('text', text?.toJson());
     writeNotNull('contained', contained?.map((e) => e?.toJson()).toList());
-    writeNotNull('extension', extension_?.map((e) => e.toJson()).toList());
+    writeNotNull('extension', extension_?.map((e) => e?.toJson()).toList());
     writeNotNull('modifierExtension',
-        modifierExtension?.map((e) => e.toJson()).toList());
+        modifierExtension?.map((e) => e?.toJson()).toList());
     return val;
   }
 

@@ -30,8 +30,8 @@ class _$GuidanceResponseTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Id? requestId,
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
@@ -48,11 +48,11 @@ class _$GuidanceResponseTearOff {
       Reference? performer,
       CodeableConcept? reasonCodeableConcept,
       Reference? reasonReference,
-      List<Annotation>? note,
-      List<Reference>? evaluationMessage,
+      List<Annotation?>? note,
+      List<Reference?>? evaluationMessage,
       Reference? outputParameters,
       Reference? result,
-      List<DataRequirement>? dataRequirement}) {
+      List<DataRequirement?>? dataRequirement}) {
     return _GuidanceResponse(
       resourceType: resourceType,
       id: id,
@@ -109,8 +109,8 @@ mixin _$GuidanceResponse {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Id? get requestId;
   @JsonKey(name: '_requestId')
   Element? get requestIdElement;
@@ -127,11 +127,11 @@ mixin _$GuidanceResponse {
   Reference? get performer;
   CodeableConcept? get reasonCodeableConcept;
   Reference? get reasonReference;
-  List<Annotation>? get note;
-  List<Reference>? get evaluationMessage;
+  List<Annotation?>? get note;
+  List<Reference?>? get evaluationMessage;
   Reference? get outputParameters;
   Reference? get result;
-  List<DataRequirement>? get dataRequirement;
+  List<DataRequirement?>? get dataRequirement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -157,8 +157,8 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Id? requestId,
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
@@ -175,11 +175,11 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       Reference? performer,
       CodeableConcept? reasonCodeableConcept,
       Reference? reasonReference,
-      List<Annotation>? note,
-      List<Reference>? evaluationMessage,
+      List<Annotation?>? note,
+      List<Reference?>? evaluationMessage,
       Reference? outputParameters,
       Reference? result,
-      List<DataRequirement>? dataRequirement});
+      List<DataRequirement?>? dataRequirement});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -262,10 +262,10 @@ class _$GuidanceResponseCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       requestId: requestId == freezed ? _value.requestId : requestId as Id?,
       requestIdElement: requestIdElement == freezed
           ? _value.requestIdElement
@@ -294,17 +294,17 @@ class _$GuidanceResponseCopyWithImpl<$Res>
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as Reference?,
-      note: note == freezed ? _value.note : note as List<Annotation>?,
+      note: note == freezed ? _value.note : note as List<Annotation?>?,
       evaluationMessage: evaluationMessage == freezed
           ? _value.evaluationMessage
-          : evaluationMessage as List<Reference>?,
+          : evaluationMessage as List<Reference?>?,
       outputParameters: outputParameters == freezed
           ? _value.outputParameters
           : outputParameters as Reference?,
       result: result == freezed ? _value.result : result as Reference?,
       dataRequirement: dataRequirement == freezed
           ? _value.dataRequirement
-          : dataRequirement as List<DataRequirement>?,
+          : dataRequirement as List<DataRequirement?>?,
     ));
   }
 
@@ -507,8 +507,8 @@ abstract class _$GuidanceResponseCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Id? requestId,
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
@@ -525,11 +525,11 @@ abstract class _$GuidanceResponseCopyWith<$Res>
       Reference? performer,
       CodeableConcept? reasonCodeableConcept,
       Reference? reasonReference,
-      List<Annotation>? note,
-      List<Reference>? evaluationMessage,
+      List<Annotation?>? note,
+      List<Reference?>? evaluationMessage,
       Reference? outputParameters,
       Reference? result,
-      List<DataRequirement>? dataRequirement});
+      List<DataRequirement?>? dataRequirement});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -630,10 +630,10 @@ class __$GuidanceResponseCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       requestId: requestId == freezed ? _value.requestId : requestId as Id?,
       requestIdElement: requestIdElement == freezed
           ? _value.requestIdElement
@@ -662,17 +662,17 @@ class __$GuidanceResponseCopyWithImpl<$Res>
       reasonReference: reasonReference == freezed
           ? _value.reasonReference
           : reasonReference as Reference?,
-      note: note == freezed ? _value.note : note as List<Annotation>?,
+      note: note == freezed ? _value.note : note as List<Annotation?>?,
       evaluationMessage: evaluationMessage == freezed
           ? _value.evaluationMessage
-          : evaluationMessage as List<Reference>?,
+          : evaluationMessage as List<Reference?>?,
       outputParameters: outputParameters == freezed
           ? _value.outputParameters
           : outputParameters as Reference?,
       result: result == freezed ? _value.result : result as Reference?,
       dataRequirement: dataRequirement == freezed
           ? _value.dataRequirement
-          : dataRequirement as List<DataRequirement>?,
+          : dataRequirement as List<DataRequirement?>?,
     ));
   }
 }
@@ -746,9 +746,9 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Id? requestId;
   @override
@@ -779,15 +779,15 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   @override
   final Reference? reasonReference;
   @override
-  final List<Annotation>? note;
+  final List<Annotation?>? note;
   @override
-  final List<Reference>? evaluationMessage;
+  final List<Reference?>? evaluationMessage;
   @override
   final Reference? outputParameters;
   @override
   final Reference? result;
   @override
-  final List<DataRequirement>? dataRequirement;
+  final List<DataRequirement?>? dataRequirement;
 
   @override
   String toString() {
@@ -931,8 +931,8 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Id? requestId,
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
@@ -949,11 +949,11 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       Reference? performer,
       CodeableConcept? reasonCodeableConcept,
       Reference? reasonReference,
-      List<Annotation>? note,
-      List<Reference>? evaluationMessage,
+      List<Annotation?>? note,
+      List<Reference?>? evaluationMessage,
       Reference? outputParameters,
       Reference? result,
-      List<DataRequirement>? dataRequirement}) = _$_GuidanceResponse;
+      List<DataRequirement?>? dataRequirement}) = _$_GuidanceResponse;
 
   factory _GuidanceResponse.fromJson(Map<String, dynamic> json) =
       _$_GuidanceResponse.fromJson;
@@ -981,9 +981,9 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Id? get requestId;
   @override
@@ -1014,15 +1014,15 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @override
   Reference? get reasonReference;
   @override
-  List<Annotation>? get note;
+  List<Annotation?>? get note;
   @override
-  List<Reference>? get evaluationMessage;
+  List<Reference?>? get evaluationMessage;
   @override
   Reference? get outputParameters;
   @override
   Reference? get result;
   @override
-  List<DataRequirement>? get dataRequirement;
+  List<DataRequirement?>? get dataRequirement;
   @override
   @JsonKey(ignore: true)
   _$GuidanceResponseCopyWith<_GuidanceResponse> get copyWith;

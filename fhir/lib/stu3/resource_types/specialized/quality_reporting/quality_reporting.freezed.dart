@@ -30,12 +30,12 @@ class _$MeasureTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier>? identifier,
+      List<Identifier?>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -73,23 +73,23 @@ class _$MeasureTearOff {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      List<CodeableConcept>? topic,
-      List<Contributor>? contributor,
-      List<ContactDetail>? contact,
+      List<UsageContext?>? useContext,
+      List<CodeableConcept?>? jurisdiction,
+      List<CodeableConcept?>? topic,
+      List<Contributor?>? contributor,
+      List<ContactDetail?>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<RelatedArtifact>? relatedArtifact,
+      List<RelatedArtifact?>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Reference>? library_,
+          List<Reference?>? library_,
       String? disclaimer,
       @JsonKey(name: '_disclaimer')
           Element? disclaimerElement,
       CodeableConcept? scoring,
       CodeableConcept? compositeScoring,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       String? riskAdjustment,
       @JsonKey(name: '_riskAdjustment')
           Element? riskAdjustmentElement,
@@ -105,9 +105,9 @@ class _$MeasureTearOff {
       String? improvementNotation,
       @JsonKey(name: '_improvementNotation')
           Element? improvementNotationElement,
-      List<String>? definition,
+      List<String?>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       String? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -115,8 +115,8 @@ class _$MeasureTearOff {
           String? set_,
       @JsonKey(name: '_set')
           Element? setElement,
-      List<MeasureGroup>? group,
-      List<MeasureSupplementalData>? supplementalData}) {
+      List<MeasureGroup?>? group,
+      List<MeasureSupplementalData?>? supplementalData}) {
     return _Measure(
       resourceType: resourceType,
       id: id,
@@ -216,12 +216,12 @@ mixin _$Measure {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   String? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   String? get version;
   @JsonKey(name: '_version')
   Element? get versionElement;
@@ -259,23 +259,23 @@ mixin _$Measure {
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   Period? get effectivePeriod;
-  List<UsageContext>? get useContext;
-  List<CodeableConcept>? get jurisdiction;
-  List<CodeableConcept>? get topic;
-  List<Contributor>? get contributor;
-  List<ContactDetail>? get contact;
+  List<UsageContext?>? get useContext;
+  List<CodeableConcept?>? get jurisdiction;
+  List<CodeableConcept?>? get topic;
+  List<Contributor?>? get contributor;
+  List<ContactDetail?>? get contact;
   String? get copyright;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
-  List<RelatedArtifact>? get relatedArtifact;
+  List<RelatedArtifact?>? get relatedArtifact;
   @JsonKey(name: 'library')
-  List<Reference>? get library_;
+  List<Reference?>? get library_;
   String? get disclaimer;
   @JsonKey(name: '_disclaimer')
   Element? get disclaimerElement;
   CodeableConcept? get scoring;
   CodeableConcept? get compositeScoring;
-  List<CodeableConcept>? get type;
+  List<CodeableConcept?>? get type;
   String? get riskAdjustment;
   @JsonKey(name: '_riskAdjustment')
   Element? get riskAdjustmentElement;
@@ -291,9 +291,9 @@ mixin _$Measure {
   String? get improvementNotation;
   @JsonKey(name: '_improvementNotation')
   Element? get improvementNotationElement;
-  List<String>? get definition;
+  List<String?>? get definition;
   @JsonKey(name: '_definition')
-  List<Element>? get definitionElement;
+  List<Element?>? get definitionElement;
   String? get guidance;
   @JsonKey(name: '_guidance')
   Element? get guidanceElement;
@@ -301,8 +301,8 @@ mixin _$Measure {
   String? get set_;
   @JsonKey(name: '_set')
   Element? get setElement;
-  List<MeasureGroup>? get group;
-  List<MeasureSupplementalData>? get supplementalData;
+  List<MeasureGroup?>? get group;
+  List<MeasureSupplementalData?>? get supplementalData;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -327,12 +327,12 @@ abstract class $MeasureCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier>? identifier,
+      List<Identifier?>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -370,23 +370,23 @@ abstract class $MeasureCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      List<CodeableConcept>? topic,
-      List<Contributor>? contributor,
-      List<ContactDetail>? contact,
+      List<UsageContext?>? useContext,
+      List<CodeableConcept?>? jurisdiction,
+      List<CodeableConcept?>? topic,
+      List<Contributor?>? contributor,
+      List<ContactDetail?>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<RelatedArtifact>? relatedArtifact,
+      List<RelatedArtifact?>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Reference>? library_,
+          List<Reference?>? library_,
       String? disclaimer,
       @JsonKey(name: '_disclaimer')
           Element? disclaimerElement,
       CodeableConcept? scoring,
       CodeableConcept? compositeScoring,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       String? riskAdjustment,
       @JsonKey(name: '_riskAdjustment')
           Element? riskAdjustmentElement,
@@ -402,9 +402,9 @@ abstract class $MeasureCopyWith<$Res> {
       String? improvementNotation,
       @JsonKey(name: '_improvementNotation')
           Element? improvementNotationElement,
-      List<String>? definition,
+      List<String?>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       String? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -412,8 +412,8 @@ abstract class $MeasureCopyWith<$Res> {
           String? set_,
       @JsonKey(name: '_set')
           Element? setElement,
-      List<MeasureGroup>? group,
-      List<MeasureSupplementalData>? supplementalData});
+      List<MeasureGroup?>? group,
+      List<MeasureSupplementalData?>? supplementalData});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -550,16 +550,16 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       url: url == freezed ? _value.url : url as String?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -617,25 +617,26 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
           : effectivePeriod as Period?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext as List<UsageContext?>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>?,
+          : jurisdiction as List<CodeableConcept?>?,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept?>?,
       contributor: contributor == freezed
           ? _value.contributor
-          : contributor as List<Contributor>?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : contributor as List<Contributor?>?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<ContactDetail?>?,
       copyright: copyright == freezed ? _value.copyright : copyright as String?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact>?,
+          : relatedArtifact as List<RelatedArtifact?>?,
       library_:
-          library_ == freezed ? _value.library_ : library_ as List<Reference>?,
+          library_ == freezed ? _value.library_ : library_ as List<Reference?>?,
       disclaimer:
           disclaimer == freezed ? _value.disclaimer : disclaimer as String?,
       disclaimerElement: disclaimerElement == freezed
@@ -646,7 +647,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       compositeScoring: compositeScoring == freezed
           ? _value.compositeScoring
           : compositeScoring as CodeableConcept?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
       riskAdjustment: riskAdjustment == freezed
           ? _value.riskAdjustment
           : riskAdjustment as String?,
@@ -679,10 +680,10 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
           : improvementNotationElement as Element?,
       definition: definition == freezed
           ? _value.definition
-          : definition as List<String>?,
+          : definition as List<String?>?,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
-          : definitionElement as List<Element>?,
+          : definitionElement as List<Element?>?,
       guidance: guidance == freezed ? _value.guidance : guidance as String?,
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
@@ -690,10 +691,10 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       set_: set_ == freezed ? _value.set_ : set_ as String?,
       setElement:
           setElement == freezed ? _value.setElement : setElement as Element?,
-      group: group == freezed ? _value.group : group as List<MeasureGroup>?,
+      group: group == freezed ? _value.group : group as List<MeasureGroup?>?,
       supplementalData: supplementalData == freezed
           ? _value.supplementalData
-          : supplementalData as List<MeasureSupplementalData>?,
+          : supplementalData as List<MeasureSupplementalData?>?,
     ));
   }
 
@@ -1038,12 +1039,12 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier>? identifier,
+      List<Identifier?>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -1081,23 +1082,23 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      List<CodeableConcept>? topic,
-      List<Contributor>? contributor,
-      List<ContactDetail>? contact,
+      List<UsageContext?>? useContext,
+      List<CodeableConcept?>? jurisdiction,
+      List<CodeableConcept?>? topic,
+      List<Contributor?>? contributor,
+      List<ContactDetail?>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<RelatedArtifact>? relatedArtifact,
+      List<RelatedArtifact?>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Reference>? library_,
+          List<Reference?>? library_,
       String? disclaimer,
       @JsonKey(name: '_disclaimer')
           Element? disclaimerElement,
       CodeableConcept? scoring,
       CodeableConcept? compositeScoring,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       String? riskAdjustment,
       @JsonKey(name: '_riskAdjustment')
           Element? riskAdjustmentElement,
@@ -1113,9 +1114,9 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       String? improvementNotation,
       @JsonKey(name: '_improvementNotation')
           Element? improvementNotationElement,
-      List<String>? definition,
+      List<String?>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       String? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -1123,8 +1124,8 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
           String? set_,
       @JsonKey(name: '_set')
           Element? setElement,
-      List<MeasureGroup>? group,
-      List<MeasureSupplementalData>? supplementalData});
+      List<MeasureGroup?>? group,
+      List<MeasureSupplementalData?>? supplementalData});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -1291,16 +1292,16 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       url: url == freezed ? _value.url : url as String?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -1358,25 +1359,26 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
           : effectivePeriod as Period?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext>?,
+          : useContext as List<UsageContext?>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept>?,
-      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>?,
+          : jurisdiction as List<CodeableConcept?>?,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept?>?,
       contributor: contributor == freezed
           ? _value.contributor
-          : contributor as List<Contributor>?,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
+          : contributor as List<Contributor?>?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact as List<ContactDetail?>?,
       copyright: copyright == freezed ? _value.copyright : copyright as String?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact>?,
+          : relatedArtifact as List<RelatedArtifact?>?,
       library_:
-          library_ == freezed ? _value.library_ : library_ as List<Reference>?,
+          library_ == freezed ? _value.library_ : library_ as List<Reference?>?,
       disclaimer:
           disclaimer == freezed ? _value.disclaimer : disclaimer as String?,
       disclaimerElement: disclaimerElement == freezed
@@ -1387,7 +1389,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       compositeScoring: compositeScoring == freezed
           ? _value.compositeScoring
           : compositeScoring as CodeableConcept?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
       riskAdjustment: riskAdjustment == freezed
           ? _value.riskAdjustment
           : riskAdjustment as String?,
@@ -1420,10 +1422,10 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
           : improvementNotationElement as Element?,
       definition: definition == freezed
           ? _value.definition
-          : definition as List<String>?,
+          : definition as List<String?>?,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
-          : definitionElement as List<Element>?,
+          : definitionElement as List<Element?>?,
       guidance: guidance == freezed ? _value.guidance : guidance as String?,
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
@@ -1431,10 +1433,10 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       set_: set_ == freezed ? _value.set_ : set_ as String?,
       setElement:
           setElement == freezed ? _value.setElement : setElement as Element?,
-      group: group == freezed ? _value.group : group as List<MeasureGroup>?,
+      group: group == freezed ? _value.group : group as List<MeasureGroup?>?,
       supplementalData: supplementalData == freezed
           ? _value.supplementalData
-          : supplementalData as List<MeasureSupplementalData>?,
+          : supplementalData as List<MeasureSupplementalData?>?,
     ));
   }
 }
@@ -1572,16 +1574,16 @@ class _$_Measure extends _Measure {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final String? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final String? version;
   @override
@@ -1645,25 +1647,25 @@ class _$_Measure extends _Measure {
   @override
   final Period? effectivePeriod;
   @override
-  final List<UsageContext>? useContext;
+  final List<UsageContext?>? useContext;
   @override
-  final List<CodeableConcept>? jurisdiction;
+  final List<CodeableConcept?>? jurisdiction;
   @override
-  final List<CodeableConcept>? topic;
+  final List<CodeableConcept?>? topic;
   @override
-  final List<Contributor>? contributor;
+  final List<Contributor?>? contributor;
   @override
-  final List<ContactDetail>? contact;
+  final List<ContactDetail?>? contact;
   @override
   final String? copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final List<RelatedArtifact>? relatedArtifact;
+  final List<RelatedArtifact?>? relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  final List<Reference>? library_;
+  final List<Reference?>? library_;
   @override
   final String? disclaimer;
   @override
@@ -1674,7 +1676,7 @@ class _$_Measure extends _Measure {
   @override
   final CodeableConcept? compositeScoring;
   @override
-  final List<CodeableConcept>? type;
+  final List<CodeableConcept?>? type;
   @override
   final String? riskAdjustment;
   @override
@@ -1701,10 +1703,10 @@ class _$_Measure extends _Measure {
   @JsonKey(name: '_improvementNotation')
   final Element? improvementNotationElement;
   @override
-  final List<String>? definition;
+  final List<String?>? definition;
   @override
   @JsonKey(name: '_definition')
-  final List<Element>? definitionElement;
+  final List<Element?>? definitionElement;
   @override
   final String? guidance;
   @override
@@ -1717,9 +1719,9 @@ class _$_Measure extends _Measure {
   @JsonKey(name: '_set')
   final Element? setElement;
   @override
-  final List<MeasureGroup>? group;
+  final List<MeasureGroup?>? group;
   @override
-  final List<MeasureSupplementalData>? supplementalData;
+  final List<MeasureSupplementalData?>? supplementalData;
 
   @override
   String toString() {
@@ -1949,12 +1951,12 @@ abstract class _Measure extends Measure {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier>? identifier,
+      List<Identifier?>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -1992,23 +1994,23 @@ abstract class _Measure extends Measure {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      List<CodeableConcept>? topic,
-      List<Contributor>? contributor,
-      List<ContactDetail>? contact,
+      List<UsageContext?>? useContext,
+      List<CodeableConcept?>? jurisdiction,
+      List<CodeableConcept?>? topic,
+      List<Contributor?>? contributor,
+      List<ContactDetail?>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<RelatedArtifact>? relatedArtifact,
+      List<RelatedArtifact?>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Reference>? library_,
+          List<Reference?>? library_,
       String? disclaimer,
       @JsonKey(name: '_disclaimer')
           Element? disclaimerElement,
       CodeableConcept? scoring,
       CodeableConcept? compositeScoring,
-      List<CodeableConcept>? type,
+      List<CodeableConcept?>? type,
       String? riskAdjustment,
       @JsonKey(name: '_riskAdjustment')
           Element? riskAdjustmentElement,
@@ -2024,9 +2026,9 @@ abstract class _Measure extends Measure {
       String? improvementNotation,
       @JsonKey(name: '_improvementNotation')
           Element? improvementNotationElement,
-      List<String>? definition,
+      List<String?>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       String? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -2034,8 +2036,8 @@ abstract class _Measure extends Measure {
           String? set_,
       @JsonKey(name: '_set')
           Element? setElement,
-      List<MeasureGroup>? group,
-      List<MeasureSupplementalData>? supplementalData}) = _$_Measure;
+      List<MeasureGroup?>? group,
+      List<MeasureSupplementalData?>? supplementalData}) = _$_Measure;
 
   factory _Measure.fromJson(Map<String, dynamic> json) = _$_Measure.fromJson;
 
@@ -2062,16 +2064,16 @@ abstract class _Measure extends Measure {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   String? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   String? get version;
   @override
@@ -2135,25 +2137,25 @@ abstract class _Measure extends Measure {
   @override
   Period? get effectivePeriod;
   @override
-  List<UsageContext>? get useContext;
+  List<UsageContext?>? get useContext;
   @override
-  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept?>? get jurisdiction;
   @override
-  List<CodeableConcept>? get topic;
+  List<CodeableConcept?>? get topic;
   @override
-  List<Contributor>? get contributor;
+  List<Contributor?>? get contributor;
   @override
-  List<ContactDetail>? get contact;
+  List<ContactDetail?>? get contact;
   @override
   String? get copyright;
   @override
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
-  List<RelatedArtifact>? get relatedArtifact;
+  List<RelatedArtifact?>? get relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  List<Reference>? get library_;
+  List<Reference?>? get library_;
   @override
   String? get disclaimer;
   @override
@@ -2164,7 +2166,7 @@ abstract class _Measure extends Measure {
   @override
   CodeableConcept? get compositeScoring;
   @override
-  List<CodeableConcept>? get type;
+  List<CodeableConcept?>? get type;
   @override
   String? get riskAdjustment;
   @override
@@ -2191,10 +2193,10 @@ abstract class _Measure extends Measure {
   @JsonKey(name: '_improvementNotation')
   Element? get improvementNotationElement;
   @override
-  List<String>? get definition;
+  List<String?>? get definition;
   @override
   @JsonKey(name: '_definition')
-  List<Element>? get definitionElement;
+  List<Element?>? get definitionElement;
   @override
   String? get guidance;
   @override
@@ -2207,9 +2209,9 @@ abstract class _Measure extends Measure {
   @JsonKey(name: '_set')
   Element? get setElement;
   @override
-  List<MeasureGroup>? get group;
+  List<MeasureGroup?>? get group;
   @override
-  List<MeasureSupplementalData>? get supplementalData;
+  List<MeasureSupplementalData?>? get supplementalData;
   @override
   @JsonKey(ignore: true)
   _$MeasureCopyWith<_Measure> get copyWith;
@@ -2229,8 +2231,8 @@ class _$MeasureGroupTearOff {
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<MeasurePopulation>? population,
-      List<MeasureStratifier>? stratifier}) {
+      List<MeasurePopulation?>? population,
+      List<MeasureStratifier?>? stratifier}) {
     return _MeasureGroup(
       identifier: identifier,
       name: name,
@@ -2259,8 +2261,8 @@ mixin _$MeasureGroup {
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<MeasurePopulation>? get population;
-  List<MeasureStratifier>? get stratifier;
+  List<MeasurePopulation?>? get population;
+  List<MeasureStratifier?>? get stratifier;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2278,8 +2280,8 @@ abstract class $MeasureGroupCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<MeasurePopulation>? population,
-      List<MeasureStratifier>? stratifier});
+      List<MeasurePopulation?>? population,
+      List<MeasureStratifier?>? stratifier});
 
   $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res>? get nameElement;
@@ -2317,10 +2319,10 @@ class _$MeasureGroupCopyWithImpl<$Res> implements $MeasureGroupCopyWith<$Res> {
           : descriptionElement as Element?,
       population: population == freezed
           ? _value.population
-          : population as List<MeasurePopulation>?,
+          : population as List<MeasurePopulation?>?,
       stratifier: stratifier == freezed
           ? _value.stratifier
-          : stratifier as List<MeasureStratifier>?,
+          : stratifier as List<MeasureStratifier?>?,
     ));
   }
 
@@ -2367,8 +2369,8 @@ abstract class _$MeasureGroupCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<MeasurePopulation>? population,
-      List<MeasureStratifier>? stratifier});
+      List<MeasurePopulation?>? population,
+      List<MeasureStratifier?>? stratifier});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
@@ -2411,10 +2413,10 @@ class __$MeasureGroupCopyWithImpl<$Res> extends _$MeasureGroupCopyWithImpl<$Res>
           : descriptionElement as Element?,
       population: population == freezed
           ? _value.population
-          : population as List<MeasurePopulation>?,
+          : population as List<MeasurePopulation?>?,
       stratifier: stratifier == freezed
           ? _value.stratifier
-          : stratifier as List<MeasureStratifier>?,
+          : stratifier as List<MeasureStratifier?>?,
     ));
   }
 }
@@ -2449,9 +2451,9 @@ class _$_MeasureGroup extends _MeasureGroup {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<MeasurePopulation>? population;
+  final List<MeasurePopulation?>? population;
   @override
-  final List<MeasureStratifier>? stratifier;
+  final List<MeasureStratifier?>? stratifier;
 
   @override
   String toString() {
@@ -2514,8 +2516,8 @@ abstract class _MeasureGroup extends MeasureGroup {
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<MeasurePopulation>? population,
-      List<MeasureStratifier>? stratifier}) = _$_MeasureGroup;
+      List<MeasurePopulation?>? population,
+      List<MeasureStratifier?>? stratifier}) = _$_MeasureGroup;
 
   factory _MeasureGroup.fromJson(Map<String, dynamic> json) =
       _$_MeasureGroup.fromJson;
@@ -2533,9 +2535,9 @@ abstract class _MeasureGroup extends MeasureGroup {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<MeasurePopulation>? get population;
+  List<MeasurePopulation?>? get population;
   @override
-  List<MeasureStratifier>? get stratifier;
+  List<MeasureStratifier?>? get stratifier;
   @override
   @JsonKey(ignore: true)
   _$MeasureGroupCopyWith<_MeasureGroup> get copyWith;
@@ -3214,7 +3216,7 @@ class _$MeasureSupplementalDataTearOff {
 
   _MeasureSupplementalData call(
       {Identifier? identifier,
-      List<CodeableConcept>? usage,
+      List<CodeableConcept?>? usage,
       String? criteria,
       @JsonKey(name: '_criteria') Element? criteriaElement,
       String? path,
@@ -3240,7 +3242,7 @@ const $MeasureSupplementalData = _$MeasureSupplementalDataTearOff();
 /// @nodoc
 mixin _$MeasureSupplementalData {
   Identifier? get identifier;
-  List<CodeableConcept>? get usage;
+  List<CodeableConcept?>? get usage;
   String? get criteria;
   @JsonKey(name: '_criteria')
   Element? get criteriaElement;
@@ -3260,7 +3262,7 @@ abstract class $MeasureSupplementalDataCopyWith<$Res> {
       _$MeasureSupplementalDataCopyWithImpl<$Res>;
   $Res call(
       {Identifier? identifier,
-      List<CodeableConcept>? usage,
+      List<CodeableConcept?>? usage,
       String? criteria,
       @JsonKey(name: '_criteria') Element? criteriaElement,
       String? path,
@@ -3292,7 +3294,7 @@ class _$MeasureSupplementalDataCopyWithImpl<$Res>
     return _then(_value.copyWith(
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
-      usage: usage == freezed ? _value.usage : usage as List<CodeableConcept>?,
+      usage: usage == freezed ? _value.usage : usage as List<CodeableConcept?>?,
       criteria: criteria == freezed ? _value.criteria : criteria as String?,
       criteriaElement: criteriaElement == freezed
           ? _value.criteriaElement
@@ -3346,7 +3348,7 @@ abstract class _$MeasureSupplementalDataCopyWith<$Res>
   @override
   $Res call(
       {Identifier? identifier,
-      List<CodeableConcept>? usage,
+      List<CodeableConcept?>? usage,
       String? criteria,
       @JsonKey(name: '_criteria') Element? criteriaElement,
       String? path,
@@ -3384,7 +3386,7 @@ class __$MeasureSupplementalDataCopyWithImpl<$Res>
     return _then(_MeasureSupplementalData(
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
-      usage: usage == freezed ? _value.usage : usage as List<CodeableConcept>?,
+      usage: usage == freezed ? _value.usage : usage as List<CodeableConcept?>?,
       criteria: criteria == freezed ? _value.criteria : criteria as String?,
       criteriaElement: criteriaElement == freezed
           ? _value.criteriaElement
@@ -3415,7 +3417,7 @@ class _$_MeasureSupplementalData extends _MeasureSupplementalData {
   @override
   final Identifier? identifier;
   @override
-  final List<CodeableConcept>? usage;
+  final List<CodeableConcept?>? usage;
   @override
   final String? criteria;
   @override
@@ -3480,7 +3482,7 @@ abstract class _MeasureSupplementalData extends MeasureSupplementalData {
   _MeasureSupplementalData._() : super._();
   factory _MeasureSupplementalData(
           {Identifier? identifier,
-          List<CodeableConcept>? usage,
+          List<CodeableConcept?>? usage,
           String? criteria,
           @JsonKey(name: '_criteria') Element? criteriaElement,
           String? path,
@@ -3493,7 +3495,7 @@ abstract class _MeasureSupplementalData extends MeasureSupplementalData {
   @override
   Identifier? get identifier;
   @override
-  List<CodeableConcept>? get usage;
+  List<CodeableConcept?>? get usage;
   @override
   String? get criteria;
   @override
@@ -3531,8 +3533,8 @@ class _$MeasureReportTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       MeasureReportStatus? status,
       @JsonKey(name: '_status')
@@ -3547,7 +3549,7 @@ class _$MeasureReportTearOff {
           Element? dateElement,
       Reference? reportingOrganization,
       required Period? period,
-      List<MeasureReportGroup>? group,
+      List<MeasureReportGroup?>? group,
       Reference? evaluatedResources}) {
     return _MeasureReport(
       resourceType: resourceType,
@@ -3600,8 +3602,8 @@ mixin _$MeasureReport {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Identifier? get identifier;
   MeasureReportStatus? get status;
   @JsonKey(name: '_status')
@@ -3616,7 +3618,7 @@ mixin _$MeasureReport {
   Element? get dateElement;
   Reference? get reportingOrganization;
   Period? get period;
-  List<MeasureReportGroup>? get group;
+  List<MeasureReportGroup?>? get group;
   Reference? get evaluatedResources;
 
   Map<String, dynamic> toJson();
@@ -3643,8 +3645,8 @@ abstract class $MeasureReportCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       MeasureReportStatus? status,
       @JsonKey(name: '_status')
@@ -3659,7 +3661,7 @@ abstract class $MeasureReportCopyWith<$Res> {
           Element? dateElement,
       Reference? reportingOrganization,
       Period? period,
-      List<MeasureReportGroup>? group,
+      List<MeasureReportGroup?>? group,
       Reference? evaluatedResources});
 
   $MetaCopyWith<$Res>? get meta;
@@ -3735,10 +3737,10 @@ class _$MeasureReportCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       status:
@@ -3759,7 +3761,7 @@ class _$MeasureReportCopyWithImpl<$Res>
           : reportingOrganization as Reference?,
       period: period == freezed ? _value.period : period as Period?,
       group:
-          group == freezed ? _value.group : group as List<MeasureReportGroup>?,
+          group == freezed ? _value.group : group as List<MeasureReportGroup?>?,
       evaluatedResources: evaluatedResources == freezed
           ? _value.evaluatedResources
           : evaluatedResources as Reference?,
@@ -3931,8 +3933,8 @@ abstract class _$MeasureReportCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       MeasureReportStatus? status,
       @JsonKey(name: '_status')
@@ -3947,7 +3949,7 @@ abstract class _$MeasureReportCopyWith<$Res>
           Element? dateElement,
       Reference? reportingOrganization,
       Period? period,
-      List<MeasureReportGroup>? group,
+      List<MeasureReportGroup?>? group,
       Reference? evaluatedResources});
 
   @override
@@ -4038,10 +4040,10 @@ class __$MeasureReportCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       status:
@@ -4062,7 +4064,7 @@ class __$MeasureReportCopyWithImpl<$Res>
           : reportingOrganization as Reference?,
       period: period == freezed ? _value.period : period as Period?,
       group:
-          group == freezed ? _value.group : group as List<MeasureReportGroup>?,
+          group == freezed ? _value.group : group as List<MeasureReportGroup?>?,
       evaluatedResources: evaluatedResources == freezed
           ? _value.evaluatedResources
           : evaluatedResources as Reference?,
@@ -4134,9 +4136,9 @@ class _$_MeasureReport extends _MeasureReport {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Identifier? identifier;
   @override
@@ -4163,7 +4165,7 @@ class _$_MeasureReport extends _MeasureReport {
   @override
   final Period? period;
   @override
-  final List<MeasureReportGroup>? group;
+  final List<MeasureReportGroup?>? group;
   @override
   final Reference? evaluatedResources;
 
@@ -4297,8 +4299,8 @@ abstract class _MeasureReport extends MeasureReport {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Identifier? identifier,
       MeasureReportStatus? status,
       @JsonKey(name: '_status')
@@ -4313,7 +4315,7 @@ abstract class _MeasureReport extends MeasureReport {
           Element? dateElement,
       Reference? reportingOrganization,
       required Period? period,
-      List<MeasureReportGroup>? group,
+      List<MeasureReportGroup?>? group,
       Reference? evaluatedResources}) = _$_MeasureReport;
 
   factory _MeasureReport.fromJson(Map<String, dynamic> json) =
@@ -4342,9 +4344,9 @@ abstract class _MeasureReport extends MeasureReport {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Identifier? get identifier;
   @override
@@ -4371,7 +4373,7 @@ abstract class _MeasureReport extends MeasureReport {
   @override
   Period? get period;
   @override
-  List<MeasureReportGroup>? get group;
+  List<MeasureReportGroup?>? get group;
   @override
   Reference? get evaluatedResources;
   @override
@@ -4389,10 +4391,10 @@ class _$MeasureReportGroupTearOff {
 
   _MeasureReportGroup call(
       {required Identifier identifier,
-      List<MeasureReportPopulation>? population,
+      List<MeasureReportPopulation?>? population,
       Decimal? measureScore,
       @JsonKey(name: '_measureScore') Element? measureScoreElement,
-      List<MeasureReportStratifier>? stratifier}) {
+      List<MeasureReportStratifier?>? stratifier}) {
     return _MeasureReportGroup(
       identifier: identifier,
       population: population,
@@ -4413,11 +4415,11 @@ const $MeasureReportGroup = _$MeasureReportGroupTearOff();
 /// @nodoc
 mixin _$MeasureReportGroup {
   Identifier get identifier;
-  List<MeasureReportPopulation>? get population;
+  List<MeasureReportPopulation?>? get population;
   Decimal? get measureScore;
   @JsonKey(name: '_measureScore')
   Element? get measureScoreElement;
-  List<MeasureReportStratifier>? get stratifier;
+  List<MeasureReportStratifier?>? get stratifier;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4431,10 +4433,10 @@ abstract class $MeasureReportGroupCopyWith<$Res> {
       _$MeasureReportGroupCopyWithImpl<$Res>;
   $Res call(
       {Identifier identifier,
-      List<MeasureReportPopulation>? population,
+      List<MeasureReportPopulation?>? population,
       Decimal? measureScore,
       @JsonKey(name: '_measureScore') Element? measureScoreElement,
-      List<MeasureReportStratifier>? stratifier});
+      List<MeasureReportStratifier?>? stratifier});
 
   $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res>? get measureScoreElement;
@@ -4462,7 +4464,7 @@ class _$MeasureReportGroupCopyWithImpl<$Res>
           identifier == freezed ? _value.identifier : identifier as Identifier,
       population: population == freezed
           ? _value.population
-          : population as List<MeasureReportPopulation>?,
+          : population as List<MeasureReportPopulation?>?,
       measureScore: measureScore == freezed
           ? _value.measureScore
           : measureScore as Decimal?,
@@ -4471,7 +4473,7 @@ class _$MeasureReportGroupCopyWithImpl<$Res>
           : measureScoreElement as Element?,
       stratifier: stratifier == freezed
           ? _value.stratifier
-          : stratifier as List<MeasureReportStratifier>?,
+          : stratifier as List<MeasureReportStratifier?>?,
     ));
   }
 
@@ -4503,10 +4505,10 @@ abstract class _$MeasureReportGroupCopyWith<$Res>
   @override
   $Res call(
       {Identifier identifier,
-      List<MeasureReportPopulation>? population,
+      List<MeasureReportPopulation?>? population,
       Decimal? measureScore,
       @JsonKey(name: '_measureScore') Element? measureScoreElement,
-      List<MeasureReportStratifier>? stratifier});
+      List<MeasureReportStratifier?>? stratifier});
 
   @override
   $IdentifierCopyWith<$Res> get identifier;
@@ -4538,7 +4540,7 @@ class __$MeasureReportGroupCopyWithImpl<$Res>
           identifier == freezed ? _value.identifier : identifier as Identifier,
       population: population == freezed
           ? _value.population
-          : population as List<MeasureReportPopulation>?,
+          : population as List<MeasureReportPopulation?>?,
       measureScore: measureScore == freezed
           ? _value.measureScore
           : measureScore as Decimal?,
@@ -4547,7 +4549,7 @@ class __$MeasureReportGroupCopyWithImpl<$Res>
           : measureScoreElement as Element?,
       stratifier: stratifier == freezed
           ? _value.stratifier
-          : stratifier as List<MeasureReportStratifier>?,
+          : stratifier as List<MeasureReportStratifier?>?,
     ));
   }
 }
@@ -4570,14 +4572,14 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   @override
   final Identifier identifier;
   @override
-  final List<MeasureReportPopulation>? population;
+  final List<MeasureReportPopulation?>? population;
   @override
   final Decimal? measureScore;
   @override
   @JsonKey(name: '_measureScore')
   final Element? measureScoreElement;
   @override
-  final List<MeasureReportStratifier>? stratifier;
+  final List<MeasureReportStratifier?>? stratifier;
 
   @override
   String toString() {
@@ -4629,10 +4631,10 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
   _MeasureReportGroup._() : super._();
   factory _MeasureReportGroup(
       {required Identifier identifier,
-      List<MeasureReportPopulation>? population,
+      List<MeasureReportPopulation?>? population,
       Decimal? measureScore,
       @JsonKey(name: '_measureScore') Element? measureScoreElement,
-      List<MeasureReportStratifier>? stratifier}) = _$_MeasureReportGroup;
+      List<MeasureReportStratifier?>? stratifier}) = _$_MeasureReportGroup;
 
   factory _MeasureReportGroup.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportGroup.fromJson;
@@ -4640,14 +4642,14 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
   @override
   Identifier get identifier;
   @override
-  List<MeasureReportPopulation>? get population;
+  List<MeasureReportPopulation?>? get population;
   @override
   Decimal? get measureScore;
   @override
   @JsonKey(name: '_measureScore')
   Element? get measureScoreElement;
   @override
-  List<MeasureReportStratifier>? get stratifier;
+  List<MeasureReportStratifier?>? get stratifier;
   @override
   @JsonKey(ignore: true)
   _$MeasureReportGroupCopyWith<_MeasureReportGroup> get copyWith;
@@ -4958,7 +4960,7 @@ class _$MeasureReportStratifierTearOff {
   const _$MeasureReportStratifierTearOff();
 
   _MeasureReportStratifier call(
-      {Identifier? identifier, List<MeasureReportStratum>? stratum}) {
+      {Identifier? identifier, List<MeasureReportStratum?>? stratum}) {
     return _MeasureReportStratifier(
       identifier: identifier,
       stratum: stratum,
@@ -4976,7 +4978,7 @@ const $MeasureReportStratifier = _$MeasureReportStratifierTearOff();
 /// @nodoc
 mixin _$MeasureReportStratifier {
   Identifier? get identifier;
-  List<MeasureReportStratum>? get stratum;
+  List<MeasureReportStratum?>? get stratum;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4988,7 +4990,7 @@ abstract class $MeasureReportStratifierCopyWith<$Res> {
   factory $MeasureReportStratifierCopyWith(MeasureReportStratifier value,
           $Res Function(MeasureReportStratifier) then) =
       _$MeasureReportStratifierCopyWithImpl<$Res>;
-  $Res call({Identifier? identifier, List<MeasureReportStratum>? stratum});
+  $Res call({Identifier? identifier, List<MeasureReportStratum?>? stratum});
 
   $IdentifierCopyWith<$Res>? get identifier;
 }
@@ -5012,7 +5014,7 @@ class _$MeasureReportStratifierCopyWithImpl<$Res>
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       stratum: stratum == freezed
           ? _value.stratum
-          : stratum as List<MeasureReportStratum>?,
+          : stratum as List<MeasureReportStratum?>?,
     ));
   }
 
@@ -5035,7 +5037,7 @@ abstract class _$MeasureReportStratifierCopyWith<$Res>
           $Res Function(_MeasureReportStratifier) then) =
       __$MeasureReportStratifierCopyWithImpl<$Res>;
   @override
-  $Res call({Identifier? identifier, List<MeasureReportStratum>? stratum});
+  $Res call({Identifier? identifier, List<MeasureReportStratum?>? stratum});
 
   @override
   $IdentifierCopyWith<$Res>? get identifier;
@@ -5063,7 +5065,7 @@ class __$MeasureReportStratifierCopyWithImpl<$Res>
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       stratum: stratum == freezed
           ? _value.stratum
-          : stratum as List<MeasureReportStratum>?,
+          : stratum as List<MeasureReportStratum?>?,
     ));
   }
 }
@@ -5080,7 +5082,7 @@ class _$_MeasureReportStratifier extends _MeasureReportStratifier {
   @override
   final Identifier? identifier;
   @override
-  final List<MeasureReportStratum>? stratum;
+  final List<MeasureReportStratum?>? stratum;
 
   @override
   String toString() {
@@ -5120,7 +5122,7 @@ abstract class _MeasureReportStratifier extends MeasureReportStratifier {
   _MeasureReportStratifier._() : super._();
   factory _MeasureReportStratifier(
       {Identifier? identifier,
-      List<MeasureReportStratum>? stratum}) = _$_MeasureReportStratifier;
+      List<MeasureReportStratum?>? stratum}) = _$_MeasureReportStratifier;
 
   factory _MeasureReportStratifier.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportStratifier.fromJson;
@@ -5128,7 +5130,7 @@ abstract class _MeasureReportStratifier extends MeasureReportStratifier {
   @override
   Identifier? get identifier;
   @override
-  List<MeasureReportStratum>? get stratum;
+  List<MeasureReportStratum?>? get stratum;
   @override
   @JsonKey(ignore: true)
   _$MeasureReportStratifierCopyWith<_MeasureReportStratifier> get copyWith;
@@ -5145,7 +5147,7 @@ class _$MeasureReportStratumTearOff {
   _MeasureReportStratum call(
       {String? value,
       @JsonKey(name: '_value') Element? valueElement,
-      List<MeasureReportPopulation1>? population,
+      List<MeasureReportPopulation1?>? population,
       Decimal? measureScore,
       @JsonKey(name: '_measureScore') Element? measureScoreElement}) {
     return _MeasureReportStratum(
@@ -5170,7 +5172,7 @@ mixin _$MeasureReportStratum {
   String? get value;
   @JsonKey(name: '_value')
   Element? get valueElement;
-  List<MeasureReportPopulation1>? get population;
+  List<MeasureReportPopulation1?>? get population;
   Decimal? get measureScore;
   @JsonKey(name: '_measureScore')
   Element? get measureScoreElement;
@@ -5188,7 +5190,7 @@ abstract class $MeasureReportStratumCopyWith<$Res> {
   $Res call(
       {String? value,
       @JsonKey(name: '_value') Element? valueElement,
-      List<MeasureReportPopulation1>? population,
+      List<MeasureReportPopulation1?>? population,
       Decimal? measureScore,
       @JsonKey(name: '_measureScore') Element? measureScoreElement});
 
@@ -5220,7 +5222,7 @@ class _$MeasureReportStratumCopyWithImpl<$Res>
           : valueElement as Element?,
       population: population == freezed
           ? _value.population
-          : population as List<MeasureReportPopulation1>?,
+          : population as List<MeasureReportPopulation1?>?,
       measureScore: measureScore == freezed
           ? _value.measureScore
           : measureScore as Decimal?,
@@ -5263,7 +5265,7 @@ abstract class _$MeasureReportStratumCopyWith<$Res>
   $Res call(
       {String? value,
       @JsonKey(name: '_value') Element? valueElement,
-      List<MeasureReportPopulation1>? population,
+      List<MeasureReportPopulation1?>? population,
       Decimal? measureScore,
       @JsonKey(name: '_measureScore') Element? measureScoreElement});
 
@@ -5299,7 +5301,7 @@ class __$MeasureReportStratumCopyWithImpl<$Res>
           : valueElement as Element?,
       population: population == freezed
           ? _value.population
-          : population as List<MeasureReportPopulation1>?,
+          : population as List<MeasureReportPopulation1?>?,
       measureScore: measureScore == freezed
           ? _value.measureScore
           : measureScore as Decimal?,
@@ -5331,7 +5333,7 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
   @JsonKey(name: '_value')
   final Element? valueElement;
   @override
-  final List<MeasureReportPopulation1>? population;
+  final List<MeasureReportPopulation1?>? population;
   @override
   final Decimal? measureScore;
   @override
@@ -5389,7 +5391,7 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
   factory _MeasureReportStratum(
           {String? value,
           @JsonKey(name: '_value') Element? valueElement,
-          List<MeasureReportPopulation1>? population,
+          List<MeasureReportPopulation1?>? population,
           Decimal? measureScore,
           @JsonKey(name: '_measureScore') Element? measureScoreElement}) =
       _$_MeasureReportStratum;
@@ -5403,7 +5405,7 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
   @JsonKey(name: '_value')
   Element? get valueElement;
   @override
-  List<MeasureReportPopulation1>? get population;
+  List<MeasureReportPopulation1?>? get population;
   @override
   Decimal? get measureScore;
   @override

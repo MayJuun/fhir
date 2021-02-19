@@ -13,7 +13,8 @@ _$_ContactDetail _$_$_ContactDetailFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
     telecom: (json['telecom'] as List<dynamic>?)
-        ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : ContactPoint.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -29,7 +30,7 @@ Map<String, dynamic> _$_$_ContactDetailToJson(_$_ContactDetail instance) {
 
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
+  writeNotNull('telecom', instance.telecom?.map((e) => e?.toJson()).toList());
   return val;
 }
 
@@ -44,7 +45,9 @@ _$_Contributor _$_$_ContributorFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
     contact: (json['contact'] as List<dynamic>?)
-        ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => e == null
+            ? null
+            : ContactDetail.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -62,7 +65,7 @@ Map<String, dynamic> _$_$_ContributorToJson(_$_Contributor instance) {
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
+  writeNotNull('contact', instance.contact?.map((e) => e?.toJson()).toList());
   return val;
 }
 
@@ -212,23 +215,27 @@ _$_DataRequirement _$_$_DataRequirementFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
     profile:
-        (json['profile'] as List<dynamic>?)?.map((e) => e as String).toList(),
+        (json['profile'] as List<dynamic>?)?.map((e) => e as String?).toList(),
     profileElement: (json['_profile'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     mustSupport: (json['mustSupport'] as List<dynamic>?)
-        ?.map((e) => e as String)
+        ?.map((e) => e as String?)
         .toList(),
     mustSupportElement: (json['_mustSupport'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     codeFilter: (json['codeFilter'] as List<dynamic>?)
-        ?.map((e) =>
-            DataRequirementCodeFilter.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => e == null
+            ? null
+            : DataRequirementCodeFilter.fromJson(e as Map<String, dynamic>))
         .toList(),
     dateFilter: (json['dateFilter'] as List<dynamic>?)
-        ?.map((e) =>
-            DataRequirementDateFilter.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => e == null
+            ? null
+            : DataRequirementDateFilter.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -246,14 +253,14 @@ Map<String, dynamic> _$_$_DataRequirementToJson(_$_DataRequirement instance) {
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('profile', instance.profile);
   writeNotNull(
-      '_profile', instance.profileElement?.map((e) => e.toJson()).toList());
+      '_profile', instance.profileElement?.map((e) => e?.toJson()).toList());
   writeNotNull('mustSupport', instance.mustSupport);
   writeNotNull('_mustSupport',
-      instance.mustSupportElement?.map((e) => e.toJson()).toList());
+      instance.mustSupportElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
-      'codeFilter', instance.codeFilter?.map((e) => e.toJson()).toList());
+      'codeFilter', instance.codeFilter?.map((e) => e?.toJson()).toList());
   writeNotNull(
-      'dateFilter', instance.dateFilter?.map((e) => e.toJson()).toList());
+      'dateFilter', instance.dateFilter?.map((e) => e?.toJson()).toList());
   return val;
 }
 
@@ -272,16 +279,20 @@ _$_DataRequirementCodeFilter _$_$_DataRequirementCodeFilterFromJson(
         ? null
         : Reference.fromJson(json['valueSetReference'] as Map<String, dynamic>),
     valueCode: (json['valueCode'] as List<dynamic>?)
-        ?.map((e) => Code.fromJson(e))
+        ?.map((e) => e == null ? null : Code.fromJson(e))
         .toList(),
     valueCodeElement: (json['_valueCode'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     valueCoding: (json['valueCoding'] as List<dynamic>?)
-        ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Coding.fromJson(e as Map<String, dynamic>))
         .toList(),
     valueCodeableConcept: (json['valueCodeableConcept'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => e == null
+            ? null
+            : CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -302,13 +313,13 @@ Map<String, dynamic> _$_$_DataRequirementCodeFilterToJson(
   writeNotNull('_valueSetString', instance.valueSetStringElement?.toJson());
   writeNotNull('valueSetReference', instance.valueSetReference?.toJson());
   writeNotNull(
-      'valueCode', instance.valueCode?.map((e) => e.toJson()).toList());
+      'valueCode', instance.valueCode?.map((e) => e?.toJson()).toList());
+  writeNotNull('_valueCode',
+      instance.valueCodeElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
-      '_valueCode', instance.valueCodeElement?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'valueCoding', instance.valueCoding?.map((e) => e.toJson()).toList());
+      'valueCoding', instance.valueCoding?.map((e) => e?.toJson()).toList());
   writeNotNull('valueCodeableConcept',
-      instance.valueCodeableConcept?.map((e) => e.toJson()).toList());
+      instance.valueCodeableConcept?.map((e) => e?.toJson()).toList());
   return val;
 }
 

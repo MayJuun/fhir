@@ -26,9 +26,9 @@ abstract class Basic with Resource implements _$Basic {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     required CodeableConcept? code,
     Reference? subject,
     Date? created,
@@ -108,8 +108,8 @@ abstract class Bundle with Resource implements _$Bundle {
     @JsonKey(name: '_timestamp') Element? timestampElement,
     UnsignedInt? total,
     @JsonKey(name: '_total') Element? totalElement,
-    List<BundleLink>? link,
-    List<BundleEntry>? entry,
+    List<BundleLink?>? link,
+    List<BundleEntry?>? entry,
     Signature? signature,
   }) = _Bundle;
 
@@ -134,8 +134,8 @@ abstract class BundleLink implements _$BundleLink {
   BundleLink._();
   factory BundleLink({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? relation,
     @JsonKey(name: '_relation') Element? relationElement,
     FhirUri? url,
@@ -164,9 +164,9 @@ abstract class BundleEntry implements _$BundleEntry {
   BundleEntry._();
   factory BundleEntry({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<BundleLink>? link,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<BundleLink?>? link,
     FhirUri? fullUrl,
     @JsonKey(name: '_fullUrl') Element? fullUrlElement,
     Resource? resource,
@@ -197,8 +197,8 @@ abstract class BundleSearch implements _$BundleSearch {
   BundleSearch._();
   factory BundleSearch({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: BundleSearchMode.unknown) BundleSearchMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Decimal? score,
@@ -227,8 +227,8 @@ abstract class BundleRequest implements _$BundleRequest {
   BundleRequest._();
   factory BundleRequest({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
         BundleRequestMethod? method,
     @JsonKey(name: '_method') Element? methodElement,
@@ -266,8 +266,8 @@ abstract class BundleResponse implements _$BundleResponse {
   BundleResponse._();
   factory BundleResponse({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirUri? location,
@@ -311,12 +311,12 @@ abstract class Linkage with Resource implements _$Linkage {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     Reference? author,
-    required List<LinkageItem>? item,
+    required List<LinkageItem?>? item,
   }) = _Linkage;
 
   /// Produces a Yaml formatted String version of the object
@@ -341,8 +341,8 @@ abstract class LinkageItem implements _$LinkageItem {
   LinkageItem._();
   factory LinkageItem({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Reference? resource,
@@ -380,12 +380,12 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Coding? eventCoding,
     FhirUri? eventUri,
     @JsonKey(name: '_eventUri') Element? eventUriElement,
-    List<MessageHeaderDestination>? destination,
+    List<MessageHeaderDestination?>? destination,
     Reference? sender,
     Reference? enterer,
     Reference? author,
@@ -393,7 +393,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     Reference? responsible,
     CodeableConcept? reason,
     MessageHeaderResponse? response,
-    List<Reference>? focus,
+    List<Reference?>? focus,
     Canonical? definition,
   }) = _MessageHeader;
 
@@ -419,8 +419,8 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
   MessageHeaderDestination._();
   factory MessageHeaderDestination({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Reference? target,
@@ -452,8 +452,8 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
   MessageHeaderSource._();
   factory MessageHeaderSource({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? software,
@@ -487,8 +487,8 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
   MessageHeaderResponse._();
   factory MessageHeaderResponse({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Id? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
     @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
@@ -529,9 +529,9 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required List<OperationOutcomeIssue>? issue,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    required List<OperationOutcomeIssue?>? issue,
   }) = _OperationOutcome;
 
   /// Produces a Yaml formatted String version of the object
@@ -556,8 +556,8 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
   OperationOutcomeIssue._();
   factory OperationOutcomeIssue({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
         OperationOutcomeIssueSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
@@ -567,10 +567,10 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
     CodeableConcept? details,
     String? diagnostics,
     @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
-    List<String>? location,
-    @JsonKey(name: '_location') List<Element>? locationElement,
-    List<String>? expression,
-    @JsonKey(name: '_expression') List<Element>? expressionElement,
+    List<String?>? location,
+    @JsonKey(name: '_location') List<Element?>? locationElement,
+    List<String?>? expression,
+    @JsonKey(name: '_expression') List<Element?>? expressionElement,
   }) = _OperationOutcomeIssue;
 
   /// Produces a Yaml formatted String version of the object
@@ -603,7 +603,7 @@ abstract class Parameters with Resource implements _$Parameters {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
-    List<ParametersParameter>? parameter,
+    List<ParametersParameter?>? parameter,
   }) = _Parameters;
 
   /// Produces a Yaml formatted String version of the object
@@ -628,8 +628,8 @@ abstract class ParametersParameter implements _$ParametersParameter {
   ParametersParameter._();
   factory ParametersParameter({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Base64Binary? valueBase64Binary,
@@ -704,7 +704,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
     Dosage? valueDosage,
     Meta? valueMeta,
     Resource? resource,
-    @JsonKey(name: 'part') List<ParametersParameter>? part_,
+    @JsonKey(name: 'part') List<ParametersParameter?>? part_,
   }) = _ParametersParameter;
 
   /// Produces a Yaml formatted String version of the object
@@ -739,25 +739,25 @@ abstract class Subscription with Resource implements _$Subscription {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Reference? topic,
-    List<ContactPoint>? contact,
+    List<ContactPoint?>? contact,
     Instant? end,
     @JsonKey(name: '_end') Element? endElement,
     String? reason,
     @JsonKey(name: '_reason') Element? reasonElement,
-    List<SubscriptionFilterBy>? filterBy,
+    List<SubscriptionFilterBy?>? filterBy,
     required Coding? channelType,
     FhirUrl? endpoint,
     @JsonKey(name: '_endpoint') Element? endpointElement,
-    List<String>? header,
-    @JsonKey(name: '_header') List<Element>? headerElement,
+    List<String?>? header,
+    @JsonKey(name: '_header') List<Element?>? headerElement,
     UnsignedInt? heartbeatPeriod,
     @JsonKey(name: '_heartbeatPeriod') Element? heartbeatPeriodElement,
     UnsignedInt? timeout,
@@ -791,8 +791,8 @@ abstract class SubscriptionFilterBy implements _$SubscriptionFilterBy {
   SubscriptionFilterBy._();
   factory SubscriptionFilterBy({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? searchParamName,
     @JsonKey(name: '_searchParamName') Element? searchParamNameElement,
     Code? searchModifier,
@@ -835,8 +835,8 @@ abstract class SubscriptionStatus
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: SubscriptionStatusType.unknown)
         SubscriptionStatusType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -850,7 +850,7 @@ abstract class SubscriptionStatus
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Canonical? topic,
-    List<CodeableConcept>? error,
+    List<CodeableConcept?>? error,
   }) = _SubscriptionStatus;
 
   /// Produces a Yaml formatted String version of the object
@@ -885,16 +885,16 @@ abstract class SubscriptionTopic with Resource implements _$SubscriptionTopic {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier>? identifier,
+    List<Identifier?>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    List<Canonical>? derivedFrom,
+    List<Canonical?>? derivedFrom,
     @JsonKey(unknownEnumValue: SubscriptionTopicStatus.unknown)
         SubscriptionTopicStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -903,11 +903,11 @@ abstract class SubscriptionTopic with Resource implements _$SubscriptionTopic {
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? publisher,
-    List<ContactDetail>? contact,
+    List<ContactDetail?>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
+    List<UsageContext?>? useContext,
+    List<CodeableConcept?>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -918,7 +918,7 @@ abstract class SubscriptionTopic with Resource implements _$SubscriptionTopic {
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
     SubscriptionTopicResourceTrigger? resourceTrigger,
-    List<SubscriptionTopicCanFilterBy>? canFilterBy,
+    List<SubscriptionTopicCanFilterBy?>? canFilterBy,
   }) = _SubscriptionTopic;
 
   /// Produces a Yaml formatted String version of the object
@@ -944,17 +944,17 @@ abstract class SubscriptionTopicResourceTrigger
   SubscriptionTopicResourceTrigger._();
   factory SubscriptionTopicResourceTrigger({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<Code>? resourceType,
-    @JsonKey(name: '_resourceType') List<Element>? resourceTypeElement,
-    List<Code>? methodCriteria,
-    @JsonKey(name: '_methodCriteria') List<Element>? methodCriteriaElement,
+    List<Code?>? resourceType,
+    @JsonKey(name: '_resourceType') List<Element?>? resourceTypeElement,
+    List<Code?>? methodCriteria,
+    @JsonKey(name: '_methodCriteria') List<Element?>? methodCriteriaElement,
     SubscriptionTopicQueryCriteria? queryCriteria,
-    List<String>? fhirPathCriteria,
-    @JsonKey(name: '_fhirPathCriteria') List<Element>? fhirPathCriteriaElement,
+    List<String?>? fhirPathCriteria,
+    @JsonKey(name: '_fhirPathCriteria') List<Element?>? fhirPathCriteriaElement,
   }) = _SubscriptionTopicResourceTrigger;
 
   /// Produces a Yaml formatted String version of the object
@@ -983,8 +983,8 @@ abstract class SubscriptionTopicQueryCriteria
   SubscriptionTopicQueryCriteria._();
   factory SubscriptionTopicQueryCriteria({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? previous,
     @JsonKey(name: '_previous') Element? previousElement,
     String? current,
@@ -1019,12 +1019,12 @@ abstract class SubscriptionTopicCanFilterBy
   SubscriptionTopicCanFilterBy._();
   factory SubscriptionTopicCanFilterBy({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? searchParamName,
     @JsonKey(name: '_searchParamName') Element? searchParamNameElement,
-    List<Code>? searchModifier,
-    @JsonKey(name: '_searchModifier') List<Element>? searchModifierElement,
+    List<Code?>? searchModifier,
+    @JsonKey(name: '_searchModifier') List<Element?>? searchModifierElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
   }) = _SubscriptionTopicCanFilterBy;

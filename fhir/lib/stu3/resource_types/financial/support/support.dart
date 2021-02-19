@@ -26,9 +26,9 @@ abstract class Coverage with Resource implements _$Coverage {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     String? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
@@ -39,7 +39,7 @@ abstract class Coverage with Resource implements _$Coverage {
     Reference? beneficiary,
     CodeableConcept? relationship,
     Period? period,
-    List<Reference>? payor,
+    List<Reference?>? payor,
     CoverageGrouping? grouping,
     String? dependent,
     @JsonKey(name: '_dependent') Element? dependentElement,
@@ -49,7 +49,7 @@ abstract class Coverage with Resource implements _$Coverage {
     @JsonKey(name: '_order') Element? orderElement,
     String? network,
     @JsonKey(name: '_network') Element? networkElement,
-    List<Reference>? contract,
+    List<Reference?>? contract,
   }) = _Coverage;
 
   /// Produces a Yaml formatted String version of the object
@@ -133,9 +133,9 @@ abstract class EligibilityRequest
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     String? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? priority,
@@ -191,9 +191,9 @@ abstract class EligibilityResponse
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     String? status,
     @JsonKey(name: '_status') Element? statusElement,
     String? created,
@@ -207,9 +207,9 @@ abstract class EligibilityResponse
     Reference? insurer,
     Boolean? inforce,
     @JsonKey(name: '_inforce') Element? inforceElement,
-    List<EligibilityResponseInsurance>? insurance,
+    List<EligibilityResponseInsurance?>? insurance,
     CodeableConcept? form,
-    List<EligibilityResponseError>? error,
+    List<EligibilityResponseError?>? error,
   }) = _EligibilityResponse;
 
   /// Produces a Yaml formatted String version of the object
@@ -236,7 +236,7 @@ abstract class EligibilityResponseInsurance
   factory EligibilityResponseInsurance({
     Reference? coverage,
     Reference? contract,
-    List<EligibilityResponseBenefitBalance>? benefitBalance,
+    List<EligibilityResponseBenefitBalance?>? benefitBalance,
   }) = _EligibilityResponseInsurance;
 
   /// Produces a Yaml formatted String version of the object
@@ -273,7 +273,7 @@ abstract class EligibilityResponseBenefitBalance
     CodeableConcept? network,
     CodeableConcept? unit,
     CodeableConcept? term,
-    List<EligibilityResponseFinancial>? financial,
+    List<EligibilityResponseFinancial?>? financial,
   }) = _EligibilityResponseBenefitBalance;
 
   /// Produces a Yaml formatted String version of the object
@@ -370,9 +370,9 @@ abstract class EnrollmentRequest with Resource implements _$EnrollmentRequest {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     String? status,
     @JsonKey(name: '_status') Element? statusElement,
     String? created,
@@ -418,9 +418,9 @@ abstract class EnrollmentResponse
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     String? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? request,

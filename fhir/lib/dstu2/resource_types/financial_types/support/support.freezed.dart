@@ -30,8 +30,8 @@ class _$CoverageTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? issuer,
       Identifier? bin,
       Period? period,
@@ -39,7 +39,7 @@ class _$CoverageTearOff {
       Identifier? subscriberId,
       @JsonKey(name: '_subscriberId')
           Element? subscriberIdElement,
-      List<Identifier>? identifier,
+      List<Identifier?>? identifier,
       String? group,
       String? plan,
       String? subPlan,
@@ -51,7 +51,7 @@ class _$CoverageTearOff {
       Identifier? network,
       @JsonKey(name: '_network')
           Element? networkElement,
-      List<Reference>? contract}) {
+      List<Reference?>? contract}) {
     return _Coverage(
       resourceType: resourceType,
       id: id,
@@ -107,8 +107,8 @@ mixin _$Coverage {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
   Reference? get issuer;
   Identifier? get bin;
   Period? get period;
@@ -116,7 +116,7 @@ mixin _$Coverage {
   Identifier? get subscriberId;
   @JsonKey(name: '_subscriberId')
   Element? get subscriberIdElement;
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   String? get group;
   String? get plan;
   String? get subPlan;
@@ -128,7 +128,7 @@ mixin _$Coverage {
   Identifier? get network;
   @JsonKey(name: '_network')
   Element? get networkElement;
-  List<Reference>? get contract;
+  List<Reference?>? get contract;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -153,8 +153,8 @@ abstract class $CoverageCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? issuer,
       Identifier? bin,
       Period? period,
@@ -162,7 +162,7 @@ abstract class $CoverageCopyWith<$Res> {
       Identifier? subscriberId,
       @JsonKey(name: '_subscriberId')
           Element? subscriberIdElement,
-      List<Identifier>? identifier,
+      List<Identifier?>? identifier,
       String? group,
       String? plan,
       String? subPlan,
@@ -174,7 +174,7 @@ abstract class $CoverageCopyWith<$Res> {
       Identifier? network,
       @JsonKey(name: '_network')
           Element? networkElement,
-      List<Reference>? contract});
+      List<Reference?>? contract});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -253,10 +253,10 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       issuer: issuer == freezed ? _value.issuer : issuer as Reference?,
       bin: bin == freezed ? _value.bin : bin as Identifier?,
       period: period == freezed ? _value.period : period as Period?,
@@ -269,7 +269,7 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
           : subscriberIdElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       group: group == freezed ? _value.group : group as String?,
       plan: plan == freezed ? _value.plan : plan as String?,
       subPlan: subPlan == freezed ? _value.subPlan : subPlan as String?,
@@ -287,7 +287,7 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
           ? _value.networkElement
           : networkElement as Element?,
       contract:
-          contract == freezed ? _value.contract : contract as List<Reference>?,
+          contract == freezed ? _value.contract : contract as List<Reference?>?,
     ));
   }
 
@@ -465,8 +465,8 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? issuer,
       Identifier? bin,
       Period? period,
@@ -474,7 +474,7 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       Identifier? subscriberId,
       @JsonKey(name: '_subscriberId')
           Element? subscriberIdElement,
-      List<Identifier>? identifier,
+      List<Identifier?>? identifier,
       String? group,
       String? plan,
       String? subPlan,
@@ -486,7 +486,7 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       Identifier? network,
       @JsonKey(name: '_network')
           Element? networkElement,
-      List<Reference>? contract});
+      List<Reference?>? contract});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -580,10 +580,10 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       issuer: issuer == freezed ? _value.issuer : issuer as Reference?,
       bin: bin == freezed ? _value.bin : bin as Identifier?,
       period: period == freezed ? _value.period : period as Period?,
@@ -596,7 +596,7 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
           : subscriberIdElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       group: group == freezed ? _value.group : group as String?,
       plan: plan == freezed ? _value.plan : plan as String?,
       subPlan: subPlan == freezed ? _value.subPlan : subPlan as String?,
@@ -614,7 +614,7 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
           ? _value.networkElement
           : networkElement as Element?,
       contract:
-          contract == freezed ? _value.contract : contract as List<Reference>?,
+          contract == freezed ? _value.contract : contract as List<Reference?>?,
     ));
   }
 }
@@ -687,9 +687,9 @@ class _$_Coverage extends _Coverage {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
   final Reference? issuer;
   @override
@@ -704,7 +704,7 @@ class _$_Coverage extends _Coverage {
   @JsonKey(name: '_subscriberId')
   final Element? subscriberIdElement;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final String? group;
   @override
@@ -726,7 +726,7 @@ class _$_Coverage extends _Coverage {
   @JsonKey(name: '_network')
   final Element? networkElement;
   @override
-  final List<Reference>? contract;
+  final List<Reference?>? contract;
 
   @override
   String toString() {
@@ -869,8 +869,8 @@ abstract class _Coverage extends Coverage {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
       Reference? issuer,
       Identifier? bin,
       Period? period,
@@ -878,7 +878,7 @@ abstract class _Coverage extends Coverage {
       Identifier? subscriberId,
       @JsonKey(name: '_subscriberId')
           Element? subscriberIdElement,
-      List<Identifier>? identifier,
+      List<Identifier?>? identifier,
       String? group,
       String? plan,
       String? subPlan,
@@ -890,7 +890,7 @@ abstract class _Coverage extends Coverage {
       Identifier? network,
       @JsonKey(name: '_network')
           Element? networkElement,
-      List<Reference>? contract}) = _$_Coverage;
+      List<Reference?>? contract}) = _$_Coverage;
 
   factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
 
@@ -917,9 +917,9 @@ abstract class _Coverage extends Coverage {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
   Reference? get issuer;
   @override
@@ -934,7 +934,7 @@ abstract class _Coverage extends Coverage {
   @JsonKey(name: '_subscriberId')
   Element? get subscriberIdElement;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   String? get group;
   @override
@@ -956,7 +956,7 @@ abstract class _Coverage extends Coverage {
   @JsonKey(name: '_network')
   Element? get networkElement;
   @override
-  List<Reference>? get contract;
+  List<Reference?>? get contract;
   @override
   @JsonKey(ignore: true)
   _$CoverageCopyWith<_Coverage> get copyWith;
@@ -984,9 +984,9 @@ class _$EligibilityRequestTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
@@ -1041,9 +1041,9 @@ mixin _$EligibilityRequest {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   Coding? get ruleset;
   Coding? get originalRuleset;
   FhirDateTime? get created;
@@ -1077,9 +1077,9 @@ abstract class $EligibilityRequestCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
@@ -1154,13 +1154,13 @@ class _$EligibilityRequestCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       ruleset: ruleset == freezed ? _value.ruleset : ruleset as Coding?,
       originalRuleset: originalRuleset == freezed
           ? _value.originalRuleset
@@ -1309,9 +1309,9 @@ abstract class _$EligibilityRequestCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
@@ -1398,13 +1398,13 @@ class __$EligibilityRequestCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       ruleset: ruleset == freezed ? _value.ruleset : ruleset as Coding?,
       originalRuleset: originalRuleset == freezed
           ? _value.originalRuleset
@@ -1479,11 +1479,11 @@ class _$_EligibilityRequest extends _EligibilityRequest {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final Coding? ruleset;
   @override
@@ -1614,9 +1614,9 @@ abstract class _EligibilityRequest extends EligibilityRequest {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
@@ -1652,11 +1652,11 @@ abstract class _EligibilityRequest extends EligibilityRequest {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   Coding? get ruleset;
   @override
@@ -1700,9 +1700,9 @@ class _$EligibilityResponseTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       @JsonKey(unknownEnumValue: EligibilityResponseOutcome.unknown)
           EligibilityResponseOutcome? outcome,
@@ -1770,9 +1770,9 @@ mixin _$EligibilityResponse {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   Reference? get request;
   @JsonKey(unknownEnumValue: EligibilityResponseOutcome.unknown)
   EligibilityResponseOutcome? get outcome;
@@ -1814,9 +1814,9 @@ abstract class $EligibilityResponseCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       @JsonKey(unknownEnumValue: EligibilityResponseOutcome.unknown)
           EligibilityResponseOutcome? outcome,
@@ -1907,13 +1907,13 @@ class _$EligibilityResponseCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       request: request == freezed ? _value.request : request as Reference?,
       outcome: outcome == freezed
           ? _value.outcome
@@ -2111,9 +2111,9 @@ abstract class _$EligibilityResponseCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       @JsonKey(unknownEnumValue: EligibilityResponseOutcome.unknown)
           EligibilityResponseOutcome? outcome,
@@ -2219,13 +2219,13 @@ class __$EligibilityResponseCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       request: request == freezed ? _value.request : request as Reference?,
       outcome: outcome == freezed
           ? _value.outcome
@@ -2324,11 +2324,11 @@ class _$_EligibilityResponse extends _EligibilityResponse {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final Reference? request;
   @override
@@ -2492,9 +2492,9 @@ abstract class _EligibilityResponse extends EligibilityResponse {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       @JsonKey(unknownEnumValue: EligibilityResponseOutcome.unknown)
           EligibilityResponseOutcome? outcome,
@@ -2538,11 +2538,11 @@ abstract class _EligibilityResponse extends EligibilityResponse {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   Reference? get request;
   @override
@@ -2598,9 +2598,9 @@ class _$EnrollmentRequestTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
@@ -2661,9 +2661,9 @@ mixin _$EnrollmentRequest {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   Coding? get ruleset;
   Coding? get originalRuleset;
   FhirDateTime? get created;
@@ -2700,9 +2700,9 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
@@ -2786,13 +2786,13 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       ruleset: ruleset == freezed ? _value.ruleset : ruleset as Coding?,
       originalRuleset: originalRuleset == freezed
           ? _value.originalRuleset
@@ -2979,9 +2979,9 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
@@ -3080,13 +3080,13 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       ruleset: ruleset == freezed ? _value.ruleset : ruleset as Coding?,
       originalRuleset: originalRuleset == freezed
           ? _value.originalRuleset
@@ -3169,11 +3169,11 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final Coding? ruleset;
   @override
@@ -3322,9 +3322,9 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
@@ -3363,11 +3363,11 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   Coding? get ruleset;
   @override
@@ -3416,9 +3416,9 @@ class _$EnrollmentResponseTearOff {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
           EnrollmentResponseOutcome? outcome,
@@ -3486,9 +3486,9 @@ mixin _$EnrollmentResponse {
   Narrative? get text;
   List<Resource?>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  List<FhirExtension>? get modifierExtension;
-  List<Identifier>? get identifier;
+  List<FhirExtension?>? get extension_;
+  List<FhirExtension?>? get modifierExtension;
+  List<Identifier?>? get identifier;
   Reference? get request;
   @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
   EnrollmentResponseOutcome? get outcome;
@@ -3530,9 +3530,9 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
           EnrollmentResponseOutcome? outcome,
@@ -3623,13 +3623,13 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       request: request == freezed ? _value.request : request as Reference?,
       outcome: outcome == freezed
           ? _value.outcome
@@ -3827,9 +3827,9 @@ abstract class _$EnrollmentResponseCopyWith<$Res>
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
           EnrollmentResponseOutcome? outcome,
@@ -3935,13 +3935,13 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
           : contained as List<Resource?>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>?,
+          : extension_ as List<FhirExtension?>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>?,
+          : modifierExtension as List<FhirExtension?>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>?,
+          : identifier as List<Identifier?>?,
       request: request == freezed ? _value.request : request as Reference?,
       outcome: outcome == freezed
           ? _value.outcome
@@ -4040,11 +4040,11 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   final List<Resource?>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  final List<FhirExtension?>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
+  final List<FhirExtension?>? modifierExtension;
   @override
-  final List<Identifier>? identifier;
+  final List<Identifier?>? identifier;
   @override
   final Reference? request;
   @override
@@ -4207,9 +4207,9 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       Narrative? text,
       List<Resource?>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          List<FhirExtension?>? extension_,
+      List<FhirExtension?>? modifierExtension,
+      List<Identifier?>? identifier,
       Reference? request,
       @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
           EnrollmentResponseOutcome? outcome,
@@ -4253,11 +4253,11 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   List<Resource?>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
+  List<FhirExtension?>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
+  List<FhirExtension?>? get modifierExtension;
   @override
-  List<Identifier>? get identifier;
+  List<Identifier?>? get identifier;
   @override
   Reference? get request;
   @override

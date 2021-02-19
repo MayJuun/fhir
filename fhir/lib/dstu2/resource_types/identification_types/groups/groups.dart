@@ -26,18 +26,18 @@ abstract class Organization with Resource implements _$Organization {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     CodeableConcept? type,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    List<ContactPoint>? telecom,
-    List<Address>? address,
+    List<ContactPoint?>? telecom,
+    List<Address?>? address,
     Reference? partOf,
-    List<OrganizationContact>? contact,
+    List<OrganizationContact?>? contact,
 
     // @JsonKey(name: '_alias') Element? aliasElement,
   }) = _Organization;
@@ -64,12 +64,12 @@ abstract class OrganizationContact with _$OrganizationContact {
   OrganizationContact._();
   factory OrganizationContact({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
     CodeableConcept? purpose,
     HumanName? name,
-    List<ContactPoint>? telecom,
+    List<ContactPoint?>? telecom,
     Address? address,
   }) = _OrganizationContact;
 
@@ -105,12 +105,12 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     Reference? providedBy,
     CodeableConcept? serviceCategory,
-    List<HealthcareServiceServiceType>? serviceType,
+    List<HealthcareServiceServiceType?>? serviceType,
     required Reference? location,
     String? serviceName,
     String? comment,
@@ -118,19 +118,19 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
     String? extraDetails,
     @JsonKey(name: '_extraDetails') Element? extraDetailsElement,
     Attachment? photo,
-    List<ContactPoint>? telecom,
-    List<Reference>? coverageArea,
-    List<CodeableConcept>? serviceProvisionCode,
+    List<ContactPoint?>? telecom,
+    List<Reference?>? coverageArea,
+    List<CodeableConcept?>? serviceProvisionCode,
     CodeableConcept? eligibility,
     String? eligibilityNote,
-    List<String>? programName,
-    List<CodeableConcept>? characteristic,
-    List<CodeableConcept>? referralMethod,
+    List<String?>? programName,
+    List<CodeableConcept?>? characteristic,
+    List<CodeableConcept?>? referralMethod,
     String? publicKey,
     Boolean? appointmentRequired,
     @JsonKey(name: '_appointmentRequired') Element? appointmentRequiredElement,
-    List<HealthcareServiceAvailableTime>? availableTime,
-    List<HealthcareServiceNotAvailable>? notAvailable,
+    List<HealthcareServiceAvailableTime?>? availableTime,
+    List<HealthcareServiceNotAvailable?>? notAvailable,
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
         Element? availabilityExceptionsElement,
@@ -159,10 +159,10 @@ abstract class HealthcareServiceServiceType
   HealthcareServiceServiceType._();
   factory HealthcareServiceServiceType({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? type,
-    List<CodeableConcept>? specialty,
+    List<CodeableConcept?>? specialty,
   }) = _HealthcareServiceServiceType;
 
   /// Produces a Yaml formatted String version of the object
@@ -189,9 +189,9 @@ abstract class HealthcareServiceAvailableTime
   HealthcareServiceAvailableTime._();
   factory HealthcareServiceAvailableTime({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<AvailableTimeDaysOfWeek>? daysOfWeek,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<AvailableTimeDaysOfWeek?>? daysOfWeek,
     @JsonKey(name: '_daysOfWeek') Element? daysOfWeekElement,
     Boolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,
@@ -227,8 +227,8 @@ abstract class HealthcareServiceNotAvailable
   HealthcareServiceNotAvailable._();
   factory HealthcareServiceNotAvailable({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Period? during,
@@ -267,9 +267,9 @@ abstract class Group with Resource implements _$Group {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<Identifier?>? identifier,
     @JsonKey(unknownEnumValue: GroupType.unknown) required GroupType type,
     @JsonKey(name: '_type') Element? typeElement,
     required Boolean? actual,
@@ -279,8 +279,8 @@ abstract class Group with Resource implements _$Group {
     @JsonKey(name: '_name') Element? nameElement,
     UnsignedInt? quantity,
     @JsonKey(name: '_quantity') Element? quantityElement,
-    List<GroupCharacteristic>? characteristic,
-    List<GroupMember>? member,
+    List<GroupCharacteristic?>? characteristic,
+    List<GroupMember?>? member,
   }) = _Group;
 
   /// Produces a Yaml formatted String version of the object
@@ -304,8 +304,8 @@ abstract class GroupCharacteristic with _$GroupCharacteristic {
   GroupCharacteristic._();
   factory GroupCharacteristic({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required CodeableConcept? code,
     CodeableConcept? valueCodeableConcept,
     Boolean? valueBoolean,
@@ -338,8 +338,8 @@ abstract class GroupMember with _$GroupMember {
   GroupMember._();
   factory GroupMember({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Reference? entity,
     Period? period,
     Boolean? inactive,

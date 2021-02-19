@@ -28,8 +28,8 @@ abstract class ImplementationGuide
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     String? version,
@@ -43,20 +43,21 @@ abstract class ImplementationGuide
     @JsonKey(name: '_experimental') Element? experimentalElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ImplementationGuideContact>? contact,
+    List<ImplementationGuideContact?>? contact,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<CodeableConcept>? useContext,
+    List<CodeableConcept?>? useContext,
     String? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     Id? fhirVersion,
-    @JsonKey(name: '_fhirVersion') List<Element>? fhirVersionElement,
-    List<ImplementationGuideDependency>? dependency,
-    @JsonKey(required: true) required List<ImplementationGuidePackage>? package,
-    List<ImplementationGuideGlobal>? global,
-    List<FhirUri>? binary,
+    @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
+    List<ImplementationGuideDependency?>? dependency,
+    @JsonKey(required: true)
+        required List<ImplementationGuidePackage?>? package,
+    List<ImplementationGuideGlobal?>? global,
+    List<FhirUri?>? binary,
     required ImplementationGuidePage? page,
   }) = _ImplementationGuide;
 
@@ -82,10 +83,10 @@ abstract class ImplementationGuideContact with _$ImplementationGuideContact {
   ImplementationGuideContact._();
   factory ImplementationGuideContact({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? name,
-    List<ContactPoint>? telecom,
+    List<ContactPoint?>? telecom,
   }) = _ImplementationGuideContact;
 
   /// Produces a Yaml formatted String version of the object
@@ -112,8 +113,8 @@ abstract class ImplementationGuideDependency
   ImplementationGuideDependency._();
   factory ImplementationGuideDependency({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: DependencyType.unknown)
         required DependencyType type,
     required FhirUri? uri,
@@ -143,8 +144,8 @@ abstract class ImplementationGuidePackage with _$ImplementationGuidePackage {
   ImplementationGuidePackage._();
   factory ImplementationGuidePackage({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required String? name,
     String? description,
     @JsonKey(required: true)
@@ -174,8 +175,8 @@ abstract class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   ImplementationGuideGlobal._();
   factory ImplementationGuideGlobal({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Reference? profile,
@@ -204,15 +205,15 @@ abstract class ImplementationGuidePage with _$ImplementationGuidePage {
   ImplementationGuidePage._();
   factory ImplementationGuidePage({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required FhirUri? source,
     required String? name,
     @JsonKey(unknownEnumValue: PageKind.unknown) required PageKind kind,
-    List<Code>? type,
-    List<String>? package,
+    List<Code?>? type,
+    List<String?>? package,
     Code? format,
-    List<ImplementationGuidePage>? page,
+    List<ImplementationGuidePage?>? page,
   }) = _ImplementationGuidePage;
 
   /// Produces a Yaml formatted String version of the object
@@ -238,8 +239,8 @@ abstract class ImplementationGuidePackageResource
   ImplementationGuidePackageResource._();
   factory ImplementationGuidePackageResource({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
         required ResourcePurpose purpose,
     String? name,
@@ -286,8 +287,8 @@ abstract class TestScript with Resource implements _$TestScript {
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     String? version,
@@ -301,22 +302,22 @@ abstract class TestScript with Resource implements _$TestScript {
     @JsonKey(name: '_experimental') Element? experimentalElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<TestScriptContact>? contact,
+    List<TestScriptContact?>? contact,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<CodeableConcept>? useContext,
+    List<CodeableConcept?>? useContext,
     String? requirements,
     String? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     TestScriptMetadata? metadata,
     Boolean? multiserver,
-    List<TestScriptFixture>? fixture,
-    List<Reference>? profile,
-    List<TestScriptVariable>? variable,
+    List<TestScriptFixture?>? fixture,
+    List<Reference?>? profile,
+    List<TestScriptVariable?>? variable,
     TestScriptSetup? setup,
-    List<TestScriptTest>? test,
+    List<TestScriptTest?>? test,
     TestScriptTeardown? teardown,
   }) = _TestScript;
 
@@ -342,10 +343,10 @@ abstract class TestScriptContact with _$TestScriptContact {
   TestScriptContact._();
   factory TestScriptContact({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? name,
-    List<ContactPoint>? telecom,
+    List<ContactPoint?>? telecom,
   }) = _TestScriptContact;
 
   /// Produces a Yaml formatted String version of the object
@@ -370,9 +371,9 @@ abstract class TestScriptMetadata with _$TestScriptMetadata {
   TestScriptMetadata._();
   factory TestScriptMetadata({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<TestScriptMetadataLink>? link,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    List<TestScriptMetadataLink?>? link,
     @JsonKey(required: true)
         required List<TestScriptMetadataCapability> capability,
   }) = _TestScriptMetadata;
@@ -399,8 +400,8 @@ abstract class TestScriptMetadataLink with _$TestScriptMetadataLink {
   TestScriptMetadataLink._();
   factory TestScriptMetadataLink({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     String? description,
@@ -430,8 +431,8 @@ abstract class TestScriptMetadataCapability
   TestScriptMetadataCapability._();
   factory TestScriptMetadataCapability({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     @JsonKey(name: 'required') Boolean? required_,
     @JsonKey(name: '_required') Element? requiredElement,
     Boolean? validated,
@@ -440,8 +441,8 @@ abstract class TestScriptMetadataCapability
     @JsonKey(name: '_description') Element? descriptionElement,
     Integer? destination,
     @JsonKey(name: '_destination') Element? destinationElement,
-    List<FhirUri>? link,
-    @JsonKey(name: '_link') List<Element>? linkElement,
+    List<FhirUri?>? link,
+    @JsonKey(name: '_link') List<Element?>? linkElement,
     required Reference? conformance,
   }) = _TestScriptMetadataCapability;
 
@@ -468,8 +469,8 @@ abstract class TestScriptFixture with _$TestScriptFixture {
   TestScriptFixture._();
   factory TestScriptFixture({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     Boolean? autocreate,
     @JsonKey(name: '_autocreate') Element? autocreateElement,
     Boolean? autodelete,
@@ -499,8 +500,8 @@ abstract class TestScriptVariable with _$TestScriptVariable {
   TestScriptVariable._();
   factory TestScriptVariable({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     required String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? headerField,
@@ -533,10 +534,10 @@ abstract class TestScriptSetup with _$TestScriptSetup {
   TestScriptSetup._();
   factory TestScriptSetup({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     TestScriptMetadata? metadata,
-    required List<TestScriptSetupAction>? action,
+    required List<TestScriptSetupAction?>? action,
   }) = _TestScriptSetup;
 
   /// Produces a Yaml formatted String version of the object
@@ -561,9 +562,9 @@ abstract class TestScriptSetupAction with _$TestScriptSetupAction {
   TestScriptSetupAction._();
   factory TestScriptSetupAction({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
     TestScriptActionOperation? operation,
     @JsonKey(name: 'assert') TestScriptActionAssert? assert_,
   }) = _TestScriptSetupAction;
@@ -590,9 +591,9 @@ abstract class TestScriptActionOperation with _$TestScriptActionOperation {
   TestScriptActionOperation._();
   factory TestScriptActionOperation({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
     Coding? type,
     Code? resource,
     @JsonKey(name: '_resource') Element? resourceElement,
@@ -611,7 +612,7 @@ abstract class TestScriptActionOperation with _$TestScriptActionOperation {
     @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
     String? params,
     @JsonKey(name: '_params') Element? paramsElement,
-    List<TestScriptOperationRequestHeader>? requestHeader,
+    List<TestScriptOperationRequestHeader?>? requestHeader,
     Id? responseId,
     @JsonKey(name: '_responseId') Element? responseIdElement,
     Id? sourceId,
@@ -646,7 +647,7 @@ abstract class TestScriptOperationRequestHeader
   TestScriptOperationRequestHeader._();
   factory TestScriptOperationRequestHeader({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
     FhirExtension? modifierExtension,
     required String? field,
     @JsonKey(name: '_field') Element? fieldElement,
@@ -679,8 +680,8 @@ abstract class TestScriptActionAssert with _$TestScriptActionAssert {
   TestScriptActionAssert._();
   factory TestScriptActionAssert({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? label,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -743,14 +744,14 @@ abstract class TestScriptTest with _$TestScriptTest {
   TestScriptTest._();
   factory TestScriptTest({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     TestScriptMetadata? metadata,
-    required List<TestScriptSetupAction>? action,
+    required List<TestScriptSetupAction?>? action,
   }) = _TestScriptTest;
 
   /// Produces a Yaml formatted String version of the object
@@ -775,9 +776,9 @@ abstract class TestScriptTeardown with _$TestScriptTeardown {
   TestScriptTeardown._();
   factory TestScriptTeardown({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required List<TestScriptTeardownAction>? action,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    required List<TestScriptTeardownAction?>? action,
   }) = _TestScriptTeardown;
 
   /// Produces a Yaml formatted String version of the object
@@ -802,9 +803,9 @@ abstract class TestScriptTeardownAction with _$TestScriptTeardownAction {
   TestScriptTeardownAction._();
   factory TestScriptTeardownAction({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
     TestScriptActionOperation? operation,
   }) = _TestScriptTeardownAction;
 
