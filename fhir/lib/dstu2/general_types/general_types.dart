@@ -462,7 +462,7 @@ abstract class HumanName implements _$HumanName {
     @JsonKey(name: '_use') Element? useElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-    List<String>? family,
+    List<String?>? family,
     @JsonKey(name: '_family') List<Element>? familyElement,
     List<String>? given,
     @JsonKey(name: '_given') List<Element>? givenElement,

@@ -13,7 +13,7 @@ class FhirDateTime {
   const FhirDateTime._(this._valueString, this._valueDateTime, this._isValid,
       this._precision, this._parseError);
 
-  factory FhirDateTime(inValue) {
+  factory FhirDateTime(dynamic inValue) {
     assert(inValue != null);
 
     switch (inValue.runtimeType.toString()) {
@@ -27,7 +27,7 @@ class FhirDateTime {
               inValue, dateTimeValue, true, _getPrecision(inValue), null);
         } on FormatException catch (e) {
           return FhirDateTime._(
-              inValue, DateTime.now(), false, DateTimePrecision.INVALID, e);
+              inValue, null, false, DateTimePrecision.INVALID, e);
         }
       default:
         throw ArgumentError(
@@ -54,14 +54,14 @@ class FhirDateTime {
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
-  final DateTime _valueDateTime;
+  final DateTime? _valueDateTime;
   final bool _isValid;
   final DateTimePrecision _precision;
   final Exception? _parseError;
 
   bool get isValid => _isValid;
   int get hashCode => _valueString.hashCode;
-  DateTime get value => _valueDateTime;
+  DateTime? get value => _valueDateTime;
   Exception? get parseError => _parseError;
   DateTimePrecision get precision => _precision;
 
@@ -106,8 +106,6 @@ class FhirDateTime {
   }
 
   static DateTime _parsePartialDateTime(String value) {
-    assert(value != null);
-
     if (_dateTimeYYYYExp.hasMatch(value)) {
       return DateTime(int.parse(value));
     } else if (_dateTimeYYYYMMExp.hasMatch(value)) {
@@ -122,8 +120,6 @@ class FhirDateTime {
   }
 
   static DateTimePrecision _getPrecision(String value) {
-    assert(value != null);
-
     switch (value.length) {
       case 4:
         return DateTimePrecision.YYYY;

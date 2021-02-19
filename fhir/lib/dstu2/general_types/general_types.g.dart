@@ -806,7 +806,7 @@ _$_HumanName _$_$_HumanNameFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_text'] as Map<String, dynamic>),
     family:
-        (json['family'] as List<dynamic>?)?.map((e) => e as String).toList(),
+        (json['family'] as List<dynamic>?)?.map((e) => e as String?).toList(),
     familyElement: (json['_family'] as List<dynamic>?)
         ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
         .toList(),

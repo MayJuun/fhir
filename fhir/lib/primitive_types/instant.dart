@@ -7,7 +7,6 @@ class Instant {
 
   factory Instant(inValue) {
     assert(inValue != null);
-
     switch (inValue.runtimeType.toString()) {
       case 'DateTime':
         return Instant._(inValue.toIso8601String(), inValue, true, null);
@@ -16,7 +15,7 @@ class Instant {
           final dateTimeValue = _parseDateTime(inValue);
           return Instant._(inValue, dateTimeValue, true, null);
         } on FormatException catch (e) {
-          return Instant._(inValue, DateTime.now(), false, e);
+          return Instant._(inValue, null, false, e);
         }
       default:
         throw ArgumentError('Instant cannot be constructed from $inValue.');
@@ -37,7 +36,7 @@ class Instant {
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final String _valueString;
-  final DateTime _valueDateTime;
+  final DateTime? _valueDateTime;
   final bool _isValid;
 
   /// ToDo: made exceptions nullable
@@ -45,7 +44,7 @@ class Instant {
 
   bool get isValid => _isValid;
   int get hashCode => _valueString.hashCode;
-  DateTime get value => _valueDateTime;
+  DateTime? get value => _valueDateTime;
   Exception? get parseError => _parseError;
 
   bool operator ==(Object o) => identical(this, o)

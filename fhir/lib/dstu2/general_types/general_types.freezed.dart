@@ -5793,7 +5793,7 @@ class _$HumanNameTearOff {
       @JsonKey(name: '_use') Element? useElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
-      List<String>? family,
+      List<String?>? family,
       @JsonKey(name: '_family') List<Element>? familyElement,
       List<String>? given,
       @JsonKey(name: '_given') List<Element>? givenElement,
@@ -5844,7 +5844,7 @@ mixin _$HumanName {
   String? get text;
   @JsonKey(name: '_text')
   Element? get textElement;
-  List<String>? get family;
+  List<String?>? get family;
   @JsonKey(name: '_family')
   List<Element>? get familyElement;
   List<String>? get given;
@@ -5875,7 +5875,7 @@ abstract class $HumanNameCopyWith<$Res> {
       @JsonKey(name: '_use') Element? useElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
-      List<String>? family,
+      List<String?>? family,
       @JsonKey(name: '_family') List<Element>? familyElement,
       List<String>? given,
       @JsonKey(name: '_given') List<Element>? givenElement,
@@ -5933,7 +5933,7 @@ class _$HumanNameCopyWithImpl<$Res> implements $HumanNameCopyWith<$Res> {
       text: text == freezed ? _value.text : text as String?,
       textElement:
           textElement == freezed ? _value.textElement : textElement as Element?,
-      family: family == freezed ? _value.family : family as List<String>?,
+      family: family == freezed ? _value.family : family as List<String?>?,
       familyElement: familyElement == freezed
           ? _value.familyElement
           : familyElement as List<Element>?,
@@ -6023,7 +6023,7 @@ abstract class _$HumanNameCopyWith<$Res> implements $HumanNameCopyWith<$Res> {
       @JsonKey(name: '_use') Element? useElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
-      List<String>? family,
+      List<String?>? family,
       @JsonKey(name: '_family') List<Element>? familyElement,
       List<String>? given,
       @JsonKey(name: '_given') List<Element>? givenElement,
@@ -6087,7 +6087,7 @@ class __$HumanNameCopyWithImpl<$Res> extends _$HumanNameCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as String?,
       textElement:
           textElement == freezed ? _value.textElement : textElement as Element?,
-      family: family == freezed ? _value.family : family as List<String>?,
+      family: family == freezed ? _value.family : family as List<String?>?,
       familyElement: familyElement == freezed
           ? _value.familyElement
           : familyElement as List<Element>?,
@@ -6154,7 +6154,7 @@ class _$_HumanName extends _HumanName {
   @JsonKey(name: '_text')
   final Element? textElement;
   @override
-  final List<String>? family;
+  final List<String?>? family;
   @override
   @JsonKey(name: '_family')
   final List<Element>? familyElement;
@@ -6268,7 +6268,7 @@ abstract class _HumanName extends HumanName {
       @JsonKey(name: '_use') Element? useElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
-      List<String>? family,
+      List<String?>? family,
       @JsonKey(name: '_family') List<Element>? familyElement,
       List<String>? given,
       @JsonKey(name: '_given') List<Element>? givenElement,
@@ -6301,7 +6301,7 @@ abstract class _HumanName extends HumanName {
   @JsonKey(name: '_text')
   Element? get textElement;
   @override
-  List<String>? get family;
+  List<String?>? get family;
   @override
   @JsonKey(name: '_family')
   List<Element>? get familyElement;
