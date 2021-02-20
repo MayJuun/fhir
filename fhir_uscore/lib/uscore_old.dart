@@ -6,37 +6,7 @@ abstract class UsCore {
 
 
 
-  Condition condition({
-    ConditionClinicalStatus clinicalStatus,
-    ConditionVerificationStatus verificationStatus,
-    required ConditionCategory conditionCategory,
-    List<CodeableConcept> category,
-    required CodeableConcept code,
-    required Reference subject,
-  }) {
-    category ??= <CodeableConcept>[];
-    category.add(codeableConceptFromConditionCategory[category]);
-    return Condition(
-      clinicalStatus:
-          codeableConceptFromConditionClinicalStatus[clinicalStatus],
-      verificationStatus:
-          codeableConceptFromVerificationStatus[verificationStatus],
-      category: category,
-      code: code,
-      subject: subject,
-    );
-  }
 
-  Condition conditionMinimum({
-    required ConditionCategory conditionCategory,
-    required CodeableConcept code,
-    required Reference subject,
-  }) =>
-      Condition(
-        category: [codeableConceptFromConditionCategory[conditionCategory]],
-        code: code,
-        subject: subject,
-      );
 
   DiagnosticReport diagnosticReport({
     required DiagnosticReportStatus status,
