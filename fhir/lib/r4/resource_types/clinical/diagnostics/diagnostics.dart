@@ -8,7 +8,6 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'diagnostics.enums.dart';
-part 'diagnostics.uscore.dart';
 part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
 

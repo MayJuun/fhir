@@ -1,4 +1,15 @@
-part of 'documents.dart';
+part of 'document_reference.dart';
+
+enum DocumentReferenceStatus {
+  @JsonValue('current')
+  current,
+  @JsonValue('superseded')
+  superseded,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('unknown')
+  unknown,
+}
 
 enum DocumentReferenceType {
   @JsonValue('Discharge summar')
@@ -38,7 +49,7 @@ final codeableConceptFromDocumentReferenceType = {
           display: 'History and physical note'),
     ],
   ),
-    DocumentReferenceType.progress_note: CodeableConcept(
+  DocumentReferenceType.progress_note: CodeableConcept(
     coding: [
       Coding(
           system: FhirUri('http://loinc.org'),
@@ -55,6 +66,3 @@ final codeableConceptFromDocumentReferenceType = {
     ],
   ),
 };
-
-
-	

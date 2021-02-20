@@ -1,4 +1,25 @@
-part of 'management.dart';
+part of 'encounter.dart';
+
+enum EncounterStatus {
+  @JsonValue('planned')
+  planned,
+  @JsonValue('arrived')
+  arrived,
+  @JsonValue('triaged')
+  triaged,
+  @JsonValue('in-progress')
+  in_progress,
+  @JsonValue('onleave')
+  onleave,
+  @JsonValue('finished')
+  finished,
+  @JsonValue('cancelled')
+  cancelled,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('unknown')
+  unknown,
+}
 
 enum EncounterType {
   @JsonValue('Patient encounter procedure')

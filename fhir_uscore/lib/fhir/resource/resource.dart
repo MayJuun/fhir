@@ -4,11 +4,12 @@ import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:yaml/yaml.dart';
 
-import '../../../uscore.dart';
+import '../uscore.dart';
+
 // import 'package:flutter/foundation.dart';
 
 part 'resource_from_json.dart';
-part 'resource_new_version.dart';
+// part 'resource_new_version.dart';
 part 'resource_types_enum.dart';
 
 /// This class ends up functioning mostly like an abstract superclass. Some of

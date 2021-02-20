@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:test/test.dart';
 
 import 'validation/validation.dart';
@@ -29,9 +27,7 @@ Future main() async {
       );
 
       test(
-        '\n****Yaml has been Validated****'
-        '\nThere are some expected errors, these have been saved in '
-        'expected_yaml.dart, and compared to the output of the test\n\n',
+        '\n****Yaml has been Validated****',
         () async {
           var testList = await yamlValidation();
 
@@ -40,7 +36,7 @@ Future main() async {
 
           expect(testList.isEmpty, true);
         },
-        timeout: Timeout(Duration(minutes: 20)),
+        timeout: Timeout(Duration(minutes: 25)),
       );
     },
   );

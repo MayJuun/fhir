@@ -36,7 +36,6 @@ Future<List<String>> stu3ValidationYaml() async {
   var dir = Directory('./test/stu3_examples');
   var string = <String>[];
   for (var file in await dir.list().toList()) {
-    print(file);
     var contents = await File(file.path).readAsString();
     final tempResource = stu3.Resource.fromJson(jsonDecode(contents));
     var resource = tempResource == null

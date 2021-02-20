@@ -1,5 +1,11 @@
 # fhir
 
+## [0.3.0-nullsafety.0]
+* Null safety!
+* Should be completely ready for null safety
+* Removed dartz & string_validator because I wasn't using them anymore, to try and remove as many foreign dependencies as I could
+* Should generally work the same as previously, you'll just need to follow null safety requirements
+
 ## [0.2.4]
 * Big thanks to [Tiloc](https://github.com/tiloc) for his PR on this one. He redid Date, FhirDateTime and Instant to be more useful. So you can now call .toString(), .toYaml(), .toJson() and now ALSO .value on any of these. The first 3 will return the proper format for that specification, and .value will return a dart DateTime so you can actually perform calculations.
 * Also added in a whole lot more examples to test since I've been playing with bulk downloads.

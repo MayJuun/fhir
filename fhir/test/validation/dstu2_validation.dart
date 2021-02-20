@@ -36,7 +36,6 @@ Future<List<String>> dstu2ValidationYaml() async {
   var dir = Directory('./test/dstu2_examples');
   var string = <String>[];
   for (var file in await dir.list().toList()) {
-    print(file);
     var contents = await File(file.path).readAsString();
     final tempResource = dstu2.Resource.fromJson(jsonDecode(contents));
     var resource = tempResource == null

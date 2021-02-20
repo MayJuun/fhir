@@ -36,7 +36,6 @@ Future<List<String>> r5ValidationYaml() async {
   var dir = Directory('./test/r5_examples');
   var string = <String>[];
   for (var file in await dir.list().toList()) {
-    print(file);
     var contents = await File(file.path).readAsString();
     final tempResource = r5.Resource.fromJson(jsonDecode(contents));
     var resource = tempResource == null

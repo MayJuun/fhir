@@ -4,7 +4,7 @@ import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
-import '../../../../uscore.dart';
+import '../../fhir.dart';
 // import 'package:flutter/foundation.dart';
 
 part 'allergy_intolerance.enums.dart';
