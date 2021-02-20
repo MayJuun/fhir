@@ -1,4 +1,15 @@
-part of 'individuals.dart';
+part of 'patient.dart';
+
+enum PatientGender {
+  @JsonValue('male')
+  male,
+  @JsonValue('female')
+  female,
+  @JsonValue('other')
+  other,
+  @JsonValue('unknown')
+  unknown,
+}
 
 enum PatientUsCoreRace {
   @JsonValue('American Indian or Alaska Native')

@@ -21,6 +21,8 @@ abstract class AllergyIntolerance
     @JsonKey(unknownEnumValue: UsCoreResourceType.AllergyIntolerance)
         UsCoreResourceType resourceType,
     Id? id,
+    Meta? meta,
+    Narrative? text,
     CodeableConcept? clinicalStatus,
     CodeableConcept? verificationStatus,
     required CodeableConcept? code,

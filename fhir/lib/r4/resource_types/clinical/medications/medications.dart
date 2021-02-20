@@ -8,7 +8,6 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'medications.freezed.dart';
-part 'medications.uscore.dart';
 part 'medications.g.dart';
 
 @freezed

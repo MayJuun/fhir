@@ -19,6 +19,7 @@ abstract class CarePlan with Resource implements _$CarePlan {
     @JsonKey(unknownEnumValue: UsCoreResourceType.CarePlan)
         UsCoreResourceType resourceType,
     Id? id,
+    Meta? meta,
     required Narrative text,
     List<Resource?>? contained,
     @JsonKey(unknownEnumValue: CarePlanStatus.unknown)

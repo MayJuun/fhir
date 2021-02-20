@@ -20,6 +20,8 @@ abstract class Immunization with Resource implements _$Immunization {
     @JsonKey(unknownEnumValue: UsCoreResourceType.Immunization)
         UsCoreResourceType resourceType,
     Id? id,
+    Meta? meta,
+    Narrative? text,
     required ImmunizationStatus status,
     CodeableConcept? statusReason,
     required CodeableConcept vaccineCode,

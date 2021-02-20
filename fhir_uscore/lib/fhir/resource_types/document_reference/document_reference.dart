@@ -20,6 +20,8 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     @JsonKey(unknownEnumValue: UsCoreResourceType.DocumentReference)
         UsCoreResourceType resourceType,
     Id? id,
+    Meta? meta,
+    Narrative? text,
     List<Identifier?>? identifier,
     @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
         required DocumentReferenceStatus status,

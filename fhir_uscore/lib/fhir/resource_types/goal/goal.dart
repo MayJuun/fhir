@@ -20,6 +20,8 @@ abstract class Goal with Resource implements _$Goal {
     @JsonKey(unknownEnumValue: UsCoreResourceType.Goal)
         UsCoreResourceType resourceType,
     Id? id,
+    Meta? meta,
+    Narrative? text,
     @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
         required GoalLifecycleStatus lifecycleStatus,
     CodeableConcept? achievementStatus,

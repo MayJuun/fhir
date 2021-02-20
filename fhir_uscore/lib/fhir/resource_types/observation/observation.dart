@@ -20,6 +20,8 @@ abstract class Observation with Resource implements _$Observation {
     @JsonKey(unknownEnumValue: UsCoreResourceType.Observation)
         UsCoreResourceType resourceType,
     Id? id,
+    Meta? meta,
+    Narrative? text,
     @JsonKey(unknownEnumValue: ObservationStatus.unknown)
         ObservationStatus? status,
     List<CodeableConcept?>? category,

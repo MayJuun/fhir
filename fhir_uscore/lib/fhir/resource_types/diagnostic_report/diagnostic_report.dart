@@ -20,6 +20,8 @@ abstract class DiagnosticReport with Resource implements _$DiagnosticReport {
     @JsonKey(unknownEnumValue: UsCoreResourceType.DiagnosticReport)
         UsCoreResourceType resourceType,
     Id? id,
+    Meta? meta,
+    Narrative? text,
     @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
         required DiagnosticReportStatus status,
     required List<CodeableConcept?> category,

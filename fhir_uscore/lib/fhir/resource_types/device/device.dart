@@ -19,6 +19,8 @@ abstract class Device with Resource implements _$Device {
     @JsonKey(unknownEnumValue: UsCoreResourceType.Device)
         UsCoreResourceType resourceType,
     Id? id,
+    Meta? meta,
+    Narrative? text,
     List<DeviceUdiCarrier?>? udiCarrier,
     String? distinctIdentifier,
     FhirDateTime? manufactureDate,

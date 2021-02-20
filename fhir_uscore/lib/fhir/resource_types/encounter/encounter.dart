@@ -20,6 +20,8 @@ abstract class Encounter with Resource implements _$Encounter {
     @JsonKey(unknownEnumValue: UsCoreResourceType.Encounter)
         UsCoreResourceType resourceType,
     Id? id,
+    Meta? meta,
+    Narrative? text,
     List<Identifier?>? identifier,
     @JsonKey(unknownEnumValue: EncounterStatus.unknown)
         required EncounterStatus status,

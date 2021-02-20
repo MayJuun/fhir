@@ -20,6 +20,8 @@ abstract class Condition with Resource implements _$Condition {
     @JsonKey(unknownEnumValue: UsCoreResourceType.Condition)
         UsCoreResourceType resourceType,
     Id? id,
+    Meta? meta,
+    Narrative? text,
     ConditionClinicalStatus? clinicalStatus,
     ConditionVerificationStatus? verificationStatus,
     List<ConditionCategory?>? category,
