@@ -1,49 +1,19 @@
-part of 'care_provision.dart';
+part of 'care_team.dart';
 
-enum CarePlanStatus {
-  @JsonValue('draft')
-  draft,
+enum CareTeamStatus {
+  @JsonValue('proposed')
+  proposed,
   @JsonValue('active')
   active,
-  @JsonValue('on-hold')
-  on_hold,
-  @JsonValue('revoked')
-  revoked,
-  @JsonValue('completed')
-  completed,
-  @JsonValue('unknown')
-  unknown,
+  @JsonValue('suspended')
+  suspended,
+  @JsonValue('inactive')
+  inactive,
   @JsonValue('entered-in-error')
   entered_in_error,
+  @JsonValue('unknown')
+  unknown,
 }
-
-final codeFromCarePlanStatus = {
-  CarePlanStatus.draft: Code('draft'),
-  CarePlanStatus.active: Code('active'),
-  CarePlanStatus.on_hold: Code('on-hold'),
-  CarePlanStatus.revoked: Code('revoked'),
-  CarePlanStatus.completed: Code('completed'),
-  CarePlanStatus.unknown: Code('unknown'),
-  CarePlanStatus.entered_in_error: Code('entered-in-error'),
-};
-
-enum CarePlanIntent {
-  @JsonValue('proposal')
-  proposal,
-  @JsonValue('plan')
-  plan,
-  @JsonValue('order')
-  order,
-  @JsonValue('option')
-  option,
-}
-
-final codeFromCarePlanIntent = {
-  CarePlanIntent.proposal: Code('proposal'),
-  CarePlanIntent.plan: Code('plan'),
-  CarePlanIntent.order: Code('order'),
-  CarePlanIntent.option: Code('option'),
-};
 
 enum CareTeamProviderRole {
   @JsonValue('Counselor')

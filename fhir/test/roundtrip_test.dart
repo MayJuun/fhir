@@ -19,10 +19,10 @@ Future main() async {
         '\n****Json has been Validated****',
         () async {
           var testList = await jsonValidation();
-          await File('./test/jsonTest.txt').writeAsString(testList.join('\n'));
 
           print(
               'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
+
           expect(testList.isEmpty, true);
         },
         timeout: Timeout(Duration(minutes: 8)),
@@ -34,37 +34,13 @@ Future main() async {
         'expected_yaml.dart, and compared to the output of the test\n\n',
         () async {
           var testList = await yamlValidation();
-          // var tempList = <String>[];
 
-          await File('./test/yamlTest.txt').writeAsString(testList.join('\n'));
-
-          // for (final i in testList) {
-          //   tempList.add(i.toString());
-          // }
-          // testList.clear();
-          // testList.addAll(tempList);
-
-          // var expectList = expectedYaml.toList();
-          // tempList.clear();
-          // for (final i in expectList) {
-          //   tempList.add(i.toString());
-          // }
-          // expectList.clear();
-          // expectList.addAll(tempList);
-
-          // var compareList = tempList;
-
-          // compareList.forEach((file) {
-          //   testList.remove(file);
-          //   expectList.remove(file);
-          // });
-
-          // expect(testList, expectList);
           print(
               'Invalid examples: ${testList.isEmpty ? 'none' : testList.join('\n')}');
+
           expect(testList.isEmpty, true);
         },
-        timeout: Timeout(Duration(minutes: 30)),
+        timeout: Timeout(Duration(minutes: 20)),
       );
     },
   );

@@ -5,12 +5,12 @@ Future<List<String>> r4Validation() async {
   var string = <String>[];
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
-    var resource = r4.Resource.fromJson(json.decode(contents));
+    var resource = r4.Resource.fromJson(jsonDecode(contents));
     if (resource == null) {
       print('nullFile: $file');
     } else {
       var result = await checkMapEquality(
-          json.decode(contents), resource.toJson(), file.toString());
+          jsonDecode(contents), resource.toJson(), file.toString());
       if (result != '') {
         string.add(result);
       }
@@ -18,12 +18,12 @@ Future<List<String>> r4Validation() async {
   }
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
-    var resource = r4.Resource.fromJson(json.decode(contents));
+    var resource = r4.Resource.fromJson(jsonDecode(contents));
     if (resource == null) {
       print('nullFile: $file');
     } else {
       var result = await checkMapEquality(
-          resource.toJson(), json.decode(contents), file.toString());
+          resource.toJson(), jsonDecode(contents), file.toString());
       if (result != '') {
         string.add(result);
       }
@@ -36,8 +36,9 @@ Future<List<String>> r4ValidationYaml() async {
   var dir = Directory('./test/r4_examples');
   var string = <String>[];
   for (var file in await dir.list().toList()) {
+    print(file);
     var contents = await File(file.path).readAsString();
-    final tempResource = r4.Resource.fromJson(json.decode(contents));
+    final tempResource = r4.Resource.fromJson(jsonDecode(contents));
     var resource = tempResource == null
         ? null
         : r4.Resource.fromYaml(tempResource.toYaml());
@@ -45,7 +46,7 @@ Future<List<String>> r4ValidationYaml() async {
       print('nullFile: $file');
     } else {
       var result = await checkMapEquality(
-          json.decode(contents), resource.toJson(), file.toString());
+          jsonDecode(contents), resource.toJson(), file.toString());
       if (result != '') {
         string.add(result);
       }
@@ -53,7 +54,7 @@ Future<List<String>> r4ValidationYaml() async {
   }
   for (var file in await dir.list().toList()) {
     var contents = await File(file.path).readAsString();
-    final tempResource = r4.Resource.fromJson(json.decode(contents));
+    final tempResource = r4.Resource.fromJson(jsonDecode(contents));
     var resource = tempResource == null
         ? null
         : r4.Resource.fromYaml(tempResource.toYaml());
@@ -61,7 +62,7 @@ Future<List<String>> r4ValidationYaml() async {
       print('nullFile: $file');
     } else {
       var result = await checkMapEquality(
-          resource.toJson(), json.decode(contents), file.toString());
+          resource.toJson(), jsonDecode(contents), file.toString());
       if (result != '') {
         string.add(result);
       }

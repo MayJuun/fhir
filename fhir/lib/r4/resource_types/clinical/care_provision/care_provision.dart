@@ -8,7 +8,6 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'care_provision.enums.dart';
-part 'care_provision.uscore.dart';
 part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';
 
