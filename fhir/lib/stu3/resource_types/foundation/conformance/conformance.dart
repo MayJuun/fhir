@@ -58,7 +58,7 @@ abstract class CapabilityStatement
     CapabilityStatementKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     List<Instant>? instantiates,
-    @JsonKey(name: '_instantiates') List<Element>? instantiatesElement,
+    @JsonKey(name: '_instantiates') List<Element?>? instantiatesElement,
     CapabilityStatementSoftware? software,
     CapabilityStatementImplementation? implementation,
     String? fhirVersion,
@@ -66,9 +66,9 @@ abstract class CapabilityStatement
     CapabilityStatementAcceptUnknown? acceptUnknown,
     @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
     List<String>? format,
-    @JsonKey(name: '_format') List<Element>? formatElement,
+    @JsonKey(name: '_format') List<Element?>? formatElement,
     List<String>? patchFormat,
-    @JsonKey(name: '_patchFormat') List<Element>? patchFormatElement,
+    @JsonKey(name: '_patchFormat') List<Element?>? patchFormatElement,
     List<Id>? implementationGuide,
     @JsonKey(name: '_implementationGuide')
         List<Element>? implementationGuideElement,
@@ -171,7 +171,7 @@ abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
     List<CapabilityStatementSearchParam>? searchParam,
     List<CapabilityStatementOperation>? operation,
     List<String>? compartment,
-    @JsonKey(name: '_compartment') List<Element>? compartmentElement,
+    @JsonKey(name: '_compartment') List<Element?>? compartmentElement,
   }) = _CapabilityStatementRest;
 
   /// Produces a Yaml formatted String version of the object
@@ -280,11 +280,11 @@ abstract class CapabilityStatementResource
     CapabilityStatementResourceConditionalDelete? conditionalDelete,
     @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
     List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
-    @JsonKey(name: '_referencePolicy') List<Element>? referencePolicyElement,
+    @JsonKey(name: '_referencePolicy') List<Element?>? referencePolicyElement,
     List<String>? searchInclude,
-    @JsonKey(name: '_searchInclude') List<Element>? searchIncludeElement,
+    @JsonKey(name: '_searchInclude') List<Element?>? searchIncludeElement,
     List<String>? searchRevInclude,
-    @JsonKey(name: '_searchRevInclude') List<Element>? searchRevIncludeElement,
+    @JsonKey(name: '_searchRevInclude') List<Element?>? searchRevIncludeElement,
     List<CapabilityStatementSearchParam>? searchParam,
   }) = _CapabilityStatementResource;
 
@@ -658,7 +658,7 @@ abstract class CompartmentDefinitionResource
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     List<String>? param,
-    @JsonKey(name: '_param') List<Element>? paramElement,
+    @JsonKey(name: '_param') List<Element?>? paramElement,
     String? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
   }) = _CompartmentDefinitionResource;
@@ -978,7 +978,7 @@ abstract class ImplementationGuide
     List<ImplementationGuidePackage>? package,
     List<ImplementationGuideGlobal>? global,
     List<String>? binary,
-    @JsonKey(name: '_binary') List<Element>? binaryElement,
+    @JsonKey(name: '_binary') List<Element?>? binaryElement,
     ImplementationGuidePage? page,
   }) = _ImplementationGuide;
 
@@ -1134,9 +1134,9 @@ abstract class ImplementationGuidePage implements _$ImplementationGuidePage {
     ImplementationGuidePageKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     List<String>? type,
-    @JsonKey(name: '_type') List<Element>? typeElement,
+    @JsonKey(name: '_type') List<Element?>? typeElement,
     List<String>? package,
-    @JsonKey(name: '_package') List<Element>? packageElement,
+    @JsonKey(name: '_package') List<Element?>? packageElement,
     String? format,
     @JsonKey(name: '_format') Element? formatElement,
     List<ImplementationGuidePage>? page,
@@ -1341,7 +1341,7 @@ abstract class OperationDefinition
     @JsonKey(name: '_comment') Element? commentElement,
     Reference? base,
     List<String>? resource,
-    @JsonKey(name: '_resource') List<Element>? resourceElement,
+    @JsonKey(name: '_resource') List<Element?>? resourceElement,
     Boolean? system,
     @JsonKey(name: '_system') Element? systemElement,
     Boolean? type,
@@ -1448,7 +1448,7 @@ abstract class OperationDefinitionOverload
   OperationDefinitionOverload._();
   factory OperationDefinitionOverload({
     List<String>? parameterName,
-    @JsonKey(name: '_parameterName') List<Element>? parameterNameElement,
+    @JsonKey(name: '_parameterName') List<Element?>? parameterNameElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
   }) = _OperationDefinitionOverload;
@@ -1510,7 +1510,7 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     List<String>? base,
-    @JsonKey(name: '_base') List<Element>? baseElement,
+    @JsonKey(name: '_base') List<Element?>? baseElement,
     SearchParameterType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? derivedFrom,
@@ -1524,13 +1524,13 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
     SearchParameterXpathUsage? xpathUsage,
     @JsonKey(name: '_xpathUsage') Element? xpathUsageElement,
     List<String>? target,
-    @JsonKey(name: '_target') List<Element>? targetElement,
+    @JsonKey(name: '_target') List<Element?>? targetElement,
     List<SearchParameterComparator>? comparator,
-    @JsonKey(name: '_comparator') List<Element>? comparatorElement,
+    @JsonKey(name: '_comparator') List<Element?>? comparatorElement,
     List<SearchParameterModifier>? modifier,
-    @JsonKey(name: '_modifier') List<Element>? modifierElement,
+    @JsonKey(name: '_modifier') List<Element?>? modifierElement,
     List<String>? chain,
-    @JsonKey(name: '_chain') List<Element>? chainElement,
+    @JsonKey(name: '_chain') List<Element?>? chainElement,
     List<SearchParameterComponent>? component,
   }) = _SearchParameter;
 
@@ -1634,9 +1634,9 @@ abstract class StructureDefinition
     StructureDefinitionContextType? contextType,
     @JsonKey(name: '_contextType') Element? contextTypeElement,
     List<String>? context,
-    @JsonKey(name: '_context') List<Element>? contextElement,
+    @JsonKey(name: '_context') List<Element?>? contextElement,
     List<String>? contextInvariant,
-    @JsonKey(name: '_contextInvariant') List<Element>? contextInvariantElement,
+    @JsonKey(name: '_contextInvariant') List<Element?>? contextInvariantElement,
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? baseDefinition,
@@ -1796,7 +1796,7 @@ abstract class StructureMap with Resource implements _$StructureMap {
     @JsonKey(name: '_copyright') Element? copyrightElement,
     List<StructureMapStructure>? structure,
     @JsonKey(name: 'import') List<String>? import_,
-    @JsonKey(name: '_import') List<Element>? importElement,
+    @JsonKey(name: '_import') List<Element?>? importElement,
     required List<StructureMapGroup> group,
   }) = _StructureMap;
 
@@ -2072,7 +2072,7 @@ abstract class StructureMapTarget implements _$StructureMapTarget {
     String? variable,
     @JsonKey(name: '_variable') Element? variableElement,
     List<StructureMapTargetListMode>? listMode,
-    @JsonKey(name: '_listMode') List<Element>? listModeElement,
+    @JsonKey(name: '_listMode') List<Element?>? listModeElement,
     Id? listRuleId,
     @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
     StructureMapTargetTransform? transform,
@@ -2137,7 +2137,7 @@ abstract class StructureMapDependent implements _$StructureMapDependent {
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     List<String>? variable,
-    @JsonKey(name: '_variable') List<Element>? variableElement,
+    @JsonKey(name: '_variable') List<Element?>? variableElement,
   }) = _StructureMapDependent;
 
   /// Produces a Yaml formatted String version of the object

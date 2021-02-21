@@ -386,7 +386,7 @@ abstract class SubscriptionChannel with _$SubscriptionChannel {
     required String payload,
     @JsonKey(name: '_payload') Element? payloadElement,
     String? header,
-    @JsonKey(name: '_header') List<Element>? headerElement,
+    @JsonKey(name: '_header') List<Element?>? headerElement,
   }) = _SubscriptionChannel;
 
   /// Produces a Yaml formatted String version of the object

@@ -82,7 +82,7 @@ abstract class Measure with Resource implements _$Measure {
     String? improvementNotation,
     @JsonKey(name: '_improvementNotation') Element? improvementNotationElement,
     List<String>? definition,
-    @JsonKey(name: '_definition') List<Element>? definitionElement,
+    @JsonKey(name: '_definition') List<Element?>? definitionElement,
     String? guidance,
     @JsonKey(name: '_guidance') Element? guidanceElement,
     @JsonKey(name: 'set') String? set_,

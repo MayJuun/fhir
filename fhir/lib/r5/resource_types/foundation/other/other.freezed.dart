@@ -7301,10 +7301,10 @@ class _$OperationOutcomeIssueTearOff {
           Element? diagnosticsElement,
       List<String>? location,
       @JsonKey(name: '_location')
-          List<Element>? locationElement,
+          List<Element?>? locationElement,
       List<String>? expression,
       @JsonKey(name: '_expression')
-          List<Element>? expressionElement}) {
+          List<Element?>? expressionElement}) {
     return _OperationOutcomeIssue(
       id: id,
       extension_: extension_,
@@ -7351,10 +7351,10 @@ mixin _$OperationOutcomeIssue {
   Element? get diagnosticsElement;
   List<String>? get location;
   @JsonKey(name: '_location')
-  List<Element>? get locationElement;
+  List<Element?>? get locationElement;
   List<String>? get expression;
   @JsonKey(name: '_expression')
-  List<Element>? get expressionElement;
+  List<Element?>? get expressionElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -7385,10 +7385,10 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
           Element? diagnosticsElement,
       List<String>? location,
       @JsonKey(name: '_location')
-          List<Element>? locationElement,
+          List<Element?>? locationElement,
       List<String>? expression,
       @JsonKey(name: '_expression')
-          List<Element>? expressionElement});
+          List<Element?>? expressionElement});
 
   $ElementCopyWith<$Res>? get severityElement;
   $ElementCopyWith<$Res>? get codeElement;
@@ -7450,13 +7450,13 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
           location == freezed ? _value.location : location as List<String>?,
       locationElement: locationElement == freezed
           ? _value.locationElement
-          : locationElement as List<Element>?,
+          : locationElement as List<Element?>?,
       expression: expression == freezed
           ? _value.expression
           : expression as List<String>?,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as List<Element>?,
+          : expressionElement as List<Element?>?,
     ));
   }
 
@@ -7531,10 +7531,10 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
           Element? diagnosticsElement,
       List<String>? location,
       @JsonKey(name: '_location')
-          List<Element>? locationElement,
+          List<Element?>? locationElement,
       List<String>? expression,
       @JsonKey(name: '_expression')
-          List<Element>? expressionElement});
+          List<Element?>? expressionElement});
 
   @override
   $ElementCopyWith<$Res>? get severityElement;
@@ -7602,13 +7602,13 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
           location == freezed ? _value.location : location as List<String>?,
       locationElement: locationElement == freezed
           ? _value.locationElement
-          : locationElement as List<Element>?,
+          : locationElement as List<Element?>?,
       expression: expression == freezed
           ? _value.expression
           : expression as List<String>?,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as List<Element>?,
+          : expressionElement as List<Element?>?,
     ));
   }
 }
@@ -7675,12 +7675,12 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
   final List<String>? location;
   @override
   @JsonKey(name: '_location')
-  final List<Element>? locationElement;
+  final List<Element?>? locationElement;
   @override
   final List<String>? expression;
   @override
   @JsonKey(name: '_expression')
-  final List<Element>? expressionElement;
+  final List<Element?>? expressionElement;
 
   @override
   String toString() {
@@ -7784,10 +7784,10 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
           Element? diagnosticsElement,
       List<String>? location,
       @JsonKey(name: '_location')
-          List<Element>? locationElement,
+          List<Element?>? locationElement,
       List<String>? expression,
       @JsonKey(name: '_expression')
-          List<Element>? expressionElement}) = _$_OperationOutcomeIssue;
+          List<Element?>? expressionElement}) = _$_OperationOutcomeIssue;
 
   factory _OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcomeIssue.fromJson;
@@ -7822,12 +7822,12 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
   List<String>? get location;
   @override
   @JsonKey(name: '_location')
-  List<Element>? get locationElement;
+  List<Element?>? get locationElement;
   @override
   List<String>? get expression;
   @override
   @JsonKey(name: '_expression')
-  List<Element>? get expressionElement;
+  List<Element?>? get expressionElement;
   @override
   @JsonKey(ignore: true)
   _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith;
@@ -10804,7 +10804,7 @@ class _$SubscriptionTearOff {
           Element? endpointElement,
       List<String>? header,
       @JsonKey(name: '_header')
-          List<Element>? headerElement,
+          List<Element?>? headerElement,
       UnsignedInt? heartbeatPeriod,
       @JsonKey(name: '_heartbeatPeriod')
           Element? heartbeatPeriodElement,
@@ -10905,7 +10905,7 @@ mixin _$Subscription {
   Element? get endpointElement;
   List<String>? get header;
   @JsonKey(name: '_header')
-  List<Element>? get headerElement;
+  List<Element?>? get headerElement;
   UnsignedInt? get heartbeatPeriod;
   @JsonKey(name: '_heartbeatPeriod')
   Element? get heartbeatPeriodElement;
@@ -10968,7 +10968,7 @@ abstract class $SubscriptionCopyWith<$Res> {
           Element? endpointElement,
       List<String>? header,
       @JsonKey(name: '_header')
-          List<Element>? headerElement,
+          List<Element?>? headerElement,
       UnsignedInt? heartbeatPeriod,
       @JsonKey(name: '_heartbeatPeriod')
           Element? heartbeatPeriodElement,
@@ -11105,7 +11105,7 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
       header: header == freezed ? _value.header : header as List<String>?,
       headerElement: headerElement == freezed
           ? _value.headerElement
-          : headerElement as List<Element>?,
+          : headerElement as List<Element?>?,
       heartbeatPeriod: heartbeatPeriod == freezed
           ? _value.heartbeatPeriod
           : heartbeatPeriod as UnsignedInt?,
@@ -11332,7 +11332,7 @@ abstract class _$SubscriptionCopyWith<$Res>
           Element? endpointElement,
       List<String>? header,
       @JsonKey(name: '_header')
-          List<Element>? headerElement,
+          List<Element?>? headerElement,
       UnsignedInt? heartbeatPeriod,
       @JsonKey(name: '_heartbeatPeriod')
           Element? heartbeatPeriodElement,
@@ -11486,7 +11486,7 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
       header: header == freezed ? _value.header : header as List<String>?,
       headerElement: headerElement == freezed
           ? _value.headerElement
-          : headerElement as List<Element>?,
+          : headerElement as List<Element?>?,
       heartbeatPeriod: heartbeatPeriod == freezed
           ? _value.heartbeatPeriod
           : heartbeatPeriod as UnsignedInt?,
@@ -11637,7 +11637,7 @@ class _$_Subscription extends _Subscription {
   final List<String>? header;
   @override
   @JsonKey(name: '_header')
-  final List<Element>? headerElement;
+  final List<Element?>? headerElement;
   @override
   final UnsignedInt? heartbeatPeriod;
   @override
@@ -11841,7 +11841,7 @@ abstract class _Subscription extends Subscription {
           Element? endpointElement,
       List<String>? header,
       @JsonKey(name: '_header')
-          List<Element>? headerElement,
+          List<Element?>? headerElement,
       UnsignedInt? heartbeatPeriod,
       @JsonKey(name: '_heartbeatPeriod')
           Element? heartbeatPeriodElement,
@@ -11924,7 +11924,7 @@ abstract class _Subscription extends Subscription {
   List<String>? get header;
   @override
   @JsonKey(name: '_header')
-  List<Element>? get headerElement;
+  List<Element?>? get headerElement;
   @override
   UnsignedInt? get heartbeatPeriod;
   @override
@@ -14545,14 +14545,14 @@ class _$SubscriptionTopicResourceTriggerTearOff {
           Element? descriptionElement,
       List<Code>? resourceType,
       @JsonKey(name: '_resourceType')
-          List<Element>? resourceTypeElement,
+          List<Element?>? resourceTypeElement,
       List<Code>? methodCriteria,
       @JsonKey(name: '_methodCriteria')
-          List<Element>? methodCriteriaElement,
+          List<Element?>? methodCriteriaElement,
       SubscriptionTopicQueryCriteria? queryCriteria,
       List<String>? fhirPathCriteria,
       @JsonKey(name: '_fhirPathCriteria')
-          List<Element>? fhirPathCriteriaElement}) {
+          List<Element?>? fhirPathCriteriaElement}) {
     return _SubscriptionTopicResourceTrigger(
       id: id,
       extension_: extension_,
@@ -14589,14 +14589,14 @@ mixin _$SubscriptionTopicResourceTrigger {
   Element? get descriptionElement;
   List<Code>? get resourceType;
   @JsonKey(name: '_resourceType')
-  List<Element>? get resourceTypeElement;
+  List<Element?>? get resourceTypeElement;
   List<Code>? get methodCriteria;
   @JsonKey(name: '_methodCriteria')
-  List<Element>? get methodCriteriaElement;
+  List<Element?>? get methodCriteriaElement;
   SubscriptionTopicQueryCriteria? get queryCriteria;
   List<String>? get fhirPathCriteria;
   @JsonKey(name: '_fhirPathCriteria')
-  List<Element>? get fhirPathCriteriaElement;
+  List<Element?>? get fhirPathCriteriaElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -14620,14 +14620,14 @@ abstract class $SubscriptionTopicResourceTriggerCopyWith<$Res> {
           Element? descriptionElement,
       List<Code>? resourceType,
       @JsonKey(name: '_resourceType')
-          List<Element>? resourceTypeElement,
+          List<Element?>? resourceTypeElement,
       List<Code>? methodCriteria,
       @JsonKey(name: '_methodCriteria')
-          List<Element>? methodCriteriaElement,
+          List<Element?>? methodCriteriaElement,
       SubscriptionTopicQueryCriteria? queryCriteria,
       List<String>? fhirPathCriteria,
       @JsonKey(name: '_fhirPathCriteria')
-          List<Element>? fhirPathCriteriaElement});
+          List<Element?>? fhirPathCriteriaElement});
 
   $ElementCopyWith<$Res>? get descriptionElement;
   $SubscriptionTopicQueryCriteriaCopyWith<$Res>? get queryCriteria;
@@ -14675,13 +14675,13 @@ class _$SubscriptionTopicResourceTriggerCopyWithImpl<$Res>
           : resourceType as List<Code>?,
       resourceTypeElement: resourceTypeElement == freezed
           ? _value.resourceTypeElement
-          : resourceTypeElement as List<Element>?,
+          : resourceTypeElement as List<Element?>?,
       methodCriteria: methodCriteria == freezed
           ? _value.methodCriteria
           : methodCriteria as List<Code>?,
       methodCriteriaElement: methodCriteriaElement == freezed
           ? _value.methodCriteriaElement
-          : methodCriteriaElement as List<Element>?,
+          : methodCriteriaElement as List<Element?>?,
       queryCriteria: queryCriteria == freezed
           ? _value.queryCriteria
           : queryCriteria as SubscriptionTopicQueryCriteria?,
@@ -14690,7 +14690,7 @@ class _$SubscriptionTopicResourceTriggerCopyWithImpl<$Res>
           : fhirPathCriteria as List<String>?,
       fhirPathCriteriaElement: fhirPathCriteriaElement == freezed
           ? _value.fhirPathCriteriaElement
-          : fhirPathCriteriaElement as List<Element>?,
+          : fhirPathCriteriaElement as List<Element?>?,
     ));
   }
 
@@ -14736,14 +14736,14 @@ abstract class _$SubscriptionTopicResourceTriggerCopyWith<$Res>
           Element? descriptionElement,
       List<Code>? resourceType,
       @JsonKey(name: '_resourceType')
-          List<Element>? resourceTypeElement,
+          List<Element?>? resourceTypeElement,
       List<Code>? methodCriteria,
       @JsonKey(name: '_methodCriteria')
-          List<Element>? methodCriteriaElement,
+          List<Element?>? methodCriteriaElement,
       SubscriptionTopicQueryCriteria? queryCriteria,
       List<String>? fhirPathCriteria,
       @JsonKey(name: '_fhirPathCriteria')
-          List<Element>? fhirPathCriteriaElement});
+          List<Element?>? fhirPathCriteriaElement});
 
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -14797,13 +14797,13 @@ class __$SubscriptionTopicResourceTriggerCopyWithImpl<$Res>
           : resourceType as List<Code>?,
       resourceTypeElement: resourceTypeElement == freezed
           ? _value.resourceTypeElement
-          : resourceTypeElement as List<Element>?,
+          : resourceTypeElement as List<Element?>?,
       methodCriteria: methodCriteria == freezed
           ? _value.methodCriteria
           : methodCriteria as List<Code>?,
       methodCriteriaElement: methodCriteriaElement == freezed
           ? _value.methodCriteriaElement
-          : methodCriteriaElement as List<Element>?,
+          : methodCriteriaElement as List<Element?>?,
       queryCriteria: queryCriteria == freezed
           ? _value.queryCriteria
           : queryCriteria as SubscriptionTopicQueryCriteria?,
@@ -14812,7 +14812,7 @@ class __$SubscriptionTopicResourceTriggerCopyWithImpl<$Res>
           : fhirPathCriteria as List<String>?,
       fhirPathCriteriaElement: fhirPathCriteriaElement == freezed
           ? _value.fhirPathCriteriaElement
-          : fhirPathCriteriaElement as List<Element>?,
+          : fhirPathCriteriaElement as List<Element?>?,
     ));
   }
 }
@@ -14857,19 +14857,19 @@ class _$_SubscriptionTopicResourceTrigger
   final List<Code>? resourceType;
   @override
   @JsonKey(name: '_resourceType')
-  final List<Element>? resourceTypeElement;
+  final List<Element?>? resourceTypeElement;
   @override
   final List<Code>? methodCriteria;
   @override
   @JsonKey(name: '_methodCriteria')
-  final List<Element>? methodCriteriaElement;
+  final List<Element?>? methodCriteriaElement;
   @override
   final SubscriptionTopicQueryCriteria? queryCriteria;
   @override
   final List<String>? fhirPathCriteria;
   @override
   @JsonKey(name: '_fhirPathCriteria')
-  final List<Element>? fhirPathCriteriaElement;
+  final List<Element?>? fhirPathCriteriaElement;
 
   @override
   String toString() {
@@ -14959,14 +14959,14 @@ abstract class _SubscriptionTopicResourceTrigger
               Element? descriptionElement,
           List<Code>? resourceType,
           @JsonKey(name: '_resourceType')
-              List<Element>? resourceTypeElement,
+              List<Element?>? resourceTypeElement,
           List<Code>? methodCriteria,
           @JsonKey(name: '_methodCriteria')
-              List<Element>? methodCriteriaElement,
+              List<Element?>? methodCriteriaElement,
           SubscriptionTopicQueryCriteria? queryCriteria,
           List<String>? fhirPathCriteria,
           @JsonKey(name: '_fhirPathCriteria')
-              List<Element>? fhirPathCriteriaElement}) =
+              List<Element?>? fhirPathCriteriaElement}) =
       _$_SubscriptionTopicResourceTrigger;
 
   factory _SubscriptionTopicResourceTrigger.fromJson(
@@ -14988,19 +14988,19 @@ abstract class _SubscriptionTopicResourceTrigger
   List<Code>? get resourceType;
   @override
   @JsonKey(name: '_resourceType')
-  List<Element>? get resourceTypeElement;
+  List<Element?>? get resourceTypeElement;
   @override
   List<Code>? get methodCriteria;
   @override
   @JsonKey(name: '_methodCriteria')
-  List<Element>? get methodCriteriaElement;
+  List<Element?>? get methodCriteriaElement;
   @override
   SubscriptionTopicQueryCriteria? get queryCriteria;
   @override
   List<String>? get fhirPathCriteria;
   @override
   @JsonKey(name: '_fhirPathCriteria')
-  List<Element>? get fhirPathCriteriaElement;
+  List<Element?>? get fhirPathCriteriaElement;
   @override
   @JsonKey(ignore: true)
   _$SubscriptionTopicResourceTriggerCopyWith<_SubscriptionTopicResourceTrigger>
@@ -15416,7 +15416,7 @@ class _$SubscriptionTopicCanFilterByTearOff {
       String? searchParamName,
       @JsonKey(name: '_searchParamName') Element? searchParamNameElement,
       List<Code>? searchModifier,
-      @JsonKey(name: '_searchModifier') List<Element>? searchModifierElement,
+      @JsonKey(name: '_searchModifier') List<Element?>? searchModifierElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement}) {
     return _SubscriptionTopicCanFilterBy(
@@ -15451,7 +15451,7 @@ mixin _$SubscriptionTopicCanFilterBy {
   Element? get searchParamNameElement;
   List<Code>? get searchModifier;
   @JsonKey(name: '_searchModifier')
-  List<Element>? get searchModifierElement;
+  List<Element?>? get searchModifierElement;
   Markdown? get documentation;
   @JsonKey(name: '_documentation')
   Element? get documentationElement;
@@ -15475,7 +15475,7 @@ abstract class $SubscriptionTopicCanFilterByCopyWith<$Res> {
       String? searchParamName,
       @JsonKey(name: '_searchParamName') Element? searchParamNameElement,
       List<Code>? searchModifier,
-      @JsonKey(name: '_searchModifier') List<Element>? searchModifierElement,
+      @JsonKey(name: '_searchModifier') List<Element?>? searchModifierElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
 
@@ -15523,7 +15523,7 @@ class _$SubscriptionTopicCanFilterByCopyWithImpl<$Res>
           : searchModifier as List<Code>?,
       searchModifierElement: searchModifierElement == freezed
           ? _value.searchModifierElement
-          : searchModifierElement as List<Element>?,
+          : searchModifierElement as List<Element?>?,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown?,
@@ -15571,7 +15571,7 @@ abstract class _$SubscriptionTopicCanFilterByCopyWith<$Res>
       String? searchParamName,
       @JsonKey(name: '_searchParamName') Element? searchParamNameElement,
       List<Code>? searchModifier,
-      @JsonKey(name: '_searchModifier') List<Element>? searchModifierElement,
+      @JsonKey(name: '_searchModifier') List<Element?>? searchModifierElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
 
@@ -15625,7 +15625,7 @@ class __$SubscriptionTopicCanFilterByCopyWithImpl<$Res>
           : searchModifier as List<Code>?,
       searchModifierElement: searchModifierElement == freezed
           ? _value.searchModifierElement
-          : searchModifierElement as List<Element>?,
+          : searchModifierElement as List<Element?>?,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as Markdown?,
@@ -15671,7 +15671,7 @@ class _$_SubscriptionTopicCanFilterBy extends _SubscriptionTopicCanFilterBy {
   final List<Code>? searchModifier;
   @override
   @JsonKey(name: '_searchModifier')
-  final List<Element>? searchModifierElement;
+  final List<Element?>? searchModifierElement;
   @override
   final Markdown? documentation;
   @override
@@ -15753,7 +15753,7 @@ abstract class _SubscriptionTopicCanFilterBy
           Element? searchParamNameElement,
       List<Code>? searchModifier,
       @JsonKey(name: '_searchModifier')
-          List<Element>? searchModifierElement,
+          List<Element?>? searchModifierElement,
       Markdown? documentation,
       @JsonKey(name: '_documentation')
           Element? documentationElement}) = _$_SubscriptionTopicCanFilterBy;
@@ -15777,7 +15777,7 @@ abstract class _SubscriptionTopicCanFilterBy
   List<Code>? get searchModifier;
   @override
   @JsonKey(name: '_searchModifier')
-  List<Element>? get searchModifierElement;
+  List<Element?>? get searchModifierElement;
   @override
   Markdown? get documentation;
   @override

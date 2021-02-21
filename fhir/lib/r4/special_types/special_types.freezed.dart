@@ -2244,7 +2244,7 @@ class _$ElementDefinitionTearOff {
           Element? pathElement,
       List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation')
-          List<Element>? representationElement,
+          List<Element?>? representationElement,
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
@@ -2270,7 +2270,7 @@ class _$ElementDefinitionTearOff {
           Element? requirementsElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element>? aliasElement,
+          List<Element?>? aliasElement,
       UnsignedInt? min,
       @JsonKey(name: '_min')
           Element? minElement,
@@ -2608,7 +2608,7 @@ class _$ElementDefinitionTearOff {
           Element? maxLengthElement,
       List<Id>? condition,
       @JsonKey(name: '_condition')
-          List<Element>? conditionElement,
+          List<Element?>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
       Boolean? mustSupport,
       @JsonKey(name: '_mustSupport')
@@ -2941,7 +2941,7 @@ mixin _$ElementDefinition {
   Element? get pathElement;
   List<ElementDefinitionRepresentation>? get representation;
   @JsonKey(name: '_representation')
-  List<Element>? get representationElement;
+  List<Element?>? get representationElement;
   String? get sliceName;
   @JsonKey(name: '_sliceName')
   Element? get sliceNameElement;
@@ -2967,7 +2967,7 @@ mixin _$ElementDefinition {
   Element? get requirementsElement;
   List<String>? get alias;
   @JsonKey(name: '_alias')
-  List<Element>? get aliasElement;
+  List<Element?>? get aliasElement;
   UnsignedInt? get min;
   @JsonKey(name: '_min')
   Element? get minElement;
@@ -3305,7 +3305,7 @@ mixin _$ElementDefinition {
   Element? get maxLengthElement;
   List<Id>? get condition;
   @JsonKey(name: '_condition')
-  List<Element>? get conditionElement;
+  List<Element?>? get conditionElement;
   List<ElementDefinitionConstraint>? get constraint;
   Boolean? get mustSupport;
   @JsonKey(name: '_mustSupport')
@@ -3342,7 +3342,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
           Element? pathElement,
       List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation')
-          List<Element>? representationElement,
+          List<Element?>? representationElement,
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
@@ -3368,7 +3368,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
           Element? requirementsElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element>? aliasElement,
+          List<Element?>? aliasElement,
       UnsignedInt? min,
       @JsonKey(name: '_min')
           Element? minElement,
@@ -3706,7 +3706,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
           Element? maxLengthElement,
       List<Id>? condition,
       @JsonKey(name: '_condition')
-          List<Element>? conditionElement,
+          List<Element?>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
       Boolean? mustSupport,
       @JsonKey(name: '_mustSupport')
@@ -4236,7 +4236,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           : representation as List<ElementDefinitionRepresentation>?,
       representationElement: representationElement == freezed
           ? _value.representationElement
-          : representationElement as List<Element>?,
+          : representationElement as List<Element?>?,
       sliceName: sliceName == freezed ? _value.sliceName : sliceName as String?,
       sliceNameElement: sliceNameElement == freezed
           ? _value.sliceNameElement
@@ -4277,7 +4277,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
       alias: alias == freezed ? _value.alias : alias as List<String>?,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as List<Element>?,
+          : aliasElement as List<Element?>?,
       min: min == freezed ? _value.min : min as UnsignedInt?,
       minElement:
           minElement == freezed ? _value.minElement : minElement as Element?,
@@ -4998,7 +4998,7 @@ class _$ElementDefinitionCopyWithImpl<$Res>
           condition == freezed ? _value.condition : condition as List<Id>?,
       conditionElement: conditionElement == freezed
           ? _value.conditionElement
-          : conditionElement as List<Element>?,
+          : conditionElement as List<Element?>?,
       constraint: constraint == freezed
           ? _value.constraint
           : constraint as List<ElementDefinitionConstraint>?,
@@ -7151,7 +7151,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
           Element? pathElement,
       List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation')
-          List<Element>? representationElement,
+          List<Element?>? representationElement,
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
@@ -7177,7 +7177,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
           Element? requirementsElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element>? aliasElement,
+          List<Element?>? aliasElement,
       UnsignedInt? min,
       @JsonKey(name: '_min')
           Element? minElement,
@@ -7515,7 +7515,7 @@ abstract class _$ElementDefinitionCopyWith<$Res>
           Element? maxLengthElement,
       List<Id>? condition,
       @JsonKey(name: '_condition')
-          List<Element>? conditionElement,
+          List<Element?>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
       Boolean? mustSupport,
       @JsonKey(name: '_mustSupport')
@@ -8236,7 +8236,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           : representation as List<ElementDefinitionRepresentation>?,
       representationElement: representationElement == freezed
           ? _value.representationElement
-          : representationElement as List<Element>?,
+          : representationElement as List<Element?>?,
       sliceName: sliceName == freezed ? _value.sliceName : sliceName as String?,
       sliceNameElement: sliceNameElement == freezed
           ? _value.sliceNameElement
@@ -8277,7 +8277,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
       alias: alias == freezed ? _value.alias : alias as List<String>?,
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
-          : aliasElement as List<Element>?,
+          : aliasElement as List<Element?>?,
       min: min == freezed ? _value.min : min as UnsignedInt?,
       minElement:
           minElement == freezed ? _value.minElement : minElement as Element?,
@@ -8998,7 +8998,7 @@ class __$ElementDefinitionCopyWithImpl<$Res>
           condition == freezed ? _value.condition : condition as List<Id>?,
       conditionElement: conditionElement == freezed
           ? _value.conditionElement
-          : conditionElement as List<Element>?,
+          : conditionElement as List<Element?>?,
       constraint: constraint == freezed
           ? _value.constraint
           : constraint as List<ElementDefinitionConstraint>?,
@@ -9448,7 +9448,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   final List<ElementDefinitionRepresentation>? representation;
   @override
   @JsonKey(name: '_representation')
-  final List<Element>? representationElement;
+  final List<Element?>? representationElement;
   @override
   final String? sliceName;
   @override
@@ -9492,7 +9492,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   final List<String>? alias;
   @override
   @JsonKey(name: '_alias')
-  final List<Element>? aliasElement;
+  final List<Element?>? aliasElement;
   @override
   final UnsignedInt? min;
   @override
@@ -10088,7 +10088,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   final List<Id>? condition;
   @override
   @JsonKey(name: '_condition')
-  final List<Element>? conditionElement;
+  final List<Element?>? conditionElement;
   @override
   final List<ElementDefinitionConstraint>? constraint;
   @override
@@ -10781,7 +10781,7 @@ abstract class _ElementDefinition extends ElementDefinition {
           Element? pathElement,
       List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation')
-          List<Element>? representationElement,
+          List<Element?>? representationElement,
       String? sliceName,
       @JsonKey(name: '_sliceName')
           Element? sliceNameElement,
@@ -10807,7 +10807,7 @@ abstract class _ElementDefinition extends ElementDefinition {
           Element? requirementsElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element>? aliasElement,
+          List<Element?>? aliasElement,
       UnsignedInt? min,
       @JsonKey(name: '_min')
           Element? minElement,
@@ -11145,7 +11145,7 @@ abstract class _ElementDefinition extends ElementDefinition {
           Element? maxLengthElement,
       List<Id>? condition,
       @JsonKey(name: '_condition')
-          List<Element>? conditionElement,
+          List<Element?>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
       Boolean? mustSupport,
       @JsonKey(name: '_mustSupport')
@@ -11181,7 +11181,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   List<ElementDefinitionRepresentation>? get representation;
   @override
   @JsonKey(name: '_representation')
-  List<Element>? get representationElement;
+  List<Element?>? get representationElement;
   @override
   String? get sliceName;
   @override
@@ -11225,7 +11225,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   List<String>? get alias;
   @override
   @JsonKey(name: '_alias')
-  List<Element>? get aliasElement;
+  List<Element?>? get aliasElement;
   @override
   UnsignedInt? get min;
   @override
@@ -11821,7 +11821,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   List<Id>? get condition;
   @override
   @JsonKey(name: '_condition')
-  List<Element>? get conditionElement;
+  List<Element?>? get conditionElement;
   @override
   List<ElementDefinitionConstraint>? get constraint;
   @override
@@ -13032,11 +13032,11 @@ class _$ElementDefinitionTypeTearOff {
           Element? codeElement,
       List<Canonical>? profile,
       @JsonKey(name: '_profile')
-          List<Element>? profileElement,
+          List<Element?>? profileElement,
       List<Canonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
-          List<Element>? aggregationElement,
+          List<Element?>? aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
           ElementDefinitionTypeVersioning? versioning,
       @JsonKey(name: '_versioning')
@@ -13076,11 +13076,11 @@ mixin _$ElementDefinitionType {
   Element? get codeElement;
   List<Canonical>? get profile;
   @JsonKey(name: '_profile')
-  List<Element>? get profileElement;
+  List<Element?>? get profileElement;
   List<Canonical>? get targetProfile;
   List<ElementDefinitionTypeAggregation>? get aggregation;
   @JsonKey(name: '_aggregation')
-  List<Element>? get aggregationElement;
+  List<Element?>? get aggregationElement;
   @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
   ElementDefinitionTypeVersioning? get versioning;
   @JsonKey(name: '_versioning')
@@ -13106,11 +13106,11 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
           Element? codeElement,
       List<Canonical>? profile,
       @JsonKey(name: '_profile')
-          List<Element>? profileElement,
+          List<Element?>? profileElement,
       List<Canonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
-          List<Element>? aggregationElement,
+          List<Element?>? aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
           ElementDefinitionTypeVersioning? versioning,
       @JsonKey(name: '_versioning')
@@ -13159,7 +13159,7 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
           profile == freezed ? _value.profile : profile as List<Canonical>?,
       profileElement: profileElement == freezed
           ? _value.profileElement
-          : profileElement as List<Element>?,
+          : profileElement as List<Element?>?,
       targetProfile: targetProfile == freezed
           ? _value.targetProfile
           : targetProfile as List<Canonical>?,
@@ -13168,7 +13168,7 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
           : aggregation as List<ElementDefinitionTypeAggregation>?,
       aggregationElement: aggregationElement == freezed
           ? _value.aggregationElement
-          : aggregationElement as List<Element>?,
+          : aggregationElement as List<Element?>?,
       versioning: versioning == freezed
           ? _value.versioning
           : versioning as ElementDefinitionTypeVersioning?,
@@ -13218,11 +13218,11 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
           Element? codeElement,
       List<Canonical>? profile,
       @JsonKey(name: '_profile')
-          List<Element>? profileElement,
+          List<Element?>? profileElement,
       List<Canonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
-          List<Element>? aggregationElement,
+          List<Element?>? aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
           ElementDefinitionTypeVersioning? versioning,
       @JsonKey(name: '_versioning')
@@ -13275,7 +13275,7 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
           profile == freezed ? _value.profile : profile as List<Canonical>?,
       profileElement: profileElement == freezed
           ? _value.profileElement
-          : profileElement as List<Element>?,
+          : profileElement as List<Element?>?,
       targetProfile: targetProfile == freezed
           ? _value.targetProfile
           : targetProfile as List<Canonical>?,
@@ -13284,7 +13284,7 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
           : aggregation as List<ElementDefinitionTypeAggregation>?,
       aggregationElement: aggregationElement == freezed
           ? _value.aggregationElement
-          : aggregationElement as List<Element>?,
+          : aggregationElement as List<Element?>?,
       versioning: versioning == freezed
           ? _value.versioning
           : versioning as ElementDefinitionTypeVersioning?,
@@ -13339,14 +13339,14 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   final List<Canonical>? profile;
   @override
   @JsonKey(name: '_profile')
-  final List<Element>? profileElement;
+  final List<Element?>? profileElement;
   @override
   final List<Canonical>? targetProfile;
   @override
   final List<ElementDefinitionTypeAggregation>? aggregation;
   @override
   @JsonKey(name: '_aggregation')
-  final List<Element>? aggregationElement;
+  final List<Element?>? aggregationElement;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
   final ElementDefinitionTypeVersioning? versioning;
@@ -13439,11 +13439,11 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
           Element? codeElement,
       List<Canonical>? profile,
       @JsonKey(name: '_profile')
-          List<Element>? profileElement,
+          List<Element?>? profileElement,
       List<Canonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
-          List<Element>? aggregationElement,
+          List<Element?>? aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
           ElementDefinitionTypeVersioning? versioning,
       @JsonKey(name: '_versioning')
@@ -13468,14 +13468,14 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
   List<Canonical>? get profile;
   @override
   @JsonKey(name: '_profile')
-  List<Element>? get profileElement;
+  List<Element?>? get profileElement;
   @override
   List<Canonical>? get targetProfile;
   @override
   List<ElementDefinitionTypeAggregation>? get aggregation;
   @override
   @JsonKey(name: '_aggregation')
-  List<Element>? get aggregationElement;
+  List<Element?>? get aggregationElement;
   @override
   @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
   ElementDefinitionTypeVersioning? get versioning;

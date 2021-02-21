@@ -2170,7 +2170,7 @@ abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
     Integer? numberOfSubunits,
     @JsonKey(name: '_numberOfSubunits') Element? numberOfSubunitsElement,
     List<String>? disulfideLinkage,
-    @JsonKey(name: '_disulfideLinkage') List<Element>? disulfideLinkageElement,
+    @JsonKey(name: '_disulfideLinkage') List<Element?>? disulfideLinkageElement,
     List<SubstanceProteinSubunit>? subunit,
   }) = _SubstanceProtein;
 

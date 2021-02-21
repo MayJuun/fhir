@@ -84,10 +84,10 @@ class _$CapabilityStatementTearOff {
           Element? fhirVersionElement,
       List<Code>? format,
       @JsonKey(name: '_format')
-          List<Element>? formatElement,
+          List<Element?>? formatElement,
       List<Code>? patchFormat,
       @JsonKey(name: '_patchFormat')
-          List<Element>? patchFormatElement,
+          List<Element?>? patchFormatElement,
       List<Canonical>? implementationGuide,
       List<CapabilityStatementRest>? rest,
       List<CapabilityStatementMessaging>? messaging,
@@ -226,10 +226,10 @@ mixin _$CapabilityStatement {
   Element? get fhirVersionElement;
   List<Code>? get format;
   @JsonKey(name: '_format')
-  List<Element>? get formatElement;
+  List<Element?>? get formatElement;
   List<Code>? get patchFormat;
   @JsonKey(name: '_patchFormat')
-  List<Element>? get patchFormatElement;
+  List<Element?>? get patchFormatElement;
   List<Canonical>? get implementationGuide;
   List<CapabilityStatementRest>? get rest;
   List<CapabilityStatementMessaging>? get messaging;
@@ -313,10 +313,10 @@ abstract class $CapabilityStatementCopyWith<$Res> {
           Element? fhirVersionElement,
       List<Code>? format,
       @JsonKey(name: '_format')
-          List<Element>? formatElement,
+          List<Element?>? formatElement,
       List<Code>? patchFormat,
       @JsonKey(name: '_patchFormat')
-          List<Element>? patchFormatElement,
+          List<Element?>? patchFormatElement,
       List<Canonical>? implementationGuide,
       List<CapabilityStatementRest>? rest,
       List<CapabilityStatementMessaging>? messaging,
@@ -516,13 +516,13 @@ class _$CapabilityStatementCopyWithImpl<$Res>
       format: format == freezed ? _value.format : format as List<Code>?,
       formatElement: formatElement == freezed
           ? _value.formatElement
-          : formatElement as List<Element>?,
+          : formatElement as List<Element?>?,
       patchFormat: patchFormat == freezed
           ? _value.patchFormat
           : patchFormat as List<Code>?,
       patchFormatElement: patchFormatElement == freezed
           ? _value.patchFormatElement
-          : patchFormatElement as List<Element>?,
+          : patchFormatElement as List<Element?>?,
       implementationGuide: implementationGuide == freezed
           ? _value.implementationGuide
           : implementationGuide as List<Canonical>?,
@@ -825,10 +825,10 @@ abstract class _$CapabilityStatementCopyWith<$Res>
           Element? fhirVersionElement,
       List<Code>? format,
       @JsonKey(name: '_format')
-          List<Element>? formatElement,
+          List<Element?>? formatElement,
       List<Code>? patchFormat,
       @JsonKey(name: '_patchFormat')
-          List<Element>? patchFormatElement,
+          List<Element?>? patchFormatElement,
       List<Canonical>? implementationGuide,
       List<CapabilityStatementRest>? rest,
       List<CapabilityStatementMessaging>? messaging,
@@ -1049,13 +1049,13 @@ class __$CapabilityStatementCopyWithImpl<$Res>
       format: format == freezed ? _value.format : format as List<Code>?,
       formatElement: formatElement == freezed
           ? _value.formatElement
-          : formatElement as List<Element>?,
+          : formatElement as List<Element?>?,
       patchFormat: patchFormat == freezed
           ? _value.patchFormat
           : patchFormat as List<Code>?,
       patchFormatElement: patchFormatElement == freezed
           ? _value.patchFormatElement
-          : patchFormatElement as List<Element>?,
+          : patchFormatElement as List<Element?>?,
       implementationGuide: implementationGuide == freezed
           ? _value.implementationGuide
           : implementationGuide as List<Canonical>?,
@@ -1271,12 +1271,12 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   final List<Code>? format;
   @override
   @JsonKey(name: '_format')
-  final List<Element>? formatElement;
+  final List<Element?>? formatElement;
   @override
   final List<Code>? patchFormat;
   @override
   @JsonKey(name: '_patchFormat')
-  final List<Element>? patchFormatElement;
+  final List<Element?>? patchFormatElement;
   @override
   final List<Canonical>? implementationGuide;
   @override
@@ -1532,10 +1532,10 @@ abstract class _CapabilityStatement extends CapabilityStatement {
           Element? fhirVersionElement,
       List<Code>? format,
       @JsonKey(name: '_format')
-          List<Element>? formatElement,
+          List<Element?>? formatElement,
       List<Code>? patchFormat,
       @JsonKey(name: '_patchFormat')
-          List<Element>? patchFormatElement,
+          List<Element?>? patchFormatElement,
       List<Canonical>? implementationGuide,
       List<CapabilityStatementRest>? rest,
       List<CapabilityStatementMessaging>? messaging,
@@ -1658,12 +1658,12 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   List<Code>? get format;
   @override
   @JsonKey(name: '_format')
-  List<Element>? get formatElement;
+  List<Element?>? get formatElement;
   @override
   List<Code>? get patchFormat;
   @override
   @JsonKey(name: '_patchFormat')
-  List<Element>? get patchFormatElement;
+  List<Element?>? get patchFormatElement;
   @override
   List<Canonical>? get implementationGuide;
   @override
@@ -3332,13 +3332,13 @@ class _$CapabilityStatementResourceTearOff {
           Element? conditionalDeleteElement,
       List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
       @JsonKey(name: '_referencePolicy')
-          List<Element>? referencePolicyElement,
+          List<Element?>? referencePolicyElement,
       List<String>? searchInclude,
       @JsonKey(name: '_searchInclude')
-          List<Element>? searchIncludeElement,
+          List<Element?>? searchIncludeElement,
       List<String>? searchRevInclude,
       @JsonKey(name: '_searchRevInclude')
-          List<Element>? searchRevIncludeElement,
+          List<Element?>? searchRevIncludeElement,
       List<CapabilityStatementSearchParam>? searchParam,
       List<CapabilityStatementOperation>? operation}) {
     return _CapabilityStatementResource(
@@ -3427,13 +3427,13 @@ mixin _$CapabilityStatementResource {
   Element? get conditionalDeleteElement;
   List<CapabilityStatementResourceReferencePolicy>? get referencePolicy;
   @JsonKey(name: '_referencePolicy')
-  List<Element>? get referencePolicyElement;
+  List<Element?>? get referencePolicyElement;
   List<String>? get searchInclude;
   @JsonKey(name: '_searchInclude')
-  List<Element>? get searchIncludeElement;
+  List<Element?>? get searchIncludeElement;
   List<String>? get searchRevInclude;
   @JsonKey(name: '_searchRevInclude')
-  List<Element>? get searchRevIncludeElement;
+  List<Element?>? get searchRevIncludeElement;
   List<CapabilityStatementSearchParam>? get searchParam;
   List<CapabilityStatementOperation>? get operation;
 
@@ -3489,13 +3489,13 @@ abstract class $CapabilityStatementResourceCopyWith<$Res> {
           Element? conditionalDeleteElement,
       List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
       @JsonKey(name: '_referencePolicy')
-          List<Element>? referencePolicyElement,
+          List<Element?>? referencePolicyElement,
       List<String>? searchInclude,
       @JsonKey(name: '_searchInclude')
-          List<Element>? searchIncludeElement,
+          List<Element?>? searchIncludeElement,
       List<String>? searchRevInclude,
       @JsonKey(name: '_searchRevInclude')
-          List<Element>? searchRevIncludeElement,
+          List<Element?>? searchRevIncludeElement,
       List<CapabilityStatementSearchParam>? searchParam,
       List<CapabilityStatementOperation>? operation});
 
@@ -3625,19 +3625,19 @@ class _$CapabilityStatementResourceCopyWithImpl<$Res>
               as List<CapabilityStatementResourceReferencePolicy>?,
       referencePolicyElement: referencePolicyElement == freezed
           ? _value.referencePolicyElement
-          : referencePolicyElement as List<Element>?,
+          : referencePolicyElement as List<Element?>?,
       searchInclude: searchInclude == freezed
           ? _value.searchInclude
           : searchInclude as List<String>?,
       searchIncludeElement: searchIncludeElement == freezed
           ? _value.searchIncludeElement
-          : searchIncludeElement as List<Element>?,
+          : searchIncludeElement as List<Element?>?,
       searchRevInclude: searchRevInclude == freezed
           ? _value.searchRevInclude
           : searchRevInclude as List<String>?,
       searchRevIncludeElement: searchRevIncludeElement == freezed
           ? _value.searchRevIncludeElement
-          : searchRevIncludeElement as List<Element>?,
+          : searchRevIncludeElement as List<Element?>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
           : searchParam as List<CapabilityStatementSearchParam>?,
@@ -3795,13 +3795,13 @@ abstract class _$CapabilityStatementResourceCopyWith<$Res>
           Element? conditionalDeleteElement,
       List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
       @JsonKey(name: '_referencePolicy')
-          List<Element>? referencePolicyElement,
+          List<Element?>? referencePolicyElement,
       List<String>? searchInclude,
       @JsonKey(name: '_searchInclude')
-          List<Element>? searchIncludeElement,
+          List<Element?>? searchIncludeElement,
       List<String>? searchRevInclude,
       @JsonKey(name: '_searchRevInclude')
-          List<Element>? searchRevIncludeElement,
+          List<Element?>? searchRevIncludeElement,
       List<CapabilityStatementSearchParam>? searchParam,
       List<CapabilityStatementOperation>? operation});
 
@@ -3944,19 +3944,19 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
               as List<CapabilityStatementResourceReferencePolicy>?,
       referencePolicyElement: referencePolicyElement == freezed
           ? _value.referencePolicyElement
-          : referencePolicyElement as List<Element>?,
+          : referencePolicyElement as List<Element?>?,
       searchInclude: searchInclude == freezed
           ? _value.searchInclude
           : searchInclude as List<String>?,
       searchIncludeElement: searchIncludeElement == freezed
           ? _value.searchIncludeElement
-          : searchIncludeElement as List<Element>?,
+          : searchIncludeElement as List<Element?>?,
       searchRevInclude: searchRevInclude == freezed
           ? _value.searchRevInclude
           : searchRevInclude as List<String>?,
       searchRevIncludeElement: searchRevIncludeElement == freezed
           ? _value.searchRevIncludeElement
-          : searchRevIncludeElement as List<Element>?,
+          : searchRevIncludeElement as List<Element?>?,
       searchParam: searchParam == freezed
           ? _value.searchParam
           : searchParam as List<CapabilityStatementSearchParam>?,
@@ -4091,17 +4091,17 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   final List<CapabilityStatementResourceReferencePolicy>? referencePolicy;
   @override
   @JsonKey(name: '_referencePolicy')
-  final List<Element>? referencePolicyElement;
+  final List<Element?>? referencePolicyElement;
   @override
   final List<String>? searchInclude;
   @override
   @JsonKey(name: '_searchInclude')
-  final List<Element>? searchIncludeElement;
+  final List<Element?>? searchIncludeElement;
   @override
   final List<String>? searchRevInclude;
   @override
   @JsonKey(name: '_searchRevInclude')
-  final List<Element>? searchRevIncludeElement;
+  final List<Element?>? searchRevIncludeElement;
   @override
   final List<CapabilityStatementSearchParam>? searchParam;
   @override
@@ -4282,13 +4282,13 @@ abstract class _CapabilityStatementResource
           Element? conditionalDeleteElement,
       List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
       @JsonKey(name: '_referencePolicy')
-          List<Element>? referencePolicyElement,
+          List<Element?>? referencePolicyElement,
       List<String>? searchInclude,
       @JsonKey(name: '_searchInclude')
-          List<Element>? searchIncludeElement,
+          List<Element?>? searchIncludeElement,
       List<String>? searchRevInclude,
       @JsonKey(name: '_searchRevInclude')
-          List<Element>? searchRevIncludeElement,
+          List<Element?>? searchRevIncludeElement,
       List<CapabilityStatementSearchParam>? searchParam,
       List<CapabilityStatementOperation>? operation}) = _$_CapabilityStatementResource;
 
@@ -4361,17 +4361,17 @@ abstract class _CapabilityStatementResource
   List<CapabilityStatementResourceReferencePolicy>? get referencePolicy;
   @override
   @JsonKey(name: '_referencePolicy')
-  List<Element>? get referencePolicyElement;
+  List<Element?>? get referencePolicyElement;
   @override
   List<String>? get searchInclude;
   @override
   @JsonKey(name: '_searchInclude')
-  List<Element>? get searchIncludeElement;
+  List<Element?>? get searchIncludeElement;
   @override
   List<String>? get searchRevInclude;
   @override
   @JsonKey(name: '_searchRevInclude')
-  List<Element>? get searchRevIncludeElement;
+  List<Element?>? get searchRevIncludeElement;
   @override
   List<CapabilityStatementSearchParam>? get searchParam;
   @override
@@ -7337,10 +7337,10 @@ class _$CapabilityStatement2TearOff {
           Element? fhirVersionElement,
       List<Code>? format,
       @JsonKey(name: '_format')
-          List<Element>? formatElement,
+          List<Element?>? formatElement,
       List<Code>? patchFormat,
       @JsonKey(name: '_patchFormat')
-          List<Element>? patchFormatElement,
+          List<Element?>? patchFormatElement,
       List<Canonical>? implementationGuide,
       List<CapabilityStatement2Rest>? rest}) {
     return _CapabilityStatement2(
@@ -7474,10 +7474,10 @@ mixin _$CapabilityStatement2 {
   Element? get fhirVersionElement;
   List<Code>? get format;
   @JsonKey(name: '_format')
-  List<Element>? get formatElement;
+  List<Element?>? get formatElement;
   List<Code>? get patchFormat;
   @JsonKey(name: '_patchFormat')
-  List<Element>? get patchFormatElement;
+  List<Element?>? get patchFormatElement;
   List<Canonical>? get implementationGuide;
   List<CapabilityStatement2Rest>? get rest;
 
@@ -7558,10 +7558,10 @@ abstract class $CapabilityStatement2CopyWith<$Res> {
           Element? fhirVersionElement,
       List<Code>? format,
       @JsonKey(name: '_format')
-          List<Element>? formatElement,
+          List<Element?>? formatElement,
       List<Code>? patchFormat,
       @JsonKey(name: '_patchFormat')
-          List<Element>? patchFormatElement,
+          List<Element?>? patchFormatElement,
       List<Canonical>? implementationGuide,
       List<CapabilityStatement2Rest>? rest});
 
@@ -7757,13 +7757,13 @@ class _$CapabilityStatement2CopyWithImpl<$Res>
       format: format == freezed ? _value.format : format as List<Code>?,
       formatElement: formatElement == freezed
           ? _value.formatElement
-          : formatElement as List<Element>?,
+          : formatElement as List<Element?>?,
       patchFormat: patchFormat == freezed
           ? _value.patchFormat
           : patchFormat as List<Code>?,
       patchFormatElement: patchFormatElement == freezed
           ? _value.patchFormatElement
-          : patchFormatElement as List<Element>?,
+          : patchFormatElement as List<Element?>?,
       implementationGuide: implementationGuide == freezed
           ? _value.implementationGuide
           : implementationGuide as List<Canonical>?,
@@ -8059,10 +8059,10 @@ abstract class _$CapabilityStatement2CopyWith<$Res>
           Element? fhirVersionElement,
       List<Code>? format,
       @JsonKey(name: '_format')
-          List<Element>? formatElement,
+          List<Element?>? formatElement,
       List<Code>? patchFormat,
       @JsonKey(name: '_patchFormat')
-          List<Element>? patchFormatElement,
+          List<Element?>? patchFormatElement,
       List<Canonical>? implementationGuide,
       List<CapabilityStatement2Rest>? rest});
 
@@ -8279,13 +8279,13 @@ class __$CapabilityStatement2CopyWithImpl<$Res>
       format: format == freezed ? _value.format : format as List<Code>?,
       formatElement: formatElement == freezed
           ? _value.formatElement
-          : formatElement as List<Element>?,
+          : formatElement as List<Element?>?,
       patchFormat: patchFormat == freezed
           ? _value.patchFormat
           : patchFormat as List<Code>?,
       patchFormatElement: patchFormatElement == freezed
           ? _value.patchFormatElement
-          : patchFormatElement as List<Element>?,
+          : patchFormatElement as List<Element?>?,
       implementationGuide: implementationGuide == freezed
           ? _value.implementationGuide
           : implementationGuide as List<Canonical>?,
@@ -8491,12 +8491,12 @@ class _$_CapabilityStatement2 extends _CapabilityStatement2 {
   final List<Code>? format;
   @override
   @JsonKey(name: '_format')
-  final List<Element>? formatElement;
+  final List<Element?>? formatElement;
   @override
   final List<Code>? patchFormat;
   @override
   @JsonKey(name: '_patchFormat')
-  final List<Element>? patchFormatElement;
+  final List<Element?>? patchFormatElement;
   @override
   final List<Canonical>? implementationGuide;
   @override
@@ -8743,10 +8743,10 @@ abstract class _CapabilityStatement2 extends CapabilityStatement2 {
           Element? fhirVersionElement,
       List<Code>? format,
       @JsonKey(name: '_format')
-          List<Element>? formatElement,
+          List<Element?>? formatElement,
       List<Code>? patchFormat,
       @JsonKey(name: '_patchFormat')
-          List<Element>? patchFormatElement,
+          List<Element?>? patchFormatElement,
       List<Canonical>? implementationGuide,
       List<CapabilityStatement2Rest>? rest}) = _$_CapabilityStatement2;
 
@@ -8866,12 +8866,12 @@ abstract class _CapabilityStatement2 extends CapabilityStatement2 {
   List<Code>? get format;
   @override
   @JsonKey(name: '_format')
-  List<Element>? get formatElement;
+  List<Element?>? get formatElement;
   @override
   List<Code>? get patchFormat;
   @override
   @JsonKey(name: '_patchFormat')
-  List<Element>? get patchFormatElement;
+  List<Element?>? get patchFormatElement;
   @override
   List<Canonical>? get implementationGuide;
   @override
@@ -13379,7 +13379,7 @@ class _$CompartmentDefinitionResourceTearOff {
       Code? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<String>? param,
-      @JsonKey(name: '_param') List<Element>? paramElement,
+      @JsonKey(name: '_param') List<Element?>? paramElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement}) {
     return _CompartmentDefinitionResource(
@@ -13414,7 +13414,7 @@ mixin _$CompartmentDefinitionResource {
   Element? get codeElement;
   List<String>? get param;
   @JsonKey(name: '_param')
-  List<Element>? get paramElement;
+  List<Element?>? get paramElement;
   String? get documentation;
   @JsonKey(name: '_documentation')
   Element? get documentationElement;
@@ -13438,7 +13438,7 @@ abstract class $CompartmentDefinitionResourceCopyWith<$Res> {
       Code? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<String>? param,
-      @JsonKey(name: '_param') List<Element>? paramElement,
+      @JsonKey(name: '_param') List<Element?>? paramElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
 
@@ -13481,7 +13481,7 @@ class _$CompartmentDefinitionResourceCopyWithImpl<$Res>
       param: param == freezed ? _value.param : param as List<String>?,
       paramElement: paramElement == freezed
           ? _value.paramElement
-          : paramElement as List<Element>?,
+          : paramElement as List<Element?>?,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String?,
@@ -13529,7 +13529,7 @@ abstract class _$CompartmentDefinitionResourceCopyWith<$Res>
       Code? code,
       @JsonKey(name: '_code') Element? codeElement,
       List<String>? param,
-      @JsonKey(name: '_param') List<Element>? paramElement,
+      @JsonKey(name: '_param') List<Element?>? paramElement,
       String? documentation,
       @JsonKey(name: '_documentation') Element? documentationElement});
 
@@ -13578,7 +13578,7 @@ class __$CompartmentDefinitionResourceCopyWithImpl<$Res>
       param: param == freezed ? _value.param : param as List<String>?,
       paramElement: paramElement == freezed
           ? _value.paramElement
-          : paramElement as List<Element>?,
+          : paramElement as List<Element?>?,
       documentation: documentation == freezed
           ? _value.documentation
           : documentation as String?,
@@ -13625,7 +13625,7 @@ class _$_CompartmentDefinitionResource extends _CompartmentDefinitionResource {
   final List<String>? param;
   @override
   @JsonKey(name: '_param')
-  final List<Element>? paramElement;
+  final List<Element?>? paramElement;
   @override
   final String? documentation;
   @override
@@ -13702,7 +13702,7 @@ abstract class _CompartmentDefinitionResource
           Code? code,
           @JsonKey(name: '_code') Element? codeElement,
           List<String>? param,
-          @JsonKey(name: '_param') List<Element>? paramElement,
+          @JsonKey(name: '_param') List<Element?>? paramElement,
           String? documentation,
           @JsonKey(name: '_documentation') Element? documentationElement}) =
       _$_CompartmentDefinitionResource;
@@ -13726,7 +13726,7 @@ abstract class _CompartmentDefinitionResource
   List<String>? get param;
   @override
   @JsonKey(name: '_param')
-  List<Element>? get paramElement;
+  List<Element?>? get paramElement;
   @override
   String? get documentation;
   @override
@@ -21421,7 +21421,7 @@ class _$ImplementationGuideTearOff {
           Element? licenseElement,
       List<ImplementationGuideFhirVersion>? fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          List<Element>? fhirVersionElement,
+          List<Element?>? fhirVersionElement,
       List<ImplementationGuideDependsOn>? dependsOn,
       List<ImplementationGuideGlobal>? global,
       ImplementationGuideDefinition? definition,
@@ -21549,7 +21549,7 @@ mixin _$ImplementationGuide {
   Element? get licenseElement;
   List<ImplementationGuideFhirVersion>? get fhirVersion;
   @JsonKey(name: '_fhirVersion')
-  List<Element>? get fhirVersionElement;
+  List<Element?>? get fhirVersionElement;
   List<ImplementationGuideDependsOn>? get dependsOn;
   List<ImplementationGuideGlobal>? get global;
   ImplementationGuideDefinition? get definition;
@@ -21628,7 +21628,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
           Element? licenseElement,
       List<ImplementationGuideFhirVersion>? fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          List<Element>? fhirVersionElement,
+          List<Element?>? fhirVersionElement,
       List<ImplementationGuideDependsOn>? dependsOn,
       List<ImplementationGuideGlobal>? global,
       ImplementationGuideDefinition? definition,
@@ -21814,7 +21814,7 @@ class _$ImplementationGuideCopyWithImpl<$Res>
           : fhirVersion as List<ImplementationGuideFhirVersion>?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as List<Element>?,
+          : fhirVersionElement as List<Element?>?,
       dependsOn: dependsOn == freezed
           ? _value.dependsOn
           : dependsOn as List<ImplementationGuideDependsOn>?,
@@ -22112,7 +22112,7 @@ abstract class _$ImplementationGuideCopyWith<$Res>
           Element? licenseElement,
       List<ImplementationGuideFhirVersion>? fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          List<Element>? fhirVersionElement,
+          List<Element?>? fhirVersionElement,
       List<ImplementationGuideDependsOn>? dependsOn,
       List<ImplementationGuideGlobal>? global,
       ImplementationGuideDefinition? definition,
@@ -22319,7 +22319,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
           : fhirVersion as List<ImplementationGuideFhirVersion>?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as List<Element>?,
+          : fhirVersionElement as List<Element?>?,
       dependsOn: dependsOn == freezed
           ? _value.dependsOn
           : dependsOn as List<ImplementationGuideDependsOn>?,
@@ -22518,7 +22518,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   final List<ImplementationGuideFhirVersion>? fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
-  final List<Element>? fhirVersionElement;
+  final List<Element?>? fhirVersionElement;
   @override
   final List<ImplementationGuideDependsOn>? dependsOn;
   @override
@@ -22757,7 +22757,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
           Element? licenseElement,
       List<ImplementationGuideFhirVersion>? fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          List<Element>? fhirVersionElement,
+          List<Element?>? fhirVersionElement,
       List<ImplementationGuideDependsOn>? dependsOn,
       List<ImplementationGuideGlobal>? global,
       ImplementationGuideDefinition? definition,
@@ -22871,7 +22871,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   List<ImplementationGuideFhirVersion>? get fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
-  List<Element>? get fhirVersionElement;
+  List<Element?>? get fhirVersionElement;
   @override
   List<ImplementationGuideDependsOn>? get dependsOn;
   @override
@@ -24190,7 +24190,7 @@ class _$ImplementationGuideResourceTearOff {
       List<FhirExtension>? modifierExtension,
       required Reference reference,
       List<ImplementationGuideResourceFhirVersion>? fhirVersion,
-      @JsonKey(name: '_fhirVersion') List<Element>? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
@@ -24238,7 +24238,7 @@ mixin _$ImplementationGuideResource {
   Reference get reference;
   List<ImplementationGuideResourceFhirVersion>? get fhirVersion;
   @JsonKey(name: '_fhirVersion')
-  List<Element>? get fhirVersionElement;
+  List<Element?>? get fhirVersionElement;
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
@@ -24273,7 +24273,7 @@ abstract class $ImplementationGuideResourceCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Reference reference,
       List<ImplementationGuideResourceFhirVersion>? fhirVersion,
-      @JsonKey(name: '_fhirVersion') List<Element>? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
@@ -24336,7 +24336,7 @@ class _$ImplementationGuideResourceCopyWithImpl<$Res>
           : fhirVersion as List<ImplementationGuideResourceFhirVersion>?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as List<Element>?,
+          : fhirVersionElement as List<Element?>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -24441,7 +24441,7 @@ abstract class _$ImplementationGuideResourceCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Reference reference,
       List<ImplementationGuideResourceFhirVersion>? fhirVersion,
-      @JsonKey(name: '_fhirVersion') List<Element>? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? description,
@@ -24514,7 +24514,7 @@ class __$ImplementationGuideResourceCopyWithImpl<$Res>
           : fhirVersion as List<ImplementationGuideResourceFhirVersion>?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as List<Element>?,
+          : fhirVersionElement as List<Element?>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -24582,7 +24582,7 @@ class _$_ImplementationGuideResource extends _ImplementationGuideResource {
   final List<ImplementationGuideResourceFhirVersion>? fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
-  final List<Element>? fhirVersionElement;
+  final List<Element?>? fhirVersionElement;
   @override
   final String? name;
   @override
@@ -24708,7 +24708,7 @@ abstract class _ImplementationGuideResource
           List<FhirExtension>? modifierExtension,
           required Reference reference,
           List<ImplementationGuideResourceFhirVersion>? fhirVersion,
-          @JsonKey(name: '_fhirVersion') List<Element>? fhirVersionElement,
+          @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
           String? name,
           @JsonKey(name: '_name') Element? nameElement,
           String? description,
@@ -24737,7 +24737,7 @@ abstract class _ImplementationGuideResource
   List<ImplementationGuideResourceFhirVersion>? get fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
-  List<Element>? get fhirVersionElement;
+  List<Element?>? get fhirVersionElement;
   @override
   String? get name;
   @override
@@ -25966,9 +25966,9 @@ class _$ImplementationGuideManifestTearOff {
       required List<ImplementationGuideResource1> resource,
       List<ImplementationGuidePage1>? page,
       List<String>? image,
-      @JsonKey(name: '_image') List<Element>? imageElement,
+      @JsonKey(name: '_image') List<Element?>? imageElement,
       List<String>? other,
-      @JsonKey(name: '_other') List<Element>? otherElement}) {
+      @JsonKey(name: '_other') List<Element?>? otherElement}) {
     return _ImplementationGuideManifest(
       id: id,
       extension_: extension_,
@@ -26005,10 +26005,10 @@ mixin _$ImplementationGuideManifest {
   List<ImplementationGuidePage1>? get page;
   List<String>? get image;
   @JsonKey(name: '_image')
-  List<Element>? get imageElement;
+  List<Element?>? get imageElement;
   List<String>? get other;
   @JsonKey(name: '_other')
-  List<Element>? get otherElement;
+  List<Element?>? get otherElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -26031,9 +26031,9 @@ abstract class $ImplementationGuideManifestCopyWith<$Res> {
       List<ImplementationGuideResource1> resource,
       List<ImplementationGuidePage1>? page,
       List<String>? image,
-      @JsonKey(name: '_image') List<Element>? imageElement,
+      @JsonKey(name: '_image') List<Element?>? imageElement,
       List<String>? other,
-      @JsonKey(name: '_other') List<Element>? otherElement});
+      @JsonKey(name: '_other') List<Element?>? otherElement});
 
   $ElementCopyWith<$Res>? get renderingElement;
 }
@@ -26083,11 +26083,11 @@ class _$ImplementationGuideManifestCopyWithImpl<$Res>
       image: image == freezed ? _value.image : image as List<String>?,
       imageElement: imageElement == freezed
           ? _value.imageElement
-          : imageElement as List<Element>?,
+          : imageElement as List<Element?>?,
       other: other == freezed ? _value.other : other as List<String>?,
       otherElement: otherElement == freezed
           ? _value.otherElement
-          : otherElement as List<Element>?,
+          : otherElement as List<Element?>?,
     ));
   }
 
@@ -26120,9 +26120,9 @@ abstract class _$ImplementationGuideManifestCopyWith<$Res>
       List<ImplementationGuideResource1> resource,
       List<ImplementationGuidePage1>? page,
       List<String>? image,
-      @JsonKey(name: '_image') List<Element>? imageElement,
+      @JsonKey(name: '_image') List<Element?>? imageElement,
       List<String>? other,
-      @JsonKey(name: '_other') List<Element>? otherElement});
+      @JsonKey(name: '_other') List<Element?>? otherElement});
 
   @override
   $ElementCopyWith<$Res>? get renderingElement;
@@ -26177,11 +26177,11 @@ class __$ImplementationGuideManifestCopyWithImpl<$Res>
       image: image == freezed ? _value.image : image as List<String>?,
       imageElement: imageElement == freezed
           ? _value.imageElement
-          : imageElement as List<Element>?,
+          : imageElement as List<Element?>?,
       other: other == freezed ? _value.other : other as List<String>?,
       otherElement: otherElement == freezed
           ? _value.otherElement
-          : otherElement as List<Element>?,
+          : otherElement as List<Element?>?,
     ));
   }
 }
@@ -26227,12 +26227,12 @@ class _$_ImplementationGuideManifest extends _ImplementationGuideManifest {
   final List<String>? image;
   @override
   @JsonKey(name: '_image')
-  final List<Element>? imageElement;
+  final List<Element?>? imageElement;
   @override
   final List<String>? other;
   @override
   @JsonKey(name: '_other')
-  final List<Element>? otherElement;
+  final List<Element?>? otherElement;
 
   @override
   String toString() {
@@ -26314,9 +26314,9 @@ abstract class _ImplementationGuideManifest
           required List<ImplementationGuideResource1> resource,
           List<ImplementationGuidePage1>? page,
           List<String>? image,
-          @JsonKey(name: '_image') List<Element>? imageElement,
+          @JsonKey(name: '_image') List<Element?>? imageElement,
           List<String>? other,
-          @JsonKey(name: '_other') List<Element>? otherElement}) =
+          @JsonKey(name: '_other') List<Element?>? otherElement}) =
       _$_ImplementationGuideManifest;
 
   factory _ImplementationGuideManifest.fromJson(Map<String, dynamic> json) =
@@ -26342,12 +26342,12 @@ abstract class _ImplementationGuideManifest
   List<String>? get image;
   @override
   @JsonKey(name: '_image')
-  List<Element>? get imageElement;
+  List<Element?>? get imageElement;
   @override
   List<String>? get other;
   @override
   @JsonKey(name: '_other')
-  List<Element>? get otherElement;
+  List<Element?>? get otherElement;
   @override
   @JsonKey(ignore: true)
   _$ImplementationGuideManifestCopyWith<_ImplementationGuideManifest>
@@ -26804,7 +26804,7 @@ class _$ImplementationGuidePage1TearOff {
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
       List<String>? anchor,
-      @JsonKey(name: '_anchor') List<Element>? anchorElement}) {
+      @JsonKey(name: '_anchor') List<Element?>? anchorElement}) {
     return _ImplementationGuidePage1(
       id: id,
       extension_: extension_,
@@ -26840,7 +26840,7 @@ mixin _$ImplementationGuidePage1 {
   Element? get titleElement;
   List<String>? get anchor;
   @JsonKey(name: '_anchor')
-  List<Element>? get anchorElement;
+  List<Element?>? get anchorElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -26861,7 +26861,7 @@ abstract class $ImplementationGuidePage1CopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
       List<String>? anchor,
-      @JsonKey(name: '_anchor') List<Element>? anchorElement});
+      @JsonKey(name: '_anchor') List<Element?>? anchorElement});
 
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get titleElement;
@@ -26906,7 +26906,7 @@ class _$ImplementationGuidePage1CopyWithImpl<$Res>
       anchor: anchor == freezed ? _value.anchor : anchor as List<String>?,
       anchorElement: anchorElement == freezed
           ? _value.anchorElement
-          : anchorElement as List<Element>?,
+          : anchorElement as List<Element?>?,
     ));
   }
 
@@ -26949,7 +26949,7 @@ abstract class _$ImplementationGuidePage1CopyWith<$Res>
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
       List<String>? anchor,
-      @JsonKey(name: '_anchor') List<Element>? anchorElement});
+      @JsonKey(name: '_anchor') List<Element?>? anchorElement});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -26999,7 +26999,7 @@ class __$ImplementationGuidePage1CopyWithImpl<$Res>
       anchor: anchor == freezed ? _value.anchor : anchor as List<String>?,
       anchorElement: anchorElement == freezed
           ? _value.anchorElement
-          : anchorElement as List<Element>?,
+          : anchorElement as List<Element?>?,
     ));
   }
 }
@@ -27044,7 +27044,7 @@ class _$_ImplementationGuidePage1 extends _ImplementationGuidePage1 {
   final List<String>? anchor;
   @override
   @JsonKey(name: '_anchor')
-  final List<Element>? anchorElement;
+  final List<Element?>? anchorElement;
 
   @override
   String toString() {
@@ -27116,7 +27116,7 @@ abstract class _ImplementationGuidePage1 extends ImplementationGuidePage1 {
           String? title,
           @JsonKey(name: '_title') Element? titleElement,
           List<String>? anchor,
-          @JsonKey(name: '_anchor') List<Element>? anchorElement}) =
+          @JsonKey(name: '_anchor') List<Element?>? anchorElement}) =
       _$_ImplementationGuidePage1;
 
   factory _ImplementationGuidePage1.fromJson(Map<String, dynamic> json) =
@@ -27143,7 +27143,7 @@ abstract class _ImplementationGuidePage1 extends ImplementationGuidePage1 {
   List<String>? get anchor;
   @override
   @JsonKey(name: '_anchor')
-  List<Element>? get anchorElement;
+  List<Element?>? get anchorElement;
   @override
   @JsonKey(ignore: true)
   _$ImplementationGuidePage1CopyWith<_ImplementationGuidePage1> get copyWith;
@@ -29498,7 +29498,7 @@ class _$OperationDefinitionTearOff {
       Canonical? base,
       List<Code>? resource,
       @JsonKey(name: '_resource')
-          List<Element>? resourceElement,
+          List<Element?>? resourceElement,
       Boolean? system,
       @JsonKey(name: '_system')
           Element? systemElement,
@@ -29653,7 +29653,7 @@ mixin _$OperationDefinition {
   Canonical? get base;
   List<Code>? get resource;
   @JsonKey(name: '_resource')
-  List<Element>? get resourceElement;
+  List<Element?>? get resourceElement;
   Boolean? get system;
   @JsonKey(name: '_system')
   Element? get systemElement;
@@ -29748,7 +29748,7 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       Canonical? base,
       List<Code>? resource,
       @JsonKey(name: '_resource')
-          List<Element>? resourceElement,
+          List<Element?>? resourceElement,
       Boolean? system,
       @JsonKey(name: '_system')
           Element? systemElement,
@@ -29962,7 +29962,7 @@ class _$OperationDefinitionCopyWithImpl<$Res>
       resource: resource == freezed ? _value.resource : resource as List<Code>?,
       resourceElement: resourceElement == freezed
           ? _value.resourceElement
-          : resourceElement as List<Element>?,
+          : resourceElement as List<Element?>?,
       system: system == freezed ? _value.system : system as Boolean?,
       systemElement: systemElement == freezed
           ? _value.systemElement
@@ -30309,7 +30309,7 @@ abstract class _$OperationDefinitionCopyWith<$Res>
       Canonical? base,
       List<Code>? resource,
       @JsonKey(name: '_resource')
-          List<Element>? resourceElement,
+          List<Element?>? resourceElement,
       Boolean? system,
       @JsonKey(name: '_system')
           Element? systemElement,
@@ -30547,7 +30547,7 @@ class __$OperationDefinitionCopyWithImpl<$Res>
       resource: resource == freezed ? _value.resource : resource as List<Code>?,
       resourceElement: resourceElement == freezed
           ? _value.resourceElement
-          : resourceElement as List<Element>?,
+          : resourceElement as List<Element?>?,
       system: system == freezed ? _value.system : system as Boolean?,
       systemElement: systemElement == freezed
           ? _value.systemElement
@@ -30785,7 +30785,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   final List<Code>? resource;
   @override
   @JsonKey(name: '_resource')
-  final List<Element>? resourceElement;
+  final List<Element?>? resourceElement;
   @override
   final Boolean? system;
   @override
@@ -31068,7 +31068,7 @@ abstract class _OperationDefinition extends OperationDefinition {
       Canonical? base,
       List<Code>? resource,
       @JsonKey(name: '_resource')
-          List<Element>? resourceElement,
+          List<Element?>? resourceElement,
       Boolean? system,
       @JsonKey(name: '_system')
           Element? systemElement,
@@ -31203,7 +31203,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   List<Code>? get resource;
   @override
   @JsonKey(name: '_resource')
-  List<Element>? get resourceElement;
+  List<Element?>? get resourceElement;
   @override
   Boolean? get system;
   @override
@@ -32673,7 +32673,7 @@ class _$OperationDefinitionOverloadTearOff {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<String>? parameterName,
-      @JsonKey(name: '_parameterName') List<Element>? parameterNameElement,
+      @JsonKey(name: '_parameterName') List<Element?>? parameterNameElement,
       String? comment,
       @JsonKey(name: '_comment') Element? commentElement}) {
     return _OperationDefinitionOverload(
@@ -32703,7 +32703,7 @@ mixin _$OperationDefinitionOverload {
   List<FhirExtension>? get modifierExtension;
   List<String>? get parameterName;
   @JsonKey(name: '_parameterName')
-  List<Element>? get parameterNameElement;
+  List<Element?>? get parameterNameElement;
   String? get comment;
   @JsonKey(name: '_comment')
   Element? get commentElement;
@@ -32725,7 +32725,7 @@ abstract class $OperationDefinitionOverloadCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<String>? parameterName,
-      @JsonKey(name: '_parameterName') List<Element>? parameterNameElement,
+      @JsonKey(name: '_parameterName') List<Element?>? parameterNameElement,
       String? comment,
       @JsonKey(name: '_comment') Element? commentElement});
 
@@ -32764,7 +32764,7 @@ class _$OperationDefinitionOverloadCopyWithImpl<$Res>
           : parameterName as List<String>?,
       parameterNameElement: parameterNameElement == freezed
           ? _value.parameterNameElement
-          : parameterNameElement as List<Element>?,
+          : parameterNameElement as List<Element?>?,
       comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
@@ -32797,7 +32797,7 @@ abstract class _$OperationDefinitionOverloadCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<String>? parameterName,
-      @JsonKey(name: '_parameterName') List<Element>? parameterNameElement,
+      @JsonKey(name: '_parameterName') List<Element?>? parameterNameElement,
       String? comment,
       @JsonKey(name: '_comment') Element? commentElement});
 
@@ -32841,7 +32841,7 @@ class __$OperationDefinitionOverloadCopyWithImpl<$Res>
           : parameterName as List<String>?,
       parameterNameElement: parameterNameElement == freezed
           ? _value.parameterNameElement
-          : parameterNameElement as List<Element>?,
+          : parameterNameElement as List<Element?>?,
       comment: comment == freezed ? _value.comment : comment as String?,
       commentElement: commentElement == freezed
           ? _value.commentElement
@@ -32878,7 +32878,7 @@ class _$_OperationDefinitionOverload extends _OperationDefinitionOverload {
   final List<String>? parameterName;
   @override
   @JsonKey(name: '_parameterName')
-  final List<Element>? parameterNameElement;
+  final List<Element?>? parameterNameElement;
   @override
   final String? comment;
   @override
@@ -32947,7 +32947,7 @@ abstract class _OperationDefinitionOverload
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
           List<FhirExtension>? modifierExtension,
           List<String>? parameterName,
-          @JsonKey(name: '_parameterName') List<Element>? parameterNameElement,
+          @JsonKey(name: '_parameterName') List<Element?>? parameterNameElement,
           String? comment,
           @JsonKey(name: '_comment') Element? commentElement}) =
       _$_OperationDefinitionOverload;
@@ -32966,7 +32966,7 @@ abstract class _OperationDefinitionOverload
   List<String>? get parameterName;
   @override
   @JsonKey(name: '_parameterName')
-  List<Element>? get parameterNameElement;
+  List<Element?>? get parameterNameElement;
   @override
   String? get comment;
   @override
@@ -33046,7 +33046,7 @@ class _$SearchParameterTearOff {
           Element? codeElement,
       List<Code>? base,
       @JsonKey(name: '_base')
-          List<Element>? baseElement,
+          List<Element?>? baseElement,
       @JsonKey(unknownEnumValue: SearchParameterType.unknown)
           SearchParameterType? type,
       @JsonKey(name: '_type')
@@ -33063,7 +33063,7 @@ class _$SearchParameterTearOff {
           Element? xpathUsageElement,
       List<Code>? target,
       @JsonKey(name: '_target')
-          List<Element>? targetElement,
+          List<Element?>? targetElement,
       Boolean? multipleOr,
       @JsonKey(name: '_multipleOr')
           Element? multipleOrElement,
@@ -33072,13 +33072,13 @@ class _$SearchParameterTearOff {
           Element? multipleAndElement,
       List<SearchParameterComparator>? comparator,
       @JsonKey(name: '_comparator')
-          List<Element>? comparatorElement,
+          List<Element?>? comparatorElement,
       List<SearchParameterModifier>? modifier,
       @JsonKey(name: '_modifier')
-          List<Element>? modifierElement,
+          List<Element?>? modifierElement,
       List<String>? chain,
       @JsonKey(name: '_chain')
-          List<Element>? chainElement,
+          List<Element?>? chainElement,
       List<SearchParameterComponent>? component}) {
     return _SearchParameter(
       resourceType: resourceType,
@@ -33216,7 +33216,7 @@ mixin _$SearchParameter {
   Element? get codeElement;
   List<Code>? get base;
   @JsonKey(name: '_base')
-  List<Element>? get baseElement;
+  List<Element?>? get baseElement;
   @JsonKey(unknownEnumValue: SearchParameterType.unknown)
   SearchParameterType? get type;
   @JsonKey(name: '_type')
@@ -33233,7 +33233,7 @@ mixin _$SearchParameter {
   Element? get xpathUsageElement;
   List<Code>? get target;
   @JsonKey(name: '_target')
-  List<Element>? get targetElement;
+  List<Element?>? get targetElement;
   Boolean? get multipleOr;
   @JsonKey(name: '_multipleOr')
   Element? get multipleOrElement;
@@ -33242,13 +33242,13 @@ mixin _$SearchParameter {
   Element? get multipleAndElement;
   List<SearchParameterComparator>? get comparator;
   @JsonKey(name: '_comparator')
-  List<Element>? get comparatorElement;
+  List<Element?>? get comparatorElement;
   List<SearchParameterModifier>? get modifier;
   @JsonKey(name: '_modifier')
-  List<Element>? get modifierElement;
+  List<Element?>? get modifierElement;
   List<String>? get chain;
   @JsonKey(name: '_chain')
-  List<Element>? get chainElement;
+  List<Element?>? get chainElement;
   List<SearchParameterComponent>? get component;
 
   Map<String, dynamic> toJson();
@@ -33321,7 +33321,7 @@ abstract class $SearchParameterCopyWith<$Res> {
           Element? codeElement,
       List<Code>? base,
       @JsonKey(name: '_base')
-          List<Element>? baseElement,
+          List<Element?>? baseElement,
       @JsonKey(unknownEnumValue: SearchParameterType.unknown)
           SearchParameterType? type,
       @JsonKey(name: '_type')
@@ -33338,7 +33338,7 @@ abstract class $SearchParameterCopyWith<$Res> {
           Element? xpathUsageElement,
       List<Code>? target,
       @JsonKey(name: '_target')
-          List<Element>? targetElement,
+          List<Element?>? targetElement,
       Boolean? multipleOr,
       @JsonKey(name: '_multipleOr')
           Element? multipleOrElement,
@@ -33347,13 +33347,13 @@ abstract class $SearchParameterCopyWith<$Res> {
           Element? multipleAndElement,
       List<SearchParameterComparator>? comparator,
       @JsonKey(name: '_comparator')
-          List<Element>? comparatorElement,
+          List<Element?>? comparatorElement,
       List<SearchParameterModifier>? modifier,
       @JsonKey(name: '_modifier')
-          List<Element>? modifierElement,
+          List<Element?>? modifierElement,
       List<String>? chain,
       @JsonKey(name: '_chain')
-          List<Element>? chainElement,
+          List<Element?>? chainElement,
       List<SearchParameterComponent>? component});
 
   $MetaCopyWith<$Res>? get meta;
@@ -33548,7 +33548,7 @@ class _$SearchParameterCopyWithImpl<$Res>
       base: base == freezed ? _value.base : base as List<Code>?,
       baseElement: baseElement == freezed
           ? _value.baseElement
-          : baseElement as List<Element>?,
+          : baseElement as List<Element?>?,
       type: type == freezed ? _value.type : type as SearchParameterType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -33570,7 +33570,7 @@ class _$SearchParameterCopyWithImpl<$Res>
       target: target == freezed ? _value.target : target as List<Code>?,
       targetElement: targetElement == freezed
           ? _value.targetElement
-          : targetElement as List<Element>?,
+          : targetElement as List<Element?>?,
       multipleOr:
           multipleOr == freezed ? _value.multipleOr : multipleOr as Boolean?,
       multipleOrElement: multipleOrElement == freezed
@@ -33586,17 +33586,17 @@ class _$SearchParameterCopyWithImpl<$Res>
           : comparator as List<SearchParameterComparator>?,
       comparatorElement: comparatorElement == freezed
           ? _value.comparatorElement
-          : comparatorElement as List<Element>?,
+          : comparatorElement as List<Element?>?,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<SearchParameterModifier>?,
       modifierElement: modifierElement == freezed
           ? _value.modifierElement
-          : modifierElement as List<Element>?,
+          : modifierElement as List<Element?>?,
       chain: chain == freezed ? _value.chain : chain as List<String>?,
       chainElement: chainElement == freezed
           ? _value.chainElement
-          : chainElement as List<Element>?,
+          : chainElement as List<Element?>?,
       component: component == freezed
           ? _value.component
           : component as List<SearchParameterComponent>?,
@@ -33913,7 +33913,7 @@ abstract class _$SearchParameterCopyWith<$Res>
           Element? codeElement,
       List<Code>? base,
       @JsonKey(name: '_base')
-          List<Element>? baseElement,
+          List<Element?>? baseElement,
       @JsonKey(unknownEnumValue: SearchParameterType.unknown)
           SearchParameterType? type,
       @JsonKey(name: '_type')
@@ -33930,7 +33930,7 @@ abstract class _$SearchParameterCopyWith<$Res>
           Element? xpathUsageElement,
       List<Code>? target,
       @JsonKey(name: '_target')
-          List<Element>? targetElement,
+          List<Element?>? targetElement,
       Boolean? multipleOr,
       @JsonKey(name: '_multipleOr')
           Element? multipleOrElement,
@@ -33939,13 +33939,13 @@ abstract class _$SearchParameterCopyWith<$Res>
           Element? multipleAndElement,
       List<SearchParameterComparator>? comparator,
       @JsonKey(name: '_comparator')
-          List<Element>? comparatorElement,
+          List<Element?>? comparatorElement,
       List<SearchParameterModifier>? modifier,
       @JsonKey(name: '_modifier')
-          List<Element>? modifierElement,
+          List<Element?>? modifierElement,
       List<String>? chain,
       @JsonKey(name: '_chain')
-          List<Element>? chainElement,
+          List<Element?>? chainElement,
       List<SearchParameterComponent>? component});
 
   @override
@@ -34164,7 +34164,7 @@ class __$SearchParameterCopyWithImpl<$Res>
       base: base == freezed ? _value.base : base as List<Code>?,
       baseElement: baseElement == freezed
           ? _value.baseElement
-          : baseElement as List<Element>?,
+          : baseElement as List<Element?>?,
       type: type == freezed ? _value.type : type as SearchParameterType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -34186,7 +34186,7 @@ class __$SearchParameterCopyWithImpl<$Res>
       target: target == freezed ? _value.target : target as List<Code>?,
       targetElement: targetElement == freezed
           ? _value.targetElement
-          : targetElement as List<Element>?,
+          : targetElement as List<Element?>?,
       multipleOr:
           multipleOr == freezed ? _value.multipleOr : multipleOr as Boolean?,
       multipleOrElement: multipleOrElement == freezed
@@ -34202,17 +34202,17 @@ class __$SearchParameterCopyWithImpl<$Res>
           : comparator as List<SearchParameterComparator>?,
       comparatorElement: comparatorElement == freezed
           ? _value.comparatorElement
-          : comparatorElement as List<Element>?,
+          : comparatorElement as List<Element?>?,
       modifier: modifier == freezed
           ? _value.modifier
           : modifier as List<SearchParameterModifier>?,
       modifierElement: modifierElement == freezed
           ? _value.modifierElement
-          : modifierElement as List<Element>?,
+          : modifierElement as List<Element?>?,
       chain: chain == freezed ? _value.chain : chain as List<String>?,
       chainElement: chainElement == freezed
           ? _value.chainElement
-          : chainElement as List<Element>?,
+          : chainElement as List<Element?>?,
       component: component == freezed
           ? _value.component
           : component as List<SearchParameterComponent>?,
@@ -34424,7 +34424,7 @@ class _$_SearchParameter extends _SearchParameter {
   final List<Code>? base;
   @override
   @JsonKey(name: '_base')
-  final List<Element>? baseElement;
+  final List<Element?>? baseElement;
   @override
   @JsonKey(unknownEnumValue: SearchParameterType.unknown)
   final SearchParameterType? type;
@@ -34451,7 +34451,7 @@ class _$_SearchParameter extends _SearchParameter {
   final List<Code>? target;
   @override
   @JsonKey(name: '_target')
-  final List<Element>? targetElement;
+  final List<Element?>? targetElement;
   @override
   final Boolean? multipleOr;
   @override
@@ -34466,17 +34466,17 @@ class _$_SearchParameter extends _SearchParameter {
   final List<SearchParameterComparator>? comparator;
   @override
   @JsonKey(name: '_comparator')
-  final List<Element>? comparatorElement;
+  final List<Element?>? comparatorElement;
   @override
   final List<SearchParameterModifier>? modifier;
   @override
   @JsonKey(name: '_modifier')
-  final List<Element>? modifierElement;
+  final List<Element?>? modifierElement;
   @override
   final List<String>? chain;
   @override
   @JsonKey(name: '_chain')
-  final List<Element>? chainElement;
+  final List<Element?>? chainElement;
   @override
   final List<SearchParameterComponent>? component;
 
@@ -34737,7 +34737,7 @@ abstract class _SearchParameter extends SearchParameter {
           Element? codeElement,
       List<Code>? base,
       @JsonKey(name: '_base')
-          List<Element>? baseElement,
+          List<Element?>? baseElement,
       @JsonKey(unknownEnumValue: SearchParameterType.unknown)
           SearchParameterType? type,
       @JsonKey(name: '_type')
@@ -34754,7 +34754,7 @@ abstract class _SearchParameter extends SearchParameter {
           Element? xpathUsageElement,
       List<Code>? target,
       @JsonKey(name: '_target')
-          List<Element>? targetElement,
+          List<Element?>? targetElement,
       Boolean? multipleOr,
       @JsonKey(name: '_multipleOr')
           Element? multipleOrElement,
@@ -34763,13 +34763,13 @@ abstract class _SearchParameter extends SearchParameter {
           Element? multipleAndElement,
       List<SearchParameterComparator>? comparator,
       @JsonKey(name: '_comparator')
-          List<Element>? comparatorElement,
+          List<Element?>? comparatorElement,
       List<SearchParameterModifier>? modifier,
       @JsonKey(name: '_modifier')
-          List<Element>? modifierElement,
+          List<Element?>? modifierElement,
       List<String>? chain,
       @JsonKey(name: '_chain')
-          List<Element>? chainElement,
+          List<Element?>? chainElement,
       List<SearchParameterComponent>? component}) = _$_SearchParameter;
 
   factory _SearchParameter.fromJson(Map<String, dynamic> json) =
@@ -34876,7 +34876,7 @@ abstract class _SearchParameter extends SearchParameter {
   List<Code>? get base;
   @override
   @JsonKey(name: '_base')
-  List<Element>? get baseElement;
+  List<Element?>? get baseElement;
   @override
   @JsonKey(unknownEnumValue: SearchParameterType.unknown)
   SearchParameterType? get type;
@@ -34903,7 +34903,7 @@ abstract class _SearchParameter extends SearchParameter {
   List<Code>? get target;
   @override
   @JsonKey(name: '_target')
-  List<Element>? get targetElement;
+  List<Element?>? get targetElement;
   @override
   Boolean? get multipleOr;
   @override
@@ -34918,17 +34918,17 @@ abstract class _SearchParameter extends SearchParameter {
   List<SearchParameterComparator>? get comparator;
   @override
   @JsonKey(name: '_comparator')
-  List<Element>? get comparatorElement;
+  List<Element?>? get comparatorElement;
   @override
   List<SearchParameterModifier>? get modifier;
   @override
   @JsonKey(name: '_modifier')
-  List<Element>? get modifierElement;
+  List<Element?>? get modifierElement;
   @override
   List<String>? get chain;
   @override
   @JsonKey(name: '_chain')
-  List<Element>? get chainElement;
+  List<Element?>? get chainElement;
   @override
   List<SearchParameterComponent>? get component;
   @override
@@ -35302,7 +35302,7 @@ class _$StructureDefinitionTearOff {
       List<StructureDefinitionContext>? context,
       List<String>? contextInvariant,
       @JsonKey(name: '_contextInvariant')
-          List<Element>? contextInvariantElement,
+          List<Element?>? contextInvariantElement,
       FhirUri? type,
       @JsonKey(name: '_type')
           Element? typeElement,
@@ -35452,7 +35452,7 @@ mixin _$StructureDefinition {
   List<StructureDefinitionContext>? get context;
   List<String>? get contextInvariant;
   @JsonKey(name: '_contextInvariant')
-  List<Element>? get contextInvariantElement;
+  List<Element?>? get contextInvariantElement;
   FhirUri? get type;
   @JsonKey(name: '_type')
   Element? get typeElement;
@@ -35545,7 +35545,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       List<StructureDefinitionContext>? context,
       List<String>? contextInvariant,
       @JsonKey(name: '_contextInvariant')
-          List<Element>? contextInvariantElement,
+          List<Element?>? contextInvariantElement,
       FhirUri? type,
       @JsonKey(name: '_type')
           Element? typeElement,
@@ -35759,7 +35759,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
           : contextInvariant as List<String>?,
       contextInvariantElement: contextInvariantElement == freezed
           ? _value.contextInvariantElement
-          : contextInvariantElement as List<Element>?,
+          : contextInvariantElement as List<Element?>?,
       type: type == freezed ? _value.type : type as FhirUri?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -36104,7 +36104,7 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       List<StructureDefinitionContext>? context,
       List<String>? contextInvariant,
       @JsonKey(name: '_contextInvariant')
-          List<Element>? contextInvariantElement,
+          List<Element?>? contextInvariantElement,
       FhirUri? type,
       @JsonKey(name: '_type')
           Element? typeElement,
@@ -36342,7 +36342,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
           : contextInvariant as List<String>?,
       contextInvariantElement: contextInvariantElement == freezed
           ? _value.contextInvariantElement
-          : contextInvariantElement as List<Element>?,
+          : contextInvariantElement as List<Element?>?,
       type: type == freezed ? _value.type : type as FhirUri?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -36574,7 +36574,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   final List<String>? contextInvariant;
   @override
   @JsonKey(name: '_contextInvariant')
-  final List<Element>? contextInvariantElement;
+  final List<Element?>? contextInvariantElement;
   @override
   final FhirUri? type;
   @override
@@ -36846,7 +36846,7 @@ abstract class _StructureDefinition extends StructureDefinition {
       List<StructureDefinitionContext>? context,
       List<String>? contextInvariant,
       @JsonKey(name: '_contextInvariant')
-          List<Element>? contextInvariantElement,
+          List<Element?>? contextInvariantElement,
       FhirUri? type,
       @JsonKey(name: '_type')
           Element? typeElement,
@@ -36979,7 +36979,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   List<String>? get contextInvariant;
   @override
   @JsonKey(name: '_contextInvariant')
-  List<Element>? get contextInvariantElement;
+  List<Element?>? get contextInvariantElement;
   @override
   FhirUri? get type;
   @override
@@ -44610,7 +44610,7 @@ class _$StructureMapTargetTearOff {
           Element? variableElement,
       List<StructureMapTargetListMode>? listMode,
       @JsonKey(name: '_listMode')
-          List<Element>? listModeElement,
+          List<Element?>? listModeElement,
       Id? listRuleId,
       @JsonKey(name: '_listRuleId')
           Element? listRuleIdElement,
@@ -44670,7 +44670,7 @@ mixin _$StructureMapTarget {
   Element? get variableElement;
   List<StructureMapTargetListMode>? get listMode;
   @JsonKey(name: '_listMode')
-  List<Element>? get listModeElement;
+  List<Element?>? get listModeElement;
   Id? get listRuleId;
   @JsonKey(name: '_listRuleId')
   Element? get listRuleIdElement;
@@ -44710,7 +44710,7 @@ abstract class $StructureMapTargetCopyWith<$Res> {
           Element? variableElement,
       List<StructureMapTargetListMode>? listMode,
       @JsonKey(name: '_listMode')
-          List<Element>? listModeElement,
+          List<Element?>? listModeElement,
       Id? listRuleId,
       @JsonKey(name: '_listRuleId')
           Element? listRuleIdElement,
@@ -44789,7 +44789,7 @@ class _$StructureMapTargetCopyWithImpl<$Res>
           : listMode as List<StructureMapTargetListMode>?,
       listModeElement: listModeElement == freezed
           ? _value.listModeElement
-          : listModeElement as List<Element>?,
+          : listModeElement as List<Element?>?,
       listRuleId: listRuleId == freezed ? _value.listRuleId : listRuleId as Id?,
       listRuleIdElement: listRuleIdElement == freezed
           ? _value.listRuleIdElement
@@ -44900,7 +44900,7 @@ abstract class _$StructureMapTargetCopyWith<$Res>
           Element? variableElement,
       List<StructureMapTargetListMode>? listMode,
       @JsonKey(name: '_listMode')
-          List<Element>? listModeElement,
+          List<Element?>? listModeElement,
       Id? listRuleId,
       @JsonKey(name: '_listRuleId')
           Element? listRuleIdElement,
@@ -44987,7 +44987,7 @@ class __$StructureMapTargetCopyWithImpl<$Res>
           : listMode as List<StructureMapTargetListMode>?,
       listModeElement: listModeElement == freezed
           ? _value.listModeElement
-          : listModeElement as List<Element>?,
+          : listModeElement as List<Element?>?,
       listRuleId: listRuleId == freezed ? _value.listRuleId : listRuleId as Id?,
       listRuleIdElement: listRuleIdElement == freezed
           ? _value.listRuleIdElement
@@ -45075,7 +45075,7 @@ class _$_StructureMapTarget extends _StructureMapTarget {
   final List<StructureMapTargetListMode>? listMode;
   @override
   @JsonKey(name: '_listMode')
-  final List<Element>? listModeElement;
+  final List<Element?>? listModeElement;
   @override
   final Id? listRuleId;
   @override
@@ -45209,7 +45209,7 @@ abstract class _StructureMapTarget extends StructureMapTarget {
           Element? variableElement,
       List<StructureMapTargetListMode>? listMode,
       @JsonKey(name: '_listMode')
-          List<Element>? listModeElement,
+          List<Element?>? listModeElement,
       Id? listRuleId,
       @JsonKey(name: '_listRuleId')
           Element? listRuleIdElement,
@@ -45254,7 +45254,7 @@ abstract class _StructureMapTarget extends StructureMapTarget {
   List<StructureMapTargetListMode>? get listMode;
   @override
   @JsonKey(name: '_listMode')
-  List<Element>? get listModeElement;
+  List<Element?>? get listModeElement;
   @override
   Id? get listRuleId;
   @override
@@ -45802,7 +45802,7 @@ class _$StructureMapDependentTearOff {
       Id? name,
       @JsonKey(name: '_name') Element? nameElement,
       List<String>? variable,
-      @JsonKey(name: '_variable') List<Element>? variableElement}) {
+      @JsonKey(name: '_variable') List<Element?>? variableElement}) {
     return _StructureMapDependent(
       id: id,
       extension_: extension_,
@@ -45833,7 +45833,7 @@ mixin _$StructureMapDependent {
   Element? get nameElement;
   List<String>? get variable;
   @JsonKey(name: '_variable')
-  List<Element>? get variableElement;
+  List<Element?>? get variableElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -45852,7 +45852,7 @@ abstract class $StructureMapDependentCopyWith<$Res> {
       Id? name,
       @JsonKey(name: '_name') Element? nameElement,
       List<String>? variable,
-      @JsonKey(name: '_variable') List<Element>? variableElement});
+      @JsonKey(name: '_variable') List<Element?>? variableElement});
 
   $ElementCopyWith<$Res>? get nameElement;
 }
@@ -45891,7 +45891,7 @@ class _$StructureMapDependentCopyWithImpl<$Res>
           variable == freezed ? _value.variable : variable as List<String>?,
       variableElement: variableElement == freezed
           ? _value.variableElement
-          : variableElement as List<Element>?,
+          : variableElement as List<Element?>?,
     ));
   }
 
@@ -45921,7 +45921,7 @@ abstract class _$StructureMapDependentCopyWith<$Res>
       Id? name,
       @JsonKey(name: '_name') Element? nameElement,
       List<String>? variable,
-      @JsonKey(name: '_variable') List<Element>? variableElement});
+      @JsonKey(name: '_variable') List<Element?>? variableElement});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -45963,7 +45963,7 @@ class __$StructureMapDependentCopyWithImpl<$Res>
           variable == freezed ? _value.variable : variable as List<String>?,
       variableElement: variableElement == freezed
           ? _value.variableElement
-          : variableElement as List<Element>?,
+          : variableElement as List<Element?>?,
     ));
   }
 }
@@ -46001,7 +46001,7 @@ class _$_StructureMapDependent extends _StructureMapDependent {
   final List<String>? variable;
   @override
   @JsonKey(name: '_variable')
-  final List<Element>? variableElement;
+  final List<Element?>? variableElement;
 
   @override
   String toString() {
@@ -46065,7 +46065,7 @@ abstract class _StructureMapDependent extends StructureMapDependent {
           Id? name,
           @JsonKey(name: '_name') Element? nameElement,
           List<String>? variable,
-          @JsonKey(name: '_variable') List<Element>? variableElement}) =
+          @JsonKey(name: '_variable') List<Element?>? variableElement}) =
       _$_StructureMapDependent;
 
   factory _StructureMapDependent.fromJson(Map<String, dynamic> json) =
@@ -46087,7 +46087,7 @@ abstract class _StructureMapDependent extends StructureMapDependent {
   List<String>? get variable;
   @override
   @JsonKey(name: '_variable')
-  List<Element>? get variableElement;
+  List<Element?>? get variableElement;
   @override
   @JsonKey(ignore: true)
   _$StructureMapDependentCopyWith<_StructureMapDependent> get copyWith;

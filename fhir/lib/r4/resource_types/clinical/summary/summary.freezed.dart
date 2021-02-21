@@ -1831,7 +1831,7 @@ class _$AllergyIntoleranceTearOff {
           Element? typeElement,
       List<AllergyIntoleranceCategory>? category,
       @JsonKey(name: '_category')
-          List<Element>? categoryElement,
+          List<Element?>? categoryElement,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality? criticality,
       @JsonKey(name: '_criticality')
@@ -1934,7 +1934,7 @@ mixin _$AllergyIntolerance {
   Element? get typeElement;
   List<AllergyIntoleranceCategory>? get category;
   @JsonKey(name: '_category')
-  List<Element>? get categoryElement;
+  List<Element?>? get categoryElement;
   @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
   AllergyIntoleranceCriticality? get criticality;
   @JsonKey(name: '_criticality')
@@ -1997,7 +1997,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
           Element? typeElement,
       List<AllergyIntoleranceCategory>? category,
       @JsonKey(name: '_category')
-          List<Element>? categoryElement,
+          List<Element?>? categoryElement,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality? criticality,
       @JsonKey(name: '_criticality')
@@ -2140,7 +2140,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
           : category as List<AllergyIntoleranceCategory>?,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
-          : categoryElement as List<Element>?,
+          : categoryElement as List<Element?>?,
       criticality: criticality == freezed
           ? _value.criticality
           : criticality as AllergyIntoleranceCriticality?,
@@ -2437,7 +2437,7 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
           Element? typeElement,
       List<AllergyIntoleranceCategory>? category,
       @JsonKey(name: '_category')
-          List<Element>? categoryElement,
+          List<Element?>? categoryElement,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality? criticality,
       @JsonKey(name: '_criticality')
@@ -2602,7 +2602,7 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
           : category as List<AllergyIntoleranceCategory>?,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
-          : categoryElement as List<Element>?,
+          : categoryElement as List<Element?>?,
       criticality: criticality == freezed
           ? _value.criticality
           : criticality as AllergyIntoleranceCriticality?,
@@ -2754,7 +2754,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   final List<AllergyIntoleranceCategory>? category;
   @override
   @JsonKey(name: '_category')
-  final List<Element>? categoryElement;
+  final List<Element?>? categoryElement;
   @override
   @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
   final AllergyIntoleranceCriticality? criticality;
@@ -2974,7 +2974,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
           Element? typeElement,
       List<AllergyIntoleranceCategory>? category,
       @JsonKey(name: '_category')
-          List<Element>? categoryElement,
+          List<Element?>? categoryElement,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality? criticality,
       @JsonKey(name: '_criticality')
@@ -3047,7 +3047,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   List<AllergyIntoleranceCategory>? get category;
   @override
   @JsonKey(name: '_category')
-  List<Element>? get categoryElement;
+  List<Element?>? get categoryElement;
   @override
   @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
   AllergyIntoleranceCriticality? get criticality;
@@ -3678,7 +3678,7 @@ class _$ClinicalImpressionTearOff {
       List<ClinicalImpressionInvestigation>? investigation,
       List<FhirUri>? protocol,
       @JsonKey(name: '_protocol')
-          List<Element>? protocolElement,
+          List<Element?>? protocolElement,
       String? summary,
       @JsonKey(name: '_summary')
           Element? summaryElement,
@@ -3778,7 +3778,7 @@ mixin _$ClinicalImpression {
   List<ClinicalImpressionInvestigation>? get investigation;
   List<FhirUri>? get protocol;
   @JsonKey(name: '_protocol')
-  List<Element>? get protocolElement;
+  List<Element?>? get protocolElement;
   String? get summary;
   @JsonKey(name: '_summary')
   Element? get summaryElement;
@@ -3838,7 +3838,7 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
       List<ClinicalImpressionInvestigation>? investigation,
       List<FhirUri>? protocol,
       @JsonKey(name: '_protocol')
-          List<Element>? protocolElement,
+          List<Element?>? protocolElement,
       String? summary,
       @JsonKey(name: '_summary')
           Element? summaryElement,
@@ -3984,7 +3984,7 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
           protocol == freezed ? _value.protocol : protocol as List<FhirUri>?,
       protocolElement: protocolElement == freezed
           ? _value.protocolElement
-          : protocolElement as List<Element>?,
+          : protocolElement as List<Element?>?,
       summary: summary == freezed ? _value.summary : summary as String?,
       summaryElement: summaryElement == freezed
           ? _value.summaryElement
@@ -4225,7 +4225,7 @@ abstract class _$ClinicalImpressionCopyWith<$Res>
       List<ClinicalImpressionInvestigation>? investigation,
       List<FhirUri>? protocol,
       @JsonKey(name: '_protocol')
-          List<Element>? protocolElement,
+          List<Element?>? protocolElement,
       String? summary,
       @JsonKey(name: '_summary')
           Element? summaryElement,
@@ -4389,7 +4389,7 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
           protocol == freezed ? _value.protocol : protocol as List<FhirUri>?,
       protocolElement: protocolElement == freezed
           ? _value.protocolElement
-          : protocolElement as List<Element>?,
+          : protocolElement as List<Element?>?,
       summary: summary == freezed ? _value.summary : summary as String?,
       summaryElement: summaryElement == freezed
           ? _value.summaryElement
@@ -4539,7 +4539,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
   final List<FhirUri>? protocol;
   @override
   @JsonKey(name: '_protocol')
-  final List<Element>? protocolElement;
+  final List<Element?>? protocolElement;
   @override
   final String? summary;
   @override
@@ -4742,7 +4742,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
       List<ClinicalImpressionInvestigation>? investigation,
       List<FhirUri>? protocol,
       @JsonKey(name: '_protocol')
-          List<Element>? protocolElement,
+          List<Element?>? protocolElement,
       String? summary,
       @JsonKey(name: '_summary')
           Element? summaryElement,
@@ -4825,7 +4825,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   List<FhirUri>? get protocol;
   @override
   @JsonKey(name: '_protocol')
-  List<Element>? get protocolElement;
+  List<Element?>? get protocolElement;
   @override
   String? get summary;
   @override
@@ -8929,7 +8929,7 @@ class _$FamilyMemberHistoryTearOff {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
           FamilyMemberHistoryStatus? status,
       @JsonKey(name: '_status')
@@ -9055,7 +9055,7 @@ mixin _$FamilyMemberHistory {
   List<Canonical>? get instantiatesCanonical;
   List<FhirUri>? get instantiatesUri;
   @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement;
+  List<Element?>? get instantiatesUriElement;
   @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
   FamilyMemberHistoryStatus? get status;
   @JsonKey(name: '_status')
@@ -9131,7 +9131,7 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
           FamilyMemberHistoryStatus? status,
       @JsonKey(name: '_status')
@@ -9299,7 +9299,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as List<Element>?,
+          : instantiatesUriElement as List<Element?>?,
       status: status == freezed
           ? _value.status
           : status as FamilyMemberHistoryStatus?,
@@ -9651,7 +9651,7 @@ abstract class _$FamilyMemberHistoryCopyWith<$Res>
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
           FamilyMemberHistoryStatus? status,
       @JsonKey(name: '_status')
@@ -9844,7 +9844,7 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as List<Element>?,
+          : instantiatesUriElement as List<Element?>?,
       status: status == freezed
           ? _value.status
           : status as FamilyMemberHistoryStatus?,
@@ -10032,7 +10032,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   final List<FhirUri>? instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final List<Element>? instantiatesUriElement;
+  final List<Element?>? instantiatesUriElement;
   @override
   @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
   final FamilyMemberHistoryStatus? status;
@@ -10298,7 +10298,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
           FamilyMemberHistoryStatus? status,
       @JsonKey(name: '_status')
@@ -10381,7 +10381,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   List<FhirUri>? get instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement;
+  List<Element?>? get instantiatesUriElement;
   @override
   @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
   FamilyMemberHistoryStatus? get status;
@@ -11012,7 +11012,7 @@ class _$ProcedureTearOff {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Code? status,
@@ -11128,7 +11128,7 @@ mixin _$Procedure {
   List<Canonical>? get instantiatesCanonical;
   List<FhirUri>? get instantiatesUri;
   @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement;
+  List<Element?>? get instantiatesUriElement;
   List<Reference>? get basedOn;
   List<Reference>? get partOf;
   Code? get status;
@@ -11194,7 +11194,7 @@ abstract class $ProcedureCopyWith<$Res> {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Code? status,
@@ -11347,7 +11347,7 @@ class _$ProcedureCopyWithImpl<$Res> implements $ProcedureCopyWith<$Res> {
           : instantiatesUri as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as List<Element>?,
+          : instantiatesUriElement as List<Element?>?,
       basedOn:
           basedOn == freezed ? _value.basedOn : basedOn as List<Reference>?,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>?,
@@ -11656,7 +11656,7 @@ abstract class _$ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Code? status,
@@ -11829,7 +11829,7 @@ class __$ProcedureCopyWithImpl<$Res> extends _$ProcedureCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as List<Element>?,
+          : instantiatesUriElement as List<Element?>?,
       basedOn:
           basedOn == freezed ? _value.basedOn : basedOn as List<Reference>?,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>?,
@@ -12006,7 +12006,7 @@ class _$_Procedure extends _Procedure {
   final List<FhirUri>? instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final List<Element>? instantiatesUriElement;
+  final List<Element?>? instantiatesUriElement;
   @override
   final List<Reference>? basedOn;
   @override
@@ -12259,7 +12259,7 @@ abstract class _Procedure extends Procedure {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Code? status,
@@ -12333,7 +12333,7 @@ abstract class _Procedure extends Procedure {
   List<FhirUri>? get instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement;
+  List<Element?>? get instantiatesUriElement;
   @override
   List<Reference>? get basedOn;
   @override

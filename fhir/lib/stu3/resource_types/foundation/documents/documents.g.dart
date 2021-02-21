@@ -305,7 +305,8 @@ _$_CompositionAttester _$_$_CompositionAttesterFromJson(
         ?.map((e) => _$enumDecode(_$CompositionAttesterModeEnumMap, e))
         .toList(),
     modeElement: (json['_mode'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     time: json['time'] == null ? null : Time.fromJson(json['time']),
     timeElement: json['_time'] == null
@@ -329,7 +330,7 @@ Map<String, dynamic> _$_$_CompositionAttesterToJson(
 
   writeNotNull('mode',
       instance.mode?.map((e) => _$CompositionAttesterModeEnumMap[e]).toList());
-  writeNotNull('_mode', instance.modeElement?.map((e) => e.toJson()).toList());
+  writeNotNull('_mode', instance.modeElement?.map((e) => e?.toJson()).toList());
   writeNotNull('time', instance.time?.toJson());
   writeNotNull('_time', instance.timeElement?.toJson());
   writeNotNull('party', instance.party?.toJson());

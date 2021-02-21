@@ -3199,7 +3199,7 @@ class _$DeviceDefinitionTearOff {
       List<DeviceDefinitionSpecialization>? specialization,
       List<String>? version,
       @JsonKey(name: '_version')
-          List<Element>? versionElement,
+          List<Element?>? versionElement,
       List<CodeableConcept>? safety,
       List<ProductShelfLife>? shelfLifeStorage,
       ProdCharacteristic? physicalCharacteristics,
@@ -3300,7 +3300,7 @@ mixin _$DeviceDefinition {
   List<DeviceDefinitionSpecialization>? get specialization;
   List<String>? get version;
   @JsonKey(name: '_version')
-  List<Element>? get versionElement;
+  List<Element?>? get versionElement;
   List<CodeableConcept>? get safety;
   List<ProductShelfLife>? get shelfLifeStorage;
   ProdCharacteristic? get physicalCharacteristics;
@@ -3360,7 +3360,7 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
       List<DeviceDefinitionSpecialization>? specialization,
       List<String>? version,
       @JsonKey(name: '_version')
-          List<Element>? versionElement,
+          List<Element?>? versionElement,
       List<CodeableConcept>? safety,
       List<ProductShelfLife>? shelfLifeStorage,
       ProdCharacteristic? physicalCharacteristics,
@@ -3503,7 +3503,7 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as List<String>?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as List<Element>?,
+          : versionElement as List<Element?>?,
       safety:
           safety == freezed ? _value.safety : safety as List<CodeableConcept>?,
       shelfLifeStorage: shelfLifeStorage == freezed
@@ -3737,7 +3737,7 @@ abstract class _$DeviceDefinitionCopyWith<$Res>
       List<DeviceDefinitionSpecialization>? specialization,
       List<String>? version,
       @JsonKey(name: '_version')
-          List<Element>? versionElement,
+          List<Element?>? versionElement,
       List<CodeableConcept>? safety,
       List<ProductShelfLife>? shelfLifeStorage,
       ProdCharacteristic? physicalCharacteristics,
@@ -3896,7 +3896,7 @@ class __$DeviceDefinitionCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as List<String>?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as List<Element>?,
+          : versionElement as List<Element?>?,
       safety:
           safety == freezed ? _value.safety : safety as List<CodeableConcept>?,
       shelfLifeStorage: shelfLifeStorage == freezed
@@ -4048,7 +4048,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
   final List<String>? version;
   @override
   @JsonKey(name: '_version')
-  final List<Element>? versionElement;
+  final List<Element?>? versionElement;
   @override
   final List<CodeableConcept>? safety;
   @override
@@ -4260,7 +4260,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
       List<DeviceDefinitionSpecialization>? specialization,
       List<String>? version,
       @JsonKey(name: '_version')
-          List<Element>? versionElement,
+          List<Element?>? versionElement,
       List<CodeableConcept>? safety,
       List<ProductShelfLife>? shelfLifeStorage,
       ProdCharacteristic? physicalCharacteristics,
@@ -4335,7 +4335,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   List<String>? get version;
   @override
   @JsonKey(name: '_version')
-  List<Element>? get versionElement;
+  List<Element?>? get versionElement;
   @override
   List<CodeableConcept>? get safety;
   @override
@@ -12709,7 +12709,7 @@ class _$PlanDefinitionActionTearOff {
       List<RelatedArtifact>? documentation,
       List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element>? goalIdElement,
+          List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<TriggerDefinition>? trigger,
@@ -12845,7 +12845,7 @@ mixin _$PlanDefinitionAction {
   List<RelatedArtifact>? get documentation;
   List<Id>? get goalId;
   @JsonKey(name: '_goalId')
-  List<Element>? get goalIdElement;
+  List<Element?>? get goalIdElement;
   CodeableConcept? get subjectCodeableConcept;
   Reference? get subjectReference;
   List<TriggerDefinition>? get trigger;
@@ -12928,7 +12928,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       List<RelatedArtifact>? documentation,
       List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element>? goalIdElement,
+          List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<TriggerDefinition>? trigger,
@@ -13102,7 +13102,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       goalId: goalId == freezed ? _value.goalId : goalId as List<Id>?,
       goalIdElement: goalIdElement == freezed
           ? _value.goalIdElement
-          : goalIdElement as List<Element>?,
+          : goalIdElement as List<Element?>?,
       subjectCodeableConcept: subjectCodeableConcept == freezed
           ? _value.subjectCodeableConcept
           : subjectCodeableConcept as CodeableConcept?,
@@ -13461,7 +13461,7 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
       List<RelatedArtifact>? documentation,
       List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element>? goalIdElement,
+          List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<TriggerDefinition>? trigger,
@@ -13658,7 +13658,7 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
       goalId: goalId == freezed ? _value.goalId : goalId as List<Id>?,
       goalIdElement: goalIdElement == freezed
           ? _value.goalIdElement
-          : goalIdElement as List<Element>?,
+          : goalIdElement as List<Element?>?,
       subjectCodeableConcept: subjectCodeableConcept == freezed
           ? _value.subjectCodeableConcept
           : subjectCodeableConcept as CodeableConcept?,
@@ -13876,7 +13876,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   final List<Id>? goalId;
   @override
   @JsonKey(name: '_goalId')
-  final List<Element>? goalIdElement;
+  final List<Element?>? goalIdElement;
   @override
   final CodeableConcept? subjectCodeableConcept;
   @override
@@ -14155,7 +14155,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       List<RelatedArtifact>? documentation,
       List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element>? goalIdElement,
+          List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<TriggerDefinition>? trigger,
@@ -14248,7 +14248,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   List<Id>? get goalId;
   @override
   @JsonKey(name: '_goalId')
-  List<Element>? get goalIdElement;
+  List<Element?>? get goalIdElement;
   @override
   CodeableConcept? get subjectCodeableConcept;
   @override
@@ -15731,7 +15731,7 @@ class _$QuestionnaireTearOff {
           Element? experimentalElement,
       List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
@@ -15858,7 +15858,7 @@ mixin _$Questionnaire {
   Element? get experimentalElement;
   List<Code>? get subjectType;
   @JsonKey(name: '_subjectType')
-  List<Element>? get subjectTypeElement;
+  List<Element?>? get subjectTypeElement;
   FhirDateTime? get date;
   @JsonKey(name: '_date')
   Element? get dateElement;
@@ -15936,7 +15936,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
           Element? experimentalElement,
       List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
@@ -16106,7 +16106,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
           : subjectType as List<Code>?,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as List<Element>?,
+          : subjectTypeElement as List<Element?>?,
       date: date == freezed ? _value.date : date as FhirDateTime?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
@@ -16401,7 +16401,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
           Element? experimentalElement,
       List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
@@ -16591,7 +16591,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
           : subjectType as List<Code>?,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as List<Element>?,
+          : subjectTypeElement as List<Element?>?,
       date: date == freezed ? _value.date : date as FhirDateTime?,
       dateElement:
           dateElement == freezed ? _value.dateElement : dateElement as Element?,
@@ -16783,7 +16783,7 @@ class _$_Questionnaire extends _Questionnaire {
   final List<Code>? subjectType;
   @override
   @JsonKey(name: '_subjectType')
-  final List<Element>? subjectTypeElement;
+  final List<Element?>? subjectTypeElement;
   @override
   final FhirDateTime? date;
   @override
@@ -17036,7 +17036,7 @@ abstract class _Questionnaire extends Questionnaire {
           Element? experimentalElement,
       List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
@@ -17133,7 +17133,7 @@ abstract class _Questionnaire extends Questionnaire {
   List<Code>? get subjectType;
   @override
   @JsonKey(name: '_subjectType')
-  List<Element>? get subjectTypeElement;
+  List<Element?>? get subjectTypeElement;
   @override
   FhirDateTime? get date;
   @override

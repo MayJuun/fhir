@@ -1223,13 +1223,15 @@ _$_OperationOutcomeIssue _$_$_OperationOutcomeIssueFromJson(
     location:
         (json['location'] as List<dynamic>?)?.map((e) => e as String).toList(),
     locationElement: (json['_location'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     expression: (json['expression'] as List<dynamic>?)
         ?.map((e) => e as String)
         .toList(),
     expressionElement: (json['_expression'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1254,10 +1256,10 @@ Map<String, dynamic> _$_$_OperationOutcomeIssueToJson(
   writeNotNull('_diagnostics', instance.diagnosticsElement?.toJson());
   writeNotNull('location', instance.location);
   writeNotNull(
-      '_location', instance.locationElement?.map((e) => e.toJson()).toList());
+      '_location', instance.locationElement?.map((e) => e?.toJson()).toList());
   writeNotNull('expression', instance.expression);
   writeNotNull('_expression',
-      instance.expressionElement?.map((e) => e.toJson()).toList());
+      instance.expressionElement?.map((e) => e?.toJson()).toList());
   return val;
 }
 
@@ -1806,7 +1808,8 @@ _$_SubscriptionChannel _$_$_SubscriptionChannelFromJson(
     header:
         (json['header'] as List<dynamic>?)?.map((e) => e as String).toList(),
     headerElement: (json['_header'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1829,7 +1832,7 @@ Map<String, dynamic> _$_$_SubscriptionChannelToJson(
   writeNotNull('_payload', instance.payloadElement?.toJson());
   writeNotNull('header', instance.header);
   writeNotNull(
-      '_header', instance.headerElement?.map((e) => e.toJson()).toList());
+      '_header', instance.headerElement?.map((e) => e?.toJson()).toList());
   return val;
 }
 

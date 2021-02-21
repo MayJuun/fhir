@@ -1441,9 +1441,9 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
     String? diagnostics,
     @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
     List<String>? location,
-    @JsonKey(name: '_location') List<Element>? locationElement,
+    @JsonKey(name: '_location') List<Element?>? locationElement,
     List<String>? expression,
-    @JsonKey(name: '_expression') List<Element>? expressionElement,
+    @JsonKey(name: '_expression') List<Element?>? expressionElement,
   }) = _OperationOutcomeIssue;
 
   /// Produces a Yaml formatted String version of the object
@@ -2001,7 +2001,7 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
     Code? payload,
     @JsonKey(name: '_payload') Element? payloadElement,
     List<String>? header,
-    @JsonKey(name: '_header') List<Element>? headerElement,
+    @JsonKey(name: '_header') List<Element?>? headerElement,
   }) = _SubscriptionChannel;
 
   /// Produces a Yaml formatted String version of the object

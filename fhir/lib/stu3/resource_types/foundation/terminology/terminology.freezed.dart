@@ -1752,7 +1752,7 @@ class _$CodeSystemFilterTearOff {
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       @JsonKey(name: 'operator') List<String>? operator_,
-      @JsonKey(name: '_operator') List<Element>? operatorElement,
+      @JsonKey(name: '_operator') List<Element?>? operatorElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement}) {
     return _CodeSystemFilter(
@@ -1786,7 +1786,7 @@ mixin _$CodeSystemFilter {
   @JsonKey(name: 'operator')
   List<String>? get operator_;
   @JsonKey(name: '_operator')
-  List<Element>? get operatorElement;
+  List<Element?>? get operatorElement;
   String? get value;
   @JsonKey(name: '_value')
   Element? get valueElement;
@@ -1807,7 +1807,7 @@ abstract class $CodeSystemFilterCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       @JsonKey(name: 'operator') List<String>? operator_,
-      @JsonKey(name: '_operator') List<Element>? operatorElement,
+      @JsonKey(name: '_operator') List<Element?>? operatorElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
 
@@ -1849,7 +1849,7 @@ class _$CodeSystemFilterCopyWithImpl<$Res>
           operator_ == freezed ? _value.operator_ : operator_ as List<String>?,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
-          : operatorElement as List<Element>?,
+          : operatorElement as List<Element?>?,
       value: value == freezed ? _value.value : value as String?,
       valueElement: valueElement == freezed
           ? _value.valueElement
@@ -1904,7 +1904,7 @@ abstract class _$CodeSystemFilterCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       @JsonKey(name: 'operator') List<String>? operator_,
-      @JsonKey(name: '_operator') List<Element>? operatorElement,
+      @JsonKey(name: '_operator') List<Element?>? operatorElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement});
 
@@ -1951,7 +1951,7 @@ class __$CodeSystemFilterCopyWithImpl<$Res>
           operator_ == freezed ? _value.operator_ : operator_ as List<String>?,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
-          : operatorElement as List<Element>?,
+          : operatorElement as List<Element?>?,
       value: value == freezed ? _value.value : value as String?,
       valueElement: valueElement == freezed
           ? _value.valueElement
@@ -1993,7 +1993,7 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
   final List<String>? operator_;
   @override
   @JsonKey(name: '_operator')
-  final List<Element>? operatorElement;
+  final List<Element?>? operatorElement;
   @override
   final String? value;
   @override
@@ -2064,7 +2064,7 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       @JsonKey(name: 'operator') List<String>? operator_,
-      @JsonKey(name: '_operator') List<Element>? operatorElement,
+      @JsonKey(name: '_operator') List<Element?>? operatorElement,
       String? value,
       @JsonKey(name: '_value') Element? valueElement}) = _$_CodeSystemFilter;
 
@@ -2086,7 +2086,7 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
   List<String>? get operator_;
   @override
   @JsonKey(name: '_operator')
-  List<Element>? get operatorElement;
+  List<Element?>? get operatorElement;
   @override
   String? get value;
   @override
@@ -13431,7 +13431,7 @@ class _$ValueSetIncludeTearOff {
       List<ValueSetConcept>? concept,
       List<ValueSetFilter>? filter,
       List<String>? valueSet,
-      @JsonKey(name: '_valueSet') List<Element>? valueSetElement}) {
+      @JsonKey(name: '_valueSet') List<Element?>? valueSetElement}) {
     return _ValueSetInclude(
       extension_: extension_,
       system: system,
@@ -13467,7 +13467,7 @@ mixin _$ValueSetInclude {
   List<ValueSetFilter>? get filter;
   List<String>? get valueSet;
   @JsonKey(name: '_valueSet')
-  List<Element>? get valueSetElement;
+  List<Element?>? get valueSetElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -13488,7 +13488,7 @@ abstract class $ValueSetIncludeCopyWith<$Res> {
       List<ValueSetConcept>? concept,
       List<ValueSetFilter>? filter,
       List<String>? valueSet,
-      @JsonKey(name: '_valueSet') List<Element>? valueSetElement});
+      @JsonKey(name: '_valueSet') List<Element?>? valueSetElement});
 
   $ElementCopyWith<$Res>? get systemElement;
   $ElementCopyWith<$Res>? get versionElement;
@@ -13536,7 +13536,7 @@ class _$ValueSetIncludeCopyWithImpl<$Res>
           valueSet == freezed ? _value.valueSet : valueSet as List<String>?,
       valueSetElement: valueSetElement == freezed
           ? _value.valueSetElement
-          : valueSetElement as List<Element>?,
+          : valueSetElement as List<Element?>?,
     ));
   }
 
@@ -13579,7 +13579,7 @@ abstract class _$ValueSetIncludeCopyWith<$Res>
       List<ValueSetConcept>? concept,
       List<ValueSetFilter>? filter,
       List<String>? valueSet,
-      @JsonKey(name: '_valueSet') List<Element>? valueSetElement});
+      @JsonKey(name: '_valueSet') List<Element?>? valueSetElement});
 
   @override
   $ElementCopyWith<$Res>? get systemElement;
@@ -13631,7 +13631,7 @@ class __$ValueSetIncludeCopyWithImpl<$Res>
           valueSet == freezed ? _value.valueSet : valueSet as List<String>?,
       valueSetElement: valueSetElement == freezed
           ? _value.valueSetElement
-          : valueSetElement as List<Element>?,
+          : valueSetElement as List<Element?>?,
     ));
   }
 }
@@ -13676,7 +13676,7 @@ class _$_ValueSetInclude extends _ValueSetInclude {
   final List<String>? valueSet;
   @override
   @JsonKey(name: '_valueSet')
-  final List<Element>? valueSetElement;
+  final List<Element?>? valueSetElement;
 
   @override
   String toString() {
@@ -13749,7 +13749,7 @@ abstract class _ValueSetInclude extends ValueSetInclude {
           List<ValueSetConcept>? concept,
           List<ValueSetFilter>? filter,
           List<String>? valueSet,
-          @JsonKey(name: '_valueSet') List<Element>? valueSetElement}) =
+          @JsonKey(name: '_valueSet') List<Element?>? valueSetElement}) =
       _$_ValueSetInclude;
 
   factory _ValueSetInclude.fromJson(Map<String, dynamic> json) =
@@ -13776,7 +13776,7 @@ abstract class _ValueSetInclude extends ValueSetInclude {
   List<String>? get valueSet;
   @override
   @JsonKey(name: '_valueSet')
-  List<Element>? get valueSetElement;
+  List<Element?>? get valueSetElement;
   @override
   @JsonKey(ignore: true)
   _$ValueSetIncludeCopyWith<_ValueSetInclude> get copyWith;

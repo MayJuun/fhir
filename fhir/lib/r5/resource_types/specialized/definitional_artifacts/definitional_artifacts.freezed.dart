@@ -3248,7 +3248,7 @@ class _$ConditionDefinitionTearOff {
           Element? hasStageElement,
       List<FhirUri>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       List<ConditionDefinitionObservation>? observation,
       List<ConditionDefinitionMedication>? medication,
       List<ConditionDefinitionPrecondition>? precondition,
@@ -3409,7 +3409,7 @@ mixin _$ConditionDefinition {
   Element? get hasStageElement;
   List<FhirUri>? get definition;
   @JsonKey(name: '_definition')
-  List<Element>? get definitionElement;
+  List<Element?>? get definitionElement;
   List<ConditionDefinitionObservation>? get observation;
   List<ConditionDefinitionMedication>? get medication;
   List<ConditionDefinitionPrecondition>? get precondition;
@@ -3506,7 +3506,7 @@ abstract class $ConditionDefinitionCopyWith<$Res> {
           Element? hasStageElement,
       List<FhirUri>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       List<ConditionDefinitionObservation>? observation,
       List<ConditionDefinitionMedication>? medication,
       List<ConditionDefinitionPrecondition>? precondition,
@@ -3744,7 +3744,7 @@ class _$ConditionDefinitionCopyWithImpl<$Res>
           : definition as List<FhirUri>?,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
-          : definitionElement as List<Element>?,
+          : definitionElement as List<Element?>?,
       observation: observation == freezed
           ? _value.observation
           : observation as List<ConditionDefinitionObservation>?,
@@ -4133,7 +4133,7 @@ abstract class _$ConditionDefinitionCopyWith<$Res>
           Element? hasStageElement,
       List<FhirUri>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       List<ConditionDefinitionObservation>? observation,
       List<ConditionDefinitionMedication>? medication,
       List<ConditionDefinitionPrecondition>? precondition,
@@ -4399,7 +4399,7 @@ class __$ConditionDefinitionCopyWithImpl<$Res>
           : definition as List<FhirUri>?,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
-          : definitionElement as List<Element>?,
+          : definitionElement as List<Element?>?,
       observation: observation == freezed
           ? _value.observation
           : observation as List<ConditionDefinitionObservation>?,
@@ -4649,7 +4649,7 @@ class _$_ConditionDefinition extends _ConditionDefinition {
   final List<FhirUri>? definition;
   @override
   @JsonKey(name: '_definition')
-  final List<Element>? definitionElement;
+  final List<Element?>? definitionElement;
   @override
   final List<ConditionDefinitionObservation>? observation;
   @override
@@ -4938,7 +4938,7 @@ abstract class _ConditionDefinition extends ConditionDefinition {
           Element? hasStageElement,
       List<FhirUri>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       List<ConditionDefinitionObservation>? observation,
       List<ConditionDefinitionMedication>? medication,
       List<ConditionDefinitionPrecondition>? precondition,
@@ -5083,7 +5083,7 @@ abstract class _ConditionDefinition extends ConditionDefinition {
   List<FhirUri>? get definition;
   @override
   @JsonKey(name: '_definition')
-  List<Element>? get definitionElement;
+  List<Element?>? get definitionElement;
   @override
   List<ConditionDefinitionObservation>? get observation;
   @override
@@ -6683,7 +6683,7 @@ class _$DeviceDefinitionTearOff {
       List<DeviceDefinitionSpecialization>? specialization,
       List<String>? version,
       @JsonKey(name: '_version')
-          List<Element>? versionElement,
+          List<Element?>? versionElement,
       List<CodeableConcept>? safety,
       List<ProductShelfLife>? shelfLifeStorage,
       ProdCharacteristic? physicalCharacteristics,
@@ -6779,7 +6779,7 @@ mixin _$DeviceDefinition {
   List<DeviceDefinitionSpecialization>? get specialization;
   List<String>? get version;
   @JsonKey(name: '_version')
-  List<Element>? get versionElement;
+  List<Element?>? get versionElement;
   List<CodeableConcept>? get safety;
   List<ProductShelfLife>? get shelfLifeStorage;
   ProdCharacteristic? get physicalCharacteristics;
@@ -6836,7 +6836,7 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
       List<DeviceDefinitionSpecialization>? specialization,
       List<String>? version,
       @JsonKey(name: '_version')
-          List<Element>? versionElement,
+          List<Element?>? versionElement,
       List<CodeableConcept>? safety,
       List<ProductShelfLife>? shelfLifeStorage,
       ProdCharacteristic? physicalCharacteristics,
@@ -6973,7 +6973,7 @@ class _$DeviceDefinitionCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as List<String>?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as List<Element>?,
+          : versionElement as List<Element?>?,
       safety:
           safety == freezed ? _value.safety : safety as List<CodeableConcept>?,
       shelfLifeStorage: shelfLifeStorage == freezed
@@ -7193,7 +7193,7 @@ abstract class _$DeviceDefinitionCopyWith<$Res>
       List<DeviceDefinitionSpecialization>? specialization,
       List<String>? version,
       @JsonKey(name: '_version')
-          List<Element>? versionElement,
+          List<Element?>? versionElement,
       List<CodeableConcept>? safety,
       List<ProductShelfLife>? shelfLifeStorage,
       ProdCharacteristic? physicalCharacteristics,
@@ -7345,7 +7345,7 @@ class __$DeviceDefinitionCopyWithImpl<$Res>
       version: version == freezed ? _value.version : version as List<String>?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as List<Element>?,
+          : versionElement as List<Element?>?,
       safety:
           safety == freezed ? _value.safety : safety as List<CodeableConcept>?,
       shelfLifeStorage: shelfLifeStorage == freezed
@@ -7491,7 +7491,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
   final List<String>? version;
   @override
   @JsonKey(name: '_version')
-  final List<Element>? versionElement;
+  final List<Element?>? versionElement;
   @override
   final List<CodeableConcept>? safety;
   @override
@@ -7694,7 +7694,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
       List<DeviceDefinitionSpecialization>? specialization,
       List<String>? version,
       @JsonKey(name: '_version')
-          List<Element>? versionElement,
+          List<Element?>? versionElement,
       List<CodeableConcept>? safety,
       List<ProductShelfLife>? shelfLifeStorage,
       ProdCharacteristic? physicalCharacteristics,
@@ -7766,7 +7766,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   List<String>? get version;
   @override
   @JsonKey(name: '_version')
-  List<Element>? get versionElement;
+  List<Element?>? get versionElement;
   @override
   List<CodeableConcept>? get safety;
   @override
@@ -11556,7 +11556,7 @@ class _$ObservationDefinitionTearOff {
       List<Canonical>? derivedFromCanonical,
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
-          List<Element>? derivedFromUriElement,
+          List<Element?>? derivedFromUriElement,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -11719,7 +11719,7 @@ mixin _$ObservationDefinition {
   List<Canonical>? get derivedFromCanonical;
   List<FhirUri>? get derivedFromUri;
   @JsonKey(name: '_derivedFromUri')
-  List<Element>? get derivedFromUriElement;
+  List<Element?>? get derivedFromUriElement;
   Code? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -11815,7 +11815,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
       List<Canonical>? derivedFromCanonical,
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
-          List<Element>? derivedFromUriElement,
+          List<Element?>? derivedFromUriElement,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -12032,7 +12032,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res>
           : derivedFromUri as List<FhirUri>?,
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value.derivedFromUriElement
-          : derivedFromUriElement as List<Element>?,
+          : derivedFromUriElement as List<Element?>?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -12548,7 +12548,7 @@ abstract class _$ObservationDefinitionCopyWith<$Res>
       List<Canonical>? derivedFromCanonical,
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
-          List<Element>? derivedFromUriElement,
+          List<Element?>? derivedFromUriElement,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -12800,7 +12800,7 @@ class __$ObservationDefinitionCopyWithImpl<$Res>
           : derivedFromUri as List<FhirUri>?,
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value.derivedFromUriElement
-          : derivedFromUriElement as List<Element>?,
+          : derivedFromUriElement as List<Element?>?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -13060,7 +13060,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
   final List<FhirUri>? derivedFromUri;
   @override
   @JsonKey(name: '_derivedFromUri')
-  final List<Element>? derivedFromUriElement;
+  final List<Element?>? derivedFromUriElement;
   @override
   final Code? status;
   @override
@@ -13391,7 +13391,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
           List<Canonical>? derivedFromCanonical,
           List<FhirUri>? derivedFromUri,
           @JsonKey(name: '_derivedFromUri')
-              List<Element>? derivedFromUriElement,
+              List<Element?>? derivedFromUriElement,
           Code? status,
           @JsonKey(name: '_status')
               Element? statusElement,
@@ -13501,7 +13501,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   List<FhirUri>? get derivedFromUri;
   @override
   @JsonKey(name: '_derivedFromUri')
-  List<Element>? get derivedFromUriElement;
+  List<Element?>? get derivedFromUriElement;
   @override
   Code? get status;
   @override
@@ -17634,7 +17634,7 @@ class _$PlanDefinitionActionTearOff {
       List<RelatedArtifact>? documentation,
       List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element>? goalIdElement,
+          List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<TriggerDefinition>? trigger,
@@ -17770,7 +17770,7 @@ mixin _$PlanDefinitionAction {
   List<RelatedArtifact>? get documentation;
   List<Id>? get goalId;
   @JsonKey(name: '_goalId')
-  List<Element>? get goalIdElement;
+  List<Element?>? get goalIdElement;
   CodeableConcept? get subjectCodeableConcept;
   Reference? get subjectReference;
   List<TriggerDefinition>? get trigger;
@@ -17853,7 +17853,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       List<RelatedArtifact>? documentation,
       List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element>? goalIdElement,
+          List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<TriggerDefinition>? trigger,
@@ -18027,7 +18027,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       goalId: goalId == freezed ? _value.goalId : goalId as List<Id>?,
       goalIdElement: goalIdElement == freezed
           ? _value.goalIdElement
-          : goalIdElement as List<Element>?,
+          : goalIdElement as List<Element?>?,
       subjectCodeableConcept: subjectCodeableConcept == freezed
           ? _value.subjectCodeableConcept
           : subjectCodeableConcept as CodeableConcept?,
@@ -18386,7 +18386,7 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
       List<RelatedArtifact>? documentation,
       List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element>? goalIdElement,
+          List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<TriggerDefinition>? trigger,
@@ -18583,7 +18583,7 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
       goalId: goalId == freezed ? _value.goalId : goalId as List<Id>?,
       goalIdElement: goalIdElement == freezed
           ? _value.goalIdElement
-          : goalIdElement as List<Element>?,
+          : goalIdElement as List<Element?>?,
       subjectCodeableConcept: subjectCodeableConcept == freezed
           ? _value.subjectCodeableConcept
           : subjectCodeableConcept as CodeableConcept?,
@@ -18801,7 +18801,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   final List<Id>? goalId;
   @override
   @JsonKey(name: '_goalId')
-  final List<Element>? goalIdElement;
+  final List<Element?>? goalIdElement;
   @override
   final CodeableConcept? subjectCodeableConcept;
   @override
@@ -19080,7 +19080,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       List<RelatedArtifact>? documentation,
       List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element>? goalIdElement,
+          List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<TriggerDefinition>? trigger,
@@ -19173,7 +19173,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   List<Id>? get goalId;
   @override
   @JsonKey(name: '_goalId')
-  List<Element>? get goalIdElement;
+  List<Element?>? get goalIdElement;
   @override
   CodeableConcept? get subjectCodeableConcept;
   @override
@@ -20681,7 +20681,7 @@ class _$QuestionnaireTearOff {
       List<Canonical>? derivedFrom,
       List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       List<Coding>? code,
       List<QuestionnaireItem>? item}) {
     return _Questionnaire(
@@ -20808,7 +20808,7 @@ mixin _$Questionnaire {
   List<Canonical>? get derivedFrom;
   List<Code>? get subjectType;
   @JsonKey(name: '_subjectType')
-  List<Element>? get subjectTypeElement;
+  List<Element?>? get subjectTypeElement;
   List<Coding>? get code;
   List<QuestionnaireItem>? get item;
 
@@ -20886,7 +20886,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       List<Canonical>? derivedFrom,
       List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       List<Coding>? code,
       List<QuestionnaireItem>? item});
 
@@ -21075,7 +21075,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
           : subjectType as List<Code>?,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as List<Element>?,
+          : subjectTypeElement as List<Element?>?,
       code: code == freezed ? _value.code : code as List<Coding>?,
       item: item == freezed ? _value.item : item as List<QuestionnaireItem>?,
     ));
@@ -21351,7 +21351,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
       List<Canonical>? derivedFrom,
       List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       List<Coding>? code,
       List<QuestionnaireItem>? item});
 
@@ -21560,7 +21560,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
           : subjectType as List<Code>?,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as List<Element>?,
+          : subjectTypeElement as List<Element?>?,
       code: code == freezed ? _value.code : code as List<Coding>?,
       item: item == freezed ? _value.item : item as List<QuestionnaireItem>?,
     ));
@@ -21751,7 +21751,7 @@ class _$_Questionnaire extends _Questionnaire {
   final List<Code>? subjectType;
   @override
   @JsonKey(name: '_subjectType')
-  final List<Element>? subjectTypeElement;
+  final List<Element?>? subjectTypeElement;
   @override
   final List<Coding>? code;
   @override
@@ -21986,7 +21986,7 @@ abstract class _Questionnaire extends Questionnaire {
       List<Canonical>? derivedFrom,
       List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       List<Coding>? code,
       List<QuestionnaireItem>? item}) = _$_Questionnaire;
 
@@ -22101,7 +22101,7 @@ abstract class _Questionnaire extends Questionnaire {
   List<Code>? get subjectType;
   @override
   @JsonKey(name: '_subjectType')
-  List<Element>? get subjectTypeElement;
+  List<Element?>? get subjectTypeElement;
   @override
   List<Coding>? get code;
   @override
@@ -25492,7 +25492,7 @@ class _$SpecimenDefinitionTearOff {
       List<Canonical>? derivedFromCanonical,
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
-          List<Element>? derivedFromUriElement,
+          List<Element?>? derivedFromUriElement,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -25623,7 +25623,7 @@ mixin _$SpecimenDefinition {
   List<Canonical>? get derivedFromCanonical;
   List<FhirUri>? get derivedFromUri;
   @JsonKey(name: '_derivedFromUri')
-  List<Element>? get derivedFromUriElement;
+  List<Element?>? get derivedFromUriElement;
   Code? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -25702,7 +25702,7 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
       List<Canonical>? derivedFromCanonical,
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
-          List<Element>? derivedFromUriElement,
+          List<Element?>? derivedFromUriElement,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -25875,7 +25875,7 @@ class _$SpecimenDefinitionCopyWithImpl<$Res>
           : derivedFromUri as List<FhirUri>?,
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value.derivedFromUriElement
-          : derivedFromUriElement as List<Element>?,
+          : derivedFromUriElement as List<Element?>?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -26234,7 +26234,7 @@ abstract class _$SpecimenDefinitionCopyWith<$Res>
       List<Canonical>? derivedFromCanonical,
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
-          List<Element>? derivedFromUriElement,
+          List<Element?>? derivedFromUriElement,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -26431,7 +26431,7 @@ class __$SpecimenDefinitionCopyWithImpl<$Res>
           : derivedFromUri as List<FhirUri>?,
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value.derivedFromUriElement
-          : derivedFromUriElement as List<Element>?,
+          : derivedFromUriElement as List<Element?>?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -26637,7 +26637,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
   final List<FhirUri>? derivedFromUri;
   @override
   @JsonKey(name: '_derivedFromUri')
-  final List<Element>? derivedFromUriElement;
+  final List<Element?>? derivedFromUriElement;
   @override
   final Code? status;
   @override
@@ -26905,7 +26905,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
       List<Canonical>? derivedFromCanonical,
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
-          List<Element>? derivedFromUriElement,
+          List<Element?>? derivedFromUriElement,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -26997,7 +26997,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
   List<FhirUri>? get derivedFromUri;
   @override
   @JsonKey(name: '_derivedFromUri')
-  List<Element>? get derivedFromUriElement;
+  List<Element?>? get derivedFromUriElement;
   @override
   Code? get status;
   @override

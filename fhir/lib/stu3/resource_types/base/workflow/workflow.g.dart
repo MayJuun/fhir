@@ -579,12 +579,14 @@ _$_ProcessRequest _$_$_ProcessRequestFromJson(Map<String, dynamic> json) {
     include:
         (json['include'] as List<dynamic>?)?.map((e) => e as String).toList(),
     includeElement: (json['_include'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     exclude:
         (json['exclude'] as List<dynamic>?)?.map((e) => e as String).toList(),
     excludeElement: (json['_exclude'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     period: json['period'] == null
         ? null
@@ -636,10 +638,10 @@ Map<String, dynamic> _$_$_ProcessRequestToJson(_$_ProcessRequest instance) {
   writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
   writeNotNull('include', instance.include);
   writeNotNull(
-      '_include', instance.includeElement?.map((e) => e.toJson()).toList());
+      '_include', instance.includeElement?.map((e) => e?.toJson()).toList());
   writeNotNull('exclude', instance.exclude);
   writeNotNull(
-      '_exclude', instance.excludeElement?.map((e) => e.toJson()).toList());
+      '_exclude', instance.excludeElement?.map((e) => e?.toJson()).toList());
   writeNotNull('period', instance.period?.toJson());
   return val;
 }

@@ -46,7 +46,8 @@ _$_Communication _$_$_CommunicationFromJson(Map<String, dynamic> json) {
         ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     basedOn: (json['basedOn'] as List<dynamic>?)
         ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
@@ -149,7 +150,7 @@ Map<String, dynamic> _$_$_CommunicationToJson(_$_Communication instance) {
   writeNotNull('instantiatesUri',
       instance.instantiatesUri?.map((e) => e.toJson()).toList());
   writeNotNull('_instantiatesUri',
-      instance.instantiatesUriElement?.map((e) => e.toJson()).toList());
+      instance.instantiatesUriElement?.map((e) => e?.toJson()).toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -668,7 +669,8 @@ _$_DeviceRequest _$_$_DeviceRequestFromJson(Map<String, dynamic> json) {
         ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     basedOn: (json['basedOn'] as List<dynamic>?)
         ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
@@ -785,7 +787,7 @@ Map<String, dynamic> _$_$_DeviceRequestToJson(_$_DeviceRequest instance) {
   writeNotNull('instantiatesUri',
       instance.instantiatesUri?.map((e) => e.toJson()).toList());
   writeNotNull('_instantiatesUri',
-      instance.instantiatesUriElement?.map((e) => e.toJson()).toList());
+      instance.instantiatesUriElement?.map((e) => e?.toJson()).toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
   writeNotNull(
       'priorRequest', instance.priorRequest?.map((e) => e.toJson()).toList());

@@ -189,9 +189,9 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
     @JsonKey(name: '_reference') Element? referenceElement,
     List<ProcessRequestItem>? item,
     List<String>? include,
-    @JsonKey(name: '_include') List<Element>? includeElement,
+    @JsonKey(name: '_include') List<Element?>? includeElement,
     List<String>? exclude,
-    @JsonKey(name: '_exclude') List<Element>? excludeElement,
+    @JsonKey(name: '_exclude') List<Element?>? excludeElement,
     Period? period,
   }) = _ProcessRequest;
 

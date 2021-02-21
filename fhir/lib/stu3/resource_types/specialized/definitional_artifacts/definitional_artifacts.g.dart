@@ -838,7 +838,8 @@ _$_PlanDefinitionAction _$_$_PlanDefinitionActionFromJson(
     goalId:
         (json['goalId'] as List<dynamic>?)?.map((e) => Id.fromJson(e)).toList(),
     goalIdElement: (json['_goalId'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     triggerDefinition: (json['triggerDefinition'] as List<dynamic>?)
         ?.map((e) => TriggerDefinition.fromJson(e as Map<String, dynamic>))
@@ -953,7 +954,7 @@ Map<String, dynamic> _$_$_PlanDefinitionActionToJson(
       'documentation', instance.documentation?.map((e) => e.toJson()).toList());
   writeNotNull('goalId', instance.goalId?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_goalId', instance.goalIdElement?.map((e) => e.toJson()).toList());
+      '_goalId', instance.goalIdElement?.map((e) => e?.toJson()).toList());
   writeNotNull('triggerDefinition',
       instance.triggerDefinition?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -1334,7 +1335,8 @@ _$_Questionnaire _$_$_QuestionnaireFromJson(Map<String, dynamic> json) {
         ?.map((e) => e as String)
         .toList(),
     subjectTypeElement: (json['_subjectType'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     item: (json['item'] as List<dynamic>?)
         ?.map((e) => QuestionnaireItem.fromJson(e as Map<String, dynamic>))
@@ -1403,7 +1405,7 @@ Map<String, dynamic> _$_$_QuestionnaireToJson(_$_Questionnaire instance) {
   writeNotNull('code', instance.code?.map((e) => e.toJson()).toList());
   writeNotNull('subjectType', instance.subjectType);
   writeNotNull('_subjectType',
-      instance.subjectTypeElement?.map((e) => e.toJson()).toList());
+      instance.subjectTypeElement?.map((e) => e?.toJson()).toList());
   writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
   return val;
 }

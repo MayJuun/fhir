@@ -5447,11 +5447,11 @@ class _$TestScriptCapabilityTearOff {
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Decimal>? origin,
-      @JsonKey(name: '_origin') List<Element>? originElement,
+      @JsonKey(name: '_origin') List<Element?>? originElement,
       Decimal? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<String>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       required Reference capabilities}) {
     return _TestScriptCapability(
       required_: required_,
@@ -5492,13 +5492,13 @@ mixin _$TestScriptCapability {
   Element? get descriptionElement;
   List<Decimal>? get origin;
   @JsonKey(name: '_origin')
-  List<Element>? get originElement;
+  List<Element?>? get originElement;
   Decimal? get destination;
   @JsonKey(name: '_destination')
   Element? get destinationElement;
   List<String>? get link;
   @JsonKey(name: '_link')
-  List<Element>? get linkElement;
+  List<Element?>? get linkElement;
   Reference get capabilities;
 
   Map<String, dynamic> toJson();
@@ -5519,11 +5519,11 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Decimal>? origin,
-      @JsonKey(name: '_origin') List<Element>? originElement,
+      @JsonKey(name: '_origin') List<Element?>? originElement,
       Decimal? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<String>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       Reference capabilities});
 
   $ElementCopyWith<$Res>? get requiredElement;
@@ -5577,7 +5577,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
       origin: origin == freezed ? _value.origin : origin as List<Decimal>?,
       originElement: originElement == freezed
           ? _value.originElement
-          : originElement as List<Element>?,
+          : originElement as List<Element?>?,
       destination:
           destination == freezed ? _value.destination : destination as Decimal?,
       destinationElement: destinationElement == freezed
@@ -5586,7 +5586,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
       link: link == freezed ? _value.link : link as List<String>?,
       linkElement: linkElement == freezed
           ? _value.linkElement
-          : linkElement as List<Element>?,
+          : linkElement as List<Element?>?,
       capabilities: capabilities == freezed
           ? _value.capabilities
           : capabilities as Reference,
@@ -5660,11 +5660,11 @@ abstract class _$TestScriptCapabilityCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Decimal>? origin,
-      @JsonKey(name: '_origin') List<Element>? originElement,
+      @JsonKey(name: '_origin') List<Element?>? originElement,
       Decimal? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<String>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       Reference capabilities});
 
   @override
@@ -5725,7 +5725,7 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
       origin: origin == freezed ? _value.origin : origin as List<Decimal>?,
       originElement: originElement == freezed
           ? _value.originElement
-          : originElement as List<Element>?,
+          : originElement as List<Element?>?,
       destination:
           destination == freezed ? _value.destination : destination as Decimal?,
       destinationElement: destinationElement == freezed
@@ -5734,7 +5734,7 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
       link: link == freezed ? _value.link : link as List<String>?,
       linkElement: linkElement == freezed
           ? _value.linkElement
-          : linkElement as List<Element>?,
+          : linkElement as List<Element?>?,
       capabilities: capabilities == freezed
           ? _value.capabilities
           : capabilities as Reference,
@@ -5785,7 +5785,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   final List<Decimal>? origin;
   @override
   @JsonKey(name: '_origin')
-  final List<Element>? originElement;
+  final List<Element?>? originElement;
   @override
   final Decimal? destination;
   @override
@@ -5795,7 +5795,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   final List<String>? link;
   @override
   @JsonKey(name: '_link')
-  final List<Element>? linkElement;
+  final List<Element?>? linkElement;
   @override
   final Reference capabilities;
 
@@ -5886,11 +5886,11 @@ abstract class _TestScriptCapability extends TestScriptCapability {
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Decimal>? origin,
-      @JsonKey(name: '_origin') List<Element>? originElement,
+      @JsonKey(name: '_origin') List<Element?>? originElement,
       Decimal? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<String>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       required Reference capabilities}) = _$_TestScriptCapability;
 
   factory _TestScriptCapability.fromJson(Map<String, dynamic> json) =
@@ -5916,7 +5916,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   List<Decimal>? get origin;
   @override
   @JsonKey(name: '_origin')
-  List<Element>? get originElement;
+  List<Element?>? get originElement;
   @override
   Decimal? get destination;
   @override
@@ -5926,7 +5926,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   List<String>? get link;
   @override
   @JsonKey(name: '_link')
-  List<Element>? get linkElement;
+  List<Element?>? get linkElement;
   @override
   Reference get capabilities;
   @override

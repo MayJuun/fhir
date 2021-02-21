@@ -803,11 +803,13 @@ _$_HumanName _$_$_HumanNameFromJson(Map<String, dynamic> json) {
     family:
         (json['family'] as List<dynamic>?)?.map((e) => e as String).toList(),
     familyElement: (json['_family'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     given: (json['given'] as List<dynamic>?)?.map((e) => e as String).toList(),
     givenElement: (json['_given'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     prefix:
         (json['prefix'] as List<dynamic>?)?.map((e) => e as String).toList(),
@@ -844,10 +846,10 @@ Map<String, dynamic> _$_$_HumanNameToJson(_$_HumanName instance) {
   writeNotNull('_text', instance.textElement?.toJson());
   writeNotNull('family', instance.family);
   writeNotNull(
-      '_family', instance.familyElement?.map((e) => e.toJson()).toList());
+      '_family', instance.familyElement?.map((e) => e?.toJson()).toList());
   writeNotNull('given', instance.given);
   writeNotNull(
-      '_given', instance.givenElement?.map((e) => e.toJson()).toList());
+      '_given', instance.givenElement?.map((e) => e?.toJson()).toList());
   writeNotNull('prefix', instance.prefix);
   writeNotNull('_prefix', instance.prefixElement?.toJson());
   writeNotNull('suffix', instance.suffix);

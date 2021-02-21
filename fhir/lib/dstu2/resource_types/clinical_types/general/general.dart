@@ -394,7 +394,7 @@ abstract class ClinicalImpression
     Reference? triggerReference,
     List<ClinicalImpressionInvestigations>? investigations,
     FhirUri? protocol,
-    @JsonKey(name: '_protocol') List<Element>? protocolElement,
+    @JsonKey(name: '_protocol') List<Element?>? protocolElement,
     String? summary,
     @JsonKey(name: '_summary') Element? summaryElement,
     List<ClinicalImpressionFinding>? finding,

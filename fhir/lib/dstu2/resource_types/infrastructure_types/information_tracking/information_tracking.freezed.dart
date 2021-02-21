@@ -51,7 +51,7 @@ class _$QuestionnaireTearOff {
       List<ContactPoint>? telecom,
       List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       required QuestionnaireGroup group}) {
     return _Questionnaire(
       resourceType: resourceType,
@@ -126,7 +126,7 @@ mixin _$Questionnaire {
   List<ContactPoint>? get telecom;
   List<Code>? get subjectType;
   @JsonKey(name: '_subjectType')
-  List<Element>? get subjectTypeElement;
+  List<Element?>? get subjectTypeElement;
   QuestionnaireGroup get group;
 
   Map<String, dynamic> toJson();
@@ -174,7 +174,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       List<ContactPoint>? telecom,
       List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       QuestionnaireGroup group});
 
   $ElementCopyWith<$Res>? get idElement;
@@ -279,7 +279,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
           : subjectType as List<Code>?,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as List<Element>?,
+          : subjectTypeElement as List<Element?>?,
       group: group == freezed ? _value.group : group as QuestionnaireGroup,
     ));
   }
@@ -433,7 +433,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
       List<ContactPoint>? telecom,
       List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       QuestionnaireGroup group});
 
   @override
@@ -550,7 +550,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
           : subjectType as List<Code>?,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as List<Element>?,
+          : subjectTypeElement as List<Element?>?,
       group: group == freezed ? _value.group : group as QuestionnaireGroup,
     ));
   }
@@ -660,7 +660,7 @@ class _$_Questionnaire extends _Questionnaire {
   final List<Code>? subjectType;
   @override
   @JsonKey(name: '_subjectType')
-  final List<Element>? subjectTypeElement;
+  final List<Element?>? subjectTypeElement;
   @override
   final QuestionnaireGroup group;
 
@@ -820,7 +820,7 @@ abstract class _Questionnaire extends Questionnaire {
       List<ContactPoint>? telecom,
       List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       required QuestionnaireGroup group}) = _$_Questionnaire;
 
   factory _Questionnaire.fromJson(Map<String, dynamic> json) =
@@ -884,7 +884,7 @@ abstract class _Questionnaire extends Questionnaire {
   List<Code>? get subjectType;
   @override
   @JsonKey(name: '_subjectType')
-  List<Element>? get subjectTypeElement;
+  List<Element?>? get subjectTypeElement;
   @override
   QuestionnaireGroup get group;
   @override
@@ -4479,7 +4479,7 @@ class _$ProvenanceTearOff {
       Reference? location,
       List<FhirUri>? policy,
       @JsonKey(name: '_policy')
-          List<Element>? policyElement,
+          List<Element?>? policyElement,
       List<ProvenanceAgent>? agent,
       List<ProvenanceEntity>? entity,
       List<Signature>? signature}) {
@@ -4545,7 +4545,7 @@ mixin _$Provenance {
   Reference? get location;
   List<FhirUri>? get policy;
   @JsonKey(name: '_policy')
-  List<Element>? get policyElement;
+  List<Element?>? get policyElement;
   List<ProvenanceAgent>? get agent;
   List<ProvenanceEntity>? get entity;
   List<Signature>? get signature;
@@ -4586,7 +4586,7 @@ abstract class $ProvenanceCopyWith<$Res> {
       Reference? location,
       List<FhirUri>? policy,
       @JsonKey(name: '_policy')
-          List<Element>? policyElement,
+          List<Element?>? policyElement,
       List<ProvenanceAgent>? agent,
       List<ProvenanceEntity>? entity,
       List<Signature>? signature});
@@ -4675,7 +4675,7 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
       policy: policy == freezed ? _value.policy : policy as List<FhirUri>?,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as List<Element>?,
+          : policyElement as List<Element?>?,
       agent: agent == freezed ? _value.agent : agent as List<ProvenanceAgent>?,
       entity:
           entity == freezed ? _value.entity : entity as List<ProvenanceEntity>?,
@@ -4806,7 +4806,7 @@ abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
       Reference? location,
       List<FhirUri>? policy,
       @JsonKey(name: '_policy')
-          List<Element>? policyElement,
+          List<Element?>? policyElement,
       List<ProvenanceAgent>? agent,
       List<ProvenanceEntity>? entity,
       List<Signature>? signature});
@@ -4905,7 +4905,7 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
       policy: policy == freezed ? _value.policy : policy as List<FhirUri>?,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as List<Element>?,
+          : policyElement as List<Element?>?,
       agent: agent == freezed ? _value.agent : agent as List<ProvenanceAgent>?,
       entity:
           entity == freezed ? _value.entity : entity as List<ProvenanceEntity>?,
@@ -5000,7 +5000,7 @@ class _$_Provenance extends _Provenance {
   final List<FhirUri>? policy;
   @override
   @JsonKey(name: '_policy')
-  final List<Element>? policyElement;
+  final List<Element?>? policyElement;
   @override
   final List<ProvenanceAgent>? agent;
   @override
@@ -5145,7 +5145,7 @@ abstract class _Provenance extends Provenance {
       Reference? location,
       List<FhirUri>? policy,
       @JsonKey(name: '_policy')
-          List<Element>? policyElement,
+          List<Element?>? policyElement,
       List<ProvenanceAgent>? agent,
       List<ProvenanceEntity>? entity,
       List<Signature>? signature}) = _$_Provenance;
@@ -5198,7 +5198,7 @@ abstract class _Provenance extends Provenance {
   List<FhirUri>? get policy;
   @override
   @JsonKey(name: '_policy')
-  List<Element>? get policyElement;
+  List<Element?>? get policyElement;
   @override
   List<ProvenanceAgent>? get agent;
   @override

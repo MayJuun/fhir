@@ -4933,7 +4933,7 @@ class _$PlanDefinitionActionTearOff {
       List<RelatedArtifact>? documentation,
       List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element>? goalIdElement,
+          List<Element?>? goalIdElement,
       List<TriggerDefinition>? triggerDefinition,
       List<PlanDefinitionCondition>? condition,
       List<DataRequirement>? input,
@@ -5038,7 +5038,7 @@ mixin _$PlanDefinitionAction {
   List<RelatedArtifact>? get documentation;
   List<Id>? get goalId;
   @JsonKey(name: '_goalId')
-  List<Element>? get goalIdElement;
+  List<Element?>? get goalIdElement;
   List<TriggerDefinition>? get triggerDefinition;
   List<PlanDefinitionCondition>? get condition;
   List<DataRequirement>? get input;
@@ -5101,7 +5101,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       List<RelatedArtifact>? documentation,
       List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element>? goalIdElement,
+          List<Element?>? goalIdElement,
       List<TriggerDefinition>? triggerDefinition,
       List<PlanDefinitionCondition>? condition,
       List<DataRequirement>? input,
@@ -5236,7 +5236,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       goalId: goalId == freezed ? _value.goalId : goalId as List<Id>?,
       goalIdElement: goalIdElement == freezed
           ? _value.goalIdElement
-          : goalIdElement as List<Element>?,
+          : goalIdElement as List<Element?>?,
       triggerDefinition: triggerDefinition == freezed
           ? _value.triggerDefinition
           : triggerDefinition as List<TriggerDefinition>?,
@@ -5526,7 +5526,7 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
       List<RelatedArtifact>? documentation,
       List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element>? goalIdElement,
+          List<Element?>? goalIdElement,
       List<TriggerDefinition>? triggerDefinition,
       List<PlanDefinitionCondition>? condition,
       List<DataRequirement>? input,
@@ -5680,7 +5680,7 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
       goalId: goalId == freezed ? _value.goalId : goalId as List<Id>?,
       goalIdElement: goalIdElement == freezed
           ? _value.goalIdElement
-          : goalIdElement as List<Element>?,
+          : goalIdElement as List<Element?>?,
       triggerDefinition: triggerDefinition == freezed
           ? _value.triggerDefinition
           : triggerDefinition as List<TriggerDefinition>?,
@@ -5838,7 +5838,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   final List<Id>? goalId;
   @override
   @JsonKey(name: '_goalId')
-  final List<Element>? goalIdElement;
+  final List<Element?>? goalIdElement;
   @override
   final List<TriggerDefinition>? triggerDefinition;
   @override
@@ -6069,7 +6069,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       List<RelatedArtifact>? documentation,
       List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element>? goalIdElement,
+          List<Element?>? goalIdElement,
       List<TriggerDefinition>? triggerDefinition,
       List<PlanDefinitionCondition>? condition,
       List<DataRequirement>? input,
@@ -6137,7 +6137,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   List<Id>? get goalId;
   @override
   @JsonKey(name: '_goalId')
-  List<Element>? get goalIdElement;
+  List<Element?>? get goalIdElement;
   @override
   List<TriggerDefinition>? get triggerDefinition;
   @override
@@ -7593,7 +7593,7 @@ class _$QuestionnaireTearOff {
       List<Coding>? code,
       List<String>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       List<QuestionnaireItem>? item}) {
     return _Questionnaire(
       resourceType: resourceType,
@@ -7717,7 +7717,7 @@ mixin _$Questionnaire {
   List<Coding>? get code;
   List<String>? get subjectType;
   @JsonKey(name: '_subjectType')
-  List<Element>? get subjectTypeElement;
+  List<Element?>? get subjectTypeElement;
   List<QuestionnaireItem>? get item;
 
   Map<String, dynamic> toJson();
@@ -7793,7 +7793,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
       List<Coding>? code,
       List<String>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       List<QuestionnaireItem>? item});
 
   $MetaCopyWith<$Res>? get meta;
@@ -7976,7 +7976,7 @@ class _$QuestionnaireCopyWithImpl<$Res>
           : subjectType as List<String>?,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as List<Element>?,
+          : subjectTypeElement as List<Element?>?,
       item: item == freezed ? _value.item : item as List<QuestionnaireItem>?,
     ));
   }
@@ -8250,7 +8250,7 @@ abstract class _$QuestionnaireCopyWith<$Res>
       List<Coding>? code,
       List<String>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       List<QuestionnaireItem>? item});
 
   @override
@@ -8453,7 +8453,7 @@ class __$QuestionnaireCopyWithImpl<$Res>
           : subjectType as List<String>?,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as List<Element>?,
+          : subjectTypeElement as List<Element?>?,
       item: item == freezed ? _value.item : item as List<QuestionnaireItem>?,
     ));
   }
@@ -8640,7 +8640,7 @@ class _$_Questionnaire extends _Questionnaire {
   final List<String>? subjectType;
   @override
   @JsonKey(name: '_subjectType')
-  final List<Element>? subjectTypeElement;
+  final List<Element?>? subjectTypeElement;
   @override
   final List<QuestionnaireItem>? item;
 
@@ -8870,7 +8870,7 @@ abstract class _Questionnaire extends Questionnaire {
       List<Coding>? code,
       List<String>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element>? subjectTypeElement,
+          List<Element?>? subjectTypeElement,
       List<QuestionnaireItem>? item}) = _$_Questionnaire;
 
   factory _Questionnaire.fromJson(Map<String, dynamic> json) =
@@ -8983,7 +8983,7 @@ abstract class _Questionnaire extends Questionnaire {
   List<String>? get subjectType;
   @override
   @JsonKey(name: '_subjectType')
-  List<Element>? get subjectTypeElement;
+  List<Element?>? get subjectTypeElement;
   @override
   List<QuestionnaireItem>? get item;
   @override

@@ -503,7 +503,7 @@ abstract class PractitionerRoleAvailableTime
   PractitionerRoleAvailableTime._();
   factory PractitionerRoleAvailableTime({
     List<String>? daysOfWeek,
-    @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
+    @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
     Boolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,
     Time? availableStartTime,

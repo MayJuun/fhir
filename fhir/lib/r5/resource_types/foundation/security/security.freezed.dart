@@ -885,7 +885,7 @@ class _$AuditEventAgentTearOff {
       @JsonKey(name: '_requestor') Element? requestorElement,
       Reference? location,
       List<FhirUri>? policy,
-      @JsonKey(name: '_policy') List<Element>? policyElement,
+      @JsonKey(name: '_policy') List<Element?>? policyElement,
       Coding? media,
       AuditEventNetwork? network,
       List<CodeableConcept>? purposeOfUse}) {
@@ -940,7 +940,7 @@ mixin _$AuditEventAgent {
   Reference? get location;
   List<FhirUri>? get policy;
   @JsonKey(name: '_policy')
-  List<Element>? get policyElement;
+  List<Element?>? get policyElement;
   Coding? get media;
   AuditEventNetwork? get network;
   List<CodeableConcept>? get purposeOfUse;
@@ -970,7 +970,7 @@ abstract class $AuditEventAgentCopyWith<$Res> {
       @JsonKey(name: '_requestor') Element? requestorElement,
       Reference? location,
       List<FhirUri>? policy,
-      @JsonKey(name: '_policy') List<Element>? policyElement,
+      @JsonKey(name: '_policy') List<Element?>? policyElement,
       Coding? media,
       AuditEventNetwork? network,
       List<CodeableConcept>? purposeOfUse});
@@ -1042,7 +1042,7 @@ class _$AuditEventAgentCopyWithImpl<$Res>
       policy: policy == freezed ? _value.policy : policy as List<FhirUri>?,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as List<Element>?,
+          : policyElement as List<Element?>?,
       media: media == freezed ? _value.media : media as Coding?,
       network:
           network == freezed ? _value.network : network as AuditEventNetwork?,
@@ -1163,7 +1163,7 @@ abstract class _$AuditEventAgentCopyWith<$Res>
       @JsonKey(name: '_requestor') Element? requestorElement,
       Reference? location,
       List<FhirUri>? policy,
-      @JsonKey(name: '_policy') List<Element>? policyElement,
+      @JsonKey(name: '_policy') List<Element?>? policyElement,
       Coding? media,
       AuditEventNetwork? network,
       List<CodeableConcept>? purposeOfUse});
@@ -1245,7 +1245,7 @@ class __$AuditEventAgentCopyWithImpl<$Res>
       policy: policy == freezed ? _value.policy : policy as List<FhirUri>?,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as List<Element>?,
+          : policyElement as List<Element?>?,
       media: media == freezed ? _value.media : media as Coding?,
       network:
           network == freezed ? _value.network : network as AuditEventNetwork?,
@@ -1318,7 +1318,7 @@ class _$_AuditEventAgent extends _AuditEventAgent {
   final List<FhirUri>? policy;
   @override
   @JsonKey(name: '_policy')
-  final List<Element>? policyElement;
+  final List<Element?>? policyElement;
   @override
   final Coding? media;
   @override
@@ -1433,7 +1433,7 @@ abstract class _AuditEventAgent extends AuditEventAgent {
       @JsonKey(name: '_requestor') Element? requestorElement,
       Reference? location,
       List<FhirUri>? policy,
-      @JsonKey(name: '_policy') List<Element>? policyElement,
+      @JsonKey(name: '_policy') List<Element?>? policyElement,
       Coding? media,
       AuditEventNetwork? network,
       List<CodeableConcept>? purposeOfUse}) = _$_AuditEventAgent;
@@ -1475,7 +1475,7 @@ abstract class _AuditEventAgent extends AuditEventAgent {
   List<FhirUri>? get policy;
   @override
   @JsonKey(name: '_policy')
-  List<Element>? get policyElement;
+  List<Element?>? get policyElement;
   @override
   Coding? get media;
   @override
@@ -4254,7 +4254,7 @@ class _$ConsentVerificationTearOff {
       Reference? verifiedWith,
       List<FhirDateTime>? verificationDate,
       @JsonKey(name: '_verificationDate')
-          List<Element>? verificationDateElement}) {
+          List<Element?>? verificationDateElement}) {
     return _ConsentVerification(
       id: id,
       extension_: extension_,
@@ -4291,7 +4291,7 @@ mixin _$ConsentVerification {
   Reference? get verifiedWith;
   List<FhirDateTime>? get verificationDate;
   @JsonKey(name: '_verificationDate')
-  List<Element>? get verificationDateElement;
+  List<Element?>? get verificationDateElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4316,7 +4316,7 @@ abstract class $ConsentVerificationCopyWith<$Res> {
       Reference? verifiedWith,
       List<FhirDateTime>? verificationDate,
       @JsonKey(name: '_verificationDate')
-          List<Element>? verificationDateElement});
+          List<Element?>? verificationDateElement});
 
   $ElementCopyWith<$Res>? get verifiedElement;
   $CodeableConceptCopyWith<$Res>? get verificationType;
@@ -4371,7 +4371,7 @@ class _$ConsentVerificationCopyWithImpl<$Res>
           : verificationDate as List<FhirDateTime>?,
       verificationDateElement: verificationDateElement == freezed
           ? _value.verificationDateElement
-          : verificationDateElement as List<Element>?,
+          : verificationDateElement as List<Element?>?,
     ));
   }
 
@@ -4440,7 +4440,7 @@ abstract class _$ConsentVerificationCopyWith<$Res>
       Reference? verifiedWith,
       List<FhirDateTime>? verificationDate,
       @JsonKey(name: '_verificationDate')
-          List<Element>? verificationDateElement});
+          List<Element?>? verificationDateElement});
 
   @override
   $ElementCopyWith<$Res>? get verifiedElement;
@@ -4501,7 +4501,7 @@ class __$ConsentVerificationCopyWithImpl<$Res>
           : verificationDate as List<FhirDateTime>?,
       verificationDateElement: verificationDateElement == freezed
           ? _value.verificationDateElement
-          : verificationDateElement as List<Element>?,
+          : verificationDateElement as List<Element?>?,
     ));
   }
 }
@@ -4548,7 +4548,7 @@ class _$_ConsentVerification extends _ConsentVerification {
   final List<FhirDateTime>? verificationDate;
   @override
   @JsonKey(name: '_verificationDate')
-  final List<Element>? verificationDateElement;
+  final List<Element?>? verificationDateElement;
 
   @override
   String toString() {
@@ -4632,7 +4632,7 @@ abstract class _ConsentVerification extends ConsentVerification {
       Reference? verifiedWith,
       List<FhirDateTime>? verificationDate,
       @JsonKey(name: '_verificationDate')
-          List<Element>? verificationDateElement}) = _$_ConsentVerification;
+          List<Element?>? verificationDateElement}) = _$_ConsentVerification;
 
   factory _ConsentVerification.fromJson(Map<String, dynamic> json) =
       _$_ConsentVerification.fromJson;
@@ -4659,7 +4659,7 @@ abstract class _ConsentVerification extends ConsentVerification {
   List<FhirDateTime>? get verificationDate;
   @override
   @JsonKey(name: '_verificationDate')
-  List<Element>? get verificationDateElement;
+  List<Element?>? get verificationDateElement;
   @override
   @JsonKey(ignore: true)
   _$ConsentVerificationCopyWith<_ConsentVerification> get copyWith;
@@ -5764,7 +5764,7 @@ class _$PermissionTearOff {
       Reference? asserter,
       List<FhirDateTime>? assertionDate,
       @JsonKey(name: '_assertionDate')
-          List<Element>? assertionDateElement,
+          List<Element?>? assertionDateElement,
       Period? validity,
       List<CodeableConcept>? purpose,
       List<Expression>? dataScope,
@@ -5831,7 +5831,7 @@ mixin _$Permission {
   Reference? get asserter;
   List<FhirDateTime>? get assertionDate;
   @JsonKey(name: '_assertionDate')
-  List<Element>? get assertionDateElement;
+  List<Element?>? get assertionDateElement;
   Period? get validity;
   List<CodeableConcept>? get purpose;
   List<Expression>? get dataScope;
@@ -5873,7 +5873,7 @@ abstract class $PermissionCopyWith<$Res> {
       Reference? asserter,
       List<FhirDateTime>? assertionDate,
       @JsonKey(name: '_assertionDate')
-          List<Element>? assertionDateElement,
+          List<Element?>? assertionDateElement,
       Period? validity,
       List<CodeableConcept>? purpose,
       List<Expression>? dataScope,
@@ -5963,7 +5963,7 @@ class _$PermissionCopyWithImpl<$Res> implements $PermissionCopyWith<$Res> {
           : assertionDate as List<FhirDateTime>?,
       assertionDateElement: assertionDateElement == freezed
           ? _value.assertionDateElement
-          : assertionDateElement as List<Element>?,
+          : assertionDateElement as List<Element?>?,
       validity: validity == freezed ? _value.validity : validity as Period?,
       purpose: purpose == freezed
           ? _value.purpose
@@ -6114,7 +6114,7 @@ abstract class _$PermissionCopyWith<$Res> implements $PermissionCopyWith<$Res> {
       Reference? asserter,
       List<FhirDateTime>? assertionDate,
       @JsonKey(name: '_assertionDate')
-          List<Element>? assertionDateElement,
+          List<Element?>? assertionDateElement,
       Period? validity,
       List<CodeableConcept>? purpose,
       List<Expression>? dataScope,
@@ -6215,7 +6215,7 @@ class __$PermissionCopyWithImpl<$Res> extends _$PermissionCopyWithImpl<$Res>
           : assertionDate as List<FhirDateTime>?,
       assertionDateElement: assertionDateElement == freezed
           ? _value.assertionDateElement
-          : assertionDateElement as List<Element>?,
+          : assertionDateElement as List<Element?>?,
       validity: validity == freezed ? _value.validity : validity as Period?,
       purpose: purpose == freezed
           ? _value.purpose
@@ -6316,7 +6316,7 @@ class _$_Permission extends _Permission {
   final List<FhirDateTime>? assertionDate;
   @override
   @JsonKey(name: '_assertionDate')
-  final List<Element>? assertionDateElement;
+  final List<Element?>? assertionDateElement;
   @override
   final Period? validity;
   @override
@@ -6469,7 +6469,7 @@ abstract class _Permission extends Permission {
       Reference? asserter,
       List<FhirDateTime>? assertionDate,
       @JsonKey(name: '_assertionDate')
-          List<Element>? assertionDateElement,
+          List<Element?>? assertionDateElement,
       Period? validity,
       List<CodeableConcept>? purpose,
       List<Expression>? dataScope,
@@ -6520,7 +6520,7 @@ abstract class _Permission extends Permission {
   List<FhirDateTime>? get assertionDate;
   @override
   @JsonKey(name: '_assertionDate')
-  List<Element>? get assertionDateElement;
+  List<Element?>? get assertionDateElement;
   @override
   Period? get validity;
   @override
@@ -7093,7 +7093,7 @@ class _$ProvenanceTearOff {
           Element? recordedElement,
       List<FhirUri>? policy,
       @JsonKey(name: '_policy')
-          List<Element>? policyElement,
+          List<Element?>? policyElement,
       Reference? location,
       List<CodeableConcept>? reason,
       CodeableConcept? activity,
@@ -7164,7 +7164,7 @@ mixin _$Provenance {
   Element? get recordedElement;
   List<FhirUri>? get policy;
   @JsonKey(name: '_policy')
-  List<Element>? get policyElement;
+  List<Element?>? get policyElement;
   Reference? get location;
   List<CodeableConcept>? get reason;
   CodeableConcept? get activity;
@@ -7208,7 +7208,7 @@ abstract class $ProvenanceCopyWith<$Res> {
           Element? recordedElement,
       List<FhirUri>? policy,
       @JsonKey(name: '_policy')
-          List<Element>? policyElement,
+          List<Element?>? policyElement,
       Reference? location,
       List<CodeableConcept>? reason,
       CodeableConcept? activity,
@@ -7306,7 +7306,7 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
       policy: policy == freezed ? _value.policy : policy as List<FhirUri>?,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as List<Element>?,
+          : policyElement as List<Element?>?,
       location: location == freezed ? _value.location : location as Reference?,
       reason:
           reason == freezed ? _value.reason : reason as List<CodeableConcept>?,
@@ -7453,7 +7453,7 @@ abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
           Element? recordedElement,
       List<FhirUri>? policy,
       @JsonKey(name: '_policy')
-          List<Element>? policyElement,
+          List<Element?>? policyElement,
       Reference? location,
       List<CodeableConcept>? reason,
       CodeableConcept? activity,
@@ -7562,7 +7562,7 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
       policy: policy == freezed ? _value.policy : policy as List<FhirUri>?,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as List<Element>?,
+          : policyElement as List<Element?>?,
       location: location == freezed ? _value.location : location as Reference?,
       reason:
           reason == freezed ? _value.reason : reason as List<CodeableConcept>?,
@@ -7664,7 +7664,7 @@ class _$_Provenance extends _Provenance {
   final List<FhirUri>? policy;
   @override
   @JsonKey(name: '_policy')
-  final List<Element>? policyElement;
+  final List<Element?>? policyElement;
   @override
   final Reference? location;
   @override
@@ -7822,7 +7822,7 @@ abstract class _Provenance extends Provenance {
           Element? recordedElement,
       List<FhirUri>? policy,
       @JsonKey(name: '_policy')
-          List<Element>? policyElement,
+          List<Element?>? policyElement,
       Reference? location,
       List<CodeableConcept>? reason,
       CodeableConcept? activity,
@@ -7877,7 +7877,7 @@ abstract class _Provenance extends Provenance {
   List<FhirUri>? get policy;
   @override
   @JsonKey(name: '_policy')
-  List<Element>? get policyElement;
+  List<Element?>? get policyElement;
   @override
   Reference? get location;
   @override

@@ -1523,7 +1523,7 @@ class _$AllergyIntoleranceTearOff {
           Element? typeElement,
       List<AllergyIntoleranceCategory>? category,
       @JsonKey(name: '_category')
-          List<Element>? categoryElement,
+          List<Element?>? categoryElement,
       AllergyIntoleranceCriticality? criticality,
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
@@ -1628,7 +1628,7 @@ mixin _$AllergyIntolerance {
   Element? get typeElement;
   List<AllergyIntoleranceCategory>? get category;
   @JsonKey(name: '_category')
-  List<Element>? get categoryElement;
+  List<Element?>? get categoryElement;
   AllergyIntoleranceCriticality? get criticality;
   @JsonKey(name: '_criticality')
   Element? get criticalityElement;
@@ -1692,7 +1692,7 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
           Element? typeElement,
       List<AllergyIntoleranceCategory>? category,
       @JsonKey(name: '_category')
-          List<Element>? categoryElement,
+          List<Element?>? categoryElement,
       AllergyIntoleranceCriticality? criticality,
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
@@ -1839,7 +1839,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
           : category as List<AllergyIntoleranceCategory>?,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
-          : categoryElement as List<Element>?,
+          : categoryElement as List<Element?>?,
       criticality: criticality == freezed
           ? _value.criticality
           : criticality as AllergyIntoleranceCriticality?,
@@ -2125,7 +2125,7 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
           Element? typeElement,
       List<AllergyIntoleranceCategory>? category,
       @JsonKey(name: '_category')
-          List<Element>? categoryElement,
+          List<Element?>? categoryElement,
       AllergyIntoleranceCriticality? criticality,
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
@@ -2293,7 +2293,7 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
           : category as List<AllergyIntoleranceCategory>?,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
-          : categoryElement as List<Element>?,
+          : categoryElement as List<Element?>?,
       criticality: criticality == freezed
           ? _value.criticality
           : criticality as AllergyIntoleranceCriticality?,
@@ -2448,7 +2448,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   final List<AllergyIntoleranceCategory>? category;
   @override
   @JsonKey(name: '_category')
-  final List<Element>? categoryElement;
+  final List<Element?>? categoryElement;
   @override
   final AllergyIntoleranceCriticality? criticality;
   @override
@@ -2668,7 +2668,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
           Element? typeElement,
       List<AllergyIntoleranceCategory>? category,
       @JsonKey(name: '_category')
-          List<Element>? categoryElement,
+          List<Element?>? categoryElement,
       AllergyIntoleranceCriticality? criticality,
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
@@ -2744,7 +2744,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   List<AllergyIntoleranceCategory>? get category;
   @override
   @JsonKey(name: '_category')
-  List<Element>? get categoryElement;
+  List<Element?>? get categoryElement;
   @override
   AllergyIntoleranceCriticality? get criticality;
   @override
@@ -3276,7 +3276,7 @@ class _$ClinicalImpressionTearOff {
       List<ClinicalImpressionInvestigation>? investigation,
       List<String>? protocol,
       @JsonKey(name: '_protocol')
-          List<Element>? protocolElement,
+          List<Element?>? protocolElement,
       String? summary,
       @JsonKey(name: '_summary')
           Element? summaryElement,
@@ -3374,7 +3374,7 @@ mixin _$ClinicalImpression {
   List<ClinicalImpressionInvestigation>? get investigation;
   List<String>? get protocol;
   @JsonKey(name: '_protocol')
-  List<Element>? get protocolElement;
+  List<Element?>? get protocolElement;
   String? get summary;
   @JsonKey(name: '_summary')
   Element? get summaryElement;
@@ -3433,7 +3433,7 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
       List<ClinicalImpressionInvestigation>? investigation,
       List<String>? protocol,
       @JsonKey(name: '_protocol')
-          List<Element>? protocolElement,
+          List<Element?>? protocolElement,
       String? summary,
       @JsonKey(name: '_summary')
           Element? summaryElement,
@@ -3575,7 +3575,7 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
           protocol == freezed ? _value.protocol : protocol as List<String>?,
       protocolElement: protocolElement == freezed
           ? _value.protocolElement
-          : protocolElement as List<Element>?,
+          : protocolElement as List<Element?>?,
       summary: summary == freezed ? _value.summary : summary as String?,
       summaryElement: summaryElement == freezed
           ? _value.summaryElement
@@ -3802,7 +3802,7 @@ abstract class _$ClinicalImpressionCopyWith<$Res>
       List<ClinicalImpressionInvestigation>? investigation,
       List<String>? protocol,
       @JsonKey(name: '_protocol')
-          List<Element>? protocolElement,
+          List<Element?>? protocolElement,
       String? summary,
       @JsonKey(name: '_summary')
           Element? summaryElement,
@@ -3961,7 +3961,7 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
           protocol == freezed ? _value.protocol : protocol as List<String>?,
       protocolElement: protocolElement == freezed
           ? _value.protocolElement
-          : protocolElement as List<Element>?,
+          : protocolElement as List<Element?>?,
       summary: summary == freezed ? _value.summary : summary as String?,
       summaryElement: summaryElement == freezed
           ? _value.summaryElement
@@ -4106,7 +4106,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
   final List<String>? protocol;
   @override
   @JsonKey(name: '_protocol')
-  final List<Element>? protocolElement;
+  final List<Element?>? protocolElement;
   @override
   final String? summary;
   @override
@@ -4306,7 +4306,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
       List<ClinicalImpressionInvestigation>? investigation,
       List<String>? protocol,
       @JsonKey(name: '_protocol')
-          List<Element>? protocolElement,
+          List<Element?>? protocolElement,
       String? summary,
       @JsonKey(name: '_summary')
           Element? summaryElement,
@@ -4387,7 +4387,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   List<String>? get protocol;
   @override
   @JsonKey(name: '_protocol')
-  List<Element>? get protocolElement;
+  List<Element?>? get protocolElement;
   @override
   String? get summary;
   @override

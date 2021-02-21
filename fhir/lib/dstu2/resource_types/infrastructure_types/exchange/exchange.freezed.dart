@@ -5414,7 +5414,7 @@ class _$SubscriptionChannelTearOff {
       required String payload,
       @JsonKey(name: '_payload') Element? payloadElement,
       String? header,
-      @JsonKey(name: '_header') List<Element>? headerElement}) {
+      @JsonKey(name: '_header') List<Element?>? headerElement}) {
     return _SubscriptionChannel(
       id: id,
       extension_: extension_,
@@ -5456,7 +5456,7 @@ mixin _$SubscriptionChannel {
   Element? get payloadElement;
   String? get header;
   @JsonKey(name: '_header')
-  List<Element>? get headerElement;
+  List<Element?>? get headerElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -5479,7 +5479,7 @@ abstract class $SubscriptionChannelCopyWith<$Res> {
       String payload,
       @JsonKey(name: '_payload') Element? payloadElement,
       String? header,
-      @JsonKey(name: '_header') List<Element>? headerElement});
+      @JsonKey(name: '_header') List<Element?>? headerElement});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get endpointElement;
@@ -5531,7 +5531,7 @@ class _$SubscriptionChannelCopyWithImpl<$Res>
       header: header == freezed ? _value.header : header as String?,
       headerElement: headerElement == freezed
           ? _value.headerElement
-          : headerElement as List<Element>?,
+          : headerElement as List<Element?>?,
     ));
   }
 
@@ -5587,7 +5587,7 @@ abstract class _$SubscriptionChannelCopyWith<$Res>
       String payload,
       @JsonKey(name: '_payload') Element? payloadElement,
       String? header,
-      @JsonKey(name: '_header') List<Element>? headerElement});
+      @JsonKey(name: '_header') List<Element?>? headerElement});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -5644,7 +5644,7 @@ class __$SubscriptionChannelCopyWithImpl<$Res>
       header: header == freezed ? _value.header : header as String?,
       headerElement: headerElement == freezed
           ? _value.headerElement
-          : headerElement as List<Element>?,
+          : headerElement as List<Element?>?,
     ));
   }
 }
@@ -5697,7 +5697,7 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
   final String? header;
   @override
   @JsonKey(name: '_header')
-  final List<Element>? headerElement;
+  final List<Element?>? headerElement;
 
   @override
   String toString() {
@@ -5786,7 +5786,7 @@ abstract class _SubscriptionChannel extends SubscriptionChannel {
           Element? payloadElement,
       String? header,
       @JsonKey(name: '_header')
-          List<Element>? headerElement}) = _$_SubscriptionChannel;
+          List<Element?>? headerElement}) = _$_SubscriptionChannel;
 
   factory _SubscriptionChannel.fromJson(Map<String, dynamic> json) =
       _$_SubscriptionChannel.fromJson;
@@ -5818,7 +5818,7 @@ abstract class _SubscriptionChannel extends SubscriptionChannel {
   String? get header;
   @override
   @JsonKey(name: '_header')
-  List<Element>? get headerElement;
+  List<Element?>? get headerElement;
   @override
   @JsonKey(ignore: true)
   _$SubscriptionChannelCopyWith<_SubscriptionChannel> get copyWith;

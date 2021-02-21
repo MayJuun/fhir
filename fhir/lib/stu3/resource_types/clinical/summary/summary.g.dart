@@ -422,7 +422,8 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
         ?.map((e) => _$enumDecode(_$AllergyIntoleranceCategoryEnumMap, e))
         .toList(),
     categoryElement: (json['_category'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     criticality: _$enumDecodeNullable(
         _$AllergyIntoleranceCriticalityEnumMap, json['criticality']),
@@ -522,7 +523,7 @@ Map<String, dynamic> _$_$_AllergyIntoleranceToJson(
           ?.map((e) => _$AllergyIntoleranceCategoryEnumMap[e])
           .toList());
   writeNotNull(
-      '_category', instance.categoryElement?.map((e) => e.toJson()).toList());
+      '_category', instance.categoryElement?.map((e) => e?.toJson()).toList());
   writeNotNull('criticality',
       _$AllergyIntoleranceCriticalityEnumMap[instance.criticality]);
   writeNotNull('_criticality', instance.criticalityElement?.toJson());
@@ -724,7 +725,8 @@ _$_ClinicalImpression _$_$_ClinicalImpressionFromJson(
     protocol:
         (json['protocol'] as List<dynamic>?)?.map((e) => e as String).toList(),
     protocolElement: (json['_protocol'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     summary: json['summary'] as String?,
     summaryElement: json['_summary'] == null
@@ -797,7 +799,7 @@ Map<String, dynamic> _$_$_ClinicalImpressionToJson(
       'investigation', instance.investigation?.map((e) => e.toJson()).toList());
   writeNotNull('protocol', instance.protocol);
   writeNotNull(
-      '_protocol', instance.protocolElement?.map((e) => e.toJson()).toList());
+      '_protocol', instance.protocolElement?.map((e) => e?.toJson()).toList());
   writeNotNull('summary', instance.summary);
   writeNotNull('_summary', instance.summaryElement?.toJson());
   writeNotNull('finding', instance.finding?.map((e) => e.toJson()).toList());

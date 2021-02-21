@@ -5433,7 +5433,7 @@ class _$ClinicalImpressionTearOff {
       List<ClinicalImpressionInvestigations>? investigations,
       FhirUri? protocol,
       @JsonKey(name: '_protocol')
-          List<Element>? protocolElement,
+          List<Element?>? protocolElement,
       String? summary,
       @JsonKey(name: '_summary')
           Element? summaryElement,
@@ -5525,7 +5525,7 @@ mixin _$ClinicalImpression {
   List<ClinicalImpressionInvestigations>? get investigations;
   FhirUri? get protocol;
   @JsonKey(name: '_protocol')
-  List<Element>? get protocolElement;
+  List<Element?>? get protocolElement;
   String? get summary;
   @JsonKey(name: '_summary')
   Element? get summaryElement;
@@ -5581,7 +5581,7 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
       List<ClinicalImpressionInvestigations>? investigations,
       FhirUri? protocol,
       @JsonKey(name: '_protocol')
-          List<Element>? protocolElement,
+          List<Element?>? protocolElement,
       String? summary,
       @JsonKey(name: '_summary')
           Element? summaryElement,
@@ -5710,7 +5710,7 @@ class _$ClinicalImpressionCopyWithImpl<$Res>
       protocol: protocol == freezed ? _value.protocol : protocol as FhirUri?,
       protocolElement: protocolElement == freezed
           ? _value.protocolElement
-          : protocolElement as List<Element>?,
+          : protocolElement as List<Element?>?,
       summary: summary == freezed ? _value.summary : summary as String?,
       summaryElement: summaryElement == freezed
           ? _value.summaryElement
@@ -5913,7 +5913,7 @@ abstract class _$ClinicalImpressionCopyWith<$Res>
       List<ClinicalImpressionInvestigations>? investigations,
       FhirUri? protocol,
       @JsonKey(name: '_protocol')
-          List<Element>? protocolElement,
+          List<Element?>? protocolElement,
       String? summary,
       @JsonKey(name: '_summary')
           Element? summaryElement,
@@ -6057,7 +6057,7 @@ class __$ClinicalImpressionCopyWithImpl<$Res>
       protocol: protocol == freezed ? _value.protocol : protocol as FhirUri?,
       protocolElement: protocolElement == freezed
           ? _value.protocolElement
-          : protocolElement as List<Element>?,
+          : protocolElement as List<Element?>?,
       summary: summary == freezed ? _value.summary : summary as String?,
       summaryElement: summaryElement == freezed
           ? _value.summaryElement
@@ -6192,7 +6192,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
   final FhirUri? protocol;
   @override
   @JsonKey(name: '_protocol')
-  final List<Element>? protocolElement;
+  final List<Element?>? protocolElement;
   @override
   final String? summary;
   @override
@@ -6384,7 +6384,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
       List<ClinicalImpressionInvestigations>? investigations,
       FhirUri? protocol,
       @JsonKey(name: '_protocol')
-          List<Element>? protocolElement,
+          List<Element?>? protocolElement,
       String? summary,
       @JsonKey(name: '_summary')
           Element? summaryElement,
@@ -6458,7 +6458,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
   FhirUri? get protocol;
   @override
   @JsonKey(name: '_protocol')
-  List<Element>? get protocolElement;
+  List<Element?>? get protocolElement;
   @override
   String? get summary;
   @override

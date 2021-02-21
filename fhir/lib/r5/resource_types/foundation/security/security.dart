@@ -83,7 +83,7 @@ abstract class AuditEventAgent implements _$AuditEventAgent {
     @JsonKey(name: '_requestor') Element? requestorElement,
     Reference? location,
     List<FhirUri>? policy,
-    @JsonKey(name: '_policy') List<Element>? policyElement,
+    @JsonKey(name: '_policy') List<Element?>? policyElement,
     Coding? media,
     AuditEventNetwork? network,
     List<CodeableConcept>? purposeOfUse,
@@ -331,7 +331,7 @@ abstract class ConsentVerification implements _$ConsentVerification {
     Reference? verifiedBy,
     Reference? verifiedWith,
     List<FhirDateTime>? verificationDate,
-    @JsonKey(name: '_verificationDate') List<Element>? verificationDateElement,
+    @JsonKey(name: '_verificationDate') List<Element?>? verificationDateElement,
   }) = _ConsentVerification;
 
   /// Produces a Yaml formatted String version of the object
@@ -471,7 +471,7 @@ abstract class Permission with Resource implements _$Permission {
     CodeableConcept? intent,
     Reference? asserter,
     List<FhirDateTime>? assertionDate,
-    @JsonKey(name: '_assertionDate') List<Element>? assertionDateElement,
+    @JsonKey(name: '_assertionDate') List<Element?>? assertionDateElement,
     Period? validity,
     List<CodeableConcept>? purpose,
     List<Expression>? dataScope,
@@ -580,7 +580,7 @@ abstract class Provenance with Resource implements _$Provenance {
     Instant? recorded,
     @JsonKey(name: '_recorded') Element? recordedElement,
     List<FhirUri>? policy,
-    @JsonKey(name: '_policy') List<Element>? policyElement,
+    @JsonKey(name: '_policy') List<Element?>? policyElement,
     Reference? location,
     List<CodeableConcept>? reason,
     CodeableConcept? activity,

@@ -1108,7 +1108,8 @@ _$_ClaimResponseItem _$_$_ClaimResponseItemFromJson(Map<String, dynamic> json) {
         ?.map((e) => PositiveInt.fromJson(e))
         .toList(),
     noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     adjudication: (json['adjudication'] as List<dynamic>?)
         ?.map((e) =>
@@ -1141,7 +1142,7 @@ Map<String, dynamic> _$_$_ClaimResponseItemToJson(
   writeNotNull(
       'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
   writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e.toJson()).toList());
+      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'adjudication', instance.adjudication?.map((e) => e.toJson()).toList());
   writeNotNull('detail', instance.detail?.map((e) => e.toJson()).toList());

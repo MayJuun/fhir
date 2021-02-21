@@ -294,11 +294,11 @@ abstract class Endpoint with Resource implements _$Endpoint {
     Period? period,
     required List<CodeableConcept> payloadType,
     List<String>? payloadMimeType,
-    @JsonKey(name: '_payloadMimeType') List<Element>? payloadMimeTypeElement,
+    @JsonKey(name: '_payloadMimeType') List<Element?>? payloadMimeTypeElement,
     String? address,
     @JsonKey(name: '_address') Element? addressElement,
     List<String>? header,
-    @JsonKey(name: '_header') List<Element>? headerElement,
+    @JsonKey(name: '_header') List<Element?>? headerElement,
   }) = _Endpoint;
 
   /// Produces a Yaml formatted String version of the object
@@ -357,7 +357,7 @@ abstract class HealthcareService with Resource implements _$HealthcareService {
     String? eligibilityNote,
     @JsonKey(name: '_eligibilityNote') Element? eligibilityNoteElement,
     List<String>? programName,
-    @JsonKey(name: '_programName') List<Element>? programNameElement,
+    @JsonKey(name: '_programName') List<Element?>? programNameElement,
     List<CodeableConcept>? characteristic,
     List<CodeableConcept>? referralMethod,
     Boolean? appointmentRequired,
@@ -393,7 +393,7 @@ abstract class HealthcareServiceAvailableTime
   HealthcareServiceAvailableTime._();
   factory HealthcareServiceAvailableTime({
     List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
-    @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
+    @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
     Boolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,
     Time? availableStartTime,
@@ -474,7 +474,7 @@ abstract class Location with Resource implements _$Location {
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     List<String>? alias,
-    @JsonKey(name: '_alias') List<Element>? aliasElement,
+    @JsonKey(name: '_alias') List<Element?>? aliasElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     LocationMode? mode,
@@ -559,7 +559,7 @@ abstract class Organization with Resource implements _$Organization {
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     List<String>? alias,
-    @JsonKey(name: '_alias') List<Element>? aliasElement,
+    @JsonKey(name: '_alias') List<Element?>? aliasElement,
     List<ContactPoint>? telecom,
     List<Address>? address,
     Reference? partOf,

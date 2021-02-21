@@ -360,7 +360,8 @@ _$_AuditEventAgent _$_$_AuditEventAgentFromJson(Map<String, dynamic> json) {
         ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     policyElement: (json['_policy'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     media: json['media'] == null
         ? null
@@ -400,7 +401,7 @@ Map<String, dynamic> _$_$_AuditEventAgentToJson(_$_AuditEventAgent instance) {
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('policy', instance.policy?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_policy', instance.policyElement?.map((e) => e.toJson()).toList());
+      '_policy', instance.policyElement?.map((e) => e?.toJson()).toList());
   writeNotNull('media', instance.media?.toJson());
   writeNotNull('network', instance.network?.toJson());
   writeNotNull(
@@ -827,7 +828,8 @@ _$_ConsentVerification _$_$_ConsentVerificationFromJson(
         ?.map((e) => FhirDateTime.fromJson(e))
         .toList(),
     verificationDateElement: (json['_verificationDate'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -855,7 +857,7 @@ Map<String, dynamic> _$_$_ConsentVerificationToJson(
   writeNotNull('verificationDate',
       instance.verificationDate?.map((e) => e.toJson()).toList());
   writeNotNull('_verificationDate',
-      instance.verificationDateElement?.map((e) => e.toJson()).toList());
+      instance.verificationDateElement?.map((e) => e?.toJson()).toList());
   return val;
 }
 
@@ -1067,7 +1069,8 @@ _$_Permission _$_$_PermissionFromJson(Map<String, dynamic> json) {
         ?.map((e) => FhirDateTime.fromJson(e))
         .toList(),
     assertionDateElement: (json['_assertionDate'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     validity: json['validity'] == null
         ? null
@@ -1123,7 +1126,7 @@ Map<String, dynamic> _$_$_PermissionToJson(_$_Permission instance) {
   writeNotNull(
       'assertionDate', instance.assertionDate?.map((e) => e.toJson()).toList());
   writeNotNull('_assertionDate',
-      instance.assertionDateElement?.map((e) => e.toJson()).toList());
+      instance.assertionDateElement?.map((e) => e?.toJson()).toList());
   writeNotNull('validity', instance.validity?.toJson());
   writeNotNull('purpose', instance.purpose?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -1279,7 +1282,8 @@ _$_Provenance _$_$_ProvenanceFromJson(Map<String, dynamic> json) {
         ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     policyElement: (json['_policy'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     location: json['location'] == null
         ? null
@@ -1334,7 +1338,7 @@ Map<String, dynamic> _$_$_ProvenanceToJson(_$_Provenance instance) {
   writeNotNull('_recorded', instance.recordedElement?.toJson());
   writeNotNull('policy', instance.policy?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_policy', instance.policyElement?.map((e) => e.toJson()).toList());
+      '_policy', instance.policyElement?.map((e) => e?.toJson()).toList());
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
   writeNotNull('activity', instance.activity?.toJson());

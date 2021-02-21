@@ -7938,9 +7938,9 @@ class _$OperationOutcomeIssueTearOff {
       String? diagnostics,
       @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
       List<String>? location,
-      @JsonKey(name: '_location') List<Element>? locationElement,
+      @JsonKey(name: '_location') List<Element?>? locationElement,
       List<String>? expression,
-      @JsonKey(name: '_expression') List<Element>? expressionElement}) {
+      @JsonKey(name: '_expression') List<Element?>? expressionElement}) {
     return _OperationOutcomeIssue(
       severity: severity,
       severityElement: severityElement,
@@ -7978,10 +7978,10 @@ mixin _$OperationOutcomeIssue {
   Element? get diagnosticsElement;
   List<String>? get location;
   @JsonKey(name: '_location')
-  List<Element>? get locationElement;
+  List<Element?>? get locationElement;
   List<String>? get expression;
   @JsonKey(name: '_expression')
-  List<Element>? get expressionElement;
+  List<Element?>? get expressionElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -8002,9 +8002,9 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
       String? diagnostics,
       @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
       List<String>? location,
-      @JsonKey(name: '_location') List<Element>? locationElement,
+      @JsonKey(name: '_location') List<Element?>? locationElement,
       List<String>? expression,
-      @JsonKey(name: '_expression') List<Element>? expressionElement});
+      @JsonKey(name: '_expression') List<Element?>? expressionElement});
 
   $ElementCopyWith<$Res>? get severityElement;
   $ElementCopyWith<$Res>? get codeElement;
@@ -8056,13 +8056,13 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
           location == freezed ? _value.location : location as List<String>?,
       locationElement: locationElement == freezed
           ? _value.locationElement
-          : locationElement as List<Element>?,
+          : locationElement as List<Element?>?,
       expression: expression == freezed
           ? _value.expression
           : expression as List<String>?,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as List<Element>?,
+          : expressionElement as List<Element?>?,
     ));
   }
 
@@ -8127,9 +8127,9 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
       String? diagnostics,
       @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
       List<String>? location,
-      @JsonKey(name: '_location') List<Element>? locationElement,
+      @JsonKey(name: '_location') List<Element?>? locationElement,
       List<String>? expression,
-      @JsonKey(name: '_expression') List<Element>? expressionElement});
+      @JsonKey(name: '_expression') List<Element?>? expressionElement});
 
   @override
   $ElementCopyWith<$Res>? get severityElement;
@@ -8187,13 +8187,13 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
           location == freezed ? _value.location : location as List<String>?,
       locationElement: locationElement == freezed
           ? _value.locationElement
-          : locationElement as List<Element>?,
+          : locationElement as List<Element?>?,
       expression: expression == freezed
           ? _value.expression
           : expression as List<String>?,
       expressionElement: expressionElement == freezed
           ? _value.expressionElement
-          : expressionElement as List<Element>?,
+          : expressionElement as List<Element?>?,
     ));
   }
 }
@@ -8240,12 +8240,12 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
   final List<String>? location;
   @override
   @JsonKey(name: '_location')
-  final List<Element>? locationElement;
+  final List<Element?>? locationElement;
   @override
   final List<String>? expression;
   @override
   @JsonKey(name: '_expression')
-  final List<Element>? expressionElement;
+  final List<Element?>? expressionElement;
 
   @override
   String toString() {
@@ -8328,9 +8328,9 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
           String? diagnostics,
           @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
           List<String>? location,
-          @JsonKey(name: '_location') List<Element>? locationElement,
+          @JsonKey(name: '_location') List<Element?>? locationElement,
           List<String>? expression,
-          @JsonKey(name: '_expression') List<Element>? expressionElement}) =
+          @JsonKey(name: '_expression') List<Element?>? expressionElement}) =
       _$_OperationOutcomeIssue;
 
   factory _OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =
@@ -8357,12 +8357,12 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
   List<String>? get location;
   @override
   @JsonKey(name: '_location')
-  List<Element>? get locationElement;
+  List<Element?>? get locationElement;
   @override
   List<String>? get expression;
   @override
   @JsonKey(name: '_expression')
-  List<Element>? get expressionElement;
+  List<Element?>? get expressionElement;
   @override
   @JsonKey(ignore: true)
   _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith;
@@ -12198,7 +12198,7 @@ class _$SubscriptionChannelTearOff {
       String? payload,
       @JsonKey(name: '_payload') Element? payloadElement,
       List<String>? header,
-      @JsonKey(name: '_header') List<Element>? headerElement}) {
+      @JsonKey(name: '_header') List<Element?>? headerElement}) {
     return _SubscriptionChannel(
       type: type,
       typeElement: typeElement,
@@ -12232,7 +12232,7 @@ mixin _$SubscriptionChannel {
   Element? get payloadElement;
   List<String>? get header;
   @JsonKey(name: '_header')
-  List<Element>? get headerElement;
+  List<Element?>? get headerElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -12252,7 +12252,7 @@ abstract class $SubscriptionChannelCopyWith<$Res> {
       String? payload,
       @JsonKey(name: '_payload') Element? payloadElement,
       List<String>? header,
-      @JsonKey(name: '_header') List<Element>? headerElement});
+      @JsonKey(name: '_header') List<Element?>? headerElement});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get endpointElement;
@@ -12294,7 +12294,7 @@ class _$SubscriptionChannelCopyWithImpl<$Res>
       header: header == freezed ? _value.header : header as List<String>?,
       headerElement: headerElement == freezed
           ? _value.headerElement
-          : headerElement as List<Element>?,
+          : headerElement as List<Element?>?,
     ));
   }
 
@@ -12347,7 +12347,7 @@ abstract class _$SubscriptionChannelCopyWith<$Res>
       String? payload,
       @JsonKey(name: '_payload') Element? payloadElement,
       List<String>? header,
-      @JsonKey(name: '_header') List<Element>? headerElement});
+      @JsonKey(name: '_header') List<Element?>? headerElement});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -12394,7 +12394,7 @@ class __$SubscriptionChannelCopyWithImpl<$Res>
       header: header == freezed ? _value.header : header as List<String>?,
       headerElement: headerElement == freezed
           ? _value.headerElement
-          : headerElement as List<Element>?,
+          : headerElement as List<Element?>?,
     ));
   }
 }
@@ -12436,7 +12436,7 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
   final List<String>? header;
   @override
   @JsonKey(name: '_header')
-  final List<Element>? headerElement;
+  final List<Element?>? headerElement;
 
   @override
   String toString() {
@@ -12505,7 +12505,7 @@ abstract class _SubscriptionChannel extends SubscriptionChannel {
           String? payload,
           @JsonKey(name: '_payload') Element? payloadElement,
           List<String>? header,
-          @JsonKey(name: '_header') List<Element>? headerElement}) =
+          @JsonKey(name: '_header') List<Element?>? headerElement}) =
       _$_SubscriptionChannel;
 
   factory _SubscriptionChannel.fromJson(Map<String, dynamic> json) =
@@ -12530,7 +12530,7 @@ abstract class _SubscriptionChannel extends SubscriptionChannel {
   List<String>? get header;
   @override
   @JsonKey(name: '_header')
-  List<Element>? get headerElement;
+  List<Element?>? get headerElement;
   @override
   @JsonKey(ignore: true)
   _$SubscriptionChannelCopyWith<_SubscriptionChannel> get copyWith;

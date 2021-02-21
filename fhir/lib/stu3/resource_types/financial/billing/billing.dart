@@ -266,7 +266,7 @@ abstract class ClaimInsurance implements _$ClaimInsurance {
     String? businessArrangement,
     @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
     List<String>? preAuthRef,
-    @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement,
+    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
     Reference? claimResponse,
   }) = _ClaimInsurance;
 
@@ -322,11 +322,11 @@ abstract class ClaimItem implements _$ClaimItem {
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     List<Id>? careTeamLinkId,
-    @JsonKey(name: '_careTeamLinkId') List<Element>? careTeamLinkIdElement,
+    @JsonKey(name: '_careTeamLinkId') List<Element?>? careTeamLinkIdElement,
     List<Id>? diagnosisLinkId,
-    @JsonKey(name: '_diagnosisLinkId') List<Element>? diagnosisLinkIdElement,
+    @JsonKey(name: '_diagnosisLinkId') List<Element?>? diagnosisLinkIdElement,
     List<Id>? procedureLinkId,
-    @JsonKey(name: '_procedureLinkId') List<Element>? procedureLinkIdElement,
+    @JsonKey(name: '_procedureLinkId') List<Element?>? procedureLinkIdElement,
     List<Id>? informationLinkId,
     @JsonKey(name: '_informationLinkId')
         List<Element>? informationLinkIdElement,
@@ -512,7 +512,7 @@ abstract class ClaimResponseItem implements _$ClaimResponseItem {
     Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     List<Decimal>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ClaimResponseAdjudication>? adjudication,
     List<ClaimResponseDetail>? detail,
   }) = _ClaimResponseItem;
@@ -571,7 +571,7 @@ abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
     Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     List<Decimal>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ClaimResponseAdjudication>? adjudication,
     List<ClaimResponseSubDetail>? subDetail,
   }) = _ClaimResponseDetail;
@@ -600,7 +600,7 @@ abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
     Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     List<Decimal>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ClaimResponseAdjudication>? adjudication,
   }) = _ClaimResponseSubDetail;
 
@@ -626,14 +626,14 @@ abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
   ClaimResponseAddItem._();
   factory ClaimResponseAddItem({
     List<Id>? sequenceLinkId,
-    @JsonKey(name: '_sequenceLinkId') List<Element>? sequenceLinkIdElement,
+    @JsonKey(name: '_sequenceLinkId') List<Element?>? sequenceLinkIdElement,
     CodeableConcept? revenue,
     CodeableConcept? category,
     CodeableConcept? service,
     List<CodeableConcept>? modifier,
     Money? fee,
     List<Decimal>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ClaimResponseAdjudication>? adjudication,
     List<ClaimResponseDetail1>? detail,
   }) = _ClaimResponseAddItem;
@@ -665,7 +665,7 @@ abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
     List<CodeableConcept>? modifier,
     Money? fee,
     List<Decimal>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ClaimResponseAdjudication>? adjudication,
   }) = _ClaimResponseDetail1;
 
@@ -790,7 +790,7 @@ abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
     String? businessArrangement,
     @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
     List<String>? preAuthRef,
-    @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement,
+    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
     Reference? claimResponse,
   }) = _ClaimResponseInsurance;
 

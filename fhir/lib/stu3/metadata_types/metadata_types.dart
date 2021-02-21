@@ -132,9 +132,9 @@ abstract class DataRequirement implements _$DataRequirement {
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
     List<String>? profile,
-    @JsonKey(name: '_profile') List<Element>? profileElement,
+    @JsonKey(name: '_profile') List<Element?>? profileElement,
     List<String>? mustSupport,
-    @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
+    @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
     List<DataRequirementCodeFilter>? codeFilter,
     List<DataRequirementDateFilter>? dateFilter,
   }) = _DataRequirement;
@@ -167,7 +167,7 @@ abstract class DataRequirementCodeFilter
     @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
     Reference? valueSetReference,
     List<Code>? valueCode,
-    @JsonKey(name: '_valueCode') List<Element>? valueCodeElement,
+    @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
     List<Coding>? valueCoding,
     List<CodeableConcept>? valueCodeableConcept,
   }) = _DataRequirementCodeFilter;

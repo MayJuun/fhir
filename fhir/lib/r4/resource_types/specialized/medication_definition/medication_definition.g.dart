@@ -62,7 +62,8 @@ _$_MedicinalProduct _$_$_MedicinalProductFromJson(Map<String, dynamic> json) {
         ?.map((e) => e as String)
         .toList(),
     specialMeasuresElement: (json['_specialMeasures'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     paediatricUseIndicator: json['paediatricUseIndicator'] == null
         ? null
@@ -146,7 +147,7 @@ Map<String, dynamic> _$_$_MedicinalProductToJson(_$_MedicinalProduct instance) {
       instance.additionalMonitoringIndicator?.toJson());
   writeNotNull('specialMeasures', instance.specialMeasures);
   writeNotNull('_specialMeasures',
-      instance.specialMeasuresElement?.map((e) => e.toJson()).toList());
+      instance.specialMeasuresElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'paediatricUseIndicator', instance.paediatricUseIndicator?.toJson());
   writeNotNull('productClassification',
@@ -2614,7 +2615,8 @@ _$_SubstancePolymer _$_$_SubstancePolymerFromJson(Map<String, dynamic> json) {
         ?.map((e) => e as String)
         .toList(),
     modificationElement: (json['_modification'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     monomerSet: (json['monomerSet'] as List<dynamic>?)
         ?.map((e) =>
@@ -2656,7 +2658,7 @@ Map<String, dynamic> _$_$_SubstancePolymerToJson(_$_SubstancePolymer instance) {
       instance.copolymerConnectivity?.map((e) => e.toJson()).toList());
   writeNotNull('modification', instance.modification);
   writeNotNull('_modification',
-      instance.modificationElement?.map((e) => e.toJson()).toList());
+      instance.modificationElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'monomerSet', instance.monomerSet?.map((e) => e.toJson()).toList());
   writeNotNull('repeat', instance.repeat?.map((e) => e.toJson()).toList());
@@ -3003,7 +3005,8 @@ _$_SubstanceProtein _$_$_SubstanceProteinFromJson(Map<String, dynamic> json) {
         ?.map((e) => e as String)
         .toList(),
     disulfideLinkageElement: (json['_disulfideLinkage'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     subunit: (json['subunit'] as List<dynamic>?)
         ?.map(
@@ -3041,7 +3044,7 @@ Map<String, dynamic> _$_$_SubstanceProteinToJson(_$_SubstanceProtein instance) {
   writeNotNull('_numberOfSubunits', instance.numberOfSubunitsElement?.toJson());
   writeNotNull('disulfideLinkage', instance.disulfideLinkage);
   writeNotNull('_disulfideLinkage',
-      instance.disulfideLinkageElement?.map((e) => e.toJson()).toList());
+      instance.disulfideLinkageElement?.map((e) => e?.toJson()).toList());
   writeNotNull('subunit', instance.subunit?.map((e) => e.toJson()).toList());
   return val;
 }

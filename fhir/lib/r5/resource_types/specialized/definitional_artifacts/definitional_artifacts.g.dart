@@ -769,7 +769,8 @@ _$_ConditionDefinition _$_$_ConditionDefinitionFromJson(
         ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     definitionElement: (json['_definition'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     observation: (json['observation'] as List<dynamic>?)
         ?.map((e) =>
@@ -871,7 +872,7 @@ Map<String, dynamic> _$_$_ConditionDefinitionToJson(
   writeNotNull(
       'definition', instance.definition?.map((e) => e.toJson()).toList());
   writeNotNull('_definition',
-      instance.definitionElement?.map((e) => e.toJson()).toList());
+      instance.definitionElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'observation', instance.observation?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -1176,7 +1177,8 @@ _$_DeviceDefinition _$_$_DeviceDefinitionFromJson(Map<String, dynamic> json) {
     version:
         (json['version'] as List<dynamic>?)?.map((e) => e as String).toList(),
     versionElement: (json['_version'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     safety: (json['safety'] as List<dynamic>?)
         ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
@@ -1269,7 +1271,7 @@ Map<String, dynamic> _$_$_DeviceDefinitionToJson(_$_DeviceDefinition instance) {
       instance.specialization?.map((e) => e.toJson()).toList());
   writeNotNull('version', instance.version);
   writeNotNull(
-      '_version', instance.versionElement?.map((e) => e.toJson()).toList());
+      '_version', instance.versionElement?.map((e) => e?.toJson()).toList());
   writeNotNull('safety', instance.safety?.map((e) => e.toJson()).toList());
   writeNotNull('shelfLifeStorage',
       instance.shelfLifeStorage?.map((e) => e.toJson()).toList());
@@ -1857,7 +1859,8 @@ _$_ObservationDefinition _$_$_ObservationDefinitionFromJson(
         ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     derivedFromUriElement: (json['_derivedFromUri'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
@@ -2033,7 +2036,7 @@ Map<String, dynamic> _$_$_ObservationDefinitionToJson(
   writeNotNull('derivedFromUri',
       instance.derivedFromUri?.map((e) => e.toJson()).toList());
   writeNotNull('_derivedFromUri',
-      instance.derivedFromUriElement?.map((e) => e.toJson()).toList());
+      instance.derivedFromUriElement?.map((e) => e?.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
@@ -2735,7 +2738,8 @@ _$_PlanDefinitionAction _$_$_PlanDefinitionActionFromJson(
     goalId:
         (json['goalId'] as List<dynamic>?)?.map((e) => Id.fromJson(e)).toList(),
     goalIdElement: (json['_goalId'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     subjectCodeableConcept: json['subjectCodeableConcept'] == null
         ? null
@@ -2879,7 +2883,7 @@ Map<String, dynamic> _$_$_PlanDefinitionActionToJson(
       'documentation', instance.documentation?.map((e) => e.toJson()).toList());
   writeNotNull('goalId', instance.goalId?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_goalId', instance.goalIdElement?.map((e) => e.toJson()).toList());
+      '_goalId', instance.goalIdElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'subjectCodeableConcept', instance.subjectCodeableConcept?.toJson());
   writeNotNull('subjectReference', instance.subjectReference?.toJson());
@@ -3296,7 +3300,8 @@ _$_Questionnaire _$_$_QuestionnaireFromJson(Map<String, dynamic> json) {
         ?.map((e) => Code.fromJson(e))
         .toList(),
     subjectTypeElement: (json['_subjectType'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     code: (json['code'] as List<dynamic>?)
         ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
@@ -3370,7 +3375,7 @@ Map<String, dynamic> _$_$_QuestionnaireToJson(_$_Questionnaire instance) {
   writeNotNull(
       'subjectType', instance.subjectType?.map((e) => e.toJson()).toList());
   writeNotNull('_subjectType',
-      instance.subjectTypeElement?.map((e) => e.toJson()).toList());
+      instance.subjectTypeElement?.map((e) => e?.toJson()).toList());
   writeNotNull('code', instance.code?.map((e) => e.toJson()).toList());
   writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
   return val;
@@ -3892,7 +3897,8 @@ _$_SpecimenDefinition _$_$_SpecimenDefinitionFromJson(
         ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     derivedFromUriElement: (json['_derivedFromUri'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
@@ -4016,7 +4022,7 @@ Map<String, dynamic> _$_$_SpecimenDefinitionToJson(
   writeNotNull('derivedFromUri',
       instance.derivedFromUri?.map((e) => e.toJson()).toList());
   writeNotNull('_derivedFromUri',
-      instance.derivedFromUriElement?.map((e) => e.toJson()).toList());
+      instance.derivedFromUriElement?.map((e) => e?.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());

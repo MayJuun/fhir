@@ -41,7 +41,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
     @JsonKey(name: '_publisher') Element? publisherElement,
     List<ContactPoint>? telecom,
     List<Code>? subjectType,
-    @JsonKey(name: '_subjectType') List<Element>? subjectTypeElement,
+    @JsonKey(name: '_subjectType') List<Element?>? subjectTypeElement,
     required QuestionnaireGroup group,
   }) = _Questionnaire;
 
@@ -338,7 +338,7 @@ abstract class Provenance with Resource implements _$Provenance {
     CodeableConcept? activity,
     Reference? location,
     List<FhirUri>? policy,
-    @JsonKey(name: '_policy') List<Element>? policyElement,
+    @JsonKey(name: '_policy') List<Element?>? policyElement,
     List<ProvenanceAgent>? agent,
     List<ProvenanceEntity>? entity,
     List<Signature>? signature,

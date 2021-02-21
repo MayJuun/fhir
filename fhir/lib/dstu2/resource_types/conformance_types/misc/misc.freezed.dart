@@ -65,7 +65,7 @@ class _$ImplementationGuideTearOff {
           Element? copyrightElement,
       Id? fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          List<Element>? fhirVersionElement,
+          List<Element?>? fhirVersionElement,
       List<ImplementationGuideDependency>? dependency,
       required List<ImplementationGuidePackage> package,
       List<ImplementationGuideGlobal>? global,
@@ -170,7 +170,7 @@ mixin _$ImplementationGuide {
   Element? get copyrightElement;
   Id? get fhirVersion;
   @JsonKey(name: '_fhirVersion')
-  List<Element>? get fhirVersionElement;
+  List<Element?>? get fhirVersionElement;
   List<ImplementationGuideDependency>? get dependency;
   List<ImplementationGuidePackage> get package;
   List<ImplementationGuideGlobal>? get global;
@@ -235,7 +235,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
           Element? copyrightElement,
       Id? fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          List<Element>? fhirVersionElement,
+          List<Element?>? fhirVersionElement,
       List<ImplementationGuideDependency>? dependency,
       List<ImplementationGuidePackage> package,
       List<ImplementationGuideGlobal>? global,
@@ -382,7 +382,7 @@ class _$ImplementationGuideCopyWithImpl<$Res>
           fhirVersion == freezed ? _value.fhirVersion : fhirVersion as Id?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as List<Element>?,
+          : fhirVersionElement as List<Element?>?,
       dependency: dependency == freezed
           ? _value.dependency
           : dependency as List<ImplementationGuideDependency>?,
@@ -603,7 +603,7 @@ abstract class _$ImplementationGuideCopyWith<$Res>
           Element? copyrightElement,
       Id? fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          List<Element>? fhirVersionElement,
+          List<Element?>? fhirVersionElement,
       List<ImplementationGuideDependency>? dependency,
       List<ImplementationGuidePackage> package,
       List<ImplementationGuideGlobal>? global,
@@ -766,7 +766,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
           fhirVersion == freezed ? _value.fhirVersion : fhirVersion as Id?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
-          : fhirVersionElement as List<Element>?,
+          : fhirVersionElement as List<Element?>?,
       dependency: dependency == freezed
           ? _value.dependency
           : dependency as List<ImplementationGuideDependency>?,
@@ -925,7 +925,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   final Id? fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
-  final List<Element>? fhirVersionElement;
+  final List<Element?>? fhirVersionElement;
   @override
   final List<ImplementationGuideDependency>? dependency;
   @override
@@ -1133,7 +1133,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
           Element? copyrightElement,
       Id? fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          List<Element>? fhirVersionElement,
+          List<Element?>? fhirVersionElement,
       List<ImplementationGuideDependency>? dependency,
       required List<ImplementationGuidePackage> package,
       List<ImplementationGuideGlobal>? global,
@@ -1223,7 +1223,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   Id? get fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
-  List<Element>? get fhirVersionElement;
+  List<Element?>? get fhirVersionElement;
   @override
   List<ImplementationGuideDependency>? get dependency;
   @override
@@ -5224,7 +5224,7 @@ class _$TestScriptMetadataCapabilityTearOff {
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       required Reference conformance}) {
     return _TestScriptMetadataCapability(
       id: id,
@@ -5273,7 +5273,7 @@ mixin _$TestScriptMetadataCapability {
   Element? get destinationElement;
   List<FhirUri>? get link;
   @JsonKey(name: '_link')
-  List<Element>? get linkElement;
+  List<Element?>? get linkElement;
   Reference get conformance;
 
   Map<String, dynamic> toJson();
@@ -5301,7 +5301,7 @@ abstract class $TestScriptMetadataCapabilityCopyWith<$Res> {
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       Reference conformance});
 
   $ElementCopyWith<$Res>? get requiredElement;
@@ -5368,7 +5368,7 @@ class _$TestScriptMetadataCapabilityCopyWithImpl<$Res>
       link: link == freezed ? _value.link : link as List<FhirUri>?,
       linkElement: linkElement == freezed
           ? _value.linkElement
-          : linkElement as List<Element>?,
+          : linkElement as List<Element?>?,
       conformance: conformance == freezed
           ? _value.conformance
           : conformance as Reference,
@@ -5448,7 +5448,7 @@ abstract class _$TestScriptMetadataCapabilityCopyWith<$Res>
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       Reference conformance});
 
   @override
@@ -5524,7 +5524,7 @@ class __$TestScriptMetadataCapabilityCopyWithImpl<$Res>
       link: link == freezed ? _value.link : link as List<FhirUri>?,
       linkElement: linkElement == freezed
           ? _value.linkElement
-          : linkElement as List<Element>?,
+          : linkElement as List<Element?>?,
       conformance: conformance == freezed
           ? _value.conformance
           : conformance as Reference,
@@ -5588,7 +5588,7 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
   final List<FhirUri>? link;
   @override
   @JsonKey(name: '_link')
-  final List<Element>? linkElement;
+  final List<Element?>? linkElement;
   @override
   final Reference conformance;
 
@@ -5689,7 +5689,7 @@ abstract class _TestScriptMetadataCapability
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       required Reference conformance}) = _$_TestScriptMetadataCapability;
 
   factory _TestScriptMetadataCapability.fromJson(Map<String, dynamic> json) =
@@ -5727,7 +5727,7 @@ abstract class _TestScriptMetadataCapability
   List<FhirUri>? get link;
   @override
   @JsonKey(name: '_link')
-  List<Element>? get linkElement;
+  List<Element?>? get linkElement;
   @override
   Reference get conformance;
   @override

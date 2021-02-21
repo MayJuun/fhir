@@ -1229,7 +1229,8 @@ _$_PractitionerRoleAvailableTime _$_$_PractitionerRoleAvailableTimeFromJson(
         ?.map((e) => Code.fromJson(e))
         .toList(),
     daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     allDay: json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
     allDayElement: json['_allDay'] == null
@@ -1268,7 +1269,7 @@ Map<String, dynamic> _$_$_PractitionerRoleAvailableTimeToJson(
   writeNotNull(
       'daysOfWeek', instance.daysOfWeek?.map((e) => e.toJson()).toList());
   writeNotNull('_daysOfWeek',
-      instance.daysOfWeekElement?.map((e) => e.toJson()).toList());
+      instance.daysOfWeekElement?.map((e) => e?.toJson()).toList());
   writeNotNull('allDay', instance.allDay?.toJson());
   writeNotNull('_allDay', instance.allDayElement?.toJson());
   writeNotNull('availableStartTime', instance.availableStartTime?.toJson());

@@ -7624,7 +7624,7 @@ class _$MedicationAdministrationTearOff {
       List<Identifier>? identifier,
       List<FhirUri>? instantiates,
       @JsonKey(name: '_instantiates')
-          List<Element>? instantiatesElement,
+          List<Element?>? instantiatesElement,
       List<Reference>? partOf,
       Code? status,
       @JsonKey(name: '_status')
@@ -7715,7 +7715,7 @@ mixin _$MedicationAdministration {
   List<Identifier>? get identifier;
   List<FhirUri>? get instantiates;
   @JsonKey(name: '_instantiates')
-  List<Element>? get instantiatesElement;
+  List<Element?>? get instantiatesElement;
   List<Reference>? get partOf;
   Code? get status;
   @JsonKey(name: '_status')
@@ -7769,7 +7769,7 @@ abstract class $MedicationAdministrationCopyWith<$Res> {
       List<Identifier>? identifier,
       List<FhirUri>? instantiates,
       @JsonKey(name: '_instantiates')
-          List<Element>? instantiatesElement,
+          List<Element?>? instantiatesElement,
       List<Reference>? partOf,
       Code? status,
       @JsonKey(name: '_status')
@@ -7891,7 +7891,7 @@ class _$MedicationAdministrationCopyWithImpl<$Res>
           : instantiates as List<FhirUri>?,
       instantiatesElement: instantiatesElement == freezed
           ? _value.instantiatesElement
-          : instantiatesElement as List<Element>?,
+          : instantiatesElement as List<Element?>?,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
@@ -8122,7 +8122,7 @@ abstract class _$MedicationAdministrationCopyWith<$Res>
       List<Identifier>? identifier,
       List<FhirUri>? instantiates,
       @JsonKey(name: '_instantiates')
-          List<Element>? instantiatesElement,
+          List<Element?>? instantiatesElement,
       List<Reference>? partOf,
       Code? status,
       @JsonKey(name: '_status')
@@ -8261,7 +8261,7 @@ class __$MedicationAdministrationCopyWithImpl<$Res>
           : instantiates as List<FhirUri>?,
       instantiatesElement: instantiatesElement == freezed
           ? _value.instantiatesElement
-          : instantiatesElement as List<Element>?,
+          : instantiatesElement as List<Element?>?,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
@@ -8398,7 +8398,7 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   final List<FhirUri>? instantiates;
   @override
   @JsonKey(name: '_instantiates')
-  final List<Element>? instantiatesElement;
+  final List<Element?>? instantiatesElement;
   @override
   final List<Reference>? partOf;
   @override
@@ -8604,7 +8604,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
       List<Identifier>? identifier,
       List<FhirUri>? instantiates,
       @JsonKey(name: '_instantiates')
-          List<Element>? instantiatesElement,
+          List<Element?>? instantiatesElement,
       List<Reference>? partOf,
       Code? status,
       @JsonKey(name: '_status')
@@ -8664,7 +8664,7 @@ abstract class _MedicationAdministration extends MedicationAdministration {
   List<FhirUri>? get instantiates;
   @override
   @JsonKey(name: '_instantiates')
-  List<Element>? get instantiatesElement;
+  List<Element?>? get instantiatesElement;
   @override
   List<Reference>? get partOf;
   @override
@@ -11415,7 +11415,7 @@ class _$MedicationKnowledgeTearOff {
       Quantity? amount,
       List<String>? synonym,
       @JsonKey(name: '_synonym')
-          List<Element>? synonymElement,
+          List<Element?>? synonymElement,
       List<MedicationKnowledgeRelatedMedicationKnowledge>?
           relatedMedicationKnowledge,
       List<Reference>? associatedMedication,
@@ -11510,7 +11510,7 @@ mixin _$MedicationKnowledge {
   Quantity? get amount;
   List<String>? get synonym;
   @JsonKey(name: '_synonym')
-  List<Element>? get synonymElement;
+  List<Element?>? get synonymElement;
   List<MedicationKnowledgeRelatedMedicationKnowledge>?
       get relatedMedicationKnowledge;
   List<Reference>? get associatedMedication;
@@ -11567,7 +11567,7 @@ abstract class $MedicationKnowledgeCopyWith<$Res> {
       Quantity? amount,
       List<String>? synonym,
       @JsonKey(name: '_synonym')
-          List<Element>? synonymElement,
+          List<Element?>? synonymElement,
       List<MedicationKnowledgeRelatedMedicationKnowledge>?
           relatedMedicationKnowledge,
       List<Reference>? associatedMedication,
@@ -11690,7 +11690,7 @@ class _$MedicationKnowledgeCopyWithImpl<$Res>
       synonym: synonym == freezed ? _value.synonym : synonym as List<String>?,
       synonymElement: synonymElement == freezed
           ? _value.synonymElement
-          : synonymElement as List<Element>?,
+          : synonymElement as List<Element?>?,
       relatedMedicationKnowledge: relatedMedicationKnowledge == freezed
           ? _value.relatedMedicationKnowledge
           : relatedMedicationKnowledge
@@ -11904,7 +11904,7 @@ abstract class _$MedicationKnowledgeCopyWith<$Res>
       Quantity? amount,
       List<String>? synonym,
       @JsonKey(name: '_synonym')
-          List<Element>? synonymElement,
+          List<Element?>? synonymElement,
       List<MedicationKnowledgeRelatedMedicationKnowledge>?
           relatedMedicationKnowledge,
       List<Reference>? associatedMedication,
@@ -12040,7 +12040,7 @@ class __$MedicationKnowledgeCopyWithImpl<$Res>
       synonym: synonym == freezed ? _value.synonym : synonym as List<String>?,
       synonymElement: synonymElement == freezed
           ? _value.synonymElement
-          : synonymElement as List<Element>?,
+          : synonymElement as List<Element?>?,
       relatedMedicationKnowledge: relatedMedicationKnowledge == freezed
           ? _value.relatedMedicationKnowledge
           : relatedMedicationKnowledge
@@ -12195,7 +12195,7 @@ class _$_MedicationKnowledge extends _MedicationKnowledge {
   final List<String>? synonym;
   @override
   @JsonKey(name: '_synonym')
-  final List<Element>? synonymElement;
+  final List<Element?>? synonymElement;
   @override
   final List<MedicationKnowledgeRelatedMedicationKnowledge>?
       relatedMedicationKnowledge;
@@ -12402,7 +12402,7 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
       Quantity? amount,
       List<String>? synonym,
       @JsonKey(name: '_synonym')
-          List<Element>? synonymElement,
+          List<Element?>? synonymElement,
       List<MedicationKnowledgeRelatedMedicationKnowledge>?
           relatedMedicationKnowledge,
       List<Reference>? associatedMedication,
@@ -12470,7 +12470,7 @@ abstract class _MedicationKnowledge extends MedicationKnowledge {
   List<String>? get synonym;
   @override
   @JsonKey(name: '_synonym')
-  List<Element>? get synonymElement;
+  List<Element?>? get synonymElement;
   @override
   List<MedicationKnowledgeRelatedMedicationKnowledge>?
       get relatedMedicationKnowledge;
@@ -14673,7 +14673,7 @@ class _$MedicationKnowledgePatientCharacteristicsTearOff {
       CodeableConcept? characteristicCodeableConcept,
       Quantity? characteristicQuantity,
       List<String>? value,
-      @JsonKey(name: '_value') List<Element>? valueElement}) {
+      @JsonKey(name: '_value') List<Element?>? valueElement}) {
     return _MedicationKnowledgePatientCharacteristics(
       id: id,
       extension_: extension_,
@@ -14704,7 +14704,7 @@ mixin _$MedicationKnowledgePatientCharacteristics {
   Quantity? get characteristicQuantity;
   List<String>? get value;
   @JsonKey(name: '_value')
-  List<Element>? get valueElement;
+  List<Element?>? get valueElement;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -14725,7 +14725,7 @@ abstract class $MedicationKnowledgePatientCharacteristicsCopyWith<$Res> {
       CodeableConcept? characteristicCodeableConcept,
       Quantity? characteristicQuantity,
       List<String>? value,
-      @JsonKey(name: '_value') List<Element>? valueElement});
+      @JsonKey(name: '_value') List<Element?>? valueElement});
 
   $CodeableConceptCopyWith<$Res>? get characteristicCodeableConcept;
   $QuantityCopyWith<$Res>? get characteristicQuantity;
@@ -14768,7 +14768,7 @@ class _$MedicationKnowledgePatientCharacteristicsCopyWithImpl<$Res>
       value: value == freezed ? _value.value : value as List<String>?,
       valueElement: valueElement == freezed
           ? _value.valueElement
-          : valueElement as List<Element>?,
+          : valueElement as List<Element?>?,
     ));
   }
 
@@ -14811,7 +14811,7 @@ abstract class _$MedicationKnowledgePatientCharacteristicsCopyWith<$Res>
       CodeableConcept? characteristicCodeableConcept,
       Quantity? characteristicQuantity,
       List<String>? value,
-      @JsonKey(name: '_value') List<Element>? valueElement});
+      @JsonKey(name: '_value') List<Element?>? valueElement});
 
   @override
   $CodeableConceptCopyWith<$Res>? get characteristicCodeableConcept;
@@ -14860,7 +14860,7 @@ class __$MedicationKnowledgePatientCharacteristicsCopyWithImpl<$Res>
       value: value == freezed ? _value.value : value as List<String>?,
       valueElement: valueElement == freezed
           ? _value.valueElement
-          : valueElement as List<Element>?,
+          : valueElement as List<Element?>?,
     ));
   }
 }
@@ -14899,7 +14899,7 @@ class _$_MedicationKnowledgePatientCharacteristics
   final List<String>? value;
   @override
   @JsonKey(name: '_value')
-  final List<Element>? valueElement;
+  final List<Element?>? valueElement;
 
   @override
   String toString() {
@@ -14967,7 +14967,7 @@ abstract class _MedicationKnowledgePatientCharacteristics
           CodeableConcept? characteristicCodeableConcept,
           Quantity? characteristicQuantity,
           List<String>? value,
-          @JsonKey(name: '_value') List<Element>? valueElement}) =
+          @JsonKey(name: '_value') List<Element?>? valueElement}) =
       _$_MedicationKnowledgePatientCharacteristics;
 
   factory _MedicationKnowledgePatientCharacteristics.fromJson(
@@ -14989,7 +14989,7 @@ abstract class _MedicationKnowledgePatientCharacteristics
   List<String>? get value;
   @override
   @JsonKey(name: '_value')
-  List<Element>? get valueElement;
+  List<Element?>? get valueElement;
   @override
   @JsonKey(ignore: true)
   _$MedicationKnowledgePatientCharacteristicsCopyWith<
@@ -17493,7 +17493,7 @@ class _$MedicationRequestTearOff {
           List<Element>? instantiatesCanonicalElement,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       CodeableConcept? courseOfTherapyType,
@@ -17625,7 +17625,7 @@ mixin _$MedicationRequest {
   List<Element>? get instantiatesCanonicalElement;
   List<FhirUri>? get instantiatesUri;
   @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement;
+  List<Element?>? get instantiatesUriElement;
   List<Reference>? get basedOn;
   Identifier? get groupIdentifier;
   CodeableConcept? get courseOfTherapyType;
@@ -17702,7 +17702,7 @@ abstract class $MedicationRequestCopyWith<$Res> {
           List<Element>? instantiatesCanonicalElement,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       CodeableConcept? courseOfTherapyType,
@@ -17912,7 +17912,7 @@ class _$MedicationRequestCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as List<Element>?,
+          : instantiatesUriElement as List<Element?>?,
       basedOn:
           basedOn == freezed ? _value.basedOn : basedOn as List<Reference>?,
       groupIdentifier: groupIdentifier == freezed
@@ -18282,7 +18282,7 @@ abstract class _$MedicationRequestCopyWith<$Res>
           List<Element>? instantiatesCanonicalElement,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       CodeableConcept? courseOfTherapyType,
@@ -18519,7 +18519,7 @@ class __$MedicationRequestCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as List<Element>?,
+          : instantiatesUriElement as List<Element?>?,
       basedOn:
           basedOn == freezed ? _value.basedOn : basedOn as List<Reference>?,
       groupIdentifier: groupIdentifier == freezed
@@ -18724,7 +18724,7 @@ class _$_MedicationRequest extends _MedicationRequest {
   final List<FhirUri>? instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final List<Element>? instantiatesUriElement;
+  final List<Element?>? instantiatesUriElement;
   @override
   final List<Reference>? basedOn;
   @override
@@ -18979,7 +18979,7 @@ abstract class _MedicationRequest extends MedicationRequest {
           List<Element>? instantiatesCanonicalElement,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       CodeableConcept? courseOfTherapyType,
@@ -19090,7 +19090,7 @@ abstract class _MedicationRequest extends MedicationRequest {
   List<FhirUri>? get instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement;
+  List<Element?>? get instantiatesUriElement;
   @override
   List<Reference>? get basedOn;
   @override

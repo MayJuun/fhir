@@ -476,7 +476,7 @@ abstract class ClaimResponseItem with _$ClaimResponseItem {
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     required PositiveInt sequenceLinkId,
     List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ClaimResponseItemAdjudication>? adjudication,
     List<ClaimResponseItemDetail>? detail,
   }) = _ClaimResponseItem;

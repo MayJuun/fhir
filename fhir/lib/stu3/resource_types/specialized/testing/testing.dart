@@ -490,11 +490,11 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<Decimal>? origin,
-    @JsonKey(name: '_origin') List<Element>? originElement,
+    @JsonKey(name: '_origin') List<Element?>? originElement,
     Decimal? destination,
     @JsonKey(name: '_destination') Element? destinationElement,
     List<String>? link,
-    @JsonKey(name: '_link') List<Element>? linkElement,
+    @JsonKey(name: '_link') List<Element?>? linkElement,
     required Reference capabilities,
   }) = _TestScriptCapability;
 

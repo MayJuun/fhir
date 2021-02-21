@@ -130,13 +130,15 @@ _$_CapabilityStatement _$_$_CapabilityStatementFromJson(
         ?.map((e) => Code.fromJson(e))
         .toList(),
     formatElement: (json['_format'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     patchFormat: (json['patchFormat'] as List<dynamic>?)
         ?.map((e) => Code.fromJson(e))
         .toList(),
     patchFormatElement: (json['_patchFormat'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     implementationGuide: (json['implementationGuide'] as List<dynamic>?)
         ?.map((e) => Canonical.fromJson(e))
@@ -222,11 +224,11 @@ Map<String, dynamic> _$_$_CapabilityStatementToJson(
   writeNotNull('_fhirVersion', instance.fhirVersionElement?.toJson());
   writeNotNull('format', instance.format?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_format', instance.formatElement?.map((e) => e.toJson()).toList());
+      '_format', instance.formatElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'patchFormat', instance.patchFormat?.map((e) => e.toJson()).toList());
   writeNotNull('_patchFormat',
-      instance.patchFormatElement?.map((e) => e.toJson()).toList());
+      instance.patchFormatElement?.map((e) => e?.toJson()).toList());
   writeNotNull('implementationGuide',
       instance.implementationGuide?.map((e) => e.toJson()).toList());
   writeNotNull('rest', instance.rest?.map((e) => e.toJson()).toList());
@@ -778,19 +780,22 @@ _$_CapabilityStatementResource _$_$_CapabilityStatementResourceFromJson(
             _$CapabilityStatementResourceReferencePolicyEnumMap, e))
         .toList(),
     referencePolicyElement: (json['_referencePolicy'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     searchInclude: (json['searchInclude'] as List<dynamic>?)
         ?.map((e) => e as String)
         .toList(),
     searchIncludeElement: (json['_searchInclude'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     searchRevInclude: (json['searchRevInclude'] as List<dynamic>?)
         ?.map((e) => e as String)
         .toList(),
     searchRevIncludeElement: (json['_searchRevInclude'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     searchParam: (json['searchParam'] as List<dynamic>?)
         ?.map((e) =>
@@ -857,13 +862,13 @@ Map<String, dynamic> _$_$_CapabilityStatementResourceToJson(
           ?.map((e) => _$CapabilityStatementResourceReferencePolicyEnumMap[e])
           .toList());
   writeNotNull('_referencePolicy',
-      instance.referencePolicyElement?.map((e) => e.toJson()).toList());
+      instance.referencePolicyElement?.map((e) => e?.toJson()).toList());
   writeNotNull('searchInclude', instance.searchInclude);
   writeNotNull('_searchInclude',
-      instance.searchIncludeElement?.map((e) => e.toJson()).toList());
+      instance.searchIncludeElement?.map((e) => e?.toJson()).toList());
   writeNotNull('searchRevInclude', instance.searchRevInclude);
   writeNotNull('_searchRevInclude',
-      instance.searchRevIncludeElement?.map((e) => e.toJson()).toList());
+      instance.searchRevIncludeElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'searchParam', instance.searchParam?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -1461,13 +1466,15 @@ _$_CapabilityStatement2 _$_$_CapabilityStatement2FromJson(
         ?.map((e) => Code.fromJson(e))
         .toList(),
     formatElement: (json['_format'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     patchFormat: (json['patchFormat'] as List<dynamic>?)
         ?.map((e) => Code.fromJson(e))
         .toList(),
     patchFormatElement: (json['_patchFormat'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     implementationGuide: (json['implementationGuide'] as List<dynamic>?)
         ?.map((e) => Canonical.fromJson(e))
@@ -1545,11 +1552,11 @@ Map<String, dynamic> _$_$_CapabilityStatement2ToJson(
   writeNotNull('_fhirVersion', instance.fhirVersionElement?.toJson());
   writeNotNull('format', instance.format?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_format', instance.formatElement?.map((e) => e.toJson()).toList());
+      '_format', instance.formatElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'patchFormat', instance.patchFormat?.map((e) => e.toJson()).toList());
   writeNotNull('_patchFormat',
-      instance.patchFormatElement?.map((e) => e.toJson()).toList());
+      instance.patchFormatElement?.map((e) => e?.toJson()).toList());
   writeNotNull('implementationGuide',
       instance.implementationGuide?.map((e) => e.toJson()).toList());
   writeNotNull('rest', instance.rest?.map((e) => e.toJson()).toList());
@@ -2249,7 +2256,8 @@ _$_CompartmentDefinitionResource _$_$_CompartmentDefinitionResourceFromJson(
         : Element.fromJson(json['_code'] as Map<String, dynamic>),
     param: (json['param'] as List<dynamic>?)?.map((e) => e as String).toList(),
     paramElement: (json['_param'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     documentation: json['documentation'] as String?,
     documentationElement: json['_documentation'] == null
@@ -2277,7 +2285,7 @@ Map<String, dynamic> _$_$_CompartmentDefinitionResourceToJson(
   writeNotNull('_code', instance.codeElement?.toJson());
   writeNotNull('param', instance.param);
   writeNotNull(
-      '_param', instance.paramElement?.map((e) => e.toJson()).toList());
+      '_param', instance.paramElement?.map((e) => e?.toJson()).toList());
   writeNotNull('documentation', instance.documentation);
   writeNotNull('_documentation', instance.documentationElement?.toJson());
   return val;
@@ -3423,7 +3431,8 @@ _$_ImplementationGuide _$_$_ImplementationGuideFromJson(
         ?.map((e) => _$enumDecode(_$ImplementationGuideFhirVersionEnumMap, e))
         .toList(),
     fhirVersionElement: (json['_fhirVersion'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     dependsOn: (json['dependsOn'] as List<dynamic>?)
         ?.map((e) =>
@@ -3509,7 +3518,7 @@ Map<String, dynamic> _$_$_ImplementationGuideToJson(
           ?.map((e) => _$ImplementationGuideFhirVersionEnumMap[e])
           .toList());
   writeNotNull('_fhirVersion',
-      instance.fhirVersionElement?.map((e) => e.toJson()).toList());
+      instance.fhirVersionElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'dependsOn', instance.dependsOn?.map((e) => e.toJson()).toList());
   writeNotNull('global', instance.global?.map((e) => e.toJson()).toList());
@@ -4113,7 +4122,8 @@ _$_ImplementationGuideResource _$_$_ImplementationGuideResourceFromJson(
             _$enumDecode(_$ImplementationGuideResourceFhirVersionEnumMap, e))
         .toList(),
     fhirVersionElement: (json['_fhirVersion'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     name: json['name'] as String?,
     nameElement: json['_name'] == null
@@ -4165,7 +4175,7 @@ Map<String, dynamic> _$_$_ImplementationGuideResourceToJson(
           ?.map((e) => _$ImplementationGuideResourceFhirVersionEnumMap[e])
           .toList());
   writeNotNull('_fhirVersion',
-      instance.fhirVersionElement?.map((e) => e.toJson()).toList());
+      instance.fhirVersionElement?.map((e) => e?.toJson()).toList());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('description', instance.description);
@@ -4396,11 +4406,13 @@ _$_ImplementationGuideManifest _$_$_ImplementationGuideManifestFromJson(
         .toList(),
     image: (json['image'] as List<dynamic>?)?.map((e) => e as String).toList(),
     imageElement: (json['_image'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     other: (json['other'] as List<dynamic>?)?.map((e) => e as String).toList(),
     otherElement: (json['_other'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -4426,10 +4438,10 @@ Map<String, dynamic> _$_$_ImplementationGuideManifestToJson(
   writeNotNull('page', instance.page?.map((e) => e.toJson()).toList());
   writeNotNull('image', instance.image);
   writeNotNull(
-      '_image', instance.imageElement?.map((e) => e.toJson()).toList());
+      '_image', instance.imageElement?.map((e) => e?.toJson()).toList());
   writeNotNull('other', instance.other);
   writeNotNull(
-      '_other', instance.otherElement?.map((e) => e.toJson()).toList());
+      '_other', instance.otherElement?.map((e) => e?.toJson()).toList());
   return val;
 }
 
@@ -4511,7 +4523,8 @@ _$_ImplementationGuidePage1 _$_$_ImplementationGuidePage1FromJson(
     anchor:
         (json['anchor'] as List<dynamic>?)?.map((e) => e as String).toList(),
     anchorElement: (json['_anchor'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -4537,7 +4550,7 @@ Map<String, dynamic> _$_$_ImplementationGuidePage1ToJson(
   writeNotNull('_title', instance.titleElement?.toJson());
   writeNotNull('anchor', instance.anchor);
   writeNotNull(
-      '_anchor', instance.anchorElement?.map((e) => e.toJson()).toList());
+      '_anchor', instance.anchorElement?.map((e) => e?.toJson()).toList());
   return val;
 }
 
@@ -4982,7 +4995,8 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
         ?.map((e) => Code.fromJson(e))
         .toList(),
     resourceElement: (json['_resource'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     system: json['system'] == null ? null : Boolean.fromJson(json['system']),
     systemElement: json['_system'] == null
@@ -5079,7 +5093,7 @@ Map<String, dynamic> _$_$_OperationDefinitionToJson(
   writeNotNull('base', instance.base?.toJson());
   writeNotNull('resource', instance.resource?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_resource', instance.resourceElement?.map((e) => e.toJson()).toList());
+      '_resource', instance.resourceElement?.map((e) => e?.toJson()).toList());
   writeNotNull('system', instance.system?.toJson());
   writeNotNull('_system', instance.systemElement?.toJson());
   writeNotNull('type', instance.type?.toJson());
@@ -5332,7 +5346,8 @@ _$_OperationDefinitionOverload _$_$_OperationDefinitionOverloadFromJson(
         ?.map((e) => e as String)
         .toList(),
     parameterNameElement: (json['_parameterName'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     comment: json['comment'] as String?,
     commentElement: json['_comment'] == null
@@ -5358,7 +5373,7 @@ Map<String, dynamic> _$_$_OperationDefinitionOverloadToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('parameterName', instance.parameterName);
   writeNotNull('_parameterName',
-      instance.parameterNameElement?.map((e) => e.toJson()).toList());
+      instance.parameterNameElement?.map((e) => e?.toJson()).toList());
   writeNotNull('comment', instance.comment);
   writeNotNull('_comment', instance.commentElement?.toJson());
   return val;
@@ -5467,7 +5482,8 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
     base:
         (json['base'] as List<dynamic>?)?.map((e) => Code.fromJson(e)).toList(),
     baseElement: (json['_base'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     type: _$enumDecodeNullable(_$SearchParameterTypeEnumMap, json['type'],
         unknownValue: SearchParameterType.unknown),
@@ -5492,7 +5508,8 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
         ?.map((e) => Code.fromJson(e))
         .toList(),
     targetElement: (json['_target'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     multipleOr: json['multipleOr'] == null
         ? null
@@ -5510,17 +5527,20 @@ _$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
         ?.map((e) => _$enumDecode(_$SearchParameterComparatorEnumMap, e))
         .toList(),
     comparatorElement: (json['_comparator'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifier: (json['modifier'] as List<dynamic>?)
         ?.map((e) => _$enumDecode(_$SearchParameterModifierEnumMap, e))
         .toList(),
     modifierElement: (json['_modifier'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     chain: (json['chain'] as List<dynamic>?)?.map((e) => e as String).toList(),
     chainElement: (json['_chain'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     component: (json['component'] as List<dynamic>?)
         ?.map(
@@ -5586,7 +5606,7 @@ Map<String, dynamic> _$_$_SearchParameterToJson(_$_SearchParameter instance) {
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('_code', instance.codeElement?.toJson());
   writeNotNull('base', instance.base?.map((e) => e.toJson()).toList());
-  writeNotNull('_base', instance.baseElement?.map((e) => e.toJson()).toList());
+  writeNotNull('_base', instance.baseElement?.map((e) => e?.toJson()).toList());
   writeNotNull('type', _$SearchParameterTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('expression', instance.expression);
@@ -5598,7 +5618,7 @@ Map<String, dynamic> _$_$_SearchParameterToJson(_$_SearchParameter instance) {
   writeNotNull('_xpathUsage', instance.xpathUsageElement?.toJson());
   writeNotNull('target', instance.target?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_target', instance.targetElement?.map((e) => e.toJson()).toList());
+      '_target', instance.targetElement?.map((e) => e?.toJson()).toList());
   writeNotNull('multipleOr', instance.multipleOr?.toJson());
   writeNotNull('_multipleOr', instance.multipleOrElement?.toJson());
   writeNotNull('multipleAnd', instance.multipleAnd?.toJson());
@@ -5609,17 +5629,17 @@ Map<String, dynamic> _$_$_SearchParameterToJson(_$_SearchParameter instance) {
           ?.map((e) => _$SearchParameterComparatorEnumMap[e])
           .toList());
   writeNotNull('_comparator',
-      instance.comparatorElement?.map((e) => e.toJson()).toList());
+      instance.comparatorElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'modifier',
       instance.modifier
           ?.map((e) => _$SearchParameterModifierEnumMap[e])
           .toList());
   writeNotNull(
-      '_modifier', instance.modifierElement?.map((e) => e.toJson()).toList());
+      '_modifier', instance.modifierElement?.map((e) => e?.toJson()).toList());
   writeNotNull('chain', instance.chain);
   writeNotNull(
-      '_chain', instance.chainElement?.map((e) => e.toJson()).toList());
+      '_chain', instance.chainElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'component', instance.component?.map((e) => e.toJson()).toList());
   return val;
@@ -5848,7 +5868,8 @@ _$_StructureDefinition _$_$_StructureDefinitionFromJson(
         ?.map((e) => e as String)
         .toList(),
     contextInvariantElement: (json['_contextInvariant'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     type: json['type'] == null ? null : FhirUri.fromJson(json['type']),
     typeElement: json['_type'] == null
@@ -5940,7 +5961,7 @@ Map<String, dynamic> _$_$_StructureDefinitionToJson(
   writeNotNull('context', instance.context?.map((e) => e.toJson()).toList());
   writeNotNull('contextInvariant', instance.contextInvariant);
   writeNotNull('_contextInvariant',
-      instance.contextInvariantElement?.map((e) => e.toJson()).toList());
+      instance.contextInvariantElement?.map((e) => e?.toJson()).toList());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('baseDefinition', instance.baseDefinition?.toJson());
@@ -7086,7 +7107,8 @@ _$_StructureMapTarget _$_$_StructureMapTargetFromJson(
         ?.map((e) => _$enumDecode(_$StructureMapTargetListModeEnumMap, e))
         .toList(),
     listModeElement: (json['_listMode'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     listRuleId:
         json['listRuleId'] == null ? null : Id.fromJson(json['listRuleId']),
@@ -7135,7 +7157,7 @@ Map<String, dynamic> _$_$_StructureMapTargetToJson(
           ?.map((e) => _$StructureMapTargetListModeEnumMap[e])
           .toList());
   writeNotNull(
-      '_listMode', instance.listModeElement?.map((e) => e.toJson()).toList());
+      '_listMode', instance.listModeElement?.map((e) => e?.toJson()).toList());
   writeNotNull('listRuleId', instance.listRuleId?.toJson());
   writeNotNull('_listRuleId', instance.listRuleIdElement?.toJson());
   writeNotNull(
@@ -7265,7 +7287,8 @@ _$_StructureMapDependent _$_$_StructureMapDependentFromJson(
     variable:
         (json['variable'] as List<dynamic>?)?.map((e) => e as String).toList(),
     variableElement: (json['_variable'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -7289,6 +7312,6 @@ Map<String, dynamic> _$_$_StructureMapDependentToJson(
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('variable', instance.variable);
   writeNotNull(
-      '_variable', instance.variableElement?.map((e) => e.toJson()).toList());
+      '_variable', instance.variableElement?.map((e) => e?.toJson()).toList());
   return val;
 }

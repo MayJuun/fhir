@@ -1004,7 +1004,8 @@ _$_ClinicalImpression _$_$_ClinicalImpressionFromJson(
     protocol:
         json['protocol'] == null ? null : FhirUri.fromJson(json['protocol']),
     protocolElement: (json['_protocol'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     summary: json['summary'] as String?,
     summaryElement: json['_summary'] == null
@@ -1073,7 +1074,7 @@ Map<String, dynamic> _$_$_ClinicalImpressionToJson(
       instance.investigations?.map((e) => e.toJson()).toList());
   writeNotNull('protocol', instance.protocol?.toJson());
   writeNotNull(
-      '_protocol', instance.protocolElement?.map((e) => e.toJson()).toList());
+      '_protocol', instance.protocolElement?.map((e) => e?.toJson()).toList());
   writeNotNull('summary', instance.summary);
   writeNotNull('_summary', instance.summaryElement?.toJson());
   writeNotNull('finding', instance.finding?.map((e) => e.toJson()).toList());

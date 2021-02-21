@@ -27408,7 +27408,7 @@ class _$SubstanceProteinTearOff {
           Element? numberOfSubunitsElement,
       List<String>? disulfideLinkage,
       @JsonKey(name: '_disulfideLinkage')
-          List<Element>? disulfideLinkageElement,
+          List<Element?>? disulfideLinkageElement,
       List<SubstanceProteinSubunit>? subunit}) {
     return _SubstanceProtein(
       resourceType: resourceType,
@@ -27462,7 +27462,7 @@ mixin _$SubstanceProtein {
   Element? get numberOfSubunitsElement;
   List<String>? get disulfideLinkage;
   @JsonKey(name: '_disulfideLinkage')
-  List<Element>? get disulfideLinkageElement;
+  List<Element?>? get disulfideLinkageElement;
   List<SubstanceProteinSubunit>? get subunit;
 
   Map<String, dynamic> toJson();
@@ -27497,7 +27497,7 @@ abstract class $SubstanceProteinCopyWith<$Res> {
           Element? numberOfSubunitsElement,
       List<String>? disulfideLinkage,
       @JsonKey(name: '_disulfideLinkage')
-          List<Element>? disulfideLinkageElement,
+          List<Element?>? disulfideLinkageElement,
       List<SubstanceProteinSubunit>? subunit});
 
   $MetaCopyWith<$Res>? get meta;
@@ -27577,7 +27577,7 @@ class _$SubstanceProteinCopyWithImpl<$Res>
           : disulfideLinkage as List<String>?,
       disulfideLinkageElement: disulfideLinkageElement == freezed
           ? _value.disulfideLinkageElement
-          : disulfideLinkageElement as List<Element>?,
+          : disulfideLinkageElement as List<Element?>?,
       subunit: subunit == freezed
           ? _value.subunit
           : subunit as List<SubstanceProteinSubunit>?,
@@ -27680,7 +27680,7 @@ abstract class _$SubstanceProteinCopyWith<$Res>
           Element? numberOfSubunitsElement,
       List<String>? disulfideLinkage,
       @JsonKey(name: '_disulfideLinkage')
-          List<Element>? disulfideLinkageElement,
+          List<Element?>? disulfideLinkageElement,
       List<SubstanceProteinSubunit>? subunit});
 
   @override
@@ -27768,7 +27768,7 @@ class __$SubstanceProteinCopyWithImpl<$Res>
           : disulfideLinkage as List<String>?,
       disulfideLinkageElement: disulfideLinkageElement == freezed
           ? _value.disulfideLinkageElement
-          : disulfideLinkageElement as List<Element>?,
+          : disulfideLinkageElement as List<Element?>?,
       subunit: subunit == freezed
           ? _value.subunit
           : subunit as List<SubstanceProteinSubunit>?,
@@ -27846,7 +27846,7 @@ class _$_SubstanceProtein extends _SubstanceProtein {
   final List<String>? disulfideLinkage;
   @override
   @JsonKey(name: '_disulfideLinkage')
-  final List<Element>? disulfideLinkageElement;
+  final List<Element?>? disulfideLinkageElement;
   @override
   final List<SubstanceProteinSubunit>? subunit;
 
@@ -27966,7 +27966,7 @@ abstract class _SubstanceProtein extends SubstanceProtein {
           Element? numberOfSubunitsElement,
       List<String>? disulfideLinkage,
       @JsonKey(name: '_disulfideLinkage')
-          List<Element>? disulfideLinkageElement,
+          List<Element?>? disulfideLinkageElement,
       List<SubstanceProteinSubunit>? subunit}) = _$_SubstanceProtein;
 
   factory _SubstanceProtein.fromJson(Map<String, dynamic> json) =
@@ -28009,7 +28009,7 @@ abstract class _SubstanceProtein extends SubstanceProtein {
   List<String>? get disulfideLinkage;
   @override
   @JsonKey(name: '_disulfideLinkage')
-  List<Element>? get disulfideLinkageElement;
+  List<Element?>? get disulfideLinkageElement;
   @override
   List<SubstanceProteinSubunit>? get subunit;
   @override

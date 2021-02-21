@@ -1026,7 +1026,7 @@ class _$CompositionAttesterTearOff {
 
   _CompositionAttester call(
       {List<CompositionAttesterMode>? mode,
-      @JsonKey(name: '_mode') List<Element>? modeElement,
+      @JsonKey(name: '_mode') List<Element?>? modeElement,
       Time? time,
       @JsonKey(name: '_time') Element? timeElement,
       Reference? party}) {
@@ -1051,7 +1051,7 @@ const $CompositionAttester = _$CompositionAttesterTearOff();
 mixin _$CompositionAttester {
   List<CompositionAttesterMode>? get mode;
   @JsonKey(name: '_mode')
-  List<Element>? get modeElement;
+  List<Element?>? get modeElement;
   Time? get time;
   @JsonKey(name: '_time')
   Element? get timeElement;
@@ -1069,7 +1069,7 @@ abstract class $CompositionAttesterCopyWith<$Res> {
       _$CompositionAttesterCopyWithImpl<$Res>;
   $Res call(
       {List<CompositionAttesterMode>? mode,
-      @JsonKey(name: '_mode') List<Element>? modeElement,
+      @JsonKey(name: '_mode') List<Element?>? modeElement,
       Time? time,
       @JsonKey(name: '_time') Element? timeElement,
       Reference? party});
@@ -1101,7 +1101,7 @@ class _$CompositionAttesterCopyWithImpl<$Res>
           : mode as List<CompositionAttesterMode>?,
       modeElement: modeElement == freezed
           ? _value.modeElement
-          : modeElement as List<Element>?,
+          : modeElement as List<Element?>?,
       time: time == freezed ? _value.time : time as Time?,
       timeElement:
           timeElement == freezed ? _value.timeElement : timeElement as Element?,
@@ -1141,7 +1141,7 @@ abstract class _$CompositionAttesterCopyWith<$Res>
   @override
   $Res call(
       {List<CompositionAttesterMode>? mode,
-      @JsonKey(name: '_mode') List<Element>? modeElement,
+      @JsonKey(name: '_mode') List<Element?>? modeElement,
       Time? time,
       @JsonKey(name: '_time') Element? timeElement,
       Reference? party});
@@ -1177,7 +1177,7 @@ class __$CompositionAttesterCopyWithImpl<$Res>
           : mode as List<CompositionAttesterMode>?,
       modeElement: modeElement == freezed
           ? _value.modeElement
-          : modeElement as List<Element>?,
+          : modeElement as List<Element?>?,
       time: time == freezed ? _value.time : time as Time?,
       timeElement:
           timeElement == freezed ? _value.timeElement : timeElement as Element?,
@@ -1205,7 +1205,7 @@ class _$_CompositionAttester extends _CompositionAttester {
   final List<CompositionAttesterMode>? mode;
   @override
   @JsonKey(name: '_mode')
-  final List<Element>? modeElement;
+  final List<Element?>? modeElement;
   @override
   final Time? time;
   @override
@@ -1262,7 +1262,7 @@ abstract class _CompositionAttester extends CompositionAttester {
   _CompositionAttester._() : super._();
   factory _CompositionAttester(
       {List<CompositionAttesterMode>? mode,
-      @JsonKey(name: '_mode') List<Element>? modeElement,
+      @JsonKey(name: '_mode') List<Element?>? modeElement,
       Time? time,
       @JsonKey(name: '_time') Element? timeElement,
       Reference? party}) = _$_CompositionAttester;
@@ -1274,7 +1274,7 @@ abstract class _CompositionAttester extends CompositionAttester {
   List<CompositionAttesterMode>? get mode;
   @override
   @JsonKey(name: '_mode')
-  List<Element>? get modeElement;
+  List<Element?>? get modeElement;
   @override
   Time? get time;
   @override

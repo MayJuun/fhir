@@ -87,7 +87,8 @@ _$_ImplementationGuide _$_$_ImplementationGuideFromJson(
     fhirVersion:
         json['fhirVersion'] == null ? null : Id.fromJson(json['fhirVersion']),
     fhirVersionElement: (json['_fhirVersion'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     dependency: (json['dependency'] as List<dynamic>?)
         ?.map((e) =>
@@ -157,7 +158,7 @@ Map<String, dynamic> _$_$_ImplementationGuideToJson(
   writeNotNull('_copyright', instance.copyrightElement?.toJson());
   writeNotNull('fhirVersion', instance.fhirVersion?.toJson());
   writeNotNull('_fhirVersion',
-      instance.fhirVersionElement?.map((e) => e.toJson()).toList());
+      instance.fhirVersionElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'dependency', instance.dependency?.map((e) => e.toJson()).toList());
   val['package'] = instance.package.map((e) => e.toJson()).toList();
@@ -910,7 +911,8 @@ _$_TestScriptMetadataCapability _$_$_TestScriptMetadataCapabilityFromJson(
         ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     linkElement: (json['_link'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     conformance:
         Reference.fromJson(json['conformance'] as Map<String, dynamic>),
@@ -941,7 +943,7 @@ Map<String, dynamic> _$_$_TestScriptMetadataCapabilityToJson(
   writeNotNull('destination', instance.destination?.toJson());
   writeNotNull('_destination', instance.destinationElement?.toJson());
   writeNotNull('link', instance.link?.map((e) => e.toJson()).toList());
-  writeNotNull('_link', instance.linkElement?.map((e) => e.toJson()).toList());
+  writeNotNull('_link', instance.linkElement?.map((e) => e?.toJson()).toList());
   val['conformance'] = instance.conformance.toJson();
   return val;
 }

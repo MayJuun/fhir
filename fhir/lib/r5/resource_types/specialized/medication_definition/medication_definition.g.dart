@@ -4088,7 +4088,8 @@ _$_SubstanceProtein _$_$_SubstanceProteinFromJson(Map<String, dynamic> json) {
         ?.map((e) => e as String)
         .toList(),
     disulfideLinkageElement: (json['_disulfideLinkage'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     subunit: (json['subunit'] as List<dynamic>?)
         ?.map(
@@ -4126,7 +4127,7 @@ Map<String, dynamic> _$_$_SubstanceProteinToJson(_$_SubstanceProtein instance) {
   writeNotNull('_numberOfSubunits', instance.numberOfSubunitsElement?.toJson());
   writeNotNull('disulfideLinkage', instance.disulfideLinkage);
   writeNotNull('_disulfideLinkage',
-      instance.disulfideLinkageElement?.map((e) => e.toJson()).toList());
+      instance.disulfideLinkageElement?.map((e) => e?.toJson()).toList());
   writeNotNull('subunit', instance.subunit?.map((e) => e.toJson()).toList());
   return val;
 }

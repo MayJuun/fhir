@@ -2088,7 +2088,7 @@ class _$CoverageEligibilityRequestTearOff {
       CodeableConcept? priority,
       List<CoverageEligibilityRequestPurpose>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element>? purposeElement,
+          List<Element?>? purposeElement,
       required Reference patient,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -2170,7 +2170,7 @@ mixin _$CoverageEligibilityRequest {
   CodeableConcept? get priority;
   List<CoverageEligibilityRequestPurpose>? get purpose;
   @JsonKey(name: '_purpose')
-  List<Element>? get purposeElement;
+  List<Element?>? get purposeElement;
   Reference get patient;
   Date? get servicedDate;
   @JsonKey(name: '_servicedDate')
@@ -2220,7 +2220,7 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
       CodeableConcept? priority,
       List<CoverageEligibilityRequestPurpose>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element>? purposeElement,
+          List<Element?>? purposeElement,
       Reference patient,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -2335,7 +2335,7 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
           : purpose as List<CoverageEligibilityRequestPurpose>?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as List<Element>?,
+          : purposeElement as List<Element?>?,
       patient: patient == freezed ? _value.patient : patient as Reference,
       servicedDate:
           servicedDate == freezed ? _value.servicedDate : servicedDate as Date?,
@@ -2543,7 +2543,7 @@ abstract class _$CoverageEligibilityRequestCopyWith<$Res>
       CodeableConcept? priority,
       List<CoverageEligibilityRequestPurpose>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element>? purposeElement,
+          List<Element?>? purposeElement,
       Reference patient,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -2675,7 +2675,7 @@ class __$CoverageEligibilityRequestCopyWithImpl<$Res>
           : purpose as List<CoverageEligibilityRequestPurpose>?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as List<Element>?,
+          : purposeElement as List<Element?>?,
       patient: patient == freezed ? _value.patient : patient as Reference,
       servicedDate:
           servicedDate == freezed ? _value.servicedDate : servicedDate as Date?,
@@ -2793,7 +2793,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   final List<CoverageEligibilityRequestPurpose>? purpose;
   @override
   @JsonKey(name: '_purpose')
-  final List<Element>? purposeElement;
+  final List<Element?>? purposeElement;
   @override
   final Reference patient;
   @override
@@ -2978,7 +2978,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
           CodeableConcept? priority,
           List<CoverageEligibilityRequestPurpose>? purpose,
           @JsonKey(name: '_purpose')
-              List<Element>? purposeElement,
+              List<Element?>? purposeElement,
           required Reference patient,
           Date? servicedDate,
           @JsonKey(name: '_servicedDate')
@@ -3038,7 +3038,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   List<CoverageEligibilityRequestPurpose>? get purpose;
   @override
   @JsonKey(name: '_purpose')
-  List<Element>? get purposeElement;
+  List<Element?>? get purposeElement;
   @override
   Reference get patient;
   @override
@@ -4695,7 +4695,7 @@ class _$CoverageEligibilityResponseTearOff {
           Element? statusElement,
       List<CoverageEligibilityResponsePurpose>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element>? purposeElement,
+          List<Element?>? purposeElement,
       required Reference patient,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -4789,7 +4789,7 @@ mixin _$CoverageEligibilityResponse {
   Element? get statusElement;
   List<CoverageEligibilityResponsePurpose>? get purpose;
   @JsonKey(name: '_purpose')
-  List<Element>? get purposeElement;
+  List<Element?>? get purposeElement;
   Reference get patient;
   Date? get servicedDate;
   @JsonKey(name: '_servicedDate')
@@ -4849,7 +4849,7 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
           Element? statusElement,
       List<CoverageEligibilityResponsePurpose>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element>? purposeElement,
+          List<Element?>? purposeElement,
       Reference patient,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -4977,7 +4977,7 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
           : purpose as List<CoverageEligibilityResponsePurpose>?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as List<Element>?,
+          : purposeElement as List<Element?>?,
       patient: patient == freezed ? _value.patient : patient as Reference,
       servicedDate:
           servicedDate == freezed ? _value.servicedDate : servicedDate as Date?,
@@ -5216,7 +5216,7 @@ abstract class _$CoverageEligibilityResponseCopyWith<$Res>
           Element? statusElement,
       List<CoverageEligibilityResponsePurpose>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element>? purposeElement,
+          List<Element?>? purposeElement,
       Reference patient,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -5364,7 +5364,7 @@ class __$CoverageEligibilityResponseCopyWithImpl<$Res>
           : purpose as List<CoverageEligibilityResponsePurpose>?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as List<Element>?,
+          : purposeElement as List<Element?>?,
       patient: patient == freezed ? _value.patient : patient as Reference,
       servicedDate:
           servicedDate == freezed ? _value.servicedDate : servicedDate as Date?,
@@ -5502,7 +5502,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   final List<CoverageEligibilityResponsePurpose>? purpose;
   @override
   @JsonKey(name: '_purpose')
-  final List<Element>? purposeElement;
+  final List<Element?>? purposeElement;
   @override
   final Reference patient;
   @override
@@ -5709,7 +5709,7 @@ abstract class _CoverageEligibilityResponse
           Element? statusElement,
       List<CoverageEligibilityResponsePurpose>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element>? purposeElement,
+          List<Element?>? purposeElement,
       required Reference patient,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -5776,7 +5776,7 @@ abstract class _CoverageEligibilityResponse
   List<CoverageEligibilityResponsePurpose>? get purpose;
   @override
   @JsonKey(name: '_purpose')
-  List<Element>? get purposeElement;
+  List<Element?>? get purposeElement;
   @override
   Reference get patient;
   @override

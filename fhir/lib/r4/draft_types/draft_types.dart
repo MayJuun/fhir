@@ -250,9 +250,9 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
     String? shape,
     @JsonKey(name: '_shape') Element? shapeElement,
     List<String>? color,
-    @JsonKey(name: '_color') List<Element>? colorElement,
+    @JsonKey(name: '_color') List<Element?>? colorElement,
     List<String>? imprint,
-    @JsonKey(name: '_imprint') List<Element>? imprintElement,
+    @JsonKey(name: '_imprint') List<Element?>? imprintElement,
     List<Attachment>? image,
     CodeableConcept? scoring,
   }) = _ProdCharacteristic;

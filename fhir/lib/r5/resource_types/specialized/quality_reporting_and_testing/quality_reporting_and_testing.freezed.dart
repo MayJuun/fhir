@@ -114,7 +114,7 @@ class _$MeasureTearOff {
       CodeableConcept? improvementNotation,
       List<Markdown>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       Markdown? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -307,7 +307,7 @@ mixin _$Measure {
   CodeableConcept? get improvementNotation;
   List<Markdown>? get definition;
   @JsonKey(name: '_definition')
-  List<Element>? get definitionElement;
+  List<Element?>? get definitionElement;
   Markdown? get guidance;
   @JsonKey(name: '_guidance')
   Element? get guidanceElement;
@@ -421,7 +421,7 @@ abstract class $MeasureCopyWith<$Res> {
       CodeableConcept? improvementNotation,
       List<Markdown>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       Markdown? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -718,7 +718,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
           : definition as List<Markdown>?,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
-          : definitionElement as List<Element>?,
+          : definitionElement as List<Element?>?,
       guidance: guidance == freezed ? _value.guidance : guidance as Markdown?,
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
@@ -1178,7 +1178,7 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       CodeableConcept? improvementNotation,
       List<Markdown>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       Markdown? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -1507,7 +1507,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
           : definition as List<Markdown>?,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
-          : definitionElement as List<Element>?,
+          : definitionElement as List<Element?>?,
       guidance: guidance == freezed ? _value.guidance : guidance as Markdown?,
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
@@ -1801,7 +1801,7 @@ class _$_Measure extends _Measure {
   final List<Markdown>? definition;
   @override
   @JsonKey(name: '_definition')
-  final List<Element>? definitionElement;
+  final List<Element?>? definitionElement;
   @override
   final Markdown? guidance;
   @override
@@ -2132,7 +2132,7 @@ abstract class _Measure extends Measure {
       CodeableConcept? improvementNotation,
       List<Markdown>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       Markdown? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -2309,7 +2309,7 @@ abstract class _Measure extends Measure {
   List<Markdown>? get definition;
   @override
   @JsonKey(name: '_definition')
-  List<Element>? get definitionElement;
+  List<Element?>? get definitionElement;
   @override
   Markdown? get guidance;
   @override
@@ -13070,11 +13070,11 @@ class _$TestScriptCapabilityTearOff {
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Integer>? origin,
-      @JsonKey(name: '_origin') List<Element>? originElement,
+      @JsonKey(name: '_origin') List<Element?>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       required Canonical capabilities}) {
     return _TestScriptCapability(
       id: id,
@@ -13122,13 +13122,13 @@ mixin _$TestScriptCapability {
   Element? get descriptionElement;
   List<Integer>? get origin;
   @JsonKey(name: '_origin')
-  List<Element>? get originElement;
+  List<Element?>? get originElement;
   Integer? get destination;
   @JsonKey(name: '_destination')
   Element? get destinationElement;
   List<FhirUri>? get link;
   @JsonKey(name: '_link')
-  List<Element>? get linkElement;
+  List<Element?>? get linkElement;
   Canonical get capabilities;
 
   Map<String, dynamic> toJson();
@@ -13152,11 +13152,11 @@ abstract class $TestScriptCapabilityCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Integer>? origin,
-      @JsonKey(name: '_origin') List<Element>? originElement,
+      @JsonKey(name: '_origin') List<Element?>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       Canonical capabilities});
 
   $ElementCopyWith<$Res>? get requiredElement;
@@ -13219,7 +13219,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
       origin: origin == freezed ? _value.origin : origin as List<Integer>?,
       originElement: originElement == freezed
           ? _value.originElement
-          : originElement as List<Element>?,
+          : originElement as List<Element?>?,
       destination:
           destination == freezed ? _value.destination : destination as Integer?,
       destinationElement: destinationElement == freezed
@@ -13228,7 +13228,7 @@ class _$TestScriptCapabilityCopyWithImpl<$Res>
       link: link == freezed ? _value.link : link as List<FhirUri>?,
       linkElement: linkElement == freezed
           ? _value.linkElement
-          : linkElement as List<Element>?,
+          : linkElement as List<Element?>?,
       capabilities: capabilities == freezed
           ? _value.capabilities
           : capabilities as Canonical,
@@ -13298,11 +13298,11 @@ abstract class _$TestScriptCapabilityCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Integer>? origin,
-      @JsonKey(name: '_origin') List<Element>? originElement,
+      @JsonKey(name: '_origin') List<Element?>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       Canonical capabilities});
 
   @override
@@ -13371,7 +13371,7 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
       origin: origin == freezed ? _value.origin : origin as List<Integer>?,
       originElement: originElement == freezed
           ? _value.originElement
-          : originElement as List<Element>?,
+          : originElement as List<Element?>?,
       destination:
           destination == freezed ? _value.destination : destination as Integer?,
       destinationElement: destinationElement == freezed
@@ -13380,7 +13380,7 @@ class __$TestScriptCapabilityCopyWithImpl<$Res>
       link: link == freezed ? _value.link : link as List<FhirUri>?,
       linkElement: linkElement == freezed
           ? _value.linkElement
-          : linkElement as List<Element>?,
+          : linkElement as List<Element?>?,
       capabilities: capabilities == freezed
           ? _value.capabilities
           : capabilities as Canonical,
@@ -13441,7 +13441,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   final List<Integer>? origin;
   @override
   @JsonKey(name: '_origin')
-  final List<Element>? originElement;
+  final List<Element?>? originElement;
   @override
   final Integer? destination;
   @override
@@ -13451,7 +13451,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
   final List<FhirUri>? link;
   @override
   @JsonKey(name: '_link')
-  final List<Element>? linkElement;
+  final List<Element?>? linkElement;
   @override
   final Canonical capabilities;
 
@@ -13556,11 +13556,11 @@ abstract class _TestScriptCapability extends TestScriptCapability {
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       List<Integer>? origin,
-      @JsonKey(name: '_origin') List<Element>? originElement,
+      @JsonKey(name: '_origin') List<Element?>? originElement,
       Integer? destination,
       @JsonKey(name: '_destination') Element? destinationElement,
       List<FhirUri>? link,
-      @JsonKey(name: '_link') List<Element>? linkElement,
+      @JsonKey(name: '_link') List<Element?>? linkElement,
       required Canonical capabilities}) = _$_TestScriptCapability;
 
   factory _TestScriptCapability.fromJson(Map<String, dynamic> json) =
@@ -13593,7 +13593,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   List<Integer>? get origin;
   @override
   @JsonKey(name: '_origin')
-  List<Element>? get originElement;
+  List<Element?>? get originElement;
   @override
   Integer? get destination;
   @override
@@ -13603,7 +13603,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
   List<FhirUri>? get link;
   @override
   @JsonKey(name: '_link')
-  List<Element>? get linkElement;
+  List<Element?>? get linkElement;
   @override
   Canonical get capabilities;
   @override

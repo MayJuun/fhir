@@ -52,7 +52,7 @@ abstract class ImplementationGuide
     String? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     Id? fhirVersion,
-    @JsonKey(name: '_fhirVersion') List<Element>? fhirVersionElement,
+    @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
     List<ImplementationGuideDependency>? dependency,
     required List<ImplementationGuidePackage> package,
     List<ImplementationGuideGlobal>? global,
@@ -441,7 +441,7 @@ abstract class TestScriptMetadataCapability
     Integer? destination,
     @JsonKey(name: '_destination') Element? destinationElement,
     List<FhirUri>? link,
-    @JsonKey(name: '_link') List<Element>? linkElement,
+    @JsonKey(name: '_link') List<Element?>? linkElement,
     required Reference conformance,
   }) = _TestScriptMetadataCapability;
 

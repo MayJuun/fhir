@@ -40,7 +40,7 @@ class _$MedicinalProductTearOff {
       CodeableConcept? additionalMonitoringIndicator,
       List<String>? specialMeasures,
       @JsonKey(name: '_specialMeasures')
-          List<Element>? specialMeasuresElement,
+          List<Element?>? specialMeasuresElement,
       CodeableConcept? paediatricUseIndicator,
       List<CodeableConcept>? productClassification,
       List<MarketingStatus>? marketingStatus,
@@ -124,7 +124,7 @@ mixin _$MedicinalProduct {
   CodeableConcept? get additionalMonitoringIndicator;
   List<String>? get specialMeasures;
   @JsonKey(name: '_specialMeasures')
-  List<Element>? get specialMeasuresElement;
+  List<Element?>? get specialMeasuresElement;
   CodeableConcept? get paediatricUseIndicator;
   List<CodeableConcept>? get productClassification;
   List<MarketingStatus>? get marketingStatus;
@@ -174,7 +174,7 @@ abstract class $MedicinalProductCopyWith<$Res> {
       CodeableConcept? additionalMonitoringIndicator,
       List<String>? specialMeasures,
       @JsonKey(name: '_specialMeasures')
-          List<Element>? specialMeasuresElement,
+          List<Element?>? specialMeasuresElement,
       CodeableConcept? paediatricUseIndicator,
       List<CodeableConcept>? productClassification,
       List<MarketingStatus>? marketingStatus,
@@ -291,7 +291,7 @@ class _$MedicinalProductCopyWithImpl<$Res>
           : specialMeasures as List<String>?,
       specialMeasuresElement: specialMeasuresElement == freezed
           ? _value.specialMeasuresElement
-          : specialMeasuresElement as List<Element>?,
+          : specialMeasuresElement as List<Element?>?,
       paediatricUseIndicator: paediatricUseIndicator == freezed
           ? _value.paediatricUseIndicator
           : paediatricUseIndicator as CodeableConcept?,
@@ -477,7 +477,7 @@ abstract class _$MedicinalProductCopyWith<$Res>
       CodeableConcept? additionalMonitoringIndicator,
       List<String>? specialMeasures,
       @JsonKey(name: '_specialMeasures')
-          List<Element>? specialMeasuresElement,
+          List<Element?>? specialMeasuresElement,
       CodeableConcept? paediatricUseIndicator,
       List<CodeableConcept>? productClassification,
       List<MarketingStatus>? marketingStatus,
@@ -606,7 +606,7 @@ class __$MedicinalProductCopyWithImpl<$Res>
           : specialMeasures as List<String>?,
       specialMeasuresElement: specialMeasuresElement == freezed
           ? _value.specialMeasuresElement
-          : specialMeasuresElement as List<Element>?,
+          : specialMeasuresElement as List<Element?>?,
       paediatricUseIndicator: paediatricUseIndicator == freezed
           ? _value.paediatricUseIndicator
           : paediatricUseIndicator as CodeableConcept?,
@@ -737,7 +737,7 @@ class _$_MedicinalProduct extends _MedicinalProduct {
   final List<String>? specialMeasures;
   @override
   @JsonKey(name: '_specialMeasures')
-  final List<Element>? specialMeasuresElement;
+  final List<Element?>? specialMeasuresElement;
   @override
   final CodeableConcept? paediatricUseIndicator;
   @override
@@ -920,7 +920,7 @@ abstract class _MedicinalProduct extends MedicinalProduct {
           CodeableConcept? additionalMonitoringIndicator,
           List<String>? specialMeasures,
           @JsonKey(name: '_specialMeasures')
-              List<Element>? specialMeasuresElement,
+              List<Element?>? specialMeasuresElement,
           CodeableConcept? paediatricUseIndicator,
           List<CodeableConcept>? productClassification,
           List<MarketingStatus>? marketingStatus,
@@ -982,7 +982,7 @@ abstract class _MedicinalProduct extends MedicinalProduct {
   List<String>? get specialMeasures;
   @override
   @JsonKey(name: '_specialMeasures')
-  List<Element>? get specialMeasuresElement;
+  List<Element?>? get specialMeasuresElement;
   @override
   CodeableConcept? get paediatricUseIndicator;
   @override
@@ -16954,7 +16954,7 @@ class _$SubstancePolymerTearOff {
       List<CodeableConcept>? copolymerConnectivity,
       List<String>? modification,
       @JsonKey(name: '_modification')
-          List<Element>? modificationElement,
+          List<Element?>? modificationElement,
       List<SubstancePolymerMonomerSet>? monomerSet,
       List<SubstancePolymerRepeat>? repeat}) {
     return _SubstancePolymer(
@@ -17010,7 +17010,7 @@ mixin _$SubstancePolymer {
   List<CodeableConcept>? get copolymerConnectivity;
   List<String>? get modification;
   @JsonKey(name: '_modification')
-  List<Element>? get modificationElement;
+  List<Element?>? get modificationElement;
   List<SubstancePolymerMonomerSet>? get monomerSet;
   List<SubstancePolymerRepeat>? get repeat;
 
@@ -17046,7 +17046,7 @@ abstract class $SubstancePolymerCopyWith<$Res> {
       List<CodeableConcept>? copolymerConnectivity,
       List<String>? modification,
       @JsonKey(name: '_modification')
-          List<Element>? modificationElement,
+          List<Element?>? modificationElement,
       List<SubstancePolymerMonomerSet>? monomerSet,
       List<SubstancePolymerRepeat>? repeat});
 
@@ -17125,7 +17125,7 @@ class _$SubstancePolymerCopyWithImpl<$Res>
           : modification as List<String>?,
       modificationElement: modificationElement == freezed
           ? _value.modificationElement
-          : modificationElement as List<Element>?,
+          : modificationElement as List<Element?>?,
       monomerSet: monomerSet == freezed
           ? _value.monomerSet
           : monomerSet as List<SubstancePolymerMonomerSet>?,
@@ -17231,7 +17231,7 @@ abstract class _$SubstancePolymerCopyWith<$Res>
       List<CodeableConcept>? copolymerConnectivity,
       List<String>? modification,
       @JsonKey(name: '_modification')
-          List<Element>? modificationElement,
+          List<Element?>? modificationElement,
       List<SubstancePolymerMonomerSet>? monomerSet,
       List<SubstancePolymerRepeat>? repeat});
 
@@ -17318,7 +17318,7 @@ class __$SubstancePolymerCopyWithImpl<$Res>
           : modification as List<String>?,
       modificationElement: modificationElement == freezed
           ? _value.modificationElement
-          : modificationElement as List<Element>?,
+          : modificationElement as List<Element?>?,
       monomerSet: monomerSet == freezed
           ? _value.monomerSet
           : monomerSet as List<SubstancePolymerMonomerSet>?,
@@ -17400,7 +17400,7 @@ class _$_SubstancePolymer extends _SubstancePolymer {
   final List<String>? modification;
   @override
   @JsonKey(name: '_modification')
-  final List<Element>? modificationElement;
+  final List<Element?>? modificationElement;
   @override
   final List<SubstancePolymerMonomerSet>? monomerSet;
   @override
@@ -17523,7 +17523,7 @@ abstract class _SubstancePolymer extends SubstancePolymer {
       List<CodeableConcept>? copolymerConnectivity,
       List<String>? modification,
       @JsonKey(name: '_modification')
-          List<Element>? modificationElement,
+          List<Element?>? modificationElement,
       List<SubstancePolymerMonomerSet>? monomerSet,
       List<SubstancePolymerRepeat>? repeat}) = _$_SubstancePolymer;
 
@@ -17567,7 +17567,7 @@ abstract class _SubstancePolymer extends SubstancePolymer {
   List<String>? get modification;
   @override
   @JsonKey(name: '_modification')
-  List<Element>? get modificationElement;
+  List<Element?>? get modificationElement;
   @override
   List<SubstancePolymerMonomerSet>? get monomerSet;
   @override
@@ -19681,7 +19681,7 @@ class _$SubstanceProteinTearOff {
           Element? numberOfSubunitsElement,
       List<String>? disulfideLinkage,
       @JsonKey(name: '_disulfideLinkage')
-          List<Element>? disulfideLinkageElement,
+          List<Element?>? disulfideLinkageElement,
       List<SubstanceProteinSubunit>? subunit}) {
     return _SubstanceProtein(
       resourceType: resourceType,
@@ -19735,7 +19735,7 @@ mixin _$SubstanceProtein {
   Element? get numberOfSubunitsElement;
   List<String>? get disulfideLinkage;
   @JsonKey(name: '_disulfideLinkage')
-  List<Element>? get disulfideLinkageElement;
+  List<Element?>? get disulfideLinkageElement;
   List<SubstanceProteinSubunit>? get subunit;
 
   Map<String, dynamic> toJson();
@@ -19770,7 +19770,7 @@ abstract class $SubstanceProteinCopyWith<$Res> {
           Element? numberOfSubunitsElement,
       List<String>? disulfideLinkage,
       @JsonKey(name: '_disulfideLinkage')
-          List<Element>? disulfideLinkageElement,
+          List<Element?>? disulfideLinkageElement,
       List<SubstanceProteinSubunit>? subunit});
 
   $MetaCopyWith<$Res>? get meta;
@@ -19850,7 +19850,7 @@ class _$SubstanceProteinCopyWithImpl<$Res>
           : disulfideLinkage as List<String>?,
       disulfideLinkageElement: disulfideLinkageElement == freezed
           ? _value.disulfideLinkageElement
-          : disulfideLinkageElement as List<Element>?,
+          : disulfideLinkageElement as List<Element?>?,
       subunit: subunit == freezed
           ? _value.subunit
           : subunit as List<SubstanceProteinSubunit>?,
@@ -19953,7 +19953,7 @@ abstract class _$SubstanceProteinCopyWith<$Res>
           Element? numberOfSubunitsElement,
       List<String>? disulfideLinkage,
       @JsonKey(name: '_disulfideLinkage')
-          List<Element>? disulfideLinkageElement,
+          List<Element?>? disulfideLinkageElement,
       List<SubstanceProteinSubunit>? subunit});
 
   @override
@@ -20041,7 +20041,7 @@ class __$SubstanceProteinCopyWithImpl<$Res>
           : disulfideLinkage as List<String>?,
       disulfideLinkageElement: disulfideLinkageElement == freezed
           ? _value.disulfideLinkageElement
-          : disulfideLinkageElement as List<Element>?,
+          : disulfideLinkageElement as List<Element?>?,
       subunit: subunit == freezed
           ? _value.subunit
           : subunit as List<SubstanceProteinSubunit>?,
@@ -20119,7 +20119,7 @@ class _$_SubstanceProtein extends _SubstanceProtein {
   final List<String>? disulfideLinkage;
   @override
   @JsonKey(name: '_disulfideLinkage')
-  final List<Element>? disulfideLinkageElement;
+  final List<Element?>? disulfideLinkageElement;
   @override
   final List<SubstanceProteinSubunit>? subunit;
 
@@ -20239,7 +20239,7 @@ abstract class _SubstanceProtein extends SubstanceProtein {
           Element? numberOfSubunitsElement,
       List<String>? disulfideLinkage,
       @JsonKey(name: '_disulfideLinkage')
-          List<Element>? disulfideLinkageElement,
+          List<Element?>? disulfideLinkageElement,
       List<SubstanceProteinSubunit>? subunit}) = _$_SubstanceProtein;
 
   factory _SubstanceProtein.fromJson(Map<String, dynamic> json) =
@@ -20282,7 +20282,7 @@ abstract class _SubstanceProtein extends SubstanceProtein {
   List<String>? get disulfideLinkage;
   @override
   @JsonKey(name: '_disulfideLinkage')
-  List<Element>? get disulfideLinkageElement;
+  List<Element?>? get disulfideLinkageElement;
   @override
   List<SubstanceProteinSubunit>? get subunit;
   @override

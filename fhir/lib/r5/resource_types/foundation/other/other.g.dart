@@ -1236,13 +1236,15 @@ _$_OperationOutcomeIssue _$_$_OperationOutcomeIssueFromJson(
     location:
         (json['location'] as List<dynamic>?)?.map((e) => e as String).toList(),
     locationElement: (json['_location'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     expression: (json['expression'] as List<dynamic>?)
         ?.map((e) => e as String)
         .toList(),
     expressionElement: (json['_expression'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1272,10 +1274,10 @@ Map<String, dynamic> _$_$_OperationOutcomeIssueToJson(
   writeNotNull('_diagnostics', instance.diagnosticsElement?.toJson());
   writeNotNull('location', instance.location);
   writeNotNull(
-      '_location', instance.locationElement?.map((e) => e.toJson()).toList());
+      '_location', instance.locationElement?.map((e) => e?.toJson()).toList());
   writeNotNull('expression', instance.expression);
   writeNotNull('_expression',
-      instance.expressionElement?.map((e) => e.toJson()).toList());
+      instance.expressionElement?.map((e) => e?.toJson()).toList());
   return val;
 }
 
@@ -1780,7 +1782,8 @@ _$_Subscription _$_$_SubscriptionFromJson(Map<String, dynamic> json) {
     header:
         (json['header'] as List<dynamic>?)?.map((e) => e as String).toList(),
     headerElement: (json['_header'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     heartbeatPeriod: json['heartbeatPeriod'] == null
         ? null
@@ -1848,7 +1851,7 @@ Map<String, dynamic> _$_$_SubscriptionToJson(_$_Subscription instance) {
   writeNotNull('_endpoint', instance.endpointElement?.toJson());
   writeNotNull('header', instance.header);
   writeNotNull(
-      '_header', instance.headerElement?.map((e) => e.toJson()).toList());
+      '_header', instance.headerElement?.map((e) => e?.toJson()).toList());
   writeNotNull('heartbeatPeriod', instance.heartbeatPeriod?.toJson());
   writeNotNull('_heartbeatPeriod', instance.heartbeatPeriodElement?.toJson());
   writeNotNull('timeout', instance.timeout?.toJson());
@@ -2239,13 +2242,15 @@ _$_SubscriptionTopicResourceTrigger
         ?.map((e) => Code.fromJson(e))
         .toList(),
     resourceTypeElement: (json['_resourceType'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     methodCriteria: (json['methodCriteria'] as List<dynamic>?)
         ?.map((e) => Code.fromJson(e))
         .toList(),
     methodCriteriaElement: (json['_methodCriteria'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     queryCriteria: json['queryCriteria'] == null
         ? null
@@ -2255,7 +2260,8 @@ _$_SubscriptionTopicResourceTrigger
         ?.map((e) => e as String)
         .toList(),
     fhirPathCriteriaElement: (json['_fhirPathCriteria'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -2280,15 +2286,15 @@ Map<String, dynamic> _$_$_SubscriptionTopicResourceTriggerToJson(
   writeNotNull(
       'resourceType', instance.resourceType?.map((e) => e.toJson()).toList());
   writeNotNull('_resourceType',
-      instance.resourceTypeElement?.map((e) => e.toJson()).toList());
+      instance.resourceTypeElement?.map((e) => e?.toJson()).toList());
   writeNotNull('methodCriteria',
       instance.methodCriteria?.map((e) => e.toJson()).toList());
   writeNotNull('_methodCriteria',
-      instance.methodCriteriaElement?.map((e) => e.toJson()).toList());
+      instance.methodCriteriaElement?.map((e) => e?.toJson()).toList());
   writeNotNull('queryCriteria', instance.queryCriteria?.toJson());
   writeNotNull('fhirPathCriteria', instance.fhirPathCriteria);
   writeNotNull('_fhirPathCriteria',
-      instance.fhirPathCriteriaElement?.map((e) => e.toJson()).toList());
+      instance.fhirPathCriteriaElement?.map((e) => e?.toJson()).toList());
   return val;
 }
 
@@ -2361,7 +2367,8 @@ _$_SubscriptionTopicCanFilterBy _$_$_SubscriptionTopicCanFilterByFromJson(
         ?.map((e) => Code.fromJson(e))
         .toList(),
     searchModifierElement: (json['_searchModifier'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     documentation: json['documentation'] == null
         ? null
@@ -2392,7 +2399,7 @@ Map<String, dynamic> _$_$_SubscriptionTopicCanFilterByToJson(
   writeNotNull('searchModifier',
       instance.searchModifier?.map((e) => e.toJson()).toList());
   writeNotNull('_searchModifier',
-      instance.searchModifierElement?.map((e) => e.toJson()).toList());
+      instance.searchModifierElement?.map((e) => e?.toJson()).toList());
   writeNotNull('documentation', instance.documentation?.toJson());
   writeNotNull('_documentation', instance.documentationElement?.toJson());
   return val;

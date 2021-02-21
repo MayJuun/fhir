@@ -497,7 +497,8 @@ _$_CoverageEligibilityRequest _$_$_CoverageEligibilityRequestFromJson(
             (e) => _$enumDecode(_$CoverageEligibilityRequestPurposeEnumMap, e))
         .toList(),
     purposeElement: (json['_purpose'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
     servicedDate: json['servicedDate'] == null
@@ -575,7 +576,7 @@ Map<String, dynamic> _$_$_CoverageEligibilityRequestToJson(
           ?.map((e) => _$CoverageEligibilityRequestPurposeEnumMap[e])
           .toList());
   writeNotNull(
-      '_purpose', instance.purposeElement?.map((e) => e.toJson()).toList());
+      '_purpose', instance.purposeElement?.map((e) => e?.toJson()).toList());
   val['patient'] = instance.patient.toJson();
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
@@ -868,7 +869,8 @@ _$_CoverageEligibilityResponse _$_$_CoverageEligibilityResponseFromJson(
             (e) => _$enumDecode(_$CoverageEligibilityResponsePurposeEnumMap, e))
         .toList(),
     purposeElement: (json['_purpose'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
     servicedDate: json['servicedDate'] == null
@@ -953,7 +955,7 @@ Map<String, dynamic> _$_$_CoverageEligibilityResponseToJson(
           ?.map((e) => _$CoverageEligibilityResponsePurposeEnumMap[e])
           .toList());
   writeNotNull(
-      '_purpose', instance.purposeElement?.map((e) => e.toJson()).toList());
+      '_purpose', instance.purposeElement?.map((e) => e?.toJson()).toList());
   val['patient'] = instance.patient.toJson();
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());

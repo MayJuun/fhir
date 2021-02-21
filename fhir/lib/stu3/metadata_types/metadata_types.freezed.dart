@@ -1192,9 +1192,9 @@ class _$DataRequirementTearOff {
       {String? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<String>? profile,
-      @JsonKey(name: '_profile') List<Element>? profileElement,
+      @JsonKey(name: '_profile') List<Element?>? profileElement,
       List<String>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
       List<DataRequirementCodeFilter>? codeFilter,
       List<DataRequirementDateFilter>? dateFilter}) {
     return _DataRequirement(
@@ -1224,10 +1224,10 @@ mixin _$DataRequirement {
   Element? get typeElement;
   List<String>? get profile;
   @JsonKey(name: '_profile')
-  List<Element>? get profileElement;
+  List<Element?>? get profileElement;
   List<String>? get mustSupport;
   @JsonKey(name: '_mustSupport')
-  List<Element>? get mustSupportElement;
+  List<Element?>? get mustSupportElement;
   List<DataRequirementCodeFilter>? get codeFilter;
   List<DataRequirementDateFilter>? get dateFilter;
 
@@ -1245,9 +1245,9 @@ abstract class $DataRequirementCopyWith<$Res> {
       {String? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<String>? profile,
-      @JsonKey(name: '_profile') List<Element>? profileElement,
+      @JsonKey(name: '_profile') List<Element?>? profileElement,
       List<String>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
       List<DataRequirementCodeFilter>? codeFilter,
       List<DataRequirementDateFilter>? dateFilter});
 
@@ -1281,13 +1281,13 @@ class _$DataRequirementCopyWithImpl<$Res>
       profile: profile == freezed ? _value.profile : profile as List<String>?,
       profileElement: profileElement == freezed
           ? _value.profileElement
-          : profileElement as List<Element>?,
+          : profileElement as List<Element?>?,
       mustSupport: mustSupport == freezed
           ? _value.mustSupport
           : mustSupport as List<String>?,
       mustSupportElement: mustSupportElement == freezed
           ? _value.mustSupportElement
-          : mustSupportElement as List<Element>?,
+          : mustSupportElement as List<Element?>?,
       codeFilter: codeFilter == freezed
           ? _value.codeFilter
           : codeFilter as List<DataRequirementCodeFilter>?,
@@ -1320,9 +1320,9 @@ abstract class _$DataRequirementCopyWith<$Res>
       {String? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<String>? profile,
-      @JsonKey(name: '_profile') List<Element>? profileElement,
+      @JsonKey(name: '_profile') List<Element?>? profileElement,
       List<String>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
       List<DataRequirementCodeFilter>? codeFilter,
       List<DataRequirementDateFilter>? dateFilter});
 
@@ -1359,13 +1359,13 @@ class __$DataRequirementCopyWithImpl<$Res>
       profile: profile == freezed ? _value.profile : profile as List<String>?,
       profileElement: profileElement == freezed
           ? _value.profileElement
-          : profileElement as List<Element>?,
+          : profileElement as List<Element?>?,
       mustSupport: mustSupport == freezed
           ? _value.mustSupport
           : mustSupport as List<String>?,
       mustSupportElement: mustSupportElement == freezed
           ? _value.mustSupportElement
-          : mustSupportElement as List<Element>?,
+          : mustSupportElement as List<Element?>?,
       codeFilter: codeFilter == freezed
           ? _value.codeFilter
           : codeFilter as List<DataRequirementCodeFilter>?,
@@ -1403,12 +1403,12 @@ class _$_DataRequirement extends _DataRequirement {
   final List<String>? profile;
   @override
   @JsonKey(name: '_profile')
-  final List<Element>? profileElement;
+  final List<Element?>? profileElement;
   @override
   final List<String>? mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  final List<Element>? mustSupportElement;
+  final List<Element?>? mustSupportElement;
   @override
   final List<DataRequirementCodeFilter>? codeFilter;
   @override
@@ -1477,9 +1477,9 @@ abstract class _DataRequirement extends DataRequirement {
       {String? type,
       @JsonKey(name: '_type') Element? typeElement,
       List<String>? profile,
-      @JsonKey(name: '_profile') List<Element>? profileElement,
+      @JsonKey(name: '_profile') List<Element?>? profileElement,
       List<String>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
       List<DataRequirementCodeFilter>? codeFilter,
       List<DataRequirementDateFilter>? dateFilter}) = _$_DataRequirement;
 
@@ -1495,12 +1495,12 @@ abstract class _DataRequirement extends DataRequirement {
   List<String>? get profile;
   @override
   @JsonKey(name: '_profile')
-  List<Element>? get profileElement;
+  List<Element?>? get profileElement;
   @override
   List<String>? get mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  List<Element>? get mustSupportElement;
+  List<Element?>? get mustSupportElement;
   @override
   List<DataRequirementCodeFilter>? get codeFilter;
   @override
@@ -1526,7 +1526,7 @@ class _$DataRequirementCodeFilterTearOff {
       @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
       Reference? valueSetReference,
       List<Code>? valueCode,
-      @JsonKey(name: '_valueCode') List<Element>? valueCodeElement,
+      @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
       List<Coding>? valueCoding,
       List<CodeableConcept>? valueCodeableConcept}) {
     return _DataRequirementCodeFilter(
@@ -1561,7 +1561,7 @@ mixin _$DataRequirementCodeFilter {
   Reference? get valueSetReference;
   List<Code>? get valueCode;
   @JsonKey(name: '_valueCode')
-  List<Element>? get valueCodeElement;
+  List<Element?>? get valueCodeElement;
   List<Coding>? get valueCoding;
   List<CodeableConcept>? get valueCodeableConcept;
 
@@ -1582,7 +1582,7 @@ abstract class $DataRequirementCodeFilterCopyWith<$Res> {
       @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
       Reference? valueSetReference,
       List<Code>? valueCode,
-      @JsonKey(name: '_valueCode') List<Element>? valueCodeElement,
+      @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
       List<Coding>? valueCoding,
       List<CodeableConcept>? valueCodeableConcept});
 
@@ -1629,7 +1629,7 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res>
           valueCode == freezed ? _value.valueCode : valueCode as List<Code>?,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
-          : valueCodeElement as List<Element>?,
+          : valueCodeElement as List<Element?>?,
       valueCoding: valueCoding == freezed
           ? _value.valueCoding
           : valueCoding as List<Coding>?,
@@ -1687,7 +1687,7 @@ abstract class _$DataRequirementCodeFilterCopyWith<$Res>
       @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
       Reference? valueSetReference,
       List<Code>? valueCode,
-      @JsonKey(name: '_valueCode') List<Element>? valueCodeElement,
+      @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
       List<Coding>? valueCoding,
       List<CodeableConcept>? valueCodeableConcept});
 
@@ -1740,7 +1740,7 @@ class __$DataRequirementCodeFilterCopyWithImpl<$Res>
           valueCode == freezed ? _value.valueCode : valueCode as List<Code>?,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
-          : valueCodeElement as List<Element>?,
+          : valueCodeElement as List<Element?>?,
       valueCoding: valueCoding == freezed
           ? _value.valueCoding
           : valueCoding as List<Coding>?,
@@ -1786,7 +1786,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   final List<Code>? valueCode;
   @override
   @JsonKey(name: '_valueCode')
-  final List<Element>? valueCodeElement;
+  final List<Element?>? valueCodeElement;
   @override
   final List<Coding>? valueCoding;
   @override
@@ -1864,7 +1864,7 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
           @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
           Reference? valueSetReference,
           List<Code>? valueCode,
-          @JsonKey(name: '_valueCode') List<Element>? valueCodeElement,
+          @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
           List<Coding>? valueCoding,
           List<CodeableConcept>? valueCodeableConcept}) =
       _$_DataRequirementCodeFilter;
@@ -1888,7 +1888,7 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   List<Code>? get valueCode;
   @override
   @JsonKey(name: '_valueCode')
-  List<Element>? get valueCodeElement;
+  List<Element?>? get valueCodeElement;
   @override
   List<Coding>? get valueCoding;
   @override

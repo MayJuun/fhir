@@ -361,7 +361,8 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         ?.map((e) => _$enumDecode(_$ElementDefinitionRepresentationEnumMap, e))
         .toList(),
     representationElement: (json['_representation'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     sliceName: json['sliceName'] as String?,
     sliceNameElement: json['_sliceName'] == null
@@ -408,7 +409,8 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         : Element.fromJson(json['_requirements'] as Map<String, dynamic>),
     alias: (json['alias'] as List<dynamic>?)?.map((e) => e as String).toList(),
     aliasElement: (json['_alias'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     min: json['min'] == null ? null : UnsignedInt.fromJson(json['min']),
     minElement: json['_min'] == null
@@ -1215,7 +1217,8 @@ _$_ElementDefinition _$_$_ElementDefinitionFromJson(Map<String, dynamic> json) {
         ?.map((e) => Id.fromJson(e))
         .toList(),
     conditionElement: (json['_condition'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     constraint: (json['constraint'] as List<dynamic>?)
         ?.map((e) =>
@@ -1276,7 +1279,7 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
           ?.map((e) => _$ElementDefinitionRepresentationEnumMap[e])
           .toList());
   writeNotNull('_representation',
-      instance.representationElement?.map((e) => e.toJson()).toList());
+      instance.representationElement?.map((e) => e?.toJson()).toList());
   writeNotNull('sliceName', instance.sliceName);
   writeNotNull('_sliceName', instance.sliceNameElement?.toJson());
   writeNotNull('sliceIsConstraining', instance.sliceIsConstraining?.toJson());
@@ -1296,7 +1299,7 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
   writeNotNull('_requirements', instance.requirementsElement?.toJson());
   writeNotNull('alias', instance.alias);
   writeNotNull(
-      '_alias', instance.aliasElement?.map((e) => e.toJson()).toList());
+      '_alias', instance.aliasElement?.map((e) => e?.toJson()).toList());
   writeNotNull('min', instance.min?.toJson());
   writeNotNull('_min', instance.minElement?.toJson());
   writeNotNull('max', instance.max);
@@ -1603,8 +1606,8 @@ Map<String, dynamic> _$_$_ElementDefinitionToJson(
   writeNotNull('_maxLength', instance.maxLengthElement?.toJson());
   writeNotNull(
       'condition', instance.condition?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      '_condition', instance.conditionElement?.map((e) => e.toJson()).toList());
+  writeNotNull('_condition',
+      instance.conditionElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'constraint', instance.constraint?.map((e) => e.toJson()).toList());
   writeNotNull('mustSupport', instance.mustSupport?.toJson());
@@ -1815,7 +1818,8 @@ _$_ElementDefinitionType _$_$_ElementDefinitionTypeFromJson(
         ?.map((e) => Canonical.fromJson(e))
         .toList(),
     profileElement: (json['_profile'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     targetProfile: (json['targetProfile'] as List<dynamic>?)
         ?.map((e) => Canonical.fromJson(e))
@@ -1824,7 +1828,8 @@ _$_ElementDefinitionType _$_$_ElementDefinitionTypeFromJson(
         ?.map((e) => _$enumDecode(_$ElementDefinitionTypeAggregationEnumMap, e))
         .toList(),
     aggregationElement: (json['_aggregation'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     versioning: _$enumDecodeNullable(
         _$ElementDefinitionTypeVersioningEnumMap, json['versioning'],
@@ -1854,7 +1859,7 @@ Map<String, dynamic> _$_$_ElementDefinitionTypeToJson(
   writeNotNull('_code', instance.codeElement?.toJson());
   writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_profile', instance.profileElement?.map((e) => e.toJson()).toList());
+      '_profile', instance.profileElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'targetProfile', instance.targetProfile?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -1863,7 +1868,7 @@ Map<String, dynamic> _$_$_ElementDefinitionTypeToJson(
           ?.map((e) => _$ElementDefinitionTypeAggregationEnumMap[e])
           .toList());
   writeNotNull('_aggregation',
-      instance.aggregationElement?.map((e) => e.toJson()).toList());
+      instance.aggregationElement?.map((e) => e?.toJson()).toList());
   writeNotNull('versioning',
       _$ElementDefinitionTypeVersioningEnumMap[instance.versioning]);
   writeNotNull('_versioning', instance.versioningElement?.toJson());

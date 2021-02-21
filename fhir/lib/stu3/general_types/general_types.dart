@@ -545,11 +545,11 @@ abstract class HumanName implements _$HumanName {
     String? family,
     @JsonKey(name: '_family') Element? familyElement,
     List<String>? given,
-    @JsonKey(name: '_given') List<Element>? givenElement,
+    @JsonKey(name: '_given') List<Element?>? givenElement,
     List<String>? prefix,
-    @JsonKey(name: '_prefix') List<Element>? prefixElement,
+    @JsonKey(name: '_prefix') List<Element?>? prefixElement,
     List<String>? suffix,
-    @JsonKey(name: '_suffix') List<Element>? suffixElement,
+    @JsonKey(name: '_suffix') List<Element?>? suffixElement,
     Period? period,
   }) = _HumanName;
 
@@ -581,7 +581,7 @@ abstract class Address implements _$Address {
     String? text,
     @JsonKey(name: '_text') Element? textElement,
     List<String>? line,
-    @JsonKey(name: '_line') List<Element>? lineElement,
+    @JsonKey(name: '_line') List<Element?>? lineElement,
     String? city,
     @JsonKey(name: '_city') Element? cityElement,
     String? district,
@@ -649,7 +649,7 @@ abstract class Timing implements _$Timing {
   Timing._();
   factory Timing({
     List<String>? event,
-    @JsonKey(name: '_event') List<Element>? eventElement,
+    @JsonKey(name: '_event') List<Element?>? eventElement,
     TimingRepeat? repeat,
     CodeableConcept? code,
   }) = _Timing;
@@ -698,11 +698,11 @@ abstract class TimingRepeat implements _$TimingRepeat {
     TimingRepeatPeriodUnit? periodUnit,
     @JsonKey(name: '_periodUnit') Element? periodUnitElement,
     List<String>? dayOfWeek,
-    @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,
+    @JsonKey(name: '_dayOfWeek') List<Element?>? dayOfWeekElement,
     List<Time>? timeOfDay,
-    @JsonKey(name: '_timeOfDay') List<Element>? timeOfDayElement,
+    @JsonKey(name: '_timeOfDay') List<Element?>? timeOfDayElement,
     List<TimingRepeatWhen>? when,
-    @JsonKey(name: '_when') List<Element>? whenElement,
+    @JsonKey(name: '_when') List<Element?>? whenElement,
     Decimal? offset,
     @JsonKey(name: '_offset') Element? offsetElement,
   }) = _TimingRepeat;

@@ -351,7 +351,7 @@ abstract class Measure with Resource implements _$Measure {
         Element? clinicalRecommendationStatementElement,
     CodeableConcept? improvementNotation,
     List<Markdown>? definition,
-    @JsonKey(name: '_definition') List<Element>? definitionElement,
+    @JsonKey(name: '_definition') List<Element?>? definitionElement,
     Markdown? guidance,
     @JsonKey(name: '_guidance') Element? guidanceElement,
     List<MeasureGroup>? group,
@@ -2592,11 +2592,11 @@ abstract class TestScriptCapability implements _$TestScriptCapability {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<Integer>? origin,
-    @JsonKey(name: '_origin') List<Element>? originElement,
+    @JsonKey(name: '_origin') List<Element?>? originElement,
     Integer? destination,
     @JsonKey(name: '_destination') Element? destinationElement,
     List<FhirUri>? link,
-    @JsonKey(name: '_link') List<Element>? linkElement,
+    @JsonKey(name: '_link') List<Element?>? linkElement,
     required Canonical capabilities,
   }) = _TestScriptCapability;
 

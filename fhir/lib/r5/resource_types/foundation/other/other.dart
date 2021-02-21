@@ -568,9 +568,9 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
     String? diagnostics,
     @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
     List<String>? location,
-    @JsonKey(name: '_location') List<Element>? locationElement,
+    @JsonKey(name: '_location') List<Element?>? locationElement,
     List<String>? expression,
-    @JsonKey(name: '_expression') List<Element>? expressionElement,
+    @JsonKey(name: '_expression') List<Element?>? expressionElement,
   }) = _OperationOutcomeIssue;
 
   /// Produces a Yaml formatted String version of the object
@@ -757,7 +757,7 @@ abstract class Subscription with Resource implements _$Subscription {
     FhirUrl? endpoint,
     @JsonKey(name: '_endpoint') Element? endpointElement,
     List<String>? header,
-    @JsonKey(name: '_header') List<Element>? headerElement,
+    @JsonKey(name: '_header') List<Element?>? headerElement,
     UnsignedInt? heartbeatPeriod,
     @JsonKey(name: '_heartbeatPeriod') Element? heartbeatPeriodElement,
     UnsignedInt? timeout,
@@ -949,12 +949,12 @@ abstract class SubscriptionTopicResourceTrigger
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<Code>? resourceType,
-    @JsonKey(name: '_resourceType') List<Element>? resourceTypeElement,
+    @JsonKey(name: '_resourceType') List<Element?>? resourceTypeElement,
     List<Code>? methodCriteria,
-    @JsonKey(name: '_methodCriteria') List<Element>? methodCriteriaElement,
+    @JsonKey(name: '_methodCriteria') List<Element?>? methodCriteriaElement,
     SubscriptionTopicQueryCriteria? queryCriteria,
     List<String>? fhirPathCriteria,
-    @JsonKey(name: '_fhirPathCriteria') List<Element>? fhirPathCriteriaElement,
+    @JsonKey(name: '_fhirPathCriteria') List<Element?>? fhirPathCriteriaElement,
   }) = _SubscriptionTopicResourceTrigger;
 
   /// Produces a Yaml formatted String version of the object
@@ -1024,7 +1024,7 @@ abstract class SubscriptionTopicCanFilterBy
     String? searchParamName,
     @JsonKey(name: '_searchParamName') Element? searchParamNameElement,
     List<Code>? searchModifier,
-    @JsonKey(name: '_searchModifier') List<Element>? searchModifierElement,
+    @JsonKey(name: '_searchModifier') List<Element?>? searchModifierElement,
     Markdown? documentation,
     @JsonKey(name: '_documentation') Element? documentationElement,
   }) = _SubscriptionTopicCanFilterBy;

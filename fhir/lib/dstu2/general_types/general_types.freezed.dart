@@ -5788,9 +5788,9 @@ class _$HumanNameTearOff {
       String? text,
       @JsonKey(name: '_text') Element? textElement,
       List<String>? family,
-      @JsonKey(name: '_family') List<Element>? familyElement,
+      @JsonKey(name: '_family') List<Element?>? familyElement,
       List<String>? given,
-      @JsonKey(name: '_given') List<Element>? givenElement,
+      @JsonKey(name: '_given') List<Element?>? givenElement,
       List<String>? prefix,
       @JsonKey(name: '_prefix') Element? prefixElement,
       List<String>? suffix,
@@ -5840,10 +5840,10 @@ mixin _$HumanName {
   Element? get textElement;
   List<String>? get family;
   @JsonKey(name: '_family')
-  List<Element>? get familyElement;
+  List<Element?>? get familyElement;
   List<String>? get given;
   @JsonKey(name: '_given')
-  List<Element>? get givenElement;
+  List<Element?>? get givenElement;
   List<String>? get prefix;
   @JsonKey(name: '_prefix')
   Element? get prefixElement;
@@ -5870,9 +5870,9 @@ abstract class $HumanNameCopyWith<$Res> {
       String? text,
       @JsonKey(name: '_text') Element? textElement,
       List<String>? family,
-      @JsonKey(name: '_family') List<Element>? familyElement,
+      @JsonKey(name: '_family') List<Element?>? familyElement,
       List<String>? given,
-      @JsonKey(name: '_given') List<Element>? givenElement,
+      @JsonKey(name: '_given') List<Element?>? givenElement,
       List<String>? prefix,
       @JsonKey(name: '_prefix') Element? prefixElement,
       List<String>? suffix,
@@ -5930,11 +5930,11 @@ class _$HumanNameCopyWithImpl<$Res> implements $HumanNameCopyWith<$Res> {
       family: family == freezed ? _value.family : family as List<String>?,
       familyElement: familyElement == freezed
           ? _value.familyElement
-          : familyElement as List<Element>?,
+          : familyElement as List<Element?>?,
       given: given == freezed ? _value.given : given as List<String>?,
       givenElement: givenElement == freezed
           ? _value.givenElement
-          : givenElement as List<Element>?,
+          : givenElement as List<Element?>?,
       prefix: prefix == freezed ? _value.prefix : prefix as List<String>?,
       prefixElement: prefixElement == freezed
           ? _value.prefixElement
@@ -6018,9 +6018,9 @@ abstract class _$HumanNameCopyWith<$Res> implements $HumanNameCopyWith<$Res> {
       String? text,
       @JsonKey(name: '_text') Element? textElement,
       List<String>? family,
-      @JsonKey(name: '_family') List<Element>? familyElement,
+      @JsonKey(name: '_family') List<Element?>? familyElement,
       List<String>? given,
-      @JsonKey(name: '_given') List<Element>? givenElement,
+      @JsonKey(name: '_given') List<Element?>? givenElement,
       List<String>? prefix,
       @JsonKey(name: '_prefix') Element? prefixElement,
       List<String>? suffix,
@@ -6084,11 +6084,11 @@ class __$HumanNameCopyWithImpl<$Res> extends _$HumanNameCopyWithImpl<$Res>
       family: family == freezed ? _value.family : family as List<String>?,
       familyElement: familyElement == freezed
           ? _value.familyElement
-          : familyElement as List<Element>?,
+          : familyElement as List<Element?>?,
       given: given == freezed ? _value.given : given as List<String>?,
       givenElement: givenElement == freezed
           ? _value.givenElement
-          : givenElement as List<Element>?,
+          : givenElement as List<Element?>?,
       prefix: prefix == freezed ? _value.prefix : prefix as List<String>?,
       prefixElement: prefixElement == freezed
           ? _value.prefixElement
@@ -6151,12 +6151,12 @@ class _$_HumanName extends _HumanName {
   final List<String>? family;
   @override
   @JsonKey(name: '_family')
-  final List<Element>? familyElement;
+  final List<Element?>? familyElement;
   @override
   final List<String>? given;
   @override
   @JsonKey(name: '_given')
-  final List<Element>? givenElement;
+  final List<Element?>? givenElement;
   @override
   final List<String>? prefix;
   @override
@@ -6263,9 +6263,9 @@ abstract class _HumanName extends HumanName {
       String? text,
       @JsonKey(name: '_text') Element? textElement,
       List<String>? family,
-      @JsonKey(name: '_family') List<Element>? familyElement,
+      @JsonKey(name: '_family') List<Element?>? familyElement,
       List<String>? given,
-      @JsonKey(name: '_given') List<Element>? givenElement,
+      @JsonKey(name: '_given') List<Element?>? givenElement,
       List<String>? prefix,
       @JsonKey(name: '_prefix') Element? prefixElement,
       List<String>? suffix,
@@ -6298,12 +6298,12 @@ abstract class _HumanName extends HumanName {
   List<String>? get family;
   @override
   @JsonKey(name: '_family')
-  List<Element>? get familyElement;
+  List<Element?>? get familyElement;
   @override
   List<String>? get given;
   @override
   @JsonKey(name: '_given')
-  List<Element>? get givenElement;
+  List<Element?>? get givenElement;
   @override
   List<String>? get prefix;
   @override

@@ -1471,7 +1471,7 @@ abstract class MedicationAdministration
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     List<FhirUri>? instantiates,
-    @JsonKey(name: '_instantiates') List<Element>? instantiatesElement,
+    @JsonKey(name: '_instantiates') List<Element?>? instantiatesElement,
     List<Reference>? partOf,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -2208,7 +2208,7 @@ abstract class MedicationKnowledge
     CodeableConcept? doseForm,
     Quantity? amount,
     List<String>? synonym,
-    @JsonKey(name: '_synonym') List<Element>? synonymElement,
+    @JsonKey(name: '_synonym') List<Element?>? synonymElement,
     List<MedicationKnowledgeRelatedMedicationKnowledge>?
         relatedMedicationKnowledge,
     List<Reference>? associatedMedication,
@@ -2764,7 +2764,7 @@ abstract class MedicationKnowledgePatientCharacteristics
     CodeableConcept? characteristicCodeableConcept,
     Quantity? characteristicQuantity,
     List<String>? value,
-    @JsonKey(name: '_value') List<Element>? valueElement,
+    @JsonKey(name: '_value') List<Element?>? valueElement,
   }) = _MedicationKnowledgePatientCharacteristics;
 
   /// Produces a Yaml formatted String version of the object
@@ -3567,7 +3567,7 @@ abstract class MedicationRequest with Resource implements _$MedicationRequest {
     @JsonKey(name: '_instantiatesCanonical')
         List<Element>? instantiatesCanonicalElement,
     List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
     List<Reference>? basedOn,
     Identifier? groupIdentifier,
     CodeableConcept? courseOfTherapyType,

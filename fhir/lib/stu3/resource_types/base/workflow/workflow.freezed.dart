@@ -2433,10 +2433,10 @@ class _$ProcessRequestTearOff {
       List<ProcessRequestItem>? item,
       List<String>? include,
       @JsonKey(name: '_include')
-          List<Element>? includeElement,
+          List<Element?>? includeElement,
       List<String>? exclude,
       @JsonKey(name: '_exclude')
-          List<Element>? excludeElement,
+          List<Element?>? excludeElement,
       Period? period}) {
     return _ProcessRequest(
       resourceType: resourceType,
@@ -2524,10 +2524,10 @@ mixin _$ProcessRequest {
   List<ProcessRequestItem>? get item;
   List<String>? get include;
   @JsonKey(name: '_include')
-  List<Element>? get includeElement;
+  List<Element?>? get includeElement;
   List<String>? get exclude;
   @JsonKey(name: '_exclude')
-  List<Element>? get excludeElement;
+  List<Element?>? get excludeElement;
   Period? get period;
 
   Map<String, dynamic> toJson();
@@ -2580,10 +2580,10 @@ abstract class $ProcessRequestCopyWith<$Res> {
       List<ProcessRequestItem>? item,
       List<String>? include,
       @JsonKey(name: '_include')
-          List<Element>? includeElement,
+          List<Element?>? includeElement,
       List<String>? exclude,
       @JsonKey(name: '_exclude')
-          List<Element>? excludeElement,
+          List<Element?>? excludeElement,
       Period? period});
 
   $MetaCopyWith<$Res>? get meta;
@@ -2709,11 +2709,11 @@ class _$ProcessRequestCopyWithImpl<$Res>
       include: include == freezed ? _value.include : include as List<String>?,
       includeElement: includeElement == freezed
           ? _value.includeElement
-          : includeElement as List<Element>?,
+          : includeElement as List<Element?>?,
       exclude: exclude == freezed ? _value.exclude : exclude as List<String>?,
       excludeElement: excludeElement == freezed
           ? _value.excludeElement
-          : excludeElement as List<Element>?,
+          : excludeElement as List<Element?>?,
       period: period == freezed ? _value.period : period as Period?,
     ));
   }
@@ -2931,10 +2931,10 @@ abstract class _$ProcessRequestCopyWith<$Res>
       List<ProcessRequestItem>? item,
       List<String>? include,
       @JsonKey(name: '_include')
-          List<Element>? includeElement,
+          List<Element?>? includeElement,
       List<String>? exclude,
       @JsonKey(name: '_exclude')
-          List<Element>? excludeElement,
+          List<Element?>? excludeElement,
       Period? period});
 
   @override
@@ -3077,11 +3077,11 @@ class __$ProcessRequestCopyWithImpl<$Res>
       include: include == freezed ? _value.include : include as List<String>?,
       includeElement: includeElement == freezed
           ? _value.includeElement
-          : includeElement as List<Element>?,
+          : includeElement as List<Element?>?,
       exclude: exclude == freezed ? _value.exclude : exclude as List<String>?,
       excludeElement: excludeElement == freezed
           ? _value.excludeElement
-          : excludeElement as List<Element>?,
+          : excludeElement as List<Element?>?,
       period: period == freezed ? _value.period : period as Period?,
     ));
   }
@@ -3210,12 +3210,12 @@ class _$_ProcessRequest extends _ProcessRequest {
   final List<String>? include;
   @override
   @JsonKey(name: '_include')
-  final List<Element>? includeElement;
+  final List<Element?>? includeElement;
   @override
   final List<String>? exclude;
   @override
   @JsonKey(name: '_exclude')
-  final List<Element>? excludeElement;
+  final List<Element?>? excludeElement;
   @override
   final Period? period;
 
@@ -3396,10 +3396,10 @@ abstract class _ProcessRequest extends ProcessRequest {
       List<ProcessRequestItem>? item,
       List<String>? include,
       @JsonKey(name: '_include')
-          List<Element>? includeElement,
+          List<Element?>? includeElement,
       List<String>? exclude,
       @JsonKey(name: '_exclude')
-          List<Element>? excludeElement,
+          List<Element?>? excludeElement,
       Period? period}) = _$_ProcessRequest;
 
   factory _ProcessRequest.fromJson(Map<String, dynamic> json) =
@@ -3474,12 +3474,12 @@ abstract class _ProcessRequest extends ProcessRequest {
   List<String>? get include;
   @override
   @JsonKey(name: '_include')
-  List<Element>? get includeElement;
+  List<Element?>? get includeElement;
   @override
   List<String>? get exclude;
   @override
   @JsonKey(name: '_exclude')
-  List<Element>? get excludeElement;
+  List<Element?>? get excludeElement;
   @override
   Period? get period;
   @override

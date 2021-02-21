@@ -145,7 +145,7 @@ abstract class MedicinalProduct with Resource implements _$MedicinalProduct {
     CodeableConcept? legalStatusOfSupply,
     CodeableConcept? additionalMonitoringIndicator,
     List<String>? specialMeasures,
-    @JsonKey(name: '_specialMeasures') List<Element>? specialMeasuresElement,
+    @JsonKey(name: '_specialMeasures') List<Element?>? specialMeasuresElement,
     CodeableConcept? paediatricUseIndicator,
     List<CodeableConcept>? productClassification,
     List<MarketingStatus>? marketingStatus,
@@ -3267,7 +3267,7 @@ abstract class SubstancePolymer with Resource implements _$SubstancePolymer {
     CodeableConcept? geometry,
     List<CodeableConcept>? copolymerConnectivity,
     List<String>? modification,
-    @JsonKey(name: '_modification') List<Element>? modificationElement,
+    @JsonKey(name: '_modification') List<Element?>? modificationElement,
     List<SubstancePolymerMonomerSet>? monomerSet,
     List<SubstancePolymerRepeat>? repeat,
   }) = _SubstancePolymer;
@@ -3806,7 +3806,7 @@ abstract class SubstanceProtein with Resource implements _$SubstanceProtein {
     Integer? numberOfSubunits,
     @JsonKey(name: '_numberOfSubunits') Element? numberOfSubunitsElement,
     List<String>? disulfideLinkage,
-    @JsonKey(name: '_disulfideLinkage') List<Element>? disulfideLinkageElement,
+    @JsonKey(name: '_disulfideLinkage') List<Element?>? disulfideLinkageElement,
     List<SubstanceProteinSubunit>? subunit,
   }) = _SubstanceProtein;
 

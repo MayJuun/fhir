@@ -36,7 +36,7 @@ class _$CommunicationTearOff {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       List<Reference>? inResponseTo,
@@ -135,7 +135,7 @@ mixin _$Communication {
   List<Canonical>? get instantiatesCanonical;
   List<FhirUri>? get instantiatesUri;
   @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement;
+  List<Element?>? get instantiatesUriElement;
   List<Reference>? get basedOn;
   List<Reference>? get partOf;
   List<Reference>? get inResponseTo;
@@ -194,7 +194,7 @@ abstract class $CommunicationCopyWith<$Res> {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       List<Reference>? inResponseTo,
@@ -325,7 +325,7 @@ class _$CommunicationCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as List<Element>?,
+          : instantiatesUriElement as List<Element?>?,
       basedOn:
           basedOn == freezed ? _value.basedOn : basedOn as List<Reference>?,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>?,
@@ -546,7 +546,7 @@ abstract class _$CommunicationCopyWith<$Res>
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       List<Reference>? inResponseTo,
@@ -692,7 +692,7 @@ class __$CommunicationCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as List<Element>?,
+          : instantiatesUriElement as List<Element?>?,
       basedOn:
           basedOn == freezed ? _value.basedOn : basedOn as List<Reference>?,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>?,
@@ -834,7 +834,7 @@ class _$_Communication extends _Communication {
   final List<FhirUri>? instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final List<Element>? instantiatesUriElement;
+  final List<Element?>? instantiatesUriElement;
   @override
   final List<Reference>? basedOn;
   @override
@@ -1052,7 +1052,7 @@ abstract class _Communication extends Communication {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       List<Reference>? inResponseTo,
@@ -1118,7 +1118,7 @@ abstract class _Communication extends Communication {
   List<FhirUri>? get instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement;
+  List<Element?>? get instantiatesUriElement;
   @override
   List<Reference>? get basedOn;
   @override
@@ -3051,7 +3051,7 @@ class _$DeviceRequestTearOff {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? priorRequest,
       Identifier? groupIdentifier,
@@ -3161,7 +3161,7 @@ mixin _$DeviceRequest {
   List<Canonical>? get instantiatesCanonical;
   List<FhirUri>? get instantiatesUri;
   @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement;
+  List<Element?>? get instantiatesUriElement;
   List<Reference>? get basedOn;
   List<Reference>? get priorRequest;
   Identifier? get groupIdentifier;
@@ -3226,7 +3226,7 @@ abstract class $DeviceRequestCopyWith<$Res> {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? priorRequest,
       Identifier? groupIdentifier,
@@ -3374,7 +3374,7 @@ class _$DeviceRequestCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as List<Element>?,
+          : instantiatesUriElement as List<Element?>?,
       basedOn:
           basedOn == freezed ? _value.basedOn : basedOn as List<Reference>?,
       priorRequest: priorRequest == freezed
@@ -3681,7 +3681,7 @@ abstract class _$DeviceRequestCopyWith<$Res>
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? priorRequest,
       Identifier? groupIdentifier,
@@ -3850,7 +3850,7 @@ class __$DeviceRequestCopyWithImpl<$Res>
           : instantiatesUri as List<FhirUri>?,
       instantiatesUriElement: instantiatesUriElement == freezed
           ? _value.instantiatesUriElement
-          : instantiatesUriElement as List<Element>?,
+          : instantiatesUriElement as List<Element?>?,
       basedOn:
           basedOn == freezed ? _value.basedOn : basedOn as List<Reference>?,
       priorRequest: priorRequest == freezed
@@ -4022,7 +4022,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   final List<FhirUri>? instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  final List<Element>? instantiatesUriElement;
+  final List<Element?>? instantiatesUriElement;
   @override
   final List<Reference>? basedOn;
   @override
@@ -4261,7 +4261,7 @@ abstract class _DeviceRequest extends DeviceRequest {
       List<Canonical>? instantiatesCanonical,
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
-          List<Element>? instantiatesUriElement,
+          List<Element?>? instantiatesUriElement,
       List<Reference>? basedOn,
       List<Reference>? priorRequest,
       Identifier? groupIdentifier,
@@ -4333,7 +4333,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   List<FhirUri>? get instantiatesUri;
   @override
   @JsonKey(name: '_instantiatesUri')
-  List<Element>? get instantiatesUriElement;
+  List<Element?>? get instantiatesUriElement;
   @override
   List<Reference>? get basedOn;
   @override

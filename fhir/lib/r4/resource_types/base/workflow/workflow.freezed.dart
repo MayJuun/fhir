@@ -11006,7 +11006,7 @@ class _$VerificationResultTearOff {
       List<Reference>? target,
       List<String>? targetLocation,
       @JsonKey(name: '_targetLocation')
-          List<Element>? targetLocationElement,
+          List<Element?>? targetLocationElement,
       CodeableConcept? need,
       Code? status,
       @JsonKey(name: '_status')
@@ -11089,7 +11089,7 @@ mixin _$VerificationResult {
   List<Reference>? get target;
   List<String>? get targetLocation;
   @JsonKey(name: '_targetLocation')
-  List<Element>? get targetLocationElement;
+  List<Element?>? get targetLocationElement;
   CodeableConcept? get need;
   Code? get status;
   @JsonKey(name: '_status')
@@ -11140,7 +11140,7 @@ abstract class $VerificationResultCopyWith<$Res> {
       List<Reference>? target,
       List<String>? targetLocation,
       @JsonKey(name: '_targetLocation')
-          List<Element>? targetLocationElement,
+          List<Element?>? targetLocationElement,
       CodeableConcept? need,
       Code? status,
       @JsonKey(name: '_status')
@@ -11251,7 +11251,7 @@ class _$VerificationResultCopyWithImpl<$Res>
           : targetLocation as List<String>?,
       targetLocationElement: targetLocationElement == freezed
           ? _value.targetLocationElement
-          : targetLocationElement as List<Element>?,
+          : targetLocationElement as List<Element?>?,
       need: need == freezed ? _value.need : need as CodeableConcept?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
@@ -11468,7 +11468,7 @@ abstract class _$VerificationResultCopyWith<$Res>
       List<Reference>? target,
       List<String>? targetLocation,
       @JsonKey(name: '_targetLocation')
-          List<Element>? targetLocationElement,
+          List<Element?>? targetLocationElement,
       CodeableConcept? need,
       Code? status,
       @JsonKey(name: '_status')
@@ -11594,7 +11594,7 @@ class __$VerificationResultCopyWithImpl<$Res>
           : targetLocation as List<String>?,
       targetLocationElement: targetLocationElement == freezed
           ? _value.targetLocationElement
-          : targetLocationElement as List<Element>?,
+          : targetLocationElement as List<Element?>?,
       need: need == freezed ? _value.need : need as CodeableConcept?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
@@ -11722,7 +11722,7 @@ class _$_VerificationResult extends _VerificationResult {
   final List<String>? targetLocation;
   @override
   @JsonKey(name: '_targetLocation')
-  final List<Element>? targetLocationElement;
+  final List<Element?>? targetLocationElement;
   @override
   final CodeableConcept? need;
   @override
@@ -11909,7 +11909,7 @@ abstract class _VerificationResult extends VerificationResult {
       List<Reference>? target,
       List<String>? targetLocation,
       @JsonKey(name: '_targetLocation')
-          List<Element>? targetLocationElement,
+          List<Element?>? targetLocationElement,
       CodeableConcept? need,
       Code? status,
       @JsonKey(name: '_status')
@@ -11966,7 +11966,7 @@ abstract class _VerificationResult extends VerificationResult {
   List<String>? get targetLocation;
   @override
   @JsonKey(name: '_targetLocation')
-  List<Element>? get targetLocationElement;
+  List<Element?>? get targetLocationElement;
   @override
   CodeableConcept? get need;
   @override

@@ -134,7 +134,7 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     List<String>? definition,
-    @JsonKey(name: '_definition') List<Element>? definitionElement,
+    @JsonKey(name: '_definition') List<Element?>? definitionElement,
     ChargeItemStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Reference>? partOf,
@@ -805,7 +805,7 @@ abstract class ExplanationOfBenefitInsurance
   factory ExplanationOfBenefitInsurance({
     Reference? coverage,
     List<String>? preAuthRef,
-    @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement,
+    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
   }) = _ExplanationOfBenefitInsurance;
 
   /// Produces a Yaml formatted String version of the object
@@ -863,11 +863,11 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     List<Id>? careTeamLinkId,
-    @JsonKey(name: '_careTeamLinkId') List<Element>? careTeamLinkIdElement,
+    @JsonKey(name: '_careTeamLinkId') List<Element?>? careTeamLinkIdElement,
     List<Id>? diagnosisLinkId,
-    @JsonKey(name: '_diagnosisLinkId') List<Element>? diagnosisLinkIdElement,
+    @JsonKey(name: '_diagnosisLinkId') List<Element?>? diagnosisLinkIdElement,
     List<Id>? procedureLinkId,
-    @JsonKey(name: '_procedureLinkId') List<Element>? procedureLinkIdElement,
+    @JsonKey(name: '_procedureLinkId') List<Element?>? procedureLinkIdElement,
     List<Id>? informationLinkId,
     @JsonKey(name: '_informationLinkId')
         List<Element>? informationLinkIdElement,
@@ -892,7 +892,7 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
     List<CodeableConcept>? subSite,
     List<Reference>? encounter,
     List<Decimal>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ExplanationOfBenefitAdjudication>? adjudication,
     List<ExplanationOfBenefitDetail>? detail,
   }) = _ExplanationOfBenefitItem;
@@ -967,7 +967,7 @@ abstract class ExplanationOfBenefitDetail
     Money? net,
     List<Reference>? udi,
     List<Decimal>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ExplanationOfBenefitAdjudication>? adjudication,
     List<ExplanationOfBenefitSubDetail>? subDetail,
   }) = _ExplanationOfBenefitDetail;
@@ -1010,7 +1010,7 @@ abstract class ExplanationOfBenefitSubDetail
     Money? net,
     List<Reference>? udi,
     List<Decimal>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ExplanationOfBenefitAdjudication>? adjudication,
   }) = _ExplanationOfBenefitSubDetail;
 
@@ -1038,14 +1038,14 @@ abstract class ExplanationOfBenefitAddItem
   ExplanationOfBenefitAddItem._();
   factory ExplanationOfBenefitAddItem({
     List<Id>? sequenceLinkId,
-    @JsonKey(name: '_sequenceLinkId') List<Element>? sequenceLinkIdElement,
+    @JsonKey(name: '_sequenceLinkId') List<Element?>? sequenceLinkIdElement,
     CodeableConcept? revenue,
     CodeableConcept? category,
     CodeableConcept? service,
     List<CodeableConcept>? modifier,
     Money? fee,
     List<Decimal>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ExplanationOfBenefitAdjudication>? adjudication,
     List<ExplanationOfBenefitDetail1>? detail,
   }) = _ExplanationOfBenefitAddItem;
@@ -1079,7 +1079,7 @@ abstract class ExplanationOfBenefitDetail1
     List<CodeableConcept>? modifier,
     Money? fee,
     List<Decimal>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
     List<ExplanationOfBenefitAdjudication>? adjudication,
   }) = _ExplanationOfBenefitDetail1;
 

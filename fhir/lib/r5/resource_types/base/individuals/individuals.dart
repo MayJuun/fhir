@@ -505,7 +505,7 @@ abstract class PractitionerRoleAvailableTime
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Code>? daysOfWeek,
-    @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
+    @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
     Boolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,
     Time? availableStartTime,

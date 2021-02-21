@@ -66,7 +66,8 @@ _$_Questionnaire _$_$_QuestionnaireFromJson(Map<String, dynamic> json) {
         ?.map((e) => Code.fromJson(e))
         .toList(),
     subjectTypeElement: (json['_subjectType'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     group: QuestionnaireGroup.fromJson(json['group'] as Map<String, dynamic>),
   );
@@ -111,7 +112,7 @@ Map<String, dynamic> _$_$_QuestionnaireToJson(_$_Questionnaire instance) {
   writeNotNull(
       'subjectType', instance.subjectType?.map((e) => e.toJson()).toList());
   writeNotNull('_subjectType',
-      instance.subjectTypeElement?.map((e) => e.toJson()).toList());
+      instance.subjectTypeElement?.map((e) => e?.toJson()).toList());
   val['group'] = instance.group.toJson();
   return val;
 }
@@ -817,7 +818,8 @@ _$_Provenance _$_$_ProvenanceFromJson(Map<String, dynamic> json) {
         ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     policyElement: (json['_policy'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     agent: (json['agent'] as List<dynamic>?)
         ?.map((e) => ProvenanceAgent.fromJson(e as Map<String, dynamic>))
@@ -864,7 +866,7 @@ Map<String, dynamic> _$_$_ProvenanceToJson(_$_Provenance instance) {
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('policy', instance.policy?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_policy', instance.policyElement?.map((e) => e.toJson()).toList());
+      '_policy', instance.policyElement?.map((e) => e?.toJson()).toList());
   writeNotNull('agent', instance.agent?.map((e) => e.toJson()).toList());
   writeNotNull('entity', instance.entity?.map((e) => e.toJson()).toList());
   writeNotNull(

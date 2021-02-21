@@ -167,7 +167,8 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
         ?.map((e) => e as String)
         .toList(),
     definitionElement: (json['_definition'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     guidance: json['guidance'] as String?,
     guidanceElement: json['_guidance'] == null
@@ -273,7 +274,7 @@ Map<String, dynamic> _$_$_MeasureToJson(_$_Measure instance) {
       '_improvementNotation', instance.improvementNotationElement?.toJson());
   writeNotNull('definition', instance.definition);
   writeNotNull('_definition',
-      instance.definitionElement?.map((e) => e.toJson()).toList());
+      instance.definitionElement?.map((e) => e?.toJson()).toList());
   writeNotNull('guidance', instance.guidance);
   writeNotNull('_guidance', instance.guidanceElement?.toJson());
   writeNotNull('set', instance.set_);

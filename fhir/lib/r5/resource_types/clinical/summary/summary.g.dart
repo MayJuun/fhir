@@ -724,7 +724,8 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
         ?.map((e) => _$enumDecode(_$AllergyIntoleranceCategoryEnumMap, e))
         .toList(),
     categoryElement: (json['_category'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     criticality: _$enumDecodeNullable(
         _$AllergyIntoleranceCriticalityEnumMap, json['criticality'],
@@ -823,7 +824,7 @@ Map<String, dynamic> _$_$_AllergyIntoleranceToJson(
           ?.map((e) => _$AllergyIntoleranceCategoryEnumMap[e])
           .toList());
   writeNotNull(
-      '_category', instance.categoryElement?.map((e) => e.toJson()).toList());
+      '_category', instance.categoryElement?.map((e) => e?.toJson()).toList());
   writeNotNull('criticality',
       _$AllergyIntoleranceCriticalityEnumMap[instance.criticality]);
   writeNotNull('_criticality', instance.criticalityElement?.toJson());
@@ -1021,7 +1022,8 @@ _$_ClinicalImpression _$_$_ClinicalImpressionFromJson(
         ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     protocolElement: (json['_protocol'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     summary: json['summary'] as String?,
     summaryElement: json['_summary'] == null
@@ -1092,7 +1094,7 @@ Map<String, dynamic> _$_$_ClinicalImpressionToJson(
   writeNotNull('problem', instance.problem?.map((e) => e.toJson()).toList());
   writeNotNull('protocol', instance.protocol?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_protocol', instance.protocolElement?.map((e) => e.toJson()).toList());
+      '_protocol', instance.protocolElement?.map((e) => e?.toJson()).toList());
   writeNotNull('summary', instance.summary);
   writeNotNull('_summary', instance.summaryElement?.toJson());
   writeNotNull('finding', instance.finding?.map((e) => e.toJson()).toList());
@@ -1672,7 +1674,8 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
         ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     status: _$enumDecodeNullable(
         _$FamilyMemberHistoryStatusEnumMap, json['status'],
@@ -1796,7 +1799,7 @@ Map<String, dynamic> _$_$_FamilyMemberHistoryToJson(
   writeNotNull('instantiatesUri',
       instance.instantiatesUri?.map((e) => e.toJson()).toList());
   writeNotNull('_instantiatesUri',
-      instance.instantiatesUriElement?.map((e) => e.toJson()).toList());
+      instance.instantiatesUriElement?.map((e) => e?.toJson()).toList());
   writeNotNull('status', _$FamilyMemberHistoryStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('dataAbsentReason', instance.dataAbsentReason?.toJson());
@@ -2028,7 +2031,8 @@ _$_Procedure _$_$_ProcedureFromJson(Map<String, dynamic> json) {
         ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     basedOn: (json['basedOn'] as List<dynamic>?)
         ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
@@ -2164,7 +2168,7 @@ Map<String, dynamic> _$_$_ProcedureToJson(_$_Procedure instance) {
   writeNotNull('instantiatesUri',
       instance.instantiatesUri?.map((e) => e.toJson()).toList());
   writeNotNull('_instantiatesUri',
-      instance.instantiatesUriElement?.map((e) => e.toJson()).toList());
+      instance.instantiatesUriElement?.map((e) => e?.toJson()).toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());

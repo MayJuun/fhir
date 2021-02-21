@@ -316,7 +316,7 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
     List<CodeableConcept>? reason,
     List<RelatedArtifact>? documentation,
     List<Id>? goalId,
-    @JsonKey(name: '_goalId') List<Element>? goalIdElement,
+    @JsonKey(name: '_goalId') List<Element?>? goalIdElement,
     List<TriggerDefinition>? triggerDefinition,
     List<PlanDefinitionCondition>? condition,
     List<DataRequirement>? input,
@@ -536,7 +536,7 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
     @JsonKey(name: '_copyright') Element? copyrightElement,
     List<Coding>? code,
     List<String>? subjectType,
-    @JsonKey(name: '_subjectType') List<Element>? subjectTypeElement,
+    @JsonKey(name: '_subjectType') List<Element?>? subjectTypeElement,
     List<QuestionnaireItem>? item,
   }) = _Questionnaire;
 

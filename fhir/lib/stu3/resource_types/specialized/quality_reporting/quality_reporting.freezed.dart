@@ -107,7 +107,7 @@ class _$MeasureTearOff {
           Element? improvementNotationElement,
       List<String>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       String? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -293,7 +293,7 @@ mixin _$Measure {
   Element? get improvementNotationElement;
   List<String>? get definition;
   @JsonKey(name: '_definition')
-  List<Element>? get definitionElement;
+  List<Element?>? get definitionElement;
   String? get guidance;
   @JsonKey(name: '_guidance')
   Element? get guidanceElement;
@@ -404,7 +404,7 @@ abstract class $MeasureCopyWith<$Res> {
           Element? improvementNotationElement,
       List<String>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       String? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -682,7 +682,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
           : definition as List<String>?,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
-          : definitionElement as List<Element>?,
+          : definitionElement as List<Element?>?,
       guidance: guidance == freezed ? _value.guidance : guidance as String?,
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
@@ -1115,7 +1115,7 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
           Element? improvementNotationElement,
       List<String>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       String? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -1423,7 +1423,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
           : definition as List<String>?,
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
-          : definitionElement as List<Element>?,
+          : definitionElement as List<Element?>?,
       guidance: guidance == freezed ? _value.guidance : guidance as String?,
       guidanceElement: guidanceElement == freezed
           ? _value.guidanceElement
@@ -1704,7 +1704,7 @@ class _$_Measure extends _Measure {
   final List<String>? definition;
   @override
   @JsonKey(name: '_definition')
-  final List<Element>? definitionElement;
+  final List<Element?>? definitionElement;
   @override
   final String? guidance;
   @override
@@ -2026,7 +2026,7 @@ abstract class _Measure extends Measure {
           Element? improvementNotationElement,
       List<String>? definition,
       @JsonKey(name: '_definition')
-          List<Element>? definitionElement,
+          List<Element?>? definitionElement,
       String? guidance,
       @JsonKey(name: '_guidance')
           Element? guidanceElement,
@@ -2194,7 +2194,7 @@ abstract class _Measure extends Measure {
   List<String>? get definition;
   @override
   @JsonKey(name: '_definition')
-  List<Element>? get definitionElement;
+  List<Element?>? get definitionElement;
   @override
   String? get guidance;
   @override

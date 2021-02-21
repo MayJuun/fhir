@@ -71,7 +71,7 @@ abstract class CompositionAttester implements _$CompositionAttester {
   CompositionAttester._();
   factory CompositionAttester({
     List<CompositionAttesterMode>? mode,
-    @JsonKey(name: '_mode') List<Element>? modeElement,
+    @JsonKey(name: '_mode') List<Element?>? modeElement,
     Time? time,
     @JsonKey(name: '_time') Element? timeElement,
     Reference? party,

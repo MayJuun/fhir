@@ -758,9 +758,9 @@ class _$ProdCharacteristicTearOff {
       String? shape,
       @JsonKey(name: '_shape') Element? shapeElement,
       List<String>? color,
-      @JsonKey(name: '_color') List<Element>? colorElement,
+      @JsonKey(name: '_color') List<Element?>? colorElement,
       List<String>? imprint,
-      @JsonKey(name: '_imprint') List<Element>? imprintElement,
+      @JsonKey(name: '_imprint') List<Element?>? imprintElement,
       List<Attachment>? image,
       CodeableConcept? scoring}) {
     return _ProdCharacteristic(
@@ -809,10 +809,10 @@ mixin _$ProdCharacteristic {
   Element? get shapeElement;
   List<String>? get color;
   @JsonKey(name: '_color')
-  List<Element>? get colorElement;
+  List<Element?>? get colorElement;
   List<String>? get imprint;
   @JsonKey(name: '_imprint')
-  List<Element>? get imprintElement;
+  List<Element?>? get imprintElement;
   List<Attachment>? get image;
   CodeableConcept? get scoring;
 
@@ -839,9 +839,9 @@ abstract class $ProdCharacteristicCopyWith<$Res> {
       String? shape,
       @JsonKey(name: '_shape') Element? shapeElement,
       List<String>? color,
-      @JsonKey(name: '_color') List<Element>? colorElement,
+      @JsonKey(name: '_color') List<Element?>? colorElement,
       List<String>? imprint,
-      @JsonKey(name: '_imprint') List<Element>? imprintElement,
+      @JsonKey(name: '_imprint') List<Element?>? imprintElement,
       List<Attachment>? image,
       CodeableConcept? scoring});
 
@@ -909,11 +909,11 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
       color: color == freezed ? _value.color : color as List<String>?,
       colorElement: colorElement == freezed
           ? _value.colorElement
-          : colorElement as List<Element>?,
+          : colorElement as List<Element?>?,
       imprint: imprint == freezed ? _value.imprint : imprint as List<String>?,
       imprintElement: imprintElement == freezed
           ? _value.imprintElement
-          : imprintElement as List<Element>?,
+          : imprintElement as List<Element?>?,
       image: image == freezed ? _value.image : image as List<Attachment>?,
       scoring:
           scoring == freezed ? _value.scoring : scoring as CodeableConcept?,
@@ -1029,9 +1029,9 @@ abstract class _$ProdCharacteristicCopyWith<$Res>
       String? shape,
       @JsonKey(name: '_shape') Element? shapeElement,
       List<String>? color,
-      @JsonKey(name: '_color') List<Element>? colorElement,
+      @JsonKey(name: '_color') List<Element?>? colorElement,
       List<String>? imprint,
-      @JsonKey(name: '_imprint') List<Element>? imprintElement,
+      @JsonKey(name: '_imprint') List<Element?>? imprintElement,
       List<Attachment>? image,
       CodeableConcept? scoring});
 
@@ -1109,11 +1109,11 @@ class __$ProdCharacteristicCopyWithImpl<$Res>
       color: color == freezed ? _value.color : color as List<String>?,
       colorElement: colorElement == freezed
           ? _value.colorElement
-          : colorElement as List<Element>?,
+          : colorElement as List<Element?>?,
       imprint: imprint == freezed ? _value.imprint : imprint as List<String>?,
       imprintElement: imprintElement == freezed
           ? _value.imprintElement
-          : imprintElement as List<Element>?,
+          : imprintElement as List<Element?>?,
       image: image == freezed ? _value.image : image as List<Attachment>?,
       scoring:
           scoring == freezed ? _value.scoring : scoring as CodeableConcept?,
@@ -1176,12 +1176,12 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   final List<String>? color;
   @override
   @JsonKey(name: '_color')
-  final List<Element>? colorElement;
+  final List<Element?>? colorElement;
   @override
   final List<String>? imprint;
   @override
   @JsonKey(name: '_imprint')
-  final List<Element>? imprintElement;
+  final List<Element?>? imprintElement;
   @override
   final List<Attachment>? image;
   @override
@@ -1287,9 +1287,9 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
       String? shape,
       @JsonKey(name: '_shape') Element? shapeElement,
       List<String>? color,
-      @JsonKey(name: '_color') List<Element>? colorElement,
+      @JsonKey(name: '_color') List<Element?>? colorElement,
       List<String>? imprint,
-      @JsonKey(name: '_imprint') List<Element>? imprintElement,
+      @JsonKey(name: '_imprint') List<Element?>? imprintElement,
       List<Attachment>? image,
       CodeableConcept? scoring}) = _$_ProdCharacteristic;
 
@@ -1324,12 +1324,12 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   List<String>? get color;
   @override
   @JsonKey(name: '_color')
-  List<Element>? get colorElement;
+  List<Element?>? get colorElement;
   @override
   List<String>? get imprint;
   @override
   @JsonKey(name: '_imprint')
-  List<Element>? get imprintElement;
+  List<Element?>? get imprintElement;
   @override
   List<Attachment>? get image;
   @override

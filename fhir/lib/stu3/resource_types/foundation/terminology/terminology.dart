@@ -99,7 +99,7 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     @JsonKey(name: 'operator') List<String>? operator_,
-    @JsonKey(name: '_operator') List<Element>? operatorElement,
+    @JsonKey(name: '_operator') List<Element?>? operatorElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
   }) = _CodeSystemFilter;
@@ -942,7 +942,7 @@ abstract class ValueSetInclude implements _$ValueSetInclude {
     List<ValueSetConcept>? concept,
     List<ValueSetFilter>? filter,
     List<String>? valueSet,
-    @JsonKey(name: '_valueSet') List<Element>? valueSetElement,
+    @JsonKey(name: '_valueSet') List<Element?>? valueSetElement,
   }) = _ValueSetInclude;
 
   /// Produces a Yaml formatted String version of the object

@@ -690,7 +690,8 @@ _$_DeviceDefinition _$_$_DeviceDefinitionFromJson(Map<String, dynamic> json) {
     version:
         (json['version'] as List<dynamic>?)?.map((e) => e as String).toList(),
     versionElement: (json['_version'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     safety: (json['safety'] as List<dynamic>?)
         ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
@@ -787,7 +788,7 @@ Map<String, dynamic> _$_$_DeviceDefinitionToJson(_$_DeviceDefinition instance) {
       instance.specialization?.map((e) => e.toJson()).toList());
   writeNotNull('version', instance.version);
   writeNotNull(
-      '_version', instance.versionElement?.map((e) => e.toJson()).toList());
+      '_version', instance.versionElement?.map((e) => e?.toJson()).toList());
   writeNotNull('safety', instance.safety?.map((e) => e.toJson()).toList());
   writeNotNull('shelfLifeStorage',
       instance.shelfLifeStorage?.map((e) => e.toJson()).toList());
@@ -2030,7 +2031,8 @@ _$_PlanDefinitionAction _$_$_PlanDefinitionActionFromJson(
     goalId:
         (json['goalId'] as List<dynamic>?)?.map((e) => Id.fromJson(e)).toList(),
     goalIdElement: (json['_goalId'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     subjectCodeableConcept: json['subjectCodeableConcept'] == null
         ? null
@@ -2174,7 +2176,7 @@ Map<String, dynamic> _$_$_PlanDefinitionActionToJson(
       'documentation', instance.documentation?.map((e) => e.toJson()).toList());
   writeNotNull('goalId', instance.goalId?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_goalId', instance.goalIdElement?.map((e) => e.toJson()).toList());
+      '_goalId', instance.goalIdElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'subjectCodeableConcept', instance.subjectCodeableConcept?.toJson());
   writeNotNull('subjectReference', instance.subjectReference?.toJson());
@@ -2543,7 +2545,8 @@ _$_Questionnaire _$_$_QuestionnaireFromJson(Map<String, dynamic> json) {
         ?.map((e) => Code.fromJson(e))
         .toList(),
     subjectTypeElement: (json['_subjectType'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
     dateElement: json['_date'] == null
@@ -2645,7 +2648,7 @@ Map<String, dynamic> _$_$_QuestionnaireToJson(_$_Questionnaire instance) {
   writeNotNull(
       'subjectType', instance.subjectType?.map((e) => e.toJson()).toList());
   writeNotNull('_subjectType',
-      instance.subjectTypeElement?.map((e) => e.toJson()).toList());
+      instance.subjectTypeElement?.map((e) => e?.toJson()).toList());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull('publisher', instance.publisher);

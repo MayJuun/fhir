@@ -341,7 +341,7 @@ abstract class CodeSystemFilter implements _$CodeSystemFilter {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     @JsonKey(name: 'operator') List<Code>? operator_,
-    @JsonKey(name: '_operator') List<Element>? operatorElement,
+    @JsonKey(name: '_operator') List<Element?>? operatorElement,
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
   }) = _CodeSystemFilter;
@@ -2180,10 +2180,10 @@ abstract class TerminologyCapabilitiesVersion
     Boolean? compositional,
     @JsonKey(name: '_compositional') Element? compositionalElement,
     List<Code>? language,
-    @JsonKey(name: '_language') List<Element>? languageElement,
+    @JsonKey(name: '_language') List<Element?>? languageElement,
     List<TerminologyCapabilitiesFilter>? filter,
     List<Code>? property,
-    @JsonKey(name: '_property') List<Element>? propertyElement,
+    @JsonKey(name: '_property') List<Element?>? propertyElement,
   }) = _TerminologyCapabilitiesVersion;
 
   /// Produces a Yaml formatted String version of the object
@@ -2254,7 +2254,7 @@ abstract class TerminologyCapabilitiesFilter
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     List<Code>? op,
-    @JsonKey(name: '_op') List<Element>? opElement,
+    @JsonKey(name: '_op') List<Element?>? opElement,
   }) = _TerminologyCapabilitiesFilter;
 
   /// Produces a Yaml formatted String version of the object

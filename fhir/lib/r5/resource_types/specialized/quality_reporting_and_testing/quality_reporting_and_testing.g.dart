@@ -196,7 +196,8 @@ _$_Measure _$_$_MeasureFromJson(Map<String, dynamic> json) {
         ?.map((e) => Markdown.fromJson(e))
         .toList(),
     definitionElement: (json['_definition'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     guidance:
         json['guidance'] == null ? null : Markdown.fromJson(json['guidance']),
@@ -305,7 +306,7 @@ Map<String, dynamic> _$_$_MeasureToJson(_$_Measure instance) {
   writeNotNull(
       'definition', instance.definition?.map((e) => e.toJson()).toList());
   writeNotNull('_definition',
-      instance.definitionElement?.map((e) => e.toJson()).toList());
+      instance.definitionElement?.map((e) => e?.toJson()).toList());
   writeNotNull('guidance', instance.guidance?.toJson());
   writeNotNull('_guidance', instance.guidanceElement?.toJson());
   writeNotNull('group', instance.group?.map((e) => e.toJson()).toList());
@@ -2043,7 +2044,8 @@ _$_TestScriptCapability _$_$_TestScriptCapabilityFromJson(
         ?.map((e) => Integer.fromJson(e))
         .toList(),
     originElement: (json['_origin'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     destination: json['destination'] == null
         ? null
@@ -2055,7 +2057,8 @@ _$_TestScriptCapability _$_$_TestScriptCapabilityFromJson(
         ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     linkElement: (json['_link'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     capabilities: Canonical.fromJson(json['capabilities']),
   );
@@ -2084,11 +2087,11 @@ Map<String, dynamic> _$_$_TestScriptCapabilityToJson(
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('origin', instance.origin?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_origin', instance.originElement?.map((e) => e.toJson()).toList());
+      '_origin', instance.originElement?.map((e) => e?.toJson()).toList());
   writeNotNull('destination', instance.destination?.toJson());
   writeNotNull('_destination', instance.destinationElement?.toJson());
   writeNotNull('link', instance.link?.map((e) => e.toJson()).toList());
-  writeNotNull('_link', instance.linkElement?.map((e) => e.toJson()).toList());
+  writeNotNull('_link', instance.linkElement?.map((e) => e?.toJson()).toList());
   val['capabilities'] = instance.capabilities.toJson();
   return val;
 }

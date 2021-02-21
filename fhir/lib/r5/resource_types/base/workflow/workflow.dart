@@ -580,7 +580,7 @@ abstract class VerificationResult
     List<FhirExtension>? modifierExtension,
     List<Reference>? target,
     List<String>? targetLocation,
-    @JsonKey(name: '_targetLocation') List<Element>? targetLocationElement,
+    @JsonKey(name: '_targetLocation') List<Element?>? targetLocationElement,
     CodeableConcept? need,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
