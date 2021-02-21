@@ -25,12 +25,12 @@ abstract class Measure with Resource implements _$Measure {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -56,20 +56,20 @@ abstract class Measure with Resource implements _$Measure {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
-    List<CodeableConcept?>? topic,
-    List<Contributor?>? contributor,
-    List<ContactDetail?>? contact,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept>? topic,
+    List<Contributor>? contributor,
+    List<ContactDetail>? contact,
     String? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
-    List<RelatedArtifact?>? relatedArtifact,
-    @JsonKey(name: 'library') List<Reference?>? library_,
+    List<RelatedArtifact>? relatedArtifact,
+    @JsonKey(name: 'library') List<Reference>? library_,
     String? disclaimer,
     @JsonKey(name: '_disclaimer') Element? disclaimerElement,
     CodeableConcept? scoring,
     CodeableConcept? compositeScoring,
-    List<CodeableConcept?>? type,
+    List<CodeableConcept>? type,
     String? riskAdjustment,
     @JsonKey(name: '_riskAdjustment') Element? riskAdjustmentElement,
     String? rateAggregation,
@@ -81,14 +81,14 @@ abstract class Measure with Resource implements _$Measure {
         Element? clinicalRecommendationStatementElement,
     String? improvementNotation,
     @JsonKey(name: '_improvementNotation') Element? improvementNotationElement,
-    List<String?>? definition,
-    @JsonKey(name: '_definition') List<Element?>? definitionElement,
+    List<String>? definition,
+    @JsonKey(name: '_definition') List<Element>? definitionElement,
     String? guidance,
     @JsonKey(name: '_guidance') Element? guidanceElement,
     @JsonKey(name: 'set') String? set_,
     @JsonKey(name: '_set') Element? setElement,
-    List<MeasureGroup?>? group,
-    List<MeasureSupplementalData?>? supplementalData,
+    List<MeasureGroup>? group,
+    List<MeasureSupplementalData>? supplementalData,
   }) = _Measure;
 
   /// Produces a Yaml formatted String version of the object
@@ -117,8 +117,8 @@ abstract class MeasureGroup implements _$MeasureGroup {
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<MeasurePopulation?>? population,
-    List<MeasureStratifier?>? stratifier,
+    List<MeasurePopulation>? population,
+    List<MeasureStratifier>? stratifier,
   }) = _MeasureGroup;
 
   /// Produces a Yaml formatted String version of the object
@@ -202,7 +202,7 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
   MeasureSupplementalData._();
   factory MeasureSupplementalData({
     Identifier? identifier,
-    List<CodeableConcept?>? usage,
+    List<CodeableConcept>? usage,
     String? criteria,
     @JsonKey(name: '_criteria') Element? criteriaElement,
     String? path,
@@ -240,9 +240,9 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     MeasureReportStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -254,7 +254,7 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
     @JsonKey(name: '_date') Element? dateElement,
     Reference? reportingOrganization,
     required Period period,
-    List<MeasureReportGroup?>? group,
+    List<MeasureReportGroup>? group,
     Reference? evaluatedResources,
   }) = _MeasureReport;
 
@@ -280,10 +280,10 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
   MeasureReportGroup._();
   factory MeasureReportGroup({
     required Identifier identifier,
-    List<MeasureReportPopulation?>? population,
+    List<MeasureReportPopulation>? population,
     Decimal? measureScore,
     @JsonKey(name: '_measureScore') Element? measureScoreElement,
-    List<MeasureReportStratifier?>? stratifier,
+    List<MeasureReportStratifier>? stratifier,
   }) = _MeasureReportGroup;
 
   /// Produces a Yaml formatted String version of the object
@@ -336,7 +336,7 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
   MeasureReportStratifier._();
   factory MeasureReportStratifier({
     Identifier? identifier,
-    List<MeasureReportStratum?>? stratum,
+    List<MeasureReportStratum>? stratum,
   }) = _MeasureReportStratifier;
 
   /// Produces a Yaml formatted String version of the object
@@ -362,7 +362,7 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
   factory MeasureReportStratum({
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
-    List<MeasureReportPopulation1?>? population,
+    List<MeasureReportPopulation1>? population,
     Decimal? measureScore,
     @JsonKey(name: '_measureScore') Element? measureScoreElement,
   }) = _MeasureReportStratum;

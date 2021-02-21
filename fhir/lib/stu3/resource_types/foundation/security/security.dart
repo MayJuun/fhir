@@ -25,11 +25,11 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Coding type,
-    List<Coding?>? subtype,
+    List<Coding>? subtype,
     AuditEventAction? action,
     @JsonKey(name: '_action') Element? actionElement,
     String? recorded,
@@ -38,10 +38,10 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? outcomeDesc,
     @JsonKey(name: '_outcomeDesc') Element? outcomeDescElement,
-    List<CodeableConcept?>? purposeOfEvent,
+    List<CodeableConcept>? purposeOfEvent,
     required List<AuditEventAgent> agent,
     required AuditEventSource source,
-    List<AuditEventEntity?>? entity,
+    List<AuditEventEntity>? entity,
   }) = _AuditEvent;
 
   /// Produces a Yaml formatted String version of the object
@@ -65,7 +65,7 @@ abstract class AuditEvent with Resource implements _$AuditEvent {
 abstract class AuditEventAgent implements _$AuditEventAgent {
   AuditEventAgent._();
   factory AuditEventAgent({
-    List<CodeableConcept?>? role,
+    List<CodeableConcept>? role,
     Reference? reference,
     Identifier? userId,
     String? altId,
@@ -75,11 +75,11 @@ abstract class AuditEventAgent implements _$AuditEventAgent {
     Boolean? requestor,
     @JsonKey(name: '_requestor') Element? requestorElement,
     Reference? location,
-    List<String?>? policy,
-    @JsonKey(name: '_policy') List<Element?>? policyElement,
+    List<String>? policy,
+    @JsonKey(name: '_policy') List<Element>? policyElement,
     Coding? media,
     AuditEventNetwork? network,
-    List<CodeableConcept?>? purposeOfUse,
+    List<CodeableConcept>? purposeOfUse,
   }) = _AuditEventAgent;
 
   /// Produces a Yaml formatted String version of the object
@@ -133,7 +133,7 @@ abstract class AuditEventSource implements _$AuditEventSource {
     String? site,
     @JsonKey(name: '_site') Element? siteElement,
     required Identifier identifier,
-    List<Coding?>? type,
+    List<Coding>? type,
   }) = _AuditEventSource;
 
   /// Produces a Yaml formatted String version of the object
@@ -162,14 +162,14 @@ abstract class AuditEventEntity implements _$AuditEventEntity {
     Coding? type,
     Coding? role,
     Coding? lifecycle,
-    List<Coding?>? securityLabel,
+    List<Coding>? securityLabel,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     String? query,
     @JsonKey(name: '_query') Element? queryElement,
-    List<AuditEventDetail?>? detail,
+    List<AuditEventDetail>? detail,
   }) = _AuditEventEntity;
 
   /// Produces a Yaml formatted String version of the object
@@ -230,32 +230,32 @@ abstract class Consent with Resource implements _$Consent {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     ConsentStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    List<CodeableConcept?>? category,
+    List<CodeableConcept>? category,
     required Reference patient,
     Period? period,
     FhirDateTime? dateTime,
     @JsonKey(name: '_dateTime') Element? dateTimeElement,
-    List<Reference?>? consentingParty,
-    List<ConsentActor?>? actor,
-    List<CodeableConcept?>? action,
-    List<Reference?>? organization,
+    List<Reference>? consentingParty,
+    List<ConsentActor>? actor,
+    List<CodeableConcept>? action,
+    List<Reference>? organization,
     Attachment? sourceAttachment,
     Identifier? sourceIdentifier,
     Reference? sourceReference,
-    List<ConsentPolicy?>? policy,
+    List<ConsentPolicy>? policy,
     String? policyRule,
     @JsonKey(name: '_policyRule') Element? policyRuleElement,
-    List<Coding?>? securityLabel,
-    List<Coding?>? purpose,
+    List<Coding>? securityLabel,
+    List<Coding>? purpose,
     Period? dataPeriod,
-    List<ConsentData?>? data,
-    List<ConsentExcept?>? except,
+    List<ConsentData>? data,
+    List<ConsentExcept>? except,
   }) = _Consent;
 
   /// Produces a Yaml formatted String version of the object
@@ -360,14 +360,14 @@ abstract class ConsentExcept implements _$ConsentExcept {
     ConsentExceptType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Period? period,
-    List<ConsentActor1?>? actor,
-    List<CodeableConcept?>? action,
-    List<Coding?>? securityLabel,
-    List<Coding?>? purpose,
-    @JsonKey(name: 'class') List<Coding?>? class_,
-    List<Coding?>? code,
+    List<ConsentActor1>? actor,
+    List<CodeableConcept>? action,
+    List<Coding>? securityLabel,
+    List<Coding>? purpose,
+    @JsonKey(name: 'class') List<Coding>? class_,
+    List<Coding>? code,
     Period? dataPeriod,
-    List<ConsentData1?>? data,
+    List<ConsentData1>? data,
   }) = _ConsentExcept;
 
   /// Produces a Yaml formatted String version of the object
@@ -452,21 +452,21 @@ abstract class Provenance with Resource implements _$Provenance {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required List<Reference> target,
     Period? period,
     String? recorded,
     @JsonKey(name: '_recorded') Element? recordedElement,
-    List<String?>? policy,
-    @JsonKey(name: '_policy') List<Element?>? policyElement,
+    List<String>? policy,
+    @JsonKey(name: '_policy') List<Element>? policyElement,
     Reference? location,
-    List<Coding?>? reason,
+    List<Coding>? reason,
     Coding? activity,
     required List<ProvenanceAgent> agent,
-    List<ProvenanceEntity?>? entity,
-    List<Signature?>? signature,
+    List<ProvenanceEntity>? entity,
+    List<Signature>? signature,
   }) = _Provenance;
 
   /// Produces a Yaml formatted String version of the object
@@ -490,7 +490,7 @@ abstract class Provenance with Resource implements _$Provenance {
 abstract class ProvenanceAgent implements _$ProvenanceAgent {
   ProvenanceAgent._();
   factory ProvenanceAgent({
-    List<CodeableConcept?>? role,
+    List<CodeableConcept>? role,
     String? whoUri,
     @JsonKey(name: '_whoUri') Element? whoUriElement,
     Reference? whoReference,
@@ -527,7 +527,7 @@ abstract class ProvenanceEntity implements _$ProvenanceEntity {
     @JsonKey(name: '_whatUri') Element? whatUriElement,
     Reference? whatReference,
     Identifier? whatIdentifier,
-    List<ProvenanceAgent?>? agent,
+    List<ProvenanceAgent>? agent,
   }) = _ProvenanceEntity;
 
   /// Produces a Yaml formatted String version of the object

@@ -10,16 +10,14 @@ _$_FhirExtension _$_$_FhirExtensionFromJson(Map<String, dynamic> json) {
   return _$_FhirExtension(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     url: FhirUri.fromJson(json['url']),
     urlElement: json['_url'] == null
         ? null
         : Element.fromJson(json['_url'] as Map<String, dynamic>),
     fhirComments: (json['fhir_comments'] as List<dynamic>?)
-        ?.map((e) => e as String?)
+        ?.map((e) => e as String)
         .toList(),
     valueBoolean: json['valueBoolean'] == null
         ? null
@@ -172,7 +170,7 @@ Map<String, dynamic> _$_$_FhirExtensionToJson(_$_FhirExtension instance) {
 
   writeNotNull('id', instance.id?.toJson());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   val['url'] = instance.url.toJson();
   writeNotNull('_url', instance.urlElement?.toJson());
   writeNotNull('fhir_comments', instance.fhirComments);

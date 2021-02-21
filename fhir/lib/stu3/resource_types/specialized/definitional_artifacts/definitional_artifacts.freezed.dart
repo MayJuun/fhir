@@ -28,14 +28,14 @@ class _$ActivityDefinitionTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -73,17 +73,17 @@ class _$ActivityDefinitionTearOff {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
-      List<CodeableConcept?>? topic,
-      List<Contributor?>? contributor,
-      List<ContactDetail?>? contact,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      List<CodeableConcept>? topic,
+      List<Contributor>? contributor,
+      List<ContactDetail>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Reference?>? library_,
+          List<Reference>? library_,
       String? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
@@ -95,14 +95,14 @@ class _$ActivityDefinitionTearOff {
       Period? timingPeriod,
       Range? timingRange,
       Reference? location,
-      List<ActivityDefinitionParticipant?>? participant,
+      List<ActivityDefinitionParticipant>? participant,
       Reference? productReference,
       CodeableConcept? productCodeableConcept,
       Quantity? quantity,
-      List<Dosage?>? dosage,
-      List<CodeableConcept?>? bodySite,
+      List<Dosage>? dosage,
+      List<CodeableConcept>? bodySite,
       Reference? transform,
-      List<ActivityDefinitionDynamicValue?>? dynamicValue}) {
+      List<ActivityDefinitionDynamicValue>? dynamicValue}) {
     return _ActivityDefinition(
       resourceType: resourceType,
       id: id,
@@ -193,14 +193,14 @@ mixin _$ActivityDefinition {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   String? get version;
   @JsonKey(name: '_version')
   Element? get versionElement;
@@ -238,17 +238,17 @@ mixin _$ActivityDefinition {
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   Period? get effectivePeriod;
-  List<UsageContext?>? get useContext;
-  List<CodeableConcept?>? get jurisdiction;
-  List<CodeableConcept?>? get topic;
-  List<Contributor?>? get contributor;
-  List<ContactDetail?>? get contact;
+  List<UsageContext>? get useContext;
+  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get topic;
+  List<Contributor>? get contributor;
+  List<ContactDetail>? get contact;
   String? get copyright;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
-  List<RelatedArtifact?>? get relatedArtifact;
+  List<RelatedArtifact>? get relatedArtifact;
   @JsonKey(name: 'library')
-  List<Reference?>? get library_;
+  List<Reference>? get library_;
   String? get kind;
   @JsonKey(name: '_kind')
   Element? get kindElement;
@@ -260,14 +260,14 @@ mixin _$ActivityDefinition {
   Period? get timingPeriod;
   Range? get timingRange;
   Reference? get location;
-  List<ActivityDefinitionParticipant?>? get participant;
+  List<ActivityDefinitionParticipant>? get participant;
   Reference? get productReference;
   CodeableConcept? get productCodeableConcept;
   Quantity? get quantity;
-  List<Dosage?>? get dosage;
-  List<CodeableConcept?>? get bodySite;
+  List<Dosage>? get dosage;
+  List<CodeableConcept>? get bodySite;
   Reference? get transform;
-  List<ActivityDefinitionDynamicValue?>? get dynamicValue;
+  List<ActivityDefinitionDynamicValue>? get dynamicValue;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -291,14 +291,14 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -336,17 +336,17 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
-      List<CodeableConcept?>? topic,
-      List<Contributor?>? contributor,
-      List<ContactDetail?>? contact,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      List<CodeableConcept>? topic,
+      List<Contributor>? contributor,
+      List<ContactDetail>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Reference?>? library_,
+          List<Reference>? library_,
       String? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
@@ -358,14 +358,14 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       Period? timingPeriod,
       Range? timingRange,
       Reference? location,
-      List<ActivityDefinitionParticipant?>? participant,
+      List<ActivityDefinitionParticipant>? participant,
       Reference? productReference,
       CodeableConcept? productCodeableConcept,
       Quantity? quantity,
-      List<Dosage?>? dosage,
-      List<CodeableConcept?>? bodySite,
+      List<Dosage>? dosage,
+      List<CodeableConcept>? bodySite,
       Reference? transform,
-      List<ActivityDefinitionDynamicValue?>? dynamicValue});
+      List<ActivityDefinitionDynamicValue>? dynamicValue});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -495,19 +495,19 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as String?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -567,26 +567,25 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
           : effectivePeriod as Period?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
-      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>?,
       contributor: contributor == freezed
           ? _value.contributor
-          : contributor as List<Contributor?>?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+          : contributor as List<Contributor>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       copyright: copyright == freezed ? _value.copyright : copyright as String?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact?>?,
+          : relatedArtifact as List<RelatedArtifact>?,
       library_:
-          library_ == freezed ? _value.library_ : library_ as List<Reference?>?,
+          library_ == freezed ? _value.library_ : library_ as List<Reference>?,
       kind: kind == freezed ? _value.kind : kind as String?,
       kindElement:
           kindElement == freezed ? _value.kindElement : kindElement as Element?,
@@ -608,7 +607,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       location: location == freezed ? _value.location : location as Reference?,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<ActivityDefinitionParticipant?>?,
+          : participant as List<ActivityDefinitionParticipant>?,
       productReference: productReference == freezed
           ? _value.productReference
           : productReference as Reference?,
@@ -616,15 +615,15 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
           ? _value.productCodeableConcept
           : productCodeableConcept as CodeableConcept?,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
-      dosage: dosage == freezed ? _value.dosage : dosage as List<Dosage?>?,
+      dosage: dosage == freezed ? _value.dosage : dosage as List<Dosage>?,
       bodySite: bodySite == freezed
           ? _value.bodySite
-          : bodySite as List<CodeableConcept?>?,
+          : bodySite as List<CodeableConcept>?,
       transform:
           transform == freezed ? _value.transform : transform as Reference?,
       dynamicValue: dynamicValue == freezed
           ? _value.dynamicValue
-          : dynamicValue as List<ActivityDefinitionDynamicValue?>?,
+          : dynamicValue as List<ActivityDefinitionDynamicValue>?,
     ));
   }
 
@@ -979,14 +978,14 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -1024,17 +1023,17 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
-      List<CodeableConcept?>? topic,
-      List<Contributor?>? contributor,
-      List<ContactDetail?>? contact,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      List<CodeableConcept>? topic,
+      List<Contributor>? contributor,
+      List<ContactDetail>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Reference?>? library_,
+          List<Reference>? library_,
       String? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
@@ -1046,14 +1045,14 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       Period? timingPeriod,
       Range? timingRange,
       Reference? location,
-      List<ActivityDefinitionParticipant?>? participant,
+      List<ActivityDefinitionParticipant>? participant,
       Reference? productReference,
       CodeableConcept? productCodeableConcept,
       Quantity? quantity,
-      List<Dosage?>? dosage,
-      List<CodeableConcept?>? bodySite,
+      List<Dosage>? dosage,
+      List<CodeableConcept>? bodySite,
       Reference? transform,
-      List<ActivityDefinitionDynamicValue?>? dynamicValue});
+      List<ActivityDefinitionDynamicValue>? dynamicValue});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -1215,19 +1214,19 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as String?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -1287,26 +1286,25 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
           : effectivePeriod as Period?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
-      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>?,
       contributor: contributor == freezed
           ? _value.contributor
-          : contributor as List<Contributor?>?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+          : contributor as List<Contributor>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       copyright: copyright == freezed ? _value.copyright : copyright as String?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact?>?,
+          : relatedArtifact as List<RelatedArtifact>?,
       library_:
-          library_ == freezed ? _value.library_ : library_ as List<Reference?>?,
+          library_ == freezed ? _value.library_ : library_ as List<Reference>?,
       kind: kind == freezed ? _value.kind : kind as String?,
       kindElement:
           kindElement == freezed ? _value.kindElement : kindElement as Element?,
@@ -1328,7 +1326,7 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
       location: location == freezed ? _value.location : location as Reference?,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<ActivityDefinitionParticipant?>?,
+          : participant as List<ActivityDefinitionParticipant>?,
       productReference: productReference == freezed
           ? _value.productReference
           : productReference as Reference?,
@@ -1336,15 +1334,15 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
           ? _value.productCodeableConcept
           : productCodeableConcept as CodeableConcept?,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
-      dosage: dosage == freezed ? _value.dosage : dosage as List<Dosage?>?,
+      dosage: dosage == freezed ? _value.dosage : dosage as List<Dosage>?,
       bodySite: bodySite == freezed
           ? _value.bodySite
-          : bodySite as List<CodeableConcept?>?,
+          : bodySite as List<CodeableConcept>?,
       transform:
           transform == freezed ? _value.transform : transform as Reference?,
       dynamicValue: dynamicValue == freezed
           ? _value.dynamicValue
-          : dynamicValue as List<ActivityDefinitionDynamicValue?>?,
+          : dynamicValue as List<ActivityDefinitionDynamicValue>?,
     ));
   }
 }
@@ -1465,19 +1463,19 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -1541,25 +1539,25 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @override
   final Period? effectivePeriod;
   @override
-  final List<UsageContext?>? useContext;
+  final List<UsageContext>? useContext;
   @override
-  final List<CodeableConcept?>? jurisdiction;
+  final List<CodeableConcept>? jurisdiction;
   @override
-  final List<CodeableConcept?>? topic;
+  final List<CodeableConcept>? topic;
   @override
-  final List<Contributor?>? contributor;
+  final List<Contributor>? contributor;
   @override
-  final List<ContactDetail?>? contact;
+  final List<ContactDetail>? contact;
   @override
   final String? copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final List<RelatedArtifact?>? relatedArtifact;
+  final List<RelatedArtifact>? relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  final List<Reference?>? library_;
+  final List<Reference>? library_;
   @override
   final String? kind;
   @override
@@ -1581,7 +1579,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @override
   final Reference? location;
   @override
-  final List<ActivityDefinitionParticipant?>? participant;
+  final List<ActivityDefinitionParticipant>? participant;
   @override
   final Reference? productReference;
   @override
@@ -1589,13 +1587,13 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @override
   final Quantity? quantity;
   @override
-  final List<Dosage?>? dosage;
+  final List<Dosage>? dosage;
   @override
-  final List<CodeableConcept?>? bodySite;
+  final List<CodeableConcept>? bodySite;
   @override
   final Reference? transform;
   @override
-  final List<ActivityDefinitionDynamicValue?>? dynamicValue;
+  final List<ActivityDefinitionDynamicValue>? dynamicValue;
 
   @override
   String toString() {
@@ -1810,14 +1808,14 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           @JsonKey(name: '_language')
               Element? languageElement,
           Narrative? text,
-          List<Resource?>? contained,
+          List<Resource>? contained,
           @JsonKey(name: 'extension')
-              List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+              List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           String? url,
           @JsonKey(name: '_url')
               Element? urlElement,
-          List<Identifier?>? identifier,
+          List<Identifier>? identifier,
           String? version,
           @JsonKey(name: '_version')
               Element? versionElement,
@@ -1855,17 +1853,17 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           @JsonKey(name: '_lastReviewDate')
               Element? lastReviewDateElement,
           Period? effectivePeriod,
-          List<UsageContext?>? useContext,
-          List<CodeableConcept?>? jurisdiction,
-          List<CodeableConcept?>? topic,
-          List<Contributor?>? contributor,
-          List<ContactDetail?>? contact,
+          List<UsageContext>? useContext,
+          List<CodeableConcept>? jurisdiction,
+          List<CodeableConcept>? topic,
+          List<Contributor>? contributor,
+          List<ContactDetail>? contact,
           String? copyright,
           @JsonKey(name: '_copyright')
               Element? copyrightElement,
-          List<RelatedArtifact?>? relatedArtifact,
+          List<RelatedArtifact>? relatedArtifact,
           @JsonKey(name: 'library')
-              List<Reference?>? library_,
+              List<Reference>? library_,
           String? kind,
           @JsonKey(name: '_kind')
               Element? kindElement,
@@ -1877,14 +1875,14 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           Period? timingPeriod,
           Range? timingRange,
           Reference? location,
-          List<ActivityDefinitionParticipant?>? participant,
+          List<ActivityDefinitionParticipant>? participant,
           Reference? productReference,
           CodeableConcept? productCodeableConcept,
           Quantity? quantity,
-          List<Dosage?>? dosage,
-          List<CodeableConcept?>? bodySite,
+          List<Dosage>? dosage,
+          List<CodeableConcept>? bodySite,
           Reference? transform,
-          List<ActivityDefinitionDynamicValue?>? dynamicValue}) =
+          List<ActivityDefinitionDynamicValue>? dynamicValue}) =
       _$_ActivityDefinition;
 
   factory _ActivityDefinition.fromJson(Map<String, dynamic> json) =
@@ -1910,19 +1908,19 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   String? get version;
   @override
@@ -1986,25 +1984,25 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
   Period? get effectivePeriod;
   @override
-  List<UsageContext?>? get useContext;
+  List<UsageContext>? get useContext;
   @override
-  List<CodeableConcept?>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction;
   @override
-  List<CodeableConcept?>? get topic;
+  List<CodeableConcept>? get topic;
   @override
-  List<Contributor?>? get contributor;
+  List<Contributor>? get contributor;
   @override
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   @override
   String? get copyright;
   @override
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
-  List<RelatedArtifact?>? get relatedArtifact;
+  List<RelatedArtifact>? get relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  List<Reference?>? get library_;
+  List<Reference>? get library_;
   @override
   String? get kind;
   @override
@@ -2026,7 +2024,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
   Reference? get location;
   @override
-  List<ActivityDefinitionParticipant?>? get participant;
+  List<ActivityDefinitionParticipant>? get participant;
   @override
   Reference? get productReference;
   @override
@@ -2034,13 +2032,13 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
   Quantity? get quantity;
   @override
-  List<Dosage?>? get dosage;
+  List<Dosage>? get dosage;
   @override
-  List<CodeableConcept?>? get bodySite;
+  List<CodeableConcept>? get bodySite;
   @override
   Reference? get transform;
   @override
-  List<ActivityDefinitionDynamicValue?>? get dynamicValue;
+  List<ActivityDefinitionDynamicValue>? get dynamicValue;
   @override
   @JsonKey(ignore: true)
   _$ActivityDefinitionCopyWith<_ActivityDefinition> get copyWith;
@@ -2680,14 +2678,14 @@ class _$PlanDefinitionTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -2726,19 +2724,19 @@ class _$PlanDefinitionTearOff {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
-      List<CodeableConcept?>? topic,
-      List<Contributor?>? contributor,
-      List<ContactDetail?>? contact,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      List<CodeableConcept>? topic,
+      List<Contributor>? contributor,
+      List<ContactDetail>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Reference?>? library_,
-      List<PlanDefinitionGoal?>? goal,
-      List<PlanDefinitionAction?>? action}) {
+          List<Reference>? library_,
+      List<PlanDefinitionGoal>? goal,
+      List<PlanDefinitionAction>? action}) {
     return _PlanDefinition(
       resourceType: resourceType,
       id: id,
@@ -2815,14 +2813,14 @@ mixin _$PlanDefinition {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   String? get version;
   @JsonKey(name: '_version')
   Element? get versionElement;
@@ -2861,19 +2859,19 @@ mixin _$PlanDefinition {
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   Period? get effectivePeriod;
-  List<UsageContext?>? get useContext;
-  List<CodeableConcept?>? get jurisdiction;
-  List<CodeableConcept?>? get topic;
-  List<Contributor?>? get contributor;
-  List<ContactDetail?>? get contact;
+  List<UsageContext>? get useContext;
+  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get topic;
+  List<Contributor>? get contributor;
+  List<ContactDetail>? get contact;
   String? get copyright;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
-  List<RelatedArtifact?>? get relatedArtifact;
+  List<RelatedArtifact>? get relatedArtifact;
   @JsonKey(name: 'library')
-  List<Reference?>? get library_;
-  List<PlanDefinitionGoal?>? get goal;
-  List<PlanDefinitionAction?>? get action;
+  List<Reference>? get library_;
+  List<PlanDefinitionGoal>? get goal;
+  List<PlanDefinitionAction>? get action;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2897,14 +2895,14 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -2943,19 +2941,19 @@ abstract class $PlanDefinitionCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
-      List<CodeableConcept?>? topic,
-      List<Contributor?>? contributor,
-      List<ContactDetail?>? contact,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      List<CodeableConcept>? topic,
+      List<Contributor>? contributor,
+      List<ContactDetail>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Reference?>? library_,
-      List<PlanDefinitionGoal?>? goal,
-      List<PlanDefinitionAction?>? action});
+          List<Reference>? library_,
+      List<PlanDefinitionGoal>? goal,
+      List<PlanDefinitionAction>? action});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -3061,19 +3059,19 @@ class _$PlanDefinitionCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as String?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -3133,30 +3131,29 @@ class _$PlanDefinitionCopyWithImpl<$Res>
           : effectivePeriod as Period?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
-      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>?,
       contributor: contributor == freezed
           ? _value.contributor
-          : contributor as List<Contributor?>?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+          : contributor as List<Contributor>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       copyright: copyright == freezed ? _value.copyright : copyright as String?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact?>?,
+          : relatedArtifact as List<RelatedArtifact>?,
       library_:
-          library_ == freezed ? _value.library_ : library_ as List<Reference?>?,
-      goal: goal == freezed ? _value.goal : goal as List<PlanDefinitionGoal?>?,
+          library_ == freezed ? _value.library_ : library_ as List<Reference>?,
+      goal: goal == freezed ? _value.goal : goal as List<PlanDefinitionGoal>?,
       action: action == freezed
           ? _value.action
-          : action as List<PlanDefinitionAction?>?,
+          : action as List<PlanDefinitionAction>?,
     ));
   }
 
@@ -3400,14 +3397,14 @@ abstract class _$PlanDefinitionCopyWith<$Res>
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -3446,19 +3443,19 @@ abstract class _$PlanDefinitionCopyWith<$Res>
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
-      List<CodeableConcept?>? topic,
-      List<Contributor?>? contributor,
-      List<ContactDetail?>? contact,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      List<CodeableConcept>? topic,
+      List<Contributor>? contributor,
+      List<ContactDetail>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Reference?>? library_,
-      List<PlanDefinitionGoal?>? goal,
-      List<PlanDefinitionAction?>? action});
+          List<Reference>? library_,
+      List<PlanDefinitionGoal>? goal,
+      List<PlanDefinitionAction>? action});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -3586,19 +3583,19 @@ class __$PlanDefinitionCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as String?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -3658,30 +3655,29 @@ class __$PlanDefinitionCopyWithImpl<$Res>
           : effectivePeriod as Period?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
-      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>?,
       contributor: contributor == freezed
           ? _value.contributor
-          : contributor as List<Contributor?>?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+          : contributor as List<Contributor>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       copyright: copyright == freezed ? _value.copyright : copyright as String?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact?>?,
+          : relatedArtifact as List<RelatedArtifact>?,
       library_:
-          library_ == freezed ? _value.library_ : library_ as List<Reference?>?,
-      goal: goal == freezed ? _value.goal : goal as List<PlanDefinitionGoal?>?,
+          library_ == freezed ? _value.library_ : library_ as List<Reference>?,
+      goal: goal == freezed ? _value.goal : goal as List<PlanDefinitionGoal>?,
       action: action == freezed
           ? _value.action
-          : action as List<PlanDefinitionAction?>?,
+          : action as List<PlanDefinitionAction>?,
     ));
   }
 }
@@ -3786,19 +3782,19 @@ class _$_PlanDefinition extends _PlanDefinition {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -3864,29 +3860,29 @@ class _$_PlanDefinition extends _PlanDefinition {
   @override
   final Period? effectivePeriod;
   @override
-  final List<UsageContext?>? useContext;
+  final List<UsageContext>? useContext;
   @override
-  final List<CodeableConcept?>? jurisdiction;
+  final List<CodeableConcept>? jurisdiction;
   @override
-  final List<CodeableConcept?>? topic;
+  final List<CodeableConcept>? topic;
   @override
-  final List<Contributor?>? contributor;
+  final List<Contributor>? contributor;
   @override
-  final List<ContactDetail?>? contact;
+  final List<ContactDetail>? contact;
   @override
   final String? copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final List<RelatedArtifact?>? relatedArtifact;
+  final List<RelatedArtifact>? relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  final List<Reference?>? library_;
+  final List<Reference>? library_;
   @override
-  final List<PlanDefinitionGoal?>? goal;
+  final List<PlanDefinitionGoal>? goal;
   @override
-  final List<PlanDefinitionAction?>? action;
+  final List<PlanDefinitionAction>? action;
 
   @override
   String toString() {
@@ -4073,14 +4069,14 @@ abstract class _PlanDefinition extends PlanDefinition {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -4119,19 +4115,19 @@ abstract class _PlanDefinition extends PlanDefinition {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
-      List<CodeableConcept?>? topic,
-      List<Contributor?>? contributor,
-      List<ContactDetail?>? contact,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      List<CodeableConcept>? topic,
+      List<Contributor>? contributor,
+      List<ContactDetail>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<RelatedArtifact>? relatedArtifact,
       @JsonKey(name: 'library')
-          List<Reference?>? library_,
-      List<PlanDefinitionGoal?>? goal,
-      List<PlanDefinitionAction?>? action}) = _$_PlanDefinition;
+          List<Reference>? library_,
+      List<PlanDefinitionGoal>? goal,
+      List<PlanDefinitionAction>? action}) = _$_PlanDefinition;
 
   factory _PlanDefinition.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinition.fromJson;
@@ -4156,19 +4152,19 @@ abstract class _PlanDefinition extends PlanDefinition {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   String? get version;
   @override
@@ -4234,29 +4230,29 @@ abstract class _PlanDefinition extends PlanDefinition {
   @override
   Period? get effectivePeriod;
   @override
-  List<UsageContext?>? get useContext;
+  List<UsageContext>? get useContext;
   @override
-  List<CodeableConcept?>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction;
   @override
-  List<CodeableConcept?>? get topic;
+  List<CodeableConcept>? get topic;
   @override
-  List<Contributor?>? get contributor;
+  List<Contributor>? get contributor;
   @override
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   @override
   String? get copyright;
   @override
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
-  List<RelatedArtifact?>? get relatedArtifact;
+  List<RelatedArtifact>? get relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  List<Reference?>? get library_;
+  List<Reference>? get library_;
   @override
-  List<PlanDefinitionGoal?>? get goal;
+  List<PlanDefinitionGoal>? get goal;
   @override
-  List<PlanDefinitionAction?>? get action;
+  List<PlanDefinitionAction>? get action;
   @override
   @JsonKey(ignore: true)
   _$PlanDefinitionCopyWith<_PlanDefinition> get copyWith;
@@ -4275,9 +4271,9 @@ class _$PlanDefinitionGoalTearOff {
       required CodeableConcept description,
       CodeableConcept? priority,
       CodeableConcept? start,
-      List<CodeableConcept?>? addresses,
-      List<RelatedArtifact?>? documentation,
-      List<PlanDefinitionTarget?>? target}) {
+      List<CodeableConcept>? addresses,
+      List<RelatedArtifact>? documentation,
+      List<PlanDefinitionTarget>? target}) {
     return _PlanDefinitionGoal(
       category: category,
       description: description,
@@ -4303,9 +4299,9 @@ mixin _$PlanDefinitionGoal {
   CodeableConcept get description;
   CodeableConcept? get priority;
   CodeableConcept? get start;
-  List<CodeableConcept?>? get addresses;
-  List<RelatedArtifact?>? get documentation;
-  List<PlanDefinitionTarget?>? get target;
+  List<CodeableConcept>? get addresses;
+  List<RelatedArtifact>? get documentation;
+  List<PlanDefinitionTarget>? get target;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4322,9 +4318,9 @@ abstract class $PlanDefinitionGoalCopyWith<$Res> {
       CodeableConcept description,
       CodeableConcept? priority,
       CodeableConcept? start,
-      List<CodeableConcept?>? addresses,
-      List<RelatedArtifact?>? documentation,
-      List<PlanDefinitionTarget?>? target});
+      List<CodeableConcept>? addresses,
+      List<RelatedArtifact>? documentation,
+      List<PlanDefinitionTarget>? target});
 
   $CodeableConceptCopyWith<$Res>? get category;
   $CodeableConceptCopyWith<$Res> get description;
@@ -4362,13 +4358,13 @@ class _$PlanDefinitionGoalCopyWithImpl<$Res>
       start: start == freezed ? _value.start : start as CodeableConcept?,
       addresses: addresses == freezed
           ? _value.addresses
-          : addresses as List<CodeableConcept?>?,
+          : addresses as List<CodeableConcept>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as List<RelatedArtifact?>?,
+          : documentation as List<RelatedArtifact>?,
       target: target == freezed
           ? _value.target
-          : target as List<PlanDefinitionTarget?>?,
+          : target as List<PlanDefinitionTarget>?,
     ));
   }
 
@@ -4425,9 +4421,9 @@ abstract class _$PlanDefinitionGoalCopyWith<$Res>
       CodeableConcept description,
       CodeableConcept? priority,
       CodeableConcept? start,
-      List<CodeableConcept?>? addresses,
-      List<RelatedArtifact?>? documentation,
-      List<PlanDefinitionTarget?>? target});
+      List<CodeableConcept>? addresses,
+      List<RelatedArtifact>? documentation,
+      List<PlanDefinitionTarget>? target});
 
   @override
   $CodeableConceptCopyWith<$Res>? get category;
@@ -4471,13 +4467,13 @@ class __$PlanDefinitionGoalCopyWithImpl<$Res>
       start: start == freezed ? _value.start : start as CodeableConcept?,
       addresses: addresses == freezed
           ? _value.addresses
-          : addresses as List<CodeableConcept?>?,
+          : addresses as List<CodeableConcept>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as List<RelatedArtifact?>?,
+          : documentation as List<RelatedArtifact>?,
       target: target == freezed
           ? _value.target
-          : target as List<PlanDefinitionTarget?>?,
+          : target as List<PlanDefinitionTarget>?,
     ));
   }
 }
@@ -4508,11 +4504,11 @@ class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
   @override
   final CodeableConcept? start;
   @override
-  final List<CodeableConcept?>? addresses;
+  final List<CodeableConcept>? addresses;
   @override
-  final List<RelatedArtifact?>? documentation;
+  final List<RelatedArtifact>? documentation;
   @override
-  final List<PlanDefinitionTarget?>? target;
+  final List<PlanDefinitionTarget>? target;
 
   @override
   String toString() {
@@ -4573,9 +4569,9 @@ abstract class _PlanDefinitionGoal extends PlanDefinitionGoal {
       required CodeableConcept description,
       CodeableConcept? priority,
       CodeableConcept? start,
-      List<CodeableConcept?>? addresses,
-      List<RelatedArtifact?>? documentation,
-      List<PlanDefinitionTarget?>? target}) = _$_PlanDefinitionGoal;
+      List<CodeableConcept>? addresses,
+      List<RelatedArtifact>? documentation,
+      List<PlanDefinitionTarget>? target}) = _$_PlanDefinitionGoal;
 
   factory _PlanDefinitionGoal.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionGoal.fromJson;
@@ -4589,11 +4585,11 @@ abstract class _PlanDefinitionGoal extends PlanDefinitionGoal {
   @override
   CodeableConcept? get start;
   @override
-  List<CodeableConcept?>? get addresses;
+  List<CodeableConcept>? get addresses;
   @override
-  List<RelatedArtifact?>? get documentation;
+  List<RelatedArtifact>? get documentation;
   @override
-  List<PlanDefinitionTarget?>? get target;
+  List<PlanDefinitionTarget>? get target;
   @override
   @JsonKey(ignore: true)
   _$PlanDefinitionGoalCopyWith<_PlanDefinitionGoal> get copyWith;
@@ -4932,17 +4928,17 @@ class _$PlanDefinitionActionTearOff {
       String? textEquivalent,
       @JsonKey(name: '_textEquivalent')
           Element? textEquivalentElement,
-      List<CodeableConcept?>? code,
-      List<CodeableConcept?>? reason,
-      List<RelatedArtifact?>? documentation,
-      List<Id?>? goalId,
+      List<CodeableConcept>? code,
+      List<CodeableConcept>? reason,
+      List<RelatedArtifact>? documentation,
+      List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element?>? goalIdElement,
-      List<TriggerDefinition?>? triggerDefinition,
-      List<PlanDefinitionCondition?>? condition,
-      List<DataRequirement?>? input,
-      List<DataRequirement?>? output,
-      List<PlanDefinitionRelatedAction?>? relatedAction,
+          List<Element>? goalIdElement,
+      List<TriggerDefinition>? triggerDefinition,
+      List<PlanDefinitionCondition>? condition,
+      List<DataRequirement>? input,
+      List<DataRequirement>? output,
+      List<PlanDefinitionRelatedAction>? relatedAction,
       FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element? timingDateTimeElement,
@@ -4950,7 +4946,7 @@ class _$PlanDefinitionActionTearOff {
       FhirDuration? timingDuration,
       Range? timingRange,
       Timing? timingTiming,
-      List<PlanDefinitionParticipant?>? participant,
+      List<PlanDefinitionParticipant>? participant,
       Coding? type,
       PlanDefinitionActionGroupingBehavior? groupingBehavior,
       @JsonKey(name: '_groupingBehavior')
@@ -4969,8 +4965,8 @@ class _$PlanDefinitionActionTearOff {
           Element? cardinalityBehaviorElement,
       Reference? definition,
       Reference? transform,
-      List<PlanDefinitionDynamicValue?>? dynamicValue,
-      List<PlanDefinitionAction?>? action}) {
+      List<PlanDefinitionDynamicValue>? dynamicValue,
+      List<PlanDefinitionAction>? action}) {
     return _PlanDefinitionAction(
       label: label,
       labelElement: labelElement,
@@ -5037,17 +5033,17 @@ mixin _$PlanDefinitionAction {
   String? get textEquivalent;
   @JsonKey(name: '_textEquivalent')
   Element? get textEquivalentElement;
-  List<CodeableConcept?>? get code;
-  List<CodeableConcept?>? get reason;
-  List<RelatedArtifact?>? get documentation;
-  List<Id?>? get goalId;
+  List<CodeableConcept>? get code;
+  List<CodeableConcept>? get reason;
+  List<RelatedArtifact>? get documentation;
+  List<Id>? get goalId;
   @JsonKey(name: '_goalId')
-  List<Element?>? get goalIdElement;
-  List<TriggerDefinition?>? get triggerDefinition;
-  List<PlanDefinitionCondition?>? get condition;
-  List<DataRequirement?>? get input;
-  List<DataRequirement?>? get output;
-  List<PlanDefinitionRelatedAction?>? get relatedAction;
+  List<Element>? get goalIdElement;
+  List<TriggerDefinition>? get triggerDefinition;
+  List<PlanDefinitionCondition>? get condition;
+  List<DataRequirement>? get input;
+  List<DataRequirement>? get output;
+  List<PlanDefinitionRelatedAction>? get relatedAction;
   FhirDateTime? get timingDateTime;
   @JsonKey(name: '_timingDateTime')
   Element? get timingDateTimeElement;
@@ -5055,7 +5051,7 @@ mixin _$PlanDefinitionAction {
   FhirDuration? get timingDuration;
   Range? get timingRange;
   Timing? get timingTiming;
-  List<PlanDefinitionParticipant?>? get participant;
+  List<PlanDefinitionParticipant>? get participant;
   Coding? get type;
   PlanDefinitionActionGroupingBehavior? get groupingBehavior;
   @JsonKey(name: '_groupingBehavior')
@@ -5074,8 +5070,8 @@ mixin _$PlanDefinitionAction {
   Element? get cardinalityBehaviorElement;
   Reference? get definition;
   Reference? get transform;
-  List<PlanDefinitionDynamicValue?>? get dynamicValue;
-  List<PlanDefinitionAction?>? get action;
+  List<PlanDefinitionDynamicValue>? get dynamicValue;
+  List<PlanDefinitionAction>? get action;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -5100,17 +5096,17 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       String? textEquivalent,
       @JsonKey(name: '_textEquivalent')
           Element? textEquivalentElement,
-      List<CodeableConcept?>? code,
-      List<CodeableConcept?>? reason,
-      List<RelatedArtifact?>? documentation,
-      List<Id?>? goalId,
+      List<CodeableConcept>? code,
+      List<CodeableConcept>? reason,
+      List<RelatedArtifact>? documentation,
+      List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element?>? goalIdElement,
-      List<TriggerDefinition?>? triggerDefinition,
-      List<PlanDefinitionCondition?>? condition,
-      List<DataRequirement?>? input,
-      List<DataRequirement?>? output,
-      List<PlanDefinitionRelatedAction?>? relatedAction,
+          List<Element>? goalIdElement,
+      List<TriggerDefinition>? triggerDefinition,
+      List<PlanDefinitionCondition>? condition,
+      List<DataRequirement>? input,
+      List<DataRequirement>? output,
+      List<PlanDefinitionRelatedAction>? relatedAction,
       FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element? timingDateTimeElement,
@@ -5118,7 +5114,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       FhirDuration? timingDuration,
       Range? timingRange,
       Timing? timingTiming,
-      List<PlanDefinitionParticipant?>? participant,
+      List<PlanDefinitionParticipant>? participant,
       Coding? type,
       PlanDefinitionActionGroupingBehavior? groupingBehavior,
       @JsonKey(name: '_groupingBehavior')
@@ -5137,8 +5133,8 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
           Element? cardinalityBehaviorElement,
       Reference? definition,
       Reference? transform,
-      List<PlanDefinitionDynamicValue?>? dynamicValue,
-      List<PlanDefinitionAction?>? action});
+      List<PlanDefinitionDynamicValue>? dynamicValue,
+      List<PlanDefinitionAction>? action});
 
   $ElementCopyWith<$Res>? get labelElement;
   $ElementCopyWith<$Res>? get titleElement;
@@ -5231,28 +5227,28 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       textEquivalentElement: textEquivalentElement == freezed
           ? _value.textEquivalentElement
           : textEquivalentElement as Element?,
-      code: code == freezed ? _value.code : code as List<CodeableConcept?>?,
+      code: code == freezed ? _value.code : code as List<CodeableConcept>?,
       reason:
-          reason == freezed ? _value.reason : reason as List<CodeableConcept?>?,
+          reason == freezed ? _value.reason : reason as List<CodeableConcept>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as List<RelatedArtifact?>?,
-      goalId: goalId == freezed ? _value.goalId : goalId as List<Id?>?,
+          : documentation as List<RelatedArtifact>?,
+      goalId: goalId == freezed ? _value.goalId : goalId as List<Id>?,
       goalIdElement: goalIdElement == freezed
           ? _value.goalIdElement
-          : goalIdElement as List<Element?>?,
+          : goalIdElement as List<Element>?,
       triggerDefinition: triggerDefinition == freezed
           ? _value.triggerDefinition
-          : triggerDefinition as List<TriggerDefinition?>?,
+          : triggerDefinition as List<TriggerDefinition>?,
       condition: condition == freezed
           ? _value.condition
-          : condition as List<PlanDefinitionCondition?>?,
-      input: input == freezed ? _value.input : input as List<DataRequirement?>?,
+          : condition as List<PlanDefinitionCondition>?,
+      input: input == freezed ? _value.input : input as List<DataRequirement>?,
       output:
-          output == freezed ? _value.output : output as List<DataRequirement?>?,
+          output == freezed ? _value.output : output as List<DataRequirement>?,
       relatedAction: relatedAction == freezed
           ? _value.relatedAction
-          : relatedAction as List<PlanDefinitionRelatedAction?>?,
+          : relatedAction as List<PlanDefinitionRelatedAction>?,
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
           : timingDateTime as FhirDateTime?,
@@ -5272,7 +5268,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
           : timingTiming as Timing?,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<PlanDefinitionParticipant?>?,
+          : participant as List<PlanDefinitionParticipant>?,
       type: type == freezed ? _value.type : type as Coding?,
       groupingBehavior: groupingBehavior == freezed
           ? _value.groupingBehavior
@@ -5310,10 +5306,10 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
           transform == freezed ? _value.transform : transform as Reference?,
       dynamicValue: dynamicValue == freezed
           ? _value.dynamicValue
-          : dynamicValue as List<PlanDefinitionDynamicValue?>?,
+          : dynamicValue as List<PlanDefinitionDynamicValue>?,
       action: action == freezed
           ? _value.action
-          : action as List<PlanDefinitionAction?>?,
+          : action as List<PlanDefinitionAction>?,
     ));
   }
 
@@ -5525,17 +5521,17 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
       String? textEquivalent,
       @JsonKey(name: '_textEquivalent')
           Element? textEquivalentElement,
-      List<CodeableConcept?>? code,
-      List<CodeableConcept?>? reason,
-      List<RelatedArtifact?>? documentation,
-      List<Id?>? goalId,
+      List<CodeableConcept>? code,
+      List<CodeableConcept>? reason,
+      List<RelatedArtifact>? documentation,
+      List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element?>? goalIdElement,
-      List<TriggerDefinition?>? triggerDefinition,
-      List<PlanDefinitionCondition?>? condition,
-      List<DataRequirement?>? input,
-      List<DataRequirement?>? output,
-      List<PlanDefinitionRelatedAction?>? relatedAction,
+          List<Element>? goalIdElement,
+      List<TriggerDefinition>? triggerDefinition,
+      List<PlanDefinitionCondition>? condition,
+      List<DataRequirement>? input,
+      List<DataRequirement>? output,
+      List<PlanDefinitionRelatedAction>? relatedAction,
       FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element? timingDateTimeElement,
@@ -5543,7 +5539,7 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
       FhirDuration? timingDuration,
       Range? timingRange,
       Timing? timingTiming,
-      List<PlanDefinitionParticipant?>? participant,
+      List<PlanDefinitionParticipant>? participant,
       Coding? type,
       PlanDefinitionActionGroupingBehavior? groupingBehavior,
       @JsonKey(name: '_groupingBehavior')
@@ -5562,8 +5558,8 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
           Element? cardinalityBehaviorElement,
       Reference? definition,
       Reference? transform,
-      List<PlanDefinitionDynamicValue?>? dynamicValue,
-      List<PlanDefinitionAction?>? action});
+      List<PlanDefinitionDynamicValue>? dynamicValue,
+      List<PlanDefinitionAction>? action});
 
   @override
   $ElementCopyWith<$Res>? get labelElement;
@@ -5675,28 +5671,28 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
       textEquivalentElement: textEquivalentElement == freezed
           ? _value.textEquivalentElement
           : textEquivalentElement as Element?,
-      code: code == freezed ? _value.code : code as List<CodeableConcept?>?,
+      code: code == freezed ? _value.code : code as List<CodeableConcept>?,
       reason:
-          reason == freezed ? _value.reason : reason as List<CodeableConcept?>?,
+          reason == freezed ? _value.reason : reason as List<CodeableConcept>?,
       documentation: documentation == freezed
           ? _value.documentation
-          : documentation as List<RelatedArtifact?>?,
-      goalId: goalId == freezed ? _value.goalId : goalId as List<Id?>?,
+          : documentation as List<RelatedArtifact>?,
+      goalId: goalId == freezed ? _value.goalId : goalId as List<Id>?,
       goalIdElement: goalIdElement == freezed
           ? _value.goalIdElement
-          : goalIdElement as List<Element?>?,
+          : goalIdElement as List<Element>?,
       triggerDefinition: triggerDefinition == freezed
           ? _value.triggerDefinition
-          : triggerDefinition as List<TriggerDefinition?>?,
+          : triggerDefinition as List<TriggerDefinition>?,
       condition: condition == freezed
           ? _value.condition
-          : condition as List<PlanDefinitionCondition?>?,
-      input: input == freezed ? _value.input : input as List<DataRequirement?>?,
+          : condition as List<PlanDefinitionCondition>?,
+      input: input == freezed ? _value.input : input as List<DataRequirement>?,
       output:
-          output == freezed ? _value.output : output as List<DataRequirement?>?,
+          output == freezed ? _value.output : output as List<DataRequirement>?,
       relatedAction: relatedAction == freezed
           ? _value.relatedAction
-          : relatedAction as List<PlanDefinitionRelatedAction?>?,
+          : relatedAction as List<PlanDefinitionRelatedAction>?,
       timingDateTime: timingDateTime == freezed
           ? _value.timingDateTime
           : timingDateTime as FhirDateTime?,
@@ -5716,7 +5712,7 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
           : timingTiming as Timing?,
       participant: participant == freezed
           ? _value.participant
-          : participant as List<PlanDefinitionParticipant?>?,
+          : participant as List<PlanDefinitionParticipant>?,
       type: type == freezed ? _value.type : type as Coding?,
       groupingBehavior: groupingBehavior == freezed
           ? _value.groupingBehavior
@@ -5754,10 +5750,10 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
           transform == freezed ? _value.transform : transform as Reference?,
       dynamicValue: dynamicValue == freezed
           ? _value.dynamicValue
-          : dynamicValue as List<PlanDefinitionDynamicValue?>?,
+          : dynamicValue as List<PlanDefinitionDynamicValue>?,
       action: action == freezed
           ? _value.action
-          : action as List<PlanDefinitionAction?>?,
+          : action as List<PlanDefinitionAction>?,
     ));
   }
 }
@@ -5833,26 +5829,26 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   @JsonKey(name: '_textEquivalent')
   final Element? textEquivalentElement;
   @override
-  final List<CodeableConcept?>? code;
+  final List<CodeableConcept>? code;
   @override
-  final List<CodeableConcept?>? reason;
+  final List<CodeableConcept>? reason;
   @override
-  final List<RelatedArtifact?>? documentation;
+  final List<RelatedArtifact>? documentation;
   @override
-  final List<Id?>? goalId;
+  final List<Id>? goalId;
   @override
   @JsonKey(name: '_goalId')
-  final List<Element?>? goalIdElement;
+  final List<Element>? goalIdElement;
   @override
-  final List<TriggerDefinition?>? triggerDefinition;
+  final List<TriggerDefinition>? triggerDefinition;
   @override
-  final List<PlanDefinitionCondition?>? condition;
+  final List<PlanDefinitionCondition>? condition;
   @override
-  final List<DataRequirement?>? input;
+  final List<DataRequirement>? input;
   @override
-  final List<DataRequirement?>? output;
+  final List<DataRequirement>? output;
   @override
-  final List<PlanDefinitionRelatedAction?>? relatedAction;
+  final List<PlanDefinitionRelatedAction>? relatedAction;
   @override
   final FhirDateTime? timingDateTime;
   @override
@@ -5867,7 +5863,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   @override
   final Timing? timingTiming;
   @override
-  final List<PlanDefinitionParticipant?>? participant;
+  final List<PlanDefinitionParticipant>? participant;
   @override
   final Coding? type;
   @override
@@ -5900,9 +5896,9 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   @override
   final Reference? transform;
   @override
-  final List<PlanDefinitionDynamicValue?>? dynamicValue;
+  final List<PlanDefinitionDynamicValue>? dynamicValue;
   @override
-  final List<PlanDefinitionAction?>? action;
+  final List<PlanDefinitionAction>? action;
 
   @override
   String toString() {
@@ -6068,17 +6064,17 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       String? textEquivalent,
       @JsonKey(name: '_textEquivalent')
           Element? textEquivalentElement,
-      List<CodeableConcept?>? code,
-      List<CodeableConcept?>? reason,
-      List<RelatedArtifact?>? documentation,
-      List<Id?>? goalId,
+      List<CodeableConcept>? code,
+      List<CodeableConcept>? reason,
+      List<RelatedArtifact>? documentation,
+      List<Id>? goalId,
       @JsonKey(name: '_goalId')
-          List<Element?>? goalIdElement,
-      List<TriggerDefinition?>? triggerDefinition,
-      List<PlanDefinitionCondition?>? condition,
-      List<DataRequirement?>? input,
-      List<DataRequirement?>? output,
-      List<PlanDefinitionRelatedAction?>? relatedAction,
+          List<Element>? goalIdElement,
+      List<TriggerDefinition>? triggerDefinition,
+      List<PlanDefinitionCondition>? condition,
+      List<DataRequirement>? input,
+      List<DataRequirement>? output,
+      List<PlanDefinitionRelatedAction>? relatedAction,
       FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element? timingDateTimeElement,
@@ -6086,7 +6082,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       FhirDuration? timingDuration,
       Range? timingRange,
       Timing? timingTiming,
-      List<PlanDefinitionParticipant?>? participant,
+      List<PlanDefinitionParticipant>? participant,
       Coding? type,
       PlanDefinitionActionGroupingBehavior? groupingBehavior,
       @JsonKey(name: '_groupingBehavior')
@@ -6105,8 +6101,8 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
           Element? cardinalityBehaviorElement,
       Reference? definition,
       Reference? transform,
-      List<PlanDefinitionDynamicValue?>? dynamicValue,
-      List<PlanDefinitionAction?>? action}) = _$_PlanDefinitionAction;
+      List<PlanDefinitionDynamicValue>? dynamicValue,
+      List<PlanDefinitionAction>? action}) = _$_PlanDefinitionAction;
 
   factory _PlanDefinitionAction.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionAction.fromJson;
@@ -6132,26 +6128,26 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @JsonKey(name: '_textEquivalent')
   Element? get textEquivalentElement;
   @override
-  List<CodeableConcept?>? get code;
+  List<CodeableConcept>? get code;
   @override
-  List<CodeableConcept?>? get reason;
+  List<CodeableConcept>? get reason;
   @override
-  List<RelatedArtifact?>? get documentation;
+  List<RelatedArtifact>? get documentation;
   @override
-  List<Id?>? get goalId;
+  List<Id>? get goalId;
   @override
   @JsonKey(name: '_goalId')
-  List<Element?>? get goalIdElement;
+  List<Element>? get goalIdElement;
   @override
-  List<TriggerDefinition?>? get triggerDefinition;
+  List<TriggerDefinition>? get triggerDefinition;
   @override
-  List<PlanDefinitionCondition?>? get condition;
+  List<PlanDefinitionCondition>? get condition;
   @override
-  List<DataRequirement?>? get input;
+  List<DataRequirement>? get input;
   @override
-  List<DataRequirement?>? get output;
+  List<DataRequirement>? get output;
   @override
-  List<PlanDefinitionRelatedAction?>? get relatedAction;
+  List<PlanDefinitionRelatedAction>? get relatedAction;
   @override
   FhirDateTime? get timingDateTime;
   @override
@@ -6166,7 +6162,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @override
   Timing? get timingTiming;
   @override
-  List<PlanDefinitionParticipant?>? get participant;
+  List<PlanDefinitionParticipant>? get participant;
   @override
   Coding? get type;
   @override
@@ -6199,9 +6195,9 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @override
   Reference? get transform;
   @override
-  List<PlanDefinitionDynamicValue?>? get dynamicValue;
+  List<PlanDefinitionDynamicValue>? get dynamicValue;
   @override
-  List<PlanDefinitionAction?>? get action;
+  List<PlanDefinitionAction>? get action;
   @override
   @JsonKey(ignore: true)
   _$PlanDefinitionActionCopyWith<_PlanDefinitionAction> get copyWith;
@@ -7546,14 +7542,14 @@ class _$QuestionnaireTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -7588,17 +7584,17 @@ class _$QuestionnaireTearOff {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
-      List<ContactDetail?>? contact,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      List<ContactDetail>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<Coding?>? code,
-      List<String?>? subjectType,
+      List<Coding>? code,
+      List<String>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element?>? subjectTypeElement,
-      List<QuestionnaireItem?>? item}) {
+          List<Element>? subjectTypeElement,
+      List<QuestionnaireItem>? item}) {
     return _Questionnaire(
       resourceType: resourceType,
       id: id,
@@ -7670,14 +7666,14 @@ mixin _$Questionnaire {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   String? get version;
   @JsonKey(name: '_version')
   Element? get versionElement;
@@ -7712,17 +7708,17 @@ mixin _$Questionnaire {
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   Period? get effectivePeriod;
-  List<UsageContext?>? get useContext;
-  List<CodeableConcept?>? get jurisdiction;
-  List<ContactDetail?>? get contact;
+  List<UsageContext>? get useContext;
+  List<CodeableConcept>? get jurisdiction;
+  List<ContactDetail>? get contact;
   String? get copyright;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
-  List<Coding?>? get code;
-  List<String?>? get subjectType;
+  List<Coding>? get code;
+  List<String>? get subjectType;
   @JsonKey(name: '_subjectType')
-  List<Element?>? get subjectTypeElement;
-  List<QuestionnaireItem?>? get item;
+  List<Element>? get subjectTypeElement;
+  List<QuestionnaireItem>? get item;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -7746,14 +7742,14 @@ abstract class $QuestionnaireCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -7788,17 +7784,17 @@ abstract class $QuestionnaireCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
-      List<ContactDetail?>? contact,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      List<ContactDetail>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<Coding?>? code,
-      List<String?>? subjectType,
+      List<Coding>? code,
+      List<String>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element?>? subjectTypeElement,
-      List<QuestionnaireItem?>? item});
+          List<Element>? subjectTypeElement,
+      List<QuestionnaireItem>? item});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -7897,19 +7893,19 @@ class _$QuestionnaireCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as String?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -7964,25 +7960,24 @@ class _$QuestionnaireCopyWithImpl<$Res>
           : effectivePeriod as Period?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+          : jurisdiction as List<CodeableConcept>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       copyright: copyright == freezed ? _value.copyright : copyright as String?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element?,
-      code: code == freezed ? _value.code : code as List<Coding?>?,
+      code: code == freezed ? _value.code : code as List<Coding>?,
       subjectType: subjectType == freezed
           ? _value.subjectType
-          : subjectType as List<String?>?,
+          : subjectType as List<String>?,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as List<Element?>?,
-      item: item == freezed ? _value.item : item as List<QuestionnaireItem?>?,
+          : subjectTypeElement as List<Element>?,
+      item: item == freezed ? _value.item : item as List<QuestionnaireItem>?,
     ));
   }
 
@@ -8204,14 +8199,14 @@ abstract class _$QuestionnaireCopyWith<$Res>
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -8246,17 +8241,17 @@ abstract class _$QuestionnaireCopyWith<$Res>
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
-      List<ContactDetail?>? contact,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      List<ContactDetail>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<Coding?>? code,
-      List<String?>? subjectType,
+      List<Coding>? code,
+      List<String>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element?>? subjectTypeElement,
-      List<QuestionnaireItem?>? item});
+          List<Element>? subjectTypeElement,
+      List<QuestionnaireItem>? item});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -8375,19 +8370,19 @@ class __$QuestionnaireCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as String?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -8442,25 +8437,24 @@ class __$QuestionnaireCopyWithImpl<$Res>
           : effectivePeriod as Period?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+          : jurisdiction as List<CodeableConcept>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       copyright: copyright == freezed ? _value.copyright : copyright as String?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element?,
-      code: code == freezed ? _value.code : code as List<Coding?>?,
+      code: code == freezed ? _value.code : code as List<Coding>?,
       subjectType: subjectType == freezed
           ? _value.subjectType
-          : subjectType as List<String?>?,
+          : subjectType as List<String>?,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as List<Element?>?,
-      item: item == freezed ? _value.item : item as List<QuestionnaireItem?>?,
+          : subjectTypeElement as List<Element>?,
+      item: item == freezed ? _value.item : item as List<QuestionnaireItem>?,
     ));
   }
 }
@@ -8559,19 +8553,19 @@ class _$_Questionnaire extends _Questionnaire {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -8630,25 +8624,25 @@ class _$_Questionnaire extends _Questionnaire {
   @override
   final Period? effectivePeriod;
   @override
-  final List<UsageContext?>? useContext;
+  final List<UsageContext>? useContext;
   @override
-  final List<CodeableConcept?>? jurisdiction;
+  final List<CodeableConcept>? jurisdiction;
   @override
-  final List<ContactDetail?>? contact;
+  final List<ContactDetail>? contact;
   @override
   final String? copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final List<Coding?>? code;
+  final List<Coding>? code;
   @override
-  final List<String?>? subjectType;
+  final List<String>? subjectType;
   @override
   @JsonKey(name: '_subjectType')
-  final List<Element?>? subjectTypeElement;
+  final List<Element>? subjectTypeElement;
   @override
-  final List<QuestionnaireItem?>? item;
+  final List<QuestionnaireItem>? item;
 
   @override
   String toString() {
@@ -8825,14 +8819,14 @@ abstract class _Questionnaire extends Questionnaire {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -8867,17 +8861,17 @@ abstract class _Questionnaire extends Questionnaire {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
-      List<ContactDetail?>? contact,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      List<ContactDetail>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<Coding?>? code,
-      List<String?>? subjectType,
+      List<Coding>? code,
+      List<String>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element?>? subjectTypeElement,
-      List<QuestionnaireItem?>? item}) = _$_Questionnaire;
+          List<Element>? subjectTypeElement,
+      List<QuestionnaireItem>? item}) = _$_Questionnaire;
 
   factory _Questionnaire.fromJson(Map<String, dynamic> json) =
       _$_Questionnaire.fromJson;
@@ -8902,19 +8896,19 @@ abstract class _Questionnaire extends Questionnaire {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   String? get version;
   @override
@@ -8973,25 +8967,25 @@ abstract class _Questionnaire extends Questionnaire {
   @override
   Period? get effectivePeriod;
   @override
-  List<UsageContext?>? get useContext;
+  List<UsageContext>? get useContext;
   @override
-  List<CodeableConcept?>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction;
   @override
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   @override
   String? get copyright;
   @override
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
-  List<Coding?>? get code;
+  List<Coding>? get code;
   @override
-  List<String?>? get subjectType;
+  List<String>? get subjectType;
   @override
   @JsonKey(name: '_subjectType')
-  List<Element?>? get subjectTypeElement;
+  List<Element>? get subjectTypeElement;
   @override
-  List<QuestionnaireItem?>? get item;
+  List<QuestionnaireItem>? get item;
   @override
   @JsonKey(ignore: true)
   _$QuestionnaireCopyWith<_Questionnaire> get copyWith;
@@ -9010,15 +9004,15 @@ class _$QuestionnaireItemTearOff {
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? definition,
       @JsonKey(name: '_definition') Element? definitionElement,
-      List<Coding?>? code,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<Coding>? code,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? prefix,
       @JsonKey(name: '_prefix') Element? prefixElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
       QuestionnaireItemType? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<QuestionnaireEnableWhen?>? enableWhen,
+      List<QuestionnaireEnableWhen>? enableWhen,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
       Boolean? repeats,
@@ -9028,7 +9022,7 @@ class _$QuestionnaireItemTearOff {
       Decimal? maxLength,
       @JsonKey(name: '_maxLength') Element? maxLengthElement,
       Reference? options,
-      List<QuestionnaireOption?>? option,
+      List<QuestionnaireOption>? option,
       Boolean? initialBoolean,
       @JsonKey(name: '_initialBoolean') Element? initialBooleanElement,
       Decimal? initialDecimal,
@@ -9049,7 +9043,7 @@ class _$QuestionnaireItemTearOff {
       Coding? initialCoding,
       Quantity? initialQuantity,
       Reference? initialReference,
-      List<QuestionnaireItem?>? item}) {
+      List<QuestionnaireItem>? item}) {
     return _QuestionnaireItem(
       linkId: linkId,
       linkIdElement: linkIdElement,
@@ -9114,9 +9108,9 @@ mixin _$QuestionnaireItem {
   String? get definition;
   @JsonKey(name: '_definition')
   Element? get definitionElement;
-  List<Coding?>? get code;
+  List<Coding>? get code;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   String? get prefix;
   @JsonKey(name: '_prefix')
   Element? get prefixElement;
@@ -9126,7 +9120,7 @@ mixin _$QuestionnaireItem {
   QuestionnaireItemType? get type;
   @JsonKey(name: '_type')
   Element? get typeElement;
-  List<QuestionnaireEnableWhen?>? get enableWhen;
+  List<QuestionnaireEnableWhen>? get enableWhen;
   @JsonKey(name: 'required')
   Boolean? get required_;
   @JsonKey(name: '_required')
@@ -9141,7 +9135,7 @@ mixin _$QuestionnaireItem {
   @JsonKey(name: '_maxLength')
   Element? get maxLengthElement;
   Reference? get options;
-  List<QuestionnaireOption?>? get option;
+  List<QuestionnaireOption>? get option;
   Boolean? get initialBoolean;
   @JsonKey(name: '_initialBoolean')
   Element? get initialBooleanElement;
@@ -9170,7 +9164,7 @@ mixin _$QuestionnaireItem {
   Coding? get initialCoding;
   Quantity? get initialQuantity;
   Reference? get initialReference;
-  List<QuestionnaireItem?>? get item;
+  List<QuestionnaireItem>? get item;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -9187,15 +9181,15 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? definition,
       @JsonKey(name: '_definition') Element? definitionElement,
-      List<Coding?>? code,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<Coding>? code,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? prefix,
       @JsonKey(name: '_prefix') Element? prefixElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
       QuestionnaireItemType? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<QuestionnaireEnableWhen?>? enableWhen,
+      List<QuestionnaireEnableWhen>? enableWhen,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
       Boolean? repeats,
@@ -9205,7 +9199,7 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       Decimal? maxLength,
       @JsonKey(name: '_maxLength') Element? maxLengthElement,
       Reference? options,
-      List<QuestionnaireOption?>? option,
+      List<QuestionnaireOption>? option,
       Boolean? initialBoolean,
       @JsonKey(name: '_initialBoolean') Element? initialBooleanElement,
       Decimal? initialDecimal,
@@ -9226,7 +9220,7 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       Coding? initialCoding,
       Quantity? initialQuantity,
       Reference? initialReference,
-      List<QuestionnaireItem?>? item});
+      List<QuestionnaireItem>? item});
 
   $ElementCopyWith<$Res>? get linkIdElement;
   $ElementCopyWith<$Res>? get definitionElement;
@@ -9318,10 +9312,10 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
           : definitionElement as Element?,
-      code: code == freezed ? _value.code : code as List<Coding?>?,
+      code: code == freezed ? _value.code : code as List<Coding>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       prefix: prefix == freezed ? _value.prefix : prefix as String?,
       prefixElement: prefixElement == freezed
           ? _value.prefixElement
@@ -9334,7 +9328,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
       enableWhen: enableWhen == freezed
           ? _value.enableWhen
-          : enableWhen as List<QuestionnaireEnableWhen?>?,
+          : enableWhen as List<QuestionnaireEnableWhen>?,
       required_:
           required_ == freezed ? _value.required_ : required_ as Boolean?,
       requiredElement: requiredElement == freezed
@@ -9356,7 +9350,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
       options: options == freezed ? _value.options : options as Reference?,
       option: option == freezed
           ? _value.option
-          : option as List<QuestionnaireOption?>?,
+          : option as List<QuestionnaireOption>?,
       initialBoolean: initialBoolean == freezed
           ? _value.initialBoolean
           : initialBoolean as Boolean?,
@@ -9414,7 +9408,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
       initialReference: initialReference == freezed
           ? _value.initialReference
           : initialReference as Reference?,
-      item: item == freezed ? _value.item : item as List<QuestionnaireItem?>?,
+      item: item == freezed ? _value.item : item as List<QuestionnaireItem>?,
     ));
   }
 
@@ -9673,15 +9667,15 @@ abstract class _$QuestionnaireItemCopyWith<$Res>
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? definition,
       @JsonKey(name: '_definition') Element? definitionElement,
-      List<Coding?>? code,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<Coding>? code,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? prefix,
       @JsonKey(name: '_prefix') Element? prefixElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
       QuestionnaireItemType? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<QuestionnaireEnableWhen?>? enableWhen,
+      List<QuestionnaireEnableWhen>? enableWhen,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
       Boolean? repeats,
@@ -9691,7 +9685,7 @@ abstract class _$QuestionnaireItemCopyWith<$Res>
       Decimal? maxLength,
       @JsonKey(name: '_maxLength') Element? maxLengthElement,
       Reference? options,
-      List<QuestionnaireOption?>? option,
+      List<QuestionnaireOption>? option,
       Boolean? initialBoolean,
       @JsonKey(name: '_initialBoolean') Element? initialBooleanElement,
       Decimal? initialDecimal,
@@ -9712,7 +9706,7 @@ abstract class _$QuestionnaireItemCopyWith<$Res>
       Coding? initialCoding,
       Quantity? initialQuantity,
       Reference? initialReference,
-      List<QuestionnaireItem?>? item});
+      List<QuestionnaireItem>? item});
 
   @override
   $ElementCopyWith<$Res>? get linkIdElement;
@@ -9828,10 +9822,10 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
       definitionElement: definitionElement == freezed
           ? _value.definitionElement
           : definitionElement as Element?,
-      code: code == freezed ? _value.code : code as List<Coding?>?,
+      code: code == freezed ? _value.code : code as List<Coding>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       prefix: prefix == freezed ? _value.prefix : prefix as String?,
       prefixElement: prefixElement == freezed
           ? _value.prefixElement
@@ -9844,7 +9838,7 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
       enableWhen: enableWhen == freezed
           ? _value.enableWhen
-          : enableWhen as List<QuestionnaireEnableWhen?>?,
+          : enableWhen as List<QuestionnaireEnableWhen>?,
       required_:
           required_ == freezed ? _value.required_ : required_ as Boolean?,
       requiredElement: requiredElement == freezed
@@ -9866,7 +9860,7 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
       options: options == freezed ? _value.options : options as Reference?,
       option: option == freezed
           ? _value.option
-          : option as List<QuestionnaireOption?>?,
+          : option as List<QuestionnaireOption>?,
       initialBoolean: initialBoolean == freezed
           ? _value.initialBoolean
           : initialBoolean as Boolean?,
@@ -9924,7 +9918,7 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
       initialReference: initialReference == freezed
           ? _value.initialReference
           : initialReference as Reference?,
-      item: item == freezed ? _value.item : item as List<QuestionnaireItem?>?,
+      item: item == freezed ? _value.item : item as List<QuestionnaireItem>?,
     ));
   }
 }
@@ -9994,10 +9988,10 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   @JsonKey(name: '_definition')
   final Element? definitionElement;
   @override
-  final List<Coding?>? code;
+  final List<Coding>? code;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final String? prefix;
   @override
@@ -10014,7 +10008,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   @JsonKey(name: '_type')
   final Element? typeElement;
   @override
-  final List<QuestionnaireEnableWhen?>? enableWhen;
+  final List<QuestionnaireEnableWhen>? enableWhen;
   @override
   @JsonKey(name: 'required')
   final Boolean? required_;
@@ -10039,7 +10033,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   @override
   final Reference? options;
   @override
-  final List<QuestionnaireOption?>? option;
+  final List<QuestionnaireOption>? option;
   @override
   final Boolean? initialBoolean;
   @override
@@ -10089,7 +10083,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   @override
   final Reference? initialReference;
   @override
-  final List<QuestionnaireItem?>? item;
+  final List<QuestionnaireItem>? item;
 
   @override
   String toString() {
@@ -10255,15 +10249,15 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? definition,
       @JsonKey(name: '_definition') Element? definitionElement,
-      List<Coding?>? code,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      List<Coding>? code,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? prefix,
       @JsonKey(name: '_prefix') Element? prefixElement,
       String? text,
       @JsonKey(name: '_text') Element? textElement,
       QuestionnaireItemType? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<QuestionnaireEnableWhen?>? enableWhen,
+      List<QuestionnaireEnableWhen>? enableWhen,
       @JsonKey(name: 'required') Boolean? required_,
       @JsonKey(name: '_required') Element? requiredElement,
       Boolean? repeats,
@@ -10273,7 +10267,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
       Decimal? maxLength,
       @JsonKey(name: '_maxLength') Element? maxLengthElement,
       Reference? options,
-      List<QuestionnaireOption?>? option,
+      List<QuestionnaireOption>? option,
       Boolean? initialBoolean,
       @JsonKey(name: '_initialBoolean') Element? initialBooleanElement,
       Decimal? initialDecimal,
@@ -10294,7 +10288,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
       Coding? initialCoding,
       Quantity? initialQuantity,
       Reference? initialReference,
-      List<QuestionnaireItem?>? item}) = _$_QuestionnaireItem;
+      List<QuestionnaireItem>? item}) = _$_QuestionnaireItem;
 
   factory _QuestionnaireItem.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireItem.fromJson;
@@ -10310,10 +10304,10 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   @JsonKey(name: '_definition')
   Element? get definitionElement;
   @override
-  List<Coding?>? get code;
+  List<Coding>? get code;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   String? get prefix;
   @override
@@ -10330,7 +10324,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
-  List<QuestionnaireEnableWhen?>? get enableWhen;
+  List<QuestionnaireEnableWhen>? get enableWhen;
   @override
   @JsonKey(name: 'required')
   Boolean? get required_;
@@ -10355,7 +10349,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   @override
   Reference? get options;
   @override
-  List<QuestionnaireOption?>? get option;
+  List<QuestionnaireOption>? get option;
   @override
   Boolean? get initialBoolean;
   @override
@@ -10405,7 +10399,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   @override
   Reference? get initialReference;
   @override
-  List<QuestionnaireItem?>? get item;
+  List<QuestionnaireItem>? get item;
   @override
   @JsonKey(ignore: true)
   _$QuestionnaireItemCopyWith<_QuestionnaireItem> get copyWith;
@@ -11738,14 +11732,14 @@ class _$ServiceDefinitionTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -11783,17 +11777,17 @@ class _$ServiceDefinitionTearOff {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
-      List<CodeableConcept?>? topic,
-      List<Contributor?>? contributor,
-      List<ContactDetail?>? contact,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      List<CodeableConcept>? topic,
+      List<Contributor>? contributor,
+      List<ContactDetail>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<RelatedArtifact?>? relatedArtifact,
-      List<TriggerDefinition?>? trigger,
-      List<DataRequirement?>? dataRequirement,
+      List<RelatedArtifact>? relatedArtifact,
+      List<TriggerDefinition>? trigger,
+      List<DataRequirement>? dataRequirement,
       Reference? operationDefinition}) {
     return _ServiceDefinition(
       resourceType: resourceType,
@@ -11870,14 +11864,14 @@ mixin _$ServiceDefinition {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   String? get version;
   @JsonKey(name: '_version')
   Element? get versionElement;
@@ -11915,17 +11909,17 @@ mixin _$ServiceDefinition {
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   Period? get effectivePeriod;
-  List<UsageContext?>? get useContext;
-  List<CodeableConcept?>? get jurisdiction;
-  List<CodeableConcept?>? get topic;
-  List<Contributor?>? get contributor;
-  List<ContactDetail?>? get contact;
+  List<UsageContext>? get useContext;
+  List<CodeableConcept>? get jurisdiction;
+  List<CodeableConcept>? get topic;
+  List<Contributor>? get contributor;
+  List<ContactDetail>? get contact;
   String? get copyright;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
-  List<RelatedArtifact?>? get relatedArtifact;
-  List<TriggerDefinition?>? get trigger;
-  List<DataRequirement?>? get dataRequirement;
+  List<RelatedArtifact>? get relatedArtifact;
+  List<TriggerDefinition>? get trigger;
+  List<DataRequirement>? get dataRequirement;
   Reference? get operationDefinition;
 
   Map<String, dynamic> toJson();
@@ -11950,14 +11944,14 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -11995,17 +11989,17 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
-      List<CodeableConcept?>? topic,
-      List<Contributor?>? contributor,
-      List<ContactDetail?>? contact,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      List<CodeableConcept>? topic,
+      List<Contributor>? contributor,
+      List<ContactDetail>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<RelatedArtifact?>? relatedArtifact,
-      List<TriggerDefinition?>? trigger,
-      List<DataRequirement?>? dataRequirement,
+      List<RelatedArtifact>? relatedArtifact,
+      List<TriggerDefinition>? trigger,
+      List<DataRequirement>? dataRequirement,
       Reference? operationDefinition});
 
   $MetaCopyWith<$Res>? get meta;
@@ -12111,19 +12105,19 @@ class _$ServiceDefinitionCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as String?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -12183,30 +12177,29 @@ class _$ServiceDefinitionCopyWithImpl<$Res>
           : effectivePeriod as Period?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
-      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>?,
       contributor: contributor == freezed
           ? _value.contributor
-          : contributor as List<Contributor?>?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+          : contributor as List<Contributor>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       copyright: copyright == freezed ? _value.copyright : copyright as String?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact?>?,
+          : relatedArtifact as List<RelatedArtifact>?,
       trigger: trigger == freezed
           ? _value.trigger
-          : trigger as List<TriggerDefinition?>?,
+          : trigger as List<TriggerDefinition>?,
       dataRequirement: dataRequirement == freezed
           ? _value.dataRequirement
-          : dataRequirement as List<DataRequirement?>?,
+          : dataRequirement as List<DataRequirement>?,
       operationDefinition: operationDefinition == freezed
           ? _value.operationDefinition
           : operationDefinition as Reference?,
@@ -12453,14 +12446,14 @@ abstract class _$ServiceDefinitionCopyWith<$Res>
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -12498,17 +12491,17 @@ abstract class _$ServiceDefinitionCopyWith<$Res>
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
-      List<CodeableConcept?>? topic,
-      List<Contributor?>? contributor,
-      List<ContactDetail?>? contact,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      List<CodeableConcept>? topic,
+      List<Contributor>? contributor,
+      List<ContactDetail>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<RelatedArtifact?>? relatedArtifact,
-      List<TriggerDefinition?>? trigger,
-      List<DataRequirement?>? dataRequirement,
+      List<RelatedArtifact>? relatedArtifact,
+      List<TriggerDefinition>? trigger,
+      List<DataRequirement>? dataRequirement,
       Reference? operationDefinition});
 
   @override
@@ -12636,19 +12629,19 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as String?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -12708,30 +12701,29 @@ class __$ServiceDefinitionCopyWithImpl<$Res>
           : effectivePeriod as Period?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
-      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
+      topic: topic == freezed ? _value.topic : topic as List<CodeableConcept>?,
       contributor: contributor == freezed
           ? _value.contributor
-          : contributor as List<Contributor?>?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+          : contributor as List<Contributor>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       copyright: copyright == freezed ? _value.copyright : copyright as String?,
       copyrightElement: copyrightElement == freezed
           ? _value.copyrightElement
           : copyrightElement as Element?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact?>?,
+          : relatedArtifact as List<RelatedArtifact>?,
       trigger: trigger == freezed
           ? _value.trigger
-          : trigger as List<TriggerDefinition?>?,
+          : trigger as List<TriggerDefinition>?,
       dataRequirement: dataRequirement == freezed
           ? _value.dataRequirement
-          : dataRequirement as List<DataRequirement?>?,
+          : dataRequirement as List<DataRequirement>?,
       operationDefinition: operationDefinition == freezed
           ? _value.operationDefinition
           : operationDefinition as Reference?,
@@ -12837,19 +12829,19 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -12913,26 +12905,26 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   @override
   final Period? effectivePeriod;
   @override
-  final List<UsageContext?>? useContext;
+  final List<UsageContext>? useContext;
   @override
-  final List<CodeableConcept?>? jurisdiction;
+  final List<CodeableConcept>? jurisdiction;
   @override
-  final List<CodeableConcept?>? topic;
+  final List<CodeableConcept>? topic;
   @override
-  final List<Contributor?>? contributor;
+  final List<Contributor>? contributor;
   @override
-  final List<ContactDetail?>? contact;
+  final List<ContactDetail>? contact;
   @override
   final String? copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final List<RelatedArtifact?>? relatedArtifact;
+  final List<RelatedArtifact>? relatedArtifact;
   @override
-  final List<TriggerDefinition?>? trigger;
+  final List<TriggerDefinition>? trigger;
   @override
-  final List<DataRequirement?>? dataRequirement;
+  final List<DataRequirement>? dataRequirement;
   @override
   final Reference? operationDefinition;
 
@@ -13119,14 +13111,14 @@ abstract class _ServiceDefinition extends ServiceDefinition {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -13164,17 +13156,17 @@ abstract class _ServiceDefinition extends ServiceDefinition {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
-      List<CodeableConcept?>? topic,
-      List<Contributor?>? contributor,
-      List<ContactDetail?>? contact,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
+      List<CodeableConcept>? topic,
+      List<Contributor>? contributor,
+      List<ContactDetail>? contact,
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      List<RelatedArtifact?>? relatedArtifact,
-      List<TriggerDefinition?>? trigger,
-      List<DataRequirement?>? dataRequirement,
+      List<RelatedArtifact>? relatedArtifact,
+      List<TriggerDefinition>? trigger,
+      List<DataRequirement>? dataRequirement,
       Reference? operationDefinition}) = _$_ServiceDefinition;
 
   factory _ServiceDefinition.fromJson(Map<String, dynamic> json) =
@@ -13200,19 +13192,19 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   String? get version;
   @override
@@ -13276,26 +13268,26 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   @override
   Period? get effectivePeriod;
   @override
-  List<UsageContext?>? get useContext;
+  List<UsageContext>? get useContext;
   @override
-  List<CodeableConcept?>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction;
   @override
-  List<CodeableConcept?>? get topic;
+  List<CodeableConcept>? get topic;
   @override
-  List<Contributor?>? get contributor;
+  List<Contributor>? get contributor;
   @override
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   @override
   String? get copyright;
   @override
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
-  List<RelatedArtifact?>? get relatedArtifact;
+  List<RelatedArtifact>? get relatedArtifact;
   @override
-  List<TriggerDefinition?>? get trigger;
+  List<TriggerDefinition>? get trigger;
   @override
-  List<DataRequirement?>? get dataRequirement;
+  List<DataRequirement>? get dataRequirement;
   @override
   Reference? get operationDefinition;
   @override

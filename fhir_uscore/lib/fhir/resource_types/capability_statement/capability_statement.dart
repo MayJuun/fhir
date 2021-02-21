@@ -26,8 +26,8 @@ abstract class CapabilityStatement
     Narrative? text,
     FhirUri? implicitRules,
     Code? language,
-    List<Resource?>? contained,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     String? version,
     String? name,
@@ -37,26 +37,26 @@ abstract class CapabilityStatement
     Boolean? experimental,
     FhirDateTime? date,
     String? publisher,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     Markdown? copyright,
     @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
         CapabilityStatementKind? kind,
-    List<Canonical?>? instantiates,
-    List<Canonical?>? imports,
+    List<Canonical>? instantiates,
+    List<Canonical>? imports,
     CapabilityStatementSoftware? software,
     CapabilityStatementImplementation? implementation,
     @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
         CapabilityStatementFhirVersion? fhirVersion,
-    List<Code?>? format,
-    List<Code?>? patchFormat,
-    List<Canonical?>? implementationGuide,
-    List<CapabilityStatementRest?>? rest,
-    List<CapabilityStatementMessaging?>? messaging,
-    List<CapabilityStatementDocument?>? document,
+    List<Code>? format,
+    List<Code>? patchFormat,
+    List<Canonical>? implementationGuide,
+    List<CapabilityStatementRest>? rest,
+    List<CapabilityStatementMessaging>? messaging,
+    List<CapabilityStatementDocument>? document,
   }) = _CapabilityStatement;
 
   /// Produces a Yaml formatted String version of the object
@@ -148,11 +148,11 @@ abstract class CapabilityStatementRest implements _$CapabilityStatementRest {
         CapabilityStatementRestMode? mode,
     Markdown? documentation,
     CapabilityStatementSecurity? security,
-    List<CapabilityStatementResource?>? resource,
-    List<CapabilityStatementInteraction1?>? interaction,
-    List<CapabilityStatementSearchParam?>? searchParam,
-    List<CapabilityStatementOperation?>? operation,
-    List<Canonical?>? compartment,
+    List<CapabilityStatementResource>? resource,
+    List<CapabilityStatementInteraction1>? interaction,
+    List<CapabilityStatementSearchParam>? searchParam,
+    List<CapabilityStatementOperation>? operation,
+    List<Canonical>? compartment,
   }) = _CapabilityStatementRest;
 
   /// Produces a Yaml formatted String version of the object
@@ -180,7 +180,7 @@ abstract class CapabilityStatementSecurity
   factory CapabilityStatementSecurity({
     String? id,
     Boolean? cors,
-    List<CodeableConcept?>? service,
+    List<CodeableConcept>? service,
     Markdown? description,
   }) = _CapabilityStatementSecurity;
 
@@ -211,9 +211,9 @@ abstract class CapabilityStatementResource
     String? id,
     Code? type,
     Canonical? profile,
-    List<Canonical?>? supportedProfile,
+    List<Canonical>? supportedProfile,
     Markdown? documentation,
-    List<CapabilityStatementInteraction?>? interaction,
+    List<CapabilityStatementInteraction>? interaction,
     @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
         CapabilityStatementResourceVersioning? versioning,
     Boolean? readHistory,
@@ -224,11 +224,11 @@ abstract class CapabilityStatementResource
     Boolean? conditionalUpdate,
     @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
         CapabilityStatementResourceConditionalDelete? conditionalDelete,
-    List<CapabilityStatementResourceReferencePolicy?>? referencePolicy,
-    List<String?>? searchInclude,
-    List<String?>? searchRevInclude,
-    List<CapabilityStatementSearchParam?>? searchParam,
-    List<CapabilityStatementOperation?>? operation,
+    List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
+    List<String>? searchInclude,
+    List<String>? searchRevInclude,
+    List<CapabilityStatementSearchParam>? searchParam,
+    List<CapabilityStatementOperation>? operation,
   }) = _CapabilityStatementResource;
 
   /// Produces a Yaml formatted String version of the object
@@ -288,8 +288,8 @@ abstract class CapabilityStatementSearchParam
 
   factory CapabilityStatementSearchParam({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? name,
     Canonical? definition,
     @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
@@ -386,10 +386,10 @@ abstract class CapabilityStatementMessaging
 
   factory CapabilityStatementMessaging({
     String? id,
-    List<CapabilityStatementEndpoint?>? endpoint,
+    List<CapabilityStatementEndpoint>? endpoint,
     UnsignedInt? reliableCache,
     Markdown? documentation,
-    List<CapabilityStatementSupportedMessage?>? supportedMessage,
+    List<CapabilityStatementSupportedMessage>? supportedMessage,
   }) = _CapabilityStatementMessaging;
 
   /// Produces a Yaml formatted String version of the object

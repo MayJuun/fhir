@@ -23,12 +23,12 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
     FhirUri? implicitRules,
     Code? language,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
         required ProcessRequestAction action,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     Coding? ruleset,
     Coding? originalRuleset,
     FhirDateTime? created,
@@ -39,9 +39,9 @@ abstract class ProcessRequest with Resource implements _$ProcessRequest {
     Reference? response,
     Boolean? nullify,
     String? reference,
-    List<ProcessRequestItem?>? item,
-    List<String?>? include,
-    List<String?>? exclude,
+    List<ProcessRequestItem>? item,
+    List<String>? include,
+    List<String>? exclude,
     Period? period,
   }) = _ProcessRequest;
 
@@ -67,8 +67,8 @@ abstract class ProcessRequestItem with _$ProcessRequestItem {
   ProcessRequestItem._();
   factory ProcessRequestItem({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Integer sequenceLinkId,
   }) = _ProcessRequestItem;
 
@@ -101,10 +101,10 @@ abstract class ProcessResponse with Resource implements _$ProcessResponse {
     FhirUri? implicitRules,
     Code? language,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     Reference? request,
     Coding? outcome,
     String? disposition,
@@ -115,8 +115,8 @@ abstract class ProcessResponse with Resource implements _$ProcessResponse {
     Reference? requestProvider,
     Reference? requestOrganization,
     Coding? form,
-    List<ProcessResponseNotes?>? notes,
-    List<Coding?>? error,
+    List<ProcessResponseNotes>? notes,
+    List<Coding>? error,
   }) = _ProcessResponse;
 
   /// Produces a Yaml formatted String version of the object
@@ -141,8 +141,8 @@ abstract class ProcessResponseNotes with _$ProcessResponseNotes {
   ProcessResponseNotes._();
   factory ProcessResponseNotes({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Coding? type,
     String? text,
   }) = _ProcessResponseNotes;
@@ -178,9 +178,9 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Reference? patient,
     Reference? source,
     FhirDateTime? date,
@@ -190,7 +190,7 @@ abstract class SupplyRequest with Resource implements _$SupplyRequest {
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? kind,
     Reference? orderedItem,
-    List<Reference?>? supplier,
+    List<Reference>? supplier,
     CodeableConcept? reasonCodeableConcept,
     Reference? reasonReference,
     SupplyRequestWhen? when,
@@ -218,8 +218,8 @@ abstract class SupplyRequestWhen with _$SupplyRequestWhen {
   SupplyRequestWhen._();
   factory SupplyRequestWhen({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
     Timing? schedule,
   }) = _SupplyRequestWhen;
@@ -255,9 +255,9 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
         SupplyDeliveryStatus? status,
@@ -270,7 +270,7 @@ abstract class SupplyDelivery with Resource implements _$SupplyDelivery {
     Period? whenPrepared,
     FhirDateTime? time,
     Reference? destination,
-    List<Reference?>? receiver,
+    List<Reference>? receiver,
   }) = _SupplyDelivery;
 
   /// Produces a Yaml formatted String version of the object

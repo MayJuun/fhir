@@ -19,7 +19,7 @@ class _$ContactDetailTearOff {
   _ContactDetail call(
       {String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactPoint?>? telecom}) {
+      List<ContactPoint>? telecom}) {
     return _ContactDetail(
       name: name,
       nameElement: nameElement,
@@ -40,7 +40,7 @@ mixin _$ContactDetail {
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
-  List<ContactPoint?>? get telecom;
+  List<ContactPoint>? get telecom;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -55,7 +55,7 @@ abstract class $ContactDetailCopyWith<$Res> {
   $Res call(
       {String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactPoint?>? telecom});
+      List<ContactPoint>? telecom});
 
   $ElementCopyWith<$Res>? get nameElement;
 }
@@ -80,7 +80,7 @@ class _$ContactDetailCopyWithImpl<$Res>
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
     ));
   }
 
@@ -106,7 +106,7 @@ abstract class _$ContactDetailCopyWith<$Res>
   $Res call(
       {String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactPoint?>? telecom});
+      List<ContactPoint>? telecom});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -134,7 +134,7 @@ class __$ContactDetailCopyWithImpl<$Res>
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
     ));
   }
 }
@@ -156,7 +156,7 @@ class _$_ContactDetail extends _ContactDetail {
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
-  final List<ContactPoint?>? telecom;
+  final List<ContactPoint>? telecom;
 
   @override
   String toString() {
@@ -199,7 +199,7 @@ abstract class _ContactDetail extends ContactDetail {
   factory _ContactDetail(
       {String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactPoint?>? telecom}) = _$_ContactDetail;
+      List<ContactPoint>? telecom}) = _$_ContactDetail;
 
   factory _ContactDetail.fromJson(Map<String, dynamic> json) =
       _$_ContactDetail.fromJson;
@@ -210,7 +210,7 @@ abstract class _ContactDetail extends ContactDetail {
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
-  List<ContactPoint?>? get telecom;
+  List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
   _$ContactDetailCopyWith<_ContactDetail> get copyWith;
@@ -229,7 +229,7 @@ class _$ContributorTearOff {
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactDetail?>? contact}) {
+      List<ContactDetail>? contact}) {
     return _Contributor(
       type: type,
       typeElement: typeElement,
@@ -255,7 +255,7 @@ mixin _$Contributor {
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -272,7 +272,7 @@ abstract class $ContributorCopyWith<$Res> {
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactDetail?>? contact});
+      List<ContactDetail>? contact});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get nameElement;
@@ -301,9 +301,8 @@ class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
     ));
   }
 
@@ -342,7 +341,7 @@ abstract class _$ContributorCopyWith<$Res>
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactDetail?>? contact});
+      List<ContactDetail>? contact});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -375,9 +374,8 @@ class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
     ));
   }
 }
@@ -408,7 +406,7 @@ class _$_Contributor extends _Contributor {
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
-  final List<ContactDetail?>? contact;
+  final List<ContactDetail>? contact;
 
   @override
   String toString() {
@@ -460,7 +458,7 @@ abstract class _Contributor extends Contributor {
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactDetail?>? contact}) = _$_Contributor;
+      List<ContactDetail>? contact}) = _$_Contributor;
 
   factory _Contributor.fromJson(Map<String, dynamic> json) =
       _$_Contributor.fromJson;
@@ -476,7 +474,7 @@ abstract class _Contributor extends Contributor {
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   @override
   @JsonKey(ignore: true)
   _$ContributorCopyWith<_Contributor> get copyWith;
@@ -1193,12 +1191,12 @@ class _$DataRequirementTearOff {
   _DataRequirement call(
       {String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<String?>? profile,
-      @JsonKey(name: '_profile') List<Element?>? profileElement,
-      List<String?>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
-      List<DataRequirementCodeFilter?>? codeFilter,
-      List<DataRequirementDateFilter?>? dateFilter}) {
+      List<String>? profile,
+      @JsonKey(name: '_profile') List<Element>? profileElement,
+      List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
+      List<DataRequirementCodeFilter>? codeFilter,
+      List<DataRequirementDateFilter>? dateFilter}) {
     return _DataRequirement(
       type: type,
       typeElement: typeElement,
@@ -1224,14 +1222,14 @@ mixin _$DataRequirement {
   String? get type;
   @JsonKey(name: '_type')
   Element? get typeElement;
-  List<String?>? get profile;
+  List<String>? get profile;
   @JsonKey(name: '_profile')
-  List<Element?>? get profileElement;
-  List<String?>? get mustSupport;
+  List<Element>? get profileElement;
+  List<String>? get mustSupport;
   @JsonKey(name: '_mustSupport')
-  List<Element?>? get mustSupportElement;
-  List<DataRequirementCodeFilter?>? get codeFilter;
-  List<DataRequirementDateFilter?>? get dateFilter;
+  List<Element>? get mustSupportElement;
+  List<DataRequirementCodeFilter>? get codeFilter;
+  List<DataRequirementDateFilter>? get dateFilter;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1246,12 +1244,12 @@ abstract class $DataRequirementCopyWith<$Res> {
   $Res call(
       {String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<String?>? profile,
-      @JsonKey(name: '_profile') List<Element?>? profileElement,
-      List<String?>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
-      List<DataRequirementCodeFilter?>? codeFilter,
-      List<DataRequirementDateFilter?>? dateFilter});
+      List<String>? profile,
+      @JsonKey(name: '_profile') List<Element>? profileElement,
+      List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
+      List<DataRequirementCodeFilter>? codeFilter,
+      List<DataRequirementDateFilter>? dateFilter});
 
   $ElementCopyWith<$Res>? get typeElement;
 }
@@ -1280,22 +1278,22 @@ class _$DataRequirementCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as String?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as List<String?>?,
+      profile: profile == freezed ? _value.profile : profile as List<String>?,
       profileElement: profileElement == freezed
           ? _value.profileElement
-          : profileElement as List<Element?>?,
+          : profileElement as List<Element>?,
       mustSupport: mustSupport == freezed
           ? _value.mustSupport
-          : mustSupport as List<String?>?,
+          : mustSupport as List<String>?,
       mustSupportElement: mustSupportElement == freezed
           ? _value.mustSupportElement
-          : mustSupportElement as List<Element?>?,
+          : mustSupportElement as List<Element>?,
       codeFilter: codeFilter == freezed
           ? _value.codeFilter
-          : codeFilter as List<DataRequirementCodeFilter?>?,
+          : codeFilter as List<DataRequirementCodeFilter>?,
       dateFilter: dateFilter == freezed
           ? _value.dateFilter
-          : dateFilter as List<DataRequirementDateFilter?>?,
+          : dateFilter as List<DataRequirementDateFilter>?,
     ));
   }
 
@@ -1321,12 +1319,12 @@ abstract class _$DataRequirementCopyWith<$Res>
   $Res call(
       {String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<String?>? profile,
-      @JsonKey(name: '_profile') List<Element?>? profileElement,
-      List<String?>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
-      List<DataRequirementCodeFilter?>? codeFilter,
-      List<DataRequirementDateFilter?>? dateFilter});
+      List<String>? profile,
+      @JsonKey(name: '_profile') List<Element>? profileElement,
+      List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
+      List<DataRequirementCodeFilter>? codeFilter,
+      List<DataRequirementDateFilter>? dateFilter});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -1358,22 +1356,22 @@ class __$DataRequirementCopyWithImpl<$Res>
       type: type == freezed ? _value.type : type as String?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
-      profile: profile == freezed ? _value.profile : profile as List<String?>?,
+      profile: profile == freezed ? _value.profile : profile as List<String>?,
       profileElement: profileElement == freezed
           ? _value.profileElement
-          : profileElement as List<Element?>?,
+          : profileElement as List<Element>?,
       mustSupport: mustSupport == freezed
           ? _value.mustSupport
-          : mustSupport as List<String?>?,
+          : mustSupport as List<String>?,
       mustSupportElement: mustSupportElement == freezed
           ? _value.mustSupportElement
-          : mustSupportElement as List<Element?>?,
+          : mustSupportElement as List<Element>?,
       codeFilter: codeFilter == freezed
           ? _value.codeFilter
-          : codeFilter as List<DataRequirementCodeFilter?>?,
+          : codeFilter as List<DataRequirementCodeFilter>?,
       dateFilter: dateFilter == freezed
           ? _value.dateFilter
-          : dateFilter as List<DataRequirementDateFilter?>?,
+          : dateFilter as List<DataRequirementDateFilter>?,
     ));
   }
 }
@@ -1402,19 +1400,19 @@ class _$_DataRequirement extends _DataRequirement {
   @JsonKey(name: '_type')
   final Element? typeElement;
   @override
-  final List<String?>? profile;
+  final List<String>? profile;
   @override
   @JsonKey(name: '_profile')
-  final List<Element?>? profileElement;
+  final List<Element>? profileElement;
   @override
-  final List<String?>? mustSupport;
+  final List<String>? mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  final List<Element?>? mustSupportElement;
+  final List<Element>? mustSupportElement;
   @override
-  final List<DataRequirementCodeFilter?>? codeFilter;
+  final List<DataRequirementCodeFilter>? codeFilter;
   @override
-  final List<DataRequirementDateFilter?>? dateFilter;
+  final List<DataRequirementDateFilter>? dateFilter;
 
   @override
   String toString() {
@@ -1478,12 +1476,12 @@ abstract class _DataRequirement extends DataRequirement {
   factory _DataRequirement(
       {String? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<String?>? profile,
-      @JsonKey(name: '_profile') List<Element?>? profileElement,
-      List<String?>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
-      List<DataRequirementCodeFilter?>? codeFilter,
-      List<DataRequirementDateFilter?>? dateFilter}) = _$_DataRequirement;
+      List<String>? profile,
+      @JsonKey(name: '_profile') List<Element>? profileElement,
+      List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
+      List<DataRequirementCodeFilter>? codeFilter,
+      List<DataRequirementDateFilter>? dateFilter}) = _$_DataRequirement;
 
   factory _DataRequirement.fromJson(Map<String, dynamic> json) =
       _$_DataRequirement.fromJson;
@@ -1494,19 +1492,19 @@ abstract class _DataRequirement extends DataRequirement {
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
-  List<String?>? get profile;
+  List<String>? get profile;
   @override
   @JsonKey(name: '_profile')
-  List<Element?>? get profileElement;
+  List<Element>? get profileElement;
   @override
-  List<String?>? get mustSupport;
+  List<String>? get mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  List<Element?>? get mustSupportElement;
+  List<Element>? get mustSupportElement;
   @override
-  List<DataRequirementCodeFilter?>? get codeFilter;
+  List<DataRequirementCodeFilter>? get codeFilter;
   @override
-  List<DataRequirementDateFilter?>? get dateFilter;
+  List<DataRequirementDateFilter>? get dateFilter;
   @override
   @JsonKey(ignore: true)
   _$DataRequirementCopyWith<_DataRequirement> get copyWith;
@@ -1527,10 +1525,10 @@ class _$DataRequirementCodeFilterTearOff {
       String? valueSetString,
       @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
       Reference? valueSetReference,
-      List<Code?>? valueCode,
-      @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
-      List<Coding?>? valueCoding,
-      List<CodeableConcept?>? valueCodeableConcept}) {
+      List<Code>? valueCode,
+      @JsonKey(name: '_valueCode') List<Element>? valueCodeElement,
+      List<Coding>? valueCoding,
+      List<CodeableConcept>? valueCodeableConcept}) {
     return _DataRequirementCodeFilter(
       path: path,
       pathElement: pathElement,
@@ -1561,11 +1559,11 @@ mixin _$DataRequirementCodeFilter {
   @JsonKey(name: '_valueSetString')
   Element? get valueSetStringElement;
   Reference? get valueSetReference;
-  List<Code?>? get valueCode;
+  List<Code>? get valueCode;
   @JsonKey(name: '_valueCode')
-  List<Element?>? get valueCodeElement;
-  List<Coding?>? get valueCoding;
-  List<CodeableConcept?>? get valueCodeableConcept;
+  List<Element>? get valueCodeElement;
+  List<Coding>? get valueCoding;
+  List<CodeableConcept>? get valueCodeableConcept;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1583,10 +1581,10 @@ abstract class $DataRequirementCodeFilterCopyWith<$Res> {
       String? valueSetString,
       @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
       Reference? valueSetReference,
-      List<Code?>? valueCode,
-      @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
-      List<Coding?>? valueCoding,
-      List<CodeableConcept?>? valueCodeableConcept});
+      List<Code>? valueCode,
+      @JsonKey(name: '_valueCode') List<Element>? valueCodeElement,
+      List<Coding>? valueCoding,
+      List<CodeableConcept>? valueCodeableConcept});
 
   $ElementCopyWith<$Res>? get pathElement;
   $ElementCopyWith<$Res>? get valueSetStringElement;
@@ -1628,16 +1626,16 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res>
           ? _value.valueSetReference
           : valueSetReference as Reference?,
       valueCode:
-          valueCode == freezed ? _value.valueCode : valueCode as List<Code?>?,
+          valueCode == freezed ? _value.valueCode : valueCode as List<Code>?,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
-          : valueCodeElement as List<Element?>?,
+          : valueCodeElement as List<Element>?,
       valueCoding: valueCoding == freezed
           ? _value.valueCoding
-          : valueCoding as List<Coding?>?,
+          : valueCoding as List<Coding>?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as List<CodeableConcept?>?,
+          : valueCodeableConcept as List<CodeableConcept>?,
     ));
   }
 
@@ -1688,10 +1686,10 @@ abstract class _$DataRequirementCodeFilterCopyWith<$Res>
       String? valueSetString,
       @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
       Reference? valueSetReference,
-      List<Code?>? valueCode,
-      @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
-      List<Coding?>? valueCoding,
-      List<CodeableConcept?>? valueCodeableConcept});
+      List<Code>? valueCode,
+      @JsonKey(name: '_valueCode') List<Element>? valueCodeElement,
+      List<Coding>? valueCoding,
+      List<CodeableConcept>? valueCodeableConcept});
 
   @override
   $ElementCopyWith<$Res>? get pathElement;
@@ -1739,16 +1737,16 @@ class __$DataRequirementCodeFilterCopyWithImpl<$Res>
           ? _value.valueSetReference
           : valueSetReference as Reference?,
       valueCode:
-          valueCode == freezed ? _value.valueCode : valueCode as List<Code?>?,
+          valueCode == freezed ? _value.valueCode : valueCode as List<Code>?,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
-          : valueCodeElement as List<Element?>?,
+          : valueCodeElement as List<Element>?,
       valueCoding: valueCoding == freezed
           ? _value.valueCoding
-          : valueCoding as List<Coding?>?,
+          : valueCoding as List<Coding>?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as List<CodeableConcept?>?,
+          : valueCodeableConcept as List<CodeableConcept>?,
     ));
   }
 }
@@ -1785,14 +1783,14 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   @override
   final Reference? valueSetReference;
   @override
-  final List<Code?>? valueCode;
+  final List<Code>? valueCode;
   @override
   @JsonKey(name: '_valueCode')
-  final List<Element?>? valueCodeElement;
+  final List<Element>? valueCodeElement;
   @override
-  final List<Coding?>? valueCoding;
+  final List<Coding>? valueCoding;
   @override
-  final List<CodeableConcept?>? valueCodeableConcept;
+  final List<CodeableConcept>? valueCodeableConcept;
 
   @override
   String toString() {
@@ -1865,10 +1863,10 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
           String? valueSetString,
           @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
           Reference? valueSetReference,
-          List<Code?>? valueCode,
-          @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
-          List<Coding?>? valueCoding,
-          List<CodeableConcept?>? valueCodeableConcept}) =
+          List<Code>? valueCode,
+          @JsonKey(name: '_valueCode') List<Element>? valueCodeElement,
+          List<Coding>? valueCoding,
+          List<CodeableConcept>? valueCodeableConcept}) =
       _$_DataRequirementCodeFilter;
 
   factory _DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =
@@ -1887,14 +1885,14 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   @override
   Reference? get valueSetReference;
   @override
-  List<Code?>? get valueCode;
+  List<Code>? get valueCode;
   @override
   @JsonKey(name: '_valueCode')
-  List<Element?>? get valueCodeElement;
+  List<Element>? get valueCodeElement;
   @override
-  List<Coding?>? get valueCoding;
+  List<Coding>? get valueCoding;
   @override
-  List<CodeableConcept?>? get valueCodeableConcept;
+  List<CodeableConcept>? get valueCodeableConcept;
   @override
   @JsonKey(ignore: true)
   _$DataRequirementCodeFilterCopyWith<_DataRequirementCodeFilter> get copyWith;

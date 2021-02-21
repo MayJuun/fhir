@@ -25,10 +25,10 @@ abstract class PaymentNotice with Resource implements _$PaymentNotice {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     Coding? ruleset,
     Coding? originalRuleset,
     FhirDateTime? created,
@@ -74,10 +74,10 @@ abstract class PaymentReconciliation
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     Reference? request,
     @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
         PaymentReconciliationOutcome? outcome,
@@ -92,10 +92,10 @@ abstract class PaymentReconciliation
     Reference? organization,
     Reference? requestProvider,
     Reference? requestOrganization,
-    List<PaymentReconciliationDetail?>? detail,
+    List<PaymentReconciliationDetail>? detail,
     Coding? form,
     required Quantity total,
-    List<PaymentReconciliationNote?>? note,
+    List<PaymentReconciliationNote>? note,
   }) = _PaymentReconciliation;
 
   /// Produces a Yaml formatted String version of the object
@@ -120,8 +120,8 @@ abstract class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   PaymentReconciliationDetail._();
   factory PaymentReconciliationDetail({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Coding type,
     Reference? request,
     Reference? responce,
@@ -155,8 +155,8 @@ abstract class PaymentReconciliationNote with _$PaymentReconciliationNote {
   PaymentReconciliationNote._();
   factory PaymentReconciliationNote({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Coding? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? text,

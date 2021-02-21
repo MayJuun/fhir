@@ -28,11 +28,11 @@ class _$PaymentNoticeTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -101,11 +101,11 @@ mixin _$PaymentNotice {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  List<Identifier?>? get identifier;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<Identifier>? get identifier;
   Code? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -146,11 +146,11 @@ abstract class $PaymentNoticeCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -243,16 +243,16 @@ class _$PaymentNoticeCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -453,11 +453,11 @@ abstract class _$PaymentNoticeCopyWith<$Res>
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -567,16 +567,16 @@ class __$PaymentNoticeCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -668,14 +668,14 @@ class _$_PaymentNotice extends _PaymentNotice {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   final Code? status;
   @override
@@ -843,11 +843,11 @@ abstract class _PaymentNotice extends PaymentNotice {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -889,14 +889,14 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   Code? get status;
   @override
@@ -954,11 +954,11 @@ class _$PaymentReconciliationTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -981,9 +981,9 @@ class _$PaymentReconciliationTearOff {
           Element? paymentDateElement,
       required Money paymentAmount,
       Identifier? paymentIdentifier,
-      List<PaymentReconciliationDetail?>? detail,
+      List<PaymentReconciliationDetail>? detail,
       CodeableConcept? formCode,
-      List<PaymentReconciliationProcessNote?>? processNote}) {
+      List<PaymentReconciliationProcessNote>? processNote}) {
     return _PaymentReconciliation(
       resourceType: resourceType,
       id: id,
@@ -1040,11 +1040,11 @@ mixin _$PaymentReconciliation {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  List<Identifier?>? get identifier;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<Identifier>? get identifier;
   Code? get status;
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -1067,9 +1067,9 @@ mixin _$PaymentReconciliation {
   Element? get paymentDateElement;
   Money get paymentAmount;
   Identifier? get paymentIdentifier;
-  List<PaymentReconciliationDetail?>? get detail;
+  List<PaymentReconciliationDetail>? get detail;
   CodeableConcept? get formCode;
-  List<PaymentReconciliationProcessNote?>? get processNote;
+  List<PaymentReconciliationProcessNote>? get processNote;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1093,11 +1093,11 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -1120,9 +1120,9 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
           Element? paymentDateElement,
       Money paymentAmount,
       Identifier? paymentIdentifier,
-      List<PaymentReconciliationDetail?>? detail,
+      List<PaymentReconciliationDetail>? detail,
       CodeableConcept? formCode,
-      List<PaymentReconciliationProcessNote?>? processNote});
+      List<PaymentReconciliationProcessNote>? processNote});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -1204,16 +1204,16 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -1253,12 +1253,12 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
           : paymentIdentifier as Identifier?,
       detail: detail == freezed
           ? _value.detail
-          : detail as List<PaymentReconciliationDetail?>?,
+          : detail as List<PaymentReconciliationDetail>?,
       formCode:
           formCode == freezed ? _value.formCode : formCode as CodeableConcept?,
       processNote: processNote == freezed
           ? _value.processNote
-          : processNote as List<PaymentReconciliationProcessNote?>?,
+          : processNote as List<PaymentReconciliationProcessNote>?,
     ));
   }
 
@@ -1454,11 +1454,11 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
@@ -1481,9 +1481,9 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
           Element? paymentDateElement,
       Money paymentAmount,
       Identifier? paymentIdentifier,
-      List<PaymentReconciliationDetail?>? detail,
+      List<PaymentReconciliationDetail>? detail,
       CodeableConcept? formCode,
-      List<PaymentReconciliationProcessNote?>? processNote});
+      List<PaymentReconciliationProcessNote>? processNote});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -1583,16 +1583,16 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
@@ -1632,12 +1632,12 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
           : paymentIdentifier as Identifier?,
       detail: detail == freezed
           ? _value.detail
-          : detail as List<PaymentReconciliationDetail?>?,
+          : detail as List<PaymentReconciliationDetail>?,
       formCode:
           formCode == freezed ? _value.formCode : formCode as CodeableConcept?,
       processNote: processNote == freezed
           ? _value.processNote
-          : processNote as List<PaymentReconciliationProcessNote?>?,
+          : processNote as List<PaymentReconciliationProcessNote>?,
     ));
   }
 }
@@ -1713,14 +1713,14 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   final Code? status;
   @override
@@ -1760,11 +1760,11 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   @override
   final Identifier? paymentIdentifier;
   @override
-  final List<PaymentReconciliationDetail?>? detail;
+  final List<PaymentReconciliationDetail>? detail;
   @override
   final CodeableConcept? formCode;
   @override
-  final List<PaymentReconciliationProcessNote?>? processNote;
+  final List<PaymentReconciliationProcessNote>? processNote;
 
   @override
   String toString() {
@@ -1912,11 +1912,11 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
           @JsonKey(name: '_language')
               Element? languageElement,
           Narrative? text,
-          List<Resource?>? contained,
+          List<Resource>? contained,
           @JsonKey(name: 'extension')
-              List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
-          List<Identifier?>? identifier,
+              List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          List<Identifier>? identifier,
           Code? status,
           @JsonKey(name: '_status')
               Element? statusElement,
@@ -1939,9 +1939,9 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
               Element? paymentDateElement,
           required Money paymentAmount,
           Identifier? paymentIdentifier,
-          List<PaymentReconciliationDetail?>? detail,
+          List<PaymentReconciliationDetail>? detail,
           CodeableConcept? formCode,
-          List<PaymentReconciliationProcessNote?>? processNote}) =
+          List<PaymentReconciliationProcessNote>? processNote}) =
       _$_PaymentReconciliation;
 
   factory _PaymentReconciliation.fromJson(Map<String, dynamic> json) =
@@ -1967,14 +1967,14 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   Code? get status;
   @override
@@ -2014,11 +2014,11 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
   Identifier? get paymentIdentifier;
   @override
-  List<PaymentReconciliationDetail?>? get detail;
+  List<PaymentReconciliationDetail>? get detail;
   @override
   CodeableConcept? get formCode;
   @override
-  List<PaymentReconciliationProcessNote?>? get processNote;
+  List<PaymentReconciliationProcessNote>? get processNote;
   @override
   @JsonKey(ignore: true)
   _$PaymentReconciliationCopyWith<_PaymentReconciliation> get copyWith;
@@ -2035,8 +2035,8 @@ class _$PaymentReconciliationDetailTearOff {
 
   _PaymentReconciliationDetail call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Identifier? predecessor,
       required CodeableConcept type,
@@ -2078,8 +2078,8 @@ const $PaymentReconciliationDetail = _$PaymentReconciliationDetailTearOff();
 mixin _$PaymentReconciliationDetail {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Identifier? get identifier;
   Identifier? get predecessor;
   CodeableConcept get type;
@@ -2107,8 +2107,8 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res> {
       _$PaymentReconciliationDetailCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Identifier? predecessor,
       CodeableConcept type,
@@ -2163,10 +2163,10 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       predecessor: predecessor == freezed
@@ -2305,8 +2305,8 @@ abstract class _$PaymentReconciliationDetailCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Identifier? predecessor,
       CodeableConcept type,
@@ -2375,10 +2375,10 @@ class __$PaymentReconciliationDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       predecessor: predecessor == freezed
@@ -2429,9 +2429,9 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Identifier? identifier;
   @override
@@ -2539,8 +2539,8 @@ abstract class _PaymentReconciliationDetail
   _PaymentReconciliationDetail._() : super._();
   factory _PaymentReconciliationDetail(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Identifier? predecessor,
       required CodeableConcept type,
@@ -2560,9 +2560,9 @@ abstract class _PaymentReconciliationDetail
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Identifier? get identifier;
   @override
@@ -2604,8 +2604,8 @@ class _$PaymentReconciliationProcessNoteTearOff {
   _PaymentReconciliationProcessNote call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
           PaymentReconciliationProcessNoteType? type,
       @JsonKey(name: '_type')
@@ -2637,8 +2637,8 @@ const $PaymentReconciliationProcessNote =
 mixin _$PaymentReconciliationProcessNote {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
   PaymentReconciliationProcessNoteType? get type;
   @JsonKey(name: '_type')
@@ -2662,8 +2662,8 @@ abstract class $PaymentReconciliationProcessNoteCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
           PaymentReconciliationProcessNoteType? type,
       @JsonKey(name: '_type')
@@ -2699,10 +2699,10 @@ class _$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed
           ? _value.type
           : type as PaymentReconciliationProcessNoteType?,
@@ -2748,8 +2748,8 @@ abstract class _$PaymentReconciliationProcessNoteCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
           PaymentReconciliationProcessNoteType? type,
       @JsonKey(name: '_type')
@@ -2791,10 +2791,10 @@ class __$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed
           ? _value.type
           : type as PaymentReconciliationProcessNoteType?,
@@ -2834,9 +2834,9 @@ class _$_PaymentReconciliationProcessNote
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
   final PaymentReconciliationProcessNoteType? type;
@@ -2907,8 +2907,8 @@ abstract class _PaymentReconciliationProcessNote
   factory _PaymentReconciliationProcessNote(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
           PaymentReconciliationProcessNoteType? type,
       @JsonKey(name: '_type')
@@ -2924,9 +2924,9 @@ abstract class _PaymentReconciliationProcessNote
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
   PaymentReconciliationProcessNoteType? get type;

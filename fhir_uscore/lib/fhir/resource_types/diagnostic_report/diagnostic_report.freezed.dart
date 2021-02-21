@@ -31,9 +31,9 @@ class _$DiagnosticReportTearOff {
       FhirDateTime? effectiveDateTime,
       Period? effectivePeriod,
       Instant? issued,
-      List<Reference?>? performer,
-      List<Reference?>? result,
-      List<Attachment?>? presentedForm}) {
+      List<Reference>? performer,
+      List<Reference>? result,
+      List<Attachment>? presentedForm}) {
     return _DiagnosticReport(
       resourceType: resourceType,
       id: id,
@@ -77,9 +77,9 @@ mixin _$DiagnosticReport {
   FhirDateTime? get effectiveDateTime;
   Period? get effectivePeriod;
   Instant? get issued;
-  List<Reference?>? get performer;
-  List<Reference?>? get result;
-  List<Attachment?>? get presentedForm;
+  List<Reference>? get performer;
+  List<Reference>? get result;
+  List<Attachment>? get presentedForm;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -106,9 +106,9 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       FhirDateTime? effectiveDateTime,
       Period? effectivePeriod,
       Instant? issued,
-      List<Reference?>? performer,
-      List<Reference?>? result,
-      List<Attachment?>? presentedForm});
+      List<Reference>? performer,
+      List<Reference>? result,
+      List<Attachment>? presentedForm});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -170,11 +170,11 @@ class _$DiagnosticReportCopyWithImpl<$Res>
       issued: issued == freezed ? _value.issued : issued as Instant?,
       performer: performer == freezed
           ? _value.performer
-          : performer as List<Reference?>?,
-      result: result == freezed ? _value.result : result as List<Reference?>?,
+          : performer as List<Reference>?,
+      result: result == freezed ? _value.result : result as List<Reference>?,
       presentedForm: presentedForm == freezed
           ? _value.presentedForm
-          : presentedForm as List<Attachment?>?,
+          : presentedForm as List<Attachment>?,
     ));
   }
 
@@ -259,9 +259,9 @@ abstract class _$DiagnosticReportCopyWith<$Res>
       FhirDateTime? effectiveDateTime,
       Period? effectivePeriod,
       Instant? issued,
-      List<Reference?>? performer,
-      List<Reference?>? result,
-      List<Attachment?>? presentedForm});
+      List<Reference>? performer,
+      List<Reference>? result,
+      List<Attachment>? presentedForm});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -331,11 +331,11 @@ class __$DiagnosticReportCopyWithImpl<$Res>
       issued: issued == freezed ? _value.issued : issued as Instant?,
       performer: performer == freezed
           ? _value.performer
-          : performer as List<Reference?>?,
-      result: result == freezed ? _value.result : result as List<Reference?>?,
+          : performer as List<Reference>?,
+      result: result == freezed ? _value.result : result as List<Reference>?,
       presentedForm: presentedForm == freezed
           ? _value.presentedForm
-          : presentedForm as List<Attachment?>?,
+          : presentedForm as List<Attachment>?,
     ));
   }
 }
@@ -394,11 +394,11 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   @override
   final Instant? issued;
   @override
-  final List<Reference?>? performer;
+  final List<Reference>? performer;
   @override
-  final List<Reference?>? result;
+  final List<Reference>? result;
   @override
-  final List<Attachment?>? presentedForm;
+  final List<Attachment>? presentedForm;
 
   @override
   String toString() {
@@ -496,9 +496,9 @@ abstract class _DiagnosticReport extends DiagnosticReport {
       FhirDateTime? effectiveDateTime,
       Period? effectivePeriod,
       Instant? issued,
-      List<Reference?>? performer,
-      List<Reference?>? result,
-      List<Attachment?>? presentedForm}) = _$_DiagnosticReport;
+      List<Reference>? performer,
+      List<Reference>? result,
+      List<Attachment>? presentedForm}) = _$_DiagnosticReport;
 
   factory _DiagnosticReport.fromJson(Map<String, dynamic> json) =
       _$_DiagnosticReport.fromJson;
@@ -530,11 +530,11 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   @override
   Instant? get issued;
   @override
-  List<Reference?>? get performer;
+  List<Reference>? get performer;
   @override
-  List<Reference?>? get result;
+  List<Reference>? get result;
   @override
-  List<Attachment?>? get presentedForm;
+  List<Attachment>? get presentedForm;
   @override
   @JsonKey(ignore: true)
   _$DiagnosticReportCopyWith<_DiagnosticReport> get copyWith;

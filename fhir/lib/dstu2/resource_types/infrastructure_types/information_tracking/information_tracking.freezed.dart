@@ -30,11 +30,11 @@ class _$QuestionnaireTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -48,10 +48,10 @@ class _$QuestionnaireTearOff {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactPoint?>? telecom,
-      List<Code?>? subjectType,
+      List<ContactPoint>? telecom,
+      List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element?>? subjectTypeElement,
+          List<Element>? subjectTypeElement,
       required QuestionnaireGroup group}) {
     return _Questionnaire(
       resourceType: resourceType,
@@ -105,11 +105,11 @@ mixin _$Questionnaire {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  List<Identifier?>? get identifier;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<Identifier>? get identifier;
   String? get version;
   @JsonKey(name: '_version')
   Element? get versionElement;
@@ -123,10 +123,10 @@ mixin _$Questionnaire {
   String? get publisher;
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
-  List<ContactPoint?>? get telecom;
-  List<Code?>? get subjectType;
+  List<ContactPoint>? get telecom;
+  List<Code>? get subjectType;
   @JsonKey(name: '_subjectType')
-  List<Element?>? get subjectTypeElement;
+  List<Element>? get subjectTypeElement;
   QuestionnaireGroup get group;
 
   Map<String, dynamic> toJson();
@@ -153,11 +153,11 @@ abstract class $QuestionnaireCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -171,10 +171,10 @@ abstract class $QuestionnaireCopyWith<$Res> {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactPoint?>? telecom,
-      List<Code?>? subjectType,
+      List<ContactPoint>? telecom,
+      List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element?>? subjectTypeElement,
+          List<Element>? subjectTypeElement,
       QuestionnaireGroup group});
 
   $ElementCopyWith<$Res>? get idElement;
@@ -247,16 +247,16 @@ class _$QuestionnaireCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -273,13 +273,13 @@ class _$QuestionnaireCopyWithImpl<$Res>
           ? _value.publisherElement
           : publisherElement as Element?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
       subjectType: subjectType == freezed
           ? _value.subjectType
-          : subjectType as List<Code?>?,
+          : subjectType as List<Code>?,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as List<Element?>?,
+          : subjectTypeElement as List<Element>?,
       group: group == freezed ? _value.group : group as QuestionnaireGroup,
     ));
   }
@@ -412,11 +412,11 @@ abstract class _$QuestionnaireCopyWith<$Res>
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -430,10 +430,10 @@ abstract class _$QuestionnaireCopyWith<$Res>
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactPoint?>? telecom,
-      List<Code?>? subjectType,
+      List<ContactPoint>? telecom,
+      List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element?>? subjectTypeElement,
+          List<Element>? subjectTypeElement,
       QuestionnaireGroup group});
 
   @override
@@ -518,16 +518,16 @@ class __$QuestionnaireCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -544,13 +544,13 @@ class __$QuestionnaireCopyWithImpl<$Res>
           ? _value.publisherElement
           : publisherElement as Element?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
       subjectType: subjectType == freezed
           ? _value.subjectType
-          : subjectType as List<Code?>?,
+          : subjectType as List<Code>?,
       subjectTypeElement: subjectTypeElement == freezed
           ? _value.subjectTypeElement
-          : subjectTypeElement as List<Element?>?,
+          : subjectTypeElement as List<Element>?,
       group: group == freezed ? _value.group : group as QuestionnaireGroup,
     ));
   }
@@ -625,14 +625,14 @@ class _$_Questionnaire extends _Questionnaire {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -655,12 +655,12 @@ class _$_Questionnaire extends _Questionnaire {
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
   @override
-  final List<ContactPoint?>? telecom;
+  final List<ContactPoint>? telecom;
   @override
-  final List<Code?>? subjectType;
+  final List<Code>? subjectType;
   @override
   @JsonKey(name: '_subjectType')
-  final List<Element?>? subjectTypeElement;
+  final List<Element>? subjectTypeElement;
   @override
   final QuestionnaireGroup group;
 
@@ -799,11 +799,11 @@ abstract class _Questionnaire extends Questionnaire {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<Identifier?>? identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -817,10 +817,10 @@ abstract class _Questionnaire extends Questionnaire {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactPoint?>? telecom,
-      List<Code?>? subjectType,
+      List<ContactPoint>? telecom,
+      List<Code>? subjectType,
       @JsonKey(name: '_subjectType')
-          List<Element?>? subjectTypeElement,
+          List<Element>? subjectTypeElement,
       required QuestionnaireGroup group}) = _$_Questionnaire;
 
   factory _Questionnaire.fromJson(Map<String, dynamic> json) =
@@ -849,14 +849,14 @@ abstract class _Questionnaire extends Questionnaire {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   String? get version;
   @override
@@ -879,12 +879,12 @@ abstract class _Questionnaire extends Questionnaire {
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
-  List<ContactPoint?>? get telecom;
+  List<ContactPoint>? get telecom;
   @override
-  List<Code?>? get subjectType;
+  List<Code>? get subjectType;
   @override
   @JsonKey(name: '_subjectType')
-  List<Element?>? get subjectTypeElement;
+  List<Element>? get subjectTypeElement;
   @override
   QuestionnaireGroup get group;
   @override
@@ -902,19 +902,19 @@ class _$QuestionnaireGroupTearOff {
 
   _QuestionnaireGroup call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      List<Coding?>? concept,
+      List<Coding>? concept,
       String? text,
       @JsonKey(name: 'required') Boolean? required_,
       Boolean? repeats,
-      List<QuestionnaireGroup?>? group,
-      List<QuestionnaireGroupQuestion?>? question}) {
+      List<QuestionnaireGroup>? group,
+      List<QuestionnaireGroupQuestion>? question}) {
     return _QuestionnaireGroup(
       id: id,
       extension_: extension_,
@@ -945,23 +945,23 @@ const $QuestionnaireGroup = _$QuestionnaireGroupTearOff();
 mixin _$QuestionnaireGroup {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   String? get linkId;
   @JsonKey(name: '_linkId')
   Element? get linkIdElement;
   String? get title;
   @JsonKey(name: '_title')
   Element? get titleElement;
-  List<Coding?>? get concept;
+  List<Coding>? get concept;
   String? get text;
   @JsonKey(name: 'required')
   Boolean? get required_;
   Boolean? get repeats;
-  List<QuestionnaireGroup?>? get group;
-  List<QuestionnaireGroupQuestion?>? get question;
+  List<QuestionnaireGroup>? get group;
+  List<QuestionnaireGroupQuestion>? get question;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -975,19 +975,19 @@ abstract class $QuestionnaireGroupCopyWith<$Res> {
       _$QuestionnaireGroupCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      List<Coding?>? concept,
+      List<Coding>? concept,
       String? text,
       @JsonKey(name: 'required') Boolean? required_,
       Boolean? repeats,
-      List<QuestionnaireGroup?>? group,
-      List<QuestionnaireGroupQuestion?>? question});
+      List<QuestionnaireGroup>? group,
+      List<QuestionnaireGroupQuestion>? question});
 
   $ElementCopyWith<$Res>? get linkIdElement;
   $ElementCopyWith<$Res>? get titleElement;
@@ -1023,13 +1023,13 @@ class _$QuestionnaireGroupCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       linkId: linkId == freezed ? _value.linkId : linkId as String?,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
@@ -1038,16 +1038,16 @@ class _$QuestionnaireGroupCopyWithImpl<$Res>
       titleElement: titleElement == freezed
           ? _value.titleElement
           : titleElement as Element?,
-      concept: concept == freezed ? _value.concept : concept as List<Coding?>?,
+      concept: concept == freezed ? _value.concept : concept as List<Coding>?,
       text: text == freezed ? _value.text : text as String?,
       required_:
           required_ == freezed ? _value.required_ : required_ as Boolean?,
       repeats: repeats == freezed ? _value.repeats : repeats as Boolean?,
       group:
-          group == freezed ? _value.group : group as List<QuestionnaireGroup?>?,
+          group == freezed ? _value.group : group as List<QuestionnaireGroup>?,
       question: question == freezed
           ? _value.question
-          : question as List<QuestionnaireGroupQuestion?>?,
+          : question as List<QuestionnaireGroupQuestion>?,
     ));
   }
 
@@ -1083,19 +1083,19 @@ abstract class _$QuestionnaireGroupCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      List<Coding?>? concept,
+      List<Coding>? concept,
       String? text,
       @JsonKey(name: 'required') Boolean? required_,
       Boolean? repeats,
-      List<QuestionnaireGroup?>? group,
-      List<QuestionnaireGroupQuestion?>? question});
+      List<QuestionnaireGroup>? group,
+      List<QuestionnaireGroupQuestion>? question});
 
   @override
   $ElementCopyWith<$Res>? get linkIdElement;
@@ -1135,13 +1135,13 @@ class __$QuestionnaireGroupCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       linkId: linkId == freezed ? _value.linkId : linkId as String?,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
@@ -1150,16 +1150,16 @@ class __$QuestionnaireGroupCopyWithImpl<$Res>
       titleElement: titleElement == freezed
           ? _value.titleElement
           : titleElement as Element?,
-      concept: concept == freezed ? _value.concept : concept as List<Coding?>?,
+      concept: concept == freezed ? _value.concept : concept as List<Coding>?,
       text: text == freezed ? _value.text : text as String?,
       required_:
           required_ == freezed ? _value.required_ : required_ as Boolean?,
       repeats: repeats == freezed ? _value.repeats : repeats as Boolean?,
       group:
-          group == freezed ? _value.group : group as List<QuestionnaireGroup?>?,
+          group == freezed ? _value.group : group as List<QuestionnaireGroup>?,
       question: question == freezed
           ? _value.question
-          : question as List<QuestionnaireGroupQuestion?>?,
+          : question as List<QuestionnaireGroupQuestion>?,
     ));
   }
 }
@@ -1192,12 +1192,12 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String?>? fhirComments;
+  final List<String>? fhirComments;
   @override
   final String? linkId;
   @override
@@ -1209,7 +1209,7 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final List<Coding?>? concept;
+  final List<Coding>? concept;
   @override
   final String? text;
   @override
@@ -1218,9 +1218,9 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
   @override
   final Boolean? repeats;
   @override
-  final List<QuestionnaireGroup?>? group;
+  final List<QuestionnaireGroup>? group;
   @override
-  final List<QuestionnaireGroupQuestion?>? question;
+  final List<QuestionnaireGroupQuestion>? question;
 
   @override
   String toString() {
@@ -1303,19 +1303,19 @@ abstract class _QuestionnaireGroup extends QuestionnaireGroup {
   _QuestionnaireGroup._() : super._();
   factory _QuestionnaireGroup(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      List<Coding?>? concept,
+      List<Coding>? concept,
       String? text,
       @JsonKey(name: 'required') Boolean? required_,
       Boolean? repeats,
-      List<QuestionnaireGroup?>? group,
-      List<QuestionnaireGroupQuestion?>? question}) = _$_QuestionnaireGroup;
+      List<QuestionnaireGroup>? group,
+      List<QuestionnaireGroupQuestion>? question}) = _$_QuestionnaireGroup;
 
   factory _QuestionnaireGroup.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireGroup.fromJson;
@@ -1324,12 +1324,12 @@ abstract class _QuestionnaireGroup extends QuestionnaireGroup {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @override
   String? get linkId;
   @override
@@ -1341,7 +1341,7 @@ abstract class _QuestionnaireGroup extends QuestionnaireGroup {
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
-  List<Coding?>? get concept;
+  List<Coding>? get concept;
   @override
   String? get text;
   @override
@@ -1350,9 +1350,9 @@ abstract class _QuestionnaireGroup extends QuestionnaireGroup {
   @override
   Boolean? get repeats;
   @override
-  List<QuestionnaireGroup?>? get group;
+  List<QuestionnaireGroup>? get group;
   @override
-  List<QuestionnaireGroupQuestion?>? get question;
+  List<QuestionnaireGroupQuestion>? get question;
   @override
   @JsonKey(ignore: true)
   _$QuestionnaireGroupCopyWith<_QuestionnaireGroup> get copyWith;
@@ -1369,19 +1369,19 @@ class _$QuestionnaireGroupQuestionTearOff {
 
   _QuestionnaireGroupQuestion call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
-      List<Coding?>? concept,
+      List<Coding>? concept,
       String? text,
       @JsonKey(unknownEnumValue: QuestionType.unknown) QuestionType? type,
       @JsonKey(name: 'required') Boolean? required_,
       Boolean? repeats,
       Reference? options,
-      List<Coding?>? option,
-      List<QuestionnaireGroup?>? group}) {
+      List<Coding>? option,
+      List<QuestionnaireGroup>? group}) {
     return _QuestionnaireGroupQuestion(
       id: id,
       extension_: extension_,
@@ -1412,14 +1412,14 @@ const $QuestionnaireGroupQuestion = _$QuestionnaireGroupQuestionTearOff();
 mixin _$QuestionnaireGroupQuestion {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   String? get linkId;
   @JsonKey(name: '_linkId')
   Element? get linkIdElement;
-  List<Coding?>? get concept;
+  List<Coding>? get concept;
   String? get text;
   @JsonKey(unknownEnumValue: QuestionType.unknown)
   QuestionType? get type;
@@ -1427,8 +1427,8 @@ mixin _$QuestionnaireGroupQuestion {
   Boolean? get required_;
   Boolean? get repeats;
   Reference? get options;
-  List<Coding?>? get option;
-  List<QuestionnaireGroup?>? get group;
+  List<Coding>? get option;
+  List<QuestionnaireGroup>? get group;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1442,19 +1442,19 @@ abstract class $QuestionnaireGroupQuestionCopyWith<$Res> {
       _$QuestionnaireGroupQuestionCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
-      List<Coding?>? concept,
+      List<Coding>? concept,
       String? text,
       @JsonKey(unknownEnumValue: QuestionType.unknown) QuestionType? type,
       @JsonKey(name: 'required') Boolean? required_,
       Boolean? repeats,
       Reference? options,
-      List<Coding?>? option,
-      List<QuestionnaireGroup?>? group});
+      List<Coding>? option,
+      List<QuestionnaireGroup>? group});
 
   $ElementCopyWith<$Res>? get linkIdElement;
   $ReferenceCopyWith<$Res>? get options;
@@ -1490,27 +1490,27 @@ class _$QuestionnaireGroupQuestionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       linkId: linkId == freezed ? _value.linkId : linkId as String?,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
           : linkIdElement as Element?,
-      concept: concept == freezed ? _value.concept : concept as List<Coding?>?,
+      concept: concept == freezed ? _value.concept : concept as List<Coding>?,
       text: text == freezed ? _value.text : text as String?,
       type: type == freezed ? _value.type : type as QuestionType?,
       required_:
           required_ == freezed ? _value.required_ : required_ as Boolean?,
       repeats: repeats == freezed ? _value.repeats : repeats as Boolean?,
       options: options == freezed ? _value.options : options as Reference?,
-      option: option == freezed ? _value.option : option as List<Coding?>?,
+      option: option == freezed ? _value.option : option as List<Coding>?,
       group:
-          group == freezed ? _value.group : group as List<QuestionnaireGroup?>?,
+          group == freezed ? _value.group : group as List<QuestionnaireGroup>?,
     ));
   }
 
@@ -1547,19 +1547,19 @@ abstract class _$QuestionnaireGroupQuestionCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
-      List<Coding?>? concept,
+      List<Coding>? concept,
       String? text,
       @JsonKey(unknownEnumValue: QuestionType.unknown) QuestionType? type,
       @JsonKey(name: 'required') Boolean? required_,
       Boolean? repeats,
       Reference? options,
-      List<Coding?>? option,
-      List<QuestionnaireGroup?>? group});
+      List<Coding>? option,
+      List<QuestionnaireGroup>? group});
 
   @override
   $ElementCopyWith<$Res>? get linkIdElement;
@@ -1600,27 +1600,27 @@ class __$QuestionnaireGroupQuestionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       linkId: linkId == freezed ? _value.linkId : linkId as String?,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
           : linkIdElement as Element?,
-      concept: concept == freezed ? _value.concept : concept as List<Coding?>?,
+      concept: concept == freezed ? _value.concept : concept as List<Coding>?,
       text: text == freezed ? _value.text : text as String?,
       type: type == freezed ? _value.type : type as QuestionType?,
       required_:
           required_ == freezed ? _value.required_ : required_ as Boolean?,
       repeats: repeats == freezed ? _value.repeats : repeats as Boolean?,
       options: options == freezed ? _value.options : options as Reference?,
-      option: option == freezed ? _value.option : option as List<Coding?>?,
+      option: option == freezed ? _value.option : option as List<Coding>?,
       group:
-          group == freezed ? _value.group : group as List<QuestionnaireGroup?>?,
+          group == freezed ? _value.group : group as List<QuestionnaireGroup>?,
     ));
   }
 }
@@ -1653,19 +1653,19 @@ class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String?>? fhirComments;
+  final List<String>? fhirComments;
   @override
   final String? linkId;
   @override
   @JsonKey(name: '_linkId')
   final Element? linkIdElement;
   @override
-  final List<Coding?>? concept;
+  final List<Coding>? concept;
   @override
   final String? text;
   @override
@@ -1679,9 +1679,9 @@ class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
   @override
   final Reference? options;
   @override
-  final List<Coding?>? option;
+  final List<Coding>? option;
   @override
-  final List<QuestionnaireGroup?>? group;
+  final List<QuestionnaireGroup>? group;
 
   @override
   String toString() {
@@ -1764,19 +1764,19 @@ abstract class _QuestionnaireGroupQuestion extends QuestionnaireGroupQuestion {
   _QuestionnaireGroupQuestion._() : super._();
   factory _QuestionnaireGroupQuestion(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
-      List<Coding?>? concept,
+      List<Coding>? concept,
       String? text,
       @JsonKey(unknownEnumValue: QuestionType.unknown) QuestionType? type,
       @JsonKey(name: 'required') Boolean? required_,
       Boolean? repeats,
       Reference? options,
-      List<Coding?>? option,
-      List<QuestionnaireGroup?>? group}) = _$_QuestionnaireGroupQuestion;
+      List<Coding>? option,
+      List<QuestionnaireGroup>? group}) = _$_QuestionnaireGroupQuestion;
 
   factory _QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireGroupQuestion.fromJson;
@@ -1785,19 +1785,19 @@ abstract class _QuestionnaireGroupQuestion extends QuestionnaireGroupQuestion {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @override
   String? get linkId;
   @override
   @JsonKey(name: '_linkId')
   Element? get linkIdElement;
   @override
-  List<Coding?>? get concept;
+  List<Coding>? get concept;
   @override
   String? get text;
   @override
@@ -1811,9 +1811,9 @@ abstract class _QuestionnaireGroupQuestion extends QuestionnaireGroupQuestion {
   @override
   Reference? get options;
   @override
-  List<Coding?>? get option;
+  List<Coding>? get option;
   @override
-  List<QuestionnaireGroup?>? get group;
+  List<QuestionnaireGroup>? get group;
   @override
   @JsonKey(ignore: true)
   _$QuestionnaireGroupQuestionCopyWith<_QuestionnaireGroupQuestion>
@@ -1844,10 +1844,10 @@ class _$QuestionnaireResponseTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Reference? questionnaire,
       @JsonKey(required: true, unknownEnumValue: QuestionnaireResponseStatus.unknown)
@@ -1912,10 +1912,10 @@ mixin _$QuestionnaireResponse {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Identifier? get identifier;
   Reference? get questionnaire;
   @JsonKey(
@@ -1956,10 +1956,10 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Reference? questionnaire,
       @JsonKey(required: true, unknownEnumValue: QuestionnaireResponseStatus.unknown)
@@ -2047,13 +2047,13 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       questionnaire: questionnaire == freezed
@@ -2257,10 +2257,10 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Reference? questionnaire,
       @JsonKey(required: true, unknownEnumValue: QuestionnaireResponseStatus.unknown)
@@ -2364,13 +2364,13 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       questionnaire: questionnaire == freezed
@@ -2463,12 +2463,12 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Identifier? identifier;
   @override
@@ -2624,10 +2624,10 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Reference? questionnaire,
       @JsonKey(required: true, unknownEnumValue: QuestionnaireResponseStatus.unknown)
@@ -2669,12 +2669,12 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Identifier? get identifier;
   @override
@@ -2717,17 +2717,17 @@ class _$QuestionnaireResponseGroupTearOff {
 
   _QuestionnaireResponseGroup call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
       String? text,
       Reference? subject,
-      List<QuestionnaireResponseGroup?>? group,
-      List<QuestionnaireResponseGroupQuestion?>? question}) {
+      List<QuestionnaireResponseGroup>? group,
+      List<QuestionnaireResponseGroupQuestion>? question}) {
     return _QuestionnaireResponseGroup(
       id: id,
       extension_: extension_,
@@ -2756,10 +2756,10 @@ const $QuestionnaireResponseGroup = _$QuestionnaireResponseGroupTearOff();
 mixin _$QuestionnaireResponseGroup {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   String? get linkId;
   @JsonKey(name: '_linkId')
   Element? get linkIdElement;
@@ -2768,8 +2768,8 @@ mixin _$QuestionnaireResponseGroup {
   Element? get titleElement;
   String? get text;
   Reference? get subject;
-  List<QuestionnaireResponseGroup?>? get group;
-  List<QuestionnaireResponseGroupQuestion?>? get question;
+  List<QuestionnaireResponseGroup>? get group;
+  List<QuestionnaireResponseGroupQuestion>? get question;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2783,17 +2783,17 @@ abstract class $QuestionnaireResponseGroupCopyWith<$Res> {
       _$QuestionnaireResponseGroupCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
       String? text,
       Reference? subject,
-      List<QuestionnaireResponseGroup?>? group,
-      List<QuestionnaireResponseGroupQuestion?>? question});
+      List<QuestionnaireResponseGroup>? group,
+      List<QuestionnaireResponseGroupQuestion>? question});
 
   $ElementCopyWith<$Res>? get linkIdElement;
   $ElementCopyWith<$Res>? get titleElement;
@@ -2828,13 +2828,13 @@ class _$QuestionnaireResponseGroupCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       linkId: linkId == freezed ? _value.linkId : linkId as String?,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
@@ -2847,10 +2847,10 @@ class _$QuestionnaireResponseGroupCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference?,
       group: group == freezed
           ? _value.group
-          : group as List<QuestionnaireResponseGroup?>?,
+          : group as List<QuestionnaireResponseGroup>?,
       question: question == freezed
           ? _value.question
-          : question as List<QuestionnaireResponseGroupQuestion?>?,
+          : question as List<QuestionnaireResponseGroupQuestion>?,
     ));
   }
 
@@ -2898,17 +2898,17 @@ abstract class _$QuestionnaireResponseGroupCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
       String? text,
       Reference? subject,
-      List<QuestionnaireResponseGroup?>? group,
-      List<QuestionnaireResponseGroupQuestion?>? question});
+      List<QuestionnaireResponseGroup>? group,
+      List<QuestionnaireResponseGroupQuestion>? question});
 
   @override
   $ElementCopyWith<$Res>? get linkIdElement;
@@ -2949,13 +2949,13 @@ class __$QuestionnaireResponseGroupCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       linkId: linkId == freezed ? _value.linkId : linkId as String?,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
@@ -2968,10 +2968,10 @@ class __$QuestionnaireResponseGroupCopyWithImpl<$Res>
       subject: subject == freezed ? _value.subject : subject as Reference?,
       group: group == freezed
           ? _value.group
-          : group as List<QuestionnaireResponseGroup?>?,
+          : group as List<QuestionnaireResponseGroup>?,
       question: question == freezed
           ? _value.question
-          : question as List<QuestionnaireResponseGroupQuestion?>?,
+          : question as List<QuestionnaireResponseGroupQuestion>?,
     ));
   }
 }
@@ -3002,12 +3002,12 @@ class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String?>? fhirComments;
+  final List<String>? fhirComments;
   @override
   final String? linkId;
   @override
@@ -3023,9 +3023,9 @@ class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
   @override
   final Reference? subject;
   @override
-  final List<QuestionnaireResponseGroup?>? group;
+  final List<QuestionnaireResponseGroup>? group;
   @override
-  final List<QuestionnaireResponseGroupQuestion?>? question;
+  final List<QuestionnaireResponseGroupQuestion>? question;
 
   @override
   String toString() {
@@ -3101,17 +3101,17 @@ abstract class _QuestionnaireResponseGroup extends QuestionnaireResponseGroup {
   _QuestionnaireResponseGroup._() : super._();
   factory _QuestionnaireResponseGroup(
           {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
-          @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
           String? linkId,
           @JsonKey(name: '_linkId') Element? linkIdElement,
           String? title,
           @JsonKey(name: '_title') Element? titleElement,
           String? text,
           Reference? subject,
-          List<QuestionnaireResponseGroup?>? group,
-          List<QuestionnaireResponseGroupQuestion?>? question}) =
+          List<QuestionnaireResponseGroup>? group,
+          List<QuestionnaireResponseGroupQuestion>? question}) =
       _$_QuestionnaireResponseGroup;
 
   factory _QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =
@@ -3121,12 +3121,12 @@ abstract class _QuestionnaireResponseGroup extends QuestionnaireResponseGroup {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @override
   String? get linkId;
   @override
@@ -3142,9 +3142,9 @@ abstract class _QuestionnaireResponseGroup extends QuestionnaireResponseGroup {
   @override
   Reference? get subject;
   @override
-  List<QuestionnaireResponseGroup?>? get group;
+  List<QuestionnaireResponseGroup>? get group;
   @override
-  List<QuestionnaireResponseGroupQuestion?>? get question;
+  List<QuestionnaireResponseGroupQuestion>? get question;
   @override
   @JsonKey(ignore: true)
   _$QuestionnaireResponseGroupCopyWith<_QuestionnaireResponseGroup>
@@ -3162,13 +3162,13 @@ class _$QuestionnaireResponseGroupQuestionTearOff {
 
   _QuestionnaireResponseGroupQuestion call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? text,
-      List<QuestionnaireResponseQuestionAnswer?>? answer}) {
+      List<QuestionnaireResponseQuestionAnswer>? answer}) {
     return _QuestionnaireResponseGroupQuestion(
       id: id,
       extension_: extension_,
@@ -3194,15 +3194,15 @@ const $QuestionnaireResponseGroupQuestion =
 mixin _$QuestionnaireResponseGroupQuestion {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   String? get linkId;
   @JsonKey(name: '_linkId')
   Element? get linkIdElement;
   String? get text;
-  List<QuestionnaireResponseQuestionAnswer?>? get answer;
+  List<QuestionnaireResponseQuestionAnswer>? get answer;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -3218,13 +3218,13 @@ abstract class $QuestionnaireResponseGroupQuestionCopyWith<$Res> {
       _$QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? text,
-      List<QuestionnaireResponseQuestionAnswer?>? answer});
+      List<QuestionnaireResponseQuestionAnswer>? answer});
 
   $ElementCopyWith<$Res>? get linkIdElement;
 }
@@ -3253,13 +3253,13 @@ class _$QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       linkId: linkId == freezed ? _value.linkId : linkId as String?,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
@@ -3267,7 +3267,7 @@ class _$QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as String?,
       answer: answer == freezed
           ? _value.answer
-          : answer as List<QuestionnaireResponseQuestionAnswer?>?,
+          : answer as List<QuestionnaireResponseQuestionAnswer>?,
     ));
   }
 
@@ -3293,13 +3293,13 @@ abstract class _$QuestionnaireResponseGroupQuestionCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? text,
-      List<QuestionnaireResponseQuestionAnswer?>? answer});
+      List<QuestionnaireResponseQuestionAnswer>? answer});
 
   @override
   $ElementCopyWith<$Res>? get linkIdElement;
@@ -3333,13 +3333,13 @@ class __$QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       linkId: linkId == freezed ? _value.linkId : linkId as String?,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
@@ -3347,7 +3347,7 @@ class __$QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as String?,
       answer: answer == freezed
           ? _value.answer
-          : answer as List<QuestionnaireResponseQuestionAnswer?>?,
+          : answer as List<QuestionnaireResponseQuestionAnswer>?,
     ));
   }
 }
@@ -3376,12 +3376,12 @@ class _$_QuestionnaireResponseGroupQuestion
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String?>? fhirComments;
+  final List<String>? fhirComments;
   @override
   final String? linkId;
   @override
@@ -3390,7 +3390,7 @@ class _$_QuestionnaireResponseGroupQuestion
   @override
   final String? text;
   @override
-  final List<QuestionnaireResponseQuestionAnswer?>? answer;
+  final List<QuestionnaireResponseQuestionAnswer>? answer;
 
   @override
   String toString() {
@@ -3453,13 +3453,13 @@ abstract class _QuestionnaireResponseGroupQuestion
   _QuestionnaireResponseGroupQuestion._() : super._();
   factory _QuestionnaireResponseGroupQuestion(
           {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
-          @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
           String? linkId,
           @JsonKey(name: '_linkId') Element? linkIdElement,
           String? text,
-          List<QuestionnaireResponseQuestionAnswer?>? answer}) =
+          List<QuestionnaireResponseQuestionAnswer>? answer}) =
       _$_QuestionnaireResponseGroupQuestion;
 
   factory _QuestionnaireResponseGroupQuestion.fromJson(
@@ -3470,12 +3470,12 @@ abstract class _QuestionnaireResponseGroupQuestion
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @override
   String? get linkId;
   @override
@@ -3484,7 +3484,7 @@ abstract class _QuestionnaireResponseGroupQuestion
   @override
   String? get text;
   @override
-  List<QuestionnaireResponseQuestionAnswer?>? get answer;
+  List<QuestionnaireResponseQuestionAnswer>? get answer;
   @override
   @JsonKey(ignore: true)
   _$QuestionnaireResponseGroupQuestionCopyWith<
@@ -3502,9 +3502,9 @@ class _$QuestionnaireResponseQuestionAnswerTearOff {
 
   _QuestionnaireResponseQuestionAnswer call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Decimal? valueDecimal,
@@ -3527,7 +3527,7 @@ class _$QuestionnaireResponseQuestionAnswerTearOff {
       Coding? valueCoding,
       Quantity? valueQuantity,
       Reference? valueReference,
-      List<QuestionnaireResponseGroup?>? group}) {
+      List<QuestionnaireResponseGroup>? group}) {
     return _QuestionnaireResponseQuestionAnswer(
       id: id,
       extension_: extension_,
@@ -3572,10 +3572,10 @@ const $QuestionnaireResponseQuestionAnswer =
 mixin _$QuestionnaireResponseQuestionAnswer {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   Boolean? get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement;
@@ -3607,7 +3607,7 @@ mixin _$QuestionnaireResponseQuestionAnswer {
   Coding? get valueCoding;
   Quantity? get valueQuantity;
   Reference? get valueReference;
-  List<QuestionnaireResponseGroup?>? get group;
+  List<QuestionnaireResponseGroup>? get group;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -3623,9 +3623,9 @@ abstract class $QuestionnaireResponseQuestionAnswerCopyWith<$Res> {
       _$QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Decimal? valueDecimal,
@@ -3648,7 +3648,7 @@ abstract class $QuestionnaireResponseQuestionAnswerCopyWith<$Res> {
       Coding? valueCoding,
       Quantity? valueQuantity,
       Reference? valueReference,
-      List<QuestionnaireResponseGroup?>? group});
+      List<QuestionnaireResponseGroup>? group});
 
   $ElementCopyWith<$Res>? get valueBooleanElement;
   $ElementCopyWith<$Res>? get valueDecimalElement;
@@ -3708,13 +3708,13 @@ class _$QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
           : valueBoolean as Boolean?,
@@ -3775,7 +3775,7 @@ class _$QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
           : valueReference as Reference?,
       group: group == freezed
           ? _value.group
-          : group as List<QuestionnaireResponseGroup?>?,
+          : group as List<QuestionnaireResponseGroup>?,
     ));
   }
 
@@ -3933,9 +3933,9 @@ abstract class _$QuestionnaireResponseQuestionAnswerCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Decimal? valueDecimal,
@@ -3958,7 +3958,7 @@ abstract class _$QuestionnaireResponseQuestionAnswerCopyWith<$Res>
       Coding? valueCoding,
       Quantity? valueQuantity,
       Reference? valueReference,
-      List<QuestionnaireResponseGroup?>? group});
+      List<QuestionnaireResponseGroup>? group});
 
   @override
   $ElementCopyWith<$Res>? get valueBooleanElement;
@@ -4035,13 +4035,13 @@ class __$QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
           : valueBoolean as Boolean?,
@@ -4102,7 +4102,7 @@ class __$QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
           : valueReference as Reference?,
       group: group == freezed
           ? _value.group
-          : group as List<QuestionnaireResponseGroup?>?,
+          : group as List<QuestionnaireResponseGroup>?,
     ));
   }
 }
@@ -4150,12 +4150,12 @@ class _$_QuestionnaireResponseQuestionAnswer
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String?>? fhirComments;
+  final List<String>? fhirComments;
   @override
   final Boolean? valueBoolean;
   @override
@@ -4210,7 +4210,7 @@ class _$_QuestionnaireResponseQuestionAnswer
   @override
   final Reference? valueReference;
   @override
-  final List<QuestionnaireResponseGroup?>? group;
+  final List<QuestionnaireResponseGroup>? group;
 
   @override
   String toString() {
@@ -4342,9 +4342,9 @@ abstract class _QuestionnaireResponseQuestionAnswer
   _QuestionnaireResponseQuestionAnswer._() : super._();
   factory _QuestionnaireResponseQuestionAnswer(
           {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
-          @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
           Boolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
           Decimal? valueDecimal,
@@ -4367,7 +4367,7 @@ abstract class _QuestionnaireResponseQuestionAnswer
           Coding? valueCoding,
           Quantity? valueQuantity,
           Reference? valueReference,
-          List<QuestionnaireResponseGroup?>? group}) =
+          List<QuestionnaireResponseGroup>? group}) =
       _$_QuestionnaireResponseQuestionAnswer;
 
   factory _QuestionnaireResponseQuestionAnswer.fromJson(
@@ -4378,12 +4378,12 @@ abstract class _QuestionnaireResponseQuestionAnswer
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @override
   Boolean? get valueBoolean;
   @override
@@ -4438,7 +4438,7 @@ abstract class _QuestionnaireResponseQuestionAnswer
   @override
   Reference? get valueReference;
   @override
-  List<QuestionnaireResponseGroup?>? get group;
+  List<QuestionnaireResponseGroup>? get group;
   @override
   @JsonKey(ignore: true)
   _$QuestionnaireResponseQuestionAnswerCopyWith<
@@ -4465,24 +4465,24 @@ class _$ProvenanceTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required List<Reference> target,
       Period? period,
       required Instant recorded,
       @JsonKey(name: '_recorded')
           Element? recordedElement,
-      List<CodeableConcept?>? reason,
+      List<CodeableConcept>? reason,
       CodeableConcept? activity,
       Reference? location,
-      List<FhirUri?>? policy,
+      List<FhirUri>? policy,
       @JsonKey(name: '_policy')
-          List<Element?>? policyElement,
-      List<ProvenanceAgent?>? agent,
-      List<ProvenanceEntity?>? entity,
-      List<Signature?>? signature}) {
+          List<Element>? policyElement,
+      List<ProvenanceAgent>? agent,
+      List<ProvenanceEntity>? entity,
+      List<Signature>? signature}) {
     return _Provenance(
       resourceType: resourceType,
       id: id,
@@ -4531,24 +4531,24 @@ mixin _$Provenance {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   List<Reference> get target;
   Period? get period;
   Instant get recorded;
   @JsonKey(name: '_recorded')
   Element? get recordedElement;
-  List<CodeableConcept?>? get reason;
+  List<CodeableConcept>? get reason;
   CodeableConcept? get activity;
   Reference? get location;
-  List<FhirUri?>? get policy;
+  List<FhirUri>? get policy;
   @JsonKey(name: '_policy')
-  List<Element?>? get policyElement;
-  List<ProvenanceAgent?>? get agent;
-  List<ProvenanceEntity?>? get entity;
-  List<Signature?>? get signature;
+  List<Element>? get policyElement;
+  List<ProvenanceAgent>? get agent;
+  List<ProvenanceEntity>? get entity;
+  List<Signature>? get signature;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -4572,24 +4572,24 @@ abstract class $ProvenanceCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       List<Reference> target,
       Period? period,
       Instant recorded,
       @JsonKey(name: '_recorded')
           Element? recordedElement,
-      List<CodeableConcept?>? reason,
+      List<CodeableConcept>? reason,
       CodeableConcept? activity,
       Reference? location,
-      List<FhirUri?>? policy,
+      List<FhirUri>? policy,
       @JsonKey(name: '_policy')
-          List<Element?>? policyElement,
-      List<ProvenanceAgent?>? agent,
-      List<ProvenanceEntity?>? entity,
-      List<Signature?>? signature});
+          List<Element>? policyElement,
+      List<ProvenanceAgent>? agent,
+      List<ProvenanceEntity>? entity,
+      List<Signature>? signature});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -4654,13 +4654,13 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       target: target == freezed ? _value.target : target as List<Reference>,
       period: period == freezed ? _value.period : period as Period?,
       recorded: recorded == freezed ? _value.recorded : recorded as Instant,
@@ -4668,21 +4668,20 @@ class _$ProvenanceCopyWithImpl<$Res> implements $ProvenanceCopyWith<$Res> {
           ? _value.recordedElement
           : recordedElement as Element?,
       reason:
-          reason == freezed ? _value.reason : reason as List<CodeableConcept?>?,
+          reason == freezed ? _value.reason : reason as List<CodeableConcept>?,
       activity:
           activity == freezed ? _value.activity : activity as CodeableConcept?,
       location: location == freezed ? _value.location : location as Reference?,
-      policy: policy == freezed ? _value.policy : policy as List<FhirUri?>?,
+      policy: policy == freezed ? _value.policy : policy as List<FhirUri>?,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as List<Element?>?,
-      agent: agent == freezed ? _value.agent : agent as List<ProvenanceAgent?>?,
-      entity: entity == freezed
-          ? _value.entity
-          : entity as List<ProvenanceEntity?>?,
+          : policyElement as List<Element>?,
+      agent: agent == freezed ? _value.agent : agent as List<ProvenanceAgent>?,
+      entity:
+          entity == freezed ? _value.entity : entity as List<ProvenanceEntity>?,
       signature: signature == freezed
           ? _value.signature
-          : signature as List<Signature?>?,
+          : signature as List<Signature>?,
     ));
   }
 
@@ -4793,24 +4792,24 @@ abstract class _$ProvenanceCopyWith<$Res> implements $ProvenanceCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       List<Reference> target,
       Period? period,
       Instant recorded,
       @JsonKey(name: '_recorded')
           Element? recordedElement,
-      List<CodeableConcept?>? reason,
+      List<CodeableConcept>? reason,
       CodeableConcept? activity,
       Reference? location,
-      List<FhirUri?>? policy,
+      List<FhirUri>? policy,
       @JsonKey(name: '_policy')
-          List<Element?>? policyElement,
-      List<ProvenanceAgent?>? agent,
-      List<ProvenanceEntity?>? entity,
-      List<Signature?>? signature});
+          List<Element>? policyElement,
+      List<ProvenanceAgent>? agent,
+      List<ProvenanceEntity>? entity,
+      List<Signature>? signature});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -4885,13 +4884,13 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       target: target == freezed ? _value.target : target as List<Reference>,
       period: period == freezed ? _value.period : period as Period?,
       recorded: recorded == freezed ? _value.recorded : recorded as Instant,
@@ -4899,21 +4898,20 @@ class __$ProvenanceCopyWithImpl<$Res> extends _$ProvenanceCopyWithImpl<$Res>
           ? _value.recordedElement
           : recordedElement as Element?,
       reason:
-          reason == freezed ? _value.reason : reason as List<CodeableConcept?>?,
+          reason == freezed ? _value.reason : reason as List<CodeableConcept>?,
       activity:
           activity == freezed ? _value.activity : activity as CodeableConcept?,
       location: location == freezed ? _value.location : location as Reference?,
-      policy: policy == freezed ? _value.policy : policy as List<FhirUri?>?,
+      policy: policy == freezed ? _value.policy : policy as List<FhirUri>?,
       policyElement: policyElement == freezed
           ? _value.policyElement
-          : policyElement as List<Element?>?,
-      agent: agent == freezed ? _value.agent : agent as List<ProvenanceAgent?>?,
-      entity: entity == freezed
-          ? _value.entity
-          : entity as List<ProvenanceEntity?>?,
+          : policyElement as List<Element>?,
+      agent: agent == freezed ? _value.agent : agent as List<ProvenanceAgent>?,
+      entity:
+          entity == freezed ? _value.entity : entity as List<ProvenanceEntity>?,
       signature: signature == freezed
           ? _value.signature
-          : signature as List<Signature?>?,
+          : signature as List<Signature>?,
     ));
   }
 }
@@ -4977,12 +4975,12 @@ class _$_Provenance extends _Provenance {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final List<Reference> target;
   @override
@@ -4993,22 +4991,22 @@ class _$_Provenance extends _Provenance {
   @JsonKey(name: '_recorded')
   final Element? recordedElement;
   @override
-  final List<CodeableConcept?>? reason;
+  final List<CodeableConcept>? reason;
   @override
   final CodeableConcept? activity;
   @override
   final Reference? location;
   @override
-  final List<FhirUri?>? policy;
+  final List<FhirUri>? policy;
   @override
   @JsonKey(name: '_policy')
-  final List<Element?>? policyElement;
+  final List<Element>? policyElement;
   @override
-  final List<ProvenanceAgent?>? agent;
+  final List<ProvenanceAgent>? agent;
   @override
-  final List<ProvenanceEntity?>? entity;
+  final List<ProvenanceEntity>? entity;
   @override
-  final List<Signature?>? signature;
+  final List<Signature>? signature;
 
   @override
   String toString() {
@@ -5133,24 +5131,24 @@ abstract class _Provenance extends Provenance {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required List<Reference> target,
       Period? period,
       required Instant recorded,
       @JsonKey(name: '_recorded')
           Element? recordedElement,
-      List<CodeableConcept?>? reason,
+      List<CodeableConcept>? reason,
       CodeableConcept? activity,
       Reference? location,
-      List<FhirUri?>? policy,
+      List<FhirUri>? policy,
       @JsonKey(name: '_policy')
-          List<Element?>? policyElement,
-      List<ProvenanceAgent?>? agent,
-      List<ProvenanceEntity?>? entity,
-      List<Signature?>? signature}) = _$_Provenance;
+          List<Element>? policyElement,
+      List<ProvenanceAgent>? agent,
+      List<ProvenanceEntity>? entity,
+      List<Signature>? signature}) = _$_Provenance;
 
   factory _Provenance.fromJson(Map<String, dynamic> json) =
       _$_Provenance.fromJson;
@@ -5175,12 +5173,12 @@ abstract class _Provenance extends Provenance {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   List<Reference> get target;
   @override
@@ -5191,22 +5189,22 @@ abstract class _Provenance extends Provenance {
   @JsonKey(name: '_recorded')
   Element? get recordedElement;
   @override
-  List<CodeableConcept?>? get reason;
+  List<CodeableConcept>? get reason;
   @override
   CodeableConcept? get activity;
   @override
   Reference? get location;
   @override
-  List<FhirUri?>? get policy;
+  List<FhirUri>? get policy;
   @override
   @JsonKey(name: '_policy')
-  List<Element?>? get policyElement;
+  List<Element>? get policyElement;
   @override
-  List<ProvenanceAgent?>? get agent;
+  List<ProvenanceAgent>? get agent;
   @override
-  List<ProvenanceEntity?>? get entity;
+  List<ProvenanceEntity>? get entity;
   @override
-  List<Signature?>? get signature;
+  List<Signature>? get signature;
   @override
   @JsonKey(ignore: true)
   _$ProvenanceCopyWith<_Provenance> get copyWith;
@@ -5222,13 +5220,13 @@ class _$ProvenanceAgentTearOff {
 
   _ProvenanceAgent call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       required Coding role,
       Reference? actor,
       Identifier? userId,
-      List<ProvenanceAgentRelatedAgent?>? relatedAgent}) {
+      List<ProvenanceAgentRelatedAgent>? relatedAgent}) {
     return _ProvenanceAgent(
       id: id,
       extension_: extension_,
@@ -5253,14 +5251,14 @@ const $ProvenanceAgent = _$ProvenanceAgentTearOff();
 mixin _$ProvenanceAgent {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   Coding get role;
   Reference? get actor;
   Identifier? get userId;
-  List<ProvenanceAgentRelatedAgent?>? get relatedAgent;
+  List<ProvenanceAgentRelatedAgent>? get relatedAgent;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -5274,13 +5272,13 @@ abstract class $ProvenanceAgentCopyWith<$Res> {
       _$ProvenanceAgentCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       Coding role,
       Reference? actor,
       Identifier? userId,
-      List<ProvenanceAgentRelatedAgent?>? relatedAgent});
+      List<ProvenanceAgentRelatedAgent>? relatedAgent});
 
   $CodingCopyWith<$Res> get role;
   $ReferenceCopyWith<$Res>? get actor;
@@ -5311,19 +5309,19 @@ class _$ProvenanceAgentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       role: role == freezed ? _value.role : role as Coding,
       actor: actor == freezed ? _value.actor : actor as Reference?,
       userId: userId == freezed ? _value.userId : userId as Identifier?,
       relatedAgent: relatedAgent == freezed
           ? _value.relatedAgent
-          : relatedAgent as List<ProvenanceAgentRelatedAgent?>?,
+          : relatedAgent as List<ProvenanceAgentRelatedAgent>?,
     ));
   }
 
@@ -5366,13 +5364,13 @@ abstract class _$ProvenanceAgentCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       Coding role,
       Reference? actor,
       Identifier? userId,
-      List<ProvenanceAgentRelatedAgent?>? relatedAgent});
+      List<ProvenanceAgentRelatedAgent>? relatedAgent});
 
   @override
   $CodingCopyWith<$Res> get role;
@@ -5408,19 +5406,19 @@ class __$ProvenanceAgentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       role: role == freezed ? _value.role : role as Coding,
       actor: actor == freezed ? _value.actor : actor as Reference?,
       userId: userId == freezed ? _value.userId : userId as Identifier?,
       relatedAgent: relatedAgent == freezed
           ? _value.relatedAgent
-          : relatedAgent as List<ProvenanceAgentRelatedAgent?>?,
+          : relatedAgent as List<ProvenanceAgentRelatedAgent>?,
     ));
   }
 }
@@ -5447,12 +5445,12 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String?>? fhirComments;
+  final List<String>? fhirComments;
   @override
   final Coding role;
   @override
@@ -5460,7 +5458,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
   @override
   final Identifier? userId;
   @override
-  final List<ProvenanceAgentRelatedAgent?>? relatedAgent;
+  final List<ProvenanceAgentRelatedAgent>? relatedAgent;
 
   @override
   String toString() {
@@ -5520,13 +5518,13 @@ abstract class _ProvenanceAgent extends ProvenanceAgent {
   _ProvenanceAgent._() : super._();
   factory _ProvenanceAgent(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       required Coding role,
       Reference? actor,
       Identifier? userId,
-      List<ProvenanceAgentRelatedAgent?>? relatedAgent}) = _$_ProvenanceAgent;
+      List<ProvenanceAgentRelatedAgent>? relatedAgent}) = _$_ProvenanceAgent;
 
   factory _ProvenanceAgent.fromJson(Map<String, dynamic> json) =
       _$_ProvenanceAgent.fromJson;
@@ -5535,12 +5533,12 @@ abstract class _ProvenanceAgent extends ProvenanceAgent {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @override
   Coding get role;
   @override
@@ -5548,7 +5546,7 @@ abstract class _ProvenanceAgent extends ProvenanceAgent {
   @override
   Identifier? get userId;
   @override
-  List<ProvenanceAgentRelatedAgent?>? get relatedAgent;
+  List<ProvenanceAgentRelatedAgent>? get relatedAgent;
   @override
   @JsonKey(ignore: true)
   _$ProvenanceAgentCopyWith<_ProvenanceAgent> get copyWith;
@@ -5564,9 +5562,9 @@ class _$ProvenanceEntityTearOff {
 
   _ProvenanceEntity call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       @JsonKey(unknownEnumValue: EntityRole.unknown) required EntityRole role,
       @JsonKey(name: '_role') Element? roleElement,
       required Coding type,
@@ -5601,10 +5599,10 @@ const $ProvenanceEntity = _$ProvenanceEntityTearOff();
 mixin _$ProvenanceEntity {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @JsonKey(unknownEnumValue: EntityRole.unknown)
   EntityRole get role;
   @JsonKey(name: '_role')
@@ -5628,9 +5626,9 @@ abstract class $ProvenanceEntityCopyWith<$Res> {
       _$ProvenanceEntityCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       @JsonKey(unknownEnumValue: EntityRole.unknown) EntityRole role,
       @JsonKey(name: '_role') Element? roleElement,
       Coding type,
@@ -5672,13 +5670,13 @@ class _$ProvenanceEntityCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       role: role == freezed ? _value.role : role as EntityRole,
       roleElement:
           roleElement == freezed ? _value.roleElement : roleElement as Element?,
@@ -5742,9 +5740,9 @@ abstract class _$ProvenanceEntityCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       @JsonKey(unknownEnumValue: EntityRole.unknown) EntityRole role,
       @JsonKey(name: '_role') Element? roleElement,
       Coding type,
@@ -5792,13 +5790,13 @@ class __$ProvenanceEntityCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       role: role == freezed ? _value.role : role as EntityRole,
       roleElement:
           roleElement == freezed ? _value.roleElement : roleElement as Element?,
@@ -5838,12 +5836,12 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String?>? fhirComments;
+  final List<String>? fhirComments;
   @override
   @JsonKey(unknownEnumValue: EntityRole.unknown)
   final EntityRole role;
@@ -5932,9 +5930,9 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
   _ProvenanceEntity._() : super._();
   factory _ProvenanceEntity(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       @JsonKey(unknownEnumValue: EntityRole.unknown) required EntityRole role,
       @JsonKey(name: '_role') Element? roleElement,
       required Coding type,
@@ -5950,12 +5948,12 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @override
   @JsonKey(unknownEnumValue: EntityRole.unknown)
   EntityRole get role;
@@ -5989,8 +5987,8 @@ class _$ProvenanceAgentRelatedAgentTearOff {
 
   _ProvenanceAgentRelatedAgent call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required CodeableConcept type,
       required FhirUri target}) {
     return _ProvenanceAgentRelatedAgent(
@@ -6014,8 +6012,8 @@ const $ProvenanceAgentRelatedAgent = _$ProvenanceAgentRelatedAgentTearOff();
 mixin _$ProvenanceAgentRelatedAgent {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept get type;
   FhirUri get target;
 
@@ -6033,8 +6031,8 @@ abstract class $ProvenanceAgentRelatedAgentCopyWith<$Res> {
       _$ProvenanceAgentRelatedAgentCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept type,
       FhirUri target});
 
@@ -6062,10 +6060,10 @@ class _$ProvenanceAgentRelatedAgentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as CodeableConcept,
       target: target == freezed ? _value.target : target as FhirUri,
     ));
@@ -6089,8 +6087,8 @@ abstract class _$ProvenanceAgentRelatedAgentCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept type,
       FhirUri target});
 
@@ -6123,10 +6121,10 @@ class __$ProvenanceAgentRelatedAgentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as CodeableConcept,
       target: target == freezed ? _value.target : target as FhirUri,
     ));
@@ -6152,9 +6150,9 @@ class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept type;
   @override
@@ -6209,8 +6207,8 @@ abstract class _ProvenanceAgentRelatedAgent
   _ProvenanceAgentRelatedAgent._() : super._();
   factory _ProvenanceAgentRelatedAgent(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required CodeableConcept type,
       required FhirUri target}) = _$_ProvenanceAgentRelatedAgent;
 
@@ -6221,9 +6219,9 @@ abstract class _ProvenanceAgentRelatedAgent
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept get type;
   @override
@@ -6254,14 +6252,14 @@ class _$AuditEventTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required AuditEventEvent event,
       required List<AuditEventParticipant> participant,
       required AuditEventSource source,
-      List<AuditEventObject?>? object}) {
+      List<AuditEventObject>? object}) {
     return _AuditEvent(
       resourceType: resourceType,
       id: id,
@@ -6302,14 +6300,14 @@ mixin _$AuditEvent {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   AuditEventEvent get event;
   List<AuditEventParticipant> get participant;
   AuditEventSource get source;
-  List<AuditEventObject?>? get object;
+  List<AuditEventObject>? get object;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -6333,14 +6331,14 @@ abstract class $AuditEventCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       AuditEventEvent event,
       List<AuditEventParticipant> participant,
       AuditEventSource source,
-      List<AuditEventObject?>? object});
+      List<AuditEventObject>? object});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -6395,21 +6393,20 @@ class _$AuditEventCopyWithImpl<$Res> implements $AuditEventCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       event: event == freezed ? _value.event : event as AuditEventEvent,
       participant: participant == freezed
           ? _value.participant
           : participant as List<AuditEventParticipant>,
       source: source == freezed ? _value.source : source as AuditEventSource,
-      object: object == freezed
-          ? _value.object
-          : object as List<AuditEventObject?>?,
+      object:
+          object == freezed ? _value.object : object as List<AuditEventObject>?,
     ));
   }
 
@@ -6490,14 +6487,14 @@ abstract class _$AuditEventCopyWith<$Res> implements $AuditEventCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       AuditEventEvent event,
       List<AuditEventParticipant> participant,
       AuditEventSource source,
-      List<AuditEventObject?>? object});
+      List<AuditEventObject>? object});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -6560,21 +6557,20 @@ class __$AuditEventCopyWithImpl<$Res> extends _$AuditEventCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       event: event == freezed ? _value.event : event as AuditEventEvent,
       participant: participant == freezed
           ? _value.participant
           : participant as List<AuditEventParticipant>,
       source: source == freezed ? _value.source : source as AuditEventSource,
-      object: object == freezed
-          ? _value.object
-          : object as List<AuditEventObject?>?,
+      object:
+          object == freezed ? _value.object : object as List<AuditEventObject>?,
     ));
   }
 }
@@ -6628,12 +6624,12 @@ class _$_AuditEvent extends _AuditEvent {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final AuditEventEvent event;
   @override
@@ -6641,7 +6637,7 @@ class _$_AuditEvent extends _AuditEvent {
   @override
   final AuditEventSource source;
   @override
-  final List<AuditEventObject?>? object;
+  final List<AuditEventObject>? object;
 
   @override
   String toString() {
@@ -6737,14 +6733,14 @@ abstract class _AuditEvent extends AuditEvent {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required AuditEventEvent event,
       required List<AuditEventParticipant> participant,
       required AuditEventSource source,
-      List<AuditEventObject?>? object}) = _$_AuditEvent;
+      List<AuditEventObject>? object}) = _$_AuditEvent;
 
   factory _AuditEvent.fromJson(Map<String, dynamic> json) =
       _$_AuditEvent.fromJson;
@@ -6769,12 +6765,12 @@ abstract class _AuditEvent extends AuditEvent {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   AuditEventEvent get event;
   @override
@@ -6782,7 +6778,7 @@ abstract class _AuditEvent extends AuditEvent {
   @override
   AuditEventSource get source;
   @override
-  List<AuditEventObject?>? get object;
+  List<AuditEventObject>? get object;
   @override
   @JsonKey(ignore: true)
   _$AuditEventCopyWith<_AuditEvent> get copyWith;
@@ -6798,15 +6794,15 @@ class _$AuditEventEventTearOff {
 
   _AuditEventEvent call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required Coding type,
-      List<Coding?>? subtype,
+      List<Coding>? subtype,
       Code? action,
       required Instant dateTime,
       Code? outcome,
       String? outcomeDesc,
-      List<Coding?>? purposeOfEvent}) {
+      List<Coding>? purposeOfEvent}) {
     return _AuditEventEvent(
       id: id,
       extension_: extension_,
@@ -6833,15 +6829,15 @@ const $AuditEventEvent = _$AuditEventEventTearOff();
 mixin _$AuditEventEvent {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Coding get type;
-  List<Coding?>? get subtype;
+  List<Coding>? get subtype;
   Code? get action;
   Instant get dateTime;
   Code? get outcome;
   String? get outcomeDesc;
-  List<Coding?>? get purposeOfEvent;
+  List<Coding>? get purposeOfEvent;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -6855,15 +6851,15 @@ abstract class $AuditEventEventCopyWith<$Res> {
       _$AuditEventEventCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Coding type,
-      List<Coding?>? subtype,
+      List<Coding>? subtype,
       Code? action,
       Instant dateTime,
       Code? outcome,
       String? outcomeDesc,
-      List<Coding?>? purposeOfEvent});
+      List<Coding>? purposeOfEvent});
 
   $CodingCopyWith<$Res> get type;
 }
@@ -6894,12 +6890,12 @@ class _$AuditEventEventCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as Coding,
-      subtype: subtype == freezed ? _value.subtype : subtype as List<Coding?>?,
+      subtype: subtype == freezed ? _value.subtype : subtype as List<Coding>?,
       action: action == freezed ? _value.action : action as Code?,
       dateTime: dateTime == freezed ? _value.dateTime : dateTime as Instant,
       outcome: outcome == freezed ? _value.outcome : outcome as Code?,
@@ -6907,7 +6903,7 @@ class _$AuditEventEventCopyWithImpl<$Res>
           outcomeDesc == freezed ? _value.outcomeDesc : outcomeDesc as String?,
       purposeOfEvent: purposeOfEvent == freezed
           ? _value.purposeOfEvent
-          : purposeOfEvent as List<Coding?>?,
+          : purposeOfEvent as List<Coding>?,
     ));
   }
 
@@ -6928,15 +6924,15 @@ abstract class _$AuditEventEventCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Coding type,
-      List<Coding?>? subtype,
+      List<Coding>? subtype,
       Code? action,
       Instant dateTime,
       Code? outcome,
       String? outcomeDesc,
-      List<Coding?>? purposeOfEvent});
+      List<Coding>? purposeOfEvent});
 
   @override
   $CodingCopyWith<$Res> get type;
@@ -6970,12 +6966,12 @@ class __$AuditEventEventCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as Coding,
-      subtype: subtype == freezed ? _value.subtype : subtype as List<Coding?>?,
+      subtype: subtype == freezed ? _value.subtype : subtype as List<Coding>?,
       action: action == freezed ? _value.action : action as Code?,
       dateTime: dateTime == freezed ? _value.dateTime : dateTime as Instant,
       outcome: outcome == freezed ? _value.outcome : outcome as Code?,
@@ -6983,7 +6979,7 @@ class __$AuditEventEventCopyWithImpl<$Res>
           outcomeDesc == freezed ? _value.outcomeDesc : outcomeDesc as String?,
       purposeOfEvent: purposeOfEvent == freezed
           ? _value.purposeOfEvent
-          : purposeOfEvent as List<Coding?>?,
+          : purposeOfEvent as List<Coding>?,
     ));
   }
 }
@@ -7012,13 +7008,13 @@ class _$_AuditEventEvent extends _AuditEventEvent {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Coding type;
   @override
-  final List<Coding?>? subtype;
+  final List<Coding>? subtype;
   @override
   final Code? action;
   @override
@@ -7028,7 +7024,7 @@ class _$_AuditEventEvent extends _AuditEventEvent {
   @override
   final String? outcomeDesc;
   @override
-  final List<Coding?>? purposeOfEvent;
+  final List<Coding>? purposeOfEvent;
 
   @override
   String toString() {
@@ -7097,15 +7093,15 @@ abstract class _AuditEventEvent extends AuditEventEvent {
   _AuditEventEvent._() : super._();
   factory _AuditEventEvent(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required Coding type,
-      List<Coding?>? subtype,
+      List<Coding>? subtype,
       Code? action,
       required Instant dateTime,
       Code? outcome,
       String? outcomeDesc,
-      List<Coding?>? purposeOfEvent}) = _$_AuditEventEvent;
+      List<Coding>? purposeOfEvent}) = _$_AuditEventEvent;
 
   factory _AuditEventEvent.fromJson(Map<String, dynamic> json) =
       _$_AuditEventEvent.fromJson;
@@ -7114,13 +7110,13 @@ abstract class _AuditEventEvent extends AuditEventEvent {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Coding get type;
   @override
-  List<Coding?>? get subtype;
+  List<Coding>? get subtype;
   @override
   Code? get action;
   @override
@@ -7130,7 +7126,7 @@ abstract class _AuditEventEvent extends AuditEventEvent {
   @override
   String? get outcomeDesc;
   @override
-  List<Coding?>? get purposeOfEvent;
+  List<Coding>? get purposeOfEvent;
   @override
   @JsonKey(ignore: true)
   _$AuditEventEventCopyWith<_AuditEventEvent> get copyWith;
@@ -7147,9 +7143,9 @@ class _$AuditEventParticipantTearOff {
 
   _AuditEventParticipant call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<CodeableConcept?>? role,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? role,
       Reference? reference,
       Identifier? userId,
       String? altId,
@@ -7157,10 +7153,10 @@ class _$AuditEventParticipantTearOff {
       @JsonKey(name: '_name') Element? nameElement,
       required Boolean requestor,
       Reference? location,
-      List<FhirUri?>? policy,
+      List<FhirUri>? policy,
       Coding? media,
       AuditEventParticipantNetwork? network,
-      List<Coding?>? purposeOfUse}) {
+      List<Coding>? purposeOfUse}) {
     return _AuditEventParticipant(
       id: id,
       extension_: extension_,
@@ -7192,9 +7188,9 @@ const $AuditEventParticipant = _$AuditEventParticipantTearOff();
 mixin _$AuditEventParticipant {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
-  List<CodeableConcept?>? get role;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
+  List<CodeableConcept>? get role;
   Reference? get reference;
   Identifier? get userId;
   String? get altId;
@@ -7203,10 +7199,10 @@ mixin _$AuditEventParticipant {
   Element? get nameElement;
   Boolean get requestor;
   Reference? get location;
-  List<FhirUri?>? get policy;
+  List<FhirUri>? get policy;
   Coding? get media;
   AuditEventParticipantNetwork? get network;
-  List<Coding?>? get purposeOfUse;
+  List<Coding>? get purposeOfUse;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -7220,9 +7216,9 @@ abstract class $AuditEventParticipantCopyWith<$Res> {
       _$AuditEventParticipantCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<CodeableConcept?>? role,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? role,
       Reference? reference,
       Identifier? userId,
       String? altId,
@@ -7230,10 +7226,10 @@ abstract class $AuditEventParticipantCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       Boolean requestor,
       Reference? location,
-      List<FhirUri?>? policy,
+      List<FhirUri>? policy,
       Coding? media,
       AuditEventParticipantNetwork? network,
-      List<Coding?>? purposeOfUse});
+      List<Coding>? purposeOfUse});
 
   $ReferenceCopyWith<$Res>? get reference;
   $IdentifierCopyWith<$Res>? get userId;
@@ -7274,11 +7270,11 @@ class _$AuditEventParticipantCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      role: role == freezed ? _value.role : role as List<CodeableConcept?>?,
+          : modifierExtension as List<FhirExtension>?,
+      role: role == freezed ? _value.role : role as List<CodeableConcept>?,
       reference:
           reference == freezed ? _value.reference : reference as Reference?,
       userId: userId == freezed ? _value.userId : userId as Identifier?,
@@ -7288,14 +7284,14 @@ class _$AuditEventParticipantCopyWithImpl<$Res>
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
       requestor: requestor == freezed ? _value.requestor : requestor as Boolean,
       location: location == freezed ? _value.location : location as Reference?,
-      policy: policy == freezed ? _value.policy : policy as List<FhirUri?>?,
+      policy: policy == freezed ? _value.policy : policy as List<FhirUri>?,
       media: media == freezed ? _value.media : media as Coding?,
       network: network == freezed
           ? _value.network
           : network as AuditEventParticipantNetwork?,
       purposeOfUse: purposeOfUse == freezed
           ? _value.purposeOfUse
-          : purposeOfUse as List<Coding?>?,
+          : purposeOfUse as List<Coding>?,
     ));
   }
 
@@ -7376,9 +7372,9 @@ abstract class _$AuditEventParticipantCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<CodeableConcept?>? role,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? role,
       Reference? reference,
       Identifier? userId,
       String? altId,
@@ -7386,10 +7382,10 @@ abstract class _$AuditEventParticipantCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       Boolean requestor,
       Reference? location,
-      List<FhirUri?>? policy,
+      List<FhirUri>? policy,
       Coding? media,
       AuditEventParticipantNetwork? network,
-      List<Coding?>? purposeOfUse});
+      List<Coding>? purposeOfUse});
 
   @override
   $ReferenceCopyWith<$Res>? get reference;
@@ -7438,11 +7434,11 @@ class __$AuditEventParticipantCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
-      role: role == freezed ? _value.role : role as List<CodeableConcept?>?,
+          : modifierExtension as List<FhirExtension>?,
+      role: role == freezed ? _value.role : role as List<CodeableConcept>?,
       reference:
           reference == freezed ? _value.reference : reference as Reference?,
       userId: userId == freezed ? _value.userId : userId as Identifier?,
@@ -7452,14 +7448,14 @@ class __$AuditEventParticipantCopyWithImpl<$Res>
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
       requestor: requestor == freezed ? _value.requestor : requestor as Boolean,
       location: location == freezed ? _value.location : location as Reference?,
-      policy: policy == freezed ? _value.policy : policy as List<FhirUri?>?,
+      policy: policy == freezed ? _value.policy : policy as List<FhirUri>?,
       media: media == freezed ? _value.media : media as Coding?,
       network: network == freezed
           ? _value.network
           : network as AuditEventParticipantNetwork?,
       purposeOfUse: purposeOfUse == freezed
           ? _value.purposeOfUse
-          : purposeOfUse as List<Coding?>?,
+          : purposeOfUse as List<Coding>?,
     ));
   }
 }
@@ -7493,11 +7489,11 @@ class _$_AuditEventParticipant extends _AuditEventParticipant {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<CodeableConcept?>? role;
+  final List<CodeableConcept>? role;
   @override
   final Reference? reference;
   @override
@@ -7514,13 +7510,13 @@ class _$_AuditEventParticipant extends _AuditEventParticipant {
   @override
   final Reference? location;
   @override
-  final List<FhirUri?>? policy;
+  final List<FhirUri>? policy;
   @override
   final Coding? media;
   @override
   final AuditEventParticipantNetwork? network;
   @override
-  final List<Coding?>? purposeOfUse;
+  final List<Coding>? purposeOfUse;
 
   @override
   String toString() {
@@ -7606,9 +7602,9 @@ abstract class _AuditEventParticipant extends AuditEventParticipant {
   _AuditEventParticipant._() : super._();
   factory _AuditEventParticipant(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
-      List<CodeableConcept?>? role,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<CodeableConcept>? role,
       Reference? reference,
       Identifier? userId,
       String? altId,
@@ -7616,10 +7612,10 @@ abstract class _AuditEventParticipant extends AuditEventParticipant {
       @JsonKey(name: '_name') Element? nameElement,
       required Boolean requestor,
       Reference? location,
-      List<FhirUri?>? policy,
+      List<FhirUri>? policy,
       Coding? media,
       AuditEventParticipantNetwork? network,
-      List<Coding?>? purposeOfUse}) = _$_AuditEventParticipant;
+      List<Coding>? purposeOfUse}) = _$_AuditEventParticipant;
 
   factory _AuditEventParticipant.fromJson(Map<String, dynamic> json) =
       _$_AuditEventParticipant.fromJson;
@@ -7628,11 +7624,11 @@ abstract class _AuditEventParticipant extends AuditEventParticipant {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<CodeableConcept?>? get role;
+  List<CodeableConcept>? get role;
   @override
   Reference? get reference;
   @override
@@ -7649,13 +7645,13 @@ abstract class _AuditEventParticipant extends AuditEventParticipant {
   @override
   Reference? get location;
   @override
-  List<FhirUri?>? get policy;
+  List<FhirUri>? get policy;
   @override
   Coding? get media;
   @override
   AuditEventParticipantNetwork? get network;
   @override
-  List<Coding?>? get purposeOfUse;
+  List<Coding>? get purposeOfUse;
   @override
   @JsonKey(ignore: true)
   _$AuditEventParticipantCopyWith<_AuditEventParticipant> get copyWith;
@@ -7671,12 +7667,12 @@ class _$AuditEventSourceTearOff {
 
   _AuditEventSource call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? site,
       @JsonKey(name: '_site') Element? siteElement,
       required Identifier identifier,
-      List<Coding?>? type}) {
+      List<Coding>? type}) {
     return _AuditEventSource(
       id: id,
       extension_: extension_,
@@ -7700,13 +7696,13 @@ const $AuditEventSource = _$AuditEventSourceTearOff();
 mixin _$AuditEventSource {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get site;
   @JsonKey(name: '_site')
   Element? get siteElement;
   Identifier get identifier;
-  List<Coding?>? get type;
+  List<Coding>? get type;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -7720,12 +7716,12 @@ abstract class $AuditEventSourceCopyWith<$Res> {
       _$AuditEventSourceCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? site,
       @JsonKey(name: '_site') Element? siteElement,
       Identifier identifier,
-      List<Coding?>? type});
+      List<Coding>? type});
 
   $ElementCopyWith<$Res>? get siteElement;
   $IdentifierCopyWith<$Res> get identifier;
@@ -7754,16 +7750,16 @@ class _$AuditEventSourceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       site: site == freezed ? _value.site : site as String?,
       siteElement:
           siteElement == freezed ? _value.siteElement : siteElement as Element?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
-      type: type == freezed ? _value.type : type as List<Coding?>?,
+      type: type == freezed ? _value.type : type as List<Coding>?,
     ));
   }
 
@@ -7795,12 +7791,12 @@ abstract class _$AuditEventSourceCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? site,
       @JsonKey(name: '_site') Element? siteElement,
       Identifier identifier,
-      List<Coding?>? type});
+      List<Coding>? type});
 
   @override
   $ElementCopyWith<$Res>? get siteElement;
@@ -7833,16 +7829,16 @@ class __$AuditEventSourceCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       site: site == freezed ? _value.site : site as String?,
       siteElement:
           siteElement == freezed ? _value.siteElement : siteElement as Element?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier,
-      type: type == freezed ? _value.type : type as List<Coding?>?,
+      type: type == freezed ? _value.type : type as List<Coding>?,
     ));
   }
 }
@@ -7868,9 +7864,9 @@ class _$_AuditEventSource extends _AuditEventSource {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? site;
   @override
@@ -7879,7 +7875,7 @@ class _$_AuditEventSource extends _AuditEventSource {
   @override
   final Identifier identifier;
   @override
-  final List<Coding?>? type;
+  final List<Coding>? type;
 
   @override
   String toString() {
@@ -7936,12 +7932,12 @@ abstract class _AuditEventSource extends AuditEventSource {
   _AuditEventSource._() : super._();
   factory _AuditEventSource(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? site,
       @JsonKey(name: '_site') Element? siteElement,
       required Identifier identifier,
-      List<Coding?>? type}) = _$_AuditEventSource;
+      List<Coding>? type}) = _$_AuditEventSource;
 
   factory _AuditEventSource.fromJson(Map<String, dynamic> json) =
       _$_AuditEventSource.fromJson;
@@ -7950,9 +7946,9 @@ abstract class _AuditEventSource extends AuditEventSource {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get site;
   @override
@@ -7961,7 +7957,7 @@ abstract class _AuditEventSource extends AuditEventSource {
   @override
   Identifier get identifier;
   @override
-  List<Coding?>? get type;
+  List<Coding>? get type;
   @override
   @JsonKey(ignore: true)
   _$AuditEventSourceCopyWith<_AuditEventSource> get copyWith;
@@ -7977,19 +7973,19 @@ class _$AuditEventObjectTearOff {
 
   _AuditEventObject call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Reference? reference,
       Coding? type,
       Coding? role,
       Coding? lifecycle,
-      List<Coding?>? securityLabel,
+      List<Coding>? securityLabel,
       String? name,
       String? description,
       Base64Binary? query,
       @JsonKey(name: '_query') Element? queryElement,
-      List<AuditEventObjectDetail?>? detail}) {
+      List<AuditEventObjectDetail>? detail}) {
     return _AuditEventObject(
       id: id,
       extension_: extension_,
@@ -8020,20 +8016,20 @@ const $AuditEventObject = _$AuditEventObjectTearOff();
 mixin _$AuditEventObject {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Identifier? get identifier;
   Reference? get reference;
   Coding? get type;
   Coding? get role;
   Coding? get lifecycle;
-  List<Coding?>? get securityLabel;
+  List<Coding>? get securityLabel;
   String? get name;
   String? get description;
   Base64Binary? get query;
   @JsonKey(name: '_query')
   Element? get queryElement;
-  List<AuditEventObjectDetail?>? get detail;
+  List<AuditEventObjectDetail>? get detail;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -8047,19 +8043,19 @@ abstract class $AuditEventObjectCopyWith<$Res> {
       _$AuditEventObjectCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Reference? reference,
       Coding? type,
       Coding? role,
       Coding? lifecycle,
-      List<Coding?>? securityLabel,
+      List<Coding>? securityLabel,
       String? name,
       String? description,
       Base64Binary? query,
       @JsonKey(name: '_query') Element? queryElement,
-      List<AuditEventObjectDetail?>? detail});
+      List<AuditEventObjectDetail>? detail});
 
   $IdentifierCopyWith<$Res>? get identifier;
   $ReferenceCopyWith<$Res>? get reference;
@@ -8099,10 +8095,10 @@ class _$AuditEventObjectCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       reference:
@@ -8112,7 +8108,7 @@ class _$AuditEventObjectCopyWithImpl<$Res>
       lifecycle: lifecycle == freezed ? _value.lifecycle : lifecycle as Coding?,
       securityLabel: securityLabel == freezed
           ? _value.securityLabel
-          : securityLabel as List<Coding?>?,
+          : securityLabel as List<Coding>?,
       name: name == freezed ? _value.name : name as String?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -8122,7 +8118,7 @@ class _$AuditEventObjectCopyWithImpl<$Res>
           : queryElement as Element?,
       detail: detail == freezed
           ? _value.detail
-          : detail as List<AuditEventObjectDetail?>?,
+          : detail as List<AuditEventObjectDetail>?,
     ));
   }
 
@@ -8202,19 +8198,19 @@ abstract class _$AuditEventObjectCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Reference? reference,
       Coding? type,
       Coding? role,
       Coding? lifecycle,
-      List<Coding?>? securityLabel,
+      List<Coding>? securityLabel,
       String? name,
       String? description,
       Base64Binary? query,
       @JsonKey(name: '_query') Element? queryElement,
-      List<AuditEventObjectDetail?>? detail});
+      List<AuditEventObjectDetail>? detail});
 
   @override
   $IdentifierCopyWith<$Res>? get identifier;
@@ -8262,10 +8258,10 @@ class __$AuditEventObjectCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       reference:
@@ -8275,7 +8271,7 @@ class __$AuditEventObjectCopyWithImpl<$Res>
       lifecycle: lifecycle == freezed ? _value.lifecycle : lifecycle as Coding?,
       securityLabel: securityLabel == freezed
           ? _value.securityLabel
-          : securityLabel as List<Coding?>?,
+          : securityLabel as List<Coding>?,
       name: name == freezed ? _value.name : name as String?,
       description:
           description == freezed ? _value.description : description as String?,
@@ -8285,7 +8281,7 @@ class __$AuditEventObjectCopyWithImpl<$Res>
           : queryElement as Element?,
       detail: detail == freezed
           ? _value.detail
-          : detail as List<AuditEventObjectDetail?>?,
+          : detail as List<AuditEventObjectDetail>?,
     ));
   }
 }
@@ -8318,9 +8314,9 @@ class _$_AuditEventObject extends _AuditEventObject {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Identifier? identifier;
   @override
@@ -8332,7 +8328,7 @@ class _$_AuditEventObject extends _AuditEventObject {
   @override
   final Coding? lifecycle;
   @override
-  final List<Coding?>? securityLabel;
+  final List<Coding>? securityLabel;
   @override
   final String? name;
   @override
@@ -8343,7 +8339,7 @@ class _$_AuditEventObject extends _AuditEventObject {
   @JsonKey(name: '_query')
   final Element? queryElement;
   @override
-  final List<AuditEventObjectDetail?>? detail;
+  final List<AuditEventObjectDetail>? detail;
 
   @override
   String toString() {
@@ -8425,19 +8421,19 @@ abstract class _AuditEventObject extends AuditEventObject {
   _AuditEventObject._() : super._();
   factory _AuditEventObject(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Reference? reference,
       Coding? type,
       Coding? role,
       Coding? lifecycle,
-      List<Coding?>? securityLabel,
+      List<Coding>? securityLabel,
       String? name,
       String? description,
       Base64Binary? query,
       @JsonKey(name: '_query') Element? queryElement,
-      List<AuditEventObjectDetail?>? detail}) = _$_AuditEventObject;
+      List<AuditEventObjectDetail>? detail}) = _$_AuditEventObject;
 
   factory _AuditEventObject.fromJson(Map<String, dynamic> json) =
       _$_AuditEventObject.fromJson;
@@ -8446,9 +8442,9 @@ abstract class _AuditEventObject extends AuditEventObject {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Identifier? get identifier;
   @override
@@ -8460,7 +8456,7 @@ abstract class _AuditEventObject extends AuditEventObject {
   @override
   Coding? get lifecycle;
   @override
-  List<Coding?>? get securityLabel;
+  List<Coding>? get securityLabel;
   @override
   String? get name;
   @override
@@ -8471,7 +8467,7 @@ abstract class _AuditEventObject extends AuditEventObject {
   @JsonKey(name: '_query')
   Element? get queryElement;
   @override
-  List<AuditEventObjectDetail?>? get detail;
+  List<AuditEventObjectDetail>? get detail;
   @override
   @JsonKey(ignore: true)
   _$AuditEventObjectCopyWith<_AuditEventObject> get copyWith;
@@ -8488,8 +8484,8 @@ class _$AuditEventParticipantNetworkTearOff {
 
   _AuditEventParticipantNetwork call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? address,
       @JsonKey(name: '_address') Element? addressElement,
       Code? type,
@@ -8517,8 +8513,8 @@ const $AuditEventParticipantNetwork = _$AuditEventParticipantNetworkTearOff();
 mixin _$AuditEventParticipantNetwork {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get address;
   @JsonKey(name: '_address')
   Element? get addressElement;
@@ -8540,8 +8536,8 @@ abstract class $AuditEventParticipantNetworkCopyWith<$Res> {
       _$AuditEventParticipantNetworkCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? address,
       @JsonKey(name: '_address') Element? addressElement,
       Code? type,
@@ -8574,10 +8570,10 @@ class _$AuditEventParticipantNetworkCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       address: address == freezed ? _value.address : address as String?,
       addressElement: addressElement == freezed
           ? _value.addressElement
@@ -8621,8 +8617,8 @@ abstract class _$AuditEventParticipantNetworkCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? address,
       @JsonKey(name: '_address') Element? addressElement,
       Code? type,
@@ -8661,10 +8657,10 @@ class __$AuditEventParticipantNetworkCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       address: address == freezed ? _value.address : address as String?,
       addressElement: addressElement == freezed
           ? _value.addressElement
@@ -8697,9 +8693,9 @@ class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? address;
   @override
@@ -8769,8 +8765,8 @@ abstract class _AuditEventParticipantNetwork
   _AuditEventParticipantNetwork._() : super._();
   factory _AuditEventParticipantNetwork(
           {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           String? address,
           @JsonKey(name: '_address') Element? addressElement,
           Code? type,
@@ -8784,9 +8780,9 @@ abstract class _AuditEventParticipantNetwork
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get address;
   @override
@@ -8814,8 +8810,8 @@ class _$AuditEventObjectDetailTearOff {
 
   _AuditEventObjectDetail call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required String type,
       @JsonKey(name: '_type') Element? typeElement,
       required Base64Binary value}) {
@@ -8841,8 +8837,8 @@ const $AuditEventObjectDetail = _$AuditEventObjectDetailTearOff();
 mixin _$AuditEventObjectDetail {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String get type;
   @JsonKey(name: '_type')
   Element? get typeElement;
@@ -8860,8 +8856,8 @@ abstract class $AuditEventObjectDetailCopyWith<$Res> {
       _$AuditEventObjectDetailCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String type,
       @JsonKey(name: '_type') Element? typeElement,
       Base64Binary value});
@@ -8891,10 +8887,10 @@ class _$AuditEventObjectDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as String,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -8923,8 +8919,8 @@ abstract class _$AuditEventObjectDetailCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String type,
       @JsonKey(name: '_type') Element? typeElement,
       Base64Binary value});
@@ -8957,10 +8953,10 @@ class __$AuditEventObjectDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as String,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -8989,9 +8985,9 @@ class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String type;
   @override
@@ -9052,8 +9048,8 @@ abstract class _AuditEventObjectDetail extends AuditEventObjectDetail {
   _AuditEventObjectDetail._() : super._();
   factory _AuditEventObjectDetail(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required String type,
       @JsonKey(name: '_type') Element? typeElement,
       required Base64Binary value}) = _$_AuditEventObjectDetail;
@@ -9065,9 +9061,9 @@ abstract class _AuditEventObjectDetail extends AuditEventObjectDetail {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String get type;
   @override

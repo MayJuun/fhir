@@ -22,11 +22,11 @@ class _$LocationTearOff {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: LocationStatus.unknown)
           LocationStatus? status,
       required String name,
-      List<ContactPoint?>? telecom,
+      List<ContactPoint>? telecom,
       Address? address,
       LocationPosition? position,
       String? description,
@@ -62,11 +62,11 @@ mixin _$Location {
   Id? get id;
   Meta? get meta;
   Narrative? get text;
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @JsonKey(unknownEnumValue: LocationStatus.unknown)
   LocationStatus? get status;
   String get name;
-  List<ContactPoint?>? get telecom;
+  List<ContactPoint>? get telecom;
   Address? get address;
   LocationPosition? get position;
   String? get description;
@@ -87,11 +87,11 @@ abstract class $LocationCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: LocationStatus.unknown)
           LocationStatus? status,
       String name,
-      List<ContactPoint?>? telecom,
+      List<ContactPoint>? telecom,
       Address? address,
       LocationPosition? position,
       String? description,
@@ -136,11 +136,11 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as LocationStatus?,
       name: name == freezed ? _value.name : name as String,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
       address: address == freezed ? _value.address : address as Address?,
       position:
           position == freezed ? _value.position : position as LocationPosition?,
@@ -219,11 +219,11 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: LocationStatus.unknown)
           LocationStatus? status,
       String name,
-      List<ContactPoint?>? telecom,
+      List<ContactPoint>? telecom,
       Address? address,
       LocationPosition? position,
       String? description,
@@ -274,11 +274,11 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as LocationStatus?,
       name: name == freezed ? _value.name : name as String,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
       address: address == freezed ? _value.address : address as Address?,
       position:
           position == freezed ? _value.position : position as LocationPosition?,
@@ -325,14 +325,14 @@ class _$_Location extends _Location {
   @override
   final Narrative? text;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   @JsonKey(unknownEnumValue: LocationStatus.unknown)
   final LocationStatus? status;
   @override
   final String name;
   @override
-  final List<ContactPoint?>? telecom;
+  final List<ContactPoint>? telecom;
   @override
   final Address? address;
   @override
@@ -419,11 +419,11 @@ abstract class _Location extends Location {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: LocationStatus.unknown)
           LocationStatus? status,
       required String name,
-      List<ContactPoint?>? telecom,
+      List<ContactPoint>? telecom,
       Address? address,
       LocationPosition? position,
       String? description,
@@ -441,14 +441,14 @@ abstract class _Location extends Location {
   @override
   Narrative? get text;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   @JsonKey(unknownEnumValue: LocationStatus.unknown)
   LocationStatus? get status;
   @override
   String get name;
   @override
-  List<ContactPoint?>? get telecom;
+  List<ContactPoint>? get telecom;
   @override
   Address? get address;
   @override

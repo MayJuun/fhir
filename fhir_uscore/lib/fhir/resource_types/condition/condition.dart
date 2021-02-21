@@ -34,7 +34,7 @@ abstract class Condition with Resource implements _$Condition {
     ConditionClinicalStatus? clinicalStatus,
     ConditionVerificationStatus? verificationStatus,
     required ConditionCategory conditionCategory,
-    List<CodeableConcept?>? category,
+    List<CodeableConcept>? category,
     required CodeableConcept code,
     required Reference subject,
   }) {

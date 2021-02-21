@@ -123,16 +123,16 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     CodeableConcept? type,
     Boolean? orderable,
     @JsonKey(name: '_orderable') Element? orderableElement,
     required Reference referencedItem,
-    List<Identifier?>? additionalIdentifier,
-    List<CodeableConcept?>? classification,
+    List<Identifier>? additionalIdentifier,
+    List<CodeableConcept>? classification,
     @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
         CatalogEntryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -141,9 +141,9 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
     @JsonKey(name: '_validTo') Element? validToElement,
     FhirDateTime? lastUpdated,
     @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
-    List<CodeableConcept?>? additionalCharacteristic,
-    List<CodeableConcept?>? additionalClassification,
-    List<CatalogEntryRelatedEntry?>? relatedEntry,
+    List<CodeableConcept>? additionalCharacteristic,
+    List<CodeableConcept>? additionalClassification,
+    List<CatalogEntryRelatedEntry>? relatedEntry,
   }) = _CatalogEntry;
 
   /// Produces a Yaml formatted String version of the object
@@ -202,8 +202,8 @@ abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
   /// [item]: The reference to the related item.
   factory CatalogEntryRelatedEntry({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationtype.unknown)
         CatalogEntryRelatedEntryRelationtype? relationtype,
     @JsonKey(name: '_relationtype') Element? relationtypeElement,
@@ -362,15 +362,15 @@ abstract class Composition with Resource implements _$Composition {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     @JsonKey(unknownEnumValue: CompositionStatus.unknown)
         CompositionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required CodeableConcept type,
-    List<CodeableConcept?>? category,
+    List<CodeableConcept>? category,
     Reference? subject,
     Reference? encounter,
     FhirDateTime? date,
@@ -380,11 +380,11 @@ abstract class Composition with Resource implements _$Composition {
     @JsonKey(name: '_title') Element? titleElement,
     Code? confidentiality,
     @JsonKey(name: '_confidentiality') Element? confidentialityElement,
-    List<CompositionAttester?>? attester,
+    List<CompositionAttester>? attester,
     Reference? custodian,
-    List<CompositionRelatesTo?>? relatesTo,
-    List<CompositionEvent?>? event,
-    List<CompositionSection?>? section,
+    List<CompositionRelatesTo>? relatesTo,
+    List<CompositionEvent>? event,
+    List<CompositionSection>? section,
   }) = _Composition;
 
   /// Produces a Yaml formatted String version of the object
@@ -454,8 +454,8 @@ abstract class CompositionAttester implements _$CompositionAttester {
   /// [party]: Who attested the composition in the specified way.
   factory CompositionAttester({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
         CompositionAttesterMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
@@ -530,8 +530,8 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
   /// [targetReference]: The target composition/document of this relationship.
   factory CompositionRelatesTo({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,
     Identifier? targetIdentifier,
@@ -609,11 +609,11 @@ abstract class CompositionEvent implements _$CompositionEvent {
   ///  or an appendectomy.
   factory CompositionEvent({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<CodeableConcept?>? code,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<CodeableConcept>? code,
     Period? period,
-    List<Reference?>? detail,
+    List<Reference>? detail,
   }) = _CompositionEvent;
 
   /// Produces a Yaml formatted String version of the object
@@ -719,20 +719,20 @@ abstract class CompositionSection implements _$CompositionSection {
   /// [section]: A nested sub-section within this section.
   factory CompositionSection({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     CodeableConcept? code,
-    List<Reference?>? author,
+    List<Reference>? author,
     Reference? focus,
     Narrative? text,
     Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     CodeableConcept? orderedBy,
-    List<Reference?>? entry,
+    List<Reference>? entry,
     CodeableConcept? emptyReason,
-    List<CompositionSection?>? section,
+    List<CompositionSection>? section,
   }) = _CompositionSection;
 
   /// Produces a Yaml formatted String version of the object
@@ -870,11 +870,11 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Identifier? masterIdentifier,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
         DocumentManifestStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -882,14 +882,14 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
     Reference? subject,
     FhirDateTime? created,
     @JsonKey(name: '_created') Element? createdElement,
-    List<Reference?>? author,
-    List<Reference?>? recipient,
+    List<Reference>? author,
+    List<Reference>? recipient,
     FhirUri? source,
     @JsonKey(name: '_source') Element? sourceElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     required List<Reference> content,
-    List<DocumentManifestRelated?>? related,
+    List<DocumentManifestRelated>? related,
   }) = _DocumentManifest;
 
   /// Produces a Yaml formatted String version of the object
@@ -947,8 +947,8 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
   ///  ServiceRequest,  Procedure, EligibilityRequest, etc.
   factory DocumentManifestRelated({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     Reference? ref,
   }) = _DocumentManifestRelated;
@@ -1105,28 +1105,28 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Identifier? masterIdentifier,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
         DocumentReferenceStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Code? docStatus,
     @JsonKey(name: '_docStatus') Element? docStatusElement,
     CodeableConcept? type,
-    List<CodeableConcept?>? category,
+    List<CodeableConcept>? category,
     Reference? subject,
     Instant? date,
     @JsonKey(name: '_date') Element? dateElement,
-    List<Reference?>? author,
+    List<Reference>? author,
     Reference? authenticator,
     Reference? custodian,
-    List<DocumentReferenceRelatesTo?>? relatesTo,
+    List<DocumentReferenceRelatesTo>? relatesTo,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<CodeableConcept?>? securityLabel,
+    List<CodeableConcept>? securityLabel,
     required List<DocumentReferenceContent> content,
     DocumentReferenceContext? context,
   }) = _DocumentReference;
@@ -1192,8 +1192,8 @@ abstract class DocumentReferenceRelatesTo
   /// [target]: The target document of this relationship.
   factory DocumentReferenceRelatesTo({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
         DocumentReferenceRelatesToCode? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -1261,8 +1261,8 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
   ///  mimeType.
   factory DocumentReferenceContent({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Attachment attachment,
     Coding? format,
   }) = _DocumentReferenceContent;
@@ -1345,15 +1345,15 @@ abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
   ///  DocumentReference.
   factory DocumentReferenceContext({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Reference?>? encounter,
-    List<CodeableConcept?>? event,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Reference>? encounter,
+    List<CodeableConcept>? event,
     Period? period,
     CodeableConcept? facilityType,
     CodeableConcept? practiceSetting,
     Reference? sourcePatientInfo,
-    List<Reference?>? related,
+    List<Reference>? related,
   }) = _DocumentReferenceContext;
 
   /// Produces a Yaml formatted String version of the object

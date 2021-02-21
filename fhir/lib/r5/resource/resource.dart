@@ -3,10 +3,12 @@ import 'dart:convert';
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:yaml/yaml.dart';
+
 // import 'package:flutter/foundation.dart';
 
 import '../../r5.dart';
 
+part 'resource.g.dart';
 part 'resource_from_json.dart';
 part 'resource_new_version.dart';
 part 'resource_types_enum.dart';
@@ -19,10 +21,10 @@ class Resource {
   FhirUri? implicitRules;
   Code? language;
   Narrative? text;
-  List<Resource?>? contained;
+  List<Resource>? contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? extension_;
-  List<FhirExtension?>? modifierExtension;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
 
   /// produce a string of the [resourceType]
   String? resourceTypeString() =>
@@ -35,7 +37,7 @@ class Resource {
   String toYaml() => json2yaml(toJson());
 
   /// Returns a Resource, accepts [Yaml String] as an argument
-  static Resource? fromYaml(dynamic yaml) => yaml is String
+  static Resource fromYaml(dynamic yaml) => yaml is String
       ? fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? fromJson(jsonDecode(jsonEncode(yaml)))
@@ -59,16 +61,16 @@ class Resource {
     writeNotNull('implicitRules', implicitRules?.toJson());
     writeNotNull('language', language?.toJson());
     writeNotNull('text', text?.toJson());
-    writeNotNull('contained', contained?.map((e) => e?.toJson()).toList());
-    writeNotNull('extension', extension_?.map((e) => e?.toJson()).toList());
+    writeNotNull('contained', contained?.map((e) => e.toJson()).toList());
+    writeNotNull('extension', extension_?.map((e) => e.toJson()).toList());
     writeNotNull('modifierExtension',
-        modifierExtension?.map((e) => e?.toJson()).toList());
+        modifierExtension?.map((e) => e.toJson()).toList());
     return val;
   }
 
   /// Acts like a constructor, returns a [Resource], accepts a
   /// [Map<String, Dyamic] as an argument
-  static Resource? fromJson(Map<String, dynamic> json) =>
+  static Resource fromJson(Map<String, dynamic> json) =>
       _resourceFromJson(json);
 
   /// Updates the [meta] field of this Resource, updates the [lastUpdated], adds

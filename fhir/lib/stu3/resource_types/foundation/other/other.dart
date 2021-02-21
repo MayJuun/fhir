@@ -25,10 +25,10 @@ abstract class Basic with Resource implements _$Basic {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     required CodeableConcept code,
     Reference? subject,
     String? created,
@@ -66,9 +66,9 @@ abstract class Binary with Resource implements _$Binary {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
     Reference? securityContext,
@@ -106,16 +106,16 @@ abstract class Bundle with Resource implements _$Bundle {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     BundleType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Decimal? total,
     @JsonKey(name: '_total') Element? totalElement,
-    List<BundleLink?>? link,
-    List<BundleEntry?>? entry,
+    List<BundleLink>? link,
+    List<BundleEntry>? entry,
     Signature? signature,
   }) = _Bundle;
 
@@ -166,7 +166,7 @@ abstract class BundleLink implements _$BundleLink {
 abstract class BundleEntry implements _$BundleEntry {
   BundleEntry._();
   factory BundleEntry({
-    List<BundleLink?>? link,
+    List<BundleLink>? link,
     String? fullUrl,
     @JsonKey(name: '_fullUrl') Element? fullUrlElement,
     Resource? resource,
@@ -300,9 +300,9 @@ abstract class Linkage with Resource implements _$Linkage {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Boolean? active,
     @JsonKey(name: '_active') Element? activeElement,
     Reference? author,
@@ -366,11 +366,11 @@ abstract class Media with Resource implements _$Media {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
-    List<Reference?>? basedOn,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<Reference>? basedOn,
     MediaType? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? subtype,
@@ -381,7 +381,7 @@ abstract class Media with Resource implements _$Media {
     @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
     Period? occurrencePeriod,
     @JsonKey(name: 'operator') Reference? operator_,
-    List<CodeableConcept?>? reasonCode,
+    List<CodeableConcept>? reasonCode,
     CodeableConcept? bodySite,
     Reference? device,
     Decimal? height,
@@ -393,7 +393,7 @@ abstract class Media with Resource implements _$Media {
     Decimal? duration,
     @JsonKey(name: '_duration') Element? durationElement,
     required Attachment content,
-    List<Annotation?>? note,
+    List<Annotation>? note,
   }) = _Media;
 
   /// Produces a Yaml formatted String version of the object
@@ -426,11 +426,11 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Coding event,
-    List<MessageHeaderDestination?>? destination,
+    List<MessageHeaderDestination>? destination,
     Reference? receiver,
     Reference? sender,
     String? timestamp,
@@ -441,7 +441,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     Reference? responsible,
     CodeableConcept? reason,
     MessageHeaderResponse? response,
-    List<Reference?>? focus,
+    List<Reference>? focus,
   }) = _MessageHeader;
 
   /// Produces a Yaml formatted String version of the object
@@ -564,9 +564,9 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
@@ -598,10 +598,10 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
     CodeableConcept? details,
     String? diagnostics,
     @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
-    List<String?>? location,
-    @JsonKey(name: '_location') List<Element?>? locationElement,
-    List<String?>? expression,
-    @JsonKey(name: '_expression') List<Element?>? expressionElement,
+    List<String>? location,
+    @JsonKey(name: '_location') List<Element>? locationElement,
+    List<String>? expression,
+    @JsonKey(name: '_expression') List<Element>? expressionElement,
   }) = _OperationOutcomeIssue;
 
   /// Produces a Yaml formatted String version of the object
@@ -635,10 +635,10 @@ abstract class Parameters with Resource implements _$Parameters {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<ParametersParameter?>? parameter,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<ParametersParameter>? parameter,
   }) = _Parameters;
 
   /// Produces a Yaml formatted String version of the object
@@ -735,7 +735,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
     ParameterDefinition? valueParameterDefinition,
     TriggerDefinition? valueTriggerDefinition,
     Resource? resource,
-    @JsonKey(name: 'part') List<ParametersParameter?>? part_,
+    @JsonKey(name: 'part') List<ParametersParameter>? part_,
   }) = _ParametersParameter;
 
   /// Produces a Yaml formatted String version of the object
@@ -769,12 +769,12 @@ abstract class Subscription with Resource implements _$Subscription {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     SubscriptionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    List<ContactPoint?>? contact,
+    List<ContactPoint>? contact,
     String? end,
     @JsonKey(name: '_end') Element? endElement,
     String? reason,
@@ -784,7 +784,7 @@ abstract class Subscription with Resource implements _$Subscription {
     String? error,
     @JsonKey(name: '_error') Element? errorElement,
     required SubscriptionChannel channel,
-    List<Coding?>? tag,
+    List<Coding>? tag,
   }) = _Subscription;
 
   /// Produces a Yaml formatted String version of the object
@@ -814,8 +814,8 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
     @JsonKey(name: '_endpoint') Element? endpointElement,
     String? payload,
     @JsonKey(name: '_payload') Element? payloadElement,
-    List<String?>? header,
-    @JsonKey(name: '_header') List<Element?>? headerElement,
+    List<String>? header,
+    @JsonKey(name: '_header') List<Element>? headerElement,
   }) = _SubscriptionChannel;
 
   /// Produces a Yaml formatted String version of the object

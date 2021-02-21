@@ -18,10 +18,10 @@ class _$ContactDetailTearOff {
 
   _ContactDetail call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactPoint?>? telecom}) {
+      List<ContactPoint>? telecom}) {
     return _ContactDetail(
       id: id,
       extension_: extension_,
@@ -43,11 +43,11 @@ const $ContactDetail = _$ContactDetailTearOff();
 mixin _$ContactDetail {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
-  List<ContactPoint?>? get telecom;
+  List<ContactPoint>? get telecom;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -61,10 +61,10 @@ abstract class $ContactDetailCopyWith<$Res> {
       _$ContactDetailCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactPoint?>? telecom});
+      List<ContactPoint>? telecom});
 
   $ElementCopyWith<$Res>? get nameElement;
 }
@@ -90,12 +90,12 @@ class _$ContactDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
     ));
   }
 
@@ -120,10 +120,10 @@ abstract class _$ContactDetailCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactPoint?>? telecom});
+      List<ContactPoint>? telecom});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -152,12 +152,12 @@ class __$ContactDetailCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
       telecom:
-          telecom == freezed ? _value.telecom : telecom as List<ContactPoint?>?,
+          telecom == freezed ? _value.telecom : telecom as List<ContactPoint>?,
     ));
   }
 }
@@ -181,14 +181,14 @@ class _$_ContactDetail extends _ContactDetail {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final String? name;
   @override
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
-  final List<ContactPoint?>? telecom;
+  final List<ContactPoint>? telecom;
 
   @override
   String toString() {
@@ -237,10 +237,10 @@ abstract class _ContactDetail extends ContactDetail {
   _ContactDetail._() : super._();
   factory _ContactDetail(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactPoint?>? telecom}) = _$_ContactDetail;
+      List<ContactPoint>? telecom}) = _$_ContactDetail;
 
   factory _ContactDetail.fromJson(Map<String, dynamic> json) =
       _$_ContactDetail.fromJson;
@@ -249,14 +249,14 @@ abstract class _ContactDetail extends ContactDetail {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   String? get name;
   @override
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
-  List<ContactPoint?>? get telecom;
+  List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
   _$ContactDetailCopyWith<_ContactDetail> get copyWith;
@@ -272,12 +272,12 @@ class _$ContributorTearOff {
 
   _Contributor call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactDetail?>? contact}) {
+      List<ContactDetail>? contact}) {
     return _Contributor(
       id: id,
       extension_: extension_,
@@ -301,7 +301,7 @@ const $Contributor = _$ContributorTearOff();
 mixin _$Contributor {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @JsonKey(unknownEnumValue: ContributorType.unknown)
   ContributorType? get type;
   @JsonKey(name: '_type')
@@ -309,7 +309,7 @@ mixin _$Contributor {
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -323,12 +323,12 @@ abstract class $ContributorCopyWith<$Res> {
       _$ContributorCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactDetail?>? contact});
+      List<ContactDetail>? contact});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get nameElement;
@@ -356,16 +356,15 @@ class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as ContributorType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
     ));
   }
 
@@ -401,12 +400,12 @@ abstract class _$ContributorCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactDetail?>? contact});
+      List<ContactDetail>? contact});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -438,16 +437,15 @@ class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as ContributorType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
     ));
   }
 }
@@ -473,7 +471,7 @@ class _$_Contributor extends _Contributor {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   @JsonKey(unknownEnumValue: ContributorType.unknown)
   final ContributorType? type;
@@ -486,7 +484,7 @@ class _$_Contributor extends _Contributor {
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
-  final List<ContactDetail?>? contact;
+  final List<ContactDetail>? contact;
 
   @override
   String toString() {
@@ -542,12 +540,12 @@ abstract class _Contributor extends Contributor {
   _Contributor._() : super._();
   factory _Contributor(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
-      List<ContactDetail?>? contact}) = _$_Contributor;
+      List<ContactDetail>? contact}) = _$_Contributor;
 
   factory _Contributor.fromJson(Map<String, dynamic> json) =
       _$_Contributor.fromJson;
@@ -556,7 +554,7 @@ abstract class _Contributor extends Contributor {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(unknownEnumValue: ContributorType.unknown)
   ContributorType? get type;
@@ -569,7 +567,7 @@ abstract class _Contributor extends Contributor {
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   @override
   @JsonKey(ignore: true)
   _$ContributorCopyWith<_Contributor> get copyWith;
@@ -585,19 +583,19 @@ class _$DataRequirementTearOff {
 
   _DataRequirement call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Code? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<Canonical?>? profile,
+      List<Canonical>? profile,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
-      List<String?>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
-      List<DataRequirementCodeFilter?>? codeFilter,
-      List<DataRequirementDateFilter?>? dateFilter,
+      List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
+      List<DataRequirementCodeFilter>? codeFilter,
+      List<DataRequirementDateFilter>? dateFilter,
       PositiveInt? limit,
       @JsonKey(name: '_limit') Element? limitElement,
-      List<DataRequirementSort?>? sort}) {
+      List<DataRequirementSort>? sort}) {
     return _DataRequirement(
       id: id,
       extension_: extension_,
@@ -628,22 +626,22 @@ const $DataRequirement = _$DataRequirementTearOff();
 mixin _$DataRequirement {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   Code? get type;
   @JsonKey(name: '_type')
   Element? get typeElement;
-  List<Canonical?>? get profile;
+  List<Canonical>? get profile;
   CodeableConcept? get subjectCodeableConcept;
   Reference? get subjectReference;
-  List<String?>? get mustSupport;
+  List<String>? get mustSupport;
   @JsonKey(name: '_mustSupport')
-  List<Element?>? get mustSupportElement;
-  List<DataRequirementCodeFilter?>? get codeFilter;
-  List<DataRequirementDateFilter?>? get dateFilter;
+  List<Element>? get mustSupportElement;
+  List<DataRequirementCodeFilter>? get codeFilter;
+  List<DataRequirementDateFilter>? get dateFilter;
   PositiveInt? get limit;
   @JsonKey(name: '_limit')
   Element? get limitElement;
-  List<DataRequirementSort?>? get sort;
+  List<DataRequirementSort>? get sort;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -657,19 +655,19 @@ abstract class $DataRequirementCopyWith<$Res> {
       _$DataRequirementCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Code? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<Canonical?>? profile,
+      List<Canonical>? profile,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
-      List<String?>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
-      List<DataRequirementCodeFilter?>? codeFilter,
-      List<DataRequirementDateFilter?>? dateFilter,
+      List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
+      List<DataRequirementCodeFilter>? codeFilter,
+      List<DataRequirementDateFilter>? dateFilter,
       PositiveInt? limit,
       @JsonKey(name: '_limit') Element? limitElement,
-      List<DataRequirementSort?>? sort});
+      List<DataRequirementSort>? sort});
 
   $ElementCopyWith<$Res>? get typeElement;
   $CodeableConceptCopyWith<$Res>? get subjectCodeableConcept;
@@ -707,12 +705,12 @@ class _$DataRequirementCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as Code?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
       profile:
-          profile == freezed ? _value.profile : profile as List<Canonical?>?,
+          profile == freezed ? _value.profile : profile as List<Canonical>?,
       subjectCodeableConcept: subjectCodeableConcept == freezed
           ? _value.subjectCodeableConcept
           : subjectCodeableConcept as CodeableConcept?,
@@ -721,21 +719,21 @@ class _$DataRequirementCopyWithImpl<$Res>
           : subjectReference as Reference?,
       mustSupport: mustSupport == freezed
           ? _value.mustSupport
-          : mustSupport as List<String?>?,
+          : mustSupport as List<String>?,
       mustSupportElement: mustSupportElement == freezed
           ? _value.mustSupportElement
-          : mustSupportElement as List<Element?>?,
+          : mustSupportElement as List<Element>?,
       codeFilter: codeFilter == freezed
           ? _value.codeFilter
-          : codeFilter as List<DataRequirementCodeFilter?>?,
+          : codeFilter as List<DataRequirementCodeFilter>?,
       dateFilter: dateFilter == freezed
           ? _value.dateFilter
-          : dateFilter as List<DataRequirementDateFilter?>?,
+          : dateFilter as List<DataRequirementDateFilter>?,
       limit: limit == freezed ? _value.limit : limit as PositiveInt?,
       limitElement: limitElement == freezed
           ? _value.limitElement
           : limitElement as Element?,
-      sort: sort == freezed ? _value.sort : sort as List<DataRequirementSort?>?,
+      sort: sort == freezed ? _value.sort : sort as List<DataRequirementSort>?,
     ));
   }
 
@@ -794,19 +792,19 @@ abstract class _$DataRequirementCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Code? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<Canonical?>? profile,
+      List<Canonical>? profile,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
-      List<String?>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
-      List<DataRequirementCodeFilter?>? codeFilter,
-      List<DataRequirementDateFilter?>? dateFilter,
+      List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
+      List<DataRequirementCodeFilter>? codeFilter,
+      List<DataRequirementDateFilter>? dateFilter,
       PositiveInt? limit,
       @JsonKey(name: '_limit') Element? limitElement,
-      List<DataRequirementSort?>? sort});
+      List<DataRequirementSort>? sort});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -850,12 +848,12 @@ class __$DataRequirementCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as Code?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
       profile:
-          profile == freezed ? _value.profile : profile as List<Canonical?>?,
+          profile == freezed ? _value.profile : profile as List<Canonical>?,
       subjectCodeableConcept: subjectCodeableConcept == freezed
           ? _value.subjectCodeableConcept
           : subjectCodeableConcept as CodeableConcept?,
@@ -864,21 +862,21 @@ class __$DataRequirementCopyWithImpl<$Res>
           : subjectReference as Reference?,
       mustSupport: mustSupport == freezed
           ? _value.mustSupport
-          : mustSupport as List<String?>?,
+          : mustSupport as List<String>?,
       mustSupportElement: mustSupportElement == freezed
           ? _value.mustSupportElement
-          : mustSupportElement as List<Element?>?,
+          : mustSupportElement as List<Element>?,
       codeFilter: codeFilter == freezed
           ? _value.codeFilter
-          : codeFilter as List<DataRequirementCodeFilter?>?,
+          : codeFilter as List<DataRequirementCodeFilter>?,
       dateFilter: dateFilter == freezed
           ? _value.dateFilter
-          : dateFilter as List<DataRequirementDateFilter?>?,
+          : dateFilter as List<DataRequirementDateFilter>?,
       limit: limit == freezed ? _value.limit : limit as PositiveInt?,
       limitElement: limitElement == freezed
           ? _value.limitElement
           : limitElement as Element?,
-      sort: sort == freezed ? _value.sort : sort as List<DataRequirementSort?>?,
+      sort: sort == freezed ? _value.sort : sort as List<DataRequirementSort>?,
     ));
   }
 }
@@ -911,34 +909,34 @@ class _$_DataRequirement extends _DataRequirement {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
   @override
-  final List<Canonical?>? profile;
+  final List<Canonical>? profile;
   @override
   final CodeableConcept? subjectCodeableConcept;
   @override
   final Reference? subjectReference;
   @override
-  final List<String?>? mustSupport;
+  final List<String>? mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  final List<Element?>? mustSupportElement;
+  final List<Element>? mustSupportElement;
   @override
-  final List<DataRequirementCodeFilter?>? codeFilter;
+  final List<DataRequirementCodeFilter>? codeFilter;
   @override
-  final List<DataRequirementDateFilter?>? dateFilter;
+  final List<DataRequirementDateFilter>? dateFilter;
   @override
   final PositiveInt? limit;
   @override
   @JsonKey(name: '_limit')
   final Element? limitElement;
   @override
-  final List<DataRequirementSort?>? sort;
+  final List<DataRequirementSort>? sort;
 
   @override
   String toString() {
@@ -1022,19 +1020,19 @@ abstract class _DataRequirement extends DataRequirement {
   _DataRequirement._() : super._();
   factory _DataRequirement(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Code? type,
       @JsonKey(name: '_type') Element? typeElement,
-      List<Canonical?>? profile,
+      List<Canonical>? profile,
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
-      List<String?>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
-      List<DataRequirementCodeFilter?>? codeFilter,
-      List<DataRequirementDateFilter?>? dateFilter,
+      List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
+      List<DataRequirementCodeFilter>? codeFilter,
+      List<DataRequirementDateFilter>? dateFilter,
       PositiveInt? limit,
       @JsonKey(name: '_limit') Element? limitElement,
-      List<DataRequirementSort?>? sort}) = _$_DataRequirement;
+      List<DataRequirementSort>? sort}) = _$_DataRequirement;
 
   factory _DataRequirement.fromJson(Map<String, dynamic> json) =
       _$_DataRequirement.fromJson;
@@ -1043,34 +1041,34 @@ abstract class _DataRequirement extends DataRequirement {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   Code? get type;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
-  List<Canonical?>? get profile;
+  List<Canonical>? get profile;
   @override
   CodeableConcept? get subjectCodeableConcept;
   @override
   Reference? get subjectReference;
   @override
-  List<String?>? get mustSupport;
+  List<String>? get mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  List<Element?>? get mustSupportElement;
+  List<Element>? get mustSupportElement;
   @override
-  List<DataRequirementCodeFilter?>? get codeFilter;
+  List<DataRequirementCodeFilter>? get codeFilter;
   @override
-  List<DataRequirementDateFilter?>? get dateFilter;
+  List<DataRequirementDateFilter>? get dateFilter;
   @override
   PositiveInt? get limit;
   @override
   @JsonKey(name: '_limit')
   Element? get limitElement;
   @override
-  List<DataRequirementSort?>? get sort;
+  List<DataRequirementSort>? get sort;
   @override
   @JsonKey(ignore: true)
   _$DataRequirementCopyWith<_DataRequirement> get copyWith;
@@ -1087,14 +1085,14 @@ class _$DataRequirementCodeFilterTearOff {
 
   _DataRequirementCodeFilter call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
       @JsonKey(name: '_searchParam') Element? searchParamElement,
       Canonical? valueSet,
-      List<Coding?>? code}) {
+      List<Coding>? code}) {
     return _DataRequirementCodeFilter(
       id: id,
       extension_: extension_,
@@ -1120,8 +1118,8 @@ const $DataRequirementCodeFilter = _$DataRequirementCodeFilterTearOff();
 mixin _$DataRequirementCodeFilter {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get path;
   @JsonKey(name: '_path')
   Element? get pathElement;
@@ -1129,7 +1127,7 @@ mixin _$DataRequirementCodeFilter {
   @JsonKey(name: '_searchParam')
   Element? get searchParamElement;
   Canonical? get valueSet;
-  List<Coding?>? get code;
+  List<Coding>? get code;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -1143,14 +1141,14 @@ abstract class $DataRequirementCodeFilterCopyWith<$Res> {
       _$DataRequirementCodeFilterCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
       @JsonKey(name: '_searchParam') Element? searchParamElement,
       Canonical? valueSet,
-      List<Coding?>? code});
+      List<Coding>? code});
 
   $ElementCopyWith<$Res>? get pathElement;
   $ElementCopyWith<$Res>? get searchParamElement;
@@ -1181,10 +1179,10 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       path: path == freezed ? _value.path : path as String?,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element?,
@@ -1194,7 +1192,7 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res>
           ? _value.searchParamElement
           : searchParamElement as Element?,
       valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical?,
-      code: code == freezed ? _value.code : code as List<Coding?>?,
+      code: code == freezed ? _value.code : code as List<Coding>?,
     ));
   }
 
@@ -1230,14 +1228,14 @@ abstract class _$DataRequirementCodeFilterCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
       @JsonKey(name: '_searchParam') Element? searchParamElement,
       Canonical? valueSet,
-      List<Coding?>? code});
+      List<Coding>? code});
 
   @override
   $ElementCopyWith<$Res>? get pathElement;
@@ -1273,10 +1271,10 @@ class __$DataRequirementCodeFilterCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       path: path == freezed ? _value.path : path as String?,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element?,
@@ -1286,7 +1284,7 @@ class __$DataRequirementCodeFilterCopyWithImpl<$Res>
           ? _value.searchParamElement
           : searchParamElement as Element?,
       valueSet: valueSet == freezed ? _value.valueSet : valueSet as Canonical?,
-      code: code == freezed ? _value.code : code as List<Coding?>?,
+      code: code == freezed ? _value.code : code as List<Coding>?,
     ));
   }
 }
@@ -1314,9 +1312,9 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? path;
   @override
@@ -1330,7 +1328,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   @override
   final Canonical? valueSet;
   @override
-  final List<Coding?>? code;
+  final List<Coding>? code;
 
   @override
   String toString() {
@@ -1397,14 +1395,14 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   _DataRequirementCodeFilter._() : super._();
   factory _DataRequirementCodeFilter(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
       @JsonKey(name: '_searchParam') Element? searchParamElement,
       Canonical? valueSet,
-      List<Coding?>? code}) = _$_DataRequirementCodeFilter;
+      List<Coding>? code}) = _$_DataRequirementCodeFilter;
 
   factory _DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementCodeFilter.fromJson;
@@ -1413,9 +1411,9 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get path;
   @override
@@ -1429,7 +1427,7 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   @override
   Canonical? get valueSet;
   @override
-  List<Coding?>? get code;
+  List<Coding>? get code;
   @override
   @JsonKey(ignore: true)
   _$DataRequirementCodeFilterCopyWith<_DataRequirementCodeFilter> get copyWith;
@@ -1446,8 +1444,8 @@ class _$DataRequirementDateFilterTearOff {
 
   _DataRequirementDateFilter call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
@@ -1483,8 +1481,8 @@ const $DataRequirementDateFilter = _$DataRequirementDateFilterTearOff();
 mixin _$DataRequirementDateFilter {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get path;
   @JsonKey(name: '_path')
   Element? get pathElement;
@@ -1509,8 +1507,8 @@ abstract class $DataRequirementDateFilterCopyWith<$Res> {
       _$DataRequirementDateFilterCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
@@ -1554,10 +1552,10 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       path: path == freezed ? _value.path : path as String?,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element?,
@@ -1645,8 +1643,8 @@ abstract class _$DataRequirementDateFilterCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
@@ -1698,10 +1696,10 @@ class __$DataRequirementDateFilterCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       path: path == freezed ? _value.path : path as String?,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element?,
@@ -1750,9 +1748,9 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? path;
   @override
@@ -1847,8 +1845,8 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   _DataRequirementDateFilter._() : super._();
   factory _DataRequirementDateFilter(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
       String? searchParam,
@@ -1865,9 +1863,9 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get path;
   @override
@@ -1903,8 +1901,8 @@ class _$DataRequirementSortTearOff {
   _DataRequirementSort call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
@@ -1935,8 +1933,8 @@ const $DataRequirementSort = _$DataRequirementSortTearOff();
 mixin _$DataRequirementSort {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get path;
   @JsonKey(name: '_path')
   Element? get pathElement;
@@ -1958,8 +1956,8 @@ abstract class $DataRequirementSortCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
@@ -1995,10 +1993,10 @@ class _$DataRequirementSortCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       path: path == freezed ? _value.path : path as String?,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element?,
@@ -2044,8 +2042,8 @@ abstract class _$DataRequirementSortCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
@@ -2085,10 +2083,10 @@ class __$DataRequirementSortCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       path: path == freezed ? _value.path : path as String?,
       pathElement:
           pathElement == freezed ? _value.pathElement : pathElement as Element?,
@@ -2127,9 +2125,9 @@ class _$_DataRequirementSort extends _DataRequirementSort {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? path;
   @override
@@ -2200,8 +2198,8 @@ abstract class _DataRequirementSort extends DataRequirementSort {
   factory _DataRequirementSort(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
@@ -2217,9 +2215,9 @@ abstract class _DataRequirementSort extends DataRequirementSort {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get path;
   @override
@@ -2246,7 +2244,7 @@ class _$ParameterDefinitionTearOff {
 
   _ParameterDefinition call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Code? name,
       @JsonKey(name: '_name') Element? nameElement,
       Code? use,
@@ -2291,7 +2289,7 @@ const $ParameterDefinition = _$ParameterDefinitionTearOff();
 mixin _$ParameterDefinition {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   Code? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
@@ -2324,7 +2322,7 @@ abstract class $ParameterDefinitionCopyWith<$Res> {
       _$ParameterDefinitionCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Code? name,
       @JsonKey(name: '_name') Element? nameElement,
       Code? use,
@@ -2378,7 +2376,7 @@ class _$ParameterDefinitionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       name: name == freezed ? _value.name : name as Code?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -2480,7 +2478,7 @@ abstract class _$ParameterDefinitionCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Code? name,
       @JsonKey(name: '_name') Element? nameElement,
       Code? use,
@@ -2542,7 +2540,7 @@ class __$ParameterDefinitionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       name: name == freezed ? _value.name : name as Code?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -2598,7 +2596,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final Code? name;
   @override
@@ -2716,7 +2714,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   _ParameterDefinition._() : super._();
   factory _ParameterDefinition(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Code? name,
       @JsonKey(name: '_name') Element? nameElement,
       Code? use,
@@ -2738,7 +2736,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   Code? get name;
   @override
@@ -2787,7 +2785,7 @@ class _$RelatedArtifactTearOff {
   _RelatedArtifact call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
           RelatedArtifactType? type,
       @JsonKey(name: '_type')
@@ -2836,7 +2834,7 @@ const $RelatedArtifact = _$RelatedArtifactTearOff();
 mixin _$RelatedArtifact {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
   RelatedArtifactType? get type;
   @JsonKey(name: '_type')
@@ -2869,7 +2867,7 @@ abstract class $RelatedArtifactCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
           RelatedArtifactType? type,
       @JsonKey(name: '_type')
@@ -2927,7 +2925,7 @@ class _$RelatedArtifactCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as RelatedArtifactType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -3028,7 +3026,7 @@ abstract class _$RelatedArtifactCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
           RelatedArtifactType? type,
       @JsonKey(name: '_type')
@@ -3094,7 +3092,7 @@ class __$RelatedArtifactCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as RelatedArtifactType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -3147,7 +3145,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
   final RelatedArtifactType? type;
@@ -3262,7 +3260,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
   factory _RelatedArtifact(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
           RelatedArtifactType? type,
       @JsonKey(name: '_type')
@@ -3289,7 +3287,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
   RelatedArtifactType? get type;
@@ -3336,7 +3334,7 @@ class _$TriggerDefinitionTearOff {
   _TriggerDefinition call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
           TriggerDefinitionType? type,
       @JsonKey(name: '_type')
@@ -3352,7 +3350,7 @@ class _$TriggerDefinitionTearOff {
       FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element? timingDateTimeElement,
-      List<DataRequirement?>? data,
+      List<DataRequirement>? data,
       Expression? condition}) {
     return _TriggerDefinition(
       id: id,
@@ -3384,7 +3382,7 @@ const $TriggerDefinition = _$TriggerDefinitionTearOff();
 mixin _$TriggerDefinition {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
   TriggerDefinitionType? get type;
   @JsonKey(name: '_type')
@@ -3400,7 +3398,7 @@ mixin _$TriggerDefinition {
   FhirDateTime? get timingDateTime;
   @JsonKey(name: '_timingDateTime')
   Element? get timingDateTimeElement;
-  List<DataRequirement?>? get data;
+  List<DataRequirement>? get data;
   Expression? get condition;
 
   Map<String, dynamic> toJson();
@@ -3416,7 +3414,7 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
           TriggerDefinitionType? type,
       @JsonKey(name: '_type')
@@ -3432,7 +3430,7 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
       FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element? timingDateTimeElement,
-      List<DataRequirement?>? data,
+      List<DataRequirement>? data,
       Expression? condition});
 
   $ElementCopyWith<$Res>? get typeElement;
@@ -3474,7 +3472,7 @@ class _$TriggerDefinitionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as TriggerDefinitionType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -3498,7 +3496,7 @@ class _$TriggerDefinitionCopyWithImpl<$Res>
       timingDateTimeElement: timingDateTimeElement == freezed
           ? _value.timingDateTimeElement
           : timingDateTimeElement as Element?,
-      data: data == freezed ? _value.data : data as List<DataRequirement?>?,
+      data: data == freezed ? _value.data : data as List<DataRequirement>?,
       condition:
           condition == freezed ? _value.condition : condition as Expression?,
     ));
@@ -3592,7 +3590,7 @@ abstract class _$TriggerDefinitionCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
           TriggerDefinitionType? type,
       @JsonKey(name: '_type')
@@ -3608,7 +3606,7 @@ abstract class _$TriggerDefinitionCopyWith<$Res>
       FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element? timingDateTimeElement,
-      List<DataRequirement?>? data,
+      List<DataRequirement>? data,
       Expression? condition});
 
   @override
@@ -3659,7 +3657,7 @@ class __$TriggerDefinitionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       type: type == freezed ? _value.type : type as TriggerDefinitionType?,
       typeElement:
           typeElement == freezed ? _value.typeElement : typeElement as Element?,
@@ -3683,7 +3681,7 @@ class __$TriggerDefinitionCopyWithImpl<$Res>
       timingDateTimeElement: timingDateTimeElement == freezed
           ? _value.timingDateTimeElement
           : timingDateTimeElement as Element?,
-      data: data == freezed ? _value.data : data as List<DataRequirement?>?,
+      data: data == freezed ? _value.data : data as List<DataRequirement>?,
       condition:
           condition == freezed ? _value.condition : condition as Expression?,
     ));
@@ -3718,7 +3716,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
   final TriggerDefinitionType? type;
@@ -3745,7 +3743,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   @JsonKey(name: '_timingDateTime')
   final Element? timingDateTimeElement;
   @override
-  final List<DataRequirement?>? data;
+  final List<DataRequirement>? data;
   @override
   final Expression? condition;
 
@@ -3832,7 +3830,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
   factory _TriggerDefinition(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
+          List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
           TriggerDefinitionType? type,
       @JsonKey(name: '_type')
@@ -3848,7 +3846,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
       FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
           Element? timingDateTimeElement,
-      List<DataRequirement?>? data,
+      List<DataRequirement>? data,
       Expression? condition}) = _$_TriggerDefinition;
 
   factory _TriggerDefinition.fromJson(Map<String, dynamic> json) =
@@ -3858,7 +3856,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
   TriggerDefinitionType? get type;
@@ -3885,7 +3883,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
   @JsonKey(name: '_timingDateTime')
   Element? get timingDateTimeElement;
   @override
-  List<DataRequirement?>? get data;
+  List<DataRequirement>? get data;
   @override
   Expression? get condition;
   @override
@@ -3903,7 +3901,7 @@ class _$UsageContextTearOff {
 
   _UsageContext call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       required Coding code,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
@@ -3932,7 +3930,7 @@ const $UsageContext = _$UsageContextTearOff();
 mixin _$UsageContext {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   Coding get code;
   CodeableConcept? get valueCodeableConcept;
   Quantity? get valueQuantity;
@@ -3951,7 +3949,7 @@ abstract class $UsageContextCopyWith<$Res> {
       _$UsageContextCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Coding code,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
@@ -3987,7 +3985,7 @@ class _$UsageContextCopyWithImpl<$Res> implements $UsageContextCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as Coding,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
@@ -4065,7 +4063,7 @@ abstract class _$UsageContextCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Coding code,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
@@ -4108,7 +4106,7 @@ class __$UsageContextCopyWithImpl<$Res> extends _$UsageContextCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       code: code == freezed ? _value.code : code as Coding,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
@@ -4146,7 +4144,7 @@ class _$_UsageContext extends _UsageContext {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final Coding code;
   @override
@@ -4214,7 +4212,7 @@ abstract class _UsageContext extends UsageContext {
   _UsageContext._() : super._();
   factory _UsageContext(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       required Coding code,
       CodeableConcept? valueCodeableConcept,
       Quantity? valueQuantity,
@@ -4228,7 +4226,7 @@ abstract class _UsageContext extends UsageContext {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   Coding get code;
   @override
@@ -4254,7 +4252,7 @@ class _$ExpressionTearOff {
 
   _Expression call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Id? name,
@@ -4293,7 +4291,7 @@ const $Expression = _$ExpressionTearOff();
 mixin _$Expression {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
@@ -4322,7 +4320,7 @@ abstract class $ExpressionCopyWith<$Res> {
       _$ExpressionCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Id? name,
@@ -4368,7 +4366,7 @@ class _$ExpressionCopyWithImpl<$Res> implements $ExpressionCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -4458,7 +4456,7 @@ abstract class _$ExpressionCopyWith<$Res> implements $ExpressionCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Id? name,
@@ -4511,7 +4509,7 @@ class __$ExpressionCopyWithImpl<$Res> extends _$ExpressionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -4564,7 +4562,7 @@ class _$_Expression extends _Expression {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final String? description;
   @override
@@ -4667,7 +4665,7 @@ abstract class _Expression extends Expression {
   _Expression._() : super._();
   factory _Expression(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Id? name,
@@ -4686,7 +4684,7 @@ abstract class _Expression extends Expression {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   String? get description;
   @override

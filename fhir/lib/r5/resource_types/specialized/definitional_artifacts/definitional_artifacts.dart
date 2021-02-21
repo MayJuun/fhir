@@ -27,12 +27,12 @@ abstract class ActivityDefinition
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -48,11 +48,11 @@ abstract class ActivityDefinition
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -68,13 +68,13 @@ abstract class ActivityDefinition
     Reference? subjectReference,
     String? usage,
     @JsonKey(name: '_usage') Element? usageElement,
-    List<CodeableConcept?>? topic,
-    List<ContactDetail?>? author,
-    List<ContactDetail?>? editor,
-    List<ContactDetail?>? reviewer,
-    List<ContactDetail?>? endorser,
-    List<RelatedArtifact?>? relatedArtifact,
-    @JsonKey(name: 'library') List<Canonical?>? library_,
+    List<CodeableConcept>? topic,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
+    @JsonKey(name: 'library') List<Canonical>? library_,
     Code? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     Canonical? profile,
@@ -93,17 +93,17 @@ abstract class ActivityDefinition
     Range? timingRange,
     FhirDuration? timingDuration,
     Reference? location,
-    List<ActivityDefinitionParticipant?>? participant,
+    List<ActivityDefinitionParticipant>? participant,
     Reference? productReference,
     CodeableConcept? productCodeableConcept,
     Quantity? quantity,
-    List<Dosage?>? dosage,
-    List<CodeableConcept?>? bodySite,
-    List<Reference?>? specimenRequirement,
-    List<Reference?>? observationRequirement,
-    List<Reference?>? observationResultRequirement,
+    List<Dosage>? dosage,
+    List<CodeableConcept>? bodySite,
+    List<Reference>? specimenRequirement,
+    List<Reference>? observationRequirement,
+    List<Reference>? observationResultRequirement,
     Canonical? transform,
-    List<ActivityDefinitionDynamicValue?>? dynamicValue,
+    List<ActivityDefinitionDynamicValue>? dynamicValue,
   }) = _ActivityDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -129,8 +129,8 @@ abstract class ActivityDefinitionParticipant
   ActivityDefinitionParticipant._();
   factory ActivityDefinitionParticipant({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Code? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? role,
@@ -160,8 +160,8 @@ abstract class ActivityDefinitionDynamicValue
   ActivityDefinitionDynamicValue._();
   factory ActivityDefinitionDynamicValue({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
     required Expression expression,
@@ -203,12 +203,12 @@ abstract class ConditionDefinition
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -224,11 +224,11 @@ abstract class ConditionDefinition
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -250,14 +250,14 @@ abstract class ConditionDefinition
     @JsonKey(name: '_hasBodySite') Element? hasBodySiteElement,
     Boolean? hasStage,
     @JsonKey(name: '_hasStage') Element? hasStageElement,
-    List<FhirUri?>? definition,
-    @JsonKey(name: '_definition') List<Element?>? definitionElement,
-    List<ConditionDefinitionObservation?>? observation,
-    List<ConditionDefinitionMedication?>? medication,
-    List<ConditionDefinitionPrecondition?>? precondition,
-    List<Reference?>? team,
-    List<ConditionDefinitionQuestionnaire?>? questionnaire,
-    List<ConditionDefinitionPlan?>? plan,
+    List<FhirUri>? definition,
+    @JsonKey(name: '_definition') List<Element>? definitionElement,
+    List<ConditionDefinitionObservation>? observation,
+    List<ConditionDefinitionMedication>? medication,
+    List<ConditionDefinitionPrecondition>? precondition,
+    List<Reference>? team,
+    List<ConditionDefinitionQuestionnaire>? questionnaire,
+    List<ConditionDefinitionPlan>? plan,
   }) = _ConditionDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -283,8 +283,8 @@ abstract class ConditionDefinitionObservation
   ConditionDefinitionObservation._();
   factory ConditionDefinitionObservation({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? category,
     CodeableConcept? code,
   }) = _ConditionDefinitionObservation;
@@ -315,8 +315,8 @@ abstract class ConditionDefinitionMedication
   ConditionDefinitionMedication._();
   factory ConditionDefinitionMedication({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? category,
     CodeableConcept? code,
   }) = _ConditionDefinitionMedication;
@@ -345,8 +345,8 @@ abstract class ConditionDefinitionPrecondition
   ConditionDefinitionPrecondition._();
   factory ConditionDefinitionPrecondition({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConditionDefinitionPreconditionType.unknown)
         ConditionDefinitionPreconditionType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -381,8 +381,8 @@ abstract class ConditionDefinitionQuestionnaire
   ConditionDefinitionQuestionnaire._();
   factory ConditionDefinitionQuestionnaire({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ConditionDefinitionQuestionnairePurpose.unknown)
         ConditionDefinitionQuestionnairePurpose? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
@@ -414,8 +414,8 @@ abstract class ConditionDefinitionPlan implements _$ConditionDefinitionPlan {
   ConditionDefinitionPlan._();
   factory ConditionDefinitionPlan({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? role,
     required Reference reference,
   }) = _ConditionDefinitionPlan;
@@ -451,35 +451,35 @@ abstract class DeviceDefinition with Resource implements _$DeviceDefinition {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
-    List<DeviceDefinitionUdiDeviceIdentifier?>? udiDeviceIdentifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<DeviceDefinitionUdiDeviceIdentifier>? udiDeviceIdentifier,
     String? manufacturerString,
     @JsonKey(name: '_manufacturerString') Element? manufacturerStringElement,
     Reference? manufacturerReference,
-    List<DeviceDefinitionDeviceName?>? deviceName,
+    List<DeviceDefinitionDeviceName>? deviceName,
     String? modelNumber,
     @JsonKey(name: '_modelNumber') Element? modelNumberElement,
     CodeableConcept? type,
-    List<DeviceDefinitionSpecialization?>? specialization,
-    List<String?>? version,
-    @JsonKey(name: '_version') List<Element?>? versionElement,
-    List<CodeableConcept?>? safety,
-    List<ProductShelfLife?>? shelfLifeStorage,
+    List<DeviceDefinitionSpecialization>? specialization,
+    List<String>? version,
+    @JsonKey(name: '_version') List<Element>? versionElement,
+    List<CodeableConcept>? safety,
+    List<ProductShelfLife>? shelfLifeStorage,
     ProdCharacteristic? physicalCharacteristics,
-    List<CodeableConcept?>? languageCode,
-    List<DeviceDefinitionCapability?>? capability,
-    List<DeviceDefinitionProperty?>? property,
+    List<CodeableConcept>? languageCode,
+    List<DeviceDefinitionCapability>? capability,
+    List<DeviceDefinitionProperty>? property,
     Reference? owner,
-    List<ContactPoint?>? contact,
+    List<ContactPoint>? contact,
     FhirUri? onlineInformation,
     @JsonKey(name: '_onlineInformation') Element? onlineInformationElement,
-    List<Annotation?>? note,
+    List<Annotation>? note,
     Quantity? quantity,
     Reference? parentDevice,
-    List<DeviceDefinitionMaterial?>? material,
+    List<DeviceDefinitionMaterial>? material,
   }) = _DeviceDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -505,8 +505,8 @@ abstract class DeviceDefinitionUdiDeviceIdentifier
   DeviceDefinitionUdiDeviceIdentifier._();
   factory DeviceDefinitionUdiDeviceIdentifier({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? deviceIdentifier,
     @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
     FhirUri? issuer,
@@ -541,8 +541,8 @@ abstract class DeviceDefinitionDeviceName
   DeviceDefinitionDeviceName._();
   factory DeviceDefinitionDeviceName({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: DeviceDefinitionDeviceNameType.unknown)
@@ -574,8 +574,8 @@ abstract class DeviceDefinitionSpecialization
   DeviceDefinitionSpecialization._();
   factory DeviceDefinitionSpecialization({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? systemType,
     @JsonKey(name: '_systemType') Element? systemTypeElement,
     String? version,
@@ -608,10 +608,10 @@ abstract class DeviceDefinitionCapability
   DeviceDefinitionCapability._();
   factory DeviceDefinitionCapability({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
-    List<CodeableConcept?>? description,
+    List<CodeableConcept>? description,
   }) = _DeviceDefinitionCapability;
 
   /// Produces a Yaml formatted String version of the object
@@ -637,11 +637,11 @@ abstract class DeviceDefinitionProperty implements _$DeviceDefinitionProperty {
   DeviceDefinitionProperty._();
   factory DeviceDefinitionProperty({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
-    List<Quantity?>? valueQuantity,
-    List<CodeableConcept?>? valueCode,
+    List<Quantity>? valueQuantity,
+    List<CodeableConcept>? valueCode,
   }) = _DeviceDefinitionProperty;
 
   /// Produces a Yaml formatted String version of the object
@@ -667,8 +667,8 @@ abstract class DeviceDefinitionMaterial implements _$DeviceDefinitionMaterial {
   DeviceDefinitionMaterial._();
   factory DeviceDefinitionMaterial({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required CodeableConcept substance,
     Boolean? alternate,
     @JsonKey(name: '_alternate') Element? alternateElement,
@@ -708,12 +708,12 @@ abstract class EventDefinition with Resource implements _$EventDefinition {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -729,11 +729,11 @@ abstract class EventDefinition with Resource implements _$EventDefinition {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -749,12 +749,12 @@ abstract class EventDefinition with Resource implements _$EventDefinition {
     Reference? subjectReference,
     String? usage,
     @JsonKey(name: '_usage') Element? usageElement,
-    List<CodeableConcept?>? topic,
-    List<ContactDetail?>? author,
-    List<ContactDetail?>? editor,
-    List<ContactDetail?>? reviewer,
-    List<ContactDetail?>? endorser,
-    List<RelatedArtifact?>? relatedArtifact,
+    List<CodeableConcept>? topic,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
     required List<TriggerDefinition> trigger,
   }) = _EventDefinition;
 
@@ -791,9 +791,9 @@ abstract class ObservationDefinition
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     Identifier? identifier,
@@ -801,9 +801,9 @@ abstract class ObservationDefinition
     @JsonKey(name: '_version') Element? versionElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    List<Canonical?>? derivedFromCanonical,
-    List<FhirUri?>? derivedFromUri,
-    @JsonKey(name: '_derivedFromUri') List<Element?>? derivedFromUriElement,
+    List<Canonical>? derivedFromCanonical,
+    List<FhirUri>? derivedFromUri,
+    @JsonKey(name: '_derivedFromUri') List<Element>? derivedFromUriElement,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
@@ -813,11 +813,11 @@ abstract class ObservationDefinition
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? publisher,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -828,11 +828,11 @@ abstract class ObservationDefinition
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
     CodeableConcept? performerType,
-    List<CodeableConcept?>? category,
+    List<CodeableConcept>? category,
     required CodeableConcept code,
-    List<ObservationDefinitionPermittedDataType?>? permittedDataType,
+    List<ObservationDefinitionPermittedDataType>? permittedDataType,
     @JsonKey(name: '_permittedDataType')
-        List<Element?>? permittedDataTypeElement,
+        List<Element>? permittedDataTypeElement,
     Boolean? multipleResultsAllowed,
     @JsonKey(name: '_multipleResultsAllowed')
         Element? multipleResultsAllowedElement,
@@ -843,13 +843,13 @@ abstract class ObservationDefinition
     String? preferredReportName,
     @JsonKey(name: '_preferredReportName') Element? preferredReportNameElement,
     ObservationDefinitionQuantitativeDetails? quantitativeDetails,
-    List<ObservationDefinitionQualifiedInterval?>? qualifiedInterval,
+    List<ObservationDefinitionQualifiedInterval>? qualifiedInterval,
     Reference? validCodedValueSet,
     Reference? normalCodedValueSet,
     Reference? abnormalCodedValueSet,
     Reference? criticalCodedValueSet,
-    List<Reference?>? hasMember,
-    List<ObservationDefinitionComponent?>? component,
+    List<Reference>? hasMember,
+    List<ObservationDefinitionComponent>? component,
   }) = _ObservationDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -875,8 +875,8 @@ abstract class ObservationDefinitionQuantitativeDetails
   ObservationDefinitionQuantitativeDetails._();
   factory ObservationDefinitionQuantitativeDetails({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? customaryUnit,
     CodeableConcept? unit,
     Decimal? conversionFactor,
@@ -911,8 +911,8 @@ abstract class ObservationDefinitionQualifiedInterval
   ObservationDefinitionQualifiedInterval._();
   factory ObservationDefinitionQualifiedInterval({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(
         unknownEnumValue:
             ObservationDefinitionQualifiedIntervalCategory.unknown)
@@ -920,7 +920,7 @@ abstract class ObservationDefinitionQualifiedInterval
     @JsonKey(name: '_category') Element? categoryElement,
     Range? range,
     CodeableConcept? context,
-    List<CodeableConcept?>? appliesTo,
+    List<CodeableConcept>? appliesTo,
     @JsonKey(unknownEnumValue: ObservationDefinitionQualifiedIntervalGender.unknown)
         ObservationDefinitionQualifiedIntervalGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
@@ -956,14 +956,14 @@ abstract class ObservationDefinitionComponent
   ObservationDefinitionComponent._();
   factory ObservationDefinitionComponent({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
-    List<ObservationDefinitionComponentPermittedDataType?>? permittedDataType,
+    List<ObservationDefinitionComponentPermittedDataType>? permittedDataType,
     @JsonKey(name: '_permittedDataType')
-        List<Element?>? permittedDataTypeElement,
+        List<Element>? permittedDataTypeElement,
     ObservationDefinitionQuantitativeDetails? quantitativeDetails,
-    List<ObservationDefinitionQualifiedInterval?>? qualifiedInterval,
+    List<ObservationDefinitionQualifiedInterval>? qualifiedInterval,
   }) = _ObservationDefinitionComponent;
 
   /// Produces a Yaml formatted String version of the object
@@ -1000,12 +1000,12 @@ abstract class PlanDefinition with Resource implements _$PlanDefinition {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -1021,11 +1021,11 @@ abstract class PlanDefinition with Resource implements _$PlanDefinition {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -1042,15 +1042,15 @@ abstract class PlanDefinition with Resource implements _$PlanDefinition {
     Reference? subjectReference,
     String? usage,
     @JsonKey(name: '_usage') Element? usageElement,
-    List<CodeableConcept?>? topic,
-    List<ContactDetail?>? author,
-    List<ContactDetail?>? editor,
-    List<ContactDetail?>? reviewer,
-    List<ContactDetail?>? endorser,
-    List<RelatedArtifact?>? relatedArtifact,
-    @JsonKey(name: 'library') List<Canonical?>? library_,
-    List<PlanDefinitionGoal?>? goal,
-    List<PlanDefinitionAction?>? action,
+    List<CodeableConcept>? topic,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
+    @JsonKey(name: 'library') List<Canonical>? library_,
+    List<PlanDefinitionGoal>? goal,
+    List<PlanDefinitionAction>? action,
   }) = _PlanDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -1075,15 +1075,15 @@ abstract class PlanDefinitionGoal implements _$PlanDefinitionGoal {
   PlanDefinitionGoal._();
   factory PlanDefinitionGoal({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? category,
     required CodeableConcept description,
     CodeableConcept? priority,
     CodeableConcept? start,
-    List<CodeableConcept?>? addresses,
-    List<RelatedArtifact?>? documentation,
-    List<PlanDefinitionTarget?>? target,
+    List<CodeableConcept>? addresses,
+    List<RelatedArtifact>? documentation,
+    List<PlanDefinitionTarget>? target,
   }) = _PlanDefinitionGoal;
 
   /// Produces a Yaml formatted String version of the object
@@ -1108,8 +1108,8 @@ abstract class PlanDefinitionTarget implements _$PlanDefinitionTarget {
   PlanDefinitionTarget._();
   factory PlanDefinitionTarget({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? measure,
     Quantity? detailQuantity,
     Range? detailRange,
@@ -1139,8 +1139,8 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
   PlanDefinitionAction._();
   factory PlanDefinitionAction({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? prefix,
     @JsonKey(name: '_prefix') Element? prefixElement,
     String? title,
@@ -1151,18 +1151,18 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
     @JsonKey(name: '_textEquivalent') Element? textEquivalentElement,
     Code? priority,
     @JsonKey(name: '_priority') Element? priorityElement,
-    List<CodeableConcept?>? code,
-    List<CodeableConcept?>? reason,
-    List<RelatedArtifact?>? documentation,
-    List<Id?>? goalId,
-    @JsonKey(name: '_goalId') List<Element?>? goalIdElement,
+    List<CodeableConcept>? code,
+    List<CodeableConcept>? reason,
+    List<RelatedArtifact>? documentation,
+    List<Id>? goalId,
+    @JsonKey(name: '_goalId') List<Element>? goalIdElement,
     CodeableConcept? subjectCodeableConcept,
     Reference? subjectReference,
-    List<TriggerDefinition?>? trigger,
-    List<PlanDefinitionCondition?>? condition,
-    List<DataRequirement?>? input,
-    List<DataRequirement?>? output,
-    List<PlanDefinitionRelatedAction?>? relatedAction,
+    List<TriggerDefinition>? trigger,
+    List<PlanDefinitionCondition>? condition,
+    List<DataRequirement>? input,
+    List<DataRequirement>? output,
+    List<PlanDefinitionRelatedAction>? relatedAction,
     FhirDateTime? timingDateTime,
     @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
     Age? timingAge,
@@ -1170,7 +1170,7 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
     FhirDuration? timingDuration,
     Range? timingRange,
     Timing? timingTiming,
-    List<PlanDefinitionParticipant?>? participant,
+    List<PlanDefinitionParticipant>? participant,
     CodeableConcept? type,
     @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
         PlanDefinitionActionGroupingBehavior? groupingBehavior,
@@ -1192,8 +1192,8 @@ abstract class PlanDefinitionAction implements _$PlanDefinitionAction {
     FhirUri? definitionUri,
     @JsonKey(name: '_definitionUri') Element? definitionUriElement,
     Canonical? transform,
-    List<PlanDefinitionDynamicValue?>? dynamicValue,
-    List<PlanDefinitionAction?>? action,
+    List<PlanDefinitionDynamicValue>? dynamicValue,
+    List<PlanDefinitionAction>? action,
   }) = _PlanDefinitionAction;
 
   /// Produces a Yaml formatted String version of the object
@@ -1218,8 +1218,8 @@ abstract class PlanDefinitionCondition implements _$PlanDefinitionCondition {
   PlanDefinitionCondition._();
   factory PlanDefinitionCondition({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: PlanDefinitionConditionKind.unknown)
         PlanDefinitionConditionKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
@@ -1249,8 +1249,8 @@ abstract class PlanDefinitionRelatedAction
   PlanDefinitionRelatedAction._();
   factory PlanDefinitionRelatedAction({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Id? actionId,
     @JsonKey(name: '_actionId') Element? actionIdElement,
     @JsonKey(unknownEnumValue: PlanDefinitionRelatedActionRelationship.unknown)
@@ -1284,8 +1284,8 @@ abstract class PlanDefinitionParticipant
   PlanDefinitionParticipant._();
   factory PlanDefinitionParticipant({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
         PlanDefinitionParticipantType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -1316,8 +1316,8 @@ abstract class PlanDefinitionDynamicValue
   PlanDefinitionDynamicValue._();
   factory PlanDefinitionDynamicValue({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
     Expression? expression,
@@ -1355,12 +1355,12 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -1376,11 +1376,11 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -1390,11 +1390,11 @@ abstract class Questionnaire with Resource implements _$Questionnaire {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
-    List<Canonical?>? derivedFrom,
-    List<Code?>? subjectType,
-    @JsonKey(name: '_subjectType') List<Element?>? subjectTypeElement,
-    List<Coding?>? code,
-    List<QuestionnaireItem?>? item,
+    List<Canonical>? derivedFrom,
+    List<Code>? subjectType,
+    @JsonKey(name: '_subjectType') List<Element>? subjectTypeElement,
+    List<Coding>? code,
+    List<QuestionnaireItem>? item,
   }) = _Questionnaire;
 
   /// Produces a Yaml formatted String version of the object
@@ -1419,13 +1419,13 @@ abstract class QuestionnaireItem implements _$QuestionnaireItem {
   QuestionnaireItem._();
   factory QuestionnaireItem({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? linkId,
     @JsonKey(name: '_linkId') Element? linkIdElement,
     FhirUri? definition,
     @JsonKey(name: '_definition') Element? definitionElement,
-    List<Coding?>? code,
+    List<Coding>? code,
     String? prefix,
     @JsonKey(name: '_prefix') Element? prefixElement,
     String? text,
@@ -1433,7 +1433,7 @@ abstract class QuestionnaireItem implements _$QuestionnaireItem {
     @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
         QuestionnaireItemType? type,
     @JsonKey(name: '_type') Element? typeElement,
-    List<QuestionnaireEnableWhen?>? enableWhen,
+    List<QuestionnaireEnableWhen>? enableWhen,
     @JsonKey(unknownEnumValue: QuestionnaireItemEnableBehavior.unknown)
         QuestionnaireItemEnableBehavior? enableBehavior,
     @JsonKey(name: '_enableBehavior') Element? enableBehaviorElement,
@@ -1446,9 +1446,9 @@ abstract class QuestionnaireItem implements _$QuestionnaireItem {
     Integer? maxLength,
     @JsonKey(name: '_maxLength') Element? maxLengthElement,
     Canonical? answerValueSet,
-    List<QuestionnaireAnswerOption?>? answerOption,
-    List<QuestionnaireInitial?>? initial,
-    List<QuestionnaireItem?>? item,
+    List<QuestionnaireAnswerOption>? answerOption,
+    List<QuestionnaireInitial>? initial,
+    List<QuestionnaireItem>? item,
   }) = _QuestionnaireItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -1473,8 +1473,8 @@ abstract class QuestionnaireEnableWhen implements _$QuestionnaireEnableWhen {
   QuestionnaireEnableWhen._();
   factory QuestionnaireEnableWhen({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? question,
     @JsonKey(name: '_question') Element? questionElement,
     @JsonKey(name: 'operator', unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
@@ -1522,8 +1522,8 @@ abstract class QuestionnaireAnswerOption
   QuestionnaireAnswerOption._();
   factory QuestionnaireAnswerOption({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Integer? valueInteger,
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
     Date? valueDate,
@@ -1561,8 +1561,8 @@ abstract class QuestionnaireInitial implements _$QuestionnaireInitial {
   QuestionnaireInitial._();
   factory QuestionnaireInitial({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Boolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
     Decimal? valueDecimal,
@@ -1618,9 +1618,9 @@ abstract class SpecimenDefinition
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
     Identifier? identifier,
@@ -1628,9 +1628,9 @@ abstract class SpecimenDefinition
     @JsonKey(name: '_version') Element? versionElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    List<Canonical?>? derivedFromCanonical,
-    List<FhirUri?>? derivedFromUri,
-    @JsonKey(name: '_derivedFromUri') List<Element?>? derivedFromUriElement,
+    List<Canonical>? derivedFromCanonical,
+    List<FhirUri>? derivedFromUri,
+    @JsonKey(name: '_derivedFromUri') List<Element>? derivedFromUriElement,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
@@ -1640,11 +1640,11 @@ abstract class SpecimenDefinition
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     Reference? publisher,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -1655,11 +1655,11 @@ abstract class SpecimenDefinition
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
     CodeableConcept? typeCollected,
-    List<CodeableConcept?>? patientPreparation,
+    List<CodeableConcept>? patientPreparation,
     String? timeAspect,
     @JsonKey(name: '_timeAspect') Element? timeAspectElement,
-    List<CodeableConcept?>? collection,
-    List<SpecimenDefinitionTypeTested?>? typeTested,
+    List<CodeableConcept>? collection,
+    List<SpecimenDefinitionTypeTested>? typeTested,
   }) = _SpecimenDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -1685,8 +1685,8 @@ abstract class SpecimenDefinitionTypeTested
   SpecimenDefinitionTypeTested._();
   factory SpecimenDefinitionTypeTested({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Boolean? isDerived,
     @JsonKey(name: '_isDerived') Element? isDerivedElement,
     CodeableConcept? type,
@@ -1699,9 +1699,9 @@ abstract class SpecimenDefinitionTypeTested
     FhirDuration? retentionTime,
     Boolean? singleUse,
     @JsonKey(name: '_singleUse') Element? singleUseElement,
-    List<CodeableConcept?>? rejectionCriterion,
-    List<SpecimenDefinitionHandling?>? handling,
-    List<CodeableConcept?>? testingDestination,
+    List<CodeableConcept>? rejectionCriterion,
+    List<SpecimenDefinitionHandling>? handling,
+    List<CodeableConcept>? testingDestination,
   }) = _SpecimenDefinitionTypeTested;
 
   /// Produces a Yaml formatted String version of the object
@@ -1728,8 +1728,8 @@ abstract class SpecimenDefinitionContainer
   SpecimenDefinitionContainer._();
   factory SpecimenDefinitionContainer({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? material,
     CodeableConcept? type,
     CodeableConcept? cap,
@@ -1739,7 +1739,7 @@ abstract class SpecimenDefinitionContainer
     Quantity? minimumVolumeQuantity,
     String? minimumVolumeString,
     @JsonKey(name: '_minimumVolumeString') Element? minimumVolumeStringElement,
-    List<SpecimenDefinitionAdditive?>? additive,
+    List<SpecimenDefinitionAdditive>? additive,
     String? preparation,
     @JsonKey(name: '_preparation') Element? preparationElement,
   }) = _SpecimenDefinitionContainer;
@@ -1768,8 +1768,8 @@ abstract class SpecimenDefinitionAdditive
   SpecimenDefinitionAdditive._();
   factory SpecimenDefinitionAdditive({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? additiveCodeableConcept,
     Reference? additiveReference,
   }) = _SpecimenDefinitionAdditive;
@@ -1798,8 +1798,8 @@ abstract class SpecimenDefinitionHandling
   SpecimenDefinitionHandling._();
   factory SpecimenDefinitionHandling({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? temperatureQualifier,
     Range? temperatureRange,
     FhirDuration? maxDuration,

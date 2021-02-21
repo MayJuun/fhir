@@ -22,14 +22,14 @@ abstract class Procedure with Resource implements _$Procedure {
     Id? id,
     Meta? meta,
     Narrative? text,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     required ProcedureStatus status,
     required CodeableConcept code,
     required Reference subject,
     FhirDateTime? performedDateTime,
     Period? performedPeriod,
-    List<ProcedurePerformer?>? performer,
-    List<ProcedureFocalDevice?>? focalDevice,
+    List<ProcedurePerformer>? performer,
+    List<ProcedureFocalDevice>? focalDevice,
   }) = _Procedure;
 
   /// Produces a Yaml formatted String version of the object
@@ -83,7 +83,7 @@ abstract class ProcedureFocalDevice implements _$ProcedureFocalDevice {
 
   factory ProcedureFocalDevice({
     String? id,
-    List<FhirExtension?>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
     CodeableConcept? action,
     required Reference manipulated,
   }) = _ProcedureFocalDevice;

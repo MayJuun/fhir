@@ -25,14 +25,14 @@ abstract class Claim with Resource implements _$Claim {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     String? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
-    List<CodeableConcept?>? subType,
+    List<CodeableConcept>? subType,
     ClaimUse? use,
     @JsonKey(name: '_use') Element? useElement,
     Reference? patient,
@@ -45,21 +45,21 @@ abstract class Claim with Resource implements _$Claim {
     Reference? organization,
     CodeableConcept? priority,
     CodeableConcept? fundsReserve,
-    List<ClaimRelated?>? related,
+    List<ClaimRelated>? related,
     Reference? prescription,
     Reference? originalPrescription,
     ClaimPayee? payee,
     Reference? referral,
     Reference? facility,
-    List<ClaimCareTeam?>? careTeam,
-    List<ClaimInformation?>? information,
-    List<ClaimDiagnosis?>? diagnosis,
-    List<ClaimProcedure?>? procedure,
-    List<ClaimInsurance?>? insurance,
+    List<ClaimCareTeam>? careTeam,
+    List<ClaimInformation>? information,
+    List<ClaimDiagnosis>? diagnosis,
+    List<ClaimProcedure>? procedure,
+    List<ClaimInsurance>? insurance,
     ClaimAccident? accident,
     Period? employmentImpacted,
     Period? hospitalization,
-    List<ClaimItem?>? item,
+    List<ClaimItem>? item,
     Money? total,
   }) = _Claim;
 
@@ -204,7 +204,7 @@ abstract class ClaimDiagnosis implements _$ClaimDiagnosis {
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? diagnosisCodeableConcept,
     Reference? diagnosisReference,
-    List<CodeableConcept?>? type,
+    List<CodeableConcept>? type,
     CodeableConcept? packageCode,
   }) = _ClaimDiagnosis;
 
@@ -265,8 +265,8 @@ abstract class ClaimInsurance implements _$ClaimInsurance {
     required Reference coverage,
     String? businessArrangement,
     @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
-    List<String?>? preAuthRef,
-    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
+    List<String>? preAuthRef,
+    @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement,
     Reference? claimResponse,
   }) = _ClaimInsurance;
 
@@ -321,20 +321,20 @@ abstract class ClaimItem implements _$ClaimItem {
   factory ClaimItem({
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
-    List<Id?>? careTeamLinkId,
-    @JsonKey(name: '_careTeamLinkId') List<Element?>? careTeamLinkIdElement,
-    List<Id?>? diagnosisLinkId,
-    @JsonKey(name: '_diagnosisLinkId') List<Element?>? diagnosisLinkIdElement,
-    List<Id?>? procedureLinkId,
-    @JsonKey(name: '_procedureLinkId') List<Element?>? procedureLinkIdElement,
-    List<Id?>? informationLinkId,
+    List<Id>? careTeamLinkId,
+    @JsonKey(name: '_careTeamLinkId') List<Element>? careTeamLinkIdElement,
+    List<Id>? diagnosisLinkId,
+    @JsonKey(name: '_diagnosisLinkId') List<Element>? diagnosisLinkIdElement,
+    List<Id>? procedureLinkId,
+    @JsonKey(name: '_procedureLinkId') List<Element>? procedureLinkIdElement,
+    List<Id>? informationLinkId,
     @JsonKey(name: '_informationLinkId')
-        List<Element?>? informationLinkIdElement,
+        List<Element>? informationLinkIdElement,
     CodeableConcept? revenue,
     CodeableConcept? category,
     CodeableConcept? service,
-    List<CodeableConcept?>? modifier,
-    List<CodeableConcept?>? programCode,
+    List<CodeableConcept>? modifier,
+    List<CodeableConcept>? programCode,
     Date? servicedDate,
     @JsonKey(name: '_servicedDate') Element? servicedDateElement,
     Period? servicedPeriod,
@@ -346,11 +346,11 @@ abstract class ClaimItem implements _$ClaimItem {
     Decimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
-    List<Reference?>? udi,
+    List<Reference>? udi,
     CodeableConcept? bodySite,
-    List<CodeableConcept?>? subSite,
-    List<Reference?>? encounter,
-    List<ClaimDetail?>? detail,
+    List<CodeableConcept>? subSite,
+    List<Reference>? encounter,
+    List<ClaimDetail>? detail,
   }) = _ClaimItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -379,15 +379,15 @@ abstract class ClaimDetail implements _$ClaimDetail {
     CodeableConcept? revenue,
     CodeableConcept? category,
     CodeableConcept? service,
-    List<CodeableConcept?>? modifier,
-    List<CodeableConcept?>? programCode,
+    List<CodeableConcept>? modifier,
+    List<CodeableConcept>? programCode,
     Quantity? quantity,
     Money? unitPrice,
     Decimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
-    List<Reference?>? udi,
-    List<ClaimSubDetail?>? subDetail,
+    List<Reference>? udi,
+    List<ClaimSubDetail>? subDetail,
   }) = _ClaimDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -416,14 +416,14 @@ abstract class ClaimSubDetail implements _$ClaimSubDetail {
     CodeableConcept? revenue,
     CodeableConcept? category,
     CodeableConcept? service,
-    List<CodeableConcept?>? modifier,
-    List<CodeableConcept?>? programCode,
+    List<CodeableConcept>? modifier,
+    List<CodeableConcept>? programCode,
     Quantity? quantity,
     Money? unitPrice,
     Decimal? factor,
     @JsonKey(name: '_factor') Element? factorElement,
     Money? net,
-    List<Reference?>? udi,
+    List<Reference>? udi,
   }) = _ClaimSubDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -457,10 +457,10 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     String? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? patient,
@@ -474,18 +474,18 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,
     CodeableConcept? payeeType,
-    List<ClaimResponseItem?>? item,
-    List<ClaimResponseAddItem?>? addItem,
-    List<ClaimResponseError?>? error,
+    List<ClaimResponseItem>? item,
+    List<ClaimResponseAddItem>? addItem,
+    List<ClaimResponseError>? error,
     Money? totalCost,
     Money? unallocDeductable,
     Money? totalBenefit,
     ClaimResponsePayment? payment,
     Coding? reserved,
     CodeableConcept? form,
-    List<ClaimResponseProcessNote?>? processNote,
-    List<Reference?>? communicationRequest,
-    List<ClaimResponseInsurance?>? insurance,
+    List<ClaimResponseProcessNote>? processNote,
+    List<Reference>? communicationRequest,
+    List<ClaimResponseInsurance>? insurance,
   }) = _ClaimResponse;
 
   /// Produces a Yaml formatted String version of the object
@@ -511,10 +511,10 @@ abstract class ClaimResponseItem implements _$ClaimResponseItem {
   factory ClaimResponseItem({
     Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
-    List<Decimal?>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    List<ClaimResponseAdjudication?>? adjudication,
-    List<ClaimResponseDetail?>? detail,
+    List<Decimal>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    List<ClaimResponseAdjudication>? adjudication,
+    List<ClaimResponseDetail>? detail,
   }) = _ClaimResponseItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -570,10 +570,10 @@ abstract class ClaimResponseDetail implements _$ClaimResponseDetail {
   factory ClaimResponseDetail({
     Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
-    List<Decimal?>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    List<ClaimResponseAdjudication?>? adjudication,
-    List<ClaimResponseSubDetail?>? subDetail,
+    List<Decimal>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    List<ClaimResponseAdjudication>? adjudication,
+    List<ClaimResponseSubDetail>? subDetail,
   }) = _ClaimResponseDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -599,9 +599,9 @@ abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
   factory ClaimResponseSubDetail({
     Id? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
-    List<Decimal?>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    List<ClaimResponseAdjudication?>? adjudication,
+    List<Decimal>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    List<ClaimResponseAdjudication>? adjudication,
   }) = _ClaimResponseSubDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -625,17 +625,17 @@ abstract class ClaimResponseSubDetail implements _$ClaimResponseSubDetail {
 abstract class ClaimResponseAddItem implements _$ClaimResponseAddItem {
   ClaimResponseAddItem._();
   factory ClaimResponseAddItem({
-    List<Id?>? sequenceLinkId,
-    @JsonKey(name: '_sequenceLinkId') List<Element?>? sequenceLinkIdElement,
+    List<Id>? sequenceLinkId,
+    @JsonKey(name: '_sequenceLinkId') List<Element>? sequenceLinkIdElement,
     CodeableConcept? revenue,
     CodeableConcept? category,
     CodeableConcept? service,
-    List<CodeableConcept?>? modifier,
+    List<CodeableConcept>? modifier,
     Money? fee,
-    List<Decimal?>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    List<ClaimResponseAdjudication?>? adjudication,
-    List<ClaimResponseDetail1?>? detail,
+    List<Decimal>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    List<ClaimResponseAdjudication>? adjudication,
+    List<ClaimResponseDetail1>? detail,
   }) = _ClaimResponseAddItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -662,11 +662,11 @@ abstract class ClaimResponseDetail1 implements _$ClaimResponseDetail1 {
     CodeableConcept? revenue,
     CodeableConcept? category,
     CodeableConcept? service,
-    List<CodeableConcept?>? modifier,
+    List<CodeableConcept>? modifier,
     Money? fee,
-    List<Decimal?>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    List<ClaimResponseAdjudication?>? adjudication,
+    List<Decimal>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    List<ClaimResponseAdjudication>? adjudication,
   }) = _ClaimResponseDetail1;
 
   /// Produces a Yaml formatted String version of the object
@@ -789,8 +789,8 @@ abstract class ClaimResponseInsurance implements _$ClaimResponseInsurance {
     required Reference coverage,
     String? businessArrangement,
     @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
-    List<String?>? preAuthRef,
-    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
+    List<String>? preAuthRef,
+    @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement,
     Reference? claimResponse,
   }) = _ClaimResponseInsurance;
 

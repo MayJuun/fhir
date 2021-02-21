@@ -27,8 +27,8 @@ abstract class AllergyIntolerance
     CodeableConcept? verificationStatus,
     required CodeableConcept? code,
     required Reference patient,
-    List<AllergyIntoleranceReaction?>? reaction,
-    List<AllergyIntoleranceCategory?>? category,
+    List<AllergyIntoleranceReaction>? reaction,
+    List<AllergyIntoleranceCategory>? category,
     @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
         AllergyIntoleranceCriticality? criticality,
     FhirDateTime? onsetDateTime,
@@ -39,7 +39,7 @@ abstract class AllergyIntolerance
     AllergyIntoleranceVerificationStatus? verificationStatus,
     required AllergyIntoleranceIdentity identity,
     required Reference patient,
-    List<AllergyIntoleranceReaction?>? reaction,
+    List<AllergyIntoleranceReaction>? reaction,
   }) =>
       AllergyIntolerance(
         clinicalStatus:

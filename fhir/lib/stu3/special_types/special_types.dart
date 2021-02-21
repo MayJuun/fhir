@@ -73,10 +73,10 @@ abstract class Meta implements _$Meta {
     @JsonKey(name: '_versionId') Element? versionIdElement,
     Instant? lastUpdated,
     @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
-    List<FhirUri?>? profile,
-    @JsonKey(name: '_profile') List<Element?>? profileElement,
-    List<Coding?>? security,
-    List<Coding?>? tag,
+    List<FhirUri>? profile,
+    @JsonKey(name: '_profile') List<Element>? profileElement,
+    List<Coding>? security,
+    List<Coding>? tag,
   }) = _Meta;
 
   /// Produces a Yaml formatted String version of the object
@@ -100,16 +100,16 @@ abstract class ElementDefinition implements _$ElementDefinition {
   ElementDefinition._();
   factory ElementDefinition({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
-    List<ElementDefinitionRepresentation?>? representation,
-    @JsonKey(name: '_representation') List<Element?>? representationElement,
+    List<ElementDefinitionRepresentation>? representation,
+    @JsonKey(name: '_representation') List<Element>? representationElement,
     String? sliceName,
     @JsonKey(name: '_sliceName') Element? sliceNameElement,
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
-    List<Coding?>? code,
+    List<Coding>? code,
     ElementDefinitionSlicing? slicing,
     String? short,
     @JsonKey(name: '_short') Element? shortElement,
@@ -119,8 +119,8 @@ abstract class ElementDefinition implements _$ElementDefinition {
     @JsonKey(name: '_comment') Element? commentElement,
     String? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
-    List<String?>? alias,
-    @JsonKey(name: '_alias') List<Element?>? aliasElement,
+    List<String>? alias,
+    @JsonKey(name: '_alias') List<Element>? aliasElement,
     Decimal? min,
     @JsonKey(name: '_min') Element? minElement,
     String? max,
@@ -128,7 +128,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     ElementDefinitionBase? base,
     String? contentReference,
     @JsonKey(name: '_contentReference') Element? contentReferenceElement,
-    List<ElementDefinitionType?>? type,
+    List<ElementDefinitionType>? type,
     Boolean? defaultValueBoolean,
     @JsonKey(name: '_defaultValueBoolean') Element? defaultValueBooleanElement,
     Decimal? defaultValueInteger,
@@ -348,7 +348,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     DataRequirement? patternDataRequirement,
     ParameterDefinition? patternParameterDefinition,
     TriggerDefinition? patternTriggerDefinition,
-    List<ElementDefinitionExample?>? example,
+    List<ElementDefinitionExample>? example,
     Date? minValueDate,
     @JsonKey(name: '_minValueDate') Element? minValueDateElement,
     FhirDateTime? minValueDateTime,
@@ -385,9 +385,9 @@ abstract class ElementDefinition implements _$ElementDefinition {
     Quantity? maxValueQuantity,
     Decimal? maxLength,
     @JsonKey(name: '_maxLength') Element? maxLengthElement,
-    List<String?>? condition,
-    @JsonKey(name: '_condition') List<Element?>? conditionElement,
-    List<ElementDefinitionConstraint?>? constraint,
+    List<String>? condition,
+    @JsonKey(name: '_condition') List<Element>? conditionElement,
+    List<ElementDefinitionConstraint>? constraint,
     Boolean? mustSupport,
     @JsonKey(name: '_mustSupport') Element? mustSupportElement,
     Boolean? isModifier,
@@ -395,7 +395,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     Boolean? isSummary,
     @JsonKey(name: '_isSummary') Element? isSummaryElement,
     ElementDefinitionBinding? binding,
-    List<ElementDefinitionMapping?>? mapping,
+    List<ElementDefinitionMapping>? mapping,
   }) = _ElementDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -419,7 +419,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
 abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
   ElementDefinitionSlicing._();
   factory ElementDefinitionSlicing({
-    List<ElementDefinitionDiscriminator?>? discriminator,
+    List<ElementDefinitionDiscriminator>? discriminator,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Boolean? ordered,
@@ -510,15 +510,15 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
 abstract class ElementDefinitionType implements _$ElementDefinitionType {
   ElementDefinitionType._();
   factory ElementDefinitionType({
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? code,
     @JsonKey(name: '_code') Element? codeElement,
     String? profile,
     @JsonKey(name: '_profile') Element? profileElement,
     String? targetProfile,
     @JsonKey(name: '_targetProfile') Element? targetProfileElement,
-    List<ElementDefinitionTypeAggregation?>? aggregation,
-    @JsonKey(name: '_aggregation') List<Element?>? aggregationElement,
+    List<ElementDefinitionTypeAggregation>? aggregation,
+    @JsonKey(name: '_aggregation') List<Element>? aggregationElement,
     ElementDefinitionTypeVersioning? versioning,
     @JsonKey(name: '_versioning') Element? versioningElement,
   }) = _ElementDefinitionType;
@@ -679,7 +679,7 @@ abstract class ElementDefinitionConstraint
 abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
   ElementDefinitionBinding._();
   factory ElementDefinitionBinding({
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     ElementDefinitionBindingStrength? strength,
     @JsonKey(name: '_strength') Element? strengthElement,
     String? description,
@@ -747,7 +747,7 @@ abstract class Dosage implements _$Dosage {
     @JsonKey(name: '_sequence') Element? sequenceElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
-    List<CodeableConcept?>? additionalInstruction,
+    List<CodeableConcept>? additionalInstruction,
     String? patientInstruction,
     @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
     Timing? timing,

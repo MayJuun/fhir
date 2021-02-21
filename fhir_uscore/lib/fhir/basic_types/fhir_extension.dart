@@ -16,7 +16,7 @@ abstract class FhirExtension implements _$FhirExtension {
 
   factory FhirExtension({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirUri? url,
     Base64Binary? valueBase64Binary,
     Boolean? valueBoolean,

@@ -32,7 +32,7 @@ abstract class CareTeam with Resource implements _$CareTeam {
     required Reference subject,
     required CareTeamProviderRole role,
     required Reference member,
-    List<CareTeamParticipant?>? participant,
+    List<CareTeamParticipant>? participant,
   }) {
     participant ??= <CareTeamParticipant>[];
     participant.add(CareTeamParticipant(

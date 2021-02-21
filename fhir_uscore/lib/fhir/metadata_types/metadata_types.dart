@@ -17,7 +17,7 @@ abstract class ContactDetail implements _$ContactDetail {
   factory ContactDetail({
     String? id,
     String? name,
-    List<ContactPoint?>? telecom,
+    List<ContactPoint>? telecom,
   }) = _ContactDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -76,9 +76,9 @@ abstract class Meta with _$Meta {
     Id? versionId,
     Instant? lastUpdated,
     FhirUri? source,
-    List<Canonical?>? profile,
-    List<Coding?>? security,
-    List<Coding?>? tag,
+    List<Canonical>? profile,
+    List<Coding>? security,
+    List<Coding>? tag,
   }) = _Meta;
 
   /// Produces a Yaml formatted String version of the object

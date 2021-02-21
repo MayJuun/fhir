@@ -27,8 +27,8 @@ class _$AllergyIntoleranceTearOff {
       CodeableConcept? verificationStatus,
       required CodeableConcept? code,
       required Reference patient,
-      List<AllergyIntoleranceReaction?>? reaction,
-      List<AllergyIntoleranceCategory?>? category,
+      List<AllergyIntoleranceReaction>? reaction,
+      List<AllergyIntoleranceCategory>? category,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality? criticality,
       FhirDateTime? onsetDateTime}) {
@@ -67,8 +67,8 @@ mixin _$AllergyIntolerance {
   CodeableConcept? get verificationStatus;
   CodeableConcept? get code;
   Reference get patient;
-  List<AllergyIntoleranceReaction?>? get reaction;
-  List<AllergyIntoleranceCategory?>? get category;
+  List<AllergyIntoleranceReaction>? get reaction;
+  List<AllergyIntoleranceCategory>? get category;
   @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
   AllergyIntoleranceCriticality? get criticality;
   FhirDateTime? get onsetDateTime;
@@ -93,8 +93,8 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       CodeableConcept? verificationStatus,
       CodeableConcept? code,
       Reference patient,
-      List<AllergyIntoleranceReaction?>? reaction,
-      List<AllergyIntoleranceCategory?>? category,
+      List<AllergyIntoleranceReaction>? reaction,
+      List<AllergyIntoleranceCategory>? category,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality? criticality,
       FhirDateTime? onsetDateTime});
@@ -148,10 +148,10 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
       patient: patient == freezed ? _value.patient : patient as Reference,
       reaction: reaction == freezed
           ? _value.reaction
-          : reaction as List<AllergyIntoleranceReaction?>?,
+          : reaction as List<AllergyIntoleranceReaction>?,
       category: category == freezed
           ? _value.category
-          : category as List<AllergyIntoleranceCategory?>?,
+          : category as List<AllergyIntoleranceCategory>?,
       criticality: criticality == freezed
           ? _value.criticality
           : criticality as AllergyIntoleranceCriticality?,
@@ -241,8 +241,8 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
       CodeableConcept? verificationStatus,
       CodeableConcept? code,
       Reference patient,
-      List<AllergyIntoleranceReaction?>? reaction,
-      List<AllergyIntoleranceCategory?>? category,
+      List<AllergyIntoleranceReaction>? reaction,
+      List<AllergyIntoleranceCategory>? category,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality? criticality,
       FhirDateTime? onsetDateTime});
@@ -304,10 +304,10 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
       patient: patient == freezed ? _value.patient : patient as Reference,
       reaction: reaction == freezed
           ? _value.reaction
-          : reaction as List<AllergyIntoleranceReaction?>?,
+          : reaction as List<AllergyIntoleranceReaction>?,
       category: category == freezed
           ? _value.category
-          : category as List<AllergyIntoleranceCategory?>?,
+          : category as List<AllergyIntoleranceCategory>?,
       criticality: criticality == freezed
           ? _value.criticality
           : criticality as AllergyIntoleranceCriticality?,
@@ -360,9 +360,9 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   @override
   final Reference patient;
   @override
-  final List<AllergyIntoleranceReaction?>? reaction;
+  final List<AllergyIntoleranceReaction>? reaction;
   @override
-  final List<AllergyIntoleranceCategory?>? category;
+  final List<AllergyIntoleranceCategory>? category;
   @override
   @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
   final AllergyIntoleranceCriticality? criticality;
@@ -451,8 +451,8 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
       CodeableConcept? verificationStatus,
       required CodeableConcept? code,
       required Reference patient,
-      List<AllergyIntoleranceReaction?>? reaction,
-      List<AllergyIntoleranceCategory?>? category,
+      List<AllergyIntoleranceReaction>? reaction,
+      List<AllergyIntoleranceCategory>? category,
       @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
           AllergyIntoleranceCriticality? criticality,
       FhirDateTime? onsetDateTime}) = _$_AllergyIntolerance;
@@ -478,9 +478,9 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   @override
   Reference get patient;
   @override
-  List<AllergyIntoleranceReaction?>? get reaction;
+  List<AllergyIntoleranceReaction>? get reaction;
   @override
-  List<AllergyIntoleranceCategory?>? get category;
+  List<AllergyIntoleranceCategory>? get category;
   @override
   @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
   AllergyIntoleranceCriticality? get criticality;

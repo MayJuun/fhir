@@ -22,18 +22,18 @@ abstract class Endpoint with Resource implements _$Endpoint {
     Id? id,
     Meta? meta,
     Narrative? text,
-    List<Resource?>? contained,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: EndpointStatus.unknown) EndpointStatus? status,
     required Coding connectionType,
     String? name,
     Reference? managingOrganization,
-    List<ContactPoint?>? contact,
+    List<ContactPoint>? contact,
     Period? period,
     required List<CodeableConcept> payloadType,
-    List<Code?>? payloadMimeType,
+    List<Code>? payloadMimeType,
     FhirUrl? address,
-    List<String?>? header,
+    List<String>? header,
   }) = _Endpoint;
 
   /// Produces a Yaml formatted String version of the object

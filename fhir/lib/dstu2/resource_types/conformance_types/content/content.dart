@@ -27,12 +27,12 @@ abstract class StructureDefinition
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required FhirUri url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     required String name,
@@ -46,19 +46,19 @@ abstract class StructureDefinition
     @JsonKey(name: '_experimental') Element? experimentalElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<StructureDefinitionContact?>? contact,
+    List<StructureDefinitionContact>? contact,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<CodeableConcept?>? useContext,
+    List<CodeableConcept>? useContext,
     String? requirements,
     String? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
-    List<Coding?>? code,
+    List<Coding>? code,
     Id? fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
-    List<StructureDefinitionMapping?>? mapping,
+    List<StructureDefinitionMapping>? mapping,
     @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
         required StructureDefinitionKind kind,
     @JsonKey(name: '_kind') Element? kindElement,
@@ -67,7 +67,7 @@ abstract class StructureDefinition
     @JsonKey(name: '_abstract') Element? abstractElement,
     @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
         StructureDefinitionContextType? contextType,
-    List<String?>? context,
+    List<String>? context,
     FhirUri? base,
     StructureDefinitionSnapshot? snapshot,
     StructureDefinitionDifferential? differential,
@@ -95,10 +95,10 @@ abstract class StructureDefinitionContact with _$StructureDefinitionContact {
   StructureDefinitionContact._();
   factory StructureDefinitionContact({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? name,
-    List<ContactPoint?>? telecom,
+    List<ContactPoint>? telecom,
   }) = _StructureDefinitionContact;
 
   /// Produces a Yaml formatted String version of the object
@@ -124,9 +124,9 @@ abstract class StructureDefinitionMapping with _$StructureDefinitionMapping {
   StructureDefinitionMapping._();
   factory StructureDefinitionMapping({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     required Id identity,
     @JsonKey(name: '_identity') Element? identityElement,
     FhirUri? uri,
@@ -160,8 +160,8 @@ abstract class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   StructureDefinitionSnapshot._();
   factory StructureDefinitionSnapshot({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required List<ElementDefinition> element,
   }) = _StructureDefinitionSnapshot;
 
@@ -189,8 +189,8 @@ abstract class StructureDefinitionDifferential
   StructureDefinitionDifferential._();
   factory StructureDefinitionDifferential({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required List<ElementDefinition> element,
   }) = _StructureDefinitionDifferential;
 
@@ -226,24 +226,24 @@ abstract class DataElement with Resource implements _$DataElement {
     FhirUri? implicitRules,
     Code? language,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     String? name,
     @JsonKey(unknownEnumValue: DataElementStatus.unknown)
         required DataElementStatus status,
     Boolean? experimental,
     String? publisher,
-    List<DataElementContact?>? contact,
+    List<DataElementContact>? contact,
     FhirDateTime? date,
-    List<CodeableConcept?>? useContext,
+    List<CodeableConcept>? useContext,
     String? copyright,
     @JsonKey(unknownEnumValue: DataElementStringency.unknown)
         DataElementStringency? stringency,
-    List<DataElementMapping?>? mapping,
+    List<DataElementMapping>? mapping,
     required List<ElementDefinition> element,
   }) = _DataElement;
 
@@ -269,10 +269,10 @@ abstract class DataElementContact with _$DataElementContact {
   DataElementContact._();
   factory DataElementContact({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? name,
-    List<ContactPoint?>? telecom,
+    List<ContactPoint>? telecom,
   }) = _DataElementContact;
 
   /// Produces a Yaml formatted String version of the object
@@ -297,9 +297,9 @@ abstract class DataElementMapping with _$DataElementMapping {
   DataElementMapping._();
   factory DataElementMapping({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     required Id identity,
     @JsonKey(name: '_identity') Element? identityElement,
     FhirUri? uri,

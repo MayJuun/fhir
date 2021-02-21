@@ -28,22 +28,16 @@ _$_AdverseEvent _$_$_AdverseEventFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
     status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
@@ -56,9 +50,7 @@ _$_AdverseEvent _$_$_AdverseEventFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_actuality'] as Map<String, dynamic>),
     category: (json['category'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     code: json['code'] == null
         ? null
@@ -92,8 +84,7 @@ _$_AdverseEvent _$_$_AdverseEventFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_recordedDate'] as Map<String, dynamic>),
     resultingCondition: (json['resultingCondition'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     location: json['location'] == null
         ? null
@@ -108,39 +99,31 @@ _$_AdverseEvent _$_$_AdverseEventFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['recorder'] as Map<String, dynamic>),
     participant: (json['participant'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : AdverseEventParticipant.fromJson(e as Map<String, dynamic>))
+        ?.map(
+            (e) => AdverseEventParticipant.fromJson(e as Map<String, dynamic>))
         .toList(),
     suspectEntity: (json['suspectEntity'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : AdverseEventSuspectEntity.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            AdverseEventSuspectEntity.fromJson(e as Map<String, dynamic>))
         .toList(),
     contributingFactor: (json['contributingFactor'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : AdverseEventContributingFactor.fromJson(
-                e as Map<String, dynamic>))
+        ?.map((e) =>
+            AdverseEventContributingFactor.fromJson(e as Map<String, dynamic>))
         .toList(),
     preventiveAction: (json['preventiveAction'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : AdverseEventPreventiveAction.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            AdverseEventPreventiveAction.fromJson(e as Map<String, dynamic>))
         .toList(),
     mitigatingAction: (json['mitigatingAction'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : AdverseEventMitigatingAction.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            AdverseEventMitigatingAction.fromJson(e as Map<String, dynamic>))
         .toList(),
     supportingInfo: (json['supportingInfo'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : AdverseEventSupportingInfo.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            AdverseEventSupportingInfo.fromJson(e as Map<String, dynamic>))
         .toList(),
     study: (json['study'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -164,18 +147,18 @@ Map<String, dynamic> _$_$_AdverseEventToJson(_$_AdverseEvent instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('actuality', _$AdverseEventActualityEnumMap[instance.actuality]);
   writeNotNull('_actuality', instance.actualityElement?.toJson());
-  writeNotNull('category', instance.category?.map((e) => e?.toJson()).toList());
+  writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   writeNotNull('code', instance.code?.toJson());
   val['subject'] = instance.subject.toJson();
   writeNotNull('encounter', instance.encounter?.toJson());
@@ -189,24 +172,24 @@ Map<String, dynamic> _$_$_AdverseEventToJson(_$_AdverseEvent instance) {
   writeNotNull('recordedDate', instance.recordedDate?.toJson());
   writeNotNull('_recordedDate', instance.recordedDateElement?.toJson());
   writeNotNull('resultingCondition',
-      instance.resultingCondition?.map((e) => e?.toJson()).toList());
+      instance.resultingCondition?.map((e) => e.toJson()).toList());
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('seriousness', instance.seriousness?.toJson());
   writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('recorder', instance.recorder?.toJson());
   writeNotNull(
-      'participant', instance.participant?.map((e) => e?.toJson()).toList());
-  writeNotNull('suspectEntity',
-      instance.suspectEntity?.map((e) => e?.toJson()).toList());
+      'participant', instance.participant?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'suspectEntity', instance.suspectEntity?.map((e) => e.toJson()).toList());
   writeNotNull('contributingFactor',
-      instance.contributingFactor?.map((e) => e?.toJson()).toList());
+      instance.contributingFactor?.map((e) => e.toJson()).toList());
   writeNotNull('preventiveAction',
-      instance.preventiveAction?.map((e) => e?.toJson()).toList());
+      instance.preventiveAction?.map((e) => e.toJson()).toList());
   writeNotNull('mitigatingAction',
-      instance.mitigatingAction?.map((e) => e?.toJson()).toList());
+      instance.mitigatingAction?.map((e) => e.toJson()).toList());
   writeNotNull('supportingInfo',
-      instance.supportingInfo?.map((e) => e?.toJson()).toList());
-  writeNotNull('study', instance.study?.map((e) => e?.toJson()).toList());
+      instance.supportingInfo?.map((e) => e.toJson()).toList());
+  writeNotNull('study', instance.study?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -407,14 +390,10 @@ _$_AdverseEventParticipant _$_$_AdverseEventParticipantFromJson(
   return _$_AdverseEventParticipant(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     function: json['function'] == null
         ? null
@@ -435,9 +414,9 @@ Map<String, dynamic> _$_$_AdverseEventParticipantToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('function', instance.function?.toJson());
   val['actor'] = instance.actor.toJson();
   return val;
@@ -448,14 +427,10 @@ _$_AdverseEventSuspectEntity _$_$_AdverseEventSuspectEntityFromJson(
   return _$_AdverseEventSuspectEntity(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     instanceCodeableConcept: json['instanceCodeableConcept'] == null
         ? null
@@ -483,9 +458,9 @@ Map<String, dynamic> _$_$_AdverseEventSuspectEntityToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'instanceCodeableConcept', instance.instanceCodeableConcept?.toJson());
   writeNotNull('instanceReference', instance.instanceReference?.toJson());
@@ -498,14 +473,10 @@ _$_AdverseEventCausality _$_$_AdverseEventCausalityFromJson(
   return _$_AdverseEventCausality(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     assessmentMethod: json['assessmentMethod'] == null
         ? null
@@ -533,9 +504,9 @@ Map<String, dynamic> _$_$_AdverseEventCausalityToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('assessmentMethod', instance.assessmentMethod?.toJson());
   writeNotNull('entityRelatedness', instance.entityRelatedness?.toJson());
   writeNotNull('author', instance.author?.toJson());
@@ -547,14 +518,10 @@ _$_AdverseEventContributingFactor _$_$_AdverseEventContributingFactorFromJson(
   return _$_AdverseEventContributingFactor(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     itemReference: json['itemReference'] == null
         ? null
@@ -578,9 +545,9 @@ Map<String, dynamic> _$_$_AdverseEventContributingFactorToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('itemReference', instance.itemReference?.toJson());
   writeNotNull('itemCodeableConcept', instance.itemCodeableConcept?.toJson());
   return val;
@@ -591,14 +558,10 @@ _$_AdverseEventPreventiveAction _$_$_AdverseEventPreventiveActionFromJson(
   return _$_AdverseEventPreventiveAction(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     itemReference: json['itemReference'] == null
         ? null
@@ -622,9 +585,9 @@ Map<String, dynamic> _$_$_AdverseEventPreventiveActionToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('itemReference', instance.itemReference?.toJson());
   writeNotNull('itemCodeableConcept', instance.itemCodeableConcept?.toJson());
   return val;
@@ -635,14 +598,10 @@ _$_AdverseEventMitigatingAction _$_$_AdverseEventMitigatingActionFromJson(
   return _$_AdverseEventMitigatingAction(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     itemReference: json['itemReference'] == null
         ? null
@@ -666,9 +625,9 @@ Map<String, dynamic> _$_$_AdverseEventMitigatingActionToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('itemReference', instance.itemReference?.toJson());
   writeNotNull('itemCodeableConcept', instance.itemCodeableConcept?.toJson());
   return val;
@@ -679,14 +638,10 @@ _$_AdverseEventSupportingInfo _$_$_AdverseEventSupportingInfoFromJson(
   return _$_AdverseEventSupportingInfo(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     itemReference: json['itemReference'] == null
         ? null
@@ -710,9 +665,9 @@ Map<String, dynamic> _$_$_AdverseEventSupportingInfoToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('itemReference', instance.itemReference?.toJson());
   writeNotNull('itemCodeableConcept', instance.itemCodeableConcept?.toJson());
   return val;
@@ -741,22 +696,16 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
     clinicalStatus: json['clinicalStatus'] == null
         ? null
@@ -772,12 +721,10 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
         ? null
         : Element.fromJson(json['_type'] as Map<String, dynamic>),
     category: (json['category'] as List<dynamic>?)
-        ?.map(
-            (e) => _$enumDecodeNullable(_$AllergyIntoleranceCategoryEnumMap, e))
+        ?.map((e) => _$enumDecode(_$AllergyIntoleranceCategoryEnumMap, e))
         .toList(),
     categoryElement: (json['_category'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     criticality: _$enumDecodeNullable(
         _$AllergyIntoleranceCriticalityEnumMap, json['criticality'],
@@ -830,13 +777,11 @@ _$_AllergyIntolerance _$_$_AllergyIntoleranceFromJson(
         ? null
         : Element.fromJson(json['_lastOccurrence'] as Map<String, dynamic>),
     note: (json['note'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
         .toList(),
     reaction: (json['reaction'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : AllergyIntoleranceReaction.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            AllergyIntoleranceReaction.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -861,13 +806,13 @@ Map<String, dynamic> _$_$_AllergyIntoleranceToJson(
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('clinicalStatus', instance.clinicalStatus?.toJson());
   writeNotNull('verificationStatus', instance.verificationStatus?.toJson());
   writeNotNull('type', _$AllergyIntoleranceTypeEnumMap[instance.type]);
@@ -878,7 +823,7 @@ Map<String, dynamic> _$_$_AllergyIntoleranceToJson(
           ?.map((e) => _$AllergyIntoleranceCategoryEnumMap[e])
           .toList());
   writeNotNull(
-      '_category', instance.categoryElement?.map((e) => e?.toJson()).toList());
+      '_category', instance.categoryElement?.map((e) => e.toJson()).toList());
   writeNotNull('criticality',
       _$AllergyIntoleranceCriticalityEnumMap[instance.criticality]);
   writeNotNull('_criticality', instance.criticalityElement?.toJson());
@@ -898,8 +843,8 @@ Map<String, dynamic> _$_$_AllergyIntoleranceToJson(
   writeNotNull('asserter', instance.asserter?.toJson());
   writeNotNull('lastOccurrence', instance.lastOccurrence?.toJson());
   writeNotNull('_lastOccurrence', instance.lastOccurrenceElement?.toJson());
-  writeNotNull('note', instance.note?.map((e) => e?.toJson()).toList());
-  writeNotNull('reaction', instance.reaction?.map((e) => e?.toJson()).toList());
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
+  writeNotNull('reaction', instance.reaction?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -929,14 +874,10 @@ _$_AllergyIntoleranceReaction _$_$_AllergyIntoleranceReactionFromJson(
   return _$_AllergyIntoleranceReaction(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     substance: json['substance'] == null
         ? null
@@ -963,8 +904,7 @@ _$_AllergyIntoleranceReaction _$_$_AllergyIntoleranceReactionFromJson(
         : CodeableConcept.fromJson(
             json['exposureRoute'] as Map<String, dynamic>),
     note: (json['note'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -981,9 +921,9 @@ Map<String, dynamic> _$_$_AllergyIntoleranceReactionToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('substance', instance.substance?.toJson());
   val['manifestation'] = instance.manifestation.map((e) => e.toJson()).toList();
   writeNotNull('description', instance.description);
@@ -994,7 +934,7 @@ Map<String, dynamic> _$_$_AllergyIntoleranceReactionToJson(
       _$AllergyIntoleranceReactionSeverityEnumMap[instance.severity]);
   writeNotNull('_severity', instance.severityElement?.toJson());
   writeNotNull('exposureRoute', instance.exposureRoute?.toJson());
-  writeNotNull('note', instance.note?.map((e) => e?.toJson()).toList());
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -1028,22 +968,16 @@ _$_ClinicalImpression _$_$_ClinicalImpressionFromJson(
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
     status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
@@ -1081,42 +1015,34 @@ _$_ClinicalImpression _$_$_ClinicalImpressionFromJson(
         ? null
         : Reference.fromJson(json['previous'] as Map<String, dynamic>),
     problem: (json['problem'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     protocol: (json['protocol'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
+        ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     protocolElement: (json['_protocol'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     summary: json['summary'] as String?,
     summaryElement: json['_summary'] == null
         ? null
         : Element.fromJson(json['_summary'] as Map<String, dynamic>),
     finding: (json['finding'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ClinicalImpressionFinding.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            ClinicalImpressionFinding.fromJson(e as Map<String, dynamic>))
         .toList(),
     prognosisCodeableConcept:
         (json['prognosisCodeableConcept'] as List<dynamic>?)
-            ?.map((e) => e == null
-                ? null
-                : CodeableConcept.fromJson(e as Map<String, dynamic>))
+            ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
             .toList(),
     prognosisReference: (json['prognosisReference'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     supportingInfo: (json['supportingInfo'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     note: (json['note'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1141,13 +1067,13 @@ Map<String, dynamic> _$_$_ClinicalImpressionToJson(
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('statusReason', instance.statusReason?.toJson());
@@ -1163,20 +1089,20 @@ Map<String, dynamic> _$_$_ClinicalImpressionToJson(
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull('performer', instance.performer?.toJson());
   writeNotNull('previous', instance.previous?.toJson());
-  writeNotNull('problem', instance.problem?.map((e) => e?.toJson()).toList());
-  writeNotNull('protocol', instance.protocol?.map((e) => e?.toJson()).toList());
+  writeNotNull('problem', instance.problem?.map((e) => e.toJson()).toList());
+  writeNotNull('protocol', instance.protocol?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_protocol', instance.protocolElement?.map((e) => e?.toJson()).toList());
+      '_protocol', instance.protocolElement?.map((e) => e.toJson()).toList());
   writeNotNull('summary', instance.summary);
   writeNotNull('_summary', instance.summaryElement?.toJson());
-  writeNotNull('finding', instance.finding?.map((e) => e?.toJson()).toList());
+  writeNotNull('finding', instance.finding?.map((e) => e.toJson()).toList());
   writeNotNull('prognosisCodeableConcept',
-      instance.prognosisCodeableConcept?.map((e) => e?.toJson()).toList());
+      instance.prognosisCodeableConcept?.map((e) => e.toJson()).toList());
   writeNotNull('prognosisReference',
-      instance.prognosisReference?.map((e) => e?.toJson()).toList());
+      instance.prognosisReference?.map((e) => e.toJson()).toList());
   writeNotNull('supportingInfo',
-      instance.supportingInfo?.map((e) => e?.toJson()).toList());
-  writeNotNull('note', instance.note?.map((e) => e?.toJson()).toList());
+      instance.supportingInfo?.map((e) => e.toJson()).toList());
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -1185,14 +1111,10 @@ _$_ClinicalImpressionFinding _$_$_ClinicalImpressionFindingFromJson(
   return _$_ClinicalImpressionFinding(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     itemCodeableConcept: json['itemCodeableConcept'] == null
         ? null
@@ -1220,9 +1142,9 @@ Map<String, dynamic> _$_$_ClinicalImpressionFindingToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('itemCodeableConcept', instance.itemCodeableConcept?.toJson());
   writeNotNull('itemReference', instance.itemReference?.toJson());
   writeNotNull('basis', instance.basis);
@@ -1252,22 +1174,16 @@ _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
     clinicalStatus: json['clinicalStatus'] == null
         ? null
@@ -1278,9 +1194,7 @@ _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
         : CodeableConcept.fromJson(
             json['verificationStatus'] as Map<String, dynamic>),
     category: (json['category'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     severity: json['severity'] == null
         ? null
@@ -1289,9 +1203,7 @@ _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
         ? null
         : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     bodySite: (json['bodySite'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
     encounter: json['encounter'] == null
@@ -1348,18 +1260,13 @@ _$_Condition _$_$_ConditionFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['asserter'] as Map<String, dynamic>),
     stage: (json['stage'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ConditionStage.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ConditionStage.fromJson(e as Map<String, dynamic>))
         .toList(),
     evidence: (json['evidence'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ConditionEvidence.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ConditionEvidence.fromJson(e as Map<String, dynamic>))
         .toList(),
     note: (json['note'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1383,19 +1290,19 @@ Map<String, dynamic> _$_$_ConditionToJson(_$_Condition instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('clinicalStatus', instance.clinicalStatus?.toJson());
   writeNotNull('verificationStatus', instance.verificationStatus?.toJson());
-  writeNotNull('category', instance.category?.map((e) => e?.toJson()).toList());
+  writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   writeNotNull('severity', instance.severity?.toJson());
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('bodySite', instance.bodySite?.map((e) => e?.toJson()).toList());
+  writeNotNull('bodySite', instance.bodySite?.map((e) => e.toJson()).toList());
   val['subject'] = instance.subject.toJson();
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull('onsetDateTime', instance.onsetDateTime?.toJson());
@@ -1417,9 +1324,9 @@ Map<String, dynamic> _$_$_ConditionToJson(_$_Condition instance) {
   writeNotNull('_recordedDate', instance.recordedDateElement?.toJson());
   writeNotNull('recorder', instance.recorder?.toJson());
   writeNotNull('asserter', instance.asserter?.toJson());
-  writeNotNull('stage', instance.stage?.map((e) => e?.toJson()).toList());
-  writeNotNull('evidence', instance.evidence?.map((e) => e?.toJson()).toList());
-  writeNotNull('note', instance.note?.map((e) => e?.toJson()).toList());
+  writeNotNull('stage', instance.stage?.map((e) => e.toJson()).toList());
+  writeNotNull('evidence', instance.evidence?.map((e) => e.toJson()).toList());
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -1427,21 +1334,16 @@ _$_ConditionStage _$_$_ConditionStageFromJson(Map<String, dynamic> json) {
   return _$_ConditionStage(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     summary: json['summary'] == null
         ? null
         : CodeableConcept.fromJson(json['summary'] as Map<String, dynamic>),
     assessment: (json['assessment'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     type: json['type'] == null
         ? null
@@ -1460,12 +1362,12 @@ Map<String, dynamic> _$_$_ConditionStageToJson(_$_ConditionStage instance) {
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('summary', instance.summary?.toJson());
   writeNotNull(
-      'assessment', instance.assessment?.map((e) => e?.toJson()).toList());
+      'assessment', instance.assessment?.map((e) => e.toJson()).toList());
   writeNotNull('type', instance.type?.toJson());
   return val;
 }
@@ -1474,23 +1376,16 @@ _$_ConditionEvidence _$_$_ConditionEvidenceFromJson(Map<String, dynamic> json) {
   return _$_ConditionEvidence(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     code: (json['code'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     detail: (json['detail'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1507,11 +1402,11 @@ Map<String, dynamic> _$_$_ConditionEvidenceToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('code', instance.code?.map((e) => e?.toJson()).toList());
-  writeNotNull('detail', instance.detail?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('code', instance.code?.map((e) => e.toJson()).toList());
+  writeNotNull('detail', instance.detail?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -1537,22 +1432,16 @@ _$_DetectedIssue _$_$_DetectedIssueFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
     status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
@@ -1583,13 +1472,10 @@ _$_DetectedIssue _$_$_DetectedIssueFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['author'] as Map<String, dynamic>),
     implicated: (json['implicated'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     evidence: (json['evidence'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : DetectedIssueEvidence.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => DetectedIssueEvidence.fromJson(e as Map<String, dynamic>))
         .toList(),
     detail: json['detail'] as String?,
     detailElement: json['_detail'] == null
@@ -1601,9 +1487,8 @@ _$_DetectedIssue _$_$_DetectedIssueFromJson(Map<String, dynamic> json) {
         ? null
         : Element.fromJson(json['_reference'] as Map<String, dynamic>),
     mitigation: (json['mitigation'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : DetectedIssueMitigation.fromJson(e as Map<String, dynamic>))
+        ?.map(
+            (e) => DetectedIssueMitigation.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1627,13 +1512,13 @@ Map<String, dynamic> _$_$_DetectedIssueToJson(_$_DetectedIssue instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
@@ -1646,14 +1531,14 @@ Map<String, dynamic> _$_$_DetectedIssueToJson(_$_DetectedIssue instance) {
   writeNotNull('identifiedPeriod', instance.identifiedPeriod?.toJson());
   writeNotNull('author', instance.author?.toJson());
   writeNotNull(
-      'implicated', instance.implicated?.map((e) => e?.toJson()).toList());
-  writeNotNull('evidence', instance.evidence?.map((e) => e?.toJson()).toList());
+      'implicated', instance.implicated?.map((e) => e.toJson()).toList());
+  writeNotNull('evidence', instance.evidence?.map((e) => e.toJson()).toList());
   writeNotNull('detail', instance.detail);
   writeNotNull('_detail', instance.detailElement?.toJson());
   writeNotNull('reference', instance.reference?.toJson());
   writeNotNull('_reference', instance.referenceElement?.toJson());
   writeNotNull(
-      'mitigation', instance.mitigation?.map((e) => e?.toJson()).toList());
+      'mitigation', instance.mitigation?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -1669,23 +1554,16 @@ _$_DetectedIssueEvidence _$_$_DetectedIssueEvidenceFromJson(
   return _$_DetectedIssueEvidence(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     code: (json['code'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     detail: (json['detail'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1702,11 +1580,11 @@ Map<String, dynamic> _$_$_DetectedIssueEvidenceToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
-  writeNotNull('code', instance.code?.map((e) => e?.toJson()).toList());
-  writeNotNull('detail', instance.detail?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('code', instance.code?.map((e) => e.toJson()).toList());
+  writeNotNull('detail', instance.detail?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -1715,14 +1593,10 @@ _$_DetectedIssueMitigation _$_$_DetectedIssueMitigationFromJson(
   return _$_DetectedIssueMitigation(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     action: CodeableConcept.fromJson(json['action'] as Map<String, dynamic>),
     date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
@@ -1747,9 +1621,9 @@ Map<String, dynamic> _$_$_DetectedIssueMitigationToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['action'] = instance.action.toJson();
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
@@ -1780,32 +1654,25 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
     instantiatesCanonical: (json['instantiatesCanonical'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : Canonical.fromJson(e))
+        ?.map((e) => Canonical.fromJson(e))
         .toList(),
     instantiatesUri: (json['instantiatesUri'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
+        ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     status: _$enumDecodeNullable(
         _$FamilyMemberHistoryStatusEnumMap, json['status'],
@@ -1881,23 +1748,18 @@ _$_FamilyMemberHistory _$_$_FamilyMemberHistoryFromJson(
         ? null
         : Element.fromJson(json['_deceasedString'] as Map<String, dynamic>),
     reason: (json['reason'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableReference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableReference.fromJson(e as Map<String, dynamic>))
         .toList(),
     note: (json['note'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
         .toList(),
     condition: (json['condition'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FamilyMemberHistoryCondition.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            FamilyMemberHistoryCondition.fromJson(e as Map<String, dynamic>))
         .toList(),
     procedure: (json['procedure'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FamilyMemberHistoryProcedure.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            FamilyMemberHistoryProcedure.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -1922,19 +1784,19 @@ Map<String, dynamic> _$_$_FamilyMemberHistoryToJson(
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('instantiatesCanonical',
-      instance.instantiatesCanonical?.map((e) => e?.toJson()).toList());
+      instance.instantiatesCanonical?.map((e) => e.toJson()).toList());
   writeNotNull('instantiatesUri',
-      instance.instantiatesUri?.map((e) => e?.toJson()).toList());
+      instance.instantiatesUri?.map((e) => e.toJson()).toList());
   writeNotNull('_instantiatesUri',
-      instance.instantiatesUriElement?.map((e) => e?.toJson()).toList());
+      instance.instantiatesUriElement?.map((e) => e.toJson()).toList());
   writeNotNull('status', _$FamilyMemberHistoryStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('dataAbsentReason', instance.dataAbsentReason?.toJson());
@@ -1964,12 +1826,12 @@ Map<String, dynamic> _$_$_FamilyMemberHistoryToJson(
   writeNotNull('_deceasedDate', instance.deceasedDateElement?.toJson());
   writeNotNull('deceasedString', instance.deceasedString);
   writeNotNull('_deceasedString', instance.deceasedStringElement?.toJson());
-  writeNotNull('reason', instance.reason?.map((e) => e?.toJson()).toList());
-  writeNotNull('note', instance.note?.map((e) => e?.toJson()).toList());
+  writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'condition', instance.condition?.map((e) => e?.toJson()).toList());
+      'condition', instance.condition?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'procedure', instance.procedure?.map((e) => e?.toJson()).toList());
+      'procedure', instance.procedure?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -1986,14 +1848,10 @@ _$_FamilyMemberHistoryCondition _$_$_FamilyMemberHistoryConditionFromJson(
   return _$_FamilyMemberHistoryCondition(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     outcome: json['outcome'] == null
@@ -2019,8 +1877,7 @@ _$_FamilyMemberHistoryCondition _$_$_FamilyMemberHistoryConditionFromJson(
         ? null
         : Element.fromJson(json['_onsetString'] as Map<String, dynamic>),
     note: (json['note'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -2037,9 +1894,9 @@ Map<String, dynamic> _$_$_FamilyMemberHistoryConditionToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
   writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('contributedToDeath', instance.contributedToDeath?.toJson());
@@ -2050,7 +1907,7 @@ Map<String, dynamic> _$_$_FamilyMemberHistoryConditionToJson(
   writeNotNull('onsetPeriod', instance.onsetPeriod?.toJson());
   writeNotNull('onsetString', instance.onsetString);
   writeNotNull('_onsetString', instance.onsetStringElement?.toJson());
-  writeNotNull('note', instance.note?.map((e) => e?.toJson()).toList());
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -2059,14 +1916,10 @@ _$_FamilyMemberHistoryProcedure _$_$_FamilyMemberHistoryProcedureFromJson(
   return _$_FamilyMemberHistoryProcedure(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     outcome: json['outcome'] == null
@@ -2098,8 +1951,7 @@ _$_FamilyMemberHistoryProcedure _$_$_FamilyMemberHistoryProcedureFromJson(
         ? null
         : Element.fromJson(json['_performedDateTime'] as Map<String, dynamic>),
     note: (json['note'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -2116,9 +1968,9 @@ Map<String, dynamic> _$_$_FamilyMemberHistoryProcedureToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
   writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('contributedToDeath', instance.contributedToDeath?.toJson());
@@ -2132,7 +1984,7 @@ Map<String, dynamic> _$_$_FamilyMemberHistoryProcedureToJson(
   writeNotNull('performedDateTime', instance.performedDateTime?.toJson());
   writeNotNull(
       '_performedDateTime', instance.performedDateTimeElement?.toJson());
-  writeNotNull('note', instance.note?.map((e) => e?.toJson()).toList());
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -2158,40 +2010,31 @@ _$_Procedure _$_$_ProcedureFromJson(Map<String, dynamic> json) {
         ? null
         : Narrative.fromJson(json['text'] as Map<String, dynamic>),
     contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Resource.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
         .toList(),
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Identifier.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
     instantiatesCanonical: (json['instantiatesCanonical'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : Canonical.fromJson(e))
+        ?.map((e) => Canonical.fromJson(e))
         .toList(),
     instantiatesUri: (json['instantiatesUri'] as List<dynamic>?)
-        ?.map((e) => e == null ? null : FhirUri.fromJson(e))
+        ?.map((e) => FhirUri.fromJson(e))
         .toList(),
     instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     basedOn: (json['basedOn'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     partOf: (json['partOf'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     status: json['status'] == null ? null : Code.fromJson(json['status']),
     statusElement: json['_status'] == null
@@ -2202,9 +2045,7 @@ _$_Procedure _$_$_ProcedureFromJson(Map<String, dynamic> json) {
         : CodeableConcept.fromJson(
             json['statusReason'] as Map<String, dynamic>),
     category: (json['category'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     code: json['code'] == null
         ? null
@@ -2254,57 +2095,40 @@ _$_Procedure _$_$_ProcedureFromJson(Map<String, dynamic> json) {
         ? null
         : Reference.fromJson(json['reportedReference'] as Map<String, dynamic>),
     performer: (json['performer'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ProcedurePerformer.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ProcedurePerformer.fromJson(e as Map<String, dynamic>))
         .toList(),
     location: json['location'] == null
         ? null
         : Reference.fromJson(json['location'] as Map<String, dynamic>),
     reason: (json['reason'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableReference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableReference.fromJson(e as Map<String, dynamic>))
         .toList(),
     bodySite: (json['bodySite'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     outcome: json['outcome'] == null
         ? null
         : CodeableConcept.fromJson(json['outcome'] as Map<String, dynamic>),
     report: (json['report'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     complication: (json['complication'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     complicationDetail: (json['complicationDetail'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Reference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
         .toList(),
     followUp: (json['followUp'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableConcept.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
         .toList(),
     note: (json['note'] as List<dynamic>?)
-        ?.map((e) =>
-            e == null ? null : Annotation.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
         .toList(),
     focalDevice: (json['focalDevice'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : ProcedureFocalDevice.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => ProcedureFocalDevice.fromJson(e as Map<String, dynamic>))
         .toList(),
     used: (json['used'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : CodeableReference.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => CodeableReference.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
@@ -2328,25 +2152,25 @@ Map<String, dynamic> _$_$_ProcedureToJson(_$_Procedure instance) {
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
-      'contained', instance.contained?.map((e) => e?.toJson()).toList());
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'identifier', instance.identifier?.map((e) => e?.toJson()).toList());
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('instantiatesCanonical',
-      instance.instantiatesCanonical?.map((e) => e?.toJson()).toList());
+      instance.instantiatesCanonical?.map((e) => e.toJson()).toList());
   writeNotNull('instantiatesUri',
-      instance.instantiatesUri?.map((e) => e?.toJson()).toList());
+      instance.instantiatesUri?.map((e) => e.toJson()).toList());
   writeNotNull('_instantiatesUri',
-      instance.instantiatesUriElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('basedOn', instance.basedOn?.map((e) => e?.toJson()).toList());
-  writeNotNull('partOf', instance.partOf?.map((e) => e?.toJson()).toList());
+      instance.instantiatesUriElement?.map((e) => e.toJson()).toList());
+  writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
+  writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('statusReason', instance.statusReason?.toJson());
-  writeNotNull('category', instance.category?.map((e) => e?.toJson()).toList());
+  writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   writeNotNull('code', instance.code?.toJson());
   val['subject'] = instance.subject.toJson();
   writeNotNull('encounter', instance.encounter?.toJson());
@@ -2366,21 +2190,21 @@ Map<String, dynamic> _$_$_ProcedureToJson(_$_Procedure instance) {
   writeNotNull('_reportedBoolean', instance.reportedBooleanElement?.toJson());
   writeNotNull('reportedReference', instance.reportedReference?.toJson());
   writeNotNull(
-      'performer', instance.performer?.map((e) => e?.toJson()).toList());
+      'performer', instance.performer?.map((e) => e.toJson()).toList());
   writeNotNull('location', instance.location?.toJson());
-  writeNotNull('reason', instance.reason?.map((e) => e?.toJson()).toList());
-  writeNotNull('bodySite', instance.bodySite?.map((e) => e?.toJson()).toList());
+  writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
+  writeNotNull('bodySite', instance.bodySite?.map((e) => e.toJson()).toList());
   writeNotNull('outcome', instance.outcome?.toJson());
-  writeNotNull('report', instance.report?.map((e) => e?.toJson()).toList());
+  writeNotNull('report', instance.report?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'complication', instance.complication?.map((e) => e?.toJson()).toList());
+      'complication', instance.complication?.map((e) => e.toJson()).toList());
   writeNotNull('complicationDetail',
-      instance.complicationDetail?.map((e) => e?.toJson()).toList());
-  writeNotNull('followUp', instance.followUp?.map((e) => e?.toJson()).toList());
-  writeNotNull('note', instance.note?.map((e) => e?.toJson()).toList());
+      instance.complicationDetail?.map((e) => e.toJson()).toList());
+  writeNotNull('followUp', instance.followUp?.map((e) => e.toJson()).toList());
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'focalDevice', instance.focalDevice?.map((e) => e?.toJson()).toList());
-  writeNotNull('used', instance.used?.map((e) => e?.toJson()).toList());
+      'focalDevice', instance.focalDevice?.map((e) => e.toJson()).toList());
+  writeNotNull('used', instance.used?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -2389,14 +2213,10 @@ _$_ProcedurePerformer _$_$_ProcedurePerformerFromJson(
   return _$_ProcedurePerformer(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     function: json['function'] == null
         ? null
@@ -2420,9 +2240,9 @@ Map<String, dynamic> _$_$_ProcedurePerformerToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('function', instance.function?.toJson());
   val['actor'] = instance.actor.toJson();
   writeNotNull('onBehalfOf', instance.onBehalfOf?.toJson());
@@ -2434,14 +2254,10 @@ _$_ProcedureFocalDevice _$_$_ProcedureFocalDeviceFromJson(
   return _$_ProcedureFocalDevice(
     id: json['id'] as String?,
     extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => e == null
-            ? null
-            : FhirExtension.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
     action: json['action'] == null
         ? null
@@ -2463,9 +2279,9 @@ Map<String, dynamic> _$_$_ProcedureFocalDeviceToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull(
-      'extension', instance.extension_?.map((e) => e?.toJson()).toList());
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e?.toJson()).toList());
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('action', instance.action?.toJson());
   val['manipulated'] = instance.manipulated.toJson();
   return val;

@@ -18,10 +18,10 @@ class _$FhirExtensionTearOff {
 
   _FhirExtension call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       required FhirUri url,
       @JsonKey(name: '_url') Element? urlElement,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Integer? valueInteger,
@@ -139,12 +139,12 @@ const $FhirExtension = _$FhirExtensionTearOff();
 mixin _$FhirExtension {
   Id? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   FhirUri get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   Boolean? get valueBoolean;
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement;
@@ -222,10 +222,10 @@ abstract class $FhirExtensionCopyWith<$Res> {
       _$FhirExtensionCopyWithImpl<$Res>;
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirUri url,
       @JsonKey(name: '_url') Element? urlElement,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Integer? valueInteger,
@@ -379,13 +379,13 @@ class _$FhirExtensionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as FhirUri,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
           : valueBoolean as Boolean?,
@@ -887,10 +887,10 @@ abstract class _$FhirExtensionCopyWith<$Res>
   @override
   $Res call(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirUri url,
       @JsonKey(name: '_url') Element? urlElement,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Integer? valueInteger,
@@ -1079,13 +1079,13 @@ class __$FhirExtensionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as FhirUri,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String?>?,
+          : fhirComments as List<String>?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
           : valueBoolean as Boolean?,
@@ -1281,7 +1281,7 @@ class _$_FhirExtension extends _FhirExtension {
   final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
   final FhirUri url;
   @override
@@ -1289,7 +1289,7 @@ class _$_FhirExtension extends _FhirExtension {
   final Element? urlElement;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String?>? fhirComments;
+  final List<String>? fhirComments;
   @override
   final Boolean? valueBoolean;
   @override
@@ -1579,10 +1579,10 @@ abstract class _FhirExtension extends FhirExtension {
   _FhirExtension._() : super._();
   factory _FhirExtension(
       {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       required FhirUri url,
       @JsonKey(name: '_url') Element? urlElement,
-      @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       Integer? valueInteger,
@@ -1639,7 +1639,7 @@ abstract class _FhirExtension extends FhirExtension {
   Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
   FhirUri get url;
   @override
@@ -1647,7 +1647,7 @@ abstract class _FhirExtension extends FhirExtension {
   Element? get urlElement;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String?>? get fhirComments;
+  List<String>? get fhirComments;
   @override
   Boolean? get valueBoolean;
   @override

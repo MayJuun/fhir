@@ -26,7 +26,7 @@ class _$ScopesTearOff {
       bool? needPatientBanner,
       bool? smartOrchestrateLaunch,
       String? intent,
-      List<String?>? additional}) {
+      List<String>? additional}) {
     return _Scopes(
       clinicalScopes: clinicalScopes,
       openid: openid,
@@ -89,7 +89,7 @@ mixin _$Scopes {
 
   /// String value describing the intent of the application launch
   String? get intent;
-  List<String?>? get additional;
+  List<String>? get additional;
 
   @JsonKey(ignore: true)
   $ScopesCopyWith<Scopes> get copyWith;
@@ -112,7 +112,7 @@ abstract class $ScopesCopyWith<$Res> {
       bool? needPatientBanner,
       bool? smartOrchestrateLaunch,
       String? intent,
-      List<String?>? additional});
+      List<String>? additional});
 }
 
 /// @nodoc
@@ -167,7 +167,7 @@ class _$ScopesCopyWithImpl<$Res> implements $ScopesCopyWith<$Res> {
       intent: intent == freezed ? _value.intent : intent as String?,
       additional: additional == freezed
           ? _value.additional
-          : additional as List<String?>?,
+          : additional as List<String>?,
     ));
   }
 }
@@ -190,7 +190,7 @@ abstract class _$ScopesCopyWith<$Res> implements $ScopesCopyWith<$Res> {
       bool? needPatientBanner,
       bool? smartOrchestrateLaunch,
       String? intent,
-      List<String?>? additional});
+      List<String>? additional});
 }
 
 /// @nodoc
@@ -246,7 +246,7 @@ class __$ScopesCopyWithImpl<$Res> extends _$ScopesCopyWithImpl<$Res>
       intent: intent == freezed ? _value.intent : intent as String?,
       additional: additional == freezed
           ? _value.additional
-          : additional as List<String?>?,
+          : additional as List<String>?,
     ));
   }
 }
@@ -322,7 +322,7 @@ class _$_Scopes extends _Scopes {
   /// String value describing the intent of the application launch
   final String? intent;
   @override
-  final List<String?>? additional;
+  final List<String>? additional;
 
   @override
   String toString() {
@@ -410,7 +410,7 @@ abstract class _Scopes extends Scopes {
       bool? needPatientBanner,
       bool? smartOrchestrateLaunch,
       String? intent,
-      List<String?>? additional}) = _$_Scopes;
+      List<String>? additional}) = _$_Scopes;
 
   @override
 
@@ -465,7 +465,7 @@ abstract class _Scopes extends Scopes {
   /// String value describing the intent of the application launch
   String? get intent;
   @override
-  List<String?>? get additional;
+  List<String>? get additional;
   @override
   @JsonKey(ignore: true)
   _$ScopesCopyWith<_Scopes> get copyWith;

@@ -23,7 +23,7 @@ Future<List<String>> jsonValidation() async {
 
 Future<List<String>> yamlValidation() async {
   var tested = <String>[];
-  tested.addAll(await dstu2ValidationYaml());
+//  tested.addAll(await dstu2ValidationYaml());
   tested.addAll(await stu3ValidationYaml());
   tested.addAll(await r4ValidationYaml());
   // tested.addAll(await r5ValidationYaml());

@@ -23,11 +23,11 @@ class _$MedicationRequestTearOff {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
           required MedicationRequestStatus status,
       required MedicationRequestIntent intent,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       Boolean? reportedBoolean,
       Reference? reportedReference,
       CodeableConcept? medicationCodeableConcept,
@@ -36,7 +36,7 @@ class _$MedicationRequestTearOff {
       Reference? encounter,
       required FhirDateTime authoredOn,
       required Reference requester,
-      List<Dosage?>? dosageInstruction,
+      List<Dosage>? dosageInstruction,
       MedicationRequestDispenseRequest? dispenseRequest}) {
     return _MedicationRequest(
       resourceType: resourceType,
@@ -75,11 +75,11 @@ mixin _$MedicationRequest {
   Id? get id;
   Meta? get meta;
   Narrative? get text;
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
   MedicationRequestStatus get status;
   MedicationRequestIntent get intent;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   Boolean? get reportedBoolean;
   Reference? get reportedReference;
   CodeableConcept? get medicationCodeableConcept;
@@ -88,7 +88,7 @@ mixin _$MedicationRequest {
   Reference? get encounter;
   FhirDateTime get authoredOn;
   Reference get requester;
-  List<Dosage?>? get dosageInstruction;
+  List<Dosage>? get dosageInstruction;
   MedicationRequestDispenseRequest? get dispenseRequest;
 
   Map<String, dynamic> toJson();
@@ -107,11 +107,11 @@ abstract class $MedicationRequestCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
           MedicationRequestStatus status,
       MedicationRequestIntent intent,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       Boolean? reportedBoolean,
       Reference? reportedReference,
       CodeableConcept? medicationCodeableConcept,
@@ -120,7 +120,7 @@ abstract class $MedicationRequestCopyWith<$Res> {
       Reference? encounter,
       FhirDateTime authoredOn,
       Reference requester,
-      List<Dosage?>? dosageInstruction,
+      List<Dosage>? dosageInstruction,
       MedicationRequestDispenseRequest? dispenseRequest});
 
   $MetaCopyWith<$Res>? get meta;
@@ -173,14 +173,14 @@ class _$MedicationRequestCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status:
           status == freezed ? _value.status : status as MedicationRequestStatus,
       intent:
           intent == freezed ? _value.intent : intent as MedicationRequestIntent,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       reportedBoolean: reportedBoolean == freezed
           ? _value.reportedBoolean
           : reportedBoolean as Boolean?,
@@ -203,7 +203,7 @@ class _$MedicationRequestCopyWithImpl<$Res>
           requester == freezed ? _value.requester : requester as Reference,
       dosageInstruction: dosageInstruction == freezed
           ? _value.dosageInstruction
-          : dosageInstruction as List<Dosage?>?,
+          : dosageInstruction as List<Dosage>?,
       dispenseRequest: dispenseRequest == freezed
           ? _value.dispenseRequest
           : dispenseRequest as MedicationRequestDispenseRequest?,
@@ -317,11 +317,11 @@ abstract class _$MedicationRequestCopyWith<$Res>
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
           MedicationRequestStatus status,
       MedicationRequestIntent intent,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       Boolean? reportedBoolean,
       Reference? reportedReference,
       CodeableConcept? medicationCodeableConcept,
@@ -330,7 +330,7 @@ abstract class _$MedicationRequestCopyWith<$Res>
       Reference? encounter,
       FhirDateTime authoredOn,
       Reference requester,
-      List<Dosage?>? dosageInstruction,
+      List<Dosage>? dosageInstruction,
       MedicationRequestDispenseRequest? dispenseRequest});
 
   @override
@@ -394,14 +394,14 @@ class __$MedicationRequestCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status:
           status == freezed ? _value.status : status as MedicationRequestStatus,
       intent:
           intent == freezed ? _value.intent : intent as MedicationRequestIntent,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       reportedBoolean: reportedBoolean == freezed
           ? _value.reportedBoolean
           : reportedBoolean as Boolean?,
@@ -424,7 +424,7 @@ class __$MedicationRequestCopyWithImpl<$Res>
           requester == freezed ? _value.requester : requester as Reference,
       dosageInstruction: dosageInstruction == freezed
           ? _value.dosageInstruction
-          : dosageInstruction as List<Dosage?>?,
+          : dosageInstruction as List<Dosage>?,
       dispenseRequest: dispenseRequest == freezed
           ? _value.dispenseRequest
           : dispenseRequest as MedicationRequestDispenseRequest?,
@@ -472,14 +472,14 @@ class _$_MedicationRequest extends _MedicationRequest {
   @override
   final Narrative? text;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
   final MedicationRequestStatus status;
   @override
   final MedicationRequestIntent intent;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   final Boolean? reportedBoolean;
   @override
@@ -497,7 +497,7 @@ class _$_MedicationRequest extends _MedicationRequest {
   @override
   final Reference requester;
   @override
-  final List<Dosage?>? dosageInstruction;
+  final List<Dosage>? dosageInstruction;
   @override
   final MedicationRequestDispenseRequest? dispenseRequest;
 
@@ -604,11 +604,11 @@ abstract class _MedicationRequest extends MedicationRequest {
           Id? id,
           Meta? meta,
           Narrative? text,
-          List<Identifier?>? identifier,
+          List<Identifier>? identifier,
           @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
               required MedicationRequestStatus status,
           required MedicationRequestIntent intent,
-          List<Resource?>? contained,
+          List<Resource>? contained,
           Boolean? reportedBoolean,
           Reference? reportedReference,
           CodeableConcept? medicationCodeableConcept,
@@ -617,7 +617,7 @@ abstract class _MedicationRequest extends MedicationRequest {
           Reference? encounter,
           required FhirDateTime authoredOn,
           required Reference requester,
-          List<Dosage?>? dosageInstruction,
+          List<Dosage>? dosageInstruction,
           MedicationRequestDispenseRequest? dispenseRequest}) =
       _$_MedicationRequest;
 
@@ -634,14 +634,14 @@ abstract class _MedicationRequest extends MedicationRequest {
   @override
   Narrative? get text;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   @JsonKey(unknownEnumValue: MedicationRequestStatus.unknown)
   MedicationRequestStatus get status;
   @override
   MedicationRequestIntent get intent;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   Boolean? get reportedBoolean;
   @override
@@ -659,7 +659,7 @@ abstract class _MedicationRequest extends MedicationRequest {
   @override
   Reference get requester;
   @override
-  List<Dosage?>? get dosageInstruction;
+  List<Dosage>? get dosageInstruction;
   @override
   MedicationRequestDispenseRequest? get dispenseRequest;
   @override

@@ -18,8 +18,8 @@ class _$PopulationTearOff {
 
   _Population call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Range? ageRange,
       CodeableConcept? ageCodeableConcept,
       CodeableConcept? gender,
@@ -49,8 +49,8 @@ const $Population = _$PopulationTearOff();
 mixin _$Population {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Range? get ageRange;
   CodeableConcept? get ageCodeableConcept;
   CodeableConcept? get gender;
@@ -69,8 +69,8 @@ abstract class $PopulationCopyWith<$Res> {
       _$PopulationCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Range? ageRange,
       CodeableConcept? ageCodeableConcept,
       CodeableConcept? gender,
@@ -107,10 +107,10 @@ class _$PopulationCopyWithImpl<$Res> implements $PopulationCopyWith<$Res> {
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       ageRange: ageRange == freezed ? _value.ageRange : ageRange as Range?,
       ageCodeableConcept: ageCodeableConcept == freezed
           ? _value.ageCodeableConcept
@@ -188,8 +188,8 @@ abstract class _$PopulationCopyWith<$Res> implements $PopulationCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Range? ageRange,
       CodeableConcept? ageCodeableConcept,
       CodeableConcept? gender,
@@ -233,10 +233,10 @@ class __$PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       ageRange: ageRange == freezed ? _value.ageRange : ageRange as Range?,
       ageCodeableConcept: ageCodeableConcept == freezed
           ? _value.ageCodeableConcept
@@ -272,9 +272,9 @@ class _$_Population extends _Population {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Range? ageRange;
   @override
@@ -345,8 +345,8 @@ abstract class _Population extends Population {
   _Population._() : super._();
   factory _Population(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Range? ageRange,
       CodeableConcept? ageCodeableConcept,
       CodeableConcept? gender,
@@ -360,9 +360,9 @@ abstract class _Population extends Population {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Range? get ageRange;
   @override
@@ -388,12 +388,12 @@ class _$ProductShelfLifeTearOff {
 
   _ProductShelfLife call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       required CodeableConcept type,
       required Quantity period,
-      List<CodeableConcept?>? specialPrecautionsForStorage}) {
+      List<CodeableConcept>? specialPrecautionsForStorage}) {
     return _ProductShelfLife(
       id: id,
       extension_: extension_,
@@ -417,12 +417,12 @@ const $ProductShelfLife = _$ProductShelfLifeTearOff();
 mixin _$ProductShelfLife {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Identifier? get identifier;
   CodeableConcept get type;
   Quantity get period;
-  List<CodeableConcept?>? get specialPrecautionsForStorage;
+  List<CodeableConcept>? get specialPrecautionsForStorage;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -436,12 +436,12 @@ abstract class $ProductShelfLifeCopyWith<$Res> {
       _$ProductShelfLifeCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       CodeableConcept type,
       Quantity period,
-      List<CodeableConcept?>? specialPrecautionsForStorage});
+      List<CodeableConcept>? specialPrecautionsForStorage});
 
   $IdentifierCopyWith<$Res>? get identifier;
   $CodeableConceptCopyWith<$Res> get type;
@@ -471,17 +471,17 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       type: type == freezed ? _value.type : type as CodeableConcept,
       period: period == freezed ? _value.period : period as Quantity,
       specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
           ? _value.specialPrecautionsForStorage
-          : specialPrecautionsForStorage as List<CodeableConcept?>?,
+          : specialPrecautionsForStorage as List<CodeableConcept>?,
     ));
   }
 
@@ -520,12 +520,12 @@ abstract class _$ProductShelfLifeCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       CodeableConcept type,
       Quantity period,
-      List<CodeableConcept?>? specialPrecautionsForStorage});
+      List<CodeableConcept>? specialPrecautionsForStorage});
 
   @override
   $IdentifierCopyWith<$Res>? get identifier;
@@ -560,17 +560,17 @@ class __$ProductShelfLifeCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       identifier:
           identifier == freezed ? _value.identifier : identifier as Identifier?,
       type: type == freezed ? _value.type : type as CodeableConcept,
       period: period == freezed ? _value.period : period as Quantity,
       specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
           ? _value.specialPrecautionsForStorage
-          : specialPrecautionsForStorage as List<CodeableConcept?>?,
+          : specialPrecautionsForStorage as List<CodeableConcept>?,
     ));
   }
 }
@@ -596,9 +596,9 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Identifier? identifier;
   @override
@@ -606,7 +606,7 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   @override
   final Quantity period;
   @override
-  final List<CodeableConcept?>? specialPrecautionsForStorage;
+  final List<CodeableConcept>? specialPrecautionsForStorage;
 
   @override
   String toString() {
@@ -665,12 +665,12 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   _ProductShelfLife._() : super._();
   factory _ProductShelfLife(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           Identifier? identifier,
           required CodeableConcept type,
           required Quantity period,
-          List<CodeableConcept?>? specialPrecautionsForStorage}) =
+          List<CodeableConcept>? specialPrecautionsForStorage}) =
       _$_ProductShelfLife;
 
   factory _ProductShelfLife.fromJson(Map<String, dynamic> json) =
@@ -680,9 +680,9 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Identifier? get identifier;
   @override
@@ -690,7 +690,7 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   @override
   Quantity get period;
   @override
-  List<CodeableConcept?>? get specialPrecautionsForStorage;
+  List<CodeableConcept>? get specialPrecautionsForStorage;
   @override
   @JsonKey(ignore: true)
   _$ProductShelfLifeCopyWith<_ProductShelfLife> get copyWith;
@@ -706,8 +706,8 @@ class _$ProdCharacteristicTearOff {
 
   _ProdCharacteristic call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Quantity? height,
       Quantity? width,
       Quantity? depth,
@@ -716,11 +716,11 @@ class _$ProdCharacteristicTearOff {
       Quantity? externalDiameter,
       String? shape,
       @JsonKey(name: '_shape') Element? shapeElement,
-      List<String?>? color,
-      @JsonKey(name: '_color') List<Element?>? colorElement,
-      List<String?>? imprint,
-      @JsonKey(name: '_imprint') List<Element?>? imprintElement,
-      List<Attachment?>? image,
+      List<String>? color,
+      @JsonKey(name: '_color') List<Element>? colorElement,
+      List<String>? imprint,
+      @JsonKey(name: '_imprint') List<Element>? imprintElement,
+      List<Attachment>? image,
       CodeableConcept? scoring}) {
     return _ProdCharacteristic(
       id: id,
@@ -755,8 +755,8 @@ const $ProdCharacteristic = _$ProdCharacteristicTearOff();
 mixin _$ProdCharacteristic {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Quantity? get height;
   Quantity? get width;
   Quantity? get depth;
@@ -766,13 +766,13 @@ mixin _$ProdCharacteristic {
   String? get shape;
   @JsonKey(name: '_shape')
   Element? get shapeElement;
-  List<String?>? get color;
+  List<String>? get color;
   @JsonKey(name: '_color')
-  List<Element?>? get colorElement;
-  List<String?>? get imprint;
+  List<Element>? get colorElement;
+  List<String>? get imprint;
   @JsonKey(name: '_imprint')
-  List<Element?>? get imprintElement;
-  List<Attachment?>? get image;
+  List<Element>? get imprintElement;
+  List<Attachment>? get image;
   CodeableConcept? get scoring;
 
   Map<String, dynamic> toJson();
@@ -787,8 +787,8 @@ abstract class $ProdCharacteristicCopyWith<$Res> {
       _$ProdCharacteristicCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Quantity? height,
       Quantity? width,
       Quantity? depth,
@@ -797,11 +797,11 @@ abstract class $ProdCharacteristicCopyWith<$Res> {
       Quantity? externalDiameter,
       String? shape,
       @JsonKey(name: '_shape') Element? shapeElement,
-      List<String?>? color,
-      @JsonKey(name: '_color') List<Element?>? colorElement,
-      List<String?>? imprint,
-      @JsonKey(name: '_imprint') List<Element?>? imprintElement,
-      List<Attachment?>? image,
+      List<String>? color,
+      @JsonKey(name: '_color') List<Element>? colorElement,
+      List<String>? imprint,
+      @JsonKey(name: '_imprint') List<Element>? imprintElement,
+      List<Attachment>? image,
       CodeableConcept? scoring});
 
   $QuantityCopyWith<$Res>? get height;
@@ -847,10 +847,10 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       height: height == freezed ? _value.height : height as Quantity?,
       width: width == freezed ? _value.width : width as Quantity?,
       depth: depth == freezed ? _value.depth : depth as Quantity?,
@@ -865,15 +865,15 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
       shapeElement: shapeElement == freezed
           ? _value.shapeElement
           : shapeElement as Element?,
-      color: color == freezed ? _value.color : color as List<String?>?,
+      color: color == freezed ? _value.color : color as List<String>?,
       colorElement: colorElement == freezed
           ? _value.colorElement
-          : colorElement as List<Element?>?,
-      imprint: imprint == freezed ? _value.imprint : imprint as List<String?>?,
+          : colorElement as List<Element>?,
+      imprint: imprint == freezed ? _value.imprint : imprint as List<String>?,
       imprintElement: imprintElement == freezed
           ? _value.imprintElement
-          : imprintElement as List<Element?>?,
-      image: image == freezed ? _value.image : image as List<Attachment?>?,
+          : imprintElement as List<Element>?,
+      image: image == freezed ? _value.image : image as List<Attachment>?,
       scoring:
           scoring == freezed ? _value.scoring : scoring as CodeableConcept?,
     ));
@@ -977,8 +977,8 @@ abstract class _$ProdCharacteristicCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Quantity? height,
       Quantity? width,
       Quantity? depth,
@@ -987,11 +987,11 @@ abstract class _$ProdCharacteristicCopyWith<$Res>
       Quantity? externalDiameter,
       String? shape,
       @JsonKey(name: '_shape') Element? shapeElement,
-      List<String?>? color,
-      @JsonKey(name: '_color') List<Element?>? colorElement,
-      List<String?>? imprint,
-      @JsonKey(name: '_imprint') List<Element?>? imprintElement,
-      List<Attachment?>? image,
+      List<String>? color,
+      @JsonKey(name: '_color') List<Element>? colorElement,
+      List<String>? imprint,
+      @JsonKey(name: '_imprint') List<Element>? imprintElement,
+      List<Attachment>? image,
       CodeableConcept? scoring});
 
   @override
@@ -1047,10 +1047,10 @@ class __$ProdCharacteristicCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       height: height == freezed ? _value.height : height as Quantity?,
       width: width == freezed ? _value.width : width as Quantity?,
       depth: depth == freezed ? _value.depth : depth as Quantity?,
@@ -1065,15 +1065,15 @@ class __$ProdCharacteristicCopyWithImpl<$Res>
       shapeElement: shapeElement == freezed
           ? _value.shapeElement
           : shapeElement as Element?,
-      color: color == freezed ? _value.color : color as List<String?>?,
+      color: color == freezed ? _value.color : color as List<String>?,
       colorElement: colorElement == freezed
           ? _value.colorElement
-          : colorElement as List<Element?>?,
-      imprint: imprint == freezed ? _value.imprint : imprint as List<String?>?,
+          : colorElement as List<Element>?,
+      imprint: imprint == freezed ? _value.imprint : imprint as List<String>?,
       imprintElement: imprintElement == freezed
           ? _value.imprintElement
-          : imprintElement as List<Element?>?,
-      image: image == freezed ? _value.image : image as List<Attachment?>?,
+          : imprintElement as List<Element>?,
+      image: image == freezed ? _value.image : image as List<Attachment>?,
       scoring:
           scoring == freezed ? _value.scoring : scoring as CodeableConcept?,
     ));
@@ -1111,9 +1111,9 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Quantity? height;
   @override
@@ -1132,17 +1132,17 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   @JsonKey(name: '_shape')
   final Element? shapeElement;
   @override
-  final List<String?>? color;
+  final List<String>? color;
   @override
   @JsonKey(name: '_color')
-  final List<Element?>? colorElement;
+  final List<Element>? colorElement;
   @override
-  final List<String?>? imprint;
+  final List<String>? imprint;
   @override
   @JsonKey(name: '_imprint')
-  final List<Element?>? imprintElement;
+  final List<Element>? imprintElement;
   @override
-  final List<Attachment?>? image;
+  final List<Attachment>? image;
   @override
   final CodeableConcept? scoring;
 
@@ -1235,8 +1235,8 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   _ProdCharacteristic._() : super._();
   factory _ProdCharacteristic(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Quantity? height,
       Quantity? width,
       Quantity? depth,
@@ -1245,11 +1245,11 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
       Quantity? externalDiameter,
       String? shape,
       @JsonKey(name: '_shape') Element? shapeElement,
-      List<String?>? color,
-      @JsonKey(name: '_color') List<Element?>? colorElement,
-      List<String?>? imprint,
-      @JsonKey(name: '_imprint') List<Element?>? imprintElement,
-      List<Attachment?>? image,
+      List<String>? color,
+      @JsonKey(name: '_color') List<Element>? colorElement,
+      List<String>? imprint,
+      @JsonKey(name: '_imprint') List<Element>? imprintElement,
+      List<Attachment>? image,
       CodeableConcept? scoring}) = _$_ProdCharacteristic;
 
   factory _ProdCharacteristic.fromJson(Map<String, dynamic> json) =
@@ -1259,9 +1259,9 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Quantity? get height;
   @override
@@ -1280,17 +1280,17 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   @JsonKey(name: '_shape')
   Element? get shapeElement;
   @override
-  List<String?>? get color;
+  List<String>? get color;
   @override
   @JsonKey(name: '_color')
-  List<Element?>? get colorElement;
+  List<Element>? get colorElement;
   @override
-  List<String?>? get imprint;
+  List<String>? get imprint;
   @override
   @JsonKey(name: '_imprint')
-  List<Element?>? get imprintElement;
+  List<Element>? get imprintElement;
   @override
-  List<Attachment?>? get image;
+  List<Attachment>? get image;
   @override
   CodeableConcept? get scoring;
   @override
@@ -1308,8 +1308,8 @@ class _$MarketingStatusTearOff {
 
   _MarketingStatus call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       required CodeableConcept country,
       CodeableConcept? jurisdiction,
       required CodeableConcept status,
@@ -1341,8 +1341,8 @@ const $MarketingStatus = _$MarketingStatusTearOff();
 mixin _$MarketingStatus {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   CodeableConcept get country;
   CodeableConcept? get jurisdiction;
   CodeableConcept get status;
@@ -1363,8 +1363,8 @@ abstract class $MarketingStatusCopyWith<$Res> {
       _$MarketingStatusCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept country,
       CodeableConcept? jurisdiction,
       CodeableConcept status,
@@ -1404,10 +1404,10 @@ class _$MarketingStatusCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       country: country == freezed ? _value.country : country as CodeableConcept,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
@@ -1476,8 +1476,8 @@ abstract class _$MarketingStatusCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept country,
       CodeableConcept? jurisdiction,
       CodeableConcept status,
@@ -1524,10 +1524,10 @@ class __$MarketingStatusCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       country: country == freezed ? _value.country : country as CodeableConcept,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
@@ -1567,9 +1567,9 @@ class _$_MarketingStatus extends _MarketingStatus {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept country;
   @override
@@ -1648,8 +1648,8 @@ abstract class _MarketingStatus extends MarketingStatus {
   _MarketingStatus._() : super._();
   factory _MarketingStatus(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           required CodeableConcept country,
           CodeableConcept? jurisdiction,
           required CodeableConcept status,
@@ -1665,9 +1665,9 @@ abstract class _MarketingStatus extends MarketingStatus {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   CodeableConcept get country;
   @override
@@ -1696,8 +1696,8 @@ class _$SubstanceAmountTearOff {
 
   _SubstanceAmount call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Quantity? amountQuantity,
       Range? amountRange,
       String? amountString,
@@ -1733,8 +1733,8 @@ const $SubstanceAmount = _$SubstanceAmountTearOff();
 mixin _$SubstanceAmount {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Quantity? get amountQuantity;
   Range? get amountRange;
   String? get amountString;
@@ -1758,8 +1758,8 @@ abstract class $SubstanceAmountCopyWith<$Res> {
       _$SubstanceAmountCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Quantity? amountQuantity,
       Range? amountRange,
       String? amountString,
@@ -1804,10 +1804,10 @@ class _$SubstanceAmountCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
           : amountQuantity as Quantity?,
@@ -1910,8 +1910,8 @@ abstract class _$SubstanceAmountCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Quantity? amountQuantity,
       Range? amountRange,
       String? amountString,
@@ -1964,10 +1964,10 @@ class __$SubstanceAmountCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
           : amountQuantity as Quantity?,
@@ -2019,9 +2019,9 @@ class _$_SubstanceAmount extends _SubstanceAmount {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Quantity? amountQuantity;
   @override
@@ -2114,8 +2114,8 @@ abstract class _SubstanceAmount extends SubstanceAmount {
   _SubstanceAmount._() : super._();
   factory _SubstanceAmount(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Quantity? amountQuantity,
       Range? amountRange,
       String? amountString,
@@ -2132,9 +2132,9 @@ abstract class _SubstanceAmount extends SubstanceAmount {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Quantity? get amountQuantity;
   @override
@@ -2169,8 +2169,8 @@ class _$SubstanceAmountReferenceRangeTearOff {
 
   _SubstanceAmountReferenceRange call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Quantity? lowLimit,
       Quantity? highLimit}) {
     return _SubstanceAmountReferenceRange(
@@ -2194,8 +2194,8 @@ const $SubstanceAmountReferenceRange = _$SubstanceAmountReferenceRangeTearOff();
 mixin _$SubstanceAmountReferenceRange {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Quantity? get lowLimit;
   Quantity? get highLimit;
 
@@ -2213,8 +2213,8 @@ abstract class $SubstanceAmountReferenceRangeCopyWith<$Res> {
       _$SubstanceAmountReferenceRangeCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Quantity? lowLimit,
       Quantity? highLimit});
 
@@ -2243,10 +2243,10 @@ class _$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       lowLimit: lowLimit == freezed ? _value.lowLimit : lowLimit as Quantity?,
       highLimit:
           highLimit == freezed ? _value.highLimit : highLimit as Quantity?,
@@ -2286,8 +2286,8 @@ abstract class _$SubstanceAmountReferenceRangeCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Quantity? lowLimit,
       Quantity? highLimit});
 
@@ -2322,10 +2322,10 @@ class __$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       lowLimit: lowLimit == freezed ? _value.lowLimit : lowLimit as Quantity?,
       highLimit:
           highLimit == freezed ? _value.highLimit : highLimit as Quantity?,
@@ -2353,9 +2353,9 @@ class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Quantity? lowLimit;
   @override
@@ -2412,8 +2412,8 @@ abstract class _SubstanceAmountReferenceRange
   _SubstanceAmountReferenceRange._() : super._();
   factory _SubstanceAmountReferenceRange(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Quantity? lowLimit,
       Quantity? highLimit}) = _$_SubstanceAmountReferenceRange;
 
@@ -2424,9 +2424,9 @@ abstract class _SubstanceAmountReferenceRange
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Quantity? get lowLimit;
   @override

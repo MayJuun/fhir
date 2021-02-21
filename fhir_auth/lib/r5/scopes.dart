@@ -63,7 +63,7 @@ abstract class Scopes implements _$Scopes {
 
     /// String value describing the intent of the application launch
     String? intent,
-    List<String?>? additional,
+    List<String>? additional,
   }) = _Scopes;
 
   /// creates a list of strings from the Scopes object to use in the request, it

@@ -25,9 +25,9 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Id? requestId,
     @JsonKey(name: '_requestId') Element? requestIdElement,
     Identifier? identifier,
@@ -41,11 +41,11 @@ abstract class GuidanceResponse with Resource implements _$GuidanceResponse {
     Reference? performer,
     CodeableConcept? reasonCodeableConcept,
     Reference? reasonReference,
-    List<Annotation?>? note,
-    List<Reference?>? evaluationMessage,
+    List<Annotation>? note,
+    List<Reference>? evaluationMessage,
     Reference? outputParameters,
     Reference? result,
-    List<DataRequirement?>? dataRequirement,
+    List<DataRequirement>? dataRequirement,
   }) = _GuidanceResponse;
 
   /// Produces a Yaml formatted String version of the object

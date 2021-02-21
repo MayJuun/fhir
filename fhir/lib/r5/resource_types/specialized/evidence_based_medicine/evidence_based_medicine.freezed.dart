@@ -28,14 +28,14 @@ class _$EvidenceTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -58,12 +58,12 @@ class _$EvidenceTearOff {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
@@ -77,11 +77,11 @@ class _$EvidenceTearOff {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<ContactDetail?>? author,
-      List<ContactDetail?>? editor,
-      List<ContactDetail?>? reviewer,
-      List<ContactDetail?>? endorser,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       Markdown? assertion,
       @JsonKey(name: '_assertion')
           Element? assertionElement,
@@ -89,9 +89,9 @@ class _$EvidenceTearOff {
       required List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
-      List<Statistic?>? statistic,
-      List<OrderedDistribution?>? distribution,
-      List<EvidenceCertainty?>? certainty}) {
+      List<Statistic>? statistic,
+      List<OrderedDistribution>? distribution,
+      List<EvidenceCertainty>? certainty}) {
     return _Evidence(
       resourceType: resourceType,
       id: id,
@@ -173,14 +173,14 @@ mixin _$Evidence {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   FhirUri? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   String? get version;
   @JsonKey(name: '_version')
   Element? get versionElement;
@@ -203,12 +203,12 @@ mixin _$Evidence {
   String? get publisher;
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   Markdown? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<UsageContext?>? get useContext;
-  List<CodeableConcept?>? get jurisdiction;
+  List<UsageContext>? get useContext;
+  List<CodeableConcept>? get jurisdiction;
   Markdown? get purpose;
   @JsonKey(name: '_purpose')
   Element? get purposeElement;
@@ -222,11 +222,11 @@ mixin _$Evidence {
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   Period? get effectivePeriod;
-  List<ContactDetail?>? get author;
-  List<ContactDetail?>? get editor;
-  List<ContactDetail?>? get reviewer;
-  List<ContactDetail?>? get endorser;
-  List<RelatedArtifact?>? get relatedArtifact;
+  List<ContactDetail>? get author;
+  List<ContactDetail>? get editor;
+  List<ContactDetail>? get reviewer;
+  List<ContactDetail>? get endorser;
+  List<RelatedArtifact>? get relatedArtifact;
   Markdown? get assertion;
   @JsonKey(name: '_assertion')
   Element? get assertionElement; // ToDo
@@ -235,9 +235,9 @@ mixin _$Evidence {
   List<EvidenceVariableDefinition> get variableDefinition;
   CodeableConcept? get synthesisType;
   CodeableConcept? get studyType;
-  List<Statistic?>? get statistic;
-  List<OrderedDistribution?>? get distribution;
-  List<EvidenceCertainty?>? get certainty;
+  List<Statistic>? get statistic;
+  List<OrderedDistribution>? get distribution;
+  List<EvidenceCertainty>? get certainty;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -260,14 +260,14 @@ abstract class $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -290,12 +290,12 @@ abstract class $EvidenceCopyWith<$Res> {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
@@ -309,11 +309,11 @@ abstract class $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<ContactDetail?>? author,
-      List<ContactDetail?>? editor,
-      List<ContactDetail?>? reviewer,
-      List<ContactDetail?>? endorser,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       Markdown? assertion,
       @JsonKey(name: '_assertion')
           Element? assertionElement,
@@ -321,9 +321,9 @@ abstract class $EvidenceCopyWith<$Res> {
       List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
-      List<Statistic?>? statistic,
-      List<OrderedDistribution?>? distribution,
-      List<EvidenceCertainty?>? certainty});
+      List<Statistic>? statistic,
+      List<OrderedDistribution>? distribution,
+      List<EvidenceCertainty>? certainty});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -435,19 +435,19 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -476,9 +476,8 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
           : publisherElement as Element?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
@@ -487,10 +486,10 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
           : descriptionElement as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
@@ -515,18 +514,18 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
           ? _value.effectivePeriod
           : effectivePeriod as Period?,
       author:
-          author == freezed ? _value.author : author as List<ContactDetail?>?,
+          author == freezed ? _value.author : author as List<ContactDetail>?,
       editor:
-          editor == freezed ? _value.editor : editor as List<ContactDetail?>?,
+          editor == freezed ? _value.editor : editor as List<ContactDetail>?,
       reviewer: reviewer == freezed
           ? _value.reviewer
-          : reviewer as List<ContactDetail?>?,
+          : reviewer as List<ContactDetail>?,
       endorser: endorser == freezed
           ? _value.endorser
-          : endorser as List<ContactDetail?>?,
+          : endorser as List<ContactDetail>?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact?>?,
+          : relatedArtifact as List<RelatedArtifact>?,
       assertion:
           assertion == freezed ? _value.assertion : assertion as Markdown?,
       assertionElement: assertionElement == freezed
@@ -544,13 +543,13 @@ class _$EvidenceCopyWithImpl<$Res> implements $EvidenceCopyWith<$Res> {
           : studyType as CodeableConcept?,
       statistic: statistic == freezed
           ? _value.statistic
-          : statistic as List<Statistic?>?,
+          : statistic as List<Statistic>?,
       distribution: distribution == freezed
           ? _value.distribution
-          : distribution as List<OrderedDistribution?>?,
+          : distribution as List<OrderedDistribution>?,
       certainty: certainty == freezed
           ? _value.certainty
-          : certainty as List<EvidenceCertainty?>?,
+          : certainty as List<EvidenceCertainty>?,
     ));
   }
 
@@ -814,14 +813,14 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -844,12 +843,12 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
@@ -863,11 +862,11 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<ContactDetail?>? author,
-      List<ContactDetail?>? editor,
-      List<ContactDetail?>? reviewer,
-      List<ContactDetail?>? endorser,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       Markdown? assertion,
       @JsonKey(name: '_assertion')
           Element? assertionElement,
@@ -875,9 +874,9 @@ abstract class _$EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
-      List<Statistic?>? statistic,
-      List<OrderedDistribution?>? distribution,
-      List<EvidenceCertainty?>? certainty});
+      List<Statistic>? statistic,
+      List<OrderedDistribution>? distribution,
+      List<EvidenceCertainty>? certainty});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -1012,19 +1011,19 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -1053,9 +1052,8 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
           : publisherElement as Element?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
@@ -1064,10 +1062,10 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
           : descriptionElement as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
@@ -1092,18 +1090,18 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
           ? _value.effectivePeriod
           : effectivePeriod as Period?,
       author:
-          author == freezed ? _value.author : author as List<ContactDetail?>?,
+          author == freezed ? _value.author : author as List<ContactDetail>?,
       editor:
-          editor == freezed ? _value.editor : editor as List<ContactDetail?>?,
+          editor == freezed ? _value.editor : editor as List<ContactDetail>?,
       reviewer: reviewer == freezed
           ? _value.reviewer
-          : reviewer as List<ContactDetail?>?,
+          : reviewer as List<ContactDetail>?,
       endorser: endorser == freezed
           ? _value.endorser
-          : endorser as List<ContactDetail?>?,
+          : endorser as List<ContactDetail>?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact?>?,
+          : relatedArtifact as List<RelatedArtifact>?,
       assertion:
           assertion == freezed ? _value.assertion : assertion as Markdown?,
       assertionElement: assertionElement == freezed
@@ -1121,13 +1119,13 @@ class __$EvidenceCopyWithImpl<$Res> extends _$EvidenceCopyWithImpl<$Res>
           : studyType as CodeableConcept?,
       statistic: statistic == freezed
           ? _value.statistic
-          : statistic as List<Statistic?>?,
+          : statistic as List<Statistic>?,
       distribution: distribution == freezed
           ? _value.distribution
-          : distribution as List<OrderedDistribution?>?,
+          : distribution as List<OrderedDistribution>?,
       certainty: certainty == freezed
           ? _value.certainty
-          : certainty as List<EvidenceCertainty?>?,
+          : certainty as List<EvidenceCertainty>?,
     ));
   }
 }
@@ -1237,19 +1235,19 @@ class _$_Evidence extends _Evidence {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -1287,16 +1285,16 @@ class _$_Evidence extends _Evidence {
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
   @override
-  final List<ContactDetail?>? contact;
+  final List<ContactDetail>? contact;
   @override
   final Markdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<UsageContext?>? useContext;
+  final List<UsageContext>? useContext;
   @override
-  final List<CodeableConcept?>? jurisdiction;
+  final List<CodeableConcept>? jurisdiction;
   @override
   final Markdown? purpose;
   @override
@@ -1320,15 +1318,15 @@ class _$_Evidence extends _Evidence {
   @override
   final Period? effectivePeriod;
   @override
-  final List<ContactDetail?>? author;
+  final List<ContactDetail>? author;
   @override
-  final List<ContactDetail?>? editor;
+  final List<ContactDetail>? editor;
   @override
-  final List<ContactDetail?>? reviewer;
+  final List<ContactDetail>? reviewer;
   @override
-  final List<ContactDetail?>? endorser;
+  final List<ContactDetail>? endorser;
   @override
-  final List<RelatedArtifact?>? relatedArtifact;
+  final List<RelatedArtifact>? relatedArtifact;
   @override
   final Markdown? assertion;
   @override
@@ -1344,11 +1342,11 @@ class _$_Evidence extends _Evidence {
   @override
   final CodeableConcept? studyType;
   @override
-  final List<Statistic?>? statistic;
+  final List<Statistic>? statistic;
   @override
-  final List<OrderedDistribution?>? distribution;
+  final List<OrderedDistribution>? distribution;
   @override
-  final List<EvidenceCertainty?>? certainty;
+  final List<EvidenceCertainty>? certainty;
 
   @override
   String toString() {
@@ -1545,14 +1543,14 @@ abstract class _Evidence extends Evidence {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -1575,12 +1573,12 @@ abstract class _Evidence extends Evidence {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
@@ -1594,11 +1592,11 @@ abstract class _Evidence extends Evidence {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
-      List<ContactDetail?>? author,
-      List<ContactDetail?>? editor,
-      List<ContactDetail?>? reviewer,
-      List<ContactDetail?>? endorser,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       Markdown? assertion,
       @JsonKey(name: '_assertion')
           Element? assertionElement,
@@ -1606,9 +1604,9 @@ abstract class _Evidence extends Evidence {
       required List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
       CodeableConcept? studyType,
-      List<Statistic?>? statistic,
-      List<OrderedDistribution?>? distribution,
-      List<EvidenceCertainty?>? certainty}) = _$_Evidence;
+      List<Statistic>? statistic,
+      List<OrderedDistribution>? distribution,
+      List<EvidenceCertainty>? certainty}) = _$_Evidence;
 
   factory _Evidence.fromJson(Map<String, dynamic> json) = _$_Evidence.fromJson;
 
@@ -1632,19 +1630,19 @@ abstract class _Evidence extends Evidence {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   FhirUri? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   String? get version;
   @override
@@ -1682,16 +1680,16 @@ abstract class _Evidence extends Evidence {
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   @override
   Markdown? get description;
   @override
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<UsageContext?>? get useContext;
+  List<UsageContext>? get useContext;
   @override
-  List<CodeableConcept?>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction;
   @override
   Markdown? get purpose;
   @override
@@ -1715,15 +1713,15 @@ abstract class _Evidence extends Evidence {
   @override
   Period? get effectivePeriod;
   @override
-  List<ContactDetail?>? get author;
+  List<ContactDetail>? get author;
   @override
-  List<ContactDetail?>? get editor;
+  List<ContactDetail>? get editor;
   @override
-  List<ContactDetail?>? get reviewer;
+  List<ContactDetail>? get reviewer;
   @override
-  List<ContactDetail?>? get endorser;
+  List<ContactDetail>? get endorser;
   @override
-  List<RelatedArtifact?>? get relatedArtifact;
+  List<RelatedArtifact>? get relatedArtifact;
   @override
   Markdown? get assertion;
   @override
@@ -1739,11 +1737,11 @@ abstract class _Evidence extends Evidence {
   @override
   CodeableConcept? get studyType;
   @override
-  List<Statistic?>? get statistic;
+  List<Statistic>? get statistic;
   @override
-  List<OrderedDistribution?>? get distribution;
+  List<OrderedDistribution>? get distribution;
   @override
-  List<EvidenceCertainty?>? get certainty;
+  List<EvidenceCertainty>? get certainty;
   @override
   @JsonKey(ignore: true)
   _$EvidenceCopyWith<_Evidence> get copyWith;
@@ -1760,11 +1758,11 @@ class _$EvidenceVariableDefinitionTearOff {
 
   _EvidenceVariableDefinition call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Markdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<Annotation?>? note,
+      List<Annotation>? note,
       required CodeableConcept variableRole,
       Reference? observed,
       Reference? intended,
@@ -1795,12 +1793,12 @@ const $EvidenceVariableDefinition = _$EvidenceVariableDefinitionTearOff();
 mixin _$EvidenceVariableDefinition {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   Markdown? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<Annotation?>? get note;
+  List<Annotation>? get note;
   CodeableConcept get variableRole;
   Reference? get observed;
   Reference? get intended;
@@ -1818,11 +1816,11 @@ abstract class $EvidenceVariableDefinitionCopyWith<$Res> {
       _$EvidenceVariableDefinitionCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Markdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<Annotation?>? note,
+      List<Annotation>? note,
       CodeableConcept variableRole,
       Reference? observed,
       Reference? intended,
@@ -1861,17 +1859,17 @@ class _$EvidenceVariableDefinitionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element?,
-      note: note == freezed ? _value.note : note as List<Annotation?>?,
+      note: note == freezed ? _value.note : note as List<Annotation>?,
       variableRole: variableRole == freezed
           ? _value.variableRole
           : variableRole as CodeableConcept,
@@ -1945,11 +1943,11 @@ abstract class _$EvidenceVariableDefinitionCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Markdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<Annotation?>? note,
+      List<Annotation>? note,
       CodeableConcept variableRole,
       Reference? observed,
       Reference? intended,
@@ -1996,17 +1994,17 @@ class __$EvidenceVariableDefinitionCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element?,
-      note: note == freezed ? _value.note : note as List<Annotation?>?,
+      note: note == freezed ? _value.note : note as List<Annotation>?,
       variableRole: variableRole == freezed
           ? _value.variableRole
           : variableRole as CodeableConcept,
@@ -2043,16 +2041,16 @@ class _$_EvidenceVariableDefinition extends _EvidenceVariableDefinition {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Markdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<Annotation?>? note;
+  final List<Annotation>? note;
   @override
   final CodeableConcept variableRole;
   @override
@@ -2131,11 +2129,11 @@ abstract class _EvidenceVariableDefinition extends EvidenceVariableDefinition {
   _EvidenceVariableDefinition._() : super._();
   factory _EvidenceVariableDefinition(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Markdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      List<Annotation?>? note,
+      List<Annotation>? note,
       required CodeableConcept variableRole,
       Reference? observed,
       Reference? intended,
@@ -2148,16 +2146,16 @@ abstract class _EvidenceVariableDefinition extends EvidenceVariableDefinition {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   Markdown? get description;
   @override
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<Annotation?>? get note;
+  List<Annotation>? get note;
   @override
   CodeableConcept get variableRole;
   @override
@@ -2182,13 +2180,13 @@ class _$EvidenceCertaintyTearOff {
 
   _EvidenceCertainty call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Annotation? note,
-      List<CodeableConcept?>? rating,
-      List<EvidenceCertaintySubcomponent?>? certaintySubcomponent}) {
+      List<CodeableConcept>? rating,
+      List<EvidenceCertaintySubcomponent>? certaintySubcomponent}) {
     return _EvidenceCertainty(
       id: id,
       extension_: extension_,
@@ -2213,15 +2211,15 @@ const $EvidenceCertainty = _$EvidenceCertaintyTearOff();
 mixin _$EvidenceCertainty {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement; // ToDo
 // List<Annotation> note,
   Annotation? get note;
-  List<CodeableConcept?>? get rating;
-  List<EvidenceCertaintySubcomponent?>? get certaintySubcomponent;
+  List<CodeableConcept>? get rating;
+  List<EvidenceCertaintySubcomponent>? get certaintySubcomponent;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2235,13 +2233,13 @@ abstract class $EvidenceCertaintyCopyWith<$Res> {
       _$EvidenceCertaintyCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Annotation? note,
-      List<CodeableConcept?>? rating,
-      List<EvidenceCertaintySubcomponent?>? certaintySubcomponent});
+      List<CodeableConcept>? rating,
+      List<EvidenceCertaintySubcomponent>? certaintySubcomponent});
 
   $ElementCopyWith<$Res>? get descriptionElement;
   $AnnotationCopyWith<$Res>? get note;
@@ -2271,10 +2269,10 @@ class _$EvidenceCertaintyCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -2282,10 +2280,10 @@ class _$EvidenceCertaintyCopyWithImpl<$Res>
           : descriptionElement as Element?,
       note: note == freezed ? _value.note : note as Annotation?,
       rating:
-          rating == freezed ? _value.rating : rating as List<CodeableConcept?>?,
+          rating == freezed ? _value.rating : rating as List<CodeableConcept>?,
       certaintySubcomponent: certaintySubcomponent == freezed
           ? _value.certaintySubcomponent
-          : certaintySubcomponent as List<EvidenceCertaintySubcomponent?>?,
+          : certaintySubcomponent as List<EvidenceCertaintySubcomponent>?,
     ));
   }
 
@@ -2321,13 +2319,13 @@ abstract class _$EvidenceCertaintyCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Annotation? note,
-      List<CodeableConcept?>? rating,
-      List<EvidenceCertaintySubcomponent?>? certaintySubcomponent});
+      List<CodeableConcept>? rating,
+      List<EvidenceCertaintySubcomponent>? certaintySubcomponent});
 
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -2361,10 +2359,10 @@ class __$EvidenceCertaintyCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -2372,10 +2370,10 @@ class __$EvidenceCertaintyCopyWithImpl<$Res>
           : descriptionElement as Element?,
       note: note == freezed ? _value.note : note as Annotation?,
       rating:
-          rating == freezed ? _value.rating : rating as List<CodeableConcept?>?,
+          rating == freezed ? _value.rating : rating as List<CodeableConcept>?,
       certaintySubcomponent: certaintySubcomponent == freezed
           ? _value.certaintySubcomponent
-          : certaintySubcomponent as List<EvidenceCertaintySubcomponent?>?,
+          : certaintySubcomponent as List<EvidenceCertaintySubcomponent>?,
     ));
   }
 }
@@ -2402,9 +2400,9 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? description;
   @override
@@ -2414,9 +2412,9 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
 // List<Annotation> note,
   final Annotation? note;
   @override
-  final List<CodeableConcept?>? rating;
+  final List<CodeableConcept>? rating;
   @override
-  final List<EvidenceCertaintySubcomponent?>? certaintySubcomponent;
+  final List<EvidenceCertaintySubcomponent>? certaintySubcomponent;
 
   @override
   String toString() {
@@ -2477,13 +2475,13 @@ abstract class _EvidenceCertainty extends EvidenceCertainty {
   _EvidenceCertainty._() : super._();
   factory _EvidenceCertainty(
           {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           String? description,
           @JsonKey(name: '_description') Element? descriptionElement,
           Annotation? note,
-          List<CodeableConcept?>? rating,
-          List<EvidenceCertaintySubcomponent?>? certaintySubcomponent}) =
+          List<CodeableConcept>? rating,
+          List<EvidenceCertaintySubcomponent>? certaintySubcomponent}) =
       _$_EvidenceCertainty;
 
   factory _EvidenceCertainty.fromJson(Map<String, dynamic> json) =
@@ -2493,9 +2491,9 @@ abstract class _EvidenceCertainty extends EvidenceCertainty {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get description;
   @override
@@ -2505,9 +2503,9 @@ abstract class _EvidenceCertainty extends EvidenceCertainty {
 // List<Annotation> note,
   Annotation? get note;
   @override
-  List<CodeableConcept?>? get rating;
+  List<CodeableConcept>? get rating;
   @override
-  List<EvidenceCertaintySubcomponent?>? get certaintySubcomponent;
+  List<EvidenceCertaintySubcomponent>? get certaintySubcomponent;
   @override
   @JsonKey(ignore: true)
   _$EvidenceCertaintyCopyWith<_EvidenceCertainty> get copyWith;
@@ -2524,13 +2522,13 @@ class _$EvidenceCertaintySubcomponentTearOff {
 
   _EvidenceCertaintySubcomponent call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Annotation? note,
-      List<CodeableConcept?>? type,
-      List<CodeableConcept?>? rating}) {
+      List<CodeableConcept>? type,
+      List<CodeableConcept>? rating}) {
     return _EvidenceCertaintySubcomponent(
       id: id,
       extension_: extension_,
@@ -2555,15 +2553,15 @@ const $EvidenceCertaintySubcomponent = _$EvidenceCertaintySubcomponentTearOff();
 mixin _$EvidenceCertaintySubcomponent {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement; // ToDo
 // List<Annotation> note,
   Annotation? get note;
-  List<CodeableConcept?>? get type;
-  List<CodeableConcept?>? get rating;
+  List<CodeableConcept>? get type;
+  List<CodeableConcept>? get rating;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -2579,13 +2577,13 @@ abstract class $EvidenceCertaintySubcomponentCopyWith<$Res> {
       _$EvidenceCertaintySubcomponentCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Annotation? note,
-      List<CodeableConcept?>? type,
-      List<CodeableConcept?>? rating});
+      List<CodeableConcept>? type,
+      List<CodeableConcept>? rating});
 
   $ElementCopyWith<$Res>? get descriptionElement;
   $AnnotationCopyWith<$Res>? get note;
@@ -2615,19 +2613,19 @@ class _$EvidenceCertaintySubcomponentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element?,
       note: note == freezed ? _value.note : note as Annotation?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
       rating:
-          rating == freezed ? _value.rating : rating as List<CodeableConcept?>?,
+          rating == freezed ? _value.rating : rating as List<CodeableConcept>?,
     ));
   }
 
@@ -2664,13 +2662,13 @@ abstract class _$EvidenceCertaintySubcomponentCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Annotation? note,
-      List<CodeableConcept?>? type,
-      List<CodeableConcept?>? rating});
+      List<CodeableConcept>? type,
+      List<CodeableConcept>? rating});
 
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -2706,19 +2704,19 @@ class __$EvidenceCertaintySubcomponentCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
           : descriptionElement as Element?,
       note: note == freezed ? _value.note : note as Annotation?,
-      type: type == freezed ? _value.type : type as List<CodeableConcept?>?,
+      type: type == freezed ? _value.type : type as List<CodeableConcept>?,
       rating:
-          rating == freezed ? _value.rating : rating as List<CodeableConcept?>?,
+          rating == freezed ? _value.rating : rating as List<CodeableConcept>?,
     ));
   }
 }
@@ -2746,9 +2744,9 @@ class _$_EvidenceCertaintySubcomponent extends _EvidenceCertaintySubcomponent {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? description;
   @override
@@ -2758,9 +2756,9 @@ class _$_EvidenceCertaintySubcomponent extends _EvidenceCertaintySubcomponent {
 // List<Annotation> note,
   final Annotation? note;
   @override
-  final List<CodeableConcept?>? type;
+  final List<CodeableConcept>? type;
   @override
-  final List<CodeableConcept?>? rating;
+  final List<CodeableConcept>? rating;
 
   @override
   String toString() {
@@ -2822,13 +2820,13 @@ abstract class _EvidenceCertaintySubcomponent
   _EvidenceCertaintySubcomponent._() : super._();
   factory _EvidenceCertaintySubcomponent(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Annotation? note,
-      List<CodeableConcept?>? type,
-      List<CodeableConcept?>? rating}) = _$_EvidenceCertaintySubcomponent;
+      List<CodeableConcept>? type,
+      List<CodeableConcept>? rating}) = _$_EvidenceCertaintySubcomponent;
 
   factory _EvidenceCertaintySubcomponent.fromJson(Map<String, dynamic> json) =
       _$_EvidenceCertaintySubcomponent.fromJson;
@@ -2837,9 +2835,9 @@ abstract class _EvidenceCertaintySubcomponent
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get description;
   @override
@@ -2849,9 +2847,9 @@ abstract class _EvidenceCertaintySubcomponent
 // List<Annotation> note,
   Annotation? get note;
   @override
-  List<CodeableConcept?>? get type;
+  List<CodeableConcept>? get type;
   @override
-  List<CodeableConcept?>? get rating;
+  List<CodeableConcept>? get rating;
   @override
   @JsonKey(ignore: true)
   _$EvidenceCertaintySubcomponentCopyWith<_EvidenceCertaintySubcomponent>
@@ -2879,14 +2877,14 @@ class _$EvidenceVariableTearOff {
           @JsonKey(name: '_language')
               Element? languageElement,
           Narrative? text,
-          List<Resource?>? contained,
+          List<Resource>? contained,
           @JsonKey(name: 'extension')
-              List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+              List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           FhirUri? url,
           @JsonKey(name: '_url')
               Element? urlElement,
-          List<Identifier?>? identifier,
+          List<Identifier>? identifier,
           String? version,
           @JsonKey(name: '_version')
               Element? versionElement,
@@ -2909,12 +2907,12 @@ class _$EvidenceVariableTearOff {
           String? publisher,
           @JsonKey(name: '_publisher')
               Element? publisherElement,
-          List<ContactDetail?>? contact,
+          List<ContactDetail>? contact,
           Markdown? description,
           @JsonKey(name: '_description')
               Element? descriptionElement,
-          List<UsageContext?>? useContext,
-          List<CodeableConcept?>? jurisdiction,
+          List<UsageContext>? useContext,
+          List<CodeableConcept>? jurisdiction,
           Markdown? purpose,
           @JsonKey(name: '_purpose')
               Element? purposeElement,
@@ -2934,12 +2932,12 @@ class _$EvidenceVariableTearOff {
           String? subtitle,
           @JsonKey(name: '_subtitle')
               Element? subtitleElement,
-          List<Annotation?>? note,
-          List<ContactDetail?>? author,
-          List<ContactDetail?>? editor,
-          List<ContactDetail?>? reviewer,
-          List<ContactDetail?>? endorser,
-          List<RelatedArtifact?>? relatedArtifact,
+          List<Annotation>? note,
+          List<ContactDetail>? author,
+          List<ContactDetail>? editor,
+          List<ContactDetail>? reviewer,
+          List<ContactDetail>? endorser,
+          List<RelatedArtifact>? relatedArtifact,
           Boolean? actual,
           @JsonKey(name: '_actual')
               Element? actualElement,
@@ -2950,12 +2948,12 @@ class _$EvidenceVariableTearOff {
                   characteristicCombination,
           @JsonKey(name: '_characteristicCombination')
               Element? characteristicCombinationElement,
-          List<EvidenceVariableCharacteristic?>? characteristic,
+          List<EvidenceVariableCharacteristic>? characteristic,
           @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
               EvidenceVariableHandling? handling,
           @JsonKey(name: '_handling')
               Element? handlingElement,
-          List<EvidenceVariableCategory?>? category}) {
+          List<EvidenceVariableCategory>? category}) {
     return _EvidenceVariable(
       resourceType: resourceType,
       id: id,
@@ -3041,14 +3039,14 @@ mixin _$EvidenceVariable {
   @JsonKey(name: '_language')
   Element? get languageElement;
   Narrative? get text;
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   FhirUri? get url;
   @JsonKey(name: '_url')
   Element? get urlElement;
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   String? get version;
   @JsonKey(name: '_version')
   Element? get versionElement;
@@ -3071,12 +3069,12 @@ mixin _$EvidenceVariable {
   String? get publisher;
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   Markdown? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
-  List<UsageContext?>? get useContext;
-  List<CodeableConcept?>? get jurisdiction;
+  List<UsageContext>? get useContext;
+  List<CodeableConcept>? get jurisdiction;
   Markdown? get purpose;
   @JsonKey(name: '_purpose')
   Element? get purposeElement;
@@ -3096,12 +3094,12 @@ mixin _$EvidenceVariable {
   String? get subtitle;
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement;
-  List<Annotation?>? get note;
-  List<ContactDetail?>? get author;
-  List<ContactDetail?>? get editor;
-  List<ContactDetail?>? get reviewer;
-  List<ContactDetail?>? get endorser;
-  List<RelatedArtifact?>? get relatedArtifact;
+  List<Annotation>? get note;
+  List<ContactDetail>? get author;
+  List<ContactDetail>? get editor;
+  List<ContactDetail>? get reviewer;
+  List<ContactDetail>? get endorser;
+  List<RelatedArtifact>? get relatedArtifact;
   Boolean? get actual;
   @JsonKey(name: '_actual')
   Element? get actualElement;
@@ -3109,12 +3107,12 @@ mixin _$EvidenceVariable {
   EvidenceVariableCharacteristicCombination? get characteristicCombination;
   @JsonKey(name: '_characteristicCombination')
   Element? get characteristicCombinationElement;
-  List<EvidenceVariableCharacteristic?>? get characteristic;
+  List<EvidenceVariableCharacteristic>? get characteristic;
   @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
   EvidenceVariableHandling? get handling;
   @JsonKey(name: '_handling')
   Element? get handlingElement;
-  List<EvidenceVariableCategory?>? get category;
+  List<EvidenceVariableCategory>? get category;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -3139,14 +3137,14 @@ abstract class $EvidenceVariableCopyWith<$Res> {
           @JsonKey(name: '_language')
               Element? languageElement,
           Narrative? text,
-          List<Resource?>? contained,
+          List<Resource>? contained,
           @JsonKey(name: 'extension')
-              List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+              List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           FhirUri? url,
           @JsonKey(name: '_url')
               Element? urlElement,
-          List<Identifier?>? identifier,
+          List<Identifier>? identifier,
           String? version,
           @JsonKey(name: '_version')
               Element? versionElement,
@@ -3169,12 +3167,12 @@ abstract class $EvidenceVariableCopyWith<$Res> {
           String? publisher,
           @JsonKey(name: '_publisher')
               Element? publisherElement,
-          List<ContactDetail?>? contact,
+          List<ContactDetail>? contact,
           Markdown? description,
           @JsonKey(name: '_description')
               Element? descriptionElement,
-          List<UsageContext?>? useContext,
-          List<CodeableConcept?>? jurisdiction,
+          List<UsageContext>? useContext,
+          List<CodeableConcept>? jurisdiction,
           Markdown? purpose,
           @JsonKey(name: '_purpose')
               Element? purposeElement,
@@ -3194,12 +3192,12 @@ abstract class $EvidenceVariableCopyWith<$Res> {
           String? subtitle,
           @JsonKey(name: '_subtitle')
               Element? subtitleElement,
-          List<Annotation?>? note,
-          List<ContactDetail?>? author,
-          List<ContactDetail?>? editor,
-          List<ContactDetail?>? reviewer,
-          List<ContactDetail?>? endorser,
-          List<RelatedArtifact?>? relatedArtifact,
+          List<Annotation>? note,
+          List<ContactDetail>? author,
+          List<ContactDetail>? editor,
+          List<ContactDetail>? reviewer,
+          List<ContactDetail>? endorser,
+          List<RelatedArtifact>? relatedArtifact,
           Boolean? actual,
           @JsonKey(name: '_actual')
               Element? actualElement,
@@ -3210,12 +3208,12 @@ abstract class $EvidenceVariableCopyWith<$Res> {
                   characteristicCombination,
           @JsonKey(name: '_characteristicCombination')
               Element? characteristicCombinationElement,
-          List<EvidenceVariableCharacteristic?>? characteristic,
+          List<EvidenceVariableCharacteristic>? characteristic,
           @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
               EvidenceVariableHandling? handling,
           @JsonKey(name: '_handling')
               Element? handlingElement,
-          List<EvidenceVariableCategory?>? category});
+          List<EvidenceVariableCategory>? category});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -3333,19 +3331,19 @@ class _$EvidenceVariableCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -3375,9 +3373,8 @@ class _$EvidenceVariableCopyWithImpl<$Res>
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
           : publisherElement as Element?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
@@ -3386,10 +3383,10 @@ class _$EvidenceVariableCopyWithImpl<$Res>
           : descriptionElement as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
@@ -3422,20 +3419,20 @@ class _$EvidenceVariableCopyWithImpl<$Res>
       subtitleElement: subtitleElement == freezed
           ? _value.subtitleElement
           : subtitleElement as Element?,
-      note: note == freezed ? _value.note : note as List<Annotation?>?,
+      note: note == freezed ? _value.note : note as List<Annotation>?,
       author:
-          author == freezed ? _value.author : author as List<ContactDetail?>?,
+          author == freezed ? _value.author : author as List<ContactDetail>?,
       editor:
-          editor == freezed ? _value.editor : editor as List<ContactDetail?>?,
+          editor == freezed ? _value.editor : editor as List<ContactDetail>?,
       reviewer: reviewer == freezed
           ? _value.reviewer
-          : reviewer as List<ContactDetail?>?,
+          : reviewer as List<ContactDetail>?,
       endorser: endorser == freezed
           ? _value.endorser
-          : endorser as List<ContactDetail?>?,
+          : endorser as List<ContactDetail>?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact?>?,
+          : relatedArtifact as List<RelatedArtifact>?,
       actual: actual == freezed ? _value.actual : actual as Boolean?,
       actualElement: actualElement == freezed
           ? _value.actualElement
@@ -3450,7 +3447,7 @@ class _$EvidenceVariableCopyWithImpl<$Res>
               : characteristicCombinationElement as Element?,
       characteristic: characteristic == freezed
           ? _value.characteristic
-          : characteristic as List<EvidenceVariableCharacteristic?>?,
+          : characteristic as List<EvidenceVariableCharacteristic>?,
       handling: handling == freezed
           ? _value.handling
           : handling as EvidenceVariableHandling?,
@@ -3459,7 +3456,7 @@ class _$EvidenceVariableCopyWithImpl<$Res>
           : handlingElement as Element?,
       category: category == freezed
           ? _value.category
-          : category as List<EvidenceVariableCategory?>?,
+          : category as List<EvidenceVariableCategory>?,
     ));
   }
 
@@ -3738,14 +3735,14 @@ abstract class _$EvidenceVariableCopyWith<$Res>
           @JsonKey(name: '_language')
               Element? languageElement,
           Narrative? text,
-          List<Resource?>? contained,
+          List<Resource>? contained,
           @JsonKey(name: 'extension')
-              List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+              List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           FhirUri? url,
           @JsonKey(name: '_url')
               Element? urlElement,
-          List<Identifier?>? identifier,
+          List<Identifier>? identifier,
           String? version,
           @JsonKey(name: '_version')
               Element? versionElement,
@@ -3768,12 +3765,12 @@ abstract class _$EvidenceVariableCopyWith<$Res>
           String? publisher,
           @JsonKey(name: '_publisher')
               Element? publisherElement,
-          List<ContactDetail?>? contact,
+          List<ContactDetail>? contact,
           Markdown? description,
           @JsonKey(name: '_description')
               Element? descriptionElement,
-          List<UsageContext?>? useContext,
-          List<CodeableConcept?>? jurisdiction,
+          List<UsageContext>? useContext,
+          List<CodeableConcept>? jurisdiction,
           Markdown? purpose,
           @JsonKey(name: '_purpose')
               Element? purposeElement,
@@ -3793,12 +3790,12 @@ abstract class _$EvidenceVariableCopyWith<$Res>
           String? subtitle,
           @JsonKey(name: '_subtitle')
               Element? subtitleElement,
-          List<Annotation?>? note,
-          List<ContactDetail?>? author,
-          List<ContactDetail?>? editor,
-          List<ContactDetail?>? reviewer,
-          List<ContactDetail?>? endorser,
-          List<RelatedArtifact?>? relatedArtifact,
+          List<Annotation>? note,
+          List<ContactDetail>? author,
+          List<ContactDetail>? editor,
+          List<ContactDetail>? reviewer,
+          List<ContactDetail>? endorser,
+          List<RelatedArtifact>? relatedArtifact,
           Boolean? actual,
           @JsonKey(name: '_actual')
               Element? actualElement,
@@ -3809,12 +3806,12 @@ abstract class _$EvidenceVariableCopyWith<$Res>
                   characteristicCombination,
           @JsonKey(name: '_characteristicCombination')
               Element? characteristicCombinationElement,
-          List<EvidenceVariableCharacteristic?>? characteristic,
+          List<EvidenceVariableCharacteristic>? characteristic,
           @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
               EvidenceVariableHandling? handling,
           @JsonKey(name: '_handling')
               Element? handlingElement,
-          List<EvidenceVariableCategory?>? category});
+          List<EvidenceVariableCategory>? category});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -3957,19 +3954,19 @@ class __$EvidenceVariableCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       url: url == freezed ? _value.url : url as FhirUri?,
       urlElement:
           urlElement == freezed ? _value.urlElement : urlElement as Element?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       version: version == freezed ? _value.version : version as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
@@ -3999,9 +3996,8 @@ class __$EvidenceVariableCopyWithImpl<$Res>
       publisherElement: publisherElement == freezed
           ? _value.publisherElement
           : publisherElement as Element?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact as List<ContactDetail?>?,
+      contact:
+          contact == freezed ? _value.contact : contact as List<ContactDetail>?,
       description: description == freezed
           ? _value.description
           : description as Markdown?,
@@ -4010,10 +4006,10 @@ class __$EvidenceVariableCopyWithImpl<$Res>
           : descriptionElement as Element?,
       useContext: useContext == freezed
           ? _value.useContext
-          : useContext as List<UsageContext?>?,
+          : useContext as List<UsageContext>?,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as List<CodeableConcept?>?,
+          : jurisdiction as List<CodeableConcept>?,
       purpose: purpose == freezed ? _value.purpose : purpose as Markdown?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
@@ -4046,20 +4042,20 @@ class __$EvidenceVariableCopyWithImpl<$Res>
       subtitleElement: subtitleElement == freezed
           ? _value.subtitleElement
           : subtitleElement as Element?,
-      note: note == freezed ? _value.note : note as List<Annotation?>?,
+      note: note == freezed ? _value.note : note as List<Annotation>?,
       author:
-          author == freezed ? _value.author : author as List<ContactDetail?>?,
+          author == freezed ? _value.author : author as List<ContactDetail>?,
       editor:
-          editor == freezed ? _value.editor : editor as List<ContactDetail?>?,
+          editor == freezed ? _value.editor : editor as List<ContactDetail>?,
       reviewer: reviewer == freezed
           ? _value.reviewer
-          : reviewer as List<ContactDetail?>?,
+          : reviewer as List<ContactDetail>?,
       endorser: endorser == freezed
           ? _value.endorser
-          : endorser as List<ContactDetail?>?,
+          : endorser as List<ContactDetail>?,
       relatedArtifact: relatedArtifact == freezed
           ? _value.relatedArtifact
-          : relatedArtifact as List<RelatedArtifact?>?,
+          : relatedArtifact as List<RelatedArtifact>?,
       actual: actual == freezed ? _value.actual : actual as Boolean?,
       actualElement: actualElement == freezed
           ? _value.actualElement
@@ -4074,7 +4070,7 @@ class __$EvidenceVariableCopyWithImpl<$Res>
               : characteristicCombinationElement as Element?,
       characteristic: characteristic == freezed
           ? _value.characteristic
-          : characteristic as List<EvidenceVariableCharacteristic?>?,
+          : characteristic as List<EvidenceVariableCharacteristic>?,
       handling: handling == freezed
           ? _value.handling
           : handling as EvidenceVariableHandling?,
@@ -4083,7 +4079,7 @@ class __$EvidenceVariableCopyWithImpl<$Res>
           : handlingElement as Element?,
       category: category == freezed
           ? _value.category
-          : category as List<EvidenceVariableCategory?>?,
+          : category as List<EvidenceVariableCategory>?,
     ));
   }
 }
@@ -4203,19 +4199,19 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -4253,16 +4249,16 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
   @override
-  final List<ContactDetail?>? contact;
+  final List<ContactDetail>? contact;
   @override
   final Markdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final List<UsageContext?>? useContext;
+  final List<UsageContext>? useContext;
   @override
-  final List<CodeableConcept?>? jurisdiction;
+  final List<CodeableConcept>? jurisdiction;
   @override
   final Markdown? purpose;
   @override
@@ -4296,17 +4292,17 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @JsonKey(name: '_subtitle')
   final Element? subtitleElement;
   @override
-  final List<Annotation?>? note;
+  final List<Annotation>? note;
   @override
-  final List<ContactDetail?>? author;
+  final List<ContactDetail>? author;
   @override
-  final List<ContactDetail?>? editor;
+  final List<ContactDetail>? editor;
   @override
-  final List<ContactDetail?>? reviewer;
+  final List<ContactDetail>? reviewer;
   @override
-  final List<ContactDetail?>? endorser;
+  final List<ContactDetail>? endorser;
   @override
-  final List<RelatedArtifact?>? relatedArtifact;
+  final List<RelatedArtifact>? relatedArtifact;
   @override
   final Boolean? actual;
   @override
@@ -4319,7 +4315,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @JsonKey(name: '_characteristicCombination')
   final Element? characteristicCombinationElement;
   @override
-  final List<EvidenceVariableCharacteristic?>? characteristic;
+  final List<EvidenceVariableCharacteristic>? characteristic;
   @override
   @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
   final EvidenceVariableHandling? handling;
@@ -4327,7 +4323,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @JsonKey(name: '_handling')
   final Element? handlingElement;
   @override
-  final List<EvidenceVariableCategory?>? category;
+  final List<EvidenceVariableCategory>? category;
 
   @override
   String toString() {
@@ -4532,14 +4528,14 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
-      List<Resource?>? contained,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       FhirUri? url,
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier?>? identifier,
+      List<Identifier>? identifier,
       String? version,
       @JsonKey(name: '_version')
           Element? versionElement,
@@ -4562,12 +4558,12 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       String? publisher,
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail?>? contact,
+      List<ContactDetail>? contact,
       Markdown? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<UsageContext?>? useContext,
-      List<CodeableConcept?>? jurisdiction,
+      List<UsageContext>? useContext,
+      List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
       @JsonKey(name: '_purpose')
           Element? purposeElement,
@@ -4587,12 +4583,12 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      List<Annotation?>? note,
-      List<ContactDetail?>? author,
-      List<ContactDetail?>? editor,
-      List<ContactDetail?>? reviewer,
-      List<ContactDetail?>? endorser,
-      List<RelatedArtifact?>? relatedArtifact,
+      List<Annotation>? note,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       Boolean? actual,
       @JsonKey(name: '_actual')
           Element? actualElement,
@@ -4600,12 +4596,12 @@ abstract class _EvidenceVariable extends EvidenceVariable {
           EvidenceVariableCharacteristicCombination? characteristicCombination,
       @JsonKey(name: '_characteristicCombination')
           Element? characteristicCombinationElement,
-      List<EvidenceVariableCharacteristic?>? characteristic,
+      List<EvidenceVariableCharacteristic>? characteristic,
       @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
           EvidenceVariableHandling? handling,
       @JsonKey(name: '_handling')
           Element? handlingElement,
-      List<EvidenceVariableCategory?>? category}) = _$_EvidenceVariable;
+      List<EvidenceVariableCategory>? category}) = _$_EvidenceVariable;
 
   factory _EvidenceVariable.fromJson(Map<String, dynamic> json) =
       _$_EvidenceVariable.fromJson;
@@ -4630,19 +4626,19 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   FhirUri? get url;
   @override
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   String? get version;
   @override
@@ -4680,16 +4676,16 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
-  List<ContactDetail?>? get contact;
+  List<ContactDetail>? get contact;
   @override
   Markdown? get description;
   @override
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  List<UsageContext?>? get useContext;
+  List<UsageContext>? get useContext;
   @override
-  List<CodeableConcept?>? get jurisdiction;
+  List<CodeableConcept>? get jurisdiction;
   @override
   Markdown? get purpose;
   @override
@@ -4723,17 +4719,17 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement;
   @override
-  List<Annotation?>? get note;
+  List<Annotation>? get note;
   @override
-  List<ContactDetail?>? get author;
+  List<ContactDetail>? get author;
   @override
-  List<ContactDetail?>? get editor;
+  List<ContactDetail>? get editor;
   @override
-  List<ContactDetail?>? get reviewer;
+  List<ContactDetail>? get reviewer;
   @override
-  List<ContactDetail?>? get endorser;
+  List<ContactDetail>? get endorser;
   @override
-  List<RelatedArtifact?>? get relatedArtifact;
+  List<RelatedArtifact>? get relatedArtifact;
   @override
   Boolean? get actual;
   @override
@@ -4746,7 +4742,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @JsonKey(name: '_characteristicCombination')
   Element? get characteristicCombinationElement;
   @override
-  List<EvidenceVariableCharacteristic?>? get characteristic;
+  List<EvidenceVariableCharacteristic>? get characteristic;
   @override
   @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
   EvidenceVariableHandling? get handling;
@@ -4754,7 +4750,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @JsonKey(name: '_handling')
   Element? get handlingElement;
   @override
-  List<EvidenceVariableCategory?>? get category;
+  List<EvidenceVariableCategory>? get category;
   @override
   @JsonKey(ignore: true)
   _$EvidenceVariableCopyWith<_EvidenceVariable> get copyWith;
@@ -4773,8 +4769,8 @@ class _$EvidenceVariableCharacteristicTearOff {
       call(
           {String? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+              List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           String? description,
           @JsonKey(name: '_description')
               Element? descriptionElement,
@@ -4830,8 +4826,8 @@ const $EvidenceVariableCharacteristic =
 mixin _$EvidenceVariableCharacteristic {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
@@ -4868,8 +4864,8 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
       call(
           {String? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+              List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           String? description,
           @JsonKey(name: '_description')
               Element? descriptionElement,
@@ -4937,10 +4933,10 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -5104,8 +5100,8 @@ abstract class _$EvidenceVariableCharacteristicCopyWith<$Res>
       call(
           {String? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension?>? extension_,
-          List<FhirExtension?>? modifierExtension,
+              List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           String? description,
           @JsonKey(name: '_description')
               Element? descriptionElement,
@@ -5187,10 +5183,10 @@ class __$EvidenceVariableCharacteristicCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -5269,9 +5265,9 @@ class _$_EvidenceVariableCharacteristic
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? description;
   @override
@@ -5406,8 +5402,8 @@ abstract class _EvidenceVariableCharacteristic
   factory _EvidenceVariableCharacteristic(
       {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -5435,9 +5431,9 @@ abstract class _EvidenceVariableCharacteristic
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get description;
   @override
@@ -5488,13 +5484,13 @@ class _$EvidenceVariableTimeFromStartTearOff {
 
   _EvidenceVariableTimeFromStart call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Quantity? quantity,
       Range? range,
-      List<Annotation?>? note}) {
+      List<Annotation>? note}) {
     return _EvidenceVariableTimeFromStart(
       id: id,
       extension_: extension_,
@@ -5519,14 +5515,14 @@ const $EvidenceVariableTimeFromStart = _$EvidenceVariableTimeFromStartTearOff();
 mixin _$EvidenceVariableTimeFromStart {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get description;
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   Quantity? get quantity;
   Range? get range;
-  List<Annotation?>? get note;
+  List<Annotation>? get note;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -5542,13 +5538,13 @@ abstract class $EvidenceVariableTimeFromStartCopyWith<$Res> {
       _$EvidenceVariableTimeFromStartCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Quantity? quantity,
       Range? range,
-      List<Annotation?>? note});
+      List<Annotation>? note});
 
   $ElementCopyWith<$Res>? get descriptionElement;
   $QuantityCopyWith<$Res>? get quantity;
@@ -5579,10 +5575,10 @@ class _$EvidenceVariableTimeFromStartCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -5590,7 +5586,7 @@ class _$EvidenceVariableTimeFromStartCopyWithImpl<$Res>
           : descriptionElement as Element?,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
       range: range == freezed ? _value.range : range as Range?,
-      note: note == freezed ? _value.note : note as List<Annotation?>?,
+      note: note == freezed ? _value.note : note as List<Annotation>?,
     ));
   }
 
@@ -5638,13 +5634,13 @@ abstract class _$EvidenceVariableTimeFromStartCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Quantity? quantity,
       Range? range,
-      List<Annotation?>? note});
+      List<Annotation>? note});
 
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -5682,10 +5678,10 @@ class __$EvidenceVariableTimeFromStartCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       description:
           description == freezed ? _value.description : description as String?,
       descriptionElement: descriptionElement == freezed
@@ -5693,7 +5689,7 @@ class __$EvidenceVariableTimeFromStartCopyWithImpl<$Res>
           : descriptionElement as Element?,
       quantity: quantity == freezed ? _value.quantity : quantity as Quantity?,
       range: range == freezed ? _value.range : range as Range?,
-      note: note == freezed ? _value.note : note as List<Annotation?>?,
+      note: note == freezed ? _value.note : note as List<Annotation>?,
     ));
   }
 }
@@ -5721,9 +5717,9 @@ class _$_EvidenceVariableTimeFromStart extends _EvidenceVariableTimeFromStart {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? description;
   @override
@@ -5734,7 +5730,7 @@ class _$_EvidenceVariableTimeFromStart extends _EvidenceVariableTimeFromStart {
   @override
   final Range? range;
   @override
-  final List<Annotation?>? note;
+  final List<Annotation>? note;
 
   @override
   String toString() {
@@ -5797,13 +5793,13 @@ abstract class _EvidenceVariableTimeFromStart
   _EvidenceVariableTimeFromStart._() : super._();
   factory _EvidenceVariableTimeFromStart(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
       Quantity? quantity,
       Range? range,
-      List<Annotation?>? note}) = _$_EvidenceVariableTimeFromStart;
+      List<Annotation>? note}) = _$_EvidenceVariableTimeFromStart;
 
   factory _EvidenceVariableTimeFromStart.fromJson(Map<String, dynamic> json) =
       _$_EvidenceVariableTimeFromStart.fromJson;
@@ -5812,9 +5808,9 @@ abstract class _EvidenceVariableTimeFromStart
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get description;
   @override
@@ -5825,7 +5821,7 @@ abstract class _EvidenceVariableTimeFromStart
   @override
   Range? get range;
   @override
-  List<Annotation?>? get note;
+  List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
   _$EvidenceVariableTimeFromStartCopyWith<_EvidenceVariableTimeFromStart>
@@ -5843,8 +5839,8 @@ class _$EvidenceVariableCategoryTearOff {
 
   _EvidenceVariableCategory call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? valueCodeableConcept,
@@ -5874,8 +5870,8 @@ const $EvidenceVariableCategory = _$EvidenceVariableCategoryTearOff();
 mixin _$EvidenceVariableCategory {
   String? get id;
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
   String? get name;
   @JsonKey(name: '_name')
   Element? get nameElement;
@@ -5895,8 +5891,8 @@ abstract class $EvidenceVariableCategoryCopyWith<$Res> {
       _$EvidenceVariableCategoryCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? valueCodeableConcept,
@@ -5933,10 +5929,10 @@ class _$EvidenceVariableCategoryCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -6006,8 +6002,8 @@ abstract class _$EvidenceVariableCategoryCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? valueCodeableConcept,
@@ -6051,10 +6047,10 @@ class __$EvidenceVariableCategoryCopyWithImpl<$Res>
       id: id == freezed ? _value.id : id as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension?>?,
+          : extension_ as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension?>?,
+          : modifierExtension as List<FhirExtension>?,
       name: name == freezed ? _value.name : name as String?,
       nameElement:
           nameElement == freezed ? _value.nameElement : nameElement as Element?,
@@ -6092,9 +6088,9 @@ class _$_EvidenceVariableCategory extends _EvidenceVariableCategory {
   final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension?>? extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension?>? modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? name;
   @override
@@ -6168,8 +6164,8 @@ abstract class _EvidenceVariableCategory extends EvidenceVariableCategory {
   _EvidenceVariableCategory._() : super._();
   factory _EvidenceVariableCategory(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-      List<FhirExtension?>? modifierExtension,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? valueCodeableConcept,
@@ -6183,9 +6179,9 @@ abstract class _EvidenceVariableCategory extends EvidenceVariableCategory {
   String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension?>? get extension_;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension?>? get modifierExtension;
+  List<FhirExtension>? get modifierExtension;
   @override
   String? get name;
   @override

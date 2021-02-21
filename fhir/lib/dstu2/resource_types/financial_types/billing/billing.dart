@@ -25,10 +25,10 @@ abstract class Account with Resource implements _$Account {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     CodeableConcept? type,
@@ -75,11 +75,11 @@ abstract class Claim with Resource implements _$Claim {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ClaimType.unknown) required ClaimType type,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     Coding? ruleset,
     Coding? originalRuleset,
     FhirDateTime? created,
@@ -97,18 +97,18 @@ abstract class Claim with Resource implements _$Claim {
     Reference? originalPrescription,
     ClaimPayee? payee,
     Reference? referral,
-    List<ClaimDiagnosis?>? diagnosis,
-    List<Coding?>? condition,
+    List<ClaimDiagnosis>? diagnosis,
+    List<Coding>? condition,
     required Reference patient,
-    List<ClaimCoverage?>? coverage,
-    List<Coding?>? exception,
+    List<ClaimCoverage>? coverage,
+    List<Coding>? exception,
     String? school,
     Date? accident,
     Coding? accidentType,
-    List<Coding?>? interventionException,
-    List<ClaimItem?>? item,
-    List<Coding?>? additionalMaterials,
-    List<ClaimMissingTeeth?>? missingTeeth,
+    List<Coding>? interventionException,
+    List<ClaimItem>? item,
+    List<Coding>? additionalMaterials,
+    List<ClaimMissingTeeth>? missingTeeth,
   }) = _Claim;
 
   /// Produces a Yaml formatted String version of the object
@@ -132,8 +132,8 @@ abstract class ClaimPayee with _$ClaimPayee {
   ClaimPayee._();
   factory ClaimPayee({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Coding? type,
     Reference? provider,
     Reference? organization,
@@ -162,8 +162,8 @@ abstract class ClaimDiagnosis with _$ClaimDiagnosis {
   ClaimDiagnosis._();
   factory ClaimDiagnosis({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required PositiveInt sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required Coding diagnosis,
@@ -191,14 +191,14 @@ abstract class ClaimCoverage with _$ClaimCoverage {
   ClaimCoverage._();
   factory ClaimCoverage({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required PositiveInt sequence,
     required Boolean focal,
     required Reference coverage,
     String? businessArrangement,
     required Coding relationship,
-    List<String?>? preAuthRef,
+    List<String>? preAuthRef,
     Reference? claimResponse,
     Coding? originalRuleset,
   }) = _ClaimCoverage;
@@ -225,13 +225,13 @@ abstract class ClaimItem with _$ClaimItem {
   ClaimItem._();
   factory ClaimItem({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required PositiveInt sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required Coding type,
     Reference? provider,
-    List<PositiveInt?>? diagnosisLinkId,
+    List<PositiveInt>? diagnosisLinkId,
     required Coding service,
     @JsonKey(name: '_servicedDate') Element? servicedDateElement,
     Date? serviceDate,
@@ -243,9 +243,9 @@ abstract class ClaimItem with _$ClaimItem {
     Quantity? net,
     Coding? udi,
     Coding? bodySite,
-    List<Coding?>? subSite,
-    List<Coding?>? modifier,
-    List<ClaimItemDetail?>? detail,
+    List<Coding>? subSite,
+    List<Coding>? modifier,
+    List<ClaimItemDetail>? detail,
     ClaimItemProsthesis? prosthesis,
   }) = _ClaimItem;
 
@@ -271,8 +271,8 @@ abstract class ClaimItemDetail with _$ClaimItemDetail {
   ClaimItemDetail._();
   factory ClaimItemDetail({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required PositiveInt sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required Coding type,
@@ -284,7 +284,7 @@ abstract class ClaimItemDetail with _$ClaimItemDetail {
     Decimal? points,
     Quantity? net,
     Coding? udi,
-    List<ClaimDetailSubDetail?>? subDetail,
+    List<ClaimDetailSubDetail>? subDetail,
   }) = _ClaimItemDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -309,8 +309,8 @@ abstract class ClaimDetailSubDetail with _$ClaimDetailSubDetail {
   ClaimDetailSubDetail._();
   factory ClaimDetailSubDetail({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required PositiveInt sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required Coding type,
@@ -346,8 +346,8 @@ abstract class ClaimItemProsthesis with _$ClaimItemProsthesis {
   ClaimItemProsthesis._();
   factory ClaimItemProsthesis({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Boolean? initial,
     Date? priorDate,
     Coding? priorMaterial,
@@ -375,8 +375,8 @@ abstract class ClaimMissingTeeth with _$ClaimMissingTeeth {
   ClaimMissingTeeth._();
   factory ClaimMissingTeeth({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Coding tooth,
     Coding? reason,
     Date? extractionDate,
@@ -413,10 +413,10 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<Identifier?>? identifier,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     Reference? request,
     Coding? ruleset,
     Coding? originalRuleset,
@@ -431,9 +431,9 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,
     Coding? payeeType,
-    List<ClaimResponseItem?>? item,
-    List<ClaimResponseAddItem?>? addItem,
-    List<ClaimResponseError?>? error,
+    List<ClaimResponseItem>? item,
+    List<ClaimResponseAddItem>? addItem,
+    List<ClaimResponseError>? error,
     Quantity? totalCost,
     Quantity? unallocDeductable,
     Quantity? totalBenefit,
@@ -445,8 +445,8 @@ abstract class ClaimResponse with Resource implements _$ClaimResponse {
     Identifier? paymentRef,
     Coding? reserved,
     Coding? form,
-    List<ClaimResponseNote?>? note,
-    List<ClaimResponseCoverage?>? coverage,
+    List<ClaimResponseNote>? note,
+    List<ClaimResponseCoverage>? coverage,
   }) = _ClaimResponse;
 
   /// Produces a Yaml formatted String version of the object
@@ -471,14 +471,14 @@ abstract class ClaimResponseItem with _$ClaimResponseItem {
   ClaimResponseItem._();
   factory ClaimResponseItem({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     required PositiveInt sequenceLinkId,
-    List<PositiveInt?>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    List<ClaimResponseItemAdjudication?>? adjudication,
-    List<ClaimResponseItemDetail?>? detail,
+    List<PositiveInt>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
+    List<ClaimResponseItemAdjudication>? adjudication,
+    List<ClaimResponseItemDetail>? detail,
   }) = _ClaimResponseItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -504,8 +504,8 @@ abstract class ClaimResponseItemAdjudication
   ClaimResponseItemAdjudication._();
   factory ClaimResponseItemAdjudication({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Coding code,
     Quantity? amount,
     Decimal? value,
@@ -535,11 +535,11 @@ abstract class ClaimResponseItemDetail with _$ClaimResponseItemDetail {
   ClaimResponseItemDetail._();
   factory ClaimResponseItemDetail({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required PositiveInt sequenceLinkId,
-    List<ClaimResponseItemAdjudication?>? adjudication,
-    List<ClaimResponseDetailSubDetail?>? subDetail,
+    List<ClaimResponseItemAdjudication>? adjudication,
+    List<ClaimResponseDetailSubDetail>? subDetail,
   }) = _ClaimResponseItemDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -565,10 +565,10 @@ abstract class ClaimResponseDetailSubDetail
   ClaimResponseDetailSubDetail._();
   factory ClaimResponseDetailSubDetail({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required PositiveInt sequenceLinkId,
-    List<ClaimResponseItemAdjudication?>? adjudication,
+    List<ClaimResponseItemAdjudication>? adjudication,
   }) = _ClaimResponseDetailSubDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -594,13 +594,13 @@ abstract class ClaimResponseAddItem with _$ClaimResponseAddItem {
   ClaimResponseAddItem._();
   factory ClaimResponseAddItem({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
-    List<PositiveInt?>? sequenceLinkId,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<PositiveInt>? sequenceLinkId,
     required Coding service,
     Quantity? fee,
-    List<PositiveInt?>? noteNumberLinkId,
-    List<ClaimResponseItemAdjudication?>? adjudication,
+    List<PositiveInt>? noteNumberLinkId,
+    List<ClaimResponseItemAdjudication>? adjudication,
     ClaimResponseAddItemDetail? detail,
   }) = _ClaimResponseAddItem;
 
@@ -626,11 +626,11 @@ abstract class ClaimResponseAddItemDetail with _$ClaimResponseAddItemDetail {
   ClaimResponseAddItemDetail._();
   factory ClaimResponseAddItemDetail({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required Coding service,
     Quantity? fee,
-    List<ClaimResponseItemAdjudication?>? adjudication,
+    List<ClaimResponseItemAdjudication>? adjudication,
   }) = _ClaimResponseAddItemDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -656,8 +656,8 @@ abstract class ClaimResponseError with _$ClaimResponseError {
   ClaimResponseError._();
   factory ClaimResponseError({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     PositiveInt? sequenceLinkId,
     PositiveInt? detailSequenceLinkId,
     PositiveInt? subdetailSequenceLinkId,
@@ -686,8 +686,8 @@ abstract class ClaimResponseNote with _$ClaimResponseNote {
   ClaimResponseNote._();
   factory ClaimResponseNote({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     PositiveInt? number,
     @JsonKey(name: '_number') Element? numberElement,
     Coding? type,
@@ -718,14 +718,14 @@ abstract class ClaimResponseCoverage with _$ClaimResponseCoverage {
   ClaimResponseCoverage._();
   factory ClaimResponseCoverage({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     required PositiveInt sequence,
     required Boolean focal,
     required Reference coverage,
     String? businessArrangement,
     required Coding relationship,
-    List<String?>? preAuthRef,
+    List<String>? preAuthRef,
     Reference? claimResponse,
     Coding? originalRuleset,
   }) = _ClaimResponseCoverage;

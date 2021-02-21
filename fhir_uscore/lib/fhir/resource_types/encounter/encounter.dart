@@ -22,17 +22,17 @@ abstract class Encounter with Resource implements _$Encounter {
     Id? id,
     Meta? meta,
     Narrative? text,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: EncounterStatus.unknown)
         required EncounterStatus status,
     @JsonKey(name: 'class') required Coding class_,
     required List<CodeableConcept?> type,
     required Reference subject,
-    List<EncounterParticipant?>? participant,
+    List<EncounterParticipant>? participant,
     Period? period,
-    List<CodeableConcept?>? reasonCode,
+    List<CodeableConcept>? reasonCode,
     EncounterHospitalization? hospitalization,
-    List<EncounterLocation?>? location,
+    List<EncounterLocation>? location,
   }) = _Encounter;
 
   factory Encounter.simple({
@@ -40,13 +40,13 @@ abstract class Encounter with Resource implements _$Encounter {
     required EncounterStatus status,
     required Coding class_,
     required EncounterType encounterType,
-    List<CodeableConcept?>? type,
+    List<CodeableConcept>? type,
     required Reference subject,
-    List<EncounterParticipant?>? participant,
+    List<EncounterParticipant>? participant,
     Period? period,
-    List<CodeableConcept?>? reasonCode,
+    List<CodeableConcept>? reasonCode,
     EncounterHospitalization? hospitalization,
-    List<EncounterLocation?>? location,
+    List<EncounterLocation>? location,
   }) {
     type ??= <CodeableConcept>[];
     type.add(codeableConceptFromEncounterType[encounterType]);
@@ -100,7 +100,7 @@ abstract class EncounterParticipant implements _$EncounterParticipant {
 
   factory EncounterParticipant({
     String? id,
-    List<CodeableConcept?>? type,
+    List<CodeableConcept>? type,
     Period? period,
     Reference? individual,
   }) = _EncounterParticipant;

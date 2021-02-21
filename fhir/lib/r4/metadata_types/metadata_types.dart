@@ -36,10 +36,10 @@ abstract class ContactDetail implements _$ContactDetail {
   ///  or the organization.
   factory ContactDetail({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    List<ContactPoint?>? telecom,
+    List<ContactPoint>? telecom,
   }) = _ContactDetail;
 
   /// Produces a Yaml formatted String version of the object
@@ -89,12 +89,12 @@ abstract class Contributor implements _$Contributor {
   ///  with the contributor.
   factory Contributor({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
   }) = _Contributor;
 
   /// Produces a Yaml formatted String version of the object
@@ -176,19 +176,19 @@ abstract class DataRequirement implements _$DataRequirement {
   /// [sort]: Specifies the order of the results to be returned.
   factory DataRequirement({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? type,
     @JsonKey(name: '_type') Element? typeElement,
-    List<Canonical?>? profile,
+    List<Canonical>? profile,
     CodeableConcept? subjectCodeableConcept,
     Reference? subjectReference,
-    List<String?>? mustSupport,
-    @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
-    List<DataRequirementCodeFilter?>? codeFilter,
-    List<DataRequirementDateFilter?>? dateFilter,
+    List<String>? mustSupport,
+    @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
+    List<DataRequirementCodeFilter>? codeFilter,
+    List<DataRequirementDateFilter>? dateFilter,
     PositiveInt? limit,
     @JsonKey(name: '_limit') Element? limitElement,
-    List<DataRequirementSort?>? sort,
+    List<DataRequirementSort>? sort,
   }) = _DataRequirement;
 
   /// Produces a Yaml formatted String version of the object
@@ -270,14 +270,14 @@ abstract class DataRequirementCodeFilter
   ///  matching a code in the value set or one of the specified codes.
   factory DataRequirementCodeFilter({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
     String? searchParam,
     @JsonKey(name: '_searchParam') Element? searchParamElement,
     Canonical? valueSet,
-    List<Coding?>? code,
+    List<Coding>? code,
   }) = _DataRequirementCodeFilter;
 
   /// Produces a Yaml formatted String version of the object
@@ -372,8 +372,8 @@ abstract class DataRequirementDateFilter
   ///  return only those data items that fall within Duration before now.
   factory DataRequirementDateFilter({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
     String? searchParam,
@@ -447,8 +447,8 @@ abstract class DataRequirementSort implements _$DataRequirementSort {
   /// [_direction]: Extensions for direction
   factory DataRequirementSort({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
     @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
@@ -524,7 +524,7 @@ abstract class ParameterDefinition implements _$ParameterDefinition {
   ///  conform to, or that the output data will conform to.
   factory ParameterDefinition({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? name,
     @JsonKey(name: '_name') Element? nameElement,
     Code? use,
@@ -605,7 +605,7 @@ abstract class RelatedArtifact implements _$RelatedArtifact {
   ///  or other knowledge resource.
   factory RelatedArtifact({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
         RelatedArtifactType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -688,7 +688,7 @@ abstract class TriggerDefinition implements _$TriggerDefinition {
   ///  trigger fires.
   factory TriggerDefinition({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
         TriggerDefinitionType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -700,7 +700,7 @@ abstract class TriggerDefinition implements _$TriggerDefinition {
     @JsonKey(name: '_timingDate') Element? timingDateElement,
     FhirDateTime? timingDateTime,
     @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
-    List<DataRequirement?>? data,
+    List<DataRequirement>? data,
     Expression? condition,
   }) = _TriggerDefinition;
 
@@ -756,7 +756,7 @@ abstract class UsageContext implements _$UsageContext {
   ///  context of use. The interpretation of the value is defined by the code.
   factory UsageContext({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required Coding code,
     CodeableConcept? valueCodeableConcept,
     Quantity? valueQuantity,
@@ -824,7 +824,7 @@ abstract class Expression implements _$Expression {
   /// [_reference]: Extensions for reference
   factory Expression({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Id? name,

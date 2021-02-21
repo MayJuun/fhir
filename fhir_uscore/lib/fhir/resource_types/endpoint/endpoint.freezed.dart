@@ -22,19 +22,19 @@ class _$EndpointTearOff {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Resource?>? contained,
-      List<Identifier?>? identifier,
+      List<Resource>? contained,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: EndpointStatus.unknown)
           EndpointStatus? status,
       required Coding connectionType,
       String? name,
       Reference? managingOrganization,
-      List<ContactPoint?>? contact,
+      List<ContactPoint>? contact,
       Period? period,
       required List<CodeableConcept> payloadType,
-      List<Code?>? payloadMimeType,
+      List<Code>? payloadMimeType,
       FhirUrl? address,
-      List<String?>? header}) {
+      List<String>? header}) {
     return _Endpoint(
       resourceType: resourceType,
       id: id,
@@ -70,19 +70,19 @@ mixin _$Endpoint {
   Id? get id;
   Meta? get meta;
   Narrative? get text;
-  List<Resource?>? get contained;
-  List<Identifier?>? get identifier;
+  List<Resource>? get contained;
+  List<Identifier>? get identifier;
   @JsonKey(unknownEnumValue: EndpointStatus.unknown)
   EndpointStatus? get status;
   Coding get connectionType;
   String? get name;
   Reference? get managingOrganization;
-  List<ContactPoint?>? get contact;
+  List<ContactPoint>? get contact;
   Period? get period;
   List<CodeableConcept> get payloadType;
-  List<Code?>? get payloadMimeType;
+  List<Code>? get payloadMimeType;
   FhirUrl? get address;
-  List<String?>? get header;
+  List<String>? get header;
 
   Map<String, dynamic> toJson();
   @JsonKey(ignore: true)
@@ -99,19 +99,19 @@ abstract class $EndpointCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Resource?>? contained,
-      List<Identifier?>? identifier,
+      List<Resource>? contained,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: EndpointStatus.unknown)
           EndpointStatus? status,
       Coding connectionType,
       String? name,
       Reference? managingOrganization,
-      List<ContactPoint?>? contact,
+      List<ContactPoint>? contact,
       Period? period,
       List<CodeableConcept> payloadType,
-      List<Code?>? payloadMimeType,
+      List<Code>? payloadMimeType,
       FhirUrl? address,
-      List<String?>? header});
+      List<String>? header});
 
   $MetaCopyWith<$Res>? get meta;
   $NarrativeCopyWith<$Res>? get text;
@@ -156,10 +156,10 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as EndpointStatus?,
       connectionType: connectionType == freezed
           ? _value.connectionType
@@ -169,16 +169,16 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
           ? _value.managingOrganization
           : managingOrganization as Reference?,
       contact:
-          contact == freezed ? _value.contact : contact as List<ContactPoint?>?,
+          contact == freezed ? _value.contact : contact as List<ContactPoint>?,
       period: period == freezed ? _value.period : period as Period?,
       payloadType: payloadType == freezed
           ? _value.payloadType
           : payloadType as List<CodeableConcept>,
       payloadMimeType: payloadMimeType == freezed
           ? _value.payloadMimeType
-          : payloadMimeType as List<Code?>?,
+          : payloadMimeType as List<Code>?,
       address: address == freezed ? _value.address : address as FhirUrl?,
-      header: header == freezed ? _value.header : header as List<String?>?,
+      header: header == freezed ? _value.header : header as List<String>?,
     ));
   }
 
@@ -245,19 +245,19 @@ abstract class _$EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Resource?>? contained,
-      List<Identifier?>? identifier,
+      List<Resource>? contained,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: EndpointStatus.unknown)
           EndpointStatus? status,
       Coding connectionType,
       String? name,
       Reference? managingOrganization,
-      List<ContactPoint?>? contact,
+      List<ContactPoint>? contact,
       Period? period,
       List<CodeableConcept> payloadType,
-      List<Code?>? payloadMimeType,
+      List<Code>? payloadMimeType,
       FhirUrl? address,
-      List<String?>? header});
+      List<String>? header});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -308,10 +308,10 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       contained: contained == freezed
           ? _value.contained
-          : contained as List<Resource?>?,
+          : contained as List<Resource>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier?>?,
+          : identifier as List<Identifier>?,
       status: status == freezed ? _value.status : status as EndpointStatus?,
       connectionType: connectionType == freezed
           ? _value.connectionType
@@ -321,16 +321,16 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
           ? _value.managingOrganization
           : managingOrganization as Reference?,
       contact:
-          contact == freezed ? _value.contact : contact as List<ContactPoint?>?,
+          contact == freezed ? _value.contact : contact as List<ContactPoint>?,
       period: period == freezed ? _value.period : period as Period?,
       payloadType: payloadType == freezed
           ? _value.payloadType
           : payloadType as List<CodeableConcept>,
       payloadMimeType: payloadMimeType == freezed
           ? _value.payloadMimeType
-          : payloadMimeType as List<Code?>?,
+          : payloadMimeType as List<Code>?,
       address: address == freezed ? _value.address : address as FhirUrl?,
-      header: header == freezed ? _value.header : header as List<String?>?,
+      header: header == freezed ? _value.header : header as List<String>?,
     ));
   }
 }
@@ -373,9 +373,9 @@ class _$_Endpoint extends _Endpoint {
   @override
   final Narrative? text;
   @override
-  final List<Resource?>? contained;
+  final List<Resource>? contained;
   @override
-  final List<Identifier?>? identifier;
+  final List<Identifier>? identifier;
   @override
   @JsonKey(unknownEnumValue: EndpointStatus.unknown)
   final EndpointStatus? status;
@@ -386,17 +386,17 @@ class _$_Endpoint extends _Endpoint {
   @override
   final Reference? managingOrganization;
   @override
-  final List<ContactPoint?>? contact;
+  final List<ContactPoint>? contact;
   @override
   final Period? period;
   @override
   final List<CodeableConcept> payloadType;
   @override
-  final List<Code?>? payloadMimeType;
+  final List<Code>? payloadMimeType;
   @override
   final FhirUrl? address;
   @override
-  final List<String?>? header;
+  final List<String>? header;
 
   @override
   String toString() {
@@ -489,19 +489,19 @@ abstract class _Endpoint extends Endpoint {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<Resource?>? contained,
-      List<Identifier?>? identifier,
+      List<Resource>? contained,
+      List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: EndpointStatus.unknown)
           EndpointStatus? status,
       required Coding connectionType,
       String? name,
       Reference? managingOrganization,
-      List<ContactPoint?>? contact,
+      List<ContactPoint>? contact,
       Period? period,
       required List<CodeableConcept> payloadType,
-      List<Code?>? payloadMimeType,
+      List<Code>? payloadMimeType,
       FhirUrl? address,
-      List<String?>? header}) = _$_Endpoint;
+      List<String>? header}) = _$_Endpoint;
 
   factory _Endpoint.fromJson(Map<String, dynamic> json) = _$_Endpoint.fromJson;
 
@@ -515,9 +515,9 @@ abstract class _Endpoint extends Endpoint {
   @override
   Narrative? get text;
   @override
-  List<Resource?>? get contained;
+  List<Resource>? get contained;
   @override
-  List<Identifier?>? get identifier;
+  List<Identifier>? get identifier;
   @override
   @JsonKey(unknownEnumValue: EndpointStatus.unknown)
   EndpointStatus? get status;
@@ -528,17 +528,17 @@ abstract class _Endpoint extends Endpoint {
   @override
   Reference? get managingOrganization;
   @override
-  List<ContactPoint?>? get contact;
+  List<ContactPoint>? get contact;
   @override
   Period? get period;
   @override
   List<CodeableConcept> get payloadType;
   @override
-  List<Code?>? get payloadMimeType;
+  List<Code>? get payloadMimeType;
   @override
   FhirUrl? get address;
   @override
-  List<String?>? get header;
+  List<String>? get header;
   @override
   @JsonKey(ignore: true)
   _$EndpointCopyWith<_Endpoint> get copyWith;

@@ -16,15 +16,15 @@ abstract class Meta implements _$Meta {
   Meta._();
   factory Meta({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     Id? versionId,
     @JsonKey(name: '_versionId') Element? versionIdElement,
     Instant? lastUpdated,
     @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
-    List<FhirUri?>? profile,
-    List<Coding?>? security,
-    List<Coding?>? tag,
+    List<FhirUri>? profile,
+    List<Coding>? security,
+    List<Coding>? tag,
   }) = _Meta;
 
   /// Produces a Yaml formatted String version of the object
@@ -48,8 +48,8 @@ abstract class Reference implements _$Reference {
   Reference._();
   factory Reference({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     String? reference,
     @JsonKey(name: '_reference') Element? referenceElement,
     String? display,
@@ -78,14 +78,14 @@ abstract class ElementDefinition implements _$ElementDefinition {
   ElementDefinition._();
   factory ElementDefinition({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required String path,
-    List<Code?>? representation,
+    List<Code>? representation,
     @JsonKey(name: '_representation') Element? representationElement,
     String? name,
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
-    List<Coding?>? code,
+    List<Coding>? code,
     ElementDefinitionSlicing? slicing,
     String? short,
     @JsonKey(name: '_short') Element? shortElement,
@@ -95,14 +95,14 @@ abstract class ElementDefinition implements _$ElementDefinition {
     @JsonKey(name: '_comments') Element? commentElement,
     Markdown? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
-    List<String?>? alias,
+    List<String>? alias,
     @JsonKey(name: '_alias') Element? aliasElement,
     Integer? min,
     @JsonKey(name: '_min') Element? minElement,
     String? max,
     @JsonKey(name: '_max') Element? maxElement,
     ElementDefinitionBase? base,
-    List<ElementDefinitionType?>? type,
+    List<ElementDefinitionType>? type,
     String? nameReference,
     Boolean? defaultValueBoolean,
     @JsonKey(name: '_defaultValueBoolean') Element? defaultValueBooleanElement,
@@ -407,9 +407,9 @@ abstract class ElementDefinition implements _$ElementDefinition {
     Meta? maxValueMeta,
     Integer? maxLength,
     @JsonKey(name: '_maxLength') Element? maxLengthElement,
-    List<Id?>? condition,
+    List<Id>? condition,
     @JsonKey(name: '_condition') Element? conditionElement,
-    List<ElementDefinitionConstraint?>? constraint,
+    List<ElementDefinitionConstraint>? constraint,
     Boolean? mustSupport,
     @JsonKey(name: '_mustSupport') Element? mustSupportElement,
     Boolean? isModifier,
@@ -417,7 +417,7 @@ abstract class ElementDefinition implements _$ElementDefinition {
     Boolean? isSummary,
     @JsonKey(name: '_isSummary') Element? isSummaryElement,
     ElementDefinitionBinding? binding,
-    List<ElementDefinitionMapping?>? mapping,
+    List<ElementDefinitionMapping>? mapping,
   }) = _ElementDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -442,8 +442,8 @@ abstract class Narrative implements _$Narrative {
   Narrative._();
   factory Narrative({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
         required NarrativeStatus status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -472,8 +472,8 @@ abstract class ElementDefinitionSlicing implements _$ElementDefinitionSlicing {
   ElementDefinitionSlicing._();
   factory ElementDefinitionSlicing({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<String?>? discriminator,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<String>? discriminator,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Boolean? ordered,
@@ -506,7 +506,7 @@ abstract class ElementDefinitionBase implements _$ElementDefinitionBase {
   ElementDefinitionBase._();
   factory ElementDefinitionBase({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required String path,
     @JsonKey(name: '_path') Element? pathElement,
     required Integer min,
@@ -537,13 +537,13 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
   ElementDefinitionType._();
   factory ElementDefinitionType({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? code,
     @JsonKey(name: '_code') TypeCodeExtension? codeExtension,
-    List<FhirUri?>? profile,
-    List<TypeAggregation?>? aggregation,
+    List<FhirUri>? profile,
+    List<TypeAggregation>? aggregation,
     @JsonKey(name: '_aggregation') Element? aggregationElement,
-    @JsonKey(name: 'fhir_comments') List<String?>? fhirElement,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirElement,
   }) = _ElementDefinitionType;
 
   /// Produces a Yaml formatted String version of the object
@@ -567,7 +567,7 @@ abstract class ElementDefinitionType implements _$ElementDefinitionType {
 abstract class TypeCodeExtension implements _$TypeCodeExtension {
   TypeCodeExtension._();
   factory TypeCodeExtension({
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
   }) = _TypeCodeExtension;
 
   /// Produces a Yaml formatted String version of the object
@@ -593,7 +593,7 @@ abstract class ElementDefinitionConstraint
   ElementDefinitionConstraint._();
   factory ElementDefinitionConstraint({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required Id key,
     @JsonKey(name: '_key') Element? keyElement,
     String? requirements,
@@ -630,7 +630,7 @@ abstract class ElementDefinitionBinding implements _$ElementDefinitionBinding {
   ElementDefinitionBinding._();
   factory ElementDefinitionBinding({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(required: true, unknownEnumValue: ElementDefinitionBindingStrength.unknown)
         required ElementDefinitionBindingStrength strength,
     @JsonKey(name: '_strength') Element? strengthElement,
@@ -663,8 +663,8 @@ abstract class ElementDefinitionMapping implements _$ElementDefinitionMapping {
   ElementDefinitionMapping._();
   factory ElementDefinitionMapping({
     Id? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String?>? fhirComments,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     required Id identity,
     @JsonKey(name: '_identity') Element? identityElement,
     Code? language,

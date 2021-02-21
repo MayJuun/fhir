@@ -24,20 +24,20 @@ abstract class Practitioner with Resource implements _$Practitioner {
     Narrative? text,
     required List<Identifier?> identifier,
     required List<HumanName?> name,
-    List<Address?>? address,
-    List<ContactPoint?>? telecom,
+    List<Address>? address,
+    List<ContactPoint>? telecom,
     @JsonKey(unknownEnumValue: PractitionerGender.unknown)
         PractitionerGender? gender,
     Date? birthDate,
-    List<PractitionerQualification?>? qualification,
+    List<PractitionerQualification>? qualification,
   }) = _Practitioner;
 
   factory Practitioner.simple({
     required Identifier agentIdentifier,
     int? npiNumber,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     required HumanName practitionerName,
-    required List<HumanName?>? name,
+    required List<HumanName>? name,
   }) {
     identifier ??= <Identifier>[];
     identifier.add(agentIdentifier);
@@ -95,23 +95,23 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
     Narrative? text,
     required Reference practitioner,
     required Reference organization,
-    List<CodeableConcept?>? code,
-    List<CodeableConcept?>? specialty,
-    List<Reference?>? location,
-    List<ContactPoint?>? telecom,
-    List<Reference?>? endpoint,
+    List<CodeableConcept>? code,
+    List<CodeableConcept>? specialty,
+    List<Reference>? location,
+    List<ContactPoint>? telecom,
+    List<Reference>? endpoint,
   }) = _PractitionerRole;
 
   factory PractitionerRole.simple({
     required Reference practitioner,
     required Reference organization,
     PractitionerRoleCode? practitionerRoleCode,
-    List<CodeableConcept?>? code,
+    List<CodeableConcept>? code,
     PractitionerRoleSpecialty? practitionerRoleSpecialty,
-    List<CodeableConcept?>? specialty,
-    List<Reference?>? location,
-    List<ContactPoint?>? telecom,
-    List<Reference?>? endpoint,
+    List<CodeableConcept>? specialty,
+    List<Reference>? location,
+    List<ContactPoint>? telecom,
+    List<Reference>? endpoint,
   }) {
     if (practitionerRoleCode != null) {
       code ??= <CodeableConcept>[];
@@ -166,7 +166,7 @@ abstract class PractitionerQualification
 
   factory PractitionerQualification({
     String? id,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     required CodeableConcept code,
     Period? period,
     Reference? issuer,

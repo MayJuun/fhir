@@ -22,7 +22,7 @@ class _$DeviceTearOff {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<DeviceUdiCarrier?>? udiCarrier,
+      List<DeviceUdiCarrier>? udiCarrier,
       String? distinctIdentifier,
       String? manufacturer,
       FhirDateTime? manufactureDate,
@@ -31,7 +31,7 @@ class _$DeviceTearOff {
       String? serialNumber,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown)
           DeviceStatus? status,
-      List<DeviceDeviceName?>? deviceName,
+      List<DeviceDeviceName>? deviceName,
       String? modelNumber,
       required CodeableConcept type,
       required Reference patient}) {
@@ -70,7 +70,7 @@ mixin _$Device {
   Id? get id;
   Meta? get meta;
   Narrative? get text;
-  List<DeviceUdiCarrier?>? get udiCarrier;
+  List<DeviceUdiCarrier>? get udiCarrier;
   String? get distinctIdentifier;
   String? get manufacturer;
   FhirDateTime? get manufactureDate;
@@ -79,7 +79,7 @@ mixin _$Device {
   String? get serialNumber;
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   DeviceStatus? get status;
-  List<DeviceDeviceName?>? get deviceName;
+  List<DeviceDeviceName>? get deviceName;
   String? get modelNumber;
   CodeableConcept get type;
   Reference get patient;
@@ -99,7 +99,7 @@ abstract class $DeviceCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<DeviceUdiCarrier?>? udiCarrier,
+      List<DeviceUdiCarrier>? udiCarrier,
       String? distinctIdentifier,
       String? manufacturer,
       FhirDateTime? manufactureDate,
@@ -108,7 +108,7 @@ abstract class $DeviceCopyWith<$Res> {
       String? serialNumber,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown)
           DeviceStatus? status,
-      List<DeviceDeviceName?>? deviceName,
+      List<DeviceDeviceName>? deviceName,
       String? modelNumber,
       CodeableConcept type,
       Reference patient});
@@ -155,7 +155,7 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
       text: text == freezed ? _value.text : text as Narrative?,
       udiCarrier: udiCarrier == freezed
           ? _value.udiCarrier
-          : udiCarrier as List<DeviceUdiCarrier?>?,
+          : udiCarrier as List<DeviceUdiCarrier>?,
       distinctIdentifier: distinctIdentifier == freezed
           ? _value.distinctIdentifier
           : distinctIdentifier as String?,
@@ -175,7 +175,7 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
       status: status == freezed ? _value.status : status as DeviceStatus?,
       deviceName: deviceName == freezed
           ? _value.deviceName
-          : deviceName as List<DeviceDeviceName?>?,
+          : deviceName as List<DeviceDeviceName>?,
       modelNumber:
           modelNumber == freezed ? _value.modelNumber : modelNumber as String?,
       type: type == freezed ? _value.type : type as CodeableConcept,
@@ -231,7 +231,7 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<DeviceUdiCarrier?>? udiCarrier,
+      List<DeviceUdiCarrier>? udiCarrier,
       String? distinctIdentifier,
       String? manufacturer,
       FhirDateTime? manufactureDate,
@@ -240,7 +240,7 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
       String? serialNumber,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown)
           DeviceStatus? status,
-      List<DeviceDeviceName?>? deviceName,
+      List<DeviceDeviceName>? deviceName,
       String? modelNumber,
       CodeableConcept type,
       Reference patient});
@@ -292,7 +292,7 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
       text: text == freezed ? _value.text : text as Narrative?,
       udiCarrier: udiCarrier == freezed
           ? _value.udiCarrier
-          : udiCarrier as List<DeviceUdiCarrier?>?,
+          : udiCarrier as List<DeviceUdiCarrier>?,
       distinctIdentifier: distinctIdentifier == freezed
           ? _value.distinctIdentifier
           : distinctIdentifier as String?,
@@ -312,7 +312,7 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
       status: status == freezed ? _value.status : status as DeviceStatus?,
       deviceName: deviceName == freezed
           ? _value.deviceName
-          : deviceName as List<DeviceDeviceName?>?,
+          : deviceName as List<DeviceDeviceName>?,
       modelNumber:
           modelNumber == freezed ? _value.modelNumber : modelNumber as String?,
       type: type == freezed ? _value.type : type as CodeableConcept,
@@ -359,7 +359,7 @@ class _$_Device extends _Device {
   @override
   final Narrative? text;
   @override
-  final List<DeviceUdiCarrier?>? udiCarrier;
+  final List<DeviceUdiCarrier>? udiCarrier;
   @override
   final String? distinctIdentifier;
   @override
@@ -376,7 +376,7 @@ class _$_Device extends _Device {
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   final DeviceStatus? status;
   @override
-  final List<DeviceDeviceName?>? deviceName;
+  final List<DeviceDeviceName>? deviceName;
   @override
   final String? modelNumber;
   @override
@@ -476,7 +476,7 @@ abstract class _Device extends Device {
       Id? id,
       Meta? meta,
       Narrative? text,
-      List<DeviceUdiCarrier?>? udiCarrier,
+      List<DeviceUdiCarrier>? udiCarrier,
       String? distinctIdentifier,
       String? manufacturer,
       FhirDateTime? manufactureDate,
@@ -485,7 +485,7 @@ abstract class _Device extends Device {
       String? serialNumber,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown)
           DeviceStatus? status,
-      List<DeviceDeviceName?>? deviceName,
+      List<DeviceDeviceName>? deviceName,
       String? modelNumber,
       required CodeableConcept type,
       required Reference patient}) = _$_Device;
@@ -502,7 +502,7 @@ abstract class _Device extends Device {
   @override
   Narrative? get text;
   @override
-  List<DeviceUdiCarrier?>? get udiCarrier;
+  List<DeviceUdiCarrier>? get udiCarrier;
   @override
   String? get distinctIdentifier;
   @override
@@ -519,7 +519,7 @@ abstract class _Device extends Device {
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   DeviceStatus? get status;
   @override
-  List<DeviceDeviceName?>? get deviceName;
+  List<DeviceDeviceName>? get deviceName;
   @override
   String? get modelNumber;
   @override

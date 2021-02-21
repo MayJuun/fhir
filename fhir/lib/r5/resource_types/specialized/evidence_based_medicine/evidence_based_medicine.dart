@@ -25,12 +25,12 @@ abstract class Evidence with Resource implements _$Evidence {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -45,11 +45,11 @@ abstract class Evidence with Resource implements _$Evidence {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -59,11 +59,11 @@ abstract class Evidence with Resource implements _$Evidence {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
-    List<ContactDetail?>? author,
-    List<ContactDetail?>? editor,
-    List<ContactDetail?>? reviewer,
-    List<ContactDetail?>? endorser,
-    List<RelatedArtifact?>? relatedArtifact,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
     Markdown? assertion,
     @JsonKey(name: '_assertion') Element? assertionElement,
     // ToDo
@@ -72,9 +72,9 @@ abstract class Evidence with Resource implements _$Evidence {
     required List<EvidenceVariableDefinition> variableDefinition,
     CodeableConcept? synthesisType,
     CodeableConcept? studyType,
-    List<Statistic?>? statistic,
-    List<OrderedDistribution?>? distribution,
-    List<EvidenceCertainty?>? certainty,
+    List<Statistic>? statistic,
+    List<OrderedDistribution>? distribution,
+    List<EvidenceCertainty>? certainty,
   }) = _Evidence;
 
   /// Produces a Yaml formatted String version of the object
@@ -100,11 +100,11 @@ abstract class EvidenceVariableDefinition
   EvidenceVariableDefinition._();
   factory EvidenceVariableDefinition({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<Annotation?>? note,
+    List<Annotation>? note,
     required CodeableConcept variableRole,
     Reference? observed,
     Reference? intended,
@@ -134,15 +134,15 @@ abstract class EvidenceCertainty implements _$EvidenceCertainty {
   EvidenceCertainty._();
   factory EvidenceCertainty({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     // ToDo
     // List<Annotation> note,
     Annotation? note,
-    List<CodeableConcept?>? rating,
-    List<EvidenceCertaintySubcomponent?>? certaintySubcomponent,
+    List<CodeableConcept>? rating,
+    List<EvidenceCertaintySubcomponent>? certaintySubcomponent,
   }) = _EvidenceCertainty;
 
   /// Produces a Yaml formatted String version of the object
@@ -168,15 +168,15 @@ abstract class EvidenceCertaintySubcomponent
   EvidenceCertaintySubcomponent._();
   factory EvidenceCertaintySubcomponent({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     // ToDo
     // List<Annotation> note,
     Annotation? note,
-    List<CodeableConcept?>? type,
-    List<CodeableConcept?>? rating,
+    List<CodeableConcept>? type,
+    List<CodeableConcept>? rating,
   }) = _EvidenceCertaintySubcomponent;
 
   /// Produces a Yaml formatted String version of the object
@@ -211,12 +211,12 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
-    List<Resource?>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier?>? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     String? name,
@@ -232,11 +232,11 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
     @JsonKey(name: '_date') Element? dateElement,
     String? publisher,
     @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail?>? contact,
+    List<ContactDetail>? contact,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext?>? useContext,
-    List<CodeableConcept?>? jurisdiction,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
     Markdown? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     Markdown? copyright,
@@ -250,23 +250,23 @@ abstract class EvidenceVariable with Resource implements _$EvidenceVariable {
     @JsonKey(name: '_shortTitle') Element? shortTitleElement,
     String? subtitle,
     @JsonKey(name: '_subtitle') Element? subtitleElement,
-    List<Annotation?>? note,
-    List<ContactDetail?>? author,
-    List<ContactDetail?>? editor,
-    List<ContactDetail?>? reviewer,
-    List<ContactDetail?>? endorser,
-    List<RelatedArtifact?>? relatedArtifact,
+    List<Annotation>? note,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
     Boolean? actual,
     @JsonKey(name: '_actual') Element? actualElement,
     @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicCombination.unknown)
         EvidenceVariableCharacteristicCombination? characteristicCombination,
     @JsonKey(name: '_characteristicCombination')
         Element? characteristicCombinationElement,
-    List<EvidenceVariableCharacteristic?>? characteristic,
+    List<EvidenceVariableCharacteristic>? characteristic,
     @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
         EvidenceVariableHandling? handling,
     @JsonKey(name: '_handling') Element? handlingElement,
-    List<EvidenceVariableCategory?>? category,
+    List<EvidenceVariableCategory>? category,
   }) = _EvidenceVariable;
 
   /// Produces a Yaml formatted String version of the object
@@ -292,8 +292,8 @@ abstract class EvidenceVariableCharacteristic
   EvidenceVariableCharacteristic._();
   factory EvidenceVariableCharacteristic({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Reference? definitionReference,
@@ -337,13 +337,13 @@ abstract class EvidenceVariableTimeFromStart
   EvidenceVariableTimeFromStart._();
   factory EvidenceVariableTimeFromStart({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Quantity? quantity,
     Range? range,
-    List<Annotation?>? note,
+    List<Annotation>? note,
   }) = _EvidenceVariableTimeFromStart;
 
   /// Produces a Yaml formatted String version of the object
@@ -369,8 +369,8 @@ abstract class EvidenceVariableCategory implements _$EvidenceVariableCategory {
   EvidenceVariableCategory._();
   factory EvidenceVariableCategory({
     String? id,
-    @JsonKey(name: 'extension') List<FhirExtension?>? extension_,
-    List<FhirExtension?>? modifierExtension,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     CodeableConcept? valueCodeableConcept,
