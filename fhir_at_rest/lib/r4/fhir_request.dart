@@ -15,84 +15,84 @@ abstract class FhirRequest with _$FhirRequest {
 
   ///  READ constructor
   factory FhirRequest.read({
-    @required Uri base,
-    @required R4ResourceType type,
-    @required Id id,
+    required Uri base,
+    required R4ResourceType type,
+    required Id id,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    Client client,
+    Client? client,
   }) = _FhirReadRequest;
 
   ///  VREAD constructor
   factory FhirRequest.vRead({
-    @required Uri base,
-    @required R4ResourceType type,
-    @required Id id,
-    @required Id vid,
+    required Uri base,
+    required R4ResourceType type,
+    required Id id,
+    required Id vid,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    Client client,
+    Client? client,
   }) = _FhirVReadRequest;
 
   ///  UPDATE constructor
   factory FhirRequest.update({
-    @required Uri base,
-    @required Resource resource,
+    required Uri base,
+    required Resource resource,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    Client client,
+    Client? client,
   }) = _FhirUpdateRequest;
 
   ///  PATCH constructor
   factory FhirRequest.patch({
-    @required Uri base,
-    @required Resource resource,
+    required Uri base,
+    required Resource resource,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    Client client,
+    Client? client,
   }) = _FhirPatchRequest;
 
   ///  DELETE constructor
   factory FhirRequest.delete({
-    @required Uri base,
-    @required R4ResourceType type,
-    @required Id id,
+    required Uri base,
+    required R4ResourceType type,
+    required Id id,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    Client client,
+    Client? client,
   }) = _FhirDeleteRequest;
 
   ///  CREATE constructor
   factory FhirRequest.create({
-    @required Uri base,
-    @required Resource resource,
+    required Uri base,
+    required Resource resource,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    Client client,
+    Client? client,
   }) = _FhirCreateRequest;
 
   ///  SEARCH constructor
   factory FhirRequest.search({
-    @required Uri base,
-    @required R4ResourceType type,
+    required Uri base,
+    required R4ResourceType type,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
@@ -100,122 +100,122 @@ abstract class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> parameters,
     @Default(false) bool usePost,
     @Default(RestfulRequest.get_) RestfulRequest restfulRequest,
-    Client client,
+    Client? client,
   }) = _FhirSearchRequest;
 
   ///  SEARCH-ALL constructor
   factory FhirRequest.searchAll({
-    @required Uri base,
+    required Uri base,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    Client client,
+    Client? client,
   }) = _FhirSearchAllRequest;
 
   ///  SEARCH-ALL constructor
   factory FhirRequest.capabilities({
-    @required Uri base,
+    required Uri base,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     @Default(Mode.full) Mode mode,
-    Client client,
+    Client? client,
   }) = _FhirCapabilitiesRequest;
 
   ///  BATCH/TRANSACTION constructor
   factory FhirRequest.transaction({
-    @required Uri base,
+    required Uri base,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    @required Bundle bundle,
-    Client client,
+    required Bundle bundle,
+    Client? client,
   }) = _FhirTransactionRequest;
 
   factory FhirRequest.batch({
-    @required Uri base,
+    required Uri base,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    @required Bundle bundle,
-    Client client,
+    required Bundle bundle,
+    Client? client,
   }) = _FhirBatchRequest;
 
   ///  HISTORY constructor
   factory FhirRequest.history({
-    @required Uri base,
-    @required R4ResourceType type,
-    @required Id id,
+    required Uri base,
+    required R4ResourceType type,
+    required Id id,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    int count,
-    Instant since,
-    FhirDateTime at,
-    String reference,
-    Client client,
+    int? count,
+    Instant? since,
+    FhirDateTime? at,
+    String? reference,
+    Client? client,
   }) = _FhirHistoryRequest;
 
   ///  HISTORY-TYPE constructor
   factory FhirRequest.historyType({
-    @required Uri base,
-    @required R4ResourceType type,
+    required Uri base,
+    required R4ResourceType type,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    int count,
-    Instant since,
-    FhirDateTime at,
-    String reference,
-    Client client,
+    int? count,
+    Instant? since,
+    FhirDateTime? at,
+    String? reference,
+    Client? client,
   }) = _FhirHistoryTypeRequest;
 
   ///  HISTORY-ALL constructor
   factory FhirRequest.historyAll({
-    @required Uri base,
+    required Uri base,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    int count,
-    Instant since,
-    FhirDateTime at,
-    String reference,
-    Client client,
+    int? count,
+    Instant? since,
+    FhirDateTime? at,
+    String? reference,
+    Client? client,
   }) = _FhirHistoryAllRequest;
 
   ///  OPERATION constructor
   factory FhirRequest.operation({
-    @required Uri base,
-    R4ResourceType type,
-    Id id,
+    required Uri base,
+    R4ResourceType? type,
+    Id? id,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     @Default(<String, dynamic>{}) Map<String, dynamic> fhirParameter,
-    @required String operation,
+    required String operation,
     @Default(false) bool usePost,
     @Default(false) bool useFormData,
-    Client client,
+    Client? client,
   }) = _FhirOperationRequest;
 
-  Future<Resource> request({
-    Map<String, String> headers,
+  Future<Resource?> request({
+    required Map<String, String> headers,
   }) async {
     return await map(
       read: (m) async => await _request(
@@ -277,22 +277,17 @@ abstract class FhirRequest with _$FhirRequest {
         'Capabilities',
       ),
       transaction: (m) async {
-        if (m.bundle == null) {
-          return _operationOutcome(
-              'A Transaction request was made, but no Bundle was included.');
-        }
-
         if (m.bundle.type != BundleType.transaction) {
           return _operationOutcome(
               'A Transaction request was made, but no Bundle was included.');
         }
         if (m.bundle.entry != null) {
-          for (var entry in m.bundle.entry) {
-            if (entry.request == null) {
+          for (var entry in m.bundle.entry!) {
+            if (entry?.request == null) {
               return _operationOutcome(
                   'Each bundle entry requires a request, but at least one of '
                   'the entries in this bundle is missing a request.');
-            } else if (entry.request.method == null) {
+            } else if (entry?.request?.method == null) {
               return _operationOutcome(
                   'Each bundle entry request needs a method type specified, but'
                   ' at least one entry in this bundle is missing a method');
@@ -308,23 +303,18 @@ abstract class FhirRequest with _$FhirRequest {
         );
       },
       batch: (m) async {
-        if (m.bundle == null) {
-          return _operationOutcome(
-              'A Transaction request was made, but no Bundle was included.');
-        }
-
         if (m.bundle.type != BundleType.batch) {
           return _operationOutcome(
               'A Batch request was made, but the included Bundle is not a'
               ' batch type.');
         }
         if (m.bundle.entry != null) {
-          for (var entry in m.bundle.entry) {
-            if (entry.request == null) {
+          for (var entry in m.bundle.entry!) {
+            if (entry?.request == null) {
               return _operationOutcome(
                   'Each bundle entry requires a request, but at least one of '
                   'the entries in this bundle is missing a request.');
-            } else if (entry.request.method == null) {
+            } else if (entry?.request?.method == null) {
               return _operationOutcome(
                   'Each bundle entry request needs a method type specified, but'
                   ' at least one entry in this bundle is missing a method');
@@ -409,10 +399,10 @@ abstract class FhirRequest with _$FhirRequest {
   }
 
   List<String> _hxParameters(
-    int count,
-    Instant since,
-    FhirDateTime at,
-    String reference,
+    int? count,
+    Instant? since,
+    FhirDateTime? at,
+    String? reference,
   ) {
     final List<String> parameters = [];
     if (count != null) {
@@ -430,13 +420,13 @@ abstract class FhirRequest with _$FhirRequest {
     return parameters;
   }
 
-  Future<Resource> _request(
+  Future<Resource?> _request(
     RestfulRequest type,
     String uri,
     Map<String, String> headers,
     String requestType, {
-    Resource resource,
-    String formData,
+    Resource? resource,
+    String? formData,
   }) async {
     try {
       final result = await _makeRequest(
@@ -488,25 +478,22 @@ abstract class FhirRequest with _$FhirRequest {
       orElse: () => '');
 
   String _format({bool join = false}) => maybeMap(
-      capabilities: (f) =>
-          _encodeParam('_format=${f?.format ?? "json"}', join: true),
-      orElse: () => _encodeParam('_format=${format ?? "json"}', join: join));
+      capabilities: (f) => _encodeParam('_format=${f.format}', join: true),
+      orElse: () => _encodeParam('_format=$format', join: join));
 
-  String _pretty({bool join = true}) => pretty ?? false
-      ? _encodeParam('_pretty=${pretty.toString()}', join: join)
+  String _pretty({bool join = true}) =>
+      _encodeParam('_pretty=${pretty.toString()}', join: join);
+
+  String _summary({bool join = true}) => summary != Summary.none
+      ? _encodeParam('_summary=${enumToString(summary)}', join: join)
       : '';
 
-  String _summary({bool join = true}) =>
-      (summary ?? Summary.none) != Summary.none
-          ? _encodeParam('_summary=${enumToString(summary)}', join: join)
-          : '';
-
-  String _elements({bool join = true}) => (elements?.isNotEmpty) ?? false
+  String _elements({bool join = true}) => elements.isNotEmpty
       ? _encodeParam('_elements=${elements.join(",")}', join: join)
       : '';
 
   String _parameters(List<String> parameters, {bool join = true}) {
-    if (parameters?.isEmpty ?? true) {
+    if (parameters.isEmpty) {
       return '';
     } else {
       String parametersString = '';
@@ -558,14 +545,14 @@ abstract class FhirRequest with _$FhirRequest {
             '\$${f.operation}',
       );
 
-  Future<Resource> _makeRequest({
-    @required RestfulRequest type,
-    @required String thisRequest,
-    Map<String, String> headers,
-    Map<String, dynamic> resource,
-    String formData,
-    Encoding encoding,
-    Client client,
+  Future<Resource?> _makeRequest({
+    required RestfulRequest type,
+    required String thisRequest,
+    required Map<String, String> headers,
+    Map<String, dynamic>? resource,
+    String? formData,
+    Encoding? encoding,
+    Client? client,
   }) async {
     Response result;
     client ??= Client();
@@ -579,17 +566,16 @@ abstract class FhirRequest with _$FhirRequest {
         case RestfulRequest.get_:
           {
             result = await client.get(
-              thisRequest,
+              Uri.parse(thisRequest),
               headers: headers,
             );
             break;
           }
         case RestfulRequest.put_:
           {
-            headers ??= <String, String>{};
             headers['Content-Type'] = 'application/fhir+json';
             result = await client.put(
-              thisRequest,
+              Uri.parse(thisRequest),
               headers: headers,
               body: jsonEncode(resource),
               encoding: encoding,
@@ -599,17 +585,16 @@ abstract class FhirRequest with _$FhirRequest {
         case RestfulRequest.delete_:
           {
             result = await client.delete(
-              thisRequest,
+              Uri.parse(thisRequest),
               headers: headers,
             );
             break;
           }
         case RestfulRequest.patch_:
           {
-            headers ??= <String, String>{};
             headers['Content-Type'] = 'application/fhir+json';
             result = await client.patch(
-              thisRequest,
+              Uri.parse(thisRequest),
               headers: headers,
               body: jsonEncode(resource),
               encoding: encoding,
@@ -618,12 +603,11 @@ abstract class FhirRequest with _$FhirRequest {
           }
         case RestfulRequest.post_:
           {
-            headers ??= <String, String>{};
             headers['Content-Type'] = formData != null
                 ? 'application/x-www-form-urlencoded'
                 : 'application/fhir+json';
             result = await client.post(
-              thisRequest,
+              Uri.parse(thisRequest),
               headers: headers,
               body: formData ?? jsonEncode(resource),
               encoding: encoding,
@@ -652,7 +636,7 @@ abstract class FhirRequest with _$FhirRequest {
     return Resource.fromJson(json.decode(result.body));
   }
 
-  OperationOutcome _operationOutcome(String issue, {String diagnostics}) =>
+  OperationOutcome _operationOutcome(String issue, {String? diagnostics}) =>
       OperationOutcome(issue: [
         OperationOutcomeIssue(
           severity: OperationOutcomeIssueSeverity.error,
